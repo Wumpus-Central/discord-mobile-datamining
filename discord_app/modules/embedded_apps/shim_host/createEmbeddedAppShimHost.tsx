@@ -1,15 +1,15 @@
-// === Module 19085: createEmbeddedAppShimHost ===
+// === Module 19320: createEmbeddedAppShimHost ===
 
-// Module 19085 (createEmbeddedAppShimHost)
+// Module 19320 (createEmbeddedAppShimHost)
 import _mod12 from "module_12" /* 12 */;
-import protocol from "protocol" /* 19081 */;
+import protocol from "protocol" /* 19316 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx");
 
-export const createEmbeddedAppShimHost = function createEmbeddedAppShimHost(arg0) {
+export function createEmbeddedAppShimHost(arg0) {
   ({ onConnect: require, onMessage } = arg0);
   const map = new Map();
   closure_3 = require("connection").createChildConnector(onMessage, () => {
@@ -33,4 +33,4 @@ export const createEmbeddedAppShimHost = function createEmbeddedAppShimHost(arg0
     }
   };
   return obj2;
-};
+}

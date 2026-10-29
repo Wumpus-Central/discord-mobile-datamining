@@ -1,14 +1,14 @@
-// === Module 9393: CollectiblesWishlistUtils ===
+// === Module 9424: CollectiblesWishlistUtils ===
 
-// Module 9393 (CollectiblesWishlistUtils)
+// Module 9424 (CollectiblesWishlistUtils)
 import util from "util" /* 1125 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7697 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7720 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
-export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {
+export function getProductNameAndTypeFromSku(sku) {
   ({ name, tenantMetadata } = sku);
   let type;
   if (tenantMetadata != null) {
@@ -34,12 +34,12 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
     }
   }
   return formatToPlainStringResult;
-};
-export const isWishlistableCollectiblesProduct = function isWishlistableCollectiblesProduct(selectedProduct) {
+}
+export function isWishlistableCollectiblesProduct(selectedProduct) {
   const result = CollectiblesUtils.isPremiumCollectiblesProduct(selectedProduct);
   let tmp4 = !result;
   if (!result) {
     tmp4 = selectedProduct.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   return tmp4;
-};
+}

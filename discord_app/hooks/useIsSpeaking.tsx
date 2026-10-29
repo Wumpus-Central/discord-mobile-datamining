@@ -1,10 +1,10 @@
-// === Module 6816: useIsSpeaking ===
+// === Module 6839: useIsSpeaking ===
 
-// Module 6816 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 6042 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import SpeakingStore from "SpeakingStore" /* 6720 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+// Module 6839 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 6046 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import SpeakingStore from "SpeakingStore" /* 6743 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const require = globalThis.__r;
 
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSpe
   }
   return stateFromStores1;
 });
-export const getIsSpeaking = function getIsSpeaking(checkIsMuted) {
+export function getIsSpeaking(checkIsMuted) {
   ({ userId, checkSoundSharing } = checkIsMuted);
   if (checkSoundSharing === undefined) {
     checkSoundSharing = false;
@@ -220,4 +220,4 @@ export const getIsSpeaking = function getIsSpeaking(checkIsMuted) {
     tmp10 = tmp11;
   }
   return tmp10;
-};
+}

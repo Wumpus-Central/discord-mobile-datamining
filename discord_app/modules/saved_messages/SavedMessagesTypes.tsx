@@ -1,14 +1,14 @@
-// === Module 10112: SavedMessagesTypes ===
+// === Module 10145: SavedMessagesTypes ===
 
-// Module 10112 (SavedMessagesTypes)
-import MessageRecordUtils from "MessageRecordUtils" /* 6047 */;
+// Module 10145 (SavedMessagesTypes)
+import MessageRecordUtils from "MessageRecordUtils" /* 6051 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };
 export const BookmarksFetchState = { LOADING: "LOADING", LOADED_HAS_MORE: "LOADED_HAS_MORE", LOADED_FINISHED: "LOADED_FINISHED", FAILED: "FAILED" };
-export const savedMessageDataToClient = function savedMessageDataToClient(channelId) {
+export function savedMessageDataToClient(channelId) {
   const obj = { channelId: channelId.channel_id, messageId: channelId.message_id, savedAt: new Date(channelId.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
   ({ author_summary: obj.authorSummary, channel_summary: obj.channelSummary, message_summary: obj.messageSummary } = channelId);
   let guild_id;
@@ -29,8 +29,8 @@ export const savedMessageDataToClient = function savedMessageDataToClient(channe
   }
   obj.dueAt = date1;
   return obj;
-};
-export const savedMessageCreateObjectToClient = function savedMessageCreateObjectToClient(body) {
+}
+export function savedMessageCreateObjectToClient(body) {
   let messageRecord = null;
   if (null != body.message) {
     messageRecord = MessageRecordUtils.createMessageRecord(body.message);
@@ -58,7 +58,7 @@ export const savedMessageCreateObjectToClient = function savedMessageCreateObjec
   obj5.dueAt = date1;
   obj2.saveData = obj5;
   return obj2;
-};
-export const savedMessageDeleteObjectToClient = function savedMessageDeleteObjectToClient(channelId) {
+}
+export function savedMessageDeleteObjectToClient(channelId) {
   return { channelId: channelId.channel_id, messageId: channelId.message_id };
-};
+}

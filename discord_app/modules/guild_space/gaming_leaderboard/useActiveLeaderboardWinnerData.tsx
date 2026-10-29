@@ -1,8 +1,8 @@
-// === Module 10706: useActiveLeaderboardWinnerData ===
+// === Module 10739: useActiveLeaderboardWinnerData ===
 
-// Module 10706 (useActiveLeaderboardWinnerData)
+// Module 10739 (useActiveLeaderboardWinnerData)
 import DurationsDefault from "Durations" /* 1101 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 
 const require = globalThis.__r;
 

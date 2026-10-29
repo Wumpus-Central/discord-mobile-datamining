@@ -1,9 +1,9 @@
-// === Module 6808: ConjureProjectStore ===
+// === Module 6831: ConjureProjectStore ===
 
-// Module 6808 (ConjureProjectStore)
+// Module 6831 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -324,7 +324,7 @@ let result = size.fileFinishedImporting("modules/conjure/projects/ConjureProject
 
 export default conjureProjectStore;
 export { isProjectOwner };
-export const canPublishProject = function canPublishProject(project) {
+export function canPublishProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -336,8 +336,8 @@ export const canPublishProject = function canPublishProject(project) {
     const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
   }
   return tmp3;
-};
-export const canRemixProject = function canRemixProject(project) {
+}
+export function canRemixProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -352,4 +352,4 @@ export const canRemixProject = function canRemixProject(project) {
     isProjectPublicResult = ConjureProjectTypes.isProjectPublic(project);
   }
   return isProjectPublicResult;
-};
+}

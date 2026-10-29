@@ -1,8 +1,8 @@
-// === Module 10827: UserApplicationIdentityActionCreators ===
+// === Module 10903: UserApplicationIdentityActionCreators ===
 
-// Module 10827 (UserApplicationIdentityActionCreators)
+// Module 10903 (UserApplicationIdentityActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10828 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10904 */;
 
 const require = fn;
 const Constants = fn(1084);
@@ -22,7 +22,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ let obj = {
             signal(tmp24[3]).dispatch(obj10);
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp24) {
           if (tmp4 === c3) {
@@ -97,7 +97,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -127,7 +127,7 @@ let obj = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp11) {
           v3 = tmp;

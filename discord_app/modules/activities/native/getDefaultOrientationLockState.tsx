@@ -1,19 +1,19 @@
-// === Module 11499: getDefaultOrientationLockState ===
+// === Module 11553: getDefaultOrientationLockState ===
 
-// Module 11499 (getDefaultOrientationLockState)
+// Module 11553 (getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import useWindowDimensions from "useWindowDimensions" /* 1496 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5190 */;
+import useWindowDimensions from "useWindowDimensions" /* 1497 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5191 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
 
-export const getIsTabletActivitySurface = function getIsTabletActivitySurface() {
+export function getIsTabletActivitySurface() {
   const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
   const bound = Math.min(size.width, size.height);
   return bound > useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE;
-};
-export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig, arg1) {
+}
+export function setOrientationLockState(embeddedActivityConfig, arg1) {
   if (arg1 == null) {
     if (null != embeddedActivityConfig) {
       const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
@@ -38,8 +38,8 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     const obj3 = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: embeddedActivityConfig.id, lockState: tmp };
     DispatcherDefault.dispatch(obj3);
   }
-};
-export const getDefaultOrientationLockState = function getDefaultOrientationLockState(application) {
+}
+export function getDefaultOrientationLockState(application) {
   if (null != application) {
     const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
     const _Math = Math;
@@ -59,4 +59,4 @@ export const getDefaultOrientationLockState = function getDefaultOrientationLock
     }
     return default_orientation_lock_state;
   }
-};
+}

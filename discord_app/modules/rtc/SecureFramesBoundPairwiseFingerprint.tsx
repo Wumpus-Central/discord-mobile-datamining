@@ -1,9 +1,9 @@
-// === Module 9236: SecureFramesBoundPairwiseFingerprint ===
+// === Module 9240: SecureFramesBoundPairwiseFingerprint ===
 
-// Module 9236 (SecureFramesBoundPairwiseFingerprint)
+// Module 9240 (SecureFramesBoundPairwiseFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 
 const require = fn;
 let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
@@ -17,7 +17,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
                               if (null != value2) {
                                 return value2;
                               } else {
-                                const obj4 = joined(9214);
+                                const obj4 = joined(9218);
                                 const _Uint8Array = Uint8Array;
                                 const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                                 const _Uint8Array2 = Uint8Array;
@@ -104,12 +104,12 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
     }
   }
 };
-let closure_6 = fn(9230).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let closure_6 = fn(9234).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");
 
-export const computeBoundPairwiseFingerprint = function computeBoundPairwiseFingerprint() {
+export function computeBoundPairwiseFingerprint() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -118,4 +118,4 @@ export const computeBoundPairwiseFingerprint = function computeBoundPairwiseFing
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

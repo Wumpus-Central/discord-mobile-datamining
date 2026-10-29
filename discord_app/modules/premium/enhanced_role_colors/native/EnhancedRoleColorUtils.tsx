@@ -1,9 +1,9 @@
-// === Module 8352: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 8374: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 8352 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 8374 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef683 from "module_683" /* 683 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6024 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
@@ -62,7 +62,7 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx");
 
 export { processColorStrings };
-export const processColorStringsArray = function processColorStringsArray(colorStrings) {
+export function processColorStringsArray(colorStrings) {
   if (null == colorStrings) {
     return [];
   } else {
@@ -70,8 +70,8 @@ export const processColorStringsArray = function processColorStringsArray(colorS
     ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(colorStrings));
     return items.filter(GlobalUtils.isNotNullish);
   }
-};
-export const useProcessColorStringsArray = function useProcessColorStringsArray(colorStrings) {
+}
+export function useProcessColorStringsArray(colorStrings) {
   closure_0 = colorStrings;
   let primaryColor;
   if (colorStrings != null) {
@@ -99,11 +99,11 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
     }
     return items;
   }, items);
-};
-export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
+}
+export function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
   return useHasEnhancedRoleColors.getHasEnhancedRoleColors(guildId, id);
-};
-export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
+}
+export function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
   let tmp = useHasEnhancedRoleColorsDefault(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;
@@ -112,4 +112,4 @@ export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyle
     tmp = processColorStringsArray.length > 1;
   }
   return tmp;
-};
+}

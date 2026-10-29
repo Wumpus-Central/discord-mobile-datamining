@@ -1,9 +1,9 @@
-// === Module 12931: AgeVerificationSystemNotificationUtils ===
+// === Module 13152: AgeVerificationSystemNotificationUtils ===
 
-// Module 12931 (AgeVerificationSystemNotificationUtils)
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7963 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11071 */;
-import MessageStore from "MessageStore" /* 6045 */;
+// Module 13152 (AgeVerificationSystemNotificationUtils)
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7986 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11125 */;
+import MessageStore from "MessageStore" /* 6049 */;
 
 require = fn;
 const MessageEmbedTypes = fn(1084).MessageEmbedTypes;
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationSy
 export const AgeVerificationSystemNotificationEmbedKeys = obj;
 export const AgeVerificationSystemNotificationCtaTypes = obj2;
 export const AgeVerificationSystemNotificationContentType = obj3;
-export const isAgeVerificationMessageWithRetryCta = function isAgeVerificationMessageWithRetryCta(channel_id, id) {
+export function isAgeVerificationMessageWithRetryCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
     if (null != message.embeds) {
@@ -37,8 +37,8 @@ export const isAgeVerificationMessageWithRetryCta = function isAgeVerificationMe
     }
   }
   return false;
-};
-export const isAgeVerificationMessageWithManualReviewCta = function isAgeVerificationMessageWithManualReviewCta(channel_id, id) {
+}
+export function isAgeVerificationMessageWithManualReviewCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
     if (null != message.embeds) {
@@ -64,8 +64,8 @@ export const isAgeVerificationMessageWithManualReviewCta = function isAgeVerific
     }
   }
   return false;
-};
-export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificationMessageWithConfirmAgeCta(channel_id, id) {
+}
+export function isAgeVerificationMessageWithConfirmAgeCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
     if (null != message.embeds) {
@@ -93,8 +93,8 @@ export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificat
     }
   }
   return false;
-};
-export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerificationMessageWithConnectToTeenCta(channel_id, id) {
+}
+export function isAgeVerificationMessageWithConnectToTeenCta(channel_id, id) {
   if (null == FamilyCenterPendingConnectionStore.getPendingConnection()) {
     return false;
   } else {
@@ -119,4 +119,4 @@ export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerifi
     }
     return false;
   }
-};
+}

@@ -1,9 +1,9 @@
-// === Module 2034: ImageProxyUtils ===
+// === Module 2035: ImageProxyUtils ===
 
-// Module 2034 (ImageProxyUtils)
+// Module 2035 (ImageProxyUtils)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
-import UrlHostUtils from "UrlHostUtils" /* 2035 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
+import UrlHostUtils from "UrlHostUtils" /* 2036 */;
 import size from "module_2" /* 2 */;
 
 function getSizedImageProxyURL(value, size) {
@@ -61,7 +61,7 @@ let result = size.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx
 
 export { isImageProxyURL };
 export { getSizedImageProxyURL };
-export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size) {
+export function getSizedImageAssetURL(value, size) {
   const str = URLUtilsDefault.toURLSafe(value);
   if (null == str) {
     return value;
@@ -98,4 +98,4 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
       tmpResult = URLUtilsDefault;
     }
   }
-};
+}

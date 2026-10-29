@@ -1,20 +1,20 @@
-// === Module 12246: MentionableSelectOptionParts ===
+// === Module 12300: MentionableSelectOptionParts ===
 
-// Module 12246 (MentionableSelectOptionParts)
+// Module 12300 (MentionableSelectOptionParts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6057 */;
-import RoleIconUtils from "RoleIconUtils" /* 7319 */;
-import RoleIconDefault from "RoleIcon" /* 7337 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9024 */;
-import DiscordTagDefault from "DiscordTag" /* 9166 */;
-import UserIcon from "UserIcon" /* 12214 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6061 */;
+import RoleIconUtils from "RoleIconUtils" /* 7343 */;
+import RoleIconDefault from "RoleIcon" /* 7361 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9027 */;
+import DiscordTagDefault from "DiscordTag" /* 9169 */;
+import UserIcon from "UserIcon" /* 12268 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4910 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
+import GuildRoleStore from "GuildRoleStore" /* 4911 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const Constants = fn(1084);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
@@ -102,7 +102,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMe
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectOptionParts.tsx");
 
-export const renderMentionableOptionIcon = function renderMentionableOptionIcon(type, guild, guildId) {
+export function renderMentionableOptionIcon(type, guild, guildId) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const user = UserStore.getUser(type.value);
     if (null == user) {
@@ -143,14 +143,14 @@ export const renderMentionableOptionIcon = function renderMentionableOptionIcon(
     }
     return null;
   }
-};
-export const renderMentionableOptionDescription = function renderMentionableOptionDescription(type) {
+}
+export function renderMentionableOptionDescription(type) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const obj = { user: UserStore.getUser(type.value) };
     return closure_1_8(closure_11, obj);
   }
-};
-export const renderMentionableOptionSuffix = function renderMentionableOptionSuffix(type, guild, arg2) {
+}
+export function renderMentionableOptionSuffix(type, guild, arg2) {
   if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
     let role;
     if (null != guild) {
@@ -169,8 +169,8 @@ export const renderMentionableOptionSuffix = function renderMentionableOptionSuf
       return closure_1_8(closure_12, obj);
     }
   }
-};
-export const mentionableOptionAccessibilityLabel = function mentionableOptionAccessibilityLabel(type) {
+}
+export function mentionableOptionAccessibilityLabel(type) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const user = UserStore.getUser(type.value);
     let bot;
@@ -203,4 +203,4 @@ export const mentionableOptionAccessibilityLabel = function mentionableOptionAcc
     const obj = { roleName: type.label };
     return intl.formatToPlainString(util.t.F6ejkk, obj);
   }
-};
+}

@@ -1,15 +1,15 @@
-// === Module 18482: getChannelOpenedRouteTrackingProps ===
+// === Module 18716: getChannelOpenedRouteTrackingProps ===
 
-// Module 18482 (getChannelOpenedRouteTrackingProps)
+// Module 18716 (getChannelOpenedRouteTrackingProps)
 import router_utils from "router_utils" /* 1111 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8329 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8351 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
-export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
+export function getChannelOpenedRouteTrackingProps(selectedChannelId) {
   const result = ThreadAnalyticsUtils.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
@@ -32,4 +32,4 @@ export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRoute
   }
   const merged1 = Object.assign(obj5);
   return {};
-};
+}

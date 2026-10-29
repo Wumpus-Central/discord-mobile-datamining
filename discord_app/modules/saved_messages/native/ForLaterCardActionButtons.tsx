@@ -1,14 +1,14 @@
-// === Module 14051: ForLaterCardActionButtons ===
+// === Module 14284: ForLaterCardActionButtons ===
 
-// Module 14051 (ForLaterCardActionButtons)
+// Module 14284 (ForLaterCardActionButtons)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import IconButton from "IconButton" /* 7991 */;
-import _modDef9172 from "module_9172" /* 9172 */;
-import ContextMenu from "ContextMenu" /* 9795 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 14045 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import IconButton from "IconButton" /* 8014 */;
+import _modDef9175 from "module_9175" /* 9175 */;
+import ContextMenu from "ContextMenu" /* 9827 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 14278 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let closure_3 = ["menuItems"];
 let closure_4 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.e1heBD);
       obj.size = "sm";
-      obj.icon = _modDef9172;
+      obj.icon = _modDef9175;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     };
     cResult[3] = fn;
@@ -96,35 +96,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.e1heBD);
       obj.size = "sm";
-      obj.icon = _modDef9172;
+      obj.icon = _modDef9175;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     }
   });
   return <View style={closure_9().actionGroup} />;
 });
-export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedMessage) {
+export function useForLaterCardMenuItems(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const jumpToMessage = savedMessage.jumpToMessage;
   const items = [savedMessage];
   const obj = { label: null, IconComponent: null, action: null };
   let tmp2Result = dependencyMap;
-  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14052, dependencyMap.paths), "MessageReminderDurationActionSheet", {
+  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14285, dependencyMap.paths), "MessageReminderDurationActionSheet", {
     createReminder(dueAt) {
       const obj2 = {};
       const merged = Object.assign(closure_1_0.saveData);
       obj2.dueAt = dueAt;
-      obj2.source = savedMessage(14055).SavedMessageSources.FOR_LATER_LIST;
-      return savedMessage(14045).addOrUpdateSavedMessage(obj2);
+      obj2.source = savedMessage(14288).SavedMessageSources.FOR_LATER_LIST;
+      return savedMessage(14278).addOrUpdateSavedMessage(obj2);
     },
     removeReminder() {
-      return savedMessage(14045).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
+      return savedMessage(14278).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
     },
     channelId: savedMessage.saveData.channelId,
     messageId: savedMessage.saveData.messageId
   }), items);
   const intl = savedMessage(1125).intl;
   obj.label = intl.string(savedMessage(1125).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(12561).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(12616).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
@@ -137,7 +137,7 @@ export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedM
   }
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6967).XSmallIcon,
+    IconComponent: savedMessage(6991).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
@@ -150,13 +150,13 @@ export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedM
     const t = tmp2(1125).t;
     let obj3 = { label: intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1), IconComponent: null, action: null };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      tmp2Result = tmp2(14056);
+      tmp2Result = tmp2(14289);
       let PencilIcon = tmp2Result.BellZIcon;
     } else {
-      PencilIcon = tmp2(10154).PencilIcon;
+      PencilIcon = tmp2(10187).PencilIcon;
     }
     obj3.IconComponent = PencilIcon;
     obj3.action = callback;
     obj3 = items1.unshift(obj3);
   }
-};
+}

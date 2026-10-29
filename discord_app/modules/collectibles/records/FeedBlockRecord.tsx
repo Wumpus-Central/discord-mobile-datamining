@@ -1,7 +1,7 @@
-// === Module 7717: FeedBlockRecord ===
+// === Module 7740: FeedBlockRecord ===
 
-// Module 7717 (FeedBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5676 */;
+// Module 7740 (FeedBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 5678 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function FeedBlockRecord(length) {

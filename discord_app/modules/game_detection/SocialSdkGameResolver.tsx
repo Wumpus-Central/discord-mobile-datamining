@@ -1,7 +1,7 @@
-// === Module 11240: SocialSdkGameResolver ===
+// === Module 11294: SocialSdkGameResolver ===
 
-// Module 11240 (SocialSdkGameResolver)
-import DetectableGameStore from "DetectableGameStore" /* 2036 */;
+// Module 11294 (SocialSdkGameResolver)
+import DetectableGameStore from "DetectableGameStore" /* 2037 */;
 
 const SdkCanonicalGameResolutionType = { UNRESOLVED: 0, [0]: "UNRESOLVED", MATCHES_DETECTED: 1, [1]: "MATCHES_DETECTED", DIFFERS: 2, [2]: "DIFFERS" };
 let closure_2 = { type: SdkCanonicalGameResolutionType.UNRESOLVED };
@@ -137,7 +137,7 @@ prototype["getResolution"] = function getResolution(arg0) {
 };
 
 export { SdkCanonicalGameResolutionType };
-export const withProcessIdentity = function withProcessIdentity(processGame) {
+export function withProcessIdentity(processGame) {
   processGame = processGame.processGame;
   let tmp = processGame;
   if (null != processGame) {
@@ -148,5 +148,5 @@ export const withProcessIdentity = function withProcessIdentity(processGame) {
     tmp = obj;
   }
   return tmp;
-};
+}
 export { SocialSdkGameResolver };

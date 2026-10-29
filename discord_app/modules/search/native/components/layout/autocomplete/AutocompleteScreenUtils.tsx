@@ -1,36 +1,36 @@
-// === Module 18466: AutocompleteScreenUtils ===
+// === Module 18700: AutocompleteScreenUtils ===
 
-// Module 18466 (AutocompleteScreenUtils)
+// Module 18700 (AutocompleteScreenUtils)
 import util from "util" /* 1125 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import LinkIcon from "LinkIcon" /* 5714 */;
-import ImageIcon from "ImageIcon" /* 8595 */;
-import PollsIcon from "PollsIcon" /* 10455 */;
-import AttachmentIcon from "AttachmentIcon" /* 10457 */;
-import VideoIcon from "VideoIcon" /* 11368 */;
-import RobotIcon from "RobotIcon" /* 12193 */;
-import UserIcon from "UserIcon" /* 12214 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 12970 */;
-import SearchUtils from "SearchUtils" /* 13463 */;
-import SoundboardIcon from "SoundboardIcon" /* 13685 */;
-import StickerIcon from "StickerIcon" /* 13690 */;
-import EmbedIcon from "EmbedIcon" /* 14304 */;
-import WebhookIcon from "WebhookIcon" /* 18467 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import LinkIcon from "LinkIcon" /* 5716 */;
+import ImageIcon from "ImageIcon" /* 8617 */;
+import PollsIcon from "PollsIcon" /* 10488 */;
+import AttachmentIcon from "AttachmentIcon" /* 10490 */;
+import VideoIcon from "VideoIcon" /* 11422 */;
+import RobotIcon from "RobotIcon" /* 12247 */;
+import UserIcon from "UserIcon" /* 12268 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 13191 */;
+import SearchUtils from "SearchUtils" /* 13696 */;
+import SoundboardIcon from "SoundboardIcon" /* 13918 */;
+import StickerIcon from "StickerIcon" /* 13923 */;
+import EmbedIcon from "EmbedIcon" /* 14538 */;
+import WebhookIcon from "WebhookIcon" /* 18701 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
-import SearchQueryStore from "SearchQueryStore" /* 13470 */;
+import SearchQueryStore from "SearchQueryStore" /* 13703 */;
 
 require = fn;
-const SearchListItemTypes = fn(9748).SearchListItemTypes;
+const SearchListItemTypes = fn(9780).SearchListItemTypes;
 const RelationshipTypes = fn(1084).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
 
-export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
+export function getSearchQueryChannelIds(items) {
   return new Set(SearchQueryStore.getChannelIds(items));
-};
-export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
+}
+export function getSearchQueryUserIds(items) {
   const prefixTag = SearchQueryStore.getPrefixTag(items);
   if (null == prefixTag) {
     const _Set2 = Set;
@@ -41,8 +41,8 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
     const set1 = new Set(SearchQueryStore.getUserIds(items, prefixTag.searchTokenType));
     return set1;
   }
-};
-export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
+}
+export function getSearchFilterHasIcon(text) {
   const intl = util.intl;
   if (intl.string(util.t.nrpA5E) === text) {
     return ForwardingIconDefault;
@@ -87,8 +87,8 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
       }
     }
   }
-};
-export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
+}
+export function getSearchFilterAuthorTypeIcon(text) {
   const intl = util.intl;
   if (intl.string(util.t.tPZo4p) === text) {
     return UserIcon.UserIcon;
@@ -103,8 +103,8 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
       }
     }
   }
-};
-export const toSearchListUserItem = function toSearchListUserItem(searchContext, user, callback2) {
+}
+export function toSearchListUserItem(searchContext, user, callback2) {
   const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
   if (null == user) {
     return null;
@@ -124,8 +124,8 @@ export const toSearchListUserItem = function toSearchListUserItem(searchContext,
     element.props = obj3;
     return element;
   }
-};
-export const toSearchListChannelItem = function toSearchListChannelItem(channel, callback3) {
+}
+export function toSearchListChannelItem(channel, callback3) {
   const id = channel;
   if (null == channel) {
     return null;
@@ -162,4 +162,4 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     }
     return tmp2;
   }
-};
+}

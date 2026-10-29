@@ -1,6 +1,6 @@
-// === Module 15247: StateManager ===
+// === Module 15482: StateManager ===
 
-// Module 15247 (StateManager)
+// Module 15482 (StateManager)
 import _modDef1354 from "module_1354" /* 1354 */;
 import size from "module_2" /* 2 */;
 

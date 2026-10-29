@@ -1,15 +1,15 @@
-// === Module 11446: ApplicationInstallUtils ===
+// === Module 11500: ApplicationInstallUtils ===
 
-// Module 11446 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5639 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9684 */;
+// Module 11500 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5640 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9716 */;
 
 require = fn;
-const BuiltInSectionId = fn(6019).BuiltInSectionId;
+const BuiltInSectionId = fn(6023).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
-export const canInstallApplication = function canInstallApplication(installAppProps) {
+export function canInstallApplication(installAppProps) {
   const integrationTypesConfig = installAppProps.integrationTypesConfig;
   let tmp = null != installAppProps.customInstallUrl || null != installAppProps.installParams;
   if (!tmp) {
@@ -36,8 +36,8 @@ export const canInstallApplication = function canInstallApplication(installAppPr
     tmp = someResult;
   }
   return tmp;
-};
-export const isAppUserInstallable = function isAppUserInstallable(integrationTypesConfig) {
+}
+export function isAppUserInstallable(integrationTypesConfig) {
   integrationTypesConfig = integrationTypesConfig.integrationTypesConfig;
   let tmp = null != integrationTypesConfig.customInstallUrl || null != integrationTypesConfig.installParams;
   if (!tmp) {
@@ -70,8 +70,8 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
     tmp = ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL in integrationTypesConfig;
   }
   return tmp;
-};
-export const shouldInstallApplicationOnDemand = function shouldInstallApplicationOnDemand(arg0) {
+}
+export function shouldInstallApplicationOnDemand(arg0) {
   ({ applicationId, channel, commandIntegrationTypes } = arg0);
   let tmp = null != commandIntegrationTypes;
   if (tmp) {
@@ -97,4 +97,4 @@ export const shouldInstallApplicationOnDemand = function shouldInstallApplicatio
     tmp4 = tmp6;
   }
   return tmp4;
-};
+}

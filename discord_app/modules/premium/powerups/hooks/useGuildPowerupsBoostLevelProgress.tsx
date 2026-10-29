@@ -1,8 +1,8 @@
-// === Module 8408: useGuildPowerupsBoostLevelProgress ===
+// === Module 8430: useGuildPowerupsBoostLevelProgress ===
 
-// Module 8408 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8404 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 8430 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8426 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   return num + tmp.available;
 });
-export const getGuildPowerupBoostLevelProgress = function getGuildPowerupBoostLevelProgress(id) {
+export function getGuildPowerupBoostLevelProgress(id) {
   const guildPowerupsBoostCount = useGuildPowerupsBoostCount.getGuildPowerupsBoostCount(id);
   guild = GuildStore.getGuild(id);
   let premiumTier;
@@ -141,4 +141,4 @@ export const getGuildPowerupBoostLevelProgress = function getGuildPowerupBoostLe
     premiumTier = constants.NONE;
   }
   return dependencyMap[premiumTier] + guildPowerupsBoostCount.available;
-};
+}

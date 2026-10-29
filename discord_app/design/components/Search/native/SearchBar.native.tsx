@@ -1,10 +1,10 @@
-// === Module 7181: Search/SearchBar ===
+// === Module 7205: Search/SearchBar ===
 
-// Module 7181 (Search/SearchBar)
+// Module 7205 (Search/SearchBar)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import TextField from "TextField" /* 7051 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7182 */;
+import TextField from "TextField" /* 7075 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7206 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

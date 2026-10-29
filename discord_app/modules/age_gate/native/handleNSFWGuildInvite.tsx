@@ -1,15 +1,15 @@
-// === Module 10049: handleNSFWGuildInvite ===
+// === Module 10081: handleNSFWGuildInvite ===
 
-// Module 10049 (handleNSFWGuildInvite)
+// Module 10081 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1084 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import GuildRecord from "GuildRecord" /* 4874 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 6700 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6701 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10050 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10051 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildRecord from "GuildRecord" /* 4875 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 6724 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6725 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10082 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10083 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ const items = [, ];
 const set = new Set(items);
 let result = size.fileFinishedImporting("modules/age_gate/native/handleNSFWGuildInvite.tsx");
 
-export const isNSFWInvite = function isNSFWInvite(guild) {
+export function isNSFWInvite(guild) {
   let nsfw_level;
   if (guild != null) {
     guild = guild.guild;
@@ -34,8 +34,8 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
     nsfw_level = GuildNSFWContentLevel.DEFAULT;
   }
   return set.has(nsfw_level);
-};
-export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1) {
+}
+export function handleNSFWGuildInvite(invite, arg1) {
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
@@ -106,4 +106,4 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
   } else {
     return false;
   }
-};
+}

@@ -1,10 +1,10 @@
-// === Module 16695: OrbsArcadeRewardUnlockedSheet ===
+// === Module 16933: OrbsArcadeRewardUnlockedSheet ===
 
-// Module 16695 (OrbsArcadeRewardUnlockedSheet)
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16663 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16669 */;
+// Module 16933 (OrbsArcadeRewardUnlockedSheet)
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16901 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16907 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16662 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16900 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -107,11 +107,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
           return closure_4.getGame(gameId);
         }
       }
-      const orbsArcadeClaimableRewards = tmp(16669).getOrbsArcadeClaimableRewards(stateFromStores.rewards, stateFromStores1);
+      const orbsArcadeClaimableRewards = tmp(16907).getOrbsArcadeClaimableRewards(stateFromStores.rewards, stateFromStores1);
       cResult[11] = stateFromStores.rewards;
       cResult[12] = stateFromStores1;
       cResult[13] = orbsArcadeClaimableRewards;
-      const tmpResult4 = tmp(16669);
+      const tmpResult4 = tmp(16907);
     }
   }
   let everyResult;

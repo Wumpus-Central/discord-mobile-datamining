@@ -1,11 +1,11 @@
-// === Module 7667: DraftCommand ===
+// === Module 7690: DraftCommand ===
 
-// Module 7667 (DraftCommand)
+// Module 7690 (DraftCommand)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
 
-export const isDraftCommandValidForText = function isDraftCommandValidForText(command1, substr) {
+export function isDraftCommandValidForText(command1, substr) {
   let tmp = null != command1;
   if (tmp) {
     let startsWithResult = substr === command1.commandText;
@@ -16,4 +16,4 @@ export const isDraftCommandValidForText = function isDraftCommandValidForText(co
     tmp = startsWithResult;
   }
   return tmp;
-};
+}

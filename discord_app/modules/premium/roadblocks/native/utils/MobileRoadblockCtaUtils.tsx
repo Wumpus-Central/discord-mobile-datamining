@@ -1,17 +1,17 @@
-// === Module 14286: MobileRoadblockCtaUtils ===
+// === Module 14520: MobileRoadblockCtaUtils ===
 
-// Module 14286 (MobileRoadblockCtaUtils)
+// Module 14520 (MobileRoadblockCtaUtils)
 import util from "util" /* 1125 */;
 import PremiumConstants from "PremiumConstants" /* 1391 */;
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import getTrialCtaOverride from "getTrialCtaOverride" /* 9835 */;
-import MobileRoadblockOfferCtaExperiment from "MobileRoadblockOfferCtaExperiment" /* 14287 */;
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import getTrialCtaOverride from "getTrialCtaOverride" /* 9867 */;
+import MobileRoadblockOfferCtaExperiment from "MobileRoadblockOfferCtaExperiment" /* 14521 */;
 import size from "module_2" /* 2 */;
 
 const PremiumSubscriptionSKUs = PremiumConstants.PremiumSubscriptionSKUs;
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/MobileRoadblockCtaUtils.tsx");
 
-export const formatMobileRoadblockOfferText = function formatMobileRoadblockOfferText(arg0) {
+export function formatMobileRoadblockOfferText(arg0) {
   ({ subscriptionTier, trialOffer, discountOffer } = arg0);
   if (subscriptionTier !== PremiumSubscriptionSKUs.TIER_2) {
     return null;
@@ -40,8 +40,8 @@ export const formatMobileRoadblockOfferText = function formatMobileRoadblockOffe
     }
     return result;
   }
-};
-export const getMobileRoadblockButtonText = function getMobileRoadblockButtonText(arg0) {
+}
+export function getMobileRoadblockButtonText(arg0) {
   ({ subscriptionTier, trialOffer, discountOffer } = arg0);
   let isReferralTrial;
   if (trialOffer != null) {
@@ -89,4 +89,4 @@ export const getMobileRoadblockButtonText = function getMobileRoadblockButtonTex
     }
     return tmp8;
   }
-};
+}

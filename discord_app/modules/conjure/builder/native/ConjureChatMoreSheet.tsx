@@ -1,14 +1,14 @@
-// === Module 12298: ConjureChatMoreSheet ===
+// === Module 12352: ConjureChatMoreSheet ===
 
-// Module 12298 (ConjureChatMoreSheet)
-import _modDef3863 from "module_3863" /* 3863 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+// Module 12352 (ConjureChatMoreSheet)
+import _modDef3864 from "module_3864" /* 3864 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let closure_3 = ["canAnnotate"];
-const conjureDesignFeedbackStore = fn(11811);
+const conjureDesignFeedbackStore = fn(11865);
 ({ enterConjureDesignFeedback: hasOwnProperty, exitConjureDesignFeedback: metroRequire, useConjureDesignFeedback: closure_7 } = conjureDesignFeedbackStore);
 const jsx = fn(21).jsx;
 const ConjureChatMoreSheet = "ConjureChatMoreSheet";
@@ -18,7 +18,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
   if ("switch" === row.row.kind) {
     if (cResult[0] !== iter.IconComponent) {
       const obj2 = { IconComponent: iter.IconComponent };
-      const tmp13 = jsx(tmp(6947).TableRowIcon, { IconComponent: iter.IconComponent });
+      const tmp13 = jsx(tmp(6971).TableRowIcon, { IconComponent: iter.IconComponent });
       cResult[0] = iter.IconComponent;
       cResult[1] = tmp13;
       let tmp11 = tmp13;
@@ -61,7 +61,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
     obj3.icon = tmp11;
     ({ value: obj5.value, disabled: obj5.disabled } = iter);
     obj3.onValueChange = tmp14;
-    const tmp17 = jsx(tmp(7331).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
+    const tmp17 = jsx(tmp(7355).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
     cResult[4] = iter.disabled;
     cResult[5] = iter.label;
     cResult[6] = iter.subLabel;
@@ -111,7 +111,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
         }
       }
       const obj4 = { label: iter.label, variant: str, icon: tmp4, onPress: C };
-      const tmp10 = jsx(tmp(6939).TableRow, { label: iter.label, variant: str, icon: tmp4, onPress: C });
+      const tmp10 = jsx(tmp(6963).TableRow, { label: iter.label, variant: str, icon: tmp4, onPress: C });
       cResult[16] = iter.label;
       cResult[17] = tmp4;
       cResult[18] = C;
@@ -119,7 +119,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
       cResult[20] = tmp10;
     }
     const obj9 = { IconComponent: iter.IconComponent, variant: str };
-    const tmp6 = jsx(tmp(6947).TableRowIcon, { IconComponent: iter.IconComponent, variant: str });
+    const tmp6 = jsx(tmp(6971).TableRowIcon, { IconComponent: iter.IconComponent, variant: str });
     cResult[11] = iter.IconComponent;
     cResult[12] = str;
     cResult[13] = tmp6;
@@ -132,7 +132,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
     const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
     ({ label: obj3.label, subLabel: obj3.subLabel } = row);
     const obj4 = { IconComponent: row.IconComponent };
-    obj2.icon = jsx(row(6947).TableRowIcon, { IconComponent: row.IconComponent });
+    obj2.icon = jsx(row(6971).TableRowIcon, { IconComponent: row.IconComponent });
     ({ value: obj3.value, disabled: obj3.disabled } = row);
     obj2.onValueChange = function onValueChange(arg0) {
       let tmp = arg0;
@@ -144,7 +144,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
       }
       row.onValueChange(arg0);
     };
-    return jsx(row(7331).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
+    return jsx(row(7355).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
   } else {
     let str = "default";
     if (true === row.destructive) {
@@ -152,12 +152,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreRo
     }
     let obj = { label: row.label, variant: str, icon: null, onPress: null };
     const obj7 = { IconComponent: row.IconComponent, variant: str };
-    obj.icon = jsx(row(6947).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+    obj.icon = jsx(row(6971).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
     obj.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
       row.onPress();
     };
-    return jsx(row(6939).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+    return jsx(row(6963).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 });
 ReactCompilerGating = fn(558);
@@ -169,10 +169,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const tmp4 = _objectWithoutProperties(canAnnotate, closure_3);
   id = tmp4.project.id;
   const obj = id(576);
-  const isConjureProjectMuted = id(10760).useIsConjureProjectMuted(id);
-  const obj2 = id(10760);
-  const conjureControlActive = id(10799).useConjureControlActive(id);
-  const obj3 = id(10799);
+  const isConjureProjectMuted = id(10835).useIsConjureProjectMuted(id);
+  const obj2 = id(10835);
+  const conjureControlActive = id(10875).useConjureControlActive(id);
+  const obj3 = id(10875);
   const obj5 = {};
   const merged = Object.assign(tmp4);
   obj5.muted = isConjureProjectMuted;
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     tmp8 = obj6;
   }
   obj5.annotate = tmp8;
-  const result = id(12299).conjureChatMoreSections(obj5);
-  const ActionSheet = tmp(7334).ActionSheet;
+  const result = id(12353).conjureChatMoreSections(obj5);
+  const ActionSheet = tmp(7358).ActionSheet;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1125).intl;
-    const stringResult = intl.string(_modDef3863.OsD9T0);
+    const stringResult = intl.string(_modDef3864.OsD9T0);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -227,15 +227,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   cResult[4] = mapped;
   cResult[5] = tmp15;
   tmp14 = tmp15;
-  const obj4 = id(12299);
+  const obj4 = id(12353);
 }) : (function ConjureChatMoreSheet(canAnnotate) {
   let tmp = null;
   const merged = Object.assign(canAnnotate, Object.assign({ canAnnotate: 0 }));
   const id = merged.project.id;
-  const isConjureProjectMuted = id(10760).useIsConjureProjectMuted(id);
-  const obj = id(10760);
-  const conjureControlActive = id(10799).useConjureControlActive(id);
-  const obj2 = id(10799);
+  const isConjureProjectMuted = id(10835).useIsConjureProjectMuted(id);
+  const obj = id(10835);
+  const conjureControlActive = id(10875).useConjureControlActive(id);
+  const obj2 = id(10875);
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.muted = isConjureProjectMuted;
@@ -255,11 +255,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(12299).conjureChatMoreSections(obj4);
+  const result = id(12353).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1125).intl;
-  obj6.dismissAccessibilityLabel = intl.string(_modDef3863.OsD9T0);
+  obj6.dismissAccessibilityLabel = intl.string(_modDef3864.OsD9T0);
   obj6.children = result.map((arr) => jsx(id(dependencyMap[16]).TableRowGroup, { hasIcons: true, children: arr.map((row) => closure_1_8(closure_1_10, { row }, row.key)) }, arr[0].key));
-  return jsx(id(7334).ActionSheet, { dismissAccessibilityLabel: null, children: null });
+  return jsx(id(7358).ActionSheet, { dismissAccessibilityLabel: null, children: null });
 });
 export const CONJURE_CHAT_MORE_SHEET_KEY = "ConjureChatMoreSheet";

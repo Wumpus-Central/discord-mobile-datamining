@@ -1,18 +1,18 @@
-// === Module 18147: getNotificationCenterItemBody ===
+// === Module 18381: getNotificationCenterItemBody ===
 
-// Module 18147 (getNotificationCenterItemBody)
+// Module 18381 (getNotificationCenterItemBody)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1125 */;
-import StringUtils from "StringUtils" /* 2030 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6823 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6819 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import StringUtils from "StringUtils" /* 2031 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6846 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const isGuildEventEnded = fn(6819).isGuildEventEnded;
+const isGuildEventEnded = fn(6842).isGuildEventEnded;
 const Constants = fn(1084);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);
@@ -221,7 +221,7 @@ export default function getNotificationCenterItemBody(arg0) {
     return str;
   }
 };
-export const getFriendRequestSentBody = function getFriendRequestSentBody(user) {
+export function getFriendRequestSentBody(user) {
   const intl = util.intl;
   return intl.format(util.t.gZVTy2, { user });
-};
+}

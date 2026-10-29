@@ -1,11 +1,11 @@
-// === Module 16082: MutexUtils ===
+// === Module 16318: MutexUtils ===
 
-// Module 16082 (MutexUtils)
+// Module 16318 (MutexUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");
 
-export const createLock = function createLock() {
+export function createLock() {
   closure_0 = Promise.resolve(null);
   return (arg0) => {
     let promise = new Promise((arg0, arg1) => {
@@ -13,8 +13,8 @@ export const createLock = function createLock() {
     });
     return promise;
   };
-};
-export const createObservableLock = function createObservableLock(arg0) {
+}
+export function createObservableLock(arg0) {
   closure_0 = Promise.resolve(null);
   closure_1 = [];
   c2 = false;
@@ -50,4 +50,4 @@ export const createObservableLock = function createObservableLock(arg0) {
   mutex.isMutexHeld = () => closure_1.length > 0;
   mutex.getLockHolders = () => closure_1;
   return mutex;
-};
+}

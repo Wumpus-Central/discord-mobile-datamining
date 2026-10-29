@@ -1,8 +1,8 @@
-// === Module 17632: createChatPanelNativeStackNavigator ===
+// === Module 17870: createChatPanelNativeStackNavigator ===
 
-// Module 17632 (createChatPanelNativeStackNavigator)
-import Link from "Link" /* 1503 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
+// Module 17870 (createChatPanelNativeStackNavigator)
+import Link from "Link" /* 1504 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPan
                                         addListener = tmp.addListener;
                                         if (addListener != null) {
                                           str = "tabPress";
-                                          addListenerResult = addListener("tabPress", () => { ... });
+                                          addListenerResult = addListener("tabPress", /* F156458 */ function() { ... });
                                         }
                                       }
                                       return addListenerResult;
@@ -120,7 +120,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPan
                                 addListener = tmp.addListener;
                                 if (addListener != null) {
                                   str = "tabPress";
-                                  addListenerResult = addListener("tabPress", () => { ... });
+                                  addListenerResult = addListener("tabPress", /* F156458 */ function() { ... });
                                 }
                               }
                               return addListenerResult;
@@ -148,7 +148,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPan
                             addListener = tmp.addListener;
                             if (addListener != null) {
                               str = "tabPress";
-                              addListenerResult = addListener("tabPress", () => { ... });
+                              addListenerResult = addListener("tabPress", /* F156458 */ function() { ... });
                             }
                           }
                           return addListenerResult;
@@ -206,7 +206,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPan
                             addListener = tmp.addListener;
                             if (addListener != null) {
                               str = "tabPress";
-                              addListenerResult = addListener("tabPress", () => { ... });
+                              addListenerResult = addListener("tabPress", /* F156458 */ function() { ... });
                             }
                           }
                           return addListenerResult;

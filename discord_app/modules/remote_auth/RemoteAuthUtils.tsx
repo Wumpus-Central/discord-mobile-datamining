@@ -1,7 +1,7 @@
-// === Module 17684: RemoteAuthUtils ===
+// === Module 17922: RemoteAuthUtils ===
 
-// Module 17684 (RemoteAuthUtils)
-import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 17682 */;
+// Module 17922 (RemoteAuthUtils)
+import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 17920 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRecord from "UserRecord" /* 1403 */;
@@ -35,7 +35,7 @@ let closure_5 = async function _decodeEncodedUserRecord() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
 
-export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
+export function decodeEncodedUserRecord() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -44,4 +44,4 @@ export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

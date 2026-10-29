@@ -1,16 +1,16 @@
-// === Module 9049: GuildEventUtils ===
+// === Module 9052: GuildEventUtils ===
 
-// Module 9049 (GuildEventUtils)
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8539 */;
-import _modDef8963 from "module_8963" /* 8963 */;
-import LocationIcon2 from "LocationIcon" /* 8964 */;
+// Module 9052 (GuildEventUtils)
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8561 */;
+import _modDef8966 from "module_8966" /* 8966 */;
+import LocationIcon2 from "LocationIcon" /* 8967 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 
-export const getEventLocationIconSource = function getEventLocationIconSource(event, channel, stateFromStores2) {
+export function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
-    let tmp4 = _modDef8963;
+    let tmp4 = _modDef8966;
   } else {
     tmp4 = null;
     if (null != channel) {
@@ -23,8 +23,8 @@ export const getEventLocationIconSource = function getEventLocationIconSource(ev
     }
   }
   return tmp4;
-};
-export const getEventLocationIconComponent = function getEventLocationIconComponent(event, stateFromStores, stateFromStores1) {
+}
+export function getEventLocationIconComponent(event, stateFromStores, stateFromStores1) {
   if (null != obj.getLocationFromEvent(event)) {
     let LocationIcon = LocationIcon2.LocationIcon;
   } else {
@@ -43,4 +43,4 @@ export const getEventLocationIconComponent = function getEventLocationIconCompon
     }
   }
   return LocationIcon;
-};
+}

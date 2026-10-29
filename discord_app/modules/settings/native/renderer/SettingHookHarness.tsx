@@ -1,13 +1,13 @@
-// === Module 16093: SettingHookHarness ===
+// === Module 16329: SettingHookHarness ===
 
-// Module 16093 (SettingHookHarness)
+// Module 16329 (SettingHookHarness)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 16094 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 16330 */;
 
 const require = fn;
-const NodeType = fn(11249).NodeType;
+const NodeType = fn(11303).NodeType;
 let closure_7 = [];
 const map = new Map();
 const map1 = new Map();
@@ -74,13 +74,13 @@ export default noop.memo(function SettingHookHarness() {
   });
   return null;
 });
-export const getCachedSettingTitle = function getCachedSettingTitle(setting) {
+export function getCachedSettingTitle(setting) {
   return map.get(setting);
-};
-export const getCachedSettingSearchTerms = function getCachedSettingSearchTerms(arg0) {
+}
+export function getCachedSettingSearchTerms(arg0) {
   value = map1.get(arg0);
   if (value == null) {
     value = closure_7;
   }
   return value;
-};
+}

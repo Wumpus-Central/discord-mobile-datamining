@@ -1,11 +1,11 @@
-// === Module 7770: FriendSuggestionStore ===
+// === Module 7792: FriendSuggestionStore ===
 
-// Module 7770 (FriendSuggestionStore)
+// Module 7792 (FriendSuggestionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7771 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7772 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7793 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7794 */;
 import UserRecord from "UserRecord" /* 1403 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -121,7 +121,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionStore.tsx");
 
 export default friendSuggestionStore;
-export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
+export function transformFriendSuggestions(arg0) {
   const mapped = _modDef12.chain(arg0).map((contact_names) => {
     if (null != contact_names.contact_names) {
       if (contact_names.contact_names.length >= 2) {
@@ -144,4 +144,4 @@ export const transformFriendSuggestions = function transformFriendSuggestions(ar
   });
   const chainResult = _modDef12.chain(arg0);
   return mapped.keyBy((key) => key.key).value();
-};
+}

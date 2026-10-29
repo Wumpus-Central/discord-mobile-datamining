@@ -1,12 +1,12 @@
-// === Module 7664: GuildMemberSafetySearchUtils ===
+// === Module 7687: GuildMemberSafetySearchUtils ===
 
-// Module 7664 (GuildMemberSafetySearchUtils)
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7665 */;
+// Module 7687 (GuildMemberSafetySearchUtils)
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
 
-export const splitQuery = function splitQuery(query) {
+export function splitQuery(query) {
   const parts = query.split(",");
   const mapped = parts.map((item) => item.trim());
   const items = [];
@@ -21,4 +21,4 @@ export const splitQuery = function splitQuery(query) {
   });
   const items2 = [items1, items];
   return items2;
-};
+}

@@ -1,12 +1,12 @@
-// === Module 17655: getDeviceCountry ===
+// === Module 17893: getDeviceCountry ===
 
-// Module 17655 (getDeviceCountry)
+// Module 17893 (getDeviceCountry)
 import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
-export const getDeviceCountry = function getDeviceCountry() {
+export function getDeviceCountry() {
   const _default = NativeDeviceLocaleModule.default;
   let Language;
   if (_default != null) {
@@ -22,4 +22,4 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-};
+}

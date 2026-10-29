@@ -1,22 +1,22 @@
-// === Module 11782: convertRouteToNavigation ===
+// === Module 11836: convertRouteToNavigation ===
 
-// Module 11782 (convertRouteToNavigation)
+// Module 11836 (convertRouteToNavigation)
 import Constants from "Constants" /* 1084 */;
-import matchPathCompat from "matchPathCompat" /* 5040 */;
-import RouteUtils from "RouteUtils" /* 5053 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import useChatLayout from "useChatLayout" /* 5189 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6843 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9750 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10856 */;
-import handleConjureRouteDefault from "handleConjureRoute" /* 11783 */;
+import matchPathCompat from "matchPathCompat" /* 5041 */;
+import RouteUtils from "RouteUtils" /* 5054 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import useChatLayout from "useChatLayout" /* 5190 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6866 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9782 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10932 */;
+import handleConjureRouteDefault from "handleConjureRoute" /* 11837 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
 const result = size.fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
 
-export const convertRouteToNavigation = function convertRouteToNavigation(pathname) {
+export function convertRouteToNavigation(pathname) {
   pathname = pathname.pathname;
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
@@ -139,4 +139,4 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
     }
   }
   return true;
-};
+}

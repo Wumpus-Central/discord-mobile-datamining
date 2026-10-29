@@ -1,14 +1,14 @@
-// === Module 9492: OrderSigningErrors ===
+// === Module 9523: OrderSigningErrors ===
 
-// Module 9492 (OrderSigningErrors)
-import BillingErrorDefault from "BillingError" /* 4827 */;
-import PaymentConstants from "PaymentConstants" /* 5734 */;
+// Module 9523 (OrderSigningErrors)
+import BillingErrorDefault from "BillingError" /* 4828 */;
+import PaymentConstants from "PaymentConstants" /* 5736 */;
 import size from "module_2" /* 2 */;
 
 const OrderClientErrorCode = PaymentConstants.OrderClientErrorCode;
 const result = size.fileFinishedImporting("modules/payments/OrderSigningErrors.tsx");
 
-export const getOrderSigningError = function getOrderSigningError(error) {
+export function getOrderSigningError(error) {
   error = error.error;
   let tmp = null;
   if (null != error) {
@@ -18,4 +18,4 @@ export const getOrderSigningError = function getOrderSigningError(error) {
     }
   }
   return tmp;
-};
+}

@@ -1,7 +1,7 @@
-// === Module 10228: HorizontalAutocompleteWrapper ===
+// === Module 10261: HorizontalAutocompleteWrapper ===
 
-// Module 10228 (HorizontalAutocompleteWrapper)
-import timing from "timing" /* 5242 */;
+// Module 10261 (HorizontalAutocompleteWrapper)
+import timing from "timing" /* 5243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

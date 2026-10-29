@@ -1,7 +1,7 @@
-// === Module 18245: CardHeightMeasurer ===
+// === Module 18479: CardHeightMeasurer ===
 
-// Module 18245 (CardHeightMeasurer)
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8878 */;
+// Module 18479 (CardHeightMeasurer)
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ export const CardHeightMeasurer = noop.memo(ReactCompilerGating.isReactCompilerE
   const cResult = itemId(576).c(8);
   itemId = itemId.itemId;
   const children = itemId.children;
-  const width = noop.useContext(itemId(18180).ICYMIContext).width;
+  const width = noop.useContext(itemId(18414).ICYMIContext).width;
   if (cResult[0] !== itemId) {
     const fn = function l(nativeEvent) {
       ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
@@ -53,5 +53,5 @@ export const CardHeightMeasurer = noop.memo(ReactCompilerGating.isReactCompilerE
   const items = [itemId];
   return <View onLayout={noop.useCallback((nativeEvent) => {
     ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
-  }, items)} pointerEvents="box-none" style={{ width: noop.useContext(itemId(18180).ICYMIContext).width, alignSelf: "center" }}>{children.children}</View>;
+  }, items)} pointerEvents="box-none" style={{ width: noop.useContext(itemId(18414).ICYMIContext).width, alignSelf: "center" }}>{children.children}</View>;
 }));

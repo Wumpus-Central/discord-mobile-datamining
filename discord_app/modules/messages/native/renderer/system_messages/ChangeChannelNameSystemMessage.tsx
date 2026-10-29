@@ -1,19 +1,19 @@
-// === Module 8372: ChangeChannelNameSystemMessage ===
+// === Module 8394: ChangeChannelNameSystemMessage ===
 
-// Module 8372 (ChangeChannelNameSystemMessage)
+// Module 8394 (ChangeChannelNameSystemMessage)
 import util from "util" /* 1125 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8344 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8358 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8366 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8380 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx");
 
-export const createChangeChannelNameSystemMessage = function createChangeChannelNameSystemMessage(message) {
+export function createChangeChannelNameSystemMessage(message) {
   message = message.message;
   ({ theme, roleStyle } = message);
   const tmp3 = resolveMessageContentColorsDefault(theme);
@@ -72,4 +72,4 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
   }
   const merged1 = Object.assign(tmp12);
   return { content: formatToPartsResult };
-};
+}

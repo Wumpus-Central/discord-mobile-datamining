@@ -1,8 +1,8 @@
-// === Module 11477: useVideoReadyTimeout ===
+// === Module 11531: useVideoReadyTimeout ===
 
-// Module 11477 (useVideoReadyTimeout)
+// Module 11531 (useVideoReadyTimeout)
 import DurationsDefault from "Durations" /* 1101 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11478 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11532 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,8 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
                             tmp4 = closure_5;
                             current = closure_5.current;
                             tmp5 = loading;
-                            startResult = current.start(loading, () => { ... });
-                            return () => { ... };
+                            startResult = current.start(loading, /* F150945 */ function() { ... });
+                            return /* F150946 */ function() { ... };
                           }
                         }
                       }
@@ -86,8 +86,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
                         tmp4 = closure_5;
                         current = closure_5.current;
                         tmp5 = loading;
-                        startResult = current.start(loading, () => { ... });
-                        return () => { ... };
+                        startResult = current.start(loading, /* F150945 */ function() { ... });
+                        return /* F150946 */ function() { ... };
                       }
                     }
                   }
@@ -115,8 +115,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
               tmp4 = closure_5;
               current = closure_5.current;
               tmp5 = loading;
-              startResult = current.start(loading, () => { ... });
-              return () => { ... };
+              startResult = current.start(loading, /* F150945 */ function() { ... });
+              return /* F150946 */ function() { ... };
             }
           }
         }

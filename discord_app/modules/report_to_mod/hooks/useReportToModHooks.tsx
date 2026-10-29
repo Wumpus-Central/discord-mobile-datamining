@@ -1,14 +1,14 @@
-// === Module 10118: useReportToModHooks ===
+// === Module 10151: useReportToModHooks ===
 
-// Module 10118 (useReportToModHooks)
+// Module 10151 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7403 */;
-import ReportToModUtils from "ReportToModUtils" /* 7420 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7424 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7601 */;
-import UserActionCreators from "UserActionCreators" /* 8707 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import MessageStore from "MessageStore" /* 6045 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7426 */;
+import ReportToModUtils from "ReportToModUtils" /* 7443 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7447 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7624 */;
+import UserActionCreators from "UserActionCreators" /* 8710 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import MessageStore from "MessageStore" /* 6049 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -124,12 +124,12 @@ const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReport
 
 export const useIsReportToModEnabled = tmp2;
 export const useReportToModChannelId = tmp3;
-export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
+export function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
   return ReportToModUtils.isModeratorReportOrPostChannel(isModeratorReportChannel);
-};
-export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
+}
+export function useIsModeratorReportPostChannel(isModeratorReportChannel) {
   return ReportToModUtils.isModeratorReportPostChannel(isModeratorReportChannel);
-};
+}
 export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadReportedMessage(messageReference) {
   const cResult = messageReference(576).c(7);
   messageReference = messageReference.messageReference;
@@ -207,7 +207,7 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
     }
   }, items1);
 });
-export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSnapshot(arg0) {
+export function loadOriginalAuthorFromSnapshot(arg0) {
   let reported_user_id;
   if (arg0 != null) {
     const first = arg0.messageSnapshots[0];
@@ -221,4 +221,4 @@ export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSna
   if (null != reported_user_id) {
     const user = UserActionCreators.getUser(reported_user_id);
   }
-};
+}

@@ -1,9 +1,9 @@
-// === Module 16013: merged15 ===
+// === Module 16250: merged15 ===
 
-// Module 16013 (merged15)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7544 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import validateTransportType from "validateTransportType" /* 16015 */;
+// Module 16250 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7567 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import validateTransportType from "validateTransportType" /* 16252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
             closure_131_6 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -265,7 +265,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6413);
+let Constants = fn(6437);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1084);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(15987);
+let CONTEXT_MENU_ICON_NAMES = fn(16215);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(15987);
+CONTEXT_MENU_ICON_NAMES = fn(16215);
 let obj7 = {
   scope: null,
   handler(arg0) {

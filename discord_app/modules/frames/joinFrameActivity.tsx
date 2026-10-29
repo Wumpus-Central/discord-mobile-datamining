@@ -1,12 +1,12 @@
-// === Module 12768: joinFrameActivity ===
+// === Module 12985: joinFrameActivity ===
 
-// Module 12768 (joinFrameActivity)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11386 */;
+// Module 12985 (joinFrameActivity)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7471 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11440 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 require = fn;
 let closure_12 = async function _joinFrameActivity(arg0) {
@@ -20,7 +20,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             };
             c9 = 1;
             c10 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         break;
         case 1:
@@ -425,7 +425,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -510,10 +510,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(6811).makeFrameId;
+const makeFrameId = fn(6834).makeFrameId;
 const Constants = fn(1084);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: c10 } = Constants);
-const ActivityIntent = fn(2023).ActivityIntent;
+const ActivityIntent = fn(2024).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

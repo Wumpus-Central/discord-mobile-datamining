@@ -1,7 +1,7 @@
-// === Module 11428: useIsPrivateChannelWithEnabledActivities ===
+// === Module 11482: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 11428 (useIsPrivateChannelWithEnabledActivities)
-import ChannelStore from "ChannelStore" /* 4856 */;
+// Module 11482 (useIsPrivateChannelWithEnabledActivities)
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPri
   }
   return flag;
 });
-export const isPrivateChannelWithEnabledActivities = function isPrivateChannelWithEnabledActivities(arg0) {
+export function isPrivateChannelWithEnabledActivities(arg0) {
   if (null == arg0) {
     return false;
   } else {
@@ -74,4 +74,4 @@ export const isPrivateChannelWithEnabledActivities = function isPrivateChannelWi
     }
     return flag;
   }
-};
+}

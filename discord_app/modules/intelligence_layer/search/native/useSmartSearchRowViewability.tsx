@@ -1,11 +1,11 @@
-// === Module 18410: useSmartSearchRowViewability ===
+// === Module 18644: useSmartSearchRowViewability ===
 
-// Module 18410 (useSmartSearchRowViewability)
-import useChatLayoutDefault from "useChatLayout" /* 5189 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13478 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13480 */;
+// Module 18644 (useSmartSearchRowViewability)
+import useChatLayoutDefault from "useChatLayout" /* 5190 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13711 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13713 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 const require = fn;
 let ReactCompilerGating = fn(558);
@@ -54,7 +54,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmar
     const effect = noop.useEffect(S, tmp14);
   }
   const obj4 = require("Link");
-  let tmp8 = null != tmp(5186).coerceChannelRoute({ name: currentNavigationRouteName });
+  let tmp8 = null != tmp(5187).coerceChannelRoute({ name: currentNavigationRouteName });
   if (!tmp8) {
     class S {
       constructor() {
@@ -80,7 +80,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmar
   cResult[1] = isChatLockedOpen;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-  const tmpResult = tmp(5186);
+  const tmpResult = tmp(5187);
 }) : (function useSmartSearchRowNavigationState() {
   const currentNavigationRouteName = require("NavigationRouteUtils").useCurrentNavigationRouteName();
   const context = noop.useContext(require("SwipeForMemberListContext").SwipeForMemberListContext);
@@ -93,8 +93,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmar
   if (!tmp6) {
     if (isChatLockedOpen) {
       const obj5 = { name: currentNavigationRouteName };
-      isChatLockedOpen = null != tmp(5186).coerceGuildsRoute(obj5);
-      const tmpResult = tmp(5186);
+      isChatLockedOpen = null != tmp(5187).coerceGuildsRoute(obj5);
+      const tmpResult = tmp(5187);
     }
     tmp6 = isChatLockedOpen;
   }
@@ -150,7 +150,7 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const fn3 = function f() {
       return () => {
-        closure_1_1(13480).setIsRowViewable(false, closure_1_1(13478));
+        closure_1_1(13713).setIsRowViewable(false, closure_1_1(13711));
       };
     };
     const items2 = [];
@@ -176,6 +176,6 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
     SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items1);
   const effect1 = noop.useEffect(() => () => {
-    closure_1_1(13480).setIsRowViewable(false, closure_1_1(13478));
+    closure_1_1(13713).setIsRowViewable(false, closure_1_1(13711));
   }, []);
 });

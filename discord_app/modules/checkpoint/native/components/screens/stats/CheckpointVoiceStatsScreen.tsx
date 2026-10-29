@@ -1,24 +1,29 @@
-// === Module 13208: CheckpointVoiceStatsScreen ===
+// === Module 13446: CheckpointVoiceStatsScreen ===
 
-// Module 13208 (CheckpointVoiceStatsScreen)
+// Module 13446 (CheckpointVoiceStatsScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3057 from "module_3057" /* 3057 */;
-import _modDef3089 from "module_3089" /* 3089 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11686 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 13018 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13217 */;
+import _modDef3058 from "module_3058" /* 3058 */;
+import _modDef3090 from "module_3090" /* 3090 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11740 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 13249 */;
+import CheckpointTextDefault from "CheckpointText" /* 13436 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13438 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13442 */;
+import _modDef13448 from "module_13448" /* 13448 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13450 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13451 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13015 */;
+import CheckpointStore from "CheckpointStore" /* 13236 */;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6050).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6054).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, title: null, titleText: null, imageContainer: null, image: null, copy: null, number: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -58,20 +63,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [CheckpointStore];
-    const fn2 = function f() {
-      const globalStats = CheckpointStore.globalStats;
-      let peakHourUtc;
-      if (globalStats != null) {
-        const voice = globalStats.voice;
-        if (voice != null) {
-          peakHourUtc = voice.peakHourUtc;
+    class S {
+      constructor() {
+        globalStats = closure_1_5.globalStats;
+        peakHourUtc = undefined;
+        if (globalStats != null) {
+          voice = globalStats.voice;
+          if (voice != null) {
+            peakHourUtc = voice.peakHourUtc;
+          }
         }
+        return peakHourUtc;
       }
-      return peakHourUtc;
-    };
+    }
     cResult[2] = items1;
-    cResult[3] = fn2;
-    let tmp10 = fn2;
+    cResult[3] = S;
+    let tmp10 = S;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
@@ -87,103 +94,148 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
             if (cResult[9] === tmp4.number) {
               if (cResult[10] === tmp4.title) {
                 if (cResult[11] === tmp4.titleText) {
-                  let totalVoiceMinutes;
-                  if (stateFromStores != null) {
-                    totalVoiceMinutes = stateFromStores.totalVoiceMinutes;
+                  class S {
+                    constructor() {
+                      globalStats = closure_1_5.globalStats;
+                      peakHourUtc = undefined;
+                      if (globalStats != null) {
+                        voice = globalStats.voice;
+                        if (voice != null) {
+                          peakHourUtc = voice.peakHourUtc;
+                        }
+                      }
+                      return peakHourUtc;
+                    }
                   }
-                  if (cResult[12] === totalVoiceMinutes) {
-                    let prop;
+                  if (cResult[12] === undefined) {
                     if (stateFromStores != null) {
-                      prop = stateFromStores.totalVoiceMinutesPercentile;
+                      const totalVoiceMinutesPercentile = stateFromStores.totalVoiceMinutesPercentile;
                     }
-                    if (cResult[13] === prop) {
-                      let tmp16 = cResult[14];
-                      let tmp17 = cResult[15];
-                      let tmp18 = cResult[16];
-                      let tmp19 = cResult[17];
-                      let tmp20 = cResult[18];
-                      let tmp21 = cResult[19];
-                      let tmp22 = cResult[20];
-                      let str = cResult[21];
-                      let tmp23 = cResult[22];
-                      let tmp24 = cResult[23];
-                      let tmp25 = cResult[24];
-                      let tmp26 = cResult[25];
-                      let tmp27 = cResult[26];
+                    class S {
+                      constructor() {
+                        globalStats = closure_1_5.globalStats;
+                        peakHourUtc = undefined;
+                        if (globalStats != null) {
+                          voice = globalStats.voice;
+                          if (voice != null) {
+                            peakHourUtc = voice.peakHourUtc;
+                          }
+                        }
+                        return peakHourUtc;
+                      }
                     }
-                    if (cResult[38] === tmp16) {
+                    if (cResult[38] === tmp58) {
                       if (cResult[39] === str) {
                         if (cResult[40] === tmp23) {
                           if (cResult[41] === tmp24) {
-                            let tmp61 = cResult[42];
+                            let tmp62 = cResult[42];
                           }
-                          if (cResult[43] === tmp17) {
+                          if (cResult[43] === View) {
                             if (cResult[44] === tmp20) {
-                              if (cResult[45] === tmp61) {
+                              if (cResult[45] === tmp62) {
                                 if (cResult[46] === tmp25) {
                                   if (cResult[47] === tmp26) {
                                     if (cResult[48] === tmp27) {
-                                      let tmp64 = cResult[49];
+                                      let tmp65 = cResult[49];
                                     }
-                                    if (cResult[50] === tmp18) {
+                                    if (cResult[50] === View) {
                                       if (cResult[51] === tmp21) {
                                         if (cResult[52] === tmp22) {
-                                          if (cResult[53] === tmp64) {
-                                            let tmp67 = cResult[54];
+                                          if (cResult[53] === tmp65) {
+                                            let tmp69 = cResult[54];
                                           }
                                           if (cResult[55] === tmp19) {
-                                            if (cResult[56] === tmp67) {
-                                              let tmp70 = cResult[57];
+                                            if (cResult[56] === tmp69) {
+                                              let tmp73 = cResult[57];
                                             }
-                                            return tmp70;
+                                            return tmp73;
                                           }
-                                          const obj2 = { children: tmp67 };
-                                          const tmp72 = React5(tmp19, obj2);
+                                          class S {
+                                            constructor() {
+                                              globalStats = closure_1_5.globalStats;
+                                              peakHourUtc = undefined;
+                                              if (globalStats != null) {
+                                                voice = globalStats.voice;
+                                                if (voice != null) {
+                                                  peakHourUtc = voice.peakHourUtc;
+                                                }
+                                              }
+                                              return peakHourUtc;
+                                            }
+                                          }
+                                          tmp75[0] = tmp69;
+                                          const tmp76 = React5(tmp19, tmp75);
                                           cResult[55] = tmp19;
-                                          cResult[56] = tmp67;
-                                          cResult[57] = tmp72;
-                                          tmp70 = tmp72;
+                                          cResult[56] = tmp69;
+                                          cResult[57] = tmp76;
+                                          tmp73 = tmp76;
                                         }
                                       }
                                     }
-                                    const obj3 = { style: tmp21, children: null };
-                                    const items2 = [tmp22, tmp64];
-                                    obj3.children = items2;
-                                    const tmp69 = closure_1_8(tmp18, obj3);
-                                    cResult[50] = tmp18;
+                                    class S {
+                                      constructor() {
+                                        globalStats = closure_1_5.globalStats;
+                                        peakHourUtc = undefined;
+                                        if (globalStats != null) {
+                                          voice = globalStats.voice;
+                                          if (voice != null) {
+                                            peakHourUtc = voice.peakHourUtc;
+                                          }
+                                        }
+                                        return peakHourUtc;
+                                      }
+                                    }
+                                    tmp71[0] = tmp21;
+                                    const items2 = [tmp22, tmp65];
+                                    tmp71[1] = items2;
+                                    const tmp72 = closure_1_8(View, tmp71);
+                                    cResult[50] = View;
                                     cResult[51] = tmp21;
                                     cResult[52] = tmp22;
-                                    cResult[53] = tmp64;
-                                    cResult[54] = tmp69;
-                                    tmp67 = tmp69;
+                                    cResult[53] = tmp65;
+                                    cResult[54] = tmp72;
+                                    tmp69 = tmp72;
                                   }
                                 }
                               }
                             }
                           }
-                          const obj4 = { style: tmp25, children: null };
-                          const items3 = [tmp26, tmp27, tmp20, tmp61];
-                          obj4.children = items3;
-                          const tmp66 = closure_1_8(tmp17, obj4);
-                          cResult[43] = tmp17;
+                          class S {
+                            constructor() {
+                              globalStats = closure_1_5.globalStats;
+                              peakHourUtc = undefined;
+                              if (globalStats != null) {
+                                voice = globalStats.voice;
+                                if (voice != null) {
+                                  peakHourUtc = voice.peakHourUtc;
+                                }
+                              }
+                              return peakHourUtc;
+                            }
+                          }
+                          tmp67[0] = tmp25;
+                          const items3 = [tmp26, tmp27, tmp20, tmp62];
+                          tmp67[1] = items3;
+                          const tmp68 = closure_1_8(View, tmp67);
+                          cResult[43] = View;
                           cResult[44] = tmp20;
-                          cResult[45] = tmp61;
+                          cResult[45] = tmp62;
                           cResult[46] = tmp25;
                           cResult[47] = tmp26;
                           cResult[48] = tmp27;
-                          cResult[49] = tmp66;
-                          tmp64 = tmp66;
+                          cResult[49] = tmp68;
+                          tmp65 = tmp68;
                         }
                       }
                     }
-                    const obj5 = { variant: str, accessibilityLabel: tmp23, children: tmp24 };
-                    const tmp63 = React5(tmp16, obj5);
-                    cResult[38] = tmp16;
+                    const obj2 = { variant: str, accessibilityLabel: tmp23, children: tmp24 };
+                    const tmp64 = React5(tmp58, obj2);
+                    cResult[38] = tmp58;
                     cResult[39] = str;
                     cResult[40] = tmp23;
                     cResult[41] = tmp24;
-                    cResult[42] = tmp63;
-                    tmp61 = tmp63;
+                    cResult[42] = tmp64;
+                    tmp62 = tmp64;
                   }
                 }
               }
@@ -203,7 +255,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const rounded = Math.round(num5);
   if (cResult[27] !== stateFromStores1) {
     const result = CheckpointStatsUtils.formatCheckpointPeakHour(stateFromStores1);
-    cResult[27] = stateFromStores1;
+    class S {
+      constructor() {
+        globalStats = closure_1_5.globalStats;
+        peakHourUtc = undefined;
+        if (globalStats != null) {
+          voice = globalStats.voice;
+          if (voice != null) {
+            peakHourUtc = voice.peakHourUtc;
+          }
+        }
+        return peakHourUtc;
+      }
+    }
     cResult[28] = result;
     let tmp30 = result;
     const tmpResult5 = CheckpointStatsUtils;
@@ -211,42 +275,92 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     tmp30 = cResult[28];
   }
   const tmpResult4 = initialize;
-  let prop1;
+  let prop;
   if (stateFromStores != null) {
-    prop1 = stateFromStores.totalVoiceMinutesPercentile;
+    prop = stateFromStores.totalVoiceMinutesPercentile;
   }
-  const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop1);
+  const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
   if (rounded <= 0) {
-    let stringResult = intl.string(_modDef3089.ZCwB8J);
-    let tmp35 = importDefault;
+    let stringResult = intl.string(_modDef3090.ZCwB8J);
+    class S {
+      constructor() {
+        globalStats = closure_1_5.globalStats;
+        peakHourUtc = undefined;
+        if (globalStats != null) {
+          voice = globalStats.voice;
+          if (voice != null) {
+            peakHourUtc = voice.peakHourUtc;
+          }
+        }
+        return peakHourUtc;
+      }
+    }
   } else {
-    const obj6 = { numMinutes: rounded };
-    stringResult = intl.formatToPlainString(_modDef3057.UZbUtl, obj6);
-    tmp35 = importDefault;
+    class S {
+      constructor() {
+        globalStats = closure_1_5.globalStats;
+        peakHourUtc = undefined;
+        if (globalStats != null) {
+          voice = globalStats.voice;
+          if (voice != null) {
+            peakHourUtc = voice.peakHourUtc;
+          }
+        }
+        return peakHourUtc;
+      }
+    }
+    stringResult = intl.formatToPlainString(_modDef3058.UZbUtl, { numMinutes: null });
+    const obj3 = { numMinutes: null };
   }
   if (rounded > 0) {
     if (null != checkpointTopPercent) {
       const intl2 = util.intl;
-      const obj7 = {
-        numMinutes: rounded,
-        percent: checkpointTopPercent,
-        percentHook(arg0) {
-              return arg0;
+      const obj4 = { numMinutes: null, percent: null, percentHook: null };
+      class S {
+        constructor() {
+          globalStats = closure_1_5.globalStats;
+          peakHourUtc = undefined;
+          if (globalStats != null) {
+            voice = globalStats.voice;
+            if (voice != null) {
+              peakHourUtc = voice.peakHourUtc;
             }
+          }
+          return peakHourUtc;
+        }
+      }
+      obj4.percent = checkpointTopPercent;
+      obj4.percentHook = function percentHook(arg0) {
+        return arg0;
       };
-      const formatToPlainStringResult = intl2.formatToPlainString(tmp35(3089).RqXsIs, obj7);
+      const formatToPlainStringResult = intl2.formatToPlainString(_modDef3090.RqXsIs, obj4);
     }
   }
-  const tmp35Result = tmp35(13206);
+  const tmp35Result = CheckpointScreenDefault;
   const container = tmp4.container;
   if (cResult[29] !== tmp4.image) {
-    const obj8 = { animatedUri: tmp35(13210), staticUri: tmp35(13211), style: tmp4.image };
-    const tmp43 = React5(tmp35(13209), obj8);
+    const obj5 = { animatedUri: null, staticUri: null, style: null };
+    class S {
+      constructor() {
+        globalStats = closure_1_5.globalStats;
+        peakHourUtc = undefined;
+        if (globalStats != null) {
+          voice = globalStats.voice;
+          if (voice != null) {
+            peakHourUtc = voice.peakHourUtc;
+          }
+        }
+        return peakHourUtc;
+      }
+    }
+    obj5.staticUri = _modDef13448;
+    obj5.style = tmp4.image;
+    const tmp43 = React5(CheckpointApngPlayerDefault, obj5);
     cResult[29] = tmp4.image;
     cResult[30] = tmp43;
     let tmp40 = tmp43;
-    const tmp35Result4 = tmp35(13209);
+    const tmp35Result3 = CheckpointApngPlayerDefault;
   } else {
     tmp40 = cResult[30];
   }
@@ -256,52 +370,127 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
     const copy = tmp4.copy;
     const _Symbol = Symbol;
-    if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp49 = React5(MicrophoneIcon.MicrophoneIcon, obj9);
-      cResult[34] = tmp49;
-      let tmp46 = tmp49;
-    } else {
-      tmp46 = cResult[34];
+    class S {
+      constructor() {
+        globalStats = closure_1_5.globalStats;
+        peakHourUtc = undefined;
+        if (globalStats != null) {
+          voice = globalStats.voice;
+          if (voice != null) {
+            peakHourUtc = voice.peakHourUtc;
+          }
+        }
+        return peakHourUtc;
+      }
     }
-    const obj10 = { style: tmp4.title, children: null };
-    const items4 = [tmp46, ];
-    const obj11 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: stringResult.toLocaleUpperCase() };
-    items4[1] = React5(tmp35(13204), obj11);
-    obj10.children = items4;
-    const tmp53 = closure_1_8(View, obj10);
+    if (tmp46 === Symbol.for("react.memo_cache_sentinel")) {
+      class S {
+        constructor() {
+          globalStats = closure_1_5.globalStats;
+          peakHourUtc = undefined;
+          if (globalStats != null) {
+            voice = globalStats.voice;
+            if (voice != null) {
+              peakHourUtc = voice.peakHourUtc;
+            }
+          }
+          return peakHourUtc;
+        }
+      }
+      const tmp50 = React5(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: null });
+      cResult[34] = tmp50;
+      let tmp47 = tmp50;
+      const obj6 = { size: "xs", color: null };
+    } else {
+      tmp47 = cResult[34];
+    }
+    const obj7 = { style: tmp4.title, children: null };
+    const items4 = [tmp47, ];
+    const obj8 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp4.titleText, children: stringResult.toLocaleUpperCase() };
+    items4[1] = React5(CheckpointTextDefault, obj8);
+    obj7.children = items4;
+    const tmp54 = closure_1_8(View, obj7);
     if (cResult[35] === tmp30) {
       if (cResult[36] === tmp29) {
-        let tmp54 = cResult[37];
+        let tmp55 = cResult[37];
       }
-      let tmp51Result = !tmp29;
+      let tmp52Result = !tmp29;
       if (!tmp29) {
-        const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+        const obj9 = { accessible: true, accessibilityLabel: null, style: null, children: null };
         const _HermesInternal = HermesInternal;
-        obj12.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
-        obj12.style = tmp4.number;
-        const obj13 = { end: rounded };
-        obj12.children = React5(tmp35(13214), obj13);
-        tmp51Result = React5(View, obj12);
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            peakHourUtc = undefined;
+            if (globalStats != null) {
+              voice = globalStats.voice;
+              if (voice != null) {
+                peakHourUtc = voice.peakHourUtc;
+              }
+            }
+            return peakHourUtc;
+          }
+        }
+        obj9.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
+        obj9.style = tmp4.number;
+        const obj10 = { end: rounded };
+        obj9.children = React5(CheckpointCountUpStatNumberDefault, obj10);
+        tmp52Result = React5(View, obj9);
       }
-      const tmp35Result6 = tmp35(13204);
+      class S {
+        constructor() {
+          globalStats = closure_1_5.globalStats;
+          peakHourUtc = undefined;
+          if (globalStats != null) {
+            voice = globalStats.voice;
+            if (voice != null) {
+              peakHourUtc = voice.peakHourUtc;
+            }
+          }
+          return peakHourUtc;
+        }
+      }
       if (tmp29) {
         const intl5 = util.intl;
-        let stringResult1 = intl5.string(tmp35(3089).huiTne);
+        let stringResult1 = intl5.string(_modDef3090.huiTne);
       } else if (null != checkpointTopPercent) {
         const intl4 = util.intl;
-        const obj15 = {
-          numMinutes: rounded,
-          percent: checkpointTopPercent,
-          percentHook(children, arg1) {
-                  return closure_1_7(CheckpointEmphasisDefault, { children }, arg1);
-                }
+        const obj11 = { numMinutes: null, percent: null, percentHook: null };
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            peakHourUtc = undefined;
+            if (globalStats != null) {
+              voice = globalStats.voice;
+              if (voice != null) {
+                peakHourUtc = voice.peakHourUtc;
+              }
+            }
+            return peakHourUtc;
+          }
+        }
+        obj11.percent = checkpointTopPercent;
+        obj11.percentHook = function percentHook(children, arg1) {
+          return closure_1_7(CheckpointEmphasisDefault, { children }, arg1);
         };
-        stringResult1 = intl4.format(tmp35(3089).RqXsIs, obj15);
+        stringResult1 = intl4.format(_modDef3090.RqXsIs, obj11);
       } else {
         const intl3 = util.intl;
-        const obj16 = { numMinutes: rounded };
-        stringResult1 = intl3.format(tmp35(3089).Y3poDW, obj16);
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            peakHourUtc = undefined;
+            if (globalStats != null) {
+              voice = globalStats.voice;
+              if (voice != null) {
+                peakHourUtc = voice.peakHourUtc;
+              }
+            }
+            return peakHourUtc;
+          }
+        }
+        stringResult1 = intl3.format(_modDef3090.Y3poDW, { numMinutes: null });
+        const obj12 = { numMinutes: null };
       }
       cResult[4] = stateFromStores1;
       cResult[5] = tmp4.container;
@@ -311,64 +500,62 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       cResult[9] = tmp4.number;
       cResult[10] = tmp4.title;
       cResult[11] = tmp4.titleText;
-      let totalVoiceMinutes1;
+      let totalVoiceMinutes;
       if (stateFromStores != null) {
-        totalVoiceMinutes1 = stateFromStores.totalVoiceMinutes;
+        totalVoiceMinutes = stateFromStores.totalVoiceMinutes;
       }
-      cResult[12] = totalVoiceMinutes1;
-      let prop2;
+      cResult[12] = totalVoiceMinutes;
+      let prop1;
       if (stateFromStores != null) {
-        prop2 = stateFromStores.totalVoiceMinutesPercentile;
+        prop1 = stateFromStores.totalVoiceMinutesPercentile;
       }
-      cResult[13] = prop2;
-      cResult[14] = tmp35Result6;
+      cResult[13] = prop1;
+      cResult[14] = tmp58;
       cResult[15] = View;
       cResult[16] = View;
       cResult[17] = tmp35Result;
-      cResult[18] = tmp51Result;
+      cResult[18] = tmp52Result;
       cResult[19] = container;
       cResult[20] = tmp44;
       cResult[21] = "heading-lg/medium";
       cResult[22] = formatToPlainStringResult;
       cResult[23] = stringResult1;
       cResult[24] = copy;
-      cResult[25] = tmp53;
-      cResult[26] = tmp54;
-      tmp27 = tmp54;
-      tmp26 = tmp53;
-      tmp25 = copy;
-      tmp24 = stringResult1;
-      tmp23 = formatToPlainStringResult;
-      str = "heading-lg/medium";
-      tmp22 = tmp44;
-      tmp21 = container;
-      tmp20 = tmp51Result;
-      tmp19 = tmp35Result;
-      tmp18 = View;
-      tmp17 = View;
-      tmp16 = tmp35Result6;
+      cResult[25] = tmp54;
+      cResult[26] = tmp55;
     }
-    let tmp51Result2 = tmp29;
+    let tmp56 = tmp29;
     if (tmp29) {
-      tmp51Result2 = null != tmp30;
+      tmp56 = null != tmp30;
     }
-    if (tmp51Result2) {
+    if (tmp56) {
       ({ value: obj14.value, label: obj14.accessibilityLabel } = tmp30);
-      tmp51Result2 = React5(tmp35(13212), { value: null, accessibilityLabel: null });
-      const obj17 = { value: null, accessibilityLabel: null };
+      class S {
+        constructor() {
+          globalStats = closure_1_5.globalStats;
+          peakHourUtc = undefined;
+          if (globalStats != null) {
+            voice = globalStats.voice;
+            if (voice != null) {
+              peakHourUtc = voice.peakHourUtc;
+            }
+          }
+          return peakHourUtc;
+        }
+      }
     }
     cResult[35] = tmp30;
     cResult[36] = tmp29;
-    cResult[37] = tmp51Result2;
-    tmp54 = tmp51Result2;
-    const tmp35Result5 = tmp35(13204);
+    cResult[37] = tmp56;
+    tmp55 = tmp56;
+    const tmp35Result4 = CheckpointTextDefault;
   }
   const tmp45 = React5(View, { style: tmp4.imageContainer, children: tmp40 });
   cResult[31] = tmp4.imageContainer;
   cResult[32] = tmp40;
   cResult[33] = tmp45;
   tmp44 = tmp45;
-  const obj18 = { style: tmp4.imageContainer, children: tmp40 };
+  const obj15 = { style: tmp4.imageContainer, children: tmp40 };
   const tmpResult6 = CheckpointStatsUtils;
 }) : (function CheckpointVoiceStatsScreen() {
   const tmp = closure_9();
@@ -409,14 +596,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (stateFromStores != null) {
     prop = stateFromStores.totalVoiceMinutesPercentile;
   }
-  const checkpointTopPercent = stateFromStores1(13018).getCheckpointTopPercent(prop);
+  const checkpointTopPercent = stateFromStores1(13249).getCheckpointTopPercent(prop);
   const intl = tmp2(1125).intl;
   if (rounded <= 0) {
-    let stringResult = intl.string(_modDef3089.ZCwB8J);
+    let stringResult = intl.string(_modDef3090.ZCwB8J);
     let tmp12 = importDefault;
   } else {
     const obj3 = { numMinutes: rounded };
-    stringResult = intl.formatToPlainString(_modDef3057.UZbUtl, obj3);
+    stringResult = intl.formatToPlainString(_modDef3058.UZbUtl, obj3);
     tmp12 = importDefault;
   }
   let formatToPlainStringResult;
@@ -430,27 +617,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               return arg0;
             }
       };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp12(3089).RqXsIs, obj4);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp12(3090).RqXsIs, obj4);
     }
   }
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { style: tmp.imageContainer, children: null };
-  const tmp2Result = stateFromStores1(13018);
+  const tmp2Result = stateFromStores1(13249);
   const obj7 = { animatedUri: null, staticUri: null, style: null };
-  const tmp12Result = tmp12(13206);
-  obj7.animatedUri = tmp12(13210);
-  obj7.staticUri = tmp12(13211);
+  const tmp12Result = tmp12(13438);
+  obj7.animatedUri = tmp12(13447);
+  obj7.staticUri = tmp12(13448);
   obj7.style = tmp.image;
-  obj6.children = closure_7(tmp12(13209), obj7);
+  obj6.children = closure_7(tmp12(13442), obj7);
   const items3 = [closure_7(View, obj6), ];
   const obj8 = { style: tmp.copy, children: null };
   const obj9 = { style: tmp.title, children: null };
-  const items4 = [closure_7(stateFromStores1(11686).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
-  const obj11 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  const items4 = [closure_7(stateFromStores1(11740).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
+  const obj11 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj10 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp12Result4 = tmp12(13209);
+  const tmp12Result4 = tmp12(13442);
   obj11.children = stringResult.toLocaleUpperCase();
-  items4[1] = closure_7(tmp12(13204), obj11);
+  items4[1] = closure_7(tmp12(13436), obj11);
   obj9.children = items4;
   const items5 = [closure_8(View, obj9), , , ];
   let tmp15Result = tmp7;
@@ -459,7 +646,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   if (tmp15Result) {
     ({ value: obj14.value, label: obj14.accessibilityLabel } = memo);
-    tmp15Result = closure_7(tmp12(13212), { value: null, accessibilityLabel: null });
+    tmp15Result = closure_7(tmp12(13449), { value: null, accessibilityLabel: null });
     const obj12 = { value: null, accessibilityLabel: null };
   }
   items5[1] = tmp15Result;
@@ -470,15 +657,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     obj13.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
     obj13.style = tmp.number;
     const obj15 = { end: rounded };
-    obj13.children = closure_7(tmp12(13214), obj15);
+    obj13.children = closure_7(tmp12(13450), obj15);
     tmp15Result2 = closure_7(View, obj13);
   }
   items5[2] = tmp15Result2;
   const obj16 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp12Result5 = tmp12(13204);
+  const tmp12Result5 = tmp12(13436);
   if (rounded <= 0) {
     const intl5 = tmp2(1125).intl;
-    let stringResult1 = intl5.string(tmp12(3089).huiTne);
+    let stringResult1 = intl5.string(tmp12(3090).huiTne);
   } else if (null != checkpointTopPercent) {
     const intl4 = tmp2(1125).intl;
     const obj17 = {
@@ -488,15 +675,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return closure_1_7(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    stringResult1 = intl4.format(tmp12(3089).RqXsIs, obj17);
+    stringResult1 = intl4.format(tmp12(3090).RqXsIs, obj17);
   } else {
     const intl3 = tmp2(1125).intl;
     const obj18 = { numMinutes: rounded };
-    stringResult1 = intl3.format(tmp12(3089).Y3poDW, obj18);
+    stringResult1 = intl3.format(tmp12(3090).Y3poDW, obj18);
   }
   const obj19 = { children: null };
   obj16.children = stringResult1;
-  items5[3] = closure_7(tmp12(13204), obj16);
+  items5[3] = closure_7(tmp12(13436), obj16);
   obj8.children = items5;
   items3[1] = closure_8(View, obj8);
   obj5.children = items3;

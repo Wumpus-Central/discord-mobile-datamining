@@ -1,13 +1,13 @@
-// === Module 5218: GuildPowerupsConstants ===
+// === Module 5219: GuildPowerupsConstants ===
 
-// Module 5218 (GuildPowerupsConstants)
+// Module 5219 (GuildPowerupsConstants)
 import util from "util" /* 1125 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import GameServerConstants from "GameServerConstants" /* 5219 */;
-import Powerups from "Powerups" /* 5221 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5222 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5223 */;
-import GameServerExperiment from "GameServerExperiment" /* 5236 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import GameServerConstants from "GameServerConstants" /* 5220 */;
+import Powerups from "Powerups" /* 5222 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5223 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5224 */;
+import GameServerExperiment from "GameServerExperiment" /* 5237 */;
 import PremiumConstants from "PremiumConstants" /* 1391 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -98,7 +98,7 @@ export const GUILD_POWERUP_NEW_PERK_GROUPS = items3;
 export const PERK_SKU_BADGES = { [GameServerConstants.GAME_SERVER_POWERUP_SKU_ID]: "beta", [Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID]: "beta", [Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID]: "beta" };
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP = set2;
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE = set3;
-export const GUILD_FEATURE_TO_PERK = () => {
+export () => {
   const obj = {};
   const obj2 = { perkIcon: constants.STREAM, description: null };
   const intl = util.intl;
@@ -155,7 +155,7 @@ export const GUILD_FEATURE_TO_PERK = () => {
   obj17.description = intl13.formatToPlainString(util.t.aFRl53, obj18);
   obj[GuildFeatures.MAX_FILE_SIZE_100_MB] = obj17;
   return obj;
-};
+}
 export const GUILD_THEME_POWERUP_BOOST_PRICE = 3;
 export const PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.VANITY_URL]: obj4, [GuildFeatures.GUILD_TAGS]: { boostPrice: 3 }, [GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: { boostPrice: 2 }, [GuildFeatures.GUILD_THEME]: obj5 };
 export const MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.GAME_SERVERS]: obj6 };

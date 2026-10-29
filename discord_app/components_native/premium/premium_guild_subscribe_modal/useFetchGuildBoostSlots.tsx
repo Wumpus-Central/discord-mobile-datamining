@@ -1,11 +1,11 @@
-// === Module 15145: useFetchGuildBoostSlots ===
+// === Module 15380: useFetchGuildBoostSlots ===
 
-// Module 15145 (useFetchGuildBoostSlots)
+// Module 15380 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7547 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7570 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
               } else {
                 v1(false);
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp13) {
               c2 = tmp;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
             } else {
               v1(false);
               c2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp13) {
             c2 = tmp;

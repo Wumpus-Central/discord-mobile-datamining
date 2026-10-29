@@ -1,10 +1,10 @@
-// === Module 16379: FamilyCenterControlledSettingsUtils ===
+// === Module 16617: FamilyCenterControlledSettingsUtils ===
 
-// Module 16379 (FamilyCenterControlledSettingsUtils)
+// Module 16617 (FamilyCenterControlledSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7433 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7435 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16376 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7456 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7458 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16614 */;
 import size from "module_2" /* 2 */;
 
 function getGoreContentSettingOrDefault(arg0) {
@@ -67,21 +67,21 @@ function getExplicitContentSettingOrDefault(teenId) {
 }
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx");
 
-export const isSetAndNotDefault = function isSetAndNotDefault(goreContentFriendDm) {
+export function isSetAndNotDefault(goreContentFriendDm) {
   let tmp = null != goreContentFriendDm;
   if (tmp) {
     tmp = goreContentFriendDm !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   return tmp;
-};
+}
 export { getGoreContentSettingOrDefault };
-export const updateGoreContentSetting = function updateGoreContentSetting(selectedTeenId, arg1) {
+export function updateGoreContentSetting(selectedTeenId, arg1) {
   const ParentalControlledGoreContent = ParentalControlledUserSettings.ParentalControlledGoreContent;
   const merged = Object.assign(getGoreContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledGoreContent.updateControlledSetting(selectedTeenId, {});
-};
-export const resolveExplicitContentSettingWithDefaultsForTeen = function resolveExplicitContentSettingWithDefaultsForTeen(teenId) {
+}
+export function resolveExplicitContentSettingWithDefaultsForTeen(teenId) {
   ({ setting, isFriend } = teenId);
   if (isFriend === undefined) {
     isFriend = false;
@@ -103,11 +103,11 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
     }
     return tmp8;
   }
-};
+}
 export { getExplicitContentSettingOrDefault };
-export const updateExplicitContentSetting = function updateExplicitContentSetting(selectedTeenId, arg1) {
+export function updateExplicitContentSetting(selectedTeenId, arg1) {
   const ParentalControlledExplicitContent = ParentalControlledUserSettings.ParentalControlledExplicitContent;
   const merged = Object.assign(getExplicitContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledExplicitContent.updateControlledSetting(selectedTeenId, {});
-};
+}

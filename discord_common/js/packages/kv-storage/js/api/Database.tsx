@@ -1,10 +1,10 @@
-// === Module 4890: Database ===
+// === Module 4891: Database ===
 
-// Module 4890 (Database)
+// Module 4891 (Database)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import TableId from "TableId" /* 4889 */;
-import Host2 from "Host" /* 4891 */;
-import Runtime2 from "Runtime" /* 4892 */;
+import TableId from "TableId" /* 4890 */;
+import Host2 from "Host" /* 4892 */;
+import Runtime2 from "Runtime" /* 4893 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -149,15 +149,15 @@ prototype["executeSync"] = function executeSync(table) {
     throw error;
   } else {
     if ("key" in table) {
-      let str = table.key[0];
+      let str2 = table.key[0];
     } else {
-      str = table.table;
+      str2 = table.table;
     }
-    if (str == null) {
-      str = "";
+    if (str2 == null) {
+      str2 = "";
     }
     const _HermesInternal = HermesInternal;
-    return AppStartPerformanceDefault.time("\u{1F4BE}", "SYNC: " + table.type + " " + str, () => {
+    return AppStartPerformanceDefault.time("\u{1F4BE}", "SYNC: " + table.type + " " + str2, () => {
       const raw = self.raw;
       const obj = {};
       const merged = Object.assign(closure_0);
@@ -198,7 +198,7 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

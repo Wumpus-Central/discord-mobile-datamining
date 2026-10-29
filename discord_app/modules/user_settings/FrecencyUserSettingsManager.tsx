@@ -1,19 +1,19 @@
-// === Module 19112: FrecencyUserSettingsManager ===
+// === Module 19347: FrecencyUserSettingsManager ===
 
-// Module 19112 (FrecencyUserSettingsManager)
+// Module 19347 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1101 */;
 import frecency_user_settings from "frecency_user_settings" /* 1244 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4837 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4838 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9686 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9685 */;
-import EmojiStore from "EmojiStore" /* 6760 */;
-import SoundboardStore from "SoundboardStore" /* 6042 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6800 */;
-import FrecencyStore from "FrecencyStore" /* 6859 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9718 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9717 */;
+import EmojiStore from "EmojiStore" /* 6783 */;
+import SoundboardStore from "SoundboardStore" /* 6046 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6823 */;
+import FrecencyStore from "FrecencyStore" /* 6882 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -66,7 +66,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_22 = async function _saveProtos(arg0) {
         const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
       });
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;
@@ -141,7 +141,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6859).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6882).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1094).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1372).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

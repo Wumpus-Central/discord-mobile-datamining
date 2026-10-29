@@ -1,10 +1,10 @@
-// === Module 14548: NewUserIcon ===
+// === Module 14782: NewUserIcon ===
 
-// Module 14548 (NewUserIcon)
+// Module 14782 (NewUserIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod14549 from "module_14549" /* 14549 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod14783 from "module_14783" /* 14783 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const NewUserIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14549;
+    const tmpResult = _mod14783;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const NewUserIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14549, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14783, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

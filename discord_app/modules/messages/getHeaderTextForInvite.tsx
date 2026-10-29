@@ -1,12 +1,12 @@
-// === Module 14794: getHeaderTextForInvite ===
+// === Module 15029: getHeaderTextForInvite ===
 
-// Module 14794 (getHeaderTextForInvite)
+// Module 15029 (getHeaderTextForInvite)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
-export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
+export function getHeaderTextForInvite(arg0) {
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
   const intl = util.intl;
@@ -48,4 +48,4 @@ export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
     }
     return stringResult3;
   }
-};
+}

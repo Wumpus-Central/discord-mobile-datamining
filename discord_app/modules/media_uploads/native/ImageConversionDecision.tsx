@@ -1,20 +1,20 @@
-// === Module 8195: ImageConversionDecision ===
+// === Module 8217: ImageConversionDecision ===
 
-// Module 8195 (ImageConversionDecision)
+// Module 8217 (ImageConversionDecision)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import IosImageTypesManagerDefault from "IosImageTypesManager" /* 8196 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 8218 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
-export const isPhotoKitAsset = function isPhotoKitAsset(str, filename) {
+export function isPhotoKitAsset(str, filename) {
   let tmp = null != str.match(/^ph:\/\//i);
   if (tmp) {
     tmp = null != filename;
   }
   return tmp;
-};
-export const isHeicUTI = function isHeicUTI(str) {
+}
+export function isHeicUTI(str) {
   if (null == str) {
     return false;
   } else {
@@ -25,8 +25,8 @@ export const isHeicUTI = function isHeicUTI(str) {
     }
     return hasItem;
   }
-};
-export const shouldForceConvertToJPG = function shouldForceConvertToJPG(str, str2, str3) {
+}
+export function shouldForceConvertToJPG(str, str2, str3) {
   let isIOSResult = PlatformUtils.isIOS();
   if (isIOSResult) {
     let flag = false;
@@ -54,8 +54,8 @@ export const shouldForceConvertToJPG = function shouldForceConvertToJPG(str, str
     }
   }
   return isIOSResult;
-};
-export const shouldConvertToJPG = function shouldConvertToJPG(str, arr, arg2, arg3, arg4) {
+}
+export function shouldConvertToJPG(str, arr, arg2, arg3, arg4) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = true;
@@ -130,4 +130,4 @@ export const shouldConvertToJPG = function shouldConvertToJPG(str, arr, arg2, ar
     return false;
   }
   obj = PlatformUtils;
-};
+}

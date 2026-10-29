@@ -1,12 +1,12 @@
-// === Module 12288: ConjureMarkdownBlocks ===
+// === Module 12342: ConjureMarkdownBlocks ===
 
-// Module 12288 (ConjureMarkdownBlocks)
+// Module 12342 (ConjureMarkdownBlocks)
 import size from "module_2" /* 2 */;
 
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMarkdownBlocks.tsx");
 
-export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
+export function splitMarkdownBlocks(source) {
   const parts = source.split("\n");
   const items = [];
   let items1 = [];
@@ -138,4 +138,4 @@ export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
     items.push(obj8);
   }
   return items;
-};
+}

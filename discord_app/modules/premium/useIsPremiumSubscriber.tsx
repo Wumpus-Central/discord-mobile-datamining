@@ -1,7 +1,7 @@
-// === Module 11121: useIsPremiumSubscriber ===
+// === Module 11175: useIsPremiumSubscriber ===
 
-// Module 11121 (useIsPremiumSubscriber)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+// Module 11175 (useIsPremiumSubscriber)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;

@@ -1,20 +1,20 @@
-// === Module 14796: FriendInvite ===
+// === Module 15031: FriendInvite ===
 
-// Module 14796 (FriendInvite)
+// Module 15031 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1125 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import Constants from "Constants" /* 7844 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8307 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import Constants from "Constants" /* 7867 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8329 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
 const InviteTypes = Constants.InviteTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
 
-export const createFriendInvite = function createFriendInvite(inviter, arg1, id, theme) {
+export function createFriendInvite(inviter, arg1, id, theme) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   const intl = util.intl;
   const string = intl.string;
@@ -117,4 +117,4 @@ export const createFriendInvite = function createFriendInvite(inviter, arg1, id,
   }
   obj.type = FRIEND;
   return obj;
-};
+}

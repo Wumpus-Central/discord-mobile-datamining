@@ -1,10 +1,10 @@
-// === Module 6675: StageMediaHooks ===
+// === Module 6699: StageMediaHooks ===
 
-// Module 6675 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 6723 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6676 */;
+// Module 6699 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 6746 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6700 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageHa
     class S {
       constructor() {
         mutableParticipants = closure_4.getMutableParticipants(closure_0, closure_0(closure_1[6]).StageChannelParticipantNamedIndex.SPEAKER);
-        return null != mutableParticipants.find(() => { ... });
+        return null != mutableParticipants.find(/* F147052 */ function() { ... });
       }
     }
     const items1 = [arg0];
@@ -37,7 +37,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageHa
     class S {
       constructor() {
         mutableParticipants = closure_4.getMutableParticipants(closure_0, closure_0(closure_1[6]).StageChannelParticipantNamedIndex.SPEAKER);
-        return null != mutableParticipants.find(() => { ... });
+        return null != mutableParticipants.find(/* F147052 */ function() { ... });
       }
     }
     tmp7 = cResult[3];
@@ -106,14 +106,14 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageMediaHook
 
 export const useStageHasMedia = tmp2;
 export const useStageHasStream = tmp3;
-export const getStageHasMedia = function getStageHasMedia(id) {
+export function getStageHasMedia(id) {
   const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
   let hasVideoResult = null != mutableParticipants.find((type) => type.type === require("StageChannelParticipants").StageChannelParticipantTypes.STREAM);
   if (!hasVideoResult) {
     hasVideoResult = VoiceStateStore.hasVideo(id);
   }
   return hasVideoResult;
-};
+}
 export { getStageHasStream };
 export const useIsStageVideoEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsStageVideoEnabled(arg0) {
   _require = arg0;
@@ -183,7 +183,7 @@ export const useIsStageVideoEnabled = ReactCompilerGating.isReactCompilerEnabled
   }
   return tmp2;
 });
-export const isStageVideoEnabled = function isStageVideoEnabled(guild_id) {
+export function isStageVideoEnabled(guild_id) {
   guild = GuildStore.getGuild(guild_id);
   let tmp2 = null != guild;
   if (tmp2) {
@@ -197,4 +197,4 @@ export const isStageVideoEnabled = function isStageVideoEnabled(guild_id) {
     tmp2 = num > 0;
   }
   return tmp2;
-};
+}

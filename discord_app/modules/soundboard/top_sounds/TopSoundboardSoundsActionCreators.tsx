@@ -1,10 +1,10 @@
-// === Module 18809: TopSoundboardSoundsActionCreators ===
+// === Module 19042: TopSoundboardSoundsActionCreators ===
 
-// Module 18809 (TopSoundboardSoundsActionCreators)
+// Module 19042 (TopSoundboardSoundsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserStore from "UserStore" /* 1389 */;
-import SoundboardStore from "SoundboardStore" /* 6042 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6043 */;
+import SoundboardStore from "SoundboardStore" /* 6046 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6047 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundsActionCreators.tsx");
 
-export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundboardSoundsByGuild(id) {
+export function maybeFetchTopSoundboardSoundsByGuild(id) {
   if (null != id) {
     if (null != UserStore.getCurrentUser()) {
       const topSoundboardSoundsMetadata = SoundboardStore.getTopSoundboardSoundsMetadata(id);
@@ -44,8 +44,8 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
       }
     }
   }
-};
-export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildId) {
+}
+export function fetchTopSoundboardSounds(guildId) {
   _require = guildId;
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
@@ -63,4 +63,4 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
   }
   obj = require("RouteUtils");
   tmp = _require;
-};
+}

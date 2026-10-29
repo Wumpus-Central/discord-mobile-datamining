@@ -1,44 +1,44 @@
-// === Module 15066: PremiumManagePlan ===
+// === Module 15301: PremiumManagePlan ===
 
-// Module 15066 (PremiumManagePlan)
+// Module 15301 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
-import useMountEffectDefault from "useMountEffect" /* 5299 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5621 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6498 */;
-import Card from "Card" /* 6941 */;
-import Pressables from "Pressables" /* 6944 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6964 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7123 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7127 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7541 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7549 */;
-import _modDef8455 from "module_8455" /* 8455 */;
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9828 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 14921 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 14964 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 14992 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 15032 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15045 */;
+import useNavigation from "useNavigation" /* 1503 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
+import useMountEffectDefault from "useMountEffect" /* 5300 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5622 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6522 */;
+import Card from "Card" /* 6965 */;
+import Pressables from "Pressables" /* 6968 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6988 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7147 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7151 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7564 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7572 */;
+import _modDef8477 from "module_8477" /* 8477 */;
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9860 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 15156 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 15199 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15227 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 15267 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15280 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
-import BillingInfoStore from "BillingInfoStore" /* 2051 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2054 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
-import EntitlementStore from "EntitlementStore" /* 7542 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import BillingInfoStore from "BillingInfoStore" /* 2052 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import EntitlementStore from "EntitlementStore" /* 7565 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
+import IAPStore from "IAPStore" /* 7582 */;
 
 require = fn;
 function SubscriptionAndBillingInfo(subscription) {
@@ -342,7 +342,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -380,7 +380,7 @@ function SubscriptionAndBillingInfo(subscription) {
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp24) {
             if (tmp4 === c3) {
@@ -427,17 +427,17 @@ function SubscriptionAndBillingInfo(subscription) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7, ScrollView: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
-const TABLE_DIVIDER_WIDTH = fn(6935).TABLE_DIVIDER_WIDTH;
-const isNoneSubscription = fn(2048).isNoneSubscription;
+const TABLE_DIVIDER_WIDTH = fn(6959).TABLE_DIVIDER_WIDTH;
+const isNoneSubscription = fn(2049).isNoneSubscription;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_19, HelpdeskArticles: closure_20, SubscriptionStatusTypes: closure_21, UserSettingsSections: closure_22 } = Constants);
-const CustomCheckoutFlow = fn(5734).CustomCheckoutFlow;
+const CustomCheckoutFlow = fn(5736).CustomCheckoutFlow;
 const PremiumConstants = fn(1391);
 ({ FractionalPremiumStates: closure_24, PREMIUM_SUBSCRIPTION_APPLICATION: closure_25, PremiumTypes: closure_26, SubscriptionPlanInfo: closure_27 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_28, jsxs: closure_29 } = jsxProd);
 let closure_30 = new LoggerDefault("PremiumManagePlan");
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj2 = { background: null, container: null, contentContainer: null, topBlur: null, accountCredit: null, accountCreditList: null, featuresTable: null, subscriptionHeader: null, billingInfo: null };
 let tmp6 = new LoggerDefault("PremiumManagePlan");
 obj2.background = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
@@ -452,7 +452,7 @@ obj2.featuresTable = { paddingTop: 16 };
 obj2.subscriptionHeader = { marginTop: 20, width: "100%" };
 obj2.billingInfo = { marginTop: 20, width: "100%" };
 let closure_31 = createStyles.createStyles(obj2);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj7 = { headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, justifyContent: "space-between" }, backButtonWrapper: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" };
 obj7.backButtonWrapper = size;
@@ -550,7 +550,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
   obj2.children = items;
   return closure_1_29(React5, obj2);
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_34 = createStyles.createStyles(() => {
   const obj = { container: { display: "flex", flexDirection: "column", gap: 12 }, errorHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, overflow: "hidden" }, headerBackground: { padding: 16 }, headerBackgroundImage: null, logoContainer: null, wumpusImg: null, logoStyle: null, errorHeaderPrimaryButton: null, extraInfoContainer: null, extraInfoTextContainer: null, mutationWarningContainer: null, mutationText: null, fpTimeRemaining: null, fpTimeRemainingPill: null, fpUnactivatedHoursPill: null, fpTimeRemainingText: null, fpUnitsTitle: null, fpUnitsStatusText: null, fpRowStart: null, fpRowIcon: null, fpRowContent: null, fpRowEnd: null, dividerContainer: null, divider: null, pillAndCardContainer: null, pillPosition: null, appleAccountMismatchNotice: null, appleAccountMismatchNoticeText: null };
   const obj3 = {};
@@ -657,7 +657,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fracti
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const obj8 = { style: tmp19, start: tmp20, end: tmp21, colors: tmp18, children: null };
     const obj9 = { children: null };
-    const obj10 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8455, size: native.IconSizes.LARGE };
+    const obj10 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8477, size: native.IconSizes.LARGE };
     obj9.children = closure_1_28(native.Icon, obj10);
     obj8.children = closure_1_28(React5, obj9);
     const tmp28 = closure_1_28(LinearGradientDefault, obj8);
@@ -937,7 +937,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fracti
   obj10.colors = items2;
   const obj12 = { children: null };
   const tmp11 = LinearGradientDefault;
-  obj12.children = closure_1_28(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8455, size: native.IconSizes.LARGE });
+  obj12.children = closure_1_28(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8477, size: native.IconSizes.LARGE });
   obj10.children = closure_1_28(React5, obj12);
   obj9.children = closure_1_28(tmp11, obj10);
   const items3 = [closure_1_28(React5, obj9), ];
@@ -1015,7 +1015,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fracti
   const intl4 = util.intl;
   obj31.children = intl4.string(util.t["B66Z+f"]);
   tmp8Result = closure_1_28(Text_Text.Text, obj31);
-  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8455, size: native.IconSizes.LARGE };
+  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8477, size: native.IconSizes.LARGE };
 });
 ReactCompilerGating = fn(558);
 let obj5 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -1028,9 +1028,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   let obj = navigation(576);
   ({ top, bottom } = useSafeAreaInsetsDefault());
   const tmp6 = useSafeAreaInsetsDefault();
-  const youBarSettingsOutsideSafeAreaTop = navigation(15030).useYouBarSettingsOutsideSafeAreaTop();
-  let obj2 = navigation(15030);
-  navigation = navigation(1502).useNavigation();
+  const youBarSettingsOutsideSafeAreaTop = navigation(15265).useYouBarSettingsOutsideSafeAreaTop();
+  let obj2 = navigation(15265);
+  navigation = navigation(1503).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
       navigation.setOptions({ headerShown: false });
@@ -1059,7 +1059,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     tmp12 = cResult[3];
     tmp13 = cResult[4];
   }
-  let obj3 = navigation(1502);
+  let obj3 = navigation(1503);
   const stateFromStores = navigation(504).useStateFromStores(tmp12, tmp13);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [SubscriptionStore];
@@ -1170,9 +1170,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   }
   useMountEffectDefault(tmp27);
   const tmpResult7 = navigation(504);
-  const isInReverseTrial = navigation(8469).useIsInReverseTrial();
-  const tmpResult8 = navigation(8469);
-  useFPDurationLeftDefault(tmp26.endsAt, navigation(15032).CountDownMessageTypes.SHORT_TIME);
+  const isInReverseTrial = navigation(8491).useIsInReverseTrial();
+  const tmpResult8 = navigation(8491);
+  useFPDurationLeftDefault(tmp26.endsAt, navigation(15267).CountDownMessageTypes.SHORT_TIME);
   if (cResult[11] !== tmp26) {
     class X {
       constructor() {
@@ -1364,7 +1364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     }
   }
   const tmp5Result = useFPDurationLeftDefault;
-  const theme = navigation(5070).useThemeContext().theme;
+  const theme = navigation(5071).useThemeContext().theme;
   importDefault = noop.useRef(false);
   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
     class J {
@@ -1421,8 +1421,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     tmp37 = cResult[15];
     tmp38 = cResult[16];
   }
-  const tmpResult9 = navigation(5070);
-  const stateFromStores2 = navigation(504).useStateFromStores(tmp36, tmp37, tmp38, tmp(4873).areSetsEqual);
+  const tmpResult9 = navigation(5071);
+  const stateFromStores2 = navigation(504).useStateFromStores(tmp36, tmp37, tmp38, tmp(4874).areSetsEqual);
   if (cResult[17] !== navigation) {
     class J {
       constructor(arg0) {
@@ -1572,7 +1572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     }
     tmp50[1] = tmp47;
     tmp50[2] = theme;
-    const tmp51 = closure_28(tmp5(5621), tmp50);
+    const tmp51 = closure_28(tmp5(5622), tmp50);
     cResult[26] = tmp47;
     cResult[27] = theme;
     cResult[28] = tmp51;
@@ -1586,14 +1586,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(15030).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(15030);
-  navigation = navigation(1502).useNavigation();
+  const youBarSettingsOutsideSafeAreaTop = navigation(15265).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(15265);
+  navigation = navigation(1503).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({ headerShown: false });
   }, items);
-  let obj2 = navigation(1502);
+  let obj2 = navigation(1503);
   const items1 = [SubscriptionPlanStore];
   const stateFromStores = navigation(504).useStateFromStores(items1, () => SubscriptionPlanStore.isLoadedForPremiumSKUs());
   const obj4 = navigation(504);
@@ -1616,20 +1616,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
       isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      const subscriptions = navigation(6498).fetchSubscriptions();
-      const obj = navigation(6498);
+      const subscriptions = navigation(6522).fetchSubscriptions();
+      const obj = navigation(6522);
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(7394).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(7394);
+      const premiumSubscriptionPlans = navigation(7417).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(7417);
     }
     tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   const obj6 = navigation(504);
-  let isInReverseTrial = navigation(8469).useIsInReverseTrial();
-  const obj8 = navigation(8469);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15032).CountDownMessageTypes.SHORT_TIME);
-  const unactivatedFractionalPremiumDurationString = navigation(2050).getUnactivatedFractionalPremiumDurationString(tmp12);
+  let isInReverseTrial = navigation(8491).useIsInReverseTrial();
+  const obj8 = navigation(8491);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15267).CountDownMessageTypes.SHORT_TIME);
+  const unactivatedFractionalPremiumDurationString = navigation(2051).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
       const currentPeriodEnd = tmp10.currentPeriodEnd;
@@ -1646,10 +1646,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   if (!tmp29Result4) {
     tmp29Result4 = tmp17;
   }
-  const obj9 = navigation(2050);
+  const obj9 = navigation(2051);
   importDefault = noop.useRef(false);
   const callback = noop.useCallback((nativeEvent) => PremiumNitroHomeUtils.trackIfScrolledToBottom({ nativeEvent: nativeEvent.nativeEvent, trackedType: "your_nitro_plan", hasTrackedScrolledToBottom }), []);
-  const tmp4Result = navigation(5070);
+  const tmp4Result = navigation(5071);
   const items4 = [EntitlementStore];
   let tmp23 = null != tmp10;
   const stateFromStores2 = navigation(504).useStateFromStores(items4, () => {
@@ -1659,7 +1659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
       forApplication = new Set();
     }
     return forApplication;
-  }, [], tmp4(4873).areSetsEqual);
+  }, [], tmp4(4874).areSetsEqual);
   if (tmp23) {
     tmp23 = !tmp10.isBoostOnly;
   }
@@ -1704,7 +1704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     const obj13 = { premiumType: closure_26.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_28(tmp2(9828), obj13);
+    isInReverseTrial = closure_28(tmp2(9860), obj13);
   }
   items9[1] = isInReverseTrial;
   let tmp29Result3 = result;
@@ -1713,7 +1713,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   }
   if (tmp29Result3) {
     const obj14 = { premiumType: closure_26.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result3 = closure_28(tmp2(9828), obj14);
+    tmp29Result3 = closure_28(tmp2(9860), obj14);
   }
   items9[2] = tmp29Result3;
   if (tmp29Result4) {
@@ -1739,9 +1739,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
         },
       subscription: tmp10
     };
-    const items10 = [closure_28(tmp2(14921), obj17), ];
+    const items10 = [closure_28(tmp2(15156), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(14962), obj18);
+    items10[1] = closure_28(tmp2(15197), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

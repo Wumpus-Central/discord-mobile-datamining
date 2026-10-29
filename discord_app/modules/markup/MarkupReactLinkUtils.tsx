@@ -1,13 +1,13 @@
-// === Module 10047: MarkupReactLinkUtils ===
+// === Module 10079: MarkupReactLinkUtils ===
 
-// Module 10047 (MarkupReactLinkUtils)
-import MarkupParser from "MarkupParser" /* 8377 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8894 */;
+// Module 10079 (MarkupReactLinkUtils)
+import MarkupParser from "MarkupParser" /* 8399 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8897 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
-export const isLinkTrusted = function isLinkTrusted(target) {
+export function isLinkTrusted(target) {
   if (null == target.target) {
     return tmp;
   } else {
@@ -19,4 +19,4 @@ export const isLinkTrusted = function isLinkTrusted(target) {
     }
     title = target.title;
   }
-};
+}

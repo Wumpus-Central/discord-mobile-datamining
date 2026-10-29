@@ -1,12 +1,12 @@
-// === Module 19583: ListingImageUtil ===
+// === Module 19816: ListingImageUtil ===
 
-// Module 19583 (ListingImageUtil)
-import StoreUtils from "StoreUtils" /* 6418 */;
+// Module 19816 (ListingImageUtil)
+import StoreUtils from "StoreUtils" /* 6442 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");
 
-export const getSource = function getSource(image_asset) {
+export function getSource(image_asset) {
   if (null == image_asset.image_asset) {
     let obj2 = { uri: "" };
   } else {
@@ -17,4 +17,4 @@ export const getSource = function getSource(image_asset) {
     obj2 = { uri: str };
   }
   return obj2;
-};
+}

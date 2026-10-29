@@ -1,16 +1,16 @@
-// === Module 7121: trackUserAvatarUpdated ===
+// === Module 7145: trackUserAvatarUpdated ===
 
-// Module 7121 (trackUserAvatarUpdated)
+// Module 7145 (trackUserAvatarUpdated)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7122 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7146 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/user_profile/utils/trackUserAvatarUpdated.tsx");
 
-export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildProfile) {
+export function trackUserAvatarUpdated(isGuildProfile) {
   let flag = isGuildProfile.isGuildProfile;
   ({ avatarHash, avatarId } = isGuildProfile);
   if (flag === undefined) {
@@ -32,4 +32,4 @@ export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildPro
   obj2.recent_avatar_id = NumberResult;
   obj2.is_edited_recent_avatar = NEW_ASSET === ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET;
   obj.track(AnalyticEvents.USER_AVATAR_UPDATED, obj2);
-};
+}

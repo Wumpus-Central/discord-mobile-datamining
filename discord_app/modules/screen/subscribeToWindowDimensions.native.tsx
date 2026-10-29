@@ -1,7 +1,7 @@
-// === Module 12574: subscribeToWindowDimensions ===
+// === Module 12628: subscribeToWindowDimensions ===
 
-// Module 12574 (subscribeToWindowDimensions)
-import DimensionsStore from "DimensionsStore" /* 1497 */;
+// Module 12628 (subscribeToWindowDimensions)
+import DimensionsStore from "DimensionsStore" /* 1498 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");

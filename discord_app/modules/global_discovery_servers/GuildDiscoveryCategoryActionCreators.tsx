@@ -1,10 +1,10 @@
-// === Module 18198: GuildDiscoveryCategoryActionCreators ===
+// === Module 18432: GuildDiscoveryCategoryActionCreators ===
 
-// Module 18198 (GuildDiscoveryCategoryActionCreators)
+// Module 18432 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18199 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18433 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -120,7 +120,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
           let about;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -214,7 +214,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
         closure_130_1(closure_130_2[5]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp18) {
       closure_3 = tmp18;
@@ -231,7 +231,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx");
 
-export const maybeFetchGuildDiscoveryCategories = function maybeFetchGuildDiscoveryCategories() {
+export function maybeFetchGuildDiscoveryCategories() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -240,8 +240,8 @@ export const maybeFetchGuildDiscoveryCategories = function maybeFetchGuildDiscov
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchMetadataForGuild = function fetchMetadataForGuild() {
+}
+export function fetchMetadataForGuild() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -250,8 +250,8 @@ export const fetchMetadataForGuild = function fetchMetadataForGuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchSlugForGuild = function fetchSlugForGuild() {
+}
+export function fetchSlugForGuild() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -260,29 +260,29 @@ export const fetchSlugForGuild = function fetchSlugForGuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateGuildPrimaryCategory = function updateGuildPrimaryCategory(guildId, primaryCategoryId) {
+}
+export function updateGuildPrimaryCategory(guildId, primaryCategoryId) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, primaryCategoryId });
-};
-export const updateGuildKeywords = function updateGuildKeywords(guildId, keywords) {
+}
+export function updateGuildKeywords(guildId, keywords) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, keywords });
-};
-export const updateGuildEmojiDiscoverabilityEnabled = function updateGuildEmojiDiscoverabilityEnabled(guildId, emojiDiscoverabilityEnabled) {
+}
+export function updateGuildEmojiDiscoverabilityEnabled(guildId, emojiDiscoverabilityEnabled) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, emojiDiscoverabilityEnabled });
-};
-export const updateGuildDiscoveryMetadataIsPublished = function updateGuildDiscoveryMetadataIsPublished(guildId, isPublished) {
+}
+export function updateGuildDiscoveryMetadataIsPublished(guildId, isPublished) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, isPublished });
-};
-export const updateGuildDiscoveryMetadataAbout = function updateGuildDiscoveryMetadataAbout(guildId, about) {
+}
+export function updateGuildDiscoveryMetadataAbout(guildId, about) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, about });
-};
-export const updateGuildDiscoveryMetadataReasonsToJoin = function updateGuildDiscoveryMetadataReasonsToJoin(guildId, reasonsToJoin) {
+}
+export function updateGuildDiscoveryMetadataReasonsToJoin(guildId, reasonsToJoin) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, reasonsToJoin });
-};
-export const updateGuildDiscoveryMetadataSocialLinks = function updateGuildDiscoveryMetadataSocialLinks(guildId, socialLinks) {
+}
+export function updateGuildDiscoveryMetadataSocialLinks(guildId, socialLinks) {
   DispatcherDefault.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, socialLinks });
-};
-export const saveGuildMetadata = function saveGuildMetadata() {
+}
+export function saveGuildMetadata() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -291,8 +291,8 @@ export const saveGuildMetadata = function saveGuildMetadata() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const addGuildCategory = function addGuildCategory(guildId, categoryId) {
+}
+export function addGuildCategory(guildId, categoryId) {
   _require = guildId;
   const HTTP = require("HTTPUtils").HTTP;
   const obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(guildId, categoryId), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
@@ -303,8 +303,8 @@ export const addGuildCategory = function addGuildCategory(guildId, categoryId) {
   }).catch((error) => {
     DispatcherDefault.dispatch({ type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId, errors: error.body });
   });
-};
-export const deleteGuildCategory = function deleteGuildCategory(guildId, categoryId) {
+}
+export function deleteGuildCategory(guildId, categoryId) {
   _require = guildId;
   const HTTP = require("HTTPUtils").HTTP;
   const obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(guildId, categoryId), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
@@ -315,4 +315,4 @@ export const deleteGuildCategory = function deleteGuildCategory(guildId, categor
   }).catch((error) => {
     DispatcherDefault.dispatch({ type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId, errors: error.body });
   });
-};
+}

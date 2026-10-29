@@ -1,14 +1,14 @@
-// === Module 12417: useConjureAutomodSettingsLink ===
+// === Module 12471: useConjureAutomodSettingsLink ===
 
-// Module 12417 (useConjureAutomodSettingsLink)
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
+// Module 12471 (useConjureAutomodSettingsLink)
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9042 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10749 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10824 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -153,7 +153,7 @@ export const ConjureAutomodSettingsLink = ReactCompilerGating.isReactCompilerEna
     tmp5 = cResult[4];
   }
   const intl = guildId(1125).intl;
-  let formatResult = _modDef3863;
+  let formatResult = _modDef3864;
   formatResult = intl.format(update ? formatResult.esEGL5 : formatResult["XrN+Bg"], { onOpen: tmp5 });
   cResult[0] = guildId;
   cResult[1] = update;
@@ -162,7 +162,7 @@ export const ConjureAutomodSettingsLink = ReactCompilerGating.isReactCompilerEna
 }) : (function ConjureAutomodSettingsLink(guildId) {
   guildId = guildId.guildId;
   const intl = guildId(1125).intl;
-  const tmp3 = _modDef3863;
+  const tmp3 = _modDef3864;
   const obj = { children: null };
   const items = [
     " ",

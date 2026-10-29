@@ -1,10 +1,10 @@
-// === Module 18804: ExpressionPickerStore ===
+// === Module 19037: ExpressionPickerStore ===
 
-// Module 18804 (ExpressionPickerStore)
+// Module 19037 (ExpressionPickerStore)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1240 */;
-import uniqueIdDefault from "uniqueId" /* 6708 */;
+import uniqueIdDefault from "uniqueId" /* 6017 */;
 import identity_mod from "module_1266" /* 1266 */;
-import module_5200 from "module_5200" /* 5200 */;
+import module_5201 from "module_5201" /* 5201 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, showEmojiPacks: false, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_5200.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_5201.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };
@@ -21,7 +21,7 @@ const withEqualityFnResult = identity(module_5200.persist(() => closure_3, {
 }));
 const result = size.fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
 
-export const openExpressionPicker = function openExpressionPicker(arg0, arg1, arg2, arg3) {
+export function openExpressionPicker(arg0, arg1, arg2, arg3) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
@@ -39,8 +39,8 @@ export const openExpressionPicker = function openExpressionPicker(arg0, arg1, ar
     obj2.lastActiveView = withEqualityFnResult.getState().activeView;
     return withEqualityFnResult.setState(obj2);
   });
-};
-export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) {
+}
+export function closeExpressionPicker(arg0, arg1) {
   const state = withEqualityFnResult.getState();
   let tmp2 = undefined !== arg0 && arg0 !== state.activeViewType;
   if (!tmp2) {
@@ -53,8 +53,8 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
       const obj = state(1271);
     }
   }
-};
-export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(arg0, arg1) {
+}
+export function toggleMultiExpressionPicker(arg0, arg1) {
   const state = withEqualityFnResult.getState();
   if (null == state.activeView) {
     let EMOJI = state.lastActiveView;
@@ -107,8 +107,8 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
     });
     const obj2 = state1(1271);
   }
-};
-export const toggleExpressionPicker = function toggleExpressionPicker(activeView, activeViewType, activeChannelId) {
+}
+export function toggleExpressionPicker(activeView, activeViewType, activeChannelId) {
   const state = withEqualityFnResult.getState();
   if (state.activeView === activeView) {
     if (state.activeViewType === activeViewType) {
@@ -138,21 +138,21 @@ export const toggleExpressionPicker = function toggleExpressionPicker(activeView
     return withEqualityFnResult.setState(obj2);
   });
   let obj2 = require("ReactBatchUpdates");
-};
-export const setExpressionPickerView = function setExpressionPickerView(activeView) {
+}
+export function setExpressionPickerView(activeView) {
   _require = activeView;
   require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false }));
-};
-export const setShowEmojiPacks = function setShowEmojiPacks(showEmojiPacks) {
+}
+export function setShowEmojiPacks(showEmojiPacks) {
   _require = showEmojiPacks;
   require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks }));
-};
-export const setSearchQuery = function setSearchQuery(searchQuery) {
+}
+export function setSearchQuery(searchQuery) {
   _require = searchQuery;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ searchQuery, isSearchSuggestion: flag }));
-};
+}
 export const useExpressionPickerStore = withEqualityFnResult;

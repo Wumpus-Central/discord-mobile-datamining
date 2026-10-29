@@ -1,18 +1,18 @@
-// === Module 14833: CtaButton ===
+// === Module 15068: CtaButton ===
 
-// Module 14833 (CtaButton)
+// Module 15068 (CtaButton)
 import util from "util" /* 1125 */;
-import _modDef3187 from "module_3187" /* 3187 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import CtaButtonUtils from "CtaButtonUtils" /* 12929 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12931 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7427 */;
+import _modDef3188 from "module_3188" /* 3188 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import CtaButtonUtils from "CtaButtonUtils" /* 13150 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13152 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7450 */;
 
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");
 
-export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) {
+export function createCtaButtons(id, channel_id, arg2) {
   const ctaButtonType = CtaButtonUtils.getCtaButtonType(id, channel_id);
   const result = AgeVerificationUtils.shouldShowTiggerPawtect();
   if (CtaButtonUtils.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
@@ -46,7 +46,7 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     if (tmpResult2.isAgeVerificationMessageWithManualReviewCta(channel_id, id)) {
       const obj11 = { text: null, textColor: null, backgroundColor: null, callback: null };
       const intl3 = util.intl;
-      obj11.text = intl3.string(_modDef3187.Z61nkt);
+      obj11.text = intl3.string(_modDef3188.Z61nkt);
       ({ reportFpTextColor: obj9.textColor, reportFpBackgroundColor: obj9.backgroundColor } = arg2);
       let prop2;
       if (result) {
@@ -69,4 +69,4 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
   } else {
     return {};
   }
-};
+}

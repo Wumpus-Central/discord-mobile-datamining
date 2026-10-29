@@ -1,14 +1,14 @@
-// === Module 11224: ProfileUpdateRequestUtils ===
+// === Module 11278: ProfileUpdateRequestUtils ===
 
-// Module 11224 (ProfileUpdateRequestUtils)
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7122 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11225 */;
+// Module 11278 (ProfileUpdateRequestUtils)
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7146 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11279 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
-export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(pendingBanner, id) {
+export function getProfileChangesForUpdateRequest(pendingBanner, id) {
   const obj = {};
   if (undefined !== pendingBanner.pendingBanner) {
     pendingBanner = pendingBanner.pendingBanner;
@@ -78,8 +78,8 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
     }
   }
   obj2 = { collectibles_sku_ids: arr5.map((skuId) => skuId.skuId) };
-};
-export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(pendingGlobalName) {
+}
+export function getAccountUpdateForUpdateRequest(pendingGlobalName) {
   const obj = {};
   if (undefined !== pendingGlobalName.pendingGlobalName) {
     obj.globalName = pendingGlobalName.pendingGlobalName;
@@ -107,8 +107,8 @@ export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpda
     obj.typingIndicatorStyle = pendingGlobalName.pendingCustomTypingIndicatorStyle;
   }
   return obj;
-};
-export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChangesForUpdateRequest(pendingAvatar) {
+}
+export function getGuildMemberChangesForUpdateRequest(pendingAvatar) {
   const obj = {};
   if (undefined !== pendingAvatar.pendingAvatar) {
     pendingAvatar = pendingAvatar.pendingAvatar;
@@ -137,11 +137,11 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
     obj.displayNameStyles = pendingAvatar.pendingDisplayNameStyles;
   }
   return obj;
-};
-export const getPrimaryGuildChangesForUpdateRequest = function getPrimaryGuildChangesForUpdateRequest(pendingPrimaryGuildId) {
+}
+export function getPrimaryGuildChangesForUpdateRequest(pendingPrimaryGuildId) {
   const obj = {};
   if (undefined !== pendingPrimaryGuildId.pendingPrimaryGuildId) {
     obj.primaryGuildId = pendingPrimaryGuildId.pendingPrimaryGuildId;
   }
   return obj;
-};
+}

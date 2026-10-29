@@ -1,13 +1,13 @@
-// === Module 7980: ShowExpressiveModalSubtitleAltFlag ===
+// === Module 8003: ShowExpressiveModalSubtitleAltFlag ===
 
-// Module 7980 (ShowExpressiveModalSubtitleAltFlag)
+// Module 8003 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7932 */;
-import SafetyHubStore from "SafetyHubStore" /* 7957 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7955 */;
+import SafetyHubStore from "SafetyHubStore" /* 7980 */;
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let obj2 = { kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null };
 obj3[1] = { enabled: true };
@@ -56,7 +56,7 @@ export const useShouldShowExpressiveModalSubtitleAlt = ReactCompilerGating.isRea
   }
   return enabled;
 });
-export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(location) {
+export function shouldShowExpressiveModalSubtitleAlt(location) {
   if (obj.isCurrentUserSuspended()) {
     let enabled = SafetyHubStore.getShowExpressiveModalSubtitleAlt();
   } else {
@@ -64,4 +64,4 @@ export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiv
     enabled = closure_3.getConfig(obj2).enabled;
   }
   return enabled;
-};
+}

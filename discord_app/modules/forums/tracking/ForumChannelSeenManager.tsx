@@ -1,8 +1,8 @@
-// === Module 9763: ForumChannelSeenManager ===
+// === Module 9795: ForumChannelSeenManager ===
 
-// Module 9763 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9762 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9764 */;
+// Module 9795 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9794 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9796 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -54,12 +54,12 @@ class prototype extends AnalyticsFeedItemSeenManager {
 let result = size.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
 
 export default prototype;
-export const getForumPostSeenManagerId = function getForumPostSeenManagerId(arg0) {
+export function getForumPostSeenManagerId(arg0) {
   return "" + AnalyticsFeedItemSeenManager2.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + arg0;
-};
-export const markForumPostItemAsSeen = function markForumPostItemAsSeen(parent_id, item, timestampMillis) {
+}
+export function markForumPostItemAsSeen(parent_id, item, timestampMillis) {
   const result = AnalyticsFeedItemSeenActionCreators.markAnalyticsFeedItemSeen("" + AnalyticsFeedItemSeenManager2.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
-};
-export const markForumPostItemAsUnseen = function markForumPostItemAsUnseen(parent_id, item, timestampMillis) {
+}
+export function markForumPostItemAsUnseen(parent_id, item, timestampMillis) {
   const result = AnalyticsFeedItemSeenActionCreators.markAnalyticsFeedItemUnseen("" + AnalyticsFeedItemSeenManager2.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
-};
+}

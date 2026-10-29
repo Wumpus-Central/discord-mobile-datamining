@@ -1,9 +1,9 @@
-// === Module 14346: openAppStoreOverlayBottomSheet ===
+// === Module 14580: openAppStoreOverlayBottomSheet ===
 
-// Module 14346 (openAppStoreOverlayBottomSheet)
+// Module 14580 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import AnalyticsActions from "AnalyticsActions" /* 7827 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14343 */;
+import AnalyticsActions from "AnalyticsActions" /* 7850 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14577 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 ({ AnalyticEvents: c3, ComponentActions: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
 
-export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1, onOverlaySurfaceClick, trackOverlayCarouselScroll) {
+export function openAppStoreOverlayBottomSheet(appId, arg1, onOverlaySurfaceClick, trackOverlayCarouselScroll) {
   _require = arg1;
   importDefault = onOverlaySurfaceClick;
   appId = appId.appId;
@@ -42,4 +42,4 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     }
   });
-};
+}

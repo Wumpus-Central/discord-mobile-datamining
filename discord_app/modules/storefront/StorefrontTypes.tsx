@@ -1,6 +1,6 @@
-// === Module 7374: StorefrontTypes ===
+// === Module 7397: StorefrontTypes ===
 
-// Module 7374 (StorefrontTypes)
+// Module 7397 (StorefrontTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/storefront/StorefrontTypes.tsx");

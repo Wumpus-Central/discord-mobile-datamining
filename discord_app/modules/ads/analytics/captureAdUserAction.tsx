@@ -1,21 +1,21 @@
-// === Module 9607: captureAdUserAction ===
+// === Module 9639: captureAdUserAction ===
 
-// Module 9607 (captureAdUserAction)
+// Module 9639 (captureAdUserAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import v1 from "v1" /* 1278 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7785 */;
-import QuestDataUtils from "QuestDataUtils" /* 7807 */;
-import getQuestLogger from "getQuestLogger" /* 7818 */;
-import AnalyticsActions from "AnalyticsActions" /* 7827 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
-import AdDataUtils from "AdDataUtils" /* 7837 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7842 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 9608 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9610 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7807 */;
+import QuestDataUtils from "QuestDataUtils" /* 7830 */;
+import getQuestLogger from "getQuestLogger" /* 7841 */;
+import AnalyticsActions from "AnalyticsActions" /* 7850 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7859 */;
+import AdDataUtils from "AdDataUtils" /* 7860 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7865 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 9640 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7811 */;
+import QuestStore from "QuestStore" /* 7834 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -39,7 +39,7 @@ let closure_7 = async function _emitClickEventWithCreative(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -212,7 +212,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -231,7 +231,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -352,7 +352,7 @@ let closure_11 = async function _handleViewInternalSurfaceImpressionAction(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -434,7 +434,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 
-export const captureAdUserAction = function captureAdUserAction(type) {
+export function captureAdUserAction(type) {
   try {
     type = type.type;
     if (captureAdUserActionTypes.AdUserActionType.END_CONTENT_LOAD === type) {
@@ -549,4 +549,4 @@ export const captureAdUserAction = function captureAdUserAction(type) {
   } catch (tmp13) {
     reportCaptureAdUserActionError(tmp13);
   }
-};
+}

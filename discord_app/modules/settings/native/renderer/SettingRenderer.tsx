@@ -1,34 +1,34 @@
-// === Module 16247: SettingRenderer ===
+// === Module 16485: SettingRenderer ===
 
-// Module 16247 (SettingRenderer)
+// Module 16485 (SettingRenderer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5018 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5249 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useToken from "useToken" /* 5288 */;
-import ToastUtils from "ToastUtils" /* 5698 */;
-import GuildIcon from "GuildIcon" /* 6919 */;
-import TableRow from "TableRow" /* 6939 */;
-import TableRadioGroup from "TableRadioGroup" /* 7021 */;
-import ClipboardUtils from "ClipboardUtils" /* 7321 */;
-import TableSwitchRow from "TableSwitchRow" /* 7331 */;
-import FormSwitch from "FormSwitch" /* 7332 */;
-import ClydeIcon from "ClydeIcon" /* 10606 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11663 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16248 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 16250 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 16251 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 16252 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5019 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useToken from "useToken" /* 5289 */;
+import ToastUtils from "ToastUtils" /* 5700 */;
+import GuildIcon from "GuildIcon" /* 6943 */;
+import TableRow from "TableRow" /* 6963 */;
+import TableRadioGroup from "TableRadioGroup" /* 7045 */;
+import ClipboardUtils from "ClipboardUtils" /* 7345 */;
+import TableSwitchRow from "TableSwitchRow" /* 7355 */;
+import FormSwitch from "FormSwitch" /* 7356 */;
+import ClydeIcon from "ClydeIcon" /* 10639 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11717 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16486 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 16488 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 16489 */;
+import settings_tracking_Tracking from "settings/tracking/Tracking" /* 16490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16246 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16484 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -100,11 +100,11 @@ function StaticSettingSearchResult(title) {
 let closure_3 = ["onChangeEnd", "step", "startIcon", "endIcon", "minValue", "maxValue", "valueLabel", "defaultValue", "onChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11249);
+const SettingRendererConstants = fn(11303);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 }, sliderTitle: { flexDirection: "row", justifyContent: "space-between" }, radioSettingHighlight: { top: 26 }, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
 obj.defaultIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
@@ -638,8 +638,8 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(16250).useHighlightSettingItem(setting);
-  let obj = trailing(16250);
+  let highlightSettingItem = trailing(16488).useHighlightSettingItem(setting);
+  let obj = trailing(16488);
   const items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;
@@ -673,18 +673,18 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(6939).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(6963).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(6939).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(6963).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(6939).TableRow, obj3), ];
+  const children = [closure_14(trailing(6963).TableRow, obj3), ];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);
@@ -1085,7 +1085,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
 
 export const GuildSelectDefaultIcon = tmp4;
-export const renderSettingItem = function renderSettingItem(item) {
+export function renderSettingItem(item) {
   ({ setting, settingData, start, end } = item);
   const type = settingData.type;
   if (constants.GUILD_SELECTOR === type) {
@@ -1142,8 +1142,8 @@ export const renderSettingItem = function renderSettingItem(item) {
     obj.setting = setting;
     return closure_1_14(closure_29, obj);
   }
-};
-export const renderSettingSearchResultItem = function renderSettingSearchResultItem(settingData) {
+}
+export function renderSettingSearchResultItem(settingData) {
   settingData = settingData.settingData;
   const tmp = _objectWithoutProperties(settingData, closure_4);
   const type = settingData.type;
@@ -1165,7 +1165,7 @@ export const renderSettingSearchResultItem = function renderSettingSearchResultI
     const error = new Error("[SettingRenderer] Found unsupported renderer type for setting: " + settingData.setting);
     throw error;
   }
-};
-export const renderSettingSearchResultPlaceholderItem = function renderSettingSearchResultPlaceholderItem(start) {
+}
+export function renderSettingSearchResultPlaceholderItem(start) {
   return closure_1_14(closure_35, { start: start.start, end: start.end });
-};
+}

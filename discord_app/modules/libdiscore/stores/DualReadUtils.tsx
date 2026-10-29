@@ -1,11 +1,11 @@
-// === Module 4880: DualReadUtils ===
+// === Module 4881: DualReadUtils ===
 
-// Module 4880 (DualReadUtils)
+// Module 4881 (DualReadUtils)
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import SetUtils from "SetUtils" /* 4873 */;
+import SetUtils from "SetUtils" /* 4874 */;
 import size from "module_2" /* 2 */;
 
 function deepEqualImpl(getTime, getTime2, map, arg3) {
@@ -429,7 +429,7 @@ const AnalyticEvents = Constants.AnalyticEvents;
 let map = new Map();
 let result = size.fileFinishedImporting("modules/libdiscore/stores/DualReadUtils.tsx");
 
-export const runDualReadValidation = function runDualReadValidation(store_name, Kkv, fn) {
+export function runDualReadValidation(store_name, Kkv, fn) {
   let items = [];
   fn((derived, derived2) => {
     doDualReadValidation(items, derived, derived2);
@@ -544,6 +544,6 @@ export const runDualReadValidation = function runDualReadValidation(store_name, 
     });
   }
   logErrorsToAnalytics(store_name, items);
-};
+}
 export { doDualReadValidation };
 export { logErrorsToAnalytics };

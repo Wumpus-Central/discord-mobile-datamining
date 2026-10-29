@@ -1,10 +1,10 @@
-// === Module 7247: LastMentionTimestampStore ===
+// === Module 7271: LastMentionTimestampStore ===
 
-// Module 7247 (LastMentionTimestampStore)
+// Module 7271 (LastMentionTimestampStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
 import UserStore from "UserStore" /* 1389 */;
 
 let timestamp = null;
@@ -248,7 +248,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
 
 export default lastMentionTimestampStore;
-export const trackMessageNotificationTimestamps = function trackMessageNotificationTimestamps(mentions, guildId) {
+export function trackMessageNotificationTimestamps(mentions, guildId) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -283,4 +283,4 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   obj2.roleMentioned = someResult1;
   obj2.everyoneMentioned = true === mentions.mention_everyone && !result;
   DispatcherDefault.dispatch(obj2);
-};
+}

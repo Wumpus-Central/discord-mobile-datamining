@@ -1,18 +1,18 @@
-// === Module 18308: MembersPruneActionSheet ===
+// === Module 18542: MembersPruneActionSheet ===
 
-// Module 18308 (MembersPruneActionSheet)
+// Module 18542 (MembersPruneActionSheet)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7402 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18310 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7425 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18544 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const PrunePreviewStore = fn(18309);
+const PrunePreviewStore = fn(18543);
 ({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -38,7 +38,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         handlePruneUpdate = function handlePruneUpdate() { ... };
         obj = id(closure_2[9]);
         subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return () => { ... };
+        return /* F157326 */ function() { ... };
       }
     }
     cResult[1] = guild.id;
@@ -49,7 +49,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         handlePruneUpdate = function handlePruneUpdate() { ... };
         obj = id(closure_2[9]);
         subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return () => { ... };
+        return /* F157326 */ function() { ... };
       }
     }
   }
@@ -59,7 +59,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         handlePruneUpdate = function handlePruneUpdate() { ... };
         obj = id(closure_2[9]);
         subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return () => { ... };
+        return /* F157326 */ function() { ... };
       }
     }
     const effect = obj2.useEffect(T, items2);
@@ -69,7 +69,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
           handlePruneUpdate = function handlePruneUpdate() { ... };
           obj = id(closure_2[9]);
           subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-          return () => { ... };
+          return /* F157326 */ function() { ... };
         }
       }
     }

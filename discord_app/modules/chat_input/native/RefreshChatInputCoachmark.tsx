@@ -1,17 +1,17 @@
-// === Module 13319: RefreshChatInputCoachmark ===
+// === Module 13552: RefreshChatInputCoachmark ===
 
-// Module 13319 (RefreshChatInputCoachmark)
+// Module 13552 (RefreshChatInputCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5163 */;
-import useCoachmark from "useCoachmark" /* 9874 */;
+import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5164 */;
+import useCoachmark from "useCoachmark" /* 9906 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["buttonRef"];
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefreshChatInputCoachmark(disabled) {
@@ -21,12 +21,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefresh
     if (disabled) {
       let items = [];
     } else {
-      items = [tmp(4840).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+      items = [tmp(4841).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
     }
     cResult[0] = disabled;
     cResult[1] = items;
   } else {
-    const tmp6 = _slicedToArray(tmp(7532).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp6 = _slicedToArray(tmp(7555).useSelectedDismissibleContent(cResult[1]), 2);
     _require = tmp7;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,13 +54,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefresh
     }
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { type: "rive", rive: tmp(5163).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      const obj2 = { type: "rive", rive: tmp(5164).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
       cResult[6] = obj2;
       let tmp14 = obj2;
     } else {
       tmp14 = cResult[6];
     }
-    const tmp15 = tmp6[0] === tmp(4840).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
+    const tmp15 = tmp6[0] === tmp(4841).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
     if (cResult[7] === tmp15) {
       if (cResult[8] === tmp13) {
         let tmp16 = cResult[9];
@@ -76,7 +76,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefresh
     cResult[8] = tmp13;
     cResult[9] = obj3;
     tmp16 = obj3;
-    const tmpResult = tmp(7532);
+    const tmpResult = tmp(7555);
   }
   const obj = require("c");
 }) : (function useRefreshChatInputCoachmark(disabled) {
@@ -85,7 +85,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefresh
   if (disabled.disabled) {
     let items = [];
   } else {
-    items = [tmp(4840).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+    items = [tmp(4841).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
   const tmp3 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
   _require = tmp4;

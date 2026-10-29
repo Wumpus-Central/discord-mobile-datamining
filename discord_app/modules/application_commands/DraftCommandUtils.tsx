@@ -1,15 +1,15 @@
-// === Module 13324: DraftCommandUtils ===
+// === Module 13557: DraftCommandUtils ===
 
-// Module 13324 (DraftCommandUtils)
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6020 */;
-import DraftCommand from "DraftCommand" /* 7667 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10238 */;
+// Module 13557 (DraftCommandUtils)
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6024 */;
+import DraftCommand from "DraftCommand" /* 7690 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10271 */;
 import size from "module_2" /* 2 */;
 
 const COMMAND_SENTINEL = ChannelAutocompleteConstants.COMMAND_SENTINEL;
 const result = size.fileFinishedImporting("modules/application_commands/DraftCommandUtils.tsx");
 
-export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
+export function toDraftCommand(activeCommand, result1) {
   if (null == activeCommand) {
     return null;
   } else {
@@ -37,8 +37,8 @@ export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
     }
     return tmp3;
   }
-};
-export const resolveDraftCommand = function resolveDraftCommand(channel, text, draftCommand) {
+}
+export function resolveDraftCommand(channel, text, draftCommand) {
   if (null != draftCommand) {
     if (obj4.isDraftCommandValidForText(draftCommand, text)) {
       const obj2 = { channel, type: "channel" };
@@ -58,4 +58,4 @@ export const resolveDraftCommand = function resolveDraftCommand(channel, text, d
     obj4 = DraftCommand;
   }
   return null;
-};
+}

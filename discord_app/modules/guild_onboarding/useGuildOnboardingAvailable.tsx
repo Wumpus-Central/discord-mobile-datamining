@@ -1,7 +1,7 @@
-// === Module 7477: useGuildOnboardingAvailable ===
+// === Module 7500: useGuildOnboardingAvailable ===
 
-// Module 7477 (useGuildOnboardingAvailable)
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
+// Module 7500 (useGuildOnboardingAvailable)
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
 
 const require = globalThis.__r;
 
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   return stateFromStores;
 });
-export const isGuildOnboardingAvailable = function isGuildOnboardingAvailable(guild) {
+export function isGuildOnboardingAvailable(guild) {
   if (null == guild) {
     return false;
   } else {
@@ -104,4 +104,4 @@ export const isGuildOnboardingAvailable = function isGuildOnboardingAvailable(gu
     }
     return hasItem;
   }
-};
+}

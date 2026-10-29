@@ -1,10 +1,10 @@
-// === Module 15958: NotifSettingsUtils ===
+// === Module 16194: NotifSettingsUtils ===
 
-// Module 15958 (NotifSettingsUtils)
+// Module 16194 (NotifSettingsUtils)
 import util from "util" /* 1125 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15959 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15955 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16195 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16191 */;
 import size from "module_2" /* 2 */;
 
 function inferImportanceFromBehavior(visibility) {
@@ -23,13 +23,23 @@ function inferImportanceFromBehavior(visibility) {
 function formatCategory(id) {
   const obj = { id: id.stringId, name: null };
   const intl = util.intl;
-  obj.name = intl.string(id.title);
+  const stringResult = intl.string(id.title);
+  let stringId = id.stringId;
+  if ("" !== stringResult) {
+    stringId = stringResult;
+  }
+  obj.name = stringId;
   return obj;
 }
 function formatSetting(item10023, importance) {
   const obj = { id: item10023.string_id, groupId: item10023.category, name: null, importance: null, ringtone: null, badge: null, vibrate: null };
   const intl = util.intl;
-  obj.name = intl.string(item10023.title);
+  const stringResult = intl.string(item10023.title);
+  let string_id = item10023.string_id;
+  if ("" !== stringResult) {
+    string_id = stringResult;
+  }
+  obj.name = string_id;
   if (importance != null) {
     obj.importance = importance;
     let ringtone;
@@ -55,7 +65,7 @@ function formatSetting(item10023, importance) {
   }
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(15960).getAssignedNotifSettingsAndMappings();
+  const assignedNotifSettingsAndMappings = map(16196).getAssignedNotifSettingsAndMappings();
   ({ categories, settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
     map = new Map();
@@ -118,7 +128,7 @@ function buildChannelsAndMapping() {
     continue;
   }
   const obj3 = { groups: null, mapping: null, channels: null, inheritedImportances: null };
-  const obj = map(15960);
+  const obj = map(16196);
   obj3.groups = categories.map(formatCategory);
   obj3.mapping = mappings.flatMap((notifSetting) => {
     value = map.get(notifSetting.notifSetting);
@@ -146,10 +156,14 @@ export default {
     ({ registerAndroidNotifGroupsAndChannels, registerAndroidNotifTypeMappings } = obj);
     if (null != registerAndroidNotifGroupsAndChannels) {
       if (null != registerAndroidNotifTypeMappings) {
-        ({ channels, inheritedImportances, groups, mapping } = buildChannelsAndMapping());
+        ({ groups, channels, inheritedImportances, mapping } = buildChannelsAndMapping());
         const tmp4 = buildChannelsAndMapping();
         const obj2 = { message: "Registering declarative notification categories", data: null };
-        const obj3 = { channels: channels.map((id) => id.id), inheritedImportances: null };
+        const obj3 = { channels: channels.map((id) => id.id), entriesWithFallbackNames: null, inheritedImportances: null };
+        const items = [];
+        HermesBuiltin.arraySpread(channels, HermesBuiltin.arraySpread(groups, 0));
+        const found = items.filter((name) => name.name === name.id);
+        obj3.entriesWithFallbackNames = found.map((id) => id.id);
         const _Array = Array;
         const tmpResult = SentryUtilsDefault;
         obj3.inheritedImportances = Array.from(inheritedImportances.entries()).map((item) => {

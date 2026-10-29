@@ -1,6 +1,6 @@
-// === Module 8197: VideoUploadUtils ===
+// === Module 8219: VideoUploadUtils ===
 
-// Module 8197 (VideoUploadUtils)
+// Module 8219 (VideoUploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
 import size from "module_2" /* 2 */;
@@ -68,7 +68,7 @@ let result = size.fileFinishedImporting("modules/media_uploads/native/VideoUploa
 
 export { VideoQualityTarget };
 export const DEFAULT_VIDEO_ENCODING_CONFIG = { bitrateFloor: 300000, createHDR: false, frameRate: 30, keyFrameIntervalSeconds: 2, rotationDegrees: 0, skipVideoTranscode: false, targetBitrate: VideoQualityTarget.MEDIUM.targetBitrate, targetHeight: 480, targetWidth: 640, videoQuality: VideoQualityTarget.MEDIUM, useTranscodedVideoForMovSources: true, transmuxLivePhotos: true, progressUpdateGranularity: 10 };
-export const calculateTargetDimensions = function calculateTargetDimensions(videoMetadata, targetResolution) {
+export function calculateTargetDimensions(videoMetadata, targetResolution) {
   const result = videoMetadata.width / videoMetadata.height;
   if (videoMetadata.width > videoMetadata.height) {
     const _Math3 = Math;
@@ -93,8 +93,8 @@ export const calculateTargetDimensions = function calculateTargetDimensions(vide
   }
   size.height = sum1;
   return size;
-};
-export const canSkipVideoTranscode = function canSkipVideoTranscode(targetResolution, videoMetadata, fileSize, effectiveUploadLimit) {
+}
+export function canSkipVideoTranscode(targetResolution, videoMetadata, fileSize, effectiveUploadLimit) {
   if (null != fileSize) {
     if (null != effectiveUploadLimit) {
       if (fileSize > effectiveUploadLimit) {
@@ -137,8 +137,8 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(targetResolu
     tmp12 = null === videoMetadata.format.match(/(avc1|hvc1|video\/(avc|hevc))/i);
   }
   return !tmp12;
-};
-export const logSourceMetadata = function logSourceMetadata(format) {
+}
+export function logSourceMetadata(format) {
   let str = "unknown";
   if (null != format.format) {
     format = { hvc1: "hvc1 (HEVC)", avc1: "avc1 (H.264)" }[format.format];
@@ -161,8 +161,8 @@ export const logSourceMetadata = function logSourceMetadata(format) {
   logger.info("- Profile: " + format.sourceProfile);
   logger.info("- Level: " + format.sourceLevel);
   logger.info("- Duration: " + format.durationMs + " ms");
-};
-export const logEncoderSettings = function logEncoderSettings(videoQuality) {
+}
+export function logEncoderSettings(videoQuality) {
   logger.info("Encoder Video Quality Settings:");
   let str1;
   if (videoQuality.videoQuality != null) {
@@ -205,7 +205,7 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
     const _HermesInternal6 = HermesInternal;
     logger.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
   }
-};
-export const calculateOptimalBitrate = function calculateOptimalBitrate(videoMetadata, targetBitrate, bitrateFloor) {
+}
+export function calculateOptimalBitrate(videoMetadata, targetBitrate, bitrateFloor) {
   return Math.min(Math.max(videoMetadata.bitRate, bitrateFloor), targetBitrate.targetBitrate);
-};
+}

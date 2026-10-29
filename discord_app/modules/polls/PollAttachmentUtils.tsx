@@ -1,6 +1,6 @@
-// === Module 12168: PollAttachmentUtils ===
+// === Module 12222: PollAttachmentUtils ===
 
-// Module 12168 (PollAttachmentUtils)
+// Module 12222 (PollAttachmentUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_2 = async function _downloadPollGif() {
@@ -22,22 +22,22 @@ let closure_2 = async function _downloadPollGif() {
   await closure_130_0.blob();
   return convertBlobToBase64(value);
 };
-const POLL_ATTACHMENT_FOLDER = fn(8343).POLL_ATTACHMENT_FOLDER;
+const POLL_ATTACHMENT_FOLDER = fn(8365).POLL_ATTACHMENT_FOLDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
 
-export const getFileNameFromGifUrl = function getFileNameFromGifUrl(localCreationAnswerId, mediaURL) {
+export function getFileNameFromGifUrl(localCreationAnswerId, mediaURL) {
   const parts = decodeURIComponent(mediaURL).split("/");
   let str2 = parts.pop();
   if (str2 == null) {
     str2 = "temp.gif";
   }
   return "" + localCreationAnswerId + "-" + str2;
-};
-export const getFilePathForGif = function getFilePathForGif(fileNameFromGifUrl) {
+}
+export function getFilePathForGif(fileNameFromGifUrl) {
   return POLL_ATTACHMENT_FOLDER + "/" + fileNameFromGifUrl;
-};
-export const downloadPollGif = function downloadPollGif() {
+}
+export function downloadPollGif() {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -46,4 +46,4 @@ export const downloadPollGif = function downloadPollGif() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

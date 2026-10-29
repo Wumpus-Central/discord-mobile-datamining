@@ -1,13 +1,13 @@
-// === Module 19160: MessageCodedLinkManager ===
+// === Module 19395: MessageCodedLinkManager ===
 
-// Module 19160 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 5735 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19172 */;
+// Module 19395 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 5737 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19407 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7602 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import InviteStore from "InviteStore" /* 5736 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7625 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import InviteStore from "InviteStore" /* 5738 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -36,7 +36,7 @@ function resolveMessageCodedLinks(content) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -64,7 +64,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;
@@ -84,7 +84,7 @@ function resolveMessageCodedLinks(content) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -112,7 +112,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;
@@ -150,7 +150,7 @@ function resolveMessageCodedLinks(content) {
                                                   const obj2 = { value, done: true };
                                                   return obj2;
                                                 } else {
-                                                  return { value: "IconComponent", done: null };
+                                                  return { value: "IconComponent", done: "IconComponent" };
                                                 }
                                               } else {
                                                 try {
@@ -164,7 +164,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj3 = { value, done: true };
                                                       return obj3;
                                                     } else {
-                                                      const useGameOrganizationInviteFetch = tmp4(19168).useGameOrganizationInviteFetch;
+                                                      const useGameOrganizationInviteFetch = tmp4(19403).useGameOrganizationInviteFetch;
                                                       const items = [code];
                                                       v1 = 1;
                                                       dependencyMap = 1;
@@ -179,9 +179,9 @@ function resolveMessageCodedLinks(content) {
                                                     const obj = { value, done: true };
                                                     return obj;
                                                   } else {
-                                                    v1(12793)(closure_128_0).catch(closure_1_6);
+                                                    v1(13014)(closure_128_0).catch(closure_1_6);
                                                     dependencyMap = 3;
-                                                    return { value: "IconComponent", done: null };
+                                                    return { value: "IconComponent", done: "IconComponent" };
                                                   }
                                                 } catch (tmp14) {
                                                   dependencyMap = tmp;
@@ -249,7 +249,7 @@ function resolveMessageCodedLinks(content) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -277,7 +277,7 @@ function resolveMessageCodedLinks(content) {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } catch (tmp10) {
                   c0 = tmp;
                   throw tmp10;
@@ -297,7 +297,7 @@ function resolveMessageCodedLinks(content) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -325,7 +325,7 @@ function resolveMessageCodedLinks(content) {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } catch (tmp10) {
                   c0 = tmp;
                   throw tmp10;
@@ -363,7 +363,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj2 = { value, done: true };
                                                       return obj2;
                                                     } else {
-                                                      return { value: "IconComponent", done: null };
+                                                      return { value: "IconComponent", done: "IconComponent" };
                                                     }
                                                   } else {
                                                     try {
@@ -377,7 +377,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj3 = { value, done: true };
                                                           return obj3;
                                                         } else {
-                                                          const useGameOrganizationInviteFetch = tmp4(19168).useGameOrganizationInviteFetch;
+                                                          const useGameOrganizationInviteFetch = tmp4(19403).useGameOrganizationInviteFetch;
                                                           const items = [code];
                                                           v1 = 1;
                                                           dependencyMap = 1;
@@ -392,9 +392,9 @@ function resolveMessageCodedLinks(content) {
                                                         const obj = { value, done: true };
                                                         return obj;
                                                       } else {
-                                                        v1(12793)(closure_128_0).catch(closure_1_6);
+                                                        v1(13014)(closure_128_0).catch(closure_1_6);
                                                         dependencyMap = 3;
-                                                        return { value: "IconComponent", done: null };
+                                                        return { value: "IconComponent", done: "IconComponent" };
                                                       }
                                                     } catch (tmp14) {
                                                       dependencyMap = tmp;

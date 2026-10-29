@@ -1,11 +1,11 @@
-// === Module 4947: MessageRecord ===
+// === Module 4948: MessageRecord ===
 
-// Module 4947 (MessageRecord)
+// Module 4948 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1402 */;
-import ReactionUtils from "ReactionUtils" /* 4948 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5261 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5638 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5639 */;
+import ReactionUtils from "ReactionUtils" /* 4949 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5262 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5639 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5640 */;
 import Record from "Record" /* 1404 */;
 
 require = fn;
@@ -588,6 +588,6 @@ export const ModeratorReport = function ModeratorReport(arg0) {
   return Object.create(new.target.prototype);
 }.prototype;
 export const MessageSnapshotRecord = prototype2;
-export const isMessageComponentsV2 = function isMessageComponentsV2(contentMessage) {
+export function isMessageComponentsV2(contentMessage) {
   return FlagUtils.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
-};
+}

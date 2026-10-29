@@ -1,6 +1,6 @@
-// === Module 7625: Lru ===
+// === Module 7648: Lru ===
 
-// Module 7625 (Lru)
+// Module 7648 (Lru)
 import size from "module_2" /* 2 */;
 
 class Lru {

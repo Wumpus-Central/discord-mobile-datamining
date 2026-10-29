@@ -1,15 +1,15 @@
-// === Module 6739: UserGuildSettingsStore ===
+// === Module 6762: UserGuildSettingsStore ===
 
-// Module 6739 (UserGuildSettingsStore)
+// Module 6762 (UserGuildSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import MuteTimers from "MuteTimers" /* 4939 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4938 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import MuteTimers from "MuteTimers" /* 4940 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const MuteTimersDefault = MuteTimers;
@@ -206,12 +206,12 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
 const Constants = fn(1084);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4949).AccountNotificationFlags;
-const UnreadSetting = fn(6740).UnreadSetting;
+const AccountNotificationFlags = fn(4950).AccountNotificationFlags;
+const UnreadSetting = fn(6763).UnreadSetting;
 const UserSettingsConstants = fn(1094);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
@@ -1070,7 +1070,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("stores/UserGuildSettingsStore.tsx");
 
 export default userGuildSettingsStoreClass;
-export const getGuildDefaults = function getGuildDefaults(arg0) {
+export function getGuildDefaults(arg0) {
   guild = GuildStore.getGuild(arg0);
   if (null != guild) {
     let ALL_MESSAGES = guild.defaultMessageNotifications;
@@ -1078,8 +1078,8 @@ export const getGuildDefaults = function getGuildDefaults(arg0) {
     ALL_MESSAGES = UserNotificationSettings.ALL_MESSAGES;
   }
   return obj2[ALL_MESSAGES];
-};
-export const convertChannelOverridesToMap = function convertChannelOverridesToMap() {
+}
+export function convertChannelOverridesToMap() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -1089,4 +1089,4 @@ export const convertChannelOverridesToMap = function convertChannelOverridesToMa
     keyByResult = _modDef12.keyBy(obj, "channel_id");
   }
   return keyByResult;
-};
+}

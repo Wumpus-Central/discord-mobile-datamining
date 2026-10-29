@@ -1,9 +1,9 @@
-// === Module 17885: registerSidebarVisibilityMethods ===
+// === Module 18123: registerSidebarVisibilityMethods ===
 
-// Module 17885 (registerSidebarVisibilityMethods)
-import SortedGuildStore2 from "SortedGuildStore" /* 6736 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9606 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 18123 (registerSidebarVisibilityMethods)
+import SortedGuildStore2 from "SortedGuildStore" /* 6759 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9638 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import size from "module_2" /* 2 */;
 
 const SortedGuildStore = SortedGuildStore2;
@@ -12,7 +12,7 @@ const SortedGuildStore = SortedGuildStore2;
 const GuildsNodeType = SortedGuildStore2.GuildsNodeType;
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
 
-export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(fastListRef) {
+export function registerGuildVisibilityMethod(fastListRef) {
   const current = fastListRef.current;
   if (null != current) {
     closure_1(function getVisibleGuildIds() {
@@ -58,8 +58,8 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
       }
     });
   }
-};
-export const registerFastListChannelVisibilityMethod = function registerFastListChannelVisibilityMethod(ref, guildChannels) {
+}
+export function registerFastListChannelVisibilityMethod(ref, guildChannels) {
   closure_0 = guildChannels;
   const current = ref.current;
   if (null != current) {
@@ -103,4 +103,4 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
       }
     });
   }
-};
+}

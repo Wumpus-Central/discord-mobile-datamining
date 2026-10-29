@@ -1,8 +1,8 @@
-// === Module 6895: PostConnectionCallbackStore ===
+// === Module 6919: PostConnectionCallbackStore ===
 
-// Module 6895 (PostConnectionCallbackStore)
-import NewUserStore from "NewUserStore" /* 6896 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
+// Module 6919 (PostConnectionCallbackStore)
+import NewUserStore from "NewUserStore" /* 6920 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
 function processCallbacks() {
@@ -23,7 +23,7 @@ const subscription2 = Dispatcher.subscribe("NUF_COMPLETE", processCallbacks);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/PostConnectionCallbackStore.tsx");
 
-export const addPostConnectionCallback = function addPostConnectionCallback(arg0) {
+export function addPostConnectionCallback(arg0) {
   if (GatewayConnectionStore.isConnectedOrOverlay()) {
     if (null == NewUserStore.getType()) {
       closure_0 = arg0;
@@ -32,4 +32,4 @@ export const addPostConnectionCallback = function addPostConnectionCallback(arg0
     }
   }
   closure_2.push(arg0);
-};
+}

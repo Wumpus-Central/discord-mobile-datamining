@@ -1,10 +1,10 @@
-// === Module 18741: useFloatConjureAppsOffScreen ===
+// === Module 18974: useFloatConjureAppsOffScreen ===
 
-// Module 18741 (useFloatConjureAppsOffScreen)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18332 */;
+// Module 18974 (useFloatConjureAppsOffScreen)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18566 */;
 import noop from "module_19" /* 19 */;
-import VisibleChannelScreenStore from "VisibleChannelScreenStore" /* 18255 */;
+import VisibleChannelScreenStore from "VisibleChannelScreenStore" /* 18489 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFloat
   const tmp5 = VisibleChannelScreenStore(first);
   _require = tmp5;
   let obj = require("c");
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp(18332).FLOATING_APP_STORES, getFloatableFrameIds);
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp(18566).FLOATING_APP_STORES, getFloatableFrameIds);
   if (cResult[1] !== tmp5) {
     const fn2 = function c() {
       const floatableFrames = conjureAppPictureInPictureFrames.getFloatableFrames();

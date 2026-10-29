@@ -1,6 +1,6 @@
-// === Module 16496: RestrictedScheduleActionCreators ===
+// === Module 16734: RestrictedScheduleActionCreators ===
 
-// Module 16496 (RestrictedScheduleActionCreators)
+// Module 16734 (RestrictedScheduleActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -49,7 +49,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
         const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
         closure_131_1(closure_131_2[3]).dispatch(obj7);
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c5 = tmp;
@@ -98,7 +98,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleActionCreators.tsx");
 
-export const addRestrictedScheduleRule = function addRestrictedScheduleRule() {
+export function addRestrictedScheduleRule() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -107,8 +107,8 @@ export const addRestrictedScheduleRule = function addRestrictedScheduleRule() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateRestrictedScheduleRule = function updateRestrictedScheduleRule() {
+}
+export function updateRestrictedScheduleRule() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -117,8 +117,8 @@ export const updateRestrictedScheduleRule = function updateRestrictedScheduleRul
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteRestrictedScheduleRule = function deleteRestrictedScheduleRule() {
+}
+export function deleteRestrictedScheduleRule() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -127,4 +127,4 @@ export const deleteRestrictedScheduleRule = function deleteRestrictedScheduleRul
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

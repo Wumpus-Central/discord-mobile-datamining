@@ -1,17 +1,17 @@
-// === Module 16577: useBountyPauseAppStoreSheet ===
+// === Module 16815: useBountyPauseAppStoreSheet ===
 
-// Module 16577 (useBountyPauseAppStoreSheet)
+// Module 16815 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import AnalyticsActions from "AnalyticsActions" /* 7827 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9614 */;
-import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 14360 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16572 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 16575 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import AnalyticsActions from "AnalyticsActions" /* 7850 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9646 */;
+import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 14594 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16810 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 16813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6745).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6768).QuestsExperimentLocations;
 const ComponentActions = fn(1084).ComponentActions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -135,7 +135,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
           constructor() {
-            return () => { ... };
+            return /* F155451 */ function() { ... };
           }
         }
         const items = [tmp15];
@@ -163,7 +163,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       } else {
         class T {
           constructor() {
-            return () => { ... };
+            return /* F155451 */ function() { ... };
           }
         }
         tmp18 = cResult[11];
@@ -172,7 +172,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       if (cResult[12] === bounty.cta) {
         class T {
           constructor() {
-            return () => { ... };
+            return /* F155451 */ function() { ... };
           }
         }
       }
@@ -197,7 +197,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
           obj1.trackOverlaySurfaceClick = function trackOverlaySurfaceClick() { ... };
           obj1.appStoreOverlayCarouselScrollContext = { adContentId: tmp3.id };
           openAppStoreOrUrlResult = obj3.openAppStoreOrUrl(obj1);
-          return openAppStoreOrUrlResult.then(() => { ... });
+          return openAppStoreOrUrlResult.then(/* F155454 */ function() { ... });
         }
       }
       cResult[12] = bounty.cta;

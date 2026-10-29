@@ -1,8 +1,8 @@
-// === Module 8119: AgeVerificationExpressiveModalEverywhereExperiment ===
+// === Module 8142: AgeVerificationExpressiveModalEverywhereExperiment ===
 
-// Module 8119 (AgeVerificationExpressiveModalEverywhereExperiment)
+// Module 8142 (AgeVerificationExpressiveModalEverywhereExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,6 +27,6 @@ export const useIsAgeVerificationExpressiveModalEverywhereEnabled = ReactCompile
 }) : (function useIsAgeVerificationExpressiveModalEverywhereEnabled(location) {
   return closure_2.useConfig({ location }).enabled;
 });
-export const isAgeVerificationExpressiveModalEverywhereEnabled = function isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint) {
+export function isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint) {
   return closure_2.getConfig({ location: entryPoint }).enabled;
-};
+}

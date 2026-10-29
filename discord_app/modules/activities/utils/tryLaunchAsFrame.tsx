@@ -1,18 +1,18 @@
-// === Module 11437: tryLaunchAsFrame ===
+// === Module 11491: tryLaunchAsFrame ===
 
-// Module 11437 (tryLaunchAsFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11397 */;
-import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 11438 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+// Module 11491 (tryLaunchAsFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10880 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11451 */;
+import openFrameInAppChannelDefault from "openFrameInAppChannel" /* 11492 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 require = fn;
-const MAIN_SURFACE = fn(6811).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6834).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
-export const tryLaunchAsFrame = function tryLaunchAsFrame(channelId) {
+export function tryLaunchAsFrame(channelId) {
   ({ applicationId, application } = channelId);
   if (application === undefined) {
     application = ApplicationStore.getApplication(applicationId);
@@ -36,4 +36,4 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(channelId) {
     flag = true;
   }
   return flag;
-};
+}

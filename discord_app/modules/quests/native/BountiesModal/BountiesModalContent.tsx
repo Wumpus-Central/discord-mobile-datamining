@@ -1,29 +1,29 @@
-// === Module 16616: BountiesModalContent ===
+// === Module 16854: BountiesModalContent ===
 
-// Module 16616 (BountiesModalContent)
+// Module 16854 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import timing from "timing" /* 5242 */;
-import timingPresets from "timingPresets" /* 5245 */;
-import Patterns from "Patterns" /* 5250 */;
-import QuestContent from "QuestContent" /* 6750 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import QuestDataUtils from "QuestDataUtils" /* 7807 */;
-import AnalyticsActions from "AnalyticsActions" /* 7827 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
-import AnimationUtils from "AnimationUtils" /* 14192 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14343 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14365 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14380 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16560 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import timing from "timing" /* 5243 */;
+import timingPresets from "timingPresets" /* 5246 */;
+import Patterns from "Patterns" /* 5251 */;
+import QuestContent from "QuestContent" /* 6773 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import QuestDataUtils from "QuestDataUtils" /* 7830 */;
+import AnalyticsActions from "AnalyticsActions" /* 7850 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7859 */;
+import AnimationUtils from "AnimationUtils" /* 14425 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14577 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14599 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14614 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16798 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7810 */;
+import BountyStore from "BountyStore" /* 7833 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -54,9 +54,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(6745);
+const QuestConstants = fn(6768);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16564);
+const BountiesModalConstants = fn(16802);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -105,10 +105,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
   cResult[5] = size;
   tmp11 = size;
 }) : (function useBountiesModalVideoLayout() {
-  let size = height(1496)();
+  let size = height(1497)();
   const width = size.width;
   height = size.height;
-  const tmp = height(1630)();
+  const tmp = height(1631)();
   dependencyMap = tmp;
   const items = [width, height, , , , ];
   ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp);
@@ -128,7 +128,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
     return size;
   }, items);
 });
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(9481).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(9481);
+                          const balance = tmp(9512).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9512);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {
@@ -279,7 +279,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                                 const obj3 = { value, done: true };
                                 return obj3;
                               } else {
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "IconComponent" };
                               }
                             } else {
                               try {
@@ -341,7 +341,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                                     }
                                   }
                                   ref = 3;
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "IconComponent" };
                                 }
                               } catch (tmp40) {
                                 if (tmp4 === c3) {
@@ -506,7 +506,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -567,7 +567,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             }
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp40) {
         if (tmp4 === c3) {
@@ -699,8 +699,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   const height = useWindowDimensionsDefault().height;
   const size = closure_20();
   let obj = sharedValue(576);
-  sharedValue = sharedValue(5085).useSharedValue(0);
-  let obj2 = sharedValue(5085);
+  sharedValue = sharedValue(5086).useSharedValue(0);
+  let obj2 = sharedValue(5086);
   [tmp4, importDefault] = noop.useState(null);
   dependencyMap = noop.useRef(null);
   bounty = noop.useRef(0);

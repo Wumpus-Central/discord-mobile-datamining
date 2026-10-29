@@ -1,13 +1,13 @@
-// === Module 8182: FileUtils ===
+// === Module 8205: FileUtils ===
 
-// Module 8182 (FileUtils)
+// Module 8205 (FileUtils)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1125 */;
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import FileSizeUtils from "FileSizeUtils" /* 6414 */;
-import UploadUtils from "UploadUtils" /* 8178 */;
-import noConflictDefault from "noConflict" /* 8183 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import FileSizeUtils from "FileSizeUtils" /* 6438 */;
+import UploadUtils from "UploadUtils" /* 8201 */;
+import noConflictDefault from "noConflict" /* 8206 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -33,7 +33,7 @@ items2[1] = items3;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileUtils.tsx");
 
-export const transformNativeFile = function transformNativeFile(filename, arg1) {
+export function transformNativeFile(filename, arg1) {
   let file = filename;
   if (!(filename instanceof File)) {
     let str = arg1;
@@ -47,13 +47,13 @@ export const transformNativeFile = function transformNativeFile(filename, arg1) 
     file = new File(items, filename, obj);
   }
   return file;
-};
-export const makeFile = function makeFile(arg0, arg1, type) {
+}
+export function makeFile(arg0, arg1, type) {
   items = [arg0];
   const file = new File(items, arg1, { type });
   return file;
-};
-export const classifyFile = function classifyFile(file) {
+}
+export function classifyFile(file) {
   const type = file.type;
   let str2;
   if (file.name != null) {
@@ -84,8 +84,8 @@ export const classifyFile = function classifyFile(file) {
     str3 = found.klass;
   }
   return str3;
-};
-export const classifyFileName = function classifyFileName(fileName, arg1) {
+}
+export function classifyFileName(fileName, arg1) {
   closure_1 = arg1;
   let str;
   if (fileName != null) {
@@ -116,11 +116,11 @@ export const classifyFileName = function classifyFileName(fileName, arg1) {
     str2 = found.klass;
   }
   return str2;
-};
-export const sizeString = function sizeString(size) {
+}
+export function sizeString(size) {
   return noConflictDefault.filesize(size);
-};
-export const maxFileSize = function maxFileSize(guildId) {
+}
+export function maxFileSize(guildId) {
   const currentUser = UserStore.getCurrentUser();
   const userMaxFileSize = PremiumUtilsDefault.getUserMaxFileSize(currentUser);
   if (null == guildId) {
@@ -146,13 +146,13 @@ export const maxFileSize = function maxFileSize(guildId) {
     const _Math = Math;
     return Math.max(reduced, userMaxFileSize);
   }
-};
+}
 export { getUploadFileSizeSum };
-export const uploadSumTooLarge = function uploadSumTooLarge(arg0) {
+export function uploadSumTooLarge(arg0) {
   const tmp = getUploadFileSizeSum(arg0);
   return tmp > UploadUtils.getMaxTotalAttachmentSize({ location: "uploadSumTooLarge" });
-};
-export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadblockDescription(arg0) {
+}
+export function fileUploadLimitRoadblockDescription(arg0) {
   ({ guildId, maxSize } = arg0);
   if (maxSize == null) {
     const currentUser = UserStore.getCurrentUser();
@@ -185,4 +185,4 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
   const premiumMaxSize = PremiumUtils.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
   const intl = util.intl;
   return intl.format(util.t["+R2TzS"], { maxSize: maxSize1, premiumMaxSize });
-};
+}

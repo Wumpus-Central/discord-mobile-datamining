@@ -1,7 +1,7 @@
-// === Module 11432: openIgnoreThermalStateAlert ===
+// === Module 11486: openIgnoreThermalStateAlert ===
 
-// Module 11432 (openIgnoreThermalStateAlert)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
+// Module 11486 (openIgnoreThermalStateAlert)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
 
-export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
+export function openIgnoreThermalStateAlert(arg0) {
   closure_0 = arg0;
   const obj2 = { importer: null, isDismissable: false };
   importDefault = asyncGeneratorStep(async () => {
@@ -34,4 +34,4 @@ export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(
     return applyArgumentsResult;
   };
   actions_AlertActionCreatorsDefault.openLazy(obj2);
-};
+}

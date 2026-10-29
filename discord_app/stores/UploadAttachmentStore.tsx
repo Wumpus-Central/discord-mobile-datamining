@@ -1,12 +1,12 @@
-// === Module 8325: UploadAttachmentStore ===
+// === Module 8347: UploadAttachmentStore ===
 
-// Module 8325 (UploadAttachmentStore)
+// Module 8347 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DraftStore from "DraftStore" /* 7666 */;
-import CloudUpload from "CloudUpload" /* 8175 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8184 */;
+import DraftStore from "DraftStore" /* 7689 */;
+import CloudUpload from "CloudUpload" /* 8198 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8207 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -108,7 +108,7 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
   }
   return value2.find((id) => id.id === closure_0);
 };
-prototype["findUpload"] = function findUpload(channelId, ChannelMessage, cResult) {
+prototype["findUpload"] = function findUpload(channelId, ChannelMessage, arg2) {
   map = map.get(channelId);
   if (map == null) {
     const _Map = Map;
@@ -121,7 +121,7 @@ prototype["findUpload"] = function findUpload(channelId, ChannelMessage, cResult
   if (value2 == null) {
     value2 = closure_7;
   }
-  return value2.find(cResult);
+  return value2.find(arg2);
 };
 UploadAttachmentStore.displayName = "UploadAttachmentStore";
 const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {

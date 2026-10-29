@@ -1,10 +1,10 @@
-// === Module 9752: AttachmentUrlUtils ===
+// === Module 9784: AttachmentUrlUtils ===
 
-// Module 9752 (AttachmentUrlUtils)
+// Module 9784 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1101 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2034 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2035 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -233,7 +233,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(6040).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(6044).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1084).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
@@ -363,7 +363,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2035).getHostWithoutPort);
+const mapped = items.map(fn(2036).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {
@@ -376,10 +376,10 @@ let result = size.fileFinishedImporting("modules/messages/AttachmentUrlUtils.tsx
 
 export { isAttachmentPathUrl };
 export { isRefreshableAttachmentUrl };
-export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
+export function isExternalProxiedAttachmentUrl(toURLSafeResult) {
   return ImageProxyUtils.isImageProxyURL(toURLSafeResult);
-};
-export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
+}
+export function removeSignedUrlParameters(toURLSafeResult) {
   toURLSafeResult = URLUtilsDefault.toURLSafe(toURLSafeResult);
   if (null == toURLSafeResult) {
     return toURLSafeResult;
@@ -392,9 +392,9 @@ export const removeSignedUrlParameters = function removeSignedUrlParameters(toUR
     }
     return toURLSafeResult;
   }
-};
+}
 export { getSignedAttachmentExpiration };
-export const messageHasExpiredAttachmentUrl = function messageHasExpiredAttachmentUrl(attachments) {
+export function messageHasExpiredAttachmentUrl(attachments) {
   attachments = attachments.attachments;
   let someResult = attachments.some(isAttachmentExpired);
   if (!someResult) {
@@ -402,8 +402,8 @@ export const messageHasExpiredAttachmentUrl = function messageHasExpiredAttachme
     someResult = embeds.some(embedHasExpiredAttachmentUrl);
   }
   return someResult;
-};
-export const maybeRefreshAttachmentUrl = function maybeRefreshAttachmentUrl() {
+}
+export function maybeRefreshAttachmentUrl() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -412,4 +412,4 @@ export const maybeRefreshAttachmentUrl = function maybeRefreshAttachmentUrl() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

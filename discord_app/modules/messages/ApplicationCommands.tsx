@@ -1,13 +1,13 @@
-// === Module 8413: ApplicationCommands ===
+// === Module 8435: ApplicationCommands ===
 
-// Module 8413 (ApplicationCommands)
+// Module 8435 (ApplicationCommands)
 import _slicedToArray from "module_32" /* 32 */;
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
 
-export const getApplicationCommand = function getApplicationCommand(content) {
+export function getApplicationCommand(content) {
   const match = re1.exec(content);
   if (null == match) {
     return null;
@@ -33,4 +33,4 @@ export const getApplicationCommand = function getApplicationCommand(content) {
     }
     return tmp2;
   }
-};
+}

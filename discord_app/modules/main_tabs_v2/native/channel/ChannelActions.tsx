@@ -1,43 +1,43 @@
-// === Module 9745: ChannelActions ===
+// === Module 9777: ChannelActions ===
 
-// Module 9745 (ChannelActions)
+// Module 9777 (ChannelActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import ChatInputUtils from "ChatInputUtils" /* 5195 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7902 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8609 */;
-import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 9750 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9754 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9756 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9761 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10917 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11246 */;
-import useSearchContext from "useSearchContext" /* 13417 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13418 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13477 */;
-import IconActionButtonDefault from "IconActionButton" /* 14235 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 14244 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 14247 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import ChatInputUtils from "ChatInputUtils" /* 5196 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7925 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8631 */;
+import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 9782 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9786 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9788 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9793 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10952 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11300 */;
+import useSearchContext from "useSearchContext" /* 13650 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13651 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13710 */;
+import IconActionButtonDefault from "IconActionButton" /* 14471 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 14480 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 14482 */;
 import noop from "module_19" /* 19 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6825 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6848 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 require = fn;
 const View = fn(17).View;
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ THREADED_CHANNEL_TYPES: hasOwnProperty, isChannelChatInSidebar: metroRequire } = ChannelRecord);
-let closure_9 = fn(9746).setIsChannelDetailsSearchActive;
+let closure_9 = fn(9778).setIsChannelDetailsSearchActive;
 const Constants = fn(1084);
 ({ ChannelTypes: c10, ChannelTypesSets: closure_11, ComponentActions: closure_12 } = Constants);
-let closure_13 = fn(9747).SearchEntrypointAnalyticsLocations;
+let closure_13 = fn(9779).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_17 = createStyles.createStyles({ actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelChatButton(id, arg1) {
@@ -72,7 +72,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
       tmp8 = cResult[4];
     }
     const obj3 = {
-      IconComponent: tmp(8579).ChatIcon,
+      IconComponent: tmp(8601).ChatIcon,
       onPress() {
           openChannelSecondaryViewChatDefault(id.guild_id, id.id);
         },
@@ -111,7 +111,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
       hasUnread = mentionCount > 0;
     }
     const obj2 = {
-      IconComponent: tmp(8579).ChatIcon,
+      IconComponent: tmp(8601).ChatIcon,
       onPress() {
           openChannelSecondaryViewChatDefault(id.guild_id, id.id);
         },
@@ -198,7 +198,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function LfgVoi
 });
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelActionButtons(channel) {
-  const cResult = channel(items1[12]).c(31);
+  const cResult = channel(items1[12]).c(28);
   channel = channel.channel;
   const screenIndex = channel.screenIndex;
   const tmp4 = closure_17();
@@ -207,7 +207,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const canSearchForumPosts = channel(items1[22]).useCanSearchForumPosts(channel);
   let tmp8 = screenIndex(items1[23])();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ActiveThreadsStore];
+    const items = [hasChannelOverflowMenu];
     cResult[0] = items;
     let first = items;
   } else {
@@ -264,22 +264,22 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (cResult[8] !== channel.id) {
-      class H {
+      class G {
         constructor() {
-          return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+          return closure_8.isInChannel(channel.id);
         }
       }
       cResult[8] = channel.id;
-      cResult[9] = H;
+      cResult[9] = tmp20;
     } else {
-      class H {
+      class G {
         constructor() {
-          return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+          return closure_8.isInChannel(channel.id);
         }
       }
     }
     const tmpResult9 = tmp(tmp2[24]);
-    const stateFromStores2 = tmp(tmp2[24]).useStateFromStores(tmp18, H);
+    const stateFromStores2 = tmp(tmp2[24]).useStateFromStores(tmp18, tmp20);
     tmp5(tmp2[26])(channel);
     const tmpResult10 = tmp(tmp2[24]);
     const conversationsHeaderButton = tmp(tmp2[27]).useConversationsHeaderButton(channel);
@@ -287,225 +287,221 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     const isGameInvitePostVoiceEnabled = tmp(tmp2[28]).useIsGameInvitePostVoiceEnabled(channel);
     tmp(tmp2[28]);
     if (cResult[10] === channel.type) {
-      class H {
+      class G {
         constructor() {
-          return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+          return closure_8.isInChannel(channel.id);
         }
       }
-      if (cResult[13] === channel) {
-        class H {
+      const tmp31 = closure_18(channel, tmp27);
+      const tmp32 = tmp5(tmp2[29])(channel, tmp27);
+      hasChannelOverflowMenu = tmp(tmp2[30]).useHasChannelOverflowMenu(channel, screenIndex);
+      if (canJoinThreadVoice) {
+        class G {
           constructor() {
-            return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+            return closure_8.isInChannel(channel.id);
           }
         }
-        ActiveThreadsStore = tmp31;
-        if (canJoinThreadVoice) {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
+      }
+      if (constants.GUILD_DIRECTORY === channel.type) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
           }
         }
-        if (constants.GUILD_DIRECTORY === channel.type) {
-          class H {
+        tmp37[0] = tmp5(tmp2[32]);
+        tmp37[1] = tmp(tmp2[33]).MagnifyingGlassIcon;
+        tmp37[2] = function onPress() {
+          GuildDirectorySearchModalActionCreatorsDefault.open({ channel });
+        };
+        const intl2 = tmp(tmp2[14]).intl;
+        tmp37[3] = intl2.string(tmp(tmp2[14]).t["5h0QOP"]);
+        items1.push(tmp37);
+      } else {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+        if (canSearchForumPosts) {
+          class G {
             constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+              return closure_8.isInChannel(channel.id);
             }
           }
-          tmp36[0] = tmp5(tmp2[31]);
-          tmp36[1] = tmp(tmp2[32]).MagnifyingGlassIcon;
-          tmp36[2] = function onPress() {
-            GuildDirectorySearchModalActionCreatorsDefault.open({ channel });
+          tmp35[0] = tmp5(tmp2[32]);
+          tmp35[1] = tmp(tmp2[33]).MagnifyingGlassIcon;
+          tmp35[2] = function onPress() {
+            const result = ForumActionCreatorsDefault.updateForumSearchQuery(channel.id, "");
           };
-          const intl2 = tmp(tmp2[14]).intl;
-          tmp36[3] = intl2.string(tmp(tmp2[14]).t["5h0QOP"]);
-          items1.push(tmp36);
+          const intl = tmp(tmp2[14]).intl;
+          tmp35[3] = intl.string(tmp(tmp2[14]).t["5h0QOP"]);
+          items1.push(tmp35);
+        }
+      }
+      if (null != tmp32) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+      }
+      if (null != tmp31) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+      }
+      if (tmp8) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+      }
+      if (!tmp8) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+        const hasItem = set.has(channel.type);
+        let tmp41 = !hasItem;
+        if (!hasItem) {
+          class G {
+            constructor() {
+              return closure_8.isInChannel(channel.id);
+            }
+          }
+        }
+        if (tmp41) {
+          class G {
+            constructor() {
+              return closure_8.isInChannel(channel.id);
+            }
+          }
+          const GUILD_THREADS_ONLY = constants2.GUILD_THREADS_ONLY;
+          tmp41 = !GUILD_THREADS_ONLY.has(channel.type);
+        }
+        if (hasItem) {
+          class G {
+            constructor() {
+              return closure_8.isInChannel(channel.id);
+            }
+          }
+        }
+        if (hasItem) {
+          class G {
+            constructor() {
+              return closure_8.isInChannel(channel.id);
+            }
+          }
+        }
+        if (hasItem) {
+          class G {
+            constructor() {
+              return closure_8.isInChannel(channel.id);
+            }
+          }
+        }
+        tmp8 = !hasItem;
+      }
+      if (!tmp8) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+        tmp42[0] = tmp5(tmp2[43]);
+        tmp42[1] = tmp(tmp2[44]).ThreadIcon;
+        tmp42[2] = function onPress() {
+          return showThreadBrowserModalDefault(channel);
+        };
+        const intl3 = tmp(tmp2[14]).intl;
+        tmp42[3] = intl3.string(tmp(tmp2[14]).t.B2panI);
+        items1.unshift(tmp42);
+      }
+      const mapped = items1.map((accessibilityLabel, index) => {
+        closure_0 = accessibilityLabel;
+        let tmp = index === items1.length - 1;
+        if (tmp) {
+          tmp = !hasChannelOverflowMenu;
+        }
+        if (accessibilityLabel === conversationsHeaderButton) {
+          const obj2 = {
+            isLast: tmp,
+            children(arg0) {
+                closure_0 = arg0;
+                const obj = { noMargin: true };
+                const merged = Object.assign(closure_0);
+                obj.onPress = function onPress(arg0) {
+                  closure_0();
+                  const onPress = closure_0.onPress;
+                  if (onPress != null) {
+                    onPress(arg0);
+                  }
+                };
+                return closure_1_14(screenIndex(items1[47]), obj);
+              }
+          };
+          let tmp10 = closure_2_14(ConversationCoachmark.ConversationCoachmark, obj2, accessibilityLabel.accessibilityLabel);
         } else {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
-          }
-          if (canSearchForumPosts) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-            tmp34[0] = tmp5(tmp2[31]);
-            tmp34[1] = tmp(tmp2[32]).MagnifyingGlassIcon;
-            tmp34[2] = function onPress() {
-              const result = ForumActionCreatorsDefault.updateForumSearchQuery(channel.id, "");
-            };
-            const intl = tmp(tmp2[14]).intl;
-            tmp34[3] = intl.string(tmp(tmp2[14]).t["5h0QOP"]);
-            items1.push(tmp34);
+          let obj = { noMargin: tmp };
+          let merged = Object.assign(accessibilityLabel);
+          obj.key = accessibilityLabel.accessibilityLabel;
+          tmp10 = createElement(IconActionButtonDefault, { noMargin: tmp });
+        }
+        return tmp10;
+      });
+      if (cResult[21] === channel) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
           }
         }
-        if (null != tmp30) {
-          class H {
+        if (cResult[24] === tmp4.actionWrapper) {
+          class G {
             constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+              return closure_8.isInChannel(channel.id);
             }
           }
         }
-        if (tmp8) {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
-          }
-        }
-        if (!tmp8) {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
-          }
-          const hasItem = set.has(channel.type);
-          let tmp40 = !hasItem;
-          if (!hasItem) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-          }
-          if (tmp40) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-            const GUILD_THREADS_ONLY = constants2.GUILD_THREADS_ONLY;
-            tmp40 = !GUILD_THREADS_ONLY.has(channel.type);
-          }
-          if (hasItem) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-          }
-          if (hasItem) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-          }
-          if (hasItem) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-          }
-          tmp8 = !hasItem;
-        }
-        if (!tmp8) {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
-          }
-          tmp41[0] = tmp5(tmp2[42]);
-          tmp41[1] = tmp(tmp2[43]).ThreadIcon;
-          tmp41[2] = function onPress() {
-            return showThreadBrowserModalDefault(channel);
-          };
-          const intl3 = tmp(tmp2[14]).intl;
-          tmp41[3] = intl3.string(tmp(tmp2[14]).t.B2panI);
-          items1.unshift(tmp41);
-        }
-        const mapped = items1.map((accessibilityLabel, index) => {
-          closure_0 = accessibilityLabel;
-          let tmp = index === items1.length - 1;
-          if (tmp) {
-            tmp = !closure_4;
-          }
-          if (accessibilityLabel === conversationsHeaderButton) {
-            const obj2 = {
-              isLast: tmp,
-              children(arg0) {
-                  closure_0 = arg0;
-                  const obj = { noMargin: true };
-                  const merged = Object.assign(closure_0);
-                  obj.onPress = function onPress(arg0) {
-                    closure_0();
-                    const onPress = closure_0.onPress;
-                    if (onPress != null) {
-                      onPress(arg0);
-                    }
-                  };
-                  return closure_1_14(screenIndex(items1[46]), obj);
-                }
-            };
-            let tmp10 = closure_2_14(ConversationCoachmark.ConversationCoachmark, obj2, accessibilityLabel.accessibilityLabel);
-          } else {
-            let obj = { noMargin: tmp };
-            let merged = Object.assign(accessibilityLabel);
-            obj.key = accessibilityLabel.accessibilityLabel;
-            tmp10 = createElement(IconActionButtonDefault, { noMargin: tmp });
-          }
-          return tmp10;
-        });
-        if (cResult[24] === channel) {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
-          }
-          if (cResult[27] === tmp4.actionWrapper) {
-            class H {
-              constructor() {
-                return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-              }
-            }
-          }
-          let obj3 = { style: tmp4.actionWrapper, children: null };
-          const items4 = [mapped, tmp44];
-          obj3.children = items4;
-          const tmp49 = closure_15(conversationsHeaderButton, obj3);
-          cResult[27] = tmp4.actionWrapper;
-          cResult[28] = mapped;
-          cResult[29] = tmp44;
-          cResult[30] = tmp49;
-        }
-        let tmp45 = tmp31;
-        if (tmp31) {
-          class H {
-            constructor() {
-              return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
-            }
-          }
-          let obj4 = { channel };
-          tmp45 = closure_14(tmp5(tmp2[29]), obj4);
-        }
-        cResult[24] = channel;
-        cResult[25] = tmp31;
-        cResult[26] = tmp45;
+        let obj3 = { style: tmp4.actionWrapper, children: null };
+        const items4 = [mapped, tmp45];
+        obj3.children = items4;
+        const tmp50 = closure_15(conversationsHeaderButton, obj3);
+        cResult[24] = tmp4.actionWrapper;
+        cResult[25] = tmp45;
+        cResult[26] = mapped;
+        cResult[27] = tmp50;
       }
-      tmp30 = closure_18(channel, tmp26);
-      let result = tmp(tmp2[29]).hasChannelOverflowMenu(channel, screenIndex);
-      cResult[13] = channel;
-      cResult[14] = screenIndex;
-      cResult[15] = result;
-      const tmpResult14 = tmp(tmp2[29]);
+      let tmp46 = hasChannelOverflowMenu;
+      if (hasChannelOverflowMenu) {
+        class G {
+          constructor() {
+            return closure_8.isInChannel(channel.id);
+          }
+        }
+        let obj4 = { channel };
+        tmp46 = closure_14(tmp5(tmp2[30]), obj4);
+      }
+      cResult[21] = channel;
+      cResult[22] = hasChannelOverflowMenu;
+      cResult[23] = tmp46;
+      const tmpResult14 = tmp(tmp2[30]);
     }
-    let tmp28 = closure_6(channel.type);
-    if (tmp28) {
-      class H {
+    let tmp29 = closure_6(channel.type);
+    if (tmp29) {
+      class G {
         constructor() {
-          return Object.keys(closure_8.getVoiceStatesForChannel(channel.id)).length;
+          return closure_8.isInChannel(channel.id);
         }
       }
-      tmp28 = "channel-secondary-view-chat" !== screenIndex;
+      tmp29 = "channel-secondary-view-chat" !== screenIndex;
     }
     cResult[10] = channel.type;
     cResult[11] = screenIndex;
-    cResult[12] = tmp28;
-    tmp26 = tmp28;
+    cResult[12] = tmp29;
     const tmpResult12 = tmp(tmp2[28]);
   }
   const fn = function l() {
@@ -520,13 +516,13 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   channel = channel.channel;
   const screenIndex = channel.screenIndex;
   let items1;
-  c4 = undefined;
+  let hasChannelOverflowMenu;
   let tmp = closure_17();
   const tmp4 = screenIndex(items1[21])(channel);
   const canSearchForumPosts = channel(items1[22]).useCanSearchForumPosts(channel);
   let tmp7 = screenIndex(items1[23])();
   let obj = channel(items1[22]);
-  const items = [c4];
+  const items = [hasChannelOverflowMenu];
   items1 = [];
   const stateFromStores = channel(items1[24]).useStateFromStores(items, () => ActiveThreadsStore.hasThreadsForChannel(channel.guild_id, channel.id));
   let obj2 = channel(items1[24]);
@@ -549,19 +545,19 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     tmp16 = "channel-secondary-view-chat" !== screenIndex;
   }
   const tmp17 = closure_18(channel, tmp16);
+  const tmp18 = screenIndex(items1[29])(channel, tmp16);
   const obj8 = channel(items1[28]);
-  let result = channel(items1[29]).hasChannelOverflowMenu(channel, screenIndex);
-  c4 = result;
+  hasChannelOverflowMenu = channel(items1[30]).useHasChannelOverflowMenu(channel, screenIndex);
   if (canJoinThreadVoice) {
     if (isGameInvitesPost) {
       if (isGameInvitePostVoiceEnabled) {
-        let tmp22 = stateFromStores1;
+        let tmp23 = stateFromStores1;
         if (!stateFromStores1) {
-          tmp22 = tmp12;
+          tmp23 = tmp12;
         }
-        let obj9 = { IconComponent: tmp22 ? closure_21 : closure_22, buttonText: null, buttonTextColor: "text-feedback-positive", onPress: null, accessibilityLabel: null };
+        let obj9 = { IconComponent: tmp23 ? closure_21 : closure_22, buttonText: null, buttonTextColor: "text-feedback-positive", onPress: null, accessibilityLabel: null };
         let StringResult;
-        if (tmp22) {
+        if (tmp23) {
           if (stateFromStores2 > 0) {
             const _String = String;
             StringResult = String(stateFromStores2);
@@ -585,7 +581,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         obj9 = items1.push(obj9);
       }
     } else {
-      if (tmp19) {
+      if (tmp20) {
         const obj10 = { IconComponent: stateFromStores1 ? closure_20 : closure_19, onPress: null, accessibilityLabel: null };
         let fn2 = fn;
         if (!stateFromStores1) {
@@ -603,14 +599,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         obj10.accessibilityLabel = stringResult;
         items1.push(obj10);
       }
-      tmp19 = channel.isVocalThread() && tmp12;
+      tmp20 = channel.isVocalThread() && tmp12;
     }
   }
   const type = channel.type;
   if (constants.GUILD_DIRECTORY === type) {
     const obj11 = {
-      source: tmp2(tmp3[31]),
-      IconComponent: tmp5(tmp3[32]).MagnifyingGlassIcon,
+      source: tmp2(tmp3[32]),
+      IconComponent: tmp5(tmp3[33]).MagnifyingGlassIcon,
       onPress() {
           GuildDirectorySearchModalActionCreatorsDefault.open({ channel });
         },
@@ -627,8 +623,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             items1.push(conversationsHeaderButton);
           }
           const obj12 = {
-            source: tmp2(tmp3[31]),
-            IconComponent: tmp5(tmp3[32]).MagnifyingGlassIcon,
+            source: tmp2(tmp3[32]),
+            IconComponent: tmp5(tmp3[33]).MagnifyingGlassIcon,
             onPress() {
                       closure_9(channel.id, true, "initial");
                       if (obj2.isIOS()) {
@@ -671,8 +667,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     }
     if (canSearchForumPosts) {
       const obj13 = {
-        source: tmp2(tmp3[31]),
-        IconComponent: tmp5(tmp3[32]).MagnifyingGlassIcon,
+        source: tmp2(tmp3[32]),
+        IconComponent: tmp5(tmp3[33]).MagnifyingGlassIcon,
         onPress() {
               const result = ForumActionCreatorsDefault.updateForumSearchQuery(channel.id, "");
             },
@@ -683,6 +679,9 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       items1.push(obj13);
     }
   }
+  if (null != tmp18) {
+    items1.push(tmp18);
+  }
   if (null != tmp17) {
     items1.push(tmp17);
   }
@@ -691,13 +690,13 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   }
   if (!tmp7) {
     let hasItem = set.has(channel.type);
-    let tmp36 = !hasItem;
+    let tmp38 = !hasItem;
     if (!hasItem) {
-      tmp36 = stateFromStores;
+      tmp38 = stateFromStores;
     }
-    if (tmp36) {
+    if (tmp38) {
       const GUILD_THREADS_ONLY = constants2.GUILD_THREADS_ONLY;
-      tmp36 = !GUILD_THREADS_ONLY.has(channel.type);
+      tmp38 = !GUILD_THREADS_ONLY.has(channel.type);
     }
     if (hasItem) {
       hasItem = !tmp4;
@@ -706,14 +705,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       hasItem = !channel.isForumLikeChannel();
     }
     if (hasItem) {
-      hasItem = tmp36;
+      hasItem = tmp38;
     }
     tmp7 = !hasItem;
   }
   if (!tmp7) {
     const obj14 = {
-      source: tmp2(tmp3[42]),
-      IconComponent: tmp5(tmp3[43]).ThreadIcon,
+      source: tmp2(tmp3[43]),
+      IconComponent: tmp5(tmp3[44]).ThreadIcon,
       onPress() {
           return showThreadBrowserModalDefault(channel);
         },
@@ -729,7 +728,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       closure_0 = accessibilityLabel;
       let tmp = index === items1.length - 1;
       if (tmp) {
-        tmp = !c4;
+        tmp = !hasChannelOverflowMenu;
       }
       if (accessibilityLabel === conversationsHeaderButton) {
         const obj2 = {
@@ -745,7 +744,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
                   onPress(arg0);
                 }
               };
-              return closure_1_14(screenIndex(items1[46]), obj);
+              return closure_1_14(screenIndex(items1[47]), obj);
             }
         };
         let tmp10 = closure_2_14(ConversationCoachmark.ConversationCoachmark, obj2, accessibilityLabel.accessibilityLabel);
@@ -759,11 +758,11 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     }),
 
   ];
-  if (result) {
+  if (hasChannelOverflowMenu) {
     const obj16 = { channel };
-    result = closure_14(tmp2(tmp3[29]), obj16);
+    hasChannelOverflowMenu = closure_14(tmp2(tmp3[30]), obj16);
   }
-  items4[1] = result;
+  items4[1] = hasChannelOverflowMenu;
   obj15.children = items4;
   return closure_15(conversationsHeaderButton, obj15);
 });
@@ -791,7 +790,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
   }
   const obj = channelId(576);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
-  channelId(6697);
+  channelId(6721);
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
@@ -814,7 +813,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
   ({ screenIndex, showCreateThread } = channelId);
   const items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  channelId(6697);
+  channelId(6721);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -876,7 +875,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   const result = ForumChannelCloseSearchButton(504);
   const stateFromStoresObject = result.useStateFromStoresObject(first, tmp4);
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  const result1 = ForumChannelCloseSearchButton(9759);
+  const result1 = ForumChannelCloseSearchButton(9791);
   const hasForumSearchQuery = result1.useHasForumSearchQuery(channelId);
   if (cResult[3] === channelId) {
     if (cResult[4] === hasForumSearchQuery) {
@@ -903,7 +902,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
     }
   }
   if (hasForumSearchQuery) {
-    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(14245).ForumChannelCloseSearchButton;
+    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(14481).ForumChannelCloseSearchButton;
     obj = { channelId };
     let tmp10 = closure_14(ForumChannelCloseSearchButton, obj);
   } else {
@@ -956,7 +955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = closure_14(tmp(14245).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = closure_14(tmp(14481).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

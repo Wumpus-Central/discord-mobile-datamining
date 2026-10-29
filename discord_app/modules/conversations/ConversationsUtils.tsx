@@ -1,12 +1,12 @@
-// === Module 7735: ConversationsUtils ===
+// === Module 7757: ConversationsUtils ===
 
-// Module 7735 (ConversationsUtils)
+// Module 7757 (ConversationsUtils)
 import _mod12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
 
-export const mapConversation = function mapConversation(rawConversation) {
+export function mapConversation(rawConversation) {
   const summary_map = rawConversation.summary_map;
   let found;
   if (summary_map != null) {
@@ -65,18 +65,18 @@ export const mapConversation = function mapConversation(rawConversation) {
   if (null != title) {
     tmp4 = null;
     if ("" !== tmp2.title) {
-      const obj5 = { id: rawConversation.id, title: null, briefSummary: null, keyPoints: null, channelId: null, guildId: null, messageIds: null, userIds: null, startMessageId: null, endMessageId: null, messageCount: null, userCount: null, keywords: null, summaryMap: null, engagement: null, substance: null, dynamics: null, moderation: null };
-      ({ title: obj3.title, brief_summary } = tmp2);
+      const obj3 = { id: rawConversation.id, title: null, briefSummary: null, keyPoints: null, channelId: null, guildId: null, messageIds: null, userIds: null, startMessageId: null, endMessageId: null, messageCount: null, userCount: null, keywords: null, summaryMap: null, engagement: null, substance: null, dynamics: null };
+      ({ title: obj2.title, brief_summary } = tmp2);
       if (brief_summary == null) {
         brief_summary = null;
       }
-      obj5.briefSummary = brief_summary;
-      obj5.keyPoints = tmp2.key_points;
-      ({ channel_id: obj3.channelId, guild_id: obj3.guildId, message_ids: obj3.messageIds, user_ids: obj3.userIds, start_message_id: obj3.startMessageId, end_message_id: obj3.endMessageId, message_count: obj3.messageCount, user_count: obj3.userCount, keywords } = rawConversation);
+      obj3.briefSummary = brief_summary;
+      obj3.keyPoints = tmp2.key_points;
+      ({ channel_id: obj2.channelId, guild_id: obj2.guildId, message_ids: obj2.messageIds, user_ids: obj2.userIds, start_message_id: obj2.startMessageId, end_message_id: obj2.endMessageId, message_count: obj2.messageCount, user_count: obj2.userCount, keywords } = rawConversation);
       if (keywords == null) {
         keywords = [];
       }
-      obj5.keywords = keywords;
+      obj3.keywords = keywords;
       let tmp5 = null;
       if (null != rawConversation.summary_map) {
         let obj = { entries: null };
@@ -84,20 +84,10 @@ export const mapConversation = function mapConversation(rawConversation) {
         obj.entries = entries1.map((summaryType) => ({ summaryType: summaryType.summary_type, contentJson: summaryType.content_json }));
         tmp5 = obj;
       }
-      obj5.summaryMap = tmp5;
-      ({ engagement: obj3.engagement, substance: obj3.substance, dynamics: obj3.dynamics } = rawConversation);
-      let tmp6 = null;
-      if (null != rawConversation.moderation) {
-        const moderation = rawConversation.moderation;
-        const obj6 = { status: null, statusReason: null, messageViolationRate: null, flaggedMessageCount: null, totalMessageCount: null, flaggedMessageIds: null, flaggedMessageDetails: null, flaggedSummaryDetails: null, flaggedTitle: null, flaggedSummary: null, flaggedKeyPoints: null, failedMessageIds: null };
-        ({ status: obj2.status, status_reason: obj2.statusReason, message_violation_rate: obj2.messageViolationRate, flagged_message_count: obj2.flaggedMessageCount, total_message_count: obj2.totalMessageCount, flagged_message_ids: obj2.flaggedMessageIds, flagged_message_details } = moderation);
-        obj6.flaggedMessageDetails = flagged_message_details.map((messageId) => ({ messageId: messageId.message_id, category: messageId.category, severity: messageId.severity, confidence: messageId.confidence, reason: messageId.reason }));
-        ({ flagged_summary_details: obj2.flaggedSummaryDetails, flagged_title: obj2.flaggedTitle, flagged_summary: obj2.flaggedSummary, flagged_key_points: obj2.flaggedKeyPoints, failed_message_ids: obj2.failedMessageIds } = moderation);
-        tmp6 = obj6;
-      }
-      obj5.moderation = tmp6;
-      tmp4 = obj5;
+      obj3.summaryMap = tmp5;
+      ({ engagement: obj2.engagement, substance: obj2.substance, dynamics: obj2.dynamics } = rawConversation);
+      tmp4 = obj3;
     }
   }
   return tmp4;
-};
+}

@@ -1,17 +1,17 @@
-// === Module 18948: VoicePanelControlsAppLauncher ===
+// === Module 19181: VoicePanelControlsAppLauncher ===
 
-// Module 18948 (VoicePanelControlsAppLauncher)
+// Module 19181 (VoicePanelControlsAppLauncher)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
-const VoicePanelControlsConstants = fn(10937);
+const VoicePanelControlsConstants = fn(10972);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1084).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
 const __initData = { code: "function VoicePanelControlsAppLauncherTsx1(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().active;}" };
 const __initData2 = { code: "function VoicePanelControlsAppLauncherTsx2(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().isDrawer;}" };
@@ -186,42 +186,42 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   noop = undefined;
   let derivedValue1;
   const tmp = closure_10();
-  const gradientTop = gestureSpecs(9742).useGradientTop();
-  const context = noop.useContext(setControlsMode(10938));
+  const gradientTop = gestureSpecs(9774).useGradientTop();
+  const context = noop.useContext(setControlsMode(10973));
   setControlsMode = context.setControlsMode;
   ({ channelId: c2, safeArea, windowDimensions } = context);
-  const tmp4 = setControlsMode(8796)(windowDimensions);
+  const tmp4 = setControlsMode(8799)(windowDimensions);
   noop = tmp4;
-  const rect = setControlsMode(8796)(safeArea);
-  const obj = gestureSpecs(9742);
+  const rect = setControlsMode(8799)(safeArea);
+  const obj = gestureSpecs(9774);
   const items = [rect];
   const stateFromStores = gestureSpecs(504).useStateFromStores(items, () => ChannelStore.getChannel(c2));
   setControlsMode(38)(null != stateFromStores, "channel should not be null");
   const obj2 = gestureSpecs(504);
   const items1 = [setControlsMode];
-  const controlsDrawerOpenWidth = gestureSpecs(13397).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
+  const controlsDrawerOpenWidth = gestureSpecs(13630).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
   const callback = noop.useCallback(() => {
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
     ComponentDispatch.dispatch(ComponentActions.SELECT_ACTIVITY);
     setControlsMode({ mode: hasOwnProperty.HIDDEN });
   }, items1);
-  const obj3 = gestureSpecs(13397);
-  const appLauncherChatInputRefDummy = gestureSpecs(11207).useAppLauncherChatInputRefDummy({ noop: true });
-  const obj4 = gestureSpecs(11207);
-  const ref = noop.useRef(gestureSpecs(11207).AppLauncherKeyboardCloseReason.DISMISSED);
+  const obj3 = gestureSpecs(13630);
+  const appLauncherChatInputRefDummy = gestureSpecs(11261).useAppLauncherChatInputRefDummy({ noop: true });
+  const obj4 = gestureSpecs(11261);
+  const ref = noop.useRef(gestureSpecs(11261).AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = noop.useRef(undefined);
-  const sharedValue = gestureSpecs(5085).useSharedValue(0);
-  const obj5 = gestureSpecs(5085);
-  const sharedValue1 = gestureSpecs(5085).useSharedValue(0);
-  const obj6 = gestureSpecs(5085);
+  const sharedValue = gestureSpecs(5086).useSharedValue(0);
+  const obj5 = gestureSpecs(5086);
+  const sharedValue1 = gestureSpecs(5086).useSharedValue(0);
+  const obj6 = gestureSpecs(5086);
   const fn = function x() {
     return gestureSpecs.get().active;
   };
   fn.__closure = { gestureSpecs };
   fn.__workletHash = 5978423252544;
   fn.__initData = __initData4;
-  const derivedValue = gestureSpecs(5085).useDerivedValue(fn);
-  const obj7 = gestureSpecs(5085);
+  const derivedValue = gestureSpecs(5086).useDerivedValue(fn);
+  const obj7 = gestureSpecs(5086);
   class E {
     constructor() {
       return gestureSpecs.get().isDrawer;
@@ -230,8 +230,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   E.__closure = { gestureSpecs };
   E.__workletHash = 1602221389280;
   E.__initData = __initData5;
-  derivedValue1 = gestureSpecs(5085).useDerivedValue(E);
-  const obj8 = gestureSpecs(5085);
+  derivedValue1 = gestureSpecs(5086).useDerivedValue(E);
+  const obj8 = gestureSpecs(5086);
   class L {
     constructor() {
       if (closure_5.get()) {
@@ -249,18 +249,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   L.__workletHash = 14640910836060;
   L.__initData = __initData6;
   const obj10 = { children: null };
-  const animatedStyle = gestureSpecs(5085).useAnimatedStyle(L);
+  const animatedStyle = gestureSpecs(5086).useAnimatedStyle(L);
   const obj11 = { style: null, children: null };
   const items2 = [tmp.container, gradientTop, animatedStyle];
   obj11.style = items2;
-  const obj9 = gestureSpecs(5085);
-  const items3 = [closure_7(setControlsMode(11988), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(11208).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
+  const obj9 = gestureSpecs(5086);
+  const items3 = [closure_7(setControlsMode(12042), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(11262).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
   const obj13 = { title: null, disablePill: true };
-  const obj12 = { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(11208).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth };
+  const obj12 = { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(11262).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth };
   const intl = gestureSpecs(1125).intl;
   obj13.title = intl.string(gestureSpecs(1125).t.shUONg);
-  items3[1] = closure_7(setControlsMode(13398), obj13);
+  items3[1] = closure_7(setControlsMode(13631), obj13);
   obj11.children = items3;
-  obj10.children = closure_8(setControlsMode(5085).View, obj11);
+  obj10.children = closure_8(setControlsMode(5086).View, obj11);
   return closure_7(closure_9, obj10);
 }));

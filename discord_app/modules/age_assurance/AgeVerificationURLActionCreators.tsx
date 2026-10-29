@@ -1,9 +1,9 @@
-// === Module 7931: AgeVerificationURLActionCreators ===
+// === Module 7954: AgeVerificationURLActionCreators ===
 
-// Module 7931 (AgeVerificationURLActionCreators)
+// Module 7954 (AgeVerificationURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7932 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -29,7 +29,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -51,7 +51,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
           ({ method: closure_129_0, classificationId: closure_129_1, vendor: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -208,7 +208,7 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -273,77 +273,15 @@ function initiateSuspendedUserAgeVerification() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          ({ classificationId: closure_129_0, method: closure_129_1 } = closure_0);
-          let suspendedUserToken;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          suspendedUserToken = closure_130_4.getSuspendedUserToken();
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const request = { url: closure_130_6.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION, body: null, rejectWithError: true };
-          const obj5 = { token: suspendedUserToken, from_classification_id: closure_129_0, method: closure_129_1 };
-          request.body = obj5;
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: HTTP.post(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        c4 = 3;
-        const obj = { value: value.body, done: true };
-        return obj;
-      }
-    } catch (tmp7) {
-      c4 = tmp;
-      throw tmp7;
-    }
-  }
+let closure_18 = async function _initiateSuspendedUserAgeVerification() {
+  closure_1 = tmp2;
+  ({ classificationId: closure_129_0, method: closure_129_1 } = closure_0);
+  await "Reflect";
+  const suspendedUserToken = closure_130_4.getSuspendedUserToken();
+  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+  const request = { url: closure_130_6.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION, body: { token: suspendedUserToken, from_classification_id: closure_129_0, method: closure_129_1 }, rejectWithError: true };
+  await HTTP.post(request);
+  return value.body;
 };
 let closure_19 = async function _registerIncodeInterview() {
   c2 = 0;
@@ -359,7 +297,7 @@ let closure_19 = async function _registerIncodeInterview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -391,7 +329,7 @@ let closure_19 = async function _registerIncodeInterview() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -401,81 +339,21 @@ let closure_19 = async function _registerIncodeInterview() {
   })();
 };
 let closure_20 = async function _requestIncodeSessionBootstrap() {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          let obj4 = closure_0;
-          if (closure_0 === undefined) {
-            obj4 = {};
-          }
-          closure_129_0 = obj4;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          let tmp8;
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const request = { url: closure_130_6.CREATE_INCODE_SESSION, body: null, rejectWithError: true };
-          if (null != closure_129_0.previousInterviewId) {
-            const obj6 = { previous_interview_id: closure_129_0.previousInterviewId };
-            tmp8 = obj6;
-          }
-          request.body = tmp8;
-          c3 = 2;
-          c4 = 1;
-          const obj7 = { value: HTTP.post(request), done: false };
-          return obj7;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        c4 = 3;
-        const obj = { value: value.body, done: true };
-        return obj;
-      }
-    } catch (tmp9) {
-      c4 = tmp;
-      throw tmp9;
-    }
+  closure_1 = tmp2;
+  let obj4 = closure_0;
+  if (closure_0 === undefined) {
+    obj4 = {};
   }
+  closure_129_0 = obj4;
+  await "Reflect";
+  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+  const request = { url: closure_130_6.CREATE_INCODE_SESSION, body: null, rejectWithError: true };
+  if (null != closure_129_0.previousInterviewId) {
+    const tmp8 = { previous_interview_id: closure_129_0.previousInterviewId };
+  }
+  request.body = tmp8;
+  await HTTP.post(request);
+  return value.body;
 };
 let closure_21 = async function _getAgeVerificationMethods() {
   DispatcherDefault.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" });
@@ -507,13 +385,13 @@ function fetchAgeVerificationMethodsSuspendedUser() {
   const request = { url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } };
   return HTTP.post(request);
 }
-const VerificationVendorName = fn(6691).VerificationVendorName;
+const VerificationVendorName = fn(6715).VerificationVendorName;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");
 
 export { requestAgeVerification };
-export const requestIncodeMethodSession = function requestIncodeMethodSession() {
+export function requestIncodeMethodSession() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -522,11 +400,11 @@ export const requestIncodeMethodSession = function requestIncodeMethodSession() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { initiateAgeVerification };
 export { initiateAgeVerificationV2 };
 export { initiateSuspendedUserAgeVerificationV2 };
-export const requestAgeVerificationV2 = function requestAgeVerificationV2() {
+export function requestAgeVerificationV2() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -535,9 +413,9 @@ export const requestAgeVerificationV2 = function requestAgeVerificationV2() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { initiateSuspendedUserAgeVerification };
-export const registerIncodeInterview = function registerIncodeInterview() {
+export function registerIncodeInterview() {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -546,8 +424,8 @@ export const registerIncodeInterview = function registerIncodeInterview() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestIncodeSessionBootstrap = function requestIncodeSessionBootstrap() {
+}
+export function requestIncodeSessionBootstrap() {
   const self = this;
   const apply = closure_20.apply;
   if (typeof apply === "unknown") {
@@ -556,8 +434,8 @@ export const requestIncodeSessionBootstrap = function requestIncodeSessionBootst
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getAgeVerificationMethods = function getAgeVerificationMethods() {
+}
+export function getAgeVerificationMethods() {
   const self = this;
   const apply = closure_21.apply;
   if (typeof apply === "unknown") {
@@ -566,6 +444,6 @@ export const getAgeVerificationMethods = function getAgeVerificationMethods() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { fetchAgeVerificationMethods };
 export { fetchAgeVerificationMethodsSuspendedUser };

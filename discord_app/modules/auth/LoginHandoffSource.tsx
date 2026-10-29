@@ -1,10 +1,10 @@
-// === Module 7470: LoginHandoffSource ===
+// === Module 7493: LoginHandoffSource ===
 
-// Module 7470 (LoginHandoffSource)
+// Module 7493 (LoginHandoffSource)
 import UserSettingsConstants from "UserSettingsConstants" /* 1094 */;
-import ChannelConstants from "ChannelConstants" /* 4863 */;
-import LinkUtils from "LinkUtils" /* 5642 */;
-import UserSettingsURLUtils from "UserSettingsURLUtils" /* 6755 */;
+import ChannelConstants from "ChannelConstants" /* 4864 */;
+import LinkUtils from "LinkUtils" /* 5643 */;
+import UserSettingsURLUtils from "UserSettingsURLUtils" /* 6778 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -13,7 +13,7 @@ const LoginHandoffSource = { ROLE_SUBSCRIPTION: "role_subscription", ROLE_SUBSCR
 const result = size.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
 
 export { LoginHandoffSource };
-export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(arg0) {
+export function getLoginHandoffSourceFromRedirectTo(arg0) {
   const str = decodeURIComponent(arg0);
   const obj = LinkUtils;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
@@ -28,4 +28,4 @@ export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourc
     ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION_SETTING;
   }
   tmpResult = UserSettingsURLUtils;
-};
+}

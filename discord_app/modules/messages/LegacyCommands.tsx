@@ -1,16 +1,16 @@
-// === Module 13326: LegacyCommands ===
+// === Module 13559: LegacyCommands ===
 
-// Module 13326 (LegacyCommands)
-import UserSettings from "UserSettings" /* 4832 */;
-import ReactionUtils from "ReactionUtils" /* 4948 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7601 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8318 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9695 */;
+// Module 13559 (LegacyCommands)
+import UserSettings from "UserSettings" /* 4833 */;
+import ReactionUtils from "ReactionUtils" /* 4949 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7624 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8340 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9727 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6760 */;
-import MessageStore from "MessageStore" /* 6045 */;
-import t_mod from "module_1948" /* 1948 */;
+import EmojiStore from "EmojiStore" /* 6783 */;
+import MessageStore from "MessageStore" /* 6049 */;
+import t_mod from "module_1949" /* 1949 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -144,7 +144,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/LegacyCommands.tsx");
 
 export { COMMANDS };
-export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
+export function handleLegacyCommands(text, arg1) {
   for (const key10005 in obj) {
     let str = obj[key10005];
     if (null == str.match) {
@@ -166,4 +166,4 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
     }
     continue;
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 5773: RTCDebugStore ===
+// === Module 5775: RTCDebugStore ===
 
-// Module 5773 (RTCDebugStore)
+// Module 5775 (RTCDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5774 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5776 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
@@ -78,7 +78,7 @@ function updateStats(arr, arg1) {
   }
   return obj2;
 }
-const Constants = fn(5754);
+const Constants = fn(5756);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1084).RTCDebugSections.TRANSPORT + ":" + 0;
@@ -177,7 +177,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: null };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: 1818230785 };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -312,7 +312,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(5775).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(5777).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             const obj2 = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
             if (arg3 == null) {
@@ -570,14 +570,14 @@ export default rTCDebugStore;
 export const DEFAULT_SECTION = combined;
 export { graphs };
 export { RTCDebugVideoOutputMap };
-export const keySection = function keySection(arg0, arg1, arg2) {
+export function keySection(arg0, arg1, arg2) {
   return "" + arg0 + ":" + arg1 + ":" + arg2;
-};
-export const parseSection = function parseSection(str) {
+}
+export function parseSection(str) {
   const tmp = _slicedToArray(str.split(":"), 2);
   return { context: tmp[0], section: tmp[1] };
-};
-export const getLastGraphValue = function getLastGraphValue(arr) {
+}
+export function getLastGraphValue(arr) {
   let tmp = arr;
   if (Array.isArray(arr)) {
     const iter = arr.at(-1);
@@ -588,4 +588,4 @@ export const getLastGraphValue = function getLastGraphValue(arr) {
     tmp = value;
   }
   return tmp;
-};
+}

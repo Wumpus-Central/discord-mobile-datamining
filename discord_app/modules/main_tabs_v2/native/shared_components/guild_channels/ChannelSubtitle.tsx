@@ -1,11 +1,11 @@
-// === Module 18378: guild_channels/ChannelSubtitle ===
+// === Module 18612: guild_channels/ChannelSubtitle ===
 
-// Module 18378 (guild_channels/ChannelSubtitle)
+// Module 18612 (guild_channels/ChannelSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11990 */;
-import ChannelListLayout from "ChannelListLayout" /* 11993 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 17936 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 12044 */;
+import ChannelListLayout from "ChannelListLayout" /* 12047 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 18174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
 
-export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
+export function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);
   if (null == subtitle) {
     return null;
@@ -131,4 +131,4 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     }
     return tmp9;
   }
-};
+}

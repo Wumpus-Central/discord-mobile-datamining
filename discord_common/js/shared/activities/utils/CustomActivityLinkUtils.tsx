@@ -1,6 +1,6 @@
-// === Module 14447: utils/CustomActivityLinkUtils ===
+// === Module 14681: utils/CustomActivityLinkUtils ===
 
-// Module 14447 (utils/CustomActivityLinkUtils)
+// Module 14681 (utils/CustomActivityLinkUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const CustomLinkType = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };
@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");
 
 export { CustomLinkType };
-export const decodeCustomActivityLink = function decodeCustomActivityLink(link_id) {
+export function decodeCustomActivityLink(link_id) {
   if (null == link_id) {
     return null;
   } else {
@@ -29,4 +29,4 @@ export const decodeCustomActivityLink = function decodeCustomActivityLink(link_i
     }
     return tmp7;
   }
-};
+}

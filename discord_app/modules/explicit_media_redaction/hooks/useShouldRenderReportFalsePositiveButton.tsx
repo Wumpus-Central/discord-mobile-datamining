@@ -1,7 +1,7 @@
-// === Module 12930: useShouldRenderReportFalsePositiveButton ===
+// === Module 13151: useShouldRenderReportFalsePositiveButton ===
 
-// Module 12930 (useShouldRenderReportFalsePositiveButton)
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7427 */;
+// Module 13151 (useShouldRenderReportFalsePositiveButton)
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7450 */;
 
 const require = globalThis.__r;
 
@@ -10,9 +10,9 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx");
 
-export const shouldRenderReportFalsePositiveButton = function shouldRenderReportFalsePositiveButton(id) {
+export function shouldRenderReportFalsePositiveButton(id) {
   return null != ExplicitMediaStore.getFpMessageInfo(id);
-};
+}
 export const useShouldRenderReportFalsePositiveButton = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldRenderReportFalsePositiveButton(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);

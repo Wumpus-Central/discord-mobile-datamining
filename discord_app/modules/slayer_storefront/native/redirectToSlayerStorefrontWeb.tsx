@@ -1,6 +1,6 @@
-// === Module 10596: redirectToSlayerStorefrontWeb ===
+// === Module 10629: redirectToSlayerStorefrontWeb ===
 
-// Module 10596 (redirectToSlayerStorefrontWeb)
+// Module 10629 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -39,7 +39,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

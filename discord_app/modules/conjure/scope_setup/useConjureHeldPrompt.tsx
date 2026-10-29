@@ -1,12 +1,12 @@
-// === Module 12340: useConjureHeldPrompt ===
+// === Module 12394: useConjureHeldPrompt ===
 
-// Module 12340 (useConjureHeldPrompt)
-import conjureScopeSetup from "conjureScopeSetup" /* 12341 */;
+// Module 12394 (useConjureHeldPrompt)
+import conjureScopeSetup from "conjureScopeSetup" /* 12395 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10734 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10733 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureChatStore from "ConjureChatStore" /* 10808 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10807 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 const require = globalThis.__r;
 

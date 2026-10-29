@@ -1,13 +1,13 @@
-// === Module 5648: utils ===
+// === Module 5649: utils ===
 
-// Module 5648 (utils)
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5649 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5651 */;
+// Module 5649 (utils)
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5650 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5652 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/content_classification/utils.tsx");
 
-export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(contentClassification) {
+export function isAgeRestrictedContentClassification(contentClassification) {
   let tmp = null != contentClassification;
   if (tmp) {
     const obj2 = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data: contentClassification };
@@ -15,4 +15,4 @@ export const isAgeRestrictedContentClassification = function isAgeRestrictedCont
     tmp = result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT;
   }
   return tmp;
-};
+}

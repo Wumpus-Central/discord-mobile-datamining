@@ -1,25 +1,25 @@
-// === Module 9163: InstantInviteRow ===
+// === Module 9166: InstantInviteRow ===
 
-// Module 9163 (InstantInviteRow)
+// Module 9166 (InstantInviteRow)
 import nativeDefault from "native" /* 587 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9085 */;
-import InviteQueue from "InviteQueue" /* 9165 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9088 */;
+import InviteQueue from "InviteQueue" /* 9168 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9084 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9098 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9087 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9101 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9164);
+const InstantInviteSendStateStore = fn(9167);
 ({ setSendState: closure_9, useInstantInviteSendStates: c10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(7844).InviteSendStates;
+const InviteSendStates = fn(7867).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;

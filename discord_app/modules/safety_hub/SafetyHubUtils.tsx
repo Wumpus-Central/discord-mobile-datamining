@@ -1,14 +1,14 @@
-// === Module 7932: SafetyHubUtils ===
+// === Module 7955: SafetyHubUtils ===
 
-// Module 7932 (SafetyHubUtils)
+// Module 7955 (SafetyHubUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
-import SafetyHubModels from "SafetyHubModels" /* 7934 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
+import SafetyHubModels from "SafetyHubModels" /* 7957 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -46,7 +46,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7933);
+const SafetyHubConstants = fn(7956);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1084);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
@@ -56,10 +56,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
-export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef2046().to(_modDef2046(timestamp));
-};
-export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
+export function getClassificationRelativeIncidentTime(timestamp) {
+  return _modDef2047().to(_modDef2047(timestamp));
+}
+export function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
     let num = constants5.IS_SPOILER;
   } else {
@@ -67,12 +67,12 @@ export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachmen
     num = 0;
   }
   return num;
-};
-export const parseMessageForProps = function parseMessageForProps(message) {
+}
+export function parseMessageForProps(message) {
   return parseMessageEmbedForProps(message.embeds[0]);
-};
+}
 export { parseMessageEmbedForProps };
-export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_link, classification_id) {
+export function mapCtaToNativeData(arg0, learn_more_link, classification_id) {
   if (constants2.LEARN_MORE_LINK === arg0) {
     let str2 = learn_more_link;
     const obj2 = { text: null, type: null, key: null };
@@ -96,8 +96,8 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
     obj.key = str;
     return obj;
   }
-};
-export const isFlaggedContentEmpty = function isFlaggedContentEmpty(type) {
+}
+export function isFlaggedContentEmpty(type) {
   let tmp = type.type !== SafetyHubModels.ContentIdType.MESSAGE;
   if (!tmp) {
     let tmp2 = "" === type.content;
@@ -107,8 +107,8 @@ export const isFlaggedContentEmpty = function isFlaggedContentEmpty(type) {
     tmp = tmp2;
   }
   return tmp;
-};
-export const getAppealSignalDisplayText = function getAppealSignalDisplayText(signal) {
+}
+export function getAppealSignalDisplayText(signal) {
   const obj = {};
   const intl = util.intl;
   obj[constants.DIDNT_VIOLATE_POLICY] = intl.string(util.t.mZffAi);
@@ -119,8 +119,8 @@ export const getAppealSignalDisplayText = function getAppealSignalDisplayText(si
   const intl4 = util.intl;
   obj[constants.SOMETHING_ELSE] = intl4.string(util.t.XU3s6r);
   return obj[signal];
-};
-export const capitalizeText = function capitalizeText(description) {
+}
+export function capitalizeText(description) {
   let str = "";
   if (null != description) {
     str = "";
@@ -136,11 +136,11 @@ export const capitalizeText = function capitalizeText(description) {
     }
   }
   return str;
-};
-export const isGuildClassification = function isGuildClassification(stateFromStores) {
+}
+export function isGuildClassification(stateFromStores) {
   return null != stateFromStores && null != stateFromStores.guild_metadata;
-};
-export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromCode(code) {
+}
+export function getRequestReviewErrorFromCode(code) {
   if (code === constants4.DSA_APPEAL_REQUEST_DEFLECTION) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t["0qyXXH"]);
@@ -149,12 +149,12 @@ export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromC
     stringResult = intl.string(util.t.aPmsx3);
   }
   return stringResult;
-};
+}
 export const APPEAL_WINDOW_DURATION_MS = result;
-export const isAppealWindowExpired = function isAppealWindowExpired(classificationId) {
+export function isAppealWindowExpired(classificationId) {
   return SnowflakeUtilsDefault.age(classificationId) > result;
-};
-export const getClassificationAccountStatusExpiration = function getClassificationAccountStatusExpiration(classification) {
+}
+export function getClassificationAccountStatusExpiration(classification) {
   const actions = classification.actions;
   if (actions.some((action_type) => action_type.action_type === SafetyHubModels.ActionType.BAN)) {
     return null;
@@ -173,7 +173,7 @@ export const getClassificationAccountStatusExpiration = function getClassificati
     }
     return null;
   }
-};
+}
 export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSuspendedUser() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -193,6 +193,6 @@ export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled() ?
   const items = [AuthenticationStore];
   return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
 });
-export const isCurrentUserSuspended = function isCurrentUserSuspended() {
+export function isCurrentUserSuspended() {
   return null != AuthenticationStore.getSuspendedUserToken();
-};
+}

@@ -1,8 +1,8 @@
-// === Module 19680: QuestFetchReconnectJitterExperiment ===
+// === Module 19902: QuestFetchReconnectJitterExperiment ===
 
-// Module 19680 (QuestFetchReconnectJitterExperiment)
+// Module 19902 (QuestFetchReconnectJitterExperiment)
 import DurationsDefault from "Durations" /* 1101 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { questFetchJitterMs: 5 * DurationsDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * DurationsDefault.Millis.SECOND };
@@ -15,6 +15,6 @@ const result = size.fileFinishedImporting("modules/quests/experiments/QuestFetch
 
 export default apexExperiment;
 export const DEFAULT_QUEST_FETCH_JITTER_CONFIG = obj;
-export const getQuestFetchReconnectJitterConfig = function getQuestFetchReconnectJitterConfig(location) {
+export function getQuestFetchReconnectJitterConfig(location) {
   return apexExperiment.getConfig({ location: location.location });
-};
+}

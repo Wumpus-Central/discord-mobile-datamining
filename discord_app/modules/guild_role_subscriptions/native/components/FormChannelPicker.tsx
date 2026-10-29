@@ -1,79 +1,53 @@
-// === Module 19611: FormChannelPicker ===
+// === Module 19844: FormChannelPicker ===
 
-// Module 19611 (FormChannelPicker)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+// Module 19844 (FormChannelPicker)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import useChannelNameDefault from "useChannelName" /* 5641 */;
+import FormStylesDefault from "FormStyles" /* 15640 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-
-const require = globalThis.__r;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
-let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 } });
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
 
 export default function FormChannelPicker(channelId) {
   channelId = channelId.channelId;
-  ({ guildId: importDefault, onChange } = channelId);
-  let stateFromStores;
-  onChange = undefined;
-  const tmp4 = closure_6();
-  const tmp3 = require("FormStyles")();
-  const items = [onChange];
+  ({ guildId: importDefault, onChange: dependencyMap } = channelId);
+  const tmp2 = FormStylesDefault();
+  const items = [ChannelStore];
   const items1 = [channelId];
-  stateFromStores = channelId(stateFromStores[5]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  let stringResult = require("useChannelName")(stateFromStores);
-  if (onChange == null) {
-    onChange = () => {
-
-    };
-  }
-  let obj2 = {
-    style: null,
-    accessibilityRole: "link",
-    onPress: function handleSelectChannel() {
-      const obj2 = { guildId, selectedChannelId: null, onChannelSelected: null };
-      let id;
-      const obj = ActionSheetActionCreatorsDefault;
-      if (stateFromStores != null) {
-        id = stateFromStores.id;
-      }
-      obj2.selectedChannelId = id;
-      obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(19612, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
-    },
-    children: null
-  };
-  const items2 = [tmp4.container, tmp3.textInput];
-  obj2.style = items2;
-  let tmp10 = null;
-  let obj = channelId(stateFromStores[5]);
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  let tmp6Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp5(tmp2[11]).getChannelIconComponent(stateFromStores);
-    if (TextIcon == null) {
-      TextIcon = tmp5(tmp2[12]).TextIcon;
+    let TextIcon = tmp3(17109).getChannelIconComponentOrDefault(stateFromStores);
+    const tmp3Result = tmp3(17109);
+  } else {
+    TextIcon = tmp3(8610).TextIcon;
+  }
+  let obj2 = { style: tmp2.inputContainer, children: null };
+  const obj3 = { start: true, end: true, icon: jsx(channelId(6963).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null };
+  if (tmp6Result == null) {
+    const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
+    const intl = tmp3(1125).intl;
+    obj4.children = intl.string(tmp3(1125).t.r2ptsz);
+    tmp6Result = jsx(tmp3(5271).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+  }
+  obj3.label = tmp6Result;
+  obj3.onPress = function handleSelectChannel() {
+    const obj2 = { guildId, selectedChannelId: null, onChannelSelected: null };
+    let id;
+    const obj = ActionSheetActionCreatorsDefault;
+    if (stateFromStores != null) {
+      id = stateFromStores.id;
     }
-    tmp10 = closure_4(TextIcon, { size: "sm" });
-    const tmp5Result = tmp5(tmp2[11]);
-  }
-  const items3 = [tmp10, , ];
-  const obj3 = { style: tmp4.content, variant: "text-md/medium", color: null, children: null };
-  let str = "text-muted";
-  if (null != channelId) {
-    str = "text-default";
-  }
-  obj3.color = str;
-  if (stringResult == null) {
-    const intl = tmp5(tmp2[14]).intl;
-    stringResult = intl.string(tmp5(tmp2[14]).t.r2ptsz);
-  }
-  obj3.children = stringResult;
-  items3[1] = closure_4(channelId(stateFromStores[13]).Text, obj3);
-  items3[2] = closure_4(channelId(stateFromStores[15]).ChevronSmallRightIcon, { size: "md" });
-  obj2.children = items3;
-  return closure_5(require("TouchableHitBox"), obj2);
+    obj2.selectedChannelId = id;
+    obj2.onChannelSelected = onChannelSelected;
+    obj.openLazy(asyncRequireImpl(19845, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+  };
+  obj2.children = jsx(channelId(6963).TableRow, { start: true, end: true, icon: jsx(channelId(6963).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null });
+  return <stateFromStores style={tmp2.inputContainer}>{null}</stateFromStores>;
 };

@@ -1,28 +1,28 @@
-// === Module 13641: GameServerActionCreators ===
+// === Module 13874: GameServerActionCreators ===
 
-// Module 13641 (GameServerActionCreators)
+// Module 13874 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import StoreUtils from "StoreUtils" /* 6418 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8407 */;
-import GameServerMocks from "GameServerMocks" /* 13643 */;
-import GameServerStatus from "GameServerStatus" /* 13644 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 13646 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import StoreUtils from "StoreUtils" /* 6442 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8429 */;
+import GameServerMocks from "GameServerMocks" /* 13876 */;
+import GameServerStatus from "GameServerStatus" /* 13877 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 13879 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 import UserStore from "UserStore" /* 1389 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 13642 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 13875 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(5219).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(5220).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_server/GameServerActionCreators.tsx");
 
-export const fetchGameServerCatalog = function fetchGameServerCatalog(guild_id) {
+export function fetchGameServerCatalog(guild_id) {
   _require = guild_id;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -64,8 +64,8 @@ export const fetchGameServerCatalog = function fetchGameServerCatalog(guild_id) 
       DispatcherDefault.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId, catalog: reduced });
     });
   }
-};
-export const fetchGameServerGlobalCatalog = function fetchGameServerGlobalCatalog() {
+}
+export function fetchGameServerGlobalCatalog() {
   const currentUser = UserStore.getCurrentUser();
   let flag;
   if (currentUser != null) {
@@ -88,8 +88,8 @@ export const fetchGameServerGlobalCatalog = function fetchGameServerGlobalCatalo
     }, {});
     DispatcherDefault.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: reduced });
   });
-};
-export const fetchGameServerInstances = function fetchGameServerInstances(guildId, arg1) {
+}
+export function fetchGameServerInstances(guildId, arg1) {
   _require = guildId;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -124,8 +124,8 @@ export const fetchGameServerInstances = function fetchGameServerInstances(guildI
     });
   }
   return resolved;
-};
-export const fetchGameServerInstructions = function fetchGameServerInstructions(guildId, skuId) {
+}
+export function fetchGameServerInstructions(guildId, skuId) {
   _require = guildId;
   const request = { url: closure_8.STOREFRONT_PRODUCT_BY_SKU_ID(skuId), query: { locale: LocaleStore.locale }, rejectWithError: true, retries: 3 };
   const result = require("StoreUtils").httpGetWithCountryCodeQuery(request);
@@ -149,8 +149,8 @@ export const fetchGameServerInstructions = function fetchGameServerInstructions(
       DispatcherDefault.dispatch(obj2);
     }
   });
-};
-export const acceptGameServerToS = function acceptGameServerToS(arg0, provider) {
+}
+export function acceptGameServerToS(arg0, provider) {
   if (arg0) {
     const currentUser = UserStore.getCurrentUser();
     let id;
@@ -160,29 +160,29 @@ export const acceptGameServerToS = function acceptGameServerToS(arg0, provider) 
     const obj2 = { user_id: id, provider };
     AnalyticsUtilsDefault.track(constants.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, obj2);
   }
-};
-export const resetGameServerRegionState = function resetGameServerRegionState() {
+}
+export function resetGameServerRegionState() {
   DispatcherDefault.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
-};
-export const updateGameServerRegionPingState = function updateGameServerRegionPingState(pingUrl, state) {
+}
+export function updateGameServerRegionPingState(pingUrl, state) {
   DispatcherDefault.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl, state });
-};
-export const enableGameServerForGuild = function enableGameServerForGuild(arg0, arg1, game_server_name, game_server_region) {
+}
+export function enableGameServerForGuild(arg0, arg1, game_server_name, game_server_region) {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: closure_1_8.GUILD_POWERUP_TOGGLE(arg0, arg1), body: { game_server_name, game_server_region }, rejectWithError: true, oldFormErrors: true };
   return HTTP.post(request);
-};
-export const updateGameServerForGuild = function updateGameServerForGuild(arg0, arg1, sku_id, game_server_name) {
+}
+export function updateGameServerForGuild(arg0, arg1, sku_id, game_server_name) {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: closure_1_8.GUILD_POWERUP_UPDATE(arg0, arg1), body: { game_server_name, sku_id }, rejectWithError: true, oldFormErrors: true };
   return HTTP.patch(request);
-};
-export const disableGameServerForGuild = function disableGameServerForGuild(arg0, arg1, entitlement_id) {
+}
+export function disableGameServerForGuild(arg0, arg1, entitlement_id) {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: closure_1_8.GUILD_POWERUP_TOGGLE(arg0, arg1), query: { entitlement_id }, rejectWithError: true, oldFormErrors: true };
   return HTTP.del(request);
-};
-export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
+}
+export function fetchGameServerRegions(arg0) {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: closure_1_8.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
@@ -195,8 +195,8 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
     });
     DispatcherDefault.dispatch(obj2);
   });
-};
-export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
+}
+export function fetchMyGameServerRegions() {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: closure_1_8.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
@@ -210,8 +210,8 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
     obj2.creationDisabled = true === body.body.creation_disabled;
     DispatcherDefault.dispatch(obj2);
   });
-};
-export const fetchMyGameServers = function fetchMyGameServers() {
+}
+export function fetchMyGameServers() {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: closure_1_8.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
@@ -222,28 +222,28 @@ export const fetchMyGameServers = function fetchMyGameServers() {
     }
     closure_1_1(dependencyMap[5]).dispatch({ type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: game_servers, maxServers: body.max_game_servers });
   });
-};
-export const optimisticallyMarkGameServerResizing = function optimisticallyMarkGameServerResizing(arg0) {
+}
+export function optimisticallyMarkGameServerResizing(arg0) {
   closure_0 = arg0;
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
     obj2.gameServer = obj3;
     DispatcherDefault.dispatch(obj2);
   }
-};
-export const updateMyGameServerName = function updateMyGameServerName(arg0, name) {
+}
+export function updateMyGameServerName(arg0, name) {
   _require = arg0;
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -298,13 +298,13 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     });
   }
   return resolved;
-};
-export const wakeMyGameServer = function wakeMyGameServer(arg0) {
+}
+export function wakeMyGameServer(arg0) {
   _require = arg0;
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -317,10 +317,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(13644).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(13877).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(13644).GameServerStatus.STARTING;
+      obj2.status = closure_0(13877).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };
@@ -340,8 +340,8 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     });
     throw error;
   });
-};
-export const wakeGameServer = function wakeGameServer(guildId, arg1) {
+}
+export function wakeGameServer(guildId, arg1) {
   _require = guildId;
   const HTTP = require("HTTPUtils").HTTP;
   let obj = { url: closure_8.GAME_SERVER_WAKE(guildId, arg1), rejectWithError: true };
@@ -349,4 +349,4 @@ export const wakeGameServer = function wakeGameServer(guildId, arg1) {
     const obj = DispatcherDefault;
     obj.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId, instance: gameServerResponseToInstanceDefault(body.body) });
   });
-};
+}

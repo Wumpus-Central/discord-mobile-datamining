@@ -1,10 +1,10 @@
-// === Module 19212: InterestGameCover ===
+// === Module 19447: InterestGameCover ===
 
-// Module 19212 (InterestGameCover)
+// Module 19447 (InterestGameCover)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import FastImageDefault from "FastImage" /* 5705 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { cover: null, image: null, name: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interest
       let tmp15 = null == tmp6;
       if (tmp15) {
         const obj3 = { style: tmp4.name, children: null };
-        const obj4 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 2, children: game.name };
+        const obj4 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 2, children: game.name };
         obj3.children = hasOwnProperty(Text_Text.Text, obj4);
         tmp15 = hasOwnProperty(React4, obj3);
       }
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interest
   let tmp10 = null == coverURL;
   if (tmp10) {
     const obj4 = { style: tmp.name, children: null };
-    const obj5 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 2, children: game.name };
+    const obj5 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 2, children: game.name };
     obj4.children = hasOwnProperty(Text_Text.Text, obj5);
     tmp10 = hasOwnProperty(React4, obj4);
   }

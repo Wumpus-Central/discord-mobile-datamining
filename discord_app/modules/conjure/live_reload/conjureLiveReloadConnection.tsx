@@ -1,8 +1,8 @@
-// === Module 10774: conjureLiveReloadConnection ===
+// === Module 10849: conjureLiveReloadConnection ===
 
-// Module 10774 (conjureLiveReloadConnection)
+// Module 10849 (conjureLiveReloadConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveReloadConnection.tsx");
@@ -29,7 +29,7 @@ export const liveReloadFrameHandlers = {
     DispatcherDefault.dispatch(obj2);
   }
 };
-export const sendLiveReload = function sendLiveReload(projectId, flag) {
+export function sendLiveReload(projectId, flag) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   try {
     if (null == conjureSocket) {
@@ -43,4 +43,4 @@ export const sendLiveReload = function sendLiveReload(projectId, flag) {
   } catch (err) {
     return false;
   }
-};
+}

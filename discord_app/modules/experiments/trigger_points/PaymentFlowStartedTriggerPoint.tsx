@@ -1,10 +1,10 @@
-// === Module 10598: PaymentFlowStartedTriggerPoint ===
+// === Module 10631: PaymentFlowStartedTriggerPoint ===
 
-// Module 10598 (PaymentFlowStartedTriggerPoint)
+// Module 10631 (PaymentFlowStartedTriggerPoint)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ExperimentConstants from "ExperimentConstants" /* 5227 */;
-import Helpers from "Helpers" /* 10599 */;
+import ExperimentConstants from "ExperimentConstants" /* 5228 */;
+import Helpers from "Helpers" /* 10632 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -12,11 +12,11 @@ const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfigurat
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
 
 export const PaymentFlowStartedTriggerPoint = commonTriggerPointConfiguration;
-export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics) {
+export function trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
   commonTriggerPointConfiguration.trigger();
-};
+}

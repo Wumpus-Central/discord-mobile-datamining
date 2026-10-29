@@ -1,19 +1,19 @@
-// === Module 8368: RemoveRecipientSystemMessage ===
+// === Module 8390: RemoveRecipientSystemMessage ===
 
-// Module 8368 (RemoveRecipientSystemMessage)
+// Module 8390 (RemoveRecipientSystemMessage)
 import util from "util" /* 1125 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
 
-export const createRemoveRecipientSystemMessage = function createRemoveRecipientSystemMessage(message) {
+export function createRemoveRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
   const channel = ChannelStore.getChannel(message.channel_id);
@@ -55,4 +55,4 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     const merged2 = Object.assign(createCommonMessageDefault(message));
     return obj6;
   }
-};
+}

@@ -1,25 +1,25 @@
-// === Module 8436: GuildAlertModeSystemMessage ===
+// === Module 8458: GuildAlertModeSystemMessage ===
 
-// Module 8436 (GuildAlertModeSystemMessage)
+// Module 8458 (GuildAlertModeSystemMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8344 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8437 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8366 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8459 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({ automodUsernameColor: nativeDefault.colors.TEXT_BRAND });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx");
 
 export const resolveAlertModeColors = nativeStyleProperties;
-export const createGuildAlertModeEnabledSystemMessage = function createGuildAlertModeEnabledSystemMessage(roleStyle) {
+export function createGuildAlertModeEnabledSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   const channel = ChannelStore.getChannel(message.channel_id);
   const tmp3 = resolveMessageContentColorsDefault(theme);
@@ -49,8 +49,8 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj3.avatarURL = tmp5Result.ensureAvatarSource(tmp5Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp12);
   return obj3;
-};
-export const createGuildAlertModeDisabledSystemMessage = function createGuildAlertModeDisabledSystemMessage(roleStyle) {
+}
+export function createGuildAlertModeDisabledSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   let automodUsernameColor = nativeStyleProperties(theme).automodUsernameColor;
   const tmp2 = resolveMessageContentColorsDefault(theme);
@@ -73,4 +73,4 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   obj4.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp6);
   return obj4;
-};
+}

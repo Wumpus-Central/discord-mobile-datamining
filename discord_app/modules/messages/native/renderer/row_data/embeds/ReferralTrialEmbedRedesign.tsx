@@ -1,24 +1,24 @@
-// === Module 8457: ReferralTrialEmbedRedesign ===
+// === Module 8479: ReferralTrialEmbedRedesign ===
 
-// Module 8457 (ReferralTrialEmbedRedesign)
+// Module 8479 (ReferralTrialEmbedRedesign)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import createStyles from "createStyles" /* 5004 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import ProductIds from "ProductIds" /* 7555 */;
-import useTrialOffer from "useTrialOffer" /* 7594 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8309 */;
-import _modDef8455 from "module_8455" /* 8455 */;
-import _modDef8458 from "module_8458" /* 8458 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 8459 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import createStyles from "createStyles" /* 5005 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import ProductIds from "ProductIds" /* 7578 */;
+import useTrialOffer from "useTrialOffer" /* 7617 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8331 */;
+import _modDef8477 from "module_8477" /* 8477 */;
+import _modDef8480 from "module_8480" /* 8480 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 8481 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
-import UserOfferStore from "UserOfferStore" /* 7595 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import UserOfferStore from "UserOfferStore" /* 7618 */;
+import IAPStore from "IAPStore" /* 7582 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -28,7 +28,7 @@ let closure_9 = fn(1391).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx");
 
-export const createReferralTrialEmbedRedesign = function createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer) {
+export function createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer) {
   if (null != message.author) {
     const obj2 = { titleColor: nativeDefault.colors.TEXT_DEFAULT, headerTextColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, bodyTextColor: nativeDefault.colors.TEXT_SUBTLE, footerTextColor: nativeDefault.colors.TEXT_MUTED, subTextColor: nativeDefault.colors.TEXT_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, acceptLabelColor: nativeDefault.colors.WHITE, linkTextColor: nativeDefault.colors.TEXT_LINK };
     const tmp42 = createStyles.createNativeStyleProperties(obj2)(theme);
@@ -64,7 +64,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             obj4.helpdeskArticle = obj5;
             const obj6 = { titleText: formatToPlainStringResult, titleColor, headerImageUrl: null, headerText: null, headerColor: null, backgroundColor: null, borderColor: null, learnMoreLink: null };
             const tmp41Result9 = HelpdeskUtilsDefault;
-            obj6.headerImageUrl = _modDef8458;
+            obj6.headerImageUrl = _modDef8480;
             const intl12 = util.intl;
             obj6.headerText = intl12.string(util.t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -174,7 +174,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                     const intl7 = util.intl;
                     obj13.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8455);
+                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8477);
                     tmp31 = obj13;
                     const tmp39Result7 = renderer_EmbedUtils;
                   }
@@ -223,7 +223,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             const formatToPartsResult = intl11.formatToParts(util.t.yisueA, obj4);
           }
         }
-        const obj19 = { titleText: "", titleColor, headerImageUrl: _modDef8458, headerText: "", headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, bodyText: null, bodyTextColor: null, canBeAccepted: false };
+        const obj19 = { titleText: "", titleColor, headerImageUrl: _modDef8480, headerText: "", headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, bodyText: null, bodyTextColor: null, canBeAccepted: false };
         const intl9 = util.intl;
         obj19.bodyText = intl9.string(util.t.eEz1N5);
         obj19.bodyTextColor = bodyTextColor;
@@ -231,4 +231,4 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
       }
     }
   }
-};
+}

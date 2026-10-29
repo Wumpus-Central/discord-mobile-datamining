@@ -1,17 +1,17 @@
-// === Module 14897: ClipsExperiment ===
+// === Module 15132: ClipsExperiment ===
 
-// Module 14897 (ClipsExperiment)
+// Module 15132 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtilsAll from "PlatformUtils" /* 1381 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const PremiumTypes = fn(1391).PremiumTypes;
-const Features = fn(5754).Features;
-const ApexExperiment = fn(1452);
+const Features = fn(5756).Features;
+const ApexExperiment = fn(1453);
 let obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
 let obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
 obj3[2] = { enableClips: true, ignorePlatformRestriction: true };
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
 export const ClipsExperiment = apexExperiment;
-export const areClipsAvailable = function areClipsAvailable() {
+export function areClipsAvailable() {
   let ignorePlatformRestriction = apexExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
   const mediaEngine = MediaEngineStore.getMediaEngine();
   if (!ignorePlatformRestriction) {
@@ -67,7 +67,7 @@ export const areClipsAvailable = function areClipsAvailable() {
   } else {
     return false;
   }
-};
+}
 export const useIsClipsAvailable = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsClipsAvailable() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

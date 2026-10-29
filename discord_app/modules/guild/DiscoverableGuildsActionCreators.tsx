@@ -1,10 +1,10 @@
-// === Module 9540: DiscoverableGuildsActionCreators ===
+// === Module 9572: DiscoverableGuildsActionCreators ===
 
-// Module 9540 (DiscoverableGuildsActionCreators)
+// Module 9572 (DiscoverableGuildsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9539 */;
+import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9571 */;
 
 require = fn;
 let closure_7 = async function _requestGuilds(arg0) {
@@ -18,7 +18,7 @@ let closure_7 = async function _requestGuilds(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_7 = async function _requestGuilds(arg0) {
         closure_131_1(closure_131_2[3]).dispatch(obj11);
         c5 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp26) {
       closure_4 = tmp26;
@@ -108,7 +108,7 @@ let closure_8 = async function _fetchDiscoverableGuilds(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -186,7 +186,7 @@ let closure_8 = async function _fetchDiscoverableGuilds(arg0) {
             return obj;
           } else {
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           c8 = 0;
@@ -202,7 +202,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild/DiscoverableGuildsActionCreators.tsx");
 
-export const fetchDiscoverableGuilds = function fetchDiscoverableGuilds() {
+export function fetchDiscoverableGuilds() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -211,4 +211,4 @@ export const fetchDiscoverableGuilds = function fetchDiscoverableGuilds() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

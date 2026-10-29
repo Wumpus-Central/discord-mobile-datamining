@@ -1,6 +1,6 @@
-// === Module 10831: conjurePreviewModeRequests ===
+// === Module 10907: conjurePreviewModeRequests ===
 
-// Module 10831 (conjurePreviewModeRequests)
+// Module 10907 (conjurePreviewModeRequests)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,12 +11,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewModeRequests.tsx");
 
-export const requestConjurePreviewMode = function requestConjurePreviewMode(arg0, widget) {
+export function requestConjurePreviewMode(arg0, widget) {
   for (const item10007 of set) {
     let item10007Result = item10007(arg0, arg1);
     continue;
   }
-};
+}
 export const useConjurePreviewModeRequests = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePreviewModeRequests(arg0, current) {
   _require = arg0;
   dependencyMap = current;

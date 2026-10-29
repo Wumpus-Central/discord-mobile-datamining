@@ -1,28 +1,28 @@
-// === Module 14518: UserProfileOverflowMenuItems ===
+// === Module 14752: UserProfileOverflowMenuItems ===
 
-// Module 14518 (UserProfileOverflowMenuItems)
+// Module 14752 (UserProfileOverflowMenuItems)
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ToastUtils from "ToastUtils" /* 5698 */;
-import ClipboardUtils from "ClipboardUtils" /* 7321 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7327 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7451 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7459 */;
-import ReportModals from "ReportModals" /* 8140 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13778 */;
-import BotReportChooser from "BotReportChooser" /* 14519 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ToastUtils from "ToastUtils" /* 5700 */;
+import ClipboardUtils from "ClipboardUtils" /* 7345 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7351 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7474 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7482 */;
+import ReportModals from "ReportModals" /* 8163 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14011 */;
+import BotReportChooser from "BotReportChooser" /* 14753 */;
 import Constants from "Constants" /* 1084 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 10998 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11033 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: metroRequire, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_7 } = RestrictionConfirmationConstants);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenuItems.tsx");
 
-export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
+export function getIgnoreMenuItem(arg0, isBlocked) {
   ({ user: require, channelId: importDefault, location: dependencyMap, analyticsLocations: closure_3, trackUserProfileAction: closure_4, showUserProfile: closure_5 } = arg0);
   if (isBlocked.isBlocked) {
     return null;
@@ -43,7 +43,7 @@ export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11000, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11035, dependencyMap.paths);
         obj.openLazy(tmp, React5, {
           userId: user.id,
           channelId,
@@ -59,8 +59,8 @@ export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
       };
     }
   }
-};
-export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
+}
+export function getBlockMenuItem(arg0, isBlocked) {
   ({ user: require, channelId: importDefault, location: dependencyMap, analyticsLocations: closure_3, trackUserProfileAction: closure_4, showUserProfile: closure_5 } = arg0);
   if (isBlocked.isBlocked) {
     let obj2 = { label: null, action: null };
@@ -81,7 +81,7 @@ export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(10999, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11034, dependencyMap.paths);
       obj.openLazy(tmp, timestampProducer, {
         userId: user.id,
         channelId,
@@ -97,8 +97,8 @@ export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
     };
   }
   return obj;
-};
-export const getReportMenuItem = function getReportMenuItem(user, isInIarUserReportingExperiment) {
+}
+export function getReportMenuItem(user, isInIarUserReportingExperiment) {
   user = user.user;
   ({ channelId: importDefault, analyticsLocations: dependencyMap, trackUserProfileAction: closure_3 } = user);
   ({ guildId: closure_4, reportEntrypoint: closure_5 } = isInIarUserReportingExperiment);
@@ -111,7 +111,7 @@ export const getReportMenuItem = function getReportMenuItem(user, isInIarUserRep
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14519, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14753, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -137,8 +137,8 @@ export const getReportMenuItem = function getReportMenuItem(user, isInIarUserRep
     }
     return tmp3;
   }
-};
-export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
+}
+export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
   ({ user: require, analyticsLocations: importDefault, trackUserProfileAction: dependencyMap } = arg0);
   ({ avatarGuildId: closure_3, bannerUrl: closure_4 } = tidaWebformEnabled);
   let obj = { label: null, action: null };
@@ -156,8 +156,8 @@ export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, 
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5058).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5058);
+        obj2.copy(analyticsLocations(5059).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5059);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);
@@ -222,4 +222,4 @@ export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, 
     tmp = obj;
   }
   return tmp;
-};
+}

@@ -1,14 +1,14 @@
-// === Module 13701: useDeactivateWarningText ===
+// === Module 13934: useDeactivateWarningText ===
 
-// Module 13701 (useDeactivateWarningText)
+// Module 13934 (useDeactivateWarningText)
 import util from "util" /* 1125 */;
-import _modDef2567 from "module_2567" /* 2567 */;
-import Powerups from "Powerups" /* 5221 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7260 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import Powerups from "Powerups" /* 5222 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7284 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5230 */;
-import GuildRoleStore from "GuildRoleStore" /* 4910 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
+import GuildRoleStore from "GuildRoleStore" /* 4911 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
           tmp3 = closure_5;
           tmp4 = closure_0;
           sortedRoles = closure_5.getSortedRoles(closure_0);
-          num = sortedRoles.reduce(() => { ... }, 0);
+          num = sortedRoles.reduce(/* F153353 */ function() { ... }, 0);
         }
       }
       return num;
@@ -204,17 +204,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
       if (stateFromStores2 > 0) {
         const intl5 = util.intl;
         const obj2 = { perk: tmp.title, memberCount: tmp14 };
-        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2567["4jSvr1"], obj2);
+        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2568["4jSvr1"], obj2);
       } else {
         const intl4 = util.intl;
         const obj3 = { perk: tmp.title };
-        formatToPlainStringResult = intl4.formatToPlainString(_modDef2567.cavtEo, obj3);
+        formatToPlainStringResult = intl4.formatToPlainString(_modDef2568.cavtEo, obj3);
       }
     } else {
       if (Powerups.VANITY_URL_POWERUP_SKU_ID === skuId) {
         const intl3 = util.intl;
         const string = intl3.string;
-        const tmp11 = _modDef2567;
+        const tmp11 = _modDef2568;
         if (stateFromStores1) {
           let stringResult = string(tmp11.hN75yb);
           let tmp13 = importDefault;
@@ -236,14 +236,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
                   num = 0;
                 }
                 obj.memberCount = num;
-                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2567["4jSvr1"], obj);
+                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2568["4jSvr1"], obj);
                 tmp7 = importDefault;
               }
             }
           }
         }
         const intl2 = util.intl;
-        formatToPlainStringResult1 = intl2.string(_modDef2567.Vf2ZcR);
+        formatToPlainStringResult1 = intl2.string(_modDef2568.Vf2ZcR);
         tmp7 = importDefault;
       }
       const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID };
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
       if (tmp20) {
         const obj5 = { text: null, critical: true };
         const intl6 = util.intl;
-        obj5.text = intl6.string(tmp7(2567).M4XL5n);
+        obj5.text = intl6.string(tmp7(2568).M4XL5n);
         items.push(obj5);
       }
       return items;

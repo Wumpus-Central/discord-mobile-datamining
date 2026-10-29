@@ -1,6 +1,6 @@
-// === Module 6942: CardTokens ===
+// === Module 6966: CardTokens ===
 
-// Module 6942 (CardTokens)
+// Module 6966 (CardTokens)
 import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
-export const createCardShadowToken = function createCardShadowToken(arg0) {
+export function createCardShadowToken(arg0) {
   _require = arg0;
   return require("createStyles").experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
@@ -28,4 +28,4 @@ export const createCardShadowToken = function createCardShadowToken(arg0) {
     }
     return {};
   });
-};
+}

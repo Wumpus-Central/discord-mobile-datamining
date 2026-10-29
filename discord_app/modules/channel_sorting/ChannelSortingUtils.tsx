@@ -1,9 +1,9 @@
-// === Module 14095: ChannelSortingUtils ===
+// === Module 14328: ChannelSortingUtils ===
 
-// Module 14095 (ChannelSortingUtils)
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7244 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13550 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
+// Module 14328 (ChannelSortingUtils)
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7268 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13783 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -409,7 +409,7 @@ function getCategoryKey(parent_id, categories) {
 ({ ChannelTypes: hasOwnProperty, NULL_STRING_CHANNEL_ID: metroRequire } = Constants);
 let result = size.fileFinishedImporting("modules/channel_sorting/ChannelSortingUtils.tsx");
 
-export const areTypesInSameSection = function areTypesInSameSection(arg0, arg1) {
+export function areTypesInSameSection(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
     let tmp2 = arg0 === arg1;
@@ -424,8 +424,8 @@ export const areTypesInSameSection = function areTypesInSameSection(arg0, arg1) 
     tmp = tmp2;
   }
   return tmp;
-};
-export const getDropData = function getDropData(localChannel, arg1, localChannel2, to, channelList) {
+}
+export function getDropData(localChannel, arg1, localChannel2, to, channelList) {
   if (null != localChannel) {
     parent_id3 = localChannel2;
     if (null != localChannel2) {
@@ -826,10 +826,10 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
     }
   }
   return null;
-};
+}
 export { getChannelMoveUpdates };
 export { getCategoryKey };
-export const getSectionSiblings = function getSectionSiblings(id, categories) {
+export function getSectionSiblings(id, categories) {
   let type = id;
   let parent_id = id.parent_id;
   if (null == parent_id) {
@@ -857,8 +857,8 @@ export const getSectionSiblings = function getSectionSiblings(id, categories) {
     }
     return tmp;
   });
-};
-export const getChannelPlacementUpdates = function getChannelPlacementUpdates(id, categories, categoryKey, arg3) {
+}
+export function getChannelPlacementUpdates(id, categories, categoryKey, arg3) {
   _require = id;
   if (id.isCategory()) {
     const _categories1 = categories._categories;
@@ -949,4 +949,4 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(id
       }
     }
   }
-};
+}

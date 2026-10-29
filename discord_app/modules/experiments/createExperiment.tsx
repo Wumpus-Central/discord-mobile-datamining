@@ -1,17 +1,17 @@
-// === Module 5225: createExperiment ===
+// === Module 5226: createExperiment ===
 
-// Module 5225 (createExperiment)
-import ExperimentManager from "ExperimentManager" /* 5231 */;
+// Module 5226 (createExperiment)
+import ExperimentManager from "ExperimentManager" /* 5232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExperimentStore from "ExperimentStore" /* 5226 */;
+import ExperimentStore from "ExperimentStore" /* 5227 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(5227);
+const ExperimentConstants = fn(5228);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");

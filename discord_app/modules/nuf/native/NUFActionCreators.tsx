@@ -1,14 +1,14 @@
-// === Module 13842: NUFActionCreators ===
+// === Module 14075: NUFActionCreators ===
 
-// Module 13842 (NUFActionCreators)
+// Module 14075 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13817 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13821 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13924 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13927 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14050 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14054 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 14157 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -95,18 +95,18 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(13814);
+const ContactSyncModalStore = fn(14047);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(13843).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(14076).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1084).PlatformTypes;
-let closure_12 = fn(7109).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_12 = fn(7133).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
-export const startOnboarding = function startOnboarding() {
+export function startOnboarding() {
   DispatcherDefault.dispatch({ type: "ONBOARDING_START" });
-};
-export const nextOnboardingStep = function nextOnboardingStep(ONBOARDING) {
+}
+export function nextOnboardingStep(ONBOARDING) {
   let flag = ONBOARDING.skip;
   if (flag === undefined) {
     flag = false;
@@ -116,11 +116,11 @@ export const nextOnboardingStep = function nextOnboardingStep(ONBOARDING) {
     flag2 = false;
   }
   DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", skip: flag, skipAttempt: flag2 });
-};
-export const previousOnboardingStep = function previousOnboardingStep() {
+}
+export function previousOnboardingStep() {
   DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", back: true });
-};
-export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
+}
+export function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
   closure_0 = SLIDE_IN;
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     closure_1 = tmp5;
@@ -129,8 +129,8 @@ export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildT
     closure_128_0.modalConfig = { animation: closure_129_0 };
     return closure_128_0;
   }), {}, closure_12);
-};
-export const transitionToHubEmailConnectionModal = function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
+}
+export function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -145,8 +145,8 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
     },
     displayStudentPrompt: flag
   }, SLIDE_IN);
-};
-export const openDiscoverabilityModal = function openDiscoverabilityModal() {
+}
+export function openDiscoverabilityModal() {
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     closure_1 = tmp5;
     closure_0 = tmp2;
@@ -155,12 +155,12 @@ export const openDiscoverabilityModal = function openDiscoverabilityModal() {
     closure_128_0.modalConfig = { animation: closure_129_0(closure_129_2[14]).ModalAnimation.SLIDE_IN_OUT };
     return closure_128_0;
   }), {}, closure_10);
-};
-export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
+}
+export function closeDiscoverabilityModal(skip) {
   ModalActionCreatorsDefault.popWithKey(closure_10);
   DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", skip });
-};
-export const startContactSyncForDiscoverability = function startContactSyncForDiscoverability() {
+}
+export function startContactSyncForDiscoverability() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -169,8 +169,8 @@ export const startContactSyncForDiscoverability = function startContactSyncForDi
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const toggleDiscoverabilityForUser = function toggleDiscoverabilityForUser() {
+}
+export function toggleDiscoverabilityForUser() {
   const currentUser = UserStore.getCurrentUser();
   let phone;
   if (currentUser != null) {
@@ -185,4 +185,4 @@ export const toggleDiscoverabilityForUser = function toggleDiscoverabilityForUse
       React4(true);
     }
   }
-};
+}

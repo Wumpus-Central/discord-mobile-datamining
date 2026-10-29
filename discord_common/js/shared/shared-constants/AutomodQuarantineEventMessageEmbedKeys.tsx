@@ -1,6 +1,6 @@
-// === Module 7656: AutomodQuarantineEventMessageEmbedKeys ===
+// === Module 7679: AutomodQuarantineEventMessageEmbedKeys ===
 
-// Module 7656 (AutomodQuarantineEventMessageEmbedKeys)
+// Module 7679 (AutomodQuarantineEventMessageEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineEventMessageEmbedKeys.tsx");

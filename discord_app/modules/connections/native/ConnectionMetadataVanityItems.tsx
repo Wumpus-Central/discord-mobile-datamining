@@ -1,25 +1,25 @@
-// === Module 11311: ConnectionMetadataVanityItems ===
+// === Module 11365: ConnectionMetadataVanityItems ===
 
-// Module 11311 (ConnectionMetadataVanityItems)
+// Module 11365 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import NumberUtils from "NumberUtils" /* 1900 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7311 */;
-import _modDef11312 from "module_11312" /* 11312 */;
-import _modDef11313 from "module_11313" /* 11313 */;
+import NumberUtils from "NumberUtils" /* 1901 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7335 */;
+import _modDef11366 from "module_11366" /* 11366 */;
+import _modDef11367 from "module_11367" /* 11367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7312);
+const Constants = fn(7336);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 }, paypalVerifiedTag: null, paypalVerifiedTagText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
 obj2.paypalVerifiedTag = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
@@ -339,7 +339,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Vanity
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/ConnectionMetadataVanityItems.tsx");
 
-export const generateRedditMetadataItems = function generateRedditMetadataItems(metadata) {
+export function generateRedditMetadataItems(metadata) {
   let num = metadata[constants.REDDIT_TOTAL_KARMA];
   if (num == null) {
     num = -1;
@@ -363,8 +363,8 @@ export const generateRedditMetadataItems = function generateRedditMetadataItems(
     items.push(timestampProducer(closure_12, obj3, constants.REDDIT_MOD));
   }
   return items;
-};
-export const generateTwitterMetadataItems = function generateTwitterMetadataItems(metadata) {
+}
+export function generateTwitterMetadataItems(metadata) {
   let num = metadata[constants.TWITTER_STATUSES_COUNT];
   if (num == null) {
     num = -1;
@@ -385,8 +385,8 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
     items.push(timestampProducer(closure_10, obj2, constants.TWITTER_FOLLOWERS_COUNT));
   }
   return items;
-};
-export const generateBlueskyMetadataItems = function generateBlueskyMetadataItems(arg0) {
+}
+export function generateBlueskyMetadataItems(arg0) {
   let num = arg0[constants.BLUESKY_STATUSES_COUNT];
   if (num == null) {
     num = -1;
@@ -407,8 +407,8 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
     items.push(timestampProducer(closure_10, obj2, constants.BLUESKY_FOLLOWERS_COUNT));
   }
   return items;
-};
-export const generateLetterboxdMetadataItems = function generateLetterboxdMetadataItems(metadata) {
+}
+export function generateLetterboxdMetadataItems(metadata) {
   let num = metadata[constants.LETTERBOXD_WATCHES];
   if (num == null) {
     num = -1;
@@ -429,8 +429,8 @@ export const generateLetterboxdMetadataItems = function generateLetterboxdMetada
     items.push(timestampProducer(closure_10, obj2, constants.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR));
   }
   return items;
-};
-export const generateSteamMetadataItems = function generateSteamMetadataItems(metadata) {
+}
+export function generateSteamMetadataItems(metadata) {
   let num = metadata[constants.STEAM_GAME_COUNT];
   if (num == null) {
     num = -1;
@@ -456,7 +456,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11312;
+    obj2.imageSrc = _modDef11366;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -466,22 +466,22 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11313;
+    obj4.imageSrc = _modDef11367;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));
   }
   return items;
-};
-export const generatePaypalMetadataItems = function generatePaypalMetadataItems(metadata) {
+}
+export function generatePaypalMetadataItems(metadata) {
   const items = [];
   if ("1" === metadata[constants.PAYPAL_VERIFIED]) {
     const obj = { style: metadataItem };
     items.push(timestampProducer(closure_9, obj));
   }
   return items;
-};
-export const generateEbayMetadataItems = function generateEbayMetadataItems(metadata) {
+}
+export function generateEbayMetadataItems(metadata) {
   let num = metadata[constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE];
   if (num == null) {
     num = -1;
@@ -499,8 +499,8 @@ export const generateEbayMetadataItems = function generateEbayMetadataItems(meta
     items.push(timestampProducer(closure_12, obj2, constants.EBAY_TOP_RATED_SELLER));
   }
   return items;
-};
-export const generateTikTokMetadataItems = function generateTikTokMetadataItems(metadata) {
+}
+export function generateTikTokMetadataItems(metadata) {
   let num = metadata[constants.TIKTOK_FOLLOWER_COUNT];
   if (num == null) {
     num = -1;
@@ -536,8 +536,8 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
     items.push(timestampProducer(closure_12, obj4, constants.TIKTOK_VERIFIED));
   }
   return items;
-};
-export const generateRoleConnectionMetadataItems = function generateRoleConnectionMetadataItems(applicationRoleConnection) {
+}
+export function generateRoleConnectionMetadataItems(applicationRoleConnection) {
   const items = [];
   const keys = Object.keys(applicationRoleConnection.metadata);
   if (null != applicationRoleConnection.application_metadata) {
@@ -598,4 +598,4 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
     }
   }
   return items;
-};
+}

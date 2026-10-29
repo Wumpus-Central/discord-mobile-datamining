@@ -1,21 +1,21 @@
-// === Module 12570: chat_input/ChatInputNativeComponent ===
+// === Module 12624: chat_input/ChatInputNativeComponent ===
 
-// Module 12570 (chat_input/ChatInputNativeComponent)
+// Module 12624 (chat_input/ChatInputNativeComponent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import shared from "shared" /* 5011 */;
-import useTheme from "useTheme" /* 5241 */;
-import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12555 */;
-import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 12575 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import shared from "shared" /* 5012 */;
+import useTheme from "useTheme" /* 5242 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12610 */;
+import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 12629 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputNat
     num6 = 1;
   }
   if (maxHeight == null) {
-    maxHeight = tmp10(12571)(onMaxHeightChanged);
+    maxHeight = tmp10(12625)(onMaxHeightChanged);
   }
   tmpResult10 = PlatformUtils;
   const isMobileMarkdownFormatMenuEnabled = MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
@@ -208,7 +208,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputNat
     num2 = 1;
   }
   tmp4Result4 = PlatformUtils;
-  const tmp13 = tmp9(12571)(onMaxHeightChanged);
+  const tmp13 = tmp9(12625)(onMaxHeightChanged);
   const isMobileMarkdownFormatMenuEnabled = MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
   const obj4 = { accessible, accessibilityLabel: tmp11, children: tmp12, editable, showFormatMenu: isMobileMarkdownFormatMenuEnabled, keyboardAppearance: num2, keyboardType: "default", markAsSpoilerTitle, maxHeight: null, onBeginFocus: null, onEndBlur: null, onChangeContentSize: null, onSelectionOrTextChange: null, onTextFlushed: null, onPasteImage: null, onPasteCommand: null, onTapAction: null, onRequestSend: null, placeholder: null, placeholderColor: null, ref: null, selectionColor: null, setNoExtractUI: null, shouldShowCursor: null, style: null, textColor: null, verticalInset: null };
   if (maxHeight == null) {

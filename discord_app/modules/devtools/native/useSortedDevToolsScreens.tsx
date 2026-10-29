@@ -1,12 +1,12 @@
-// === Module 17391: useSortedDevToolsScreens ===
+// === Module 17630: useSortedDevToolsScreens ===
 
-// Module 17391 (useSortedDevToolsScreens)
+// Module 17630 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 17209 */;
-import DevToolsScreens from "DevToolsScreens" /* 17213 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 17448 */;
+import DevToolsScreens from "DevToolsScreens" /* 17452 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7828 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7851 */;
 
 require = fn;
 function getSortedDevToolsScreens() {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSorte
     return num2;
   });
 });
-export const updateSortOrder = function updateSortOrder(screenKey, down) {
+export function updateSortOrder(screenKey, down) {
   const items = [...DevToolsSettingsStore.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
@@ -151,4 +151,4 @@ export const updateSortOrder = function updateSortOrder(screenKey, down) {
   }
   tmp2 = getSortedDevToolsScreens()[Symbol.iterator]();
   const result = DevToolsActionCreators.updateDevToolsSettings({ sortedScreenKeys: items });
-};
+}

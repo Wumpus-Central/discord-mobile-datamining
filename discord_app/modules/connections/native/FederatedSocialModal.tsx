@@ -1,7 +1,7 @@
-// === Module 14341: FederatedSocialModal ===
+// === Module 14575: FederatedSocialModal ===
 
-// Module 14341 (FederatedSocialModal)
-import PlatformsDefault from "Platforms" /* 6537 */;
+// Module 14575 (FederatedSocialModal)
+import PlatformsDefault from "Platforms" /* 6561 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1084).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -177,11 +177,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Federate
     tmp4 = cResult[1];
   }
   if (cResult[2] !== platformType.onClose) {
-    const headerBackButton = tmp(6960).getHeaderBackButton(platformType.onClose);
+    const headerBackButton = tmp(6984).getHeaderBackButton(platformType.onClose);
     cResult[2] = platformType.onClose;
     cResult[3] = headerBackButton;
     let tmp10 = headerBackButton;
-    const tmpResult = tmp(6960);
+    const tmpResult = tmp(6984);
   } else {
     tmp10 = cResult[3];
   }

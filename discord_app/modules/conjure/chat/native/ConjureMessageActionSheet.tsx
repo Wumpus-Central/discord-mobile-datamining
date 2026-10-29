@@ -1,12 +1,12 @@
-// === Module 12394: ConjureMessageActionSheet ===
+// === Module 12448: ConjureMessageActionSheet ===
 
-// Module 12394 (ConjureMessageActionSheet)
+// Module 12448 (ConjureMessageActionSheet)
 import util from "util" /* 1125 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import CopyIcon from "CopyIcon" /* 5718 */;
-import ClipboardUtils from "ClipboardUtils" /* 7321 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import CopyIcon from "CopyIcon" /* 5720 */;
+import ClipboardUtils from "ClipboardUtils" /* 7345 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -479,10 +479,10 @@ const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMe
 
 export const CONJURE_MESSAGE_SHEET_KEY = "conjure-message-actions";
 export { openMessageAuthorProfile };
-export const showConjureMessageActions = function showConjureMessageActions(arg0) {
+export function showConjureMessageActions(arg0) {
   const obj2 = { content: null, key: null };
   const merged = Object.assign(arg0);
   obj2.content = React4(closure_8, {});
   obj2.key = key;
   ActionSheetActionCreators.showActionSheet(obj2);
-};
+}

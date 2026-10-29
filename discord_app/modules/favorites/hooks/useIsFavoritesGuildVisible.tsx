@@ -1,9 +1,9 @@
-// === Module 16955: useIsFavoritesGuildVisible ===
+// === Module 17194: useIsFavoritesGuildVisible ===
 
-// Module 16955 (useIsFavoritesGuildVisible)
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
-import FavoriteStore from "FavoriteStore" /* 4859 */;
+// Module 17194 (useIsFavoritesGuildVisible)
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+import FavoriteStore from "FavoriteStore" /* 4860 */;
 
 const require = globalThis.__r;
 
@@ -65,11 +65,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFav
     return favoriteGuildEnabled;
   }, items1);
 });
-export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
+export function isFavoritesGuildVisible() {
   const isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(SelectedGuildStore.getGuildId());
   let favoriteGuildEnabled = isFavoritesGuildIdResult;
   if (!isFavoritesGuildIdResult) {
     favoriteGuildEnabled = FavoriteStore.favoriteGuildEnabled;
   }
   return favoriteGuildEnabled;
-};
+}

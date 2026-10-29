@@ -1,11 +1,11 @@
-// === Module 5701: ? ===
+// === Module 5703: ? ===
 
-// Module 5701
-import module_5015 from "module_5015" /* 5015 */;
+// Module 5703
+import module_5016 from "module_5016" /* 5016 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 1;
-const useToastStore = module_5015.create(() => {
+const useToastStore = module_5016.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -14,7 +14,7 @@ const useToastStore = module_5015.create(() => {
 let result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx");
 
 export { useToastStore };
-export const showToast = function showToast(surface) {
+export function showToast(surface) {
   let str;
   if (surface != null) {
     str = surface.surface;
@@ -52,8 +52,8 @@ export const showToast = function showToast(surface) {
       }
     });
   });
-};
-export const popToast = function popToast(arg0) {
+}
+export function popToast(arg0) {
   let str = arg0;
   if (arg0 === undefined) {
     str = "app";
@@ -92,4 +92,4 @@ export const popToast = function popToast(arg0) {
       }
     });
   });
-};
+}

@@ -1,6 +1,6 @@
-// === Module 10107: MessageDataSnowflakeUtils ===
+// === Module 10140: MessageDataSnowflakeUtils ===
 
-// Module 10107 (MessageDataSnowflakeUtils)
+// Module 10140 (MessageDataSnowflakeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("modules/messages/native/snowflake/Mes
 export function castNativeSyntheticEventData(arg0) {
   return arg0;
 }
-export const getNativeSyntheticEventData = function getNativeSyntheticEventData(nativeEvent) {
+export function getNativeSyntheticEventData(nativeEvent) {
   return nativeEvent.nativeEvent;
-};
+}

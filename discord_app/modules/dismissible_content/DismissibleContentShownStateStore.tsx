@@ -1,14 +1,14 @@
-// === Module 4848: DismissibleContentShownStateStore ===
+// === Module 4849: DismissibleContentShownStateStore ===
 
-// Module 4848 (DismissibleContentShownStateStore)
+// Module 4849 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import isActionRequiredDefault from "isActionRequired" /* 4852 */;
+import isActionRequiredDefault from "isActionRequired" /* 4853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4849 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4850 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4843 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4850 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4851 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4844 */;
 
 function withContent(currentlyShown, content) {
   let tmp = found;
@@ -66,7 +66,7 @@ let closure_15 = async function _arbitrateCandidates(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -573,7 +573,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4851).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4852).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -697,11 +697,11 @@ export default function useDismissibleContentShownStateStore(arg0, arg1) {
 };
 export { isInCooldown };
 export { isStateInCooldown };
-export const addCandidateContent = function addCandidateContent(content) {
+export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4844).bypassesFatigue(content.content);
+  closure_1 = closure_0(4845).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4844);
+  let obj = closure_0(4845);
   closure_0(1271).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
@@ -730,8 +730,8 @@ export const addCandidateContent = function addCandidateContent(content) {
     applyWinnerUpdateResult(dependencyMap);
   }
   const obj2 = closure_0(1271);
-};
-export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
+}
+export function removeCandidateContent(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   dependencyMap = null;
@@ -816,15 +816,15 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
     batchInvocationManager.reset();
   }
   let obj = closure_0(1271);
-};
-export const getLastShownDismissibleContent = function getLastShownDismissibleContent() {
+}
+export function getLastShownDismissibleContent() {
   let first = closure_12.getState().recentlyShown[0];
   if (first == null) {
     first = null;
   }
   return first;
-};
-export const getCurrentFatigableWinner = function getCurrentFatigableWinner() {
+}
+export function getCurrentFatigableWinner() {
   const shownFatigableCandidate = closure_12.getState().shownFatigableCandidate;
   let content;
   if (shownFatigableCandidate != null) {
@@ -834,11 +834,11 @@ export const getCurrentFatigableWinner = function getCurrentFatigableWinner() {
     content = null;
   }
   return content;
-};
-export const isContentShown = function isContentShown(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
+}
+export function isContentShown(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
   const currentlyShown = closure_12.getState().currentlyShown;
   return currentlyShown.has(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
-};
+}
 export const useIsContentShown = tmp6;
 export const useIsAnyContentShown = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAnyContentShown(arg0) {
   closure_0 = arg0;
@@ -868,17 +868,17 @@ export const useIsAnyContentShown = ReactCompilerGating.isReactCompilerEnabled()
     });
   });
 });
-export const isAnyContentShown = function isAnyContentShown(arr) {
+export function isAnyContentShown(arr) {
   const currentlyShown = closure_12.getState().currentlyShown;
   return arr.find((item) => currentlyShown.has(item));
-};
-export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
+}
+export function getCurrentlyShownCounts() {
   const items = [...closure_12.getState().currentlyShown];
   const items1 = [closure_12.getState().currentlyShown.size, items.filter((item) => !closure_1_0(dependencyMap[7]).bypassesFatigue(item)).length];
   return items1;
-};
+}
 export { reset };
-export const resetFatigueCooldown = function resetFatigueCooldown() {
+export function resetFatigueCooldown() {
   closure_0(1271).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
@@ -893,8 +893,8 @@ export const resetFatigueCooldown = function resetFatigueCooldown() {
       return obj;
     });
   });
-};
-export const isPostConnectionOpen = function isPostConnectionOpen() {
+}
+export function isPostConnectionOpen() {
   return closure_12.getState().postConnectionOpen;
-};
+}
 export { dismissibleContentShownStateStore };

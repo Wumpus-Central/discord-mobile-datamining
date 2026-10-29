@@ -1,14 +1,14 @@
-// === Module 14470: MediaModalOverlayAltText ===
+// === Module 14704: MediaModalOverlayAltText ===
 
-// Module 14470 (MediaModalOverlayAltText)
+// Module 14704 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11272 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11326 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" } };
   return obj;
@@ -26,7 +26,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = PressableOpacity(4832).ViewImageDescriptions;
+  const ViewImageDescriptions = PressableOpacity(4833).ViewImageDescriptions;
   let tmp3 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp3 = null;
@@ -57,7 +57,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
         const intl = PressableOpacity(1125).intl;
         obj2.children = intl.string(PressableOpacity(1125).t.Q5VqrN);
-        const tmp9 = jsx(PressableOpacity(5270).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+        const tmp9 = jsx(PressableOpacity(5271).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
         cResult[3] = tmp9;
         let tmp7 = tmp9;
       } else {
@@ -65,7 +65,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       if (cResult[4] === container.container) {
       }
-      PressableOpacity = PressableOpacity(6944).PressableOpacity;
+      PressableOpacity = PressableOpacity(6968).PressableOpacity;
       const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
       tmp = <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>{tmp7}</PressableOpacity>;
       container = container.container;
@@ -80,7 +80,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(4832).ViewImageDescriptions;
+  const ViewImageDescriptions = str(4833).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
@@ -99,8 +99,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1125).intl;
       obj2.children = intl.string(tmp3(1125).t.Q5VqrN);
-      obj.children = jsx(tmp3(5270).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(6944).PressableOpacity, {
+      obj.children = jsx(tmp3(5271).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(6968).PressableOpacity, {
         style: tmp2.container,
         onPress() {
               if (str == null) {

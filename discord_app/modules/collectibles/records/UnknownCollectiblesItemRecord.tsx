@@ -1,8 +1,8 @@
-// === Module 7693: UnknownCollectiblesItemRecord ===
+// === Module 7716: UnknownCollectiblesItemRecord ===
 
-// Module 7693 (UnknownCollectiblesItemRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1991 */;
+// Module 7716 (UnknownCollectiblesItemRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1992 */;
 
 require = fn;
 const prototype = function UnknownCollectiblesItemRecord(arg0) {
@@ -29,6 +29,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");
 
 export default prototype;
-export const isUnknownCollectiblesItemRecord = function isUnknownCollectiblesItemRecord(arg0) {
+export function isUnknownCollectiblesItemRecord(arg0) {
   return arg0 instanceof prototype;
-};
+}

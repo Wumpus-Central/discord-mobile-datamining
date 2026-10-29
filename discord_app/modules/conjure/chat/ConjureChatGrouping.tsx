@@ -1,11 +1,11 @@
-// === Module 12350: ConjureChatGrouping ===
+// === Module 12404: ConjureChatGrouping ===
 
-// Module 12350 (ConjureChatGrouping)
+// Module 12404 (ConjureChatGrouping)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatGrouping.tsx");
 
-export const groupChatRows = function groupChatRows(arg0) {
+export function groupChatRows(arg0) {
   const items = [];
   actor = null;
   let flag = false;
@@ -48,4 +48,4 @@ export const groupChatRows = function groupChatRows(arg0) {
     continue;
   }
   return items;
-};
+}

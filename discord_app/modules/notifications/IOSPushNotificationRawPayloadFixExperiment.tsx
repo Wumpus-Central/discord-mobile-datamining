@@ -1,7 +1,7 @@
-// === Module 6529: IOSPushNotificationRawPayloadFixExperiment ===
+// === Module 6553: IOSPushNotificationRawPayloadFixExperiment ===
 
-// Module 6529 (IOSPushNotificationRawPayloadFixExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 6553 (IOSPushNotificationRawPayloadFixExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-ios-push-notif-json-fix", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -12,9 +12,9 @@ const config = ApexExperiment.createApexExperiment(obj);
 let enabled = null;
 const result = size.fileFinishedImporting("modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx");
 
-export const isIOSPushNotificationRawPayloadFixExperimentEnabled = function isIOSPushNotificationRawPayloadFixExperimentEnabled() {
+export function isIOSPushNotificationRawPayloadFixExperimentEnabled() {
   if (null == enabled) {
     enabled = config.getConfig({ location: "isIOSPushNotificationRawPayloadFixExperiment" }).enabled;
   }
   return enabled;
-};
+}

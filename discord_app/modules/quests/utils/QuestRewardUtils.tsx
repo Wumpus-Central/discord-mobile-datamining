@@ -1,18 +1,18 @@
-// === Module 9623: QuestRewardUtils ===
+// === Module 9655: QuestRewardUtils ===
 
-// Module 9623 (QuestRewardUtils)
+// Module 9655 (QuestRewardUtils)
 import util from "util" /* 1125 */;
-import _mod4433 from "module_4433" /* 4433 */;
-import QuestTypes from "QuestTypes" /* 6748 */;
-import QuestDataUtils from "QuestDataUtils" /* 7807 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7816 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9624 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9625 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9626 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9627 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9628 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9629 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7685 */;
+import _mod4434 from "module_4434" /* 4434 */;
+import QuestTypes from "QuestTypes" /* 6771 */;
+import QuestDataUtils from "QuestDataUtils" /* 7830 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7839 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9656 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9657 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9658 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9659 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9660 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9661 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7708 */;
 
 require = fn;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
@@ -75,12 +75,12 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
     }
   }
 }
-let items = [fn(9624).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(9624).QuestRewardExpirationMode.PREMIUM_PERMANENT];
+let items = [fn(9656).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(9656).QuestRewardExpirationMode.PREMIUM_PERMANENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestRewardUtils.tsx");
 
-export const getCollectiblesQuestReward = function getCollectiblesQuestReward(rewardsConfig) {
+export function getCollectiblesQuestReward(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -92,8 +92,8 @@ export const getCollectiblesQuestReward = function getCollectiblesQuestReward(re
     tmp3 = found;
   }
   return tmp3;
-};
-export const getCollectibleQuestRewardExtendableExpirationDate = function getCollectibleQuestRewardExtendableExpirationDate(rewardsConfig) {
+}
+export function getCollectibleQuestRewardExtendableExpirationDate(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -116,8 +116,8 @@ export const getCollectibleQuestRewardExtendableExpirationDate = function getCol
     }
   }
   return questFormattedDate;
-};
-export const getCollectibleQuestRewardDuration = function getCollectibleQuestRewardDuration(config) {
+}
+export function getCollectibleQuestRewardDuration(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -135,7 +135,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        const differenceInDaysResult = _mod4433.differenceInDays(date1, date);
+        const differenceInDaysResult = _mod4434.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
         const rounded = Math.floor(differenceInDaysResult / 30);
@@ -154,7 +154,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
           const obj3 = { months: sum };
           return intl3.formatToPlainString(util.t.kridzK, obj3);
         } else {
-          const differenceInDaysResult1 = _mod4433.differenceInDays(date1, date);
+          const differenceInDaysResult1 = _mod4434.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;
             const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
@@ -166,23 +166,23 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
             const obj = { days: differenceInDaysResult1 };
             return intl.formatToPlainString(util.t["k2UNz+"], obj);
           }
-          const tmp3Result2 = _mod4433;
+          const tmp3Result2 = _mod4434;
         }
-        const tmp3Result = _mod4433;
+        const tmp3Result = _mod4434;
       }
     }
   }
   return null;
-};
-export const hasFractionalPremiumQuestReward = function hasFractionalPremiumQuestReward(rewardsConfig) {
+}
+export function hasFractionalPremiumQuestReward(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   return rewards.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
-};
-export const hasVirtualCurrencyReward = function hasVirtualCurrencyReward(config) {
+}
+export function hasVirtualCurrencyReward(config) {
   const rewards = config.rewardsConfig.rewards;
   return rewards.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
-};
-export const hasPremiumOrbQuantity = function hasPremiumOrbQuantity(config) {
+}
+export function hasPremiumOrbQuantity(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
   let premiumOrbQuantity;
@@ -194,8 +194,8 @@ export const hasPremiumOrbQuantity = function hasPremiumOrbQuantity(config) {
     tmp3 = premiumOrbQuantity > 0;
   }
   return tmp3;
-};
-export const hasCollectiblesQuestReward = function hasCollectiblesQuestReward(config) {
+}
+export function hasCollectiblesQuestReward(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -207,24 +207,24 @@ export const hasCollectiblesQuestReward = function hasCollectiblesQuestReward(co
     tmp3 = found;
   }
   return null != tmp3;
-};
-export const hasInGameQuestReward = function hasInGameQuestReward(config) {
+}
+export function hasInGameQuestReward(config) {
   const rewards = config.rewardsConfig.rewards;
   return rewards.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.IN_GAME);
-};
-export const hasQuestRewardCode = function hasQuestRewardCode(config) {
+}
+export function hasQuestRewardCode(config) {
   const rewards = config.rewardsConfig.rewards;
   return rewards.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.REWARD_CODE);
-};
-export const getInGameQuestReward = function getInGameQuestReward(rewardsConfig) {
+}
+export function getInGameQuestReward(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   let found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.IN_GAME);
   if (found == null) {
     found = null;
   }
   return found;
-};
-export const getCollectiblesQuestRewardItem = function getCollectiblesQuestRewardItem(rewardsConfig) {
+}
+export function getCollectiblesQuestRewardItem(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -251,8 +251,8 @@ export const getCollectiblesQuestRewardItem = function getCollectiblesQuestRewar
     first = null;
   }
   return first;
-};
-export const getVirtualCurrencyRewardOrbQuantity = function getVirtualCurrencyRewardOrbQuantity(config) {
+}
+export function getVirtualCurrencyRewardOrbQuantity(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
   let orbQuantity;
@@ -260,8 +260,8 @@ export const getVirtualCurrencyRewardOrbQuantity = function getVirtualCurrencyRe
     orbQuantity = found.orbQuantity;
   }
   return orbQuantity;
-};
-export const getVirtualCurrencyRewardPremiumOrbQuantity = function getVirtualCurrencyRewardPremiumOrbQuantity(rewardsConfig) {
+}
+export function getVirtualCurrencyRewardPremiumOrbQuantity(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
   let type;
@@ -271,8 +271,8 @@ export const getVirtualCurrencyRewardPremiumOrbQuantity = function getVirtualCur
   if (type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
     return found.premiumOrbQuantity;
   }
-};
-export const isCollectibleQuestRewardPremiumExtendable = function isCollectibleQuestRewardPremiumExtendable(config) {
+}
+export function isCollectibleQuestRewardPremiumExtendable(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -292,8 +292,8 @@ export const isCollectibleQuestRewardPremiumExtendable = function isCollectibleQ
     hasItem = set.has(expirationMode);
   }
   return hasItem;
-};
-export const isCollectibleQuestRewardPermanentWithPremiumSubscription = function isCollectibleQuestRewardPermanentWithPremiumSubscription(config) {
+}
+export function isCollectibleQuestRewardPermanentWithPremiumSubscription(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
   let type;
@@ -330,8 +330,8 @@ export const isCollectibleQuestRewardPermanentWithPremiumSubscription = function
     hasItem = expirationMode1 === QuestRewardExpirationMode.QuestRewardExpirationMode.PREMIUM_PERMANENT;
   }
   return hasItem;
-};
-export const getQuestPrimaryReward = function getQuestPrimaryReward(quest) {
+}
+export function getQuestPrimaryReward(quest) {
   const userStatus = quest.userStatus;
   let num;
   if (userStatus != null) {
@@ -347,8 +347,8 @@ export const getQuestPrimaryReward = function getQuestPrimaryReward(quest) {
     tmp = config.rewards[num];
   }
   return tmp;
-};
-export const getQuestOrbMultiplier = function getQuestOrbMultiplier(config) {
+}
+export function getQuestOrbMultiplier(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
   let type;
@@ -369,8 +369,8 @@ export const getQuestOrbMultiplier = function getQuestOrbMultiplier(config) {
     }
     return result;
   }
-};
-export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUser(rewardsConfig, isFractionalPremiumWithNoStandardSub) {
+}
+export function getQuestOrbMultiplierForUser(rewardsConfig, isFractionalPremiumWithNoStandardSub) {
   if (null == isFractionalPremiumWithNoStandardSub) {
     return 1;
   } else {
@@ -417,8 +417,8 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     }
     return num6;
   }
-};
-export const getQuestOrbRewardQuantityForUser = function getQuestOrbRewardQuantityForUser(config, stateFromStores2) {
+}
+export function getQuestOrbRewardQuantityForUser(config, stateFromStores2) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
   if (null == found) {
@@ -449,14 +449,14 @@ export const getQuestOrbRewardQuantityForUser = function getQuestOrbRewardQuanti
     }
     orbQuantity = found.orbQuantity;
   }
-};
-export const getDefaultRewardName = function getDefaultRewardName(config, stateFromStores) {
+}
+export function getDefaultRewardName(config, stateFromStores) {
   return _getDefaultRewardName(config, stateFromStores, false);
-};
-export const getDefaultRewardNameWithArticle = function getDefaultRewardNameWithArticle(config, stateFromStores) {
+}
+export function getDefaultRewardNameWithArticle(config, stateFromStores) {
   return _getDefaultRewardName(config, stateFromStores, true);
-};
-export const getRewardCodeQuestReward = function getRewardCodeQuestReward(idx) {
+}
+export function getRewardCodeQuestReward(idx) {
   if (null == idx.idx) {
     return null;
   } else {
@@ -466,8 +466,8 @@ export const getRewardCodeQuestReward = function getRewardCodeQuestReward(idx) {
     }
     return tmp5;
   }
-};
-export const isTieredRewardCodeQuest = function isTieredRewardCodeQuest(quest) {
+}
+export function isTieredRewardCodeQuest(quest) {
   const rewardsConfig = quest.quest.config.rewardsConfig;
   let everyResult = rewardsConfig.assignmentMethod === QuestRewardAssignmentMethods.QuestRewardAssignmentMethods.TIERED;
   if (everyResult) {
@@ -478,8 +478,8 @@ export const isTieredRewardCodeQuest = function isTieredRewardCodeQuest(quest) {
     everyResult = rewards.every((type) => type.type === QuestRewardTypes.QuestRewardTypes.REWARD_CODE);
   }
   return everyResult;
-};
-export const getDefaultPlatform = function getDefaultPlatform(config) {
+}
+export function getDefaultPlatform(config) {
   const platforms = config.rewardsConfig.platforms;
   if (platforms.length > 0) {
     let CROSS_PLATFORM = platforms[0];
@@ -487,8 +487,8 @@ export const getDefaultPlatform = function getDefaultPlatform(config) {
     CROSS_PLATFORM = QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM;
   }
   return CROSS_PLATFORM;
-};
-export const getPlatformString = function getPlatformString(arg0) {
+}
+export function getPlatformString(arg0) {
   if (QuestTypes.QuestRewardCodePlatforms.XBOX === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t.G84UWZ);
@@ -505,4 +505,4 @@ export const getPlatformString = function getPlatformString(arg0) {
     const intl = util.intl;
     return intl.string(util.t.UWVbzV);
   }
-};
+}

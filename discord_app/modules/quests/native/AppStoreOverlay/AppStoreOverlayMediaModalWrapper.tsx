@@ -1,12 +1,12 @@
-// === Module 14356: AppStoreOverlayMediaModalWrapper ===
+// === Module 14590: AppStoreOverlayMediaModalWrapper ===
 
-// Module 14356 (AppStoreOverlayMediaModalWrapper)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8816 */;
-import MediaModalDefault from "MediaModal" /* 8817 */;
+// Module 14590 (AppStoreOverlayMediaModalWrapper)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8819 */;
+import MediaModalDefault from "MediaModal" /* 8820 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5247 */;
+import ActionSheetStore from "ActionSheetStore" /* 5248 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     const items = [];
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   } else {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     tmp9 = cResult[4];
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   if (cResult[5] !== tmp3) {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     cResult[5] = tmp3;
@@ -62,14 +62,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   } else {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
   }
   if (ActionSheetStore.isOpen()) {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     const obj2 = {};
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   } else {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     const obj3 = {};

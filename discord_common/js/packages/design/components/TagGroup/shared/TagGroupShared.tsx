@@ -1,6 +1,6 @@
-// === Module 12277: TagGroupShared ===
+// === Module 12331: TagGroupShared ===
 
-// Module 12277 (TagGroupShared)
+// Module 12331 (TagGroupShared)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" };
@@ -16,9 +16,9 @@ export function getDefaultTagGroupSize(layout) {
   }
   return str;
 }
-export const getTagTextVariant = function getTagTextVariant(size) {
+export function getTagTextVariant(size) {
   return closure_0[size];
-};
-export const getTagIconSize = function getTagIconSize(size) {
+}
+export function getTagIconSize(size) {
   return closure_1[size];
-};
+}

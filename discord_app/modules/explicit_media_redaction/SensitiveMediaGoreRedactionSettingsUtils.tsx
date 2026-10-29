@@ -1,10 +1,10 @@
-// === Module 7435: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 7458: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 7435 (SensitiveMediaGoreRedactionSettingsUtils)
+// Module 7458 (SensitiveMediaGoreRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5687 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5689 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -124,7 +124,7 @@ const result = size.fileFinishedImporting("modules/explicit_media_redaction/Sens
 export { resolveGoreSettingWithDefaults };
 export { resolveGoreSettingWithDefaultsForTeen };
 export { getGoreContentSettingOrDefault };
-export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
+export function updateGoreContentSetting(arg0) {
   const GoreContentSettings = UserSettings.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
   let goreContentGuilds;
@@ -147,7 +147,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   const merged1 = Object.assign(arg0);
   GoreContentSettings2.updateSetting({});
   const obj2 = {};
-};
+}
 export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled() ? (function useSensitiveContentFilterHelpArticle() {
   return HelpdeskArticles.EXPLICIT_MEDIA_REDACTION;
 }) : (function useSensitiveContentFilterHelpArticle() {

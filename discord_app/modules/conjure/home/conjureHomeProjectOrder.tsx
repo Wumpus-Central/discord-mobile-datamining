@@ -1,12 +1,12 @@
-// === Module 14396: conjureHomeProjectOrder ===
+// === Module 14630: conjureHomeProjectOrder ===
 
-// Module 14396 (conjureHomeProjectOrder)
+// Module 14630 (conjureHomeProjectOrder)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/home/conjureHomeProjectOrder.tsx");
 
-export const sortConjureProjectsByActivity = function sortConjureProjectsByActivity(arr) {
+export function sortConjureProjectsByActivity(arr) {
   const mapped = arr.map((project) => {
     const obj = { project: project.project, time: null };
     ({ project, turnStartedAt, finishedAt } = project);
@@ -55,4 +55,4 @@ export const sortConjureProjectsByActivity = function sortConjureProjectsByActiv
     return num;
   });
   return sorted.map((project) => project.project);
-};
+}

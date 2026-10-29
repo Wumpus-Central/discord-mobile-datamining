@@ -1,6 +1,6 @@
-// === Module 6741: GuildsTree ===
+// === Module 6764: GuildsTree ===
 
-// Module 6741 (GuildsTree)
+// Module 6764 (GuildsTree)
 import _mod12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
@@ -153,8 +153,8 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   self.version = self.version + 1;
   return self;
 };
-prototype["cloneNode"] = function cloneNode(node) {
-  return _mod12.clone(node);
+prototype["cloneNode"] = function cloneNode(arg0) {
+  return _mod12.clone(arg0);
 };
 prototype["convertToFolder"] = function convertToFolder(node) {
   const self = this;
@@ -231,7 +231,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(() => { ... });
+                    let mapped = children.map(/* F147095 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;
@@ -271,11 +271,11 @@ prototype["_pluckNode"] = function _pluckNode(parentId) {
 
 export { GuildsNodeType };
 export { GuildsTree };
-export const createGuildNode = function createGuildNode(item10030, id) {
+export function createGuildNode(item10030, id) {
   const element = { type: obj.GUILD, id: item10030, parentId: id, children: [], unavailable: false };
   return element;
-};
-export const createFolderNode = function createFolderNode(folderId, parentId, ExpandedGuildFolderStore) {
+}
+export function createFolderNode(folderId, parentId, ExpandedGuildFolderStore) {
   const element = { type: obj.FOLDER, id: folderId.folderId, parentId, name: null, color: null, expanded: null, children: null };
   const folderName = folderId.folderName;
   element.name = folderName;
@@ -292,4 +292,4 @@ export const createFolderNode = function createFolderNode(folderId, parentId, Ex
   element.expanded = tmp;
   element.children = [];
   return element;
-};
+}

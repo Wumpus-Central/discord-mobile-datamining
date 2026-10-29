@@ -1,6 +1,6 @@
-// === Module 18193: ICYMICustomScoreTypes ===
+// === Module 18427: ICYMICustomScoreTypes ===
 
-// Module 18193 (ICYMICustomScoreTypes)
+// Module 18427 (ICYMICustomScoreTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoreTypes.tsx");

@@ -1,13 +1,13 @@
-// === Module 17751: useMessagesReconnectToCallsEffect ===
+// === Module 17989: useMessagesReconnectToCallsEffect ===
 
-// Module 17751 (useMessagesReconnectToCallsEffect)
+// Module 17989 (useMessagesReconnectToCallsEffect)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7359 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7382 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

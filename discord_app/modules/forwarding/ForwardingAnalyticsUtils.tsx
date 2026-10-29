@@ -1,12 +1,12 @@
-// === Module 12959: ForwardingAnalyticsUtils ===
+// === Module 13180: ForwardingAnalyticsUtils ===
 
-// Module 12959 (ForwardingAnalyticsUtils)
+// Module 13180 (ForwardingAnalyticsUtils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
@@ -52,14 +52,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackFo
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
 
-export const trackForwardStart = function trackForwardStart(channel_id, id, source) {
+export function trackForwardStart(channel_id, id, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_STARTED, { channel_id, message_id: id, source });
-};
-export const trackForwardCancel = function trackForwardCancel(arg0) {
+}
+export function trackForwardCancel(arg0) {
   ({ channelId, messageId, numDestinationChanges, numQueryChanges } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_CANCELLED, { channel_id: channelId, message_id: messageId, num_destination_changes: numDestinationChanges, num_query_changes: numQueryChanges });
-};
-export const trackForwardSent = function trackForwardSent(arg0) {
+}
+export function trackForwardSent(arg0) {
   ({ channelId, messageId } = arg0);
   ({ hasError, hasContextMessage, numDestinations, numDestinationChanges, numQueryChanges, anyDestinationHasSlowmode, source } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_SENT, { channel_id: channelId, message_id: messageId, has_error: hasError, has_context_message: hasContextMessage, num_destinations: numDestinations, num_destination_changes: numDestinationChanges, num_query_changes: numQueryChanges, any_destination_has_slowmode: anyDestinationHasSlowmode });
@@ -76,10 +76,10 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj2);
     const tmp13Result = AppAnalyticsUtils;
   }
-};
-export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {
+}
+export function trackForwardCopyLink(channel_id, id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_COPY_LINK, { channel_id, message_id: id });
-};
+}
 export const useTrackForwardAddRecipientOnce = tmp2;
 export const useTrackForwardEditSearchOnce = tmp3;
 export const useTrackForwardEditContextMessageOnce = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackForwardEditContextMessageOnce() {

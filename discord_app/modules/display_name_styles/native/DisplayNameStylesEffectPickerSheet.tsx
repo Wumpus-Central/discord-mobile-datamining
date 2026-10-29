@@ -1,15 +1,15 @@
-// === Module 16972: DisplayNameStylesEffectPickerSheet ===
+// === Module 17211: DisplayNameStylesEffectPickerSheet ===
 
-// Module 16972 (DisplayNameStylesEffectPickerSheet)
+// Module 17211 (DisplayNameStylesEffectPickerSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef2929 from "module_2929" /* 2929 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10696 */;
-import types from "types" /* 10697 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10699 */;
+import _modDef2930 from "module_2930" /* 2930 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10729 */;
+import types from "types" /* 10730 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1 }, contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" }, gridContainer: { flexWrap: "wrap", width: 350 }, effectCard: null, effectCardSelected: null, effectName: null, tileNewDot: null };
 let size = { width: 109, height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
 obj2.effectCard = size;
@@ -39,7 +39,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Effect
     const intl = util.intl;
     let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
     if (OpWJ3f == null) {
-      OpWJ3f = _modDef2929.OpWJ3f;
+      OpWJ3f = _modDef2930.OpWJ3f;
     }
     const stringResult = intl.string(OpWJ3f);
     cResult[0] = effectId;
@@ -146,7 +146,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Effect
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef2929.OpWJ3f;
+    OpWJ3f = _modDef2930.OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
   const obj = { onPress: onClick, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: { selected }, children: null };
@@ -471,10 +471,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   first = undefined;
   closure_5 = undefined;
   const tmp = closure_9();
-  let obj = userId(8696);
-  const visibleEffectOrder = userId(16967).useVisibleEffectOrder();
-  let obj2 = userId(16967);
-  const displayNameStylesNewEffects = userId(16968).useDisplayNameStylesNewEffects(visibleEffectOrder);
+  let obj = userId(8699);
+  const visibleEffectOrder = userId(17206).useVisibleEffectOrder();
+  let obj2 = userId(17206);
+  const displayNameStylesNewEffects = userId(17207).useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -487,13 +487,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     const obj4 = { ref: obj.useBottomSheetRef().bottomSheetRef, header: null, children: null };
     const obj5 = { title: null, trailing: null };
     const intl = tmp2(1125).intl;
-    obj5.title = intl.string(onSelectEffect(2929).RVtMxT);
+    obj5.title = intl.string(onSelectEffect(2930).RVtMxT);
     const obj6 = { text: null, onPress: null, variant: "primary", size: "sm" };
     const intl2 = tmp2(1125).intl;
     obj6.text = intl2.string(tmp2(1125).t.XqMe3N);
     obj6.onPress = tmp8;
-    obj5.trailing = closure_7(tmp2(5280).Button, obj6);
-    obj4.header = closure_7(onSelectEffect(16970), obj5);
+    obj5.trailing = closure_7(tmp2(5281).Button, obj6);
+    obj4.header = closure_7(onSelectEffect(17209), obj5);
     const obj7 = { style: tmp.container, children: null };
     const obj8 = { style: tmp.contentContainer, children: null };
     const obj9 = {
@@ -516,11 +516,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
           }, effectId);
         })
     };
-    obj8.children = closure_7(tmp2(6013).Stack, obj9);
+    obj8.children = closure_7(tmp2(6015).Stack, obj9);
     obj7.children = closure_7(closure_5, obj8);
     obj4.children = closure_7(closure_5, obj7);
-    tmp9 = closure_7(tmp2(5301).BottomSheet, obj4);
-    const tmp12 = onSelectEffect(16970);
+    tmp9 = closure_7(tmp2(5302).BottomSheet, obj4);
+    const tmp12 = onSelectEffect(17209);
   }
   return tmp9;
 });

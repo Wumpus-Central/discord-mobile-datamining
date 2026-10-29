@@ -1,13 +1,13 @@
-// === Module 8535: transformNativeMarkupTimestamp ===
+// === Module 8557: transformNativeMarkupTimestamp ===
 
-// Module 8535 (transformNativeMarkupTimestamp)
-import MarkupTypes from "MarkupTypes" /* 6016 */;
-import TimestampUtils from "TimestampUtils" /* 8536 */;
+// Module 8557 (transformNativeMarkupTimestamp)
+import MarkupTypes from "MarkupTypes" /* 6020 */;
+import TimestampUtils from "TimestampUtils" /* 8558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupTimestamp.tsx");
 
-export const transformNativeTimestamp = function transformNativeTimestamp(value) {
+export function transformNativeTimestamp(value) {
   const str1 = value.value.toString();
   const style = value.style;
   const parseTimestampResult = TimestampUtils.parseTimestamp(str1, style);
@@ -21,4 +21,4 @@ export const transformNativeTimestamp = function transformNativeTimestamp(value)
     obj3.type = MarkupTypes.AST_KEY.TIMESTAMP;
   }
   return obj3;
-};
+}

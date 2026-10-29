@@ -1,20 +1,20 @@
-// === Module 10190: stickers/StickersUtils ===
+// === Module 10223: stickers/StickersUtils ===
 
-// Module 10190 (stickers/StickersUtils)
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import StickersTypes from "StickersTypes" /* 6524 */;
-import StickerCategoryUtils from "StickerCategoryUtils" /* 10192 */;
-import _modDef10193 from "module_10193" /* 10193 */;
-import _modDef10194 from "module_10194" /* 10194 */;
+// Module 10223 (stickers/StickersUtils)
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import StickersTypes from "StickersTypes" /* 6548 */;
+import StickerCategoryUtils from "StickerCategoryUtils" /* 10225 */;
+import _modDef10226 from "module_10226" /* 10226 */;
+import _modDef10227 from "module_10227" /* 10227 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10191).useStickerPickerStore;
+const useStickerPickerStore = fn(10224).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1084).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
@@ -150,9 +150,9 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
     if (type.type === StickersTypes.StickerCategoryTypes.FAVORITE) {
-      let tmp14 = _modDef10193;
+      let tmp14 = _modDef10226;
     } else {
-      tmp14 = _modDef10194;
+      tmp14 = _modDef10227;
     }
     const obj3 = {};
     const merged1 = Object.assign(type);
@@ -236,15 +236,15 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
     });
   }, items1);
 });
-export const preloadSticker = function preloadSticker(hash) {
+export function preloadSticker(hash) {
   const NativeLottieUtils = NativeModules.NativeLottieUtils;
   NativeLottieUtils.preload(hash.hash, hash.url, hash.width, hash.height, hash.frames, hash.callback);
-};
-export const dropPreloadedSticker = function dropPreloadedSticker(arg0) {
+}
+export function dropPreloadedSticker(arg0) {
   const NativeLottieUtils = NativeModules.NativeLottieUtils;
   NativeLottieUtils.dropPreload(arg0);
-};
-export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0, dependencyMap) {
+}
+export function openStickerPickerToPackId(arg0, dependencyMap) {
   const state = useStickerPickerStore.getState();
   state.setPackToScrollTo(dependencyMap);
   const timerId = setTimeout(() => {
@@ -256,4 +256,4 @@ export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0
       current.openCustomKeyboard(obj);
     }
   }, 1);
-};
+}

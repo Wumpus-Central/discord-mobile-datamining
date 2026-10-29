@@ -1,11 +1,11 @@
-// === Module 12305: ConjureArchivePicker ===
+// === Module 12359: ConjureArchivePicker ===
 
-// Module 12305 (ConjureArchivePicker)
+// Module 12359 (ConjureArchivePicker)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12206 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12236 */;
-import FilePickerUtils from "FilePickerUtils" /* 12306 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12260 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12290 */;
+import FilePickerUtils from "FilePickerUtils" /* 12360 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -51,7 +51,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp14) {
       c6 = tmp;
@@ -97,13 +97,13 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10733);
+const ConjureConnectionStore = fn(10807);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let closure_6 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/archive/native/ConjureArchivePicker.tsx");
 
-export const pickConjureArchive = function pickConjureArchive() {
+export function pickConjureArchive() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -112,20 +112,20 @@ export const pickConjureArchive = function pickConjureArchive() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const describeConjureArchiveRejection = function describeConjureArchiveRejection(bytes) {
+}
+export function describeConjureArchiveRejection(bytes) {
   let formatToPlainStringResult = null;
   if (!obj.isConjureAttachmentWithinLimit(bytes.bytes.size, bytes.contentType)) {
     const intl = util.intl;
     const obj2 = { size: null };
     const tmpResult = ConjureAttachmentTypes;
     obj2.size = tmpResult.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3863.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3864.ThxcOX, obj2);
     const tmpResult2 = ConjureAttachmentTypes;
   }
   return formatToPlainStringResult;
-};
-export const sendConjureArchiveImport = function sendConjureArchiveImport() {
+}
+export function sendConjureArchiveImport() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -134,4 +134,4 @@ export const sendConjureArchiveImport = function sendConjureArchiveImport() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

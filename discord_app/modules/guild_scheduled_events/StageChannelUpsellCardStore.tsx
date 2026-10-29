@@ -1,11 +1,11 @@
-// === Module 8982: StageChannelUpsellCardStore ===
+// === Module 8985: StageChannelUpsellCardStore ===
 
-// Module 8982 (StageChannelUpsellCardStore)
+// Module 8985 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4862 */;
-import _mod4919 from "module_4919" /* 4919 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4863 */;
+import _mod4920 from "module_4920" /* 4920 */;
 import identity from "module_1266" /* 1266 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -40,11 +40,11 @@ export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompile
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4919.shallow);
+  return closure_3(first, _mod4920.shallow);
 }) : (function useStageChannelUpsellCardStore() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, _mod4919.shallow);
+  }, _mod4920.shallow);
 });

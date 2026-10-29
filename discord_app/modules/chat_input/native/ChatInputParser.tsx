@@ -1,6 +1,6 @@
-// === Module 12553: ChatInputParser ===
+// === Module 12608: ChatInputParser ===
 
-// Module 12553 (ChatInputParser)
+// Module 12608 (ChatInputParser)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
@@ -50,7 +50,7 @@ prototype["parse"] = function parse(arg0, arg1) {
 };
 
 export default ChatInputParser;
-export const convertToNativeStyle = (autocomplete) => {
+export (autocomplete) => {
   ({ backgroundColor, borderRadius } = autocomplete);
   const merged = Object.assign(autocomplete, Object.assign({ backgroundColor: 0, color: 0, borderRadius: 0 }));
   let tmp2 = null;
@@ -63,6 +63,6 @@ export const convertToNativeStyle = (autocomplete) => {
   }
   const merged1 = Object.assign(merged);
   return { color: processColor(autocomplete.color), backgroundStyle: tmp2 };
-};
+}
 export const ChatInputParseResultDataType = { COMMAND_OPTION: 0, [0]: "COMMAND_OPTION", ROLE_HIGHLIGHT: 1, [1]: "ROLE_HIGHLIGHT" };
 export const ChatInputNodeType = { COMMAND_OPTION: 0, [0]: "COMMAND_OPTION", COMMAND_OPTION_WITH_VALUE: 1, [1]: "COMMAND_OPTION_WITH_VALUE", EMOJI_HIGHLIGHT: 2, [2]: "EMOJI_HIGHLIGHT", USER_HIGHLIGHT: 3, [3]: "USER_HIGHLIGHT", ROLE_HIGHLIGHT: 4, [4]: "ROLE_HIGHLIGHT", CHANNEL_HIGHLIGHT: 5, [5]: "CHANNEL_HIGHLIGHT", SILENT_HIGHLIGHT: 6, [6]: "SILENT_HIGHLIGHT", GAME_HIGHLIGHT: 7, [7]: "GAME_HIGHLIGHT", GAME_MENTION_INPUT: 8, [8]: "GAME_MENTION_INPUT", TIMESTAMP_HIGHLIGHT: 9, [9]: "TIMESTAMP_HIGHLIGHT", TIMESTAMP_MENTION_INPUT: 10, [10]: "TIMESTAMP_MENTION_INPUT" };

@@ -1,9 +1,9 @@
-// === Module 10198: StickerPackInformationPopout ===
+// === Module 10231: StickerPackInformationPopout ===
 
-// Module 10198 (StickerPackInformationPopout)
+// Module 10231 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
+import Text_Text from "Text/Text" /* 5271 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { informationContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "90%", marginHorizontal: "5%", padding: 16, borderRadius: nativeDefault.radii.xs, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.25, shadowRadius: 5 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }, informationHeader: { lineHeight: 20 }, informationContentContainer: { flexDirection: "row" }, informationContent: { lineHeight: 20 }, informationContentDescription: { flex: 1, marginLeft: 5 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
             const obj4 = { variant: "text-md/bold", color: "text-brand", children: null };
             const intl4 = tmp(1125).intl;
             obj4.children = intl4.string(tmp(1125).t.cpT0Cq);
-            const tmp16 = closure_3(tmp(5270).Text, obj4);
+            const tmp16 = closure_3(tmp(5271).Text, obj4);
             cResult[23] = tmp16;
             let tmp14 = tmp16;
           } else {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           }
           if (cResult[24] !== onClose) {
             const obj5 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: tmp12, children: tmp14 };
-            const tmp19 = closure_3(tmp(6944).PressableOpacity, obj5);
+            const tmp19 = closure_3(tmp(6968).PressableOpacity, obj5);
             cResult[24] = onClose;
             cResult[25] = tmp19;
             let tmp17 = tmp19;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           tmp20 = tmp23;
         }
         const obj8 = { style: informationHeader2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp6 };
-        const tmp10 = closure_3(tmp(5270).Text, obj8);
+        const tmp10 = closure_3(tmp(5271).Text, obj8);
         cResult[19] = informationHeader.informationHeader;
         cResult[20] = tmp6;
         cResult[21] = tmp10;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
   cResult[12] = informationHeader.informationContentDescription;
   cResult[13] = renderItem;
   tmp5 = renderItem;
-  tmpResult = informationHeader(6523);
+  tmpResult = informationHeader(6547);
 }) : (function StickerPackInformationPopout(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   ({ onClose, style } = stickerPack);
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
   obj3.children = items3;
   return closure_4(View, obj3);
 });
-export const doesStickerPackHavePopoutInformation = function doesStickerPackHavePopoutInformation(stickerPack) {
+export function doesStickerPackHavePopoutInformation(stickerPack) {
   const items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
@@ -223,4 +223,4 @@ export const doesStickerPackHavePopoutInformation = function doesStickerPackHave
     items.push(obj2);
   }
   return items.length > 0;
-};
+}

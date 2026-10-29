@@ -1,16 +1,16 @@
-// === Module 5188: getInitialNavigationState ===
+// === Module 5189: getInitialNavigationState ===
 
-// Module 5188 (getInitialNavigationState)
+// Module 5189 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1111 */;
-import matchPathCompat from "matchPathCompat" /* 5040 */;
-import RouteUtils from "RouteUtils" /* 5053 */;
-import useChatLayout from "useChatLayout" /* 5189 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5192 */;
+import matchPathCompat from "matchPathCompat" /* 5041 */;
+import RouteUtils from "RouteUtils" /* 5054 */;
+import useChatLayout from "useChatLayout" /* 5190 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5193 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5039 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5040 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 require = fn;
 function getInitialGuildState(id, channelId, flag) {
@@ -162,11 +162,11 @@ export default function getInitialNavigationState(arr) {
   }
   return tmp;
 };
-export const wrapRouteForRootNavigator = function wrapRouteForRootNavigator(items) {
+export function wrapRouteForRootNavigator(items) {
   const obj = { name: "main", state: { routes: items, index: items.length - 1 } };
   items = [obj];
   return items;
-};
+}
 export function getInitialAuthState() {
   const obj = { routes: null, index: 0 };
   const items = [{ name: "auth" }];
@@ -174,8 +174,8 @@ export function getInitialAuthState() {
   return obj;
 }
 export { getInitialGuildState };
-export const computeInitialNavigationState = function computeInitialNavigationState() {
+export function computeInitialNavigationState() {
   const tmp = computeInitialNavigationStateWithoutLogging();
   logger.log("Initial State:", tmp);
   return tmp;
-};
+}

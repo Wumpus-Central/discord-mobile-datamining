@@ -1,17 +1,17 @@
-// === Module 15055: usePremiumGroupFeaturesTableCardText ===
+// === Module 15290: usePremiumGroupFeaturesTableCardText ===
 
-// Module 15055 (usePremiumGroupFeaturesTableCardText)
+// Module 15290 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import user from "user" /* 1397 */;
-import _modDef3283 from "module_3283" /* 3283 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8453 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 15056 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import _modDef3284 from "module_3284" /* 3284 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8475 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 15291 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
 
 require = fn;
-const PremiumGroupConstants = fn(2063);
+const PremiumGroupConstants = fn(2064);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
           }
         }
         obj4.premiumGroupProductName = React4();
-        priceString = intl.format(_modDef3283.Nu9LNm, obj4);
+        priceString = intl.format(_modDef3284.Nu9LNm, obj4);
       }
     }
     class S {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
       if (null != tmp2) {
         const intl2 = util.intl;
         const obj4 = { primaryName: tmp2, premiumGroupProductName: React4() };
-        priceString = intl2.format(_modDef3283.Nu9LNm, obj4);
+        priceString = intl2.format(_modDef3284.Nu9LNm, obj4);
       }
     }
     let str = "...";
@@ -142,12 +142,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
     const obj5 = { subheaderString: str, bodyString: null };
     if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
       intl = util.intl;
-      prop = _modDef3283["+R/K74"];
+      prop = _modDef3284["+R/K74"];
       obj = { helpCenterLink, premiumGroupProductName: React4() };
       let formatResult = intl.format(prop, obj);
     } else {
       const intl3 = util.intl;
-      const propResult = _modDef3283;
+      const propResult = _modDef3284;
       const obj6 = { helpCenterLink };
       formatResult = intl3.format(arg1 ? propResult["xF+upx"] : propResult.qqfnOm, obj6);
     }

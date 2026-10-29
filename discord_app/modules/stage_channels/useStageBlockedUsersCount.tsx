@@ -1,8 +1,8 @@
-// === Module 8138: useStageBlockedUsersCount ===
+// === Module 8161: useStageBlockedUsersCount ===
 
-// Module 8138 (useStageBlockedUsersCount)
-import StageChannelParticipants from "StageChannelParticipants" /* 6723 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6676 */;
+// Module 8161 (useStageBlockedUsersCount)
+import StageChannelParticipants from "StageChannelParticipants" /* 6746 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6700 */;
 
 const require = globalThis.__r;
 
@@ -132,20 +132,20 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStageBlocke
 
 export const useStageBlockedUsersCount = tmp2;
 export const useStageIgnoredUsersCount = tmp3;
-export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) {
+export function getStageBlockedUsersCount(id) {
   let num = StageChannelParticipantStore.getParticipantCount(id, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED);
   if (num == null) {
     num = 0;
   }
   return num;
-};
-export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) {
+}
+export function getStageIgnoredUsersCount(id) {
   let num = StageChannelParticipantStore.getParticipantCount(id, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED);
   if (num == null) {
     num = 0;
   }
   return num;
-};
+}
 export const useStageBlockedUsers = tmp4;
 export const useStageIgnoredUsers = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageIgnoredUsers(arg0) {
   _require = arg0;

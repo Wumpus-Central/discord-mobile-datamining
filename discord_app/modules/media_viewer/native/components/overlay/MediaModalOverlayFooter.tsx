@@ -1,12 +1,12 @@
-// === Module 14472: MediaModalOverlayFooter ===
+// === Module 14706: MediaModalOverlayFooter ===
 
-// Module 14472 (MediaModalOverlayFooter)
+// Module 14706 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import timing from "timing" /* 5242 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11274 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import timing from "timing" /* 5243 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "application" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "paths" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(5005);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "__packager_asset" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {
@@ -42,7 +42,7 @@ let closure_25 = { code: "function MediaModalOverlayFooterTsx16([overlayEnabledV
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx");
 
-export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelId) {
+export function MediaModalOverlayFooter(channelId) {
   let tmp = first1();
   const onFullViewToggled = channelId.onFullViewToggled;
   const overlayEnabled = channelId.overlayEnabled;
@@ -407,4 +407,4 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   obj14.children = items12;
   obj13.children = setFull(tmp43, obj14);
   return full(onFullViewToggled(num[11]).GestureDetector, obj13);
-};
+}

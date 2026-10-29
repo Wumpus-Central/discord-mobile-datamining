@@ -1,13 +1,13 @@
-// === Module 6906: FileExtensionUtils ===
+// === Module 6930: FileExtensionUtils ===
 
-// Module 6906 (FileExtensionUtils)
+// Module 6930 (FileExtensionUtils)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
 const result = size.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
-export const getExtensionFromContentType = function getExtensionFromContentType(str) {
+export function getExtensionFromContentType(str) {
   if (null != str) {
     str = str.toLowerCase();
     if (obj.test(str)) {
@@ -28,8 +28,8 @@ export const getExtensionFromContentType = function getExtensionFromContentType(
     }
     obj = /^(image|video)\//;
   }
-};
-export const decideFileExtension = function decideFileExtension(uri, contentType, arg2) {
+}
+export function decideFileExtension(uri, contentType, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -105,4 +105,4 @@ export const decideFileExtension = function decideFileExtension(uri, contentType
     tmp = tmp15;
   }
   return tmp;
-};
+}

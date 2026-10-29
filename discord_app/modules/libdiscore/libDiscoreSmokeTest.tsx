@@ -1,6 +1,6 @@
-// === Module 19795: libDiscoreSmokeTest ===
+// === Module 20017: libDiscoreSmokeTest ===
 
-// Module 19795 (libDiscoreSmokeTest)
+// Module 20017 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import initLibdiscore from "initLibdiscore" /* 566 */;
@@ -29,7 +29,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ const result = size.fileFinishedImporting("modules/libdiscore/libDiscoreSmokeTes
 export default libDiscoreSmokeTest;
 export { libDiscoreSmokeTest };
 export { trackLibdiscoreSuccess };
-export const formatErrorMessage = function formatErrorMessage(arg0) {
+export function formatErrorMessage(arg0) {
   if (arg0 instanceof Error) {
     ({ message, name } = arg0);
   } else {
@@ -154,5 +154,5 @@ export const formatErrorMessage = function formatErrorMessage(arg0) {
     combined = "" + name + ": " + text;
   }
   return combined;
-};
+}
 export { trackLibdiscoreFailure };

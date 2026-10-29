@@ -1,23 +1,23 @@
-// === Module 8428: GuildProductPurchaseSystemMessage ===
+// === Module 8450: GuildProductPurchaseSystemMessage ===
 
-// Module 8428 (GuildProductPurchaseSystemMessage)
+// Module 8450 (GuildProductPurchaseSystemMessage)
 import util from "util" /* 1125 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import useMessageAuthor from "useMessageAuthor" /* 6401 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8384 */;
-import MessageRecord from "MessageRecord" /* 4947 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
+import useMessageAuthor from "useMessageAuthor" /* 6425 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8406 */;
+import MessageRecord from "MessageRecord" /* 4948 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
 
-export const createGuildProductPurchaseSystemMessage = function createGuildProductPurchaseSystemMessage(message) {
+export function createGuildProductPurchaseSystemMessage(message) {
   const obj = {};
   const merged = Object.assign(message);
   obj.message = new MessageRecord(message.message);
@@ -65,4 +65,4 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     guildMemberAvatarSource = author.getAvatarSource(undefined);
   }
   const tmp2 = new MessageRecord(message.message);
-};
+}

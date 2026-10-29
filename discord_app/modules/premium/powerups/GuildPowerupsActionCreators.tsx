@@ -1,12 +1,12 @@
-// === Module 13647: GuildPowerupsActionCreators ===
+// === Module 13880: GuildPowerupsActionCreators ===
 
-// Module 13647 (GuildPowerupsActionCreators)
+// Module 13880 (GuildPowerupsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 13649 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5218 */;
+import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 13882 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5219 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,13 +15,13 @@ const require = globalThis.__r;
 const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
-export const guildPowerupsAckNotification = function guildPowerupsAckNotification(guildId) {
+export function guildPowerupsAckNotification(guildId) {
   DispatcherDefault.dispatch({ type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId });
-};
-export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
+}
+export function guildPowerupsResetNotifications() {
   DispatcherDefault.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
-};
-export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(guildId, arg1) {
+}
+export function fetchPowerupCatalogForGuild(guildId, arg1) {
   _require = guildId;
   if (true === arg1) {
     const MOCK_LEVELS = require("GuildPowerupMocks").MOCK_LEVELS;
@@ -81,8 +81,8 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
       return body.body;
     });
   }
-};
-export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(guildId, arg1) {
+}
+export function fetchGuildBoostEntitlements(guildId, arg1) {
   _require = guildId;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -137,12 +137,12 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
     });
     DispatcherDefault.dispatch({ type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS", guildId, unlockedPowerups, unlockedGameServers: obj2 });
   });
-};
-export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
+}
+export function enablePowerupForGuild(arg0, arg1) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
-};
-export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
+}
+export function disablePowerupForGuild(arg0, arg1) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
-};
+}

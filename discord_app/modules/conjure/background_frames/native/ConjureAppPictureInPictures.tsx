@@ -1,33 +1,33 @@
-// === Module 18732: ConjureAppPictureInPictures ===
+// === Module 18966: ConjureAppPictureInPictures ===
 
-// Module 18732 (ConjureAppPictureInPictures)
+// Module 18966 (ConjureAppPictureInPictures)
 import c from "c" /* 576 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18332 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 18736 */;
-import ConjureAppPictureInPictureDefault from "ConjureAppPictureInPicture" /* 18738 */;
-import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 18741 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18566 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 18970 */;
+import ConjureAppPictureInPictureDefault from "ConjureAppPictureInPicture" /* 18972 */;
+import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 18974 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6810 */;
+import FramesStore from "FramesStore" /* 6833 */;
 
 require = fn;
 const View = fn(17).View;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ layer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, hidden: { opacity: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureAppPictureInPictureLayer(frameIds) {
   const cResult = width(576).c(34);
   frameIds = frameIds.frameIds;
   const tmp4 = closure_10();
-  const size = height(1496)();
+  const size = height(1497)();
   width = size.width;
   height = size.height;
-  const tmp6 = height(1630)();
+  const tmp6 = height(1631)();
   dependencyMap = tmp6;
-  const tmp7 = height(18733)(tmp6);
+  const tmp7 = height(18967)(tmp6);
   const avoidance = tmp7;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { includeCustomKeyboard: true };
@@ -36,11 +36,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   } else {
     first = cResult[0];
   }
-  const tmp9 = height(7063)(first);
+  const tmp9 = height(7087)(first);
   const obj = width(576);
-  const sharedValue = width(5085).useSharedValue(false);
-  const tmpResult = width(5085);
-  const sharedValue1 = width(5085).useSharedValue(false);
+  const sharedValue = width(5086).useSharedValue(false);
+  const tmpResult = width(5086);
+  const sharedValue1 = width(5086).useSharedValue(false);
   if (cResult[1] === tmp6) {
     if (cResult[2] === height) {
       if (cResult[3] === width) {
@@ -140,7 +140,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
         }
         const obj4 = { center: tmp12, shown: sharedValue, hovered: sharedValue1 };
-        const tmp17 = closure_8(tmp5(18737), obj4);
+        const tmp17 = closure_8(tmp5(18971), obj4);
         cResult[8] = tmp12;
         cResult[9] = sharedValue1;
         cResult[10] = sharedValue;
@@ -154,29 +154,29 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       tmp14 = items1;
     }
   }
-  const tmpResult3 = width(5085);
-  closeTargetCenter = width(18736).getCloseTargetCenter(width, height, tmp6);
+  const tmpResult3 = width(5086);
+  closeTargetCenter = width(18970).getCloseTargetCenter(width, height, tmp6);
   cResult[1] = tmp6;
   cResult[2] = height;
   cResult[3] = width;
   cResult[4] = closeTargetCenter;
   tmp12 = closeTargetCenter;
-  const tmpResult4 = width(18736);
+  const tmpResult4 = width(18970);
 }) : (function ConjureAppPictureInPictureLayer(frameIds) {
   frameIds = frameIds.frameIds;
   let height;
   const tmp = closure_10();
-  const size = height(1496)();
+  const size = height(1497)();
   const width = size.width;
   height = size.height;
-  const tmp4 = height(1630)();
+  const tmp4 = height(1631)();
   dependencyMap = tmp4;
-  noop = height(18733)(tmp4);
-  const tmp5 = height(7063)({ includeCustomKeyboard: true });
-  const sharedValue = width(5085).useSharedValue(false);
-  const obj = width(5085);
+  noop = height(18967)(tmp4);
+  const tmp5 = height(7087)({ includeCustomKeyboard: true });
+  const sharedValue = width(5086).useSharedValue(false);
+  const obj = width(5086);
   const tmp2 = height;
-  const sharedValue1 = width(5085).useSharedValue(false);
+  const sharedValue1 = width(5086).useSharedValue(false);
   const items = [width, height, tmp4];
   const memo = noop.useMemo(() => conjureAppPictureInPictureLayout.getCloseTargetCenter(width, height, closure_2), items);
   const items1 = [tmp.layer, ];
@@ -191,7 +191,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     str = "none";
   }
   obj3.pointerEvents = str;
-  const items2 = [closure_8(tmp2(18737), { center: memo, shown: sharedValue, hovered: sharedValue1 }), frameIds.map((frameId, index) => closure_2_8(closure_12, { frameId, index, windowWidth: width, windowHeight: height, safeArea, avoidance, closeTargetCenter: memo, closeTargetShown: sharedValue, closeTargetHovered: sharedValue1 }, frameId))];
+  const items2 = [closure_8(tmp2(18971), { center: memo, shown: sharedValue, hovered: sharedValue1 }), frameIds.map((frameId, index) => closure_2_8(closure_12, { frameId, index, windowWidth: width, windowHeight: height, safeArea, avoidance, closeTargetCenter: memo, closeTargetShown: sharedValue, closeTargetHovered: sharedValue1 }, frameId))];
   obj3.children = items2;
   return closure_9(sharedValue, obj3);
 });
@@ -243,12 +243,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     tmp11 = tmp18;
   }
   const tmpResult = frameId(504);
-  const pictureInPictureSize = frameId(18736).getPictureInPictureSize(windowWidth, stateFromStores);
+  const pictureInPictureSize = frameId(18970).getPictureInPictureSize(windowWidth, stateFromStores);
   cResult[4] = stateFromStores;
   cResult[5] = windowWidth;
   cResult[6] = pictureInPictureSize;
   tmp9 = pictureInPictureSize;
-  const tmpResult2 = frameId(18736);
+  const tmpResult2 = frameId(18970);
 }) : (function ConjureAppPictureInPictureWithSize(frameId) {
   frameId = frameId.frameId;
   const windowWidth = frameId.windowWidth;

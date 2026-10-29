@@ -1,13 +1,13 @@
-// === Module 5246: ActionSheetActionCreators ===
+// === Module 5247: ActionSheetActionCreators ===
 
-// Module 5246 (ActionSheetActionCreators)
+// Module 5247 (ActionSheetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5249 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5247 */;
+import ActionSheetStore from "ActionSheetStore" /* 5248 */;
 
 require = fn;
 let closure_3 = ["impressionName", "impressionProperties", "backdropKind", "disableHapticOnOpen", "appEntryKey"];
@@ -58,11 +58,11 @@ export default {
 };
 export const ACTION_SHEET_HEIGHT_HALF = "start";
 export const ACTION_SHEET_HEIGHT_EXPANDED = "expanded";
-export const showActionSheet = function showActionSheet(disableHapticOnOpen) {
+export function showActionSheet(disableHapticOnOpen) {
   ({ content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey } = disableHapticOnOpen);
   if (!disableHapticOnOpen.disableHapticOnOpen) {
     const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   }
   const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
   DispatcherDefault.dispatch({ type: "SHOW_ACTION_SHEET", content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey });
-};
+}

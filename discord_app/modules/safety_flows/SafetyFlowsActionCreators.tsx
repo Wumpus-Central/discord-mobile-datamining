@@ -1,8 +1,8 @@
-// === Module 19731: SafetyFlowsActionCreators ===
+// === Module 19953: SafetyFlowsActionCreators ===
 
-// Module 19731 (SafetyFlowsActionCreators)
+// Module 19953 (SafetyFlowsActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6711 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -40,7 +40,7 @@ let closure_7 = async function _resendVerificationCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsActionCreators.tsx");
 
-export const getCurrentTask = function getCurrentTask() {
+export function getCurrentTask() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -111,8 +111,8 @@ export const getCurrentTask = function getCurrentTask() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const completeTask = function completeTask() {
+}
+export function completeTask() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -121,8 +121,8 @@ export const completeTask = function completeTask() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resendVerificationCode = function resendVerificationCode() {
+}
+export function resendVerificationCode() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -131,4 +131,4 @@ export const resendVerificationCode = function resendVerificationCode() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

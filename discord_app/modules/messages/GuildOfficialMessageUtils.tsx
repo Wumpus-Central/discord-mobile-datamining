@@ -1,19 +1,19 @@
-// === Module 7404: GuildOfficialMessageUtils ===
+// === Module 7427: GuildOfficialMessageUtils ===
 
-// Module 7404 (GuildOfficialMessageUtils)
+// Module 7427 (GuildOfficialMessageUtils)
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import shared from "shared" /* 5011 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6852 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7405 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import shared from "shared" /* 5012 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6875 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7428 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
-const ThreadHooks = tmp(7406);
+const ThreadHooks = tmp(7429);
 require = fn;
-let closure_5 = fn(5009).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(5010).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1084);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);
@@ -173,7 +173,7 @@ function canManageGuildOfficialMessages(features, arg1, location) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessageUtils.tsx");
 
-export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOfficialTextColor(selectedColor, semanticColor) {
+export function getAccessibleGuildOfficialTextColor(selectedColor, semanticColor) {
   let num = saturation;
   if (saturation === undefined) {
     num = 1;
@@ -193,7 +193,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
   obj4 = _modDef683;
   const tmp2Result = ColorUtils;
   return tmp2Result.getAccessibleForegroundColor({ foreground: tmp6, background: tmp5, ratio: shared.WCAGContrastRatios.Text, saturationFactor: num });
-};
+}
 export function showGuildOfficialMessageGradient(officialMessageStyle) {
   let tmp = "no_gradient" !== officialMessageStyle;
   if (tmp) {
@@ -270,7 +270,7 @@ export const useCanToggleGuildOfficialMessages = ReactCompilerGating.isReactComp
     }
   }
 });
-export const canSendGuildOfficialMessages = function canSendGuildOfficialMessages(guild, channel, _sendMessage) {
+export function canSendGuildOfficialMessages(guild, channel, _sendMessage) {
   let enabled = null != guild;
   if (enabled) {
     const features = guild.features;
@@ -297,4 +297,4 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
     enabled = isActiveChannelOrUnarchivableThread;
   }
   return enabled;
-};
+}

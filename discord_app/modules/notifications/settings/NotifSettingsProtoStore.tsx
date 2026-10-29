@@ -1,10 +1,10 @@
-// === Module 15253: NotifSettingsProtoStore ===
+// === Module 15488: NotifSettingsProtoStore ===
 
-// Module 15253 (NotifSettingsProtoStore)
+// Module 15488 (NotifSettingsProtoStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
-import notification_settings from "notification_settings" /* 15254 */;
+import notification_settings from "notification_settings" /* 15489 */;
 import size from "module_2" /* 2 */;
 
 let DeclarativeSettings = notification_settings.DeclarativeSettings;
@@ -302,7 +302,7 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsProtoStore.tsx");
 
 export default notifSettingsProtoStore;
-export const createPendingEdit = function createPendingEdit() {
+export function createPendingEdit() {
   const obj = { partialSettings: null, offlineEditDataVersion: null };
   const DeclarativeSettings = notification_settings.DeclarativeSettings;
   obj.partialSettings = DeclarativeSettings.create();
@@ -316,4 +316,4 @@ export const createPendingEdit = function createPendingEdit() {
   }
   obj.offlineEditDataVersion = num;
   return obj;
-};
+}

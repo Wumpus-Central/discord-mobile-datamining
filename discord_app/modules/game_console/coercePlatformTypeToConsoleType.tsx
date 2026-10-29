@@ -1,15 +1,15 @@
-// === Module 11691: coercePlatformTypeToConsoleType ===
+// === Module 11745: coercePlatformTypeToConsoleType ===
 
-// Module 11691 (coercePlatformTypeToConsoleType)
+// Module 11745 (coercePlatformTypeToConsoleType)
 import Constants from "Constants" /* 1084 */;
-import GameConsoleConstants from "GameConsoleConstants" /* 9660 */;
+import GameConsoleConstants from "GameConsoleConstants" /* 9692 */;
 import size from "module_2" /* 2 */;
 
 const GameConsoleTypes = GameConsoleConstants.GameConsoleTypes;
 const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/game_console/coercePlatformTypeToConsoleType.tsx");
 
-export const coercePlatformTypeToConsoleType = function coercePlatformTypeToConsoleType(type) {
+export function coercePlatformTypeToConsoleType(type) {
   if (PlatformTypes.XBOX === type) {
     return GameConsoleTypes.XBOX;
   } else {
@@ -20,8 +20,8 @@ export const coercePlatformTypeToConsoleType = function coercePlatformTypeToCons
     }
     return GameConsoleTypes.PLAYSTATION;
   }
-};
-export const coerceConsoleTypeToPlatformType = function coerceConsoleTypeToPlatformType(arg0, arr) {
+}
+export function coerceConsoleTypeToPlatformType(arg0, arr) {
   if (GameConsoleTypes.XBOX === arg0) {
     return PlatformTypes.XBOX;
   } else if (tmp.PLAYSTATION === arg0) {
@@ -36,4 +36,4 @@ export const coerceConsoleTypeToPlatformType = function coerceConsoleTypeToPlatf
   } else {
     return null;
   }
-};
+}

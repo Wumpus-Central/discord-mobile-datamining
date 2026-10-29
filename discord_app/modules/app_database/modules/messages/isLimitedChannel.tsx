@@ -1,15 +1,15 @@
-// === Module 7629: isLimitedChannel ===
+// === Module 7652: isLimitedChannel ===
 
-// Module 7629 (isLimitedChannel)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5230 */;
+// Module 7652 (isLimitedChannel)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
 
 const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 
 export const LIMITED_GUILD_MEMBER_THRESHOLD = 10000;
-export const isLimitedChannel = function isLimitedChannel(basicChannel) {
+export function isLimitedChannel(basicChannel) {
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
@@ -29,8 +29,8 @@ export const isLimitedChannel = function isLimitedChannel(basicChannel) {
     tmp3 = num >= 10000;
   }
   return tmp3;
-};
-export const isLimitedChannelId = function isLimitedChannelId(arg0) {
+}
+export function isLimitedChannelId(arg0) {
   let str = arg0;
   if (arg0 == null) {
     str = "_";
@@ -55,4 +55,4 @@ export const isLimitedChannelId = function isLimitedChannelId(arg0) {
     tmp5 = num >= 10000;
   }
   return tmp5;
-};
+}

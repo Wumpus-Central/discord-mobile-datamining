@@ -1,10 +1,10 @@
-// === Module 7063: useKeyboardIsOpen ===
+// === Module 7087: useKeyboardIsOpen ===
 
-// Module 7063 (useKeyboardIsOpen)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1500 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
+// Module 7087 (useKeyboardIsOpen)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1501 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeybo
     if (cResult[1] === tmp5) {
       let tmp7 = cResult[2];
     }
-    return appEntryKey(1500)(tmp7);
+    return appEntryKey(1501)(tmp7);
   }
   const fn = function o(arg0) {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeybo
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = flag(1499).useAppEntryKey();
+  importDefault = flag(1500).useAppEntryKey();
   return KeyboardUIStoreDefault((arg0) => {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (flag) {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeybo
     return tmp2;
   });
 });
-export const subscribeToKeyboardIsOpen = function subscribeToKeyboardIsOpen(arg0) {
+export function subscribeToKeyboardIsOpen(arg0) {
   _require = arg0;
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -135,5 +135,5 @@ export const subscribeToKeyboardIsOpen = function subscribeToKeyboardIsOpen(arg0
     }
     return closure_0(tmp6);
   }, DEFAULT_APP_ENTRY_KEY);
-};
+}
 export { getKeyboardIsOpen };

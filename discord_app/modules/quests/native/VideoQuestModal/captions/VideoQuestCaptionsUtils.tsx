@@ -1,11 +1,11 @@
-// === Module 16762: VideoQuestCaptionsUtils ===
+// === Module 17000: VideoQuestCaptionsUtils ===
 
-// Module 16762 (VideoQuestCaptionsUtils)
+// Module 17000 (VideoQuestCaptionsUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
 
-export const findActiveCaption = function findActiveCaption(captions, currentTime) {
+export function findActiveCaption(captions, currentTime) {
   let tmp3;
   let diff = captions.length - 1;
   let num = 0;
@@ -32,4 +32,4 @@ export const findActiveCaption = function findActiveCaption(captions, currentTim
     return tmp3;
   }
   return null;
-};
+}

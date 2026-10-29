@@ -1,13 +1,13 @@
-// === Module 12818: ReferralMessageUtils ===
+// === Module 13039: ReferralMessageUtils ===
 
-// Module 12818 (ReferralMessageUtils)
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
-import UserOfferStore from "UserOfferStore" /* 7595 */;
+// Module 13039 (ReferralMessageUtils)
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import UserOfferStore from "UserOfferStore" /* 7618 */;
 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageUtils.tsx");
 
-export const canOpenPremiumPlanDirectlyForReferralTrial = function canOpenPremiumPlanDirectlyForReferralTrial() {
+export function canOpenPremiumPlanDirectlyForReferralTrial() {
   const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription(false);
   let result = SubscriptionStore.hasFetchedSubscriptions();
   if (result) {
@@ -17,4 +17,4 @@ export const canOpenPremiumPlanDirectlyForReferralTrial = function canOpenPremiu
     result = !isFetchingOfferResult;
   }
   return result;
-};
+}

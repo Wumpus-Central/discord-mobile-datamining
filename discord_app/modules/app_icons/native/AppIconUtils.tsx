@@ -1,12 +1,12 @@
-// === Module 15026: AppIconUtils ===
+// === Module 15261: AppIconUtils ===
 
-// Module 15026 (AppIconUtils)
+// Module 15261 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import useMountEffectDefault from "useMountEffect" /* 5299 */;
-import openUserSettings from "openUserSettings" /* 7526 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15027 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import useMountEffectDefault from "useMountEffect" /* 5300 */;
+import openUserSettings from "openUserSettings" /* 7549 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ let closure_15 = async function _fetchCurrentAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -101,7 +101,7 @@ let closure_17 = async function _setAppIcon(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -131,7 +131,7 @@ let closure_17 = async function _setAppIcon(arg0) {
           closure_131_2 = flag;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -195,7 +195,7 @@ let closure_17 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(9899);
+const AppIconConstants = fn(9931);
 ({ getDefaultIcon: metroRequire, getIconById: closure_7, getLimitedAlternateIcons: closure_8, getOfficialAlternateIcons: closure_9 } = AppIconConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
@@ -218,7 +218,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -250,7 +250,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
             closure_128_0 = value;
             tmp2(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -286,7 +286,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
   } else {
     tmp6 = cResult[1];
   }
-  first(5299)(tmp6);
+  first(5300)(tmp6);
   return tmp3[0];
 }) : (function useCurrentAppIcon() {
   const tmp = _slicedToArray(noop.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT), 2);
@@ -302,7 +302,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -335,7 +335,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
           closure_128_0 = value;
           closure_129_0(closure_128_0);
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -360,7 +360,7 @@ const result = size.fileFinishedImporting("modules/app_icons/native/AppIconUtils
 
 export { fetchCurrentAppIcon };
 export const useCurrentAppIcon = tmp5;
-export const setAppIcon = function setAppIcon() {
+export function setAppIcon() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -369,7 +369,7 @@ export const setAppIcon = function setAppIcon() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useAppIcons = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppIcons() {
   const cResult = require("c").c(8);
   const tmp3 = closure_16();
@@ -529,9 +529,9 @@ export const useAppIcons = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   });
   return { officialAppIcons, limitedTimeAppIcons: limitedTimeAppIcons[0], currentAppIcon };
 });
-export const navigateToAppIconSettings = function navigateToAppIconSettings() {
+export function navigateToAppIconSettings() {
   openUserSettings.openUserSettings({ screen: constants.APP_ICONS });
-};
-export const isAppIconsSupported = function isAppIconsSupported() {
+}
+export function isAppIconsSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
+}

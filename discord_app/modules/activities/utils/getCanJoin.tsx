@@ -1,21 +1,21 @@
-// === Module 11387: getCanJoin ===
+// === Module 11441: getCanJoin ===
 
-// Module 11387 (getCanJoin)
+// Module 11441 (getCanJoin)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import hasFlagDefault from "hasFlag" /* 7446 */;
-import isInviteActiveDefault from "isInviteActive" /* 11388 */;
-import getPartySize from "getPartySize" /* 11390 */;
-import isPartyFull from "isPartyFull" /* 11392 */;
-import getIsInParty from "getIsInParty" /* 11393 */;
-import getIsAskToJoin from "getIsAskToJoin" /* 11394 */;
-import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 11395 */;
+import hasFlagDefault from "hasFlag" /* 7469 */;
+import isInviteActiveDefault from "isInviteActive" /* 11442 */;
+import getPartySize from "getPartySize" /* 11444 */;
+import isPartyFull from "isPartyFull" /* 11446 */;
+import getIsInParty from "getIsInParty" /* 11447 */;
+import getIsAskToJoin from "getIsAskToJoin" /* 11448 */;
+import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 11449 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityActionTypes: c3, ActivityFlags: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getCanJoin.tsx");
 
-export const getCanJoin = function getCanJoin(currentUserId) {
+export function getCanJoin(currentUserId) {
   ({ presenceActivity, message } = currentUserId);
   if (message.author.id === currentUserId.currentUserId) {
     return { canJoin: false, remoteJoinPlatform: null };
@@ -70,8 +70,8 @@ export const getCanJoin = function getCanJoin(currentUserId) {
   } else {
     return { canJoin: false, remoteJoinPlatform: null };
   }
-};
-export const getCanSync = function getCanSync(activity, tmp7Result, arg2, id) {
+}
+export function getCanSync(activity, tmp7Result, arg2, id) {
   let tmp = null != activity;
   if (tmp) {
     let tmp6 = isInviteActiveDefault(activity, arg2, id.id);
@@ -90,4 +90,4 @@ export const getCanSync = function getCanSync(activity, tmp7Result, arg2, id) {
     tmp = tmp6;
   }
   return tmp;
-};
+}

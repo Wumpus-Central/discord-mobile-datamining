@@ -1,8 +1,8 @@
-// === Module 5189: useChatLayout ===
+// === Module 5190: useChatLayout ===
 
-// Module 5189 (useChatLayout)
+// Module 5190 (useChatLayout)
 import c from "c" /* 576 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5190 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5191 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatL
   const items = [tmp];
   return noop.useMemo(() => ({ isChatBesideChannelList: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE, isChatLockedOpen: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE }), items);
 });
-export const getChatLayout = function getChatLayout() {
+export function getChatLayout() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
   return { isChatBesideChannelList: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE, isChatLockedOpen: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE };
-};
+}

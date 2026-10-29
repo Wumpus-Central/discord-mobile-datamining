@@ -1,25 +1,25 @@
-// === Module 9425: ProfileEffect ===
+// === Module 9456: ProfileEffect ===
 
-// Module 9425 (ProfileEffect)
+// Module 9456 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8754 */;
-import utils from "utils" /* 9426 */;
-import constants from "constants" /* 9427 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9428 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9431 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8757 */;
+import utils from "utils" /* 9457 */;
+import constants from "constants" /* 9458 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9459 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9462 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreloadProfileEffect(arr) {

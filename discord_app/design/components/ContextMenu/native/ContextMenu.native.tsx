@@ -1,17 +1,17 @@
-// === Module 9795: ContextMenu ===
+// === Module 9827: ContextMenu ===
 
-// Module 9795 (ContextMenu)
+// Module 9827 (ContextMenu)
 import util from "util" /* 1125 */;
 import PlatformUtils2 from "PlatformUtils" /* 1381 */;
-import shared from "shared" /* 5011 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5303 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6007 */;
-import ContextMenuState from "ContextMenuState" /* 9796 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9797 */;
-import UID from "UID" /* 9798 */;
+import shared from "shared" /* 5012 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5304 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6009 */;
+import ContextMenuState from "ContextMenuState" /* 9828 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9829 */;
+import UID from "UID" /* 9830 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ let closure_15 = { code: "function ContextMenuNativeTsx9(){const{runOnJS,trigger
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenu.native.tsx");
 
-export const ContextMenu = function ContextMenu(triggerOnLongPress) {
+export function ContextMenu(triggerOnLongPress) {
   ({ children, items } = triggerOnLongPress);
   let flag = triggerOnLongPress.triggerOnLongPress;
   if (flag === undefined) {
@@ -533,4 +533,4 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
     tmp25Result = tmp25(tmp(tmp2[13]).GestureDetector, obj7);
   }
   return tmp25Result;
-};
+}

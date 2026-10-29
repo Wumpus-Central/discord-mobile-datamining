@@ -1,20 +1,20 @@
-// === Module 11005: ConfirmBlockUserAlert ===
+// === Module 11040: ConfirmBlockUserAlert ===
 
-// Module 11005 (ConfirmBlockUserAlert)
+// Module 11040 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import components_Button_Button from "components/Button/Button" /* 5280 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7451 */;
-import ReportModals from "ReportModals" /* 8140 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7474 */;
+import ReportModals from "ReportModals" /* 8163 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(10965).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11000).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmB
       obj = closure_1(closure_2[12]);
       obj1 = { location: LOCATION_CONTEXT_MOBILE };
       blockUserResult = obj.blockUser(userId, obj1, channelId);
-      nextPromise = blockUserResult.then(() => { ... });
+      nextPromise = blockUserResult.then(/* F150491 */ function() { ... });
       return;
     }
   }

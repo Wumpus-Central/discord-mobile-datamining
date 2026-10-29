@@ -1,13 +1,13 @@
-// === Module 17891: useLiveStageChannels ===
+// === Module 18129: useLiveStageChannels ===
 
-// Module 17891 (useLiveStageChannels)
+// Module 18129 (useLiveStageChannels)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import StageInstanceStore from "StageInstanceStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import StageInstanceStore from "StageInstanceStore" /* 4862 */;
 
 const require = globalThis.__r;
 
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLiveS
   const items1 = [arg0];
   return closure_6(require("initialize").useStateFromStoresArray(items, () => SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(closure_0)), items1));
 });
-export const getAllLiveStageChannels = function getAllLiveStageChannels() {
+export function getAllLiveStageChannels() {
   const allStageInstances = StageInstanceStore.getAllStageInstances();
   return allStageInstances.reduce((arr, channel_id) => {
     channel = channel.getChannel(channel_id.channel_id);
@@ -152,5 +152,5 @@ export const getAllLiveStageChannels = function getAllLiveStageChannels() {
     }
     return arr;
   }, []);
-};
+}
 export const useAllLiveStageChannels = tmp2;

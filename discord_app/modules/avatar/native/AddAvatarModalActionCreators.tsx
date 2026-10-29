@@ -1,16 +1,16 @@
-// === Module 19183: AddAvatarModalActionCreators ===
+// === Module 19418: AddAvatarModalActionCreators ===
 
-// Module 19183 (AddAvatarModalActionCreators)
+// Module 19418 (AddAvatarModalActionCreators)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7114 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8690 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8692 */;
-import NUFActionCreators from "NUFActionCreators" /* 13842 */;
-import AddAvatarModalConstants from "AddAvatarModalConstants" /* 19184 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7138 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8693 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8695 */;
+import NUFActionCreators from "NUFActionCreators" /* 14075 */;
+import AddAvatarModalConstants from "AddAvatarModalConstants" /* 19419 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const ADD_AVATAR_MODAL_KEY = AddAvatarModalConstants.ADD_AVATAR_MODAL_KEY;
 const AnalyticEvents = Constants.AnalyticEvents;
 let result = size.fileFinishedImporting("modules/avatar/native/AddAvatarModalActionCreators.tsx");
 
-export const handlePressNext = function handlePressNext(pendingImage, default_avatar_selected, fn) {
+export function handlePressNext(pendingImage, default_avatar_selected, fn) {
   if (null != pendingImage) {
     const obj4 = { default_avatar_selected, is_guild_profile: false, location: { page: "Onboarding" } };
     AnalyticsUtilsDefault.track(AnalyticEvents.USER_AVATAR_UPDATED, obj4);
@@ -33,8 +33,8 @@ export const handlePressNext = function handlePressNext(pendingImage, default_av
     ModalActionCreatorsDefault.popWithKey(ADD_AVATAR_MODAL_KEY);
     NUFActionCreators.nextOnboardingStep({ skip: false });
   }
-};
-export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
+}
+export function showSkipAvatarModal(arg0) {
   _require = arg0;
   AnalyticsUtilsDefault.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
   let obj3 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
@@ -58,7 +58,7 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
     }
   };
   AlertActionCreatorsDefault.show(obj3);
-};
-export const openAddAvatarModal = function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19185, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
-};
+}
+export function openAddAvatarModal() {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19420, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+}

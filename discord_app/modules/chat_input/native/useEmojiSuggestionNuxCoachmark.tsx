@@ -1,16 +1,16 @@
-// === Module 13567: useEmojiSuggestionNuxCoachmark ===
+// === Module 13800: useEmojiSuggestionNuxCoachmark ===
 
-// Module 13567 (useEmojiSuggestionNuxCoachmark)
+// Module 13800 (useEmojiSuggestionNuxCoachmark)
 import util from "util" /* 1125 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 13295 */;
-import useChatInputKeyboardOffsetDefault from "useChatInputKeyboardOffset" /* 13564 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 13528 */;
+import useChatInputKeyboardOffsetDefault from "useChatInputKeyboardOffset" /* 13797 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const EmojiSuggestionNuxCoachmark = "EmojiSuggestionNuxCoachmark";
 const ReactCompilerGating = fn(558);
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
   }
   if (cResult[0] !== tmp7) {
     if (tmp7) {
-      const items = [tmp2(4840).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+      const items = [tmp2(4841).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
       let items1 = items;
     } else {
       items1 = [];
@@ -38,11 +38,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
     cResult[0] = tmp7;
     cResult[1] = items1;
   } else {
-    const tmp5Result = _slicedToArray(tmp2(7532).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp5Result = _slicedToArray(tmp2(7555).useSelectedDismissibleContent(cResult[1]), 2);
     _require = tmp12;
-    const tmp13 = tmp5Result[0] === tmp2(4840).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
+    const tmp13 = tmp5Result[0] === tmp2(4841).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
     importDefault = tmp13;
-    const tmp2Result = tmp2(7532);
+    const tmp2Result = tmp2(7555);
     if (cResult[2] !== tmp13) {
       class I {
         constructor() {
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
   }
   const tmp3 = _slicedToArray(noop.useState(arg1), 2);
   if (tmp4) {
-    const items = [tmp7(4840).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+    const items = [tmp7(4841).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];

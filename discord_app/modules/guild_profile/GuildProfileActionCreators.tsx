@@ -1,14 +1,14 @@
-// === Module 9021: GuildProfileActionCreators ===
+// === Module 9024: GuildProfileActionCreators ===
 
-// Module 9021 (GuildProfileActionCreators)
+// Module 9024 (GuildProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6409 */;
-import GuildProfileBuilders from "GuildProfileBuilders" /* 6886 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6433 */;
+import GuildProfileBuilders from "GuildProfileBuilders" /* 6910 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5036 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildProfileStore from "GuildProfileStore" /* 9019 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5037 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildProfileStore from "GuildProfileStore" /* 9022 */;
 
 const require = globalThis.__r;
 
@@ -21,13 +21,13 @@ let closure_10 = async function _fetchGuildTopGames() {
   closure_129_0 = value;
   return closure_130_0(closure_130_2[7]).buildTopGamesFromServer(closure_129_0.body.top_games);
 };
-const GuildProfileFetchStatus = fn(9019).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9022).GuildProfileFetchStatus;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileActionCreators.tsx");
 
-export const getGuildProfile = function getGuildProfile(guildId, arg1, arg2) {
+export function getGuildProfile(guildId, arg1, arg2) {
   _require = guildId;
   let obj = arg2;
   if (arg2 === undefined) {
@@ -93,8 +93,8 @@ export const getGuildProfile = function getGuildProfile(guildId, arg1, arg2) {
       return guildProfileFromServer;
     });
   }
-};
-export const saveGuildProfile = function saveGuildProfile(guildId, updates) {
+}
+export function saveGuildProfile(guildId, updates) {
   _require = guildId;
   if (GuildProfileStore.getIsUpdating(guildId)) {
     let resolved = Promise.resolve(null);
@@ -124,8 +124,8 @@ export const saveGuildProfile = function saveGuildProfile(guildId, updates) {
     });
   }
   return resolved;
-};
-export const setGuildProfileVisibility = function setGuildProfileVisibility(guildId, visibility) {
+}
+export function setGuildProfileVisibility(guildId, visibility) {
   _require = guildId;
   if (GuildProfileStore.getIsUpdating(guildId)) {
     let resolved = Promise.resolve(null);
@@ -155,8 +155,8 @@ export const setGuildProfileVisibility = function setGuildProfileVisibility(guil
     });
   }
   return resolved;
-};
-export const fetchGuildTopGames = function fetchGuildTopGames() {
+}
+export function fetchGuildTopGames() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -165,9 +165,9 @@ export const fetchGuildTopGames = function fetchGuildTopGames() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const trackGuildProfileViewed = function trackGuildProfileViewed(guildId, analyticsLocations) {
+}
+export function trackGuildProfileViewed(guildId, analyticsLocations) {
   const tmp = null != GuildMemberStore.getSelfMember(guildId);
   const tmp2 = null != UserGuildJoinRequestStore.getRequest(guildId);
   AnalyticsUtilsDefault.track(constants.GUILD_PROFILE_VIEWED, { guild_id: guildId, location_stack: analyticsLocations, is_member: tmp, has_join_request: tmp2 });
-};
+}

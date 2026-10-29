@@ -1,31 +1,31 @@
-// === Module 18704: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 18938: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 18704 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 18938 (useMainViewTooltipActionSheetEligibilityMap)
 import initialize from "initialize" /* 504 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7592 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8460 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8464 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10529 */;
-import MarketingComponentType from "MarketingComponentType" /* 10530 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10537 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13299 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 14990 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 16129 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 18676 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 18705 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 18707 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 18708 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 18709 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7615 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8482 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8486 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10562 */;
+import MarketingComponentType from "MarketingComponentType" /* 10563 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10570 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13532 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15225 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 16366 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 18910 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 18939 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 18941 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 18942 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 18943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7597 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 18678 */;
-import PromotionsStore from "PromotionsStore" /* 9551 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7620 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 18912 */;
+import PromotionsStore from "PromotionsStore" /* 9583 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4850 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4851 */;
 
 const require = globalThis.__r;
 

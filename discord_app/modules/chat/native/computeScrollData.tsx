@@ -1,12 +1,12 @@
-// === Module 10028: computeScrollData ===
+// === Module 10060: computeScrollData ===
 
-// Module 10028 (computeScrollData)
-import Client from "Client" /* 5237 */;
-import NativeChatUtils from "NativeChatUtils" /* 10029 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+// Module 10060 (computeScrollData)
+import Client from "Client" /* 5238 */;
+import NativeChatUtils from "NativeChatUtils" /* 10061 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
 
 require = fn;
-const RowGeneratorConstants = fn(8166);
+const RowGeneratorConstants = fn(8189);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
@@ -93,7 +93,7 @@ export default function computeScrollData(shouldInitialScroll) {
   }
   return tmp4;
 };
-export const findMessageRowIndex = function findMessageRowIndex(previousRows, startMessageId) {
+export function findMessageRowIndex(previousRows, startMessageId) {
   closure_0 = startMessageId;
   const findIndexResult = previousRows.findIndex((message) => {
     let tmp = null != message.message;
@@ -103,4 +103,4 @@ export const findMessageRowIndex = function findMessageRowIndex(previousRows, st
     return tmp;
   });
   return -1 !== findIndexResult ? findIndexResult : undefined;
-};
+}

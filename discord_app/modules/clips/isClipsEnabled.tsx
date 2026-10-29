@@ -1,22 +1,22 @@
-// === Module 14896: isClipsEnabled ===
+// === Module 15131: isClipsEnabled ===
 
-// Module 14896 (isClipsEnabled)
+// Module 15131 (isClipsEnabled)
 import c from "c" /* 576 */;
-import ClipsExperiment from "ClipsExperiment" /* 14897 */;
-import ClipsStore from "ClipsStore" /* 2017 */;
+import ClipsExperiment from "ClipsExperiment" /* 15132 */;
+import ClipsStore from "ClipsStore" /* 2018 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
-export const isClipsEnabled = function isClipsEnabled() {
+export function isClipsEnabled() {
   let clipsEnabled = ClipsExperiment.areClipsAvailable();
   if (clipsEnabled) {
     clipsEnabled = ClipsStore.getState().clipsSettings.clipsEnabled;
   }
   return clipsEnabled;
-};
+}
 export const useIsClipsEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsClipsEnabled() {
   const cResult = c.c(2);
   let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();

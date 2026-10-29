@@ -1,17 +1,17 @@
-// === Module 7556: launchPremiumPlanSelect ===
+// === Module 7579: launchPremiumPlanSelect ===
 
-// Module 7556 (launchPremiumPlanSelect)
+// Module 7579 (launchPremiumPlanSelect)
 import Constants from "Constants" /* 1084 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7127 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7554 */;
-import PremiumModal from "PremiumModal" /* 7557 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7151 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7577 */;
+import PremiumModal from "PremiumModal" /* 7580 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;
 let result = size.fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
 
-export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostPurchaseFlow) {
+export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
   ({ predicate: require, navigation, showCurrentPlan } = isBoostPurchaseFlow);
   if (showCurrentPlan === undefined) {
     showCurrentPlan = true;
@@ -46,9 +46,9 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     navigation.push(PREMIUM_PLAN_SELECT, obj);
   } else {
     const obj4 = { initialRoute: PREMIUM_PLAN_SELECT, analyticsLocation, analyticsLocations, predicate: wrappedPredicate, showCurrentPlan, isBoostPurchaseFlow: flag, planId, applicationId, guildId, onBack: tmp, onPaymentSuccess, onPaymentDismiss };
-    const obj3 = flag2(6707);
-    obj3.pushLazy(asyncRequireImpl(7557, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(7557, dependencyMap.paths);
+    const obj3 = flag2(6731);
+    obj3.pushLazy(asyncRequireImpl(7580, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(7580, dependencyMap.paths);
   }
   let result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
-};
+}

@@ -3,9 +3,9 @@
 // Module 1403 (UserRecord)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1985 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
 import Record from "Record" /* 1404 */;
 
 const AvatarUtilsDefault = AvatarUtils;

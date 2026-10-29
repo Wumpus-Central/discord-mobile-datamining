@@ -1,25 +1,25 @@
-// === Module 18539: ChannelDetailsNavigator ===
+// === Module 18773: ChannelDetailsNavigator ===
 
-// Module 18539 (ChannelDetailsNavigator)
+// Module 18773 (ChannelDetailsNavigator)
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HeaderShared from "HeaderShared" /* 9733 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13582 */;
-import _modDef13955 from "module_13955" /* 13955 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 18540 */;
+import HeaderShared from "HeaderShared" /* 9765 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13815 */;
+import _modDef14188 from "module_14188" /* 14188 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 18774 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(10058).ChannelDetailsNavigatorScreens;
+const constants = fn(10090).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const SearchNavigatorScreens = fn(18366).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18600).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({});
-const NativeStackNavigator = fn(9777);
+const NativeStackNavigator = fn(9809);
 let closure_13 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedCreateThreadHeaderButton(channelId) {
@@ -71,7 +71,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
   const cResult = channel(576).c(5);
   channel = channel.channel;
   const obj = channel(576);
-  const canStartThread = channel(7406).useCanStartThread(channel);
+  const canStartThread = channel(7429).useCanStartThread(channel);
   if (cResult[0] !== channel) {
     const fn = function t() {
       const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Toolbar");
@@ -95,28 +95,28 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
       tmp6 = cResult[2];
     }
     if (cResult[3] !== tmp4) {
-      HeaderIconButton = HeaderIconButton(9733).HeaderIconButton;
+      HeaderIconButton = HeaderIconButton(9765).HeaderIconButton;
       const obj3 = { accessibilityLabel: tmp6, onPress: tmp4, source: null };
-      tmp = _modDef13955;
+      tmp = _modDef14188;
       obj3.source = tmp;
       const tmp11 = closure_10(HeaderIconButton, obj3);
       cResult[3] = tmp4;
       cResult[4] = tmp11;
     }
   }
-  const obj2 = channel(7406);
+  const obj2 = channel(7429);
 }) : (function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(7406).useCanStartThread(channel);
+  const canStartThread = channel(7429).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1125).intl;
     obj2.accessibilityLabel = intl.string(tmp(1125).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13955;
-    tmp5 = closure_10(tmp(9733).HeaderIconButton, obj2);
+    obj2.source = _modDef14188;
+    tmp5 = closure_10(tmp(9765).HeaderIconButton, obj2);
   }
   return tmp5;
 });
@@ -266,7 +266,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                 header(arg0) {
                                                   const obj2 = {};
                                                   const merged = Object.assign(arg0);
-                                                  const obj = route(9733);
+                                                  const obj = route(9765);
                                                   obj2.shouldHandleSafeArea = route(1381).isAndroid();
                                                   return obj.renderHeader(obj2);
                                                 },
@@ -594,7 +594,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(9733);
+            const obj = route(9765);
             obj2.shouldHandleSafeArea = route(1381).isAndroid();
             return obj.renderHeader(obj2);
           },
@@ -632,7 +632,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(9733);
+          const obj = route(9765);
           obj2.shouldHandleSafeArea = route(1381).isAndroid();
           return obj.renderHeader(obj2);
         },

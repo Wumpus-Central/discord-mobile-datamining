@@ -1,8 +1,8 @@
-// === Module 17530: AdTopicOptOutClientExperiment ===
+// === Module 17769: AdTopicOptOutClientExperiment ===
 
-// Module 17530 (AdTopicOptOutClientExperiment)
+// Module 17769 (AdTopicOptOutClientExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,6 +27,6 @@ export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompil
 }) : (function useIsAdTopicOptOutClientEnabled() {
   return apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
 });
-export const isAdTopicOptOutClientEnabled = function isAdTopicOptOutClientEnabled() {
+export function isAdTopicOptOutClientEnabled() {
   return apexExperiment.getConfig({ location: "isAdTopicOptOutClientEnabled" }).enabled;
-};
+}

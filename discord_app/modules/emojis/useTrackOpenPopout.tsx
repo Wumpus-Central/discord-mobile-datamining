@@ -1,13 +1,13 @@
-// === Module 9974: useTrackOpenPopout ===
+// === Module 10006: useTrackOpenPopout ===
 
-// Module 9974 (useTrackOpenPopout)
+// Module 10006 (useTrackOpenPopout)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import useMountEffectDefault from "useMountEffect" /* 5299 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 9860 */;
+import useMountEffectDefault from "useMountEffect" /* 5300 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 9892 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 require = fn;
 const EmojiInteractionPoint = fn(1392).EmojiInteractionPoint;
@@ -15,7 +15,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
-export const useTrackOpenPopout = (cResult) => {
+export (cResult) => {
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = cResult);
   let current;
   let merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId))));
@@ -36,4 +36,4 @@ export const useTrackOpenPopout = (cResult) => {
     }
   });
   return current;
-};
+}

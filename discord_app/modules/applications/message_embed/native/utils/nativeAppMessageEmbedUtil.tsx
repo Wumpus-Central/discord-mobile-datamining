@@ -1,11 +1,11 @@
-// === Module 13276: nativeAppMessageEmbedUtil ===
+// === Module 13509: nativeAppMessageEmbedUtil ===
 
-// Module 13276 (nativeAppMessageEmbedUtil)
+// Module 13509 (nativeAppMessageEmbedUtil)
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useAvatarColor from "useAvatarColor" /* 8651 */;
-import useHeroColors from "useHeroColors" /* 8652 */;
-import ColorUtils_mod from "ColorUtils" /* 5001 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import useAvatarColor from "useAvatarColor" /* 8673 */;
+import useHeroColors from "useHeroColors" /* 8674 */;
+import ColorUtils_mod from "ColorUtils" /* 5002 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "#000000";
@@ -15,7 +15,7 @@ let ColorUtils = ColorUtils_mod;
 items[1] = ColorUtils.hexToRgba(nativeDefault.unsafe_rawColors.PRIMARY_760);
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx");
 
-export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
+export function getAppGradientColors(appIconSrc) {
   if (null == appIconSrc) {
     return tmp;
   } else {
@@ -37,11 +37,11 @@ export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
     }
     obj5 = useAvatarColor;
   }
-};
-export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {
+}
+export function getAppIconSrc(id, icon, bot) {
   let applicationIconURL = AvatarUtilsDefault.getApplicationIconURL({ id, icon, bot, fallbackAvatar: false });
   if (applicationIconURL == null) {
     applicationIconURL = null;
   }
   return applicationIconURL;
-};
+}

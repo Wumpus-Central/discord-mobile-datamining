@@ -1,15 +1,15 @@
-// === Module 15901: installSystrace ===
+// === Module 16137: installSystrace ===
 
-// Module 15901 (installSystrace)
+// Module 16137 (installSystrace)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeSystraceModule from "NativeSystraceModule" /* 15902 */;
+import NativeSystraceModule from "NativeSystraceModule" /* 16138 */;
 import size from "module_2" /* 2 */;
 
 const Systrace = _mod17.Systrace;
 const result = size.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
 
-export const installSystrace = function installSystrace() {
+export function installSystrace() {
   if (obj.isAndroid()) {
     Systrace.isEnabled = () => {
       const _default = NativeSystraceModule.default;
@@ -75,4 +75,4 @@ export const installSystrace = function installSystrace() {
     };
   }
   obj = PlatformUtils;
-};
+}

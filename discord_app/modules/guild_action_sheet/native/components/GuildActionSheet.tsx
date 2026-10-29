@@ -1,26 +1,26 @@
-// === Module 15485: GuildActionSheet ===
+// === Module 15719: GuildActionSheet ===
 
-// Module 15485 (GuildActionSheet)
+// Module 15719 (GuildActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5301 */;
-import BottomSheetModal from "BottomSheetModal" /* 5305 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5618 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8696 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 15419 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 15480 */;
-import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 15486 */;
-import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 15487 */;
-import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 15490 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5302 */;
+import BottomSheetModal from "BottomSheetModal" /* 5306 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5619 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8699 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 15653 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 15714 */;
+import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 15720 */;
+import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 15721 */;
+import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 15724 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

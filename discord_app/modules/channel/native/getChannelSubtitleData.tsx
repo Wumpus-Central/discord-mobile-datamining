@@ -1,12 +1,12 @@
-// === Module 17936: getChannelSubtitleData ===
+// === Module 18174: getChannelSubtitleData ===
 
-// Module 17936 (getChannelSubtitleData)
+// Module 18174 (getChannelSubtitleData)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
-export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
+export function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {
     return null;
   } else {
@@ -29,4 +29,4 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
     ({ name: obj3.subtitle, type: obj3.type } = subtitle);
     return { subtitle: null, type: null };
   }
-};
+}

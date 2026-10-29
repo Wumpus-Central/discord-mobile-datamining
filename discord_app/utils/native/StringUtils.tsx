@@ -1,12 +1,12 @@
-// === Module 10703: ? ===
+// === Module 10736: ? ===
 
-// Module 10703
-import rawDefault from "raw" /* 10702 */;
+// Module 10736
+import rawDefault from "raw" /* 10735 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
-export const splitGraphemes = function splitGraphemes(name) {
+export function splitGraphemes(name) {
   const obj = rawDefault();
   const items = [];
   let match = obj.exec(name);
@@ -35,4 +35,4 @@ export const splitGraphemes = function splitGraphemes(name) {
     HermesBuiltin.apply(items2, items);
   }
   return items;
-};
+}

@@ -1,11 +1,11 @@
-// === Module 8897: MaskedLinkStoreMethodsAdditional ===
+// === Module 8900: MaskedLinkStoreMethodsAdditional ===
 
-// Module 8897 (MaskedLinkStoreMethodsAdditional)
+// Module 8900 (MaskedLinkStoreMethodsAdditional)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");
 
-export const getHostname = function getHostname(url) {
+export function getHostname(url) {
   try {
     const _URL = URL;
     const uRL = new URL(url);
@@ -13,8 +13,8 @@ export const getHostname = function getHostname(url) {
   } catch (err) {
     return "";
   }
-};
-export const getProtocol = function getProtocol(url) {
+}
+export function getProtocol(url) {
   try {
     const _URL = URL;
     const uRL = new URL(url);
@@ -22,4 +22,4 @@ export const getProtocol = function getProtocol(url) {
   } catch (err) {
     return "";
   }
-};
+}

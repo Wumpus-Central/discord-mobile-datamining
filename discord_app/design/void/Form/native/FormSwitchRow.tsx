@@ -1,13 +1,13 @@
-// === Module 8996: FormSwitchRow ===
+// === Module 8999: FormSwitchRow ===
 
-// Module 8996 (FormSwitchRow)
+// Module 8999 (FormSwitchRow)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import RedesignCompat from "RedesignCompat" /* 7022 */;
-import FormRowDefault from "FormRow" /* 7273 */;
-import FormLabelDefault from "FormLabel" /* 7275 */;
-import TableSwitchRow from "TableSwitchRow" /* 7331 */;
-import Form_FormSwitchDefault from "Form/FormSwitch" /* 8994 */;
+import RedesignCompat from "RedesignCompat" /* 7046 */;
+import FormRowDefault from "FormRow" /* 7297 */;
+import FormLabelDefault from "FormLabel" /* 7299 */;
+import TableSwitchRow from "TableSwitchRow" /* 7355 */;
+import Form_FormSwitchDefault from "Form/FormSwitch" /* 8997 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ let closure_3 = ["onValueChange", "value", "disabled", "label", "subLabel", "acc
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormSwitchRow(onValueChange) {

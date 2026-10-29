@@ -1,6 +1,6 @@
-// === Module 9426: utils ===
+// === Module 9457: utils ===
 
-// Module 9426 (utils)
+// Module 9457 (utils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");
 
-export const sortEffectLayers = function sortEffectLayers(effects) {
+export function sortEffectLayers(effects) {
   return effects.sort((zIndex, zIndex2) => {
     let num = zIndex.zIndex;
     if (num == null) {
@@ -23,7 +23,7 @@ export const sortEffectLayers = function sortEffectLayers(effects) {
     }
     return num - num2;
   });
-};
+}
 export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReactCompilerEnabled() ? (function usePotentiallyRandomizedProfileEffect(arg0) {
   const cResult = c.c(2);
   [tmp6, tmp7] = noop.useState(arg0);

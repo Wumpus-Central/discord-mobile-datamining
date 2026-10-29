@@ -1,6 +1,6 @@
-// === Module 12848: CommunicationDisabledActionCreators ===
+// === Module 13069: CommunicationDisabledActionCreators ===
 
-// Module 12848 (CommunicationDisabledActionCreators)
+// Module 13069 (CommunicationDisabledActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const size = fn(2);
@@ -25,7 +25,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ export default {
             return obj;
           } else {
             guildId = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp15) {
           guildId = tmp;

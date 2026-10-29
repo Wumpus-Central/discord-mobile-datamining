@@ -1,11 +1,11 @@
-// === Module 5903: VideoBackgroundUtils ===
+// === Module 5905: VideoBackgroundUtils ===
 
-// Module 5903 (VideoBackgroundUtils)
+// Module 5905 (VideoBackgroundUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 
 require = fn;
 function isAnimatedBackgroundOption(type) {
@@ -92,13 +92,13 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(5899);
+const VideoBackgroundConstants = fn(5901);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 
-export const isCustomBackgroundOption = function isCustomBackgroundOption(stateFromStores) {
+export function isCustomBackgroundOption(stateFromStores) {
   let tmp = null != stateFromStores && typeof stateFromStores === "object";
   if (tmp) {
     tmp = "id" in stateFromStores;
@@ -112,24 +112,24 @@ export const isCustomBackgroundOption = function isCustomBackgroundOption(stateF
     tmp = flag;
   }
   return tmp;
-};
-export const isDefaultBackgroundOption = function isDefaultBackgroundOption(stateFromStores) {
+}
+export function isDefaultBackgroundOption(stateFromStores) {
   let tmp = typeof stateFromStores === "number";
   if (typeof stateFromStores === "number") {
     tmp = stateFromStores in OPTION_1;
   }
   return tmp;
-};
+}
 export { isAnimatedBackgroundOption };
-export const getEffectAnalyticsType = function getEffectAnalyticsType(lastUsedVideoBackgroundOption) {
+export function getEffectAnalyticsType(lastUsedVideoBackgroundOption) {
   let str = "None";
   if (null != lastUsedVideoBackgroundOption) {
     str = "Video Background";
   }
   return str;
-};
+}
 export { getEffectDetailAnalyticsName };
-export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdated(type, location, Enabled) {
+export function trackBackgroundOptionUpdated(type, location, Enabled) {
   const guildId = RTCConnectionStore.getGuildId();
   const channelId = RTCConnectionStore.getChannelId();
   const channel = ChannelStore.getChannel(channelId);
@@ -154,18 +154,18 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   obj5.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
   obj5.is_animated = isAnimatedBackgroundOption(type);
   AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj5);
-};
-export const trackBackgroundOptionAdded = function trackBackgroundOptionAdded(type, is_video, is_from_tenor) {
+}
+export function trackBackgroundOptionAdded(type, is_video, is_from_tenor) {
   const obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.VIDEO_BACKGROUND_ADDED, { is_animated: isAnimatedBackgroundOption(type), is_video, is_from_tenor });
-};
-export const trackBackgroundOptionDeleted = function trackBackgroundOptionDeleted(type) {
+}
+export function trackBackgroundOptionDeleted(type) {
   const obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.VIDEO_BACKGROUND_DELETED, { is_animated: isAnimatedBackgroundOption(type) });
-};
-export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(type) {
+}
+export function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "paths" };
+    let obj = { oneofKind: "r" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {
@@ -193,8 +193,8 @@ export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProt
     }
   }
   return obj;
-};
-export const getVideoBackgroundOptionFromProto = function getVideoBackgroundOptionFromProto(oneofKind, user_id) {
+}
+export function getVideoBackgroundOptionFromProto(oneofKind, user_id) {
   if (null != oneofKind) {
     if (undefined !== oneofKind.oneofKind) {
       oneofKind = oneofKind.oneofKind;
@@ -213,4 +213,4 @@ export const getVideoBackgroundOptionFromProto = function getVideoBackgroundOpti
     }
   }
   return null;
-};
+}

@@ -1,16 +1,16 @@
-// === Module 10770: conjureDebugConnection ===
+// === Module 10845: conjureDebugConnection ===
 
-// Module 10770 (conjureDebugConnection)
+// Module 10845 (conjureDebugConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10755 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10771 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10739 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10830 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10846 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10814 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let obj3 = { web: { location: "runtime_frame", code: fn(10755).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
+let obj3 = { web: { location: "runtime_frame", code: fn(10830).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
 let obj = {
   log(log, projectId) {
     projectId = projectId.projectId;
@@ -208,8 +208,8 @@ let obj2 = {
     }
   }
 };
-let obj4 = { location: "runtime_frame", code: fn(10755).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
-obj3.preview = { location: "runtime_worker", code: fn(10755).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
+let obj4 = { location: "runtime_frame", code: fn(10830).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
+obj3.preview = { location: "runtime_worker", code: fn(10830).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
 let c5 = 10;
 const map = new Map();
 let set = new Set();
@@ -218,7 +218,7 @@ let result = size.fileFinishedImporting("modules/conjure/debug/conjureDebugConne
 
 export const debugFrameHandlers = obj;
 export const debugStepHandlers = obj2;
-export const requestDebugStatus = function requestDebugStatus(projectId) {
+export function requestDebugStatus(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId });
   const obj2 = { type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId };
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
@@ -235,8 +235,8 @@ export const requestDebugStatus = function requestDebugStatus(projectId) {
     tmp3(tmp2[1]).dispatch(obj4);
     const tmp3Result = tmp3(tmp2[1]);
   }
-};
-export const forceCompaction = function forceCompaction(projectId) {
+}
+export function forceCompaction(projectId) {
   if (flag === undefined) {
     flag = false;
   }
@@ -259,8 +259,8 @@ export const forceCompaction = function forceCompaction(projectId) {
     tmp3(tmp2[1]).dispatch(obj4);
     const tmp3Result = tmp3(tmp2[1]);
   }
-};
-export const restartConjureSandbox = function restartConjureSandbox(projectId) {
+}
+export function restartConjureSandbox(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_SANDBOX_RESTART_REQUESTED", projectId });
   const obj2 = { type: "CONJURE_SANDBOX_RESTART_REQUESTED", projectId };
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
@@ -280,8 +280,8 @@ export const restartConjureSandbox = function restartConjureSandbox(projectId) {
     tmp3(tmp2[1]).dispatch(obj4);
     const tmp3Result = tmp3(tmp2[1]);
   }
-};
-export const pollConjureDebugInstance = function pollConjureDebugInstance(projectId) {
+}
+export function pollConjureDebugInstance(projectId) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   if (null != conjureSocket) {
     try {
@@ -294,8 +294,8 @@ export const pollConjureDebugInstance = function pollConjureDebugInstance(projec
       return tmp;
     }
   }
-};
-export const requestConjureDebugGitInfo = function requestConjureDebugGitInfo(projectId) {
+}
+export function requestConjureDebugGitInfo(projectId) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   try {
     if (null == conjureSocket) {
@@ -315,8 +315,8 @@ export const requestConjureDebugGitInfo = function requestConjureDebugGitInfo(pr
     require("Dispatcher").dispatch(obj4);
     const obj5 = require("Dispatcher");
   }
-};
-export const restartConjureAgent = function restartConjureAgent(projectId, first1) {
+}
+export function restartConjureAgent(projectId, first1) {
   DispatcherDefault.dispatch({ type: "CONJURE_RESTART_AGENT_REQUESTED", projectId });
   const obj2 = { type: "CONJURE_RESTART_AGENT_REQUESTED", projectId };
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
@@ -336,4 +336,4 @@ export const restartConjureAgent = function restartConjureAgent(projectId, first
     tmp3(tmp2[1]).dispatch(obj4);
     const tmp3Result = tmp3(tmp2[1]);
   }
-};
+}

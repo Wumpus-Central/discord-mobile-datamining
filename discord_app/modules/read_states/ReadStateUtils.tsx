@@ -1,24 +1,24 @@
-// === Module 9113: ReadStateUtils ===
+// === Module 9116: ReadStateUtils ===
 
-// Module 9113 (ReadStateUtils)
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
+// Module 9116 (ReadStateUtils)
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(6740).UnreadSetting;
+const UnreadSetting = fn(6763).UnreadSetting;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 
-export const getHasImportantUnread = function getHasImportantUnread(channel) {
+export function getHasImportantUnread(channel) {
   let hasUnreadResult = ReadStateStore.hasUnread(channel.id);
   if (hasUnreadResult) {
     hasUnreadResult = UserGuildSettingsStore.resolveUnreadSetting(channel) === UnreadSetting.ALL_MESSAGES;
   }
   return hasUnreadResult;
-};
+}
 export const useHasImportantUnread = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasImportantUnread(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);

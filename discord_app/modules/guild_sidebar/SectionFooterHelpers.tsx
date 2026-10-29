@@ -1,18 +1,18 @@
-// === Module 17949: SectionFooterHelpers ===
+// === Module 18187: SectionFooterHelpers ===
 
-// Module 17949 (SectionFooterHelpers)
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import ChannelListState from "ChannelListState" /* 7672 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7249 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 18187 (SectionFooterHelpers)
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import ChannelListState from "ChannelListState" /* 7695 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7273 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 require = fn;
-const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7701).ChannelListGuildActionRow;
 const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
 
-export const getSectionFooterConfig = function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
+export function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
   if (section === ChannelListState.SECTION_INDEX_GUILD_ACTIONS) {
     const guildActionSection = guildChannels.getGuildActionSection();
     const rows = guildActionSection.getRows();
@@ -60,8 +60,8 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
   }
   const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === ChannelListState.SECTION_INDEX_GUILD_ACTIONS || section === ChannelListState.SECTION_INDEX_FAVORITES || section === ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };
   return obj;
-};
-export const getSectionFooterActiveVoiceChannels = function getSectionFooterActiveVoiceChannels(arg0) {
+}
+export function getSectionFooterActiveVoiceChannels(arg0) {
   ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: CategoryCollapseStore } = arg0);
   if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
     let items = [];
@@ -87,8 +87,8 @@ export const getSectionFooterActiveVoiceChannels = function getSectionFooterActi
     });
   }
   return items;
-};
-export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWithActiveVoiceChannels(arg0) {
+}
+export function isSectionFooterWithActiveVoiceChannels(arg0) {
   ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: CategoryCollapseStore } = arg0);
   if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
     let items = [];
@@ -114,4 +114,4 @@ export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWi
     });
   }
   return items.length > 0;
-};
+}

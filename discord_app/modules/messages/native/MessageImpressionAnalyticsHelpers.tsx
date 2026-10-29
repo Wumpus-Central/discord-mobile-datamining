@@ -1,17 +1,17 @@
-// === Module 10033: MessageImpressionAnalyticsHelpers ===
+// === Module 10065: MessageImpressionAnalyticsHelpers ===
 
-// Module 10033 (MessageImpressionAnalyticsHelpers)
+// Module 10065 (MessageImpressionAnalyticsHelpers)
 import c from "c" /* 576 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5737 */;
-import CodedLink from "CodedLink" /* 5739 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7404 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7843 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10034 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10035 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10036 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5739 */;
+import CodedLink from "CodedLink" /* 5741 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7427 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7866 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10066 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10067 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10068 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5736 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5753 */;
+import InviteStore from "InviteStore" /* 5738 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5755 */;
 
 const require = globalThis.__r;
 
@@ -58,8 +58,8 @@ function getVoiceInviteEmbedRenderInfo(state) {
 }
 const Constants = fn(1084);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(7797).LinkType;
-const InviteTypes = fn(7844).InviteTypes;
+const LinkType = fn(7820).LinkType;
+const InviteTypes = fn(7867).InviteTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackAnnouncementMessageViews(arg0) {
@@ -253,7 +253,7 @@ let result = size.fileFinishedImporting("modules/messages/native/MessageImpressi
 
 export const useShouldTrackAnnouncementMessageViews = tmp3;
 export const useShouldTrackRichPresenceInviteEmbedViews = tmp4;
-export const handleAnnouncementMessageViewTracking = function handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel) {
+export function handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel) {
   _require = guildId;
   importDefault = channel;
   if (shouldTrackAnnouncementMessageViews) {
@@ -305,8 +305,8 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
       let obj = require("MessageViewTrackingManager");
     }
   }
-};
-export const handleRichPresenceInviteEmbedViewTracking = function handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel) {
+}
+export function handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel) {
   _require = guildId;
   importDefault = channel;
   if (shouldTrackRichPresenceInviteEmbedViews) {
@@ -331,9 +331,9 @@ export const handleRichPresenceInviteEmbedViewTracking = function handleRichPres
     const result = require("MessageViewTrackingManager").handleMessageListVisibilityChange(items, require("MessageViewTrackingManager").MessageViewTrackingType.APP_EMBED);
     let obj = require("MessageViewTrackingManager");
   }
-};
+}
 export const useShouldTrackOfficialMessageViews = tmp5;
-export const handleOfficialMessageViewTracking = function handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel) {
+export function handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel) {
   _require = guildId;
   importDefault = channel;
   if (shouldTrackOfficialMessageViews) {
@@ -355,7 +355,7 @@ export const handleOfficialMessageViewTracking = function handleOfficialMessageV
       let obj = require("MessageViewTrackingManager");
     }
   }
-};
+}
 export const useShouldTrackVoiceInviteEmbedViews = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackVoiceInviteEmbedViews(arg0) {
   const cResult = c.c(3);
   ({ messages, isMessagesReady } = arg0);
@@ -391,7 +391,7 @@ export const useShouldTrackVoiceInviteEmbedViews = ReactCompilerGating.isReactCo
     return someResult;
   }, items);
 });
-export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel) {
+export function handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel) {
   _require = guildId;
   importDefault = channel;
   if (shouldTrackVoiceInviteEmbedViews) {
@@ -464,4 +464,4 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
     const result = require("MessageViewTrackingManager").handleMessageListVisibilityChange(items, require("MessageViewTrackingManager").MessageViewTrackingType.VOICE_INVITE_EMBED);
     let obj = require("MessageViewTrackingManager");
   }
-};
+}

@@ -1,8 +1,8 @@
-// === Module 6844: ConjureUserExperiment ===
+// === Module 6867: ConjureUserExperiment ===
 
-// Module 6844 (ConjureUserExperiment)
+// Module 6867 (ConjureUserExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ export const useIsConjureUserEnabled = ReactCompilerGating.isReactCompilerEnable
 }) : (function useIsConjureUserEnabled(location) {
   return closure_2.useConfig({ location: location.location }).enabled;
 });
-export const isConjureUserEnabled = function isConjureUserEnabled(location, arg1) {
+export function isConjureUserEnabled(location, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -34,4 +34,4 @@ export const isConjureUserEnabled = function isConjureUserEnabled(location, arg1
     autoTrackExposure = true;
   }
   return closure_2.getConfig({ location: location.location }, { autoTrackExposure }).enabled;
-};
+}

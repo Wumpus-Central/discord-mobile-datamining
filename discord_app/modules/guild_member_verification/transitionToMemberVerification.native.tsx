@@ -1,18 +1,18 @@
-// === Module 6870: transitionToMemberVerification ===
+// === Module 6894: transitionToMemberVerification ===
 
-// Module 6870 (transitionToMemberVerification)
+// Module 6894 (transitionToMemberVerification)
 import router_utils from "router_utils" /* 1111 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5038 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6871 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6907 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5036 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5039 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6895 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6931 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5037 */;
 
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/transitionToMemberVerification.native.tsx");
 
-export const transitionToMemberVerification = function transitionToMemberVerification(guildId) {
+export function transitionToMemberVerification(guildId) {
   if (null == GuildStore.getGuild(guildId)) {
     const request = UserGuildJoinRequestStore.getRequest(guildId);
     let applicationStatus;
@@ -36,4 +36,4 @@ export const transitionToMemberVerification = function transitionToMemberVerific
   } else {
     router_utils.transitionToGuild(guildId);
   }
-};
+}

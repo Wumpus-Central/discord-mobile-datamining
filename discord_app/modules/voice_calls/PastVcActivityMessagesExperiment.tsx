@@ -1,9 +1,9 @@
-// === Module 19067: PastVcActivityMessagesExperiment ===
+// === Module 19300: PastVcActivityMessagesExperiment ===
 
-// Module 19067 (PastVcActivityMessagesExperiment)
+// Module 19300 (PastVcActivityMessagesExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 5227 */;
-import createExperiment from "module_5224" /* 5224 */;
+import ExperimentConstants from "ExperimentConstants" /* 5228 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,9 +14,9 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
 
 export default experiment;
-export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessagesEnabled(id, GuildSettingsModalOverview) {
+export function isPastVcActivityMessagesEnabled(id, GuildSettingsModalOverview) {
   return experiment.getCurrentConfig({ guildId: id, location: GuildSettingsModalOverview }, { autoTrackExposure: true }).enabled;
-};
+}
 export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPastVcActivityMessagesEnabled(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {

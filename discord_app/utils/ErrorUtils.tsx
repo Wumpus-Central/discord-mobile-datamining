@@ -1,7 +1,7 @@
-// === Module 14914: ErrorUtils ===
+// === Module 15149: ErrorUtils ===
 
-// Module 14914 (ErrorUtils)
-import _mod14915 from "module_14915" /* 14915 */;
+// Module 15149 (ErrorUtils)
+import _mod15150 from "module_15150" /* 15150 */;
 import size from "module_2" /* 2 */;
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -15,7 +15,7 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
 }
 const result = size.fileFinishedImporting("utils/ErrorUtils.tsx");
 
-export const getUnderlyingIOSError = function getUnderlyingIOSError(message) {
+export function getUnderlyingIOSError(message) {
   try {
     let tmp3 = getUnderlyingIOSExceptionRecursively(message);
     if (tmp3 == null) {
@@ -25,8 +25,8 @@ export const getUnderlyingIOSError = function getUnderlyingIOSError(message) {
   } catch (err) {
     return null;
   }
-};
-export const serializeError = function serializeError(arg0) {
+}
+export function serializeError(arg0) {
   let error = arg0;
   if (!Boolean(arg0)) {
     const _Error = Error;
@@ -38,5 +38,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(_mod14915.normalizeToSize(error1));
-};
+  return JSON.stringify(_mod15150.normalizeToSize(error1));
+}

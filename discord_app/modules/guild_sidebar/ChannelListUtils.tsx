@@ -1,11 +1,11 @@
-// === Module 6031: ChannelListUtils ===
+// === Module 6035: ChannelListUtils ===
 
-// Module 6031 (ChannelListUtils)
+// Module 6035 (ChannelListUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
-export const hasStream = function hasStream(voiceStates) {
+export function hasStream(voiceStates) {
   if (null == voiceStates) {
     return false;
   } else {
@@ -18,4 +18,4 @@ export const hasStream = function hasStream(voiceStates) {
     }
     return false;
   }
-};
+}

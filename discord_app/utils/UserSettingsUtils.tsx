@@ -1,13 +1,13 @@
-// === Module 7127: UserSettingsUtils ===
+// === Module 7151: UserSettingsUtils ===
 
-// Module 7127 (UserSettingsUtils)
+// Module 7151 (UserSettingsUtils)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7128 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6738 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7152 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6761 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -16,7 +16,7 @@ const NonSpamRetrainingOptInOptions = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
-export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
+export function getSanitizedRestrictedGuilds() {
   const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
@@ -24,8 +24,8 @@ export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuild
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedMessageRequestRestrictedGuilds() {
+}
+export function getSanitizedMessageRequestRestrictedGuilds() {
   const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
@@ -33,8 +33,8 @@ export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedM
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivityRestrictedGuilds() {
+}
+export function getSanitizedActivityRestrictedGuilds() {
   const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
@@ -42,8 +42,8 @@ export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivit
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitizedActivityJoiningRestrictedGuilds() {
+}
+export function getSanitizedActivityJoiningRestrictedGuilds() {
   const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
@@ -51,25 +51,25 @@ export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitized
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const computeFlags = function computeFlags(setting) {
+}
+export function computeFlags(setting) {
   if ((setting & React5) === React5) {
     let obj = { all: true, mutualFriends: true, mutualGuilds: true };
   } else {
     obj = { all: false, mutualFriends: (setting & constants2.MUTUAL_FRIENDS) === constants2.MUTUAL_FRIENDS, mutualGuilds: (setting & constants2.MUTUAL_GUILDS) === constants2.MUTUAL_GUILDS };
   }
   return obj;
-};
-export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
+}
+export function trackUserSettingsPaneViewed(arg0) {
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
   const obj2 = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: null };
   const obj = AppAnalyticsUtilsDefault;
   obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
-};
+}
 export { NonSpamRetrainingOptInOptions };
 export const NonSpamRetrainingOptInOptionsToValue = { [NonSpamRetrainingOptInOptions.UNDECIDED]: undefined, [NonSpamRetrainingOptInOptions.OPTIN]: true, [NonSpamRetrainingOptInOptions.OPTOUT]: false };
-export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
+export function generateNonSpamRetrainingOptInSettingOptions() {
   const obj = { name: null, desc: null, value: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["/yLMRQ"]);
@@ -92,8 +92,8 @@ export const generateNonSpamRetrainingOptInSettingOptions = function generateNon
   obj3.value = obj.UNDECIDED;
   items[2] = obj3;
   return items;
-};
-export const shakeUserSettings = function shakeUserSettings(arg0) {
+}
+export function shakeUserSettings(arg0) {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(constants3.SHAKE_SETTINGS_MODAL, arg0);
-};
+}

@@ -1,9 +1,9 @@
-// === Module 9700: imagePreConvert ===
+// === Module 9732: imagePreConvert ===
 
-// Module 9700 (imagePreConvert)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import UploadPlatform from "UploadPlatform" /* 8177 */;
-import imageFilename from "imageFilename" /* 8206 */;
+// Module 9732 (imagePreConvert)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import UploadPlatform from "UploadPlatform" /* 8200 */;
+import imageFilename from "imageFilename" /* 8228 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -46,7 +46,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -216,7 +216,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
 let size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imagePreConvert.tsx");
 
-export const itemNeedsImagePreConversion = function itemNeedsImagePreConversion(file) {
+export function itemNeedsImagePreConversion(file) {
   let tmp3 = null;
   if (file.platform === UploadPlatform.UploadPlatform.WEB) {
     tmp3 = null;
@@ -238,8 +238,8 @@ export const itemNeedsImagePreConversion = function itemNeedsImagePreConversion(
     }
   }
   return null != tmp3;
-};
-export const maybePreConvertImageItem = function maybePreConvertImageItem() {
+}
+export function maybePreConvertImageItem() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -248,4 +248,4 @@ export const maybePreConvertImageItem = function maybePreConvertImageItem() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

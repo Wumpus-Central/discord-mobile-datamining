@@ -1,25 +1,25 @@
-// === Module 19202: InterestPickerExperiment ===
+// === Module 19437: InterestPickerExperiment ===
 
-// Module 19202 (InterestPickerExperiment)
+// Module 19437 (InterestPickerExperiment)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-interest-picker", kind: "user", defaultConfig: { enabled: false, gameList: "popular" }, variations: { 0: { enabled: false, gameList: "popular" }, 1: { enabled: true, gameList: "popular" }, 2: { enabled: true, gameList: "trending" }, 3: { enabled: true, gameList: "mobile" } } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/InterestPickerExperiment.tsx");
 
 export const InterestPickerExperiment = apexExperiment;
-export const isInterestPickerExperimentEnabled = function isInterestPickerExperimentEnabled(nuf_interest_picker_step) {
+export function isInterestPickerExperimentEnabled(nuf_interest_picker_step) {
   try {
     const obj = { location: nuf_interest_picker_step };
     return apexExperiment.getConfig(obj).enabled;
   } catch (err) {
     return false;
   }
-};
+}
 export const useInterestPickerGameList = ReactCompilerGating.isReactCompilerEnabled() ? (function useInterestPickerGameList(location) {
   const cResult = c.c(2);
   try {

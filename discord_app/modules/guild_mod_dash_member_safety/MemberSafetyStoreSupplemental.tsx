@@ -1,26 +1,26 @@
-// === Module 7645: MemberSafetyStoreSupplemental ===
+// === Module 7668: MemberSafetyStoreSupplemental ===
 
-// Module 7645 (MemberSafetyStoreSupplemental)
-import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7646 */;
+// Module 7668 (MemberSafetyStoreSupplemental)
+import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7669 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = {};
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyStoreSupplemental.tsx");
 
-export const hasMemberSupplemental = function hasMemberSupplemental(arg0, arg1) {
+export function hasMemberSupplemental(arg0, arg1) {
   let tmp2 = null != dependencyMap[arg0];
   if (tmp2) {
     tmp2 = null != tmp[arg0][arg1];
   }
   return tmp2;
-};
-export const getMemberSupplementalByGuildId = function getMemberSupplementalByGuildId(guildId) {
+}
+export function getMemberSupplementalByGuildId(guildId) {
   if (null == dependencyMap[guildId]) {
     dependencyMap[guildId] = {};
   }
   return dependencyMap[guildId];
-};
-export const syncMemberSupplemental = function syncMemberSupplemental(guildId, memberSupplementals) {
+}
+export function syncMemberSupplemental(guildId, memberSupplementals) {
   if (0 === memberSupplementals.length) {
     return false;
   } else {
@@ -116,4 +116,4 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
     });
     return true;
   }
-};
+}

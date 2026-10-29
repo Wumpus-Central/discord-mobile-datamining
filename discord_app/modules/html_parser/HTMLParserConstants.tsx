@@ -1,0 +1,24 @@
+// === Module 9370: HTMLParserConstants ===
+
+// Module 9370 (HTMLParserConstants)
+import size from "module_2" /* 2 */;
+
+const obj = { LINE: 1, PARAGRAPH: 2 };
+const map = new Map(Object.entries({ b: { style: "bold" }, strong: { style: "bold" }, i: { style: "italic" }, em: { style: "italic" }, u: { style: "underline" }, h1: { heading: "h1", breaks: obj.PARAGRAPH }, h2: { heading: "h2", breaks: obj.PARAGRAPH }, h3: { heading: "h3", breaks: obj.PARAGRAPH }, h4: { heading: "h4", breaks: obj.PARAGRAPH }, p: { breaks: obj.PARAGRAPH }, blockquote: { breaks: obj.PARAGRAPH }, hr: { breaks: obj.PARAGRAPH }, div: { breaks: obj.LINE }, br: { lineBreak: true }, ul: { breaks: obj.LINE, list: "unordered" }, ol: { breaks: obj.LINE, list: "ordered" }, li: { breaks: obj.LINE, item: true }, a: { link: true }, span: {}, small: {}, sup: {}, script: { hidden: true }, style: { hidden: true } }));
+const obj2 = { b: { style: "bold" }, strong: { style: "bold" }, i: { style: "italic" }, em: { style: "italic" }, u: { style: "underline" }, h1: { heading: "h1", breaks: obj.PARAGRAPH }, h2: { heading: "h2", breaks: obj.PARAGRAPH }, h3: { heading: "h3", breaks: obj.PARAGRAPH }, h4: { heading: "h4", breaks: obj.PARAGRAPH }, p: { breaks: obj.PARAGRAPH }, blockquote: { breaks: obj.PARAGRAPH }, hr: { breaks: obj.PARAGRAPH }, div: { breaks: obj.LINE }, br: { lineBreak: true }, ul: { breaks: obj.LINE, list: "unordered" }, ol: { breaks: obj.LINE, list: "ordered" }, li: { breaks: obj.LINE, item: true }, a: { link: true }, span: {}, small: {}, sup: {}, script: { hidden: true }, style: { hidden: true } };
+const set = new Set(["area", "base", "basefont", "br", "col", "command", "embed", "frame", "hr", "img", "input", "isindex", "keygen", "link", "meta", "param", "source", "track", "wbr"]);
+const result = size.fileFinishedImporting("modules/html_parser/HTMLParserConstants.tsx");
+
+export const DEFAULT_MAX_HTML_LENGTH = 10000;
+export const HTML_WHITESPACE_CODES = { SPACE: 32, TAB: 9, LINE_FEED: 10, FORM_FEED: 12, CARRIAGE_RETURN: 13 };
+export const BLOCK_BREAKS = obj;
+export const TAG_BEHAVIORS = map;
+export const PLAIN_STYLE = { bold: false, italic: false, underline: false };
+export const BULLET = "\u2022 ";
+export const HIGH_SURROGATE = /[\uD800-\uDBFF]/;
+export const TAG_NAME = /^[a-z][a-z0-9:-]*$/;
+export const BARE_UNKNOWN_TAG = /^<[a-z][a-z0-9:-]*\s*(?:\/+\s*)?>$/i;
+export const SLASH_SEPARATED_UNKNOWN_TAG = /^<[a-z][a-z0-9:-]*(?:\s+[a-z0-9:+-]+)*(?:\s*\/+\s*[a-z0-9:+-]+(?:\s+[a-z0-9:+-]+)*)+\s*>$/i;
+export const SLASH_PREFIXED_MARKER = /^<\/{2,}[\s/a-z0-9:+-]*>$/i;
+export const VOID_HTML_TAGS = set;
+export const KNOWN_UNSUPPORTED_HTML_TAGS = new Set(["abbr", "address", "article", "aside", "audio", "bdi", "bdo", "body", "button", "canvas", "caption", "cite", "code", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "dl", "dt", "fieldset", "figcaption", "figure", "footer", "form", "h5", "h6", "head", "header", "hgroup", "html", "iframe", "ins", "kbd", "label", "legend", "main", "map", "mark", "math", "menu", "meter", "nav", "noscript", "object", "optgroup", "option", "output", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "search", "section", "select", "slot", "sub", "summary", "svg", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "var", "video"]);

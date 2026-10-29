@@ -1,12 +1,12 @@
-// === Module 9402: WishlistRecord ===
+// === Module 9433: WishlistRecord ===
 
-// Module 9402 (WishlistRecord)
+// Module 9433 (WishlistRecord)
 import Record from "Record" /* 1404 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9403 */;
-import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 9404 */;
-import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 9405 */;
-import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 9406 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9434 */;
+import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 9435 */;
+import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 9436 */;
+import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 9437 */;
 
 const SKUProductLines = fn(1084).SKUProductLines;
 const prototype = function WishlistRecord(arg0) {
@@ -56,16 +56,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
-export const getWishlistSkuIds = function getWishlistSkuIds(first1) {
+export function getWishlistSkuIds(first1) {
   const items = first1.items;
   return items.map((skuId) => skuId.skuId);
-};
-export const wishlistHasSkuId = function wishlistHasSkuId(items, arg1) {
+}
+export function wishlistHasSkuId(items, arg1) {
   closure_0 = arg1;
   items = items.items;
   return items.some((skuId) => skuId.skuId === closure_0);
-};
-export const getWishlistProductLines = function getWishlistProductLines(items) {
+}
+export function getWishlistProductLines(items) {
   items = items.items;
   return new Set(items.map((skuProductLine) => skuProductLine.skuProductLine));
-};
+}

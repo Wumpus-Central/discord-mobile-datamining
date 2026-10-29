@@ -1,20 +1,20 @@
-// === Module 17858: FavoritesGuildAddCategoryActionSheet ===
+// === Module 18096: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 17858 (FavoritesGuildAddCategoryActionSheet)
+// Module 18096 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10883 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
-const maxLength = fn(4869).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const maxLength = fn(4870).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };
@@ -26,11 +26,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
   const tmp5 = _slicedToArray(noop.useState(""), 2);
   value = tmp5[0];
   if (cResult[0] !== value) {
-    const result = tmp(4881).isFavoritesGuildCategoryNameValid(value);
+    const result = tmp(4882).isFavoritesGuildCategoryNameValid(value);
     cResult[0] = value;
     cResult[1] = result;
     let tmp7 = result;
-    const tmpResult = tmp(4881);
+    const tmpResult = tmp(4882);
   } else {
     tmp7 = cResult[1];
   }
@@ -45,7 +45,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
       let obj2 = { title: null };
       const intl = tmp(1125).intl;
       obj2.title = intl.string(tmp(1125).t["ISN+NM"]);
-      const tmp13 = closure_6(tmp(7284).BottomSheetTitleHeader, obj2);
+      const tmp13 = closure_6(tmp(7308).BottomSheetTitleHeader, obj2);
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -95,7 +95,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
         const obj3 = { contentStyles: content, bodyStyles: body, keyboardShouldPersistTaps: "always", header: tmp11, children: null };
         const items = [tmp18, tmp25];
         obj3.children = items;
-        const tmp30 = closure_7(tmp(5301).BottomSheet, obj3);
+        const tmp30 = closure_7(tmp(5302).BottomSheet, obj3);
         cResult[15] = tmp4.body;
         cResult[16] = tmp4.content;
         cResult[17] = tmp25;
@@ -104,14 +104,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
         tmp28 = tmp30;
       }
       const obj4 = { text: tmp22, onPress: tmp9, disabled: !tmp7 };
-      const tmp27 = closure_6(tmp(5280).Button, obj4);
+      const tmp27 = closure_6(tmp(5281).Button, obj4);
       cResult[12] = tmp9;
       cResult[13] = !tmp7;
       cResult[14] = tmp27;
       tmp25 = tmp27;
     }
     const obj5 = { label: tmp14, placeholder: tmp15, value, onChange: tmp5[1], maxLength, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: tmp9 };
-    const tmp21 = closure_6(tmp(7044).TextInput, obj5);
+    const tmp21 = closure_6(tmp(7068).TextInput, obj5);
     cResult[8] = tmp9;
     cResult[9] = value;
     cResult[10] = tmp21;
@@ -131,7 +131,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
 }) : (function FavoritesGuildAddCategoryActionSheet() {
   const tmp = closure_9();
   [value, obj4.onChange] = noop.useState("");
-  const result = value(4881).isFavoritesGuildCategoryNameValid(value);
+  const result = value(4882).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
   const items = [result, value];
   const callback = noop.useCallback(() => {
@@ -144,7 +144,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
   const obj3 = { title: null };
   const intl = value(1125).intl;
   obj3.title = intl.string(value(1125).t["ISN+NM"]);
-  obj2.header = closure_6(value(7284).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(7308).BottomSheetTitleHeader, obj3);
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = value(1125).intl;
   obj4.label = intl2.string(value(1125).t.OCAkGP);
@@ -153,20 +153,20 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(7044).TextInput, obj4), ];
+  const items1 = [closure_6(value(7068).TextInput, obj4), ];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1125).intl;
   obj5.text = intl4.string(value(1125).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5280).Button, obj5);
+  items1[1] = closure_6(value(5281).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(5301).BottomSheet, obj2);
+  return closure_7(value(5302).BottomSheet, obj2);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
 
-export const openFavoritesGuildAddCategoryActionSheet = function openFavoritesGuildAddCategoryActionSheet() {
+export function openFavoritesGuildAddCategoryActionSheet() {
   const obj = ActionSheetActionCreators;
   obj.showActionSheet({ content: timestampProducer(closure_10, {}), key: FavoritesGuildAddCategoryActionSheet });
-};
+}

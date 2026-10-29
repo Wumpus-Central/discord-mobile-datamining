@@ -1,9 +1,9 @@
-// === Module 7682: FamilyCenterActionCreators ===
+// === Module 7705: FamilyCenterActionCreators ===
 
-// Module 7682 (FamilyCenterActionCreators)
+// Module 7705 (FamilyCenterActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7683 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7706 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -99,7 +99,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -135,7 +135,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -157,7 +157,7 @@ let closure_12 = async function _updateLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -198,7 +198,7 @@ let closure_12 = async function _updateLinkForUserId() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -221,7 +221,7 @@ let closure_13 = async function _removeLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -262,7 +262,7 @@ let closure_13 = async function _removeLinkForUserId() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -282,7 +282,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -321,7 +321,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -340,7 +340,7 @@ let closure_15 = async function _shareIarWithParents() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -370,7 +370,7 @@ let closure_15 = async function _shareIarWithParents() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -378,7 +378,7 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7681).FamilyCenterAction;
+const FamilyCenterAction = fn(7704).FamilyCenterAction;
 const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -387,58 +387,68 @@ let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterAction
 export default {
   initialPageLoad() {
     return (async () => {
-      if (c15 === 2) {
-        c15 = 3;
+      if (c16 === 2) {
+        c16 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
-          c15 = 2;
-          if (0 === c14) {
+          c16 = 2;
+          if (0 === c15) {
             if (arg0 === 1) {
-              c15 = 3;
+              c16 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c15 = 3;
+              c16 = 3;
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              c13 = 0;
-              closure_12 = tmp4;
+              closure_13 = tmp3;
+              closure_12 = tmp7;
+              closure_140_0 = undefined;
               let body;
               let teen_audit_log;
               let linked_users;
               let users2;
               let age_group;
-              closure_140_5 = undefined;
+              closure_140_6 = undefined;
               DispatcherDefault.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+              c14 = 1;
               const HTTP = require("HTTPUtils").HTTP;
               const obj5 = { url: constants.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: null };
               obj5.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-              c14 = 1;
-              c15 = 1;
+              c15 = 2;
+              c16 = 1;
               const obj7 = { value: HTTP.get(obj5), done: false };
               return obj7;
             }
+          } else if (1 === tmp7) {
+            c14 = 0;
+            closure_141_1(closure_141_2[5]).dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" });
+            c16 = 3;
+            return { value: null, done: true };
           } else {
-            if (1 === tmp4) {
+            if (2 === tmp7) {
               if (arg0 === 1) {
-                c15 = 3;
+                c16 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c15 = 3;
+                c14 = 0;
+                c16 = 3;
                 const obj8 = { value, done: true };
                 return obj8;
               } else {
-                body = value.body;
+                closure_140_0 = value;
+                c14 = 0;
+                body = closure_140_0.body;
                 teen_audit_log = body.teen_audit_log;
                 linked_users = body.linked_users;
                 users2 = body.users;
@@ -555,65 +565,69 @@ export default {
                   gifts = [];
                 }
                 obj9.gifts = gifts;
-                closure_140_5 = obj9;
-                let tmp46 = null != closure_140_5.invoices;
-                if (tmp46) {
-                  tmp46 = closure_140_5.invoices.length > 0;
+                closure_140_6 = obj9;
+                let tmp49 = null != closure_140_6.invoices;
+                if (tmp49) {
+                  tmp49 = closure_140_6.invoices.length > 0;
                 }
-                if (tmp46) {
-                  c14 = 2;
-                  c15 = 1;
-                  const obj10 = { value: closure_141_8(closure_140_5.invoices), done: false };
+                if (tmp49) {
+                  c15 = 3;
+                  c16 = 1;
+                  const obj10 = { value: closure_141_8(closure_140_6.invoices), done: false };
                   return obj10;
                 }
               }
             } else {
-              if (2 === tmp4) {
+              if (3 === tmp7) {
                 if (arg0 === 1) {
-                  c15 = 3;
+                  c16 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c15 = 3;
+                  c16 = 3;
                   const obj11 = { value, done: true };
                   return obj11;
                 }
               } else if (arg0 === 1) {
-                c15 = 3;
+                c16 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c15 = 3;
+                c16 = 3;
                 const obj = { value, done: true };
                 return obj;
               }
-              const obj12 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: closure_140_5, linkedUsers: linked_users, users: users2, ageGroup: age_group };
-              closure_141_1(closure_141_2[5]).dispatch(obj12);
-              let tmp66 = null != body.restricted_schedule;
-              if (tmp66) {
-                tmp66 = null != closure_140_5.teenId;
+              const obj13 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: closure_140_6, linkedUsers: linked_users, users: users2, ageGroup: age_group };
+              closure_141_1(closure_141_2[5]).dispatch(obj13);
+              let tmp67 = null != body.restricted_schedule;
+              if (tmp67) {
+                tmp67 = null != closure_140_6.teenId;
               }
-              if (tmp66) {
-                const obj13 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_140_5.teenId, restrictedSchedule: body.restricted_schedule };
-                closure_141_1(closure_141_2[5]).dispatch(obj13);
+              if (tmp67) {
+                const obj14 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_140_6.teenId, restrictedSchedule: body.restricted_schedule };
+                closure_141_1(closure_141_2[5]).dispatch(obj14);
                 const obj6 = closure_141_1(closure_141_2[5]);
               }
-              c15 = 3;
-              const obj14 = { value: closure_140_5, done: true };
-              return obj14;
+              c16 = 3;
+              const obj15 = { value: closure_140_6, done: true };
+              return obj15;
             }
-            let tmp52 = null != closure_140_5.gifts;
-            if (tmp52) {
-              tmp52 = closure_140_5.gifts.length > 0;
+            let tmp54 = null != closure_140_6.gifts;
+            if (tmp54) {
+              tmp54 = closure_140_6.gifts.length > 0;
             }
-            if (tmp52) {
-              c14 = 3;
-              c15 = 1;
-              const obj16 = { value: closure_141_10(closure_140_5.gifts), done: false };
-              return obj16;
+            if (tmp54) {
+              c15 = 4;
+              c16 = 1;
+              const obj17 = { value: closure_141_10(closure_140_6.gifts), done: false };
+              return obj17;
             }
           }
-        } catch (tmp85) {
-          c15 = tmp;
-          throw tmp85;
+        } catch (tmp90) {
+          if (tmp4 === c14) {
+            c16 = tmp2;
+            throw tmp90;
+          } else {
+            c15 = tmp;
+          }
         }
       }
     })();
@@ -666,56 +680,67 @@ export default {
   fetchTeenActivity(arg0) {
     closure_0 = arg0;
     return (async () => {
-      if (c11 === 2) {
-        c11 = 3;
+      if (c13 === 2) {
+        c13 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
-          c11 = 2;
-          if (0 === v3) {
+          c13 = 2;
+          if (0 === c12) {
             if (arg0 === 1) {
-              c11 = 3;
+              c13 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c11 = 3;
+              c13 = 3;
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              closure_9 = tmp5;
+              closure_9 = tmp3;
+              closure_8 = tmp7;
+              closure_136_0 = undefined;
               let body;
               let teen_audit_log;
-              closure_136_2 = undefined;
+              closure_136_3 = undefined;
               topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+              c11 = 1;
               const result = gifts.FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities);
               const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
               const obj6 = { url: result, rejectWithError: null };
-              const obj15 = topGuildActivities(totalSpendAmount[5]);
+              const obj16 = topGuildActivities(totalSpendAmount[5]);
               obj6.rejectWithError = topUserActivities(totalSpendAmount[6]).rejectWithMigratedError();
-              v3 = 1;
-              c11 = 1;
+              c12 = 2;
+              c13 = 1;
               const obj7 = { value: HTTP.get(obj6), done: false };
               return obj7;
             }
+          } else if (1 === tmp7) {
+            c11 = 0;
+            closure_136_4 = tmp69;
+            topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_FAILURE" });
+            throw closure_136_4;
           } else {
-            if (1 === tmp5) {
+            if (2 === tmp7) {
               if (arg0 === 1) {
-                c11 = 3;
+                c13 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c11 = 3;
+                c11 = 0;
+                c13 = 3;
                 const obj8 = { value, done: true };
                 return obj8;
               } else {
-                body = value.body;
+                closure_136_0 = value;
+                c11 = 0;
+                body = closure_136_0.body;
                 teen_audit_log = body.teen_audit_log;
                 const obj9 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, totals: teen_audit_log.totals, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
                 const top_user_activities = teen_audit_log.top_user_activities;
@@ -784,61 +809,65 @@ export default {
                   gifts = [];
                 }
                 obj9.gifts = gifts;
-                closure_136_2 = obj9;
-                invoices = closure_136_2.invoices;
+                closure_136_3 = obj9;
+                invoices = closure_136_3.invoices;
                 if (invoices) {
-                  invoices = closure_136_2.invoices.length > 0;
+                  invoices = closure_136_3.invoices.length > 0;
                 }
                 if (invoices) {
-                  v3 = 2;
-                  c11 = 1;
-                  const obj10 = { value: tmp2(closure_136_2.invoices), done: false };
+                  c12 = 3;
+                  c13 = 1;
+                  const obj10 = { value: closure_8(closure_136_3.invoices), done: false };
                   return obj10;
                 }
               }
             } else {
-              if (2 === tmp5) {
+              if (3 === tmp7) {
                 if (arg0 === 1) {
-                  c11 = 3;
+                  c13 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c11 = 3;
-                  const obj11 = { value, done: true };
-                  return obj11;
+                  c13 = 3;
+                  const obj12 = { value, done: true };
+                  return obj12;
                 }
               } else if (arg0 === 1) {
-                c11 = 3;
+                c13 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c11 = 3;
+                c13 = 3;
                 const obj = { value, done: true };
                 return obj;
               }
-              const obj12 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: closure_136_2 };
-              topGuildActivities(totalSpendAmount[5]).dispatch(obj12);
+              const obj13 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: closure_136_3 };
+              topGuildActivities(totalSpendAmount[5]).dispatch(obj13);
               if (null != body.restricted_schedule) {
-                const obj13 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_137_0, restrictedSchedule: body.restricted_schedule };
-                topGuildActivities(totalSpendAmount[5]).dispatch(obj13);
+                const obj14 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_137_0, restrictedSchedule: body.restricted_schedule };
+                topGuildActivities(totalSpendAmount[5]).dispatch(obj14);
                 const obj5 = topGuildActivities(totalSpendAmount[5]);
               }
-              c11 = 3;
-              const obj14 = { value: closure_136_2, done: true };
-              return obj14;
+              c13 = 3;
+              const obj15 = { value: closure_136_3, done: true };
+              return obj15;
             }
-            gifts = closure_136_2.gifts;
+            gifts = closure_136_3.gifts;
             if (gifts) {
-              gifts = closure_136_2.gifts.length > 0;
+              gifts = closure_136_3.gifts.length > 0;
             }
             if (gifts) {
-              v3 = 3;
-              c11 = 1;
-              const obj16 = { value: v3(closure_136_2.gifts), done: false };
-              return obj16;
+              c12 = 4;
+              c13 = 1;
+              const obj17 = { value: tmp69(closure_136_3.gifts), done: false };
+              return obj17;
             }
           }
-        } catch (tmp60) {
-          c11 = tmp;
-          throw tmp60;
+        } catch (tmp69) {
+          if (tmp4 === c11) {
+            c13 = tmp2;
+            throw tmp69;
+          } else {
+            c12 = tmp;
+          }
         }
       }
     })();
@@ -936,7 +965,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -951,13 +980,13 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(4838).getProtoFieldClass(tmp5(1208).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(4839).getProtoFieldClass(tmp5(1208).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(4838);
+              const tmp33Result = tmp5(4839);
               const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp5(1208).PreloadedUserSettings, tmp2);
               if (null != modifiedProto) {
                 const HTTP = tmp5(1294).HTTP;
@@ -973,7 +1002,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(4838);
+              const obj12 = tmp5(4839);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -1005,7 +1034,7 @@ export default {
     });
   }
 };
-export const updateLinkForUserId = function updateLinkForUserId() {
+export function updateLinkForUserId() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -1014,8 +1043,8 @@ export const updateLinkForUserId = function updateLinkForUserId() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeLinkForUserId = function removeLinkForUserId() {
+}
+export function removeLinkForUserId() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -1024,8 +1053,8 @@ export const removeLinkForUserId = function removeLinkForUserId() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getLinkCodeForCurrentUser = function getLinkCodeForCurrentUser() {
+}
+export function getLinkCodeForCurrentUser() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -1034,8 +1063,8 @@ export const getLinkCodeForCurrentUser = function getLinkCodeForCurrentUser() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const shareIarWithParents = function shareIarWithParents() {
+}
+export function shareIarWithParents() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -1044,4 +1073,4 @@ export const shareIarWithParents = function shareIarWithParents() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

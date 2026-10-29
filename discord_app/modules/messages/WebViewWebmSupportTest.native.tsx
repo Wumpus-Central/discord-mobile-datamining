@@ -1,14 +1,14 @@
-// === Module 6036: WebViewWebmSupportTest ===
+// === Module 6040: WebViewWebmSupportTest ===
 
-// Module 6036 (WebViewWebmSupportTest)
+// Module 6040 (WebViewWebmSupportTest)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
 import size from "module_2" /* 2 */;
 
 const ARM64_ = "ARM64_";
 const result = size.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 
-export const isIOSWithWebM = function isIOSWithWebM() {
+export function isIOSWithWebM() {
   if (obj.isIOS()) {
     const str = DeviceUtils.getSocName();
     let tmp4 = null == str;
@@ -41,4 +41,4 @@ export const isIOSWithWebM = function isIOSWithWebM() {
     return false;
   }
   obj = PlatformUtils;
-};
+}

@@ -1,33 +1,33 @@
-// === Module 18738: ConjureAppPictureInPicture ===
+// === Module 18972: ConjureAppPictureInPicture ===
 
-// Module 18738 (ConjureAppPictureInPicture)
+// Module 18972 (ConjureAppPictureInPicture)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import timing from "timing" /* 5242 */;
-import spring from "spring" /* 5283 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import GuildIconDefault from "GuildIcon" /* 6919 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8609 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9300 */;
-import VoiceXIcon from "VoiceXIcon" /* 11664 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18327 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 18736 */;
-import conjureFrameSound from "conjureFrameSound" /* 18739 */;
-import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions" /* 18740 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import timing from "timing" /* 5243 */;
+import spring from "spring" /* 5284 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import GuildIconDefault from "GuildIcon" /* 6943 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8631 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9304 */;
+import VoiceXIcon from "VoiceXIcon" /* 11718 */;
+import conjureFrameSound from "conjureFrameSound" /* 14469 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18561 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 18970 */;
+import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions" /* 18973 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6810 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import FramesStore from "FramesStore" /* 6833 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1084).ThemeTypes;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(10940).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(10975).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let DeviceUtils = fn(4961);
+let DeviceUtils = fn(4962);
 DeviceUtils = DeviceUtils.getRamSize();
 if (DeviceUtils == null) {
   DeviceUtils = Infinity;
@@ -38,8 +38,8 @@ let c14 = 1.05;
 let c15 = 0.4;
 let closure_16 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: true };
 let closure_17 = { mass: 0.4, damping: 22, stiffness: 220 };
-let presentation = { layoutMode: FrameLayoutModes.PIP, portraitSafeAreasConfig: fn(18650).DEFAULT_PORTRAIT_LETTERBOX_CONFIG };
-const createStyles = fn(5004);
+let presentation = { layoutMode: FrameLayoutModes.PIP, portraitSafeAreasConfig: fn(18884).DEFAULT_PORTRAIT_LETTERBOX_CONFIG };
+const createStyles = fn(5005);
 let obj = { window: null, mask: null, card: null, soundBadge: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -104,7 +104,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Static
           return closure_6.getGuild(closure_0);
         }
       }
-      const obj2 = { guild: stateFromStores, size: tmp(6919).GuildIconSizes.NORMAL };
+      const obj2 = { guild: stateFromStores, size: tmp(6943).GuildIconSizes.NORMAL };
       const tmp14 = closure_10(GuildIconDefault, obj2);
     }
     cResult[6] = stateFromStores;
@@ -123,7 +123,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Static
       }
     }
     const obj3 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 2, children: appName };
-    const tmp18 = closure_10(tmp(5270).Text, obj3);
+    const tmp18 = closure_10(tmp(5271).Text, obj3);
     cResult[8] = appName;
     cResult[9] = tmp18;
   } else {
@@ -160,7 +160,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Static
   const obj2 = { style: tmp.card, children: null };
   let tmp9 = null;
   if (null != stateFromStores) {
-    const obj3 = { guild: stateFromStores, size: tmp5(6919).GuildIconSizes.NORMAL };
+    const obj3 = { guild: stateFromStores, size: tmp5(6943).GuildIconSizes.NORMAL };
     tmp9 = closure_10(GuildIconDefault, obj3);
     const tmp2Result = GuildIconDefault;
   }

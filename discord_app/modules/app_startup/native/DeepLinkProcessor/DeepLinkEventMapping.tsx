@@ -1,12 +1,12 @@
-// === Module 19768: DeepLinkEventMapping ===
+// === Module 19990: DeepLinkEventMapping ===
 
-// Module 19768 (DeepLinkEventMapping)
-import DeepLinkTypes from "DeepLinkTypes" /* 19765 */;
+// Module 19990 (DeepLinkEventMapping)
+import DeepLinkTypes from "DeepLinkTypes" /* 19987 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_startup/native/DeepLinkProcessor/DeepLinkEventMapping.tsx");
 
-export const mapDeepLinkEvent = function mapDeepLinkEvent(source, arg1, arg2) {
+export function mapDeepLinkEvent(source, arg1, arg2) {
   let tmp = arg1;
   if (!arg1) {
     tmp = "appsflyer" === source.source && source.isColdStart;
@@ -25,4 +25,4 @@ export const mapDeepLinkEvent = function mapDeepLinkEvent(source, arg1, arg2) {
     obj.isColdStart = tmp;
     return obj;
   }
-};
+}

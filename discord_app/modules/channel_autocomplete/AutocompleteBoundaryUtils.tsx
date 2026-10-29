@@ -1,8 +1,8 @@
-// === Module 7791: AutocompleteBoundaryUtils ===
+// === Module 7813: AutocompleteBoundaryUtils ===
 
-// Module 7791 (AutocompleteBoundaryUtils)
+// Module 7813 (AutocompleteBoundaryUtils)
 import Constants from "Constants" /* 1084 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6020 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6024 */;
 import size from "module_2" /* 2 */;
 
 function isAutocompleteSeparatingBoundary(c22, selectionStart) {
@@ -49,8 +49,8 @@ export const AUTOCOMPLETE_BOUNDARY_CHARACTERS = items1;
 export const AUTOCOMPLETE_BOUNDARY_CHARACTERS_SET = set;
 export { isAutocompleteSeparatingBoundary };
 export { getAutocompleteToken };
-export const boundAutocompleteWord = function boundAutocompleteWord(c22, arr) {
+export function boundAutocompleteWord(c22, arr) {
   arr = getAutocompleteToken(c22);
   const diff = c22.length - arr.length;
   return { word: arr, fullWord: arr.slice(diff), didTrimPrefix: diff > 0 };
-};
+}

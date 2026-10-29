@@ -1,11 +1,11 @@
-// === Module 13410: components/ChannelBadge ===
+// === Module 13643: components/ChannelBadge ===
 
-// Module 13410 (components/ChannelBadge)
+// Module 13643 (components/ChannelBadge)
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import NumberUtils from "NumberUtils" /* 1900 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import renderChannelBadge from "renderChannelBadge" /* 13409 */;
+import NumberUtils from "NumberUtils" /* 1901 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import renderChannelBadge from "renderChannelBadge" /* 13642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelBadge.tsx");
 
-export const renderChannelBadge = function renderChannelBadge(newChannel) {
+export function renderChannelBadge(newChannel) {
   let flag = newChannel.newChannel;
   if (flag === undefined) {
     flag = false;
@@ -57,4 +57,4 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
       }
     }
   }
-};
+}

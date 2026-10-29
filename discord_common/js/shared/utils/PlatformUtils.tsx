@@ -10,22 +10,22 @@ const result = size.fileFinishedImporting("../discord_common/js/shared/utils/Pla
 
 export { PlatformTypes };
 export const isPlatformEmbedded = true;
-export const isWindows = function isWindows() {
+export function isWindows() {
   return /^win/.test(android);
-};
+}
 export function isMac() {
   return false;
 }
 export function isLinux() {
   return false;
 }
-export const isDesktop = function isDesktop() {
+export function isDesktop() {
   return /^win/.test(android) || false;
-};
+}
 export function isWeb() {
   return false;
 }
-export const isAndroidChrome = function isAndroidChrome() {
+export function isAndroidChrome() {
   let tmp = null != navigator.userAgent;
   if (tmp) {
     const _navigator = navigator;
@@ -34,42 +34,42 @@ export const isAndroidChrome = function isAndroidChrome() {
     const str2 = navigator.userAgent.toLowerCase();
   }
   return tmp;
-};
-export const isAndroidWeb = function isAndroidWeb() {
+}
+export function isAndroidWeb() {
   let match;
   if (navigator.userAgent != null) {
     match = str.match(/android/i);
   }
   return null != match;
-};
-export const isMacWeb = function isMacWeb() {
+}
+export function isMacWeb() {
   let match;
   if (navigator.userAgent != null) {
     match = str.match(/Macintosh/i);
   }
   return null != match;
-};
+}
 export function isAndroid() {
   return true;
 }
 export function isIOS() {
   return false;
 }
-export const isOculusWeb = function isOculusWeb() {
+export function isOculusWeb() {
   let match;
   if (navigator.userAgent != null) {
     match = str.match(/OculusBrowser/i);
   }
   return null != match;
-};
-export const platformPrefersDeepLink = function platformPrefersDeepLink() {
+}
+export function platformPrefersDeepLink() {
   let match;
   if (navigator.userAgent != null) {
     match = str.match(/OculusBrowser/i);
   }
   return null != match;
-};
-export const platformSupportsActivityJoin = function platformSupportsActivityJoin() {
+}
+export function platformSupportsActivityJoin() {
   let tmp = /^win/.test(android) || false;
   if (!tmp) {
     const _navigator = navigator;
@@ -83,11 +83,11 @@ export const platformSupportsActivityJoin = function platformSupportsActivityJoi
     tmp = c1;
   }
   return tmp;
-};
-export const getPlatform = function getPlatform() {
+}
+export function getPlatform() {
   const obj = /^win/;
   return obj.test(android) ? obj.WINDOWS : obj.WEB;
-};
+}
 export function getPlatformName() {
   return android;
 }
@@ -99,12 +99,12 @@ export function getNativePlatform() {
   }
   return android;
 }
-export const getOS = function getOS() {
+export function getOS() {
   return "android";
-};
-export const getNewUpdaterPlatformName = function getNewUpdaterPlatformName() {
+}
+export function getNewUpdaterPlatformName() {
   if (obj.test(android)) {
     return "win";
   }
   obj = /^win/;
-};
+}

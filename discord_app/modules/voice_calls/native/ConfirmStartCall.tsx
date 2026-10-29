@@ -1,10 +1,10 @@
-// === Module 14250: ConfirmStartCall ===
+// === Module 14485: ConfirmStartCall ===
 
-// Module 14250 (ConfirmStartCall)
+// Module 14485 (ConfirmStartCall)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import useAlertStore from "useAlertStore" /* 5946 */;
-import AlertModal from "AlertModal" /* 5950 */;
+import useAlertStore from "useAlertStore" /* 5948 */;
+import AlertModal from "AlertModal" /* 5952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,6 +90,6 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confirm
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
 
-export const confirmStartCall = function confirmStartCall(fn) {
+export function confirmStartCall(fn) {
   useAlertStore.openAlert("start-voice-call", React2(closure_4, { onConfirm: fn }));
-};
+}

@@ -1,17 +1,17 @@
-// === Module 18743: ActivityPanelUtils ===
+// === Module 18976: ActivityPanelUtils ===
 
-// Module 18743 (ActivityPanelUtils)
+// Module 18976 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1105 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4925 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5665 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5667 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
 
 require = fn;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivityPanelFullscreen() {
@@ -78,14 +78,14 @@ function isConnectedToActivityInText() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
-export const isActivityPanelFullscreen = function isActivityPanelFullscreen() {
+export function isActivityPanelFullscreen() {
   const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
   let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === ActivityPanelModes.PANEL;
   if (tmp3) {
     tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
   }
   return tmp3;
-};
+}
 export { isConnectedToActivityInText };
 export const useIsActivityPanelFullscreen = tmp2;
 export const useIsConnectedToActivityInText = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConnectedToActivityInText() {

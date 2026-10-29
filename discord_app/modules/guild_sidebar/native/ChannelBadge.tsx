@@ -1,19 +1,19 @@
-// === Module 17923: ChannelBadge ===
+// === Module 18161: ChannelBadge ===
 
-// Module 17923 (ChannelBadge)
+// Module 18161 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import NumberUtils from "NumberUtils" /* 1900 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 12595 */;
-import NewBadgeDefault from "NewBadge" /* 13414 */;
+import NumberUtils from "NumberUtils" /* 1901 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 12812 */;
+import NewBadgeDefault from "NewBadge" /* 13647 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

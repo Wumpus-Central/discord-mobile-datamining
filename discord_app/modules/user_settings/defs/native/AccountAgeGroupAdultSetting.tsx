@@ -1,13 +1,13 @@
-// === Module 16284: AccountAgeGroupAdultSetting ===
+// === Module 16522: AccountAgeGroupAdultSetting ===
 
-// Module 16284 (AccountAgeGroupAdultSetting)
+// Module 16522 (AccountAgeGroupAdultSetting)
 import util from "util" /* 1125 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import SettingsConstants from "SettingsConstants" /* 8365 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16240 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import SettingsConstants from "SettingsConstants" /* 8387 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16478 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11248 */;
+import SettingBuilders from "SettingBuilders" /* 11302 */;
 import size from "module_2" /* 2 */;
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupAdultSettingPredicate() {

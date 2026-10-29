@@ -1,17 +1,17 @@
-// === Module 17613: VEVOOPropBlurAmount ===
+// === Module 17851: VEVOOPropBlurAmount ===
 
-// Module 17613 (VEVOOPropBlurAmount)
+// Module 17851 (VEVOOPropBlurAmount)
 import c from "c" /* 576 */;
-import FormSwitch from "FormSwitch" /* 7332 */;
-import Form from "Form" /* 8985 */;
+import FormSwitch from "FormSwitch" /* 7356 */;
+import Form from "Form" /* 8988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VEVOOStore = fn(5623);
+const VEVOOStore = fn(5624);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -208,7 +208,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[17] = tmp29;
     }
     const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: O, accessibilityLabel: "Blur Amount" };
-    const tmp25 = jsx(first1(17614), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: O, accessibilityLabel: "Blur Amount" });
+    const tmp25 = jsx(first1(17852), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: O, accessibilityLabel: "Blur Amount" });
     cResult[9] = !tmp7;
     cResult[10] = !tmp7;
     cResult[11] = tmp25;
@@ -270,7 +270,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(17614), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
+  obj.subLabel = jsx(first(17852), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

@@ -1,11 +1,11 @@
-// === Module 1411: PremiumStateUtils ===
+// === Module 1412: PremiumStateUtils ===
 
-// Module 1411 (PremiumStateUtils)
+// Module 1412 (PremiumStateUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
 
-export const parseServerPremiumState = function parseServerPremiumState(premium_state) {
+export function parseServerPremiumState(premium_state) {
   let tmp = null;
   if (null != premium_state) {
     const obj = { premiumSubscriptionType: null, premiumSource: null, premiumSubscriptionGroupRole: null };
@@ -13,4 +13,4 @@ export const parseServerPremiumState = function parseServerPremiumState(premium_
     tmp = obj;
   }
   return tmp;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 14444: CustomActivityLinkUtils ===
+// === Module 14678: CustomActivityLinkUtils ===
 
-// Module 14444 (CustomActivityLinkUtils)
+// Module 14678 (CustomActivityLinkUtils)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14447 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14681 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14445 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14679 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -28,7 +28,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -117,7 +117,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -158,7 +158,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "paths" }, done: true };
+        const obj9 = { value: { customId: "r" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;
@@ -222,7 +222,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");
 
 export { fetchCustomActivityLink };
-export const getCustomActivityLinkParams = function getCustomActivityLinkParams() {
+export function getCustomActivityLinkParams() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -231,9 +231,9 @@ export const getCustomActivityLinkParams = function getCustomActivityLinkParams(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { loadCustomActivityLink };
-export const getOrFetchCustomActivityLink = function getOrFetchCustomActivityLink(id, linkId) {
+export function getOrFetchCustomActivityLink(id, linkId) {
   let one = CustomActivityLinksStore.getOne(id, linkId);
   if (null == one) {
     one = null;
@@ -244,4 +244,4 @@ export const getOrFetchCustomActivityLink = function getOrFetchCustomActivityLin
     }
   }
   return one;
-};
+}

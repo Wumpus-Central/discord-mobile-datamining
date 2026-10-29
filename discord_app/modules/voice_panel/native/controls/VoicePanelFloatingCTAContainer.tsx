@@ -1,28 +1,28 @@
-// === Module 18904: VoicePanelFloatingCTAContainer ===
+// === Module 19137: VoicePanelFloatingCTAContainer ===
 
-// Module 18904 (VoicePanelFloatingCTAContainer)
+// Module 19137 (VoicePanelFloatingCTAContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5070 */;
-import spring from "spring" /* 5283 */;
-import Stack_Stack from "Stack/Stack" /* 6013 */;
-import RowButton from "RowButton" /* 8987 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12003 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12131 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13397 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18798 */;
+import native from "native" /* 5071 */;
+import spring from "spring" /* 5284 */;
+import Stack_Stack from "Stack/Stack" /* 6015 */;
+import RowButton from "RowButton" /* 8990 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12057 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12185 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13630 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(10939).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(10942).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(10974).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(10977).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1095).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: null };
 const rect = { zIndex: 1, position: "absolute", bottom: 0, left: "50%", overflow: "hidden", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = rect;
@@ -414,10 +414,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
 
 export default tmp2;
-export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight() {
+export function getFloatingCTATotalViewHeight() {
   return MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
-};
-export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(key, arg1, state, cleanUp) {
+}
+export function renderVoicePanelFloatingCTA(key, arg1, state, cleanUp) {
   const obj = { theme: ThemeTypes.DARK, children: null };
   const obj2 = {};
   const merged = Object.assign(arg1);
@@ -425,4 +425,4 @@ export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(
   obj2.cleanUp = cleanUp;
   obj.children = <closure_16 />;
   return jsx(native.ThemeContextProvider, { theme: ThemeTypes.DARK, children: null }, key);
-};
+}

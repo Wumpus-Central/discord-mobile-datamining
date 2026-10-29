@@ -1,36 +1,36 @@
-// === Module 8337: ApplicationCommandActionCreators ===
+// === Module 8359: ApplicationCommandActionCreators ===
 
-// Module 8337 (ApplicationCommandActionCreators)
+// Module 8359 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import InteractionTypes from "InteractionTypes" /* 6054 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7665 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import InteractionTypes from "InteractionTypes" /* 6058 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8338 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8360 */;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");
 
-export const setActiveCommand = function setActiveCommand(command) {
+export function setActiveCommand(command) {
   command = command.command;
   ({ channelId, section, location: _location, initialValues, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin } = command);
   if (null != command) {
     _modDef38(command.inputType !== ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
   }
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", channelId, command, section, initialValues, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin });
-};
-export const setPreferredCommandId = function setPreferredCommandId(channelId, commandId) {
+}
+export function setPreferredCommandId(channelId, commandId) {
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId, commandId });
-};
-export const updateOptionStates = function updateOptionStates(id, changedOptionStates) {
+}
+export function updateOptionStates(id, changedOptionStates) {
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: id, changedOptionStates });
-};
-export const updateOptionValidationStates = function updateOptionValidationStates(channelId, arg1) {
+}
+export function updateOptionValidationStates(channelId, arg1) {
   const entries = Object.entries(arg1);
   const fromEntriesResult = Object.fromEntries(entries.map((item) => {
     [tmp, tmp2] = item;
@@ -38,17 +38,17 @@ export const updateOptionValidationStates = function updateOptionValidationState
     return items;
   }));
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId, changedOptionStates: fromEntriesResult });
-};
-export const updateChannelState = function updateChannelState(arg0) {
+}
+export function updateChannelState(arg0) {
   ({ channelId, command, section, preferredCommandId, location: _location, changedOptionStates } = arg0);
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_CHANNEL_STATE", channelId, command, section, preferredCommandId, location: _location, changedOptionStates });
-};
-export const updateApplicationGuildCommandPermissions = function updateApplicationGuildCommandPermissions(arg0, arg1, arg2, permissions) {
+}
+export function updateApplicationGuildCommandPermissions(arg0, arg1, arg2, permissions) {
   const HTTP = HTTPUtils.HTTP;
   const request = { body: { permissions }, url: Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2), rejectWithError: false };
   return HTTP.put(request);
-};
-export const performAutocomplete = function performAutocomplete(applicationId, autocomplete, data) {
+}
+export function performAutocomplete(applicationId, autocomplete, data) {
   _modDef38(null != autocomplete.autocomplete, "Missing autocomplete context");
   ({ query, name } = autocomplete.autocomplete);
   let str = "";
@@ -102,24 +102,24 @@ export const performAutocomplete = function performAutocomplete(applicationId, a
     }
     const tmp7Result = DispatcherDefault;
   }
-};
-export const fetchCommand = function fetchCommand(guildId, channelId, commandId) {
+}
+export function fetchCommand(guildId, channelId, commandId) {
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_FETCH", channelId, commandId, guildId });
-};
-export const fetchCommands = function fetchCommands(guildId, channelId, commandIds) {
+}
+export function fetchCommands(guildId, channelId, commandIds) {
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMANDS_FETCH", channelId, commandIds, guildId });
-};
-export const fetchCommandsForApplication = function fetchCommandsForApplication(arg0) {
+}
+export function fetchCommandsForApplication(arg0) {
   ({ guildId, channelId, applicationId } = arg0);
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMANDS_FETCH_FOR_APPLICATION", channelId, guildId, applicationId });
-};
-export const updateRegistry = function updateRegistry(commands, applications, channelId) {
+}
+export function updateRegistry(commands, applications, channelId) {
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_REGISTRY_UPDATE", applications, commands, channelId });
-};
-export const setAppLauncherActiveCommand = function setAppLauncherActiveCommand(id, command) {
+}
+export function setAppLauncherActiveCommand(id, command) {
   if (null != command) {
     _modDef38(command.inputType !== ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
   }
   DispatcherDefault.dispatch({ type: "APP_LAUNCHER_SET_ACTIVE_COMMAND", channelId: id, command });
   const obj2 = { type: "APP_LAUNCHER_SET_ACTIVE_COMMAND", channelId: id, command };
-};
+}

@@ -1,8 +1,8 @@
-// === Module 19334: AutomodKeywordPresetInfo ===
+// === Module 19567: AutomodKeywordPresetInfo ===
 
-// Module 19334 (AutomodKeywordPresetInfo)
+// Module 19567 (AutomodKeywordPresetInfo)
 import util from "util" /* 1125 */;
-import Constants from "Constants" /* 12870 */;
+import Constants from "Constants" /* 13091 */;
 import size from "module_2" /* 2 */;
 
 const KeywordPreset = Constants.KeywordPreset;
@@ -11,7 +11,7 @@ const items = [, , ];
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodKeywordPresetInfo.tsx");
 
 export const KEYWORD_PRESETS = items;
-export const getKeywordPresetInfo = function getKeywordPresetInfo(item) {
+export function getKeywordPresetInfo(item) {
   if (KeywordPreset.PROFANITY === item) {
     const obj2 = { headerText: null, subtitleText: null };
     const intl5 = util.intl;
@@ -36,4 +36,4 @@ export const getKeywordPresetInfo = function getKeywordPresetInfo(item) {
   } else {
     return { headerText: "Error", subtitleText: "Unrecognized list" };
   }
-};
+}

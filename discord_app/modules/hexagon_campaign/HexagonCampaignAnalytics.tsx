@@ -1,17 +1,17 @@
-// === Module 16121: HexagonCampaignAnalytics ===
+// === Module 16358: HexagonCampaignAnalytics ===
 
-// Module 16121 (HexagonCampaignAnalytics)
+// Module 16358 (HexagonCampaignAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7785 */;
-import AnalyticsActions from "AnalyticsActions" /* 7827 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7807 */;
+import AnalyticsActions from "AnalyticsActions" /* 7850 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7859 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({ HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4, HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty, HEXAGON_SPECIAL_EVENT_ID: metroRequire } = HexagonCampaignConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
@@ -97,7 +97,7 @@ export const useTrackHexagonCampaignContentViewed = ReactCompilerGating.isReactC
     }
   }, items);
 });
-export const trackHexagonCampaignPerkAction = function trackHexagonCampaignPerkAction(contentSurface) {
+export function trackHexagonCampaignPerkAction(contentSurface) {
   ({ perks, content, sourceQuestContent } = contentSurface);
   if (sourceQuestContent === undefined) {
     sourceQuestContent = content;
@@ -111,4 +111,4 @@ export const trackHexagonCampaignPerkAction = function trackHexagonCampaignPerkA
   obj2.content_surface = contentSurface.contentSurface;
   obj2.ad_content_id = ad_content_id;
   obj.track(AnalyticEvents.QUEST_PROMOTIONAL_EVENT_USER_ACTION, obj2);
-};
+}

@@ -1,17 +1,17 @@
-// === Module 7665: ApplicationCommandUtils ===
+// === Module 7688: ApplicationCommandUtils ===
 
-// Module 7665 (ApplicationCommandUtils)
+// Module 7688 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1095 */;
-import Server from "Server" /* 1997 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import DraftStore from "DraftStore" /* 7666 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7668 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6019 */;
+import Server from "Server" /* 1998 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import DraftStore from "DraftStore" /* 7689 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7691 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6023 */;
 import Constants from "Constants" /* 1084 */;
 import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 import size from "module_2" /* 2 */;
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(() => { ... });
+                      mapped = choices.map(/* F147897 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(() => { ... });
+                      mapped1 = options.map(/* F101015 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -433,14 +433,14 @@ let deserializeResult = BigFlagUtils.deserialize(0);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUtils.tsx");
 
 export { buildCommand };
-export const buildApplicationCommands = function buildApplicationCommands(cResult, useKeyedPermissions) {
-  return _modDef12.flatMap(cResult, (id) => {
+export function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
+  return _modDef12.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
     const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
     return buildSubCommands(obj);
   });
-};
-export const applicationPermissionsList = function applicationPermissionsList(arr) {
+}
+export function applicationPermissionsList(arr) {
   let reduced;
   if (arr != null) {
     reduced = arr.reduce((arr, applicationCommandPermissions) => {
@@ -453,11 +453,11 @@ export const applicationPermissionsList = function applicationPermissionsList(ar
     }, []);
   }
   return reduced;
-};
-export const isSnowflake = function isSnowflake(text) {
+}
+export function isSnowflake(text) {
   return regex.test(text.trim());
-};
-export const getMatchingGroupCommands = function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
+}
+export function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
   regex = regExp;
   closure_1 = arg2;
   const items = [];
@@ -475,8 +475,8 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
     }
   });
   return items.slice(0, arg3);
-};
-export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
+}
+export function getApplicationCommandOptionQueryOptions(option) {
   let tmp3 = option.type === Server.ApplicationCommandOptionType.USER;
   if (!tmp3) {
     tmp3 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
@@ -510,12 +510,12 @@ export const getApplicationCommandOptionQueryOptions = function getApplicationCo
   obj.canMentionNonMentionableRoles = tmp4;
   obj.canMentionOtherGlobals = tmp5;
   return obj;
-};
-export const allChannelsSentinel = function allChannelsSentinel(contextGuildId) {
+}
+export function allChannelsSentinel(contextGuildId) {
   const obj = IntegerDefault(contextGuildId);
   return IntegerDefault(contextGuildId).subtract(1).toString();
-};
-export const canUseApplicationCommands = function canUseApplicationCommands(can, arg1, isMultiUserDM) {
+}
+export function canUseApplicationCommands(can, arg1, isMultiUserDM) {
   let tmp = !arg1;
   if (!arg1) {
     const isMultiUserDMResult = isMultiUserDM.isMultiUserDM();
@@ -533,9 +533,9 @@ export const canUseApplicationCommands = function canUseApplicationCommands(can,
     }
   }
   return tmp;
-};
+}
 export const DISABLED_BY_DEFAULT_PERMISSION_FLAG = deserializeResult;
-export const hasAccess = function hasAccess(arg0) {
+export function hasAccess(arg0) {
   ({ PermissionStore, guild, selfMember, commandLevelPermissions, defaultMemberPermissions } = arg0);
   if (guild.ownerId !== selfMember.userId) {
     if (!PermissionStore.can(Permissions.ADMINISTRATOR, guild)) {
@@ -568,15 +568,15 @@ export const hasAccess = function hasAccess(arg0) {
     }
   }
   return true;
-};
-export const getCommandAttachmentDraftType = function getCommandAttachmentDraftType(arg0) {
+}
+export function getCommandAttachmentDraftType(arg0) {
   if (ApplicationCommandTypes.CommandOrigin.CHAT === arg0) {
     return DraftType.SlashCommand;
   } else {
     return DraftType.ApplicationLauncherCommand;
   }
-};
-export const getCommandTriggerSection = function getCommandTriggerSection(descriptor) {
+}
+export function getCommandTriggerSection(descriptor) {
   if (null != descriptor) {
     if (descriptor.id === constants.BUILT_IN) {
       let APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.BUILT_IN;
@@ -587,8 +587,8 @@ export const getCommandTriggerSection = function getCommandTriggerSection(descri
     }
     return APP;
   }
-};
-export const getApplicationCommandSection = function getApplicationCommandSection(application, arg1, arg2) {
+}
+export function getApplicationCommandSection(application, arg1, arg2) {
   let name = arg2;
   const obj = { type: ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION, id: application.id, name: null, icon: null, application: null, isUserApp: null };
   if (arg2 == null) {
@@ -613,8 +613,8 @@ export const getApplicationCommandSection = function getApplicationCommandSectio
   }
   obj.isUserApp = flag;
   return obj;
-};
-export const extractInteractionDataProps = function extractInteractionDataProps(parsed) {
+}
+export function extractInteractionDataProps(parsed) {
   ({ id, options } = parsed);
   let found;
   if (interactionOptions != null) {
@@ -637,8 +637,8 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
     interactionOptions = found1.options;
   }
   return { commandKey, interactionOptions };
-};
-export const trackCommandSelected = function trackCommandSelected(command) {
+}
+export function trackCommandSelected(command) {
   command = command.command;
   ({ location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source } = command);
   const rootCommand = command.rootCommand;
@@ -650,8 +650,8 @@ export const trackCommandSelected = function trackCommandSelected(command) {
     id = command.id;
   }
   AppAnalyticsUtils.trackWithMetadata(constants2.APPLICATION_COMMAND_SELECTED, { command_id: id, application_id: command.applicationId, location: _location, section: triggerSection, query_length: queryLength, command_text_length: command.displayName.length, section_name: sectionName, query, search_results_position: searchResultsPosition, source });
-};
-export const getInitialInteractionMetadata = function getInitialInteractionMetadata(interactionMetadata) {
+}
+export function getInitialInteractionMetadata(interactionMetadata) {
   interactionMetadata = interactionMetadata.interactionMetadata;
   let tmp = null;
   if (null != interactionMetadata) {
@@ -662,8 +662,8 @@ export const getInitialInteractionMetadata = function getInitialInteractionMetad
     tmp = triggering_interaction_metadata;
   }
   return tmp;
-};
-export const hasCommandIndexForApp = function hasCommandIndexForApp(id, guildState) {
+}
+export function hasCommandIndexForApp(id, guildState) {
   const result = guildState.result;
   let sections;
   if (result != null) {
@@ -674,4 +674,4 @@ export const hasCommandIndexForApp = function hasCommandIndexForApp(id, guildSta
     tmp2 = id in sections;
   }
   return tmp2;
-};
+}

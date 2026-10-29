@@ -1,7 +1,7 @@
-// === Module 19436: RoleIconUploadUtils ===
+// === Module 19669: RoleIconUploadUtils ===
 
-// Module 19436 (RoleIconUploadUtils)
-import AvatarUtils from "AvatarUtils" /* 1414 */;
+// Module 19669 (RoleIconUploadUtils)
+import AvatarUtils from "AvatarUtils" /* 1415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -28,7 +28,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/RoleIconUploadUtils.tsx");
 
 export const ROLE_ICON_MAX_FILE_SIZE = 256000;
-export const fetchCustomEmojiAsPngDataUri = function fetchCustomEmojiAsPngDataUri() {
+export function fetchCustomEmojiAsPngDataUri() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -37,4 +37,4 @@ export const fetchCustomEmojiAsPngDataUri = function fetchCustomEmojiAsPngDataUr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,12 +1,12 @@
-// === Module 16650: SameAsDeviceThemeUtils ===
+// === Module 16888: SameAsDeviceThemeUtils ===
 
-// Module 16650 (SameAsDeviceThemeUtils)
+// Module 16888 (SameAsDeviceThemeUtils)
 import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import shared from "shared" /* 5011 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5069 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5904 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
+import shared from "shared" /* 5012 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5032 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5070 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5906 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const ThemeConstants = fn(1207);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");
 
-export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(customUserThemeSettings) {
+export function enableSameAsDeviceTheme(customUserThemeSettings) {
   const result = UserSettingsActionCreatorsDefault.setShouldSyncAppearanceSettings(false);
   if (null == ThemeStore.getSyncedClientTheme(constants.LIGHT)) {
     if (null == ThemeStore.getSyncedClientTheme(constants.DARK)) {
@@ -53,8 +53,8 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(customUs
   }
   const result5 = ThemeActionCreators.setSameAsDeviceThemeEnabled(true);
   ThemeActionCreators.setUseSystemTheme(constants2.ON);
-};
-export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
+}
+export function disableSameAsDeviceTheme() {
   ThemeActionCreators.setUseSystemTheme(constants2.OFF);
   const result = ThemeActionCreators.setSameAsDeviceThemeEnabled(false);
-};
+}

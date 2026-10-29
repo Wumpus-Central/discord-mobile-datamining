@@ -1,15 +1,15 @@
-// === Module 15910: ICYMISessionStore ===
+// === Module 16146: ICYMISessionStore ===
 
-// Module 15910 (ICYMISessionStore)
+// Module 16146 (ICYMISessionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import v1 from "v1" /* 1278 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15911 */;
-import ExperimentStore from "ExperimentStore" /* 5226 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16147 */;
+import ExperimentStore from "ExperimentStore" /* 5227 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
-import LabFeatureStore from "LabFeatureStore" /* 8498 */;
+import LabFeatureStore from "LabFeatureStore" /* 8520 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ICYMIStore from "ICYMIStore" /* 8860 */;
+import ICYMIStore from "ICYMIStore" /* 8863 */;
 
 require = fn;
 let c7 = 300000;
@@ -591,7 +591,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMISessionStore.tsx");
 
 export default iCYMISessionStore;
-export const resetGlobalState = function resetGlobalState() {
+export function resetGlobalState() {
   if (null != _null) {
     const _clearTimeout = clearTimeout;
     clearTimeout(_null._timeout);
@@ -600,5 +600,5 @@ export const resetGlobalState = function resetGlobalState() {
   closure_9 = [];
   c10 = 0;
   map.clear();
-};
+}
 export { ICYMISession };

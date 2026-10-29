@@ -1,6 +1,6 @@
-// === Module 15219: GatewaySocketAnalytics ===
+// === Module 15454: GatewaySocketAnalytics ===
 
-// Module 15219 (GatewaySocketAnalytics)
+// Module 15454 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
@@ -59,7 +59,7 @@ let result = size.fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.
 export function reportDevtoolsEvent() {
 
 }
-export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics) {
+export function logReadyPayloadReceived(socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics) {
   const tmp = (function getReadyPayloadTraceAnalytics(data) {
     const obj = {};
     try {
@@ -153,8 +153,8 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
   const result = TTITrackerDefault.attachReadyPayloadProperties(obj4);
   const tmp6Result = TTITrackerDefault;
   AnalyticsUtilsDefault.track(constants.READY_PAYLOAD_RECEIVED, obj4, { logEventProperties: true });
-};
-export const getConnectionPath = function getConnectionPath(_trace) {
+}
+export function getConnectionPath(_trace) {
   try {
     _trace = _trace._trace;
     let first;
@@ -224,8 +224,8 @@ export const getConnectionPath = function getConnectionPath(_trace) {
     }
   } catch (err) {
   }
-};
-export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSizeAnalytics(data) {
+}
+export function getReadyPayloadByteSizeAnalytics(data) {
   if (Math.random() <= 0.01) {
     const _Date2 = Date;
     ({ guilds, merged_presences, merged_members, user_settings, user_settings_proto, experiments, guild_experiments } = data);
@@ -350,19 +350,19 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
     obj.size_metrics_duration_ms = Date.now() - timestamp;
     return obj;
   }
-};
-export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
+}
+export function logGatewayConnected(gatewayUrl) {
   ({ socket, now } = gatewayUrl);
   AnalyticsUtilsDefault.track(constants.GATEWAY_CONNECTED, { num_failed_connect_attempts: socket.failedConnectAttempts, gateway_url: gatewayUrl.gatewayUrl, is_reconnect: socket.hasConnectedOnce, is_fast_connect: socket.isFastConnect, duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime, duration_ms_since_connect_attempt_start: now - socket.connectionStartTime }, { logEventProperties: true });
-};
-export const createResumeAnalytics = function createResumeAnalytics(arg0) {
+}
+export function createResumeAnalytics(arg0) {
   let num = arg0;
   if (arg0 == null) {
     num = 0;
   }
   return { connectTime: num, numEvents: 0, largestWaitTime: 0, dispatchTime: 0, totalWaitTime: 0, initialWaitTime: 0, startTime: performance.now(), lastUpdateTime: performance.now() };
-};
-export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
+}
+export function logResumeAnalytics(resumeAnalytics) {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -389,4 +389,4 @@ export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
     obj.total_dispatch_time_ms = Math.floor(resumeAnalytics.dispatchTime);
     AnalyticsUtilsDefault.track(constants.CONNECTION_RESUMED, obj, { logEventProperties: true });
   }
-};
+}

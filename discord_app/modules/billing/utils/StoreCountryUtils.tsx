@@ -1,11 +1,11 @@
-// === Module 1413: StoreCountryUtils ===
+// === Module 1414: StoreCountryUtils ===
 
-// Module 1413 (StoreCountryUtils)
+// Module 1414 (StoreCountryUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
 
-export const parseStoreCountry = function parseStoreCountry(storeCountry) {
+export function parseStoreCountry(storeCountry) {
   let tmp = storeCountry;
   if (null != storeCountry) {
     const obj = { country: null, setAt: null, isLocked: null };
@@ -28,4 +28,4 @@ export const parseStoreCountry = function parseStoreCountry(storeCountry) {
     tmp = obj;
   }
   return tmp;
-};
+}

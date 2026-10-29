@@ -1,14 +1,14 @@
-// === Module 12773: useCanFulfillStreamRequest ===
+// === Module 12990: useCanFulfillStreamRequest ===
 
-// Module 12773 (useCanFulfillStreamRequest)
-import RunningGameStore from "RunningGameStore" /* 2018 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
+// Module 12990 (useCanFulfillStreamRequest)
+import RunningGameStore from "RunningGameStore" /* 2019 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 
 const require = globalThis.__r;
 
@@ -45,15 +45,15 @@ function canFulfillStreamRequest(channel_id) {
     const tmp19 = flag;
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(11629).getVideoPermission(channel);
+    const videoPermission = flag(11683).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    const obj8 = flag(11629);
+    const obj8 = flag(11683);
     dependencyMap = tmp19(1381).isAndroid() ? constants.ANDROID : constants.IOS;
     const tmp19Result = tmp19(1381);
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11389).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11443).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];

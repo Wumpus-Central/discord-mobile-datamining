@@ -1,17 +1,17 @@
-// === Module 7621: modules/Messages ===
+// === Module 7644: modules/Messages ===
 
-// Module 7621 (modules/Messages)
+// Module 7644 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4882 */;
-import _mod4883 from "module_4883" /* 4883 */;
-import requireSortedDescending from "requireSortedDescending" /* 6530 */;
-import isReadableChannel from "isReadableChannel" /* 7628 */;
-import KvMessage2 from "KvMessage" /* 7631 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4883 */;
+import _mod4884 from "module_4884" /* 4884 */;
+import requireSortedDescending from "requireSortedDescending" /* 6554 */;
+import isReadableChannel from "isReadableChannel" /* 7651 */;
+import KvMessage2 from "KvMessage" /* 7654 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 7622 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7645 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");
@@ -140,7 +140,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -282,13 +282,13 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod4883.ConflictOptions.Skip);
+  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod4884.ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod4883.ConflictOptions.Replace);
+  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod4884.ConflictOptions.Replace);
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
@@ -334,7 +334,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -429,6 +429,6 @@ let result = size.fileFinishedImporting("modules/app_database/modules/Messages.t
 
 export default obj2;
 export const ChannelHistory = prototype;
-export const isLikelyNotDelta = function isLikelyNotDelta(author) {
+export function isLikelyNotDelta(author) {
   return null != author.author && null != author.content && null != author.mentions && null != author.timestamp;
-};
+}

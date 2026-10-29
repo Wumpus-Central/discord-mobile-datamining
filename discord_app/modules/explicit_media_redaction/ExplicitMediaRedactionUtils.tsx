@@ -1,23 +1,23 @@
-// === Module 8623: ExplicitMediaRedactionUtils ===
+// === Module 8645: ExplicitMediaRedactionUtils ===
 
-// Module 8623 (ExplicitMediaRedactionUtils)
+// Module 8645 (ExplicitMediaRedactionUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6503 */;
-import MetricEvents from "MetricEvents" /* 6508 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6694 */;
-import SelfModUtils from "SelfModUtils" /* 7425 */;
-import DevSettingsStore from "DevSettingsStore" /* 5273 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7427 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6527 */;
+import MetricEvents from "MetricEvents" /* 6532 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6718 */;
+import SelfModUtils from "SelfModUtils" /* 7448 */;
+import DevSettingsStore from "DevSettingsStore" /* 5274 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7450 */;
 
-const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7431);
+const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7454);
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7429);
+const ExplicitMediaRedactionConstants = fn(7452);
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire, EXPLICIT_MEDIA_MIN_WIDTH: closure_7, MESSAGE_SCAN_TIMEOUT: closure_8 } = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
@@ -39,7 +39,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
-export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
+export function redactionSettingToRenderedString(prop) {
   if (preloaded_user_settings.ExplicitContentRedaction.SHOW === prop) {
     return () => {
       const intl = util.intl;
@@ -56,8 +56,8 @@ export const redactionSettingToRenderedString = function redactionSettingToRende
       return intl.string(util.t["D/157Y"]);
     };
   }
-};
-export const isPendingScanVersion = function isPendingScanVersion(contentScanVersion) {
+}
+export function isPendingScanVersion(contentScanVersion) {
   value = DevSettingsStore.get("explicit_media_redaction_ignore_pending_scan");
   let tmp2 = !value;
   if (!value) {
@@ -75,10 +75,10 @@ export const isPendingScanVersion = function isPendingScanVersion(contentScanVer
     tmp2 = tmp4;
   }
   return tmp2;
-};
+}
 export const TrackMediaRedactionActionType = { EXPLICIT_MEDIA_LEARN_MORE_VIEWED: "explicit_media_learn_more_viewed", EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS: "explicit_media_learn_more_click_settings", EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE: "explicit_media_learn_more_click_learn_more", EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS: "explicit_media_learn_more_click_dismiss", EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE: "explicit_media_learn_more_click_false_positive", EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY: "explicit_media_learn_more_click_age_verify_reverify", EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE: "explicit_media_learn_more_click_age_verify_learn_more", EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED: "explicit_media_false_positive_viewed", EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM: "explicit_media_false_positive_click_confirm", EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL: "explicit_media_false_positive_click_cancel", EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED: "explicit_media_sender_false_positive_button_clicked", EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT: "explicit_media_false_positive_clyde_message_sent" };
 export const TrackMediaRedactionContext = { EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW: "explicit_media_obscured_false_positive_flow", EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW: "explicit_media_sender_false_positive_flow", EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED: "explicit_media_message_send_blocked", EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED: "explicit_media_add_media_to_forum_post_blocked" };
-export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0) {
+export function trackMediaRedactionAction(arg0) {
   ({ channelId, messageId } = arg0);
   if (null != channelId) {
     if (null != messageId) {
@@ -97,16 +97,16 @@ export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0
       obj2.track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj3);
     }
   }
-};
+}
 export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
-export const trackScanTiming = function trackScanTiming(setAt, UPDATE) {
+export function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
   const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
   const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
   obj2.tags = items;
   MonitoringAgentDefault.increment(obj2);
-};
-export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
+}
+export function trackScanningTimedOut(arg0) {
   ({ channelId, messageId, attachmentIds, embedIds } = arg0);
   if (null != channelId) {
     if (null != messageId) {
@@ -163,8 +163,8 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       }
     }
   }
-};
-export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicitMediaRedactableMessagedLoaded(arg0) {
+}
+export function trackExplicitMediaRedactableMessagedLoaded(arg0) {
   ({ channelId, numOfAttachmentsPendingScan, numOfEmbedsPendingScan } = arg0);
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
@@ -186,8 +186,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
       const tmp10Result = MonitoringAgentDefault;
     }
   }
-};
-export const trackRedactableMessageLoaded = function trackRedactableMessageLoaded(arg0) {
+}
+export function trackRedactableMessageLoaded(arg0) {
   ({ messageId, channelId, numOfSelfHarmAttachments, numOfGoreAttachments, numOfExplicitAttachments, numOfSelfHarmEmbeds, numOfGoreEmbeds, numOfExplicitEmbeds } = arg0);
   let tmp = numOfExplicitAttachments > 0;
   ({ numOfAttachments, numOfEmbeds } = arg0);
@@ -224,8 +224,8 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
   }
   tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
   tmp3 = numOfSelfHarmAttachments > 0 || numOfSelfHarmEmbeds > 0;
-};
-export const trackExplicitMediaScanComplete = function trackExplicitMediaScanComplete(channelId) {
+}
+export function trackExplicitMediaScanComplete(channelId) {
   channelId = channelId.channelId;
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
@@ -246,8 +246,8 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
     obj2.num_of_explicit_embeds = tmp5;
     AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj2);
   }
-};
-export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowConstraints(arg0, arg1) {
+}
+export function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
     let tmp3 = arg0 <= React5;
@@ -257,14 +257,14 @@ export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowCons
     tmp = tmp3;
   }
   return tmp;
-};
-export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplicitMedia() {
+}
+export function shouldAgeVerifyForExplicitMedia() {
   let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
-};
+}
 export const useShouldAgeVerifyForExplicitMedia = tmp3;
 export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldAgeVerifyForReason(arg0) {
   let AGE_VERIFICATION_OBSCURABLE_REASONS = require;
@@ -296,7 +296,7 @@ export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEn
   }
   return hasItem;
 });
-export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(obscure) {
+export function trackToggleMediaObscurityV2(obscure) {
   if (obj.isVerifiedAdult()) {
     let str = "show";
     if (obscure.obscure) {
@@ -306,8 +306,8 @@ export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(
     AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj3);
   }
   obj = AgeVerificationUtils;
-};
-export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
+}
+export function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
   const message_snapshots = message.message_snapshots;
   let someResult;
   if (message_snapshots != null) {
@@ -337,4 +337,4 @@ export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSna
     });
   }
   return someResult;
-};
+}

@@ -1,11 +1,11 @@
-// === Module 8961: useGuildsUserCanStartStageIn ===
+// === Module 8964: useGuildsUserCanStartStageIn ===
 
-// Module 8961 (useGuildsUserCanStartStageIn)
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 8964 (useGuildsUserCanStartStageIn)
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4934).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
@@ -30,7 +30,7 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
     class S {
       constructor() {
         arr = closure_2.getChannels(c0)[GUILD_VOCAL_CHANNELS_KEY];
-        return arr.reduce(() => { ... }, []);
+        return arr.reduce(/* F148816 */ function() { ... }, []);
       }
     }
     const items1 = [id];
@@ -42,7 +42,7 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
     class S {
       constructor() {
         arr = closure_2.getChannels(c0)[GUILD_VOCAL_CHANNELS_KEY];
-        return arr.reduce(() => { ... }, []);
+        return arr.reduce(/* F148816 */ function() { ... }, []);
       }
     }
     tmp9 = cResult[3];

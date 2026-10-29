@@ -1,6 +1,6 @@
-// === Module 10885: FavoritesLimits ===
+// === Module 10790: FavoritesLimits ===
 
-// Module 10885 (FavoritesLimits)
+// Module 10790 (FavoritesLimits)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/FavoritesLimits.tsx");

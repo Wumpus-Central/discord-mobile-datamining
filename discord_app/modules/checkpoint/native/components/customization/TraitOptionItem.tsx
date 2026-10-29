@@ -1,21 +1,21 @@
-// === Module 13263: TraitOptionItem ===
+// === Module 13496: TraitOptionItem ===
 
-// Module 13263 (TraitOptionItem)
+// Module 13496 (TraitOptionItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5072 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6051 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6077 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6398 */;
-import _modDef7002 from "module_7002" /* 7002 */;
-import inlineStyles from "inlineStyles" /* 7994 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9456 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5073 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6055 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6101 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6422 */;
+import _modDef7026 from "module_7026" /* 7026 */;
+import inlineStyles from "inlineStyles" /* 8017 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9487 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6050 */;
+import CheckpointConstants from "CheckpointConstants" /* 6054 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5004 */;
+import createStyles from "createStyles" /* 5005 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -71,7 +71,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Rarity
         return tmp23;
       }
       const obj3 = { style: tmp11, maskElement: tmp13, pointerEvents: "none", children: tmp16 };
-      const tmp26 = closure_1_11(_modDef7002, obj3);
+      const tmp26 = closure_1_11(_modDef7026, obj3);
       cResult[6] = tmp11;
       cResult[7] = tmp16;
       cResult[8] = tmp26;
@@ -127,7 +127,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Rarity
     obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = closure_1_11(LinearGradientDefault, obj3);
-    let tmp4Result = closure_1_11(_modDef7002, obj2);
+    let tmp4Result = closure_1_11(_modDef7026, obj2);
   } else {
     const items1 = [, , ];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

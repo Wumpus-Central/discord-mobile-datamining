@@ -1,7 +1,7 @@
-// === Module 15220: VoiceServerUpdateImmediateExperiment ===
+// === Module 15455: VoiceServerUpdateImmediateExperiment ===
 
-// Module 15220 (VoiceServerUpdateImmediateExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15455 (VoiceServerUpdateImmediateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-voice-server-update-immediate-mobile", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -11,7 +11,7 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
 
-export const isVoiceServerUpdateImmediateEnabled = function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
+export function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
   let flag;
   if (config != null) {
     const obj2 = { location: GatewaySocketDispatcher };
@@ -21,4 +21,4 @@ export const isVoiceServerUpdateImmediateEnabled = function isVoiceServerUpdateI
     flag = false;
   }
   return flag;
-};
+}

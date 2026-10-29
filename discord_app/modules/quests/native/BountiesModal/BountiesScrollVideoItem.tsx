@@ -1,19 +1,19 @@
-// === Module 16571: BountiesScrollVideoItem ===
+// === Module 16809: BountiesScrollVideoItem ===
 
-// Module 16571 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 6750 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14380 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16572 */;
+// Module 16809 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 6773 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14614 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16810 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9483 */;
-import BountyStore from "BountyStore" /* 7810 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9514 */;
+import BountyStore from "BountyStore" /* 7833 */;
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6745).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6768).BOUNTY_ORB_AMOUNT;
 let jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useResumeOnActive(isActive) {
@@ -292,7 +292,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -348,7 +348,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
               });
             }
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp27) {
           closure_2 = tmp27;
@@ -471,7 +471,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -526,7 +526,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             });
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -731,10 +731,10 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14380).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14614).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(6752).AdCreativeType.BOUNTY,
-    questContent: bounty(6750).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(6775).AdCreativeType.BOUNTY,
+    questContent: bounty(6773).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

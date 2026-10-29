@@ -1,11 +1,11 @@
-// === Module 12339: ConjureChatEmptyState ===
+// === Module 12393: ConjureChatEmptyState ===
 
-// Module 12339 (ConjureChatEmptyState)
+// Module 12393 (ConjureChatEmptyState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatEmptyState.tsx");
 
-export const chatEmptyState = function chatEmptyState(connState) {
+export function chatEmptyState(connState) {
   connState = connState.connState;
   let str = "unavailable";
   if (!connState.historyUnavailable) {
@@ -21,4 +21,4 @@ export const chatEmptyState = function chatEmptyState(connState) {
     str = str2;
   }
   return str;
-};
+}

@@ -1,8 +1,8 @@
-// === Module 16684: openOrbsArcadeRewardsCollectedModal ===
+// === Module 16922: openOrbsArcadeRewardsCollectedModal ===
 
-// Module 16684 (openOrbsArcadeRewardsCollectedModal)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
+// Module 16922 (openOrbsArcadeRewardsCollectedModal)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -12,13 +12,13 @@ const OrbsArcadeRewardsCollectedModal = "OrbsArcadeRewardsCollectedModal";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/openOrbsArcadeRewardsCollectedModal.tsx");
 
-export const openOrbsArcadeRewardsCollectedModal = function openOrbsArcadeRewardsCollectedModal(rewards, entitlements) {
+export function openOrbsArcadeRewardsCollectedModal(rewards, entitlements) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     await require("asyncRequireImpl")(paths[3], paths.paths);
     return value.default;
   }), { rewards, entitlements }, OrbsArcadeRewardsCollectedModal);
-};
-export const closeOrbsArcadeRewardsCollectedModal = function closeOrbsArcadeRewardsCollectedModal() {
+}
+export function closeOrbsArcadeRewardsCollectedModal() {
   ModalActionCreatorsDefault.popWithKey(OrbsArcadeRewardsCollectedModal);
-};
+}

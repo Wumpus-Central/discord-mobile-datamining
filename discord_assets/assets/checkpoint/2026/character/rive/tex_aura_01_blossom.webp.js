@@ -1,6 +1,6 @@
-// === Module 13031: ? ===
+// === Module 13262: ? ===
 
-// Module 13031
+// Module 13262
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_aura_01_blossom.webp.js");

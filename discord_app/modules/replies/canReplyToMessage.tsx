@@ -1,11 +1,11 @@
-// === Module 8366: canReplyToMessage ===
+// === Module 8388: canReplyToMessage ===
 
-// Module 8366 (canReplyToMessage)
+// Module 8388 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1100 */;
-import ThreadHooks from "ThreadHooks" /* 7406 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8367 */;
+import ThreadHooks from "ThreadHooks" /* 7429 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8389 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -167,7 +167,7 @@ export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
   }
   return tmp6;
 });
-export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
+export function canReplyToMessage(isPrivate, type) {
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
@@ -203,4 +203,4 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     hasItem = tmp11;
   }
   return hasItem;
-};
+}

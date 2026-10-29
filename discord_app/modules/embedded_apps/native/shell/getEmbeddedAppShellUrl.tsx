@@ -1,13 +1,13 @@
-// === Module 11536: getEmbeddedAppShellUrl ===
+// === Module 11590: getEmbeddedAppShellUrl ===
 
-// Module 11536 (getEmbeddedAppShellUrl)
+// Module 11590 (getEmbeddedAppShellUrl)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import getNativeShellOriginForEmbeddedApp from "getNativeShellOriginForEmbeddedApp" /* 11537 */;
+import getNativeShellOriginForEmbeddedApp from "getNativeShellOriginForEmbeddedApp" /* 11591 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/shell/getEmbeddedAppShellUrl.tsx");
 
-export const getEmbeddedAppShellUrl = function getEmbeddedAppShellUrl(embeddedAppUrl) {
+export function getEmbeddedAppShellUrl(embeddedAppUrl) {
   const nativeShellOriginForEmbeddedApp = getNativeShellOriginForEmbeddedApp.getNativeShellOriginForEmbeddedApp(embeddedAppUrl);
   if (null != nativeShellOriginForEmbeddedApp) {
     const _HermesInternal = HermesInternal;
@@ -28,4 +28,4 @@ export const getEmbeddedAppShellUrl = function getEmbeddedAppShellUrl(embeddedAp
     }
     return str;
   }
-};
+}

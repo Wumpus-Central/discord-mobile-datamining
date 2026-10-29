@@ -1,15 +1,15 @@
-// === Module 19443: RolePermissionTemplatesActionSheet ===
+// === Module 19676: RolePermissionTemplatesActionSheet ===
 
-// Module 19443 (RolePermissionTemplatesActionSheet)
+// Module 19676 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ToastUtils from "ToastUtils" /* 5698 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
-import ActionSheet from "ActionSheet" /* 7334 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 19421 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ToastUtils from "ToastUtils" /* 5700 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7308 */;
+import ActionSheet from "ActionSheet" /* 7358 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 19654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { templateContainer: { paddingVertical: 16, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       let obj2 = { title: null };
       let intl = tmp(1125).intl;
       obj2.title = intl.string(tmp(1125).t.KgCkoQ);
-      const tmp12 = jsx(tmp(7284).BottomSheetTitleHeader, { title: null });
+      const tmp12 = jsx(tmp(7308).BottomSheetTitleHeader, { title: null });
       cResult[7] = tmp12;
       const tmp11 = tmp12;
     } else {
@@ -136,14 +136,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       const obj3 = { header: tmp11, startExpanded: true, children: null };
       const obj4 = { style: tmp4.templateContainer, children: tmp13 };
       obj3.children = <View style={tmp4.templateContainer}>{tmp13}</View>;
-      const tmp21 = jsx(tmp(7334).ActionSheet, { header: tmp11, startExpanded: true, children: null });
+      const tmp21 = jsx(tmp(7358).ActionSheet, { header: tmp11, startExpanded: true, children: null });
       cResult[11] = tmp4.templateContainer;
       cResult[12] = tmp13;
       cResult[13] = tmp21;
       tmp18 = tmp21;
     }
     const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-    const tmp17 = jsx(onPermissionsChanged(19421), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
+    const tmp17 = jsx(onPermissionsChanged(19654), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
     cResult[8] = guildId;
     cResult[9] = tmp10;
     cResult[10] = tmp17;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
         dependencyMap(closure_0);
       };
       obj2.onCancel = function onCancel() {
-        onPermissionsChanged(5246).hideActionSheet();
+        onPermissionsChanged(5247).hideActionSheet();
       };
       onPermissionsChanged(tmp9[11]).show(obj2);
       const obj = onPermissionsChanged(tmp9[11]);
@@ -203,12 +203,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
           obj4.confirmText = intl4.string(util.t.p89ACt);
           obj4.onConfirm = function onConfirm() {
             importDefault(closure_0);
-            closure_1_1(5246).hideActionSheet();
-            const obj = closure_1_1(5246);
-            const result = closure_0(5698).roleTemplateAppliedToast();
+            closure_1_1(5247).hideActionSheet();
+            const obj = closure_1_1(5247);
+            const result = closure_0(5700).roleTemplateAppliedToast();
           };
           obj4.onCancel = function onCancel() {
-            closure_1_1(5246).hideActionSheet();
+            closure_1_1(5247).hideActionSheet();
           };
           AlertActionCreatorsDefault.show(obj4);
         } else {
@@ -236,12 +236,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
         obj4.confirmText = intl4.string(util.t.p89ACt);
         obj4.onConfirm = function onConfirm() {
           importDefault(closure_0);
-          closure_1_1(5246).hideActionSheet();
-          const obj = closure_1_1(5246);
-          const result = closure_0(5698).roleTemplateAppliedToast();
+          closure_1_1(5247).hideActionSheet();
+          const obj = closure_1_1(5247);
+          const result = closure_0(5700).roleTemplateAppliedToast();
         };
         obj4.onCancel = function onCancel() {
-          closure_1_1(5246).hideActionSheet();
+          closure_1_1(5247).hideActionSheet();
         };
         AlertActionCreatorsDefault.show(obj4);
       } else {

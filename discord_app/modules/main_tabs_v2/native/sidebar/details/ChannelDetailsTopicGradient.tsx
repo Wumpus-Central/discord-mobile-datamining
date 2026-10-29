@@ -1,10 +1,10 @@
-// === Module 18474: ChannelDetailsTopicGradient ===
+// === Module 18708: ChannelDetailsTopicGradient ===
 
-// Module 18474 (ChannelDetailsTopicGradient)
+// Module 18708 (ChannelDetailsTopicGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 5288 */;
+import useToken from "useToken" /* 5289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export const useChannelTopicGradientBackground = ReactCompilerGating.isReactComp
   cResult[4] = items;
   tmp7 = items;
 }) : (function useChannelTopicGradientBackground() {
-  token = token(5288).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = token(5289).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   return noop.useMemo(() => {
     const obj = _modDef683(token);

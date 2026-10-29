@@ -1,8 +1,8 @@
-// === Module 12590: conjureTemplateIntakeRequests ===
+// === Module 12807: conjureTemplateIntakeRequests ===
 
-// Module 12590 (conjureTemplateIntakeRequests)
+// Module 12807 (conjureTemplateIntakeRequests)
 import util from "util" /* 1125 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10830 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -22,7 +22,7 @@ let closure_3 = async function _fetchStoredConjureIntake(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ let closure_3 = async function _fetchStoredConjureIntake(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/conjureTemplateIntakeRequests.tsx");
 
-export const fetchStoredConjureIntake = function fetchStoredConjureIntake() {
+export function fetchStoredConjureIntake() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -120,4 +120,4 @@ export const fetchStoredConjureIntake = function fetchStoredConjureIntake() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

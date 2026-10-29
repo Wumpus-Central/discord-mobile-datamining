@@ -1,6 +1,6 @@
-// === Module 14023: uploadRtcLogFiles ===
+// === Module 14256: uploadRtcLogFiles ===
 
-// Module 14023 (uploadRtcLogFiles)
+// Module 14256 (uploadRtcLogFiles)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -112,7 +112,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       }
       if (dependencyMap === undefined) {
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else {
         closure_131_1 = tmp57;
         closure_131_2 = "";
@@ -132,7 +132,7 @@ let closure_5 = new LoggerDefault("uploadRtcLogFiles");
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploadRtcLogFiles.android.tsx");
 
-export const uploadRtcLogFiles = function uploadRtcLogFiles() {
+export function uploadRtcLogFiles() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -141,4 +141,4 @@ export const uploadRtcLogFiles = function uploadRtcLogFiles() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

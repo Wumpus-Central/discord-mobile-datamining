@@ -1,18 +1,18 @@
-// === Module 19322: getActionInfo ===
+// === Module 19555: getActionInfo ===
 
-// Module 19322 (getActionInfo)
-import CircleXIcon2 from "CircleXIcon" /* 7054 */;
-import TextIcon from "TextIcon" /* 8588 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 12861 */;
-import Constants from "Constants" /* 12870 */;
-import ChatXIcon from "ChatXIcon" /* 13621 */;
-import BaseActionInfo from "BaseActionInfo" /* 19323 */;
+// Module 19555 (getActionInfo)
+import CircleXIcon2 from "CircleXIcon" /* 7078 */;
+import TextIcon from "TextIcon" /* 8610 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 13082 */;
+import Constants from "Constants" /* 13091 */;
+import ChatXIcon from "ChatXIcon" /* 13854 */;
+import BaseActionInfo from "BaseActionInfo" /* 19556 */;
 import size from "module_2" /* 2 */;
 
 const AutomodActionType = Constants.AutomodActionType;
 const result = size.fileFinishedImporting("modules/guild_automod/native/getActionInfo.tsx");
 
-export const getActionInfo = function getActionInfo(actionType, action, triggerType) {
+export function getActionInfo(actionType, action, triggerType) {
   const baseActionInfo = BaseActionInfo.getBaseActionInfo(actionType, action, triggerType);
   let tmp4 = null;
   if (null != baseActionInfo) {
@@ -34,4 +34,4 @@ export const getActionInfo = function getActionInfo(actionType, action, triggerT
     tmp4 = obj2;
   }
   return tmp4;
-};
+}

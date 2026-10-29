@@ -1,6 +1,6 @@
-// === Module 10760: conjureProjectMute ===
+// === Module 10835: conjureProjectMute ===
 
-// Module 10760 (conjureProjectMute)
+// Module 10835 (conjureProjectMute)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
@@ -70,7 +70,7 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
     return true === muted;
   }, items1);
 });
-export const setConjureProjectMuted = function setConjureProjectMuted(id, arg1) {
+export function setConjureProjectMuted(id, arg1) {
   _require = id;
   dependencyMap = arg1;
   const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
@@ -86,4 +86,4 @@ export const setConjureProjectMuted = function setConjureProjectMuted(id, arg1) 
       delete tmp[tmp2];
     }
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
-};
+}

@@ -1,12 +1,12 @@
-// === Module 9428: ProfileEffectUtils ===
+// === Module 9459: ProfileEffectUtils ===
 
-// Module 9428 (ProfileEffectUtils)
-import getAssetWHRatio from "getAssetWHRatio" /* 9429 */;
+// Module 9459 (ProfileEffectUtils)
+import getAssetWHRatio from "getAssetWHRatio" /* 9460 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export const shouldAnimate = function shouldAnimate(entering, current) {
+export function shouldAnimate(entering, current) {
   if (current >= entering.start) {
     if (!entering.loop) {
       if (current > entering.duration + entering.start) {
@@ -30,7 +30,7 @@ export const shouldAnimate = function shouldAnimate(entering, current) {
   } else {
     return false;
   }
-};
-export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
+}
+export function calculateProfileEffectHeight(layerConfig, width) {
   return width / getAssetWHRatio.getAssetWHRatio(layerConfig);
-};
+}

@@ -1,14 +1,14 @@
-// === Module 17901: VoiceCategoryActionCreators ===
+// === Module 18139: VoiceCategoryActionCreators ===
 
-// Module 17901 (VoiceCategoryActionCreators)
+// Module 18139 (VoiceCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/VoiceCategoryActionCreators.tsx");
 
-export const voiceCategoryExpand = function voiceCategoryExpand(guildId) {
+export function voiceCategoryExpand(guildId) {
   DispatcherDefault.dispatch({ type: "VOICE_CATEGORY_EXPAND", guildId, expand: true });
-};
-export const voiceCategoryCollapse = function voiceCategoryCollapse(guildId) {
+}
+export function voiceCategoryCollapse(guildId) {
   DispatcherDefault.dispatch({ type: "VOICE_CATEGORY_COLLAPSE", guildId, expand: false });
-};
+}

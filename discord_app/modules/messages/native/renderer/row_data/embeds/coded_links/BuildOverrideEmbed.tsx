@@ -1,19 +1,19 @@
-// === Module 14805: BuildOverrideEmbed ===
+// === Module 15040: BuildOverrideEmbed ===
 
-// Module 14805 (BuildOverrideEmbed)
+// Module 15040 (BuildOverrideEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1380 */;
-import Constants from "Constants" /* 7844 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8169 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8307 */;
-import BuildOverrideStore2 from "BuildOverrideStore" /* 11066 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12774 */;
-import _modDef12812 from "module_12812" /* 12812 */;
-import _modDef12813 from "module_12813" /* 12813 */;
-import _modDef14804 from "module_14804" /* 14804 */;
-import validateBuildOverrideDefault from "validateBuildOverride" /* 14806 */;
+import Constants from "Constants" /* 7867 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8192 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8329 */;
+import BuildOverrideStore2 from "BuildOverrideStore" /* 11120 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12991 */;
+import _modDef13033 from "module_13033" /* 13033 */;
+import _modDef13034 from "module_13034" /* 13034 */;
+import _modDef15039 from "module_15039" /* 15039 */;
+import validateBuildOverrideDefault from "validateBuildOverride" /* 15041 */;
 import size from "module_2" /* 2 */;
 
 const BuildOverrideStore = BuildOverrideStore2;
@@ -23,7 +23,7 @@ const State = BuildOverrideStore2.State;
 const InviteTypes = Constants.InviteTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx");
 
-export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, theme) {
+export function createBuildOverrideEmbed(code, theme) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   const currentBuildOverride = BuildOverrideStore.getCurrentBuildOverride();
   const buildOverride = BuildOverrideStore.getBuildOverride(code);
@@ -90,7 +90,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj3.titleColor = colors.titleColor;
               obj3.subtitle = id;
               obj3.subtitleColor = colors.subtitleColor;
-              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef14804).uri;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef15039).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -135,9 +135,9 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     }
     obj5.subtitleColor = subtitleColor;
     if (tmp20Result.isThemeDark(theme)) {
-      let tmpResult2 = _modDef12812;
+      let tmpResult2 = _modDef13033;
     } else {
-      tmpResult2 = _modDef12813;
+      tmpResult2 = _modDef13034;
     }
     obj5.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
     obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -145,4 +145,4 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     return obj5;
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);
-};
+}

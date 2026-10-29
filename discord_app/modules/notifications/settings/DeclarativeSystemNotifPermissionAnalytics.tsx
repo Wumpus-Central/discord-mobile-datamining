@@ -1,11 +1,11 @@
-// === Module 17602: DeclarativeSystemNotifPermissionAnalytics ===
+// === Module 17840: DeclarativeSystemNotifPermissionAnalytics ===
 
-// Module 17602 (DeclarativeSystemNotifPermissionAnalytics)
+// Module 17840 (DeclarativeSystemNotifPermissionAnalytics)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15955 */;
-import NotifTypes from "NotifTypes" /* 15957 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15960 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16191 */;
+import NotifTypes from "NotifTypes" /* 16193 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16196 */;
 import size from "module_2" /* 2 */;
 
 function getNotifTypesUsingSettings(items) {
@@ -38,7 +38,7 @@ const map = new Map(NOTIF_SETTINGS.map((item) => {
 }));
 const result = size.fileFinishedImporting("modules/notifications/settings/DeclarativeSystemNotifPermissionAnalytics.tsx");
 
-export const trackSystemNotifSettingsOpened = function trackSystemNotifSettingsOpened(notif_setting_id) {
+export function trackSystemNotifSettingsOpened(notif_setting_id) {
   value = map.get(notif_setting_id);
   if (null != value) {
     const items = [notif_setting_id];
@@ -47,8 +47,8 @@ export const trackSystemNotifSettingsOpened = function trackSystemNotifSettingsO
     ({ ids: obj2.notif_type_ids, names: obj2.notif_type_names } = tmp3);
     AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTING_SYSTEM_SETTINGS_OPENED, obj3);
   }
-};
-export const trackSystemNotifSettingsReenabled = function trackSystemNotifSettingsReenabled(disabledSettings, disabledSettings2, app_launch) {
+}
+export function trackSystemNotifSettingsReenabled(disabledSettings, disabledSettings2, app_launch) {
   const items = [];
   const items1 = [];
   const iter = disabledSettings[Symbol.iterator]();
@@ -72,4 +72,4 @@ export const trackSystemNotifSettingsReenabled = function trackSystemNotifSettin
     AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTING_SYSTEM_REENABLED, obj);
   }
   set = new Set(disabledSettings2);
-};
+}

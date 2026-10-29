@@ -1,8 +1,8 @@
-// === Module 11219: GiftModalEmojis ===
+// === Module 11273: GiftModalEmojis ===
 
-// Module 11219 (GiftModalEmojis)
-import EmojiUtilsDefault from "EmojiUtils" /* 4954 */;
-import EmojiDefault from "Emoji" /* 7263 */;
+// Module 11273 (GiftModalEmojis)
+import EmojiUtilsDefault from "EmojiUtils" /* 4955 */;
+import EmojiDefault from "Emoji" /* 7287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let items = [[100, 0, -40], [120, 40, -10], [100, 80, 10], [180, 20, 20], [140, 95, 15], [250, 0, 0], [250, 80, -20], [400, 90, 10], [400, 20, -20], [410, 0, 40]];
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({ emojisContainer: { alignItems: "center", justifyContent: "center", height: 250, width: "100%", position: "absolute", zIndex: 1, paddingBottom: 210 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -81,8 +81,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
     flag = false;
   }
   let tmp = closure_7();
-  dependencyMap = flag(4954).getURL(emojiName);
-  let obj = flag(4954);
+  dependencyMap = flag(4955).getURL(emojiName);
+  let obj = flag(4955);
   return <View style={tmp.emojisContainer}>{items.map((item, index) => {
     [tmp2, tmp3, tmp4] = item;
     const obj = { src, name: emojiName, style: null, forceTextEmoji: true };

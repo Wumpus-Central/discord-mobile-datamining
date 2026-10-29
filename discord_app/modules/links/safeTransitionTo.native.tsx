@@ -1,12 +1,12 @@
-// === Module 7384: safeTransitionTo ===
+// === Module 7407: safeTransitionTo ===
 
-// Module 7384 (safeTransitionTo)
+// Module 7407 (safeTransitionTo)
 import router_utils from "router_utils" /* 1111 */;
-import LinkUtils from "LinkUtils" /* 5642 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7385 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7386 */;
+import LinkUtils from "LinkUtils" /* 5643 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7408 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {
@@ -20,7 +20,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "paths" };
+        closure_2 = { guildId: "r" };
       }
       c5 = 2;
       c6 = 1;

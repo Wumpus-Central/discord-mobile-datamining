@@ -1,7 +1,7 @@
-// === Module 8750: useProfileFrameLayerAsset ===
+// === Module 8753: useProfileFrameLayerAsset ===
 
-// Module 8750 (useProfileFrameLayerAsset)
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1986 */;
+// Module 8753 (useProfileFrameLayerAsset)
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -85,7 +85,7 @@ let closure_16 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7340).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7364).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();

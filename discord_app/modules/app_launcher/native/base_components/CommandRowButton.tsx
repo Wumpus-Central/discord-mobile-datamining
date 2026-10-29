@@ -1,6 +1,6 @@
-// === Module 12026: CommandRowButton ===
+// === Module 12080: CommandRowButton ===
 
-// Module 12026 (CommandRowButton)
+// Module 12080 (CommandRowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -8,9 +8,9 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const util = TableRowArrow(1125);
-const components_Button_Button = TableRowArrow(5280);
-const SendMessageIcon = TableRowArrow(5716);
-const TableRowArrow2 = TableRowArrow(6948);
+const components_Button_Button = TableRowArrow(5281);
+const SendMessageIcon = TableRowArrow(5718);
+const TableRowArrow2 = TableRowArrow(6972);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandR
   }
   return tmp3Result;
 });
-export const useCommandRowSend = function useCommandRowSend(command) {
+export function useCommandRowSend(command) {
   command = command.command;
   const beforeExecuteCommand = command.beforeExecuteCommand;
   const onExecuteCommand = command.onExecuteCommand;
@@ -89,7 +89,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -139,7 +139,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -161,4 +161,4 @@ export const useCommandRowSend = function useCommandRowSend(command) {
     }
   }, items1);
   return obj2;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 8184: uploader/UploadUtils ===
+// === Module 8207: uploader/UploadUtils ===
 
-// Module 8184 (uploader/UploadUtils)
+// Module 8207 (uploader/UploadUtils)
 import js_shim_shim from "js_shim/shim" /* 562 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UploadPlatform from "UploadPlatform" /* 8177 */;
-import AttachmentFile from "AttachmentFile" /* 8185 */;
+import UploadPlatform from "UploadPlatform" /* 8200 */;
+import AttachmentFile from "AttachmentFile" /* 8208 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
@@ -78,7 +78,7 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
   }
 };
 
-export const doesImageMatchUpload = function doesImageMatchUpload(image, id) {
+export function doesImageMatchUpload(image, id) {
   if (id.id !== image.uri) {
     if (id.item.platform === UploadPlatform.UploadPlatform.REACT_NATIVE) {
       const item = id.item;
@@ -102,8 +102,8 @@ export const doesImageMatchUpload = function doesImageMatchUpload(image, id) {
     }
   }
   return true;
-};
-export const calculateProgress = function calculateProgress(loaded, currentSize) {
+}
+export function calculateProgress(loaded, currentSize) {
   let num = 0;
   if (0 !== currentSize) {
     const _Math = Math;
@@ -111,9 +111,9 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
     num = Math.min(Math.floor(loaded / currentSize * 100), 100);
   }
   return num;
-};
+}
 export { DefaultHttpClient };
-export const canUploadNatively = function canUploadNatively(platform) {
+export function canUploadNatively(platform) {
   let fileIsInAppDirResult = platform.platform === UploadPlatform.UploadPlatform.REACT_NATIVE;
   if (fileIsInAppDirResult) {
     fileIsInAppDirResult = null != platform.uri;
@@ -127,5 +127,5 @@ export const canUploadNatively = function canUploadNatively(platform) {
     const tmpResult2 = js_shim_shim;
   }
   return fileIsInAppDirResult;
-};
+}
 export { LibdiscoreHttpClient };

@@ -1,12 +1,12 @@
-// === Module 15330: getPinotReadyAction ===
+// === Module 15565: getPinotReadyAction ===
 
-// Module 15330 (getPinotReadyAction)
-import PinotMemberSettingStore from "PinotMemberSettingStore" /* 15331 */;
+// Module 15565 (getPinotReadyAction)
+import PinotMemberSettingStore from "PinotMemberSettingStore" /* 15566 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/getPinotReadyAction.tsx");
 
-export const getPinotReadyAction = function getPinotReadyAction(pinotReadyAction) {
+export function getPinotReadyAction(pinotReadyAction) {
   let flag = pinotReadyAction.swp_message_promotion_locked;
   if (flag == null) {
     flag = true;
@@ -18,4 +18,4 @@ export const getPinotReadyAction = function getPinotReadyAction(pinotReadyAction
   }
   obj.defaultOptedOut = prop;
   return obj;
-};
+}

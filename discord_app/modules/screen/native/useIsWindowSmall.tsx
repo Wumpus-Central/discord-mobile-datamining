@@ -1,7 +1,7 @@
-// === Module 9765: useIsWindowSmall ===
+// === Module 9797: useIsWindowSmall ===
 
-// Module 9765 (useIsWindowSmall)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5190 */;
+// Module 9797 (useIsWindowSmall)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5191 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,6 +15,6 @@ export default function getIsWindowSmall() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
   return windowSizeClassifier <= useWindowSizeClassifier.WindowSizeClassifier.SMALL;
 };
-export const useIsWindowSmall = function useIsWindowSmall() {
+export function useIsWindowSmall() {
   return useWindowSizeClassifierDefault() <= useWindowSizeClassifier.WindowSizeClassifier.SMALL;
-};
+}

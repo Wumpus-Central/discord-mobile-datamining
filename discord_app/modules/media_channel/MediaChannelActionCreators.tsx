@@ -1,6 +1,6 @@
-// === Module 10855: MediaChannelActionCreators ===
+// === Module 10931: MediaChannelActionCreators ===
 
-// Module 10855 (MediaChannelActionCreators)
+// Module 10931 (MediaChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -48,7 +48,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -109,10 +109,10 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 
-export const dismissMediaPostSharePrompt = function dismissMediaPostSharePrompt(threadId) {
+export function dismissMediaPostSharePrompt(threadId) {
   DispatcherDefault.dispatch({ type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId });
-};
-export const fetchMediaPostEmbed = function fetchMediaPostEmbed() {
+}
+export function fetchMediaPostEmbed() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -121,8 +121,8 @@ export const fetchMediaPostEmbed = function fetchMediaPostEmbed() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const unfurlEmbedUrl = function unfurlEmbedUrl() {
+}
+export function unfurlEmbedUrl() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -131,4 +131,4 @@ export const unfurlEmbedUrl = function unfurlEmbedUrl() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

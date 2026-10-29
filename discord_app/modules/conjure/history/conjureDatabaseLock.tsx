@@ -1,6 +1,6 @@
-// === Module 12273: conjureDatabaseLock ===
+// === Module 12327: conjureDatabaseLock ===
 
-// Module 12273 (conjureDatabaseLock)
+// Module 12327 (conjureDatabaseLock)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ let closure_8 = async function _withConjureDatabaseLock(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -101,7 +101,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjureDatabaseLock.tsx");
 
-export const withConjureDatabaseLock = function withConjureDatabaseLock() {
+export function withConjureDatabaseLock() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -110,7 +110,7 @@ export const withConjureDatabaseLock = function withConjureDatabaseLock() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useConjureDatabaseBusy = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureDatabaseBusy(arg0) {
   _require = arg0;
   const cResult = require("c").c(2);

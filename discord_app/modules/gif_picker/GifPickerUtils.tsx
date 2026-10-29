@@ -1,11 +1,11 @@
-// === Module 10172: GifPickerUtils ===
+// === Module 10205: GifPickerUtils ===
 
-// Module 10172 (GifPickerUtils)
+// Module 10205 (GifPickerUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
 
-export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favorites, first2) {
+export function filterFavoriteGIFsByQuery(favorites, first2) {
   if ("" === first2) {
     return favorites;
   } else {
@@ -15,4 +15,4 @@ export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favo
       return replaced.includes(closure_0);
     });
   }
-};
+}

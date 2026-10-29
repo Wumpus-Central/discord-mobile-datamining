@@ -1,11 +1,11 @@
-// === Module 11392: isPartyFull ===
+// === Module 11446: isPartyFull ===
 
-// Module 11392 (isPartyFull)
+// Module 11446 (isPartyFull)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
 
-export const isPartyFull = function isPartyFull(partySize) {
+export function isPartyFull(partySize) {
   ({ partySize, maxPartySize } = partySize);
   let tmp = partySize > -1;
   if (tmp) {
@@ -15,4 +15,4 @@ export const isPartyFull = function isPartyFull(partySize) {
     tmp = partySize >= maxPartySize;
   }
   return tmp;
-};
+}

@@ -1,22 +1,22 @@
-// === Module 14766: VoiceChannelBadge ===
+// === Module 15001: VoiceChannelBadge ===
 
-// Module 14766 (VoiceChannelBadge)
+// Module 15001 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1084 */;
-import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6688 */;
-import AgeGateUtils from "AgeGateUtils" /* 6697 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8539 */;
-import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 14767 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6712 */;
+import AgeGateUtils from "AgeGateUtils" /* 6721 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8561 */;
+import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 15002 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
 const Permissions = Constants.Permissions;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
-export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId1) {
+export function createVoiceChannelBadge(id, guildId1) {
   const guildId = guildId1;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId1) {
@@ -58,4 +58,4 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
     }
   }
   obj = VoiceChannelBadgeExperiment;
-};
+}

@@ -1,12 +1,12 @@
-// === Module 5259: getDeviceSpecificString ===
+// === Module 5260: getDeviceSpecificString ===
 
-// Module 5259 (getDeviceSpecificString)
+// Module 5260 (getDeviceSpecificString)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
-export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2Yp7dF) {
+export function getDeviceSpecificString(arg0, _2Yp7dF) {
   let str = null;
   if (obj.isMetaQuest()) {
     str = "quest";
@@ -20,4 +20,4 @@ export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2
   }
   const intl = util.intl;
   return intl.string(tmp3);
-};
+}

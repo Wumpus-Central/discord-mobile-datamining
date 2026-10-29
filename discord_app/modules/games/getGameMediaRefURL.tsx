@@ -1,9 +1,9 @@
-// === Module 2029: getGameMediaRefURL ===
+// === Module 2030: getGameMediaRefURL ===
 
-// Module 2029 (getGameMediaRefURL)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import StringUtils from "StringUtils" /* 2030 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2034 */;
+// Module 2030 (getGameMediaRefURL)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import StringUtils from "StringUtils" /* 2031 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2035 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
@@ -47,10 +47,10 @@ export default function getGameMediaRefURL(id, value, size) {
     return null;
   }
 };
-export const hasGameMediaRef = function hasGameMediaRef(cover) {
+export function hasGameMediaRef(cover) {
   let tmp = null != cover;
   if (tmp) {
     tmp = !StringUtils.isNullOrEmpty(cover.value);
   }
   return tmp;
-};
+}

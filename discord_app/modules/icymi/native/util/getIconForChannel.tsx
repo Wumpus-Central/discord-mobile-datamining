@@ -1,19 +1,19 @@
-// === Module 18226: getIconForChannel ===
+// === Module 18460: getIconForChannel ===
 
-// Module 18226 (getIconForChannel)
+// Module 18460 (getIconForChannel)
 import Constants from "Constants" /* 1084 */;
-import TextIcon from "TextIcon" /* 8588 */;
-import ImageIcon from "ImageIcon" /* 8595 */;
-import ForumIcon from "ForumIcon" /* 8596 */;
-import AnnouncementsIcon from "AnnouncementsIcon" /* 8602 */;
-import StageIcon from "StageIcon" /* 8605 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8609 */;
+import TextIcon from "TextIcon" /* 8610 */;
+import ImageIcon from "ImageIcon" /* 8617 */;
+import ForumIcon from "ForumIcon" /* 8618 */;
+import AnnouncementsIcon from "AnnouncementsIcon" /* 8624 */;
+import StageIcon from "StageIcon" /* 8627 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8631 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
 
-export const getIconForChannel = function getIconForChannel(stateFromStores) {
+export function getIconForChannel(stateFromStores) {
   const type = stateFromStores.type;
   if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
     return AnnouncementsIcon.AnnouncementsIcon;
@@ -30,4 +30,4 @@ export const getIconForChannel = function getIconForChannel(stateFromStores) {
   } else {
     return TextIcon.TextIcon;
   }
-};
+}

@@ -1,6 +1,6 @@
-// === Module 9041: GlobalDiscoveryServersConstants ===
+// === Module 9044: GlobalDiscoveryServersConstants ===
 
-// Module 9041 (GlobalDiscoveryServersConstants)
+// Module 9044 (GlobalDiscoveryServersConstants)
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
 
@@ -32,7 +32,7 @@ export const FEATURED_GUILDS_CACHE_DURATION = result;
 export const FEATURED_GUILDS_SEARCH_OPTIONS = { categoryId: -1 };
 export const CategoryId = obj2;
 export const DISCOVERY_SIDEBAR_CATEGORIES = items1;
-export const getLanguageOptions = function getLanguageOptions() {
+export function getLanguageOptions() {
   const languages = util.getLanguages();
   const found = languages.filter((code) => !closure_1_2.includes(code.code));
   return found.map((code) => {
@@ -46,4 +46,4 @@ export const getLanguageOptions = function getLanguageOptions() {
     }
     return tmp;
   });
-};
+}

@@ -1,6 +1,6 @@
-// === Module 14027: ComponentProfiler ===
+// === Module 14260: ComponentProfiler ===
 
-// Module 14027 (ComponentProfiler)
+// Module 14260 (ComponentProfiler)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -136,7 +136,7 @@ export function clearComponentRenderStats() {
 export function getComponentRenderStats() {
   return closure_5;
 }
-export const serializeComponentRenderAverages = function serializeComponentRenderAverages() {
+export function serializeComponentRenderAverages() {
   let str = "";
   if (0 !== Object.keys(closure_5).length) {
     let num = 20;
@@ -245,7 +245,7 @@ export const serializeComponentRenderAverages = function serializeComponentRende
     const padEndResult5 = substr5.padEnd(8, " ");
   }
   return str;
-};
+}
 export function resetComponentProfiler() {
   closure_5 = {};
 }

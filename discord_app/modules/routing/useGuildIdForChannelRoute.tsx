@@ -1,10 +1,10 @@
-// === Module 5744: useGuildIdForChannelRoute ===
+// === Module 5746: useGuildIdForChannelRoute ===
 
-// Module 5744 (useGuildIdForChannelRoute)
+// Module 5746 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FavoriteStore from "FavoriteStore" /* 4859 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import FavoriteStore from "FavoriteStore" /* 4860 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 
 require = fn;
 const FAVORITES = fn(1084).FAVORITES;
@@ -43,11 +43,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   return stateFromStores;
 });
-export const getGuildIdForGenericRedirect = function getGuildIdForGenericRedirect(channel) {
+export function getGuildIdForGenericRedirect(channel) {
   if (!obj.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
     let guildId = channel.getGuildId();
   } else if (FavoriteStore.isFavorite(channel.id)) {
     guildId = FAVORITES;
   }
   return guildId;
-};
+}

@@ -1,16 +1,16 @@
-// === Module 16921: SettingsAppearanceMessagesHeaderItem ===
+// === Module 17160: SettingsAppearanceMessagesHeaderItem ===
 
-// Module 16921 (SettingsAppearanceMessagesHeaderItem)
+// Module 17160 (SettingsAppearanceMessagesHeaderItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
+import Text_Text from "Text/Text" /* 5271 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { messagesHeaderContainer: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center", marginHorizontal: nativeDefault.space.PX_24 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

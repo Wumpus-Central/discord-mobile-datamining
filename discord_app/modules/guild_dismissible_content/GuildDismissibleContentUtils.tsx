@@ -1,15 +1,15 @@
-// === Module 13653: GuildDismissibleContentUtils ===
+// === Module 13886: GuildDismissibleContentUtils ===
 
-// Module 13653 (GuildDismissibleContentUtils)
+// Module 13886 (GuildDismissibleContentUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4839 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4840 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const UserSettingsDelay = fn(1094).UserSettingsDelay;
 const ReactCompilerGating = fn(558);
 function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
@@ -68,7 +68,7 @@ export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled(
     return hasBitResult;
   });
 });
-export const markContentAsDismissed = function markContentAsDismissed(dc, guildId, arg2, AUTO_DISMISS) {
+export function markContentAsDismissed(dc, guildId, arg2, AUTO_DISMISS) {
   _require = true;
   importDefault = dc;
   dependencyMap = guildId;
@@ -86,7 +86,7 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(4840).DismissibleGuildContent[dc], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(4841).DismissibleGuildContent[dc], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }
@@ -95,8 +95,8 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   }
   const obj = require("UserSettingsProtoActionCreators");
   tmp = _require;
-};
-export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, guildId) {
+}
+export function unmarkContentAsDismissed(dc, guildId) {
   _require = false;
   closure_1 = dc;
   dependencyMap = guildId;
@@ -112,4 +112,4 @@ export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, gu
     }
     return false;
   }, UserSettingsDelay.FREQUENT_USER_ACTION);
-};
+}

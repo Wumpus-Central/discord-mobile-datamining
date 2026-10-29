@@ -1,6 +1,6 @@
-// === Module 10104: SummaryActionCreators ===
+// === Module 10136: SummaryActionCreators ===
 
-// Module 10104 (SummaryActionCreators)
+// Module 10136 (SummaryActionCreators)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,9 +8,9 @@ import DurationsDefault from "Durations" /* 1101 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SummaryStore from "SummaryStore" /* 10043 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SummaryStore from "SummaryStore" /* 10075 */;
 
 require = fn;
 function fetchSummary() {
@@ -38,7 +38,7 @@ let closure_13 = async function _fetchSummary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -133,7 +133,7 @@ let closure_14 = async function _fetchSummaries() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -259,7 +259,7 @@ let closure_16 = async function _fetchChannelAffinities() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -336,7 +336,7 @@ let closure_16 = async function _fetchChannelAffinities() {
         obj9.receivedAt = Date.now();
         closure_130_1(closure_130_2[7]).dispatch(obj9);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp38) {
       closure_3 = tmp38;
@@ -360,88 +360,166 @@ function fetchSummariesBulk() {
   return applyArgumentsResult;
 }
 let closure_18 = async function _fetchSummariesBulk(arg0) {
-  closure_2 = closure_131_0;
-  if (closure_131_0 == null) {
-    closure_2 = [];
-  }
-  closure_131_0 = closure_2;
-  const _Date2 = Date;
-  closure_131_3 = Date.now();
-  const combined = closure_131_0.concat(closure_132_7.defaultChannelIds({ withQuickSwitcher: closure_131_1, withChannelAffinities: closure_131_2 }));
-  const found = combined.filter((item) => {
-    channel = channel.getChannel(item);
-    return closure_1_0(closure_1_2[11]).canSeeChannelSummaries(channel, false, true);
-  });
-  const found1 = found.filter((item) => {
-    const timestamp = Date.now();
-    const statusResult = closure_1_7.status(item);
-    let fetching;
-    if (statusResult != null) {
-      fetching = statusResult.fetching;
-    }
-    if (fetching) {
-      return false;
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      let lastReceivedAt;
-      if (statusResult != null) {
-        lastReceivedAt = statusResult.lastReceivedAt;
-      }
-      let tmp5 = null == lastReceivedAt;
-      if (!tmp5) {
-        tmp5 = timestamp - lastReceivedAt > closure_1_9;
-      }
-      return tmp5;
+      return { value: "IconComponent", done: "IconComponent" };
     }
-  });
-  const substr = found1.slice(0, 50);
-  closure_131_0 = substr;
-  if (0 === substr.length) {
-    return Promise.resolve(null);
-  }
-  closure_132_1(closure_132_2[7]).dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: closure_131_0, requestedAt: closure_131_3 });
-  const HTTP = closure_132_0(closure_132_2[8]).HTTP;
-  const request = { url: closure_132_8.USER_SUMMARIES, body: { channel_ids: closure_131_0 }, rejectWithError: false };
-  await HTTP.post(request);
-  if (2 === tmp7) {
-    c6 = 0;
-    closure_131_7 = closure_5;
-    const aPIError = new closure_132_0(closure_132_2[9]).APIError(closure_131_7);
-    closure_131_4 = aPIError;
-  } else if (arg0 === 1) {
-    c8 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c6 = 0;
-    c8 = 3;
-    return { value, done: true };
   } else {
-    closure_131_5 = value;
-    c6 = 0;
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          let obj5 = closure_1;
+          if (closure_1 === undefined) {
+            obj5 = {};
+          }
+          let flag = obj5.useQuickSwitcher;
+          if (flag === undefined) {
+            flag = true;
+          }
+          closure_131_1 = flag;
+          let flag2 = obj5.useChannelAffinities;
+          if (flag2 === undefined) {
+            flag2 = true;
+          }
+          closure_131_2 = flag2;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_2 = closure_131_0;
+          if (closure_131_0 == null) {
+            closure_2 = [];
+          }
+          closure_131_0 = closure_2;
+          const _Date2 = Date;
+          closure_131_3 = Date.now();
+          const obj7 = { withQuickSwitcher: closure_131_1, withChannelAffinities: closure_131_2 };
+          const combined = closure_131_0.concat(closure_132_7.defaultChannelIds(obj7));
+          const found = combined.filter((item) => {
+            channel = channel.getChannel(item);
+            return closure_1_0(closure_1_2[11]).canSeeChannelSummaries(channel, false, true);
+          });
+          const found1 = found.filter((item) => {
+            const timestamp = Date.now();
+            const statusResult = closure_1_7.status(item);
+            let fetching;
+            if (statusResult != null) {
+              fetching = statusResult.fetching;
+            }
+            if (fetching) {
+              return false;
+            } else {
+              let lastReceivedAt;
+              if (statusResult != null) {
+                lastReceivedAt = statusResult.lastReceivedAt;
+              }
+              let tmp5 = null == lastReceivedAt;
+              if (!tmp5) {
+                tmp5 = timestamp - lastReceivedAt > closure_1_9;
+              }
+              return tmp5;
+            }
+          });
+          const substr = found1.slice(0, 50);
+          closure_131_0 = substr;
+          if (0 === substr.length) {
+            c8 = 3;
+            const obj8 = { value: Promise.resolve(null), done: true };
+            return obj8;
+          } else {
+            const obj9 = { type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: closure_131_0, requestedAt: closure_131_3 };
+            closure_132_1(closure_132_2[7]).dispatch(obj9);
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            c6 = 1;
+            const HTTP = closure_132_0(closure_132_2[8]).HTTP;
+            const request = { url: closure_132_8.USER_SUMMARIES, body: null, rejectWithError: false };
+            const obj10 = { channel_ids: closure_131_0 };
+            request.body = obj10;
+            c7 = 3;
+            c8 = 1;
+            const obj11 = { value: HTTP.post(request), done: false };
+            return obj11;
+          }
+        }
+      } else {
+        if (2 === tmp7) {
+          c6 = 0;
+          closure_131_7 = closure_5;
+          const aPIError = new closure_132_0(closure_132_2[9]).APIError(closure_131_7);
+          closure_131_4 = aPIError;
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_131_5 = value;
+          c6 = 0;
+        }
+        let summaries;
+        if (closure_131_5 != null) {
+          summaries = closure_131_5.body.summaries;
+        }
+        closure_131_6 = summaries;
+        const obj13 = { type: "RECEIVE_CHANNEL_SUMMARIES_BULK", requestedAt: closure_131_3, receivedAt: null, summaries: null, requestArgs: null, error: null };
+        const _Date = Date;
+        obj13.receivedAt = Date.now();
+        obj13.summaries = closure_131_6;
+        const obj14 = { channelIds: closure_131_0 };
+        obj13.requestArgs = obj14;
+        obj13.error = closure_131_4;
+        closure_132_1(closure_132_2[7]).dispatch(obj13);
+        c8 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } catch (tmp39) {
+      closure_5 = tmp39;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp39;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  if (closure_131_5 != null) {
-    const summaries = closure_131_5.body.summaries;
-  }
-  closure_131_6 = summaries;
-  const _Date = Date;
-  closure_132_1(closure_132_2[7]).dispatch({ type: "RECEIVE_CHANNEL_SUMMARIES_BULK", requestedAt: closure_131_3, receivedAt: Date.now(), summaries: closure_131_6, requestArgs: { channelIds: closure_131_0 }, error: closure_131_4 });
-  await "IconComponent";
-  closure_4 = tmp3;
-  closure_131_0 = closure_0;
-  let obj5 = closure_1;
-  if (closure_1 === undefined) {
-    obj5 = {};
-  }
-  let flag = obj5.useQuickSwitcher;
-  if (flag === undefined) {
-    flag = true;
-  }
-  closure_131_1 = flag;
-  let flag2 = obj5.useChannelAffinities;
-  if (flag2 === undefined) {
-    flag2 = true;
-  }
-  closure_131_2 = flag2;
-  return "Reflect";
 };
 let closure_20 = async function _deleteSummary(arg0) {
   if (c6 === 2) {
@@ -454,7 +532,7 @@ let closure_20 = async function _deleteSummary(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -497,7 +575,7 @@ let closure_20 = async function _deleteSummary(arg0) {
         closure_130_1(closure_130_2[7]).dispatch(obj7);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -578,7 +656,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetc
             return { value, done: true };
           } else {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -637,7 +715,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetc
           return { value, done: true };
         } else {
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -770,12 +848,12 @@ export default { setSummaryFeedback, updateVisibleMessages, setSelectedSummary, 
 export { fetchSummary };
 export { fetchSummaries };
 export { setHighlightedSummary };
-export const toggleTopicsBar = function toggleTopicsBar() {
+export function toggleTopicsBar() {
   DispatcherDefault.dispatch({ type: "TOGGLE_TOPICS_BAR" });
-};
+}
 export { setSelectedSummary };
 export { updateVisibleMessages };
-export const stopPolling = function stopPolling(arg0) {
+export function stopPolling(arg0) {
   if (null == dependencyMap[arg0]) {
     dependencyMap[arg0] = 0;
   }
@@ -788,7 +866,7 @@ export const stopPolling = function stopPolling(arg0) {
     const _clearInterval = clearInterval;
     clearInterval(closure_11[arg0]);
   }
-};
+}
 export { setSummaryFeedback };
 export { fetchChannelAffinities };
 export { fetchSummariesBulk };

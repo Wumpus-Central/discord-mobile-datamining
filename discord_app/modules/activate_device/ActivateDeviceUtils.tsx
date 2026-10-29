@@ -1,14 +1,14 @@
-// === Module 15386: ActivateDeviceUtils ===
+// === Module 15620: ActivateDeviceUtils ===
 
-// Module 15386 (ActivateDeviceUtils)
+// Module 15620 (ActivateDeviceUtils)
 import Constants from "Constants" /* 1084 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 13759 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 13992 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/activate_device/ActivateDeviceUtils.tsx");
 
-export const clientIdToActivateDevicePlatform = function clientIdToActivateDevicePlatform(clientId) {
+export function clientIdToActivateDevicePlatform(clientId) {
   if (clientId === ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID) {
     let PLAYSTATION = PlatformTypes.PLAYSTATION;
   } else {
@@ -18,4 +18,4 @@ export const clientIdToActivateDevicePlatform = function clientIdToActivateDevic
     }
   }
   return PLAYSTATION;
-};
+}

@@ -1,12 +1,12 @@
-// === Module 19735: SafetyFlowsUtils ===
+// === Module 19957: SafetyFlowsUtils ===
 
-// Module 19735 (SafetyFlowsUtils)
+// Module 19957 (SafetyFlowsUtils)
 import util from "util" /* 1125 */;
-import _modDef2833 from "module_2833" /* 2833 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import types from "types" /* 19729 */;
-import constants from "constants" /* 19730 */;
+import _modDef2834 from "module_2834" /* 2834 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import types from "types" /* 19951 */;
+import constants from "constants" /* 19952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
@@ -39,7 +39,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef2833["/fHz9S"]);
+    obj3.text = intl.string(_modDef2834["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;
@@ -129,7 +129,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -177,7 +177,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp15) {
           c4 = tmp;
@@ -223,7 +223,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -271,7 +271,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp15) {
           c4 = tmp;

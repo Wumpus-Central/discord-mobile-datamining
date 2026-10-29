@@ -1,6 +1,6 @@
-// === Module 9661: TwoWayLinkDiscordConsent ===
+// === Module 9693: TwoWayLinkDiscordConsent ===
 
-// Module 9661 (TwoWayLinkDiscordConsent)
+// Module 9693 (TwoWayLinkDiscordConsent)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const tmp4 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
@@ -121,7 +121,7 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -236,7 +236,7 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

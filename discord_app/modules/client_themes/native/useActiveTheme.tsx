@@ -1,11 +1,11 @@
-// === Module 9744: useActiveTheme ===
+// === Module 9776: useActiveTheme ===
 
-// Module 9744 (useActiveTheme)
+// Module 9776 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5185 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5186 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 require = fn;

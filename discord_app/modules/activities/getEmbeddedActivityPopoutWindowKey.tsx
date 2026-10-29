@@ -1,13 +1,13 @@
-// === Module 15999: getEmbeddedActivityPopoutWindowKey ===
+// === Module 16236: getEmbeddedActivityPopoutWindowKey ===
 
-// Module 15999 (getEmbeddedActivityPopoutWindowKey)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4925 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7865 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+// Module 16236 (getEmbeddedActivityPopoutWindowKey)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7888 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
 
 require = fn;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 const PopoutWindowKeys = fn(1084).PopoutWindowKeys;
 const ReactCompilerGating = fn(558);
 function getEmbeddedActivityPopoutWindowKey(arg0) {
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivit
 
 export default getEmbeddedActivityPopoutWindowKey;
 export { getEmbeddedActivityPopoutWindowKeyForChannel };
-export const getEmbeddedActivityPopoutWindowKeyForApplication = function getEmbeddedActivityPopoutWindowKeyForApplication(applicationId) {
+export function getEmbeddedActivityPopoutWindowKeyForApplication(applicationId) {
   applicationId = applicationId.applicationId;
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   if (null != currentEmbeddedActivity) {
@@ -37,7 +37,7 @@ export const getEmbeddedActivityPopoutWindowKeyForApplication = function getEmbe
       }
     }
   }
-};
+}
 export const usePopoutWindowForActivity = ReactCompilerGating.isReactCompilerEnabled() ? (function usePopoutWindowForActivity(channelId) {
   const cResult = channelId(576).c(3);
   channelId = channelId.channelId;

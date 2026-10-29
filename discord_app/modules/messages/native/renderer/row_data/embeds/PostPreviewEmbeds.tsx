@@ -1,14 +1,14 @@
-// === Module 14828: PostPreviewEmbeds ===
+// === Module 15063: PostPreviewEmbeds ===
 
-// Module 14828 (PostPreviewEmbeds)
+// Module 15063 (PostPreviewEmbeds)
 import Constants from "Constants" /* 1084 */;
-import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 14829 */;
+import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 15064 */;
 import size from "module_2" /* 2 */;
 
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
 
-export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle) {
+export function createPostPreviewEmbeds(message, roleStyle) {
   closure_0 = message;
   closure_1 = roleStyle;
   let flag = useReducedMotion;
@@ -28,4 +28,4 @@ export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message,
     });
   }
   return items;
-};
+}

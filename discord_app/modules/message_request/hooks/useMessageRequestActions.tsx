@@ -1,22 +1,22 @@
-// === Module 13585: useMessageRequestActions ===
+// === Module 13818: useMessageRequestActions ===
 
-// Module 13585 (useMessageRequestActions)
+// Module 13818 (useMessageRequestActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import ReportModals from "ReportModals" /* 8140 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import ReportModals from "ReportModals" /* 8163 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7738 */;
+import UserProfileStore from "UserProfileStore" /* 7760 */;
 
 require = fn;
-const MessageRequestConstants = fn(13586);
+const MessageRequestConstants = fn(13819);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
 
-export const useMessageRequestActions = function useMessageRequestActions(user) {
+export function useMessageRequestActions(user) {
   user = user.user;
   closure_0 = user;
   let onAcceptSuccess = user.onAcceptSuccess;
@@ -57,7 +57,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -151,7 +151,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -265,7 +265,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             closure_131_1 = undefined;
             if (isUserProfileLoading) {
               v3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               let tmp30 = _undefined(true);
               let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp58, closure_8);
@@ -347,7 +347,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         let obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -377,7 +377,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -427,7 +427,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp16) {
                     c1 = tmp;
@@ -584,4 +584,4 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     acceptMessageRequest = callback3;
   }
   return { acceptMessageRequest, rejectMessageRequest, rejectAll, markAsNotSpam, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected: isOptimisticRejected[0] };
-};
+}

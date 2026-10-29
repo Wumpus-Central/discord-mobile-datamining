@@ -1,14 +1,14 @@
-// === Module 19100: shouldShowLogUploadForCategory ===
+// === Module 19335: shouldShowLogUploadForCategory ===
 
-// Module 19100 (shouldShowLogUploadForCategory)
-import Constants from "Constants" /* 10079 */;
+// Module 19335 (shouldShowLogUploadForCategory)
+import Constants from "Constants" /* 10111 */;
 import size from "module_2" /* 2 */;
 
 const FeedbackRating = Constants.FeedbackRating;
 let closure_1 = {};
 const result = size.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
 
-export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCategory(rating, category, reason) {
+export function shouldShowLogUploadForCategory(rating, category, reason) {
   if (rating !== FeedbackRating.BAD) {
     if (rating !== FeedbackRating.NEUTRAL) {
       return false;
@@ -28,4 +28,4 @@ export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCat
     const _Math = Math;
     return Math.random() < num2;
   }
-};
+}

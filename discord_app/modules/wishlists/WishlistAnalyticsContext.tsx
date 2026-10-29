@@ -1,6 +1,6 @@
-// === Module 14689: WishlistAnalyticsContext ===
+// === Module 14924: WishlistAnalyticsContext ===
 
-// Module 14689 (WishlistAnalyticsContext)
+// Module 14924 (WishlistAnalyticsContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

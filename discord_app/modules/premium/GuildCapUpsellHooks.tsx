@@ -1,11 +1,11 @@
-// === Module 7343: GuildCapUpsellHooks ===
+// === Module 7367: GuildCapUpsellHooks ===
 
-// Module 7343 (GuildCapUpsellHooks)
+// Module 7367 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import HotspotStore2 from "HotspotStore" /* 7344 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import HotspotStore2 from "HotspotStore" /* 7368 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -99,11 +99,11 @@ export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactComp
   }
   return stateFromStores;
 });
-export const hideInlineGuildCapUpsell = function hideInlineGuildCapUpsell() {
+export function hideInlineGuildCapUpsell() {
   HotspotStore2.hideHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
-};
+}
 export { hasIncreasedGuildCap };
-export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
+export function isAtGuildCapAndNonPremium() {
   let tmp = GuildStore.getGuildCount() >= MAX_USER_GUILDS;
   if (tmp) {
     const currentUser = UserStore.getCurrentUser();
@@ -118,4 +118,4 @@ export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
     tmp = !result;
   }
   return tmp;
-};
+}

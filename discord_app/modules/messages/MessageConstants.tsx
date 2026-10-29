@@ -1,6 +1,6 @@
-// === Module 5009: MessageConstants ===
+// === Module 5010: MessageConstants ===
 
-// Module 5009 (MessageConstants)
+// Module 5010 (MessageConstants)
 import Constants from "Constants" /* 1084 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import Backoff from "Backoff" /* 569 */;
@@ -33,8 +33,8 @@ export const GUILD_OFFICIAL_HIGHLIGHT_ALPHA = 0.16;
 export const FileUploadErrorTypes = { ERROR_SOURCE_UNKNOWN: "ERROR_SOURCE_UNKNOWN", PRECOMPRESSION_SUM_TOO_LARGE: "PRECOMPRESSION_SUM_TOO_LARGE", PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE: "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE", POSTCOMPRESSION_SUM_TOO_LARGE: "POSTCOMPRESSION_SUM_TOO_LARGE", POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE: "POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE", UPLOAD_ATTACHMENT_MAX_SIZE_ERROR: "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR", EXPLICIT_CONTENT: "EXPLICIT_CONTENT" };
 export const MessageTagTypes = { SYSTEM_DM_TAG_SYSTEM_TYPE: "a", BOT_TAG_SERVER_TYPE: "b", BOT_TAG_BOT_TYPE: "d", POLL_TYPE: "g" };
 export const DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE = 209715200;
-export const isChannelStreamMessage = function isChannelStreamMessage(type) {
+export function isChannelStreamMessage(type) {
   return type.type === ChannelStreamTypes.MESSAGE;
-};
+}
 export const MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS = obj;
 export const MessageSendLocation = { PUSH_NOTIFICATION: "push_notification", CHAT_INPUT: "chat_input", SHARE_MODAL: "share_modal", VOICE_MESSAGE: "voice_message", THREAD_CREATION: "thread_creation", FORWARDING: "forwarding", USER_PROFILE: "user_profile", RETRY: "explicit_retry", OVERLAY: "overlay", ACTIVITY_SHARE: "activity_share", ICYMI: "icymi", INSTANT_UPLOAD: "instant_upload", APP_COMMAND: "app_command", PRIVATE_MESSAGE_COMMAND: "private_message_command", POLL_CREATION: "poll_creation", SHARE_CUSTOM_THEME: "share_custom_theme", CONJURE_PATCH_NOTES: "conjure_patch_notes", GIF_REPLY: "gif_reply", STICKER_REPLY: "sticker_reply", SEND_WAVE: "send_wave", GIFTING: "gifting", CONTENT_INVENTORY_MEMBERLIST: "content_inventory_memberlist", GREET: "greet", SOCIAL_LAYER_STOREFRONT: "social_layer_storefront", COLLECTIBLES_SHOP: "collectibles_shop", GAME_SERVER_SHOP: "game_server_shop", GAME_ORGANIZATION_INVITE: "game_organization_invite", MEDIA_MENTION: "media_mention", GUILD_SPACE: "guild_space", OTHER: "other" };

@@ -1,13 +1,13 @@
-// === Module 10931: useChannelContentGate ===
+// === Module 10966: useChannelContentGate ===
 
-// Module 10931 (useChannelContentGate)
+// Module 10966 (useChannelContentGate)
 import c from "c" /* 576 */;
-import AgeGateUtils from "AgeGateUtils" /* 6697 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6717 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9892 */;
-import NsfwGateChatDefault from "NsfwGateChat" /* 10932 */;
-import GuildNSFWDefault from "GuildNSFW" /* 10934 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 10936 */;
+import AgeGateUtils from "AgeGateUtils" /* 6721 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6740 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9924 */;
+import NsfwGateChatDefault from "NsfwGateChat" /* 10967 */;
+import GuildNSFWDefault from "GuildNSFW" /* 10969 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 10971 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,7 +80,7 @@ export const useChannelContentGate = ReactCompilerGating.isReactCompilerEnabled(
     tmpResult = age_gate_AgeGateUtils;
   }
 });
-export const renderChannelContentGate = function renderChannelContentGate(channelContentGate) {
+export function renderChannelContentGate(channelContentGate) {
   const kind = channelContentGate.kind;
   if (constants.IOS_GUILD_NSFW === kind) {
     return jsx(NsfwGateChatDefault, {});
@@ -92,4 +92,4 @@ export const renderChannelContentGate = function renderChannelContentGate(channe
     ({ guildId: obj.guildId, spoilerGatingChannelId: obj.channelId } = channelContentGate);
     return jsx(ChannelSpoilerDefault, { guildId: null, channelId: null }, channelContentGate.channelId);
   }
-};
+}

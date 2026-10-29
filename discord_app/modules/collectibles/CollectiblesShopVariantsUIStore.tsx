@@ -1,8 +1,8 @@
-// === Module 9452: CollectiblesShopVariantsUIStore ===
+// === Module 9483: CollectiblesShopVariantsUIStore ===
 
-// Module 9452 (CollectiblesShopVariantsUIStore)
-import _mod4919 from "module_4919" /* 4919 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7696 */;
+// Module 9483 (CollectiblesShopVariantsUIStore)
+import _mod4920 from "module_4920" /* 4920 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7719 */;
 import identity from "module_1266" /* 1266 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4919.shallow);
+}, _mod4920.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedVariantIndex(arg0) {
@@ -76,7 +76,7 @@ export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnable
   }
   return defaultVariantIndex;
 });
-export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, arg1) {
+export function setSelectedVariantIndex(arg0, arg1) {
   const storeListingId = arg0;
   closure_1 = arg1;
   state.setState((selectionStates) => {
@@ -97,4 +97,4 @@ export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, ar
     }
     return tmp5;
   });
-};
+}

@@ -1,11 +1,11 @@
-// === Module 7483: useGuildIdsToFetchSoundsFor ===
+// === Module 7506: useGuildIdsToFetchSoundsFor ===
 
-// Module 7483 (useGuildIdsToFetchSoundsFor)
+// Module 7506 (useGuildIdsToFetchSoundsFor)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import SoundboardStore from "SoundboardStore" /* 6042 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import SoundboardStore from "SoundboardStore" /* 6046 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -66,8 +66,8 @@ export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEn
     return stateFromStoresArray.filter((item) => null == closure_0.get(item));
   }, items2);
 });
-export const getGuildIdsToFetchSoundsFor = function getGuildIdsToFetchSoundsFor() {
+export function getGuildIdsToFetchSoundsFor() {
   const guildIds = GuildStore.getGuildIds();
   const sounds = SoundboardStore.getSounds();
   return guildIds.filter((item) => null == closure_0.get(item));
-};
+}

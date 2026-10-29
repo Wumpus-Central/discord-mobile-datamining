@@ -1,6 +1,6 @@
-// === Module 6809: ConjureProjectTypes ===
+// === Module 6832: ConjureProjectTypes ===
 
-// Module 6809 (ConjureProjectTypes)
+// Module 6832 (ConjureProjectTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7, ACTIVITY: 8 });
@@ -13,24 +13,24 @@ export const MAX_PROJECT_NAME_LENGTH = 128;
 export const MAX_APP_DESCRIPTION_LENGTH = 400;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
 export const ConjureProjectFlags = frozen1;
-export const isProjectGuildCollaborationEnabled = function isProjectGuildCollaborationEnabled(flags) {
+export function isProjectGuildCollaborationEnabled(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
   return num & frozen1.GUILD_COLLABORATION;
-};
-export const isPreviewlessProject = function isPreviewlessProject(project) {
+}
+export function isPreviewlessProject(project) {
   return null != project.preview_application_id && project.preview_application_id === project.application_id;
-};
-export const isProjectPublic = function isProjectPublic(flags) {
+}
+export function isProjectPublic(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
   return num & frozen1.PUBLIC;
-};
-export const projectUsesAppChannels = function projectUsesAppChannels(project) {
+}
+export function projectUsesAppChannels(project) {
   let supported_surfaces = project.supported_surfaces;
   if (supported_surfaces == null) {
     supported_surfaces = [];
@@ -44,10 +44,10 @@ export const projectUsesAppChannels = function projectUsesAppChannels(project) {
     hasItem = tmp2;
   }
   return hasItem;
-};
-export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
+}
+export function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;
-};
-export const projectSupportsCollaboratorRoles = function projectSupportsCollaboratorRoles(stateFromStores) {
+}
+export function projectSupportsCollaboratorRoles(stateFromStores) {
   return null != stateFromStores.collaborator_role_ids;
-};
+}

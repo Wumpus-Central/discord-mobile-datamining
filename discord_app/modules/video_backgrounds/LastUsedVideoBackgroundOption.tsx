@@ -1,21 +1,21 @@
-// === Module 5902: LastUsedVideoBackgroundOption ===
+// === Module 5904: LastUsedVideoBackgroundOption ===
 
-// Module 5902 (LastUsedVideoBackgroundOption)
+// Module 5904 (LastUsedVideoBackgroundOption)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const initialize = obj(504);
-const VideoBackgroundUtils = obj(5903);
+const VideoBackgroundUtils = obj(5905);
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
 
-export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgroundOption(currentUser) {
+export function getLastUsedVideoBackgroundOption(currentUser) {
   const videoBackground = UnsyncedUserSettingsStore.videoBackground;
   if (!obj.isCustomBackgroundOption(videoBackground)) {
     if (typeof videoBackground !== "number") {
@@ -30,7 +30,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
     tmp5 = null;
   }
   return tmp5;
-};
+}
 export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompilerEnabled() ? (function useLastUsedVideoBackgroundOption() {
   let obj = require;
   let result = dependencyMap;

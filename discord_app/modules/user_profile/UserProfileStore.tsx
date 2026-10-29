@@ -1,27 +1,27 @@
-// === Module 7738: UserProfileStore ===
+// === Module 7760: UserProfileStore ===
 
-// Module 7738 (UserProfileStore)
+// Module 7760 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import util from "util" /* 1125 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import Timers from "Timers" /* 4851 */;
-import WidgetType from "WidgetType" /* 7739 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7740 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7743 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7744 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7746 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7747 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7748 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7749 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import Timers from "Timers" /* 4852 */;
+import WidgetType from "WidgetType" /* 7761 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7762 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7765 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7766 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7768 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7769 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7770 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7771 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 import UserRecord from "UserRecord" /* 1403 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1083 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import SortedGuildStore from "SortedGuildStore" /* 6736 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import SortedGuildStore from "SortedGuildStore" /* 6759 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -52,12 +52,12 @@ function createUserWidgetFromServer(data) {
               if (null != id.id) {
                 tmp = null;
                 if (null != id.file_id) {
-                  obj = { status: "saved", id: null, fileId: null, gameId: null, title: null, tags: null, localClipId: null, videoURL: null, thumbnailURL: null, spritesheetImageURL: null, spritesheetVttURL: null };
+                  obj = { status: "saved", id: null, fileId: null, gameId: null, title: null, tags: null, localClipId: null, clipEventsTimeline: null, videoURL: null, thumbnailURL: null, spritesheetImageURL: null, spritesheetVttURL: null };
                   ({ id: obj.id, file_id: obj.fileId, game_id: obj.gameId, title } = id);
                   obj.title = title;
                   ({ tags: obj.tags, local_clip_id } = id);
                   obj.localClipId = local_clip_id;
-                  ({ video_url: obj.videoURL, thumbnail_url: obj.thumbnailURL, spritesheet_image_url: obj.spritesheetImageURL, spritesheet_vtt_url: obj.spritesheetVttURL } = id);
+                  ({ clip_events_timeline: obj.clipEventsTimeline, video_url: obj.videoURL, thumbnail_url: obj.thumbnailURL, spritesheet_image_url: obj.spritesheetImageURL, spritesheet_vtt_url: obj.spritesheetVttURL } = id);
                   tmp = obj;
                 }
               }

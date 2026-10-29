@@ -1,9 +1,9 @@
-// === Module 13845: create_guild/CreateGuildConstants ===
+// === Module 14078: create_guild/CreateGuildConstants ===
 
-// Module 13845 (create_guild/CreateGuildConstants)
+// Module 14078 (create_guild/CreateGuildConstants)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import util from "util" /* 1125 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const GuildTemplateId = { CREATE: "CREATE", GAMING: "GAMING", FRIENDS: "FRIENDS"
 const result = size.fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
 
 export { GuildTemplateId };
-export const getGuildTemplatesMap = function getGuildTemplatesMap() {
+export function getGuildTemplatesMap() {
   const obj = {};
   const obj2 = { id: obj.CREATE, code: "2TffvPucqHkN", label: null, channels: null, system_channel_id: null };
   const intl = util.intl;
@@ -401,4 +401,4 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   obj65.roles = items7;
   obj[obj.SCHOOL_CLUB] = obj65;
   return obj;
-};
+}

@@ -1,6 +1,6 @@
-// === Module 10044: SummaryConstants ===
+// === Module 10076: SummaryConstants ===
 
-// Module 10044 (SummaryConstants)
+// Module 10076 (SummaryConstants)
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
 
@@ -14,7 +14,7 @@ export const SUMMARY_POLL_INTERVAL = result;
 export const SummariesSidebarToggledSource = { TOOLBAR_BUTTON: "toolbar button", PILL: "pill" };
 export const SummariesTopicClickedSource = { SIDEBAR: "sidebar", PILL_DROPDOWN: "pill dropdown", PILL_NEXT_ARROW: "pill next arrow", PILL_PREVIOUS_ARROW: "pill previous arrow" };
 export { SummaryFeedbackReasons };
-export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
+export function getSummaryFeedbackReasons() {
   obj = { value: obj.DUPLICATED, label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.wwXl5h);
@@ -40,4 +40,4 @@ export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
   obj6.label = intl6.string(util.t.BufsKk);
   items[5] = obj6;
   return items;
-};
+}

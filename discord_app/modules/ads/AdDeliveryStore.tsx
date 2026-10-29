@@ -1,13 +1,13 @@
-// === Module 7808: AdDeliveryStore ===
+// === Module 7831: AdDeliveryStore ===
 
-// Module 7808 (AdDeliveryStore)
+// Module 7831 (AdDeliveryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import AdPlacement from "AdPlacement" /* 6751 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7809 */;
+import AdPlacement from "AdPlacement" /* 6774 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7832 */;
 
 require = fn;
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
@@ -181,20 +181,34 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     closure_11 = Date.now();
     map = new Map(map);
     const result = map.set(fetchedAt.placement, false);
-    let tmp2 = null;
+    value = map3.get(fetchedAt.placement);
+    if (value != null) {
+      value.succeed();
+    }
+    map4.delete(fetchedAt.placement);
+    let tmp4 = null;
     if (null != fetchedAt.questHomeHero) {
       const obj = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
-      tmp2 = obj;
+      tmp4 = obj;
     }
-    const obj2 = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
-    ({ adDecisionData: obj3.adDecisionData, adContext: obj3.adContext, metadataSealed: obj3.metadataSealed, trafficMetadataSealed: obj3.trafficMetadataSealed, provenanceMetadataSealed: obj3.provenanceMetadataSealed } = fetchedAt);
+    const obj2 = { creative: tmp4, fetchedAt: fetchedAt.fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+    ({ adDecisionData: obj4.adDecisionData, adContext: obj4.adContext, metadataSealed: obj4.metadataSealed, trafficMetadataSealed: obj4.trafficMetadataSealed, provenanceMetadataSealed: obj4.provenanceMetadataSealed } = fetchedAt);
     map1 = new Map(map1);
     const result1 = map1.set(fetchedAt.placement, obj2);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
+    placement = placement.placement;
     c12 = false;
     map = new Map(map);
-    const result = map.set(placement.placement, false);
+    const result = map.set(placement, false);
+    value = map3.get(placement);
+    if (null == value) {
+      const tmp8 = new BackoffDefault(closure_9, closure_10);
+      const result1 = map3.set(placement, tmp8);
+      value = tmp8;
+    }
+    const timestamp = Date.now();
+    const result2 = map4.set(placement, timestamp + value.fail());
   }
 });
 const size = fn(2);

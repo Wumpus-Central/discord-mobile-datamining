@@ -1,8 +1,8 @@
-// === Module 9355: GameProfileMobileStoreLinkUtils ===
+// === Module 9359: GameProfileMobileStoreLinkUtils ===
 
-// Module 9355 (GameProfileMobileStoreLinkUtils)
+// Module 9359 (GameProfileMobileStoreLinkUtils)
 import ApplicationDistributors from "ApplicationDistributors" /* 1103 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9305 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9309 */;
 import size from "module_2" /* 2 */;
 
 let obj = { appStore: null, googlePlay: null };
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/game_profile/GameProfileMobil
 
 export const MOBILE_STORES = obj;
 export const MOBILE_STORE_WEBSITE_CATEGORIES = new Set(values.flatMap((websiteCategories) => websiteCategories.websiteCategories));
-export const getMobileStoreLink = function getMobileStoreLink(thirdPartySkus, buildUrl) {
+export function getMobileStoreLink(thirdPartySkus, buildUrl) {
   let tmp = (function getMobileStoreWebsite(thirdPartySkus, buildUrl) {
     closure_1 = buildUrl;
     function _loop(iter) {
@@ -87,4 +87,4 @@ export const getMobileStoreLink = function getMobileStoreLink(thirdPartySkus, bu
     tmp = tmp4;
   }
   return tmp;
-};
+}

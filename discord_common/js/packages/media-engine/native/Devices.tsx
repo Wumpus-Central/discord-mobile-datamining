@@ -1,14 +1,14 @@
-// === Module 5847: Devices ===
+// === Module 5849: Devices ===
 
-// Module 5847 (Devices)
+// Module 5849 (Devices)
 import formatDefault from "format" /* 1364 */;
-import Constants from "Constants" /* 5777 */;
+import Constants from "Constants" /* 5779 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");
 
-export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
+export function sanitizeDevices(AUDIO_INPUT, items) {
   closure_0 = AUDIO_INPUT;
   importDefault = false;
   const mapped = items.map((item, index) => {
@@ -64,11 +64,11 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     mapped.unshift(obj2);
   }
   return mapped;
-};
-export const getAudioInputDevices = function getAudioInputDevices() {
+}
+export function getAudioInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2013).getVoiceEngine();
+    const voiceEngine = closure_0(2014).getVoiceEngine();
     const inputDevices = voiceEngine.getInputDevices((arr) => {
       const AUDIO_INPUT = constants.AUDIO_INPUT;
       c1 = false;
@@ -127,11 +127,11 @@ export const getAudioInputDevices = function getAudioInputDevices() {
       return closure_0(mapped);
     });
   });
-};
-export const getAudioOutputDevices = function getAudioOutputDevices() {
+}
+export function getAudioOutputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2013).getVoiceEngine();
+    const voiceEngine = closure_0(2014).getVoiceEngine();
     const outputDevices = voiceEngine.getOutputDevices((arr) => {
       const AUDIO_OUTPUT = constants.AUDIO_OUTPUT;
       c1 = false;
@@ -190,11 +190,11 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
       return closure_0(mapped);
     });
   });
-};
-export const getVideoInputDevices = function getVideoInputDevices() {
+}
+export function getVideoInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2013).getVoiceEngine();
+    const voiceEngine = closure_0(2014).getVoiceEngine();
     const videoInputDevices = voiceEngine.getVideoInputDevices((arr) => {
       const VIDEO_INPUT = constants.VIDEO_INPUT;
       c1 = false;
@@ -253,4 +253,4 @@ export const getVideoInputDevices = function getVideoInputDevices() {
       return closure_0(mapped);
     });
   });
-};
+}

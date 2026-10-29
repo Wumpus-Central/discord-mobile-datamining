@@ -1,10 +1,10 @@
-// === Module 10755: ConjureAnalytics ===
+// === Module 10830: ConjureAnalytics ===
 
-// Module 10755 (ConjureAnalytics)
+// Module 10830 (ConjureAnalytics)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import ConjureUtils from "ConjureUtils" /* 7382 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import ConjureUtils from "ConjureUtils" /* 7405 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 require = fn;
 function projectFields(projectId) {
@@ -90,7 +90,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 
 export const ConjureErrorCodes = { BUILD_FAILED: "BUILD_FAILED", HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED", AGENT_ERROR: "AGENT_ERROR", PUBLISH_FAILED: "PUBLISH_FAILED", WS_OPEN_FAILED: "WS_OPEN_FAILED", SEND_FAILED: "SEND_FAILED", RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR", RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR" };
-export const trackConjureTurnResulted = function trackConjureTurnResulted(projectId, turn_id) {
+export function trackConjureTurnResulted(projectId, turn_id) {
   const obj2 = {};
   const merged = Object.assign(projectFields(projectId));
   const merged1 = Object.assign(conjureLocation(projectId, true));
@@ -141,8 +141,8 @@ export const trackConjureTurnResulted = function trackConjureTurnResulted(projec
   }
   const merged2 = Object.assign(obj5);
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_TURN_RESULTED, obj2);
-};
-export const trackConjureErrored = function trackConjureErrored(projectId, turnId) {
+}
+export function trackConjureErrored(projectId, turnId) {
   ({ message, details, isPreview } = turnId);
   ({ location: _location, code } = turnId);
   if (isPreview === undefined) {
@@ -176,8 +176,8 @@ export const trackConjureErrored = function trackConjureErrored(projectId, turnI
   }
   obj2.error_details = substr1;
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_ERRORED, obj2);
-};
-export const trackConjurePublishActionClicked = function trackConjurePublishActionClicked(project_id, arg1) {
+}
+export function trackConjurePublishActionClicked(project_id, arg1) {
   ({ publishState, installScope } = arg1);
   ({ entryPoint, surface, action } = arg1);
   const project = ConjureProjectStore.getProject(project_id);
@@ -217,8 +217,8 @@ export const trackConjurePublishActionClicked = function trackConjurePublishActi
   obj2.install_scope = installScope;
   obj2.action = action;
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_PUBLISH_ACTION_CLICKED, obj2);
-};
-export const trackConjureRatingSubmitted = function trackConjureRatingSubmitted(projectId) {
+}
+export function trackConjureRatingSubmitted(projectId) {
   projectId = projectId.projectId;
   const obj2 = {};
   ({ turnId, rating, publishReason, surface } = projectId);
@@ -246,8 +246,8 @@ export const trackConjureRatingSubmitted = function trackConjureRatingSubmitted(
   obj2.client_platform = str;
   obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_SUBMITTED, obj2);
   obj3 = PlatformUtils;
-};
-export const trackConjureRatingFeedbackSubmitted = function trackConjureRatingFeedbackSubmitted(projectId, substr) {
+}
+export function trackConjureRatingFeedbackSubmitted(projectId, substr) {
   projectId = projectId.projectId;
   const obj2 = {};
   ({ turnId, rating, publishReason, surface } = projectId);
@@ -278,4 +278,4 @@ export const trackConjureRatingFeedbackSubmitted = function trackConjureRatingFe
   obj4.feedback_text = substr;
   obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_FEEDBACK_SUBMITTED, obj4);
   obj3 = PlatformUtils;
-};
+}

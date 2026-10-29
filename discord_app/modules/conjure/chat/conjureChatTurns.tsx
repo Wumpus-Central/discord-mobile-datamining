@@ -1,8 +1,8 @@
-// === Module 10735: conjureChatTurns ===
+// === Module 10809: conjureChatTurns ===
 
-// Module 10735 (conjureChatTurns)
-import conjureStepTimeline from "conjureStepTimeline" /* 10736 */;
-import conjureChatHistory from "conjureChatHistory" /* 10737 */;
+// Module 10809 (conjureChatTurns)
+import conjureStepTimeline from "conjureStepTimeline" /* 10810 */;
+import conjureChatHistory from "conjureChatHistory" /* 10811 */;
 import size from "module_2" /* 2 */;
 
 function findOpenTurn(messages) {
@@ -56,7 +56,7 @@ function findOpenTurn(messages) {
 }
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureChatTurns.tsx");
 
-export const turnSettled = function turnSettled(message) {
+export function turnSettled(message) {
   let hasTerminalStepResult = true === message.finished || true === message.continued;
   if (!hasTerminalStepResult) {
     hasTerminalStepResult = "" !== message.content;
@@ -74,12 +74,12 @@ export const turnSettled = function turnSettled(message) {
     hasTerminalStepResult = conjureStepTimeline.hasTerminalStep(message.steps);
   }
   return hasTerminalStepResult;
-};
+}
 export { findOpenTurn };
-export const hasOpenTurn = function hasOpenTurn(map) {
+export function hasOpenTurn(map) {
   return null != findOpenTurn(map);
-};
-export const isStrandedSegment = function isStrandedSegment(arr, diff) {
+}
+export function isStrandedSegment(arr, diff) {
   if (arr[diff] != null) {
     const turn_id = tmp.turn_id;
   }
@@ -123,16 +123,16 @@ export const isStrandedSegment = function isStrandedSegment(arr, diff) {
     }
   }
   return false;
-};
-export const isSegmentOfTurn = function isSegmentOfTurn(value, turnId) {
+}
+export function isSegmentOfTurn(value, turnId) {
   let tmp = value.turn_id === turnId;
   if (!tmp) {
     const _HermesInternal = HermesInternal;
     tmp = value.id === "" + conjureChatHistory.TURN_ENTRY_PREFIX + turnId;
   }
   return tmp;
-};
-export const turnIdOfSegment = function turnIdOfSegment(message) {
+}
+export function turnIdOfSegment(message) {
   if (null != message.turn_id) {
     let turn_id = message.turn_id;
   } else {
@@ -144,8 +144,8 @@ export const turnIdOfSegment = function turnIdOfSegment(message) {
     }
   }
   return turn_id;
-};
-export const findTurnSegment = function findTurnSegment(arr3, activeTurnId) {
+}
+export function findTurnSegment(arr3, activeTurnId) {
   if (null == activeTurnId) {
     return -1;
   } else {
@@ -168,8 +168,8 @@ export const findTurnSegment = function findTurnSegment(arr3, activeTurnId) {
     }
     return -1;
   }
-};
-export const resolveTurnIndex = function resolveTurnIndex(value, activeTurnId) {
+}
+export function resolveTurnIndex(value, activeTurnId) {
   let num = -1;
   if (null != activeTurnId) {
     let diff = value.length - 1;
@@ -220,13 +220,13 @@ export const resolveTurnIndex = function resolveTurnIndex(value, activeTurnId) {
     }
     return -1;
   }
-};
-export const replaceAt = function replaceAt(value, findIndexResult, arg2) {
+}
+export function replaceAt(value, findIndexResult, arg2) {
   const substr = value.slice();
   substr[findIndexResult] = arg2;
   return substr;
-};
-export const isOutsideTurn = function isOutsideTurn(value) {
+}
+export function isOutsideTurn(value) {
   let tmp = "side_reply" === value.kind;
   if (!tmp) {
     tmp = "publish_notice" === value.kind;
@@ -238,8 +238,8 @@ export const isOutsideTurn = function isOutsideTurn(value) {
     tmp = "context_boundary" === value.kind;
   }
   return tmp;
-};
-export const stoppable = function stoppable(role) {
+}
+export function stoppable(role) {
   let tmp = "assistant" === role.role;
   if (tmp) {
     let tmp2 = "side_reply" === role.kind;
@@ -277,4 +277,4 @@ export const stoppable = function stoppable(role) {
     tmp = true !== role.stopRequested;
   }
   return tmp;
-};
+}

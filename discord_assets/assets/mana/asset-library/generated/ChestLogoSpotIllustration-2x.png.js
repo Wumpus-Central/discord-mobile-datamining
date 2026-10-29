@@ -1,6 +1,6 @@
-// === Module 16676: ? ===
+// === Module 16914: ? ===
 
-// Module 16676
+// Module 16914
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestLogoSpotIllustration-2x.png.js");

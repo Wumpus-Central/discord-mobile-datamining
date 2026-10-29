@@ -1,12 +1,12 @@
-// === Module 13566: EmojiSuggestionChatButton ===
+// === Module 13799: EmojiSuggestionChatButton ===
 
-// Module 13566 (EmojiSuggestionChatButton)
+// Module 13799 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import spring from "spring" /* 5283 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13560 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import spring from "spring" /* 5284 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13793 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
@@ -14,11 +14,11 @@ import ThemeStore from "ThemeStore" /* 1204 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = { swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical }, wrapper: { height, width: height }, glyphOverlay: null, glyphButton: null, image: null, surrogates: null };
   const obj2 = {};
@@ -45,7 +45,7 @@ let closure_16 = { code: "function EmojiSuggestionChatButtonTsx4(){const{runOnJS
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionChatButton.tsx");
 
-export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0) {
+export function EmojiSuggestionChatButton(arg0) {
   ({ active, onPress } = arg0);
   ({ style, showKeyboardIcon, ref } = arg0);
   const merged = Object.assign(arg0, Object.assign({ style: 0, active: 0, showKeyboardIcon: 0, onPress: 0, ref: 0 }));
@@ -234,4 +234,4 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
     tmp26(tmp4Result, obj13);
     const tmp4Result4 = tmp4(tmp4Result2Result[25]);
   }
-};
+}

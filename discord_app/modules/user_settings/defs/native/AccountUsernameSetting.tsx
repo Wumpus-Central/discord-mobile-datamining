@@ -1,15 +1,15 @@
-// === Module 16260: AccountUsernameSetting ===
+// === Module 16498: AccountUsernameSetting ===
 
-// Module 16260 (AccountUsernameSetting)
+// Module 16498 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12879 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 13100 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
-const Text_Text = Text(5270);
+const Text_Text = Text(5271);
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
 });
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
   let Text = require;
   let tmp = dependencyMap;
@@ -76,7 +76,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8365).MobileUserSettings.ACCOUNT,
+  parent: fn(8387).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
     let Text = require;

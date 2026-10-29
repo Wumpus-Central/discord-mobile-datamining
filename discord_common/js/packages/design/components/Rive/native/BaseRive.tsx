@@ -1,12 +1,12 @@
-// === Module 5079: BaseRive ===
+// === Module 5080: BaseRive ===
 
-// Module 5079 (BaseRive)
+// Module 5080 (BaseRive)
 import c from "c" /* 576 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5018 */;
-import DataBindByName from "DataBindByName" /* 5080 */;
-import ManaContext from "ManaContext" /* 5129 */;
-import useRivePlayback from "useRivePlayback" /* 5130 */;
-import RiveTypes from "RiveTypes" /* 5131 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5019 */;
+import DataBindByName from "DataBindByName" /* 5081 */;
+import ManaContext from "ManaContext" /* 5130 */;
+import useRivePlayback from "useRivePlayback" /* 5131 */;
+import RiveTypes from "RiveTypes" /* 5132 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -832,7 +832,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled() ? (f
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -940,7 +940,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled() ? (f
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -1031,7 +1031,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled() ? (f
     }
   }, items2);
 });
-export const useArtboardBinding = function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
+export function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
   closure_0 = Icon;
   const bindableArtboard = file;
   closure_3 = Icon2;
@@ -1055,4 +1055,4 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
       }
     }
   }, items);
-};
+}

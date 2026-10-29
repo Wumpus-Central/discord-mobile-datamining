@@ -1,8 +1,8 @@
-// === Module 7365: canUseGuildSpace ===
+// === Module 7388: canUseGuildSpace ===
 
-// Module 7365 (canUseGuildSpace)
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 7388 (canUseGuildSpace)
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 
@@ -56,13 +56,13 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
 
-export const isGuildSpaceAdmin = function isGuildSpaceAdmin(arg0) {
+export function isGuildSpaceAdmin(arg0) {
   let canResult = null != arg0;
   if (canResult) {
     canResult = PermissionStore.can(Permissions.MANAGE_GUILD, arg0);
   }
   return canResult;
-};
+}
 export const useIsGuildSpaceAdmin = tmp2;
 export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
   return false;

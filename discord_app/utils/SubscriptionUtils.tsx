@@ -1,15 +1,15 @@
-// === Module 11086: SubscriptionUtils ===
+// === Module 11140: SubscriptionUtils ===
 
-// Module 11086 (SubscriptionUtils)
+// Module 11140 (SubscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7394 */;
-import CheckoutError from "CheckoutError" /* 11087 */;
-import PauseDuration from "PauseDuration" /* 11089 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7417 */;
+import CheckoutError from "CheckoutError" /* 11141 */;
+import PauseDuration from "PauseDuration" /* 11143 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2054 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2055 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("utils/SubscriptionUtils.tsx");
 
 export { getSubscriptionPlans };
-export const getSubscriptionSKUs = function getSubscriptionSKUs(items) {
+export function getSubscriptionSKUs(items) {
   items = items.items;
   const mapped = items.map((planId) => {
     value = SubscriptionPlanStore.get(planId.planId);
@@ -63,9 +63,9 @@ export const getSubscriptionSKUs = function getSubscriptionSKUs(items) {
     return value;
   });
   return mapped.map((skuId) => skuId.skuId);
-};
+}
 export { subscriptionCanSwitchImmediately };
-export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, newPlanId, arr) {
+export function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, newPlanId, arr) {
   const currentSubscriptionPlanIdForGroup = getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
   if (getCurrentSubscriptionPlanIdForGroup.type !== constants2.PREMIUM) {
     const obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
@@ -88,8 +88,8 @@ export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCur
     flag = true;
   }
   return !flag;
-};
-export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(subscriptionPlanId, arg1) {
+}
+export function getOrFetchSubscriptionPlan(subscriptionPlanId, arg1) {
   value = SubscriptionPlanStore.get(subscriptionPlanId);
   if (null == value) {
     const _HermesInternal = HermesInternal;
@@ -102,7 +102,7 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     }
   }
   return value;
-};
+}
 export const useGetOrFetchSubscriptionPlan = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOrFetchSubscriptionPlan(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
@@ -208,16 +208,16 @@ export const useGetOrFetchSubscriptionPlan = ReactCompilerGating.isReactCompiler
   }, items1);
   return first;
 });
-export const getSubscriptionPauseDurations = function getSubscriptionPauseDurations(status) {
+export function getSubscriptionPauseDurations(status) {
   const keys = Object.keys(PauseDuration.PauseDuration);
   const found = keys.filter((item) => isNaN(Number(item)));
   if (status.status !== constants.PAUSED) {
     const obj3 = { durations: found, currentDaysPaused: 0 };
     return obj3;
   } else if (null != status.pauseEndsAt) {
-    const tmp6 = _modDef2046(status.currentPeriodStart);
+    const tmp6 = _modDef2047(status.currentPeriodStart);
     const _Math = Math;
-    const rounded = Math.round(_modDef2046(status.pauseEndsAt).diff(tmp6, "days", true));
+    const rounded = Math.round(_modDef2047(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
       if (PauseDuration.PauseDuration[item10042] > rounded) {
@@ -231,14 +231,14 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     const obj = { durations: [], currentDaysPaused: 0 };
     return obj;
   }
-};
-export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
+}
+export function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
-    isMomentResult = _modDef2046.isMoment(isSameOrAfter);
+    isMomentResult = _modDef2047.isMoment(isSameOrAfter);
   }
   if (isMomentResult) {
-    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef2046());
+    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef2047());
   }
   return isMomentResult;
-};
+}

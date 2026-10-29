@@ -1,18 +1,18 @@
-// === Module 8415: ThreadStarterSystemMessage ===
+// === Module 8437: ThreadStarterSystemMessage ===
 
-// Module 8415 (ThreadStarterSystemMessage)
+// Module 8437 (ThreadStarterSystemMessage)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1125 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7731 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7754 */;
 
 require = fn;
-const ReferencedMessageState = fn(7731).ReferencedMessageState;
+const ReferencedMessageState = fn(7754).ReferencedMessageState;
 const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");
 
-export const createThreadStarterSystemMessage = function createThreadStarterSystemMessage(message) {
+export function createThreadStarterSystemMessage(message) {
   message = message.message;
   const type = message.type;
   _modDef38(type === MessageTypes.THREAD_STARTER_MESSAGE, "cannot call createThreadStarterSystemMessage on a message of type " + type);
@@ -25,4 +25,4 @@ export const createThreadStarterSystemMessage = function createThreadStarterSyst
     tmp5 = obj;
   }
   return tmp5;
-};
+}

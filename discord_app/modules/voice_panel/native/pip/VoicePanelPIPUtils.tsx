@@ -1,24 +1,24 @@
-// === Module 18730: VoicePanelPIPUtils ===
+// === Module 18964: VoicePanelPIPUtils ===
 
-// Module 18730 (VoicePanelPIPUtils)
+// Module 18964 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 587 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5663 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6680 */;
-import participantHasVideo from "participantHasVideo" /* 10944 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5665 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6704 */;
+import participantHasVideo from "participantHasVideo" /* 10979 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(10939);
+const VoicePanelConstants = fn(10974);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(18731);
+const VoicePanelPIPConstants = fn(18965);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(5668).ParticipantTypes;
-const MorphablePanelConstants = fn(10940);
+const ParticipantTypes = fn(5670).ParticipantTypes;
+const MorphablePanelConstants = fn(10975);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 let set = new Set();
@@ -317,7 +317,7 @@ export { PIPReferenceDimensions };
 export { SquarePIPReferenceDimensions };
 export { SquareActivityPIPReferenceDimensions };
 export const PIP_LAYOUT_PHYSICS = { mass: 0.3, damping: 80, stiffness: 150 };
-export const computePIPSize = function computePIPSize(SquarePIPReferenceDimensions, arg1, arg2, showSecondaryPIP) {
+export function computePIPSize(SquarePIPReferenceDimensions, arg1, arg2, showSecondaryPIP) {
   ({ width, height } = SquarePIPReferenceDimensions);
   if (!arg1) {
     if (width !== height) {
@@ -349,8 +349,8 @@ export const computePIPSize = function computePIPSize(SquarePIPReferenceDimensio
     }
   }
   ({ width: width3, height: height3 } = arg2 ? SquareActivityPIPReferenceDimensions : SquarePIPReferenceDimensions);
-};
-export const createPIPBlockList = function createPIPBlockList(PIP, focusedId) {
+}
+export function createPIPBlockList(PIP, focusedId) {
   set = new Set();
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
@@ -364,8 +364,8 @@ export const createPIPBlockList = function createPIPBlockList(PIP, focusedId) {
     set.add(focusedId);
   }
   return set;
-};
-export const computePIPParticipantToShow = function computePIPParticipantToShow(canShowActivities) {
+}
+export function computePIPParticipantToShow(canShowActivities) {
   ({ channelId, panelMode, lastParticipantId, speakingUserId, focusedParticipantId, blockList } = canShowActivities);
   if (blockList === undefined) {
     blockList = set;
@@ -519,8 +519,8 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     }
   }
   return tmp48;
-};
-export const getPIPMode = function getPIPMode(connected) {
+}
+export function getPIPMode(connected) {
   ({ channelId, manuallyFocusedId, mode } = connected);
   if (connected.connected) {
     if (null != manuallyFocusedId) {
@@ -569,7 +569,7 @@ export const getPIPMode = function getPIPMode(connected) {
     }
     return IN_APP;
   }
-};
+}
 export { getPIPWindowDimensions };
 export { pipXYtoAbsoluteXY };
 export { getClampedPIPPosition };

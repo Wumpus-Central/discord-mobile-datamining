@@ -1,11 +1,11 @@
-// === Module 8404: useGuildPowerupsBoostCount ===
+// === Module 8426: useGuildPowerupsBoostCount ===
 
-// Module 8404 (useGuildPowerupsBoostCount)
-import GameServerExperiment from "GameServerExperiment" /* 5236 */;
+// Module 8426 (useGuildPowerupsBoostCount)
+import GameServerExperiment from "GameServerExperiment" /* 5237 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8405 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5217 */;
+import GameServerStore from "GameServerStore" /* 8427 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5218 */;
 
 const require = globalThis.__r;
 
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     return { available: 0, spent: 0, total: num, isLoading: true };
   }, items3);
 });
-export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id) {
+export function getGuildPowerupsBoostCount(id) {
   guild = GuildStore.getGuild(id);
   let total;
   if (guild != null) {
@@ -194,4 +194,4 @@ export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id
     return obj2;
   }
   return { available: 0, spent: 0, total };
-};
+}

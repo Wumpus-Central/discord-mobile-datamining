@@ -1,11 +1,11 @@
-// === Module 8507: MarkupRulesUtils ===
+// === Module 8529: MarkupRulesUtils ===
 
-// Module 8507 (MarkupRulesUtils)
+// Module 8529 (MarkupRulesUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
-export const smartOutput = function smartOutput(node, output, state) {
+export function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {
     if (undefined !== node.content) {
       let content = output(node.content, state);
@@ -13,7 +13,7 @@ export const smartOutput = function smartOutput(node, output, state) {
     return content;
   }
   content = node.content;
-};
+}
 export function isStaticRouteIconType(channelId) {
   let tmp = "home" === channelId;
   if (!tmp) {

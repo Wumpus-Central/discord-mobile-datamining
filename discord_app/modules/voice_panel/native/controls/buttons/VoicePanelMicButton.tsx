@@ -1,31 +1,31 @@
-// === Module 18910: VoicePanelMicButton ===
+// === Module 19143: VoicePanelMicButton ===
 
-// Module 18910 (VoicePanelMicButton)
+// Module 19143 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import useMuteStates from "useMuteStates" /* 7489 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9204 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10938 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11621 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11684 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11685 */;
-import useDeafStates from "useDeafStates" /* 11717 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 18911 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 18912 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import useMuteStates from "useMuteStates" /* 7512 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9208 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10973 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11675 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11738 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11739 */;
+import useDeafStates from "useDeafStates" /* 11771 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19144 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5751 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
+import GameConsoleStore from "GameConsoleStore" /* 5753 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_17 = createStyles.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMuteHandlers(arg0) {
@@ -188,7 +188,7 @@ const tmp3 = new LoggerDefault("VoicePanelMicButton");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx");
 
-export const PTTButton = function PTTButton(arg0) {
+export function PTTButton(arg0) {
   _require = undefined;
   let onPress2;
   let sharedValue;
@@ -307,7 +307,7 @@ export const PTTButton = function PTTButton(arg0) {
   items6[1] = closure_13(require("Text/Text").Text, obj6);
   obj5.children = items6;
   return closure_15(closure_14, obj5);
-};
+}
 export const MicButton = ReactCompilerGating.isReactCompilerEnabled() ? (function MicButton(props) {
   const cResult = c.c(13);
   props = props.props;

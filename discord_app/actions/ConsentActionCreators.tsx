@@ -1,6 +1,6 @@
-// === Module 16413: ConsentActionCreators ===
+// === Module 16651: ConsentActionCreators ===
 
-// Module 16413 (ConsentActionCreators)
+// Module 16651 (ConsentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
@@ -40,7 +40,7 @@ function handleRequestFailure(status) {
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
-export const fetchConsents = function fetchConsents() {
+export function fetchConsents() {
   const HTTP = HTTPUtils.HTTP;
   const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   value = HTTP.get(obj);
@@ -48,10 +48,10 @@ export const fetchConsents = function fetchConsents() {
     const error = new Error(body.body.message);
     return Promise.reject(error);
   });
-};
-export const setConsents = function setConsents(items, items2) {
+}
+export function setConsents(items, items2) {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: Endpoints.SETTINGS_CONSENT, body: { grant: items, revoke: items2 }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   const obj = { grant: items, revoke: items2 };
   return HTTP.post(request).then(handleRequestSuccess, handleRequestFailure);
-};
+}

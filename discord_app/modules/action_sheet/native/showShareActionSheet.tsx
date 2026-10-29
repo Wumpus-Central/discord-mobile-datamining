@@ -1,10 +1,10 @@
-// === Module 8885: showShareActionSheet ===
+// === Module 8888: showShareActionSheet ===
 
-// Module 8885 (showShareActionSheet)
+// Module 8888 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8886 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8887 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8889 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8890 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ if (PlatformUtils.isAndroid()) {
 }
 let result = size.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
 
-export const showShareActionSheet = function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) {
+export function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) {
   _require = source;
   let tmp = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
   importDefault = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
@@ -27,7 +27,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "useCallback", mediaStagingOptions: "PX_16" };
+    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "Reflect" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {
@@ -102,4 +102,4 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
   }).finally(() => {
     fn();
   });
-};
+}

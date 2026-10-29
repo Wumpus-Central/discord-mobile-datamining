@@ -1,20 +1,20 @@
-// === Module 19422: GuildSettingsRolesUtils ===
+// === Module 19655: GuildSettingsRolesUtils ===
 
-// Module 19422 (GuildSettingsRolesUtils)
+// Module 19655 (GuildSettingsRolesUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6863 */;
-import GuildUtilsDefault from "GuildUtils" /* 6865 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7262 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6886 */;
+import GuildUtilsDefault from "GuildUtils" /* 6888 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7286 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19413).GuildSettingsRoleEditSections;
+const constants = fn(19646).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMembers(arg0, arg1) {
@@ -309,7 +309,7 @@ export const useQueryGuildMembers = ReactCompilerGating.isReactCompilerEnabled()
     }
   }, items);
 });
-export const filterFullMembersByQuery = function filterFullMembersByQuery(str, id) {
+export function filterFullMembersByQuery(str, id) {
   str = str.trim();
   const formatted = str.toLowerCase();
   let tmp8Result = id.id === formatted;
@@ -320,8 +320,8 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
     tmp8Result = fuzzysearchDefault(formatted, id.userTag.toLowerCase());
   }
   return tmp8Result;
-};
-export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY) {
+}
+export function getSectionAnalyticsName(DISPLAY) {
   if (constants.MEMBERS === DISPLAY) {
     return "Members";
   } else if (constants.PERMISSIONS === DISPLAY) {
@@ -333,12 +333,12 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
   } else {
     GlobalUtils.assertNever(DISPLAY);
   }
-};
-export const filterRole = function filterRole(name, str) {
+}
+export function filterRole(name, str) {
   let hasItem = "" === str;
   if (!hasItem) {
     const formatted = str.toLowerCase();
     hasItem = formatted.includes(str.toLowerCase());
   }
   return hasItem;
-};
+}

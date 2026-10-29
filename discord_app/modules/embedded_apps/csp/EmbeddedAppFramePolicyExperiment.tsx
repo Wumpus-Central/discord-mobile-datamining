@@ -1,8 +1,8 @@
-// === Module 10811: EmbeddedAppFramePolicyExperiment ===
+// === Module 10887: EmbeddedAppFramePolicyExperiment ===
 
-// Module 10811 (EmbeddedAppFramePolicyExperiment)
+// Module 10887 (EmbeddedAppFramePolicyExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,6 +28,6 @@ export const useIsEmbeddedAppFramePolicyEnabled = ReactCompilerGating.isReactCom
 }) : (function useIsEmbeddedAppFramePolicyEnabled(location) {
   return closure_2.useConfig({ location }).enabled;
 });
-export const getIsEmbeddedAppFramePolicyEnabled = function getIsEmbeddedAppFramePolicyEnabled(loadEmbeddedAppCSPForLaunch) {
+export function getIsEmbeddedAppFramePolicyEnabled(loadEmbeddedAppCSPForLaunch) {
   return closure_2.getConfig({ location: loadEmbeddedAppCSPForLaunch }).enabled;
-};
+}

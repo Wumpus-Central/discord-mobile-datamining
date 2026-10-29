@@ -1,11 +1,11 @@
-// === Module 19690: BasicGuildActionCreators ===
+// === Module 19912: BasicGuildActionCreators ===
 
-// Module 19690 (BasicGuildActionCreators)
+// Module 19912 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import BasicGuildStore from "BasicGuildStore" /* 8346 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import BasicGuildStore from "BasicGuildStore" /* 8368 */;
 
 require = fn;
 let closure_8 = async function _fetchBasicGuild() {
@@ -23,7 +23,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");
 
-export const fetchBasicGuild = function fetchBasicGuild() {
+export function fetchBasicGuild() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -115,4 +115,4 @@ export const fetchBasicGuild = function fetchBasicGuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 9376: AnnouncementMessageUtils ===
+// === Module 9408: AnnouncementMessageUtils ===
 
-// Module 9376 (AnnouncementMessageUtils)
+// Module 9408 (AnnouncementMessageUtils)
 import util from "util" /* 1125 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import MessageRecord from "MessageRecord" /* 4947 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9378 */;
+import MessageRecord from "MessageRecord" /* 4948 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9410 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
@@ -12,7 +12,7 @@ const re4 = /^#{1,3}\s+(.+)$/;
 const re5 = /^https?:\/\/\S+$/;
 let result = size.fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
 
-export const toAnnouncementMessages = function toAnnouncementMessages(messages) {
+export function toAnnouncementMessages(messages) {
   return messages.map((reactions) => {
     const tmp2 = found5(found6[5]);
     const tmp2Result = tmp2(found4(found6[6]).createMessageRecord(reactions));
@@ -225,16 +225,16 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
     }
     const obj = found4(found6[6]);
   });
-};
-export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
+}
+export function getPollExpiryLabel(poll) {
   let result = useFormattedExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
     const intl = util.intl;
     result = intl.string(util.t["e+J3JZ"]);
   }
   return result;
-};
-export const getPosterUrl = function getPosterUrl(proxyUrl, c11, c10) {
+}
+export function getPosterUrl(proxyUrl, c11, c10) {
   const str = URLUtilsDefault.toURLSafe(proxyUrl);
   let str1 = null;
   if (null != str) {
@@ -251,4 +251,4 @@ export const getPosterUrl = function getPosterUrl(proxyUrl, c11, c10) {
     str1 = str.toString();
   }
   return str1;
-};
+}

@@ -1,8 +1,8 @@
-// === Module 14636: ConjureCustomWidget ===
+// === Module 14870: ConjureCustomWidget ===
 
-// Module 14636 (ConjureCustomWidget)
-import ConjureUtils from "ConjureUtils" /* 7382 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 14870 (ConjureCustomWidget)
+import ConjureUtils from "ConjureUtils" /* 7405 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
   const cResult = require("c").c(5);
   dependencyMap = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1452).ApexExperimentStore];
+    const items = [GuildStore, tmp(1453).ApexExperimentStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -61,7 +61,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
     return result;
   }, items1);
 });
-export const composeConjureCustomWidgetPrompt = function composeConjureCustomWidgetPrompt(arg0) {
+export function composeConjureCustomWidgetPrompt(arg0) {
   const items = ["Build a profile card (an application profile widget) for my Discord profile.", "Read the data from the public source below \u2014 it must be reachable without a login.", "Recommend which fields the card should show and ask me to confirm or edit them before you build.", "", arg0];
   return items.join("\n");
-};
+}

@@ -1,14 +1,14 @@
-// === Module 11241: PresenceActivityFiltering ===
+// === Module 11295: PresenceActivityFiltering ===
 
-// Module 11241 (PresenceActivityFiltering)
-import Server from "Server" /* 1997 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+// Module 11295 (PresenceActivityFiltering)
+import Server from "Server" /* 1998 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");
 
-export const doesGameHaveRichPresence = function doesGameHaveRichPresence(visibleGame, items3) {
+export function doesGameHaveRichPresence(visibleGame, items3) {
   if (null !== visibleGame.id) {
     if (undefined !== visibleGame.id) {
       const application = ApplicationStore.getApplication(visibleGame.id);
@@ -31,4 +31,4 @@ export const doesGameHaveRichPresence = function doesGameHaveRichPresence(visibl
     }
   }
   return false;
-};
+}

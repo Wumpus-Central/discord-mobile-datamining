@@ -1,7 +1,7 @@
-// === Module 11502: doesOrientationMatchLockState ===
+// === Module 11556: doesOrientationMatchLockState ===
 
-// Module 11502 (doesOrientationMatchLockState)
-import Constants from "Constants" /* 2023 */;
+// Module 11556 (doesOrientationMatchLockState)
+import Constants from "Constants" /* 2024 */;
 import size from "module_2" /* 2 */;
 
 const OrientationLockState = Constants.OrientationLockState;

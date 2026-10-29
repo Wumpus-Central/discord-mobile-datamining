@@ -1,12 +1,12 @@
-// === Module 13988: StatusUtils ===
+// === Module 14221: StatusUtils ===
 
-// Module 13988 (StatusUtils)
+// Module 14221 (StatusUtils)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
-export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
+export function getStatusExpiryParts(arg0) {
   const date = new Date(Number(arg0));
   const date1 = new Date();
   const fullYear = date.getFullYear();
@@ -52,4 +52,4 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     obj3.timeString = formatTimeResult;
   }
   return obj3;
-};
+}

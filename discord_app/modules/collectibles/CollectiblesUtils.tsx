@@ -1,21 +1,21 @@
-// === Module 7697: CollectiblesUtils ===
+// === Module 7720: CollectiblesUtils ===
 
-// Module 7697 (CollectiblesUtils)
+// Module 7720 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1095 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import PerksStateUtils from "PerksStateUtils" /* 1395 */;
 import user from "user" /* 1397 */;
-import NameplateRecord from "NameplateRecord" /* 1990 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import PriceUtils from "PriceUtils" /* 7376 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7690 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7691 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7692 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7696 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7698 */;
+import NameplateRecord from "NameplateRecord" /* 1991 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import PriceUtils from "PriceUtils" /* 7399 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7713 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7714 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7715 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7719 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7721 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1086 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -118,14 +118,14 @@ let items = [, , ];
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesUtils.tsx");
 
 export { ShopDiscountSource };
-export const getAnalyticsShopDiscountSource = function getAnalyticsShopDiscountSource(shopDiscountSource) {
+export function getAnalyticsShopDiscountSource(shopDiscountSource) {
   let tmp = null;
   if (null != shopDiscountSource) {
     tmp = closure_16[shopDiscountSource];
   }
   return tmp;
-};
-export const getShopDiscountSource = function getShopDiscountSource(currentUser) {
+}
+export function getShopDiscountSource(currentUser) {
   const obj = PremiumUtilsDefault;
   if (obj.canUseShopDiscounts(currentUser)) {
     if (tmpResult.canUseCollectibles(currentUser)) {
@@ -158,22 +158,22 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
   } else {
     return null;
   }
-};
-export const isPremiumCollectiblesProduct = function isPremiumCollectiblesProduct(product) {
+}
+export function isPremiumCollectiblesProduct(product) {
   let premiumType;
   if (product != null) {
     premiumType = product.premiumType;
   }
   return null != premiumType;
-};
-export const isPremiumCollectiblesPurchase = function isPremiumCollectiblesPurchase(purchase) {
+}
+export function isPremiumCollectiblesPurchase(purchase) {
   let purchaseType;
   if (purchase != null) {
     purchaseType = purchase.purchaseType;
   }
   return purchaseType === constants2.PREMIUM_PURCHASE;
-};
-export const getAssetForAvatarDecorationProduct = function getAssetForAvatarDecorationProduct(items) {
+}
+export function getAssetForAvatarDecorationProduct(items) {
   items = items.items;
   const found = items.find(isAvatarDecorationRecord);
   let asset;
@@ -181,8 +181,8 @@ export const getAssetForAvatarDecorationProduct = function getAssetForAvatarDeco
     asset = found.asset;
   }
   return asset;
-};
-export const getPriceForCollectiblesProduct = function getPriceForCollectiblesProduct(stateFromStores, c5, arg2) {
+}
+export function getPriceForCollectiblesProduct(stateFromStores, c5, arg2) {
   if (!arg2) {
     const tmp4 = stateFromStores.prices[c5 ? constants3.PREMIUM_TIER_2 : constants3.DEFAULT];
     let prices;
@@ -202,8 +202,8 @@ export const getPriceForCollectiblesProduct = function getPriceForCollectiblesPr
     }
     return tmp7;
   }
-};
-export const getFormattedPriceForCollectiblesProduct = function getFormattedPriceForCollectiblesProduct(c5, arg1, arg2) {
+}
+export function getFormattedPriceForCollectiblesProduct(c5, arg1, arg2) {
   if (!arg2) {
     const tmp4 = isProfileEffectRecord.prices[arg1 ? constants3.PREMIUM_TIER_2 : constants3.DEFAULT];
     let prices;
@@ -235,14 +235,14 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     }
     return str;
   }
-};
-export const getDefaultPriceSetAssignmentPurchaseType = function getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult, arg1) {
+}
+export function getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult, arg1) {
   if (!obj.isAndroid()) {
     PlatformUtils;
   }
   return canUseShopDiscountsResult ? constants3.PREMIUM_TIER_2 : constants3.DEFAULT;
-};
-export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledProducts, arg1) {
+}
+export function getBundleItemsPriceSum(bundledProducts, arg1) {
   _require = arg1;
   bundledProducts = bundledProducts.bundledProducts;
   if (null == bundledProducts) {
@@ -289,8 +289,8 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
     obj = require("PlatformUtils");
     tmp = _require;
   }
-};
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(type, defaultPriceSetAssignmentPurchaseType, arg2) {
+}
+export function extractPriceByPurchaseTypes(type, defaultPriceSetAssignmentPurchaseType, arg2) {
   closure_0 = arg2;
   let prices;
   if (type.prices[defaultPriceSetAssignmentPurchaseType] != null) {
@@ -312,10 +312,10 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     tmp3 = first;
   }
   return tmp3;
-};
+}
 export const NoDiscount = obj2;
 export const DISCOUNT_DISPLAY_MINIMUM_THRESHOLD = 5;
-export const getProductDiscount = function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
+export function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
   if (null == product) {
     return obj2;
   } else {
@@ -399,8 +399,8 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
       tmp = _require;
     }
   }
-};
-export const getCollectiblesProductPriceComparisons = function getCollectiblesProductPriceComparisons(type, hasShopDiscount) {
+}
+export function getCollectiblesProductPriceComparisons(type, hasShopDiscount) {
   hasShopDiscount = hasShopDiscount.hasShopDiscount;
   c0 = undefined;
   let prices;
@@ -464,8 +464,8 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
     const obj3 = { defaultPrice: tmp4, originalPrice: tmp12, premiumPrice: tmp7, finalPrice: tmp16, showDiscountPrice: hasShopDiscount, finalPriceIsDifferent: tmp16.amount !== tmp12.amount, showDefaultPriceOnly: false };
     return obj3;
   }
-};
-export const isFreeCollectiblesProduct = function isFreeCollectiblesProduct(product) {
+}
+export function isFreeCollectiblesProduct(product) {
   c0 = undefined;
   let prices;
   if (product.prices[constants3.DEFAULT] != null) {
@@ -487,8 +487,8 @@ export const isFreeCollectiblesProduct = function isFreeCollectiblesProduct(prod
     amount = tmp3.amount;
   }
   return 0 === amount;
-};
-export const extendVariantsProducts = function extendVariantsProducts(items) {
+}
+export function extendVariantsProducts(items) {
   return items.reduce((arr, type) => {
     closure_0 = type;
     if (null != type) {
@@ -509,8 +509,8 @@ export const extendVariantsProducts = function extendVariantsProducts(items) {
     arr = arr.push(type);
     combined = arr;
   }, []);
-};
-export const getProductsFromCategories = function getProductsFromCategories(arr, arg1) {
+}
+export function getProductsFromCategories(arr, arg1) {
   items = [...arr.values()];
   const flatMapResult = _mod12.flatMap(items, "products");
   let reduced = flatMapResult;
@@ -537,10 +537,10 @@ export const getProductsFromCategories = function getProductsFromCategories(arr,
     }, []);
   }
   return _mod12.uniqBy(reduced, "storeListingId");
-};
+}
 export { getItemRecordsFromPurchases };
 export { getItemRecordsFromCategories };
-export const getCollectibleTypeLabel = function getCollectibleTypeLabel(type) {
+export function getCollectibleTypeLabel(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl4 = util.intl;
     return intl4.string(util.t["7v0T9P"]);
@@ -556,45 +556,45 @@ export const getCollectibleTypeLabel = function getCollectibleTypeLabel(type) {
   } else {
     return null;
   }
-};
-export const getAssetDisplayConfig = function getAssetDisplayConfig(banner_display_config) {
+}
+export function getAssetDisplayConfig(banner_display_config) {
   let fromServerResult;
   if (null != banner_display_config) {
     fromServerResult = AssetDisplayConfigRecord.fromServer(banner_display_config);
   }
   return fromServerResult;
-};
-export const getAvatarDecorationsFromPurchases = function getAvatarDecorationsFromPurchases(arr) {
+}
+export function getAvatarDecorationsFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION);
-};
-export const getAvatarDecorationsFromCategories = function getAvatarDecorationsFromCategories(categories) {
+}
+export function getAvatarDecorationsFromCategories(categories) {
   return getItemRecordsFromCategories(categories, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION);
-};
-export const getAvatarDecorations = function getAvatarDecorations(stateFromStores, arr) {
+}
+export function getAvatarDecorations(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION)];
   return _mod12.uniqBy(items, "skuId");
-};
-export const getNameplatesFromPurchases = function getNameplatesFromPurchases(arr) {
+}
+export function getNameplatesFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
-};
-export const getNameplatesFromCategories = function getNameplatesFromCategories(arr) {
+}
+export function getNameplatesFromCategories(arr) {
   return getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
-};
-export const getNameplates = function getNameplates(stateFromStores, arr) {
+}
+export function getNameplates(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.NAMEPLATE), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE)];
   return _mod12.uniqBy(items, "skuId");
-};
-export const getProfileEffectsFromPurchases = function getProfileEffectsFromPurchases(arr) {
+}
+export function getProfileEffectsFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
-};
-export const getProfileEffectsFromCategories = function getProfileEffectsFromCategories(arr) {
+}
+export function getProfileEffectsFromCategories(arr) {
   return getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
-};
-export const getProfileEffects = function getProfileEffects(stateFromStores, arr) {
+}
+export function getProfileEffects(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT)];
   return _mod12.uniqBy(items, "skuId");
-};
-export const groupProfileEffects = function groupProfileEffects(arr, arr) {
+}
+export function groupProfileEffects(arr, arr) {
   const tmp = getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
   closure_0 = tmp;
   arr = getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
@@ -605,33 +605,33 @@ export const groupProfileEffects = function groupProfileEffects(arr, arr) {
       return !closure_0.some((skuId) => skuId.skuId === skuId);
     })
   };
-};
-export const getProfileFramesFromPurchases = function getProfileFramesFromPurchases(arr) {
+}
+export function getProfileFramesFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
-};
-export const getProfileFramesFromCategories = function getProfileFramesFromCategories(arr) {
+}
+export function getProfileFramesFromCategories(arr) {
   return getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
-};
-export const getProfileFrames = function getProfileFrames(stateFromStores, arr) {
+}
+export function getProfileFrames(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME)];
   return _mod12.uniqBy(items, "skuId");
-};
-export const isCollectiblesGiftCode = function isCollectiblesGiftCode(giftCode) {
+}
+export function isCollectiblesGiftCode(giftCode) {
   return giftCode.applicationId === closure_1_11;
-};
+}
 export const LOGO_ASPECT_RATIO = 3.8;
-export const getLogoSize = function getLogoSize(arg0) {
+export function getLogoSize(arg0) {
   return 3.8 * arg0;
-};
-export const getDaysRemaining = function getDaysRemaining(date) {
+}
+export function getDaysRemaining(date) {
   date = new Date();
   const fullYear = date.getFullYear();
   const month = date.getMonth();
   const fullYear1 = date.getFullYear();
   const month1 = date.getMonth();
   return Math.floor((Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000);
-};
-export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
+}
+export function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
   let tmp = null != categoryWillUnpublishAt;
   if (tmp) {
     const _Date = Date;
@@ -647,8 +647,8 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(ca
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;
-};
-export const isProductNew = function isProductNew(cResult) {
+}
+export function isProductNew(cResult) {
   let tmp2 = null != tmp;
   if (tmp2) {
     const _Date = Date;
@@ -656,15 +656,15 @@ export const isProductNew = function isProductNew(cResult) {
     tmp2 = date.getTime() < tmp;
   }
   return tmp2;
-};
-export const isBundleProduct = function isBundleProduct(type) {
+}
+export function isBundleProduct(type) {
   type = undefined;
   if (type != null) {
     type = type.type;
   }
   return type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
-};
-export const getCollectiblesItemTypeForDisplay = function getCollectiblesItemTypeForDisplay(type) {
+}
+export function getCollectiblesItemTypeForDisplay(type) {
   if (null != type) {
     if (type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
       type = CollectiblesItemType.CollectiblesItemType.BUNDLE;
@@ -679,8 +679,8 @@ export const getCollectiblesItemTypeForDisplay = function getCollectiblesItemTyp
     }
     return type;
   }
-};
-export const getCollectiblesPrice = function getCollectiblesPrice(arg0) {
+}
+export function getCollectiblesPrice(arg0) {
   ({ invoicePreview, selectedSkuId } = arg0);
   let unitPrice;
   if (invoicePreview != null) {
@@ -714,15 +714,15 @@ export const getCollectiblesPrice = function getCollectiblesPrice(arg0) {
     }
   }
   return tmp4;
-};
-export const shouldHideGiftingForCurrency = function shouldHideGiftingForCurrency(currency) {
+}
+export function shouldHideGiftingForCurrency(currency) {
   let hasItem = null != currency;
   if (hasItem) {
     hasItem = items.includes(currency);
   }
   return hasItem;
-};
-export const getStrikeThroughPriceAmountForCollectiblesProduct = function getStrikeThroughPriceAmountForCollectiblesProduct(stateFromStores, c5, arg2) {
+}
+export function getStrikeThroughPriceAmountForCollectiblesProduct(stateFromStores, c5, arg2) {
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
@@ -795,8 +795,8 @@ export const getStrikeThroughPriceAmountForCollectiblesProduct = function getStr
     }
     return amount;
   }
-};
-export const canActionOnProduct = function canActionOnProduct(arg0) {
+}
+export function canActionOnProduct(arg0) {
   ({ product, isPartiallyOwnedBundle } = arg0);
   if (!isPartiallyOwnedBundle) {
     let skuId;
@@ -807,8 +807,8 @@ export const canActionOnProduct = function canActionOnProduct(arg0) {
     const tmp5 = constants.ORB_PROFILE_BADGE === skuId && tmp;
   }
   return !isPartiallyOwnedBundle;
-};
-export const getProductTypeNameForLogging = function getProductTypeNameForLogging(arg0, arg1) {
+}
+export function getProductTypeNameForLogging(arg0, arg1) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === arg0) {
     return "avatar decoration";
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === arg0) {
@@ -838,8 +838,8 @@ export const getProductTypeNameForLogging = function getProductTypeNameForLoggin
   } else {
     return "unknown";
   }
-};
-export const sortProductsByPrice = function sortProductsByPrice(arr, hasShopDiscount, arg2) {
+}
+export function sortProductsByPrice(arr, hasShopDiscount, arg2) {
   closure_1 = arg2;
   return arr.sort((product, product2) => {
     if (closure_1) {
@@ -902,7 +902,7 @@ export const sortProductsByPrice = function sortProductsByPrice(arr, hasShopDisc
     }
     return num - num2;
   });
-};
-export const removeRewardProductsFilter = function removeRewardProductsFilter(arr) {
+}
+export function removeRewardProductsFilter(arr) {
   return arr.filter((isCategoryReward) => !isCategoryReward.isCategoryReward);
-};
+}

@@ -1,15 +1,15 @@
-// === Module 7823: v2/Video ===
+// === Module 7846: v2/Video ===
 
-// Module 7823 (v2/Video)
+// Module 7846 (v2/Video)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Video.tsx");
 
-export const videoAssetFromServer = function videoAssetFromServer(url) {
+export function videoAssetFromServer(url) {
   const size = { url: url.url, width: url.width, height: url.height, thumbnail: url.thumbnail, caption: url.caption, transcript: url.transcript };
   return size;
-};
-export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServer(assets) {
+}
+export function desktopVideoAssetsFromServer(assets) {
   const obj = { video: null };
   const video = assets.video;
   obj.video = { url: video.url, width: video.width, height: video.height, thumbnail: video.thumbnail, caption: video.caption, transcript: video.transcript };
@@ -24,11 +24,11 @@ export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServe
     obj.videoHls = size1;
   }
   return obj;
-};
-export const desktopVideoMessagesFromServer = function desktopVideoMessagesFromServer(messages) {
+}
+export function desktopVideoMessagesFromServer(messages) {
   return { videoTitle: messages.video_title };
-};
-export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(assets) {
+}
+export function mobileVideoAssetsFromServer(assets) {
   const obj = { video: null };
   const video = assets.video;
   obj.video = { url: video.url, width: video.width, height: video.height, thumbnail: video.thumbnail, caption: video.caption, transcript: video.transcript };
@@ -43,7 +43,7 @@ export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(
     obj.videoHls = size1;
   }
   return obj;
-};
-export const mobileVideoMessagesFromServer = function mobileVideoMessagesFromServer(messages) {
+}
+export function mobileVideoMessagesFromServer(messages) {
   return { videoTitle: messages.video_title };
-};
+}

@@ -1,11 +1,11 @@
-// === Module 8857: DeviceOrientation ===
+// === Module 8860: DeviceOrientation ===
 
-// Module 8857 (DeviceOrientation)
+// Module 8860 (DeviceOrientation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
 import noop from "module_19" /* 19 */;
-import get_ActivityIndicator_mod from "module_8858" /* 8858 */;
+import get_ActivityIndicator_mod from "module_8861" /* 8861 */;
 
 const require = globalThis.__r;
 
@@ -258,12 +258,12 @@ export { handleOrientationChange };
 export { unlockOrientation };
 export { lockOrientation };
 export { lockOrientationForiOS };
-export const getOrientation = function getOrientation() {
+export function getOrientation() {
   return obj3.getState().orientation;
-};
-export const getOrientationLock = function getOrientationLock() {
+}
+export function getOrientationLock() {
   return obj3.getState().orientationLock;
-};
+}
 export { useOrientation };
 export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled() ? (function useOrientationListener(arg0) {
   _require = arg0;
@@ -288,7 +288,7 @@ export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled
   const items = [arg0];
   const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);
 });
-export const restoreDefaultOrientation = function restoreDefaultOrientation() {
+export function restoreDefaultOrientation() {
   if (obj.isIOS()) {
     const tmpResult = DeviceUtils;
   }
@@ -309,4 +309,4 @@ export const restoreDefaultOrientation = function restoreDefaultOrientation() {
   });
   lockOrientationForiOS();
   const tmpResult8 = ReactBatchUpdates;
-};
+}

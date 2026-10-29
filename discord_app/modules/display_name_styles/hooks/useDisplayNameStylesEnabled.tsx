@@ -1,11 +1,11 @@
-// === Module 6403: useDisplayNameStylesEnabled ===
+// === Module 6427: useDisplayNameStylesEnabled ===
 
-// Module 6403 (useDisplayNameStylesEnabled)
+// Module 6427 (useDisplayNameStylesEnabled)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DisplayNameStylesContext from "DisplayNameStylesContext" /* 6404 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import DisplayNameStylesContext from "DisplayNameStylesContext" /* 6428 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 18528: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 18762: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 18528 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 18762 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import _modDef2929 from "module_2929" /* 2929 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 18529 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import _modDef2930 from "module_2930" /* 2930 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 18763 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   if (cResult[4] !== tmp8) {
     const intl = markAsDismissed(1125).intl;
     const string = intl.string;
-    let h6sykk = _modDef2929;
+    let h6sykk = _modDef2930;
     if (tmp8) {
       h6sykk = h6sykk.h6sykk;
       let stringResult = string(h6sykk);
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   } else if (cResult[6] !== tmp8) {
     const intl2 = markAsDismissed(1125).intl;
     const string2 = intl2.string;
-    let TyUdka = _modDef2929;
+    let TyUdka = _modDef2930;
     if (tmp8) {
       TyUdka = TyUdka.TyUdka;
       let string2Result = string2(TyUdka);
@@ -142,10 +142,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(2050).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(2051).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1125).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(2929);
+  const tmp6 = markAsDismissed(2930);
   if (result) {
     let stringResult = string(tmp6.h6sykk);
   } else {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   dependencyMap = stringResult;
   const intl2 = tmp(1125).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(2929);
+  const tmp4Result = tmp4(2930);
   if (result) {
     let string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(2050);
-  const coachmark = visible(9874).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(2051);
+  const coachmark = visible(9906).useCoachmark(visible.targetRef, memo);
   return null;
 });

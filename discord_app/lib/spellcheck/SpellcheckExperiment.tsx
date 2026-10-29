@@ -1,7 +1,7 @@
-// === Module 6900: SpellcheckExperiment ===
+// === Module 6924: SpellcheckExperiment ===
 
-// Module 6900 (SpellcheckExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 6924 (SpellcheckExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-05-electron-multilang-spellcheck", defaultConfig: { enableElectronMultilangSpellcheck: false }, variations: null };
@@ -12,6 +12,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("lib/spellcheck/SpellcheckExperiment.tsx");
 
 export const SpellcheckExperiment = apexExperiment;
-export const isElectronMultilangSpellcheckEnabled = function isElectronMultilangSpellcheckEnabled() {
+export function isElectronMultilangSpellcheckEnabled() {
   return apexExperiment.getConfig({ location: "isElectronMultilangSpellcheckEnabled" }).enableElectronMultilangSpellcheck;
-};
+}

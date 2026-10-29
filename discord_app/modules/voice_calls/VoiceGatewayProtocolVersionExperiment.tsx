@@ -1,7 +1,7 @@
-// === Module 15642: VoiceGatewayProtocolVersionExperiment ===
+// === Module 15878: VoiceGatewayProtocolVersionExperiment ===
 
-// Module 15642 (VoiceGatewayProtocolVersionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15878 (VoiceGatewayProtocolVersionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 let obj = { name: "2026-04-voice-gateway-protocol-version", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -12,7 +12,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
 
 export default apexExperiment;
-export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {
+export function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {
   let num = 9;
   if (supportsSfuUpdate.supportsSfuUpdate) {
     const obj = { location: tmp };
@@ -22,4 +22,4 @@ export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVe
     }
   }
   return num;
-};
+}

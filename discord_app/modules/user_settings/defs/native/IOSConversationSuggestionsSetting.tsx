@@ -1,11 +1,11 @@
-// === Module 16407: IOSConversationSuggestionsSetting ===
+// === Module 16645: IOSConversationSuggestionsSetting ===
 
-// Module 16407 (IOSConversationSuggestionsSetting)
+// Module 16645 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import _mod4919 from "module_4919" /* 4919 */;
+import _mod4920 from "module_4920" /* 4920 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,13 +23,13 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConv
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4919.shallow);
+  return closure_4(first, _mod4920.shallow);
 }) : (function useConversationSuggestionsEnabled() {
-  return closure_4((isEnabled) => isEnabled.isEnabled, _mod4919.shallow);
+  return closure_4((isEnabled) => isEnabled.isEnabled, _mod4920.shallow);
 });
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8365).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8387).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,25 +1,25 @@
-// === Module 6670: SelectedChannelActionCreatorsAdditional ===
+// === Module 6694: SelectedChannelActionCreatorsAdditional ===
 
-// Module 6670 (SelectedChannelActionCreatorsAdditional)
+// Module 6694 (SelectedChannelActionCreatorsAdditional)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import v1 from "v1" /* 1278 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6671 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6695 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(6672).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(6696).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
-export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
+export function getChannelSelectionOrigin() {
   let guildId = SelectedGuildStore.getGuildId();
   if (guildId == null) {
     guildId = null;
@@ -31,8 +31,8 @@ export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
   }
   obj.fromChannelId = channelId;
   return obj;
-};
-export const selectVoiceChannelAdditional = function selectVoiceChannelAdditional(id, guildId) {
+}
+export function selectVoiceChannelAdditional(id, guildId) {
   _require = id;
   importDefault = guildId;
   if (flag === undefined) {
@@ -89,4 +89,4 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
       obj2.dispatch({ type: "VOICE_CHANNEL_SELECT", guildId, channelId, currentVoiceChannelId: SelectedChannelStore.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 });
     }, id, flag2, flag);
   }
-};
+}

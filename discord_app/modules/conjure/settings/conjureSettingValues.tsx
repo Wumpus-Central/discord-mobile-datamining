@@ -1,12 +1,12 @@
-// === Module 10847: conjureSettingValues ===
+// === Module 10923: conjureSettingValues ===
 
-// Module 10847 (conjureSettingValues)
+// Module 10923 (conjureSettingValues)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingValues.tsx");
 
-export const conjureSettingSubmitValue = function conjureSettingSubmitValue(found, num) {
+export function conjureSettingSubmitValue(found, num) {
   if ("number" === found.type) {
     if (typeof num === "number") {
       return num;
@@ -56,20 +56,20 @@ export const conjureSettingSubmitValue = function conjureSettingSubmitValue(foun
     }
     return tmp;
   }
-};
-export const conjureSettingValuesEqual = function conjureSettingValuesEqual(result, tmp2Result2) {
+}
+export function conjureSettingValuesEqual(result, tmp2Result2) {
   const json = JSON.stringify(result);
   return json === JSON.stringify(tmp2Result2);
-};
-export const conjureSettingBaseline = function conjureSettingBaseline(found, memo1) {
+}
+export function conjureSettingBaseline(found, memo1) {
   let tmp = memo1;
   if (memo1 == null) {
     tmp = "checkbox" !== found.type && null;
     const tmp3 = "checkbox" !== found.type && null;
   }
   return tmp;
-};
-export const conjureSecretsSubmission = function conjureSecretsSubmission(memo, secrets) {
+}
+export function conjureSecretsSubmission(memo, secrets) {
   if (0 === Object.keys(secrets).length) {
     return {};
   } else {
@@ -106,8 +106,8 @@ export const conjureSecretsSubmission = function conjureSecretsSubmission(memo, 
     const merged = Object.assign(obj4);
     return obj;
   }
-};
-export const mergeSubmittedSettingValues = function mergeSubmittedSettingValues(values, values2) {
+}
+export function mergeSubmittedSettingValues(values, values2) {
   let obj = values2;
   const obj2 = {};
   const merged = Object.assign(values);
@@ -126,4 +126,4 @@ export const mergeSubmittedSettingValues = function mergeSubmittedSettingValues(
     continue;
   }
   return obj2;
-};
+}

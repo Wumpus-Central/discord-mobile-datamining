@@ -1,6 +1,6 @@
-// === Module 9043: GuildSettingsVanityURLActionCreators ===
+// === Module 9046: GuildSettingsVanityURLActionCreators ===
 
-// Module 9043 (GuildSettingsVanityURLActionCreators)
+// Module 9046 (GuildSettingsVanityURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
@@ -11,21 +11,21 @@ const require = globalThis.__r;
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
 
-export const fetchVanityUrl = function fetchVanityUrl(id) {
+export function fetchVanityUrl(id) {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: Endpoints.GUILD_VANITY_URL(id), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     ({ code, uses, error } = body.body);
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses, error });
   });
-};
-export const resetCode = function resetCode() {
+}
+export function resetCode() {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
-};
-export const setCode = function setCode(code) {
+}
+export function setCode(code) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code });
-};
-export const saveCode = function saveCode(id, code, arg2) {
+}
+export function saveCode(id, code, arg2) {
   _require = arg2;
   const HTTP = require("HTTPUtils").HTTP;
   const request = { url: Endpoints.GUILD_VANITY_URL(id), body: { code }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
@@ -47,4 +47,4 @@ export const saveCode = function saveCode(id, code, arg2) {
     }
     const obj2 = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
   });
-};
+}

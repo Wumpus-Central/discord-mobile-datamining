@@ -1,6 +1,6 @@
-// === Module 11309: ConnectionsRoleActionCreators ===
+// === Module 11363: ConnectionsRoleActionCreators ===
 
-// Module 11309 (ConnectionsRoleActionCreators)
+// Module 11363 (ConnectionsRoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
         const obj11 = { type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS", roleId: closure_131_1, roleConnectionConfigurations: closure_131_3 };
         closure_132_1(closure_132_2[3]).dispatch(obj11);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp29) {
       c6 = tmp;
@@ -105,7 +105,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/ConnectionsRoleActionCreators.tsx");
 
-export const fetchRoleConnectionsConfiguration = function fetchRoleConnectionsConfiguration(guildId, id) {
+export function fetchRoleConnectionsConfiguration(guildId, id) {
   _require = id;
   const HTTP = require("HTTPUtils").HTTP;
   value = HTTP.get({ url: Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(guildId, id), rejectWithError: true });
@@ -119,8 +119,8 @@ export const fetchRoleConnectionsConfiguration = function fetchRoleConnectionsCo
   }).catch(() => {
 
   });
-};
-export const putRoleConnectionsConfigurations = function putRoleConnectionsConfigurations() {
+}
+export function putRoleConnectionsConfigurations() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -129,8 +129,8 @@ export const putRoleConnectionsConfigurations = function putRoleConnectionsConfi
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchUserApplicationRoleConnections = function fetchUserApplicationRoleConnections() {
+}
+export function fetchUserApplicationRoleConnections() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -139,4 +139,4 @@ export const fetchUserApplicationRoleConnections = function fetchUserApplication
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,21 +1,21 @@
-// === Module 8398: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
+// === Module 8420: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
 
-// Module 8398 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
+// Module 8420 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
 import util from "util" /* 1125 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8396 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8397 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8399 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8418 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8419 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8421 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx");
 
-export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = function createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, TIER_1) {
+export function createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, TIER_1) {
   message = message.message;
   const channel = ChannelStore.getChannel(message.getChannelId());
   if (null == channel) {
@@ -45,4 +45,4 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
       return obj4;
     }
   }
-};
+}

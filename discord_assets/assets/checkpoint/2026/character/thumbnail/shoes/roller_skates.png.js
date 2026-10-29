@@ -1,6 +1,6 @@
-// === Module 6127: ? ===
+// === Module 6151: ? ===
 
-// Module 6127
+// Module 6151
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/shoes/roller_skates.png.js");

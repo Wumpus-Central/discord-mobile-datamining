@@ -1,20 +1,20 @@
-// === Module 11385: SpotifyActionCreators ===
+// === Module 11439: SpotifyActionCreators ===
 
-// Module 11385 (SpotifyActionCreators)
+// Module 11439 (SpotifyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import GameUtilsDefault from "GameUtils" /* 9287 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11384 */;
+import GameUtilsDefault from "GameUtils" /* 9291 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11438 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function apiRequest(fn, arg1, arg2, value) {
+function apiRequest(fn, arg1, arg2, arg3) {
   closure_0 = fn;
   closure_1 = arg1;
-  obj = value;
+  obj = arg3;
   obj = {};
-  const merged = Object.assign(value);
+  const merged = Object.assign(arg3);
   obj.headers = { authorization: "Bearer " + arg2 };
   const obj2 = { authorization: "Bearer " + arg2 };
   const promise = fn(obj);
@@ -67,7 +67,7 @@ function apiRequest(fn, arg1, arg2, value) {
                 let HTTP = closure_2_0(closure_2_2[4]).HTTP;
                 let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
                 let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-                return value.catch(() => { ... }).then(() => { ... });
+                return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
               });
             }
             return Promise.reject(error);
@@ -106,7 +106,7 @@ function apiRequest(fn, arg1, arg2, value) {
                 let HTTP = closure_2_0(closure_2_2[4]).HTTP;
                 let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
                 let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-                return value.catch(() => { ... }).then(() => { ... });
+                return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
               });
             }
             return Promise.reject(error);
@@ -147,14 +147,14 @@ function apiRequest(fn, arg1, arg2, value) {
                   const HTTP = closure_0(obj[4]).HTTP;
                   obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
                   const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
+                  return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
                 });
                 timeoutPromiseResult.then(() => {
                   closure_0 = closure_1_1;
                   const HTTP = closure_0(obj[4]).HTTP;
                   obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
                   const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
+                  return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
                 }).then((body) => {
                   closure_0 = closure_1_0;
                   closure_1 = closure_1_1;
@@ -164,17 +164,17 @@ function apiRequest(fn, arg1, arg2, value) {
                   obj.headers = { authorization: "Bearer " + body.body.access_token };
                   let obj2 = { authorization: "Bearer " + body.body.access_token };
                   let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
+                  return closure_1_0(obj).then(/* F112237 */ function() { ... }).catch(/* F112238 */ function() { ... });
                 }).then((result) => {
                   closure_0 = result;
-                  return new Promise(() => { ... });
+                  return new Promise(/* F163125 */ function() { ... });
                 });
                 let nextPromise1 = timeoutPromiseResult.then(() => {
                   closure_0 = closure_1_1;
                   const HTTP = closure_0(obj[4]).HTTP;
                   obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
                   const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
+                  return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
                 }).then((body) => {
                   closure_0 = closure_1_0;
                   closure_1 = closure_1_1;
@@ -184,7 +184,7 @@ function apiRequest(fn, arg1, arg2, value) {
                   obj.headers = { authorization: "Bearer " + body.body.access_token };
                   let obj2 = { authorization: "Bearer " + body.body.access_token };
                   let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
+                  return closure_1_0(obj).then(/* F112237 */ function() { ... }).catch(/* F112238 */ function() { ... });
                 });
               }
             }
@@ -227,7 +227,7 @@ function apiRequest(fn, arg1, arg2, value) {
                 let HTTP = closure_2_0(closure_2_2[4]).HTTP;
                 let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
                 let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-                return value.catch(() => { ... }).then(() => { ... });
+                return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
               });
             }
             return Promise.reject(error);
@@ -268,14 +268,14 @@ function apiRequest(fn, arg1, arg2, value) {
                   const HTTP = closure_0(obj[4]).HTTP;
                   obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
                   const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
+                  return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
                 });
                 timeoutPromiseResult.then(() => {
                   closure_0 = closure_1_1;
                   const HTTP = closure_0(obj[4]).HTTP;
                   obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
                   const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
+                  return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
                 }).then((body) => {
                   closure_0 = closure_1_0;
                   closure_1 = closure_1_1;
@@ -285,17 +285,17 @@ function apiRequest(fn, arg1, arg2, value) {
                   obj.headers = { authorization: "Bearer " + body.body.access_token };
                   let obj2 = { authorization: "Bearer " + body.body.access_token };
                   let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
+                  return closure_1_0(obj).then(/* F112237 */ function() { ... }).catch(/* F112238 */ function() { ... });
                 }).then((result) => {
                   closure_0 = result;
-                  return new Promise(() => { ... });
+                  return new Promise(/* F163125 */ function() { ... });
                 });
                 let nextPromise1 = timeoutPromiseResult.then(() => {
                   closure_0 = closure_1_1;
                   const HTTP = closure_0(obj[4]).HTTP;
                   obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, closure_1_1), oldFormErrors: true, rejectWithError: false };
                   const value = HTTP.get(obj);
-                  return value.catch(() => { ... }).then(() => { ... });
+                  return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
                 }).then((body) => {
                   closure_0 = closure_1_0;
                   closure_1 = closure_1_1;
@@ -305,7 +305,7 @@ function apiRequest(fn, arg1, arg2, value) {
                   obj.headers = { authorization: "Bearer " + body.body.access_token };
                   let obj2 = { authorization: "Bearer " + body.body.access_token };
                   let promise = closure_1_0(obj);
-                  return closure_1_0(obj).then(() => { ... }).catch(() => { ... });
+                  return closure_1_0(obj).then(/* F112237 */ function() { ... }).catch(/* F112238 */ function() { ... });
                 });
               }
             }
@@ -317,7 +317,7 @@ function apiRequest(fn, arg1, arg2, value) {
     return Promise.reject(error);
   });
 }
-const SpotifyConstants = fn(8865);
+const SpotifyConstants = fn(8868);
 ({ SPOTIFY_APP_PROTOCOL: closure_4, SpotifyEndpoints: hasOwnProperty } = SpotifyConstants);
 const Constants = fn(1084);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, PlatformTypes: closure_8 } = Constants);
@@ -326,7 +326,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyActionCreators.tsx");
 
 export { SpotifyAPI };
-export const getAccessToken = function getAccessToken(id) {
+export function getAccessToken(id) {
   _require = id;
   const HTTP = require("HTTPUtils").HTTP;
   value = HTTP.get({ url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false });
@@ -381,7 +381,7 @@ export const getAccessToken = function getAccessToken(id) {
               let HTTP = closure_2_0(closure_2_2[4]).HTTP;
               let value = HTTP.get({ url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false });
               let obj = { url: closure_2_7.CONNECTION_ACCESS_TOKEN(closure_2_8.SPOTIFY, accountId), oldFormErrors: true, rejectWithError: false };
-              return value.catch(() => { ... }).then(() => { ... });
+              return value.catch(/* F112239 */ function() { ... }).then(/* F112240 */ function() { ... });
             });
           }
           return Promise.reject(error);
@@ -396,8 +396,8 @@ export const getAccessToken = function getAccessToken(id) {
     closure_2_1(closure_2_2[5]).dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId, accessToken: accessToken.body.access_token });
     return accessToken;
   });
-};
-export const subscribePlayerStateNotifications = function subscribePlayerStateNotifications(accountId, accessToken, connectionId) {
+}
+export function subscribePlayerStateNotifications(accountId, accessToken, connectionId) {
   closure_0 = accountId;
   closure_1 = accessToken;
   closure_2 = connectionId;
@@ -424,7 +424,7 @@ export const subscribePlayerStateNotifications = function subscribePlayerStateNo
               closure_2 = connection_id;
               closure_3 = closure_1_3 - 1;
               let request = { url: closure_2_5.NOTIFICATIONS_PLAYER, query: { connection_id } };
-              return closure_2_9.put(closure_1_0, closure_1_1, request).catch(() => { ... });
+              return closure_2_9.put(closure_1_0, closure_1_1, request).catch(/* F112241 */ function() { ... });
             });
             let timeoutPromiseResult = closure_2_0(closure_2_2[3]).timeoutPromise(5000);
           }
@@ -435,16 +435,16 @@ export const subscribePlayerStateNotifications = function subscribePlayerStateNo
     }
     return rejectResult;
   });
-};
-export const getProfile = function getProfile(accountId, accessToken) {
+}
+export function getProfile(accountId, accessToken) {
   obj = { url: closure_5.PROFILE };
   value = obj.get(accountId, accessToken, obj);
   return value.then((body) => {
     DispatcherDefault.dispatch({ type: "SPOTIFY_PROFILE_UPDATE", accountId, isPremium: "premium" === body.body.product });
     return body;
   });
-};
-export const getDevices = function getDevices(accountId, accessToken) {
+}
+export function getDevices(accountId, accessToken) {
   obj = { url: closure_5.PLAYER_DEVICES };
   value = obj.get(accountId, accessToken, obj);
   return value.then((body) => {
@@ -454,8 +454,8 @@ export const getDevices = function getDevices(accountId, accessToken) {
     }
     return body;
   });
-};
-export const play = function play(accountId, accessToken, sync_id, TRACK, arg4) {
+}
+export function play(accountId, accessToken, sync_id, TRACK, arg4) {
   closure_0 = accountId;
   closure_1 = accessToken;
   const id = sync_id;
@@ -517,15 +517,15 @@ export const play = function play(accountId, accessToken, sync_id, TRACK, arg4) 
     DispatcherDefault.dispatch(obj2);
     return result;
   });
-};
-export const pause = function pause(accountId, accessToken) {
+}
+export function pause(accountId, accessToken) {
   obj = { url: hasOwnProperty.PLAYER_PAUSE };
   return obj.put(accountId, accessToken, obj).then((result) => {
     DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" });
     return result;
   });
-};
-export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolRegistered() {
+}
+export function fetchIsSpotifyProtocolRegistered() {
   if (!SpotifyProtocolStore.isProtocolRegistered()) {
     if (obj.isDesktop()) {
       GameUtilsDefault.isProtocolRegistered(React4).then((isRegistered) => {
@@ -535,7 +535,7 @@ export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolR
     }
     obj = PlatformUtils;
   }
-};
-export const setActiveDevice = function setActiveDevice(accountId, deviceId) {
+}
+export function setActiveDevice(accountId, deviceId) {
   DispatcherDefault.dispatch({ type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId, deviceId });
-};
+}

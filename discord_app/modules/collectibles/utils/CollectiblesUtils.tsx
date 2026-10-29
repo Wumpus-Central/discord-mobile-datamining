@@ -1,33 +1,16 @@
-// === Module 7726: utils/CollectiblesUtils ===
+// === Module 7749: utils/CollectiblesUtils ===
 
-// Module 7726 (utils/CollectiblesUtils)
+// Module 7749 (utils/CollectiblesUtils)
 import c from "c" /* 576 */;
-import DateUtils from "DateUtils" /* 4829 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5775 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5850 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7541 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7727 */;
+import DateUtils from "DateUtils" /* 4830 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7564 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7750 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
-export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  const obj = { qualityOptions: { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate }, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
-  if (null != desktopSource) {
-    if (null != desktopSource.desktopSource) {
-      const obj3 = { sourceId: desktopSource.desktopSource.id, sound: true };
-      obj.desktopSettings = obj3;
-    }
-    if (null != desktopSource.cameraSource) {
-      const obj4 = { videoDeviceGuid: desktopSource.cameraSource.videoDeviceGuid, audioDeviceGuid: desktopSource.cameraSource.audioDeviceGuid };
-      obj.cameraSettings = obj4;
-    }
-  }
-  return obj;
-};
-export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectiblesOptionsQuery(noCache, tab) {
+export function buildFetchCollectiblesOptionsQuery(noCache, tab) {
   const obj = {};
   if (null != tab) {
     obj.tab = tab;
@@ -66,13 +49,13 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
     }
   }
   return obj;
-};
-export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfileEffectThumbnailUrl(arg0) {
+}
+export function getOptimizedProfileEffectThumbnailUrl(arg0) {
   if (null != arg0) {
     const _HermesInternal = HermesInternal;
     return "" + arg0 + "?width=100&height=195";
   }
-};
+}
 export const useFetchFractionalPremiumInfo = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchFractionalPremiumInfo() {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,6 +1,6 @@
-// === Module 4939: MuteTimers ===
+// === Module 4940: MuteTimers ===
 
-// Module 4939 (MuteTimers)
+// Module 4940 (MuteTimers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/MuteTimers.tsx");
@@ -57,7 +57,7 @@ prototype["clearTimer"] = function clearTimer(arg0) {
 };
 
 export default MuteTimers;
-export const computeIsMuted = function computeIsMuted(mute_config) {
+export function computeIsMuted(mute_config) {
   mute_config = mute_config.mute_config;
   let muted = mute_config.muted;
   if (muted) {
@@ -72,8 +72,8 @@ export const computeIsMuted = function computeIsMuted(mute_config) {
     muted = tmp3;
   }
   return muted;
-};
-export const isTemporarilyMuted = function isTemporarilyMuted(mute_config) {
+}
+export function isTemporarilyMuted(mute_config) {
   mute_config = mute_config.mute_config;
   let muted = mute_config.muted;
   if (muted) {
@@ -90,4 +90,4 @@ export const isTemporarilyMuted = function isTemporarilyMuted(mute_config) {
     muted = date >= date1;
   }
   return muted;
-};
+}

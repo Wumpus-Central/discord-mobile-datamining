@@ -1,20 +1,20 @@
-// === Module 14502: GuildInviteUtils ===
+// === Module 14736: GuildInviteUtils ===
 
-// Module 14502 (GuildInviteUtils)
+// Module 14736 (GuildInviteUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6863 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8900 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9085 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6886 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8903 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5230 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import SortedGuildStore from "SortedGuildStore" /* 6736 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import SortedGuildStore from "SortedGuildStore" /* 6759 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -51,7 +51,7 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     obj7.inviteAnalyticsMetadata = { source: closure_131_2 };
     closure_132_1(closure_132_2[24]).enqueue(obj7, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-      const AccessibilityAnnouncer = closure_0(5013).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5014).AccessibilityAnnouncer;
       const intl = closure_0(1125).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1125).t.PuLLzP));
     });
@@ -60,20 +60,20 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   }
   return value;
 };
-const setSendState = fn(14503).setSendState;
-const InviteSendStates = fn(7844).InviteSendStates;
+const setSendState = fn(14737).setSendState;
+const InviteSendStates = fn(7867).InviteSendStates;
 const Constants = fn(1084);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
 
-export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
+export function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(14504, dependencyMap.paths), "invite-to-guilds-" + id, { recipientId: id, source: newestAnalyticsLocation });
-};
+  obj3.openLazy(asyncRequireImpl(14738, dependencyMap.paths), "invite-to-guilds-" + id, { recipientId: id, source: newestAnalyticsLocation });
+}
 export const useServerInviteRows = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerInviteRows(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
@@ -222,7 +222,7 @@ export const useServerInviteRows = ReactCompilerGating.isReactCompilerEnabled() 
     }
   }, items1);
 });
-export const sendGuildInvite = function sendGuildInvite() {
+export function sendGuildInvite() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -231,4 +231,4 @@ export const sendGuildInvite = function sendGuildInvite() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

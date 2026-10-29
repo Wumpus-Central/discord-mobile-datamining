@@ -1,6 +1,6 @@
-// === Module 16950: RemoteFetchData ===
+// === Module 17189: RemoteFetchData ===
 
-// Module 16950 (RemoteFetchData)
+// Module 17189 (RemoteFetchData)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
@@ -102,7 +102,7 @@ prototype["try"] = function try(nextWantsResult, arrayResult) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

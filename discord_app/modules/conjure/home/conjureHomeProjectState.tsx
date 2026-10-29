@@ -1,14 +1,14 @@
-// === Module 14394: conjureHomeProjectState ===
+// === Module 14628: conjureHomeProjectState ===
 
-// Module 14394 (conjureHomeProjectState)
-import conjureUnread from "conjureUnread" /* 10759 */;
-import conjureProjectMute from "conjureProjectMute" /* 10760 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10842 */;
+// Module 14628 (conjureHomeProjectState)
+import conjureUnread from "conjureUnread" /* 10834 */;
+import conjureProjectMute from "conjureProjectMute" /* 10835 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10918 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import ConjureChatStore from "ConjureChatStore" /* 10734 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10749 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import ConjureChatStore from "ConjureChatStore" /* 10808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10824 */;
 
 require = fn;
 function readConjureHomeProjectState(id) {
@@ -172,7 +172,7 @@ export function conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromS
   }
   return tmp;
 }
-export const conjureProjectLastActivityTime = function conjureProjectLastActivityTime(project) {
+export function conjureProjectLastActivityTime(project) {
   if (null == project.updated_at) {
     return null;
   } else {
@@ -185,7 +185,7 @@ export const conjureProjectLastActivityTime = function conjureProjectLastActivit
     }
     return tmp3;
   }
-};
+}
 export const CONJURE_HOME_PROJECT_STATE_STORES = items;
 export { readConjureHomeProjectState };
 export const useConjureHomeProjectState = tmp7;

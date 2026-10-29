@@ -1,9 +1,9 @@
-// === Module 12352: useConjureManualAppBuildRequest ===
+// === Module 12406: useConjureManualAppBuildRequest ===
 
-// Module 12352 (useConjureManualAppBuildRequest)
+// Module 12406 (useConjureManualAppBuildRequest)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureAppBuildRequest from "ConjureAppBuildRequest" /* 12353 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureAppBuildRequest from "ConjureAppBuildRequest" /* 12407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       const obj = { projectId, request: null, clearComposer: null };
       const obj2 = { id: "manual:" + projectId + ":" + Date.now(), summary: null, prompt: null };
       const intl = util.intl;
-      obj2.summary = intl.string(_modDef3863["o2++BO"]);
+      obj2.summary = intl.string(_modDef3864["o2++BO"]);
       const trimmed = str.trim();
       obj2.prompt = trimmed.slice(0, ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH);
       obj.request = obj2;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const obj = { projectId, request: null, clearComposer: null };
     const obj2 = { id: "manual:" + projectId + ":" + Date.now(), summary: null, prompt: null };
     const intl = util.intl;
-    obj2.summary = intl.string(_modDef3863["o2++BO"]);
+    obj2.summary = intl.string(_modDef3864["o2++BO"]);
     const trimmed = str.trim();
     obj2.prompt = trimmed.slice(0, ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH);
     obj.request = obj2;

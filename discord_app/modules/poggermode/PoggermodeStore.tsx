@@ -1,13 +1,13 @@
-// === Module 14901: PoggermodeStore ===
+// === Module 15136: PoggermodeStore ===
 
-// Module 14901 (PoggermodeStore)
+// Module 15136 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 14902 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 15137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7786 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7808 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -45,7 +45,7 @@ function updateCombo(userId) {
     decayInterval1 = iter.decayInterval;
   }
   if (decayInterval1 == null) {
-    decayInterval1 = new obj2(4851).Interval();
+    decayInterval1 = new obj2(4852).Interval();
   }
   obj2.decayInterval = decayInterval1;
   const result = secondaryIndexMap.set("" + userId.userId + "-" + userId.channelId, obj2);
@@ -82,18 +82,18 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7787);
+const PoggermodeConstants = fn(7809);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1084).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(4931).SecondaryIndexMap(function indexedBy(arg0) {
+const secondaryIndexMap = new fn(4932).SecondaryIndexMap(function indexedBy(arg0) {
   const items = [, ];
   ({ userId: arr[0], channelId: arr[1] } = arg0);
   return items;
 }, function sortBy(channelId) {
   return "" + channelId.channelId + "-" + channelId.userId;
 });
-const secondaryIndexMap1 = new fn(4931).SecondaryIndexMap(function indexedBy(combo) {
+const secondaryIndexMap1 = new fn(4932).SecondaryIndexMap(function indexedBy(combo) {
   const items = [, , ];
   ({ messageId: arr[0], channelId: arr[1] } = combo);
   items[2] = combo.combo.userId;
@@ -243,7 +243,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/poggermode/PoggermodeStore.tsx");
 
 export default poggermodeStore;
-export const isComboing = function isComboing(value) {
+export function isComboing(value) {
   let tmp = null != value;
   if (tmp) {
     let tmp2 = value.value > 0;
@@ -257,11 +257,11 @@ export const isComboing = function isComboing(value) {
     tmp = tmp2;
   }
   return tmp;
-};
-export const getComboId = function getComboId(userId) {
+}
+export function getComboId(userId) {
   return "" + userId.userId + "-" + userId.channelId;
-};
-export const shouldTrackMessage = function shouldTrackMessage(arg0, arg1, arg2, has) {
+}
+export function shouldTrackMessage(arg0, arg1, arg2, has) {
   let tmp = arg0 === arg1;
   if (tmp) {
     let flag = null != arg2 && !has.has(arg2);
@@ -272,4 +272,4 @@ export const shouldTrackMessage = function shouldTrackMessage(arg0, arg1, arg2, 
     tmp = flag;
   }
   return tmp;
-};
+}

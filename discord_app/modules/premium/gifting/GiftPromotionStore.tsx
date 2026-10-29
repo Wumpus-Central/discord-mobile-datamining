@@ -1,6 +1,6 @@
-// === Module 7567: GiftPromotionStore ===
+// === Module 7590: GiftPromotionStore ===
 
-// Module 7567 (GiftPromotionStore)
+// Module 7590 (GiftPromotionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

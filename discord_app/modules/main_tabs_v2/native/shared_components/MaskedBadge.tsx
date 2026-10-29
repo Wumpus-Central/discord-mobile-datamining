@@ -1,15 +1,15 @@
-// === Module 9737: MaskedBadge ===
+// === Module 9769: MaskedBadge ===
 
-// Module 9737 (MaskedBadge)
+// Module 9769 (MaskedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import shared_components_BadgeDefault from "shared_components/Badge" /* 9738 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9770 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { maskStyle: { position: "relative", right: "IconComponent" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

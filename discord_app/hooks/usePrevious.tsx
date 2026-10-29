@@ -1,6 +1,6 @@
-// === Module 6695: usePrevious ===
+// === Module 6719: usePrevious ===
 
-// Module 6695 (usePrevious)
+// Module 6719 (usePrevious)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ export default function usePrevious(current) {
   }, items);
   return tmp.current;
 };
-export const usePreviousWhen = function usePreviousWhen(value) {
+export function usePreviousWhen(value) {
   value = value.value;
   const shouldUpdate = value.shouldUpdate;
   const tmp = React(null);
@@ -28,8 +28,8 @@ export const usePreviousWhen = function usePreviousWhen(value) {
     }
   }, items);
   return tmp.current;
-};
-export const useCurrentWhen = function useCurrentWhen(value) {
+}
+export function useCurrentWhen(value) {
   let current = value.value;
   const shouldUpdate = value.shouldUpdate;
   const tmp = React(null);
@@ -44,4 +44,4 @@ export const useCurrentWhen = function useCurrentWhen(value) {
     current = tmp.current;
   }
   return current;
-};
+}

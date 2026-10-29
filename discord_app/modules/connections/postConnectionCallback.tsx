@@ -1,6 +1,6 @@
-// === Module 6667: postConnectionCallback ===
+// === Module 6691: postConnectionCallback ===
 
-// Module 6667 (postConnectionCallback)
+// Module 6691 (postConnectionCallback)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 ({ Endpoints: c2, FRIEND_SYNC_PLATFORM_TYPES: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/connections/postConnectionCallback.tsx");
 
-export const postConnectionCallback = function postConnectionCallback(provider, arg1) {
+export function postConnectionCallback(provider, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -22,4 +22,4 @@ export const postConnectionCallback = function postConnectionCallback(provider, 
   request.body = obj;
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   return HTTP.post(request);
-};
+}

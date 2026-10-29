@@ -1,7 +1,7 @@
-// === Module 15567: GoLiveHdrExperiment ===
+// === Module 15803: GoLiveHdrExperiment ===
 
-// Module 15567 (GoLiveHdrExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15803 (GoLiveHdrExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };
@@ -13,6 +13,6 @@ const config = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/media_engine/GoLiveHdrExperiment.tsx");
 
 export const HdrCaptureMode = obj;
-export const getGoLiveHdrConfig = function getGoLiveHdrConfig(location) {
+export function getGoLiveHdrConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

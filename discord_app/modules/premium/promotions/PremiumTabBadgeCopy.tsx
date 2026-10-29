@@ -1,13 +1,13 @@
-// === Module 16543: PremiumTabBadgeCopy ===
+// === Module 16781: PremiumTabBadgeCopy ===
 
-// Module 16543 (PremiumTabBadgeCopy)
+// Module 16781 (PremiumTabBadgeCopy)
 import util from "util" /* 1125 */;
-import MarketingStringFormat from "MarketingStringFormat" /* 16544 */;
+import MarketingStringFormat from "MarketingStringFormat" /* 16782 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/promotions/PremiumTabBadgeCopy.tsx");
 
-export const getPremiumTabBadgeCopy = function getPremiumTabBadgeCopy(promotionMarketingComponent) {
+export function getPremiumTabBadgeCopy(promotionMarketingComponent) {
   if ("premiumTab" !== promotionMarketingComponent.properties.properties.oneofKind) {
     return null;
   } else {
@@ -26,4 +26,4 @@ export const getPremiumTabBadgeCopy = function getPremiumTabBadgeCopy(promotionM
       return null;
     }
   }
-};
+}

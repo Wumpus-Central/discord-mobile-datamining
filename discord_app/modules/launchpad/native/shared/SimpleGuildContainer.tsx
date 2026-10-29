@@ -1,15 +1,15 @@
-// === Module 18979: SimpleGuildContainer ===
+// === Module 19212: SimpleGuildContainer ===
 
-// Module 18979 (SimpleGuildContainer)
+// Module 19212 (SimpleGuildContainer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import spring from "spring" /* 5283 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9737 */;
-import GuildsBarActivityIndicatorDefault from "GuildsBarActivityIndicator" /* 18056 */;
-import CutoutImageDefault from "CutoutImage" /* 18980 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import spring from "spring" /* 5284 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9769 */;
+import GuildsBarActivityIndicatorDefault from "GuildsBarActivityIndicator" /* 18290 */;
+import CutoutImageDefault from "CutoutImage" /* 19213 */;
 import noop from "module_19" /* 19 */;
 
-const GuildsBarActivityIndicator = isCurrentUserConnected(18056);
+const GuildsBarActivityIndicator = isCurrentUserConnected(18290);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGuildContainerBadge(arg0) {
@@ -152,7 +152,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuildContainer.tsx");
 
-export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
+export function SimpleGuildContainer(selected) {
   selected = selected.selected;
   let num = selected.size;
   ({ guildIconRef, guildId, style, children } = selected);
@@ -269,7 +269,7 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
   const items3 = [flag2(backgroundColor, obj4), memo1, memo, flag2(closure_13, { backgroundColor, guildId, activityIndicatorState }), flag2(closure_12, { backgroundColor, badge, unread })];
   obj3.children = items3;
   return iconStroke(backgroundColor, obj3);
-};
+}
 export const SimpleGuildContainerAnimated = ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGuildContainerAnimated(arg0) {
   const cResult = selected(iconBackground[5]).c(31);
   ({ guildIconRef, guildId, style, children, selected } = arg0);

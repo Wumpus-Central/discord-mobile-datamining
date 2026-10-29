@@ -1,20 +1,20 @@
-// === Module 19489: ChannelSetupScreen ===
+// === Module 19722: ChannelSetupScreen ===
 
-// Module 19489 (ChannelSetupScreen)
+// Module 19722 (ChannelSetupScreen)
 import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9040 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9043 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8439).CREATE_NEW_CHANNEL_VALUE;
+let closure_8 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(8461).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1084).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -22,16 +22,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx");
 
 export default function ChannelSetupScreen() {
-  const ref = callback.useRef(null);
-  const token = guild(publicUpdatesChannel[10]).useToken(rulesChannel(publicUpdatesChannel[11]).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(publicUpdatesChannel[10]);
-  const enableCommunitySharedStyles = guild(publicUpdatesChannel[12]).useEnableCommunitySharedStyles();
-  const obj3 = guild(publicUpdatesChannel[12]);
+  const ref = noop.useRef(null);
+  const token = guild(callback[10]).useToken(publicUpdatesChannel(callback[11]).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(callback[10]);
+  const enableCommunitySharedStyles = guild(callback[12]).useEnableCommunitySharedStyles();
+  let obj3 = guild(callback[12]);
   let items = [GuildSettingsStore];
-  guild = guild(publicUpdatesChannel[13]).useStateFromStoresObject(items, () => props.getProps()).guild;
-  const obj4 = guild(publicUpdatesChannel[13]);
+  guild = guild(callback[13]).useStateFromStoresObject(items, () => props.getProps()).guild;
+  const obj4 = guild(callback[13]);
   let items1 = [ChannelStore];
-  const stateFromStoresObject = guild(publicUpdatesChannel[13]).useStateFromStoresObject(items1, () => {
+  const stateFromStoresObject = guild(callback[13]).useStateFromStoresObject(items1, () => {
     let rulesChannelId;
     if (guild != null) {
       rulesChannelId = guild.rulesChannelId;
@@ -44,132 +44,154 @@ export default function ChannelSetupScreen() {
     obj2.publicUpdatesChannel = ChannelStore.getChannel(prop);
     return obj2;
   });
-  rulesChannel = stateFromStoresObject.rulesChannel;
   publicUpdatesChannel = stateFromStoresObject.publicUpdatesChannel;
-  let stringResult = rulesChannel(publicUpdatesChannel[14])(rulesChannel, true);
-  if (stringResult == null) {
-    let intl = tmp2(tmp3[15]).intl;
-    stringResult = intl.string(tmp2(tmp3[15]).t.Cla0re);
-  }
-  let stringResult1 = tmp4(tmp3[14])(publicUpdatesChannel, true);
-  if (stringResult1 == null) {
-    const intl2 = tmp2(tmp3[15]).intl;
-    stringResult1 = intl2.string(tmp2(tmp3[15]).t.Cla0re);
-  }
-  let id;
-  const obj5 = guild(publicUpdatesChannel[13]);
-  if (guild != null) {
-    id = guild.id;
-  }
-  const items2 = [id];
-  callback = obj.useCallback(() => {
+  const tmp8 = publicUpdatesChannel(callback[14])(stateFromStoresObject.rulesChannel, true);
+  if (tmp8 != null) {
+    let stringResult = tmp4(tmp3[14])(publicUpdatesChannel, true);
+    if (stringResult == null) {
+      let intl2 = tmp2(tmp3[15]).intl;
+      stringResult = intl2.string(tmp2(tmp3[15]).t.Cla0re);
+    }
     let id;
     if (guild != null) {
       id = guild.id;
     }
-    const channels = GuildChannelStore.getChannels(id);
-    let obj = { value: CREATE_NEW_CHANNEL_VALUE, label: null };
-    const intl = util.intl;
-    obj.label = intl.string(util.t.Cla0re);
-    let items = [];
-    if (null != channels) {
-      const found = channels[closure_8].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
-      items = found.map((channel) => {
-        channel = channel.channel;
-        const obj = { value: channel.id, label: guild(publicUpdatesChannel[14]).computeChannelName(channel, closure_1_10, closure_1_9, true) };
-        return obj;
-      });
+    const items2 = [id];
+    callback = noop.useCallback(() => {
+      let id;
+      if (guild != null) {
+        id = guild.id;
+      }
+      const channels = GuildChannelStore.getChannels(id);
+      let obj = { value: CREATE_NEW_CHANNEL_VALUE, label: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.Cla0re);
+      let items = [];
+      if (null != channels) {
+        const found = channels[closure_8].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+        items = found.map((channel) => {
+          channel = channel.channel;
+          const obj = { value: channel.id, label: guild(callback[14]).computeChannelName(channel, closure_1_10, closure_1_9, true) };
+          return obj;
+        });
+      }
+      const items1 = [obj, ...items];
+      return items1;
+    }, items2);
+    const items3 = [callback, ];
+    let rulesChannelId;
+    if (guild != null) {
+      rulesChannelId = guild.rulesChannelId;
     }
-    const items1 = [obj, ...items];
-    return items1;
-  }, items2);
-  const items3 = [callback, rulesChannel];
-  const items4 = [callback, publicUpdatesChannel];
-  const callback1 = obj.useCallback(() => {
-    let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-    let obj = ActionSheetActionCreatorsDefault;
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.Yr6nGx);
-    obj2.items = callback();
-    obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      rulesChannel(9039).updateGuild({ rulesChannelId });
-      const obj = rulesChannel(9039);
-      const obj2 = { rulesChannelId };
-      rulesChannel(5246).hideActionSheet();
-    };
-    let id;
-    if (rulesChannel != null) {
-      id = rulesChannel.id;
+    items3[1] = rulesChannelId;
+    const items4 = [callback, publicUpdatesChannel];
+    const callback1 = noop.useCallback(() => {
+      let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      let obj = ActionSheetActionCreatorsDefault;
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.Yr6nGx);
+      const obj3 = { value: null, label: null };
+      const intl2 = util.intl;
+      obj3.label = intl2.string(util.t.PoWNfe);
+      const items = [obj3, ...callback()];
+      obj2.items = items;
+      obj2.onItemSelect = function onItemSelect(rulesChannelId) {
+        publicUpdatesChannel(9042).updateGuild({ rulesChannelId });
+        const obj = publicUpdatesChannel(9042);
+        const obj2 = { rulesChannelId };
+        publicUpdatesChannel(5247).hideActionSheet();
+      };
+      let rulesChannelId;
+      if (guild != null) {
+        rulesChannelId = guild.rulesChannelId;
+      }
+      if (rulesChannelId == null) {
+        rulesChannelId = null;
+      }
+      obj2.selectedItem = rulesChannelId;
+      obj.openLazy(asyncRequireImpl(8962, dependencyMap.paths), "SelectRulesChannel", obj2);
+    }, items3);
+    const callback2 = noop.useCallback(() => {
+      let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      let obj = ActionSheetActionCreatorsDefault;
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.VqhxxN);
+      obj2.items = callback();
+      obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
+        publicUpdatesChannel(9042).updateGuild({ publicUpdatesChannelId });
+        const obj = publicUpdatesChannel(9042);
+        const obj2 = { publicUpdatesChannelId };
+        publicUpdatesChannel(5247).hideActionSheet();
+      };
+      let id;
+      if (publicUpdatesChannel != null) {
+        id = publicUpdatesChannel.id;
+      }
+      if (id == null) {
+        id = CREATE_NEW_CHANNEL_VALUE;
+      }
+      obj2.selectedItem = id;
+      obj.openLazy(asyncRequireImpl(8962, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    }, items4);
+    const obj6 = { headerRef: ref, disableNextStep: false, currentStep: tmp2(tmp3[21]).EnableCommunityModalSteps.STEP_2, children: null };
+    const obj7 = { style: enableCommunitySharedStyles.content, children: null };
+    const obj8 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
+    const intl3 = tmp2(tmp3[15]).intl;
+    obj8.children = intl3.formatToPlainString(tmp2(tmp3[15]).t.tInpJj, { number: 2, total: 3 });
+    const items5 = [closure_13(tmp2(tmp3[22]).Text, obj8), , , ];
+    const obj9 = { resizeMode: "contain", source: tmp4(tmp3[16])().channelSetup };
+    items5[1] = closure_13(tmp4(tmp3[23]), obj9);
+    const obj10 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const intl4 = tmp2(tmp3[15]).intl;
+    obj10.children = intl4.string(tmp2(tmp3[15]).t.YtXpEh);
+    items5[2] = closure_13(tmp2(tmp3[22]).Heading, obj10);
+    const obj11 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
+    const intl5 = tmp2(tmp3[15]).intl;
+    obj11.children = intl5.string(tmp2(tmp3[15]).t["J/fYR8"]);
+    items5[3] = closure_13(tmp2(tmp3[22]).Text, obj11);
+    obj7.children = items5;
+    const items6 = [closure_14(View, obj7), ];
+    const obj12 = { spacing: 24, style: null, children: null };
+    const obj13 = { paddingHorizontal: token };
+    obj12.style = obj13;
+    const obj14 = { helperText: null, hasIcons: false, children: null };
+    const intl6 = tmp2(tmp3[15]).intl;
+    obj14.helperText = intl6.string(tmp2(tmp3[15]).t["+Af+Vw"]);
+    const obj15 = { label: null, trailing: null, arrow: true, onPress: null };
+    const intl7 = tmp2(tmp3[15]).intl;
+    obj15.label = intl7.string(tmp2(tmp3[15]).t.dYrhCO);
+    const obj16 = { text: tmp8 };
+    obj15.trailing = closure_13(tmp2(tmp3[26]).TableRow.TrailingText, obj16);
+    obj15.onPress = callback1;
+    obj14.children = closure_13(tmp2(tmp3[26]).TableRow, obj15);
+    const items7 = [closure_13(tmp2(tmp3[25]).TableRowGroup, obj14), ];
+    const obj17 = { helperText: null, hasIcons: false, children: null };
+    const intl8 = tmp2(tmp3[15]).intl;
+    obj17.helperText = intl8.string(tmp2(tmp3[15]).t.ZFeonu);
+    const obj18 = { label: null, trailing: null, arrow: true, onPress: null };
+    const intl9 = tmp2(tmp3[15]).intl;
+    obj18.label = intl9.string(tmp2(tmp3[15]).t.vAyDGU);
+    const obj19 = { text: stringResult };
+    obj18.trailing = closure_13(tmp2(tmp3[26]).TableRow.TrailingText, obj19);
+    obj18.onPress = callback2;
+    obj17.children = closure_13(tmp2(tmp3[26]).TableRow, obj18);
+    items7[1] = closure_13(tmp2(tmp3[25]).TableRowGroup, obj17);
+    obj12.children = items7;
+    items6[1] = closure_14(tmp2(tmp3[24]).Stack, obj12);
+    obj6.children = items6;
+    return closure_14(tmp2(tmp3[21]).EnableCommunityModalScreen, obj6);
+  } else {
+    let intl = tmp2(tmp3[15]).intl;
+    let rulesChannelId1;
+    if (guild != null) {
+      rulesChannelId1 = guild.rulesChannelId;
     }
-    if (id == null) {
-      id = CREATE_NEW_CHANNEL_VALUE;
+    if (rulesChannelId1 === CREATE_NEW_CHANNEL_VALUE) {
+      let PoWNfe = tmp2(tmp3[15]).t.Cla0re;
+    } else {
+      PoWNfe = tmp2(tmp3[15]).t.PoWNfe;
     }
-    obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8959, dependencyMap.paths), "SelectRulesChannel", obj2);
-  }, items3);
-  const callback2 = obj.useCallback(() => {
-    let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-    let obj = ActionSheetActionCreatorsDefault;
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.VqhxxN);
-    obj2.items = callback();
-    obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      rulesChannel(9039).updateGuild({ publicUpdatesChannelId });
-      const obj = rulesChannel(9039);
-      const obj2 = { publicUpdatesChannelId };
-      rulesChannel(5246).hideActionSheet();
-    };
-    let id;
-    if (publicUpdatesChannel != null) {
-      id = publicUpdatesChannel.id;
-    }
-    if (id == null) {
-      id = CREATE_NEW_CHANNEL_VALUE;
-    }
-    obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8959, dependencyMap.paths), "SelectUpdatesChannel", obj2);
-  }, items4);
-  const obj6 = { headerRef: ref, disableNextStep: false, currentStep: guild(publicUpdatesChannel[21]).EnableCommunityModalSteps.STEP_2, children: null };
-  const obj7 = { style: enableCommunitySharedStyles.content, children: null };
-  const obj8 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
-  const intl3 = tmp2(tmp3[15]).intl;
-  obj8.children = intl3.formatToPlainString(guild(publicUpdatesChannel[15]).t.tInpJj, { number: 2, total: 3 });
-  const items5 = [closure_13(guild(publicUpdatesChannel[22]).Text, obj8), , , ];
-  const tmp10 = rulesChannel(publicUpdatesChannel[16])();
-  items5[1] = closure_13(rulesChannel(publicUpdatesChannel[23]), { resizeMode: "contain", source: rulesChannel(publicUpdatesChannel[16])().channelSetup });
-  const obj10 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl4 = tmp2(tmp3[15]).intl;
-  obj10.children = intl4.string(guild(publicUpdatesChannel[15]).t.YtXpEh);
-  items5[2] = closure_13(guild(publicUpdatesChannel[22]).Heading, obj10);
-  const obj11 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
-  const intl5 = tmp2(tmp3[15]).intl;
-  obj11.children = intl5.string(guild(publicUpdatesChannel[15]).t["J/fYR8"]);
-  items5[3] = closure_13(guild(publicUpdatesChannel[22]).Text, obj11);
-  obj7.children = items5;
-  const items6 = [closure_14(View, obj7), ];
-  const obj12 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
-  const obj13 = { helperText: null, hasIcons: false, children: null };
-  const intl6 = tmp2(tmp3[15]).intl;
-  obj13.helperText = intl6.string(guild(publicUpdatesChannel[15]).t["+Af+Vw"]);
-  const obj14 = { label: null, trailing: null, arrow: true, onPress: null };
-  const intl7 = tmp2(tmp3[15]).intl;
-  obj14.label = intl7.string(guild(publicUpdatesChannel[15]).t.dYrhCO);
-  obj14.trailing = closure_13(guild(publicUpdatesChannel[26]).TableRow.TrailingText, { text: stringResult });
-  obj14.onPress = callback1;
-  obj13.children = closure_13(guild(publicUpdatesChannel[26]).TableRow, obj14);
-  const items7 = [closure_13(guild(publicUpdatesChannel[25]).TableRowGroup, obj13), ];
-  const obj15 = { helperText: null, hasIcons: false, children: null };
-  const intl8 = tmp2(tmp3[15]).intl;
-  obj15.helperText = intl8.string(guild(publicUpdatesChannel[15]).t.ZFeonu);
-  const obj16 = { label: null, trailing: null, arrow: true, onPress: null };
-  const intl9 = tmp2(tmp3[15]).intl;
-  obj16.label = intl9.string(guild(publicUpdatesChannel[15]).t.vAyDGU);
-  obj16.trailing = closure_13(guild(publicUpdatesChannel[26]).TableRow.TrailingText, { text: stringResult1 });
-  obj16.onPress = callback2;
-  obj15.children = closure_13(guild(publicUpdatesChannel[26]).TableRow, obj16);
-  items7[1] = closure_13(guild(publicUpdatesChannel[25]).TableRowGroup, obj15);
-  obj12.children = items7;
-  items6[1] = closure_14(guild(publicUpdatesChannel[24]).Stack, obj12);
-  obj6.children = items6;
-  return closure_14(guild(publicUpdatesChannel[21]).EnableCommunityModalScreen, obj6);
+    intl.string(PoWNfe);
+  }
+  const obj5 = guild(callback[13]);
 };

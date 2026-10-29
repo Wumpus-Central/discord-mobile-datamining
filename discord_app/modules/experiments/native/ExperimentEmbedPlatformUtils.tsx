@@ -1,19 +1,19 @@
-// === Module 12810: ExperimentEmbedPlatformUtils ===
+// === Module 13031: ExperimentEmbedPlatformUtils ===
 
-// Module 12810 (ExperimentEmbedPlatformUtils)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ExperimentManager from "ExperimentManager" /* 5231 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8521 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11258 */;
-import useApexExperiments from "useApexExperiments" /* 11259 */;
+// Module 13031 (ExperimentEmbedPlatformUtils)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ExperimentManager from "ExperimentManager" /* 5232 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8543 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11312 */;
+import useApexExperiments from "useApexExperiments" /* 11313 */;
 import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 const result = size.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
-export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experimentTreatmentFromEmbedURL) {
+export function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experimentTreatmentFromEmbedURL) {
   closure_0 = experimentTreatmentFromEmbedURL;
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
@@ -49,6 +49,6 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
       }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12811, dependencyMap.paths), "ExperimentOverrideSheet", { id: experimentFromEmbedURL });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13032, dependencyMap.paths), "ExperimentOverrideSheet", { id: experimentFromEmbedURL });
   const obj3 = { id: experimentFromEmbedURL };
-};
+}

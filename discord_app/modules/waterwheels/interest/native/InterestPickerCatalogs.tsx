@@ -1,9 +1,9 @@
-// === Module 19208: InterestPickerCatalogs ===
+// === Module 19443: InterestPickerCatalogs ===
 
-// Module 19208 (InterestPickerCatalogs)
+// Module 19443 (InterestPickerCatalogs)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import GuildProfileConstants from "GuildProfileConstants" /* 9260 */;
-import GameCommunityConfig from "GameCommunityConfig" /* 17256 */;
+import GuildProfileConstants from "GuildProfileConstants" /* 9264 */;
+import GameCommunityConfig from "GameCommunityConfig" /* 17495 */;
 import size from "module_2" /* 2 */;
 
 const HOISTED_SEARCH_GAME_IDS = GuildProfileConstants.HOISTED_SEARCH_GAME_IDS;
@@ -22,7 +22,7 @@ const dependencyMap = {
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestPickerCatalogs.tsx");
 
 export const INTEREST_PICKER_CATALOG_VERSION = "2026-10-27-placeholder";
-export const getInterestPickerCatalog = function getInterestPickerCatalog(arg0) {
+export function getInterestPickerCatalog(arg0) {
   const set = new Set(dependencyMap[arg0]());
   const substr = Array.from(new Set(dependencyMap[arg0]())).slice(0, 60);
   let tmp2 = null;
@@ -30,4 +30,4 @@ export const getInterestPickerCatalog = function getInterestPickerCatalog(arg0) 
     tmp2 = substr;
   }
   return tmp2;
-};
+}

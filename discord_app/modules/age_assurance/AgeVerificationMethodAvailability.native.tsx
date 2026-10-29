@@ -1,10 +1,10 @@
-// === Module 7965: AgeVerificationMethodAvailability ===
+// === Module 7988: AgeVerificationMethodAvailability ===
 
-// Module 7965 (AgeVerificationMethodAvailability)
+// Module 7988 (AgeVerificationMethodAvailability)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7966 */;
-import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 7967 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7989 */;
+import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 7990 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -148,7 +148,7 @@ export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled(
     });
   }, items);
 });
-export const getAvailableMethodsV2 = function getAvailableMethodsV2() {
+export function getAvailableMethodsV2() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -157,4 +157,4 @@ export const getAvailableMethodsV2 = function getAvailableMethodsV2() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

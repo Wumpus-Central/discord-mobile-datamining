@@ -1,14 +1,14 @@
-// === Module 8883: trackFeedLoaded ===
+// === Module 8886: trackFeedLoaded ===
 
-// Module 8883 (trackFeedLoaded)
-import ICYMITypes from "ICYMITypes" /* 8873 */;
+// Module 8886 (trackFeedLoaded)
+import ICYMITypes from "ICYMITypes" /* 8876 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, ChannelTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/icymi/trackFeedLoaded.tsx");
 
-export const trackFeedLoaded = function trackFeedLoaded(unreadFeedItems) {
+export function trackFeedLoaded(unreadFeedItems) {
   const items = [];
   const items1 = [];
   const items2 = [];
@@ -73,4 +73,4 @@ export const trackFeedLoaded = function trackFeedLoaded(unreadFeedItems) {
   obj3.unread_feed_item_types = items2;
   obj3.read_feed_item_types = items3;
   items1(items2[1]).track(items3.FEED_LOADED, obj3);
-};
+}

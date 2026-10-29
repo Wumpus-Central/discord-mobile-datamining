@@ -1,13 +1,13 @@
-// === Module 4917: useCommunicationDisabledNoticeStore ===
+// === Module 4918: useCommunicationDisabledNoticeStore ===
 
-// Module 4917 (useCommunicationDisabledNoticeStore)
+// Module 4918 (useCommunicationDisabledNoticeStore)
 import c from "c" /* 576 */;
 import _mod1266 from "module_1266" /* 1266 */;
-import _mod4919 from "module_4919" /* 4919 */;
+import _mod4920 from "module_4920" /* 4920 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4918).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4919).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_571 = fn(571);
 let state = module_571.createStore((arg0, arg1) => {
   _require = arg0;
@@ -65,7 +65,7 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
     first = cResult[0];
   }
   const tmpResult = _mod1266;
-  [obj3, tmp6] = _mod1266.useStoreWithEqualityFn(closure_4, first, _mod4919.shallow);
+  [obj3, tmp6] = _mod1266.useStoreWithEqualityFn(closure_4, first, _mod4920.shallow);
   if (cResult[1] === arg0) {
     if (cResult[2] === obj3) {
       let tmp7 = cResult[3];
@@ -87,18 +87,18 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
   cResult[2] = obj3;
   cResult[3] = hasItem;
   tmp7 = hasItem;
-  const tmp5 = _slicedToArray(_mod1266.useStoreWithEqualityFn(closure_4, first, _mod4919.shallow), 2);
+  const tmp5 = _slicedToArray(_mod1266.useStoreWithEqualityFn(closure_4, first, _mod4920.shallow), 2);
 }) : (function useCommunicationDisabledNoticeStore(arg0) {
   const tmp = _slicedToArray(_mod1266.useStoreWithEqualityFn(closure_4, (arg0) => {
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4919.shallow), 2);
+  }, _mod4920.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;
 });
-export const clearCommunicationDisabledNotice = function clearCommunicationDisabledNotice(arg0) {
+export function clearCommunicationDisabledNotice(arg0) {
   state = state.getState();
   return state.resetNotification(arg0);
-};
+}

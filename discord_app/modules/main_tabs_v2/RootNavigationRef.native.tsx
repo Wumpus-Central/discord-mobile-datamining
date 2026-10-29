@@ -1,7 +1,7 @@
-// === Module 5187: RootNavigationRef ===
+// === Module 5188: RootNavigationRef ===
 
-// Module 5187 (RootNavigationRef)
-import Link from "Link" /* 1503 */;
+// Module 5188 (RootNavigationRef)
+import Link from "Link" /* 1504 */;
 import size from "module_2" /* 2 */;
 
 let ready = Link.createNavigationContainerRef();
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/RootNavigationRe
 export function getRootNavigationRef() {
   return closure_0;
 }
-export const runWhenRootNavigationReady = function runWhenRootNavigationReady(fn) {
+export function runWhenRootNavigationReady(fn) {
   ready = fn;
   if (ready.isReady()) {
     fn();
@@ -20,4 +20,4 @@ export const runWhenRootNavigationReady = function runWhenRootNavigationReady(fn
       closure_0();
     });
   }
-};
+}

@@ -1,20 +1,20 @@
-// === Module 13503: UpcomingEventsLongPressActionSheet ===
+// === Module 13736: UpcomingEventsLongPressActionSheet ===
 
-// Module 13503 (UpcomingEventsLongPressActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7242 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7246 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7251 */;
+// Module 13736 (UpcomingEventsLongPressActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7266 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7270 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7275 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
 
 require = fn;
 const View = fn(17).View;
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ headerIcon: { marginRight: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -63,12 +63,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
   const tmpResult = guildId(504);
   const stateFromStores1 = guildId(504).useStateFromStores(tmp9, tmp11);
   if (cResult[6] !== stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp(6919).GuildIconSizes.LARGE };
-    const tmp17 = closure_7(stateFromStores1(6919), obj2);
+    const obj2 = { guild: stateFromStores, size: tmp(6943).GuildIconSizes.LARGE };
+    const tmp17 = closure_7(stateFromStores1(6943), obj2);
     cResult[6] = stateFromStores;
     cResult[7] = tmp17;
     let tmp13 = tmp17;
-    const tmp16 = stateFromStores1(6919);
+    const tmp16 = stateFromStores1(6943);
   } else {
     tmp13 = cResult[7];
   }
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
     }
     if (cResult[12] !== tmp18) {
       const obj3 = { leading: tmp18, title: tmp20 };
-      const tmp24 = closure_7(tmp(7284).BottomSheetTitleHeader, obj3);
+      const tmp24 = closure_7(tmp(7308).BottomSheetTitleHeader, obj3);
       cResult[12] = tmp18;
       cResult[13] = tmp24;
       let tmp22 = tmp24;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
     }
     const _Symbol2 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = { source: stateFromStores1(13504) };
+      const obj4 = { source: stateFromStores1(13737) };
       const tmp28 = closure_7(tmp(1199).Icon, obj4);
       cResult[14] = tmp28;
       let tmp25 = tmp28;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
       const obj5 = { text: null };
       const intl2 = tmp(1125).intl;
       obj5.text = intl2.string(tmp(1125).t.e6RscS);
-      const tmp31 = closure_7(tmp(8985).FormLabel, obj5);
+      const tmp31 = closure_7(tmp(8988).FormLabel, obj5);
       cResult[15] = tmp31;
       let tmp29 = tmp31;
     } else {
@@ -123,14 +123,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
               ActionSheetActionCreatorsDefault.hideActionSheet();
             }
       };
-      const tmp34 = closure_7(tmp(8985).FormRow, obj6);
+      const tmp34 = closure_7(tmp(8988).FormRow, obj6);
       cResult[16] = guildId;
       cResult[17] = tmp34;
       let tmp32 = tmp34;
     } else {
       tmp32 = cResult[17];
     }
-    const tmp35 = stateFromStores1(stateFromStores1 ? 13505 : 13506);
+    const tmp35 = stateFromStores1(stateFromStores1 ? 13738 : 13739);
     if (cResult[18] !== tmp35) {
       const obj7 = { source: tmp35 };
       const tmp38 = closure_7(tmp(1199).Icon, obj7);
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
     } else {
       if (cResult[22] !== cResult[21]) {
         const obj8 = { text: tmp39 };
-        const tmp44 = closure_7(tmp(8985).FormLabel, obj8);
+        const tmp44 = closure_7(tmp(8988).FormLabel, obj8);
         cResult[22] = tmp39;
         cResult[23] = tmp44;
         let tmp42 = tmp44;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
             const obj9 = { children: null };
             const items2 = [tmp22, tmp32, tmp46];
             obj9.children = items2;
-            const tmp51 = closure_8(tmp(7334).ActionSheet, obj9);
+            const tmp51 = closure_8(tmp(7358).ActionSheet, obj9);
             cResult[31] = tmp32;
             cResult[32] = tmp46;
             cResult[33] = tmp22;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
           }
         }
         const obj10 = { leading: tmp36, label: tmp42, onPress: tmp45 };
-        const tmp48 = closure_7(tmp(8985).FormRow, obj10);
+        const tmp48 = closure_7(tmp(8988).FormRow, obj10);
         cResult[27] = tmp36;
         cResult[28] = tmp42;
         cResult[29] = tmp45;
@@ -228,27 +228,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
   const obj5 = { guild: stateFromStores, size: null };
   const obj2 = guildId(504);
   const tmp8 = stateFromStores1;
-  obj5.size = guildId(6919).GuildIconSizes.LARGE;
-  obj4.children = closure_7(stateFromStores1(6919), obj5);
+  obj5.size = guildId(6943).GuildIconSizes.LARGE;
+  obj4.children = closure_7(stateFromStores1(6943), obj5);
   obj3.leading = closure_7(View, obj4);
   const intl = guildId(1125).intl;
   obj3.title = intl.string(guildId(1125).t.tlopTM);
-  const items2 = [closure_7(guildId(7284).BottomSheetTitleHeader, obj3), , ];
+  const items2 = [closure_7(guildId(7308).BottomSheetTitleHeader, obj3), , ];
   const obj6 = { leading: null, label: null, onPress: null };
-  const tmp9 = stateFromStores1(6919);
-  obj6.leading = closure_7(guildId(1199).Icon, { source: stateFromStores1(13504) });
+  const tmp9 = stateFromStores1(6943);
+  obj6.leading = closure_7(guildId(1199).Icon, { source: stateFromStores1(13737) });
   const obj8 = { text: null };
   const intl2 = guildId(1125).intl;
   obj8.text = intl2.string(guildId(1125).t.e6RscS);
-  obj6.label = closure_7(guildId(8985).FormLabel, obj8);
+  obj6.label = closure_7(guildId(8988).FormLabel, obj8);
   obj6.onPress = function onPress() {
     ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items2[1] = closure_7(guildId(8985).FormRow, obj6);
+  items2[1] = closure_7(guildId(8988).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(13504) };
-  obj9.leading = closure_7(guildId(1199).Icon, { source: tmp8(stateFromStores1 ? 13505 : 13506) });
+  const obj7 = { source: stateFromStores1(13737) };
+  obj9.leading = closure_7(guildId(1199).Icon, { source: tmp8(stateFromStores1 ? 13738 : 13739) });
   const intl3 = tmp2(1125).intl;
   const string = intl3.string;
   const t = tmp2(1125).t;
@@ -258,12 +258,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
     stringResult = string(t.ONG3Yz);
   }
   const obj11 = { children: null };
-  obj9.label = closure_7(guildId(8985).FormLabel, { text: stringResult });
+  obj9.label = closure_7(guildId(8988).FormLabel, { text: stringResult });
   obj9.onPress = function onPress() {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId, { mute_scheduled_events: !stateFromStores1 }, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = closure_7(guildId(8985).FormRow, obj9);
+  items2[2] = closure_7(guildId(8988).FormRow, obj9);
   obj11.children = items2;
-  return closure_8(guildId(7334).ActionSheet, obj11);
+  return closure_8(guildId(7358).ActionSheet, obj11);
 });

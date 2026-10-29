@@ -1,13 +1,13 @@
-// === Module 17295: DevToolsProfilingScreen ===
+// === Module 17534: DevToolsProfilingScreen ===
 
-// Module 17295 (DevToolsProfilingScreen)
+// Module 17534 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import Stack_Stack from "Stack/Stack" /* 6013 */;
-import TableRow from "TableRow" /* 6939 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import ComponentProfiler from "ComponentProfiler" /* 14027 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 17296 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import Stack_Stack from "Stack/Stack" /* 6015 */;
+import TableRow from "TableRow" /* 6963 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import ComponentProfiler from "ComponentProfiler" /* 14260 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 17535 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -47,10 +47,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const tmp5 = closure_8();
   dependencyMap = tmp5;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const componentRenderStats = tmp(14027).getComponentRenderStats();
+    const componentRenderStats = tmp(14260).getComponentRenderStats();
     cResult[1] = componentRenderStats;
     let tmp6 = componentRenderStats;
-    const tmpResult = tmp(14027);
+    const tmpResult = tmp(14260);
   } else {
     tmp6 = cResult[1];
   }
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       let obj2 = { children: null };
       let obj3 = { title: "Component Profiler", hasIcons: false, children: null };
       const obj4 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: first };
-      obj3.children = closure_5(tmp(6939).TableRow, obj4);
-      let items = [closure_5(tmp(7023).TableRowGroup, obj3), ];
+      obj3.children = closure_5(tmp(6963).TableRow, obj4);
+      let items = [closure_5(tmp(7047).TableRowGroup, obj3), ];
       const _Object2 = Object;
       const keys1 = Object.keys(tmp6);
       items[1] = keys1.map((item) => {
@@ -97,18 +97,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const obj6 = { label: "No components rendered yet.", subLabel: null };
       const obj7 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const obj8 = { variant: "text-xs/semibold", style: tmp5.monospace, children: "<ComponentProfiler />" };
-      const items1 = ["Make sure you wrap your component in ", closure_5(tmp(5270).Text, obj8), " to enable measurements."];
+      const items1 = ["Make sure you wrap your component in ", closure_5(tmp(5271).Text, obj8), " to enable measurements."];
       obj7.children = items1;
-      obj6.subLabel = closure_7(tmp(5270).Text, obj7);
-      obj5.children = closure_5(tmp(6939).TableRow, obj6);
-      tmp12 = closure_5(tmp(7023).TableRowGroup, obj5);
+      obj6.subLabel = closure_7(tmp(5271).Text, obj7);
+      obj5.children = closure_5(tmp(6963).TableRow, obj6);
+      tmp12 = closure_5(tmp(7047).TableRowGroup, obj5);
     }
     cResult[3] = tmp5.monospace;
     cResult[4] = tmp12;
   } else {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(17296).DevToolsProfilingUseStateFromStores, {});
+      const tmp19 = closure_5(tmp(17535).DevToolsProfilingUseStateFromStores, {});
       cResult[5] = tmp19;
       let tmp17 = tmp19;
     } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const obj9 = { spacing: 16, children: null };
       const items2 = [tmp9, tmp17];
       obj9.children = items2;
-      const tmp22 = closure_7(tmp(6013).Stack, obj9);
+      const tmp22 = closure_7(tmp(6015).Stack, obj9);
       cResult[6] = tmp9;
       cResult[7] = tmp22;
       let tmp20 = tmp22;

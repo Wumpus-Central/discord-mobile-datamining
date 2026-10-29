@@ -1,9 +1,9 @@
-// === Module 8824: MediaModalTiktok ===
+// === Module 8827: MediaModalTiktok ===
 
-// Module 8824 (MediaModalTiktok)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8790 */;
-import useVideoControls from "useVideoControls" /* 8791 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8825 */;
+// Module 8827 (MediaModalTiktok)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8793 */;
+import useVideoControls from "useVideoControls" /* 8794 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,11 +12,11 @@ let jsx = fn(21).jsx;
 let c6 = "https://www.tiktok.com/player/v1/";
 let closure_7 = { autoplay: 1, controls: 0, enable_music_info: 0, enable_timestamp: 0, utm_source: "discord.gg" };
 let c8 = "\n  window.addEventListener('message', function(event) {\n    if (!event.data[\"x-tiktok-player\"]) {\n      return;\n    }\n    window.ReactNativeWebView.postMessage(JSON.stringify(event.data));\n  }, true);\n";
-let obj = { "-1": fn(8825).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
-obj[0] = fn(8825).PlayerState.ENDED;
-obj[1] = fn(8825).PlayerState.PLAYING;
-obj[2] = fn(8825).PlayerState.PAUSED;
-obj[3] = fn(8825).PlayerState.BUFFERING;
+let obj = { "-1": fn(8828).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
+obj[0] = fn(8828).PlayerState.ENDED;
+obj[1] = fn(8828).PlayerState.PLAYING;
+obj[2] = fn(8828).PlayerState.PAUSED;
+obj[3] = fn(8828).PlayerState.BUFFERING;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalTiktok.tsx");
@@ -467,7 +467,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj2.onLoadStart = onLoadStart;
   return jsx(source(controls[3]), { ref, style, source: null, baseURL: null, injectedJavaScript: null, onDataReceived: null, playerState: null, onToggleOverlay: null, onError: null, onLoad: null, onLoadStart: null });
 }));
-export const createTiktokVideoControls = function createTiktokVideoControls() {
+export function createTiktokVideoControls() {
   const ref = noop.createRef();
   closure_3 = 0;
   noop = 0;
@@ -533,4 +533,4 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
       }
     }
   };
-};
+}

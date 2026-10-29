@@ -1,10 +1,10 @@
-// === Module 14721: useProductDescription ===
+// === Module 14956: useProductDescription ===
 
-// Module 14721 (useProductDescription)
+// Module 14956 (useProductDescription)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

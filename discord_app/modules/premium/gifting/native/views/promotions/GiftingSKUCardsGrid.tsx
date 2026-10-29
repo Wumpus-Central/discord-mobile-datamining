@@ -1,35 +1,35 @@
-// === Module 14142: GiftingSKUCardsGrid ===
+// === Module 14375: GiftingSKUCardsGrid ===
 
-// Module 14142 (GiftingSKUCardsGrid)
+// Module 14375 (GiftingSKUCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5072 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useToken from "useToken" /* 5288 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import Pressables from "Pressables" /* 6944 */;
-import useCurrentUser from "useCurrentUser" /* 8704 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9249 */;
-import ProfileEffectDefault from "ProfileEffect" /* 9425 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9434 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9446 */;
-import _modDef9447 from "module_9447" /* 9447 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9448 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11090 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5073 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useToken from "useToken" /* 5289 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import Pressables from "Pressables" /* 6968 */;
+import useCurrentUser from "useCurrentUser" /* 8707 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9253 */;
+import ProfileEffectDefault from "ProfileEffect" /* 9456 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9465 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9477 */;
+import _modDef9478 from "module_9478" /* 9478 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9479 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7690).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1990).isNameplateRecord;
-const isProfileEffectRecord = fn(7691).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7692).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7713).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1991).isNameplateRecord;
+const isProfileEffectRecord = fn(7714).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7715).isProfileFrameRecord;
 const VerticalGradient = fn(1084).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -40,7 +40,7 @@ const previewWidth = 150 - nativeDefault.space.PX_32;
 let sum = 100 + nativeDefault.space.PX_40;
 const PX_122 = nativeDefault.space.PX_12;
 let closure_18 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj = { card: { width: 150, display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16, paddingTop: PX_12, paddingBottom: nativeDefault.space.PX_16, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderColor: nativeDefault.colors.BORDER_SUBTLE }, previewContainer: { display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: 100, overflow: "hidden" }, expandedPreviewContainer: { overflow: "visible" }, preview: null, selected: null, claimed: null, checkmark: null, profileEffect: null, sampleProfile: null, profileFrame: null, collectibleTextFade: null, textContainer: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -54,7 +54,7 @@ obj.claimed = { opacity: 0.4 };
 obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
 const rect = { position: "absolute", top: -PX_12, left: 0, right: 0, overflow: "hidden", height: sum + PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9422).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9453).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
 obj.collectibleTextFade = rect1;
@@ -103,7 +103,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
     } else if (isProfileEffectRecord(item)) {
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { uri: _modDef9447 };
+        const obj5 = { uri: _modDef9478 };
         cResult[10] = obj5;
         let tmp26 = obj5;
       } else {
@@ -178,7 +178,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
 }) : (function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_19();
-  const currentUser = isSelected(8704).useCurrentUser();
+  const currentUser = isSelected(8707).useCurrentUser();
   const items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
@@ -189,30 +189,30 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(9448), obj2);
+    let tmp8 = closure_10(currentUser(9479), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9434), obj3);
+    tmp8 = closure_10(currentUser(9465), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(9447) };
+    const obj6 = { uri: currentUser(9478) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(5705), obj5), ];
+    const items1 = [closure_10(currentUser(5707), obj5), ];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9425), obj7);
+    items1[1] = closure_10(currentUser(9456), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(5705);
+    const tmp19 = currentUser(5707);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {
       const obj8 = { style: tmp.profileFrame, children: null };
       const obj9 = { profileFrame: item, previewWidth, previewHeight, profileBackgroundColor: currentUser(587).colors.BACKGROUND_BASE_LOW };
-      obj8.children = closure_10(currentUser(9446), obj9);
+      obj8.children = closure_10(currentUser(9477), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(9446);
+      const tmp12 = currentUser(9477);
     }
   }
   return tmp8;
@@ -654,7 +654,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return closure_1_11(Pressables.PressableOpacity, obj3);
   }
 }));
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_24 = createStyles.createStyles({ grid: { flexDirection: "column", alignSelf: "center", gap: PX_122 }, row: { flexDirection: "row", gap: PX_122 } });
 ReactCompilerGating = fn(558);
 let obj6 = { alignSelf: "stretch", paddingHorizontal: nativeDefault.space.PX_16, alignItems: "flex-start" };

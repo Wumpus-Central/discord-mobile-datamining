@@ -1,12 +1,12 @@
-// === Module 9672: convertor ===
+// === Module 9704: convertor ===
 
-// Module 9672 (convertor)
+// Module 9704 (convertor)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/oauth2/convertor.tsx");
 
-export const convertOAuth2Authorization = function convertOAuth2Authorization(guilds) {
+export function convertOAuth2Authorization(guilds) {
   let tmp = guilds;
   if (null != guilds.guilds) {
     let obj = {};
@@ -22,4 +22,4 @@ export const convertOAuth2Authorization = function convertOAuth2Authorization(gu
     tmp = obj;
   }
   return tmp;
-};
+}

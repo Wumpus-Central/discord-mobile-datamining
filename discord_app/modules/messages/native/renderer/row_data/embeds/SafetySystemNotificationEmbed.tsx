@@ -1,19 +1,19 @@
-// === Module 14832: SafetySystemNotificationEmbed ===
+// === Module 15067: SafetySystemNotificationEmbed ===
 
-// Module 14832 (SafetySystemNotificationEmbed)
+// Module 15067 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7932 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8309 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7955 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8331 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx");
 
-export const createSafetySystemNotificationEmbed = function createSafetySystemNotificationEmbed(message) {
+export function createSafetySystemNotificationEmbed(message) {
   if (null != message) {
     if (null != message.embeds) {
       const first = message.embeds[0];
@@ -50,7 +50,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7990 : 8547))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8013 : 8569))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
@@ -58,8 +58,8 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             const obj3 = { daysAgo: null };
             const tmp6Result4 = renderer_EmbedUtils;
-            const obj7 = _modDef2046();
-            obj3.daysAgo = obj7.diff(_modDef2046.unix(num), "days");
+            const obj7 = _modDef2047();
+            obj3.daysAgo = obj7.diff(_modDef2047.unix(num), "days");
             obj2.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj3);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
@@ -103,4 +103,4 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
       }
     }
   }
-};
+}

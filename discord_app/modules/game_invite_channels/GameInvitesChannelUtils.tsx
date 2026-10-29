@@ -1,16 +1,16 @@
-// === Module 7416: GameInvitesChannelUtils ===
+// === Module 7439: GameInvitesChannelUtils ===
 
-// Module 7416 (GameInvitesChannelUtils)
+// Module 7439 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6858 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7418 */;
-import ForumTagHooks from "ForumTagHooks" /* 7419 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 7438 */;
-import hasFlagDefault from "hasFlag" /* 7446 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6868 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6881 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7441 */;
+import ForumTagHooks from "ForumTagHooks" /* 7442 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7461 */;
+import hasFlagDefault from "hasFlag" /* 7469 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 let closure_3 = ["data"];
@@ -18,8 +18,8 @@ let closure_4 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1084);
 ({ ActivityFlags: closure_8, ActivityTypes: closure_9, MAX_CHANNEL_NAME_LENGTH: c10 } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7417).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(4864).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(7440).MAX_FORUM_POST_TAGS;
 let c13 = "No Mic";
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGameInvitesPost(arg0) {
@@ -185,7 +185,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGam
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
   }
-  const data = tmp(7443).useGame(gameId).data;
+  const data = tmp(7466).useGame(gameId).data;
   let officialApplicationId;
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
@@ -238,7 +238,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameInvit
   tmp9 = obj3;
 }) : (function useGameInvitesChannelOfficialApplication(arg0) {
   const tmp = closure_15(arg0);
-  application = application(6845).useApplication(tmp);
+  application = application(6868).useApplication(tmp);
   const items = [application];
   return useMemo(() => {
     const merged = Object.assign(_objectWithoutProperties(application, closure_4));
@@ -290,8 +290,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
       } else {
         tmp11 = cResult[7];
       }
-      const subscribeGuildMembers = tmp(7445).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
-      const tmpResult2 = tmp(7445);
+      const subscribeGuildMembers = tmp(7468).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
+      const tmpResult2 = tmp(7468);
     }
     const tmpResult = tmp(504);
   }
@@ -458,26 +458,26 @@ const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvi
 
 export const GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME = "No Mic";
 export const GAME_INVITE_POST_MESSAGE_MAX_LENGTH = 120;
-export const deriveThreadName = function deriveThreadName(description) {
+export function deriveThreadName(description) {
   let str2 = description.trim().split("\n")[0];
   if (str2 == null) {
     str2 = "";
   }
   const str = description.trim();
   return sanitizeThreadNameDefault(str2.slice(0, v65535), true);
-};
+}
 export const useIsGameInvitesPost = tmp3;
 export const useIsGameInvitePostVoiceEnabled = tmp4;
 export const useFirstMessage = tmp5;
 export const useGameInvitesChannelOfficialApplication = tmp6;
 export const useSubscribeToGameInvitePostAuthors = tmp7;
-export const canInviteToActivity = function canInviteToActivity(stateFromStores) {
+export function canInviteToActivity(stateFromStores) {
   let tmp = stateFromStores.type === constants2.PLAYING;
   if (tmp) {
     tmp = hasFlagDefault(stateFromStores, constants.JOIN);
   }
   return tmp;
-};
+}
 export { maxedAppliedForumPostTags };
 export const useGameInviteVoiceChatState = tmp8;
 export const useGameInvitesActiveAndArchivedThreads = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameInvitesActiveAndArchivedThreads(isGameInvitesChannel, activeThreadIds, archivedThreadIds) {

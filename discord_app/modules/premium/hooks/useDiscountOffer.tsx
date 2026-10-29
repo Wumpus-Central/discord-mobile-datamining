@@ -1,10 +1,10 @@
-// === Module 8465: useDiscountOffer ===
+// === Module 8487: useDiscountOffer ===
 
-// Module 8465 (useDiscountOffer)
+// Module 8487 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
-import UserOfferStore from "UserOfferStore" /* 7595 */;
+import UserOfferStore from "UserOfferStore" /* 7618 */;
 
 const require = globalThis.__r;
 
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDisco
                 num = time - Date.now();
               }
               if (closure_1_0 != null) {
-                closure_1_0.start(num, () => { ... });
+                closure_1_0.start(num, /* F162149 */ function() { ... });
               }
             }
           });
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDisco
                           num = time - Date.now();
                         }
                         if (closure_1_0 != null) {
-                          closure_1_0.start(num, () => { ... });
+                          closure_1_0.start(num, /* F162150 */ function() { ... });
                         }
                       }
                     });

@@ -1,15 +1,15 @@
-// === Module 8363: DoubleTapErrorToast ===
+// === Module 8385: DoubleTapErrorToast ===
 
-// Module 8363 (DoubleTapErrorToast)
+// Module 8385 (DoubleTapErrorToast)
 import util from "util" /* 1125 */;
 import EmojiConstants from "EmojiConstants" /* 1392 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
 import size from "module_2" /* 2 */;
 
 const EmojiDisabledReasons = EmojiConstants.EmojiDisabledReasons;
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapErrorToast.tsx");
 
-export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiName) {
+export function showDoubleTapErrorToast(emojiName) {
   emojiName = emojiName.emojiName;
   if (null == emojiName) {
     const intl3 = util.intl;
@@ -24,4 +24,4 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
     stringResult = intl.formatToPlainString(util.t.WZGLFq, obj3);
   }
   ToastActionCreatorsDefault.open("EMOJI_DOUBLE_TAP_ERROR", { text: stringResult, variant: "critical" });
-};
+}

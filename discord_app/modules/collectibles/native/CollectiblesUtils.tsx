@@ -1,15 +1,15 @@
-// === Module 9479: collectibles/CollectiblesUtils ===
+// === Module 9510: collectibles/CollectiblesUtils ===
 
-// Module 9479 (collectibles/CollectiblesUtils)
+// Module 9510 (collectibles/CollectiblesUtils)
 import Constants from "Constants" /* 1084 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2062 */;
-import PriceUtils from "PriceUtils" /* 7376 */;
-import IAPStoreDefault from "IAPStore" /* 7559 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7696 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7697 */;
-import types from "types" /* 8722 */;
-import _modDef9480 from "module_9480" /* 9480 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2063 */;
+import PriceUtils from "PriceUtils" /* 7399 */;
+import IAPStoreDefault from "IAPStore" /* 7582 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7719 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7720 */;
+import types from "types" /* 8725 */;
+import _modDef9511 from "module_9511" /* 9511 */;
 import size from "module_2" /* 2 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -26,7 +26,7 @@ function hasAtLeastOneGPlaySynced(nextResult) {
               let everyResult = variants.every((variants) => {
                 if (obj.getIsVariantProduct(variants)) {
                   variants = variants.variants;
-                  let everyResult = variants.every(() => { ... });
+                  let everyResult = variants.every(/* F105557 */ function() { ... });
                 } else {
                   const googleSkuIds = variants.googleSkuIds;
                   let tmp4;
@@ -102,7 +102,7 @@ function hasAtLeastOneGPlaySynced(nextResult) {
 let closure_3 = Constants.PriceSetAssignmentPurchaseTypes;
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesUtils.tsx");
 
-export const getFormattedPriceForCollectiblesProduct = function getFormattedPriceForCollectiblesProduct(googleSkuIds, hasShopDiscount, arg2) {
+export function getFormattedPriceForCollectiblesProduct(googleSkuIds, hasShopDiscount, arg2) {
   if (arg2) {
     if (hasShopDiscount) {
       let MOBILE = closure_3.MOBILE_PREMIUM_TIER_2;
@@ -149,8 +149,8 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     }
     obj = BillingPlatformUtils;
   }
-};
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType) {
+}
+export function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType) {
   if (obj.isGooglePlayBillingSupported()) {
     if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE) {
       if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE_PREMIUM_TIER_2) {
@@ -174,8 +174,8 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType);
   }
   obj = BillingPlatformUtils;
-};
-export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(cResult, stateFromStores) {
+}
+export function getCollectibleGoogleSkuId(cResult, stateFromStores) {
   if (null == stateFromStores) {
     return null;
   } else {
@@ -190,8 +190,8 @@ export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(cRes
     }
     return tmp5;
   }
-};
-export const getGoogleSkuIds = function getGoogleSkuIds(products) {
+}
+export function getGoogleSkuIds(products) {
   let items = [];
   let item = products.forEach((googleSkuIds) => {
     let tmp = undefined !== googleSkuIds.googleSkuIds;
@@ -223,8 +223,8 @@ export const getGoogleSkuIds = function getGoogleSkuIds(products) {
     }
   });
   return items;
-};
-export const isGPlaySynced = function isGPlaySynced(variants) {
+}
+export function isGPlaySynced(variants) {
   if (obj.getIsVariantProduct(variants)) {
     variants = variants.variants;
     return variants.every((variants) => {
@@ -239,7 +239,7 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
                 let everyResult = variants.every((variants) => {
                   if (obj.getIsVariantProduct(variants)) {
                     variants = variants.variants;
-                    let everyResult = variants.every(() => { ... });
+                    let everyResult = variants.every(/* F105557 */ function() { ... });
                   } else {
                     const googleSkuIds = variants.googleSkuIds;
                     let tmp4;
@@ -328,8 +328,8 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
     return null != product && null != IAPStoreDefault.getProduct(tmp7);
   }
   obj = CollectiblesProductUtils;
-};
-export const filterGPlaySyncedCategories = function filterGPlaySyncedCategories(items) {
+}
+export function filterGPlaySyncedCategories(items) {
   if (null == items) {
     return [];
   } else {
@@ -346,8 +346,8 @@ export const filterGPlaySyncedCategories = function filterGPlaySyncedCategories(
     }
     return items;
   }
-};
-export const filterHiddenCategories = function filterHiddenCategories(result1) {
+}
+export function filterHiddenCategories(result1) {
   return result1.filter((unpublishedAt) => {
     let tmp = null == unpublishedAt.unpublishedAt;
     if (!tmp) {
@@ -360,7 +360,7 @@ export const filterHiddenCategories = function filterHiddenCategories(result1) {
     }
     return tmp;
   });
-};
-export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9480, description: "", isPreviewMode: true };
-};
+}
+export function createOrbProfileBadge() {
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9511, description: "", isPreviewMode: true };
+}

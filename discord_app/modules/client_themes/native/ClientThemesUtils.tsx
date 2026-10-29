@@ -1,21 +1,21 @@
-// === Module 5180: client_themes/ClientThemesUtils ===
+// === Module 5181: client_themes/ClientThemesUtils ===
 
-// Module 5180 (client_themes/ClientThemesUtils)
+// Module 5181 (client_themes/ClientThemesUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import utils_ColorDefault from "utils/Color" /* 5002 */;
-import shared from "shared" /* 5011 */;
-import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5181 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5182 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5238 */;
-import useThemeDefault from "useTheme" /* 5241 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import utils_ColorDefault from "utils/Color" /* 5003 */;
+import shared from "shared" /* 5012 */;
+import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5182 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5183 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5239 */;
+import useThemeDefault from "useTheme" /* 5242 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 require = fn;
@@ -190,7 +190,7 @@ export { colorToHex };
 export { getPresetOverlayOpacity };
 export { getClientThemesGradientColorByPercentage };
 export { getClientThemesGradientHexColors };
-export const getGradientThemeMetadata = function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
+export function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
   if (null != gradientThemeFromFlags) {
     if (null != gradient) {
       const tmp14 = calculateGradientValueWithOpacity(gradient, obj3.START, gradient.theme);
@@ -264,7 +264,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
     }
   }
   return null;
-};
+}
 export { getGradientValue };
 export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientValue(END, dark) {
   const obj = c;
@@ -383,14 +383,14 @@ export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled() ? (
     }
   }, items);
 });
-export const isCustomThemeActive = function isCustomThemeActive() {
+export function isCustomThemeActive() {
   let tmp = null != MobileThemesUtils.getCustomBackgroundGradient();
   if (!tmp) {
     tmp = null != ClientThemesBackgroundStore.gradientPreset;
   }
   return tmp;
-};
-export const getEmbedScrollGradientBackground = function getEmbedScrollGradientBackground() {
+}
+export function getEmbedScrollGradientBackground() {
   let customBackgroundGradient = MobileThemesUtils.getCustomBackgroundGradient();
   if (customBackgroundGradient == null) {
     customBackgroundGradient = ClientThemesBackgroundStore.gradientPreset;
@@ -403,8 +403,8 @@ export const getEmbedScrollGradientBackground = function getEmbedScrollGradientB
     tmp3 = calculateGradientValueWithOpacity(customBackgroundGradient, undefined, customBackgroundGradient.theme);
   }
   return tmp3;
-};
-export const getEmbedBackground = function getEmbedBackground() {
+}
+export function getEmbedBackground() {
   if (null == ClientThemesBackgroundStore.gradientPreset) {
     if (!CustomThemeMobileStore.hasCustomTheme()) {
       return null;
@@ -413,4 +413,4 @@ export const getEmbedBackground = function getEmbedBackground() {
   const obj = shared;
   const tmp4 = obj.isThemeDark(ThemeStore.theme) ? obj2.DARK : obj2.LIGHT;
   return ColorUtils.hexWithOpacity(tmp4, obj.LEVEL_1);
-};
+}

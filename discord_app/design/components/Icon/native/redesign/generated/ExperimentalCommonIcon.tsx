@@ -1,10 +1,10 @@
-// === Module 11174: ExperimentalCommonIcon ===
+// === Module 11228: ExperimentalCommonIcon ===
 
-// Module 11174 (ExperimentalCommonIcon)
+// Module 11228 (ExperimentalCommonIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod11175 from "module_11175" /* 11175 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod11229 from "module_11229" /* 11229 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ExperimentalCommonIcon = ReactCompilerGating.isReactCompilerEnabled
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11175;
+    const tmpResult = _mod11229;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ExperimentalCommonIcon = ReactCompilerGating.isReactCompilerEnabled
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11175, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11229, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

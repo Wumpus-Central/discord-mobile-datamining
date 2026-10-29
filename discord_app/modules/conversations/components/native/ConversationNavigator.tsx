@@ -1,20 +1,20 @@
-// === Module 9776: ConversationNavigator ===
+// === Module 9808: ConversationNavigator ===
 
-// Module 9776 (ConversationNavigator)
+// Module 9808 (ConversationNavigator)
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9770 */;
-import useSelectedConversationDefault from "useSelectedConversation" /* 9787 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9802 */;
+import useSelectedConversationDefault from "useSelectedConversation" /* 9819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 9771 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9803 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const NativeStackNavigator = fn(9777);
+const NativeStackNavigator = fn(9809);
 let closure_8 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
   }
   const first = _slicedToArray(noop.useState(tmp6), 1)[0];
   if (null != first) {
-    let LIST = tmp(9788).ConversationNavigatorScreens.FOCUS;
+    let LIST = tmp(9820).ConversationNavigatorScreens.FOCUS;
   } else {
-    LIST = tmp(9788).ConversationNavigatorScreens.LIST;
+    LIST = tmp(9820).ConversationNavigatorScreens.LIST;
   }
   if (cResult[2] === channelId) {
     if (cResult[3] === guildId) {
@@ -61,11 +61,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function f(arg0) {
         ({ route, navigation } = arg0);
-        const obj = closure_0(9789);
+        const obj = closure_0(9821);
         return obj.conversationNavigatorListHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
       };
       const fn3 = function h() {
-        return closure_0(9800).default;
+        return closure_0(9832).default;
       };
       cResult[5] = fn2;
       cResult[6] = fn3;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
       tmp11 = cResult[6];
     }
     if (cResult[7] !== tmp8) {
-      const obj3 = { initialParams: tmp8, name: tmp(9788).ConversationNavigatorScreens.LIST, options: tmp10, getComponent: tmp11 };
+      const obj3 = { initialParams: tmp8, name: tmp(9820).ConversationNavigatorScreens.LIST, options: tmp10, getComponent: tmp11 };
       const tmp15 = closure_6(closure_8.Screen, obj3);
       cResult[7] = tmp8;
       cResult[8] = tmp15;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
             }
           }
           const fn4 = function b() {
-            return closure_0(9810).default;
+            return closure_0(9842).default;
           };
           cResult[13] = T;
           cResult[14] = fn4;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
               return obj.conversationNavigatorFocusHeaderOptions(route, navigation, obj1);
             }
           }
-          const obj4 = { name: tmp(9788).ConversationNavigatorScreens.FOCUS, initialParams: tmp16, options: T, getComponent: tmp23 };
+          const obj4 = { name: tmp(9820).ConversationNavigatorScreens.FOCUS, initialParams: tmp16, options: T, getComponent: tmp23 };
           const tmp26 = closure_6(closure_8.Screen, obj4);
           cResult[15] = tmp16;
           cResult[16] = tmp26;
@@ -207,9 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
   }), 1)[0];
   const obj2 = { id: "conversation-navigator", screenOptions: accessibilityNativeStackOptions, initialRouteName: null, children: null };
   if (null != first) {
-    let LIST = tmp(9788).ConversationNavigatorScreens.FOCUS;
+    let LIST = tmp(9820).ConversationNavigatorScreens.FOCUS;
   } else {
-    LIST = tmp(9788).ConversationNavigatorScreens.LIST;
+    LIST = tmp(9820).ConversationNavigatorScreens.LIST;
   }
   obj2.initialRouteName = LIST;
   let obj = require("Navigator");
@@ -219,11 +219,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
       name: require("ConversationNavigatorUtils").ConversationNavigatorScreens.LIST,
       options(arg0) {
         ({ route, navigation } = arg0);
-        const obj = closure_0(9789);
+        const obj = closure_0(9821);
         return obj.conversationNavigatorListHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
       },
       getComponent() {
-        return closure_0(9800).default;
+        return closure_0(9832).default;
       }
     }),
 
@@ -238,17 +238,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
   obj4.initialParams = tmp8;
   obj4.options = function options(arg0) {
     ({ route, navigation } = arg0);
-    const obj = closure_0(9789);
+    const obj = closure_0(9821);
     return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
   };
   obj4.getComponent = function getComponent() {
-    return closure_0(9810).default;
+    return closure_0(9842).default;
   };
   items[1] = closure_6(closure_8.Screen, obj4);
   obj2.children = items;
   return closure_7(closure_8.Navigator, obj2);
 });
-export const openConversationNavigator = function openConversationNavigator(focusSelectedConversation) {
+export function openConversationNavigator(focusSelectedConversation) {
   let flag = focusSelectedConversation.focusSelectedConversation;
   ({ channelId, guildId } = focusSelectedConversation);
   if (flag === undefined) {
@@ -264,4 +264,4 @@ export const openConversationNavigator = function openConversationNavigator(focu
     rootNavigationRef.navigate("conversations", obj2);
   }
   tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
-};
+}

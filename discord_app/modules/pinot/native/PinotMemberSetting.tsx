@@ -1,21 +1,21 @@
-// === Module 17533: PinotMemberSetting ===
+// === Module 17772: PinotMemberSetting ===
 
-// Module 17533 (PinotMemberSetting)
+// Module 17772 (PinotMemberSetting)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import _modDef3155 from "module_3155" /* 3155 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import InlineNotice from "InlineNotice" /* 7988 */;
-import SettingsConstants from "SettingsConstants" /* 8365 */;
-import PinotExperiment from "PinotExperiment" /* 17534 */;
-import PinotMemberSettingState from "PinotMemberSettingState" /* 17535 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import _modDef3156 from "module_3156" /* 3156 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import InlineNotice from "InlineNotice" /* 8011 */;
+import SettingsConstants from "SettingsConstants" /* 8387 */;
+import PinotExperiment from "PinotExperiment" /* 11070 */;
+import PinotMemberSettingState from "PinotMemberSettingState" /* 17773 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5004 */;
-import SettingBuilders from "SettingBuilders" /* 11248 */;
+import createStyles from "createStyles" /* 5005 */;
+import SettingBuilders from "SettingBuilders" /* 11302 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ let closure_9 = createStyles.createStyles(obj);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3155.M33rl6);
+    return intl.string(_modDef3156.M33rl6);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {
@@ -61,14 +61,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function PinotM
   const obj4 = { style: tmp4.footer, children: null };
   const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj5.children = intl.format(_modDef3155.V0EPTo, { learnMoreURL: articleURL });
+  obj5.children = intl.format(_modDef3156.V0EPTo, { learnMoreURL: articleURL });
   const items = [timestampProducer(Text_Text.Text, obj5), ];
   let tmp10Result = null;
   if (locked) {
     const obj6 = { type: "info", message: null, role: "none" };
     const intl2 = util.intl;
     const obj7 = { learnMoreURL: articleURL };
-    obj6.message = intl2.format(_modDef3155.Z9bKIJ, obj7);
+    obj6.message = intl2.format(_modDef3156.Z9bKIJ, obj7);
     tmp10Result = timestampProducer(InlineNotice.InlineNotice, obj6);
   }
   items[1] = tmp10Result;
@@ -85,14 +85,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function PinotM
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj4.children = intl.format(_modDef3155.V0EPTo, { learnMoreURL: articleURL });
+  obj4.children = intl.format(_modDef3156.V0EPTo, { learnMoreURL: articleURL });
   const items = [timestampProducer(Text_Text.Text, obj4), ];
   let tmp8Result = null;
   if (obj.usePinotMemberSettingState().locked) {
     const obj5 = { type: "info", message: null, role: "none" };
     const intl2 = util.intl;
     const obj6 = { learnMoreURL: articleURL };
-    obj5.message = intl2.format(_modDef3155.Z9bKIJ, obj6);
+    obj5.message = intl2.format(_modDef3156.Z9bKIJ, obj6);
     tmp8Result = timestampProducer(InlineNotice.InlineNotice, obj5);
   }
   items[1] = tmp8Result;
@@ -104,7 +104,7 @@ let obj2 = { gap: nativeDefault.space.PX_12 };
 let obj3 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3155.M33rl6);
+    return intl.string(_modDef3156.M33rl6);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {

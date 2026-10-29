@@ -1,10 +1,10 @@
-// === Module 6712: WebAuthnActionCreators ===
+// === Module 6735: WebAuthnActionCreators ===
 
-// Module 6712 (WebAuthnActionCreators)
+// Module 6735 (WebAuthnActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import AnalyticsSchema from "AnalyticsSchema" /* 1358 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6711 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_8 = async function _editWebAuthnCredential(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ let closure_8 = async function _editWebAuthnCredential(arg0) {
             const obj2 = closure_131_1(closure_131_2[3]);
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp22) {
         c5 = tmp;
@@ -135,7 +135,7 @@ let closure_10 = async function _finishRegisterWebAuthnCredential() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -177,7 +177,7 @@ let closure_10 = async function _finishRegisterWebAuthnCredential() {
           const obj11 = { type: "MFA_ENABLE_SUCCESS", codes: closure_131_0.body.backup_codes };
           closure_132_1(closure_132_2[3]).dispatch(obj11);
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp6) {
         c6 = tmp;
@@ -190,7 +190,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnActionCreators.tsx");
 
-export const fetchWebAuthnConditionalChallenge = function fetchWebAuthnConditionalChallenge() {
+export function fetchWebAuthnConditionalChallenge() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -199,8 +199,8 @@ export const fetchWebAuthnConditionalChallenge = function fetchWebAuthnCondition
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchWebAuthnPasswordlessChallenge = function fetchWebAuthnPasswordlessChallenge() {
+}
+export function fetchWebAuthnPasswordlessChallenge() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -209,8 +209,8 @@ export const fetchWebAuthnPasswordlessChallenge = function fetchWebAuthnPassword
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchWebAuthnCredentials = function fetchWebAuthnCredentials() {
+}
+export function fetchWebAuthnCredentials() {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: Endpoints.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: true });
   value.then((body) => {
@@ -231,8 +231,8 @@ export const fetchWebAuthnCredentials = function fetchWebAuthnCredentials() {
       DispatcherDefault.dispatch(obj2);
     }
   });
-};
-export const deleteWebAuthnCredential = function deleteWebAuthnCredential() {
+}
+export function deleteWebAuthnCredential() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -241,8 +241,8 @@ export const deleteWebAuthnCredential = function deleteWebAuthnCredential() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const editWebAuthnCredential = function editWebAuthnCredential() {
+}
+export function editWebAuthnCredential() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -251,8 +251,8 @@ export const editWebAuthnCredential = function editWebAuthnCredential() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const startRegisterWebAuthnCredential = function startRegisterWebAuthnCredential() {
+}
+export function startRegisterWebAuthnCredential() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -261,8 +261,8 @@ export const startRegisterWebAuthnCredential = function startRegisterWebAuthnCre
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const finishRegisterWebAuthnCredential = function finishRegisterWebAuthnCredential() {
+}
+export function finishRegisterWebAuthnCredential() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -271,10 +271,10 @@ export const finishRegisterWebAuthnCredential = function finishRegisterWebAuthnC
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const triggerWebAuthnRegister = function triggerWebAuthnRegister() {
+}
+export function triggerWebAuthnRegister() {
   DispatcherDefault.dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
-};
-export const clearWebAuthnRegisterTrigger = function clearWebAuthnRegisterTrigger() {
+}
+export function clearWebAuthnRegisterTrigger() {
   DispatcherDefault.dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
-};
+}

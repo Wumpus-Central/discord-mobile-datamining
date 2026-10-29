@@ -1,11 +1,11 @@
-// === Module 9634: EarnedDecisionRoundtripTracker ===
+// === Module 9666: EarnedDecisionRoundtripTracker ===
 
-// Module 9634 (EarnedDecisionRoundtripTracker)
+// Module 9666 (EarnedDecisionRoundtripTracker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import NetStats from "NetStats" /* 7604 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7607 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7785 */;
-import NetworkStore from "NetworkStore" /* 5926 */;
+import NetStats from "NetStats" /* 7627 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7630 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7807 */;
+import NetworkStore from "NetworkStore" /* 5928 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp) {
@@ -43,20 +43,30 @@ class EarnedDecisionRoundtripTracker {
   }
 }
 const prototype = EarnedDecisionRoundtripTracker.prototype;
-prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(content, callerSource) {
+prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(callerSource) {
   const self = this;
-  closure_0 = content;
+  const SymbolResult = Symbol();
+  require = SymbolResult;
   let pendingRequests = this.pendingRequests;
-  const result = pendingRequests.set(content, { initialSendTimestamp: Date.now(), endpoint: "/quests/earned-decision", apiResponseTimestamp: null, wasSuccessful: false, callerSource, requestId: null, fetchedAt: null });
-  const timerId = setTimeout(() => {
-    const pendingRequests = self.pendingRequests;
-    value = pendingRequests.get(closure_0);
-    if (null != value) {
-      trackRoundtrip(value);
-      const pendingRequests2 = self.pendingRequests;
-      pendingRequests2.delete(closure_0);
-    }
-  }, 30000);
+  const result = pendingRequests.set(SymbolResult, {
+    timeoutId: setTimeout(() => {
+      const pendingRequests = self.pendingRequests;
+      value = pendingRequests.get(SymbolResult);
+      if (null != value) {
+        const pendingRequests2 = self.pendingRequests;
+        pendingRequests2.delete(SymbolResult);
+        trackRoundtrip(value);
+      }
+    }, 30000),
+    initialSendTimestamp: Date.now(),
+    endpoint: "/quests/earned-decision",
+    apiResponseTimestamp: null,
+    wasSuccessful: false,
+    callerSource,
+    requestId: null,
+    fetchedAt: null
+  });
+  return SymbolResult;
 };
 prototype["recordEarnedRequestApiResponse"] = function recordEarnedRequestApiResponse(arg0, requestId) {
   requestId = requestId.requestId;
@@ -70,6 +80,10 @@ prototype["recordEarnedRequestApiResponse"] = function recordEarnedRequestApiRes
   const pendingRequests = this.pendingRequests;
   value = pendingRequests.get(arg0);
   if (null != value) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(value.timeoutId);
+    const pendingRequests2 = this.pendingRequests;
+    pendingRequests2.delete(arg0);
     const obj = {};
     const merged = Object.assign(value);
     const _Date = Date;
@@ -78,8 +92,6 @@ prototype["recordEarnedRequestApiResponse"] = function recordEarnedRequestApiRes
     obj.requestId = requestId;
     obj.fetchedAt = fetchedAt;
     trackRoundtrip(obj);
-    const pendingRequests2 = this.pendingRequests;
-    pendingRequests2.delete(arg0);
   }
 };
 let merged = Object.assign({ pendingRequests: null });

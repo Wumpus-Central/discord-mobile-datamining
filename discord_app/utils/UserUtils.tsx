@@ -1,10 +1,10 @@
-// === Module 5058: UserUtils ===
+// === Module 5059: UserUtils ===
 
-// Module 5058 (UserUtils)
+// Module 5059 (UserUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import StreamerModeStore from "StreamerModeStore" /* 5059 */;
+import StreamerModeStore from "StreamerModeStore" /* 5060 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -444,7 +444,7 @@ export { getGlobalName };
 export { getFormattedName };
 export { humanizeStatus };
 export { accountAgeInRange };
-export const ageEligibleForPremiumUpsell = function ageEligibleForPremiumUpsell(stateFromStores) {
+export function ageEligibleForPremiumUpsell(stateFromStores) {
   let flag = false;
   if (null != stateFromStores) {
     const _Date = Date;
@@ -458,8 +458,8 @@ export const ageEligibleForPremiumUpsell = function ageEligibleForPremiumUpsell(
     flag = tmp5;
   }
   return !flag;
-};
-export const isNewUser = function isNewUser(createdAt) {
+}
+export function isNewUser(createdAt) {
   let flag = false;
   if (null != createdAt) {
     const _Date = Date;
@@ -473,7 +473,7 @@ export const isNewUser = function isNewUser(createdAt) {
     flag = tmp5;
   }
   return flag;
-};
+}
 export { getUserTag };
 export const useUserTag = tmp3;
 export const useDirectMessageRecipient = tmp4;

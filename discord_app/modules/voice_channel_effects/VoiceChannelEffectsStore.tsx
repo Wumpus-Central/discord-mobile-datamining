@@ -1,12 +1,12 @@
-// === Module 11486: VoiceChannelEffectsStore ===
+// === Module 11540: VoiceChannelEffectsStore ===
 
-// Module 11486 (VoiceChannelEffectsStore)
+// Module 11540 (VoiceChannelEffectsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import shared from "shared" /* 5011 */;
-import CallConstants from "CallConstants" /* 5668 */;
-import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils" /* 7493 */;
+import shared from "shared" /* 5012 */;
+import CallConstants from "CallConstants" /* 5670 */;
+import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils" /* 7516 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -106,9 +106,9 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(DispatcherDefault,
 const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
 
 export default voiceChannelEffectsStore;
-export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(userId) {
+export function clearVoiceChannelEffectForUser(userId) {
   if (null != userId) {
     const obj2 = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId };
     DispatcherDefault.dispatch(obj2);
   }
-};
+}

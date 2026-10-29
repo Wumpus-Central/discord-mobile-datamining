@@ -1,21 +1,21 @@
-// === Module 5753: SortedVoiceStateStore ===
+// === Module 5755: SortedVoiceStateStore ===
 
-// Module 5753 (SortedVoiceStateStore)
+// Module 5755 (SortedVoiceStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4931 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4932 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 4859 */;
+import FavoriteStore from "FavoriteStore" /* 4860 */;
 import UserRecord from "UserRecord" /* 1403 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 require = fn;
 function getVoiceStatesForGuild(guildId) {
@@ -796,7 +796,7 @@ let result = size.fileFinishedImporting("stores/views/SortedVoiceStateStore.tsx"
 
 export default sortedVoiceStateStore;
 export const NO_VOICE_STATES = frozen;
-export const makeMemberAndComparator = function makeMemberAndComparator(selfStream, member, user) {
+export function makeMemberAndComparator(selfStream, member, user) {
   const obj = { member, comparator: null };
   let nick;
   if (member != null) {
@@ -811,12 +811,12 @@ export const makeMemberAndComparator = function makeMemberAndComparator(selfStre
   }
   obj.comparator = "" + str + nick.toLowerCase() + "\0" + selfStream.userId;
   return obj;
-};
-export const getComparator = function getComparator(selfStream, str) {
+}
+export function getComparator(selfStream, str) {
   str = "\u0001";
   if (selfStream.selfStream) {
     str = "\0";
   }
   return "" + str + str.toLowerCase() + "\0" + selfStream.userId;
-};
+}
 export { makeSortedVoiceState };

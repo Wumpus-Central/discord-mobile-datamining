@@ -1,22 +1,22 @@
-// === Module 13228: CheckpointEmojiStatsScreen ===
+// === Module 13462: CheckpointEmojiStatsScreen ===
 
-// Module 13228 (CheckpointEmojiStatsScreen)
+// Module 13462 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import CheckpointStore from "CheckpointStore" /* 13015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import CheckpointStore from "CheckpointStore" /* 13236 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6050);
+const CheckpointConstants = fn(6054);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" }, copy: { flexShrink: 1 }, title: null, titleText: null, titleSpacing: null, number: null, emojis: null, emojiChip: null, emoji: null, customEmoji: null, textEmoji: null, rankText: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                     const obj7 = { style: tmp4.copy, children: null };
                                     const obj8 = { style: tmp41, children: null };
                                     const items5 = [tmp42, ];
-                                    const obj9 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: null };
+                                    const obj9 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp4.titleText, children: null };
                                     const tmp30Result3 = tmp30(tmp2[28]);
                                     obj9.children = stringResult.toLocaleUpperCase();
                                     items5[1] = closure_9(tmp30(tmp2[23]), obj9);
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   [emoji, _slicedToArray] = noop.useState(tmp9 ? closure_11 : emojis[0]);
   let obj4 = require("initialize");
-  noop = require("useCheckpointSound")(require("module_13023"));
+  noop = require("useCheckpointSound")(require("module_13254"));
   let intl = tmp2(tmp3[16]).intl;
   const string = intl.string;
   if (tmp9) {
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj8 = { style: items5, children: null };
   items5[1] = titleSpacing;
   const items6 = [closure_9(EmojiSlightlySmilingFaceIcon, { size: "xs", color }), ];
-  const obj10 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  const obj10 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color };
   const tmp12Result = require("CheckpointScreen");
   obj10.children = stringResult.toLocaleUpperCase();

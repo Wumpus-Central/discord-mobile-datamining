@@ -1,12 +1,12 @@
-// === Module 10591: SocialLayerStorefrontActionCreators ===
+// === Module 10624: SocialLayerStorefrontActionCreators ===
 
-// Module 10591 (SocialLayerStorefrontActionCreators)
+// Module 10624 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9411 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7369 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9442 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7392 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
           closure_132_17 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -268,7 +268,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -303,7 +303,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
           let storefront_metadata;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -428,7 +428,7 @@ let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -533,7 +533,7 @@ let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -710,7 +710,7 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -895,38 +895,38 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx");
 
 export { _fetchSocialLayerStorefront };
-export const fetchSocialLayerStorefrontForApplication = function fetchSocialLayerStorefrontForApplication(applicationId, arg1) {
+export function fetchSocialLayerStorefrontForApplication(applicationId, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   return _fetchSocialLayerStorefront({ type: "application", applicationId }, Endpoints.SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID(applicationId), obj);
-};
-export const fetchSocialLayerStorefront = function fetchSocialLayerStorefront(guildId, arg1) {
+}
+export function fetchSocialLayerStorefront(guildId, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   return _fetchSocialLayerStorefront({ type: "guild", guildId }, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT(guildId), obj);
-};
-export const fetchSocialLayerStorefrontSkuForApplication = function fetchSocialLayerStorefrontSkuForApplication(applicationId, id, arg2) {
+}
+export function fetchSocialLayerStorefrontSkuForApplication(applicationId, id, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id), obj);
-};
-export const fetchSocialLayerStorefrontSku = function fetchSocialLayerStorefrontSku(guildId, id, arg2) {
+}
+export function fetchSocialLayerStorefrontSku(guildId, id, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(guildId, id), obj);
-};
-export const setSocialLayerStorefrontState = function setSocialLayerStorefrontState(applicationId, pageIndex, skuId) {
+}
+export function setSocialLayerStorefrontState(applicationId, pageIndex, skuId) {
   DispatcherDefault.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId, pageIndex, skuId });
-};
-export const fetchSocialLayerStorefrontEntries = function fetchSocialLayerStorefrontEntries() {
+}
+export function fetchSocialLayerStorefrontEntries() {
   const self = this;
   const apply = closure_22.apply;
   if (typeof apply === "unknown") {
@@ -935,8 +935,8 @@ export const fetchSocialLayerStorefrontEntries = function fetchSocialLayerStoref
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchSocialLayerStorefrontById = function fetchSocialLayerStorefrontById() {
+}
+export function fetchSocialLayerStorefrontById() {
   const self = this;
   const apply = closure_23.apply;
   if (typeof apply === "unknown") {
@@ -945,9 +945,9 @@ export const fetchSocialLayerStorefrontById = function fetchSocialLayerStorefron
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { setSocialLayerStorefrontPreview };
-export const fetchSocialLayerStorefrontAnnouncement = function fetchSocialLayerStorefrontAnnouncement() {
+export function fetchSocialLayerStorefrontAnnouncement() {
   const self = this;
   const apply = closure_25.apply;
   if (typeof apply === "unknown") {
@@ -956,8 +956,8 @@ export const fetchSocialLayerStorefrontAnnouncement = function fetchSocialLayerS
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchSocialLayerStorefrontConfig = function fetchSocialLayerStorefrontConfig() {
+}
+export function fetchSocialLayerStorefrontConfig() {
   const self = this;
   const apply = closure_26.apply;
   if (typeof apply === "unknown") {
@@ -966,8 +966,8 @@ export const fetchSocialLayerStorefrontConfig = function fetchSocialLayerStorefr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerSKUPurchaseEligibility(arg0, skuId) {
+}
+export function fetchSocialLayerSKUPurchaseEligibility(arg0, skuId) {
   _require = skuId;
   const sKUEligibility = SocialLayerStorefrontStore.getSKUEligibility(skuId);
   let tmp2 = "checking" !== sKUEligibility;
@@ -1005,8 +1005,8 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
       DispatcherDefault.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId, interactionId: body.body.interaction_id });
     });
   }
-};
-export const fetchSocialLayerStorefrontLaunchAnnouncement = function fetchSocialLayerStorefrontLaunchAnnouncement() {
+}
+export function fetchSocialLayerStorefrontLaunchAnnouncement() {
   const self = this;
   const apply = closure_27.apply;
   if (typeof apply === "unknown") {
@@ -1015,4 +1015,4 @@ export const fetchSocialLayerStorefrontLaunchAnnouncement = function fetchSocial
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

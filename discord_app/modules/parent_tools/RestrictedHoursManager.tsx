@@ -1,16 +1,16 @@
-// === Module 19756: RestrictedHoursManager ===
+// === Module 19978: RestrictedHoursManager ===
 
-// Module 19756 (RestrictedHoursManager)
+// Module 19978 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import FamilyCenterModels from "FamilyCenterModels" /* 1412 */;
-import _modDef2535 from "module_2535" /* 2535 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 13981 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19022 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13979 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1413 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 14214 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19255 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 14212 */;
 import UserStore from "UserStore" /* 1389 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7680 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 require = fn;
 function scheduleUpcomingWarning() {
@@ -52,7 +52,7 @@ function scheduleUpcomingWarning() {
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const stringResult = intl.string(_modDef2535["0JlDg0"]);
+        const stringResult = intl.string(_modDef2536["0JlDg0"]);
         const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;
@@ -168,6 +168,6 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedHoursManager.tsx");
 
 export default restrictedHoursManager;
-export const getCurrentRestrictedHoursState = function getCurrentRestrictedHoursState() {
+export function getCurrentRestrictedHoursState() {
   return FamilyCenterStore.isCurrentUserInRestrictedHours();
-};
+}

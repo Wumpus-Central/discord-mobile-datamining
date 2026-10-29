@@ -1,7 +1,7 @@
-// === Module 12269: conjureHistoryRequests ===
+// === Module 12323: conjureHistoryRequests ===
 
-// Module 12269 (conjureHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10830 */;
+// Module 12323 (conjureHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -47,7 +47,7 @@ let closure_4 = async function _restoreSourceHistoryEntry(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -266,7 +266,7 @@ let closure_7 = async function _createDatabaseRestorePoint(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ let closure_9 = async function _settleDatabaseRestore(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -456,7 +456,7 @@ let closure_11 = async function _restoreDatabaseToTimestamp(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/history/conjureHistoryRequests.tsx");
 
-export const fetchVersionHistory = function fetchVersionHistory() {
+export function fetchVersionHistory() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -465,8 +465,8 @@ export const fetchVersionHistory = function fetchVersionHistory() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
+}
+export function restoreSourceHistoryEntry() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -475,8 +475,8 @@ export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() {
+}
+export function fetchDatabaseRestorePoints() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -485,8 +485,8 @@ export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() {
+}
+export function fetchDatabaseRestoreWindow() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -495,8 +495,8 @@ export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createDatabaseRestorePoint = function createDatabaseRestorePoint() {
+}
+export function createDatabaseRestorePoint() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -505,8 +505,8 @@ export const createDatabaseRestorePoint = function createDatabaseRestorePoint() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
+}
+export function restoreDatabaseToPoint() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -515,8 +515,8 @@ export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const restoreDatabaseToTimestamp = function restoreDatabaseToTimestamp() {
+}
+export function restoreDatabaseToTimestamp() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -525,4 +525,4 @@ export const restoreDatabaseToTimestamp = function restoreDatabaseToTimestamp() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

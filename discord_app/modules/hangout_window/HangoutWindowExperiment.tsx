@@ -1,9 +1,9 @@
-// === Module 18570: HangoutWindowExperiment ===
+// === Module 18804: HangoutWindowExperiment ===
 
-// Module 18570 (HangoutWindowExperiment)
+// Module 18804 (HangoutWindowExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 5227 */;
-import createExperiment from "module_5224" /* 5224 */;
+import ExperimentConstants from "ExperimentConstants" /* 5228 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -39,6 +39,6 @@ export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEna
 }) : (function useHangoutWindowExperiment(guildId) {
   return experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
 });
-export const getHangoutWindowExperiment = function getHangoutWindowExperiment(guildId) {
+export function getHangoutWindowExperiment(guildId) {
   return experiment.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
-};
+}

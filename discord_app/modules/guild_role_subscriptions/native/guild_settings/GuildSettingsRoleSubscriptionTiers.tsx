@@ -1,58 +1,39 @@
-// === Module 19593: GuildSettingsRoleSubscriptionTiers ===
+// === Module 19826: GuildSettingsRoleSubscriptionTiers ===
 
-// Module 19593 (GuildSettingsRoleSubscriptionTiers)
+// Module 19826 (GuildSettingsRoleSubscriptionTiers)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import PriceUtils from "PriceUtils" /* 7376 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9074 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16855 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16859 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19592 */;
-import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 19596 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 19597 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17093 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19825 */;
+import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 19829 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 19830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9040 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4929 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9043 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4930 */;
 
 require = fn;
-function getPriceText(first2, first1) {
-  if (undefined === first2) {
-    return "";
-  } else if (null != first1) {
-    const intl = util.intl;
-    const obj = { price: PriceUtils.formatPrice(first2, first1.currency), interval: null };
-    obj.interval = GuildRoleSubscriptionTypeUtils.formatPlanInterval(first1);
-    let formatToPlainStringResult = intl.formatToPlainString(util.t.CgmBaG, obj);
-  } else {
-    const intl2 = util.intl;
-    const obj4 = { price: PriceUtils.formatPrice(first2, constants.USD), interval: null };
-    const obj7 = { interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 };
-    obj4.interval = GuildRoleSubscriptionTypeUtils.formatPlanInterval(obj7);
-    formatToPlainStringResult = intl2.formatToPlainString(util.t.CgmBaG, obj4);
-  }
-}
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(16833).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(17071).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1084);
-({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = Constants);
-const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
+({ GuildSettingsSections: map1, GuildSettingsSubsections: closure_14 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5004);
-let obj2 = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 }, tierColumn: { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 }, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierIcon: null, createTierLabel: null, spinner: null, disabled: null };
-let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
+({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
+const createStyles = fn(5005);
+let obj2 = { container: { height: "100%" }, content: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingTop: nativeDefault.space.PX_16 }, tierIcon: null, tierPrice: null, tierPriceWithoutBadge: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, spinner: null };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, height: 40, width: 40 };
 obj2.tierIcon = size;
 obj2.tierPrice = { marginStart: 6 };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 };
+obj2.tierPriceWithoutBadge = { marginStart: 0 };
+let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingTop: nativeDefault.space.PX_16 };
 obj2.draftBadge = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4 };
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4 };
 obj2.draftBadgeLabel = { color: nativeDefault.unsafe_rawColors.PRIMARY_860, textTransform: "uppercase" };
@@ -62,17 +43,13 @@ obj2.archiveBadgeLabel = { textTransform: "uppercase" };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4 };
 obj2.unsavedBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4 };
 obj2.unsavedBadgeLabel = { textTransform: "uppercase" };
-obj2.detailsRow = { flexDirection: "row", alignItems: "center", marginTop: 3 };
-const size1 = { width: 40, height: 40, borderRadius: nativeDefault.radii.round, borderWidth: 2, borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_STRONG, alignItems: "center", justifyContent: "center" };
-obj2.createTierIcon = size1;
-obj2.createTierLabel = { marginStart: 12 };
+obj2.detailsRow = { flexDirection: "row", alignItems: "center" };
 obj2.spinner = { marginTop: 12 };
-obj2.disabled = { opacity: 0.5 };
-let closure_19 = createStyles.createStyles(obj2);
+let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftBadge() {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftBadge() {
   const cResult = c.c(6);
-  const tmp4 = closure_19();
+  const tmp4 = closure_17();
   ({ draftBadge, draftBadgeLabel } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -84,7 +61,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftB
   }
   if (cResult[1] !== tmp4.draftBadgeLabel) {
     const obj2 = { style: draftBadgeLabel, variant: "text-xs/semibold", children: first };
-    const tmp9 = constants(Text_Text.Text, obj2);
+    const tmp9 = value2(Text_Text.Text, obj2);
     cResult[1] = tmp4.draftBadgeLabel;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -97,24 +74,24 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftB
     }
     return tmp10;
   }
-  const tmp11 = constants(React5, { style: draftBadge, children: tmp7 });
+  const tmp11 = value2(React5, { style: draftBadge, children: tmp7 });
   cResult[3] = tmp4.draftBadge;
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
 }) : (function DraftBadge() {
-  const tmp = closure_19();
+  const tmp = closure_17();
   const obj = { style: tmp.draftBadge, children: null };
   const obj2 = { style: tmp.draftBadgeLabel, variant: "text-xs/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.vosPk5);
-  obj.children = constants(Text_Text.Text, obj2);
-  return constants(React5, obj);
+  obj.children = value2(Text_Text.Text, obj2);
+  return value2(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ArchivedBadge() {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function ArchivedBadge() {
   const cResult = c.c(6);
-  const tmp4 = closure_19();
+  const tmp4 = closure_17();
   ({ archiveBadge, archiveBadgeLabel } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -126,7 +103,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   }
   if (cResult[1] !== tmp4.archiveBadgeLabel) {
     const obj2 = { style: archiveBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: first };
-    const tmp9 = constants(Text_Text.Text, obj2);
+    const tmp9 = value2(Text_Text.Text, obj2);
     cResult[1] = tmp4.archiveBadgeLabel;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -139,24 +116,24 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
     }
     return tmp10;
   }
-  const tmp11 = constants(React5, { style: archiveBadge, children: tmp7 });
+  const tmp11 = value2(React5, { style: archiveBadge, children: tmp7 });
   cResult[3] = tmp4.archiveBadge;
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
 }) : (function ArchivedBadge() {
-  const tmp = closure_19();
+  const tmp = closure_17();
   const obj = { style: tmp.archiveBadge, children: null };
   const obj2 = { style: tmp.archiveBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.nhbtEl);
-  obj.children = constants(Text_Text.Text, obj2);
-  return constants(React5, obj);
+  obj.children = value2(Text_Text.Text, obj2);
+  return value2(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function UnsavedBadge() {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function UnsavedBadge() {
   const cResult = c.c(6);
-  const tmp4 = closure_19();
+  const tmp4 = closure_17();
   ({ unsavedBadge, unsavedBadgeLabel } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -168,7 +145,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unsave
   }
   if (cResult[1] !== tmp4.unsavedBadgeLabel) {
     const obj2 = { style: unsavedBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: first };
-    const tmp9 = constants(Text_Text.Text, obj2);
+    const tmp9 = value2(Text_Text.Text, obj2);
     cResult[1] = tmp4.unsavedBadgeLabel;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -181,83 +158,28 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unsave
     }
     return tmp10;
   }
-  const tmp11 = constants(React5, { style: unsavedBadge, children: tmp7 });
+  const tmp11 = value2(React5, { style: unsavedBadge, children: tmp7 });
   cResult[3] = tmp4.unsavedBadge;
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
 }) : (function UnsavedBadge() {
-  const tmp = closure_19();
+  const tmp = closure_17();
   const obj = { style: tmp.unsavedBadge, children: null };
   const obj2 = { style: tmp.unsavedBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.aiwXeq);
-  obj.children = constants(Text_Text.Text, obj2);
-  return constants(React5, obj);
+  obj.children = value2(Text_Text.Text, obj2);
+  return value2(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Row(arg0) {
-  const cResult = c.c(9);
-  ({ children, onPress, onLongPress, disabled } = arg0);
-  const tmp4 = closure_19();
-  let disabled2 = tmp3;
-  if (undefined !== disabled && disabled) {
-    disabled2 = tmp4.disabled;
-  }
-  if (cResult[0] === tmp4.tierManagementButton) {
-    if (cResult[1] === disabled2) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] === children) {
-      if (cResult[4] === tmp3) {
-        if (cResult[5] === onLongPress) {
-          if (cResult[6] === onPress) {
-            if (cResult[7] === tmp5) {
-              let tmp6 = cResult[8];
-            }
-            return tmp6;
-          }
-        }
-      }
-    }
-    const obj2 = { style: tmp5, accessibilityRole: "button", onPress, onLongPress, disabled: tmp3, children };
-    const tmp9 = constants(TouchableHitBoxDefault, obj2);
-    cResult[3] = children;
-    cResult[4] = tmp3;
-    cResult[5] = onLongPress;
-    cResult[6] = onPress;
-    cResult[7] = tmp5;
-    cResult[8] = tmp9;
-    tmp6 = tmp9;
-  }
-  const items = [tmp4.tierManagementButton, disabled2];
-  cResult[0] = tmp4.tierManagementButton;
-  cResult[1] = disabled2;
-  cResult[2] = items;
-  tmp5 = items;
-}) : (function Row(disabled) {
-  let disabled2 = disabled.disabled;
-  ({ children, onPress, onLongPress } = disabled);
-  if (disabled2 === undefined) {
-    disabled2 = false;
-  }
-  const tmp = closure_19();
-  const style = [tmp.tierManagementButton, ];
-  disabled = disabled2;
-  if (disabled2) {
-    disabled = tmp.disabled;
-  }
-  style[1] = disabled;
-  return constants(TouchableHitBoxDefault, { style, accessibilityRole: "button", onPress, onLongPress, disabled: disabled2, children });
-});
-ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditListingButton(editStateId) {
-  const cResult = editStateId(576).c(40);
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditListingButton(editStateId) {
+  const cResult = editStateId(576).c(37);
   editStateId = editStateId.editStateId;
   const guildId = editStateId.guildId;
   const groupListingId = editStateId.groupListingId;
   const onPress = editStateId.onPress;
-  const tmp4 = closure_19();
+  let tierIcon = closure_17();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildRoleSubscriptionsStore];
     cResult[0] = items;
@@ -266,17 +188,17 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
     first = cResult[0];
   }
   if (cResult[1] !== editStateId) {
-    const fn = function l() {
+    const fn = function s() {
       return GuildRoleSubscriptionsStore.getSubscriptionListing(editStateId);
     };
     cResult[1] = editStateId;
     cResult[2] = fn;
-    let tmp7 = fn;
+    let tmp6 = fn;
   } else {
-    tmp7 = cResult[2];
+    tmp6 = cResult[2];
   }
   const obj = editStateId(576);
-  const stateFromStores = editStateId(573).useStateFromStores(first, tmp7);
+  const stateFromStores = editStateId(573).useStateFromStores(first, tmp6);
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.published;
@@ -291,275 +213,187 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   if (flag2 == null) {
     flag2 = false;
   }
-  let tmp9 = !flag2;
+  let tmp8 = !flag2;
   if (!flag2) {
-    tmp9 = !flag;
+    tmp8 = !flag;
   }
-  if (tmp9) {
-    tmp9 = undefined !== stateFromStores;
+  if (tmp8) {
+    tmp8 = undefined !== stateFromStores;
   }
   const tmpResult = editStateId(573);
-  const first1 = _slicedToArray(groupListingId(16855).useName(editStateId), 1)[0];
-  const obj3 = groupListingId(16855);
-  const first2 = _slicedToArray(groupListingId(16855).usePriceTier(editStateId), 1)[0];
-  const obj4 = groupListingId(16855);
-  const first3 = _slicedToArray(groupListingId(16855).useImage(editStateId, 250), 1)[0];
-  let first4;
+  const first1 = _slicedToArray(groupListingId(17093).useName(editStateId), 1)[0];
+  const obj3 = groupListingId(17093);
+  const first2 = _slicedToArray(groupListingId(17093).usePriceTier(editStateId), 1)[0];
+  const obj4 = groupListingId(17093);
+  const first3 = _slicedToArray(groupListingId(17093).useImage(editStateId, 250), 1)[0];
   if (stateFromStores != null) {
-    first4 = stateFromStores.subscription_plans[0];
+    const first4 = stateFromStores.subscription_plans[0];
   }
   if (cResult[3] === first2) {
     if (cResult[4] === first4) {
-      let tmp14 = cResult[5];
+      let str = cResult[5];
     }
-    if (cResult[6] === editStateId) {
-      if (cResult[7] === groupListingId) {
-        if (cResult[8] === guildId) {
-          let tmp16 = cResult[9];
+    if (cResult[6] !== tmp8) {
+      let tmp16 = tmp8;
+      if (tmp8) {
+        tmp16 = closure_15(closure_18, {});
+      }
+      cResult[6] = tmp8;
+      cResult[7] = tmp16;
+      let tmp15 = tmp16;
+    } else {
+      tmp15 = cResult[7];
+    }
+    if (cResult[8] !== flag2) {
+      let tmp20 = flag2;
+      if (flag2) {
+        tmp20 = closure_15(closure_19, {});
+      }
+      cResult[8] = flag2;
+      cResult[9] = tmp20;
+      let tmp19 = tmp20;
+    } else {
+      tmp19 = cResult[9];
+    }
+    if (cResult[10] !== (undefined === stateFromStores)) {
+      let tmp25 = tmp23;
+      if (tmp23) {
+        tmp25 = closure_15(closure_20, {});
+      }
+      cResult[10] = tmp23;
+      cResult[11] = tmp25;
+      let tmp24 = tmp25;
+    } else {
+      tmp24 = cResult[11];
+    }
+    if (!tmp8) {
+      tmp8 = flag2;
+    }
+    if (!tmp8) {
+      tmp8 = tmp23;
+    }
+    let tierPriceWithoutBadge = !tmp8;
+    if (!tmp8) {
+      tierPriceWithoutBadge = tierIcon.tierPriceWithoutBadge;
+    }
+    if (cResult[12] === tierIcon.tierPrice) {
+      if (cResult[13] === tierPriceWithoutBadge) {
+        let tmp28 = cResult[14];
+      }
+      if (cResult[15] === str) {
+        if (cResult[16] === tmp28) {
+          let tmp29 = cResult[17];
         }
-        if (cResult[10] === first3) {
-          if (cResult[11] === tmp4.tierIcon) {
-            let tmp17 = cResult[12];
-          }
-          if (cResult[13] !== first1) {
-            class H {
-              constructor() {
-                obj = closure_1(closure_3[12]);
-                obj1 = { editStateId, guildId, groupListingId };
-                openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                return;
-              }
-            }
-            const tmp24 = closure_17(tmp(5270).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null });
-            cResult[13] = first1;
-            cResult[14] = tmp24;
-            let tmp22 = tmp24;
-            const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-          } else {
-            tmp22 = cResult[14];
-          }
-          class H {
-            constructor() {
-              obj = closure_1(closure_3[12]);
-              obj1 = { editStateId, guildId, groupListingId };
-              openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-              return;
-            }
-          }
-          if (cResult[17] !== flag2) {
-            if (flag2) {
-              class H {
-                constructor() {
-                  obj = closure_1(closure_3[12]);
-                  obj1 = { editStateId, guildId, groupListingId };
-                  openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                  return;
+        if (cResult[18] === tierIcon.detailsRow) {
+          if (cResult[19] === tmp15) {
+            if (cResult[20] === tmp19) {
+              if (cResult[21] === tmp24) {
+                if (cResult[22] === tmp29) {
+                  let tmp32 = cResult[23];
                 }
-              }
-            }
-            class H {
-              constructor() {
-                obj = closure_1(closure_3[12]);
-                obj1 = { editStateId, guildId, groupListingId };
-                openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                return;
-              }
-            }
-            cResult[17] = flag2;
-            cResult[18] = flag2;
-            let tmp26 = tmp27;
-          } else {
-            tmp26 = cResult[18];
-          }
-          if (cResult[19] !== (undefined === stateFromStores)) {
-            if (tmp30) {
-              class H {
-                constructor() {
-                  obj = closure_1(closure_3[12]);
-                  obj1 = { editStateId, guildId, groupListingId };
-                  openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                  return;
-                }
-              }
-            }
-            class H {
-              constructor() {
-                obj = closure_1(closure_3[12]);
-                obj1 = { editStateId, guildId, groupListingId };
-                openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                return;
-              }
-            }
-            cResult[19] = tmp30;
-            cResult[20] = tmp30;
-            let tmp31 = tmp32;
-          } else {
-            tmp31 = cResult[20];
-          }
-          if (cResult[21] === tmp14) {
-            if (cResult[22] === tmp4.tierPrice) {
-              let tmp35 = cResult[23];
-            }
-            if (cResult[24] === tmp4.detailsRow) {
-              if (cResult[25] === tmp35) {
-                if (cResult[26] === tmp25) {
-                  if (cResult[27] === tmp26) {
-                    if (cResult[28] === tmp31) {
-                      let tmp38 = cResult[29];
-                    }
-                    if (cResult[30] === tmp4.tierColumn) {
-                      if (cResult[31] === tmp38) {
-                        if (cResult[32] === tmp22) {
-                          let tmp41 = cResult[33];
+                if (cResult[24] === first3) {
+                  if (cResult[25] === tierIcon.tierIcon) {
+                    if (cResult[27] === editStateId) {
+                      if (cResult[28] === groupListingId) {
+                        if (cResult[29] === guildId) {
+                          let tmp42 = cResult[30];
                         }
-                        const _Symbol = Symbol;
-                        class H {
-                          constructor() {
-                            obj = closure_1(closure_3[12]);
-                            obj1 = { editStateId, guildId, groupListingId };
-                            openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                            return;
-                          }
-                        }
-                        if (tmp44 === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp47 = closure_17(tmp(10154).PencilIcon, {});
-                          class H {
-                            constructor() {
-                              obj = closure_1(closure_3[12]);
-                              obj1 = { editStateId, guildId, groupListingId };
-                              openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                              return;
-                            }
-                          }
-                          cResult[34] = tmp47;
-                          let tmp45 = tmp47;
-                        } else {
-                          tmp45 = cResult[34];
-                        }
-                        if (cResult[35] === onPress) {
-                          if (cResult[36] === tmp41) {
-                            if (cResult[37] === tmp16) {
-                              if (cResult[38] === tmp17) {
-                                let tmp48 = cResult[39];
+                        if (cResult[31] === first1) {
+                          if (cResult[32] === onPress) {
+                            if (cResult[33] === tmp32) {
+                              if (cResult[34] === tmp36) {
+                                if (cResult[35] === tmp42) {
+                                  let tmp43 = cResult[36];
+                                }
+                                return tmp43;
                               }
-                              return tmp48;
                             }
                           }
                         }
-                        const obj6 = { children: null };
-                        const obj7 = { onPress, onLongPress: tmp16, children: null };
-                        const items1 = [tmp17, tmp41, tmp45];
-                        obj7.children = items1;
-                        obj6.children = closure_18(closure_24, obj7);
-                        const tmp53 = closure_17(closure_7, obj6);
-                        cResult[35] = onPress;
-                        cResult[36] = tmp41;
-                        cResult[37] = tmp16;
-                        cResult[38] = tmp17;
-                        cResult[39] = tmp53;
-                        tmp48 = tmp53;
+                        const obj2 = { label: first1, subLabel: tmp32, icon: tmp36, arrow: true, onPress, onLongPress: tmp42 };
+                        const tmp45 = closure_15(tmp(6963).TableRow, obj2);
+                        cResult[31] = first1;
+                        cResult[32] = onPress;
+                        cResult[33] = tmp32;
+                        cResult[34] = tmp36;
+                        cResult[35] = tmp42;
+                        cResult[36] = tmp45;
+                        tmp43 = tmp45;
                       }
                     }
-                    class H {
-                      constructor() {
-                        obj = closure_1(closure_3[12]);
-                        obj1 = { editStateId, guildId, groupListingId };
-                        openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                        return;
-                      }
-                    }
-                    const obj8 = { style: tmp4.tierColumn, children: null };
-                    const items2 = [tmp22, tmp38];
-                    obj8.children = items2;
-                    const tmp43 = closure_18(closure_7, obj8);
-                    cResult[30] = tmp4.tierColumn;
-                    cResult[31] = tmp38;
-                    cResult[32] = tmp22;
-                    cResult[33] = tmp43;
-                    tmp41 = tmp43;
+                    const fn2 = function q() {
+                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19827, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+                    };
+                    cResult[27] = editStateId;
+                    cResult[28] = groupListingId;
+                    cResult[29] = guildId;
+                    cResult[30] = fn2;
+                    tmp42 = fn2;
                   }
                 }
+                if (null != first3) {
+                  const obj6 = { style: tierIcon.tierIcon, resizeMode: "cover", source: null };
+                  const obj7 = { uri: first3 };
+                  obj6.source = obj7;
+                  let tmp38 = closure_15(guildId(5707), obj6);
+                } else {
+                  const obj8 = { IconComponent: tmp(11096).TagsIcon };
+                  tmp38 = closure_15(tmp(6963).TableRow.Icon, obj8);
+                }
+                cResult[24] = first3;
+                tierIcon = tierIcon.tierIcon;
+                cResult[25] = tierIcon;
+                cResult[26] = tmp38;
               }
             }
-            class H {
-              constructor() {
-                obj = closure_1(closure_3[12]);
-                obj1 = { editStateId, guildId, groupListingId };
-                openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-                return;
-              }
-            }
-            const obj9 = { style: tmp4.detailsRow, children: null };
-            const items3 = [tmp25, tmp26, tmp31, tmp35];
-            obj9.children = items3;
-            const tmp40 = closure_18(closure_7, obj9);
-            cResult[24] = tmp4.detailsRow;
-            cResult[25] = tmp35;
-            cResult[26] = tmp25;
-            cResult[27] = tmp26;
-            cResult[28] = tmp31;
-            cResult[29] = tmp40;
-            tmp38 = tmp40;
-          }
-          const obj10 = { style: tmp4.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: tmp14 };
-          const tmp37 = closure_17(tmp(5270).Text, obj10);
-          cResult[21] = tmp14;
-          cResult[22] = tmp4.tierPrice;
-          cResult[23] = tmp37;
-          tmp35 = tmp37;
-        }
-        class H {
-          constructor() {
-            obj = closure_1(closure_3[12]);
-            obj1 = { editStateId, guildId, groupListingId };
-            openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-            return;
           }
         }
-        if (tmp18) {
-          class H {
-            constructor() {
-              obj = closure_1(closure_3[12]);
-              obj1 = { editStateId, guildId, groupListingId };
-              openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-              return;
-            }
-          }
-          tmp21[0] = tmp4.tierIcon;
-          const obj11 = { uri: first3 };
-          tmp21[2] = obj11;
-          tmp18 = closure_17(guildId(5705), tmp21);
-        }
-        cResult[10] = first3;
-        cResult[11] = tmp4.tierIcon;
-        cResult[12] = tmp18;
-        tmp17 = tmp18;
+        const obj9 = { style: tierIcon.detailsRow, children: null };
+        const items1 = [tmp15, tmp19, tmp24, tmp29];
+        obj9.children = items1;
+        const tmp35 = closure_16(closure_7, obj9);
+        cResult[18] = tierIcon.detailsRow;
+        cResult[19] = tmp15;
+        cResult[20] = tmp19;
+        cResult[21] = tmp24;
+        cResult[22] = tmp29;
+        cResult[23] = tmp35;
+        tmp32 = tmp35;
       }
+      const obj10 = { style: tmp28, variant: "text-sm/medium", color: "interactive-text-default", children: str };
+      const tmp31 = closure_15(tmp(5271).Text, obj10);
+      cResult[15] = str;
+      cResult[16] = tmp28;
+      cResult[17] = tmp31;
+      tmp29 = tmp31;
     }
-    class H {
-      constructor() {
-        obj = closure_1(closure_3[12]);
-        obj1 = { editStateId, guildId, groupListingId };
-        openLazyResult = obj.openLazy(closure_0(closure_3[14])(closure_3[13], closure_3.paths), "TierArchiveOrDelete", obj1);
-        return;
-      }
-    }
-    cResult[6] = editStateId;
-    cResult[7] = groupListingId;
-    cResult[8] = guildId;
-    cResult[9] = H;
-    tmp16 = H;
+    const items2 = [tierIcon.tierPrice, tierPriceWithoutBadge];
+    cResult[12] = tierIcon.tierPrice;
+    cResult[13] = tierPriceWithoutBadge;
+    cResult[14] = items2;
+    tmp28 = items2;
   }
-  const tmp15 = getPriceText(first2, first4);
-  cResult[3] = first2;
-  cResult[4] = first4;
-  cResult[5] = tmp15;
-  tmp14 = tmp15;
-  const obj5 = groupListingId(16855);
+  if (undefined === first2) {
+    cResult[3] = first2;
+    cResult[4] = first4;
+    cResult[5] = "";
+    str = "";
+  } else if (null != first4) {
+    const intl = tmp(1125).intl;
+    const obj11 = { price: tmp(7399).formatPrice(first2, first4.currency), interval: null };
+    const tmpResult4 = tmp(7399);
+    obj11.interval = tmp(17097).formatPlanInterval(first4);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t.CgmBaG, obj11);
+    const tmpResult5 = tmp(17097);
+  } else {
+    formatToPlainStringResult = tmp(17097).formatMonthlyPriceLabel(first2);
+    const tmpResult6 = tmp(17097);
+  }
+  const obj5 = groupListingId(17093);
 }) : (function EditListingButton(editStateId) {
   editStateId = editStateId.editStateId;
   ({ guildId: importDefault, groupListingId: importAll } = editStateId);
-  const tmp = closure_19();
+  const tmp = closure_17();
   const items = [GuildRoleSubscriptionsStore];
   const stateFromStores = editStateId(573).useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(editStateId));
   let flag;
@@ -576,95 +410,113 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   if (flag2 == null) {
     flag2 = false;
   }
-  let tmp9Result3 = !flag2;
+  let tmp5 = !flag2;
   if (!flag2) {
-    tmp9Result3 = !flag;
+    tmp5 = !flag;
   }
-  if (tmp9Result3) {
-    tmp9Result3 = undefined !== stateFromStores;
+  if (tmp5) {
+    tmp5 = undefined !== stateFromStores;
   }
   const obj = editStateId(573);
   const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(editStateId, 250), 1)[0];
-  let first1;
+  const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.usePriceTier(editStateId), 1)[0];
+  const first1 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(editStateId, 250), 1)[0];
   if (stateFromStores != null) {
-    first1 = stateFromStores.subscription_plans[0];
+    const first2 = stateFromStores.subscription_plans[0];
   }
-  const obj5 = {
-    onPress: editStateId.onPress,
-    onLongPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19594, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
-    },
-    children: null
-  };
-  let tmp9Result = null != first;
-  if (tmp9Result) {
-    const obj6 = { style: tmp.tierIcon, resizeMode: "cover", source: null };
-    const obj7 = { uri: first };
-    obj6.source = obj7;
-    tmp9Result = closure_17(FastImageDefault, obj6);
+  if (undefined === first) {
+    const obj5 = { label: _slicedToArray(obj2.useName(editStateId), 1)[0], subLabel: null, icon: null, arrow: true, onPress: null, onLongPress: null };
+    const obj6 = { style: tmp.detailsRow, children: null };
+    let tmp11Result = tmp5;
+    if (tmp5) {
+      tmp11Result = closure_15(closure_18, {});
+    }
+    const items1 = [tmp11Result, , , ];
+    let tmp11Result4 = flag2;
+    if (flag2) {
+      tmp11Result4 = closure_15(closure_19, {});
+    }
+    items1[1] = tmp11Result4;
+    let tmp11Result5 = tmp18;
+    if (undefined === stateFromStores) {
+      tmp11Result5 = closure_15(closure_20, {});
+    }
+    items1[2] = tmp11Result5;
+    const items2 = [tmp.tierPrice, ];
+    if (!tmp5) {
+      tmp5 = flag2;
+    }
+    if (!tmp5) {
+      tmp5 = tmp18;
+    }
+    let tierPriceWithoutBadge = !tmp5;
+    if (!tmp5) {
+      tierPriceWithoutBadge = tmp.tierPriceWithoutBadge;
+    }
+    const obj7 = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
+    items2[1] = tierPriceWithoutBadge;
+    obj7.style = items2;
+    obj7.children = "";
+    items1[3] = closure_15(tmp2(5271).Text, obj7);
+    obj6.children = items1;
+    obj5.subLabel = closure_16(closure_7, obj6);
+    if (null != first1) {
+      const obj8 = { style: tmp.tierIcon, resizeMode: "cover", source: null };
+      const obj9 = { uri: first1 };
+      obj8.source = obj9;
+      let tmp11Result6 = closure_15(FastImageDefault, obj8);
+    } else {
+      const obj10 = { IconComponent: tmp2(11096).TagsIcon };
+      tmp11Result6 = closure_15(tmp2(6963).TableRow.Icon, obj10);
+    }
+    obj5.icon = tmp11Result6;
+    obj5.onPress = editStateId.onPress;
+    obj5.onLongPress = function onLongPress() {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19827, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+    };
+    return closure_15(tmp2(6963).TableRow, obj5);
+  } else if (null != first2) {
+    const intl = tmp2(1125).intl;
+    const obj11 = { price: tmp2(7399).formatPrice(first, first2.currency), interval: null };
+    const tmp2Result = tmp2(7399);
+    obj11.interval = tmp2(17097).formatPlanInterval(first2);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp2(1125).t.CgmBaG, obj11);
+    const tmp2Result3 = tmp2(17097);
+  } else {
+    formatToPlainStringResult = tmp2(17097).formatMonthlyPriceLabel(first);
+    const tmp2Result4 = tmp2(17097);
   }
-  const items1 = [tmp9Result, , ];
-  const obj8 = { style: tmp.tierColumn, children: null };
-  const items2 = [closure_17(editStateId(5270).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(editStateId), 1)[0] }), ];
-  const obj9 = { style: tmp.detailsRow, children: null };
-  if (tmp9Result3) {
-    tmp9Result3 = closure_17(closure_21, {});
-  }
-  const items3 = [tmp9Result3, , , ];
-  if (flag2) {
-    flag2 = closure_17(closure_22, {});
-  }
-  let tmp9Result4 = undefined === stateFromStores;
-  items3[1] = flag2;
-  if (tmp9Result4) {
-    tmp9Result4 = closure_17(closure_23, {});
-  }
-  const obj10 = { children: null };
-  items3[2] = tmp9Result4;
-  const tmp8 = getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1);
-  items3[3] = closure_17(editStateId(5270).Text, { style: tmp.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1) });
-  obj9.children = items3;
-  items2[1] = closure_18(closure_7, obj9);
-  obj8.children = items2;
-  items1[1] = closure_18(closure_7, obj8);
-  items1[2] = closure_17(editStateId(10154).PencilIcon, {});
-  obj5.children = items1;
-  obj10.children = closure_18(closure_24, obj5);
-  return closure_17(closure_7, obj10);
 });
 ReactCompilerGating = fn(558);
-let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
-  const cResult = guildId(first[19]).c(65);
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
+  const cResult = guildId(first[18]).c(58);
   guildId = guildId.guildId;
-  closure_19();
-  const bottom = navigation(first[26])().bottom;
-  navigation(first[27])();
-  let obj = guildId(first[19]);
+  closure_17();
+  const bottom = navigation(first[25])().bottom;
+  let obj = guildId(first[18]);
   let tmp = guildId;
-  navigation = guildId(first[28]).useNavigation();
-  let obj2 = guildId(first[28]);
-  const groupListingsFetchContext = guildId(first[29]).useGroupListingsFetchContext();
-  const obj3 = guildId(first[29]);
-  const roleSubscriptionSettingsDisabled = guildId(first[30]).useRoleSubscriptionSettingsDisabled();
-  const obj4 = guildId(first[30]);
-  const guildEligibleForTierTemplates = guildId(first[31]).useGuildEligibleForTierTemplates(guildId);
-  const obj5 = guildId(first[31]);
-  const groupListingsForGuild = guildId(first[32]).useGroupListingsForGuild(guildId);
+  navigation = guildId(first[26]).useNavigation();
+  let obj2 = guildId(first[26]);
+  const groupListingsFetchContext = guildId(first[27]).useGroupListingsFetchContext();
+  const obj3 = guildId(first[27]);
+  const roleSubscriptionSettingsDisabled = guildId(first[28]).useRoleSubscriptionSettingsDisabled();
+  const obj4 = guildId(first[28]);
+  const guildEligibleForTierTemplates = guildId(first[29]).useGuildEligibleForTierTemplates(guildId);
+  const obj5 = guildId(first[29]);
+  const groupListingsForGuild = guildId(first[30]).useGroupListingsForGuild(guildId);
   first = groupListingsForGuild[0];
   if (cResult[0] !== groupListingsForGuild) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function p(id) {
+      const fn = function h(id) {
         return id.id;
       };
       cResult[2] = fn;
-      let tmp12 = fn;
+      let tmp11 = fn;
     } else {
-      tmp12 = cResult[2];
+      tmp11 = cResult[2];
     }
-    const mapped = groupListingsForGuild.map(tmp12);
+    const mapped = groupListingsForGuild.map(tmp11);
     cResult[0] = groupListingsForGuild;
     cResult[1] = mapped;
   } else {
@@ -673,22 +525,22 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj7 = { includeSoftDeleted: true };
       cResult[3] = obj7;
-      let tmp17 = obj7;
+      let tmp16 = obj7;
     } else {
-      tmp17 = cResult[3];
+      tmp16 = cResult[3];
     }
-    const editStateIds = guildEligibleForTierTemplates(tmp2[23]).useEditStateIds(first1, guildId, tmp17).editStateIds;
+    const editStateIds = guildEligibleForTierTemplates(tmp2[21]).useEditStateIds(first1, guildId, tmp16).editStateIds;
     const _Symbol3 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj9 = {};
       cResult[4] = obj9;
-      let tmp19 = obj9;
+      let tmp18 = obj9;
     } else {
-      tmp19 = cResult[4];
+      tmp18 = cResult[4];
     }
-    const tmp21 = first1(first2.useState(tmp19), 2);
-    first2 = tmp21[0];
-    closure_6 = tmp21[1];
+    const tmp20 = first1(first2.useState(tmp18), 2);
+    first2 = tmp20[0];
+    closure_6 = tmp20[1];
     if (cResult[5] === editStateIds) {
       if (cResult[6] === first2) {
         const _Symbol4 = Symbol;
@@ -704,13 +556,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             });
           }
           cResult[10] = handleListingCreated;
-          let tmp28 = handleListingCreated;
+          let tmp27 = handleListingCreated;
         } else {
-          tmp28 = cResult[10];
+          tmp27 = cResult[10];
         }
-        closure_7 = tmp28;
+        closure_7 = tmp27;
         if (cResult[11] !== navigation) {
-          class W {
+          class K {
             constructor() {
               obj = {
                 headerTitle() {
@@ -719,7 +571,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1125).t.pXbGYc);
                               const intl2 = guildId(1125).intl;
                               obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                              return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                              return closure_1_15(guildId(6984).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -727,9 +579,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             }
           }
           cResult[11] = navigation;
-          cResult[12] = W;
+          cResult[12] = K;
         } else {
-          class W {
+          class K {
             constructor() {
               obj = {
                 headerTitle() {
@@ -738,7 +590,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1125).t.pXbGYc);
                               const intl2 = guildId(1125).intl;
                               obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                              return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                              return closure_1_15(guildId(6984).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -746,9 +598,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             }
           }
         }
-        const layoutEffect = obj10.useLayoutEffect(W);
+        const layoutEffect = obj10.useLayoutEffect(K);
         if (first != null) {
-          class W {
+          class K {
             constructor() {
               obj = {
                 headerTitle() {
@@ -757,7 +609,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1125).t.pXbGYc);
                               const intl2 = guildId(1125).intl;
                               obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                              return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                              return closure_1_15(guildId(6984).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -766,7 +618,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
           }
         }
         if (cResult[13] === undefined) {
-          class W {
+          class K {
             constructor() {
               obj = {
                 headerTitle() {
@@ -775,7 +627,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1125).t.pXbGYc);
                               const intl2 = guildId(1125).intl;
                               obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                              return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                              return closure_1_15(guildId(6984).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -784,7 +636,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
           }
         }
         if (first != null) {
-          class W {
+          class K {
             constructor() {
               obj = {
                 headerTitle() {
@@ -793,7 +645,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1125).t.pXbGYc);
                               const intl2 = guildId(1125).intl;
                               obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                              return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                              return closure_1_15(guildId(6984).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -801,51 +653,39 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             }
           }
         }
-        class J {
-          constructor() {
-            tmp = closure_2;
-            tmp2 = closure_3;
-            if (closure_2) {
-              tmpResult = tmp(tmp2[35]);
-              obj1 = { guildId: null, groupListingId: null };
-              tmp8 = guildId;
-              obj1.guildId = guildId;
-              tmp9 = null;
-              id = undefined;
-              tmp7 = closure_1;
-              if (closure_3 != null) {
-                id = closure_3.id;
-              }
-              obj1.groupListingId = id;
-              result = tmpResult.pushTierTemplateSelectionScene(tmp7, obj1);
-            } else {
-              tmpResult1 = tmp(tmp2[36]);
-              obj5 = { guildId: null, groupListingId: null, onAfterTierCreation: null };
-              tmp3 = guildId;
-              obj5.guildId = guildId;
-              tmp4 = null;
-              id1 = undefined;
-              if (closure_3 != null) {
-                id1 = closure_3.id;
-              }
-              obj5.groupListingId = id1;
-              obj5.onAfterTierCreation = function onAfterTierCreation() {
-                navigation.navigate(constants.ROLE_SUBSCRIPTIONS_TIERS);
-              };
-              result1 = tmpResult1.openTierCreationModal(obj5);
+        const fn2 = function j() {
+          if (guildEligibleForTierTemplates) {
+            const obj = { guildId, groupListingId: null };
+            let id;
+            if (first != null) {
+              id = first.id;
             }
-            return;
+            obj.groupListingId = id;
+            const result = GuildRoleSettingsActionCreatorsAll.pushTierTemplateSelectionScene(navigation, obj);
+            const tmpResult = GuildRoleSettingsActionCreatorsAll;
+          } else {
+            const obj2 = { guildId, groupListingId: null, onAfterTierCreation: null };
+            let id1;
+            if (first != null) {
+              id1 = first.id;
+            }
+            obj2.groupListingId = id1;
+            obj2.onAfterTierCreation = function onAfterTierCreation() {
+              navigation.navigate(constants.ROLE_SUBSCRIPTIONS_TIERS);
+            };
+            const result1 = GuildRoleSubscriptionsActionCreatorExtrasAll.openTierCreationModal(obj2);
+            const tmpResult2 = GuildRoleSubscriptionsActionCreatorExtrasAll;
           }
-        }
+        };
         cResult[13] = undefined;
         cResult[14] = guildId;
         cResult[15] = guildEligibleForTierTemplates;
         cResult[16] = navigation;
-        cResult[17] = J;
+        cResult[17] = fn2;
       }
     }
     if (cResult[8] !== first2) {
-      class W {
+      class K {
         constructor() {
           obj = {
             headerTitle() {
@@ -854,7 +694,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                       obj.title = intl.string(guildId(1125).t.pXbGYc);
                       const intl2 = guildId(1125).intl;
                       obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                      return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                      return closure_1_15(guildId(6984).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -864,7 +704,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
       cResult[8] = first2;
       cResult[9] = X;
     } else {
-      class W {
+      class K {
         constructor() {
           obj = {
             headerTitle() {
@@ -873,7 +713,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                       obj.title = intl.string(guildId(1125).t.pXbGYc);
                       const intl2 = guildId(1125).intl;
                       obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-                      return closure_1_17(guildId(6960).NavigatorHeader, obj);
+                      return closure_1_15(guildId(6984).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -883,38 +723,37 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
     }
     const mapped1 = editStateIds.map(X);
     obj10 = first2;
-    const obj8 = guildEligibleForTierTemplates(tmp2[23]);
-    const uniqResult = tmp(tmp2[33]).uniq(mapped1);
+    const obj8 = guildEligibleForTierTemplates(tmp2[21]);
+    const uniqResult = tmp(tmp2[31]).uniq(mapped1);
     cResult[5] = editStateIds;
     cResult[6] = first2;
     cResult[7] = uniqResult;
-    let tmpResult = tmp(tmp2[33]);
+    let tmpResult = tmp(tmp2[31]);
   }
-  const obj6 = guildId(first[32]);
+  const obj6 = guildId(first[30]);
 }) : (function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
   guildId = guildId.guildId;
-  let navigation;
   let first;
   let onPress;
   let stateFromStores;
-  let tmp = closure_19();
-  const tmp4 = navigation(first[27])();
-  navigation = guildId(first[28]).useNavigation();
-  let obj = guildId(first[28]);
-  const groupListingsFetchContext = guildId(first[29]).useGroupListingsFetchContext();
-  let obj2 = guildId(first[29]);
-  const roleSubscriptionSettingsDisabled = guildId(first[30]).useRoleSubscriptionSettingsDisabled();
-  const obj3 = guildId(first[30]);
-  const guildEligibleForTierTemplates = guildId(first[31]).useGuildEligibleForTierTemplates(guildId);
-  const obj4 = guildId(first[31]);
-  const groupListingsForGuild = guildId(first[32]).useGroupListingsForGuild(guildId);
+  let tmp = closure_17();
+  const navigation = guildId(first[26]).useNavigation();
+  let obj = guildId(first[26]);
+  const tmp2 = navigation;
+  const groupListingsFetchContext = guildId(first[27]).useGroupListingsFetchContext();
+  let obj2 = guildId(first[27]);
+  const roleSubscriptionSettingsDisabled = guildId(first[28]).useRoleSubscriptionSettingsDisabled();
+  const obj3 = guildId(first[28]);
+  const guildEligibleForTierTemplates = guildId(first[29]).useGuildEligibleForTierTemplates(guildId);
+  const obj4 = guildId(first[29]);
+  const groupListingsForGuild = guildId(first[30]).useGroupListingsForGuild(guildId);
   first = groupListingsForGuild[0];
   const first1 = groupListingsForGuild.map((id) => id.id)[0];
-  const obj5 = guildId(first[32]);
-  const editStateIds = guildEligibleForTierTemplates(first[23]).useEditStateIds(first1, guildId, { includeSoftDeleted: true }).editStateIds;
-  const tmp12 = first1(editStateIds.useState({}), 2);
-  const first2 = tmp12[0];
-  closure_7 = tmp12[1];
+  const obj5 = guildId(first[30]);
+  const editStateIds = guildEligibleForTierTemplates(first[21]).useEditStateIds(first1, guildId, { includeSoftDeleted: true }).editStateIds;
+  const tmp11 = first1(editStateIds.useState({}), 2);
+  const first2 = tmp11[0];
+  closure_7 = tmp11[1];
   const items = [editStateIds, first2];
   const memo = editStateIds.useMemo(() => {
     const mapped = editStateIds.map((item) => {
@@ -934,7 +773,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
         obj.title = intl.string(guildId(1125).t.pXbGYc);
         const intl2 = guildId(1125).intl;
         obj.subtitle = intl2.string(guildId(1125).t["KzCF/6"]);
-        return closure_1_17(guildId(6960).NavigatorHeader, obj);
+        return closure_1_15(guildId(6984).NavigatorHeader, obj);
       }
     });
   });
@@ -968,13 +807,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
       const tmpResult2 = GuildRoleSubscriptionsActionCreatorExtrasAll;
     }
   }, items1);
-  const obj6 = guildEligibleForTierTemplates(first[23]);
+  const obj6 = guildEligibleForTierTemplates(first[21]);
   const obj7 = editStateIds;
   const items2 = [stateFromStores];
-  stateFromStores = guildId(first[22]).useStateFromStores(items2, () => stateFromStores.getProps().subsection);
+  stateFromStores = guildId(first[20]).useStateFromStores(items2, () => stateFromStores.getProps().subsection);
   const items3 = [stateFromStores, onPress];
   const effect = obj7.useEffect(() => {
-    if (stateFromStores === constants2.ROLE_SUBSCRIPTION_TIER_TEMPLATE) {
+    if (stateFromStores === constants.ROLE_SUBSCRIPTION_TIER_TEMPLATE) {
       callback();
     }
   }, items3);
@@ -983,7 +822,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
     if (memo != null) {
       mapped = memo.map((editStateId) => {
         guildId = editStateId;
-        return closure_1_17(closure_1_25, {
+        return closure_1_15(closure_1_21, {
           editStateId,
           guildId,
           groupListingId: first1,
@@ -994,7 +833,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             if (first != null) {
               id = first.id;
             }
-            guildEligibleForTierTemplates(19596).pushTierEditScene(navigation, {
+            guildEligibleForTierTemplates(19829).pushTierEditScene(navigation, {
               groupListingId: id,
               initialEditStateId,
               onBeforeDispatchNewListing(id) {
@@ -1008,7 +847,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                 });
               }
             });
-            let obj = guildEligibleForTierTemplates(19596);
+            let obj = guildEligibleForTierTemplates(19829);
             const obj2 = {
               groupListingId: id,
               initialEditStateId,
@@ -1029,37 +868,34 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
     }
     const obj8 = { style: tmp.container, children: null };
     const obj9 = { style: null, children: null };
-    const obj10 = { paddingBottom: navigation(first[26])().bottom };
-    obj9.style = obj10;
-    const obj11 = { style: tmp4.header, children: null };
-    let intl = tmp5(tmp3[15]).intl;
-    obj11.children = intl.string(tmp5(tmp3[15]).t["7iBIoO"]);
-    const items4 = [closure_17(tmp2(tmp3[38]), obj11), , , ];
-    const obj12 = { style: tmp.tierManagementDescription, variant: "text-sm/medium", color: "text-default", children: null };
-    let intl2 = tmp5(tmp3[15]).intl;
-    const obj13 = { maxTiers: MAX_SUBSCRIPTION_TIERS };
-    obj12.children = intl2.format(tmp5(tmp3[15]).t.nHRSvM, obj13);
-    items4[1] = closure_17(tmp5(tmp3[20]).Text, obj12);
-    items4[2] = mapped;
-    const obj14 = { onPress, disabled: roleSubscriptionSettingsDisabled, children: null };
-    const obj15 = { style: tmp.createTierIcon, children: null };
-    const obj16 = { size: "sm", color: tmp2(tmp3[11]).colors.ICON_BRAND };
-    obj15.children = closure_17(tmp5(tmp3[39]).CirclePlusIcon, obj16);
-    const items5 = [closure_17(closure_7, obj15), ];
-    const obj17 = { style: tmp.createTierLabel, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    const intl3 = tmp5(tmp3[15]).intl;
-    obj17.children = intl3.string(tmp5(tmp3[15]).t.PiFnny);
-    items5[1] = closure_17(tmp5(tmp3[20]).Text, obj17);
-    obj14.children = items5;
-    items4[3] = closure_18(closure_24, obj14);
-    obj9.children = items4;
-    obj8.children = closure_18(closure_7, obj9);
-    return closure_17(onPress, obj8);
+    const items4 = [tmp.content, ];
+    const obj10 = { paddingBottom: navigation(first[25])().bottom };
+    items4[1] = obj10;
+    obj9.style = items4;
+    const obj11 = { title: null, description: null, hasIcons: true, children: null };
+    let intl = tmp4(tmp3[14]).intl;
+    obj11.title = intl.string(tmp4(tmp3[14]).t["7iBIoO"]);
+    let intl2 = tmp4(tmp3[14]).intl;
+    const obj12 = { maxTiers: MAX_SUBSCRIPTION_TIERS };
+    obj11.description = intl2.format(tmp4(tmp3[14]).t.nHRSvM, obj12);
+    const items5 = [mapped, ];
+    const obj13 = { label: null, icon: null, onPress: null, disabled: null };
+    const intl3 = tmp4(tmp3[14]).intl;
+    obj13.label = intl3.string(tmp4(tmp3[14]).t.PiFnny);
+    const obj14 = { size: "md", color: tmp2(tmp3[10]).colors.ICON_BRAND };
+    obj13.icon = closure_15(tmp4(tmp3[36]).CirclePlusIcon, obj14);
+    obj13.onPress = onPress;
+    obj13.disabled = roleSubscriptionSettingsDisabled;
+    items5[1] = closure_15(tmp4(tmp3[23]).TableRow, obj13);
+    obj11.children = items5;
+    obj9.children = closure_16(tmp4(tmp3[37]).TableRowGroup, obj11);
+    obj8.children = closure_15(closure_7, obj9);
+    return closure_15(onPress, obj8);
   } else {
-    const obj18 = { style: tmp.spinner, children: closure_17(first2, {}) };
-    return closure_17(closure_7, obj18);
+    const obj15 = { style: tmp.spinner, children: closure_15(first2, {}) };
+    return closure_15(closure_7, obj15);
   }
-  const tmp5Result = guildId(first[22]);
+  const tmp4Result = guildId(first[20]);
 });
 ReactCompilerGating = fn(558);
 let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4 };
@@ -1071,7 +907,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   guildId = guildId.guildId;
   if (cResult[0] !== guildId) {
     const obj2 = { guildId };
-    const tmp6 = constants(closure_26, obj2);
+    const tmp6 = value2(closure_22, obj2);
     cResult[0] = guildId;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -1084,13 +920,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     }
     return tmp7;
   }
-  const tmp8 = constants(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
+  const tmp8 = value2(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
   cResult[2] = guildId;
   cResult[3] = tmp3;
   cResult[4] = tmp8;
   tmp7 = tmp8;
 }) : (function GuildSettingsRoleSubscriptionsTiers(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: constants(closure_26, { guildId }) };
-  return constants(GuildSettingsRoleSubscriptionContainerDefault, obj);
+  const obj = { guildId, children: value2(closure_22, { guildId }) };
+  return value2(GuildSettingsRoleSubscriptionContainerDefault, obj);
 });

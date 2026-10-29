@@ -1,6 +1,6 @@
-// === Module 13198: useCheckpointCharacterTextureSwaps ===
+// === Module 13430: useCheckpointCharacterTextureSwaps ===
 
-// Module 13198 (useCheckpointCharacterTextureSwaps)
+// Module 13430 (useCheckpointCharacterTextureSwaps)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ let closure_5 = async function _loadImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_7 = async function _swapTextures(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -147,7 +147,7 @@ let closure_7 = async function _swapTextures(arg0) {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "IconComponent" };
                               }
                             } else {
                               try {
@@ -195,7 +195,7 @@ let closure_7 = async function _swapTextures(arg0) {
                                     const result = closure_1_5.set(closure_129_0, closure_129_1);
                                   }
                                   c4 = 3;
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "IconComponent" };
                                 }
                               } catch (tmp16) {
                                 c4 = tmp;

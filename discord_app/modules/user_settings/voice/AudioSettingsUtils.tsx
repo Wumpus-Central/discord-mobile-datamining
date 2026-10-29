@@ -1,16 +1,16 @@
-// === Module 5893: AudioSettingsUtils ===
+// === Module 5895: AudioSettingsUtils ===
 
-// Module 5893 (AudioSettingsUtils)
+// Module 5895 (AudioSettingsUtils)
 import UserSettingsConstants from "UserSettingsConstants" /* 1094 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5775 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 5894 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5895 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5777 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 5896 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5897 */;
 import size from "module_2" /* 2 */;
 
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;
 let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
-export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
+export function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
     USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
   } else {
@@ -23,11 +23,11 @@ export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
     tmp3 = USER;
   }
   return tmp3;
-};
-export const coerceAudioContextForProto = function coerceAudioContextForProto(arg0) {
+}
+export function coerceAudioContextForProto(arg0) {
   if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === arg0) {
     return constants.USER;
   } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === arg0) {
     return constants.STREAM;
   }
-};
+}

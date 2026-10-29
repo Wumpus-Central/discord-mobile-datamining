@@ -1,15 +1,15 @@
-// === Module 5674: WideBannerDismissibleContentVersion ===
+// === Module 5676: WideBannerDismissibleContentVersion ===
 
-// Module 5674 (WideBannerDismissibleContentVersion)
-import ShopBlockType from "ShopBlockType" /* 5676 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5675 */;
+// Module 5676 (WideBannerDismissibleContentVersion)
+import ShopBlockType from "ShopBlockType" /* 5678 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5677 */;
 
 require = fn;
 const CollectibleShopTab = fn(1086).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 
-export const getWideBannerDismissibleContentVersion = function getWideBannerDismissibleContentVersion() {
+export function getWideBannerDismissibleContentVersion() {
   const items = [, , ];
   ({ HOME: arr[0], ORBS: arr[1], CATALOG: arr[2] } = CollectibleShopTab);
   const obj = items[Symbol.iterator]();
@@ -26,4 +26,4 @@ export const getWideBannerDismissibleContentVersion = function getWideBannerDism
     }
   }
   return 0;
-};
+}

@@ -1,17 +1,17 @@
-// === Module 14278: ScheduledMessageEditContentModal ===
+// === Module 14512: ScheduledMessageEditContentModal ===
 
-// Module 14278 (ScheduledMessageEditContentModal)
+// Module 14512 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import Pressables from "Pressables" /* 6944 */;
-import MessageParserDefault from "MessageParser" /* 7790 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9729 */;
-import HeaderShared from "HeaderShared" /* 9733 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import Pressables from "Pressables" /* 6968 */;
+import MessageParserDefault from "MessageParser" /* 7812 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9761 */;
+import HeaderShared from "HeaderShared" /* 9765 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { modal: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null, container: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
               const arr = channelId(stateFromStores[16]);
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp9) {
           c2 = tmp;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -198,11 +198,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj5 = v1(7790);
+            const obj5 = v1(7812);
             const obj4 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(9728).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
+            const obj7 = { value: tmp4(9760).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -214,11 +214,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
           return obj;
         } else {
           if (value) {
-            v1(6707).pop();
-            const arr = v1(6707);
+            v1(6731).pop();
+            const arr = v1(6731);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

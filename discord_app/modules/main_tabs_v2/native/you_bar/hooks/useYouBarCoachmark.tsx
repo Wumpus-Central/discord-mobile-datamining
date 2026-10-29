@@ -1,22 +1,22 @@
-// === Module 18087: useYouBarCoachmark ===
+// === Module 18321: useYouBarCoachmark ===
 
-// Module 18087 (useYouBarCoachmark)
+// Module 18321 (useYouBarCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import Link from "Link" /* 1503 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7532 */;
-import useCoachmark from "useCoachmark" /* 9874 */;
-import TinyBroncoLazy from "TinyBroncoLazy" /* 16272 */;
-import usePrivateProfileCoachmarkProps from "usePrivateProfileCoachmarkProps" /* 18088 */;
+import Link from "Link" /* 1504 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7555 */;
+import useCoachmark from "useCoachmark" /* 9906 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 16510 */;
+import usePrivateProfileCoachmarkProps from "usePrivateProfileCoachmarkProps" /* 18322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 
 require = fn;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 let closure_6 = [];
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwipeCoachmarkProps(markAsDismissed) {
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwip
   } else {
     tmp8 = cResult[3];
   }
-  const tmp9 = markAsDismissed.visibleContent === markAsDismissed(4840).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
+  const tmp9 = markAsDismissed.visibleContent === markAsDismissed(4841).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
   if (cResult[4] === tmp9) {
     if (cResult[5] === tmp8) {
       let tmp10 = cResult[6];

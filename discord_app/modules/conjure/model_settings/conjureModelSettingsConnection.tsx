@@ -1,8 +1,8 @@
-// === Module 10775: conjureModelSettingsConnection ===
+// === Module 10850: conjureModelSettingsConnection ===
 
-// Module 10775 (conjureModelSettingsConnection)
+// Module 10850 (conjureModelSettingsConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/model_settings/conjureModelSettingsConnection.tsx");
@@ -24,7 +24,7 @@ export const modelSettingsFrameHandlers = {
     DispatcherDefault.dispatch(obj2);
   }
 };
-export const sendModelSettings = function sendModelSettings(projectId, arg1) {
+export function sendModelSettings(projectId, arg1) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   try {
     if (null == conjureSocket) {
@@ -36,4 +36,4 @@ export const sendModelSettings = function sendModelSettings(projectId, arg1) {
     }
   } catch (err) {
   }
-};
+}

@@ -1,15 +1,15 @@
-// === Module 10803: leaveFrame ===
+// === Module 10879: leaveFrame ===
 
-// Module 10803 (leaveFrame)
+// Module 10879 (leaveFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import FramesStore from "FramesStore" /* 6810 */;
+import FramesStore from "FramesStore" /* 6833 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/leaveFrame.tsx");
 
-export const leaveFrame = function leaveFrame(id) {
+export function leaveFrame(id) {
   if (obj.isNotNullish(id)) {
     const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: id, lockState: null, pictureInPictureLockState: null };
     DispatcherDefault.dispatch(obj3);
@@ -21,4 +21,4 @@ export const leaveFrame = function leaveFrame(id) {
     const obj7 = { type: "FRAME_STOP", applicationId: null, frameId: null };
   }
   obj = GlobalUtils;
-};
+}

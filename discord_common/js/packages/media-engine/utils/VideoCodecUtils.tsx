@@ -1,14 +1,14 @@
-// === Module 5836: VideoCodecUtils ===
+// === Module 5838: VideoCodecUtils ===
 
-// Module 5836 (VideoCodecUtils)
-import Constants from "Constants" /* 5754 */;
+// Module 5838 (VideoCodecUtils)
+import Constants from "Constants" /* 5756 */;
 import size from "module_2" /* 2 */;
 
 const ExperimentFlags = Constants.ExperimentFlags;
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
 
-export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, arg2) {
+export function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, arg2) {
   closure_0 = parseNativeCodecsResult;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -43,8 +43,8 @@ export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNat
     });
   }
   return items;
-};
-export const getExperimentCodecs = function getExperimentCodecs(experimentFlags) {
+}
+export function getExperimentCodecs(experimentFlags) {
   const hasItem = experimentFlags.has(ExperimentFlags.SIGNAL_AV1_ENCODE);
   const hasItem1 = experimentFlags.has(ExperimentFlags.SIGNAL_AV1_DECODE);
   let tmp4 = hasItem;
@@ -59,8 +59,8 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
   const tmp6 = !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE);
   items.push({ name: "H265", encode: !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE), decode: experimentFlags.has(ExperimentFlags.H265_HARDWARE_DECODE_AVAILABLE) });
   return items;
-};
-export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
+}
+export function filterVideoCodecs(arg0, arr) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -106,8 +106,8 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
     });
   }
   return items;
-};
-export const parseNativeCodecs = function parseNativeCodecs(arg0) {
+}
+export function parseNativeCodecs(arg0) {
   const parsed = JSON.parse(arg0);
   return parsed.map((codec) => {
     codec = codec.codec;
@@ -117,7 +117,7 @@ export const parseNativeCodecs = function parseNativeCodecs(arg0) {
     }
     return { name: str, encode: codec.encode, decode: codec.decode };
   });
-};
+}
 export function codecNameToPayloadName(name) {
   let str = "AV1X";
   if ("AV1" !== name) {

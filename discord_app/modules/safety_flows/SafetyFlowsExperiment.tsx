@@ -1,8 +1,8 @@
-// === Module 19199: SafetyFlowsExperiment ===
+// === Module 19434: SafetyFlowsExperiment ===
 
-// Module 19199 (SafetyFlowsExperiment)
+// Module 19434 (SafetyFlowsExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -12,9 +12,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
 
 export default tmp2;
-export const isEligibleForSafetyFlowsExperiment = function isEligibleForSafetyFlowsExperiment(location) {
+export function isEligibleForSafetyFlowsExperiment(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}
 export const useIsEligibleForSafetyFlowsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForSafetyFlowsExperiment(location) {
   const cResult = c.c(2);
   const _location = location.location;

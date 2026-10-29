@@ -1,13 +1,13 @@
-// === Module 8427: PurchaseNotificationSystemMessage ===
+// === Module 8449: PurchaseNotificationSystemMessage ===
 
-// Module 8427 (PurchaseNotificationSystemMessage)
-import Server from "Server" /* 1997 */;
-import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8428 */;
+// Module 8449 (PurchaseNotificationSystemMessage)
+import Server from "Server" /* 1998 */;
+import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8450 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
-export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {
+export function createPurchaseNotificationSystemMessage(message) {
   const purchaseNotification = message.message.purchaseNotification;
   let type;
   if (purchaseNotification != null) {
@@ -19,4 +19,4 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     const tmp2Result = GuildProductPurchaseSystemMessage;
   }
   return guildProductPurchaseSystemMessage;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 16708: QuestDockUtils ===
+// === Module 16946: QuestDockUtils ===
 
-// Module 16708 (QuestDockUtils)
+// Module 16946 (QuestDockUtils)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import spring from "spring" /* 5283 */;
-import QuestDockConstants from "QuestDockConstants" /* 16709 */;
+import spring from "spring" /* 5284 */;
+import QuestDockConstants from "QuestDockConstants" /* 16947 */;
 import size from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;
@@ -72,12 +72,12 @@ export { getQuestDockExpandedHeightLimits };
 export { getQuestDockCollapsedWidth };
 export { getQuestDockExpandedWidth };
 export { getQuestDockClosedWidth };
-export const isSoftDismissed = function isSoftDismissed(questDockSoftDismissedAt) {
+export function isSoftDismissed(questDockSoftDismissedAt) {
   let tmp = null != questDockSoftDismissedAt;
   if (tmp) {
     const _Date = Date;
     tmp = Date.now() - questDockSoftDismissedAt < closure_7;
   }
   return tmp;
-};
+}
 export { dimensionsLayoutTransition };

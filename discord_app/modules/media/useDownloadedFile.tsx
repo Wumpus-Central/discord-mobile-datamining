@@ -1,8 +1,8 @@
-// === Module 11325: useDownloadedFile ===
+// === Module 11379: useDownloadedFile ===
 
-// Module 11325 (useDownloadedFile)
+// Module 11379 (useDownloadedFile)
 import util from "util" /* 1125 */;
-import FileSizeUtils from "FileSizeUtils" /* 6414 */;
+import FileSizeUtils from "FileSizeUtils" /* 6438 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ let c5 = "utf-8";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media/useDownloadedFile.tsx");
 
-export const getBytesLeftNotice = function getBytesLeftNotice(bytesLeft) {
+export function getBytesLeftNotice(bytesLeft) {
   let str = "";
   if (bytesLeft > 0) {
     const intl = util.intl;
@@ -21,8 +21,8 @@ export const getBytesLeftNotice = function getBytesLeftNotice(bytesLeft) {
     str = "... " + intl.formatToPlainString(util.t["1+gGcK"], obj);
   }
   return str;
-};
-export const useDownloadedFile = function useDownloadedFile(url, arg1) {
+}
+export function useDownloadedFile(url, arg1) {
   dependencyMap = arg1;
   const hadError = _slicedToArray(noop.useState(false), 2);
   closure_2 = hadError[1];
@@ -140,4 +140,4 @@ export const useDownloadedFile = function useDownloadedFile(url, arg1) {
     })();
   }, items);
   return { fileContents: fileContents[0], bytesLeft: bytesLeft[0], hadError: hadError[0] };
-};
+}

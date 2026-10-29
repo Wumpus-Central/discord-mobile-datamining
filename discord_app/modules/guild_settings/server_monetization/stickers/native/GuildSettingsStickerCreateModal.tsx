@@ -1,8 +1,8 @@
-// === Module 19387: GuildSettingsStickerCreateModal ===
+// === Module 19620: GuildSettingsStickerCreateModal ===
 
-// Module 19387 (GuildSettingsStickerCreateModal)
+// Module 19620 (GuildSettingsStickerCreateModal)
 import util from "util" /* 1125 */;
-import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 19388 */;
+import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 19621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,8 +64,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   ({ guildId: require, stickerId } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(10061)());
-  const tmp2 = stickerId(10061)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(10093)());
+  const tmp2 = stickerId(10093)();
   const tmp3 = c3;
   const intl = util.intl;
   if (null != stickerId) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   } else {
     tdhW5b = util.t["3DzNjU"];
   }
-  const tmp4 = stickerId(10064);
+  const tmp4 = stickerId(10096);
   return tmp3(tmp4, {
     screenKey: "guild-settings-sticker-create",
     title: intl.string(tdhW5b),

@@ -1,17 +1,17 @@
-// === Module 11242: ActivityFlagUtils ===
+// === Module 11296: ActivityFlagUtils ===
 
-// Module 11242 (ActivityFlagUtils)
+// Module 11296 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7847 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7870 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
-export const computeActivityFlags = function computeActivityFlags(secrets) {
+export function computeActivityFlags(secrets) {
   let flag = hasFlagResult;
   if (hasFlagResult === undefined) {
     flag = false;
@@ -91,8 +91,8 @@ export const computeActivityFlags = function computeActivityFlags(secrets) {
       }
     }
   }
-};
-export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActivity(remoteApplicationActivity) {
+}
+export function isContextlessEmbeddedActivity(remoteApplicationActivity) {
   let num;
   if (remoteApplicationActivity != null) {
     num = remoteApplicationActivity.flags;
@@ -105,4 +105,4 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
     hasFlagResult = isEmbeddedActivityDefault(remoteApplicationActivity);
   }
   return hasFlagResult;
-};
+}

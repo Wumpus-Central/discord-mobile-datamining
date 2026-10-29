@@ -1,11 +1,11 @@
-// === Module 10584: PremiumGiftWishlistBanner ===
+// === Module 10617: PremiumGiftWishlistBanner ===
 
-// Module 10584 (PremiumGiftWishlistBanner)
+// Module 10617 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
-import useWishlistHooks from "useWishlistHooks" /* 9400 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10589 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
+import useWishlistHooks from "useWishlistHooks" /* 9431 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,17 +14,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(7368).WishlistRecommendationReason;
+let constants = fn(7391).WishlistRecommendationReason;
 const PremiumConstants = fn(1391);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1086).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8709).UserProfileSections;
+const UserProfileSections = fn(8712).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };
@@ -395,7 +395,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -710,7 +710,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

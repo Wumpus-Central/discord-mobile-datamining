@@ -1,12 +1,12 @@
-// === Module 8705: showUserProfileActionSheet ===
+// === Module 8708: showUserProfileActionSheet ===
 
-// Module 8705 (showUserProfileActionSheet)
+// Module 8708 (showUserProfileActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 require = fn;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
@@ -16,7 +16,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = asyncRequireImpl(8708, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(8711, dependencyMap.paths);
       const obj = ActionSheetActionCreatorsDefault;
       const _HermesInternal = HermesInternal;
       const combined = "" + UserProfile + "IgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -32,7 +32,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     }
     isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
-  const tmp20 = asyncRequireImpl(8727, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(8730, dependencyMap.paths);
   const combined1 = "" + UserProfile + ignoreBlockedSpeedBump.userId;
   const obj4 = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -42,7 +42,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   }
   return ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
 }
-fn(6895).addPostConnectionCallback;
+fn(6919).addPostConnectionCallback;
 const UserProfile = "UserProfile";
 let closure_7 = new LoggerDefault("showUserProfileActionSheet");
 const size = fn(2);
@@ -50,16 +50,16 @@ const result = size.fileFinishedImporting("modules/user_profile/native/showUserP
 
 export default showUserProfileActionSheet;
 export const USER_PROFILE_ACTION_SHEET_KEY_PREFIX = "UserProfile";
-export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(userId) {
+export function getUserProfileActionSheetKey(userId) {
   return "" + UserProfile + userId;
-};
-export const getUserProfileBlockedSpeedBumpActionSheetKey = function getUserProfileBlockedSpeedBumpActionSheetKey(arg0) {
+}
+export function getUserProfileBlockedSpeedBumpActionSheetKey(arg0) {
   return "" + UserProfile + "BlockedSpeedBump" + arg0;
-};
-export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProfileIgnoredSpeedBumpActionSheetKey(arg0) {
+}
+export function getUserProfileIgnoredSpeedBumpActionSheetKey(arg0) {
   return "" + UserProfile + "IgnoredSpeedBump" + arg0;
-};
-export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
+}
+export function showUserProfileActionSheetPostConnection(arg0) {
   closure_0 = arg0;
   addPostConnectionCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
@@ -72,7 +72,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -153,7 +153,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             showUserProfileActionSheet(closure_129_0);
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp40) {
         if (tmp4 === c3) {
@@ -165,4 +165,4 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
       }
     }
   }));
-};
+}

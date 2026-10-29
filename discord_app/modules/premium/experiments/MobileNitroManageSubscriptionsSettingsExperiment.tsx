@@ -1,8 +1,8 @@
-// === Module 14967: MobileNitroManageSubscriptionsSettingsExperiment ===
+// === Module 15202: MobileNitroManageSubscriptionsSettingsExperiment ===
 
-// Module 14967 (MobileNitroManageSubscriptionsSettingsExperiment)
+// Module 15202 (MobileNitroManageSubscriptionsSettingsExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -29,6 +29,6 @@ export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompiler
 }) : (function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
   return apexExperiment.useConfig({ location: location.location }).enabled;
 });
-export const getMobileNitroManageSubscriptionsSettingsExperiment = function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
+export function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
   return apexExperiment.getConfig({ location: location.location }).enabled;
-};
+}

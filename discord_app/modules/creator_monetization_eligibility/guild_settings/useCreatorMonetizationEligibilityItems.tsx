@@ -1,9 +1,9 @@
-// === Module 19522: useCreatorMonetizationEligibilityItems ===
+// === Module 19755: useCreatorMonetizationEligibilityItems ===
 
-// Module 19522 (useCreatorMonetizationEligibilityItems)
+// Module 19755 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 19525 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 19758 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -339,7 +339,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -403,7 +403,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             tmp13();
           }
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } catch (tmp16) {
           c2 = tmp;
           throw tmp16;
@@ -466,7 +466,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -530,7 +530,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             tmp13();
           }
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } catch (tmp16) {
           c2 = tmp;
           throw tmp16;
@@ -564,8 +564,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         let handleContactSupportClick;
         if (!noRecentViolations) {
           handleContactSupportClick = function handleContactSupportClick() {
-            const tmp = onEligibilityBecameStale(5692);
-            return tmp(onEligibilityBecameStale(2064).getSubmitRequestURL());
+            const tmp = onEligibilityBecameStale(5694);
+            return tmp(onEligibilityBecameStale(2065).getSubmitRequestURL());
           };
         }
         obj2.actionHandler = handleContactSupportClick;

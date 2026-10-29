@@ -1,11 +1,11 @@
-// === Module 9594: useHasNewAdContent ===
+// === Module 9626: useHasNewAdContent ===
 
-// Module 9594 (useHasNewAdContent)
+// Module 9626 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1101 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 9595 */;
-import QuestStore from "QuestStore" /* 7811 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 9627 */;
+import QuestStore from "QuestStore" /* 7834 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -76,9 +76,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNe
   const tmpResult3 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = tmp(4840).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+    prop = tmp(4841).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp17 = _slicedToArray(stateFromStoresArray(7532).useSelectedTimeRecurringDismissibleContent(prop, tmp14, undefined, true), 2);
+  const tmp17 = _slicedToArray(stateFromStoresArray(7555).useSelectedTimeRecurringDismissibleContent(prop, tmp14, undefined, true), 2);
   if (cResult[8] === tmp17[1]) {
     if (cResult[9] === tmp19) {
       let tmp20 = cResult[10];
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNe
   cResult[9] = null != tmp17[0];
   cResult[10] = obj3;
   tmp20 = obj3;
-  const tmpResult4 = stateFromStoresArray(7532);
+  const tmpResult4 = stateFromStoresArray(7555);
 }) : (function useHasNewAdContent() {
   const items = [QuestStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNe
   const obj2 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = tmp(4840).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+    prop = tmp(4841).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp6 = _slicedToArray(stateFromStoresArray(7532).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  const tmp6 = _slicedToArray(stateFromStoresArray(7555).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
   return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 });

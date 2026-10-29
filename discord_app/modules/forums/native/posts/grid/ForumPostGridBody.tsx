@@ -1,16 +1,17 @@
-// === Module 13336: ForumPostGridBody ===
+// === Module 13569: ForumPostGridBody ===
 
-// Module 13336 (ForumPostGridBody)
+// Module 13569 (ForumPostGridBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8882 */;
-import _modDef13337 from "module_13337" /* 13337 */;
-import _modDef13338 from "module_13338" /* 13338 */;
-import _modDef13339 from "module_13339" /* 13339 */;
-import ForumPostMedia from "ForumPostMedia" /* 13340 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8885 */;
+import useChatWidthDefault from "useChatWidth" /* 11317 */;
+import _modDef13570 from "module_13570" /* 13570 */;
+import _modDef13571 from "module_13571" /* 13571 */;
+import _modDef13572 from "module_13572" /* 13572 */;
+import ForumPostMedia from "ForumPostMedia" /* 13573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +21,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 225;
 let c9 = 192;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
 let size = { height: 20, width: 33, backgroundColor: "black", borderRadius: nativeDefault.radii.xs, resizeMode: "cover" };
 obj2.gifIcon = size;
@@ -47,7 +48,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIco
   const cResult = c.c(2);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.gifIcon) {
-    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef13337, disableColor: true, style: tmp4.gifIcon };
+    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef13570, disableColor: true, style: tmp4.gifIcon };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.gifIcon;
     cResult[1] = tmp8;
@@ -58,13 +59,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIco
   return tmp5;
 }) : (function GIFIcon() {
   const tmp = closure_10();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef13337, disableColor: true, style: closure_10().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef13570, disableColor: true, style: closure_10().gifIcon });
 });
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIcon() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef13338, disableColor: true };
+    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef13571, disableColor: true };
     const tmp7 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -73,14 +74,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIc
   }
   return first;
 }) : (function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef13338, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef13571, disableColor: true });
 });
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraMediaIcon(extraMediaCount) {
   const cResult = c.c(9);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.icon.color) {
-    const obj2 = { source: _modDef13339, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+    const obj2 = { source: _modDef13572, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.icon.color;
     cResult[1] = tmp8;
@@ -120,8 +121,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraM
 }) : (function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_10();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef13339, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef13339, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef13572, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef13572, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
@@ -132,15 +133,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMed
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(16);
-  width = require("useWindowDimensions")().width;
+  const tmp2 = useChatWidthDefault();
+  dependencyMap = tmp2;
   const bound = Math.min(arg0.length, 2);
   if (cResult[0] === arg0) {
     if (cResult[1] === bound) {
       const arr = cResult[2];
-      const tmp6 = arg1 ? c9 : c8;
-      closure_4 = tmp6;
-      if (cResult[6] === width) {
-        if (cResult[7] === tmp6) {
+      const tmp7 = arg1 ? c9 : c8;
+      closure_4 = tmp7;
+      if (cResult[6] === tmp2) {
+        if (cResult[7] === tmp7) {
           if (cResult[8] === arr) {
             if (cResult[9] === arg1) {
               return cResult[10];
@@ -148,15 +150,15 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMed
           }
         }
       }
-      if (cResult[11] === width) {
-        if (cResult[12] === tmp6) {
+      if (cResult[11] === tmp2) {
+        if (cResult[12] === tmp7) {
           if (cResult[13] === arr.length) {
             if (cResult[14] === arg1) {
-              let tmp7 = cResult[15];
+              let tmp8 = cResult[15];
             }
-            let mapped = arr.map(tmp7);
-            cResult[6] = width;
-            cResult[7] = tmp6;
+            let mapped = arr.map(tmp8);
+            cResult[6] = tmp2;
+            cResult[7] = tmp7;
             cResult[8] = arr;
             cResult[9] = arg1;
             cResult[10] = mapped;
@@ -164,9 +166,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMed
         }
       }
       const fn3 = function x(arr) {
-        arr.filter(closure_0(width[14]).isNotNullish).length;
+        arr.filter(closure_0(closure_2[14]).isNotNullish).length;
         return arr.map((media) => {
-          const diff = (width - 48) / length - 2 * (length - 1) / length;
+          const diff = (closure_2 - 48) / length - 2 * (length - 1) / length;
           const obj = { media, targetWidth: diff, targetHeight: null };
           if (closure_1) {
             if (length < 2) {
@@ -178,12 +180,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMed
           result = closure_4 / length - 2 * (length - 1) / length;
         });
       };
-      cResult[11] = width;
-      cResult[12] = tmp6;
+      cResult[11] = tmp2;
+      cResult[12] = tmp7;
       cResult[13] = arr.length;
       cResult[14] = arg1;
       cResult[15] = fn3;
-      tmp7 = fn3;
+      tmp8 = fn3;
     }
   }
   if (cResult[3] !== arg0) {
@@ -193,45 +195,46 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMed
     };
     cResult[3] = arg0;
     cResult[4] = fn;
-    let tmp3 = fn;
+    let tmp4 = fn;
   } else {
-    tmp3 = cResult[4];
+    tmp4 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function c(arg0) {
       return arg0.length > 0;
     };
     cResult[5] = fn2;
-    let tmp4 = fn2;
+    let tmp5 = fn2;
   } else {
-    tmp4 = cResult[5];
+    tmp5 = cResult[5];
   }
   const substr = items.slice(0, bound);
-  const mapped1 = substr.map(tmp3);
-  const found = mapped1.filter(tmp4);
+  const mapped1 = substr.map(tmp4);
+  const found = mapped1.filter(tmp5);
   cResult[0] = arg0;
   cResult[1] = bound;
   cResult[2] = found;
 }) : (function useMediaGridLayout(arg0, arg1) {
   importDefault = arg1;
-  width = require("useWindowDimensions")().width;
+  const tmp = useChatWidthDefault();
+  dependencyMap = tmp;
   items = [arg0];
   const memo = noop.useMemo(() => {
     const substr = items.slice(0, Math.min(length.length, 2));
     let mapped = substr.map((arr) => {
       const mapped = arr.map((item) => closure_1_0[item]);
-      return mapped.filter(closure_0(width[14]).isNotNullish);
+      return mapped.filter(closure_0(closure_2[14]).isNotNullish);
     });
     return mapped.filter((item) => item.length > 0);
   }, items);
-  const items1 = [width, memo, arg1];
+  const items1 = [tmp, memo, arg1];
   return noop.useMemo(() => {
     closure_0 = closure_1 ? closure_1_9 : closure_1_8;
     return memo.map((arr) => {
-      length = arr.filter(closure_0(width[14]).isNotNullish).length;
+      length = arr.filter(closure_0(closure_2[14]).isNotNullish).length;
       length = length.length;
       return arr.map((media) => {
-        const diff = (width - 48) / length - 2 * (length - 1) / length;
+        const diff = (closure_2 - 48) / length - 2 * (length - 1) / length;
         const obj = { media, targetWidth: diff, targetHeight: null };
         if (closure_1) {
           if (length < 2) {
@@ -339,8 +342,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   importDefault = tmp4;
   let obj = thread(576);
   const tmp = thread;
-  let obj2 = thread(7419);
-  [arr, tmp6] = thread(7419).useSomeAppliedTags(thread, 2);
+  let obj2 = thread(7442);
+  [arr, tmp6] = thread(7442).useSomeAppliedTags(thread, 2);
   if (cResult[0] !== media) {
     const substr = media.slice(0, 4);
     cResult[0] = media;
@@ -361,11 +364,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   let columnSpacer = closure_15(tmp8, tmp11);
   let wideAspectRatioGrid = tmp11;
   if (cResult[4] !== media) {
-    const result = tmp(8882).messageContainsGifOrVideo(media);
+    const result = tmp(8885).messageContainsGifOrVideo(media);
     cResult[4] = media;
     cResult[5] = result;
     let tmp13 = result;
-    const tmpResult = tmp(8882);
+    const tmpResult = tmp(8885);
   } else {
     tmp13 = cResult[5];
   }
@@ -723,20 +726,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   cResult[7] = wideAspectRatioContainer;
   cResult[8] = items2;
   tmp15 = items2;
-  const tmp5 = _slicedToArray(thread(7419).useSomeAppliedTags(thread, 2), 2);
+  const tmp5 = _slicedToArray(thread(7442).useSomeAppliedTags(thread, 2), 2);
 }) : (function ForumPostGridBody(thread) {
   thread = thread.thread;
   const media = thread.media;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(7419).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(7442).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp12Result = first.length > 0;
   items = [media];
   const memo = noop.useMemo(() => media.slice(0, 4), items);
   const bound = Math.max(0, media.length - 4);
   const isMediaPostResult = thread.isMediaPost();
-  let obj = thread(7419);
+  let obj = thread(7442);
   let tmp2 = thread;
   const items1 = [media];
   const memo1 = noop.useMemo(() => ForumPostMediaUtils.messageContainsGifOrVideo(media), items1);
@@ -777,7 +780,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   if (tmp12Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(13344).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(13577).ForumPostAppliedTagPills, obj5);
     tmp12Result = closure_6(View, obj4);
   }
   items4[1] = tmp12Result;

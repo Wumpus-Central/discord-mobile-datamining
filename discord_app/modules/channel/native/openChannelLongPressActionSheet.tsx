@@ -1,17 +1,17 @@
-// === Module 10726: openChannelLongPressActionSheet ===
+// === Module 10759: openChannelLongPressActionSheet ===
 
-// Module 10726 (openChannelLongPressActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+// Module 10759 (openChannelLongPressActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
 
-export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {
+export function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  ActionSheetActionCreatorsDefault.openLazy(combined(1999)(10727, dependencyMap.paths), combined, {
+  ActionSheetActionCreatorsDefault.openLazy(combined(2000)(10760, dependencyMap.paths), combined, {
     channelId: id,
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     }
   });
-};
+}

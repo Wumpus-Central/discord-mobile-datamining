@@ -1,20 +1,20 @@
-// === Module 19299: GuildSettingsRoleSubscriptionsSection ===
+// === Module 19532: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 19299 (GuildSettingsRoleSubscriptionsSection)
+// Module 19532 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5722 */;
-import TableRow from "TableRow" /* 6939 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import TagsIcon from "TagsIcon" /* 11042 */;
-import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17008 */;
-import WalletIcon from "WalletIcon" /* 19300 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5724 */;
+import TableRow from "TableRow" /* 6963 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import TagsIcon from "TagsIcon" /* 11096 */;
+import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17247 */;
+import WalletIcon from "WalletIcon" /* 19533 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const isGuildOwner = fn(4874).isGuildOwner;
+const isGuildOwner = fn(4875).isGuildOwner;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

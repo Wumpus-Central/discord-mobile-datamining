@@ -1,8 +1,8 @@
-// === Module 10952: AnimatedKeyboardExperiment ===
+// === Module 10987: AnimatedKeyboardExperiment ===
 
-// Module 10952 (AnimatedKeyboardExperiment)
+// Module 10987 (AnimatedKeyboardExperiment)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 let obj = { name: "2025-08-animated-keyboard-android", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -14,6 +14,6 @@ const enabled = apexExperiment.getConfig({ location: "isAnimatedKeyboardEnabled"
 const result = size.fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardExperiment.tsx");
 
 export const AnimatedKeyboardExperiment = apexExperiment;
-export const isAnimatedAndroidKeyboard = function isAnimatedAndroidKeyboard() {
+export function isAnimatedAndroidKeyboard() {
   return PlatformUtils.isAndroid() && enabled;
-};
+}

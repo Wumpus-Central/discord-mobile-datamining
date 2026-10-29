@@ -1,13 +1,13 @@
-// === Module 9608: BrandSafetyContext ===
+// === Module 9640: BrandSafetyContext ===
 
-// Module 9608 (BrandSafetyContext)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 9609 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9606 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+// Module 9640 (BrandSafetyContext)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 9641 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9638 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 import UserStore from "UserStore" /* 1389 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 let closure_10 = ContentImpressionTrackerConstants.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
 let result = size.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
-export const getBrandSafetyContext = function getBrandSafetyContext(surfaceId) {
+export function getBrandSafetyContext(surfaceId) {
   const result = require("QuestDataUtils").isBillableQuestContent(surfaceId);
   let obj = require("QuestDataUtils");
   const adContext = require("QuestDataUtils").getAdContext(surfaceId);
@@ -128,4 +128,4 @@ export const getBrandSafetyContext = function getBrandSafetyContext(surfaceId) {
     }
   }
   return null;
-};
+}

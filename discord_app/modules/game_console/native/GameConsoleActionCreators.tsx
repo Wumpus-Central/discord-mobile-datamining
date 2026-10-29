@@ -1,7 +1,7 @@
-// === Module 11695: game_console/GameConsoleActionCreators ===
+// === Module 11749: game_console/GameConsoleActionCreators ===
 
-// Module 11695 (game_console/GameConsoleActionCreators)
-import transferToPlayStation from "transferToPlayStation" /* 11696 */;
+// Module 11749 (game_console/GameConsoleActionCreators)
+import transferToPlayStation from "transferToPlayStation" /* 11750 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -39,7 +39,7 @@ let closure_4 = async function _transferToPlaystationWithAlert(arg0, arg1, arg2)
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleActionCreators.tsx");
 
-export const transferToPlaystationWithAlert = function transferToPlaystationWithAlert() {
+export function transferToPlaystationWithAlert() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -48,4 +48,4 @@ export const transferToPlaystationWithAlert = function transferToPlaystationWith
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

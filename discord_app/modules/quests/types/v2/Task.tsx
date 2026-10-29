@@ -1,10 +1,10 @@
-// === Module 7821: Task ===
+// === Module 7844: Task ===
 
-// Module 7821 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6753 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7822 */;
-import v2_Video from "v2/Video" /* 7823 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7824 */;
+// Module 7844 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6776 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7845 */;
+import v2_Video from "v2/Video" /* 7846 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7847 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {
@@ -43,7 +43,7 @@ function _thirdPartyTasksFromServer(tasks) {
 }
 const result = size.fileFinishedImporting("modules/quests/types/v2/Task.tsx");
 
-export const questTaskConfigFromServer = function questTaskConfigFromServer(type) {
+export function questTaskConfigFromServer(type) {
   type = type.type;
   if (QuestTaskConfigTypes.QuestTaskConfigTypes.FIRST_PARTY === type) {
     const obj2 = { type: QuestTaskConfigTypes.QuestTaskConfigTypes.FIRST_PARTY, tasks: _firstPartyTasksFromServer(type.tasks), joinOperator: type.join_operator };
@@ -53,8 +53,8 @@ export const questTaskConfigFromServer = function questTaskConfigFromServer(type
     ({ enrollment_url: obj.enrollmentUrl, developer_application_id: obj.developerApplicationId, join_operator: obj.joinOperator } = type);
     return obj;
   }
-};
-export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(task_config_v2) {
+}
+export function questTaskConfigV2FromServer(task_config_v2) {
   try {
     const _Object = Object;
     const entries = Object.entries(task_config_v2.tasks);
@@ -127,4 +127,4 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     let obj2 = { tasks: {}, joinOperator: QuestTaskJoinOperator.QuestTaskJoinOperator.OR };
     return obj2;
   }
-};
+}

@@ -1,9 +1,9 @@
-// === Module 8512: XNeutralIcon ===
+// === Module 8534: XNeutralIcon ===
 
-// Module 8512 (XNeutralIcon)
+// Module 8534 (XNeutralIcon)
 import c from "c" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod8513 from "module_8513" /* 8513 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod8535 from "module_8535" /* 8535 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const XNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     str = tmp6;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8513;
+    const tmpResult = _mod8535;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const XNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8513, color: str, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8535, color: str, style: color.style });
 });

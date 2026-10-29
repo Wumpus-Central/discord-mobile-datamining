@@ -1,22 +1,22 @@
-// === Module 10953: ChatViewWrapperAnimatedKeyboard ===
+// === Module 10988: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 10953 (ChatViewWrapperAnimatedKeyboard)
+// Module 10988 (ChatViewWrapperAnimatedKeyboard)
 import c from "c" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5085 */;
-import timing from "timing" /* 5242 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5632 */;
-import LayerScope from "LayerScope" /* 5633 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10959 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10961 */;
-import StickyWrapper from "StickyWrapper" /* 10962 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5086 */;
+import timing from "timing" /* 5243 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5633 */;
+import LayerScope from "LayerScope" /* 5634 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10994 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10996 */;
+import StickyWrapper from "StickyWrapper" /* 10997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const Easing = fn(5085).Easing;
-let obj = { duration: fn(5245).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const Easing = fn(5086).Easing;
+let obj = { duration: fn(5246).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 const __initData = { code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}" };
 const __initData2 = { code: "function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){const{animatedAdjustedMargin,animatedAdjustedMarginPending}=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}}" };
 const __initData3 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{animatedAdjustedMargin,withTiming,animatedHeight,INSET_ANIMATION_CONFIG2,animatedAdjustedMarginPending}=this.__closure;return{flex:1,marginTop:animatedAdjustedMargin.get(),transform:[{translateY:withTiming(-animatedHeight.get(),INSET_ANIMATION_CONFIG2,\"respect-motion-settings\",function(finished){if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})}]};}" };

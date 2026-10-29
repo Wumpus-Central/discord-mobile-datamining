@@ -1,19 +1,19 @@
-// === Module 8462: PremiumSubscriptionOfferUtil ===
+// === Module 8484: PremiumSubscriptionOfferUtil ===
 
-// Module 8462 (PremiumSubscriptionOfferUtil)
+// Module 8484 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import Server from "Server" /* 1997 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7592 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8463 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8464 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8465 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8466 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8469 */;
+import Server from "Server" /* 1998 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7615 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8485 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8486 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8487 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8488 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
 
 require = fn;
 function getDiscountInfo(active_discount_id) {
@@ -94,8 +94,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let tmp10 = null != prop;
     if (tmp10) {
       const _Date = Date;
-      tmp10 = _modDef2046(Date.now()) <= _modDef2046(prop);
-      const tmp12Result = _modDef2046(Date.now());
+      tmp10 = _modDef2047(Date.now()) <= _modDef2047(prop);
+      const tmp12Result = _modDef2047(Date.now());
     }
     cResult[2] = prop;
     cResult[3] = tmp10;
@@ -117,8 +117,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef2046(Date.now()) <= _modDef2046(prop);
-    const tmp6Result = _modDef2046(Date.now());
+    tmp4 = _modDef2047(Date.now()) <= _modDef2047(prop);
+    const tmp6Result = _modDef2047(Date.now());
   }
   return tmp4;
 });
@@ -421,7 +421,7 @@ export const useShouldFetchChurnOffer = ReactCompilerGating.isReactCompilerEnabl
   }
   return hasPremiumNitroMonthly;
 });
-export const renewalInvoiceChurnDiscountInfo = function renewalInvoiceChurnDiscountInfo(arg0) {
+export function renewalInvoiceChurnDiscountInfo(arg0) {
   const iter = arg0.invoiceItems[Symbol.iterator]();
   while (iter !== undefined) {
     let discounts = iter.next().discounts;
@@ -447,7 +447,7 @@ export const renewalInvoiceChurnDiscountInfo = function renewalInvoiceChurnDisco
     continue;
   }
   return null;
-};
-export const useIsNUXEligible = function useIsNUXEligible() {
+}
+export function useIsNUXEligible() {
   return ReverseTrialUtils.useIsInReverseTrial();
-};
+}

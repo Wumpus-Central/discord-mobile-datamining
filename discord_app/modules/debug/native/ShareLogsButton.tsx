@@ -1,12 +1,12 @@
-// === Module 17197: ShareLogsButton ===
+// === Module 17436: ShareLogsButton ===
 
-// Module 17197 (ShareLogsButton)
+// Module 17436 (ShareLogsButton)
 import LogAggregator from "LogAggregator" /* 7 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import Pressables from "Pressables" /* 6944 */;
-import showShareActionSheet from "showShareActionSheet" /* 8885 */;
-import ShareIcon from "ShareIcon" /* 14458 */;
+import Pressables from "Pressables" /* 6968 */;
+import showShareActionSheet from "showShareActionSheet" /* 8888 */;
+import ShareIcon from "ShareIcon" /* 14692 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

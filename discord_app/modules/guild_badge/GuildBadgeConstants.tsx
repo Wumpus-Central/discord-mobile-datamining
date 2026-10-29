@@ -1,14 +1,14 @@
-// === Module 9266: GuildBadgeConstants ===
+// === Module 9270: GuildBadgeConstants ===
 
-// Module 9266 (GuildBadgeConstants)
+// Module 9270 (GuildBadgeConstants)
 import util from "util" /* 1125 */;
-import GuildTraits from "GuildTraits" /* 9267 */;
-import BadgeCategory from "BadgeCategory" /* 9268 */;
+import GuildTraits from "GuildTraits" /* 9271 */;
+import BadgeCategory from "BadgeCategory" /* 9272 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
-export const getBadgeTooltip = function getBadgeTooltip(badgeCategory, visibility) {
+export function getBadgeTooltip(badgeCategory, visibility) {
   if (visibility === GuildTraits.GuildVisibility.PUBLIC) {
     const intl3 = util.intl;
     let stringResult = intl3.string(util.t.op2cJ6);
@@ -71,4 +71,4 @@ export const getBadgeTooltip = function getBadgeTooltip(badgeCategory, visibilit
     obj.tooltipTitle = intl4.string(util.t["iZRkC/"]);
     return obj;
   }
-};
+}

@@ -1,6 +1,6 @@
-// === Module 8627: utils ===
+// === Module 8649: utils ===
 
-// Module 8627 (utils)
+// Module 8649 (utils)
 import Constants from "Constants" /* 1084 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
 import size from "module_2" /* 2 */;
@@ -8,10 +8,10 @@ import size from "module_2" /* 2 */;
 const MessageEmbedFlags = Constants.MessageEmbedFlags;
 const result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");
 
-export const isContentInventoryFallbackEmbed = function isContentInventoryFallbackEmbed(flags) {
+export function isContentInventoryFallbackEmbed(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
   return FlagUtils.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
-};
+}

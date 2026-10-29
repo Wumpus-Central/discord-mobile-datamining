@@ -1,20 +1,20 @@
-// === Module 17823: VoiceUserItem ===
+// === Module 18061: VoiceUserItem ===
 
-// Module 17823 (VoiceUserItem)
+// Module 18061 (VoiceUserItem)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef8544 from "module_8544" /* 8544 */;
-import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9200 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9202 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9204 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9206 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11098 */;
-import VideoIcon from "VideoIcon" /* 11368 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 14431 */;
-import getConsoleIcon from "getConsoleIcon" /* 14433 */;
-import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 17824 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import _modDef8566 from "module_8566" /* 8566 */;
+import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9204 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9206 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9208 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9210 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11152 */;
+import VideoIcon from "VideoIcon" /* 11422 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 14665 */;
+import getConsoleIcon from "getConsoleIcon" /* 14667 */;
+import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 18062 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -28,11 +28,11 @@ const jsxProd = fn(21);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1199).AvatarSizes.XSMALL_20;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11993);
+const ChannelListLayout = fn(12047);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
@@ -309,7 +309,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     function renderEmbeddedActivityIcon() {
                                       let tmp = null;
                                       if (isInEmbeddedActivity) {
-                                        const obj = { source: _modDef8544, size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_16.legacyVoiceStateIcon };
+                                        const obj = { source: _modDef8566, size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_16.legacyVoiceStateIcon };
                                         tmp = timestampProducer(native.Icon, obj);
                                       }
                                       return tmp;
@@ -576,6 +576,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   return tmp7Result;
 }));
-export const getVoiceUserHeight = function getVoiceUserHeight(fontScale) {
+export function getVoiceUserHeight(fontScale) {
   return Math.max(useScaledTextLineHeight.scaleTextLineHeight(c8, fontScale), native.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
-};
+}

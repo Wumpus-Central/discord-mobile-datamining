@@ -1,23 +1,23 @@
-// === Module 12062: ActivityDetailContent ===
+// === Module 12116: ActivityDetailContent ===
 
-// Module 12062 (ActivityDetailContent)
+// Module 12116 (ActivityDetailContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7289 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9683 */;
-import AppLauncherContext from "AppLauncherContext" /* 11207 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11208 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 11967 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12003 */;
-import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 12064 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7313 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9715 */;
+import AppLauncherContext from "AppLauncherContext" /* 11261 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11262 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12021 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12057 */;
+import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 12118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5661 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5663 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 require = fn;
 const View = fn(17).View;
@@ -25,7 +25,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1 }, cardContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderRadius: nativeDefault.radii.lg, overflow: "hidden", gap: nativeDefault.space.PX_16, paddingBottom: PX_12 }, activityHeroDetailsLandscape: { flexDirection: "row" }, heroMediaContainerLandscape: { width: "65%" }, detailsContainerLandscape: { width: "35%" }, details: { marginTop: 16, paddingHorizontal: PX_12, rowGap: 4 }, tagList: null, tag: null, tagText: null, tagIcon: null, buttonContainer: null, activityUrlOverrideInputContainer: null, primaryEntryPointButtonDisabledCTA: null, tryItOutButtonContainerStyle: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderRadius: nativeDefault.radii.lg, overflow: "hidden", gap: nativeDefault.space.PX_16, paddingBottom: PX_12 };
 obj2.tagList = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: nativeDefault.space.PX_8, columnGap: 4, rowGap: 6 };
@@ -344,7 +344,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TryItO
       }
     }
     const obj2 = { size: "lg", loading: tmp5, variant: str, text: tmp8, onPress: tmp6 };
-    const tmp12 = closure_11(tmp(5280).Button, obj2);
+    const tmp12 = closure_11(tmp(5281).Button, obj2);
     cResult[4] = tmp5;
     cResult[5] = tmp6;
     cResult[6] = str;
@@ -399,12 +399,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TryItO
   const items = [applicationId, analyticsLocations];
   let str = "primary";
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
-    v2(1264).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: tmp3(11208).EntryPointCommandButtonActions.OPEN_APP_DM });
+    v2(1264).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: tmp3(11262).EntryPointCommandButtonActions.OPEN_APP_DM });
     const _setTimeout = setTimeout;
     closure_3.current = setTimeout(() => {
       closure_1_2(true);
     }, 250);
-    await v2(11401).launch({ applicationId, analyticsLocations });
+    await v2(11455).launch({ applicationId, analyticsLocations });
     if (1 === tmp7) {
       dependencyMap = 0;
       const _clearTimeout = clearTimeout;
@@ -426,7 +426,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TryItO
   const intl = applicationId(1125).intl;
   obj.text = intl.string(applicationId(1125).t.AUM8hY);
   obj.onPress = callback;
-  return closure_11(applicationId(5280).Button, obj);
+  return closure_11(applicationId(5281).Button, obj);
 });
 ReactCompilerGating = fn(558);
 let obj6 = { marginTop: nativeDefault.space.PX_12, color: nativeDefault.colors.TEXT_MUTED, textAlign: "center" };
@@ -439,10 +439,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   ({ context, sectionName, onActivityItemSelected, entrypoint } = application);
   const tmp4 = closure_15();
   let obj = application(576);
-  const width = application(11207).useRequiredAppLauncherContext().width;
-  const obj2 = application(11207);
-  const getPrimaryAppCommand = application(11444).useGetPrimaryAppCommand(context, application.id);
-  const obj3 = application(11444);
+  const width = application(11261).useRequiredAppLauncherContext().width;
+  const obj2 = application(11261);
+  const getPrimaryAppCommand = application(11498).useGetPrimaryAppCommand(context, application.id);
+  const obj3 = application(11498);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
   [r10041, importDefault] = noop.useState(undefined);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -455,8 +455,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     first = cResult[0];
   }
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
-  const isScreenLandscape = application(8728).useIsScreenLandscape();
-  entrypoint !== application(11208).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+  const isScreenLandscape = application(8731).useIsScreenLandscape();
+  entrypoint !== application(11262).AppLauncherEntrypoint.VOICE && isScreenLandscape;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DeveloperActivityShelfStore];
     cResult[1] = items;
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       }
     }
   }
-  const tmpResult = application(8728);
+  const tmpResult = application(8731);
   const stateFromStoresObject = application(504).useStateFromStoresObject(tmp11, G);
   ({ isDeveloperOfThisApp, activityUrlOverride, useActivityUrlOverride } = stateFromStoresObject);
   const tmpResult3 = application(504);
@@ -528,13 +528,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       const obj5 = { style: null, children: null };
       obj4.marginBottom = 0;
       obj5.style = obj4;
-      const items1 = [closure_11(tmp(6934).TableRowDivider, {}), , ];
+      const items1 = [closure_11(tmp(6958).TableRowDivider, {}), , ];
       const obj6 = { label: null, value: null, onValueChange: null, end: true };
       let intl = tmp(1125).intl;
       obj6.label = intl.string(tmp(1125).t["3TSGuD"]);
       obj6.value = useActivityUrlOverride;
       obj6.onValueChange = DeveloperActivityShelfActionCreatorsAll.toggleUseActivityUrlOverride;
-      items1[1] = closure_11(tmp(7331).TableSwitchRow, obj6);
+      items1[1] = closure_11(tmp(7355).TableSwitchRow, obj6);
       let tmp25Result = null;
       if (useActivityUrlOverride) {
         class G {
@@ -553,7 +553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           }
         }
         const obj7 = { placeholder: "e.g. http://192.168.1.1:3000", value: activityUrlOverride, onChange: DeveloperActivityShelfActionCreatorsAll.setActivityUrlOverride };
-        tmp28[1] = closure_11(tmp(7044).TextInput, obj7);
+        tmp28[1] = closure_11(tmp(7068).TextInput, obj7);
         tmp25Result = closure_11(tmp24, tmp28);
       }
       items1[2] = tmp25Result;
@@ -576,26 +576,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  tmpResult4 = application(9683);
+  tmpResult4 = application(9715);
 }) : (function ActivityDetailContent(application) {
   application = application.application;
   ({ context, entrypoint } = application);
   importDefault = undefined;
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
   const tmp = closure_15();
-  const width = application(11207).useRequiredAppLauncherContext().width;
-  let obj = application(11207);
-  const getPrimaryAppCommand = application(11444).useGetPrimaryAppCommand(context, application.id);
-  const obj2 = application(11444);
+  const width = application(11261).useRequiredAppLauncherContext().width;
+  let obj = application(11261);
+  const getPrimaryAppCommand = application(11498).useGetPrimaryAppCommand(context, application.id);
+  const obj2 = application(11498);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
   [tmp8, c1] = noop.useState(undefined);
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(roundToNearestPixelDefault(nativeEvent.nativeEvent.layout.width));
   }, []);
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
-  const isScreenLandscape = application(8728).useIsScreenLandscape();
-  let detailsContainerLandscape = entrypoint !== application(11208).AppLauncherEntrypoint.VOICE && isScreenLandscape;
-  const obj3 = application(8728);
+  const isScreenLandscape = application(8731).useIsScreenLandscape();
+  let detailsContainerLandscape = entrypoint !== application(11262).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+  const obj3 = application(8731);
   const items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = application(504).useStateFromStoresObject(items, () => ({ isDeveloperOfThisApp: DeveloperActivityShelfStore.inDevModeForApplication(application.id), activityUrlOverride: DeveloperActivityShelfStore.getActivityUrlOverride(), useActivityUrlOverride: DeveloperActivityShelfStore.getUseActivityUrlOverride() }));
   ({ isDeveloperOfThisApp, activityUrlOverride, useActivityUrlOverride } = stateFromStoresObject);
@@ -615,40 +615,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       const obj5 = { style: null, children: null };
       obj4.marginBottom = num2;
       obj5.style = obj4;
-      const items1 = [closure_11(tmp2(6934).TableRowDivider, {}), , ];
+      const items1 = [closure_11(tmp2(6958).TableRowDivider, {}), , ];
       const obj6 = { label: null, value: null, onValueChange: null, end: true };
       let intl = tmp2(1125).intl;
       obj6.label = intl.string(tmp2(1125).t["3TSGuD"]);
       obj6.value = useActivityUrlOverride;
       obj6.onValueChange = DeveloperActivityShelfActionCreatorsAll.toggleUseActivityUrlOverride;
-      items1[1] = closure_11(tmp2(7331).TableSwitchRow, obj6);
+      items1[1] = closure_11(tmp2(7355).TableSwitchRow, obj6);
       let tmp22Result = null;
       if (useActivityUrlOverride) {
         const obj7 = { style: tmp.activityUrlOverrideInputContainer, children: null };
         const obj8 = { placeholder: "e.g. http://192.168.1.1:3000", value: activityUrlOverride, onChange: DeveloperActivityShelfActionCreatorsAll.setActivityUrlOverride };
-        obj7.children = closure_11(tmp2(7044).TextInput, obj8);
+        obj7.children = closure_11(tmp2(7068).TextInput, obj8);
         tmp22Result = closure_11(View, obj7);
       }
       items1[2] = tmp22Result;
       obj5.children = items1;
       tmp20Result = closure_12(View, obj5);
     }
-    const getOrFetchApplication = tmp2(7293).useGetOrFetchApplication(application.id);
+    const getOrFetchApplication = tmp2(7317).useGetOrFetchApplication(application.id);
     let bot;
     if (getOrFetchApplication != null) {
       bot = getOrFetchApplication.bot;
     }
-    const tmp2Result8 = tmp2(7293);
+    const tmp2Result8 = tmp2(7317);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(11967).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(11967);
-    const delayedSwapToActivityActionLeave = tmp2(12065).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(12021).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(12021);
+    const delayedSwapToActivityActionLeave = tmp2(12119).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(12065);
-    ({ reason, disabled } = tmp5(12066)(obj10));
+    const tmp2Result10 = tmp2(12119);
+    ({ reason, disabled } = tmp5(12120)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(12067);
+    tmp5(12121);
     if (bot != null) {
       id = bot.id;
     }
@@ -678,7 +678,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       let tmp39Result2 = null != reason;
       if (tmp39Result2) {
         const obj17 = { variant: "text-sm/normal", style: tmp.primaryEntryPointButtonDisabledCTA, children: reason };
-        tmp39Result2 = closure_11(tmp2(5270).Text, obj17);
+        tmp39Result2 = closure_11(tmp2(5271).Text, obj17);
       }
       items3[1] = tmp39Result2;
       obj16.children = items3;
@@ -688,15 +688,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
         isDeveloperOfThisApp = !hasCommands;
       }
       if (isDeveloperOfThisApp) {
-        isDeveloperOfThisApp = tmp2(9683).isActivityApp(application);
-        const tmp2Result11 = tmp2(9683);
+        isDeveloperOfThisApp = tmp2(9715).isActivityApp(application);
+        const tmp2Result11 = tmp2(9715);
       }
       if (isDeveloperOfThisApp) {
         const obj18 = { style: tmp.buttonContainer, children: null };
         const obj19 = { type: "warning", message: null, role: "none" };
         const intl2 = tmp2(1125).intl;
         obj19.message = intl2.format(tmp2(1125).t["s/3hjE"], {});
-        obj18.children = closure_11(tmp2(7988).InlineNotice, obj19);
+        obj18.children = closure_11(tmp2(8011).InlineNotice, obj19);
         const tmp33 = closure_11(View, obj18);
       }
     }
@@ -715,13 +715,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(12066)(obj10);
+    const tmp29 = tmp5(12120)(obj10);
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(12004), obj25);
+    obj24.children = closure_11(tmp5(12058), obj25);
     const items4 = [closure_11(View, obj24), ];
     const items5 = [tmp.details, ];
     if (detailsContainerLandscape) {
@@ -731,22 +731,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     items5[1] = detailsContainerLandscape;
     obj26.style = items5;
     const obj27 = { application };
-    const items6 = [closure_11(tmp5(9682), obj27), , , , ];
+    const items6 = [closure_11(tmp5(9714), obj27), , , , ];
     const obj28 = { style: tmp.tagList, children: null };
     const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj30 = { style: tmp.tagIcon, size: "xs" };
-    obj29.icon = closure_11(tmp2(8597).GroupIcon, obj30);
-    const tmp5Result3 = tmp5(12004);
+    obj29.icon = closure_11(tmp2(8619).GroupIcon, obj30);
+    const tmp5Result3 = tmp5(12058);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(12069).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(12069);
+    obj29.tagName = tmp2(12123).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(12123);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(12069)(num);
+    obj29.accessibilityLabel = tmp5(12123)(num);
     const items7 = [closure_11(closure_16, obj29, "participants"), ];
     const tags = application.tags;
     let mapped;
@@ -770,11 +770,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     obj22.children = closure_12(View, obj23);
     obj21.children = closure_11(View, obj22);
     obj20.children = closure_11(View, obj21);
-    return closure_11(tmp2(7289).AnalyticsLocationProvider, obj20);
+    return closure_11(tmp2(7313).AnalyticsLocationProvider, obj20);
   } else {
     const _Error = Error;
     const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  tmp2Result7 = application(9683);
+  tmp2Result7 = application(9715);
 });

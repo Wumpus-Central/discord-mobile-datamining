@@ -1,9 +1,9 @@
-// === Module 8390: useIsStickerReplyEnabled ===
+// === Module 8412: useIsStickerReplyEnabled ===
 
-// Module 8390 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7406 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 8412 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7429 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
 
-export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
+export function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
   const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
@@ -37,4 +37,4 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     canResult = arg3;
   }
   return canResult;
-};
+}

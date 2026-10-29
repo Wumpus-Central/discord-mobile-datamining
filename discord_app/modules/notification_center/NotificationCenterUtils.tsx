@@ -1,17 +1,17 @@
-// === Module 6824: NotificationCenterUtils ===
+// === Module 6847: NotificationCenterUtils ===
 
-// Module 6824 (NotificationCenterUtils)
+// Module 6847 (NotificationCenterUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import getTimestampString from "getTimestampString" /* 6060 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6823 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import getTimestampString from "getTimestampString" /* 6064 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6846 */;
 import size from "module_2" /* 2 */;
 
 const getTimestampStringDefault = getTimestampString;
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
-export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult) {
+export function getRelativeTimestamp(extractTimestampResult) {
   if (flag === undefined) {
     flag = true;
   }
@@ -19,8 +19,8 @@ export const getRelativeTimestamp = function getRelativeTimestamp(extractTimesta
   const tmp2 = getTimestampString;
   obj.getFormatter = flag ? tmp2.getAbbreviatedFormatter : tmp2.getFullFormatter;
   return getTimestampStringDefault(obj);
-};
-export const isRemoteAcked = function isRemoteAcked(addResult, setting) {
+}
+export function isRemoteAcked(addResult, setting) {
   let acked = addResult.acked;
   if (!acked) {
     let tmp4 = setting !== UserSettings.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
@@ -30,20 +30,20 @@ export const isRemoteAcked = function isRemoteAcked(addResult, setting) {
     acked = tmp4;
   }
   return acked;
-};
-export const incomingFriendRequestLocalItem = function incomingFriendRequestLocalItem(user, since, origin_application_id) {
+}
+export function incomingFriendRequestLocalItem(user, since, origin_application_id) {
   const obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
   const date = new Date(since);
   return { acked: false, forceUnacked: true, other_user: user, kind: "notification-center-item", local_id: "incoming_friend_requests_" + user.id + "_" + fromTimestampResult, deeplink: "https://discord.com/users/" + user.id, type: NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, id: fromTimestampResult, applicationId: origin_application_id };
-};
-export const incomingGameFriendRequestLocalItem = function incomingGameFriendRequestLocalItem(user, since, applicationId) {
+}
+export function incomingGameFriendRequestLocalItem(user, since, applicationId) {
   const obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
   const date = new Date(since);
   return { acked: false, forceUnacked: true, other_user: user, kind: "notification-center-item", local_id: "incoming_game_friend_requests_" + user.id + "_" + fromTimestampResult, deeplink: "https://discord.com/users/" + user.id, type: NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, id: fromTimestampResult, applicationId };
-};
-export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateAvailableLocalItem(newBuild) {
+}
+export function mobileNativeUpdateAvailableLocalItem(newBuild) {
   const obj = { acked: false, enableBadge: true, id: null, kind: "notification-center-item", local_id: null, type: null, deeplink: null };
   const obj2 = SnowflakeUtilsDefault;
   obj.id = obj2.fromTimestamp(new Date().getTime());
@@ -51,11 +51,11 @@ export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateA
   obj.type = NotificationCenterItemsTypes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
   obj.deeplink = newBuild.urls.install.toString();
   return obj;
-};
-export const isMentionItem = function isMentionItem(addResult) {
+}
+export function isMentionItem(addResult) {
   let tmp3 = addResult.type === NotificationCenterItemsTypes.NotificationCenterItems.RECENT_MENTION;
   if (!tmp3) {
     tmp3 = addResult.type === NotificationCenterItemsTypes.NotificationCenterItems.REPLY_MENTION;
   }
   return tmp3;
-};
+}

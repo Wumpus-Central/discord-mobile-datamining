@@ -1,15 +1,15 @@
-// === Module 15687: Badge/Badge ===
+// === Module 15923: Badge/Badge ===
 
-// Module 15687 (Badge/Badge)
+// Module 15923 (Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NumberUtils from "NumberUtils" /* 1900 */;
-import shared from "shared" /* 5011 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 9000 */;
+import NumberUtils from "NumberUtils" /* 1901 */;
+import shared from "shared" /* 5012 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 9003 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const BadgeConstants = fn(1201);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" }, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 let obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
 let PlatformUtils = fn(1381);

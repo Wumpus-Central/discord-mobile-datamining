@@ -1,13 +1,13 @@
-// === Module 12242: conjureGuildPickerSources ===
+// === Module 12296: conjureGuildPickerSources ===
 
-// Module 12242 (conjureGuildPickerSources)
+// Module 12296 (conjureGuildPickerSources)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import UserUtils from "UserUtils" /* 5058 */;
-import GuildUtilsDefault from "GuildUtils" /* 6865 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6866 */;
+import UserUtils from "UserUtils" /* 5059 */;
+import GuildUtilsDefault from "GuildUtils" /* 6888 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6889 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildRoleStore from "GuildRoleStore" /* 4910 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildRoleStore from "GuildRoleStore" /* 4911 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -113,13 +113,13 @@ const result = size.fileFinishedImporting("modules/conjure/guild_pickers/conjure
 
 export const useConjureGuildRoles = tmp2;
 export const useConjureGuildMemberUsers = tmp3;
-export const conjureMemberUsername = function conjureMemberUsername(id, stateFromStores1) {
+export function conjureMemberUsername(id, stateFromStores1) {
   let identifiable = "always";
   if (stateFromStores1) {
     identifiable = "never";
   }
   return UserUtils.getUserTag(id, { identifiable });
-};
+}
 export const useConjureMemberRequests = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureMemberRequests(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(13);

@@ -1,22 +1,22 @@
-// === Module 10123: ForumComposerModal ===
+// === Module 10156: ForumComposerModal ===
 
-// Module 10123 (ForumComposerModal)
+// Module 10156 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8336 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9699 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10122 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1501 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8358 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9731 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10155 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10124 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import DraftStore from "DraftStore" /* 7666 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8325 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7421 */;
+import NativeMenuStore from "NativeMenuStore" /* 10157 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import DraftStore from "DraftStore" /* 7689 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8347 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7444 */;
 
 require = fn;
 function showForumComposerCloseAlert(arg0) {
@@ -36,9 +36,9 @@ function showForumComposerCloseAlert(arg0) {
   actions_AlertActionCreatorsDefault.show(obj3);
 }
 const View = fn(17).View;
-const DraftType = fn(7666).DraftType;
+const DraftType = fn(7689).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

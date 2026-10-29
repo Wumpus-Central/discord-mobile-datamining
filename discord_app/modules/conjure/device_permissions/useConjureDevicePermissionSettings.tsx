@@ -1,10 +1,10 @@
-// === Module 14240: useConjureDevicePermissionSettings ===
+// === Module 14476: useConjureDevicePermissionSettings ===
 
-// Module 14240 (useConjureDevicePermissionSettings)
+// Module 14476 (useConjureDevicePermissionSettings)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10835 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 10911 */;
 import noop from "module_19" /* 19 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10834 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10910 */;
 
 const require = globalThis.__r;
 
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   let obj = require("c");
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
   if (cResult[4] !== stateFromStoresObject) {
-    const prop = tmp(10835).CONJURE_DEVICE_PERMISSION_NAMES;
-    const found = prop.filter(tmp(10835).isConjureDevicePermissionSupported);
+    const prop = tmp(10911).CONJURE_DEVICE_PERMISSION_NAMES;
+    const found = prop.filter(tmp(10911).isConjureDevicePermissionSupported);
     const mapped = found.map((permission) => {
       const obj = { permission, decision: null };
       let tmp = stateFromStoresObject[permission];

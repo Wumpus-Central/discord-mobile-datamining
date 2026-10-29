@@ -1,8 +1,8 @@
-// === Module 17557: useShouldDisableMessageRequestSettings ===
+// === Module 17795: useShouldDisableMessageRequestSettings ===
 
-// Module 17557 (useShouldDisableMessageRequestSettings)
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5687 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
+// Module 17795 (useShouldDisableMessageRequestSettings)
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5689 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

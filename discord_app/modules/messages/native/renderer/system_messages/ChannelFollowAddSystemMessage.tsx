@@ -1,15 +1,15 @@
-// === Module 8409: ChannelFollowAddSystemMessage ===
+// === Module 8431: ChannelFollowAddSystemMessage ===
 
-// Module 8409 (ChannelFollowAddSystemMessage)
+// Module 8431 (ChannelFollowAddSystemMessage)
 import util from "util" /* 1125 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx");
 
-export const createChannelFollowAddSystemMessage = function createChannelFollowAddSystemMessage(roleStyle) {
+export function createChannelFollowAddSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { content: null };
@@ -17,4 +17,4 @@ export const createChannelFollowAddSystemMessage = function createChannelFollowA
   obj2.content = intl.formatToParts(util.t.xH8qGO, { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), webhookName: message.content, webhookNameOnClick: { action: "bindGuildMenu", messageReference: message.messageReference, medium: true } });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
-};
+}

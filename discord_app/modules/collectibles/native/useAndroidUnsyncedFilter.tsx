@@ -1,15 +1,15 @@
-// === Module 16632: useAndroidUnsyncedFilter ===
+// === Module 16870: useAndroidUnsyncedFilter ===
 
-// Module 16632 (useAndroidUnsyncedFilter)
+// Module 16870 (useAndroidUnsyncedFilter)
 import _mod19 from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5273 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import DevSettingsStore from "DevSettingsStore" /* 5274 */;
+import IAPStore from "IAPStore" /* 7582 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
 const result = size.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
 
-export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
+export function useAndroidUnsyncedFilter() {
   isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(stateFromStores[3]).useIsInImprovedMobileShopLoading();
   const obj = isInImprovedMobileShopLoading(stateFromStores[3]);
   const items = [IAPStore];
@@ -48,4 +48,4 @@ export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
     }
     return found;
   }, items5);
-};
+}

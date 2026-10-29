@@ -1,12 +1,12 @@
-// === Module 14994: PremiumMarketingButtonActions ===
+// === Module 15229: PremiumMarketingButtonActions ===
 
-// Module 14994 (PremiumMarketingButtonActions)
-import ProductIds from "ProductIds" /* 7555 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7569 */;
-import cta_button from "cta_button" /* 9558 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 14995 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 14996 */;
-import PromotionsStore from "PromotionsStore" /* 9551 */;
+// Module 15229 (PremiumMarketingButtonActions)
+import ProductIds from "ProductIds" /* 7578 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7592 */;
+import cta_button from "cta_button" /* 9590 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 15230 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 15231 */;
+import PromotionsStore from "PromotionsStore" /* 9583 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx");
 
-export const getButtonActionHandler = function getButtonActionHandler(arg0) {
+export function getButtonActionHandler(arg0) {
   ({ buttonAction, applicationId: require, analyticsLocations: importDefault, analyticsPage: dependencyMap, onPaymentSuccess: PromotionsStore, onPaymentDismiss: PremiumTypes } = arg0);
   if (cta_button.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
     return () => {
@@ -74,4 +74,4 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
       analyticsLocations(page[5])(obj);
     };
   }
-};
+}

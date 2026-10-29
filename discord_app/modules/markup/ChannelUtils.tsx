@@ -1,16 +1,16 @@
-// === Module 6038: markup/ChannelUtils ===
+// === Module 6042: markup/ChannelUtils ===
 
-// Module 6038 (markup/ChannelUtils)
-import ChannelRecord from "ChannelRecord" /* 4860 */;
+// Module 6042 (markup/ChannelUtils)
+import ChannelRecord from "ChannelRecord" /* 4861 */;
 import size from "module_2" /* 2 */;
 
 ({ isGuildSelectableChannelType: closure_0, isGuildVocalChannelType: closure_1 } = ChannelRecord);
 const result = size.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
 
-export const isChannelTypeMentionable = function isChannelTypeMentionable(type) {
+export function isChannelTypeMentionable(type) {
   let tmp = React(type);
   if (!tmp) {
     tmp = framebus(type);
   }
   return tmp;
-};
+}

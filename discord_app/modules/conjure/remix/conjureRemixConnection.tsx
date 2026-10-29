@@ -1,9 +1,9 @@
-// === Module 10845: conjureRemixConnection ===
+// === Module 10921: conjureRemixConnection ===
 
-// Module 10845 (conjureRemixConnection)
+// Module 10921 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10762 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10837 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -132,7 +132,7 @@ export const remixFrameHandlers = {
     DispatcherDefault.dispatch({ type: "CONJURE_REMIX_STATE_SET", projectId: projectId.projectId, pending: pending.pending, failed: pending.failed });
   }
 };
-export const acceptRemix = function acceptRemix() {
+export function acceptRemix() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -141,7 +141,7 @@ export const acceptRemix = function acceptRemix() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendRetryRemix = function sendRetryRemix(projectId) {
+}
+export function sendRetryRemix(projectId) {
   return conjureProjectSockets.sendOnConjureSocket(projectId, "retry remix", (sendRetryRemix) => sendRetryRemix.sendRetryRemix());
-};
+}

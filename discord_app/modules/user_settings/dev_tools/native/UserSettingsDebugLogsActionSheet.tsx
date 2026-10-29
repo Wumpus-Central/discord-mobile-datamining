@@ -1,16 +1,16 @@
-// === Module 17196: UserSettingsDebugLogsActionSheet ===
+// === Module 17435: UserSettingsDebugLogsActionSheet ===
 
-// Module 17196 (UserSettingsDebugLogsActionSheet)
+// Module 17435 (UserSettingsDebugLogsActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import TableRow from "TableRow" /* 6939 */;
-import TableRadioRow from "TableRadioRow" /* 7020 */;
-import TableRadioGroup from "TableRadioGroup" /* 7021 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
-import ActionSheet from "ActionSheet" /* 7334 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import TableRow from "TableRow" /* 6963 */;
+import TableRadioRow from "TableRadioRow" /* 7044 */;
+import TableRadioGroup from "TableRadioGroup" /* 7045 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7308 */;
+import ActionSheet from "ActionSheet" /* 7358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -148,6 +148,6 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSet
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx");
 
-export const openUserSettingsDebugLogsFiltersActionSheet = function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
+export function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_5 }), "UserSettingsDebugLogsFiltersActionSheet", arg0);
-};
+}

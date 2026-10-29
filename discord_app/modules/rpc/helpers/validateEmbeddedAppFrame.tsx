@@ -1,14 +1,14 @@
-// === Module 15972: validateEmbeddedAppFrame ===
+// === Module 16208: validateEmbeddedAppFrame ===
 
-// Module 15972 (validateEmbeddedAppFrame)
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9289 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9290 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10765 */;
-import RPCHelpers from "RPCHelpers" /* 11520 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15973 */;
+// Module 16208 (validateEmbeddedAppFrame)
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9293 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9294 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
+import RPCHelpers from "RPCHelpers" /* 11574 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16209 */;
 
 require = fn;
 function validateEmbeddedAppFrame(socket) {
@@ -93,10 +93,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 
 export default validateEmbeddedAppFrame;
-export const validateEmbeddedAppFrameOnAnySurface = function validateEmbeddedAppFrameOnAnySurface(require) {
+export function validateEmbeddedAppFrameOnAnySurface(require) {
   return validateFrame(require, true);
-};
-export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(socket) {
+}
+export function tryValidateEmbeddedAppFrame(socket) {
   try {
     return validateEmbeddedAppFrame(socket);
   } catch (tmp3) {
@@ -106,4 +106,4 @@ export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(
       throw tmp3;
     }
   }
-};
+}

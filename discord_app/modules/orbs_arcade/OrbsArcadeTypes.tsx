@@ -1,6 +1,6 @@
-// === Module 16663: OrbsArcadeTypes ===
+// === Module 16901: OrbsArcadeTypes ===
 
-// Module 16663 (OrbsArcadeTypes)
+// Module 16901 (OrbsArcadeTypes)
 import _slicedToArray from "module_32" /* 32 */;
 
 function _rewardFromServer(type) {
@@ -16,7 +16,14 @@ function _rewardFromServer(type) {
   }
 }
 function orbsArcadeGameFromServer(id) {
-  obj = { id: id.id, versionId: id.version_id, applicationId: id.application_id, name: id.name, instructions: id.instructions, startsAt: id.starts_at, endsAt: id.ends_at, orbCost: id.orb_cost, numFreePlays: id.num_free_plays, windowDurationHours: id.window_duration_hours, asset: id.asset, rewards: null };
+  obj = { id: id.id, versionId: id.version_id, applicationId: id.application_id, name: id.name, instructions: id.instructions, startsAt: id.starts_at, endsAt: id.ends_at, orbCost: id.orb_cost, numFreePlays: id.num_free_plays, windowDurationHours: id.window_duration_hours, asset: id.asset, heroVideoAsset: null, rewards: null };
+  let tmp = null;
+  if (null != id.hero_video_asset) {
+    const size = { url: null, altText: null, mimeType: null, width: null, height: null };
+    ({ url: obj2.url, alt_text: obj2.altText, mime_type: obj2.mimeType, width: obj2.width, height: obj2.height } = id.hero_video_asset);
+    tmp = size;
+  }
+  obj.heroVideoAsset = tmp;
   const rewards = id.rewards;
   obj.rewards = rewards.map(_rewardFromServer);
   return obj;
@@ -45,14 +52,14 @@ function orbsArcadeGameStateFromServer(game_state) {
   return obj5;
 }
 const OrbsArcadeRewardType = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", COLLECTIBLE: 1, [1]: "COLLECTIBLE", FRACTIONAL_PREMIUM: 2, [2]: "FRACTIONAL_PREMIUM" };
-const size = fn(2);
+let size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/OrbsArcadeTypes.tsx");
 
 export { OrbsArcadeRewardType };
 export const OrbsArcadeRewardStatus = { LOCKED: "locked", CLAIMABLE: "claimable", CLAIMED: "claimed" };
 export { orbsArcadeGameFromServer };
 export { orbsArcadeGameStateFromServer };
-export const orbsArcadeGamesFromServer = function orbsArcadeGamesFromServer(body) {
+export function orbsArcadeGamesFromServer(body) {
   const gameStateByGameId = {};
   const values = Object.values(body.game_state_by_game_id);
   for (const item10011 of values) {
@@ -63,22 +70,29 @@ export const orbsArcadeGamesFromServer = function orbsArcadeGamesFromServer(body
   const games = body.games;
   obj2.games = games.map(orbsArcadeGameFromServer);
   return obj2;
-};
-export const orbsArcadeApplicationGameFromServer = function orbsArcadeApplicationGameFromServer(game) {
-  obj = { game: null, gameState: null, enrollmentClosesAt: null, canAffordRun: null };
+}
+export function orbsArcadeApplicationGameFromServer(game) {
   game = game.game;
-  const obj2 = { id: game.id, versionId: game.version_id, applicationId: game.application_id, name: game.name, instructions: game.instructions, startsAt: game.starts_at, endsAt: game.ends_at, orbCost: game.orb_cost, numFreePlays: game.num_free_plays, windowDurationHours: game.window_duration_hours, asset: game.asset, rewards: null };
-  const rewards = game.rewards;
-  obj2.rewards = rewards.map(_rewardFromServer);
-  obj.game = obj2;
+  game = { id: game.id, versionId: game.version_id, applicationId: game.application_id, name: game.name, instructions: game.instructions, startsAt: game.starts_at, endsAt: game.ends_at, orbCost: game.orb_cost, numFreePlays: game.num_free_plays, windowDurationHours: game.window_duration_hours, asset: game.asset, heroVideoAsset: null, rewards: null };
   let tmp = null;
-  if (null != game.game_state) {
-    tmp = orbsArcadeGameStateFromServer(game.game_state);
+  if (null != game.hero_video_asset) {
+    const size = { url: null, altText: null, mimeType: null, width: null, height: null };
+    ({ url: obj2.url, alt_text: obj2.altText, mime_type: obj2.mimeType, width: obj2.width, height: obj2.height } = game.hero_video_asset);
+    tmp = size;
   }
-  obj.gameState = tmp;
-  ({ enrollment_closes_at: obj.enrollmentClosesAt, can_afford_run: obj.canAffordRun } = game);
-  return obj;
-};
-export const orbsArcadeClaimedRewardFromServer = function orbsArcadeClaimedRewardFromServer(body) {
+  const obj4 = { game: null, gameState: null, enrollmentClosesAt: null, canAffordRun: null };
+  game.heroVideoAsset = tmp;
+  const rewards = game.rewards;
+  game.rewards = rewards.map(_rewardFromServer);
+  obj4.game = game;
+  let tmp2 = null;
+  if (null != game.game_state) {
+    tmp2 = orbsArcadeGameStateFromServer(game.game_state);
+  }
+  obj4.gameState = tmp2;
+  ({ enrollment_closes_at: obj3.enrollmentClosesAt, can_afford_run: obj3.canAffordRun } = game);
+  return obj4;
+}
+export function orbsArcadeClaimedRewardFromServer(body) {
   return { gameState: orbsArcadeGameStateFromServer(body.game_state), entitlements: body.entitlements };
-};
+}

@@ -1,14 +1,14 @@
-// === Module 11403: _tryJoinAsFrame ===
+// === Module 11457: _tryJoinAsFrame ===
 
-// Module 11403 (_tryJoinAsFrame)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11397 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11402 */;
+// Module 11457 (_tryJoinAsFrame)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7471 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11451 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11456 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
 
 require = fn;
 let closure_10 = async function _tryJoinAsFrame(arg0) {
@@ -25,7 +25,7 @@ let closure_10 = async function _tryJoinAsFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_11 = async function _tryStartAsEmbeddedApp(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -220,7 +220,7 @@ let closure_12 = async function _startFrame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -265,7 +265,7 @@ let closure_12 = async function _startFrame(arg0) {
           let frameParticipantId;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -366,7 +366,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -469,11 +469,11 @@ let closure_13 = async function _startActivity(arg0, arg1) {
   })();
 };
 const ActivityFlags = fn(1084).ActivityFlags;
-const MAIN_SURFACE = fn(6811).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6834).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 
-export const tryJoinAsFrame = function tryJoinAsFrame() {
+export function tryJoinAsFrame() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -482,8 +482,8 @@ export const tryJoinAsFrame = function tryJoinAsFrame() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const tryStartAsEmbeddedApp = function tryStartAsEmbeddedApp() {
+}
+export function tryStartAsEmbeddedApp() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -492,4 +492,4 @@ export const tryStartAsEmbeddedApp = function tryStartAsEmbeddedApp() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

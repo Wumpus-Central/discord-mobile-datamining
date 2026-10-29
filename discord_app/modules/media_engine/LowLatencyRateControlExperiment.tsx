@@ -1,7 +1,7 @@
-// === Module 15578: LowLatencyRateControlExperiment ===
+// === Module 15859: LowLatencyRateControlExperiment ===
 
-// Module 15578 (LowLatencyRateControlExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+// Module 15859 (LowLatencyRateControlExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 const obj = { kind: "user", name: "2025-10-low-latency-rate-control", defaultConfig: { enabled: false }, variations: null };
 let obj2 = { 1: null };
@@ -11,7 +11,7 @@ const config = apex_ApexExperimentDefault(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/LowLatencyRateControlExperiment.tsx");
 
-export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRateControlExperimentConfig(disable) {
+export function getLowLatencyRateControlExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
@@ -23,4 +23,4 @@ export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRa
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;
-};
+}

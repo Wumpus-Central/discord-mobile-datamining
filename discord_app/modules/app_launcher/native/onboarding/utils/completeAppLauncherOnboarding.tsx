@@ -1,8 +1,8 @@
-// === Module 11956: completeAppLauncherOnboarding ===
+// === Module 12010: completeAppLauncherOnboarding ===
 
-// Module 11956 (completeAppLauncherOnboarding)
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
+// Module 12010 (completeAppLauncherOnboarding)
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/utils/completeAppLauncherOnboarding.tsx");

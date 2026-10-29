@@ -1,13 +1,13 @@
-// === Module 9333: useGameProfileInvite ===
+// === Module 9337: useGameProfileInvite ===
 
-// Module 9333 (useGameProfileInvite)
+// Module 9337 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1101 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8900 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8903 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2019 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4858 */;
-import InviteStore from "InviteStore" /* 5736 */;
+import GameStore from "GameStore" /* 2020 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4859 */;
+import InviteStore from "InviteStore" /* 5738 */;
 
 const require = globalThis.__r;
 
@@ -85,7 +85,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameP
   obj3.isResolving = tmp8;
   return obj3;
 });
-export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsite(game) {
+export function hasGameProfileDiscordWebsite(game) {
   let flag;
   if (game != null) {
     const websites = game.websites;
@@ -372,8 +372,8 @@ export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsit
     flag = false;
   }
   return flag;
-};
-export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) {
+}
+export function preloadGameProfileInvite(arg0) {
   _require = arg0;
   const useGame = require("useGame").useGame;
   let items = [arg0];
@@ -404,4 +404,4 @@ export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) 
       const many = closure_10.fetchMany(items);
     }
   });
-};
+}

@@ -1,8 +1,8 @@
-// === Module 8306: GuildTagConstants ===
+// === Module 8328: GuildTagConstants ===
 
-// Module 8306 (GuildTagConstants)
+// Module 8328 (GuildTagConstants)
 import Constants from "Constants" /* 1084 */;
-import Powerups from "Powerups" /* 5221 */;
+import Powerups from "Powerups" /* 5222 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;
@@ -28,15 +28,15 @@ export const GuildTagPalettePresetColor = obj2;
 export const GUILD_TAG_BADGE_PALETTE_PRESETS = items;
 export const GUILD_TAG_BADGE_PRIMARY_DEFAULT = items[0].primary;
 export const GUILD_TAG_BADGE_SECONDARY_DEFAULT = items[0].secondary;
-export const getRandomGuildTagBadgePreset = function getRandomGuildTagBadgePreset() {
+export function getRandomGuildTagBadgePreset() {
   return items[Math.floor(Math, Math.random(Math) * items.length)];
-};
+}
 export const GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS = { [GuildTagBadgeKind.SWORD]: 2, [GuildTagBadgeKind.WATER_DROP]: 1, [GuildTagBadgeKind.SKULL]: 1, [GuildTagBadgeKind.TOADSTOOL]: 2, [GuildTagBadgeKind.MOON]: 1, [GuildTagBadgeKind.LIGHTNING]: 1, [GuildTagBadgeKind.LEAF]: 1, [GuildTagBadgeKind.HEART]: 1, [GuildTagBadgeKind.FIRE]: 1, [GuildTagBadgeKind.COMPASS]: 2, [GuildTagBadgeKind.CROSSHAIRS]: 2, [GuildTagBadgeKind.FLOWER]: 2, [GuildTagBadgeKind.FORCE]: 2, [GuildTagBadgeKind.GEM]: 2, [GuildTagBadgeKind.LAVA]: 2, [GuildTagBadgeKind.PSYCHIC]: 2, [GuildTagBadgeKind.SMOKE]: 2, [GuildTagBadgeKind.SNOW]: 2, [GuildTagBadgeKind.SOUND]: 2, [GuildTagBadgeKind.SUN]: 2, [GuildTagBadgeKind.WIND]: 2, [GuildTagBadgeKind.BUNNY]: 1, [GuildTagBadgeKind.DOG]: 2, [GuildTagBadgeKind.FROG]: 2, [GuildTagBadgeKind.GOAT]: 1, [GuildTagBadgeKind.CAT]: 1, [GuildTagBadgeKind.DIAMOND]: 1, [GuildTagBadgeKind.CROWN]: 2, [GuildTagBadgeKind.TROPHY]: 1, [GuildTagBadgeKind.MONEY_BAG]: 1, [GuildTagBadgeKind.DOLLAR_SIGN]: 1, [GuildTagBadgeKind.BEE]: 1, [GuildTagBadgeKind.SPIDER]: 2, [GuildTagBadgeKind.CATERPILLAR]: 2, [GuildTagBadgeKind.SNAIL]: 2, [GuildTagBadgeKind.BUTTERFLY]: 2, [GuildTagBadgeKind.WILTED_FLOWER]: 2, [GuildTagBadgeKind.BLOSSOM]: 1, [GuildTagBadgeKind.POTTED_PLANT]: 2, [GuildTagBadgeKind.CLOVER]: 1, [GuildTagBadgeKind.MAPLE]: 1 };
-export const getRandomGuildTagBadgeKind = function getRandomGuildTagBadgeKind() {
+export function getRandomGuildTagBadgeKind() {
   const keys = Object.keys(obj);
   const found = keys.filter((item) => isNaN(Number(item)));
   return obj[found[Math.floor(Math, Math.random(Math) * found.length)]];
-};
+}
 export const GuildTagBadgeSize = obj4;
 export const GuildTagBadgeMediaProxySizes = { [obj4.SIZE_12]: 16, [obj4.SIZE_14]: 16, [obj4.SIZE_16]: 16, [obj4.SIZE_24]: 24, [obj4.SIZE_32]: 32, [obj4.SIZE_36]: 40 };
 export const GuildTagBadgeMediaProxySizesMobile = { [obj4.SIZE_12]: 32, [obj4.SIZE_14]: 32, [obj4.SIZE_16]: 32, [obj4.SIZE_24]: 48, [obj4.SIZE_32]: 64, [obj4.SIZE_36]: 80 };

@@ -1,12 +1,12 @@
-// === Module 18883: VoicePanelPreJoinUtils ===
+// === Module 19116: VoicePanelPreJoinUtils ===
 
-// Module 18883 (VoicePanelPreJoinUtils)
+// Module 19116 (VoicePanelPreJoinUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 
-export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers, arg1) {
+export function areVoicePanelPreJoinContentPropsEqual(streamingMembers, arg1) {
   if (null != streamingMembers) {
     if (null != arg1) {
       if (discord_common_shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
@@ -38,4 +38,4 @@ export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJo
     }
   }
   return streamingMembers === arg1;
-};
+}

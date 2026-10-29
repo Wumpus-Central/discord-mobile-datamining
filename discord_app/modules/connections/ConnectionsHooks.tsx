@@ -1,19 +1,19 @@
-// === Module 7647: ConnectionsHooks ===
+// === Module 7670: ConnectionsHooks ===
 
-// Module 7647 (ConnectionsHooks)
+// Module 7670 (ConnectionsHooks)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import PlatformsDefault from "Platforms" /* 6537 */;
+import PlatformsDefault from "Platforms" /* 6561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const Constants = fn(1084);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7648).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7671).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -230,11 +230,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlatforms
   const tmpResult = require("initialize");
   const obj4 = set(12);
   const items1 = [tmp15, tmp16, tmp17, tmp18, A];
-  sortByResult = obj4.sortBy(set(6537).filter(tmp8), items1);
+  sortByResult = obj4.sortBy(set(6561).filter(tmp8), items1);
   cResult[5] = tmp9;
   cResult[6] = tmp8;
   cResult[7] = sortByResult;
-  const arr3 = set(6537);
+  const arr3 = set(6561);
 }) : (function usePlatforms() {
   let items = [ConnectedAccountsStore];
   stateFromStores = stateFromStores(memo[9]).useStateFromStores(items, () => accounts.getAccounts());
@@ -335,7 +335,7 @@ export const useEmptyStatePlatforms = ReactCompilerGating.isReactCompilerEnabled
     return obj.sortBy(PlatformsDefault.filter(closure_0), items);
   }, items);
 });
-export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
+export function useLegacyPlatformType(arg0) {
   function handleKeyDown(key) {
     if (key.key === KeyboardKeysUpdated.SHIFT) {
       _require(true);
@@ -363,4 +363,4 @@ export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
     }
   }
   return TWITTER_LEGACY;
-};
+}

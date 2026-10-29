@@ -1,18 +1,18 @@
-// === Module 18427: PeopleScreen ===
+// === Module 18661: PeopleScreen ===
 
-// Module 18427 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13477 */;
+// Module 18661 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13710 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13485 */;
-import SearchQueryStore from "SearchQueryStore" /* 13470 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13718 */;
+import SearchQueryStore from "SearchQueryStore" /* 13703 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9748);
+const SearchConstants = fn(9780);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-const constants2 = fn(9747).SearchResultContentEntityTypes;
+const constants2 = fn(9779).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -270,7 +270,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -306,7 +306,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const result = closure_1(onPressGroupDMItem[14]).trackSearchResultClicked(obj7);
             tmp5(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c5 = tmp;
@@ -365,7 +365,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -402,7 +402,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const result = closure_1(stateFromStores[14]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c5 = tmp;

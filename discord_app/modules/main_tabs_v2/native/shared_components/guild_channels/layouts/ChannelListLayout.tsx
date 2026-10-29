@@ -1,11 +1,11 @@
-// === Module 11993: ChannelListLayout ===
+// === Module 12047: ChannelListLayout ===
 
-// Module 11993 (ChannelListLayout)
-import UserSettings from "UserSettings" /* 4832 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5679 */;
-import CozyDrawer from "CozyDrawer" /* 11994 */;
-import Compact from "Compact" /* 11996 */;
-import Cozy from "Cozy" /* 11997 */;
+// Module 12047 (ChannelListLayout)
+import UserSettings from "UserSettings" /* 4833 */;
+import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5681 */;
+import CozyDrawer from "CozyDrawer" /* 12048 */;
+import Compact from "Compact" /* 12050 */;
+import Cozy from "Cozy" /* 12051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -40,9 +40,9 @@ export function makeSizeStyle(size) {
   return size;
 }
 export { isLayoutCompact };
-export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
+export function isLayoutCozy(messagesTabLayout) {
   return messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-};
+}
 export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagesTabLayout(arg0) {
   const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
   const setting = ChannelListLayoutSetting.useSetting();
@@ -68,7 +68,7 @@ export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled()
   }
   return COZY;
 });
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale, layout) {
+export function getScaledChannelRowHeight(fontScale, layout) {
   let flag = isThreadResult;
   if (isThreadResult === undefined) {
     flag = false;
@@ -94,4 +94,4 @@ export const getScaledChannelRowHeight = function getScaledChannelRowHeight(font
     num = 4;
   }
   return sum + result + num;
-};
+}

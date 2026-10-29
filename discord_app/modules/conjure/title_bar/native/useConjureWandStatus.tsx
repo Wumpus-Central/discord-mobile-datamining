@@ -1,13 +1,13 @@
-// === Module 14392: useConjureWandStatus ===
+// === Module 14626: useConjureWandStatus ===
 
-// Module 14392 (useConjureWandStatus)
+// Module 14626 (useConjureWandStatus)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import useMountEffectDefault from "useMountEffect" /* 5299 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
-import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 14393 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import useMountEffectDefault from "useMountEffect" /* 5300 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
+import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 14627 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   useMountEffectDefault(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3863.uk6jhJ);
+    const stringResult = intl.string(_modDef3864.uk6jhJ);
     cResult[1] = stringResult;
     let tmp9 = stringResult;
   } else {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     let stringResult1 = null;
     if (tmp11) {
       const intl2 = util.intl;
-      stringResult1 = intl2.string(_modDef3863["Y8pS+n"]);
+      stringResult1 = intl2.string(_modDef3864["Y8pS+n"]);
     }
     cResult[2] = tmp11;
     cResult[3] = stringResult1;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     let stringResult2 = null;
     if ("needs_input" === kind2) {
       const intl3 = util.intl;
-      stringResult2 = intl3.string(_modDef3863.hfIuc7);
+      stringResult2 = intl3.string(_modDef3864.hfIuc7);
     }
     let kind3;
     if (status != null) {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     let stringResult3 = null;
     if ("unread" === kind5) {
       const intl4 = util.intl;
-      stringResult3 = intl4.string(_modDef3863["6XGnHJ"]);
+      stringResult3 = intl4.string(_modDef3864["6XGnHJ"]);
     }
     let kind6;
     if (status != null) {
@@ -154,11 +154,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   obj.hasBadge = hasUnread;
   const intl = util.intl;
-  const items = [intl.string(_modDef3863.uk6jhJ), , , ];
+  const items = [intl.string(_modDef3864.uk6jhJ), , , ];
   let stringResult = null;
   if ("working" === kind) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef3863["Y8pS+n"]);
+    stringResult = intl2.string(_modDef3864["Y8pS+n"]);
   }
   items[1] = stringResult;
   let kind1;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   let stringResult1 = null;
   if ("needs_input" === kind1) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef3863.hfIuc7);
+    stringResult1 = intl3.string(_modDef3864.hfIuc7);
   }
   items[2] = stringResult1;
   let kind2;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   let stringResult2 = null;
   if ("unread" === kind2) {
     const intl4 = util.intl;
-    stringResult2 = intl4.string(_modDef3863["6XGnHJ"]);
+    stringResult2 = intl4.string(_modDef3864["6XGnHJ"]);
   }
   items[3] = stringResult2;
   const found = items.filter((item) => null != item);

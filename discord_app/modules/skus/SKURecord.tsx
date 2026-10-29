@@ -1,14 +1,14 @@
-// === Module 2044: SKURecord ===
+// === Module 2045: SKURecord ===
 
-// Module 2044 (SKURecord)
-import _modDef2046 from "module_2046" /* 2046 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 2047 */;
-import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 2049 */;
+// Module 2045 (SKURecord)
+import _modDef2047 from "module_2047" /* 2047 */;
+import getPricesFromServerDefault from "getPricesFromServer" /* 2048 */;
+import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 2050 */;
 import Record from "Record" /* 1404 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 const require = fn;
-fn(2045).THE_GAME_AWARD_WINNER_SKUS;
+fn(2046).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1084);
 ({ GIFTABLE_CURRENCIES: hasOwnProperty, OperatingSystems: metroRequire, SKUFlags: closure_7, SKUTypes: closure_8 } = Constants);
 let SKURecord;
@@ -47,12 +47,12 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.name = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = _modDef2046(id.release_date);
+    tmp6 = _modDef2047(id.release_date);
   }
   obj.releaseDate = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = _modDef2046(id.preorder_release_at);
+    tmp9 = _modDef2047(id.preorder_release_at);
   }
   obj.preorderReleaseAt = tmp9;
   ({ preorder_approximate_release_date: obj.preorderApproximateReleaseDate, summary: obj.summary } = id);
@@ -122,7 +122,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.eligibleOffers = eligible_offers;
   let tmp17 = null;
   if (null != id.preview_asset_paths) {
-    const obj5 = { fgStatic: id.preview_asset_paths.fg_static, fgAnimated: id.preview_asset_paths.fg_animated, bgStatic: id.preview_asset_paths.bg_static, bgAnimated: id.preview_asset_paths.bg_animated };
+    const obj5 = { fgStatic: id.preview_asset_paths.fg_static, fgVideo: id.preview_asset_paths.fg_video, fgAnimated: id.preview_asset_paths.fg_animated, bgStatic: id.preview_asset_paths.bg_static, bgAnimated: id.preview_asset_paths.bg_animated };
     tmp17 = obj5;
   }
   obj.previewAssetPaths = tmp17;

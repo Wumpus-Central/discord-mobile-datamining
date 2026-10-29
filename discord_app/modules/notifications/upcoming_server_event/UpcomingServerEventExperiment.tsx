@@ -1,8 +1,8 @@
-// === Module 17141: UpcomingServerEventExperiment ===
+// === Module 17380: UpcomingServerEventExperiment ===
 
-// Module 17141 (UpcomingServerEventExperiment)
+// Module 17380 (UpcomingServerEventExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,6 +28,6 @@ export const useUpcomingServerEventExperiment = ReactCompilerGating.isReactCompi
 }) : (function useUpcomingServerEventExperiment(location) {
   return apexExperiment.useConfig({ location });
 });
-export const isEligibleForUpcomingServerEventNotifications = function isEligibleForUpcomingServerEventNotifications(location) {
+export function isEligibleForUpcomingServerEventNotifications(location) {
   return apexExperiment.getConfig({ location }).showSettingsToggle;
-};
+}

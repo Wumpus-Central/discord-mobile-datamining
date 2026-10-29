@@ -1,6 +1,6 @@
-// === Module 14483: EmbedIFrameConfig ===
+// === Module 14717: EmbedIFrameConfig ===
 
-// Module 14483 (EmbedIFrameConfig)
+// Module 14717 (EmbedIFrameConfig)
 import Constants from "Constants" /* 1084 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
@@ -35,7 +35,7 @@ let result = size.fileFinishedImporting("modules/chat/EmbedIFrameConfig.tsx");
 
 export const EMBED_IFRAME_SANDBOX = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
 export const SupportedEmbedIFrame = obj;
-export const formatProviderSrc = function formatProviderSrc(uri, cResult, arg2) {
+export function formatProviderSrc(uri, cResult, arg2) {
   let str = uri;
   obj2 = URLUtilsDefault;
   if (uri == null) {
@@ -88,4 +88,4 @@ export const formatProviderSrc = function formatProviderSrc(uri, cResult, arg2) 
     }
     return str2.toString();
   }
-};
+}

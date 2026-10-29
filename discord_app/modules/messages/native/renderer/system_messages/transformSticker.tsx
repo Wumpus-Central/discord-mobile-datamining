@@ -1,8 +1,8 @@
-// === Module 8391: transformSticker ===
+// === Module 8413: transformSticker ===
 
-// Module 8391 (transformSticker)
+// Module 8413 (transformSticker)
 import util from "util" /* 1125 */;
-import StickersConstants from "StickersConstants" /* 4835 */;
+import StickersConstants from "StickersConstants" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const StickerAnimationSettings = StickersConstants.StickerAnimationSettings;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
 
-export const transformSticker = function transformSticker(tmp2Result4) {
+export function transformSticker(tmp2Result4) {
   const AnimateStickers = require("UserSettings").AnimateStickers;
   _require = tmp2Result4;
   const obj = {};
@@ -26,7 +26,7 @@ export const transformSticker = function transformSticker(tmp2Result4) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(8392).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(8414).NativeLottieRenderMode;
   obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
   const obj2 = { isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE };
   const tmpResult = require("StickersUtils");
@@ -43,4 +43,4 @@ export const transformSticker = function transformSticker(tmp2Result4) {
   const intl2 = tmp(1125).intl;
   obj.accessibilityHint = intl2.string(require("util").t.GCEruV);
   return obj;
-};
+}

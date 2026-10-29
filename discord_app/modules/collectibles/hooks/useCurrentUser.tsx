@@ -1,6 +1,6 @@
-// === Module 8704: useCurrentUser ===
+// === Module 8707: useCurrentUser ===
 
-// Module 8704 (useCurrentUser)
+// Module 8707 (useCurrentUser)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;

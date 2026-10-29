@@ -1,6 +1,6 @@
-// === Module 19764: ManagerRegistryShared ===
+// === Module 19986: ManagerRegistryShared ===
 
-// Module 19764 (ManagerRegistryShared)
+// Module 19986 (ManagerRegistryShared)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
@@ -73,7 +73,7 @@ let closure_2 = {};
 let c3 = false;
 const result = size.fileFinishedImporting("modules/app_startup/ManagerRegistryShared.tsx");
 
-export const initialize = function initialize(obj) {
+export function initialize(obj) {
   for (const key10004 in arg0) {
     let tmp3 = arg0[key10004];
     let actions = tmp3.actions;
@@ -81,4 +81,4 @@ export const initialize = function initialize(obj) {
     continue;
   }
   DispatcherDefault.addInterceptor(handleAction);
-};
+}

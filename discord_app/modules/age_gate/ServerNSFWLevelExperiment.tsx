@@ -1,7 +1,7 @@
-// === Module 4875: ServerNSFWLevelExperiment ===
+// === Module 4876: ServerNSFWLevelExperiment ===
 
-// Module 4875 (ServerNSFWLevelExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 4876 (ServerNSFWLevelExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-09-server-nsfw-level", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -12,6 +12,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_gate/ServerNSFWLevelExperiment.tsx");
 
 export const ServerNSFWLevelExperiment = apexExperiment;
-export const isServerNSFWLevelEnabled = function isServerNSFWLevelEnabled(guild_record) {
+export function isServerNSFWLevelEnabled(guild_record) {
   return apexExperiment.getConfig({ location: guild_record }).enabled;
-};
+}

@@ -1,9 +1,9 @@
-// === Module 12231: conjureMarkup ===
+// === Module 12285: conjureMarkup ===
 
-// Module 12231 (conjureMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
-import conjureFileMentions from "conjureFileMentions" /* 12232 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 12233 */;
+// Module 12285 (conjureMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
+import conjureFileMentions from "conjureFileMentions" /* 12286 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 12287 */;
 import noop from "module_19" /* 19 */;
 import apply from "module_12" /* 12 */;
 
@@ -19,7 +19,7 @@ let closure_4 = apply.once(() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/conjureMarkup.tsx");
 
-export const parseConjureMarkup = function parseConjureMarkup() {
+export function parseConjureMarkup() {
   const items = [...arguments];
   return closure_4()(...items);
-};
+}

@@ -1,8 +1,8 @@
-// === Module 4918: GuildDisableCommunicationConstants ===
+// === Module 4919: GuildDisableCommunicationConstants ===
 
-// Module 4918 (GuildDisableCommunicationConstants)
+// Module 4919 (GuildDisableCommunicationConstants)
 import util from "util" /* 1125 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2064 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2065 */;
 
 require = fn;
 function getFriendlyDurationString(timeout_seconds) {
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/guild_communication_disabled/
 
 export { DisableCommunicationDuration };
 export { getFriendlyDurationString };
-export const getDisableCommunicationDurationOptions = () => {
+export () => {
   const keys = Object.keys(obj);
   const found = keys.filter((item) => isNaN(Number(item)));
   return found.map((id) => {
@@ -46,7 +46,7 @@ export const getDisableCommunicationDurationOptions = () => {
     obj.value = DisableCommunicationDuration[id];
     return obj;
   });
-};
+}
 export const GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK = articleURL;
 export const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = "GuildCommunicationDisabledDismissedGuilds";
 export const SET_COMMUNICATION_DISABLED_MODAL_NAME = "Set Communication Disabled Modal";

@@ -1,14 +1,14 @@
-// === Module 18415: SmartSearchCitation ===
+// === Module 18649: SmartSearchCitation ===
 
-// Module 18415 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18416 */;
+// Module 18649 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18650 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(9748).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_5 = fn(9780).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -107,7 +107,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -203,7 +203,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -219,7 +219,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
           } else {
             closure_0 = tmp3;
             const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-            const result = v2(13480).trackSmartSearchCitationOpened(obj4, v2(13478));
+            const result = v2(13713).trackSmartSearchCitationOpened(obj4, v2(13711));
             if ("conversation" === citation.sourceType) {
               dependencyMap = 1;
               v2 = 2;
@@ -227,7 +227,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
               const obj5 = { value: onPressConversationCitation(citation), done: false };
               return obj5;
             }
-            const obj6 = v2(13480);
+            const obj6 = v2(13713);
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;

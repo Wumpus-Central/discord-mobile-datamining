@@ -1,16 +1,16 @@
-// === Module 18439: BaseMessagesScreen ===
+// === Module 18673: BaseMessagesScreen ===
 
-// Module 18439 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13456 */;
-import SearchUtils from "SearchUtils" /* 13463 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13477 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18441 */;
+// Module 18673 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13689 */;
+import SearchUtils from "SearchUtils" /* 13696 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13710 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18675 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6827 */;
-import SearchQueryStore from "SearchQueryStore" /* 13470 */;
+import SearchMessageStore from "SearchMessageStore" /* 6850 */;
+import SearchQueryStore from "SearchQueryStore" /* 13703 */;
 
 require = fn;
-const constants = fn(9747).SearchResultContentEntityTypes;
+const constants = fn(9779).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -446,7 +446,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMess
     tmp10 = smartSearchStatus === tmp(tmp2[15]).SmartSearchStatus.LOADING || smartSearchStatus === tmp(tmp2[15]).SmartSearchStatus.LOADED;
   }
 });
-export const trackMessageItemPress = function trackMessageItemPress(messageId) {
+export function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   const message = SearchMessageStore.getMessage(messageId);
@@ -462,4 +462,4 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   obj2.index = index;
   obj2.entityType = constants.MESSAGE;
   const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
-};
+}

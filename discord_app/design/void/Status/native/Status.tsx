@@ -1,19 +1,19 @@
-// === Module 15668: Status ===
+// === Module 15904: Status ===
 
-// Module 15668 (Status)
+// Module 15904 (Status)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5283 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15666 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15667 */;
-import _modDef15669 from "module_15669" /* 15669 */;
-import _modDef15670 from "module_15670" /* 15670 */;
-import _modDef15671 from "module_15671" /* 15671 */;
-import _modDef15672 from "module_15672" /* 15672 */;
-import _modDef15673 from "module_15673" /* 15673 */;
-import _modDef15674 from "module_15674" /* 15674 */;
-import _modDef15675 from "module_15675" /* 15675 */;
+import spring from "spring" /* 5284 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15902 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15903 */;
+import _modDef15905 from "module_15905" /* 15905 */;
+import _modDef15906 from "module_15906" /* 15906 */;
+import _modDef15907 from "module_15907" /* 15907 */;
+import _modDef15908 from "module_15908" /* 15908 */;
+import _modDef15909 from "module_15909" /* 15909 */;
+import _modDef15910 from "module_15910" /* 15910 */;
+import _modDef15911 from "module_15911" /* 15911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,13 +23,13 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1200).STATUS_PADDING;
 const StatusTypes = fn(1084).StatusTypes;
-const ChannelAnimationConstants = fn(14574);
+const ChannelAnimationConstants = fn(14808);
 ({ TYPING_ENTERING: closure_7, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let closure_12 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_13 = createStyles.createStyles((statusSizeOverride, arg1) => {
   const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(statusSizeOverride);
   ({ height, dotSize } = statusTypingDimensions);
@@ -110,23 +110,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status(arg0)
           }
         }
         if (tmp5) {
-          let tmp14 = _modDef15669;
+          let tmp14 = _modDef15905;
         } else if (tmp4) {
-          tmp14 = _modDef15670;
+          tmp14 = _modDef15906;
         } else if (tmp3) {
-          tmp14 = _modDef15671;
+          tmp14 = _modDef15907;
         } else if (StatusTypes.IDLE === status) {
-          tmp14 = _modDef15672;
+          tmp14 = _modDef15908;
         } else {
           if (StatusTypes.DND === status) {
-            tmp14 = _modDef15673;
+            tmp14 = _modDef15909;
           } else if (StatusTypes.OFFLINE !== status) {
             if (StatusTypes.INVISIBLE !== status) {
               const ONLINE = StatusTypes.ONLINE;
-              tmp14 = _modDef15675;
+              tmp14 = _modDef15911;
             }
           }
-          tmp14 = _modDef15674;
+          tmp14 = _modDef15910;
         }
         cResult[7] = tmp3;
         cResult[8] = tmp4;
@@ -166,23 +166,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status(arg0)
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef15669;
+    let tmp4Result = _modDef15905;
   } else if (flag2) {
-    tmp4Result = _modDef15670;
+    tmp4Result = _modDef15906;
   } else if (flag) {
-    tmp4Result = _modDef15671;
+    tmp4Result = _modDef15907;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef15672;
+    tmp4Result = _modDef15908;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef15673;
+    tmp4Result = _modDef15909;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef15675;
+        tmp4Result = _modDef15911;
       }
     }
-    tmp4Result = _modDef15674;
+    tmp4Result = _modDef15910;
   }
   obj2.source = tmp4Result;
   obj.children = v65535(FastImageDefault, obj2);

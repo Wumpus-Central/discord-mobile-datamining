@@ -1,6 +1,6 @@
-// === Module 18902: getConsoleConnectingText ===
+// === Module 19135: getConsoleConnectingText ===
 
-// Module 18902 (getConsoleConnectingText)
+// Module 19135 (getConsoleConnectingText)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
 
-export const getConsoleConnectingText = function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
+export function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
@@ -41,4 +41,4 @@ export const getConsoleConnectingText = function getConsoleConnectingText(stateF
       str = intl.string(util.t.QCw1oW);
     }
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 13535: ApplicationCommandList ===
+// === Module 13768: ApplicationCommandList ===
 
-// Module 13535 (ApplicationCommandList)
+// Module 13768 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-let closure_6 = 3 * fn(10147).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_6 = 3 * fn(10180).AUTOCOMPLETE_ROW_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
         tmp2 = null;
         found = undefined;
         if (sections != null) {
-          found = arr.find(() => { ... });
+          found = arr.find(/* F153095 */ function() { ... });
         }
         closure_1 = found;
         tmp4 = scrollDown;

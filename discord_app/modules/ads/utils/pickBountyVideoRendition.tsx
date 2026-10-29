@@ -1,8 +1,8 @@
-// === Module 16591: pickBountyVideoRendition ===
+// === Module 16829: pickBountyVideoRendition ===
 
-// Module 16591 (pickBountyVideoRendition)
+// Module 16829 (pickBountyVideoRendition)
 import _modDef38 from "module_38" /* 38 */;
-import BountyAspectRatio from "BountyAspectRatio" /* 9617 */;
+import BountyAspectRatio from "BountyAspectRatio" /* 9649 */;
 import size from "module_2" /* 2 */;
 
 function getRendition(videoRenditions, preferred) {
@@ -57,7 +57,7 @@ const result = size.fileFinishedImporting("modules/ads/utils/pickBountyVideoRend
 export const BOUNTY_MOBILE_MODAL_RENDITION_PICK = obj;
 export const BOUNTY_DESKTOP_MODAL_RENDITION_PICK = obj2;
 export { pickBountyVideoRendition };
-export const pickBountyVideoRenditionWithFallback = function pickBountyVideoRenditionWithFallback(videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK) {
+export function pickBountyVideoRenditionWithFallback(videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK) {
   if (null == videoRenditions.videoRenditions) {
     const supported = BOUNTY_MOBILE_MODAL_RENDITION_PICK.supported;
     let tmp5 = null;
@@ -70,4 +70,4 @@ export const pickBountyVideoRenditionWithFallback = function pickBountyVideoRend
     tmp2 = pickBountyVideoRendition(videoRenditions.videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK);
   }
   return tmp2;
-};
+}

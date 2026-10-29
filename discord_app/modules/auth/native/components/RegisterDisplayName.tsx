@@ -1,12 +1,12 @@
-// === Module 17657: RegisterDisplayName ===
+// === Module 17895: RegisterDisplayName ===
 
-// Module 17657 (RegisterDisplayName)
+// Module 17895 (RegisterDisplayName)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16265 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16503 */;
 
 const require = globalThis.__r;
 
@@ -28,13 +28,13 @@ function getGlobalNameError(first1) {
   }
 }
 const View = fn(17).View;
-const RegistrationUIStore = fn(17636);
+const RegistrationUIStore = fn(17874);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17637);
+const RegistrationConstants = fn(17875);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { globalName: { marginTop: nativeDefault.space.PX_24 }, button: null, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.button = { marginTop: nativeDefault.space.PX_24 };
@@ -562,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Register
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -596,7 +596,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Register
               }
               const result = globalName(first1[16]).handleNextOrSubmitRegistration(globalName(first1[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -672,7 +672,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Register
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -706,7 +706,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Register
               }
               const result = globalName(str[16]).handleNextOrSubmitRegistration(globalName(str[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (arg0 === 1) {
             c3 = 3;

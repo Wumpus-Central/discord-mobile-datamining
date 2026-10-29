@@ -1,10 +1,10 @@
-// === Module 9981: StarOutlineIcon ===
+// === Module 10013: StarOutlineIcon ===
 
-// Module 9981 (StarOutlineIcon)
+// Module 10013 (StarOutlineIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod9982 from "module_9982" /* 9982 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod10014 from "module_10014" /* 10014 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const StarOutlineIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9982;
+    const tmpResult = _mod10014;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const StarOutlineIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9982, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10014, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

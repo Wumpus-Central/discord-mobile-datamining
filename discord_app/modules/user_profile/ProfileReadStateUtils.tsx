@@ -1,7 +1,7 @@
-// === Module 7749: ProfileReadStateUtils ===
+// === Module 7771: ProfileReadStateUtils ===
 
-// Module 7749 (ProfileReadStateUtils)
-import ProfileReadStateConstants from "ProfileReadStateConstants" /* 7750 */;
+// Module 7771 (ProfileReadStateUtils)
+import ProfileReadStateConstants from "ProfileReadStateConstants" /* 7772 */;
 import size from "module_2" /* 2 */;
 
 function parseTimestamp(arg0) {
@@ -21,7 +21,7 @@ function parseTimestamp(arg0) {
 const ProfileReadStateSection = ProfileReadStateConstants.ProfileReadStateSection;
 const result = size.fileFinishedImporting("modules/user_profile/ProfileReadStateUtils.tsx");
 
-export const parseProfileReadState = function parseProfileReadState(profile_read_state) {
+export function parseProfileReadState(profile_read_state) {
   if (null != profile_read_state) {
     const obj = {};
     const _Object = Object;
@@ -43,8 +43,8 @@ export const parseProfileReadState = function parseProfileReadState(profile_read
     }
     return obj;
   }
-};
-export const getWishlistUpdatedAtTimestamp = function getWishlistUpdatedAtTimestamp(updated_at) {
+}
+export function getWishlistUpdatedAtTimestamp(updated_at) {
   updated_at = undefined;
   if (updated_at != null) {
     updated_at = updated_at.updated_at;
@@ -61,8 +61,8 @@ export const getWishlistUpdatedAtTimestamp = function getWishlistUpdatedAtTimest
     tmp2 = tmp5;
   }
   return tmp2;
-};
-export const isWishlistItemNew = function isWishlistItemNew(arg0, arg1) {
+}
+export function isWishlistItemNew(arg0, arg1) {
   let tmp = null;
   if (null != arg0) {
     const _Date = Date;
@@ -75,8 +75,8 @@ export const isWishlistItemNew = function isWishlistItemNew(arg0, arg1) {
     tmp = tmp4;
   }
   return null != tmp && null != arg1 && tmp > arg1;
-};
-export const hasWishlistBeenUpdatedSinceAcked = function hasWishlistBeenUpdatedSinceAcked(updated_at, arg1) {
+}
+export function hasWishlistBeenUpdatedSinceAcked(updated_at, arg1) {
   if (null == arg1) {
     return false;
   } else {
@@ -97,8 +97,8 @@ export const hasWishlistBeenUpdatedSinceAcked = function hasWishlistBeenUpdatedS
     }
     return null != tmp3 && tmp3 > arg1;
   }
-};
-export const mergeProfileReadState = function mergeProfileReadState(profileReadState, ackedAt) {
+}
+export function mergeProfileReadState(profileReadState, ackedAt) {
   let tmp = ackedAt;
   if (null != profileReadState) {
     if (null != tmp) {
@@ -129,8 +129,8 @@ export const mergeProfileReadState = function mergeProfileReadState(profileReadS
     tmp = profileReadState;
   }
   return tmp;
-};
-export const shouldAckWishlist = function shouldAckWishlist(updated_at, arg1) {
+}
+export function shouldAckWishlist(updated_at, arg1) {
   let tmp = null == arg1;
   if (!tmp) {
     let flag = false;
@@ -156,4 +156,4 @@ export const shouldAckWishlist = function shouldAckWishlist(updated_at, arg1) {
     tmp = flag;
   }
   return tmp;
-};
+}

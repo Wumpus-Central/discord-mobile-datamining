@@ -1,20 +1,20 @@
-// === Module 7800: activityBookmarkUtils ===
+// === Module 7823: activityBookmarkUtils ===
 
-// Module 7800 (activityBookmarkUtils)
+// Module 7823 (activityBookmarkUtils)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
-export const getLinkChannelId = function getLinkChannelId(toURLSafeResult) {
+export function getLinkChannelId(toURLSafeResult) {
   value = undefined;
   if (toURLSafeResult != null) {
     const searchParams = toURLSafeResult.searchParams;
     value = searchParams.get("channel_id");
   }
   return value;
-};
-export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
+}
+export function extractActivityBookmarkParams(url) {
   const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
   value = undefined;
   if (toURLSafeResult != null) {
@@ -41,4 +41,4 @@ export const extractActivityBookmarkParams = function extractActivityBookmarkPar
   }
   obj2.channelId = value6;
   return obj2;
-};
+}

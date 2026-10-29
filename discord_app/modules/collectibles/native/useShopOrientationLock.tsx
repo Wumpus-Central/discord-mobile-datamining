@@ -1,8 +1,8 @@
-// === Module 17461: useShopOrientationLock ===
+// === Module 17700: useShopOrientationLock ===
 
-// Module 17461 (useShopOrientationLock)
+// Module 17700 (useShopOrientationLock)
 import c from "c" /* 576 */;
-import applyOrientationLock from "applyOrientationLock" /* 14386 */;
+import applyOrientationLock from "applyOrientationLock" /* 14620 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

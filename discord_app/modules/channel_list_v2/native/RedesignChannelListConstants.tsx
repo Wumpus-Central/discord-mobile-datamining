@@ -1,8 +1,8 @@
-// === Module 11992: RedesignChannelListConstants ===
+// === Module 12046: RedesignChannelListConstants ===
 
-// Module 11992 (RedesignChannelListConstants)
+// Module 12046 (RedesignChannelListConstants)
 import _mod17 from "module_17" /* 17 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11098 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11152 */;
 import PlatformUtils_mod from "utils/PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;
 
@@ -49,17 +49,17 @@ export const STICKY_BANNER_ASPECT_RATIO = 2.609375;
 export const CATEGORY_MARGIN_TOP = 12;
 export const CATEGORY_MARGIN_BOTTOM = 4;
 export const CATEGORY_VERTICAL_PADDING = 4;
-export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleHeight(fontScale) {
+export function getScaledChannelSubtitleHeight(fontScale) {
   return useScaledTextLineHeight.scaleTextLineHeight(c2, fontScale);
-};
-export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
+}
+export function getScaledCategoryRowHeight(fontScale) {
   return useScaledTextLineHeight.scaleLineHeight(num, fontScale) + 8 + 4;
-};
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale) {
+}
+export function getScaledChannelRowHeight(fontScale) {
   const sum = 8 + hairlineWidth;
   return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num2, fontScale);
-};
-export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
+}
+export function getScaledSearchBarHeight(fontScale) {
   return 24 + useScaledTextLineHeight.scaleTextLineHeight(c5, fontScale);
-};
+}
 export const VIEWABILITY_CONFIG = frozen;

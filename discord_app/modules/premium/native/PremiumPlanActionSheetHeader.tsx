@@ -1,19 +1,19 @@
-// === Module 7578: PremiumPlanActionSheetHeader ===
+// === Module 7601: PremiumPlanActionSheetHeader ===
 
-// Module 7578 (PremiumPlanActionSheetHeader)
+// Module 7601 (PremiumPlanActionSheetHeader)
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import _modDef7580 from "module_7580" /* 7580 */;
-import _modDef7581 from "module_7581" /* 7581 */;
-import _modDef7582 from "module_7582" /* 7582 */;
-import _modDef7583 from "module_7583" /* 7583 */;
-import _modDef7584 from "module_7584" /* 7584 */;
-import _modDef7585 from "module_7585" /* 7585 */;
-import _modDef7586 from "module_7586" /* 7586 */;
-import _modDef7587 from "module_7587" /* 7587 */;
-import PremiumPill from "PremiumPill" /* 7588 */;
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import _modDef7603 from "module_7603" /* 7603 */;
+import _modDef7604 from "module_7604" /* 7604 */;
+import _modDef7605 from "module_7605" /* 7605 */;
+import _modDef7606 from "module_7606" /* 7606 */;
+import _modDef7607 from "module_7607" /* 7607 */;
+import _modDef7608 from "module_7608" /* 7608 */;
+import _modDef7609 from "module_7609" /* 7609 */;
+import _modDef7610 from "module_7610" /* 7610 */;
+import PremiumPill from "PremiumPill" /* 7611 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -22,10 +22,10 @@ require = fn;
 const View = fn(17).View;
 const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = fn(7579).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7602).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { header: { height: 112, justifyContent: "center", alignItems: "center" }, logoContainer: { position: "absolute", top: 16, left: 16 }, imgWumpus: { position: "absolute", height: 90 }, imgWumpusRight: null, imgWumpusBottom: { bottom: 0 }, discountPill: { marginTop: 10 } };
 let obj3 = { transform: null };
 let items = [{ scaleX: -1 }];
@@ -45,11 +45,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
   if (cResult[0] !== premiumType) {
     function getLogo() {
       if (React4.TIER_0 === premiumType) {
-        return _modDef7580;
+        return _modDef7603;
       } else if (React4.TIER_1 === premiumType) {
-        return _modDef7581;
+        return _modDef7604;
       } else if (React4.TIER_2 === premiumType) {
-        return _modDef7582;
+        return _modDef7605;
       }
     }
     cResult[0] = premiumType;
@@ -61,11 +61,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
   if (cResult[2] !== premiumType) {
     function getWumpus() {
       if (React4.TIER_0 === premiumType) {
-        return _modDef7583;
+        return _modDef7606;
       } else if (React4.TIER_1 === premiumType) {
-        return _modDef7584;
+        return _modDef7607;
       } else if (React4.TIER_2 === premiumType) {
-        return _modDef7585;
+        return _modDef7608;
       }
     }
     cResult[2] = premiumType;
@@ -82,11 +82,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
       if (cResult[8] !== premiumType) {
         function getClouds() {
           if (React4.TIER_0 === premiumType) {
-            return _modDef7586;
+            return _modDef7609;
           } else if (React4.TIER_1 === premiumType) {
             return null;
           } else if (React4.TIER_2 === premiumType) {
-            return _modDef7587;
+            return _modDef7610;
           }
         }
         cResult[8] = premiumType;
@@ -112,11 +112,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
             tmp21 = cResult[17];
           }
           if (cResult[18] !== premiumType) {
-            const premiumTypeDisplayName = tmp(2050).getPremiumTypeDisplayName(premiumType);
+            const premiumTypeDisplayName = tmp(2051).getPremiumTypeDisplayName(premiumType);
             cResult[18] = premiumType;
             cResult[19] = premiumTypeDisplayName;
             let tmp24 = premiumTypeDisplayName;
-            const tmpResult = tmp(2050);
+            const tmpResult = tmp(2051);
           } else {
             tmp24 = cResult[19];
           }
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
                 let tmp41 = null;
                 if (tmp14) {
                   const obj8 = { style: tmp4.discountPill, discountOffer, premiumType, shouldShowDiscountUpsell: true, useWhiteBackground: true };
-                  tmp41 = closure_7(tmp(7588).PremiumPill, obj8);
+                  tmp41 = closure_7(tmp(7611).PremiumPill, obj8);
                 }
                 cResult[31] = discountOffer;
                 cResult[32] = tmp14;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
           let tmp38 = null;
           if (tmp9) {
             const obj9 = { style: tmp4.discountPill, trialOffer, premiumType, useWhiteBackground: true, hideTrialCountdown: true };
-            tmp38 = closure_7(tmp(7588).PremiumPill, obj9);
+            tmp38 = closure_7(tmp(7611).PremiumPill, obj9);
           }
           cResult[26] = tmp9;
           cResult[27] = premiumType;
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
           cResult[30] = tmp38;
           tmp37 = tmp38;
         }
-        tmp(2050);
+        tmp(2051);
         let tmp19 = null != discountOffer;
         if (tmp19) {
           const discount = discountOffer.discount;
@@ -346,12 +346,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
   const tmp14 = LinearGradientDefault;
   obj2.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   if (React4.TIER_0 === premiumType) {
-    let tmp13Result = _modDef7586;
+    let tmp13Result = _modDef7609;
   } else {
     tmp13Result = null;
     if (React4.TIER_1 !== premiumType) {
       if (React4.TIER_2 === premiumType) {
-        tmp13Result = _modDef7587;
+        tmp13Result = _modDef7610;
       }
     }
   }
@@ -359,11 +359,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     const items = [tmp13Result, , ];
     const obj3 = { style: tmp.logoContainer, children: null };
     if (React4.TIER_0 === premiumType) {
-      let tmp13Result8 = _modDef7580;
+      let tmp13Result8 = _modDef7603;
     } else if (React4.TIER_1 === premiumType) {
-      tmp13Result8 = _modDef7581;
+      tmp13Result8 = _modDef7604;
     } else if (React4.TIER_2 === premiumType) {
-      tmp13Result8 = _modDef7582;
+      tmp13Result8 = _modDef7605;
     }
     const obj4 = { source: tmp13Result8, resizeMode: "contain" };
     const items1 = [React5(FastImageDefault, obj4), , ];
@@ -383,11 +383,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     items[1] = closure_1_8(View, obj3);
     const tmp13Result7 = FastImageDefault;
     if (React4.TIER_0 === premiumType) {
-      let tmp13Result10 = _modDef7583;
+      let tmp13Result10 = _modDef7606;
     } else if (React4.TIER_1 === premiumType) {
-      tmp13Result10 = _modDef7584;
+      tmp13Result10 = _modDef7607;
     } else if (React4.TIER_2 === premiumType) {
-      tmp13Result10 = _modDef7585;
+      tmp13Result10 = _modDef7608;
     }
     const obj7 = { source: tmp13Result10, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus, ];
@@ -407,12 +407,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     tmp13Result9 = FastImageDefault;
   } else {
     if (React4.TIER_0 === premiumType) {
-      let tmp13Result12 = _modDef7586;
+      let tmp13Result12 = _modDef7609;
     } else {
       tmp13Result12 = null;
       if (React4.TIER_1 !== premiumType) {
         if (React4.TIER_2 === premiumType) {
-          tmp13Result12 = _modDef7587;
+          tmp13Result12 = _modDef7610;
         }
       }
     }

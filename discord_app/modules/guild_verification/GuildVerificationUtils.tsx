@@ -1,17 +1,17 @@
-// === Module 14439: GuildVerificationUtils ===
+// === Module 14673: GuildVerificationUtils ===
 
-// Module 14439 (GuildVerificationUtils)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5038 */;
-import transitionToMemberVerification from "transitionToMemberVerification" /* 6870 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6907 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5036 */;
+// Module 14673 (GuildVerificationUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5039 */;
+import transitionToMemberVerification from "transitionToMemberVerification" /* 6894 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6931 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5037 */;
 
 require = fn;
 const GuildFeatures = fn(1084).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
-export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(guild) {
+export function inviteGuildHasPendingMemberDisabledVerification(guild) {
   const features = guild.features;
   let hasItem;
   if (features != null) {
@@ -26,8 +26,8 @@ export const inviteGuildHasPendingMemberDisabledVerification = function inviteGu
     hasItem = hasItem1;
   }
   return hasItem;
-};
-export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(id) {
+}
+export function openVerificationModalOrTransitionToApplication(id) {
   const request = UserGuildJoinRequestStore.getRequest(id);
   if (null != request) {
     if (request.applicationStatus !== MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED) {
@@ -36,4 +36,4 @@ export const openVerificationModalOrTransitionToApplication = function openVerif
     }
   }
   const result1 = MemberVerificationModalActionCreators.openMemberVerificationModal(id);
-};
+}

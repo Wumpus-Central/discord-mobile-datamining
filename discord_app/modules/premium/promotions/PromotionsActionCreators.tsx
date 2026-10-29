@@ -1,14 +1,14 @@
-// === Module 9592: PromotionsActionCreators ===
+// === Module 9624: PromotionsActionCreators ===
 
-// Module 9592 (PromotionsActionCreators)
+// Module 9624 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import wrappers from "wrappers" /* 1239 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9593 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 import UserStore from "UserStore" /* 1389 */;
-import PromotionsStore from "PromotionsStore" /* 9551 */;
+import PromotionsStore from "PromotionsStore" /* 9583 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -82,11 +82,11 @@ function dismissOutboundPromotionNotice() {
   DispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
-    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4837).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4838).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("userContent", async (arg0) => {
       const StringValue = wrappers.StringValue;
       arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
-    }, lastDismissedOutboundPromotionStartDate(4837).UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, lastDismissedOutboundPromotionStartDate(4838).UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function fetchClaimedOutboundPromotionCodes() {
@@ -110,7 +110,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -187,7 +187,7 @@ export default {
     DispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTIONS_SEEN" });
   }
 };
-export const maybeFetchActivePromotions = function maybeFetchActivePromotions(arg0) {
+export function maybeFetchActivePromotions(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -204,10 +204,10 @@ export const maybeFetchActivePromotions = function maybeFetchActivePromotions(ar
       fetchActivePromotions();
     }
   }
-};
-export const clearActivePromotions = function clearActivePromotions() {
+}
+export function clearActivePromotions() {
   DispatcherDefault.dispatch({ type: "ACTIVE_PROMOTIONS_CLEAR" });
-};
+}
 export { fetchActivePromotions };
 export { dismissOutboundPromotionNotice };
 export { fetchClaimedOutboundPromotionCodes };

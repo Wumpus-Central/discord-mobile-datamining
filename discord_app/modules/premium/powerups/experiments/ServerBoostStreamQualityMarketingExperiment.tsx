@@ -1,7 +1,7 @@
-// === Module 15161: ServerBoostStreamQualityMarketingExperiment ===
+// === Module 15396: ServerBoostStreamQualityMarketingExperiment ===
 
-// Module 15161 (ServerBoostStreamQualityMarketingExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+// Module 15396 (ServerBoostStreamQualityMarketingExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 const obj = { name: "2026-04-server-boost-copy-1440p", kind: "user", defaultConfig: { streamQualityMarketingResolution: "1080p" }, variations: null };
 const obj2 = { 1: null };
@@ -14,6 +14,6 @@ const result = size.fileFinishedImporting("modules/premium/powerups/experiments/
 
 export default tmp2;
 export const CONTROL_RESOLUTION = "1080p";
-export const getServerBoostStreamQualityMarketingResolution = function getServerBoostStreamQualityMarketingResolution(GuildBoostingMarketingTierCards) {
+export function getServerBoostStreamQualityMarketingResolution(GuildBoostingMarketingTierCards) {
   return config.getConfig({ location: GuildBoostingMarketingTierCards }).streamQualityMarketingResolution;
-};
+}

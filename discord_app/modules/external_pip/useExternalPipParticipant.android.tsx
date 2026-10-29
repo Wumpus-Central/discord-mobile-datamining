@@ -1,15 +1,15 @@
-// === Module 18729: useExternalPipParticipant ===
+// === Module 18963: useExternalPipParticipant ===
 
-// Module 18729 (useExternalPipParticipant)
-import participantHasVideo from "participantHasVideo" /* 10944 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18730 */;
+// Module 18963 (useExternalPipParticipant)
+import participantHasVideo from "participantHasVideo" /* 10979 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18964 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15311 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15546 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 
 require = fn;
 function getExternalPipSelectedParticipant(batchedStoreListener, selectedParticipantId1, speakerId) {
@@ -43,8 +43,8 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
     obj = closure_10;
   }
 }
-const ParticipantTypes = fn(5668).ParticipantTypes;
-const VoicePanelModes = fn(10939).VoicePanelModes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
+const VoicePanelModes = fn(10974).VoicePanelModes;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
   const cResult = selectedParticipantStreamId(576).c(3);
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetH
     }
   }, items);
 });
-let closure_10 = { participantType: "Reflect", selectedParticipantId: "metadata", selectedParticipantSpeaking: null, selectedParticipantStreamId: null, selectedParticipantUserId: null };
+let closure_10 = { participantType: "Reflect", selectedParticipantId: "data", selectedParticipantSpeaking: 0, selectedParticipantStreamId: null, selectedParticipantUserId: 130.447265625 };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,24 +1,24 @@
-// === Module 8683: avatar_decorations/AvatarDecorationUtils ===
+// === Module 8686: avatar_decorations/AvatarDecorationUtils ===
 
-// Module 8683 (avatar_decorations/AvatarDecorationUtils)
+// Module 8686 (avatar_decorations/AvatarDecorationUtils)
 import native from "native" /* 1199 */;
-import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1415 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1416 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
 
-export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
+export function getDecorationSizeForAvatarSize(NORMAL) {
   if (typeof NORMAL !== "number") {
     let result = native.AVATAR_SIZE_MAP[NORMAL] * closure_3;
   } else {
     result = NORMAL * closure_3;
   }
   return result;
-};
-export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutForAvatarCutout(cutout, arg1) {
+}
+export function getDecorationCutoutForAvatarCutout(cutout, arg1) {
   closure_0 = arg1;
   let tmp = cutout;
   if (null != cutout) {
@@ -44,9 +44,9 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
     tmp = obj;
   }
   return tmp;
-};
-export const openAvatarDecorationActionSheet = function openAvatarDecorationActionSheet(arg0) {
+}
+export function openAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8684, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
-};
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8687, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+}

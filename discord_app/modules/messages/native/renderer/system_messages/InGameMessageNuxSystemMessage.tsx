@@ -1,20 +1,20 @@
-// === Module 8448: InGameMessageNuxSystemMessage ===
+// === Module 8470: InGameMessageNuxSystemMessage ===
 
-// Module 8448 (InGameMessageNuxSystemMessage)
+// Module 8470 (InGameMessageNuxSystemMessage)
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8344 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8366 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 require = fn;
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
 
-export const createInGameMessageNuxSystemMessage = function createInGameMessageNuxSystemMessage(message) {
+export function createInGameMessageNuxSystemMessage(message) {
   message = message.message;
   ({ theme, roleStyle } = message);
   let str = message.applicationId;
@@ -41,4 +41,4 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     return obj5;
   }
   tmp3 = resolveMessageContentColorsDefault(theme);
-};
+}

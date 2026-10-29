@@ -1,12 +1,12 @@
-// === Module 14825: MessageActivityInviteCoverImageActionCreators ===
+// === Module 15060: MessageActivityInviteCoverImageActionCreators ===
 
-// Module 14825 (MessageActivityInviteCoverImageActionCreators)
+// Module 15060 (MessageActivityInviteCoverImageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");
 
-export const setCoverImageURL = function setCoverImageURL(arg0) {
+export function setCoverImageURL(arg0) {
   ({ messageId, coverImageURL } = arg0);
   DispatcherDefault.dispatch({ type: "SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL", messageId, coverImageURL });
-};
+}

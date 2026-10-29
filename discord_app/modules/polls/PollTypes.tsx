@@ -1,6 +1,6 @@
-// === Module 12169: PollTypes ===
+// === Module 12223: PollTypes ===
 
-// Module 12169 (PollTypes)
+// Module 12223 (PollTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/PollTypes.tsx");

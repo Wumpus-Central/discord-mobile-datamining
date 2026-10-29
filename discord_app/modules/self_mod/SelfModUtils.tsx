@@ -1,16 +1,16 @@
-// === Module 7425: SelfModUtils ===
+// === Module 7448: SelfModUtils ===
 
-// Module 7425 (SelfModUtils)
+// Module 7448 (SelfModUtils)
 import UserStore from "UserStore" /* 1389 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
 
-export const isCurrentUserTeen = function isCurrentUserTeen() {
+export function isCurrentUserTeen() {
   const currentUser = UserStore.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
     nsfwAllowed = currentUser.nsfwAllowed;
   }
   return false === nsfwAllowed;
-};
+}

@@ -1,31 +1,31 @@
-// === Module 13361: application_commands/ApplicationCommandUtils ===
+// === Module 13594: application_commands/ApplicationCommandUtils ===
 
-// Module 13361 (application_commands/ApplicationCommandUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef1987 from "module_1987" /* 1987 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6019 */;
-import DraftStore from "DraftStore" /* 7666 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9699 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10450 */;
-import _modDef13362 from "module_13362" /* 13362 */;
-import _modDef13363 from "module_13363" /* 13363 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8325 */;
+// Module 13594 (application_commands/ApplicationCommandUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import _modDef1988 from "module_1988" /* 1988 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6023 */;
+import DraftStore from "DraftStore" /* 7689 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9731 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10483 */;
+import _modDef13595 from "module_13595" /* 13595 */;
+import _modDef13596 from "module_13596" /* 13596 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8347 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
 
-export const getApplicationCommandsIconSource = function getApplicationCommandsIconSource(section, stateFromStores) {
+export function getApplicationCommandsIconSource(section, stateFromStores) {
   if (null == section) {
     return null;
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13362);
+      return AvatarUtilsDefault.makeSource(_modDef13595);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13363);
+      return AvatarUtilsDefault.makeSource(_modDef13596);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
@@ -38,13 +38,13 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
         obj5.guildMember = stateFromStores;
         let applicationIconSource = AvatarUtilsDefault.getApplicationIconSource(obj5);
       } else {
-        applicationIconSource = _modDef1987;
+        applicationIconSource = _modDef1988;
       }
       return applicationIconSource;
     }
   }
-};
-export const openCommandAttachmentPreview = function openCommandAttachmentPreview(applicationCommandManager, channelId, name, fn) {
+}
+export function openCommandAttachmentPreview(applicationCommandManager, channelId, name, fn) {
   importDefault = channelId;
   dependencyMap = name;
   upload = UploadAttachmentStore.getUpload(channelId, name, upload.SlashCommand);
@@ -75,4 +75,4 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
     };
     showUploadPreviewActionSheetDefault(obj);
   }
-};
+}

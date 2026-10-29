@@ -1,11 +1,11 @@
-// === Module 15975: ConjureVoiceGeometry ===
+// === Module 16211: ConjureVoiceGeometry ===
 
-// Module 15975 (ConjureVoiceGeometry)
+// Module 16211 (ConjureVoiceGeometry)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/voice/ConjureVoiceGeometry.tsx");
 
-export const toListenerRelativePosition = function toListenerRelativePosition(forward, position) {
+export function toListenerRelativePosition(forward, position) {
   forward = forward.forward;
   ({ x, y, z } = forward);
   const sqrtResult = Math.sqrt(x * x + y * y + z * z);
@@ -51,4 +51,4 @@ export const toListenerRelativePosition = function toListenerRelativePosition(fo
     point7 = { x: diff6 * point3.x + diff7 * point3.y + diff8 * point3.z, y: diff6 * point4.x + diff7 * point4.y + diff8 * point4.z, z: -diff6 * point.x + diff7 * point.y + diff8 * point.z };
   }
   return point7;
-};
+}

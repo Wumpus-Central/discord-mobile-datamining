@@ -1,12 +1,12 @@
-// === Module 12513: conjureClarificationLinks ===
+// === Module 12567: conjureClarificationLinks ===
 
-// Module 12513 (conjureClarificationLinks)
-import conjureLinkedApps from "conjureLinkedApps" /* 12249 */;
+// Module 12567 (conjureClarificationLinks)
+import conjureLinkedApps from "conjureLinkedApps" /* 12303 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/clarification/conjureClarificationLinks.tsx");
 
-export const sendAfterLinkingApps = function sendAfterLinkingApps(projectId, questions, arg2, first1, fn) {
+export function sendAfterLinkingApps(projectId, questions, arg2, first1, fn) {
   closure_0 = projectId;
   closure_1 = arg2;
   closure_2 = first1;
@@ -36,4 +36,4 @@ export const sendAfterLinkingApps = function sendAfterLinkingApps(projectId, que
   } else {
     fn();
   }
-};
+}

@@ -8,16 +8,16 @@ import _mod17 from "module_17" /* 17 */;
 import KvCacheVersionConstants from "KvCacheVersionConstants" /* 499 */;
 import QosToken from "QosToken" /* 500 */;
 import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1272 */;
-import isCacheEnabled from "isCacheEnabled" /* 7757 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10134 */;
-import GatewayCapabilities from "GatewayCapabilities" /* 15243 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15703 */;
+import isCacheEnabled from "isCacheEnabled" /* 7779 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10167 */;
+import GatewayCapabilities from "GatewayCapabilities" /* 15478 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15939 */;
 import checkEnv from "checkEnv" /* 16 */;
 import size from "module_2" /* 2 */;
 
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    let obj = obj3(15225);
+    let obj = obj3(15460);
     constants = obj.getConstants();
     let flag;
     if (constants != null) {
@@ -37,14 +37,14 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp7}`);
     const _Date = Date;
     closure_0 = Date.now();
-    const tmp9 = obj3(15212)(combined);
+    const tmp9 = obj3(15447)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp9._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj2.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp9._socketId);
     } else {
-      const tmp3Result = tmp3(15225);
+      const tmp3Result = tmp3(15460);
       if (flag) {
         const result = tmp3Result.enableZstdStreamSupport(parsed);
       } else {
@@ -88,7 +88,7 @@ const fastConnectSocket = createFastConnectSocket();
 let result = size.fileFinishedImporting("modules/gateway/native/fast_connect.tsx");
 
 export { createFastConnectSocket };
-export const closeFastConnectSocket = function closeFastConnectSocket() {
+export function closeFastConnectSocket() {
   if (null != window._ws) {
     const _window = window;
     ws.close();
@@ -96,11 +96,11 @@ export const closeFastConnectSocket = function closeFastConnectSocket() {
     window._ws = null;
     c7 = null;
   }
-};
+}
 export function getLastFastConnectIdentifyUserId() {
   return c7;
 }
-export const identifyWebSocket = function identifyWebSocket() {
+export function identifyWebSocket() {
   if (null != window._ws) {
     const beginFastConnect = TTITrackerDefault.beginFastConnect;
     beginFastConnect.measure(() => {
@@ -187,4 +187,4 @@ export const identifyWebSocket = function identifyWebSocket() {
   } else {
     obj.log("Skipping identifyWebSocket because socket is null");
   }
-};
+}

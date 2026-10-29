@@ -1,12 +1,12 @@
-// === Module 16286: AgeGroupScreenRowProps ===
+// === Module 16524: AgeGroupScreenRowProps ===
 
-// Module 16286 (AgeGroupScreenRowProps)
+// Module 16524 (AgeGroupScreenRowProps)
 import util from "util" /* 1125 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6692 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16240 */;
+import _modDef3092 from "module_3092" /* 3092 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16478 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -35,11 +35,11 @@ const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/Ag
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3091.SH6Tcv);
+    return intl.string(_modDef3092.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3091.rJiO86);
+    return intl.string(_modDef3092.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;
@@ -47,9 +47,9 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   },
   withArrow: true
 };
-export const useShowAssignedAdultAgeGroupRow = function useShowAssignedAdultAgeGroupRow() {
+export function useShowAssignedAdultAgeGroupRow() {
   return closure_3(false);
-};
-export const useShowAccountStatusAgeGroupRow = function useShowAccountStatusAgeGroupRow() {
+}
+export function useShowAccountStatusAgeGroupRow() {
   return closure_3(true);
-};
+}

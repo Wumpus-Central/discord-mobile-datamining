@@ -1,7 +1,7 @@
-// === Module 15640: NvencReconstructedFrameExperiment ===
+// === Module 15876: NvencReconstructedFrameExperiment ===
 
-// Module 15640 (NvencReconstructedFrameExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+// Module 15876 (NvencReconstructedFrameExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 const obj = { kind: "user", name: "2026-07-nvenc-reconstructed-frames", defaultConfig: { enabled: false }, variations: null };
 let obj2 = { 1: null };
@@ -11,7 +11,7 @@ const config = apex_ApexExperimentDefault(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/NvencReconstructedFrameExperiment.tsx");
 
-export const getNvencReconstructedFrameExperimentConfig = function getNvencReconstructedFrameExperimentConfig(disable) {
+export function getNvencReconstructedFrameExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
@@ -23,4 +23,4 @@ export const getNvencReconstructedFrameExperimentConfig = function getNvencRecon
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;
-};
+}

@@ -1,13 +1,13 @@
-// === Module 7203: FastList ===
+// === Module 7227: FastList ===
 
-// Module 7203 (FastList)
+// Module 7227 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5085 */;
-import BottomSheetModal from "BottomSheetModal" /* 5305 */;
-import NativeViewDefault from "NativeView" /* 6922 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7206 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5086 */;
+import BottomSheetModal from "BottomSheetModal" /* 5306 */;
+import NativeViewDefault from "NativeView" /* 6946 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7230 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -2494,9 +2494,9 @@ let result1 = size.fileFinishedImporting("lib/native/FastList.tsx");
 export default FastList;
 export const DEFAULT_BATCHES_TO_RENDER = 12;
 export const MINIMUM_BATCHES_TO_RENDER = 5;
-export const getItemSizeOverrideKey = function getItemSizeOverrideKey(arg0, arg1, arg2) {
+export function getItemSizeOverrideKey(arg0, arg1, arg2) {
   return "" + arg0 + ":" + arg1 + ":" + arg2;
-};
+}
 export { FastListItemTypes };
 export { FastListComputer };
 export const AnimatedFastList = animatedComponent;

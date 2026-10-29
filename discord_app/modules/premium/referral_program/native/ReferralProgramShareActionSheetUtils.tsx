@@ -1,13 +1,13 @@
-// === Module 15012: ReferralProgramShareActionSheetUtils ===
+// === Module 15247: ReferralProgramShareActionSheetUtils ===
 
-// Module 15012 (ReferralProgramShareActionSheetUtils)
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+// Module 15247 (ReferralProgramShareActionSheetUtils)
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
-const UserRowModes = fn(10651).UserRowModes;
+const UserRowModes = fn(10684).UserRowModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
 
-export const buildReferralUserRow = function buildReferralUserRow(selectedNotResendUsers) {
+export function buildReferralUserRow(selectedNotResendUsers) {
   ({ eligibleUsers, row, selectedUserIds, resendUsers } = selectedNotResendUsers);
   if (null != eligibleUsers[row]) {
     let tmp4 = selectedNotResendUsers.selectedNotResendUsers.length >= tmp;
@@ -32,4 +32,4 @@ export const buildReferralUserRow = function buildReferralUserRow(selectedNotRes
     element.props = obj;
     return element;
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 14871: NUFVoiceChannelsTemplate ===
+// === Module 15106: NUFVoiceChannelsTemplate ===
 
-// Module 14871 (NUFVoiceChannelsTemplate)
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6669 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 14864 */;
-import NUFTemplateDefault from "NUFTemplate" /* 14872 */;
-import _modDef14873 from "module_14873" /* 14873 */;
+// Module 15106 (NUFVoiceChannelsTemplate)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6693 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 15099 */;
+import NUFTemplateDefault from "NUFTemplate" /* 15107 */;
+import _modDef15108 from "module_15108" /* 15108 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoice
     let obj2 = {
       title: tmp4,
       description: tmp5,
-      imageSrc: _modDef14873,
+      imageSrc: _modDef15108,
       CTALabel: tmp8,
       onCTAPress() {
           const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoice
     const tmp14 = jsx(NUFTemplateDefault, {
       title: tmp4,
       description: tmp5,
-      imageSrc: _modDef14873,
+      imageSrc: _modDef15108,
       CTALabel: tmp8,
       onCTAPress() {
           const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoice
   obj.title = intl.string(channel(1125).t.w5HAll);
   const intl2 = channel(1125).intl;
   obj.description = intl2.string(channel(1125).t.Ww4hhq);
-  obj.imageSrc = _modDef14873;
+  obj.imageSrc = _modDef15108;
   const intl3 = channel(1125).intl;
   obj.CTALabel = intl3.string(channel(1125).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {

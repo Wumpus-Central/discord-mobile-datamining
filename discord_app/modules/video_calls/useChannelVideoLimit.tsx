@@ -1,8 +1,8 @@
-// === Module 9189: useChannelVideoLimit ===
+// === Module 9192: useChannelVideoLimit ===
 
-// Module 9189 (useChannelVideoLimit)
-import GuildStore from "GuildStore" /* 4878 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5753 */;
+// Module 9192 (useChannelVideoLimit)
+import GuildStore from "GuildStore" /* 4879 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5755 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
     return obj;
   }, items1);
 });
-export const getChannelVideoLimit = function getChannelVideoLimit(channel) {
+export function getChannelVideoLimit(channel) {
   const result = SortedVoiceStateStore.countVoiceStatesForChannel(channel.id);
   guild = GuildStore.getGuild(channel.getGuildId());
   if (null == guild) {
@@ -81,4 +81,4 @@ export const getChannelVideoLimit = function getChannelVideoLimit(channel) {
     const tmp4 = guild.maxVideoChannelUsers > 0 && result > guild.maxVideoChannelUsers;
   }
   return obj;
-};
+}

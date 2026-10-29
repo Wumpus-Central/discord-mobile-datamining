@@ -1,6 +1,6 @@
-// === Module 8419: GuildAntiRaidConstants ===
+// === Module 8441: GuildAntiRaidConstants ===
 
-// Module 8419 (GuildAntiRaidConstants)
+// Module 8441 (GuildAntiRaidConstants)
 import Constants from "Constants" /* 1095 */;
 import util from "util" /* 1125 */;
 import BigFlagUtils from "BigFlagUtils" /* 1096 */;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidC
 export const GUILD_REPORT_RAID_MOBILE_KEY = "guild_report_raid_mobile";
 export const NAGBAR_DISPLAY_MAX_HOURS = 2;
 export const DEFAULT_LOCKDOWN_DURATION = 2;
-export const getTimeframes = () => {
+export () => {
   const obj = { id: "1", value: 1, label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["GA/d4I"]);
@@ -38,5 +38,5 @@ export const getTimeframes = () => {
   obj6.label = intl6.string(util.t["W0+LsV"]);
   items[5] = obj6;
   return items;
-};
+}
 export const IncidentAlertModeratorPermissions = BigFlagUtils.combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);

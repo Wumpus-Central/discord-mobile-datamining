@@ -1,10 +1,10 @@
-// === Module 17026: EmojiWoozyFaceIcon ===
+// === Module 17265: EmojiWoozyFaceIcon ===
 
-// Module 17026 (EmojiWoozyFaceIcon)
+// Module 17265 (EmojiWoozyFaceIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod17027 from "module_17027" /* 17027 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod17266 from "module_17266" /* 17266 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiWoozyFaceIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod17027;
+    const tmpResult = _mod17266;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiWoozyFaceIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17027, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17266, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

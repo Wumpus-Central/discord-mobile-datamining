@@ -1,6 +1,6 @@
-// === Module 5303: useIsScreenReaderEnabled ===
+// === Module 5304: useIsScreenReaderEnabled ===
 
-// Module 5303 (useIsScreenReaderEnabled)
+// Module 5304 (useIsScreenReaderEnabled)
 import _mod17 from "module_17" /* 17 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -54,15 +54,15 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/a11y/native/useIsScreenReaderEnabled.native.tsx");
 
-export const addScreenReaderEnabledListener = function addScreenReaderEnabledListener(arg0) {
+export function addScreenReaderEnabledListener(arg0) {
   closure_0 = arg0;
   return closure_5.subscribe((screenReaderEnabled) => {
     closure_0(screenReaderEnabled.screenReaderEnabled);
   });
-};
-export const getIsScreenReaderEnabled = function getIsScreenReaderEnabled() {
+}
+export function getIsScreenReaderEnabled() {
   return closure_5.getState().screenReaderEnabled;
-};
-export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
+}
+export function useIsScreenReaderEnabled() {
   return closure_5(SCREEN_READER_ENABLED_GETTER);
-};
+}

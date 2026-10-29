@@ -1,12 +1,12 @@
-// === Module 12558: ListUtils ===
+// === Module 12613: ListUtils ===
 
-// Module 12558 (ListUtils)
+// Module 12613 (ListUtils)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/ListUtils.tsx");
 
-export const getListSummaryLabel = function getListSummaryLabel(names, length) {
+export function getListSummaryLabel(names, length) {
   let first = names;
   if (length == null) {
     length = first.length;
@@ -36,4 +36,4 @@ export const getListSummaryLabel = function getListSummaryLabel(names, length) {
     obj.count = length - 3;
     formatToPlainStringResult = intl.formatToPlainString(util.t.xpU76u, obj);
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 9980: getEmojiPopoutMessage ===
+// === Module 10012: getEmojiPopoutMessage ===
 
-// Module 9980 (getEmojiPopoutMessage)
+// Module 10012 (getEmojiPopoutMessage)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import _modDef4150 from "module_4150" /* 4150 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 6920 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import _modDef4151 from "module_4151" /* 4151 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 6944 */;
 import size from "module_2" /* 2 */;
 
 const EmojiSourceDataTypes = ExpressionSourceRecord.EmojiSourceDataTypes;
@@ -15,12 +15,12 @@ const EmojiPopoutType = { GET_PREMIUM: "GET_PREMIUM", JOIN_GUILD: "JOIN_GUILD", 
 const result = size.fileFinishedImporting("modules/messages/getEmojiPopoutMessage.tsx");
 
 export { EmojiPopoutType };
-export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
+export function getEmojiPopoutData(sourceType) {
   if (sourceType.sourceType === EmojiSourceDataTypes.PACK) {
     const obj2 = { type: obj.UNAVAILABLE, text: null, description: null, emojiDescription: null, analyticsType: null };
     const intl11 = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj2.emojiDescription = intl11.format(_modDef4150["/jdd/7"], obj3);
+    obj2.emojiDescription = intl11.format(_modDef4151["/jdd/7"], obj3);
     obj2.analyticsType = constants.NITRO_EMOJI_PACK;
     return obj2;
   } else {
@@ -148,4 +148,4 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
       }
     }
   }
-};
+}

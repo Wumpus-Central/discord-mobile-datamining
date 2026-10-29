@@ -1,25 +1,25 @@
-// === Module 17352: SurveyActionCreators ===
+// === Module 17591: SurveyActionCreators ===
 
-// Module 17352 (SurveyActionCreators)
+// Module 17591 (SurveyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import TypeUtils from "TypeUtils" /* 4868 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6711 */;
-import SurveyStore from "SurveyStore" /* 7892 */;
+import TypeUtils from "TypeUtils" /* 4869 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
+import SurveyStore from "SurveyStore" /* 7915 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SURVEY_REFETCH_INTERVAL = fn(7892).SURVEY_REFETCH_INTERVAL;
+const SURVEY_REFETCH_INTERVAL = fn(7915).SURVEY_REFETCH_INTERVAL;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, NoticeTypes: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/SurveyActionCreators.tsx");
 
-export const overrideSurvey = function overrideSurvey(id, isActionTriggered) {
+export function overrideSurvey(id, isActionTriggered) {
   DispatcherDefault.dispatch({ type: "SURVEY_OVERRIDE", id, isActionTriggered });
-};
-export const surveyHide = function surveyHide(key, dismissed) {
+}
+export function surveyHide(key, dismissed) {
   DispatcherDefault.dispatch({ type: "SURVEY_HIDE", key });
   const obj2 = { type: "SURVEY_HIDE", key };
   const track = AnalyticsUtilsDefault.track;
@@ -30,8 +30,8 @@ export const surveyHide = function surveyHide(key, dismissed) {
     const obj4 = { notice_type: constants.SURVEY };
     track(hasOwnProperty.APP_NOTICE_PRIMARY_CTA_OPENED, obj4);
   }
-};
-export const surveySeen = function surveySeen(key) {
+}
+export function surveySeen(key) {
   _require = key;
   const lastSeenTimestamp = SurveyStore.getLastSeenTimestamp();
   if (null !== lastSeenTimestamp) {
@@ -57,4 +57,4 @@ export const surveySeen = function surveySeen(key) {
   };
   obj4.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
   return obj3.post(obj4);
-};
+}

@@ -1,12 +1,12 @@
-// === Module 8385: ApplicationSubscriptionSystemMessageUtils ===
+// === Module 8407: ApplicationSubscriptionSystemMessageUtils ===
 
-// Module 8385 (ApplicationSubscriptionSystemMessageUtils)
+// Module 8407 (ApplicationSubscriptionSystemMessageUtils)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
-export const getApplicationSubscriptionSystemMessageASTContent = function getApplicationSubscriptionSystemMessageASTContent(arg0) {
+export function getApplicationSubscriptionSystemMessageASTContent(arg0) {
   ({ application, username, usernameOnClick } = arg0);
   if (null != application) {
     const intl2 = util.intl;
@@ -18,4 +18,4 @@ export const getApplicationSubscriptionSystemMessageASTContent = function getApp
     formatToPartsResult = intl.formatToParts(util.t.PUJtgi, obj);
   }
   return formatToPartsResult;
-};
+}

@@ -1,6 +1,6 @@
-// === Module 12166: PollsHttpApi ===
+// === Module 12220: PollsHttpApi ===
 
-// Module 12166 (PollsHttpApi)
+// Module 12220 (PollsHttpApi)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_4 = async function _submitPollVote(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, answerIds: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -74,7 +74,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp21) {
       closure_3 = tmp21;
@@ -98,7 +98,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -119,7 +119,7 @@ let closure_5 = async function _endPollEarly(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -154,7 +154,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp28) {
       closure_3 = tmp28;
@@ -171,7 +171,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
 
-export const submitPollVote = function submitPollVote() {
+export function submitPollVote() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -180,8 +180,8 @@ export const submitPollVote = function submitPollVote() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const endPollEarly = function endPollEarly() {
+}
+export function endPollEarly() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -190,4 +190,4 @@ export const endPollEarly = function endPollEarly() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

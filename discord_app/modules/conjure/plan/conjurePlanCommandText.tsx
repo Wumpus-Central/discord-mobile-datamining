@@ -1,8 +1,8 @@
-// === Module 12487: conjurePlanCommandText ===
+// === Module 12541: conjurePlanCommandText ===
 
-// Module 12487 (conjurePlanCommandText)
+// Module 12541 (conjurePlanCommandText)
 import c from "c" /* 576 */;
-import escapeRegExpDefault from "escapeRegExp" /* 5055 */;
+import escapeRegExpDefault from "escapeRegExp" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanComma
 export { conjurePlanSlashCommandNames };
 export const useConjurePlanSlashCommandNames = tmp2;
 export { conjurePlanCommandPattern };
-export const conjurePlanTextMentionsCommand = function conjurePlanTextMentionsCommand(item, arr) {
+export function conjurePlanTextMentionsCommand(item, arr) {
   if (0 === arr.length) {
     return false;
   } else {
@@ -62,7 +62,7 @@ export const conjurePlanTextMentionsCommand = function conjurePlanTextMentionsCo
     const regExp = new RegExp("(?<![\\p{L}\\p{N}/.:])/(?:" + mapped.join("|") + ")(?![\\p{L}\\p{N}_-])", "iu");
     return regExp.test(item);
   }
-};
+}
 export const useConjurePlanCommandPattern = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePlanCommandPattern(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
@@ -99,7 +99,7 @@ export const useConjurePlanCommandPattern = ReactCompilerGating.isReactCompilerE
     return regExp;
   }, items);
 });
-export const splitConjurePlanCommandText = function splitConjurePlanCommandText(text, conjurePlanCommandPattern) {
+export function splitConjurePlanCommandText(text, conjurePlanCommandPattern) {
   if (null == conjurePlanCommandPattern) {
     return null;
   } else {
@@ -140,4 +140,4 @@ export const splitConjurePlanCommandText = function splitConjurePlanCommandText(
     }
     return tmp15;
   }
-};
+}

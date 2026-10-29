@@ -1,10 +1,10 @@
-// === Module 15345: ChannelListMagnifyingGlassIcon ===
+// === Module 15580: ChannelListMagnifyingGlassIcon ===
 
-// Module 15345 (ChannelListMagnifyingGlassIcon)
+// Module 15580 (ChannelListMagnifyingGlassIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod15346 from "module_15346" /* 15346 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod15581 from "module_15581" /* 15581 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChannelListMagnifyingGlassIcon = ReactCompilerGating.isReactCompile
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15346;
+    const tmpResult = _mod15581;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChannelListMagnifyingGlassIcon = ReactCompilerGating.isReactCompile
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15581, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,17 +1,17 @@
-// === Module 16491: FamilyCenterParentalControlsDataAndPrivacy ===
+// === Module 16729: FamilyCenterParentalControlsDataAndPrivacy ===
 
-// Module 16491 (FamilyCenterParentalControlsDataAndPrivacy)
+// Module 16729 (FamilyCenterParentalControlsDataAndPrivacy)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import _modDef2535 from "module_2535" /* 2535 */;
-import SettingBuilders from "SettingBuilders" /* 11248 */;
-import SettingLayoutDefault from "SettingLayout" /* 16244 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import SettingBuilders from "SettingBuilders" /* 11302 */;
+import SettingLayoutDefault from "SettingLayout" /* 16482 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
-const MobileUserSettings = fn(8365).MobileUserSettings;
+const MobileUserSettings = fn(8387).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     obj2.settings = items;
     const intl = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.DATA_PRIVACY_CONTROLS) };
-    obj2.subLabel = intl.format(_modDef2535.Z5yJZy, obj3);
+    obj2.subLabel = intl.format(_modDef2536.Z5yJZy, obj3);
     const items1 = [obj2, , , ];
     const obj5 = { settings: null, subLabel: null };
     const items2 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const intl2 = util.intl;
     const obj6 = { helpdeskArticle: null };
     obj6.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.DATA_USED_FOR_RECOMMENDED);
-    obj5.subLabel = intl2.format(_modDef2535.Imp6Ns, obj6);
+    obj5.subLabel = intl2.format(_modDef2536.Imp6Ns, obj6);
     items1[1] = obj5;
     const obj8 = { settings: null, subLabel: null };
     const items3 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const intl3 = util.intl;
     const obj9 = { helpdeskArticle: null };
     obj9.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
-    obj8.subLabel = intl3.format(_modDef2535.cnCK6b, obj9);
+    obj8.subLabel = intl3.format(_modDef2536.cnCK6b, obj9);
     items1[2] = obj8;
     const obj11 = { settings: null, subLabel: null };
     const items4 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P];
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const intl4 = util.intl;
     const obj12 = { helpdeskArticle: null };
     obj12.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
-    obj11.subLabel = intl4.format(_modDef2535["6mK5Pz"], obj12);
+    obj11.subLabel = intl4.format(_modDef2536["6mK5Pz"], obj12);
     items1[3] = obj11;
     cResult[0] = items1;
     let first = items1;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     obj.settings = items;
     const intl = memo(1125).intl;
     const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.DATA_PRIVACY_CONTROLS) };
-    obj.subLabel = intl.format(_modDef2535.Z5yJZy, obj2);
+    obj.subLabel = intl.format(_modDef2536.Z5yJZy, obj2);
     const items1 = [obj, , , ];
     const obj4 = { settings: null, subLabel: null };
     const items2 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const intl2 = memo(1125).intl;
     const obj5 = { helpdeskArticle: null };
     obj5.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
-    obj4.subLabel = intl2.format(_modDef2535.Imp6Ns, obj5);
+    obj4.subLabel = intl2.format(_modDef2536.Imp6Ns, obj5);
     items1[1] = obj4;
     const obj7 = { settings: null, subLabel: null };
     const items3 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const intl3 = memo(1125).intl;
     const obj8 = { helpdeskArticle: null };
     obj8.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj7.subLabel = intl3.format(_modDef2535.cnCK6b, obj8);
+    obj7.subLabel = intl3.format(_modDef2536.cnCK6b, obj8);
     items1[2] = obj7;
     const obj10 = { settings: null, subLabel: null };
     const items4 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P];
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const intl4 = memo(1125).intl;
     const obj11 = { helpdeskArticle: null };
     obj11.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj10.subLabel = intl4.format(_modDef2535["6mK5Pz"], obj11);
+    obj10.subLabel = intl4.format(_modDef2536["6mK5Pz"], obj11);
     items1[3] = obj10;
     return items1;
   }, []);

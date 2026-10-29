@@ -1,9 +1,9 @@
-// === Module 9383: useGameAnnouncements ===
+// === Module 9415: useGameAnnouncements ===
 
-// Module 9383 (useGameAnnouncements)
+// Module 9415 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9384 */;
-import GameProfileStore from "GameProfileStore" /* 9285 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9416 */;
+import GameProfileStore from "GameProfileStore" /* 9289 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

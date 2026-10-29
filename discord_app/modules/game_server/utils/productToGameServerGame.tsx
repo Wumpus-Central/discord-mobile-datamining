@@ -1,11 +1,11 @@
-// === Module 13645: productToGameServerGame ===
+// === Module 13878: productToGameServerGame ===
 
-// Module 13645 (productToGameServerGame)
+// Module 13878 (productToGameServerGame)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
 
-export const productToGameServerGame = function productToGameServerGame(id) {
+export function productToGameServerGame(id) {
   const skus = id.skus;
   const mapped = skus.map((id) => {
     const plan_features = id.tenant_metadata.plan_features;
@@ -87,4 +87,4 @@ export const productToGameServerGame = function productToGameServerGame(id) {
   }
   obj.can_market = can_market;
   return obj;
-};
+}

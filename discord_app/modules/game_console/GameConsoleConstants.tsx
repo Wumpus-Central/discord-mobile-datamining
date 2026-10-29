@@ -1,8 +1,8 @@
-// === Module 9660: GameConsoleConstants ===
+// === Module 9692: GameConsoleConstants ===
 
-// Module 9660 (GameConsoleConstants)
+// Module 9692 (GameConsoleConstants)
 import Constants from "Constants" /* 1084 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
 import size from "module_2" /* 2 */;
 
 const items = [OAuth2Scopes.OAuth2Scopes.VOICE, OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ, OAuth2Scopes.OAuth2Scopes.GUILDS, OAuth2Scopes.OAuth2Scopes.GUILDS_MEMBERS_READ, OAuth2Scopes.OAuth2Scopes.IDENTIFY, OAuth2Scopes.OAuth2Scopes.CONNECTIONS, OAuth2Scopes.OAuth2Scopes.ACTIVITIES_READ];
@@ -26,7 +26,7 @@ export const XBOX_LINK_DEST_ORIGIN = "https://login.live.com";
 export const XBOX_CLIENT_SCOPES = items;
 export const PLAYSTATION_CLIENT_SCOPES = items1;
 export const PLAYSTATION_LINK_DEST_ORIGIN = "https://my.account.sony.com";
-export const XBOX_HANDOFF_SEARCH_PARAMS = (channelid) => {
+export (channelid) => {
   const nonce = channelid.nonce;
   const obj = { channelid: channelid.channelId, guildid: channelid.guildId, channelname: channelid.channelName, guildname: channelid.guildName, muted: String(channelid.muted), deafened: String(channelid.deafened) };
   if (null != nonce) {
@@ -34,7 +34,7 @@ export const XBOX_HANDOFF_SEARCH_PARAMS = (channelid) => {
   }
   const uRLSearchParams = new URLSearchParams(obj);
   return uRLSearchParams;
-};
+}
 export const GameConsoleTypes = obj;
 export const GAME_CONSOLE_SESSIONS = set;
 export const CONSOLE_VOICE_PLATFORMS = set1;

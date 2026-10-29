@@ -1,6 +1,6 @@
-// === Module 5278: PlainTextEligibility ===
+// === Module 5279: PlainTextEligibility ===
 
-// Module 5278 (PlainTextEligibility)
+// Module 5279 (PlainTextEligibility)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -16,10 +16,10 @@ let closure_8 = { eligible: false, reason: "non-ios" };
 let closure_9 = { eligible: false, reason: "ref" };
 const result = size.fileFinishedImporting("design/components/Text/native/PlainTextEligibility.tsx");
 
-export const isPlainTextEligible = function isPlainTextEligible(plainTextEligibility) {
+export function isPlainTextEligible(plainTextEligibility) {
   return !("eligible" in plainTextEligibility);
-};
-export const getPlainTextEligibility = function getPlainTextEligibility(element) {
+}
+export function getPlainTextEligibility(element) {
   if (element.enabled) {
     if (element.isIOS) {
       if (element.hasTextAncestor) {
@@ -72,4 +72,4 @@ export const getPlainTextEligibility = function getPlainTextEligibility(element)
   } else {
     return closure_4;
   }
-};
+}

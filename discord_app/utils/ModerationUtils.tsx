@@ -1,11 +1,11 @@
-// === Module 16395: ModerationUtils ===
+// === Module 16633: ModerationUtils ===
 
-// Module 16395 (ModerationUtils)
+// Module 16633 (ModerationUtils)
 import shims from "shims" /* 586 */;
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import DMSafetyConstants from "DMSafetyConstants" /* 4834 */;
-import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 16396 */;
+import DMSafetyConstants from "DMSafetyConstants" /* 4835 */;
+import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 16634 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -42,10 +42,10 @@ const constants4 = DMSafetyConstants.ExplicitContentFilterTypes;
 const result = size.fileFinishedImporting("utils/ModerationUtils.tsx");
 
 export { mapColorToHighlightColor };
-export const mapOptionToHighlightedRowOptions = function mapOptionToHighlightedRowOptions(arr) {
+export function mapOptionToHighlightedRowOptions(arr) {
   return arr.map((name) => ({ title: name.name, description: name.desc, highlightColor: mapColorToHighlightColor(name.color), value: name.value, disabled: name.disabled }));
-};
-export const generateVerificationLevelOptions = function generateVerificationLevelOptions() {
+}
+export function generateVerificationLevelOptions() {
   let flag = features;
   if (features === undefined) {
     flag = false;
@@ -122,8 +122,8 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   obj7.color = unsafe_getRawColorResult3;
   items[4] = obj7;
   return items;
-};
-export const generateContentFilterHighlightedOptions = function generateContentFilterHighlightedOptions() {
+}
+export function generateContentFilterHighlightedOptions() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -170,8 +170,8 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   obj4.color = shims.unsafe_getRawColor("PRIMARY_400");
   items[2] = obj4;
   return items;
-};
-export const generateContentFilterOptions = function generateContentFilterOptions() {
+}
+export function generateContentFilterOptions() {
   let flag = features;
   if (features === undefined) {
     flag = false;
@@ -214,8 +214,8 @@ export const generateContentFilterOptions = function generateContentFilterOption
   obj3.disabled = flag;
   items[2] = obj3;
   return items;
-};
-export const generateDmSpamOptions = function generateDmSpamOptions() {
+}
+export function generateDmSpamOptions() {
   const obj = { name: null, desc: null, value: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["4IaoCI"]);
@@ -238,8 +238,8 @@ export const generateDmSpamOptions = function generateDmSpamOptions() {
   obj3.value = preloaded_user_settings.DmSpamFilterV2.DISABLED;
   items[2] = obj3;
   return items;
-};
-export const generateExplicitImageOptions = function generateExplicitImageOptions() {
+}
+export function generateExplicitImageOptions() {
   const obj = { name: null, desc: null, value: null, color: null };
   const intl = util.intl;
   obj.name = intl.string(util.t.PhNlhz);
@@ -265,4 +265,4 @@ export const generateExplicitImageOptions = function generateExplicitImageOption
   obj5.color = shims.unsafe_getRawColor("RED_400");
   items[2] = obj5;
   return items;
-};
+}

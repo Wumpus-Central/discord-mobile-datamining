@@ -1,6 +1,6 @@
-// === Module 14768: ConnectionsRoleTag ===
+// === Module 15003: ConnectionsRoleTag ===
 
-// Module 14768 (ConnectionsRoleTag)
+// Module 15003 (ConnectionsRoleTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1084 */;
@@ -11,7 +11,7 @@ const processColor = _mod17.processColor;
 const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
 
-export const createConnectionsRoleTag = function createConnectionsRoleTag(visibleConnectionsRole) {
+export function createConnectionsRoleTag(visibleConnectionsRole) {
   let colorString = visibleConnectionsRole.colorString;
   if (colorString == null) {
     colorString = DEFAULT_ROLE_COLOR_HEX;
@@ -23,4 +23,4 @@ export const createConnectionsRoleTag = function createConnectionsRoleTag(visibl
   }
   obj2 = utils_ColorUtils;
   return { id: visibleConnectionsRole.id, name: visibleConnectionsRole.name, backgroundColor: processColor(colorString), iconColor: processColor(PRIMARY_630) };
-};
+}

@@ -1,9 +1,9 @@
-// === Module 14441: generateDynamicLink ===
+// === Module 14675: generateDynamicLink ===
 
-// Module 14441 (generateDynamicLink)
+// Module 14675 (generateDynamicLink)
 import v1 from "v1" /* 1278 */;
 import formatDefault from "format" /* 1364 */;
-import getDescriptionDefault from "getDescription" /* 14442 */;
+import getDescriptionDefault from "getDescription" /* 14676 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -79,10 +79,10 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
   }
   return sum1;
 };
-export const generateAttemptId = function generateAttemptId() {
+export function generateAttemptId() {
   return v1.v4();
-};
-export const parseDynamicLink = function parseDynamicLink(str) {
+}
+export function parseDynamicLink(str) {
   if (str.startsWith(c6)) {
     try {
       const _URL = URL;
@@ -113,4 +113,4 @@ export const parseDynamicLink = function parseDynamicLink(str) {
   } else {
     return null;
   }
-};
+}

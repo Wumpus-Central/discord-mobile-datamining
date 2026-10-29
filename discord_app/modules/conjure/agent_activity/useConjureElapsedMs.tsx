@@ -1,6 +1,6 @@
-// === Module 12549: useConjureElapsedMs ===
+// === Module 12604: useConjureElapsedMs ===
 
-// Module 12549 (useConjureElapsedMs)
+// Module 12604 (useConjureElapsedMs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/useConjureElapsedMs.tsx");
 
-export const useConjureElapsedMs = function useConjureElapsedMs(startedAt, arg1) {
+export function useConjureElapsedMs(startedAt, arg1) {
   if (closure_5) {
     closure_129_0 = startedAt;
     const cResult = require("c").c(5);
@@ -103,4 +103,4 @@ export const useConjureElapsedMs = function useConjureElapsedMs(startedAt, arg1)
     }
   }
   return bound1;
-};
+}

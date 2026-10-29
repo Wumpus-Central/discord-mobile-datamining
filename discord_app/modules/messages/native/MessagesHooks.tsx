@@ -1,25 +1,25 @@
-// === Module 11254: MessagesHooks ===
+// === Module 11308: MessagesHooks ===
 
-// Module 11254 (MessagesHooks)
+// Module 11308 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7843 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9815 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11255 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11256 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6868 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7866 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9847 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11309 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10037 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6738 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10069 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6761 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9816).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9848).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageAuthorActivities(arr) {
@@ -361,7 +361,7 @@ let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.t
 export const useMessageAuthorActivities = tmp2;
 export const useFetchMessageApplications = tmp3;
 export const useFetchVoiceChannelInviteStartTimes = tmp4;
-export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
+export function useMessagesLifecycle(screenIndex) {
   ({ messages: require, isMessagesReady: importDefault, oldestUnreadMessageId: dependencyMap, channelId } = screenIndex);
   screenIndex = screenIndex.screenIndex;
   ({ updateRows: findNodeHandle, scrollToMessageId: VoiceChannelStartTimeStore } = screenIndex);
@@ -374,9 +374,9 @@ export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
   const effect1 = screenIndex.useEffect(() => () => {
     closure_2_7(channelId, screenIndex, false);
   }, items);
-};
+}
 export const useScrollState = tmp5;
-export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) {
+export function useChatUpdatesQueue(ref5, callback) {
   closure_0 = ref5;
   closure_1 = callback;
   const items = [ref5, callback];
@@ -394,7 +394,7 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
     memo.cleanup();
   }, items1);
   return memo;
-};
+}
 export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagesState() {
   const cResult = c.c(3);
   [tmp3, tmp4] = noop.useState(false);

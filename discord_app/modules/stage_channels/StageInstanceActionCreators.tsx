@@ -1,6 +1,6 @@
-// === Module 7916: StageInstanceActionCreators ===
+// === Module 7939: StageInstanceActionCreators ===
 
-// Module 7916 (StageInstanceActionCreators)
+// Module 7939 (StageInstanceActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -30,7 +30,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 
-export const startStageInstance = function startStageInstance() {
+export function startStageInstance() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -39,8 +39,8 @@ export const startStageInstance = function startStageInstance() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateStageInstance = function updateStageInstance() {
+}
+export function updateStageInstance() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -49,9 +49,9 @@ export const updateStageInstance = function updateStageInstance() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const endStageInstance = function endStageInstance(id) {
+}
+export function endStageInstance(id) {
   const HTTP = HTTPUtils.HTTP;
   const obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.del(obj);
-};
+}

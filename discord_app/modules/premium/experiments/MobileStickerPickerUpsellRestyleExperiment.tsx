@@ -1,9 +1,9 @@
-// === Module 9966: MobileStickerPickerUpsellRestyleExperiment ===
+// === Module 9998: MobileStickerPickerUpsellRestyleExperiment ===
 
-// Module 9966 (MobileStickerPickerUpsellRestyleExperiment)
+// Module 9998 (MobileStickerPickerUpsellRestyleExperiment)
 import c from "c" /* 576 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5063 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5064 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -29,11 +29,11 @@ export const useMobileStickerPickerUpsellRestyleEnabled = ReactCompilerGating.is
   return apexExperiment.useConfig({ location });
 });
 export { getMobileStickerPickerUpsellRestyleEnabled };
-export const getMobileStickerPickerUpsellRestyleEnabledForFeature = function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, location) {
+export function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, location) {
   let config = featureName === EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
   if (config) {
     const obj = { location };
     config = apexExperiment.getConfig(obj);
   }
   return config;
-};
+}

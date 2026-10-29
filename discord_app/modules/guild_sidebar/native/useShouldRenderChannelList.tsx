@@ -1,13 +1,13 @@
-// === Module 17969: useShouldRenderChannelList ===
+// === Module 18207: useShouldRenderChannelList ===
 
-// Module 17969 (useShouldRenderChannelList)
+// Module 18207 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7620 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
+import CacheStore from "CacheStore" /* 7643 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
 
 require = fn;
 const ComponentActions = fn(1084).ComponentActions;
@@ -58,7 +58,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
             tmp11 = checkGatewayConnection;
             tmp12 = checkGatewayConnection(true);
           }
-          return () => { ... };
+          return /* F156869 */ function() { ... };
         }
       }
     }
@@ -106,7 +106,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
             tmp11 = checkGatewayConnection;
             tmp12 = checkGatewayConnection(true);
           }
-          return () => { ... };
+          return /* F156869 */ function() { ... };
         }
       }
     }
@@ -135,8 +135,8 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       }
     }
     function checkNavigationState() {
-      const obj = first(5186);
-      const rootNavigationRef = first(5187).getRootNavigationRef();
+      const obj = first(5187);
+      const rootNavigationRef = first(5188).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -145,14 +145,14 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5187);
+      const obj2 = first(5188);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
       let ComponentDispatch = first(1120).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5187).getRootNavigationRef();
+      let rootNavigationRef = first(5188).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

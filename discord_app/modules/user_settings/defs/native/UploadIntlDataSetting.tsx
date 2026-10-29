@@ -1,6 +1,6 @@
-// === Module 17170: UploadIntlDataSetting ===
+// === Module 17409: UploadIntlDataSetting ===
 
-// Module 17170 (UploadIntlDataSetting)
+// Module 17409 (UploadIntlDataSetting)
 import c from "c" /* 576 */;
 import AssetJsonUtils from "AssetJsonUtils" /* 1129 */;
 import _mod1163 from "module_1163" /* 1163 */;
@@ -19,7 +19,7 @@ let closure_11 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -265,7 +265,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadIntlDataDisabled() {
   return closure_9().isDisabled;
 }
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
   const cResult = c.c(2);
   if (typeof useIsUploadingIntlData === "function") {
@@ -301,7 +301,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(12320).FileUpIcon,
+  IconComponent: fn(12374).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -312,7 +312,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16400).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16638).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
     const cResult = c.c(2);
     if (typeof useIsUploadingIntlData === "function") {

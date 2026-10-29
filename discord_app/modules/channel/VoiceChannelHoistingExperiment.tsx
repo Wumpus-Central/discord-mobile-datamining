@@ -1,9 +1,9 @@
-// === Module 19066: VoiceChannelHoistingExperiment ===
+// === Module 19299: VoiceChannelHoistingExperiment ===
 
-// Module 19066 (VoiceChannelHoistingExperiment)
+// Module 19299 (VoiceChannelHoistingExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 5227 */;
-import createExperiment from "module_5224" /* 5224 */;
+import ExperimentConstants from "ExperimentConstants" /* 5228 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

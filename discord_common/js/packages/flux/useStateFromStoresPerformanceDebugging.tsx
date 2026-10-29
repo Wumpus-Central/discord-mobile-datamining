@@ -1,6 +1,6 @@
-// === Module 17297: useStateFromStoresPerformanceDebugging ===
+// === Module 17536: useStateFromStoresPerformanceDebugging ===
 
-// Module 17297 (useStateFromStoresPerformanceDebugging)
+// Module 17536 (useStateFromStoresPerformanceDebugging)
 import Storage2 from "Storage" /* 510 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -101,7 +101,7 @@ export function getUseStateFromStoresExecutionWindowThresholdMs() {
   }
   return num;
 }
-export const setUseStateFromStoresExecutionWindowThresholdMs = function setUseStateFromStoresExecutionWindowThresholdMs(arg0) {
+export function setUseStateFromStoresExecutionWindowThresholdMs(arg0) {
   global = arg0;
   const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionWindowThresholdMs", arg0);
@@ -110,7 +110,7 @@ export const setUseStateFromStoresExecutionWindowThresholdMs = function setUseSt
     const _setInterval = setInterval;
     interval = setInterval(flushViolators, global);
   }
-};
+}
 export function getUseStateFromStoresExecutionTimeWarningThresholdMs() {
   let num = arg0;
   if (arg0 === undefined) {
@@ -118,11 +118,11 @@ export function getUseStateFromStoresExecutionTimeWarningThresholdMs() {
   }
   return num;
 }
-export const setUseStateFromStoresExecutionTimeWarningThresholdMs = function setUseStateFromStoresExecutionTimeWarningThresholdMs(arg0) {
+export function setUseStateFromStoresExecutionTimeWarningThresholdMs(arg0) {
   global = arg0;
   const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionTimeWarningThresholdMs", arg0);
-};
+}
 export function getUseStateFromStoresExecutionCountWarningThreshold() {
   let num = arg0;
   if (arg0 === undefined) {
@@ -130,16 +130,16 @@ export function getUseStateFromStoresExecutionCountWarningThreshold() {
   }
   return num;
 }
-export const setUseStateFromStoresExecutionCountWarningThreshold = function setUseStateFromStoresExecutionCountWarningThreshold(arg0) {
+export function setUseStateFromStoresExecutionCountWarningThreshold(arg0) {
   global = arg0;
   const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionCountWarningThreshold", arg0);
-};
-export const setUseStateFromStoresSpecificHookFilter = function setUseStateFromStoresSpecificHookFilter(first1) {
+}
+export function setUseStateFromStoresSpecificHookFilter(first1) {
   global = first1;
   const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresSpecificHookFilter", first1);
-};
+}
 export function getUseStateFromStoresSpecificHookFilter() {
   let str = arg0;
   if (arg0 === undefined) {
@@ -154,7 +154,7 @@ export function getUseStateFromStoresDebuggingEnabled() {
   }
   return flag;
 }
-export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(first1) {
+export function setUseStateFromStoresDebuggingEnabled(first1) {
   global = first1;
   const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresDebuggingEnabled", first1);
@@ -166,8 +166,8 @@ export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromSto
     clearInterval(interval);
     interval = undefined;
   }
-};
-export const getUseStateFromStoresHookInfo = function getUseStateFromStoresHookInfo() {
+}
+export function getUseStateFromStoresHookInfo() {
   if (global) {
     const _Error = Error;
     const error = new Error();
@@ -210,8 +210,8 @@ export const getUseStateFromStoresHookInfo = function getUseStateFromStoresHookI
     const result = map.set(str8, value);
     return value;
   }
-};
-export const trackGetStateFromStoresPerformance = function trackGetStateFromStoresPerformance(execTime, fn) {
+}
+export function trackGetStateFromStoresPerformance(execTime, fn) {
   if (global) {
     if (null != execTime) {
       const _performance = performance;
@@ -245,4 +245,4 @@ export const trackGetStateFromStoresPerformance = function trackGetStateFromStor
     }
   }
   return fn();
-};
+}

@@ -1,11 +1,11 @@
-// === Module 13283: tryInjectMessage ===
+// === Module 13516: tryInjectMessage ===
 
-// Module 13283 (tryInjectMessage)
+// Module 13516 (tryInjectMessage)
 import FlagUtils from "FlagUtils" /* 1402 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6047 */;
-import createMessageDefault from "createMessage" /* 10241 */;
-import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 13284 */;
-import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 13285 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6051 */;
+import createMessageDefault from "createMessage" /* 10274 */;
+import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 13517 */;
+import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 13518 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/tryInjectMessage.tsx");
 
-export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id2) {
+export function tryCreateInjectedMessage(id, id2) {
   if (map.get(id2.id) === id.id) {
     const obj3 = { channelId: id2.id, type: constants3.IN_GAME_MESSAGE_NUX, content: "", author: id.author, flags: constants.EPHEMERAL, state: constants2.SENT };
     const tmp19 = createMessageDefault(obj3);
@@ -72,4 +72,4 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id
     tmp22 = obj5;
   }
   return tmp22;
-};
+}

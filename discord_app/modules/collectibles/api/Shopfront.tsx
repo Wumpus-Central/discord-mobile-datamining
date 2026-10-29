@@ -1,6 +1,6 @@
-// === Module 16628: Shopfront ===
+// === Module 16866: Shopfront ===
 
-// Module 16628 (Shopfront)
+// Module 16866 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _search(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -41,7 +41,7 @@ let closure_4 = async function _search(arg0) {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -96,7 +96,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/api/Shopfront.tsx");
 
-export const search = function search() {
+export function search() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -105,4 +105,4 @@ export const search = function search() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

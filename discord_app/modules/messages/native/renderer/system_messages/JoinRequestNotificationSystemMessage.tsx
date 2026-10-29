@@ -1,12 +1,12 @@
-// === Module 8449: JoinRequestNotificationSystemMessage ===
+// === Module 8471: JoinRequestNotificationSystemMessage ===
 
-// Module 8449 (JoinRequestNotificationSystemMessage)
+// Module 8471 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1125 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6880 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5036 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6904 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5037 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
 
-export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
+export function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
   const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
@@ -87,4 +87,4 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     const merged = Object.assign(createCommonMessageDefault(message));
     return obj5;
   }
-};
+}

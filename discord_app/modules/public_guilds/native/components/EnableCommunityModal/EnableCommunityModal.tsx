@@ -1,13 +1,13 @@
-// === Module 19475: EnableCommunityModal ===
+// === Module 19708: EnableCommunityModal ===
 
-// Module 19475 (EnableCommunityModal)
+// Module 19708 (EnableCommunityModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import NavigatorHeader from "NavigatorHeader" /* 6960 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6966 */;
-import Navigator from "Navigator" /* 7131 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19474 */;
-import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 19476 */;
+import NavigatorHeader from "NavigatorHeader" /* 6984 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6990 */;
+import Navigator from "Navigator" /* 7155 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19707 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 19709 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,10 +56,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     function headerRight() {
-      const obj = { source: closure_1_1(8147), onPress, accessibilityLabel: null };
+      const obj = { source: closure_1_1(8170), onPress, accessibilityLabel: null };
       const intl = closure_1_0(1125).intl;
       obj.accessibilityLabel = intl.string(closure_1_0(1125).t.cpT0Cq);
-      return closure_1_4(closure_1_0(7521).HeaderActionButton, obj);
+      return closure_1_4(closure_1_0(7544).HeaderActionButton, obj);
     }
     const obj2 = {};
     const obj3 = {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
           return null;
         },
       render() {
-          return closure_1_4(closure_1_1(19477), {});
+          return closure_1_4(closure_1_1(19710), {});
         }
     };
     obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_1] = obj3;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
           return null;
         },
       render() {
-          return closure_1_4(closure_1_1(19489), {});
+          return closure_1_4(closure_1_1(19722), {});
         }
     };
     obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_2] = obj4;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
           return null;
         },
       render() {
-          return closure_1_4(closure_1_1(19490), {});
+          return closure_1_4(closure_1_1(19723), {});
         }
     };
     obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_3] = obj5;
@@ -112,10 +112,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
 }) : (function EnableCommunityModal() {
   const memo = noop.useMemo(() => {
     function headerRight() {
-      const obj = { source: closure_1_1(8147), onPress, accessibilityLabel: null };
+      const obj = { source: closure_1_1(8170), onPress, accessibilityLabel: null };
       const intl = closure_1_0(1125).intl;
       obj.accessibilityLabel = intl.string(closure_1_0(1125).t.cpT0Cq);
-      return closure_1_4(closure_1_0(7521).HeaderActionButton, obj);
+      return closure_1_4(closure_1_0(7544).HeaderActionButton, obj);
     }
     return {
       [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_1]: {
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19477), {});
+          return closure_1_4(closure_1_1(19710), {});
         }
       },
       [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_2]: {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19489), {});
+          return closure_1_4(closure_1_1(19722), {});
         }
       },
       [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_3]: {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnableCo
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19490), {});
+          return closure_1_4(closure_1_1(19723), {});
         }
       }
     };

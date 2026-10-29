@@ -1,11 +1,11 @@
-// === Module 15973: ConjureBuilderPreviewStore ===
+// === Module 16209: ConjureBuilderPreviewStore ===
 
-// Module 15973 (ConjureBuilderPreviewStore)
+// Module 16209 (ConjureBuilderPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FramesStore from "FramesStore" /* 6810 */;
+import FramesStore from "FramesStore" /* 6833 */;
 
-const OrientationLockState = fn(2023).OrientationLockState;
+const OrientationLockState = fn(2024).OrientationLockState;
 let applicationId = null;
 let enabled = false;
 let closure_5 = false;

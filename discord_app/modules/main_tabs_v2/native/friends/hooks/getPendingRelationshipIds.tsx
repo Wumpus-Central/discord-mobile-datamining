@@ -1,7 +1,7 @@
-// === Module 18514: getPendingRelationshipIds ===
+// === Module 18748: getPendingRelationshipIds ===
 
-// Module 18514 (getPendingRelationshipIds)
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+// Module 18748 (getPendingRelationshipIds)
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 function filterFromPending(arg0) {
   return RelationshipStore.isSpam(arg0) || RelationshipStore.isIgnored(arg0);
@@ -10,7 +10,7 @@ const RelationshipTypes = fn(1084).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/hooks/getPendingRelationshipIds.tsx");
 
-export const getPendingRelationshipIds = function getPendingRelationshipIds(mutableRelationships) {
+export function getPendingRelationshipIds(mutableRelationships) {
   const pendingIncomingIds = [];
   const pendingOutgoingIds = [];
   const spamIds = [];
@@ -52,4 +52,4 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
   const reversed1 = pendingOutgoingIds.reverse();
   const reversed2 = spamIds.reverse();
   return { pendingIncomingIds, pendingOutgoingIds, spamIds, ignoredUserIds };
-};
+}

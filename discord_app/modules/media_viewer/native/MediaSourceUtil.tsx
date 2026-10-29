@@ -1,31 +1,31 @@
-// === Module 8794: MediaSourceUtil ===
+// === Module 8797: MediaSourceUtil ===
 
-// Module 8794 (MediaSourceUtil)
+// Module 8797 (MediaSourceUtil)
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import util from "util" /* 1125 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1444 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1495 */;
-import Server from "Server" /* 1997 */;
-import ToastUtils from "ToastUtils" /* 5698 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6049 */;
-import EmbedUtils from "EmbedUtils" /* 6521 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6717 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7426 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7432 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8309 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8518 */;
-import transformMessageComponents from "transformMessageComponents" /* 8630 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8646 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8790 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8795 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8796 */;
-import MediaModalPortal from "MediaModalPortal" /* 8797 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1445 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1496 */;
+import Server from "Server" /* 1998 */;
+import ToastUtils from "ToastUtils" /* 5700 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6053 */;
+import EmbedUtils from "EmbedUtils" /* 6545 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6740 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7449 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7455 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8331 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8540 */;
+import transformMessageComponents from "transformMessageComponents" /* 8652 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8668 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8793 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8798 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8799 */;
+import MediaModalPortal from "MediaModalPortal" /* 8800 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
@@ -750,7 +750,7 @@ export { extractMediaFromAttachment };
 export { getEmbedUrl };
 export { getEmbedMedia };
 export { extractMediaFromEmbed };
-export const extractThumbnailMediaFromEmbed = function extractThumbnailMediaFromEmbed(thumbnail, message2, message1, embedIndex, guild_id) {
+export function extractThumbnailMediaFromEmbed(thumbnail, message2, message1, embedIndex, guild_id) {
   thumbnail = thumbnail.thumbnail;
   if (null != thumbnail) {
     const obj = { embed: thumbnail, media: thumbnail, message: message2, embedIndex, guildId: guild_id, spoiler: null, obscure: null, noCarousel: true };
@@ -761,8 +761,8 @@ export const extractThumbnailMediaFromEmbed = function extractThumbnailMediaFrom
     obj.obscure = obj3.isMediaObscuredForHarmTypes(obj4, ObscuredMediaUtils.getEnabledHarmTypesForMessage(message2));
     return getEmbedImageMediaSources(obj);
   }
-};
-export const extractMediaFromMessageComponents = function extractMediaFromMessageComponents(getContentMessage, contentMessage, getContentMessage) {
+}
+export function extractMediaFromMessageComponents(getContentMessage, contentMessage, getContentMessage) {
   if (0 === contentMessage.components.length) {
     return [];
   } else {
@@ -799,8 +799,8 @@ export const extractMediaFromMessageComponents = function extractMediaFromMessag
     }
     return items1;
   }
-};
-export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbed(message2, message1, images, index, guild_id) {
+}
+export function extractMediaSourcesFromEmbed(message2, message1, images, index, guild_id) {
   importDefault = images;
   dependencyMap = index;
   const guildId = guild_id;
@@ -856,8 +856,8 @@ export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbe
     const items = [size, { uri: str1, messageId: message2.id, guildId, channelId: message2.channel_id, mediaIndex, width: width.width, height: width.height, sourceURI: width.url, accessoryType: "embed", noCarousel: false, spoiler: hasSpoilerEmbeds, contentType: width.contentType, flags: images.flags, obscure: tmp10, contentScanVersion: content_scan_version, shareURI: width.url }];
     return items;
   });
-};
-export const extractMediaSourcesFromComponent = function extractMediaSourcesFromComponent(message2, components, guild_id, tmp10Result14, componentMediaIndex) {
+}
+export function extractMediaSourcesFromComponent(message2, components, guild_id, tmp10Result14, componentMediaIndex) {
   _require = message2;
   closure_1 = guild_id;
   const obj = require("InteractionComponentUtils");
@@ -866,7 +866,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     return null;
   } else {
     const type = value.type;
-    if (tmp(1997).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(1998).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -889,7 +889,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
       });
       obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1385).isNotNullish) };
       return obj2;
-    } else if (tmp(1997).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1998).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {
@@ -904,8 +904,8 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     }
   }
   const flattenComponentsResult = require("InteractionComponentUtils").flattenComponents(components);
-};
-export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMessage(message, message2, guild_id, GRAVITY_VALID_EMBED_TYPES) {
+}
+export function extractMediaSourcesFromMessage(message, message2, guild_id, GRAVITY_VALID_EMBED_TYPES) {
   const items = [];
   let num = 0;
   let num2 = 0;
@@ -961,8 +961,8 @@ export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMe
     }
   }
   return items;
-};
-export const setMediaSourcePortal = function setMediaSourcePortal(items1, portal) {
+}
+export function setMediaSourcePortal(items1, portal) {
   let first = items1;
   if (Array.isArray(items1)) {
     first = items1[0];
@@ -975,8 +975,8 @@ export const setMediaSourcePortal = function setMediaSourcePortal(items1, portal
       items1.portal = portal;
     }
   }
-};
-export const getSelectedMediaSource = function getSelectedMediaSource(mediaViewerSyncer) {
+}
+export function getSelectedMediaSource(mediaViewerSyncer) {
   const index = mediaViewerSyncer.index;
   value = index.get();
   if (value >= 0) {
@@ -994,7 +994,7 @@ export const getSelectedMediaSource = function getSelectedMediaSource(mediaViewe
     }
   }
   return null;
-};
+}
 export const useSelectedMediaSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedMediaSource(index) {
   const cResult = c.c(3);
   const tmp2 = useStateFromSharedValueDefault(index.index);
@@ -1051,7 +1051,7 @@ export const useSelectedMediaSource = ReactCompilerGating.isReactCompilerEnabled
   ];
   return items1;
 });
-export const downloadMediaAsset = function downloadMediaAsset(mediaUrl, VIDEO) {
+export function downloadMediaAsset(mediaUrl, VIDEO) {
   closure_0 = VIDEO;
   return NativeMediaManagerModuleDefault.downloadMediaAsset(mediaUrl, VIDEO).then(() => {
     if (ConstantsIOS.MediaType.IMAGE === closure_0) {
@@ -1067,9 +1067,9 @@ export const downloadMediaAsset = function downloadMediaAsset(mediaUrl, VIDEO) {
     const MediaViewerAnalytics = MediaViewerAnalyticsManager.MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMediaViewerDownloadButtonTapped();
   }, handleDownloadError);
-};
+}
 export { downloadMediaAssetWithContentType };
-export const getYoutubeClipVideoIdFromURI = function getYoutubeClipVideoIdFromURI(uri) {
+export function getYoutubeClipVideoIdFromURI(uri) {
   const match = uri.match(/^https:\/\/www\.youtube\.com\/embed\/([A-Za-z0-9_-]*)(\?clip=([A-Za-z0-9_-]+)(&clipt=([A-Za-z0-9_-]+)))?$/);
   if (null != match) {
     if (6 === match.length) {
@@ -1088,8 +1088,8 @@ export const getYoutubeClipVideoIdFromURI = function getYoutubeClipVideoIdFromUR
     }
   }
   return null;
-};
-export const getYoutubeVideoIdFromURI = function getYoutubeVideoIdFromURI(uri) {
+}
+export function getYoutubeVideoIdFromURI(uri) {
   let match = uri.match(/^https:\/\/www\.youtube\.com\/embed\/([A-Za-z0-9_-]*)(\?start=([0-9]+))?$/);
   let tmp = null;
   if (null != match) {
@@ -1108,9 +1108,9 @@ export const getYoutubeVideoIdFromURI = function getYoutubeVideoIdFromURI(uri) {
     }
   }
   return tmp;
-};
+}
 export const VideoSourceType = obj2;
-export const getVideoSourceType = function getVideoSourceType(source) {
+export function getVideoSourceType(source) {
   if (null != source.videoURI) {
     if (obj.isWebPlayerVideoUrl(source.videoURI)) {
       let PORTAL = obj2.WEB_FILE_IFRAME;
@@ -1127,8 +1127,8 @@ export const getVideoSourceType = function getVideoSourceType(source) {
     const DEFAULT = obj2.DEFAULT;
   }
   const TIKTOK_IFRAME = obj2.TIKTOK_IFRAME;
-};
-export const supportOverlayVideoControls = function supportOverlayVideoControls(videoURI) {
+}
+export function supportOverlayVideoControls(videoURI) {
   let tmp = null != videoURI.videoURI;
   if (tmp) {
     tmp = true !== videoURI.isGIFV;
@@ -1141,11 +1141,11 @@ export const supportOverlayVideoControls = function supportOverlayVideoControls(
     tmp = tmp2;
   }
   return tmp;
-};
+}
 export { isAnimatedWebpSource };
 export { isAnimatedAvifSource };
 export { isGIFSource };
-export const isAnimatedImageSource = function isAnimatedImageSource(source) {
+export function isAnimatedImageSource(source) {
   let result = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, ConstantsIOS.GIF_RE_IOS);
   if (!result) {
     let result1 = null != source.sourceURI && null != source.uri;
@@ -1176,4 +1176,4 @@ export const isAnimatedImageSource = function isAnimatedImageSource(source) {
     result = result2;
   }
   return result;
-};
+}

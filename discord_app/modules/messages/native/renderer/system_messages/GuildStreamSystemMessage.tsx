@@ -1,18 +1,18 @@
-// === Module 8410: GuildStreamSystemMessage ===
+// === Module 8432: GuildStreamSystemMessage ===
 
-// Module 8410 (GuildStreamSystemMessage)
+// Module 8432 (GuildStreamSystemMessage)
 import util from "util" /* 1125 */;
-import Constants from "Constants" /* 6678 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8370 */;
+import Constants from "Constants" /* 6702 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8392 */;
 import size from "module_2" /* 2 */;
 
 const StreamTypes = Constants.StreamTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
 
-export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(roleStyle) {
+export function createGuildStreamSystemMessage(roleStyle) {
   const message = roleStyle.message;
   let messageReference = message.messageReference;
   if (messageReference == null) {
@@ -41,4 +41,4 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   obj5.content = formatToPartsResult;
   const merged2 = Object.assign(createCommonMessageDefault(roleStyle));
   return obj5;
-};
+}

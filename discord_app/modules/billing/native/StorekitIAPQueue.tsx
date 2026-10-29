@@ -1,7 +1,7 @@
-// === Module 14168: StorekitIAPQueue ===
+// === Module 14401: StorekitIAPQueue ===
 
-// Module 14168 (StorekitIAPQueue)
-import utils_PriceUtils from "utils/PriceUtils" /* 7377 */;
+// Module 14401 (StorekitIAPQueue)
+import utils_PriceUtils from "utils/PriceUtils" /* 7400 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function productSK2ToIAPProduct(subscription) {
     str2 = "PAYASYOUGO";
   }
 }
-const convertToAlpha2 = fn(5682).convertToAlpha2;
+const convertToAlpha2 = fn(5684).convertToAlpha2;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 class StorekitIAPQueueClass {
   constructor() {
@@ -139,7 +139,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

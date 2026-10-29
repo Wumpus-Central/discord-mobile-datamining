@@ -1,10 +1,10 @@
-// === Module 14970: useSubscriptionPlansLoaded ===
+// === Module 15205: useSubscriptionPlansLoaded ===
 
-// Module 14970 (useSubscriptionPlansLoaded)
+// Module 15205 (useSubscriptionPlansLoaded)
 import LoggerDefault from "Logger" /* 3 */;
-import PaymentSourceStore from "PaymentSourceStore" /* 2052 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2054 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 2053 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
 
 const require = fn;
 function getSubscriptionPlansLoaded() {
@@ -52,7 +52,7 @@ new LoggerDefault("useSubscriptionPlansLoaded");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
 
-export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() {
+export function useSubscriptionPlansLoaded() {
   let tmp = arg0;
   if (arg0 === undefined) {
     let items = [];
@@ -66,5 +66,5 @@ export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() 
     items = [PaymentSourceStore, SubscriptionPlanStore, SubscriptionStore];
     return getSubscriptionPlansLoaded(items, items);
   }, items2);
-};
+}
 export { getSubscriptionPlansLoaded };

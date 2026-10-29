@@ -1,11 +1,11 @@
-// === Module 5622: VisualEffectView ===
+// === Module 5623: VisualEffectView ===
 
-// Module 5622 (VisualEffectView)
+// Module 5623 (VisualEffectView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken2 from "useToken" /* 5288 */;
-import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5624 */;
-import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5627 */;
+import useToken2 from "useToken" /* 5289 */;
+import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5625 */;
+import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5628 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ function getIOSBlurEffect(blurTheme, blurStyle) {
 }
 let closure_3 = ["blurTheme", "blurStyle", "blurAmount", "tintColor", "android_fallbackColor", "android_blurTargetViewNativeId", "android_softwareBlurDisabled", "ref"];
 const View = fn(17).View;
-let closure_6 = fn(5623).useVisualEffectViewOverrides;
+let closure_6 = fn(5624).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1084).ThemeTypes;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1381);

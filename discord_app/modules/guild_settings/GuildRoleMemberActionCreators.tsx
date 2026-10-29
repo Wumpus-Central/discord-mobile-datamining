@@ -1,11 +1,11 @@
-// === Module 7262: GuildRoleMemberActionCreators ===
+// === Module 7286: GuildRoleMemberActionCreators ===
 
-// Module 7262 (GuildRoleMemberActionCreators)
+// Module 7286 (GuildRoleMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1456 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6866 */;
+import privDefault from "priv" /* 1457 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6889 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7261 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7285 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -100,7 +100,7 @@ let closure_8 = new privDefault({ maxAge: 10000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");
 
-export const fetchMemberCounts = function fetchMemberCounts() {
+export function fetchMemberCounts() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -109,8 +109,8 @@ export const fetchMemberCounts = function fetchMemberCounts() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestMembersForRole = function requestMembersForRole(guildId, roleId, arg2) {
+}
+export function requestMembersForRole(guildId, roleId, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -132,4 +132,4 @@ export const requestMembersForRole = function requestMembersForRole(guildId, rol
     return body.body.length;
   });
   const obj2 = require("HTTPUtils");
-};
+}

@@ -1,6 +1,6 @@
-// === Module 11522: getRemoteIconURL ===
+// === Module 11576: getRemoteIconURL ===
 
-// Module 11522 (getRemoteIconURL)
+// Module 11576 (getRemoteIconURL)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/getRemoteIconURL.tsx");

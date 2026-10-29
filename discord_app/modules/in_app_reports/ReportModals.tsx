@@ -1,14 +1,14 @@
-// === Module 8140: ReportModals ===
+// === Module 8163: ReportModals ===
 
-// Module 8140 (ReportModals)
-import GuildRecordUtils from "GuildRecordUtils" /* 4870 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
-import MenuTypes from "MenuTypes" /* 8141 */;
-import showReportModal from "showReportModal" /* 8142 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8144 */;
+// Module 8163 (ReportModals)
+import GuildRecordUtils from "GuildRecordUtils" /* 4871 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
+import MenuTypes from "MenuTypes" /* 8164 */;
+import showReportModal from "showReportModal" /* 8165 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StageInstanceStore from "StageInstanceStore" /* 4861 */;
-import MessageRecord from "MessageRecord" /* 4947 */;
+import StageInstanceStore from "StageInstanceStore" /* 4862 */;
+import MessageRecord from "MessageRecord" /* 4948 */;
 import UserRecord from "UserRecord" /* 1403 */;
 
 require = fn;
@@ -69,7 +69,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportModals.tsx");
 
-export const showReportModalForGuild = function showReportModalForGuild(guild, onSubmit) {
+export function showReportModalForGuild(guild, onSubmit) {
   const obj = { guild_id: guild.id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -77,8 +77,8 @@ export const showReportModalForGuild = function showReportModalForGuild(guild, o
   const obj3 = { report_type: MenuTypes.ReportNames.GUILD };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.GUILD, record: guild }, {}, { onSubmit });
-};
-export const showReportModalForGuildDirectoryEntry = function showReportModalForGuildDirectoryEntry(entry, onSubmit) {
+}
+export function showReportModalForGuildDirectoryEntry(entry, onSubmit) {
   const obj = { channel_id: entry.channelId, guild_id: entry.guildId };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -86,8 +86,8 @@ export const showReportModalForGuildDirectoryEntry = function showReportModalFor
   const obj3 = { report_type: MenuTypes.ReportNames.GUILD_DIRECTORY_ENTRY };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.GUILD_DIRECTORY_ENTRY, record: entry }, {}, { onSubmit });
-};
-export const showReportModalForMessage = function showReportModalForMessage(message, mobile_media_message_preview_action_sheet, onSubmit, onClose) {
+}
+export function showReportModalForMessage(message, mobile_media_message_preview_action_sheet, onSubmit, onClose) {
   const obj = { message_id: message.id, channel_id: message.channel_id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -95,8 +95,8 @@ export const showReportModalForMessage = function showReportModalForMessage(mess
   const obj3 = { report_type: MenuTypes.ReportNames.MESSAGE };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: message }, {}, { onSubmit, onClose });
-};
-export const showStaffTestReportModalForMessage = function showStaffTestReportModalForMessage(id, arg1, onSubmit) {
+}
+export function showStaffTestReportModalForMessage(id, arg1, onSubmit) {
   const obj = { message_id: id.id, channel_id: id.channel_id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -104,8 +104,8 @@ export const showStaffTestReportModalForMessage = function showStaffTestReportMo
   const obj3 = { report_type: MenuTypes.ReportNames.MESSAGE };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: id }, { variant: "staff" }, { onSubmit });
-};
-export const showStaffTestReportModalForGuild = function showStaffTestReportModalForGuild(guild_id, arg1, onSubmit) {
+}
+export function showStaffTestReportModalForGuild(guild_id, arg1, onSubmit) {
   const obj = { guild_id: guild_id.id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -113,8 +113,8 @@ export const showStaffTestReportModalForGuild = function showStaffTestReportModa
   const obj3 = { report_type: MenuTypes.ReportNames.GUILD };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.GUILD, record: guild_id }, { variant: "staff" }, { onSubmit });
-};
-export const showReportModalForStageChannel = function showReportModalForStageChannel(channel, onSubmit) {
+}
+export function showReportModalForStageChannel(channel, onSubmit) {
   const stageInstanceByChannel = StageInstanceStore.getStageInstanceByChannel(channel.id);
   if (null != stageInstanceByChannel) {
     const obj = { stage_instance_id: null, channel_id: null, guild_id: null };
@@ -126,8 +126,8 @@ export const showReportModalForStageChannel = function showReportModalForStageCh
     const obj6 = { onSubmit };
     showReportModal.showReportModal(obj5, {}, obj6);
   }
-};
-export const showReportModalForGuildScheduledEvent = function showReportModalForGuildScheduledEvent(guild_scheduled_event_id, onSubmit) {
+}
+export function showReportModalForGuildScheduledEvent(guild_scheduled_event_id, onSubmit) {
   const obj = { guild_scheduled_event_id: guild_scheduled_event_id.id, guild_id: guild_scheduled_event_id.guild_id, channel_id: null };
   const channel_id = guild_scheduled_event_id.channel_id;
   obj.channel_id = channel_id;
@@ -139,8 +139,8 @@ export const showReportModalForGuildScheduledEvent = function showReportModalFor
   tmpResult.showReportModal({ name: MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT, record: guild_scheduled_event_id }, {}, { onSubmit });
   const obj4 = { name: MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT, record: guild_scheduled_event_id };
   const obj5 = { onSubmit };
-};
-export const showReportModalForFirstDM = function showReportModalForFirstDM(id, onSubmit) {
+}
+export function showReportModalForFirstDM(id, onSubmit) {
   const obj = { message_id: id.id, channel_id: id.channel_id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -148,8 +148,8 @@ export const showReportModalForFirstDM = function showReportModalForFirstDM(id, 
   const obj3 = { report_type: MenuTypes.ReportNames.FIRST_DM };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.FIRST_DM, record: id }, {}, { onSubmit, isEligibleForFeedback: false });
-};
-export const submitHamReportForFirstDM = function submitHamReportForFirstDM() {
+}
+export function submitHamReportForFirstDM() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -158,8 +158,8 @@ export const submitHamReportForFirstDM = function submitHamReportForFirstDM() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const showReportModalForUser = function showReportModalForUser(user, contextualGuildId, onSubmit, appContext) {
+}
+export function showReportModalForUser(user, contextualGuildId, onSubmit, appContext) {
   const obj = { reported_user_id: user.id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -167,8 +167,8 @@ export const showReportModalForUser = function showReportModalForUser(user, cont
   const obj3 = { report_type: MenuTypes.ReportNames.USER };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.USER, record: user, contextualGuildId }, {}, { onSubmit, appContext });
-};
-export const showStaffTestReportModalForUser = function showStaffTestReportModalForUser(id, contextualGuildId, onSubmit, appContext) {
+}
+export function showStaffTestReportModalForUser(id, contextualGuildId, onSubmit, appContext) {
   const obj = { reported_user_id: id.id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -176,8 +176,8 @@ export const showStaffTestReportModalForUser = function showStaffTestReportModal
   const obj3 = { report_type: MenuTypes.ReportNames.USER };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.USER, record: id, contextualGuildId }, { variant: "staff" }, { onSubmit, isEligibleForFeedback: false, appContext });
-};
-export const showUnauthenticatedReportModalForUser = function showUnauthenticatedReportModalForUser(emailToken, onClose) {
+}
+export function showUnauthenticatedReportModalForUser(emailToken, onClose) {
   const tmp = new UserRecord({});
   const obj = { reported_user_id: tmp.id };
   const obj2 = AppAnalyticsUtilsDefault;
@@ -186,8 +186,8 @@ export const showUnauthenticatedReportModalForUser = function showUnauthenticate
   const obj3 = { report_type: MenuTypes.UnauthenticatedReportNames.USER };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.UnauthenticatedReportNames.USER, record: tmp }, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
-};
-export const showUnauthenticatedReportModalForGuild = function showUnauthenticatedReportModalForGuild(emailToken, onClose) {
+}
+export function showUnauthenticatedReportModalForGuild(emailToken, onClose) {
   const result = GuildRecordUtils.dangerouslyConstructGuildRecordFromUntypedObject({});
   const obj2 = { guild_id: result.id };
   const obj3 = AppAnalyticsUtilsDefault;
@@ -196,25 +196,25 @@ export const showUnauthenticatedReportModalForGuild = function showUnauthenticat
   const obj4 = { report_type: MenuTypes.UnauthenticatedReportNames.GUILD };
   const obj5 = showReportModal;
   obj5.showReportModal({ name: MenuTypes.UnauthenticatedReportNames.GUILD, record: result }, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
-};
-export const showUnauthenticatedReportModalForTida = function showUnauthenticatedReportModalForTida(emailToken, onClose) {
+}
+export function showUnauthenticatedReportModalForTida(emailToken, onClose) {
   const obj = AppAnalyticsUtilsDefault;
   const merged = Object.assign({});
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MEDIA_TAKEDOWN });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
   const obj3 = showReportModal;
   obj3.showReportModal({ name: MenuTypes.UnauthenticatedReportNames.MEDIA_TAKEDOWN }, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
-};
-export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
+}
+export function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "useCallback", channel_id: "PX_16" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "Reflect" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;
   obj3.showReportModal({ name: MenuTypes.UnauthenticatedReportNames.MESSAGE, record: tmp }, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
-};
-export const submitReportForInappropriateConversationSafetyAlert = function submitReportForInappropriateConversationSafetyAlert() {
+}
+export function submitReportForInappropriateConversationSafetyAlert() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -223,8 +223,8 @@ export const submitReportForInappropriateConversationSafetyAlert = function subm
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const showReportModalForInappropriateConversationSafetyAlert = function showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage, onSubmit) {
+}
+export function showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage, onSubmit) {
   const obj = { message_id: lastChannelMessage.id, channel_id: lastChannelMessage.channel_id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -232,8 +232,8 @@ export const showReportModalForInappropriateConversationSafetyAlert = function s
   const obj3 = { report_type: MenuTypes.ReportNames.MESSAGE };
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: lastChannelMessage }, { variant: "safety_alerts_v1" }, { onSubmit });
-};
-export const showReportModalForWidget = function showReportModalForWidget(user_id, id, onSubmit, appContext) {
+}
+export function showReportModalForWidget(user_id, id, onSubmit, appContext) {
   const obj2 = { name: MenuTypes.ReportNames.WIDGET, widget_id: null, user_id: null, widget: null };
   let str = id.id;
   if (str == null) {
@@ -243,8 +243,8 @@ export const showReportModalForWidget = function showReportModalForWidget(user_i
   obj2.user_id = user_id;
   obj2.widget = id;
   showReportModal.showReportModal(obj2, {}, { onSubmit, appContext });
-};
-export const showReportModalForApp = function showReportModalForApp(arg0) {
+}
+export function showReportModalForApp(arg0) {
   ({ application, entrypoint, contextualGuildId, contextualChannelId } = arg0);
   ({ onSubmit, appContext } = arg0);
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.REPORT_APPLICATION_CLICKED, { application_id: application.id, location: entrypoint });
@@ -256,8 +256,8 @@ export const showReportModalForApp = function showReportModalForApp(arg0) {
   const obj5 = { report_type: MenuTypes.ReportNames.APPLICATION };
   const obj6 = showReportModal;
   obj6.showReportModal({ name: MenuTypes.ReportNames.APPLICATION, record: application, contextualGuildId, contextualChannelId, entrypoint }, {}, { onSubmit, appContext });
-};
-export const showReportToModMessageModal = function showReportToModMessageModal(message, onSubmit) {
+}
+export function showReportToModMessageModal(message, onSubmit) {
   const obj = showReportModal;
   obj.showReportModal({ name: MenuTypes.ModeratorReportNames.MESSAGE, record: message }, {}, { onSubmit, isEligibleForFeedback: false });
-};
+}

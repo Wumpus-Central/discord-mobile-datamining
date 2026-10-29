@@ -1,6 +1,6 @@
-// === Module 7283: FormIcon ===
+// === Module 7307: FormIcon ===
 
-// Module 7283 (FormIcon)
+// Module 7307 (FormIcon)
 import c from "c" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const native = ThemedIcon(1199);
 require = fn;
 let closure_2 = ["style", "color", "themedColor"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_5 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

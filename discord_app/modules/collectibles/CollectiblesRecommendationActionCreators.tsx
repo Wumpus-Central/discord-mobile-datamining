@@ -1,6 +1,6 @@
-// === Module 16234: CollectiblesRecommendationActionCreators ===
+// === Module 16471: CollectiblesRecommendationActionCreators ===
 
-// Module 16234 (CollectiblesRecommendationActionCreators)
+// Module 16471 (CollectiblesRecommendationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -46,7 +46,7 @@ let closure_4 = fn(1084).COLLECTIBLES_APPLICATION_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesRecommendationActionCreators.tsx");
 
-export const maybeFetchCollectiblesRecommendations = function maybeFetchCollectiblesRecommendations() {
+export function maybeFetchCollectiblesRecommendations() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -55,4 +55,4 @@ export const maybeFetchCollectiblesRecommendations = function maybeFetchCollecti
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

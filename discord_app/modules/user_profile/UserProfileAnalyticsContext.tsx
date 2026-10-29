@@ -1,10 +1,10 @@
-// === Module 8716: UserProfileAnalyticsContext ===
+// === Module 8719: UserProfileAnalyticsContext ===
 
-// Module 8716 (UserProfileAnalyticsContext)
+// Module 8719 (UserProfileAnalyticsContext)
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1278 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7289 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8717 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7313 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8720 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -97,7 +97,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateU
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsContext.tsx");
 
-export const UserProfileAnalyticsProvider = (children) => {
+export (children) => {
   ({ value, openedAt } = children);
   ({ fetchStartedAt: importDefault, fetchEndedAt: dependencyMap, isLoaded } = children);
   if (isLoaded === undefined) {
@@ -151,12 +151,12 @@ export const UserProfileAnalyticsProvider = (children) => {
     }
   }, items);
   return ref(obj2.Provider, { value, children: children.children });
-};
+}
 export const useCreateUserProfileAnalyticsContext = tmp2;
 export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileAnalyticsContext() {
   const cResult = context(576).c(18);
   context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7289)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7313)().analyticsLocations;
   if (cResult[0] === analyticsLocations) {
     if (cResult[1] === context) {
       let tmp3 = cResult[2];
@@ -271,7 +271,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
   tmp3 = fn;
 }) : (function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7289)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7313)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   const items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {

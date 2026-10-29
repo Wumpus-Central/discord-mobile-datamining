@@ -1,11 +1,11 @@
-// === Module 11259: useApexExperiments ===
+// === Module 11313: useApexExperiments ===
 
-// Module 11259 (useApexExperiments)
+// Module 11313 (useApexExperiments)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import ExperimentManager from "ExperimentManager" /* 5231 */;
-import experiment from "experiment" /* 8524 */;
+import apex_ApexTypes from "apex/ApexTypes" /* 1456 */;
+import ExperimentManager from "ExperimentManager" /* 5232 */;
+import experiment from "experiment" /* 8546 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
@@ -85,13 +85,13 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 
 export { mergeApexExperiments };
 export { getApexExperimentOverridesInfo };
-export const getApexExperiments = function getApexExperiments() {
+export function getApexExperiments() {
   const obj = { experiments: null, overridesInfo: null };
   const experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
   obj.experiments = mergeApexExperiments(experimentsMetadata, ApexExperimentStore.getRegisteredExperiments());
   obj.overridesInfo = getApexExperimentOverridesInfo(ApexExperimentStore.getClientOverrides());
   return obj;
-};
+}
 export const useApexExperiments = ReactCompilerGating.isReactCompilerEnabled() ? (function useApexExperiments() {
   const cResult = c.c(16);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

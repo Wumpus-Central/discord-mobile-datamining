@@ -1,12 +1,12 @@
-// === Module 12393: ConjureMessageTime ===
+// === Module 12447: ConjureMessageTime ===
 
-// Module 12393 (ConjureMessageTime)
-import DateUtils from "DateUtils" /* 4829 */;
+// Module 12447 (ConjureMessageTime)
+import DateUtils from "DateUtils" /* 4830 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMessageTime.tsx");
 
-export const describeMessageTime = function describeMessageTime(at) {
+export function describeMessageTime(at) {
   let isFiniteResult = null != at;
   if (isFiniteResult) {
     const _Number = Number;
@@ -22,4 +22,4 @@ export const describeMessageTime = function describeMessageTime(at) {
     calendarFormatResult = DateUtils.calendarFormat(date, true);
   }
   return calendarFormatResult;
-};
+}

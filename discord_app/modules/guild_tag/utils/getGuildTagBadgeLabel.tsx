@@ -1,9 +1,9 @@
-// === Module 19401: getGuildTagBadgeLabel ===
+// === Module 19634: getGuildTagBadgeLabel ===
 
-// Module 19401 (getGuildTagBadgeLabel)
+// Module 19634 (getGuildTagBadgeLabel)
 import util from "util" /* 1125 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import GuildTagConstants from "GuildTagConstants" /* 8306 */;
+import GuildTagConstants from "GuildTagConstants" /* 8328 */;
 import size from "module_2" /* 2 */;
 
 const GuildTagBadgeKind = GuildTagConstants.GuildTagBadgeKind;

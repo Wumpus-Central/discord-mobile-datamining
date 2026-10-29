@@ -1,28 +1,28 @@
-// === Module 14811: EmbeddedActivityInstanceEmbed ===
+// === Module 15046: EmbeddedActivityInstanceEmbed ===
 
-// Module 14811 (EmbeddedActivityInstanceEmbed)
+// Module 15046 (EmbeddedActivityInstanceEmbed)
 import util from "util" /* 1125 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12054 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13273 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 13274 */;
-import getPlayInContext from "getPlayInContext" /* 13275 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13276 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 14801 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 14812 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6868 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12108 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13506 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 13507 */;
+import getPlayInContext from "getPlayInContext" /* 13508 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13509 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 15036 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 15047 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(10038).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(10070).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
 
-export const createActivityInstanceEmbed = function createActivityInstanceEmbed(message) {
+export function createActivityInstanceEmbed(message) {
   ({ application, activityInstance } = message);
   const channel = ChannelStore.getChannel(message.channel_id);
   if (null != application) {
@@ -165,4 +165,4 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
       }
     }
   }
-};
+}

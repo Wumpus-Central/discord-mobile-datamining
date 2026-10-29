@@ -1,11 +1,11 @@
-// === Module 8625: sanitizeMediaDimension ===
+// === Module 8647: sanitizeMediaDimension ===
 
-// Module 8625 (sanitizeMediaDimension)
+// Module 8647 (sanitizeMediaDimension)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
 
-export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {
+export function sanitizeMediaDimension(height) {
   if (typeof height !== "number") {
     let num = height;
   } else {
@@ -16,4 +16,4 @@ export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {
     }
   }
   return num;
-};
+}

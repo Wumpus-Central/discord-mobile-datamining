@@ -1,25 +1,25 @@
-// === Module 18232: ReactActionSheet ===
+// === Module 18466: ReactActionSheet ===
 
-// Module 18232 (ReactActionSheet)
+// Module 18466 (ReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5261 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8878 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9859 */;
-import ICYMIContext from "ICYMIContext" /* 18180 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13369 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5262 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9891 */;
+import ICYMIContext from "ICYMIContext" /* 18414 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13602 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5302).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5303).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, base: { position: "relative" }, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -555,7 +555,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -589,7 +589,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
                   } else {
                     closure_1_6(false);
                     c3 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp9) {
                   c3 = tmp;
@@ -627,7 +627,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -663,7 +663,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             closure_1_6(false);
             closure_1_8("");
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp11) {
           c2 = tmp;
@@ -736,7 +736,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -751,10 +751,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
               return obj3;
             } else {
               closure_5(true);
-              v1(8878).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8878);
+              v1(8881).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8881);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8878).feedItemActioned(obj4);
+              v1(8881).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -771,7 +771,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             closure_128_5(false);
             closure_128_8("");
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -794,7 +794,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -828,7 +828,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp9) {
             c3 = tmp;
@@ -1024,7 +1024,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReactAct
     return v65535(ICYMIContext.ICYMIContextProvider, obj);
   }
 });
-export const getStatusReplyContent = function getStatusReplyContent(reply) {
+export function getStatusReplyContent(reply) {
   ({ username, status, emojiStr, attachments, isForward } = reply);
   if (isForward === undefined) {
     isForward = false;
@@ -1057,4 +1057,4 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   }
   items.push(reply.reply);
   return items.join("\n");
-};
+}

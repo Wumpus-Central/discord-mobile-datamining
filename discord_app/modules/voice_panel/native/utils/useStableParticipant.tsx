@@ -1,13 +1,13 @@
-// === Module 18795: useStableParticipant ===
+// === Module 19028: useStableParticipant ===
 
-// Module 18795 (useStableParticipant)
+// Module 19028 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import NicknameUtils from "NicknameUtils" /* 6025 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6817 */;
-import participantHasVideoDefault from "participantHasVideo" /* 10944 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+import NicknameUtils from "NicknameUtils" /* 6029 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6840 */;
+import participantHasVideoDefault from "participantHasVideo" /* 10979 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5668).ParticipantTypes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStabl
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: "2025-12-shadow-node-spike", isSelf: "user" };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: "LottieFiles AE 3.0.2", isSelf: "" };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStabl
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: "2025-12-shadow-node-spike", isSelf: "user" };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: "LottieFiles AE 3.0.2", isSelf: "" };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStabl
 export { isStableStreamParticipant };
 export { isStableUserParticipant };
 export { isStableActivityParticipant };
-export const isStableParticipantWithUser = function isStableParticipantWithUser(participant) {
+export function isStableParticipantWithUser(participant) {
   let type;
   if (participant != null) {
     type = participant.type;
@@ -244,8 +244,8 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     BooleanResult = Boolean(type2 === ParticipantTypes.USER);
   }
   return BooleanResult;
-};
-export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0) {
+}
+export function stableParticipantHasVideo(arg0) {
   let streamId = arg0;
   let type;
   if (arg0 != null) {
@@ -274,4 +274,4 @@ export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0
       selfVideo = streamId.selfVideo;
     }
   }
-};
+}

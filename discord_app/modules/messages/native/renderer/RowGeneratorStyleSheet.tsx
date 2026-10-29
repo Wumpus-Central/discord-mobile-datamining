@@ -1,13 +1,13 @@
-// === Module 8169: RowGeneratorStyleSheet ===
+// === Module 8192: RowGeneratorStyleSheet ===
 
-// Module 8169 (RowGeneratorStyleSheet)
+// Module 8192 (RowGeneratorStyleSheet)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");
 
-export const processColorOrThrow = function processColorOrThrow(RED_400) {
+export function processColorOrThrow(RED_400) {
   const tmp = processColor(RED_400);
   if (null == tmp) {
     const _Error = Error;
@@ -17,4 +17,4 @@ export const processColorOrThrow = function processColorOrThrow(RED_400) {
   } else {
     return tmp;
   }
-};
+}

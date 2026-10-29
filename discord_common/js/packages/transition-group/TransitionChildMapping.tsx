@@ -1,12 +1,12 @@
-// === Module 13558: TransitionChildMapping ===
+// === Module 13791: TransitionChildMapping ===
 
-// Module 13558 (TransitionChildMapping)
+// Module 13791 (TransitionChildMapping)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionChildMapping.tsx");
 
-export const getChildMapping = function getChildMapping(children) {
+export function getChildMapping(children) {
   if (children) {
     const Children = noop.Children;
     const mapped = Children.map(children, (arg0) => arg0);
@@ -19,8 +19,8 @@ export const getChildMapping = function getChildMapping(children) {
     }
   }
   return {};
-};
-export const mergeChildMappings = function mergeChildMappings() {
+}
+export function mergeChildMappings() {
   let obj = children;
   if (children === undefined) {
     obj = {};
@@ -78,4 +78,4 @@ export const mergeChildMappings = function mergeChildMappings() {
     obj4[arr2[num2]] = obj2.hasOwnProperty(tmp10) ? obj2[tmp10] : obj[tmp10];
   }
   return obj4;
-};
+}

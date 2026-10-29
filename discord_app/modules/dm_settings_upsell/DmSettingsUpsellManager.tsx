@@ -1,10 +1,10 @@
-// === Module 19074: DmSettingsUpsellManager ===
+// === Module 19309: DmSettingsUpsellManager ===
 
-// Module 19074 (DmSettingsUpsellManager)
+// Module 19309 (DmSettingsUpsellManager)
 import Constants from "Constants" /* 1084 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import DmSettingsUpsellActionCreatorsDefault from "DmSettingsUpsellActionCreators" /* 19075 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import DmSettingsUpsellActionCreatorsDefault from "DmSettingsUpsellActionCreators" /* 19310 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -22,7 +22,7 @@ const dmSettingsUpsellManager = new DmSettingsUpsellManager();
 let result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
 
 export default dmSettingsUpsellManager;
-export const acknowledgeDmSettingsUpsell = function acknowledgeDmSettingsUpsell(guildId) {
+export function acknowledgeDmSettingsUpsell(guildId) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.post({ url: Endpoints.DM_SETTINGS_UPSELL_ACK(guildId), rejectWithError: false });
-};
+}

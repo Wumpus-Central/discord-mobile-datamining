@@ -1,16 +1,16 @@
-// === Module 13231: EmojiCube ===
+// === Module 13465: EmojiCube ===
 
-// Module 13231 (EmojiCube)
+// Module 13465 (EmojiCube)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import CheckpointConstants from "CheckpointConstants" /* 6050 */;
-import EmojiDefault from "Emoji" /* 7263 */;
-import _mod13232 from "module_13232" /* 13232 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import createStyles from "createStyles" /* 5004 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import CheckpointConstants from "CheckpointConstants" /* 6054 */;
+import EmojiDefault from "Emoji" /* 7287 */;
+import _mod13466 from "module_13466" /* 13466 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import createStyles from "createStyles" /* 5005 */;
 import PlatformUtils_mod from "utils/PlatformUtils" /* 1382 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -28,22 +28,22 @@ function transformMatrix(items, rotation) {
   if (point2 === undefined) {
     point2 = { x: 0, y: 0, z: 0 };
   }
-  const mat4 = _mod13232.mat4;
+  const mat4 = _mod13466.mat4;
   const obj = mat4.create();
-  const mat42 = _mod13232.mat4;
+  const mat42 = _mod13466.mat4;
   mat42.copy(obj, items);
-  const mat43 = _mod13232.mat4;
+  const mat43 = _mod13466.mat4;
   mat43.rotateX(obj, obj, point.x);
-  const mat44 = _mod13232.mat4;
+  const mat44 = _mod13466.mat4;
   mat44.rotateY(obj, obj, point.y);
-  const mat45 = _mod13232.mat4;
+  const mat45 = _mod13466.mat4;
   mat45.rotateZ(obj, obj, point.z);
-  const mat46 = _mod13232.mat4;
+  const mat46 = _mod13466.mat4;
   items = [, , ];
   ({ x: arr[0], y: arr[1], z: arr[2] } = translation);
   mat46.translate(obj, obj, items);
-  const mat47 = _mod13232.mat4;
-  const mat48 = _mod13232.mat4;
+  const mat47 = _mod13466.mat4;
+  const mat48 = _mod13466.mat4;
   mat48.multiply(obj, obj, mat47.fromValues(1, point2.y, 0, 0, point2.x, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));
   return Array.from(obj);
 }
@@ -239,8 +239,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiCub
       tmp5 = true === emoji.animated;
     }
     obj3.animated = tmp5;
-    emojiURL = emojiURL(1414).getEmojiURL(obj3);
-    const obj2 = emojiURL(1414);
+    emojiURL = emojiURL(1415).getEmojiURL(obj3);
+    const obj2 = emojiURL(1415);
   }
   const tmp6 = closure_6();
   dependencyMap = tmp6;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiCub
   const items1 = [tmp6.container, , ];
   const obj5 = { transform: null };
   let obj = emoji(504);
-  const items2 = [{ scale: emojiURL(1496)().width / 392 }];
+  const items2 = [{ scale: emojiURL(1497)().width / 392 }];
   obj5.transform = items2;
   items1[1] = obj5;
   items1[2] = emoji.style;

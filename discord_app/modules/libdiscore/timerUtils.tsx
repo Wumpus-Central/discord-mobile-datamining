@@ -1,6 +1,6 @@
-// === Module 19796: timerUtils ===
+// === Module 20018: timerUtils ===
 
-// Module 19796 (timerUtils)
+// Module 20018 (timerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import timersAll from "timers" /* 567 */;
@@ -41,6 +41,6 @@ let closure_6 = debounceDefault(function flushDelayLogs() {
 }, 5000);
 let result = size.fileFinishedImporting("modules/libdiscore/timerUtils.tsx");
 
-export const setupLibdiscoreTimersMonitor = function setupLibdiscoreTimersMonitor() {
+export function setupLibdiscoreTimersMonitor() {
   const result = timersAll.setTimersMonitorCallback(onTimersDelayCallback);
-};
+}

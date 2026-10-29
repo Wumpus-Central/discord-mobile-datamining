@@ -1,9 +1,9 @@
-// === Module 15244: PrivateChannelHidingExperiment ===
+// === Module 15479: PrivateChannelHidingExperiment ===
 
-// Module 15244 (PrivateChannelHidingExperiment)
+// Module 15479 (PrivateChannelHidingExperiment)
 import c from "c" /* 576 */;
-import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 15245 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 15480 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,9 +16,9 @@ const result = size.fileFinishedImporting("modules/gateway/PrivateChannelHidingE
 
 export const getCachedPrivateChannelObfuscation = PrivateChannelHidingExperimentCache.getCachedPrivateChannelObfuscation;
 export const PRIVATE_CHANNEL_OBFUSCATION_KEY = PrivateChannelHidingExperimentCache.PRIVATE_CHANNEL_OBFUSCATION_KEY;
-export const isChannelMetadataObfuscationEnabled = function isChannelMetadataObfuscationEnabled(dependencyMap) {
+export function isChannelMetadataObfuscationEnabled(dependencyMap) {
   return closure_2.getConfig({ location: dependencyMap }).enableObfuscation;
-};
+}
 export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChannelMetadataObfuscationEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
@@ -33,6 +33,6 @@ export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReac
 }) : (function useIsChannelMetadataObfuscationEnabled(location) {
   return closure_2.useConfig({ location }).enableObfuscation;
 });
-export const isChannelMetadataIntegrityCheckEnabled = function isChannelMetadataIntegrityCheckEnabled(scheduleIntegrityCheck) {
+export function isChannelMetadataIntegrityCheckEnabled(scheduleIntegrityCheck) {
   return closure_2.getConfig({ location: scheduleIntegrityCheck }).enableIntegrityCheck;
-};
+}

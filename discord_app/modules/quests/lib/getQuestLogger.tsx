@@ -1,6 +1,6 @@
-// === Module 7818: getQuestLogger ===
+// === Module 7841: getQuestLogger ===
 
-// Module 7818 (getQuestLogger)
+// Module 7841 (getQuestLogger)
 import LoggerDefault from "Logger" /* 3 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
 
@@ -8,7 +8,7 @@ const NOOP = fn(1095).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
-export const getQuestLogger = function getQuestLogger(arg0) {
+export function getQuestLogger(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -31,4 +31,4 @@ export const getQuestLogger = function getQuestLogger(arg0) {
   }
   const tmp42 = new LoggerDefault("QuestLogger" + str2 + str);
   return { log: isLoggingQuestEvents ? tmp42.log : NOOP, warn: isLoggingQuestEvents ? tmp42.warn : NOOP, error: isLoggingQuestEvents ? tmp42.error : NOOP, info: isLoggingQuestEvents ? tmp42.info : NOOP, verbose: isLoggingQuestEvents ? tmp42.verbose : NOOP, trace: isLoggingQuestEvents ? tmp42.trace : NOOP };
-};
+}

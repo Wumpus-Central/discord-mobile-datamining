@@ -1,13 +1,13 @@
-// === Module 11075: GiftCodeActionCreators ===
+// === Module 11129: GiftCodeActionCreators ===
 
-// Module 11075 (GiftCodeActionCreators)
+// Module 11129 (GiftCodeActionCreators)
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4828 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11076 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4829 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7685 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7708 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -31,7 +31,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           let product;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -209,11 +209,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(7693).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(7716).isUnknownCollectiblesItemRecord;
 const Constants = fn(1084);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1391).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11077).default);
+const merged = Object.assign(fn(11131).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 
@@ -302,7 +302,7 @@ export default {
 };
 export { resolveGiftCode };
 export { reportUnexpectedGiftCodeError };
-export const deliverGiftCodes = function deliverGiftCodes() {
+export function deliverGiftCodes() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -311,4 +311,4 @@ export const deliverGiftCodes = function deliverGiftCodes() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

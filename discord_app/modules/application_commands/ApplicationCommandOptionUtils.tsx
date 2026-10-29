@@ -1,11 +1,11 @@
-// === Module 10233: ApplicationCommandOptionUtils ===
+// === Module 10266: ApplicationCommandOptionUtils ===
 
-// Module 10233 (ApplicationCommandOptionUtils)
+// Module 10266 (ApplicationCommandOptionUtils)
 import _modDef38 from "module_38" /* 38 */;
-import Server from "Server" /* 1997 */;
-import RegexUtilsDefault from "RegexUtils" /* 5644 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6019 */;
-import numberParts from "numberParts" /* 10234 */;
+import Server from "Server" /* 1998 */;
+import RegexUtilsDefault from "RegexUtils" /* 5645 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6023 */;
+import numberParts from "numberParts" /* 10267 */;
 import size from "module_2" /* 2 */;
 
 function getString(arg0, arg1) {
@@ -51,7 +51,7 @@ function getString(arg0, arg1) {
 const TRUE_OPTION_NAME = ApplicationCommandConstants.TRUE_OPTION_NAME;
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandOptionUtils.tsx");
 
-export const filterEmpty = function filterEmpty(arr) {
+export function filterEmpty(arr) {
   closure_0 = arr;
   if (null == arr) {
     let items = [];
@@ -70,8 +70,8 @@ export const filterEmpty = function filterEmpty(arr) {
     });
   }
   return items;
-};
-export const getBoolean = function getBoolean(arg0, arg1) {
+}
+export function getBoolean(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
     let items = [];
@@ -97,8 +97,8 @@ export const getBoolean = function getBoolean(arg0, arg1) {
   }
   _modDef38("text" === type, "First value is not text");
   return items[0].text === TRUE_OPTION_NAME;
-};
-export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
+}
+export function getOptionalBoolean(arg0, arg1) {
   let tmp = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
@@ -127,8 +127,8 @@ export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
     tmp = items[0].text === TRUE_OPTION_NAME;
   }
   return tmp;
-};
-export const getChannelId = function getChannelId(arg0, arg1) {
+}
+export function getChannelId(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
     let items = [];
@@ -154,8 +154,8 @@ export const getChannelId = function getChannelId(arg0, arg1) {
   }
   _modDef38("channelMention" === type, "First value is not a channel mention");
   return items[0].channelId;
-};
-export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
+}
+export function getOptionalChannelId(arg0, arg1) {
   let channelId = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
@@ -184,8 +184,8 @@ export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
     channelId = items[0].channelId;
   }
   return channelId;
-};
-export const getUserId = function getUserId(arg0, arg1) {
+}
+export function getUserId(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
     let items = [];
@@ -211,8 +211,8 @@ export const getUserId = function getUserId(arg0, arg1) {
   }
   _modDef38("userMention" === type, "First value is not a user mention");
   return items[0].userId;
-};
-export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
+}
+export function getOptionalUserId(arg0, arg1) {
   let userId = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
@@ -241,8 +241,8 @@ export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
     userId = items[0].userId;
   }
   return userId;
-};
-export const getRoleId = function getRoleId(arg0, arg1) {
+}
+export function getRoleId(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
     let items = [];
@@ -268,8 +268,8 @@ export const getRoleId = function getRoleId(arg0, arg1) {
   }
   _modDef38("roleMention" === type, "First value is not a role mention");
   return items[0].roleId;
-};
-export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
+}
+export function getOptionalRoleId(arg0, arg1) {
   let roleId = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
@@ -298,16 +298,16 @@ export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
     roleId = items[0].roleId;
   }
   return roleId;
-};
+}
 export { getString };
-export const getOptionalString = function getOptionalString(arg0, name) {
+export function getOptionalString(arg0, name) {
   let tmp = null;
   if (null != arg0[name]) {
     tmp = getString(arg0, name);
   }
   return tmp;
-};
-export const normalizeNumericString = function normalizeNumericString(locale, trimmed) {
+}
+export function normalizeNumericString(locale, trimmed) {
   if (locale !== global) {
     global = locale;
     let prop = numberParts.numberParts[locale];
@@ -321,8 +321,8 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
     regExp1 = new RegExp(RegexUtilsDefault.escape(decimal), "g");
   }
   return trimmed.replace(regExp, "").replace(regExp1, ".");
-};
-export const getInitialValuesFromInteractionOptions = function getInitialValuesFromInteractionOptions(command, interactionOptions) {
+}
+export function getInitialValuesFromInteractionOptions(command, interactionOptions) {
   let options = command;
   const obj = {};
   function _loop(iter) {
@@ -350,4 +350,4 @@ export const getInitialValuesFromInteractionOptions = function getInitialValuesF
     continue;
   }
   return obj;
-};
+}

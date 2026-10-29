@@ -1,16 +1,16 @@
-// === Module 16894: SavedCustomThemeActionCreators ===
+// === Module 17133: SavedCustomThemeActionCreators ===
 
-// Module 16894 (SavedCustomThemeActionCreators)
+// Module 17133 (SavedCustomThemeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5239 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5240 */;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
 
-export const fetchUserCustomThemes = function fetchUserCustomThemes() {
+export function fetchUserCustomThemes() {
   if (!SavedCustomThemeStore.isFetching()) {
     DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
     const HTTP = HTTPUtils.HTTP;
@@ -41,4 +41,4 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     });
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 9636: QuestHomeHeroCta ===
+// === Module 9668: QuestHomeHeroCta ===
 
-// Module 9636 (QuestHomeHeroCta)
+// Module 9668 (QuestHomeHeroCta)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
-export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
+export function questHomeHeroCtaFromServer(cta) {
   const obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
@@ -20,4 +20,4 @@ export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(ct
   }
   obj.ios = tmp2;
   return obj;
-};
+}

@@ -1,15 +1,15 @@
-// === Module 13819: ContactSyncAnalyticsUtils ===
+// === Module 14052: ContactSyncAnalyticsUtils ===
 
-// Module 13819 (ContactSyncAnalyticsUtils)
+// Module 14052 (ContactSyncAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13820 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14053 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const getIsOnboarding = fn(13814).getIsOnboarding;
-const ContactPermissions = fn(13815).ContactPermissions;
+const getIsOnboarding = fn(14047).getIsOnboarding;
+const ContactPermissions = fn(14048).ContactPermissions;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const Steps = { INITIALIZED: "Flow Initialized", LANDING: "Landing", PERMISSION_REQUESTED: "Contacts Permission Requested", NAME_INPUT: "Name Input", SUGGESTIONS_RESULTS: "Suggestions Results", CONTACT_INVITES: "Contact Invites", ADD_PHONE_NUMBER: "Add Phone Number", VERIFY_PHONE_NUMBER: "Verify Phone Number", PASSWORD_CONFIRM: "Password Confirmation", COMPLETE: "Complete" };
 let c8 = null;
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/contact_sync/native/ContactSync
 
 export { Steps };
 export const CONTACT_SYNC_ONBOARDING_LOCATION = "Onboarding";
-export const trackFlowStart = function trackFlowStart(arg0) {
+export function trackFlowStart(arg0) {
   _require = arg0;
   const LANDING = obj.LANDING;
   closure_9 = Date.now();
@@ -53,8 +53,8 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     obj3.mobile_contacts_permission = tmp;
     obj.track(AnalyticEvents.CONTACT_SYNC_FLOW_KEY, obj3);
   });
-};
-export const trackFlowStep = function trackFlowStep(LANDING, skip, back, location) {
+}
+export function trackFlowStep(LANDING, skip, back, location) {
   const tmp = getIsOnboarding();
   timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
@@ -78,8 +78,8 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
     NewUserAnalyticsUtils.trackNUFStep(from_step, LANDING, obj4);
   }
   from_step = LANDING;
-};
-export const trackFlowEnd = function trackFlowEnd(flag, location) {
+}
+export function trackFlowEnd(flag, location) {
   timestamp = Date.now();
   const obj = AnalyticsUtilsDefault;
   const obj2 = {};
@@ -98,4 +98,4 @@ export const trackFlowEnd = function trackFlowEnd(flag, location) {
   obj2.seconds_on_from_step = (timestamp - timestamp) / 1000;
   obj.track(AnalyticEvents.CONTACT_SYNC_FLOW_KEY, obj2);
   from_step = null;
-};
+}

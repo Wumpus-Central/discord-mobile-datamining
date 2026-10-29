@@ -1,6 +1,6 @@
-// === Module 5623: VEVOOStore ===
+// === Module 5624: VEVOOStore ===
 
-// Module 5623 (VEVOOStore)
+// Module 5624 (VEVOOStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -14,16 +14,16 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
 
-export const useVisualEffectViewOverrides = function useVisualEffectViewOverrides() {
+export function useVisualEffectViewOverrides() {
   return state();
-};
-export const getVisualEffectViewOverrides = function getVisualEffectViewOverrides() {
+}
+export function getVisualEffectViewOverrides() {
   return state.getState();
-};
-export const setVisualEffectViewOverides = function setVisualEffectViewOverides(arg0) {
+}
+export function setVisualEffectViewOverides(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => state.setState(closure_0));
-};
-export const clearVisualEffectViewOverrides = function clearVisualEffectViewOverrides() {
+}
+export function clearVisualEffectViewOverrides() {
   ReactBatchUpdates.batchUpdates(() => state.setState(closure_1_2));
-};
+}

@@ -1,10 +1,10 @@
-// === Module 12987: MosaicMediaType ===
+// === Module 13208: MosaicMediaType ===
 
-// Module 12987 (MosaicMediaType)
+// Module 13208 (MosaicMediaType)
 import Constants from "Constants" /* 1084 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12988 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 13209 */;
 import size from "module_2" /* 2 */;
 
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
@@ -24,7 +24,7 @@ export function isVisualMedia(arg0) {
   }
   return tmp;
 }
-export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAttachment(proxy_url, arg1) {
+export function getMosaicMediaTypeForAttachment(proxy_url, arg1) {
   ({ filename, width, height } = proxy_url);
   if (arg1) {
     if (null != width) {
@@ -74,8 +74,8 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     obj = PlaintextFilePreviewHelpers;
   }
   str = str2;
-};
-export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTypeForUnfurledMediaItem(arg0) {
+}
+export function getMosaicMediaTypeForUnfurledMediaItem(arg0) {
   ({ contentType, width, height } = arg0);
   if (null != width) {
     if (width > 0) {
@@ -95,4 +95,4 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
     }
   }
   return "VISUAL_PLACEHOLDER";
-};
+}

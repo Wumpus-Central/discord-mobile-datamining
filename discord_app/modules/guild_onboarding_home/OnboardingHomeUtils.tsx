@@ -1,21 +1,21 @@
-// === Module 7361: OnboardingHomeUtils ===
+// === Module 7384: OnboardingHomeUtils ===
 
-// Module 7361 (OnboardingHomeUtils)
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7237 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7363 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7364 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7362 */;
+// Module 7384 (OnboardingHomeUtils)
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7261 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7386 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7387 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
@@ -171,7 +171,7 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
     return false;
   }, items1);
 });
-export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
+export function canSeeOnboardingHome(id) {
   guild = GuildStore.getGuild(id);
   if (null == guild) {
     return false;
@@ -226,4 +226,4 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
     }
     return false;
   }
-};
+}

@@ -1,25 +1,25 @@
-// === Module 8330: getChannelOpenedMetadata ===
+// === Module 8352: getChannelOpenedMetadata ===
 
-// Module 8330 (getChannelOpenedMetadata)
+// Module 8352 (getChannelOpenedMetadata)
 import DurationsDefault from "Durations" /* 1101 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8331 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 8332 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8353 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 8354 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const Constants = fn(1084);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx");
 
-export const getChannelOpenedMetadata = function getChannelOpenedMetadata(selectedChannelId) {
+export function getChannelOpenedMetadata(selectedChannelId) {
   if (isStaticChannelRoute(selectedChannelId)) {
     const obj = { channel_static_route: selectedChannelId };
     return obj;
@@ -86,4 +86,4 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
       }
     }
   }
-};
+}

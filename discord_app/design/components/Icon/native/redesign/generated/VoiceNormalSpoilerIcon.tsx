@@ -1,10 +1,10 @@
-// === Module 8608: VoiceNormalSpoilerIcon ===
+// === Module 8630: VoiceNormalSpoilerIcon ===
 
-// Module 8608 (VoiceNormalSpoilerIcon)
+// Module 8630 (VoiceNormalSpoilerIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod8553 from "module_8553" /* 8553 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod8575 from "module_8575" /* 8575 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const VoiceNormalSpoilerIcon = ReactCompilerGating.isReactCompilerEnabled
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8553;
+    const tmpResult = _mod8575;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const VoiceNormalSpoilerIcon = ReactCompilerGating.isReactCompilerEnabled
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8553, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8575, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

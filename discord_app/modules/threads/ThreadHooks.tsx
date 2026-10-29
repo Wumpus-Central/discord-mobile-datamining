@@ -1,25 +1,25 @@
-// === Module 7406: ThreadHooks ===
+// === Module 7429: ThreadHooks ===
 
-// Module 7406 (ThreadHooks)
+// Module 7429 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6688 */;
-import AgeGateUtils from "AgeGateUtils" /* 6697 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6852 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7412 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7414 */;
-import useIsRemoteDefault from "useIsRemote" /* 7415 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7416 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6712 */;
+import AgeGateUtils from "AgeGateUtils" /* 6721 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6875 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7435 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7437 */;
+import useIsRemoteDefault from "useIsRemote" /* 7438 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5225 */;
+import createExperiment from "createExperiment" /* 5226 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6805 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7407 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6828 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7430 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {
@@ -59,7 +59,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4860).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(4861).THREADED_CHANNEL_TYPES;
 const Constants = fn(1084);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = { id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: null };
@@ -1240,7 +1240,7 @@ const result = size.fileFinishedImporting("modules/threads/ThreadHooks.tsx");
 
 export const VoiceInThreadsExperiment = importDefaultResultResult;
 export const useCanStartPublicThread = tmp5;
-export const computeCanStartPublicThread = function computeCanStartPublicThread(channel, message) {
+export function computeCanStartPublicThread(channel, message) {
   if (channel.isForumLikeChannel()) {
     let SEND_MESSAGES = constants.SEND_MESSAGES;
   } else {
@@ -1263,9 +1263,9 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
     }
   }
   return flag;
-};
+}
 export const useCanStartPrivateThread = tmp6;
-export const computeCanStartPrivateThread = function computeCanStartPrivateThread(type, hasFlag) {
+export function computeCanStartPrivateThread(type, hasFlag) {
   let tmp3 = type.type === constants3.GUILD_TEXT;
   if (!tmp3) {
     tmp3 = type.type === tmp2.GUILD_APP;
@@ -1290,7 +1290,7 @@ export const computeCanStartPrivateThread = function computeCanStartPrivateThrea
     tmp3 = flag;
   }
   return tmp3;
-};
+}
 export const useCanStartThread = tmp7;
 export const useCanViewThreadForMessage = tmp8;
 export const useHasActiveThreads = tmp9;
@@ -1298,7 +1298,7 @@ export const useCanManageThread = tmp10;
 export const useCanUnarchiveThread = tmp11;
 export { canUnarchiveThread };
 export const useIsActiveChannelOrUnarchivableThread = tmp12;
-export const getIsActiveChannelOrUnarchivableThread = function getIsActiveChannelOrUnarchivableThread(channel) {
+export function getIsActiveChannelOrUnarchivableThread(channel) {
   let tmp = null != channel;
   if (tmp) {
     const isThreadResult = channel.isThread();
@@ -1324,15 +1324,15 @@ export const getIsActiveChannelOrUnarchivableThread = function getIsActiveChanne
     tmp = isActiveThreadResult;
   }
   return tmp;
-};
-export const computeIsReadOnlyThread = function computeIsReadOnlyThread(channel) {
+}
+export function computeIsReadOnlyThread(channel) {
   if (channel.isMediaThread()) {
     return true;
   } else {
     const canResult = PermissionStore.can(constants.MANAGE_THREADS, channel);
     return channel.isArchivedLockedThread() && !PermissionStore.can(constants.MANAGE_THREADS, channel);
   }
-};
+}
 export const useIsThreadModerator = tmp13;
 export { isThreadModerator };
 export const useCanRemoveThreadMember = tmp14;
@@ -1357,7 +1357,7 @@ export const useIsNonModInLockedThread = ReactCompilerGating.isReactCompilerEnab
   const tmp = closure_21(isLockedThread);
   return isLockedThread.isLockedThread() && !closure_21(isLockedThread);
 });
-export const isNonModInLockedThread = function isNonModInLockedThread(isLockedThread) {
+export function isNonModInLockedThread(isLockedThread) {
   const items = [PermissionStore];
   const first = _slicedToArray(items, 1)[0];
   let canResult = null != isLockedThread;
@@ -1365,4 +1365,4 @@ export const isNonModInLockedThread = function isNonModInLockedThread(isLockedTh
     canResult = first.can(constants.MANAGE_THREADS, isLockedThread);
   }
   return isLockedThread.isLockedThread() && !canResult;
-};
+}

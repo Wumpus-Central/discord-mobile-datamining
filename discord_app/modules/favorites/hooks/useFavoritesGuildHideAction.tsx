@@ -1,14 +1,14 @@
-// === Module 17841: useFavoritesGuildHideAction ===
+// === Module 18079: useFavoritesGuildHideAction ===
 
-// Module 17841 (useFavoritesGuildHideAction)
+// Module 18079 (useFavoritesGuildHideAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1111 */;
 import util from "util" /* 1125 */;
-import _modDef3445 from "module_3445" /* 3445 */;
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10883 */;
+import _modDef3446 from "module_3446" /* 3446 */;
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10788 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 
 require = fn;
 const Routes = fn(1084).Routes;
@@ -35,9 +35,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { label: null, subLabel: null, perform: null };
     const intl = util.intl;
-    obj2.label = intl.string(_modDef3445["8FO0y9"]);
+    obj2.label = intl.string(_modDef3446["8FO0y9"]);
     const intl2 = util.intl;
-    obj2.subLabel = intl2.string(_modDef3445.FaHxWl);
+    obj2.subLabel = intl2.string(_modDef3446.FaHxWl);
     obj2.perform = first;
     cResult[1] = obj2;
     let tmp5 = obj2;
@@ -56,9 +56,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     obj2 = FavoritesUtils;
   }, []);
   const intl = util.intl;
-  obj.label = intl.string(_modDef3445["8FO0y9"]);
+  obj.label = intl.string(_modDef3446["8FO0y9"]);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3445.FaHxWl);
+  obj.subLabel = intl2.string(_modDef3446.FaHxWl);
   obj.perform = callback;
   return obj;
 });

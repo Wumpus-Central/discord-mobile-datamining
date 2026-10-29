@@ -1,7 +1,7 @@
-// === Module 9490: OrderSigningDeferral ===
+// === Module 9521: OrderSigningDeferral ===
 
-// Module 9490 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9491 */;
+// Module 9521 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9522 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp19) {
       c1 = tmp;
       throw tmp19;
@@ -80,7 +80,7 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/OrderSigningDeferral.tsx");
 
-export const getPaymentRedirectContext = function getPaymentRedirectContext(billing_facet) {
+export function getPaymentRedirectContext(billing_facet) {
   billing_facet = null;
   if (null != billing_facet) {
     billing_facet = billing_facet.billing_facet;
@@ -94,9 +94,9 @@ export const getPaymentRedirectContext = function getPaymentRedirectContext(bill
     prop1 = prop.payment_redirect_context;
   }
   return prop1;
-};
+}
 export { openPaymentRedirect };
-export const performSigningDeferralAction = function performSigningDeferralAction() {
+export function performSigningDeferralAction() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -105,4 +105,4 @@ export const performSigningDeferralAction = function performSigningDeferralActio
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

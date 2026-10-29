@@ -1,9 +1,9 @@
-// === Module 5680: RegionalFeatureConfigUtils ===
+// === Module 5682: RegionalFeatureConfigUtils ===
 
-// Module 5680 (RegionalFeatureConfigUtils)
+// Module 5682 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5681 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5683 */;
 
 require = fn;
 fn(558);
@@ -86,21 +86,21 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasAgeG
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
 
-export const isFeatureAgeGated = function isFeatureAgeGated(AGE_GATED_SPACES) {
+export function isFeatureAgeGated(AGE_GATED_SPACES) {
   return RegionalFeatureConfigStore.isFeatureAgeGated(AGE_GATED_SPACES);
-};
+}
 export const useIsFeatureAgeGated = tmp2;
-export const isSettingTeenByDefault = function isSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
+export function isSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
   return RegionalFeatureConfigStore.isSettingTeenByDefault(GUILD_ACTIVITY_STATUS);
-};
+}
 export const useIsSettingTeenByDefault = tmp3;
-export const hasAgeGatedFeatures = function hasAgeGatedFeatures() {
+export function hasAgeGatedFeatures() {
   return RegionalFeatureConfigStore.hasAgeGatedFeatures();
-};
+}
 export const useHasAgeGatedFeatures = tmp4;
-export const hasTeenDefaults = function hasTeenDefaults() {
+export function hasTeenDefaults() {
   return RegionalFeatureConfigStore.hasTeenDefaults();
-};
+}
 export const useHasTeenDefaults = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasTeenDefaults() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -120,6 +120,6 @@ export const useHasTeenDefaults = ReactCompilerGating.isReactCompilerEnabled() ?
   const items = [RegionalFeatureConfigStore];
   return initialize.useStateFromStores(items, () => RegionalFeatureConfigStore.hasTeenDefaults());
 });
-export const shouldCollectAppStoreSignal = function shouldCollectAppStoreSignal() {
+export function shouldCollectAppStoreSignal() {
   return RegionalFeatureConfigStore.shouldCollectAppStoreSignal();
-};
+}

@@ -1,9 +1,9 @@
-// === Module 5145: CheckpointCharacterRive ===
+// === Module 5146: CheckpointCharacterRive ===
 
-// Module 5145 (CheckpointCharacterRive)
+// Module 5146 (CheckpointCharacterRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 5079 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5134 */;
+import BaseRive from "BaseRive" /* 5080 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5135 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14321,7 +14321,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Checkp
           }
         }
       }
-      obj2 = { ref: tmp6, src: tmp(5146), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null };
+      obj2 = { ref: tmp6, src: tmp(5147), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null };
       class R {
         constructor(arg0) {
           tmp = closure_9[closure_2];
@@ -14342,7 +14342,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Checkp
         }
       }
       let merged = Object.assign(tmp7);
-      const tmp22 = jsx(tmp(5079).BaseRive, { ref: tmp6, src: tmp(5146), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null });
+      const tmp22 = jsx(tmp(5080).BaseRive, { ref: tmp6, src: tmp(5147), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;

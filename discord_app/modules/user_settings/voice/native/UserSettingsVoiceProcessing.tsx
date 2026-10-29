@@ -1,27 +1,27 @@
-// === Module 11669: UserSettingsVoiceProcessing ===
+// === Module 11723: UserSettingsVoiceProcessing ===
 
-// Module 11669 (UserSettingsVoiceProcessing)
+// Module 11723 (UserSettingsVoiceProcessing)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5887 */;
-import TableRadioRow from "TableRadioRow" /* 7020 */;
-import TableRadioGroup from "TableRadioGroup" /* 7021 */;
-import TableSwitchRow from "TableSwitchRow" /* 7331 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 11654 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11670 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11671 */;
-import KrispLogoDefault from "KrispLogo" /* 11674 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5889 */;
+import TableRadioRow from "TableRadioRow" /* 7044 */;
+import TableRadioGroup from "TableRadioGroup" /* 7045 */;
+import TableSwitchRow from "TableSwitchRow" /* 7355 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 11708 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11724 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11725 */;
+import KrispLogoDefault from "KrispLogo" /* 11728 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { optionsParentContainer: { marginTop: 12 }, optionsDescriptionContainer: { paddingTop: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 }, krisp: { marginStart: -20 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -400,9 +400,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   if (cResult[4] !== echoCancellation) {
     const obj2 = { title: tmp8, hasIcons: false, children: null };
-    const obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(11670).handleEchoCancellationChange };
-    obj2.children = closure_5(inputMode(7331).TableSwitchRow, obj3);
-    const tmp14 = closure_5(inputMode(11654).UserSettingsTableRowGroup, obj2);
+    const obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(11724).handleEchoCancellationChange };
+    obj2.children = closure_5(inputMode(7355).TableSwitchRow, obj3);
+    const tmp14 = closure_5(inputMode(11708).UserSettingsTableRowGroup, obj2);
     cResult[4] = echoCancellation;
     cResult[5] = tmp14;
     let tmp12 = tmp14;
@@ -430,8 +430,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     tmp20 = cResult[8];
   }
   if (cResult[9] !== automaticGainControl) {
-    const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(11670).handleAutomaticGainControlChange };
-    const tmp25 = closure_5(inputMode(7331).TableSwitchRow, obj4);
+    const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(11724).handleAutomaticGainControlChange };
+    const tmp25 = closure_5(inputMode(7355).TableSwitchRow, obj4);
     cResult[9] = automaticGainControl;
     cResult[10] = tmp25;
     let tmp23 = tmp25;
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj6 = { hasIcons: false, children: null };
       const items2 = [tmp23, tmp26];
       obj6.children = items2;
-      const tmp31 = closure_6(inputMode(11654).UserSettingsTableRowGroup, obj6);
+      const tmp31 = closure_6(inputMode(11708).UserSettingsTableRowGroup, obj6);
       cResult[15] = tmp23;
       cResult[16] = tmp26;
       cResult[17] = tmp31;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj7.onValueChange = function onValueChange(vadUseKrisp) {
       return AudioActionCreatorsDefault.setMode(inputMode, { vadUseKrisp });
     };
-    tmp27 = closure_5(inputMode(7331).TableSwitchRow, obj7);
+    tmp27 = closure_5(inputMode(7355).TableSwitchRow, obj7);
   }
   cResult[11] = advancedVoiceActivitySupported;
   cResult[12] = inputMode;

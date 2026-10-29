@@ -1,9 +1,9 @@
-// === Module 5632: useCustomKeyboardHeight ===
+// === Module 5633: useCustomKeyboardHeight ===
 
-// Module 5632 (useCustomKeyboardHeight)
+// Module 5633 (useCustomKeyboardHeight)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1500 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1501 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,10 +27,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCusto
   closure_0 = AppEntryKeyContext.useAppEntryKey();
   return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
 });
-export const getCustomKeyboardHeight = function getCustomKeyboardHeight() {
+export function getCustomKeyboardHeight() {
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
   return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
-};
+}

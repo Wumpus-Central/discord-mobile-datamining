@@ -1,8 +1,8 @@
-// === Module 14919: acomRetry ===
+// === Module 15154: acomRetry ===
 
-// Module 14919 (acomRetry)
+// Module 15154 (acomRetry)
 import BackoffDefault from "Backoff" /* 569 */;
-import ErrorUtilsAll from "ErrorUtils" /* 14914 */;
+import ErrorUtilsAll from "ErrorUtils" /* 15149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -44,7 +44,7 @@ let closure_10 = async function _retryACOMRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -172,7 +172,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/apple/acomRetry.tsx");
 
 export { parseACOMErrorCode };
-export const retryACOMRequest = function retryACOMRequest() {
+export function retryACOMRequest() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -181,4 +181,4 @@ export const retryACOMRequest = function retryACOMRequest() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

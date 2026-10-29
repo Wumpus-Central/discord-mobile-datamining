@@ -1,14 +1,15 @@
-// === Module 16688: launchOrbsArcadeGame ===
+// === Module 16926: launchOrbsArcadeGame ===
 
-// Module 16688 (launchOrbsArcadeGame)
+// Module 16926 (launchOrbsArcadeGame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16668 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6868 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16662 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import FramesStore from "FramesStore" /* 6833 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16900 */;
 
 require = fn;
 function showLaunchError() {
@@ -19,7 +20,7 @@ function showLaunchError() {
   }
   ToastActionCreatorsDefault.open("ORBS_ARCADE_LAUNCH_ERROR", { text: stringResult, variant: "critical" });
 }
-let closure_10 = async function _ensureEnrollment(arg0) {
+let closure_12 = async function _ensureEnrollment(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -30,7 +31,7 @@ let closure_10 = async function _ensureEnrollment(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -55,19 +56,19 @@ let closure_10 = async function _ensureEnrollment(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_0 = closure_3;
-        if (closure_129_0 instanceof closure_130_1(closure_130_2[8])) {
-          if (closure_129_0.code === closure_130_6.ORBS_ARCADE_GAME_VERSION_OUTDATED) {
-            const orbsArcadeGames = closure_130_0(closure_130_2[7]).fetchOrbsArcadeGames();
-            const intl2 = closure_130_0(closure_130_2[5]).intl;
-            closure_130_9(intl2.string(closure_130_0(closure_130_2[5]).t.ZkQ7rP));
-            const obj2 = closure_130_0(closure_130_2[7]);
+        if (closure_129_0 instanceof closure_130_1(closure_130_2[9])) {
+          if (closure_129_0.code === closure_130_7.ORBS_ARCADE_GAME_VERSION_OUTDATED) {
+            const orbsArcadeGames = closure_130_0(closure_130_2[8]).fetchOrbsArcadeGames();
+            const intl2 = closure_130_0(closure_130_2[6]).intl;
+            closure_130_11(intl2.string(closure_130_0(closure_130_2[6]).t.ZkQ7rP));
+            const obj2 = closure_130_0(closure_130_2[8]);
           }
           c6 = 3;
-          const intl = closure_130_0(closure_130_2[5]).intl;
-          closure_130_9(intl.string(closure_130_0(closure_130_2[5]).t["2rQ7Zf"]));
+          const intl = closure_130_0(closure_130_2[6]).intl;
+          closure_130_11(intl.string(closure_130_0(closure_130_2[6]).t["2rQ7Zf"]));
         }
-        if (!(closure_129_0 instanceof closure_130_1(closure_130_2[8]))) {
-          closure_130_9();
+        if (!(closure_129_0 instanceof closure_130_1(closure_130_2[9]))) {
+          closure_130_11();
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -93,7 +94,7 @@ let closure_10 = async function _ensureEnrollment(arg0) {
     }
   }
 };
-let closure_11 = async function _launchGame(arg0, arg1) {
+let closure_13 = async function _launchGame(arg0, arg1) {
   let applicationId = arg0;
   closure_1 = arg1;
   c5 = 0;
@@ -110,7 +111,7 @@ let closure_11 = async function _launchGame(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -121,8 +122,8 @@ let closure_11 = async function _launchGame(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp8;
@@ -132,7 +133,8 @@ let closure_11 = async function _launchGame(arg0, arg1) {
             closure_130_3 = undefined;
             closure_130_4 = undefined;
             closure_130_5 = undefined;
-            closure_130_6 = undefined;
+            let frame;
+            closure_130_7 = undefined;
             let rootNavigationRef;
             applicationId = applicationId.applicationId;
             closure_130_2 = applicationId;
@@ -142,21 +144,21 @@ let closure_11 = async function _launchGame(arg0, arg1) {
                 const items = [applicationId];
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: ApplicationActionCreatorsDefault.fetchApplications(items, false), done: false };
-                return obj7;
+                const obj8 = { value: ApplicationActionCreatorsDefault.fetchApplications(items, false), done: false };
+                return obj8;
               }
             }
             c6 = 3;
-            closure_131_0(closure_131_2[15]).leaveFrame(closure_130_4);
-            closure_131_9();
+            closure_131_0(closure_131_2[13]).leaveFrame(closure_130_4);
+            closure_131_11();
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp8) {
           c4 = 0;
-          closure_131_9();
+          closure_131_11();
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
@@ -173,61 +175,79 @@ let closure_11 = async function _launchGame(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj10 = { value, done: true };
-            return obj10;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
             closure_130_3 = value;
             if (closure_130_3) {
-              const orbsArcadeClaimableRewards = closure_131_0(closure_131_2[11]).getOrbsArcadeClaimableRewards(closure_130_0.rewards, closure_131_5.getGameStateForGame(closure_130_0.id));
+              const orbsArcadeClaimableRewards = closure_131_0(closure_131_2[12]).getOrbsArcadeClaimableRewards(closure_130_0.rewards, closure_131_6.getGameStateForGame(closure_130_0.id));
               closure_130_5 = orbsArcadeClaimableRewards.map((id) => id.id);
+              frame = closure_131_5.getFrame(closure_131_10(closure_130_2, closure_131_9));
+              let tmp36 = null != frame;
+              if (tmp36) {
+                const tmp41 = closure_131_8(frame);
+                let customId;
+                if (tmp41 != null) {
+                  customId = tmp41.customId;
+                }
+                tmp36 = customId !== closure_130_0.id;
+              }
+              if (tmp36) {
+                closure_131_0(closure_131_2[13]).leaveFrame(frame.id);
+                const obj5 = closure_131_0(closure_131_2[13]);
+              }
               c4 = 2;
-              const obj4 = closure_131_0(closure_131_2[11]);
-              const obj11 = { applicationId: closure_130_2, surface: closure_131_7, analyticsContext: null };
-              const obj13 = { isStart: true, analyticsLocations: closure_130_1 };
-              obj11.analyticsContext = obj13;
-              closure_130_6 = closure_131_1(closure_131_2[12]).launchFrame(obj11);
-              const obj5 = closure_131_1(closure_131_2[12]);
-              closure_131_1(closure_131_2[12]).demoteMainFrame(closure_131_8(closure_130_2, closure_131_7));
+              const obj4 = closure_131_0(closure_131_2[12]);
+              const obj12 = { applicationId: closure_130_2, surface: closure_131_9, launch: null, analyticsContext: null };
+              const obj13 = { customId: closure_130_0.id, path: null };
+              const _HermesInternal = HermesInternal;
+              obj13.path = "/" + closure_130_0.id + "/";
+              obj12.launch = obj13;
+              const obj15 = { isStart: true, analyticsLocations: closure_130_1 };
+              obj12.analyticsContext = obj15;
+              closure_130_7 = closure_131_1(closure_131_2[14]).launchFrame(obj12);
+              const obj6 = closure_131_1(closure_131_2[14]);
+              closure_131_1(closure_131_2[14]).demoteMainFrame(closure_131_10(closure_130_2, closure_131_9));
               c5 = 5;
               c6 = 1;
-              const obj15 = { value: closure_130_6, done: false };
-              return obj15;
+              const obj17 = { value: closure_130_7, done: false };
+              return obj17;
             }
           }
         } else if (4 === tmp8) {
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj16 = { value, done: true };
-          return obj16;
+          const obj18 = { value, done: true };
+          return obj18;
         } else {
           closure_130_4 = value;
           c4 = 0;
-          closure_131_1(closure_131_2[13]).hideActionSheet();
-          const obj18 = closure_131_1(closure_131_2[13]);
-          rootNavigationRef = closure_131_0(closure_131_2[14]).getRootNavigationRef();
+          closure_131_1(closure_131_2[15]).hideActionSheet();
+          const obj20 = closure_131_1(closure_131_2[15]);
+          rootNavigationRef = closure_131_0(closure_131_2[16]).getRootNavigationRef();
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
               const obj = { frameId: closure_130_4, gameId: closure_130_0.id, claimableRewardIdsAtLaunch: closure_130_5 };
               rootNavigationRef.navigate("orbs-arcade-game", obj);
             }
           }
-          const obj19 = closure_131_0(closure_131_2[14]);
+          const obj21 = closure_131_0(closure_131_2[16]);
         }
         c4 = 0;
-        if (obj12.canLaunchContextlessFrame(closure_131_4.getApplication(closure_130_2))) {
+        if (obj14.canLaunchContextlessFrame(closure_131_4.getApplication(closure_130_2))) {
           c5 = 3;
           c6 = 1;
-          const obj17 = {
+          const obj19 = {
             value: (function ensureEnrollment() {
                     const self = this;
-                    const apply = closure_1_10.apply;
+                    const apply = closure_1_12.apply;
                     if (typeof apply === "unknown") {
                       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                     } else {
@@ -237,16 +257,16 @@ let closure_11 = async function _launchGame(arg0, arg1) {
                   })(closure_130_0),
             done: false
           };
-          return obj17;
+          return obj19;
         } else {
-          closure_131_9();
+          closure_131_11();
         }
-        obj12 = closure_131_0(closure_131_2[10]);
-      } catch (tmp60) {
+        obj14 = closure_131_0(closure_131_2[11]);
+      } catch (tmp83) {
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp60;
-        } else if (tmp === tmp61) {
+          throw tmp83;
+        } else if (tmp === tmp84) {
           c5 = tmp;
         } else {
           c5 = tmp5;
@@ -255,7 +275,7 @@ let closure_11 = async function _launchGame(arg0, arg1) {
     }
   })();
 };
-let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
+let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1) {
   let id = arg0;
   closure_1 = arg1;
   c6 = 0;
@@ -272,7 +292,7 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -289,7 +309,7 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
             closure_3 = tmp3;
             closure_2 = tmp7;
             closure_130_0 = id;
-            if (launchingGame.isLaunchingGame(id.id)) {
+            if (isLaunchingAnyGame.isLaunchingAnyGame) {
               c7 = 3;
             } else {
               const obj5 = { type: "ORBS_ARCADE_LAUNCH_GAME_BEGIN", gameId: id.id };
@@ -300,14 +320,14 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
               const obj7 = {
                 value: (function launchGame() {
                             const self = this;
-                            const apply = closure_1_11.apply;
+                            const apply = closure_1_13.apply;
                             if (typeof apply === "unknown") {
                               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                             } else {
                               applyArgumentsResult = apply(self, arguments);
                             }
                             return applyArgumentsResult;
-                          })(id, closure_1),
+                          })(id, tmp39),
                 done: false
               };
               return obj7;
@@ -316,7 +336,7 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
         } else if (1 === tmp7) {
           c5 = 0;
           const obj9 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_130_0.id };
-          closure_131_1(closure_131_2[16]).dispatch(obj9);
+          closure_131_1(closure_131_2[17]).dispatch(obj9);
           throw closure_4;
         } else if (arg0 === 1) {
           c7 = 3;
@@ -324,12 +344,12 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
         } else if (arg0 !== 2) {
           c5 = 0;
           const obj10 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_130_0.id };
-          closure_131_1(closure_131_2[16]).dispatch(obj10);
-          const obj = closure_131_1(closure_131_2[16]);
+          closure_131_1(closure_131_2[17]).dispatch(obj10);
+          const obj = closure_131_1(closure_131_2[17]);
         }
         c5 = 0;
         const obj11 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_130_0.id };
-        closure_131_1(closure_131_2[16]).dispatch(obj11);
+        closure_131_1(closure_131_2[17]).dispatch(obj11);
         c7 = 3;
         const obj12 = { value, done: true };
         return obj12;
@@ -346,14 +366,14 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
   })();
 };
 const AbortCodes = fn(1084).AbortCodes;
-const FramesConstants = fn(6811);
-({ MAIN_SURFACE: closure_7, makeFrameId: closure_8 } = FramesConstants);
+const FramesConstants = fn(6834);
+({ getFrameLaunchParams: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");
 
 export default function launchOrbsArcadeGame() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

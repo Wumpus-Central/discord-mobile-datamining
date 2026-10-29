@@ -1,10 +1,10 @@
-// === Module 7238: isRoleRequired ===
+// === Module 7262: isRoleRequired ===
 
-// Module 7238 (isRoleRequired)
+// Module 7262 (isRoleRequired)
 import Constants from "Constants" /* 1095 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
 import size from "module_2" /* 2 */;
 
 ChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;

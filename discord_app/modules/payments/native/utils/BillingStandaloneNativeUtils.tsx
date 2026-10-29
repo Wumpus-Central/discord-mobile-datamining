@@ -1,11 +1,11 @@
-// === Module 7550: BillingStandaloneNativeUtils ===
+// === Module 7573: BillingStandaloneNativeUtils ===
 
-// Module 7550 (BillingStandaloneNativeUtils)
+// Module 7573 (BillingStandaloneNativeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1084 */;
-import LinkingDefault from "Linking" /* 5696 */;
-import PaymentConstants from "PaymentConstants" /* 5734 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7551 */;
+import LinkingDefault from "Linking" /* 5698 */;
+import PaymentConstants from "PaymentConstants" /* 5736 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7574 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -35,7 +35,7 @@ const Routes = Constants.Routes;
 const logger = new LoggerDefault("BillingStandaloneNativeUtils");
 let result = size.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
-export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selection_action_sheet, arg1, arg2, arg3) {
+export function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selection_action_sheet, arg1, arg2, arg3) {
   _require = premium_plan_selection_action_sheet;
   const loadId = arg1;
   dependencyMap = arg2;
@@ -62,8 +62,8 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
     emitMWRCSentryErrorOnFailure(items, closure_0, loadId.loadId);
     closure_3(...items);
   });
-};
-export const goToStandaloneNitroManagementFromMobileApp = function goToStandaloneNitroManagementFromMobileApp(premium_external_management, loadId, arg2, arg3) {
+}
+export function goToStandaloneNitroManagementFromMobileApp(premium_external_management, loadId, arg2, arg3) {
   _require = premium_external_management;
   loadId = loadId.loadId;
   dependencyMap = arg2;
@@ -85,8 +85,8 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
     emitMWRCSentryErrorOnFailure(items, closure_0, loadId);
     closure_3(...items);
   });
-};
-export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, newAnalyticsLoadId, arg3, arg4) {
+}
+export function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, newAnalyticsLoadId, arg3, arg4) {
   _require = args;
   closure_1 = newAnalyticsLoadId;
   dependencyMap = arg3;
@@ -111,4 +111,4 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
     emitMWRCSentryErrorOnFailure(items, closure_0, closure_1);
     closure_3(...items);
   });
-};
+}

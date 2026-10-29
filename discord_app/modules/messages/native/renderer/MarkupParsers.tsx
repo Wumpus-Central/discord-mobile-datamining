@@ -1,15 +1,15 @@
-// === Module 8496: MarkupParsers ===
+// === Module 8518: MarkupParsers ===
 
-// Module 8496 (MarkupParsers)
+// Module 8518 (MarkupParsers)
 import Constants from "Constants" /* 1084 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
-import NativeMarkdownExperiment from "NativeMarkdownExperiment" /* 8497 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8501 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8518 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 8527 */;
-import priv from "priv" /* 1456 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
+import NativeMarkdownExperiment from "NativeMarkdownExperiment" /* 8519 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8523 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8540 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8549 */;
+import priv from "priv" /* 1457 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;
@@ -25,7 +25,7 @@ const tmp3 = new priv(obj);
 let closure_7 = new priv(obj);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
-export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, channelId) {
+export function parseEmbedTitleMarkup(rawName, channelId) {
   const combined = "" + rawName + "-" + channelId;
   value = closure_4.get(combined);
   if (null == value) {
@@ -35,8 +35,8 @@ export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, cha
     value = parseEmbedTitleToASTResult;
   }
   return value;
-};
-export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
+}
+export function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
   const combined = "" + arg0 + "-" + channelId + "-nolinks";
   value = closure_5.get(combined);
   if (null == value) {
@@ -46,8 +46,8 @@ export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupW
     value = result;
   }
   return value;
-};
-export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(arg0) {
+}
+export function parseEmbedDescriptionMarkup(arg0) {
   ({ description, channelId, isField, replaceMap, showListsAndHeaders } = arg0);
   ({ ignoreCache, showMaskedLinks } = arg0);
   const combined = "" + description + "-" + channelId;
@@ -78,8 +78,8 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   const parseToASTResult = MarkupUtilsDefault.parseToAST(tmp4, true, obj);
   const result = importDefaultResult1.set(combined, parseToASTResult);
   return parseToASTResult;
-};
-export const parseMessageMarkup = function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent) {
+}
+export function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent) {
   let flag = isInlineReplyPreview;
   if (isInlineReplyPreview === undefined) {
     flag = false;
@@ -157,4 +157,4 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   obj7.nativeMarkdownEnabled = result;
   result2 = closure_7.set(message, obj7);
   return obj7;
-};
+}

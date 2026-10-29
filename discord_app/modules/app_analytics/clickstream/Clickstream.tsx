@@ -1,13 +1,13 @@
-// === Module 7610: Clickstream ===
+// === Module 7633: Clickstream ===
 
-// Module 7610 (Clickstream)
+// Module 7633 (Clickstream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ClickstreamExperiment from "ClickstreamExperiment" /* 7611 */;
-import ClickstreamEvents from "ClickstreamEvents" /* 7612 */;
+import ClickstreamExperiment from "ClickstreamExperiment" /* 7634 */;
+import ClickstreamEvents from "ClickstreamEvents" /* 7635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 
 require = fn;
 function isClickstreamEnabled() {
@@ -48,7 +48,7 @@ let c7 = -1;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
-export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
+export function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
@@ -70,5 +70,5 @@ export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGE
       value.push(obj4);
     }
   }
-};
+}
 export { drainClickstream };

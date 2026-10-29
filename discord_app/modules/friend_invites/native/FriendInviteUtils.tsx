@@ -1,12 +1,12 @@
-// === Module 19031: FriendInviteUtils ===
+// === Module 19264: FriendInviteUtils ===
 
-// Module 19031 (FriendInviteUtils)
+// Module 19264 (FriendInviteUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8900 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8903 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 require = fn;
 const size = fn(2);
@@ -14,15 +14,15 @@ let result = size.fileFinishedImporting("modules/friend_invites/native/FriendInv
 
 export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
-export const revokeAllFriendInvites = function revokeAllFriendInvites() {
+export function revokeAllFriendInvites() {
   InstantInviteActionCreatorsDefault.revokeFriendInvites().then(() => {
     const obj2 = { text: null, variant: "success" };
     const intl = util.intl;
     obj2.text = intl.string(util.t.jSHEOQ);
     ToastActionCreatorsDefault.open("TOAST_FRIEND_INVITES_REVOKED", obj2);
   });
-};
-export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
+}
+export function acceptFriendInvite(invite, context) {
   if (tmp) {
     let dMFromUserId = null;
     if (RelationshipStore.isFriend(invite.inviter.id)) {
@@ -53,4 +53,4 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
     }
   }
   tmp = null == invite.channel && null == invite.guild && null != invite.inviter;
-};
+}

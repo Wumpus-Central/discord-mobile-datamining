@@ -1,9 +1,9 @@
-// === Module 16575: QuestCustomAppStoreOverlayUtils ===
+// === Module 16813: QuestCustomAppStoreOverlayUtils ===
 
-// Module 16575 (QuestCustomAppStoreOverlayUtils)
-import apexExperiment from "apexExperiment" /* 9638 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9642 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 14344 */;
+// Module 16813 (QuestCustomAppStoreOverlayUtils)
+import apexExperiment from "apexExperiment" /* 9670 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9674 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 14578 */;
 import size from "module_2" /* 2 */;
 
 function fetchCustomAppStoreOverlayContent(cta) {
@@ -33,7 +33,7 @@ function fetchCustomAppStoreOverlayContent(cta) {
 }
 const result = size.fileFinishedImporting("modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx");
 
-export const canOpenCustomAppStoreOverlayFromCta = function canOpenCustomAppStoreOverlayFromCta(cta) {
+export function canOpenCustomAppStoreOverlayFromCta(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
@@ -41,9 +41,9 @@ export const canOpenCustomAppStoreOverlayFromCta = function canOpenCustomAppStor
     const tmpResult = QuestPlatformUtils;
   }
   return enabled;
-};
+}
 export { fetchCustomAppStoreOverlayContent };
-export const prefetchCustomAppStoreOverlayContent = function prefetchCustomAppStoreOverlayContent(cta) {
+export function prefetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
@@ -56,4 +56,4 @@ export const prefetchCustomAppStoreOverlayContent = function prefetchCustomAppSt
     });
     const promise = fetchCustomAppStoreOverlayContent(cta);
   }
-};
+}

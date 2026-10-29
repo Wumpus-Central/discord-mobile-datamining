@@ -1,7 +1,7 @@
-// === Module 18746: useActivityWebViewLockManager ===
+// === Module 18979: useActivityWebViewLockManager ===
 
-// Module 18746 (useActivityWebViewLockManager)
-import native from "native" /* 5070 */;
+// Module 18979 (useActivityWebViewLockManager)
+import native from "native" /* 5071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -91,7 +91,7 @@ export default function useActivityWebViewLockManager() {
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(() => { ... });
+            closure_0 = resolved.then(/* F164635 */ function() { ... });
           }
         };
       }, items1);
@@ -99,7 +99,7 @@ export default function useActivityWebViewLockManager() {
     };
   })[0];
 };
-export const useLockedWebView = function useLockedWebView(transitionState) {
+export function useLockedWebView(transitionState) {
   transitionState = transitionState.transitionState;
   const hasActivity = transitionState.hasActivity;
   let renderWebView;
@@ -117,4 +117,4 @@ export const useLockedWebView = function useLockedWebView(transitionState) {
     const result1 = shown.set(false);
   }, items);
   return { shown, renderWebView };
-};
+}

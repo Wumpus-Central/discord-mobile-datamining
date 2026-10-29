@@ -1,8 +1,8 @@
-// === Module 16814: BountiesAndroidQuestBarSmokeAnimationExperiment ===
+// === Module 17052: BountiesAndroidQuestBarSmokeAnimationExperiment ===
 
-// Module 16814 (BountiesAndroidQuestBarSmokeAnimationExperiment)
+// Module 17052 (BountiesAndroidQuestBarSmokeAnimationExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

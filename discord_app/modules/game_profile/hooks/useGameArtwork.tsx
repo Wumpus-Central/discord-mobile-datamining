@@ -1,8 +1,8 @@
-// === Module 9338: useGameArtwork ===
+// === Module 9342: useGameArtwork ===
 
-// Module 9338 (useGameArtwork)
+// Module 9342 (useGameArtwork)
 import c from "c" /* 576 */;
-import getGameMediaRefURL from "getGameMediaRefURL" /* 2029 */;
+import getGameMediaRefURL from "getGameMediaRefURL" /* 2030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameA
   return obj2;
 });
 export { getGameArtworkSource };
-export const hasGameArtwork = function hasGameArtwork(media) {
+export function hasGameArtwork(media) {
   media = media.media;
   let cover;
   if (media != null) {
@@ -251,4 +251,4 @@ export const hasGameArtwork = function hasGameArtwork(media) {
     tmpResult = getGameMediaRefURL;
   }
   return null != str;
-};
+}

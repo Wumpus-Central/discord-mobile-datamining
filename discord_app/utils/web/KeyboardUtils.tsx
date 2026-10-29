@@ -1,10 +1,10 @@
-// === Module 15630: utils/KeyboardUtils ===
+// === Module 15866: utils/KeyboardUtils ===
 
-// Module 15630 (utils/KeyboardUtils)
+// Module 15866 (utils/KeyboardUtils)
 import PlatformUtils2 from "PlatformUtils" /* 1381 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import keyCodeDefault from "keyCode" /* 15631 */;
-import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils" /* 15632 */;
+import keyCodeDefault from "keyCode" /* 15867 */;
+import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils" /* 15868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import apply_mod from "module_12" /* 12 */;
 
@@ -190,7 +190,7 @@ function toPrettyKey(str) {
   }
   return str;
 }
-const KeyboardConstants = fn(7648);
+const KeyboardConstants = fn(7671);
 ({ KeyboardDeviceTypes: hasOwnProperty, LinuxKeyToCode } = KeyboardConstants);
 const MacosKeyToCode = KeyboardConstants.MacosKeyToCode;
 const WindowsKeyToCode = KeyboardConstants.WindowsKeyToCode;
@@ -366,7 +366,7 @@ const re20 = /shift|meta|ctrl|alt$/;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/web/KeyboardUtils.tsx");
 
-export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
+export function getRawCodeFromKey(arg0) {
   if (arg1 !== undefined) {
     if (arg1 === KeyboardEnvs.BROWSER) {
       let tmp10 = keyCodeDefault(arg0);
@@ -388,13 +388,13 @@ export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
     }
     obj = PlatformUtils2;
   }
-};
+}
 export { getCodeToKeyLanguageCorrection };
 export { getEnv };
 export { codeToKey };
 export { keyToCode };
 export { getKeyConversionForBrowser };
-export const toBrowserEvents = function toBrowserEvents(arr) {
+export function toBrowserEvents(arr) {
   closure_0 = { keyCode: 0, key: "", code: "", metaKey: false, shiftKey: false, altKey: false, ctrlKey: false };
   if (null == arr) {
     items = [];
@@ -474,8 +474,8 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
     }, []);
   }
   return items;
-};
-export const toCombo = function toCombo(shortcut) {
+}
+export function toCombo(shortcut) {
   if (arg1 !== undefined) {
     closure_0 = arg1;
     let KEYBOARD_KEY = arg2;
@@ -484,7 +484,7 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(15633).modKey).split("+");
+    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(15869).modKey).split("+");
     const mapped = parts.map((item) => item.trim().replace("plus", "+"));
     return mapped.reduce((arr, item) => {
       const tmp3 = keyToCode((function toUglyKey(item) {
@@ -520,9 +520,9 @@ export const toCombo = function toCombo(shortcut) {
     }
     obj = KEYBOARD_KEY(1381);
   }
-};
+}
 export { toKeyNames };
-export const toString = function toString(arr) {
+export function toString(arr) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -617,8 +617,8 @@ export const toString = function toString(arr) {
     formatted = found.join("+");
   }
   return formatted;
-};
-export const areKeyCombosEqual = function areKeyCombosEqual(arr, arg1) {
+}
+export function areKeyCombosEqual(arr, arg1) {
   closure_0 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -640,8 +640,8 @@ export const areKeyCombosEqual = function areKeyCombosEqual(arr, arg1) {
     }
     return tmp5;
   });
-};
-export const isKeyboardActivatedMouseEvent = function isKeyboardActivatedMouseEvent(nativeEvent) {
+}
+export function isKeyboardActivatedMouseEvent(nativeEvent) {
   let tmp = null != nativeEvent && typeof nativeEvent === "object";
   if (tmp) {
     tmp = "nativeEvent" in nativeEvent;
@@ -653,4 +653,4 @@ export const isKeyboardActivatedMouseEvent = function isKeyboardActivatedMouseEv
     tmp = 0 === nativeEvent.nativeEvent.clientY;
   }
   return tmp;
-};
+}

@@ -1,6 +1,6 @@
-// === Module 9302: distributorStoreUrls ===
+// === Module 9306: distributorStoreUrls ===
 
-// Module 9302 (distributorStoreUrls)
+// Module 9306 (distributorStoreUrls)
 import size from "module_2" /* 2 */;
 
 const discord7937464 = "discord7937464";
@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/activities/utils/distributorS
 export const XBOX_DISCORD_OCID = "discord7937464";
 export const XBOX_GAME_PASS_STORE_HOSTNAME = "www.xbox.com";
 export const XBOX_GAME_PASS_PROTOCOL = "msxbox";
-export const buildXboxGamePassStoreUrl = function buildXboxGamePassStoreUrl(id) {
+export function buildXboxGamePassStoreUrl(id) {
   return "https://" + c1 + "/games/store/title/" + encodeURIComponent(id) + "?ocid=" + discord7937464;
-};
-export const buildXboxGamePassStoreDeepLinkUrl = function buildXboxGamePassStoreDeepLinkUrl(arg0) {
+}
+export function buildXboxGamePassStoreDeepLinkUrl(arg0) {
   return "" + msxbox + "://game/?productid=" + encodeURIComponent(arg0) + "&ocid=" + discord7937464;
-};
+}

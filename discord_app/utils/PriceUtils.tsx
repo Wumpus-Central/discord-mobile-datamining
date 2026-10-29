@@ -1,10 +1,10 @@
-// === Module 7376: PriceUtils ===
+// === Module 7399: PriceUtils ===
 
-// Module 7376 (PriceUtils)
+// Module 7399 (PriceUtils)
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7377 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7400 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 
 require = fn;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
@@ -50,13 +50,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/PriceUtils.tsx");
 
 export { formatSingleCurrencyPrice };
-export const formatDualPriceForBG = function formatDualPriceForBG(result, localeOverride) {
+export function formatDualPriceForBG(result, localeOverride) {
   return "" + formatSingleCurrencyPrice(result, CurrencyCodes.EUR, localeOverride) + " (" + formatSingleCurrencyPrice(1.95583 * result, CurrencyCodes.BGN, localeOverride) + ")";
-};
-export const formatPrice = function formatPrice(result, BGN, localeOverride) {
+}
+export function formatPrice(result, BGN, localeOverride) {
   return formatSingleCurrencyPrice(result, BGN, localeOverride);
-};
-export const formatRate = function formatRate(priceString, interval, intervalCount) {
+}
+export function formatRate(priceString, interval, intervalCount) {
   if (interval === SubscriptionIntervalTypes.YEAR) {
     const intl3 = util.intl;
     const obj2 = { price: priceString };
@@ -81,22 +81,22 @@ export const formatRate = function formatRate(priceString, interval, intervalCou
     const error = new Error("Unsupported interval type: " + interval + ", and interval count: " + intervalCount);
     throw error;
   }
-};
-export const formatPercent = function formatPercent(stateFromStores, arg1) {
+}
+export function formatPercent(stateFromStores, arg1) {
   return Intl.NumberFormat(stateFromStores, { style: "percent", minimumFractionDigits: 0 }).format(arg1);
-};
-export const maybeShortenPrice = function maybeShortenPrice(str) {
+}
+export function maybeShortenPrice(str) {
   let replaced = str;
   if (str.length > 5) {
     replaced = str.replace(/\.00(?=[\s)]|$)/g, "");
   }
   return replaced;
-};
-export const shortenAndFormatPrice = function shortenAndFormatPrice(amount, currency, localeOverride) {
+}
+export function shortenAndFormatPrice(amount, currency, localeOverride) {
   const arr = formatSingleCurrencyPrice(amount, currency, localeOverride);
   let replaced = arr;
   if (arr.length > 5) {
     replaced = arr.replace(/\.00(?=[\s)]|$)/g, "");
   }
   return replaced;
-};
+}

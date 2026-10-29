@@ -1,10 +1,10 @@
-// === Module 7910: ChannelPermissionsConstants ===
+// === Module 7933: ChannelPermissionsConstants ===
 
-// Module 7910 (ChannelPermissionsConstants)
+// Module 7933 (ChannelPermissionsConstants)
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 7911 */;
-import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 7912 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 7934 */;
+import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 7935 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export const MEMBER_REQUEST_COUNT = 20;
 export const ADVANCED_MODE_ON_KEY = "channelPermissionSettingsAdvancedModeOn";
 export const TrackExposureLocations = { SETTINGS_PAGE: "settings-page", MEMBERS_LIST: "members-list", EMPTY_STATE: "empty-state", CREATE_CHANNEL: "create-channel" };
 export const SettingMode = { BASIC: "basic", ADVANCED: "advanced" };
-export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
+export function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
   type = type.type;
   if (type === constants.GUILD_CATEGORY) {
     const intl2 = util.intl;
@@ -757,4 +757,4 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   obj58.flag = constants4.SET_VOICE_CHANNEL_STATUS;
   obj2[constants4.SET_VOICE_CHANNEL_STATUS.toString()] = obj58;
   return obj2;
-};
+}

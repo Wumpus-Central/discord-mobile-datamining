@@ -1,6 +1,6 @@
-// === Module 18133: MentionActionCreators ===
+// === Module 18367: MentionActionCreators ===
 
-// Module 18133 (MentionActionCreators)
+// Module 18367 (MentionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import Constants from "Constants" /* 1084 */;

@@ -1,18 +1,18 @@
-// === Module 9095: HubProgressActionCreators ===
+// === Module 9098: HubProgressActionCreators ===
 
-// Module 9095 (HubProgressActionCreators)
+// Module 9098 (HubProgressActionCreators)
 import FlagUtils from "FlagUtils" /* 1402 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9096).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9099).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1084).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
-export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, INVITE_USER) {
+export function setHubProgressActionComplete(guildId, INVITE_USER) {
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
     let hasItem = null != guild;
@@ -22,7 +22,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [INVITE_USER];
-      const result = items(4837).updateUserGuildSettings(guildId, (hubProgress) => {
+      const result = items(4838).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
           let obj = FlagUtils;
@@ -34,12 +34,12 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           continue;
         }
         return flag;
-      }, items(4837).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      const obj = items(4837);
+      }, items(4838).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      const obj = items(4838);
     }
   }
-};
-export const skipHubProgress = function skipHubProgress(id) {
+}
+export function skipHubProgress(id) {
   _require = HUB_PROGRESS_STEP_ORDER;
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(id, (hubProgress) => {
     let flag = false;
@@ -54,4 +54,4 @@ export const skipHubProgress = function skipHubProgress(id) {
     }
     return flag;
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
-};
+}

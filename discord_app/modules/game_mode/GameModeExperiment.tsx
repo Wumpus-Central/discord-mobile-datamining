@@ -1,8 +1,8 @@
-// === Module 5008: GameModeExperiment ===
+// === Module 5009: GameModeExperiment ===
 
-// Module 5008 (GameModeExperiment)
+// Module 5009 (GameModeExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,9 +13,9 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_mode/GameModeExperiment.tsx");
 
-export const getGameModeExperimentConfig = function getGameModeExperimentConfig(location) {
+export function getGameModeExperimentConfig(location) {
   return closure_2.getConfig({ location: location.location });
-};
+}
 export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameModeExperimentConfig(location) {
   const cResult = c.c(2);
   const _location = location.location;

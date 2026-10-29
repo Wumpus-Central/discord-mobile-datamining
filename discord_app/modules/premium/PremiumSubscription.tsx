@@ -1,13 +1,13 @@
-// === Module 2061: PremiumSubscription ===
+// === Module 2062: PremiumSubscription ===
 
-// Module 2061 (PremiumSubscription)
+// Module 2062 (PremiumSubscription)
 import PremiumConstants from "PremiumConstants" /* 1391 */;
 import size from "module_2" /* 2 */;
 
 ({ SubscriptionPlans: closure_0, SubscriptionPlanInfo: closure_1, PremiumSubscriptionSKUs: c2 } = PremiumConstants);
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscription.tsx");
 
-export const getNonePlanIdForIntervalType = function getNonePlanIdForIntervalType(arg0) {
+export function getNonePlanIdForIntervalType(arg0) {
   constants = arg0;
   let num = arg1;
   if (arg1 === undefined) {
@@ -31,8 +31,8 @@ export const getNonePlanIdForIntervalType = function getNonePlanIdForIntervalTyp
     NONE_MONTH = constants.NONE_MONTH;
   }
   return NONE_MONTH;
-};
-export const getNonePlanIdForSubscription = function getNonePlanIdForSubscription(arg0) {
+}
+export function getNonePlanIdForSubscription(arg0) {
   let num;
   const interval = tmp2.interval;
   if (num === undefined) {
@@ -56,11 +56,11 @@ export const getNonePlanIdForSubscription = function getNonePlanIdForSubscriptio
     NONE_MONTH = interval.NONE_MONTH;
   }
   return NONE_MONTH;
-};
-export const getBaseSubscriptionItemForSubscriptionItems = function getBaseSubscriptionItemForSubscriptionItems(items) {
+}
+export function getBaseSubscriptionItemForSubscriptionItems(items) {
   return items.find((item) => null != intervalCount[item.planId] && null != intervalCount[item.planId].premiumType);
-};
-export const getBasePlanIdForSubscriptionItems = function getBasePlanIdForSubscriptionItems(items, interval, intervalCount) {
+}
+export function getBasePlanIdForSubscriptionItems(items, interval, intervalCount) {
   const found = items.find((item) => null != intervalCount[item.planId] && null != intervalCount[item.planId].premiumType);
   if (null == found) {
     if (items.length > 0) {
@@ -91,4 +91,4 @@ export const getBasePlanIdForSubscriptionItems = function getBasePlanIdForSubscr
   } else {
     return found.planId;
   }
-};
+}

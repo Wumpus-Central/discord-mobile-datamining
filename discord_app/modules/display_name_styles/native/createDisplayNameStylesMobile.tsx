@@ -1,16 +1,16 @@
-// === Module 8354: createDisplayNameStylesMobile ===
+// === Module 8376: createDisplayNameStylesMobile ===
 
-// Module 8354 (createDisplayNameStylesMobile)
+// Module 8376 (createDisplayNameStylesMobile)
 import DisplayNameFont from "DisplayNameFont" /* 1409 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
 
-export const createDisplayNameStylesMobile = function createDisplayNameStylesMobile(author, member) {
+export function createDisplayNameStylesMobile(author, member) {
   const currentUser = UserStore.getCurrentUser();
   let displayNameStyles = author.displayNameStyles;
   if (tmp2) {
@@ -36,8 +36,8 @@ export const createDisplayNameStylesMobile = function createDisplayNameStylesMob
       return obj;
     }
   }
-};
-export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdForMobileUser(user, guildId) {
+}
+export function getDisplayNameFontIdForMobileUser(user, guildId) {
   if (null != user) {
     let member = null;
     if (null != guildId) {
@@ -80,4 +80,4 @@ export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdFo
     }
     tmp6 = null != currentUser && currentUser.id === user.id;
   }
-};
+}

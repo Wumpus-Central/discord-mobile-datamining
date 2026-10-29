@@ -1,10 +1,10 @@
-// === Module 18793: useInviteMembersCallback ===
+// === Module 19026: useInviteMembersCallback ===
 
-// Module 18793 (useInviteMembersCallback)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9083 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11332 */;
+// Module 19026 (useInviteMembersCallback)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9086 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11386 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 

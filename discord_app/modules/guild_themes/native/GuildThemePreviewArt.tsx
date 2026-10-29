@@ -1,18 +1,18 @@
-// === Module 17868: GuildThemePreviewArt ===
+// === Module 18106: GuildThemePreviewArt ===
 
-// Module 17868 (GuildThemePreviewArt)
+// Module 18106 (GuildThemePreviewArt)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 5241 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
-import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 17869 */;
+import useThemeDefault from "useTheme" /* 5242 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
+import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 18107 */;
 import noop from "module_19" /* 19 */;
 
-const GuildThemePresets = obj(5183);
+const GuildThemePresets = obj(5184);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { previewArt: { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, previewOverlay: { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

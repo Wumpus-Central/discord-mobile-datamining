@@ -1,20 +1,20 @@
-// === Module 8447: ChannelLinkedToLobbySystemMessage ===
+// === Module 8469: ChannelLinkedToLobbySystemMessage ===
 
-// Module 8447 (ChannelLinkedToLobbySystemMessage)
+// Module 8469 (ChannelLinkedToLobbySystemMessage)
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8344 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8366 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 require = fn;
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
 
-export const createChannelLinkedToLobbySystemMessage = function createChannelLinkedToLobbySystemMessage(message) {
+export function createChannelLinkedToLobbySystemMessage(message) {
   message = message.message;
   ({ roleStyle, theme } = message);
   const tmp3 = resolveMessageContentColorsDefault(theme);
@@ -43,4 +43,4 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const merged = Object.assign(createCommonMessageDefault(message));
     return obj6;
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 15415: MobileNativeUpdateUtils ===
+// === Module 15649: MobileNativeUpdateUtils ===
 
-// Module 15415 (MobileNativeUpdateUtils)
+// Module 15649 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Linking from "Linking" /* 5696 */;
+import Linking from "Linking" /* 5698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -104,12 +104,12 @@ function openBuildInstallerUrl(install) {
   } catch (err) {
   }
 }
-const UPDATE_CONFIG = fn(5733).UPDATE_CONFIG;
+const UPDATE_CONFIG = fn(5735).UPDATE_CONFIG;
 const logger = new LoggerDefault("MobileNativeUpdateUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
 
-export const checkForNewerBuild = function checkForNewerBuild() {
+export function checkForNewerBuild() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -118,8 +118,8 @@ export const checkForNewerBuild = function checkForNewerBuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const openBuildInstaller = function openBuildInstaller(newBuild) {
+}
+export function openBuildInstaller(newBuild) {
   openBuildInstallerUrl(newBuild.urls.install);
-};
+}
 export { openBuildInstallerUrl };

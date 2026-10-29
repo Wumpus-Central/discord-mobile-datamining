@@ -1,16 +1,16 @@
-// === Module 10738: conjureAgentReaction ===
+// === Module 10812: conjureAgentReaction ===
 
-// Module 10738 (conjureAgentReaction)
+// Module 10812 (conjureAgentReaction)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
 import size from "module_2" /* 2 */;
 
 const re3 = /^\d{17,20}$/;
 const re4 = /^\w{2,32}$/;
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureAgentReaction.tsx");
 
-export const agentReactionFromStep = function agentReactionFromStep(setting) {
+export function agentReactionFromStep(setting) {
   let animated = setting;
   ({ emoji, emoji_id } = setting);
   let tmp = null;
@@ -34,11 +34,11 @@ export const agentReactionFromStep = function agentReactionFromStep(setting) {
     }
   }
   return tmp;
-};
-export const sameAgentReaction = function sameAgentReaction(agentReaction, reaction) {
+}
+export function sameAgentReaction(agentReaction, reaction) {
   return null != agentReaction && agentReaction.emoji === reaction.emoji && agentReaction.emojiId === reaction.emojiId && agentReaction.animated === reaction.animated;
-};
-export const getConjureAgentReactionLabel = function getConjureAgentReactionLabel(reaction) {
+}
+export function getConjureAgentReactionLabel(reaction) {
   if (null != reaction.emojiId) {
     const _HermesInternal = HermesInternal;
     let emojiName = ":" + reaction.emoji + ":";
@@ -46,5 +46,5 @@ export const getConjureAgentReactionLabel = function getConjureAgentReactionLabe
     emojiName = UnicodeEmojisDefault.convertSurrogateToName(reaction.emoji, false);
   }
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3863.lxXLho, { emojiName });
-};
+  return intl.formatToPlainString(_modDef3864.lxXLho, { emojiName });
+}

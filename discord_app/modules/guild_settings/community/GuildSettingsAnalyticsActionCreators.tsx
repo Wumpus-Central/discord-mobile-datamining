@@ -1,6 +1,6 @@
-// === Module 19510: GuildSettingsAnalyticsActionCreators ===
+// === Module 19743: GuildSettingsAnalyticsActionCreators ===
 
-// Module 19510 (GuildSettingsAnalyticsActionCreators)
+// Module 19743 (GuildSettingsAnalyticsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -12,7 +12,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/community/GuildSettingsAnalyticsActionCreators.tsx");
 
-export const fetchEngagementOverview = function fetchEngagementOverview(guildId) {
+export function fetchEngagementOverview(guildId) {
   _require = guildId;
   const date = new Date();
   const time = date.getTime();
@@ -30,8 +30,8 @@ export const fetchEngagementOverview = function fetchEngagementOverview(guildId)
   }, (body) => {
     DispatcherDefault.dispatch({ type: "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE", error: body.body });
   });
-};
-export const fetchGrowthActivationOverview = function fetchGrowthActivationOverview(guildId) {
+}
+export function fetchGrowthActivationOverview(guildId) {
   _require = guildId;
   const date = new Date();
   const time = date.getTime();
@@ -49,8 +49,8 @@ export const fetchGrowthActivationOverview = function fetchGrowthActivationOverv
   }, (body) => {
     DispatcherDefault.dispatch({ type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE", error: body.body });
   });
-};
-export const fetchGrowthActivationRetention = function fetchGrowthActivationRetention(guildId) {
+}
+export function fetchGrowthActivationRetention(guildId) {
   _require = guildId;
   const date = new Date();
   const time = date.getTime();
@@ -74,4 +74,4 @@ export const fetchGrowthActivationRetention = function fetchGrowthActivationRete
   }, (body) => {
     DispatcherDefault.dispatch({ type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE", error: body.body });
   });
-};
+}

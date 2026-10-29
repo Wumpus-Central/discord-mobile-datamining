@@ -1,13 +1,13 @@
-// === Module 10754: conjureChatConnection ===
+// === Module 10829: conjureChatConnection ===
 
-// Module 10754 (conjureChatConnection)
+// Module 10829 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10738 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10755 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10812 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10830 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -98,7 +98,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3863["913RMa"]);
+      const stringResult = intl.string(_modDef3864["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -187,7 +187,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3863["0+RUWx"]);
+      const stringResult = intl.string(_modDef3864["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -339,7 +339,7 @@ let result = size.fileFinishedImporting("modules/conjure/chat/conjureChatConnect
 
 export const chatFrameHandlers = obj;
 export const chatStepHandlers = obj2;
-export const sendFailedStep = function sendFailedStep(projectId, message) {
+export function sendFailedStep(projectId, message) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = obj3;
@@ -350,11 +350,11 @@ export const sendFailedStep = function sendFailedStep(projectId, message) {
   const merged = Object.assign(tmp);
   obj4.message = message;
   obj3.trackConjureErrored(projectId, obj4);
-};
-export const appendTurnStep = function appendTurnStep(projectId, turnId) {
+}
+export function appendTurnStep(projectId, turnId) {
   DispatcherDefault.dispatch({ type: "CONJURE_CHAT_STEP_APPEND", projectId, turnId: turnId.turn_id, step: turnId });
-};
-export const sendQueuedMessageAction = function sendQueuedMessageAction(projectId, id, arg2) {
+}
+export function sendQueuedMessageAction(projectId, id, arg2) {
   try {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
     if (null == conjureSocket) {
@@ -367,4 +367,4 @@ export const sendQueuedMessageAction = function sendQueuedMessageAction(projectI
     obj2 = conjureSocket;
   } catch (err) {
   }
-};
+}

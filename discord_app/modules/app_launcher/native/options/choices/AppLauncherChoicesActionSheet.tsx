@@ -1,17 +1,17 @@
-// === Module 12088: AppLauncherChoicesActionSheet ===
+// === Module 12142: AppLauncherChoicesActionSheet ===
 
-// Module 12088 (AppLauncherChoicesActionSheet)
+// Module 12142 (AppLauncherChoicesActionSheet)
 import c from "c" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6743 */;
-import _mod7256 from "module_7256" /* 7256 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6766 */;
+import _mod7280 from "module_7280" /* 7280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["scrollable"];
-const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -34,7 +34,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function FlashL
       return cResult[5];
     }
   }
-  let obj2 = _mod7256;
+  let obj2 = _mod7280;
   if (tmp5) {
     obj2 = { preserveScrollMomentum: true };
     const merged = Object.assign(tmp4);
@@ -49,7 +49,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function FlashL
   cResult[5] = tmp9Result;
 }) : (function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod7256;
+  const tmp3 = _mod7280;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);

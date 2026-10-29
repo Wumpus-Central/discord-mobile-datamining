@@ -1,19 +1,19 @@
-// === Module 19047: VoicePermissionManager ===
+// === Module 19280: VoicePermissionManager ===
 
-// Module 19047 (VoicePermissionManager)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6032 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7920 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6721 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5667 */;
+// Module 19280 (VoicePermissionManager)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6036 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7943 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6744 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5669 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 require = fn;
 const InputModes = fn(1084).InputModes;
-const NativePermissionTypes = fn(7903).NativePermissionTypes;
+const NativePermissionTypes = fn(7926).NativePermissionTypes;
 let c11 = null;
 class VoicePermissionManager extends tmp2 {
   constructor() {
@@ -83,7 +83,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
 
 export default voicePermissionManager;
-export const shouldImmediatelyRequestVoicePermissions = function shouldImmediatelyRequestVoicePermissions(id, id2) {
+export function shouldImmediatelyRequestVoicePermissions(id, id2) {
   const channel = ChannelStore.getChannel(id2);
   let isListenModeCapableResult;
   if (channel != null) {
@@ -94,4 +94,4 @@ export const shouldImmediatelyRequestVoicePermissions = function shouldImmediate
     isSpeakerResult = StageChannelRoleStore.isSpeaker(id, id2);
   }
   return isSpeakerResult;
-};
+}

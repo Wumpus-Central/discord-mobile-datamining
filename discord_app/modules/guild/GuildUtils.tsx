@@ -1,14 +1,14 @@
-// === Module 9986: guild/GuildUtils ===
+// === Module 10018: guild/GuildUtils ===
 
-// Module 9986 (guild/GuildUtils)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6866 */;
+// Module 10018 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6889 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
-export const handleJoinGuild = function handleJoinGuild(guildId) {
+export function handleJoinGuild(guildId) {
   _require = guildId;
   if (null != guildId) {
     const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
@@ -19,4 +19,4 @@ export const handleJoinGuild = function handleJoinGuild(guildId) {
       const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
   }
-};
+}

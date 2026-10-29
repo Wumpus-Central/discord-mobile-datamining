@@ -1,10 +1,10 @@
-// === Module 18513: ClearAllIncomingRequestsAlertModal ===
+// === Module 18747: ClearAllIncomingRequestsAlertModal ===
 
-// Module 18513 (ClearAllIncomingRequestsAlertModal)
+// Module 18747 (ClearAllIncomingRequestsAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import AlertModal from "AlertModal" /* 5950 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7451 */;
+import AlertModal from "AlertModal" /* 5952 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7474 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ let closure_7 = async function _handleConfirm() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_7 = async function _handleConfirm() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp7) {
       c0 = tmp;

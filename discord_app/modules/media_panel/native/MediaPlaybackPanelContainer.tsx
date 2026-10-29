@@ -1,11 +1,11 @@
-// === Module 18958: MediaPlaybackPanelContainer ===
+// === Module 19191: MediaPlaybackPanelContainer ===
 
-// Module 18958 (MediaPlaybackPanelContainer)
+// Module 19191 (MediaPlaybackPanelContainer)
 import c from "c" /* 576 */;
-import _mod4921 from "module_4921" /* 4921 */;
-import MediaPlayerManager from "MediaPlayerManager" /* 16066 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 18959 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 18961 */;
+import _mod4922 from "module_4922" /* 4922 */;
+import MediaPlayerManager from "MediaPlayerManager" /* 16302 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 19192 */;
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 19194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -66,7 +66,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     first = cResult[0];
   }
   const tmpResult = MediaPlayerManager;
-  const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4921.useShallow(first));
+  const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4922.useShallow(first));
   if (cResult[1] !== mediaPlayerManagerStore) {
     let tmp7 = null;
     if (mediaPlayerManagerStore) {

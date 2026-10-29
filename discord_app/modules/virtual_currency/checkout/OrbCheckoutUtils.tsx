@@ -1,11 +1,11 @@
-// === Module 7379: OrbCheckoutUtils ===
+// === Module 7402: OrbCheckoutUtils ===
 
-// Module 7379 (OrbCheckoutUtils)
+// Module 7402 (OrbCheckoutUtils)
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1086 */;
 import util from "util" /* 1125 */;
-import BillingError from "BillingError" /* 4827 */;
-import OrderConstants from "OrderConstants" /* 7380 */;
-import OrderActionCreators from "OrderActionCreators" /* 7381 */;
+import BillingError from "BillingError" /* 4828 */;
+import OrderConstants from "OrderConstants" /* 7403 */;
+import OrderActionCreators from "OrderActionCreators" /* 7404 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_
 const ConstraintReasonCode = OrderConstants.ConstraintReasonCode;
 const result = size.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutUtils.tsx");
 
-export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, cResult) {
+export function getOrbPriceFromPrices(prices, cResult) {
   if (cResult) {
     if (null != prices[React4.PREMIUM_TIER_2]) {
       let tmp2 = prices[React4.PREMIUM_TIER_2];
@@ -36,8 +36,8 @@ export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, cRes
     return found;
   }
   tmp2 = prices[React4.DEFAULT];
-};
-export const getOrbCheckoutDisclaimerMessage = function getOrbCheckoutDisclaimerMessage(skuId) {
+}
+export function getOrbCheckoutDisclaimerMessage(skuId) {
   const intl = util.intl;
   const obj = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
   const intl2 = util.intl;
@@ -54,8 +54,8 @@ export const getOrbCheckoutDisclaimerMessage = function getOrbCheckoutDisclaimer
   }
   const items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
   return items;
-};
-export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMessage(code, arg1) {
+}
+export function resolveOrbCheckoutErrorMessage(code, arg1) {
   if (null == code) {
     return null;
   } else {
@@ -97,4 +97,4 @@ export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMe
       stringResult1 = intl7.string(util.t.v9oC0p);
     }
   }
-};
+}

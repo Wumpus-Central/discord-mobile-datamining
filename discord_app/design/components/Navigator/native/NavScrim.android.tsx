@@ -1,16 +1,16 @@
-// === Module 5628: NavScrim ===
+// === Module 5629: NavScrim ===
 
-// Module 5628 (NavScrim)
+// Module 5629 (NavScrim)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5629 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { androidNavScrim: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,6 +1,6 @@
-// === Module 4913: EnhancedRoleColorUtils ===
+// === Module 4914: EnhancedRoleColorUtils ===
 
-// Module 4913 (EnhancedRoleColorUtils)
+// Module 4914 (EnhancedRoleColorUtils)
 import Constants from "Constants" /* 1084 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
 import size from "module_2" /* 2 */;
@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;
 const result = size.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
 
-export const extractColorStringsFromServerColors = function extractColorStringsFromServerColors(colors) {
+export function extractColorStringsFromServerColors(colors) {
   if (0 === colors.primary_color) {
     let int2hexResult = DEFAULT_ROLE_COLOR_HEX;
   } else {
@@ -26,16 +26,16 @@ export const extractColorStringsFromServerColors = function extractColorStringsF
   }
   obj2.tertiaryColor = int2hexResult2;
   return obj2;
-};
-export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorStrings) {
+}
+export function getAuthorHasGradientRole(colorStrings) {
   let tmp = null != colorStrings;
   if (tmp) {
     tmp = null != colorStrings.colorStrings && null != colorStrings.colorStrings.primaryColor && null != colorStrings.colorStrings.secondaryColor;
     const tmp2 = null != colorStrings.colorStrings && null != colorStrings.colorStrings.primaryColor && null != colorStrings.colorStrings.secondaryColor;
   }
   return tmp;
-};
-export const getIsDefaultErc = function getIsDefaultErc(role) {
+}
+export function getIsDefaultErc(role) {
   let tmp = null != role.colors;
   if (tmp) {
     tmp = 0 === role.colors.primary_color;
@@ -47,4 +47,4 @@ export const getIsDefaultErc = function getIsDefaultErc(role) {
     tmp = null == role.colors.tertiary_color;
   }
   return 0 === role.color || tmp;
-};
+}

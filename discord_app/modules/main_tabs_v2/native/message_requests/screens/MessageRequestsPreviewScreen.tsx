@@ -1,12 +1,12 @@
-// === Module 18633: MessageRequestsPreviewScreen ===
+// === Module 18867: MessageRequestsPreviewScreen ===
 
-// Module 18633 (MessageRequestsPreviewScreen)
-import MessageManagerDefault from "MessageManager" /* 9751 */;
+// Module 18867 (MessageRequestsPreviewScreen)
+import MessageManagerDefault from "MessageManager" /* 9783 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
 
-const ChatViewDefault = tmp11(10930);
-const RestrictedMessageRequestPreviewDefault = tmp11(18634);
+const ChatViewDefault = tmp11(10965);
+const RestrictedMessageRequestPreviewDefault = tmp11(18868);
 const require = fn;
 const ME = fn(1084).ME;
 const jsx = fn(21).jsx;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   let obj = channelId(576);
   const tmp = channelId;
   const ref = noop.useRef(null);
-  const isMessageRequestRestrictedViewer = channelId(13584).useIsMessageRequestRestrictedViewer();
+  const isMessageRequestRestrictedViewer = channelId(13817).useIsMessageRequestRestrictedViewer();
   if (cResult[0] !== channelId) {
     const fn = function l() {
       const obj = MessageManagerDefault;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
         return tmp14;
       }
       const obj4 = { guildId: ME, channelId, children: cResult[5] };
-      const tmp17 = jsx(tmp(13976).ChannelContainer, { guildId: ME, channelId, children: cResult[5] });
+      const tmp17 = jsx(tmp(14209).ChannelContainer, { guildId: ME, channelId, children: cResult[5] });
       cResult[6] = channelId;
       cResult[7] = cResult[5];
       cResult[8] = tmp17;
@@ -63,12 +63,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   cResult[3] = channelId;
   cResult[4] = isMessageRequestRestrictedViewer;
   cResult[5] = tmp10Result;
-  const obj3 = channelId(13584);
+  const obj3 = channelId(13817);
 }) : (function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   const items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(13584).useIsMessageRequestRestrictedViewer();
+  const isMessageRequestRestrictedViewer = channelId(13817).useIsMessageRequestRestrictedViewer();
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });
@@ -82,5 +82,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
     tmp5Result = jsx(ChatViewDefault, { guildId: tmp6, channelId, chatInputRef: ref, HACK_fixModalInteraction: true, screenIndex: "message-request" });
   }
   obj2.children = tmp5Result;
-  return jsx(channelId(13976).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(14209).ChannelContainer, { guildId: ME, channelId, children: null });
 });

@@ -1,17 +1,17 @@
-// === Module 9507: useCollectiblesShopProducts ===
+// === Module 9539: useCollectiblesShopProducts ===
 
-// Module 9507 (useCollectiblesShopProducts)
+// Module 9539 (useCollectiblesShopProducts)
 import c from "c" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7684 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8745 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9509 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9510 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7707 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8748 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9541 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9508 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8746 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7686 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7687 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9540 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8749 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7709 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7710 */;
 
 const require = globalThis.__r;
 
@@ -585,7 +585,7 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
     }, items10)
   };
 });
-export const useCollectiblesShopProducts = function useCollectiblesShopProducts(skuIds) {
+export function useCollectiblesShopProducts(skuIds) {
   _require = skuIds;
   let obj = cResult;
   if (cResult === undefined) {
@@ -768,4 +768,4 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     }
     return obj;
   }, items13);
-};
+}

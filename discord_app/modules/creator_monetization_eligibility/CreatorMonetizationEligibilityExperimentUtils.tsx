@@ -1,10 +1,10 @@
-// === Module 7398: CreatorMonetizationEligibilityExperimentUtils ===
+// === Module 7421: CreatorMonetizationEligibilityExperimentUtils ===
 
-// Module 7398 (CreatorMonetizationEligibilityExperimentUtils)
+// Module 7421 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1389 */;
-import BillingInfoStore from "BillingInfoStore" /* 2051 */;
+import BillingInfoStore from "BillingInfoStore" /* 2052 */;
 
 require = fn;
 const GuildFeatures = fn(1084).GuildFeatures;
@@ -88,7 +88,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
 
 export const useIsUserInCreatorMonetizationEligibleCountry = tmp3;
-export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreatorMonetizationEligibleCountry() {
+export function isUserInCreatorMonetizationEligibleCountry() {
   const currentUser = UserStore.getCurrentUser();
   let country;
   if (currentUser != null) {
@@ -105,7 +105,7 @@ export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreat
     hasItem = set.has(country);
   }
   return hasItem;
-};
+}
 export { useIsRavenOnboardingGuild };
 export { isRavenOnboardingGuild };
 export { useIsWhitegloveOnboardingGuild };
@@ -141,7 +141,7 @@ export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompiler
   }
   return tmp2;
 });
-export const isExpeditedMonetizationOnboardingGuild = function isExpeditedMonetizationOnboardingGuild(id) {
+export function isExpeditedMonetizationOnboardingGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -156,4 +156,4 @@ export const isExpeditedMonetizationOnboardingGuild = function isExpeditedMoneti
     tmp2 = hasItem;
   }
   return tmp2;
-};
+}

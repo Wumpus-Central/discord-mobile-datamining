@@ -1,6 +1,6 @@
-// === Module 13049: ? ===
+// === Module 13280: ? ===
 
-// Module 13049
+// Module 13280
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_base_05_forrest.webp.js");

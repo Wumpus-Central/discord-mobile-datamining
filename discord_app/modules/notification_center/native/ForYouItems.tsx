@@ -1,6 +1,6 @@
-// === Module 18143: ForYouItems ===
+// === Module 18377: ForYouItems ===
 
-// Module 18143 (ForYouItems)
+// Module 18377 (ForYouItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _mod686 from "module_686" /* 686 */;
@@ -8,35 +8,35 @@ import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import Link from "Link" /* 1503 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import parseURLDefault from "parseURL" /* 5732 */;
-import CustomMarkupAll from "CustomMarkup" /* 6015 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6823 */;
-import PollsUtils from "PollsUtils" /* 8316 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8446 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13786 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15354 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18141 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18158 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18159 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18160 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18161 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18162 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 18168 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18169 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 18170 */;
+import Link from "Link" /* 1504 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import parseURLDefault from "parseURL" /* 5734 */;
+import CustomMarkupAll from "CustomMarkup" /* 6019 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6846 */;
+import PollsUtils from "PollsUtils" /* 8338 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8468 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14019 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15589 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18375 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18392 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18393 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18394 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18395 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18396 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 18402 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18403 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 18404 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18137 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18371 */;
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(18142);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(18376);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -153,28 +153,28 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, RefreshControl: closure_8, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_15, MessageFlags: closure_16, AnalyticsLocations: closure_17, MessageTypes: closure_18, EMPTY_STRING_SNOWFLAKE_ID: closure_19 } = Constants);
-const NotificationTypes = fn(6706).NotificationTypes;
+const NotificationTypes = fn(6730).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5270).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(5271).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5270).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(5271).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj7 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
@@ -195,7 +195,7 @@ ReactCompilerGating.isReactCompilerEnabled();
 function useMarkupUnreadV2() {
 
 }
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj13 = { container: { flex: 1 }, row: null, rowCompact: null, rowActive: null, col: null, unreadIndicatorV2: null, unreadIndicatorCompactV2: null, rowText: null, rowTextV2: null, rowBody: null, rowBodyV2: null, rowBodyAcked: null, rowTime: null, rowTimeV2: null, itemV2: null, calloutContainer: null, calloutTextAcked: null, calloutTextNotAcked: null, messagePreviewContainerV2: null, messagePreviewBarV2: null, messagePreviewIconV2Container: null, messagePreviewIconV2: null, messagePreviewTextV2Acked: null, messagePreviewTextV2NotAcked: null, messagePreviewSystemTextV2: null, refreshSpinner: null, forYouDivider: null, friendRequestNoteContainer: null };
 let obj12 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 obj13.row = { marginHorizontal: 4, paddingHorizontal: 12, paddingVertical: 8, marginBottom: 4, borderRadius: nativeDefault.radii.lg, flexDirection: "row", justifyContent: "space-between" };
@@ -361,7 +361,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
   ({ compactMode, roleStyle } = item);
   const tmp3 = closure_32();
   const obj = item(576);
-  const notifCenterV2MessagePreviewParser = message_channel_id(6015).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
+  const notifCenterV2MessagePreviewParser = message_channel_id(6019).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
   const tmp5 = getMessageContentPreviewV2({ item });
   const iconType = tmp5.iconType;
   const guild_id = item.guild_id;
@@ -384,7 +384,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
   } else {
     tmp8 = cResult[2];
   }
-  const obj2 = message_channel_id(6015);
+  const obj2 = message_channel_id(6019);
   const stateFromStores = item(504).useStateFromStores(first, tmp8);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ChannelStore];
@@ -436,7 +436,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
     } else {
       tmp23 = cResult[11];
     }
-    const Text = tmp(5270).Text;
+    const Text = tmp(5271).Text;
     const tmp26 = acked ? tmp3.messagePreviewTextV2Acked : tmp3.messagePreviewTextV2NotAcked;
     let prop;
     if (isSystemMessage) {
@@ -462,7 +462,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
         str = "text-muted";
       }
       const obj5 = { textColor: str };
-      const result = tmp(8518).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
+      const result = tmp(8540).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
       if (null == iconType) {
         if (cResult[15] === Text) {
           if (cResult[16] === tmp28) {
@@ -509,7 +509,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
       } else {
         const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp35 = guild_id(13339);
+          let tmp35 = guild_id(13572);
           const obj9 = { source: tmp35, size: tmp(1199).IconSizes.SMALL, style: null };
           messagePreviewIconV2 = tmp3.messagePreviewIconV2;
           obj9.style = messagePreviewIconV2;
@@ -518,12 +518,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
         } else if (constants4.STICKER !== iconType) {
           tmp35 = null;
           if (constants4.VOICE_MESSAGE === iconType) {
-            tmp35 = guild_id(8137);
+            tmp35 = guild_id(8160);
           }
         }
-        tmp35 = guild_id(10227);
+        tmp35 = guild_id(10260);
       }
-      const tmpResult6 = tmp(8518);
+      const tmpResult6 = tmp(8540);
     }
     const items5 = [tmp26, prop];
     cResult[12] = tmp26;
@@ -575,13 +575,13 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_32();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(6015).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
+  const notifCenterV2MessagePreviewParser = message_channel_id(6019).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
   const tmp2 = getMessageContentPreviewV2({ item });
   const iconType = tmp2.iconType;
   const guild_id = item.guild_id;
   message_channel_id = item.message_channel_id;
   ({ content, isSystemMessage } = tmp2);
-  const obj = message_channel_id(6015);
+  const obj = message_channel_id(6019);
   let items = [GuildStore];
   const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   const obj2 = item(504);
@@ -637,17 +637,17 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
   if (acked) {
     str = "text-muted";
   }
-  const items5 = [item(8518).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }), ];
+  const items5 = [item(8540).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }), ];
   if (null == iconType) {
     items5[1] = tmp12;
     obj7.children = items5;
-    items3[1] = closure_22(item(5270).Text, obj7);
+    items3[1] = closure_22(item(5271).Text, obj7);
     obj5.children = items3;
     return closure_22(closure_7, obj5);
   } else {
     const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === iconType) {
-      let tmp15 = guild_id(13339);
+      let tmp15 = guild_id(13572);
       const obj10 = { source: tmp15, size: null, style: null };
       SMALL = tmp3(1199).IconSizes.SMALL;
       obj10.size = SMALL;
@@ -658,12 +658,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
     } else if (constants4.STICKER !== iconType) {
       tmp15 = null;
       if (constants4.VOICE_MESSAGE === iconType) {
-        tmp15 = guild_id(8137);
+        tmp15 = guild_id(8160);
       }
     }
-    tmp15 = guild_id(10227);
+    tmp15 = guild_id(10260);
   }
-  const tmp3Result = item(8518);
+  const tmp3Result = item(8540);
 });
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationName(applicationId) {
@@ -830,15 +830,15 @@ let closure_39 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(18139).deleteNotificationCenterItem(tmp3);
+        yield tmp3(18373).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
           const intl = tmp3(1125).intl;
           obj7.text = intl.string(tmp3(1125).t.WDxhvB);
-          rowIndex(5699).open("REMOVE_NOTIFICATION_ERROR", obj7);
+          rowIndex(5701).open("REMOVE_NOTIFICATION_ERROR", obj7);
           c4 = 3;
-          rowIndex(5699);
+          rowIndex(5701);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

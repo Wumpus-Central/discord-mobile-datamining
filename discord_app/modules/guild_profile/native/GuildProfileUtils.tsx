@@ -1,12 +1,12 @@
-// === Module 9264: guild_profile/GuildProfileUtils ===
+// === Module 9268: guild_profile/GuildProfileUtils ===
 
-// Module 9264 (guild_profile/GuildProfileUtils)
+// Module 9268 (guild_profile/GuildProfileUtils)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import tinycolorDefault from "tinycolor" /* 7695 */;
-import useAvatarColor from "useAvatarColor" /* 8651 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import tinycolorDefault from "tinycolor" /* 7718 */;
+import useAvatarColor from "useAvatarColor" /* 8673 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
 
 const useAvatarColorDefault = useAvatarColor;
 
@@ -62,7 +62,7 @@ export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled
   }
   return brandColorPrimary;
 });
-export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfileFromInvite) {
+export function getProfilePrimaryColor(guildProfileFromInvite) {
   if (null == guildProfileFromInvite) {
     return null;
   } else if (null != guildProfileFromInvite.brandColorPrimary) {
@@ -99,4 +99,4 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
     }
     const obj3 = { id: null, icon: null, size: 64 };
   }
-};
+}

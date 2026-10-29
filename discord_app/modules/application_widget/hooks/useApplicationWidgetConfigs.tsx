@@ -1,15 +1,15 @@
-// === Module 11795: useApplicationWidgetConfigs ===
+// === Module 11849: useApplicationWidgetConfigs ===
 
-// Module 11795 (useApplicationWidgetConfigs)
+// Module 11849 (useApplicationWidgetConfigs)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10824 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10900 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10825 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10901 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(10825).FetchState;
+const FetchState = fn(10901).FetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");

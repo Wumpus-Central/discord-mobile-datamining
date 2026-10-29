@@ -1,45 +1,45 @@
-// === Module 17462: CollectiblesShopV2 ===
+// === Module 17701: CollectiblesShopV2 ===
 
-// Module 17462 (CollectiblesShopV2)
+// Module 17701 (CollectiblesShopV2)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2062 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7728 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8713 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9479 */;
-import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 9497 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9509 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9831 */;
-import takeWhileDefault from "takeWhile" /* 17469 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 17472 */;
-import ShopCategory from "ShopCategory" /* 17474 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 17476 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 17477 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2063 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7751 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8716 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9510 */;
+import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 9528 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9541 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9863 */;
+import takeWhileDefault from "takeWhile" /* 17708 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 17711 */;
+import ShopCategory from "ShopCategory" /* 17713 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 17715 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 17716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5273 */;
+import DevSettingsStore from "DevSettingsStore" /* 5274 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 import UserStore from "UserStore" /* 1389 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7685 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5675 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7708 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5677 */;
 
 const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeedExperiment;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FeedBlockRecord = fn(7717).FeedBlockRecord;
+const FeedBlockRecord = fn(7740).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1086);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1, CollectiblesMobileShopScreen: closure_14, CollectibleShopTab: closure_15, SHOP_ALL_PAGE_SIZE } = CollectiblesShopConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_17, PaymentGateways: closure_18 } = Constants);
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_22 = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 const constants5 = { CATEGORY: "category", NITRO_UPSELL: "nitro_upsell", SKELETON: "skeleton" };
 let closure_24 = 2 * SHOP_ALL_PAGE_SIZE;
@@ -47,7 +47,7 @@ let closure_25 = Array.from({ length: 3 }, (arg0, skeletonIndex) => ({ kind: con
 let closure_26 = [];
 let ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSource) => {
-  const cResult = analyticsSource(screen[16]).c(167);
+  const cResult = analyticsSource(screen[16]).c(169);
   analyticsSource = analyticsSource.analyticsSource;
   const onNavigateAway = analyticsSource.onNavigateAway;
   ({ storeFront, screen } = analyticsSource);
@@ -56,23 +56,25 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSourc
   const commonTriggerPoint = analyticsSource(screen[17]).useCommonTriggerPoint(analyticsSource(screen[18]).CollectiblesShopOpenTriggerPoint);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [CollectiblesCategoryStore];
-    const fn = function _() {
-      let num = lastSuccessfulFetch.lastSuccessfulFetch;
-      if (num == null) {
-        num = 0;
+    class E {
+      constructor() {
+        num = isLoading.lastSuccessfulFetch;
+        if (num == null) {
+          num = 0;
+        }
+        items = [];
+        items[0] = num;
+        return items;
       }
-      const items = [num];
-      return items;
-    };
+    }
     cResult[0] = items;
-    cResult[1] = fn;
+    cResult[1] = E;
     tmp5 = items;
-    tmp6 = fn;
   } else {
     [tmp5, tmp6] = cResult;
   }
   let obj2 = analyticsSource(screen[17]);
-  const first = improvedLoading(analyticsSource(screen[19]).useStateFromStoresArray(tmp5, tmp6), 1)[0];
+  const first = improvedLoading(analyticsSource(screen[19]).useStateFromStoresArray(tmp5, E), 1)[0];
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [HOME];
     class N {
@@ -123,7 +125,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSourc
       }
     }
   }
-  const tmp15 = onNavigateAway;
+  let tmp15 = onNavigateAway;
   const tmpResult3 = analyticsSource(screen[19]);
   const sessionId = onNavigateAway(screen[21])(tmp14).sessionId;
   let FEATURED_PAGE = screen;
@@ -345,7 +347,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSourc
   const bypassGoogleSkuSync = stateFromStoresObject.bypassGoogleSkuSync;
   const noCache = stateFromStoresObject.noCache;
   const includeUnpublished = stateFromStoresObject.includeUnpublished;
-  const tmp7 = stateFromStores1();
+  let tmp7 = stateFromStores1();
   let country;
   if (storeFront != null) {
     country = storeFront.country;
@@ -680,20 +682,27 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSourc
   const tmp4Result4 = improvedLoading(bypassGoogleSkuSync.useState(0), 2);
   first3 = tmp4Result4[0];
   closure_37 = tmp4Result4[1];
-  const items22 = [memo8, prefetchThrough];
+  const items22 = [memo8, prefetchThrough, memo5.length, categories1.length];
   const items23 = [improvedLoading, screen, hasMore, isLoading, memo4.length, categories1.length, memo5.length, first3, prefetchThrough];
   const callback4 = obj4.useCallback((arg0) => {
     let num = 0;
-    let bound = 0;
+    let bound1 = 0;
     let num2 = 0;
     const iter = arg0.viewableItems[Symbol.iterator]();
     while (iter !== undefined) {
       let item = iter.next().item;
       let tmp = item;
-      if (item.kind === analyticsLocations.CATEGORY) {
+      if (item.kind === analyticsLocations.SKELETON) {
         let _Math = Math;
-        bound = Math.max(num, tmp.categoryIndex + 1);
+        let bound = Math.max(num, memo5.length);
         num = bound;
+        bound1 = bound;
+        let _Math2 = Math;
+        num2 = Math.max(num2, categories1.length);
+      } else if (tmp.kind === tmp2.CATEGORY) {
+        let _Math3 = Math;
+        bound1 = Math.max(num, tmp.categoryIndex + 1);
+        num = bound1;
         categoryIndex = memo8.get(tmp.category.skuId);
         if (categoryIndex == null) {
           categoryIndex = tmp.categoryIndex;
@@ -703,7 +712,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSourc
       continue;
     }
     prefetchThrough(num2);
-    closure_37((arg0) => Math.max(arg0, bound));
+    closure_37((arg0) => Math.max(arg0, bound1));
   }, items22);
   const effect4 = obj4.useEffect(() => {
     let tmp = improvedLoading;
@@ -874,7 +883,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibles
   const nativeIAPPayments = NativePaymentHooksDefault.useNativeIAPPayments();
   nativePaymentsConnected = nativeIAPPayments.nativePaymentsConnected;
   const storeFront = nativeIAPPayments.storeFront;
-  closure_22();
+  const tmp6 = closure_22();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function l() {
@@ -882,12 +891,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibles
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp6 = items;
-    tmp7 = fn;
+    tmp7 = items;
+    tmp8 = fn;
   } else {
-    [tmp6, tmp7] = cResult;
+    [tmp7, tmp8] = cResult;
   }
-  const stateFromStores = nativePaymentsConnected(504).useStateFromStores(tmp6, tmp7);
+  const stateFromStores = nativePaymentsConnected(504).useStateFromStores(tmp7, tmp8);
   let isStaffResult;
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();
@@ -900,172 +909,79 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibles
     isStaffResult = isStaffPersonalResult;
   }
   const tmpResult = nativePaymentsConnected(504);
-  [tmp12, importDefault] = noop.useState(false);
+  [tmp13, importDefault] = noop.useState(false);
   if (cResult[2] !== nativePaymentsConnected) {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
-        } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
-        }
+    const fn2 = function _() {
+      if (!timeout) {
+        const _setTimeout = setTimeout;
+        timeout = setTimeout(() => {
+          closure_1_1(true);
+        }, 10000);
+        return () => clearTimeout(closure_0);
       }
-    }
+    };
     const items1 = [nativePaymentsConnected];
     cResult[2] = nativePaymentsConnected;
-    cResult[3] = E;
+    cResult[3] = fn2;
     cResult[4] = items1;
-    let tmp14 = items1;
+    let tmp15 = items1;
+    let tmp14 = fn2;
   } else {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
-        } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
-        }
-      }
-    }
-    tmp14 = cResult[4];
+    tmp14 = cResult[3];
+    tmp15 = cResult[4];
   }
-  const effect = noop.useEffect(E, tmp14);
-  const tmp11 = _slicedToArray(noop.useState(false), 2);
-  nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6504).isStable && isStaffResult;
+  const effect = noop.useEffect(tmp14, tmp15);
+  const tmp12 = _slicedToArray(noop.useState(false), 2);
+  const tmpResult4 = nativePaymentsConnected(1381);
   if (!nativePaymentsConnected) {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
+    if (!tmp17) {
+      if (!tmp13) {
+        if (cResult[5] !== tmp6.spinner) {
+          const obj3 = { style: tmp6.spinner, size: "large" };
+          const tmp21 = closure_20(closure_5, obj3);
+          cResult[5] = tmp6.spinner;
+          cResult[6] = tmp21;
+          let tmp18 = tmp21;
         } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
+          tmp18 = cResult[6];
         }
+        return tmp18;
       }
     }
   }
-  if (tmp12) {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
-        } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
-        }
-      }
-    }
-  }
-  if (tmp12) {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
-        } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
-        }
-      }
-    }
+  if (tmp13) {
     tmp(1381);
-    const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`;
-    obj7.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`} isStable: ${tmp(6504).isStable}`);
+    const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`;
+    SentryUtilsDefault.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`} isStable: ${tmp(6528).isStable}`);
+    const tmp4Result = SentryUtilsDefault;
   }
   if (screen.screen !== constants.ORBS) {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
-        } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
-        }
+    if (!tmpResult6.isMetaQuest()) {
+      if (cResult[10] === screen) {
       }
-    }
-    if (!obj9.isMetaQuest()) {
-      class E {
-        constructor() {
-          if (closure_0) {
-            return;
-          } else {
-            tmp = globalThis;
-            _setTimeout = setTimeout;
-            num = 10000;
-            closure_0 = setTimeout(() => {
-              closure_1_1(true);
-            }, 10000);
-            return () => clearTimeout(closure_0);
-          }
-        }
-      }
-      const obj3 = {};
+      const obj4 = {};
       const merged = Object.assign(screen);
-      obj3.storeFront = storeFront;
-      obj3.screen = screen.screen;
-      const tmp25 = closure_20(closure_28, obj3);
+      obj4.storeFront = storeFront;
+      obj4.screen = screen.screen;
+      const tmp30 = closure_20(closure_28, obj4);
       cResult[10] = screen;
       cResult[11] = storeFront;
-      cResult[12] = tmp25;
+      cResult[12] = tmp30;
     }
+    tmpResult6 = tmp(1628);
   }
   if (cResult[7] === screen) {
-    class E {
-      constructor() {
-        if (closure_0) {
-          return;
-        } else {
-          tmp = globalThis;
-          _setTimeout = setTimeout;
-          num = 10000;
-          closure_0 = setTimeout(() => {
-            closure_1_1(true);
-          }, 10000);
-          return () => clearTimeout(closure_0);
-        }
-      }
-    }
   }
-  const obj4 = {};
+  const obj6 = {};
   const merged1 = Object.assign(screen);
-  obj4.storeFront = storeFront;
-  obj4.screen = screen.screen;
-  obj4.improvedLoading = false;
-  const tmp27 = closure_20(closure_27, obj4);
+  obj6.storeFront = storeFront;
+  obj6.screen = screen.screen;
+  obj6.improvedLoading = false;
+  const tmp33 = closure_20(closure_27, obj6);
   cResult[7] = screen;
   cResult[8] = storeFront;
-  cResult[9] = tmp27;
-  const tmpResult3 = nativePaymentsConnected(1381);
+  cResult[9] = tmp33;
+  tmp17 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6528).isStable && isStaffResult;
 }) : (function CollectiblesShopV2(screen) {
   const nativeIAPPayments = NativePaymentHooksDefault.useNativeIAPPayments();
   const nativePaymentsConnected = nativeIAPPayments.nativePaymentsConnected;
@@ -1109,7 +1025,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibles
   if (tmp9) {
     tmp5(1381);
     const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
-    SentryUtilsDefault.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(6504).isStable}`);
+    SentryUtilsDefault.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(6528).isStable}`);
     const tmpResult = SentryUtilsDefault;
   }
   if (screen.screen !== constants.ORBS) {
@@ -1120,7 +1036,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibles
       obj4.screen = screen.screen;
       let tmp21 = closure_20(closure_28, obj4);
     }
-    tmp5Result4 = tmp5(1627);
+    tmp5Result4 = tmp5(1628);
   }
   const obj5 = {};
   const merged1 = Object.assign(screen);
@@ -1129,7 +1045,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collectibles
   obj5.screen = screen;
   obj5.improvedLoading = false;
   tmp21 = closure_20(closure_27, obj5);
-  tmp11 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6504).isStable && isStaffResult;
+  tmp11 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6528).isStable && isStaffResult;
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopV2.tsx");

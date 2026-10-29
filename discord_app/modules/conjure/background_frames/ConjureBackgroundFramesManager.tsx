@@ -1,8 +1,8 @@
-// === Module 19069: ConjureBackgroundFramesManager ===
+// === Module 19302: ConjureBackgroundFramesManager ===
 
-// Module 19069 (ConjureBackgroundFramesManager)
+// Module 19302 (ConjureBackgroundFramesManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 const require = fn;
 function handleFrameLaunchStart() {
@@ -16,72 +16,30 @@ function handleFrameLaunchStart() {
   return applyArgumentsResult;
 }
 let closure_4 = async function _handleFrameLaunchStart(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  closure_1 = tmp2;
+  ({ applicationId: closure_129_0, frameId: closure_129_1, surface: closure_129_2 } = closure_0);
+  await "Reflect";
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c4 = 3;
+      return { value, done: true };
+    } else if (closure_129_2.type === closure_130_0(closure_130_1[2]).EmbeddedSurfaceType.MAIN) {
+      c3 = 2;
+      c4 = 1;
+      return { value: closure_130_0(closure_130_1[4])(closure_130_1[3], closure_130_1.paths), done: false };
     } else {
-      return { value: "IconComponent", done: null };
+      c4 = 3;
     }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({ applicationId: closure_129_0, frameId: closure_129_1, surface: closure_129_2 } = closure_0);
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else if (closure_129_2.type === closure_130_0(closure_130_1[2]).EmbeddedSurfaceType.MAIN) {
-            c3 = 2;
-            c4 = 1;
-            const obj5 = { value: closure_130_0(closure_130_1[4])(closure_130_1[3], closure_130_1.paths), done: false };
-            return obj5;
-          } else {
-            c4 = 3;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          const result = value.closeBackgroundedConjureAppFrames(closure_129_0, closure_129_1);
-        }
-        c4 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp16) {
-      c4 = tmp;
-      throw tmp16;
-    }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    const result = value.closeBackgroundedConjureAppFrames(closure_129_0, closure_129_1);
   }
+  return value;
 };
 const prototype = function ConjureBackgroundFramesManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

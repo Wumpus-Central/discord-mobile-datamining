@@ -1,11 +1,11 @@
-// === Module 5741: MarkupUtils ===
+// === Module 5743: MarkupUtils ===
 
-// Module 5741 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 5742 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6017 */;
-import MarkupRulesDefault from "MarkupRules" /* 6018 */;
-import MarkupParserAll from "MarkupParser" /* 8377 */;
-import reactParserFor from "reactParserFor" /* 15349 */;
+// Module 5743 (MarkupUtils)
+import MarkupReactRules from "MarkupReactRules" /* 5744 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6021 */;
+import MarkupRulesDefault from "MarkupRules" /* 6022 */;
+import MarkupParserAll from "MarkupParser" /* 8399 */;
+import reactParserFor from "reactParserFor" /* 15584 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -189,7 +189,7 @@ Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17()
 Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
 obj3.astParserFor = MarkupParserAll.astParserFor;
-obj3.reactParserFor = fn(15349).default;
+obj3.reactParserFor = fn(15584).default;
 obj3.parse = function parse() {
   const items = [...arguments];
   return closure_20()(...items);

@@ -1,11 +1,11 @@
-// === Module 12876: DataUtils ===
+// === Module 13097: DataUtils ===
 
-// Module 12876 (DataUtils)
+// Module 13097 (DataUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/DataUtils.tsx");
 
-export const _transformMetadataToCamelCase = function _transformMetadataToCamelCase(body) {
+export function _transformMetadataToCamelCase(body) {
   closure_0 = body;
   let reduced = body;
   if (null != body) {
@@ -51,7 +51,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
                                   if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
-                                    reduced = keys.reduce(() => { ... }, {});
+                                    reduced = keys.reduce(/* F118482 */ function() { ... }, {});
                                   }
                                   acc[camelCaseResult] = reduced;
                                 }
@@ -86,8 +86,8 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
     }, {});
   }
   return reduced;
-};
-export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeCase(metadata) {
+}
+export function _transformMetadataToSnakeCase(metadata) {
   closure_0 = metadata;
   let reduced = metadata;
   if (null != metadata) {
@@ -133,7 +133,7 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
                                   if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
-                                    reduced = keys.reduce(() => { ... }, {});
+                                    reduced = keys.reduce(/* F118483 */ function() { ... }, {});
                                   }
                                   acc[snakeCaseResult] = reduced;
                                 }
@@ -172,4 +172,4 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
     }, {});
   }
   return reduced;
-};
+}

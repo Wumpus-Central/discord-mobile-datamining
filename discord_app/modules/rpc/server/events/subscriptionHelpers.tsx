@@ -1,23 +1,23 @@
-// === Module 16021: subscriptionHelpers ===
+// === Module 16258: subscriptionHelpers ===
 
-// Module 16021 (subscriptionHelpers)
-import QuestTaskUtils from "QuestTaskUtils" /* 7833 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8728 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9289 */;
-import useThermalState from "useThermalState" /* 15976 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15977 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15973 */;
-import QuestStore from "QuestStore" /* 7811 */;
+// Module 16258 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8731 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9293 */;
+import useThermalState from "useThermalState" /* 16212 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16214 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16209 */;
+import QuestStore from "QuestStore" /* 7834 */;
 
 require = fn;
 const RPCEvents = fn(1084).RPCEvents;
-const Constants = fn(2023);
+const Constants = fn(2024);
 ({ ActivityLayoutMode: metroRequire, ActivityScreenOrientation: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
-export const getInitialSubscriptionPayload = function getInitialSubscriptionPayload(application, arg1, quest_id) {
+export function getInitialSubscriptionPayload(application, arg1, quest_id) {
   if (RPCEvents.ACTIVITY_PIP_MODE_UPDATE === arg1) {
     const application3 = application.application;
     let id;
@@ -114,4 +114,4 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
   } else {
     return null;
   }
-};
+}

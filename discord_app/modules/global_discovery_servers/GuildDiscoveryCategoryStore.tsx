@@ -1,12 +1,12 @@
-// === Module 18199: GuildDiscoveryCategoryStore ===
+// === Module 18433: GuildDiscoveryCategoryStore ===
 
-// Module 18199 (GuildDiscoveryCategoryStore)
+// Module 18433 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9041 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9044 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: metroRequire } = GlobalDiscoveryServersConstants);
@@ -102,7 +102,7 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
 
 export default guildDiscoveryCategoryStore;
-export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(arr, arr2) {
+export function areDiscoveryCategoriesEqual(arr, arr2) {
   const mapped = arr.map((item) => {
     const items = [, ];
     ({ categoryId: arr[0], name: arr[1] } = item);
@@ -113,4 +113,4 @@ export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(
     ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   }));
-};
+}

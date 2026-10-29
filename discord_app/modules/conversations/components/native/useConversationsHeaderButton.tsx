@@ -1,22 +1,22 @@
-// === Module 9767: useConversationsHeaderButton ===
+// === Module 9799: useConversationsHeaderButton ===
 
-// Module 9767 (useConversationsHeaderButton)
+// Module 9799 (useConversationsHeaderButton)
 import util from "util" /* 1125 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9770 */;
-import PaperIcon from "PaperIcon" /* 9774 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9802 */;
+import PaperIcon from "PaperIcon" /* 9806 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7732 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7755 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(5643);
+const ConversationConstants = fn(5644);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: metroRequire, MOBILE_PREVIEW_MESSAGE_COUNT: closure_7 } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
 
-export const useConversationsHeaderButton = function useConversationsHeaderButton(channel) {
+export function useConversationsHeaderButton(channel) {
   _require = channel;
   let isTopicalNavEnabled = require("ConversationExperiments").useIsTopicalNavEnabled(channel.guild_id, "channel_header");
   if (isTopicalNavEnabled) {
@@ -47,7 +47,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -195,4 +195,4 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
     }
     return tmp;
   }, items9);
-};
+}

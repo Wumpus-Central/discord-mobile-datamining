@@ -1,12 +1,12 @@
-// === Module 9632: PlayableTypes ===
+// === Module 9664: PlayableTypes ===
 
-// Module 9632 (PlayableTypes)
-import AssetUtils from "AssetUtils" /* 9618 */;
+// Module 9664 (PlayableTypes)
+import AssetUtils from "AssetUtils" /* 9650 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/PlayableTypes.tsx");
 
-export const playableCtaFromServer = function playableCtaFromServer(url) {
+export function playableCtaFromServer(url) {
   const obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
@@ -21,8 +21,8 @@ export const playableCtaFromServer = function playableCtaFromServer(url) {
   }
   obj.ios = tmp2;
   return obj;
-};
-export const playableFromServer = function playableFromServer(creative_content) {
+}
+export function playableFromServer(creative_content) {
   const obj = { id: creative_content.id, applicationId: creative_content.application_id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: AssetUtils.resolveAdCreativeCdnUrl(creative_content.product_icon), videoPreview: null, imagePreview: null, cta: null, rewardTimerSeconds: null };
   obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
   obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
@@ -43,4 +43,4 @@ export const playableFromServer = function playableFromServer(creative_content) 
   obj.cta = obj5;
   obj.rewardTimerSeconds = creative_content.reward_timer_seconds;
   return obj;
-};
+}

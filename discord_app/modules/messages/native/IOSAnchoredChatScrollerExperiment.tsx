@@ -1,9 +1,9 @@
-// === Module 7783: IOSAnchoredChatScrollerExperiment ===
+// === Module 7805: IOSAnchoredChatScrollerExperiment ===
 
-// Module 7783 (IOSAnchoredChatScrollerExperiment)
+// Module 7805 (IOSAnchoredChatScrollerExperiment)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -14,10 +14,10 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/messages/native/IOSAnchoredChatScrollerExperiment.tsx");
 
-export const shouldUseIOSAnchoredChatScroller = function shouldUseIOSAnchoredChatScroller(location) {
+export function shouldUseIOSAnchoredChatScroller(location) {
   return config.getConfig({ location: location.location }).enabled;
-};
-export const isIOSAnchoredChatScrollerEnabled = function isIOSAnchoredChatScrollerEnabled() {
+}
+export function isIOSAnchoredChatScrollerEnabled() {
   let isIOSResult = PlatformUtils.isIOS();
   if (isIOSResult) {
     const NSUserDefaultsBridge = NativeModules.NSUserDefaultsBridge;
@@ -28,4 +28,4 @@ export const isIOSAnchoredChatScrollerEnabled = function isIOSAnchoredChatScroll
     isIOSResult = true === prop;
   }
   return isIOSResult;
-};
+}

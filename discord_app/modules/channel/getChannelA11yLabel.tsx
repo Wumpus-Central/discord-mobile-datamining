@@ -1,12 +1,12 @@
-// === Module 9051: getChannelA11yLabel ===
+// === Module 9054: getChannelA11yLabel ===
 
-// Module 9051 (getChannelA11yLabel)
+// Module 9054 (getChannelA11yLabel)
 import util from "util" /* 1125 */;
-import UserUtils from "UserUtils" /* 5058 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7238 */;
-import utils from "utils" /* 8654 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import UserUtils from "UserUtils" /* 5059 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7262 */;
+import utils from "utils" /* 8676 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -257,7 +257,7 @@ export default function getChannelA11yLabel(mentionCount) {
     }
   }
 };
-export const getStatusLabel = function getStatusLabel(value) {
+export function getStatusLabel(value) {
   if (constants2.ONLINE === value) {
     return UserUtils.humanizeStatus(constants2.ONLINE);
   } else if (constants2.IDLE === value) {
@@ -269,8 +269,8 @@ export const getStatusLabel = function getStatusLabel(value) {
   } else {
     return "";
   }
-};
-export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
+}
+export function getChannelA11yHint(userStatus) {
   userStatus = userStatus.userStatus;
   const items = [];
   ({ channel, muted } = userStatus);
@@ -309,4 +309,4 @@ export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
     }
     return joined;
   }
-};
+}

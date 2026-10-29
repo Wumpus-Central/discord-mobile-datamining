@@ -1,6 +1,6 @@
-// === Module 5668: CallConstants ===
+// === Module 5670: CallConstants ===
 
-// Module 5668 (CallConstants)
+// Module 5670 (CallConstants)
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
@@ -12,7 +12,7 @@ export const ContextMenuTileTypes = { STREAM: "STREAM", USER: "USER", ACTIVITY: 
 export const ParticipantSelectionTypes = { NONE: "NONE", AUTO: "AUTO" };
 export const VoicePlatforms = { DESKTOP: 0, [0]: "DESKTOP", MOBILE: 1, [1]: "MOBILE", XBOX: 2, [2]: "XBOX", PLAYSTATION: 3, [3]: "PLAYSTATION", QUEST: 4, [4]: "QUEST" };
 export const CallMenuEntrypoint = { CONTEXT_MENU: "Context Menu", THREE_DOT: "Three-Dot", CARET: "Caret", OTHER_BUTTON: "Other Button" };
-export const isStreamParticipant = function isStreamParticipant(stateFromStores) {
+export function isStreamParticipant(stateFromStores) {
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
@@ -26,21 +26,21 @@ export const isStreamParticipant = function isStreamParticipant(stateFromStores)
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }
   return tmp3;
-};
-export const isUserParticipant = function isUserParticipant(type) {
+}
+export function isUserParticipant(type) {
   type = undefined;
   if (type != null) {
     type = type.type;
   }
   return type === obj.USER;
-};
-export const isActivityParticipant = function isActivityParticipant(participant) {
+}
+export function isActivityParticipant(participant) {
   let type;
   if (participant != null) {
     type = participant.type;
   }
   return type === obj.ACTIVITY;
-};
+}
 export const PictureInPictureTypes = obj2;
 export const DEFAULT_PIP_WIDTH = { [obj2.VIDEO]: 320, [obj2.CAMERA_PREVIEW]: 160 };
 export const MAX_PIP_WIDTH = { [obj2.VIDEO]: 960, [obj2.CAMERA_PREVIEW]: 480 };

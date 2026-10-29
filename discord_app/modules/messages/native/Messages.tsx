@@ -1,75 +1,75 @@
-// === Module 11065: Messages ===
+// === Module 11119: Messages ===
 
-// Module 11065 (Messages)
+// Module 11119 (Messages)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9815 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11262 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6868 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9847 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11316 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8658 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11066 */;
-import CacheStore from "CacheStore" /* 7620 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10037 */;
-import EmojiStore from "EmojiStore" /* 6760 */;
-import ExperimentStore from "ExperimentStore" /* 5226 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7427 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11067 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6846 */;
-import BasicGuildStore from "BasicGuildStore" /* 8346 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8171 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6819 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7602 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8633 */;
-import InteractionStore from "InteractionStore" /* 8302 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11070 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8303 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7239 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11071 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7597 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11073 */;
-import PendingReplyStore from "PendingReplyStore" /* 7788 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7731 */;
-import SummaryStore from "SummaryStore" /* 10043 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4938 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7440 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8680 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11120 */;
+import CacheStore from "CacheStore" /* 7643 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10069 */;
+import EmojiStore from "EmojiStore" /* 6783 */;
+import ExperimentStore from "ExperimentStore" /* 5227 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7450 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11121 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6869 */;
+import BasicGuildStore from "BasicGuildStore" /* 8368 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8194 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7625 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8655 */;
+import InteractionStore from "InteractionStore" /* 8324 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11124 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8325 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7263 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11125 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7620 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11127 */;
+import PendingReplyStore from "PendingReplyStore" /* 7810 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7754 */;
+import SummaryStore from "SummaryStore" /* 10075 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7463 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import EditMessageStore from "EditMessageStore" /* 7789 */;
-import GiftCodeStore from "GiftCodeStore" /* 11074 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6671 */;
-import InviteStore from "InviteStore" /* 5736 */;
-import MessageStore from "MessageStore" /* 6045 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import SessionsStore from "SessionsStore" /* 5752 */;
-import UploadStore from "UploadStore" /* 8305 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import EditMessageStore from "EditMessageStore" /* 7811 */;
+import GiftCodeStore from "GiftCodeStore" /* 11128 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6695 */;
+import InviteStore from "InviteStore" /* 5738 */;
+import MessageStore from "MessageStore" /* 6049 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import SessionsStore from "SessionsStore" /* 5754 */;
+import UploadStore from "UploadStore" /* 8327 */;
 import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
-import SKUStore from "SKUStore" /* 6860 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11232 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5753 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
+import SKUStore from "SKUStore" /* 6883 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 11286 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5755 */;
 
 require = fn;
 let closure_3 = ["ref"];
-const PollsInteractionStore = fn(11072);
+const PollsInteractionStore = fn(11126);
 ({ useChannelPollInteractions: closure_30, useMessagePollInteractions: closure_31 } = PollsInteractionStore);
 const Constants = fn(1084);
 ({ ActivityActionTypes: closure_61, ChannelTypesSets: closure_62, ME: closure_63, MessageTypes: closure_64, Permissions: closure_65 } = Constants);
-const constants3 = fn(11068).GameOrganizationInviteStates;
+const constants3 = fn(11122).GameOrganizationInviteStates;
 const PremiumConstants = fn(1391);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_67, PremiumTypes: closure_68 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -634,7 +634,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -672,7 +672,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -706,7 +706,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -733,7 +733,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
         embeddedActivitiesByChannel = closure_8.getEmbeddedActivitiesByChannel();
         item = embeddedActivitiesByChannel.forEach((arr, index) => {
           closure_0 = index;
-          let item = arr.forEach(() => { ... });
+          let item = arr.forEach(/* F163060 */ function() { ... });
         });
         return Array.from(set);
       }
@@ -754,7 +754,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -789,7 +789,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -816,7 +816,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
         embeddedActivitiesByChannel = closure_8.getEmbeddedActivitiesByChannel();
         item = embeddedActivitiesByChannel.forEach((arr, index) => {
           closure_0 = index;
-          let item = arr.forEach(() => { ... });
+          let item = arr.forEach(/* F163060 */ function() { ... });
         });
         return Array.from(set);
       }
@@ -837,7 +837,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -872,7 +872,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -913,7 +913,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -948,7 +948,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -992,7 +992,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1028,7 +1028,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1072,7 +1072,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1108,7 +1108,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1147,7 +1147,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {

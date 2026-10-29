@@ -1,6 +1,6 @@
-// === Module 8327: ForumChannelAnalyticsManager ===
+// === Module 8349: ForumChannelAnalyticsManager ===
 
-// Module 8327 (ForumChannelAnalyticsManager)
+// Module 8349 (ForumChannelAnalyticsManager)
 import "ChannelStore";
 
 const obj2 = Object.create(function ForumChannelAnalyticsManager() {

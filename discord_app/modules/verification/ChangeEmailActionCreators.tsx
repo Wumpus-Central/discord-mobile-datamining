@@ -1,8 +1,8 @@
-// === Module 7039: ChangeEmailActionCreators ===
+// === Module 7063: ChangeEmailActionCreators ===
 
-// Module 7039 (ChangeEmailActionCreators)
+// Module 7063 (ChangeEmailActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6711 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
 
-export const sendConfirmationCode = function sendConfirmationCode() {
+export function sendConfirmationCode() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -28,8 +28,8 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   const obj = TrackedHTTPUtilsDefault;
   obj2.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   return obj.put(obj2);
-};
-export const confirmEmailChange = function confirmEmailChange() {
+}
+export function confirmEmailChange() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -38,4 +38,4 @@ export const confirmEmailChange = function confirmEmailChange() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

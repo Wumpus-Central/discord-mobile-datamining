@@ -1,13 +1,13 @@
-// === Module 19672: NativeNotificationsManager ===
+// === Module 19894: NativeNotificationsManager ===
 
-// Module 19672 (NativeNotificationsManager)
+// Module 19894 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import PushNotificationDefault from "PushNotification" /* 10790 */;
-import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10793 */;
+import PushNotificationDefault from "PushNotification" /* 10866 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10869 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6873 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
@@ -35,7 +35,7 @@ const prototype = function NativeNotificationsManager() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const _Map = Map;
                   const map = new Map();

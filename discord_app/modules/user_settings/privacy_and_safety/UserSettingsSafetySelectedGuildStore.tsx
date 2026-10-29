@@ -1,6 +1,6 @@
-// === Module 17546: UserSettingsSafetySelectedGuildStore ===
+// === Module 17784: UserSettingsSafetySelectedGuildStore ===
 
-// Module 17546 (UserSettingsSafetySelectedGuildStore)
+// Module 17784 (UserSettingsSafetySelectedGuildStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -21,10 +21,10 @@ const result = size.fileFinishedImporting("modules/user_settings/privacy_and_saf
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
 export { useUserSafetySettingsSelectedGuildStore };
-export const setSelectedGuildId = function setSelectedGuildId(selectedGuildId) {
+export function setSelectedGuildId(selectedGuildId) {
   const obj = { selectedGuildId };
   return obj.setState(obj);
-};
-export const getSelectedGuildId = function getSelectedGuildId() {
+}
+export function getSelectedGuildId() {
   return obj.getState().selectedGuildId;
-};
+}

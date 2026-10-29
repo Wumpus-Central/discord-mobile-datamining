@@ -1,24 +1,24 @@
-// === Module 17661: useUsernameRegistrationStep ===
+// === Module 17899: useUsernameRegistrationStep ===
 
-// Module 17661 (useUsernameRegistrationStep)
+// Module 17899 (useUsernameRegistrationStep)
 import util from "util" /* 1125 */;
-import Link from "Link" /* 1503 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16262 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17635 */;
+import Link from "Link" /* 1504 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16500 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17873 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16265 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16503 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(17636).useRegistrationUIStore;
-const RegistrationConstants = fn(17637);
+const useRegistrationUIStore = fn(17874).useRegistrationUIStore;
+const RegistrationConstants = fn(17875);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
 
-export const useUsernameRegistrationStep = function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
+export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
   _require = REGISTER_ACCOUNT_INFORMATION;
   const context = obj3.useContext(require("Auth").TrackRegistrationContext);
   navigation = require("useNavigation").useNavigation();
@@ -117,4 +117,4 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       message = intl.string(util.t.GPfy3L);
     }, items2)
   };
-};
+}

@@ -1,19 +1,19 @@
-// === Module 16959: SettingsAccessibilityScreen ===
+// === Module 17198: SettingsAccessibilityScreen ===
 
-// Module 16959 (SettingsAccessibilityScreen)
+// Module 17198 (SettingsAccessibilityScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import _modDef2929 from "module_2929" /* 2929 */;
-import openUserSettings from "openUserSettings" /* 7526 */;
-import SettingBuilders from "SettingBuilders" /* 11248 */;
-import SettingLayoutDefault from "SettingLayout" /* 16244 */;
-import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 16960 */;
+import useNavigation from "useNavigation" /* 1503 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import _modDef2930 from "module_2930" /* 2930 */;
+import openUserSettings from "openUserSettings" /* 7549 */;
+import SettingBuilders from "SettingBuilders" /* 11302 */;
+import SettingLayoutDefault from "SettingLayout" /* 16482 */;
+import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 17199 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4833 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4834 */;
 
 require = fn;
 function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
@@ -35,7 +35,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
   obj5.settings = items3;
   const intl3 = util.intl;
-  obj5.subLabel = intl3.format(_modDef2929.L8U56h, {
+  obj5.subLabel = intl3.format(_modDef2930.L8U56h, {
     onClickOpenModal() {
       openUserSettings.openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
         closure_1_0(closure_1_2[10]).runAfterInteractions(() => {
@@ -141,7 +141,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   items1[13] = obj20;
   return items1.filter((item) => null != item);
 }
-const MobileUserSettings = fn(8365).MobileUserSettings;
+const MobileUserSettings = fn(8387).MobileUserSettings;
 const Constants = fn(1084);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;

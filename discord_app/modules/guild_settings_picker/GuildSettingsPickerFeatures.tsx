@@ -1,13 +1,13 @@
-// === Module 15399: GuildSettingsPickerFeatures ===
+// === Module 15633: GuildSettingsPickerFeatures ===
 
-// Module 15399 (GuildSettingsPickerFeatures)
+// Module 15633 (GuildSettingsPickerFeatures)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1125 */;
-import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 15400 */;
-import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 15401 */;
+import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 15634 */;
+import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 15635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 require = fn;
 let obj = { "server-subscriptions-onboarding": RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault, "server-subscriptions-create-tier-from-template": RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault };
@@ -41,7 +41,7 @@ let closure_6 = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
 
-export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeature(feature) {
+export function useGuildSettingsPickerFeature(feature) {
   let tmp2;
   if (null != feature) {
     tmp2 = obj[feature];
@@ -80,4 +80,4 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
       return tmp;
     }
   };
-};
+}

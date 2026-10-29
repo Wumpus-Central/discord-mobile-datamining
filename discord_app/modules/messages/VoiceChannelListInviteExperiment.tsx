@@ -1,8 +1,8 @@
-// === Module 10035: VoiceChannelListInviteExperiment ===
+// === Module 10067: VoiceChannelListInviteExperiment ===
 
-// Module 10035 (VoiceChannelListInviteExperiment)
+// Module 10067 (VoiceChannelListInviteExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_5224" /* 5224 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,9 +12,9 @@ obj.treatments = items;
 let closure_2 = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/messages/VoiceChannelListInviteExperiment.tsx");
 
-export const getVoiceChannelListInviteExperiment = function getVoiceChannelListInviteExperiment(guildId) {
+export function getVoiceChannelListInviteExperiment(guildId) {
   return closure_2.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location });
-};
+}
 export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelListInviteExperiment(arg0) {
   const cResult = c.c(3);
   ({ guildId, location: _location } = arg0);

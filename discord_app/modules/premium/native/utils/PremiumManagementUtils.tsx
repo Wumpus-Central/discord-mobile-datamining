@@ -1,13 +1,13 @@
-// === Module 7549: PremiumManagementUtils ===
+// === Module 7572: PremiumManagementUtils ===
 
-// Module 7549 (PremiumManagementUtils)
+// Module 7572 (PremiumManagementUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1084 */;
 import Constants2 from "Constants" /* 1095 */;
 import util from "util" /* 1125 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 7550 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 7573 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,7 +33,7 @@ let result = size.fileFinishedImporting("modules/premium/native/utils/PremiumMan
 
 export const MobileWebDestinationTypes = { PREMIUM_MANAGEMENT: "premium_management" };
 export { PremiumManagementMethod };
-export const getPremiumManagementMethod = function getPremiumManagementMethod(isOnPlatformMatchingExternalPaymentGateway) {
+export function getPremiumManagementMethod(isOnPlatformMatchingExternalPaymentGateway) {
   if (null == isOnPlatformMatchingExternalPaymentGateway) {
     return null;
   } else if (isOnPlatformMatchingExternalPaymentGateway.isOnPlatformMatchingExternalPaymentGateway) {
@@ -46,8 +46,8 @@ export const getPremiumManagementMethod = function getPremiumManagementMethod(is
     }
     IN_WEB = obj.IN_WEB;
   }
-};
-export const getExternalManagementMessage = function getExternalManagementMessage(subscription, arg1) {
+}
+export function getExternalManagementMessage(subscription, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
@@ -63,7 +63,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
             str = "Meta Quest";
           }
           str2 = str;
-          tmp13Result = tmp13(1627);
+          tmp13Result = tmp13(1628);
         }
         if (null === tmp12.IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY) {
           if (null != subscription) {
@@ -78,7 +78,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
           if (null != tmp) {
             if (tmp.shouldAllowExternalManagement) {
               if ("iOS" !== str2) {
-                tmp13(1627);
+                tmp13(1628);
               }
               let status;
               if (subscription != null) {
@@ -102,7 +102,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 const intl3 = tmp13(1125).intl;
                 const t = tmp13(1125).t;
                 obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7553).LinkButton, {
+                jsx(tmp13(7576).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                                   if (null != _null) {
@@ -153,4 +153,4 @@ export const getExternalManagementMessage = function getExternalManagementMessag
     }
     IN_WEB = obj.IN_WEB;
   }
-};
+}

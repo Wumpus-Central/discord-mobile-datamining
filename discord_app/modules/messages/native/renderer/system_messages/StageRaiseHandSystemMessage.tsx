@@ -1,16 +1,16 @@
-// === Module 8433: StageRaiseHandSystemMessage ===
+// === Module 8455: StageRaiseHandSystemMessage ===
 
-// Module 8433 (StageRaiseHandSystemMessage)
+// Module 8455 (StageRaiseHandSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6032 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6676 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6036 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6700 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -18,7 +18,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
 
-export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
+export function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let canResult = PermissionStore.can(constants4.MUTE_MEMBERS, ChannelStore.getChannel(message.channel_id));
@@ -72,4 +72,4 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   obj3.ephemeralIndication = tmp10;
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj3;
-};
+}

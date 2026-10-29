@@ -1,10 +1,10 @@
-// === Module 18611: shouldExcludeSafeAreaForModalKey ===
+// === Module 18845: shouldExcludeSafeAreaForModalKey ===
 
-// Module 18611 (shouldExcludeSafeAreaForModalKey)
+// Module 18845 (shouldExcludeSafeAreaForModalKey)
 import Constants2 from "Constants" /* 1084 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7902 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8888 */;
-import Constants from "Constants" /* 10782 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7925 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8891 */;
+import Constants from "Constants" /* 10862 */;
 import size from "module_2" /* 2 */;
 
 ({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
@@ -12,7 +12,7 @@ const items = [Constants2.MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SU
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
 
-export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
+export function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
     let hasItem = PrivateChannelCallUtils.isVoiceChannelModalKey(key);
@@ -22,4 +22,4 @@ export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaFo
     tmp = hasItem;
   }
   return tmp;
-};
+}

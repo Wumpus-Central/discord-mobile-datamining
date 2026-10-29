@@ -1,12 +1,12 @@
-// === Module 5875: LinuxGpuDecodeExperiment ===
+// === Module 5877: LinuxGpuDecodeExperiment ===
 
-// Module 5875 (LinuxGpuDecodeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5877 (LinuxGpuDecodeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-linux-gpu-decode", defaultConfig: { mode: "all" }, variations: { 0: { mode: "all" }, 1: { mode: "disable_nvidia" }, 2: { mode: "disable_all" } } });
 const result = size.fileFinishedImporting("modules/media_engine/LinuxGpuDecodeExperiment.tsx");
 
-export const getLinuxGpuDecodeExperimentConfig = function getLinuxGpuDecodeExperimentConfig(_chooseExperiments) {
+export function getLinuxGpuDecodeExperimentConfig(_chooseExperiments) {
   return config.getConfig({ location: _chooseExperiments });
-};
+}

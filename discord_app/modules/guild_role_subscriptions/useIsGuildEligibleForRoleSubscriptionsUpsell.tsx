@@ -1,9 +1,9 @@
-// === Module 17960: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 18198: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 17960 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 18198 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1084 */;
-import GuildRecord from "GuildRecord" /* 4874 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildRecord from "GuildRecord" /* 4875 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGui
         return closure_3.getGuild(closure_0);
       }
     }
-    const isUserInCreatorMonetizationEligibleCountry = tmp(7398).useIsUserInCreatorMonetizationEligibleCountry();
+    const isUserInCreatorMonetizationEligibleCountry = tmp(7421).useIsUserInCreatorMonetizationEligibleCountry();
     if (stateFromStores != null) {
       class E {
         constructor() {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGui
     cResult[9] = tmp11;
     cResult[10] = isUserInCreatorMonetizationEligibleCountry;
     cResult[11] = tmp17;
-    const tmpResult4 = tmp(7398);
+    const tmpResult4 = tmp(7421);
   }
   let tmp12 = null != stateFromStores;
   if (tmp12) {

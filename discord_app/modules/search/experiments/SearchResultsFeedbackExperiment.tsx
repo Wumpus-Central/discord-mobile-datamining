@@ -1,8 +1,8 @@
-// === Module 19097: SearchResultsFeedbackExperiment ===
+// === Module 19332: SearchResultsFeedbackExperiment ===
 
-// Module 19097 (SearchResultsFeedbackExperiment)
+// Module 19332 (SearchResultsFeedbackExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,6 +28,6 @@ export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.i
 }) : (function useIsSearchResultsFeedbackExperimentEnabled(location) {
   return closure_2.useConfig({ location: location.location }).enabled;
 });
-export const getIsSearchResultsFeedbackExperimentEnabled = function getIsSearchResultsFeedbackExperimentEnabled(location) {
+export function getIsSearchResultsFeedbackExperimentEnabled(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}

@@ -1,13 +1,13 @@
-// === Module 8654: utils ===
+// === Module 8676: utils ===
 
-// Module 8654 (utils)
+// Module 8676 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import _mod4433 from "module_4433" /* 4433 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8650 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8655 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import _mod4434 from "module_4434" /* 4434 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8672 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8677 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -97,8 +97,8 @@ function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = _modDef2046(timestamp);
-  const tmp3 = _modDef2046;
+  const obj2 = _modDef2047(timestamp);
+  const tmp3 = _modDef2047;
   const diffResult = obj2.diff(tmp3(SnowflakeUtilsDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {
@@ -149,7 +149,7 @@ let closure_6 = {
 let result = size.fileFinishedImporting("modules/content_inventory/utils.tsx");
 
 export { calculateTimestampDurations };
-export const calculateActiveTimestampDurations = function calculateActiveTimestampDurations(end, now) {
+export function calculateActiveTimestampDurations(end, now) {
   end = undefined;
   if ("end" in end) {
     end = end.end;
@@ -182,10 +182,10 @@ export const calculateActiveTimestampDurations = function calculateActiveTimesta
     }
   }
   return calculateTimestampDurations(bound, start);
-};
+}
 export { formatActiveTimestamp };
 export { formatTimestampToA11yLabel };
-export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end, now) {
+export function formatActiveA11yTimestamp(end, now) {
   end = undefined;
   if ("end" in end) {
     end = end.end;
@@ -221,7 +221,7 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
     }
   }
   tmp6Result = calculateTimestampDurations(bound, start);
-};
+}
 export const A11Y_FORMAT_SET = {
   secondsAgo(count) {
     const intl = util.intl;
@@ -249,7 +249,7 @@ export const A11Y_FORMAT_SET = {
   }
 };
 export { formatEndedTimestamp };
-export const formatEntryTimestamp = function formatEntryTimestamp(contentInventoryEntry, locale) {
+export function formatEntryTimestamp(contentInventoryEntry, locale) {
   let timestamp = time;
   if (time === undefined) {
     const _Date = Date;
@@ -275,13 +275,13 @@ export const formatEntryTimestamp = function formatEntryTimestamp(contentInvento
     tmp8 = formatEndedTimestamp(contentInventoryEntry, 0, timestamp, obj);
   }
   return tmp8;
-};
-export const getTrait = function getTrait(contentInventoryEntry, AGGREGATE_COUNT) {
+}
+export function getTrait(contentInventoryEntry, AGGREGATE_COUNT) {
   closure_0 = AGGREGATE_COUNT;
   const traits = contentInventoryEntry.traits;
   return traits.find((type) => type.type === TRENDING_CONTENT);
-};
-export const isEntryActive = function isEntryActive(entry) {
+}
+export function isEntryActive(entry) {
   const IS_LIVE = ContentInventoryTraitType.ContentInventoryTraitType.IS_LIVE;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -293,8 +293,8 @@ export const isEntryActive = function isEntryActive(entry) {
     flag = false;
   }
   return flag;
-};
-export const isEntryNew = function isEntryNew(entry) {
+}
+export function isEntryNew(entry) {
   const FIRST_TIME = ContentInventoryTraitType.ContentInventoryTraitType.FIRST_TIME;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -306,11 +306,11 @@ export const isEntryNew = function isEntryNew(entry) {
     flag = false;
   }
   return flag;
-};
-export const isEntryRecent = function isEntryRecent(id) {
+}
+export function isEntryRecent(id) {
   return SnowflakeUtilsDefault.age(id.id) / DurationsDefault.Millis.HOUR < 48;
-};
-export const isEntryExpired = function isEntryExpired(content) {
+}
+export function isEntryExpired(content) {
   let tmp = null != content.expires_at;
   if (tmp) {
     const _Date = Date;
@@ -320,8 +320,8 @@ export const isEntryExpired = function isEntryExpired(content) {
     tmp = date < date1;
   }
   return tmp;
-};
-export const isEntryLive = function isEntryLive(traits) {
+}
+export function isEntryLive(traits) {
   const IS_LIVE = ContentInventoryTraitType.ContentInventoryTraitType.IS_LIVE;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -344,8 +344,8 @@ export const isEntryLive = function isEntryLive(traits) {
     flag = !tmp2;
   }
   return flag;
-};
-export const getEntryDuration = function getEntryDuration(contentInventoryEntry) {
+}
+export function getEntryDuration(contentInventoryEntry) {
   const DURATION_SECONDS = ContentInventoryTraitType.ContentInventoryTraitType.DURATION_SECONDS;
   const traits = contentInventoryEntry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -354,8 +354,8 @@ export const getEntryDuration = function getEntryDuration(contentInventoryEntry)
     duration_seconds = found.duration_seconds;
   }
   return duration_seconds;
-};
-export const getAggregateRange = function getAggregateRange(traits) {
+}
+export function getAggregateRange(traits) {
   const AGGREGATE_RANGE = ContentInventoryTraitType.ContentInventoryTraitType.AGGREGATE_RANGE;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -364,8 +364,8 @@ export const getAggregateRange = function getAggregateRange(traits) {
     range = found.range;
   }
   return range;
-};
-export const isEntryMarathon = function isEntryMarathon(entry) {
+}
+export function isEntryMarathon(entry) {
   const MARATHON = ContentInventoryTraitType.ContentInventoryTraitType.MARATHON;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -374,8 +374,8 @@ export const isEntryMarathon = function isEntryMarathon(entry) {
     marathon = found.marathon;
   }
   return marathon;
-};
-export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastPlayTime(traits) {
+}
+export function getResurrectedEntryLastPlayTime(traits) {
   const RESURRECTED = ContentInventoryTraitType.ContentInventoryTraitType.RESURRECTED;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -389,10 +389,10 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
     date = new Date(found.resurrected_last_played);
   }
   return date;
-};
-export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
+}
+export function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod4433;
+  const obj = _mod4434;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;
@@ -426,8 +426,8 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
   }
   obj3.days = num5;
   return intl.formatToPlainString(util.t.NXBtjF, obj3);
-};
-export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
+}
+export function getEpisodeBadgeText(large_text) {
   if (null != large_text) {
     if ("" !== large_text) {
       const match = /\w+ (\d+), \w+ (\d+)/.exec(large_text);
@@ -441,8 +441,8 @@ export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
     }
   }
   return null;
-};
-export const getEpisodeBadgeA11yText = function getEpisodeBadgeA11yText(arg0) {
+}
+export function getEpisodeBadgeA11yText(arg0) {
   if (null != arg0) {
     if ("" !== arg0) {
       const match = /\w+ (\d+), \w+ (\d+)/.exec(arg0);
@@ -454,8 +454,8 @@ export const getEpisodeBadgeA11yText = function getEpisodeBadgeA11yText(arg0) {
       const obj = /\w+ (\d+), \w+ (\d+)/;
     }
   }
-};
-export const getRichGameStateBadgeText = function getRichGameStateBadgeText(state, party) {
+}
+export function getRichGameStateBadgeText(state, party) {
   let first;
   if (party != null) {
     const size = party.size;
@@ -501,11 +501,11 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
     const obj = { count: first };
     formatToPlainStringResult = intl.formatToPlainString(util.t.UTYMsa, obj);
   }
-};
-export const isEntryTopGame = function isEntryTopGame(contentInventoryEntry) {
+}
+export function isEntryTopGame(contentInventoryEntry) {
   return contentInventoryEntry.content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
-};
-export const getStreakCount = function getStreakCount(entry) {
+}
+export function getStreakCount(entry) {
   const STREAK_DAYS = ContentInventoryTraitType.ContentInventoryTraitType.STREAK_DAYS;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -514,8 +514,8 @@ export const getStreakCount = function getStreakCount(entry) {
     streak_count_days = found.streak_count_days;
   }
   return streak_count_days;
-};
-export const isValidStreak = function isValidStreak(traits) {
+}
+export function isValidStreak(traits) {
   const STREAK_DAYS = ContentInventoryTraitType.ContentInventoryTraitType.STREAK_DAYS;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -532,8 +532,8 @@ export const isValidStreak = function isValidStreak(traits) {
     const diff = Date.now() - SnowflakeUtilsDefault.extractTimestamp(traits.id);
     return diff <= 48 * DurationsDefault.Millis.HOUR;
   }
-};
-export const getMarathonDescription = function getMarathonDescription(entry) {
+}
+export function getMarathonDescription(entry) {
   const DURATION_SECONDS = ContentInventoryTraitType.ContentInventoryTraitType.DURATION_SECONDS;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -562,8 +562,8 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
     }
     return obj;
   }
-};
-export const getTrendingType = function getTrendingType(traits) {
+}
+export function getTrendingType(traits) {
   const TRENDING_CONTENT = ContentInventoryTraitType.ContentInventoryTraitType.TRENDING_CONTENT;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
@@ -572,4 +572,4 @@ export const getTrendingType = function getTrendingType(traits) {
     trending = found.trending;
   }
   return trending;
-};
+}

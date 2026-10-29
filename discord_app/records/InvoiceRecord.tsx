@@ -1,7 +1,7 @@
-// === Module 2058: InvoiceRecord ===
+// === Module 2059: InvoiceRecord ===
 
-// Module 2058 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 2059 */;
+// Module 2059 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 2060 */;
 import Record from "Record" /* 1404 */;
 
 require = fn;
@@ -120,7 +120,7 @@ class InvoiceRecord extends BaseInvoiceRecord {
 }
 const prototype2 = InvoiceRecord.prototype;
 InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body) {
-  const obj = { id: body.id, invoiceItems: null, total: null, subtotal: null, currency: null, tax: null, taxInclusive: null, subscriptionPeriodStart: null, subscriptionPeriodEnd: null, status: null, orbsReward: null, checkoutContext: null };
+  const obj = { id: body.id, invoiceItems: null, total: null, subtotal: null, currency: null, tax: null, taxInclusive: null, subscriptionPeriodStart: null, subscriptionPeriodEnd: null, status: null, orbsReward: null, checkoutContext: null, paymentLegs: null };
   const invoice_items = body.invoice_items;
   let mapped;
   if (invoice_items != null) {
@@ -132,7 +132,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const date = new Date(body.subscription_period_start);
   const tmp6 = new.target;
   obj.subscriptionPeriodEnd = new Date(body.subscription_period_end);
-  ({ status: obj.status, orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext } = body);
+  ({ status: obj.status, orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext, payment_legs: obj.paymentLegs } = body);
   if (typeof InvoiceRecord === "function") {
     const tmp12 = new InvoiceRecord(obj, require, Date, Date, tmp6);
     ({ id: tmp12.id, invoiceItems } = obj);

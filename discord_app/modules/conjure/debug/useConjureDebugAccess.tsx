@@ -1,7 +1,7 @@
-// === Module 12292: useConjureDebugAccess ===
+// === Module 12346: useConjureDebugAccess ===
 
-// Module 12292 (useConjureDebugAccess)
-import UserSettings from "UserSettings" /* 4832 */;
+// Module 12346 (useConjureDebugAccess)
+import UserSettings from "UserSettings" /* 4833 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,11 +17,11 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result2 = size.fileFinishedImporting("modules/conjure/debug/useConjureDebugAccess.tsx");
 
 export { useConjureDebugPaneEnabled };
-export const useConjureTraceTabEnabled = function useConjureTraceTabEnabled() {
+export function useConjureTraceTabEnabled() {
   if (typeof useConjureDebugPaneEnabled === "function") {
     const DeveloperMode = UserSettings.DeveloperMode;
     return DeveloperMode.useSetting() || c2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

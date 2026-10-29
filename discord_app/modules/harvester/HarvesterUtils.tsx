@@ -1,20 +1,20 @@
-// === Module 16417: HarvesterUtils ===
+// === Module 16655: HarvesterUtils ===
 
-// Module 16417 (HarvesterUtils)
+// Module 16655 (HarvesterUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
-import DataHarvestStore from "DataHarvestStore" /* 15284 */;
+import DataHarvestStore from "DataHarvestStore" /* 15519 */;
 
 require = fn;
-const REQUEST_DATA_LIMIT_MS = fn(16418).REQUEST_DATA_LIMIT_MS;
+const REQUEST_DATA_LIMIT_MS = fn(16656).REQUEST_DATA_LIMIT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
-export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
+export function harvestDisabled(created_at, stateFromStores) {
   const verified = stateFromStores.verified;
   let tmp = !verified;
   if (verified) {
@@ -33,7 +33,7 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
     tmp = isStaffResult;
   }
   return tmp;
-};
+}
 export const useRequestHarvestStatus = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequestHarvestStatus() {
   const cResult = c.c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

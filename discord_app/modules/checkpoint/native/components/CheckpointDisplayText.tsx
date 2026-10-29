@@ -1,9 +1,10 @@
-// === Module 13222: CheckpointDisplayText ===
+// === Module 13456: CheckpointDisplayText ===
 
-// Module 13222 (CheckpointDisplayText)
+// Module 13456 (CheckpointDisplayText)
 import c from "c" /* 576 */;
-import CheckpointTextDefault from "CheckpointText" /* 13204 */;
+import CheckpointTextDefault from "CheckpointText" /* 13436 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["style"];

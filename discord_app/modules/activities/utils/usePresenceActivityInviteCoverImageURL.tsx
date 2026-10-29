@@ -1,11 +1,11 @@
-// === Module 14823: usePresenceActivityInviteCoverImageURL ===
+// === Module 15058: usePresenceActivityInviteCoverImageURL ===
 
-// Module 14823 (usePresenceActivityInviteCoverImageURL)
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1897 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8657 */;
-import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 14825 */;
+// Module 15058 (usePresenceActivityInviteCoverImageURL)
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1898 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8679 */;
+import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 15060 */;
 import noop from "module_19" /* 19 */;
-import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 14824 */;
+import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 15059 */;
 
 require = fn;
 function _getPresenceActivityInviteCoverImageURL(messageId) {
@@ -135,7 +135,7 @@ export const usePresenceActivityInviteCoverImageURL = ReactCompilerGating.isReac
   }, items2);
   return imageURL;
 });
-export const getPresenceActivityInviteCoverImageURL = function getPresenceActivityInviteCoverImageURL(messageId) {
+export function getPresenceActivityInviteCoverImageURL(messageId) {
   messageId = messageId.messageId;
   const tmp = _getPresenceActivityInviteCoverImageURL({ messageId, presenceActivity: messageId.presenceActivity, application: messageId.application });
   const imageURL = tmp.imageURL;
@@ -144,4 +144,4 @@ export const getPresenceActivityInviteCoverImageURL = function getPresenceActivi
     MessageActivityInviteCoverImageActionCreatorsAll.setCoverImageURL(obj3);
   }
   return imageURL;
-};
+}

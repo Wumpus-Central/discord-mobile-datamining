@@ -1,20 +1,20 @@
-// === Module 5028: ClientThemesBackgroundStore ===
+// === Module 5029: ClientThemesBackgroundStore ===
 
-// Module 5028 (ClientThemesBackgroundStore)
+// Module 5029 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
-import UserUtils from "UserUtils" /* 5058 */;
-import ProductCatalog from "ProductCatalog" /* 5061 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5069 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
+import UserUtils from "UserUtils" /* 5059 */;
+import ProductCatalog from "ProductCatalog" /* 5062 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5070 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -181,9 +181,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4860).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4861).isGuildTextChannelType;
 const dependencyMap = fn(1252).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5029).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5030).HexagonCampaignPerk;
 const SystemThemeState = fn(1207).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

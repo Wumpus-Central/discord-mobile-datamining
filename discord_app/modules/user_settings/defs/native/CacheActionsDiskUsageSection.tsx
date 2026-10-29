@@ -1,15 +1,15 @@
-// === Module 17201: CacheActionsDiskUsageSection ===
+// === Module 17440: CacheActionsDiskUsageSection ===
 
-// Module 17201 (CacheActionsDiskUsageSection)
+// Module 17440 (CacheActionsDiskUsageSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import Stack_Stack from "Stack/Stack" /* 6013 */;
-import FileSizeUtils from "FileSizeUtils" /* 6414 */;
-import Card from "Card" /* 6941 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17204 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import Stack_Stack from "Stack/Stack" /* 6015 */;
+import FileSizeUtils from "FileSizeUtils" /* 6438 */;
+import Card from "Card" /* 6965 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17443 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { label: { flex: 1 }, nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 }, value: { flexShrink: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -620,7 +620,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CacheAct
   children[2] = isIOSResult;
   return React5(Stack_Stack.Stack, { children });
 });
-export const useDiskUsageMeasurement = function useDiskUsageMeasurement() {
+export function useDiskUsageMeasurement() {
   closure_2 = async function _handleCalculateSize() {
     if (c5 === 2) {
       c5 = 3;
@@ -632,7 +632,7 @@ export const useDiskUsageMeasurement = function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -763,4 +763,4 @@ export const useDiskUsageMeasurement = function useDiskUsageMeasurement() {
     return applyArgumentsResult;
   };
   return obj;
-};
+}

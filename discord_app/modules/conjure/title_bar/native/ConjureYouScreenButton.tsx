@@ -1,22 +1,22 @@
-// === Module 14391: ConjureYouScreenButton ===
+// === Module 14625: ConjureYouScreenButton ===
 
-// Module 14391 (ConjureYouScreenButton)
+// Module 14625 (ConjureYouScreenButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Link from "Link" /* 1503 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import MagicWandIcon from "MagicWandIcon" /* 12212 */;
-import useConjureWandStatusDefault from "useConjureWandStatus" /* 14392 */;
-import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 14397 */;
-import getIconSize from "getIconSize" /* 14399 */;
-import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14400 */;
-import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 14402 */;
+import Link from "Link" /* 1504 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import MagicWandIcon from "MagicWandIcon" /* 12266 */;
+import useConjureWandStatusDefault from "useConjureWandStatus" /* 14626 */;
+import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 14631 */;
+import getIconSize from "getIconSize" /* 14633 */;
+import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14634 */;
+import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 14636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { dot: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3863.uk6jhJ);
+      const stringResult = intl.string(_modDef3864.uk6jhJ);
       cResult[3] = stringResult;
       let tmp13 = stringResult;
     } else {
@@ -89,7 +89,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj2.icon = tmp7Result;
   obj2.accessibilityLabel = accessibilityLabel;
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3863.uk6jhJ);
+  obj2.label = intl.string(_modDef3864.uk6jhJ);
   obj2.onPress = openConjureProjectsSheetDefault;
   obj2.showRedDot = hasBadge;
   obj2.dotStyle = tmp.dot;

@@ -1,27 +1,27 @@
-// === Module 9229: SecureFramesUtils ===
+// === Module 9233: SecureFramesUtils ===
 
-// Module 9229 (SecureFramesUtils)
+// Module 9233 (SecureFramesUtils)
 import _modDef38 from "module_38" /* 38 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6025 */;
-import _mod9214 from "module_9214" /* 9214 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9231 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9232 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9233 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6029 */;
+import _mod9218 from "module_9218" /* 9218 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9235 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9236 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7849 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7872 */;
 import UserStore from "UserStore" /* 1389 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5768 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5770 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ let closure_21 = async function _isPublicKeyMatch(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -151,7 +151,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -215,7 +215,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
         const result = closure_130_1(closure_130_2[11]).addUploadedKeyVersion(closure_129_0);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -243,7 +243,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -271,7 +271,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -289,7 +289,7 @@ let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -419,23 +419,23 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9230);
+const SecureFramesConstants = fn(9234);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SecureFramesConstants);
 const Constants = fn(1084);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
 
-export const getSecureFramesHelpdeskArticle = function getSecureFramesHelpdeskArticle() {
+export function getSecureFramesHelpdeskArticle() {
   return HelpdeskUtilsDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
-};
-export const getSecureFramesPersistentCodesHelpdeskArticle = function getSecureFramesPersistentCodesHelpdeskArticle() {
+}
+export function getSecureFramesPersistentCodesHelpdeskArticle() {
   return HelpdeskUtilsDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
-};
-export const getSecureFramesVerifiedDevicesHelpdeskArticle = function getSecureFramesVerifiedDevicesHelpdeskArticle() {
+}
+export function getSecureFramesVerifiedDevicesHelpdeskArticle() {
   return HelpdeskUtilsDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
-};
-export const addVerification = function addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
+}
+export function addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
   const obj = SecureFramesActionCreatorsDefault;
   if (isOtherUserKeyPersistent) {
     const secureFramesVerifiedKey = obj.createSecureFramesVerifiedKey(userId, fingerprintUserKey);
@@ -444,18 +444,18 @@ export const addVerification = function addVerification(userId, fingerprintUserK
   }
   const result = SecureFramesTracking.trackE2EEUserVerified({ channelId, userId, analyticsLocation: DEEP_LINK });
   const obj3 = { channelId, userId, analyticsLocation: DEEP_LINK };
-};
-export const deleteVerification = function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
+}
+export function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9214.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9218.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);
   }
-};
-export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
+}
+export function deletePersistentVerification(userId, verifiedKey) {
   _require = userId;
   importDefault = verifiedKey;
   const obj2 = { title: null, subtitle: null, onConfirm: null };
@@ -468,8 +468,8 @@ export const deletePersistentVerification = function deletePersistentVerificatio
     const result1 = SecureFramesTracking.trackE2EESettingsDeviceDelete();
   };
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj2);
-};
-export const deleteUserPersistentVerifications = function deleteUserPersistentVerifications(userId) {
+}
+export function deleteUserPersistentVerifications(userId) {
   _require = userId;
   const user = UserStore.getUser(userId);
   const name = UserUtilsDefault.getName(user);
@@ -483,10 +483,10 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const result1 = SecureFramesTracking.trackE2EESettingsUserDelete();
   };
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
-};
-export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2046(timestamp);
-  const diffResult = _modDef2046().diff(tmp3, "s");
+}
+export function getSecureFramesUserVerifiedTimestamp(timestamp) {
+  const tmp3 = _modDef2047(timestamp);
+  const diffResult = _modDef2047().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -528,12 +528,12 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2046();
-};
-export const getUserVerificationDeeplink = function getUserVerificationDeeplink(userId, arg1) {
+  const obj = _modDef2047();
+}
+export function getUserVerificationDeeplink(userId, arg1) {
   return "" + location.protocol + "//" + location.host + closure_1_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + userId + "&fingerprint=" + encodeURIComponent(arg1);
-};
-export const getUserVerifyStateText = function getUserVerifyStateText(CURRENT_USER_DISCONNECTED, name) {
+}
+export function getUserVerifyStateText(CURRENT_USER_DISCONNECTED, name) {
   if (constants.OTHER_USER_DISCONNECTED === CURRENT_USER_DISCONNECTED) {
     const intl13 = util.intl;
     const items = [intl13.string(util.t.ZBHDM9), ];
@@ -583,8 +583,8 @@ export const getUserVerifyStateText = function getUserVerifyStateText(CURRENT_US
     items6[1] = intl2.format(util.t.WY6IKb, obj);
     return items6;
   }
-};
-export const getUserVerificationFooterText = function getUserVerificationFooterText(arg0) {
+}
+export function getUserVerificationFooterText(arg0) {
   ({ isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname } = arg0);
   if (isCurrentUserKeyPersistent) {
     if (isOtherUserKeyPersistent) {
@@ -607,10 +607,10 @@ export const getUserVerificationFooterText = function getUserVerificationFooterT
     const obj = { helpArticle: HelpdeskUtilsDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION) };
     formatResult = format(t["6JLy+i"], obj);
   }
-};
+}
 export { getCurrentUserSigningKey };
 export { isPublicKeyMatch };
-export const ensureCurrentUserPublicKey = function ensureCurrentUserPublicKey() {
+export function ensureCurrentUserPublicKey() {
   const self = this;
   const apply = closure_25.apply;
   if (typeof apply === "unknown") {
@@ -619,8 +619,8 @@ export const ensureCurrentUserPublicKey = function ensureCurrentUserPublicKey() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch() {
+}
+export function isCurrentUserPublicKeyMatch() {
   const self = this;
   const apply = closure_26.apply;
   if (typeof apply === "unknown") {
@@ -629,9 +629,9 @@ export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { getIsSecureFramesKeyInconsistent };
-export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKeyInconsistentAlert(arg0) {
+export function showSecureFramesKeyInconsistentAlert(arg0) {
   ({ userId, channelId, nickname } = arg0);
   const result = SecureFramesTracking.trackE2EEUserVerificationFailed({ userId, channelId, keyVersion, reason: constants.OTHER_USER_INCONSISTENT_KEYS });
   const obj2 = { userId, channelId, keyVersion, reason: constants.OTHER_USER_INCONSISTENT_KEYS };
@@ -641,8 +641,8 @@ export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKey
   const intl2 = util.intl;
   obj4.body = intl2.format(util.t.WY6IKb, { username: nickname });
   AlertActionCreatorsDefault.show(obj4);
-};
-export const validateSecureFramesKeyConsistent = function validateSecureFramesKeyConsistent(guildId) {
+}
+export function validateSecureFramesKeyConsistent(guildId) {
   ({ userId, channelId } = guildId);
   const items = [RTCConnectionStore, StreamRTCConnectionStore];
   if (getIsSecureFramesKeyInconsistent(userId, items)) {
@@ -661,4 +661,4 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
   } else {
     return true;
   }
-};
+}

@@ -1,18 +1,18 @@
-// === Module 18951: trackActivityThermalStateNoticeShown ===
+// === Module 19184: trackActivityThermalStateNoticeShown ===
 
-// Module 18951 (trackActivityThermalStateNoticeShown)
+// Module 19184 (trackActivityThermalStateNoticeShown)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4925 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
-export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
+export function trackActivityThermalStateNoticeShown() {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let _location;
   if (currentEmbeddedActivity != null) {
@@ -36,4 +36,4 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   obj3.guild_id = guild_id;
   obj3.media_session_id = RTCConnectionStore.getMediaSessionId();
   AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj3);
-};
+}

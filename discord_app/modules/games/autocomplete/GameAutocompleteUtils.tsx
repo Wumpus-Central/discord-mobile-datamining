@@ -1,14 +1,14 @@
-// === Module 8617: GameAutocompleteUtils ===
+// === Module 8639: GameAutocompleteUtils ===
 
-// Module 8617 (GameAutocompleteUtils)
-import GameWidgetLimits from "GameWidgetLimits" /* 7742 */;
+// Module 8639 (GameAutocompleteUtils)
+import GameWidgetLimits from "GameWidgetLimits" /* 7764 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
 
 export const GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH = 100;
 export const MIN_TRUSTED_EMPTY_PREFIX_LENGTH = 7;
-export const shouldSuppressAutocompleteFetch = function shouldSuppressAutocompleteFetch(arr, fn) {
+export function shouldSuppressAutocompleteFetch(arr, fn) {
   let diff = arr.length - 1;
   if (1 <= diff) {
     arr = fn(arr.slice(0, diff));
@@ -22,8 +22,8 @@ export const shouldSuppressAutocompleteFetch = function shouldSuppressAutocomple
     return tmp3;
   }
   return false;
-};
-export const normalizeGameAutocompleteQuery = function normalizeGameAutocompleteQuery(name) {
+}
+export function normalizeGameAutocompleteQuery(name) {
   if (null == name) {
     return null;
   } else {
@@ -36,8 +36,8 @@ export const normalizeGameAutocompleteQuery = function normalizeGameAutocomplete
     }
     return tmp;
   }
-};
-export const isGameAutocompleteResultAllowedInGameWidgets = function isGameAutocompleteResultAllowedInGameWidgets(id) {
+}
+export function isGameAutocompleteResultAllowedInGameWidgets(id) {
   const GAME_WIDGET_BANNED_APPLICATION_IDS = GameWidgetLimits.GAME_WIDGET_BANNED_APPLICATION_IDS;
   return !GAME_WIDGET_BANNED_APPLICATION_IDS.has(id.id);
-};
+}

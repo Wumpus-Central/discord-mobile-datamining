@@ -1,12 +1,12 @@
-// === Module 6838: NavigationHistoryStore ===
+// === Module 6861: NavigationHistoryStore ===
 
-// Module 6838 (NavigationHistoryStore)
+// Module 6861 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import useChatLayout from "useChatLayout" /* 5189 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import useChatLayout from "useChatLayout" /* 5190 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 function getIdFromHistoryItem(str) {
@@ -115,7 +115,7 @@ export default navigationHistoryStore;
 export const CHANNEL_PREFIX = "channel-";
 export const GUILD_PREFIX = "guild-";
 export { getIdFromHistoryItem };
-export const handleHistoryStoreNavigationChange = function handleHistoryStoreNavigationChange() {
+export function handleHistoryStoreNavigationChange() {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     const currentRoute = rootNavigationRef.getCurrentRoute();
@@ -197,7 +197,7 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
       }
     }
   }
-};
+}
 export function getNavigationHistory() {
   return closure_6;
 }

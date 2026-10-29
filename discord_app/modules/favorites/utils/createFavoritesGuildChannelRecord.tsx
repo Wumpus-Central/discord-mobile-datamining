@@ -1,13 +1,13 @@
-// === Module 4935: createFavoritesGuildChannelRecord ===
+// === Module 4936: createFavoritesGuildChannelRecord ===
 
-// Module 4935 (createFavoritesGuildChannelRecord)
+// Module 4936 (createFavoritesGuildChannelRecord)
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");
 
-export const createFavoritesGuildChannelRecord = function createFavoritesGuildChannelRecord(arg0, order, toJS) {
+export function createFavoritesGuildChannelRecord(arg0, order, toJS) {
   const constructor = new toJS.constructor(toJS.toJS());
   constructor.position_ = order.order;
   let tmp2 = null != order.nickname;
@@ -26,4 +26,4 @@ export const createFavoritesGuildChannelRecord = function createFavoritesGuildCh
   if (undefined === constructor.parent_id) {
     constructor.parent_id = null;
   }
-};
+}

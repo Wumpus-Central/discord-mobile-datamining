@@ -1,11 +1,11 @@
-// === Module 6819: GuildScheduledEventStore ===
+// === Module 6842: GuildScheduledEventStore ===
 
-// Module 6819 (GuildScheduledEventStore)
+// Module 6842 (GuildScheduledEventStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 
 function scheduledEventSort(status) {
   ({ id, scheduled_start_time } = status);
@@ -168,7 +168,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(4862);
+const GuildScheduledEventsConstants = fn(4863);
 ({ GuildScheduledEventStatus: closure_4, GuildScheduledEventStatusDone: hasOwnProperty, GuildScheduledEventUserResponses: metroRequire } = GuildScheduledEventsConstants);
 const StaticGuildEventIndexes = {
   EVENT: "event",
@@ -193,7 +193,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   }
 };
-const secondaryIndexMap = new fn(4931).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4932).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {
@@ -563,7 +563,7 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildSch
 export default guildScheduledEventStore;
 export { StaticGuildEventIndexes };
 export { scheduledEventSort };
-export const isGuildScheduledEventActive = function isGuildScheduledEventActive(status) {
+export function isGuildScheduledEventActive(status) {
   let tmp = null != status;
   if (tmp) {
     status = undefined;
@@ -573,18 +573,18 @@ export const isGuildScheduledEventActive = function isGuildScheduledEventActive(
     tmp = status === constants.ACTIVE;
   }
   return tmp;
-};
-export const isEventUpcoming = function isEventUpcoming(guild_scheduled_event) {
+}
+export function isEventUpcoming(guild_scheduled_event) {
   return !set.has(guild_scheduled_event.status);
-};
-export const eventScheduledToStartWithin = function eventScheduledToStartWithin(scheduled_start_time, arg1) {
+}
+export function eventScheduledToStartWithin(scheduled_start_time, arg1) {
   const time = new Date(scheduled_start_time.scheduled_start_time).getTime();
   return time < Date.now() + 1000 * arg1;
-};
-export const isGuildEventEnded = function isGuildEventEnded(guildScheduledEvent) {
+}
+export function isGuildEventEnded(guildScheduledEvent) {
   let hasItem = null != guildScheduledEvent;
   if (hasItem) {
     hasItem = set.has(guildScheduledEvent.status);
   }
   return hasItem;
-};
+}

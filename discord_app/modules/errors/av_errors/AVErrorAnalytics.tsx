@@ -1,20 +1,20 @@
-// === Module 19717: AVErrorAnalytics ===
+// === Module 19939: AVErrorAnalytics ===
 
-// Module 19717 (AVErrorAnalytics)
+// Module 19939 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1375 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5010 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5859 */;
-import VideoQualityStats from "VideoQualityStats" /* 5936 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5011 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5861 */;
+import VideoQualityStats from "VideoQualityStats" /* 5938 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5767 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5915 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import RTCRegionStore from "RTCRegionStore" /* 5849 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7849 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5769 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5917 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import RTCRegionStore from "RTCRegionStore" /* 5851 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7872 */;
 
 const require = globalThis.__r;
 
@@ -72,14 +72,14 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(5769).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5771).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const Constants = fn(5754);
+const Constants = fn(5756);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
 
-export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(error, context) {
+export function sendAVErrorAnalyticsEvent(error, context) {
   _require = error;
   errorInfo = require("AVError").getErrorInfo(error);
   let channelId;
@@ -938,4 +938,4 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     AnalyticsUtilsDefault.track(AnalyticEvents.AV_ERROR_REPORTED, obj);
     const tmp115Result4 = AnalyticsUtilsDefault;
   });
-};
+}

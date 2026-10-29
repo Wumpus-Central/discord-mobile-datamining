@@ -1,12 +1,12 @@
-// === Module 5878: noise_cancellation/KrispUtils ===
+// === Module 5880: noise_cancellation/KrispUtils ===
 
-// Module 5878 (noise_cancellation/KrispUtils)
-import inject from "inject" /* 2013 */;
+// Module 5880 (noise_cancellation/KrispUtils)
+import inject from "inject" /* 2014 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
 
-export const getKrispModel = function getKrispModel() {
+export function getKrispModel() {
   return new Promise((fn) => {
     closure_0 = fn;
     const voiceEngine = inject.getVoiceEngine();
@@ -16,7 +16,7 @@ export const getKrispModel = function getKrispModel() {
       fn(null);
     }
   });
-};
+}
 export function setKrispSuppressionLevel() {
 
 }

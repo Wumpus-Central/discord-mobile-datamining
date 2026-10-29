@@ -1,16 +1,16 @@
-// === Module 17821: VoiceUsers ===
+// === Module 18059: VoiceUsers ===
 
-// Module 17821 (VoiceUsers)
+// Module 18059 (VoiceUsers)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9743 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11098 */;
-import ChannelListLayout from "ChannelListLayout" /* 11993 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13687 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9775 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11152 */;
+import ChannelListLayout from "ChannelListLayout" /* 12047 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13920 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 
 require = fn;
 const View = fn(17).View;
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "text-sm/medium";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -41,63 +41,71 @@ let closure_11 = createStyles.createStyles((arg0) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceStateUserItem(collapsed) {
-  const cResult = channel(576).c(21);
+  const cResult = channel(576).c(24);
   ({ voiceState, channel } = collapsed);
   collapsed = collapsed.collapsed;
   const user = voiceState.user;
   ({ member, voiceState: voiceState2 } = voiceState);
   const obj = channel(576);
   const tmp4 = user;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildMemberStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === channel.guild_id) {
-    if (cResult[2] === user.id) {
-      let tmp8 = cResult[3];
-      let tmp9 = cResult[4];
+  const tmp5 = closure_11(user(9775)());
+  const localSelfMuteDeaf = channel(9203).useLocalSelfMuteDeaf();
+  if (cResult[0] === voiceState2) {
+    if (cResult[1] === localSelfMuteDeaf) {
+      let tmp7 = cResult[2];
     }
-    const stateFromStoresObject = channel(504).useStateFromStoresObject(first, tmp8, tmp9);
-    const isGuest = stateFromStoresObject.isGuest;
-    let userCollapsedOverlap = null;
-    if (collapsed) {
-      userCollapsedOverlap = null;
-      if (!collapsed.isFirst) {
-        userCollapsedOverlap = tmp5.userCollapsedOverlap;
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [GuildMemberStore];
+      cResult[3] = items;
+      let tmp10 = items;
+    } else {
+      tmp10 = cResult[3];
+    }
+    if (cResult[4] === channel.guild_id) {
+      if (cResult[5] === user.id) {
+        let tmp12 = cResult[6];
+        let tmp13 = cResult[7];
       }
-    }
-    if (member == null) {
-      member = stateFromStoresObject.storeMember;
-    }
-    if (cResult[5] === channel) {
-      if (cResult[6] === collapsed) {
-        if (cResult[7] === isGuest) {
-          if (cResult[8] === member) {
-            if (cResult[9] === user) {
-              if (cResult[10] === voiceState2.deaf) {
-                if (cResult[11] === voiceState2.mute) {
-                  if (cResult[12] === voiceState2.selfDeaf) {
-                    if (cResult[13] === voiceState2.selfMute) {
-                      if (cResult[14] === voiceState2.selfVideo) {
-                        if (cResult[15] === voiceState2.sessionId) {
-                          if (cResult[16] === voiceState2.suppress) {
-                            let tmp13 = cResult[17];
-                          }
-                          if (cResult[18] === userCollapsedOverlap) {
-                            if (cResult[19] === tmp13) {
-                              let tmp16 = cResult[20];
+      const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp10, tmp12, tmp13);
+      const isGuest = stateFromStoresObject.isGuest;
+      let userCollapsedOverlap = null;
+      if (collapsed) {
+        userCollapsedOverlap = null;
+        if (!collapsed.isFirst) {
+          userCollapsedOverlap = tmp5.userCollapsedOverlap;
+        }
+      }
+      if (member == null) {
+        member = stateFromStoresObject.storeMember;
+      }
+      if (cResult[8] === channel) {
+        if (cResult[9] === collapsed) {
+          if (cResult[10] === isGuest) {
+            if (cResult[11] === member) {
+              if (cResult[12] === user) {
+                if (cResult[13] === tmp7.deaf) {
+                  if (cResult[14] === tmp7.mute) {
+                    if (cResult[15] === tmp7.selfDeaf) {
+                      if (cResult[16] === tmp7.selfMute) {
+                        if (cResult[17] === tmp7.selfVideo) {
+                          if (cResult[18] === tmp7.sessionId) {
+                            if (cResult[19] === tmp7.suppress) {
+                              let tmp17 = cResult[20];
                             }
-                            return tmp16;
+                            if (cResult[21] === userCollapsedOverlap) {
+                              if (cResult[22] === tmp17) {
+                                let tmp20 = cResult[23];
+                              }
+                              return tmp20;
+                            }
+                            const obj3 = { style: userCollapsedOverlap, children: tmp17 };
+                            const tmp23 = closure_6(View, obj3);
+                            cResult[21] = userCollapsedOverlap;
+                            cResult[22] = tmp17;
+                            cResult[23] = tmp23;
+                            tmp20 = tmp23;
                           }
-                          const obj2 = { style: userCollapsedOverlap, children: tmp13 };
-                          const tmp19 = closure_6(View, obj2);
-                          cResult[18] = userCollapsedOverlap;
-                          cResult[19] = tmp13;
-                          cResult[20] = tmp19;
-                          tmp16 = tmp19;
                         }
                       }
                     }
@@ -108,49 +116,58 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
       }
+      const obj4 = { user, member, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
+      ({ mute: obj5.mute, deaf: obj5.deaf, selfVideo: obj5.selfVideo, selfMute: obj5.selfMute, selfDeaf: obj5.selfDeaf, suppress: obj5.suppress } = tmp7);
+      obj4.collapsed = collapsed;
+      obj4.sessionId = tmp7.sessionId;
+      obj4.channel = channel;
+      obj4.isGuest = isGuest;
+      const tmp19 = closure_6(tmp4(18060), obj4, user.id);
+      cResult[8] = channel;
+      cResult[9] = collapsed;
+      cResult[10] = isGuest;
+      cResult[11] = member;
+      cResult[12] = user;
+      cResult[13] = tmp7.deaf;
+      cResult[14] = tmp7.mute;
+      cResult[15] = tmp7.selfDeaf;
+      cResult[16] = tmp7.selfMute;
+      cResult[17] = tmp7.selfVideo;
+      cResult[18] = tmp7.sessionId;
+      cResult[19] = tmp7.suppress;
+      cResult[20] = tmp19;
+      tmp17 = tmp19;
+      const tmpResult = channel(504);
     }
-    const obj4 = { user, member, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
-    ({ mute: obj3.mute, deaf: obj3.deaf, selfVideo: obj3.selfVideo, selfMute: obj3.selfMute, selfDeaf: obj3.selfDeaf, suppress: obj3.suppress } = voiceState2);
-    obj4.collapsed = collapsed;
-    obj4.sessionId = voiceState2.sessionId;
-    obj4.channel = channel;
-    obj4.isGuest = isGuest;
-    const tmp15 = closure_6(tmp4(17822), obj4, user.id);
-    cResult[5] = channel;
-    cResult[6] = collapsed;
-    cResult[7] = isGuest;
-    cResult[8] = member;
-    cResult[9] = user;
-    cResult[10] = voiceState2.deaf;
-    cResult[11] = voiceState2.mute;
-    cResult[12] = voiceState2.selfDeaf;
-    cResult[13] = voiceState2.selfMute;
-    cResult[14] = voiceState2.selfVideo;
-    cResult[15] = voiceState2.sessionId;
-    cResult[16] = voiceState2.suppress;
-    cResult[17] = tmp15;
-    tmp13 = tmp15;
-    const tmpResult = channel(504);
+    const fn = function y() {
+      return { storeMember: GuildMemberStore.getMember(channel.guild_id, user.id), isGuest: GuildMemberStore.isGuestOrLurker(channel.guild_id, user.id) };
+    };
+    const items1 = [channel.guild_id, user.id];
+    cResult[4] = channel.guild_id;
+    cResult[5] = user.id;
+    cResult[6] = fn;
+    cResult[7] = items1;
+    tmp13 = items1;
+    tmp12 = fn;
   }
-  const fn = function c() {
-    return { storeMember: GuildMemberStore.getMember(channel.guild_id, user.id), isGuest: GuildMemberStore.isGuestOrLurker(channel.guild_id, user.id) };
-  };
-  const items1 = [channel.guild_id, user.id];
-  cResult[1] = channel.guild_id;
-  cResult[2] = user.id;
-  cResult[3] = fn;
-  cResult[4] = items1;
-  tmp9 = items1;
-  tmp8 = fn;
-  tmp5 = closure_11(user(9743)());
+  const obj2 = channel(9203);
+  const result = channel(9203).withLocalSelfMuteDeaf(voiceState2, localSelfMuteDeaf);
+  cResult[0] = voiceState2;
+  cResult[1] = localSelfMuteDeaf;
+  cResult[2] = result;
+  tmp7 = result;
+  const tmpResult2 = channel(9203);
 }) : (function VoiceStateUserItem(voiceState) {
   voiceState = voiceState.voiceState;
   const user = voiceState.user;
-  ({ member, voiceState: voiceState2 } = voiceState);
+  let member = voiceState.member;
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(9743)());
+  const tmp3 = closure_11(channel(9775)());
+  const obj = user(9203);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9203).useLocalSelfMuteDeaf());
+  const obj2 = user(9203);
   const items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ storeMember: GuildMemberStore.getMember(channel.guild_id, user.id), isGuest: GuildMemberStore.isGuestOrLurker(channel.guild_id, user.id) }), items1);
@@ -162,20 +179,20 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       userCollapsedOverlap = tmp3.userCollapsedOverlap;
     }
   }
-  const obj2 = { style: userCollapsedOverlap, children: null };
-  const obj5 = { user, member: null, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
-  const obj = user(504);
+  const obj4 = { style: userCollapsedOverlap, children: null };
+  const obj7 = { user, member: null, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
+  const obj3 = user(504);
   if (member == null) {
     member = storeMember;
   }
-  obj5.member = member;
-  ({ mute: obj3.mute, deaf: obj3.deaf, selfVideo: obj3.selfVideo, selfMute: obj3.selfMute, selfDeaf: obj3.selfDeaf, suppress: obj3.suppress } = voiceState2);
-  obj5.collapsed = collapsed;
-  obj5.sessionId = voiceState2.sessionId;
-  obj5.channel = channel;
-  obj5.isGuest = isGuest;
-  obj2.children = closure_6(tmp(17822), obj5, user.id);
-  return closure_6(View, obj2);
+  obj7.member = member;
+  ({ mute: obj5.mute, deaf: obj5.deaf, selfVideo: obj5.selfVideo, selfMute: obj5.selfMute, selfDeaf: obj5.selfDeaf, suppress: obj5.suppress } = result);
+  obj7.collapsed = collapsed;
+  obj7.sessionId = result.sessionId;
+  obj7.channel = channel;
+  obj7.isGuest = isGuest;
+  obj4.children = closure_6(tmp(18060), obj7, user.id);
+  return closure_6(View, obj4);
 }));
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudienceItem(arg0) {
@@ -263,7 +280,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Audien
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");
+let result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUsers(collapsed) {
   let tmp2 = dependencyMap;
@@ -275,10 +292,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
   if (cResult[0] === guild_id) {
     if (cResult[1] === voiceStates) {
       let tmp5 = channel;
-      const arr2 = channel(17826)(cResult[2]);
+      const arr2 = channel(18064)(cResult[2]);
       if (cResult[3] === guild_id) {
         if (cResult[4] === arr2) {
-          const subscribeGuildMembers = tmp(7445).useSubscribeGuildMembers(cResult[5], "voice_channel_games");
+          const subscribeGuildMembers = tmp(7468).useSubscribeGuildMembers(cResult[5], "voice_channel_games");
           if (cResult[6] === channel) {
             if (cResult[7] === collapsed) {
               let tmp10 = cResult[8];
@@ -298,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
                     if (cResult[16] === tmp13) {
                     }
                   }
-                  tmp5 = tmp5(17829);
+                  tmp5 = tmp5(18067);
                   const obj2 = { collapsed, children: null };
                   const items = [tmp13, tmp15];
                   obj2.children = items;
@@ -332,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
           cResult[7] = collapsed;
           cResult[8] = renderVoiceState;
           tmp10 = renderVoiceState;
-          const tmpResult = tmp(7445);
+          const tmpResult = tmp(7468);
         }
       }
       if (null == guild_id) {
@@ -347,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
     }
   }
   if (null != guild_id) {
-    const substr = voiceStates.slice(0, tmp(7445).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
+    const substr = voiceStates.slice(0, tmp(7468).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
     let mapped1 = substr.map((user) => user.user.id);
   } else {
     mapped1 = closure_9;
@@ -363,12 +380,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
   noop = undefined;
   const guild_id = channel.guild_id;
   if (null != guild_id) {
-    const substr = voiceStates.slice(0, collapsed(tmp2[16]).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
+    const substr = voiceStates.slice(0, collapsed(tmp2[17]).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
     let mapped = substr.map((user) => user.user.id);
   } else {
     mapped = closure_9;
   }
-  const tmp3Result = channel(guild_id[17])(mapped);
+  const tmp3Result = channel(guild_id[18])(mapped);
   noop = tmp3Result;
   const items = [guild_id, tmp3Result];
   const memo = noop.useMemo(() => {
@@ -383,8 +400,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
     tmp3 = closure_8;
   }, items);
   const tmp = channel;
-  let tmp3 = channel(guild_id[17]);
-  const subscribeGuildMembers = collapsed(guild_id[16]).useSubscribeGuildMembers(memo, "voice_channel_games");
+  let tmp3 = channel(guild_id[18]);
+  const subscribeGuildMembers = collapsed(guild_id[17]).useSubscribeGuildMembers(memo, "voice_channel_games");
   let tmp10Result = null;
   if (0 !== voiceStates.length) {
     const obj2 = { collapsed, children: null };
@@ -401,11 +418,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUse
     }
     items1[1] = tmp12;
     obj2.children = items1;
-    tmp10Result = closure_7(tmp(tmp2[18]), obj2);
-    const tmpResult = tmp(tmp2[18]);
+    tmp10Result = closure_7(tmp(tmp2[19]), obj2);
+    const tmpResult = tmp(tmp2[19]);
   }
   return tmp10Result;
 });
-export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
+export function getAudienceItemHeight(fontScale) {
   return 8 + Math.max(20, useScaledTextLineHeight.scaleTextLineHeight(c10, fontScale));
-};
+}

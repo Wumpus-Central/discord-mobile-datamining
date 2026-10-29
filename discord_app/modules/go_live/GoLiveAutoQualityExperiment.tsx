@@ -1,14 +1,14 @@
-// === Module 11638: GoLiveAutoQualityExperiment ===
+// === Module 11692: GoLiveAutoQualityExperiment ===
 
-// Module 11638 (GoLiveAutoQualityExperiment)
+// Module 11692 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import StreamActionCreators from "StreamActionCreators" /* 7864 */;
+import StreamActionCreators from "StreamActionCreators" /* 7887 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5915 */;
-import ApexExperiment from "apex/ApexExperiment" /* 1453 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5917 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1454 */;
 
 require = fn;
-const ApplicationStreamPresets = fn(5850).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5852).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -60,7 +60,7 @@ export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactC
   const items = [ApexExperimentStore];
   return location(504).useStateFromStores(items, () => config.getConfig({ location }));
 });
-export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
+export function maybeMigrateToAutoQuality() {
   const Storage = Storage3.Storage;
   let num = Storage.get(GoLiveAutoQualityMigrationVersion);
   if (num == null) {
@@ -79,4 +79,4 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
       }
     }
   }
-};
+}

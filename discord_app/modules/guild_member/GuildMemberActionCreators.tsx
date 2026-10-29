@@ -1,17 +1,17 @@
-// === Module 7252: GuildMemberActionCreators ===
+// === Module 7276: GuildMemberActionCreators ===
 
-// Module 7252 (GuildMemberActionCreators)
+// Module 7276 (GuildMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ImpersonateActionCreators from "ImpersonateActionCreators" /* 6890 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 6914 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 
-export const updateGuildSelfMember = function updateGuildSelfMember(guildId, memberOptions) {
+export function updateGuildSelfMember(guildId, memberOptions) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -27,4 +27,4 @@ export const updateGuildSelfMember = function updateGuildSelfMember(guildId, mem
     const request = { url: Endpoints.SET_GUILD_MEMBER(guildId), body: memberOptions, oldFormErrors: flag || undefined, rejectWithError: false };
     return HTTP.patch(request);
   }
-};
+}

@@ -1,8 +1,8 @@
-// === Module 18736: conjureAppPictureInPictureLayout ===
+// === Module 18970: conjureAppPictureInPictureLayout ===
 
-// Module 18736 (conjureAppPictureInPictureLayout)
-import Constants from "Constants" /* 2023 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 10940 */;
+// Module 18970 (conjureAppPictureInPictureLayout)
+import Constants from "Constants" /* 2024 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 10975 */;
 import size from "module_2" /* 2 */;
 
 const OrientationLockState = Constants.OrientationLockState;

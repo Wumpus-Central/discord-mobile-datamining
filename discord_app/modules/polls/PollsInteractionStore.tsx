@@ -1,6 +1,6 @@
-// === Module 11072: PollsInteractionStore ===
+// === Module 11126: PollsInteractionStore ===
 
-// Module 11072 (PollsInteractionStore)
+// Module 11126 (PollsInteractionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
@@ -111,7 +111,7 @@ export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEna
     return tmp;
   }, discord_common_shallowEqualDefault);
 });
-export const clearChannelPollState = function clearChannelPollState(arg0) {
+export function clearChannelPollState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     state.setState((arg0) => {
@@ -132,8 +132,8 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
       return { pollsByChannelId: {}, pollsByMessageId: obj2 };
     });
   });
-};
-export const clearPollState = function clearPollState(arg0, arg1) {
+}
+export function clearPollState(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
@@ -156,16 +156,16 @@ export const clearPollState = function clearPollState(arg0, arg1) {
       return obj4;
     });
   });
-};
-export const updatePollState = function updatePollState(arg0, arg1, arg2) {
+}
+export function updatePollState(arg0, arg1, arg2) {
   const state = closure_4.getState();
   state.updatePollState(arg0, arg1, arg2);
-};
-export const getPollState = function getPollState(channelId, id) {
+}
+export function getPollState(channelId, id) {
   const tmp = closure_4.getState().pollsByChannelId[channelId];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[id];
   }
   return tmp2;
-};
+}

@@ -1,14 +1,14 @@
-// === Module 9664: Authorize ===
+// === Module 9696: Authorize ===
 
-// Module 9664 (Authorize)
+// Module 9696 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
-import QueryStringUtils from "QueryStringUtils" /* 5738 */;
-import keysSorter from "keysSorter" /* 6757 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
-import scopes from "scopes" /* 9665 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
+import QueryStringUtils from "QueryStringUtils" /* 5740 */;
+import keysSorter from "keysSorter" /* 6780 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
+import scopes from "scopes" /* 9697 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -16,7 +16,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/Authorize.tsx");
 
-export const filterScopes = function filterScopes(items) {
+export function filterScopes(items) {
   const found = items.filter((item) => {
     const RemovedScopes = scopes.RemovedScopes;
     return !RemovedScopes.includes(item);
@@ -29,8 +29,8 @@ export const filterScopes = function filterScopes(items) {
     found.push(OAuth2Scopes.OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
-};
-export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(query) {
+}
+export function parseOAuth2AuthorizeProps(query) {
   const parsed = keysSorter.parse(query, { arrayFormat: "bracket" });
   const NONE = PermissionUtilsAll.NONE;
   try {
@@ -89,4 +89,4 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     return obj2;
   } catch (err) {
   }
-};
+}

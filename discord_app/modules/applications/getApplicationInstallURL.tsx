@@ -1,13 +1,13 @@
-// === Module 12054: getApplicationInstallURL ===
+// === Module 12108: getApplicationInstallURL ===
 
-// Module 12054 (getApplicationInstallURL)
+// Module 12108 (getApplicationInstallURL)
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
 let result = size.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
-export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
+export function getActivityLaunchURL(applicationId) {
   ({ customId, referrerId, linkId, channelId } = applicationId);
   const str = new URL(Routes.ACTIVITY_DETAILS(applicationId.applicationId), "" + location.protocol + "//" + location.host);
   const searchParams = str.searchParams;
@@ -24,8 +24,8 @@ export const getActivityLaunchURL = function getActivityLaunchURL(applicationId)
     const result3 = searchParams.set("channel_id", channelId);
   }
   return str.toString();
-};
-export const getApplicationInstallURL = function getApplicationInstallURL(application) {
+}
+export function getApplicationInstallURL(application) {
   ({ customInstallUrl, installParams, integrationTypesConfig } = application);
   if (null != customInstallUrl) {
     return customInstallUrl;
@@ -69,4 +69,4 @@ export const getApplicationInstallURL = function getApplicationInstallURL(applic
     const _HermesInternal = HermesInternal;
     return "" + location.protocol + "//" + location.host + Routes.OAUTH2_AUTHORIZE + "?" + str7.toString();
   }
-};
+}

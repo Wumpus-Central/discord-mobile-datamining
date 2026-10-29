@@ -1,9 +1,9 @@
-// === Module 14499: ZoomLayoutGesture ===
+// === Module 14733: ZoomLayoutGesture ===
 
-// Module 14499 (ZoomLayoutGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import spring from "spring" /* 5283 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
+// Module 14733 (ZoomLayoutGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import spring from "spring" /* 5284 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,23 +48,23 @@ function releaseTranslation(sharedValue2, point, velocityX) {
             const tmp3 = -closure_1;
           }
         };
-        let obj2 = { bound: point, translation: sharedValue2, withSpring: tmp5(5283).withSpring, SPRING_CONFIG };
+        let obj2 = { bound: point, translation: sharedValue2, withSpring: tmp5(5284).withSpring, SPRING_CONFIG };
         fn.__closure = obj2;
         fn.__workletHash = 7034972790996;
         fn.__initData = __initData;
-        const result1 = sharedValue2.set(tmp5(5085).withDecay(SPRING_CONFIG, fn));
-        const tmp5Result = tmp5(5085);
+        const result1 = sharedValue2.set(tmp5(5086).withDecay(SPRING_CONFIG, fn));
+        const tmp5Result = tmp5(5086);
       }
     }
-    const result2 = sharedValue2.set(tmp5(5283).withSpring(bound, SPRING_CONFIG));
-    const tmp5Result2 = tmp5(5283);
+    const result2 = sharedValue2.set(tmp5(5284).withSpring(bound, SPRING_CONFIG));
+    const tmp5Result2 = tmp5(5284);
   }
   const tmp2 = -point;
 }
-releaseTranslation.__closure = { MAX_PAN_VELOCITY: 4000, accessibilityPreferencesSharedValue: fn(5244).accessibilityPreferencesSharedValue, withSpring: fn(5283).withSpring, SPRING_CONFIG, MAX_FLING_OVERSHOOT: 48, withDecay: fn(5085).withDecay, PAN_DECELERATION: 0.998 };
+releaseTranslation.__closure = { MAX_PAN_VELOCITY: 4000, accessibilityPreferencesSharedValue: fn(5245).accessibilityPreferencesSharedValue, withSpring: fn(5284).withSpring, SPRING_CONFIG, MAX_FLING_OVERSHOOT: 48, withDecay: fn(5086).withDecay, PAN_DECELERATION: 0.998 };
 releaseTranslation.__workletHash = 13339877968106;
 releaseTranslation.__initData = { code: "function releaseTranslation_ZoomLayoutGestureNativeTsx2(translation,bound,velocity){const{MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION}=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));}));}}" };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden" }, content: { flex: 1 } });
 let closure_12 = { code: "function ZoomLayoutGestureNativeTsx4(){const{cancelAnimation,scale,translateX,translateY}=this.__closure;cancelAnimation(scale);cancelAnimation(translateX);cancelAnimation(translateY);}" };
 let closure_13 = { code: "function ZoomLayoutGestureNativeTsx5(zoom){const{contentWidth,containerWidth,contentHeight,containerHeight}=this.__closure;return{x:Math.max(0,(contentWidth*zoom-containerWidth.get())/2),y:Math.max(0,(contentHeight*zoom-containerHeight.get())/2)};}" };
@@ -99,7 +99,7 @@ const __initData9 = { code: "function ZoomLayoutGestureNativeTsx33(){const{trans
 let closure_42 = { code: "function ZoomLayoutGestureNativeTsx34(){const{stopAnimation,touchStoppedAnimation,panInterrupted,minimumZoomScale,maximumZoomScale,requestedScale,scale,x_1,containerWidth,y_1,containerHeight,clampTranslation,translateX,translateY,animated,withSpring,SPRING_CONFIG}=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);const nextScale_0=Math.max(minimumZoomScale,Math.min(maximumZoomScale,requestedScale));const ratio_0=nextScale_0/scale.get();const focalX_0=x_1-containerWidth.get()/2;const focalY_0=y_1-containerHeight.get()/2;const position_2=clampTranslation(focalX_0+(translateX.get()-focalX_0)*ratio_0,focalY_0+(translateY.get()-focalY_0)*ratio_0,nextScale_0);scale.set(animated?withSpring(nextScale_0,SPRING_CONFIG):nextScale_0);translateX.set(animated?withSpring(position_2.x,SPRING_CONFIG):position_2.x);translateY.set(animated?withSpring(position_2.y,SPRING_CONFIG):position_2.y);}" };
 let closure_43 = { code: "function ZoomLayoutGestureNativeTsx35(){const{stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated_0,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY}=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated_0?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated_0?withSpring(0,SPRING_CONFIG):0);translateY.set(animated_0?withSpring(0,SPRING_CONFIG):0);}" };
 const ReactCompilerGating = fn(558);
-let obj2 = { MAX_PAN_VELOCITY: 4000, accessibilityPreferencesSharedValue: fn(5244).accessibilityPreferencesSharedValue, withSpring: fn(5283).withSpring, SPRING_CONFIG, MAX_FLING_OVERSHOOT: 48, withDecay: fn(5085).withDecay, PAN_DECELERATION: 0.998 };
+let obj2 = { MAX_PAN_VELOCITY: 4000, accessibilityPreferencesSharedValue: fn(5245).accessibilityPreferencesSharedValue, withSpring: fn(5284).withSpring, SPRING_CONFIG, MAX_FLING_OVERSHOOT: 48, withDecay: fn(5086).withDecay, PAN_DECELERATION: 0.998 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/zoom_layout/ZoomLayoutGesture.native.tsx");
 
@@ -277,8 +277,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                                                                                                                                                           }
                                                                                                                                                                                                                           scale = tmp;
                                                                                                                                                                                                                           const fn = function n() { ... };
-                                                                                                                                                                                                                          obj = onLayout(5085);
-                                                                                                                                                                                                                          fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, minimumZoomScale, maximumZoomScale, requestedScale: num, scale, x_1: x, containerWidth, y_1: y, containerHeight, clampTranslation, translateX, translateY, animated: undefined === animated || animated, withSpring: onLayout(5283).withSpring, SPRING_CONFIG };
+                                                                                                                                                                                                                          obj = onLayout(5086);
+                                                                                                                                                                                                                          fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, minimumZoomScale, maximumZoomScale, requestedScale: num, scale, x_1: x, containerWidth, y_1: y, containerHeight, clampTranslation, translateX, translateY, animated: undefined === animated || animated, withSpring: onLayout(5284).withSpring, SPRING_CONFIG };
                                                                                                                                                                                                                           fn.__workletHash = 8380953020180;
                                                                                                                                                                                                                           fn.__initData = __initData;
                                                                                                                                                                                                                           obj.runOnUI(fn)();
@@ -291,8 +291,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                                                                                                                                                           const animated = obj.animated;
                                                                                                                                                                                                                           closure_0 = tmp;
                                                                                                                                                                                                                           const fn = function n() { ... };
-                                                                                                                                                                                                                          let obj2 = onLayout(5085);
-                                                                                                                                                                                                                          fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, scale, animated_0: undefined === animated || animated, withSpring: onLayout(5283).withSpring, minimumZoomScale, SPRING_CONFIG, translateX, translateY };
+                                                                                                                                                                                                                          let obj2 = onLayout(5086);
+                                                                                                                                                                                                                          fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, scale, animated_0: undefined === animated || animated, withSpring: onLayout(5284).withSpring, minimumZoomScale, SPRING_CONFIG, translateX, translateY };
                                                                                                                                                                                                                           fn.__workletHash = 7952194524856;
                                                                                                                                                                                                                           fn.__initData = __initData2;
                                                                                                                                                                                                                           obj2.runOnUI(fn)();
@@ -355,8 +355,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                                                                                                                   }
                                                                                                                                                                                   scale = tmp;
                                                                                                                                                                                   const fn = function n() { ... };
-                                                                                                                                                                                  obj = onLayout(5085);
-                                                                                                                                                                                  fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, minimumZoomScale, maximumZoomScale, requestedScale: num, scale, x_1: x, containerWidth, y_1: y, containerHeight, clampTranslation, translateX, translateY, animated: undefined === animated || animated, withSpring: onLayout(5283).withSpring, SPRING_CONFIG };
+                                                                                                                                                                                  obj = onLayout(5086);
+                                                                                                                                                                                  fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, minimumZoomScale, maximumZoomScale, requestedScale: num, scale, x_1: x, containerWidth, y_1: y, containerHeight, clampTranslation, translateX, translateY, animated: undefined === animated || animated, withSpring: onLayout(5284).withSpring, SPRING_CONFIG };
                                                                                                                                                                                   fn.__workletHash = 8380953020180;
                                                                                                                                                                                   fn.__initData = __initData;
                                                                                                                                                                                   obj.runOnUI(fn)();
@@ -369,8 +369,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                                                                                                                   const animated = obj.animated;
                                                                                                                                                                                   closure_0 = tmp;
                                                                                                                                                                                   const fn = function n() { ... };
-                                                                                                                                                                                  let obj2 = onLayout(5085);
-                                                                                                                                                                                  fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, scale, animated_0: undefined === animated || animated, withSpring: onLayout(5283).withSpring, minimumZoomScale, SPRING_CONFIG, translateX, translateY };
+                                                                                                                                                                                  let obj2 = onLayout(5086);
+                                                                                                                                                                                  fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, scale, animated_0: undefined === animated || animated, withSpring: onLayout(5284).withSpring, minimumZoomScale, SPRING_CONFIG, translateX, translateY };
                                                                                                                                                                                   fn.__workletHash = 7952194524856;
                                                                                                                                                                                   fn.__initData = __initData2;
                                                                                                                                                                                   obj2.runOnUI(fn)();
@@ -999,8 +999,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const result6 = translateY.set(y);
       };
-      obj = onCreateGesture(5085);
-      fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, minimumZoomScale: flag, maximumZoomScale, requestedScale: num, scale, x_1: x, containerWidth, y_1: y, containerHeight, clampTranslation, translateX, translateY, animated: flag, withSpring: onCreateGesture(5283).withSpring, SPRING_CONFIG };
+      obj = onCreateGesture(5086);
+      fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, minimumZoomScale: flag, maximumZoomScale, requestedScale: num, scale, x_1: x, containerWidth, y_1: y, containerHeight, clampTranslation, translateX, translateY, animated: flag, withSpring: onCreateGesture(5284).withSpring, SPRING_CONFIG };
       fn.__workletHash = 2092714849882;
       fn.__initData = __initData;
       obj.runOnUI(fn)();
@@ -1038,8 +1038,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const result4 = translateY.set(num2);
       };
-      let obj2 = onCreateGesture(5085);
-      fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, scale, animated_0: flag, withSpring: onCreateGesture(5283).withSpring, minimumZoomScale, SPRING_CONFIG, translateX, translateY };
+      let obj2 = onCreateGesture(5086);
+      fn.__closure = { stopAnimation, touchStoppedAnimation, panInterrupted, scale, animated_0: flag, withSpring: onCreateGesture(5284).withSpring, minimumZoomScale, SPRING_CONFIG, translateX, translateY };
       fn.__workletHash = 3638818216438;
       fn.__initData = __initData2;
       obj2.runOnUI(fn)();

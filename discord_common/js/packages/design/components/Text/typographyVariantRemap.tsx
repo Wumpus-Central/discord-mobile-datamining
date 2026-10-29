@@ -1,14 +1,14 @@
-// === Module 5276: typographyVariantRemap ===
+// === Module 5277: typographyVariantRemap ===
 
-// Module 5276 (typographyVariantRemap)
-import TypographyVariantRemap from "TypographyVariantRemap" /* 5277 */;
+// Module 5277 (typographyVariantRemap)
+import TypographyVariantRemap from "TypographyVariantRemap" /* 5278 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");
 
-export const remapTypographyVariant = function remapTypographyVariant(cResult, arg1, arg2) {
+export function remapTypographyVariant(cResult, arg1, arg2) {
   const obj = TypographyVariantRemap.TYPOGRAPHY_EXPERIMENT_REMAPS[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp3 = _slicedToArray(tmp, 2);
@@ -31,4 +31,4 @@ export const remapTypographyVariant = function remapTypographyVariant(cResult, a
     continue;
   }
   return arg1;
-};
+}

@@ -1,8 +1,8 @@
-// === Module 6701: TinyBroncoExperiment ===
+// === Module 6725: TinyBroncoExperiment ===
 
-// Module 6701 (TinyBroncoExperiment)
+// Module 6725 (TinyBroncoExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,6 +23,6 @@ export const useIsTinyBroncoEnabled = ReactCompilerGating.isReactCompilerEnabled
 }) : (function useIsTinyBroncoEnabled(location) {
   return closure_2.useConfig({ location }).enabled;
 });
-export const isTinyBroncoEnabled = function isTinyBroncoEnabled(location) {
+export function isTinyBroncoEnabled(location) {
   return closure_2.getConfig({ location }).enabled;
-};
+}

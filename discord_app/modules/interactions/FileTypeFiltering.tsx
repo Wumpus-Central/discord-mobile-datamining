@@ -1,13 +1,13 @@
-// === Module 12082: FileTypeFiltering ===
+// === Module 12136: FileTypeFiltering ===
 
-// Module 12082 (FileTypeFiltering)
+// Module 12136 (FileTypeFiltering)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 
 require = fn;
 function fileTypesFormattedStringHelper(arr, stateFromStores) {
@@ -88,7 +88,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/FileTypeFiltering.tsx");
 
 export const useFileTypesFormattedString = tmp2;
-export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
+export function getFileTypeFiltering(fileTypes) {
   if (null != fileTypes) {
     if (0 !== fileTypes.length) {
       const found = fileTypes.filter((item) => item.startsWith("."));
@@ -153,7 +153,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
     return obj;
   }
   items3 = [];
-};
+}
 export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled() ? (function useFileTypeFiltering(arr) {
   const cResult = allowedExtensions(576).c(14);
   if (cResult[0] !== arr) {

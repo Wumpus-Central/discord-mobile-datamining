@@ -1,9 +1,9 @@
-// === Module 14736: useVirtualCurrencyBalance ===
+// === Module 14971: useVirtualCurrencyBalance ===
 
-// Module 14736 (useVirtualCurrencyBalance)
+// Module 14971 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9483 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9514 */;
 
 const require = globalThis.__r;
 
@@ -78,6 +78,6 @@ export const useHasEnoughVirtualCurrency = ReactCompilerGating.isReactCompilerEn
     return tmp2;
   });
 });
-export const getVirtualCurrencyBalance = function getVirtualCurrencyBalance() {
+export function getVirtualCurrencyBalance() {
   return VirtualCurrencyStore.getCurrentBalance();
-};
+}

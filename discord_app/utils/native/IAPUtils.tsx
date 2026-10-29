@@ -1,20 +1,20 @@
-// === Module 14147: IAPUtils ===
+// === Module 14380: IAPUtils ===
 
-// Module 14147 (IAPUtils)
+// Module 14380 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import v1 from "v1" /* 1278 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1380 */;
 import PlatformUtils2 from "PlatformUtils" /* 1381 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
-import ProductIds from "ProductIds" /* 7555 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14168 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14169 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
+import ProductIds from "ProductIds" /* 7578 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14401 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5273 */;
+import DevSettingsStore from "DevSettingsStore" /* 5274 */;
 import UserStore from "UserStore" /* 1389 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import IAPStore from "IAPStore" /* 7582 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_16 = async function _makeIAPRequest() {
               const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("module_14149").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("module_14382").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -141,7 +141,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("module_14149").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("module_14382").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -228,7 +228,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ let closure_18 = async function _restorePurchases(arg0) {
             closure_132_3 = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -425,7 +425,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -446,7 +446,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_14149").getStorefront(), done: false };
+            const obj6 = { value: require("module_14382").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -486,7 +486,7 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5682).convertToAlpha2;
+const convertToAlpha2 = fn(5684).convertToAlpha2;
 const Constants = fn(1084);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1391).NAMESPACE_SNOWFLAKE_UUID;
@@ -494,9 +494,9 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1381);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(14148).default;
+  _default = fn(14381).default;
 }
-let items = [fn(14149).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14149).ErrorCode.E_UNKNOWN];
+let items = [fn(14382).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14382).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 const ReactCompilerGating = fn(558);
@@ -582,8 +582,8 @@ if (PlatformUtils) {
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4961).getIsRunningOnSimulator();
-      let obj8 = fn(4961);
+      isRunningOnSimulator = fn(4962).getIsRunningOnSimulator();
+      let obj8 = fn(4962);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -596,7 +596,7 @@ if (PlatformUtils) {
   let obj6 = fn(1381);
 }
 if (PlatformUtils) {
-  obj = fn(14170).default;
+  obj = fn(14403).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();
@@ -617,7 +617,7 @@ let result = size.fileFinishedImporting("utils/native/IAPUtils.tsx");
 
 export default obj;
 export { convertToUUID };
-export const makeIAPRequest = function makeIAPRequest() {
+export function makeIAPRequest() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -626,7 +626,7 @@ export const makeIAPRequest = function makeIAPRequest() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useCanPurchaseIAP = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanPurchaseIAP(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
@@ -724,7 +724,7 @@ export const useCanPurchaseIAP = ReactCompilerGating.isReactCompilerEnabled() ? 
 });
 export { isStorekit2Available };
 export { remapStorefront };
-export const manageSubscription = function manageSubscription() {
+export function manageSubscription() {
   let isIOSResult = PlatformUtils2.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
@@ -741,5 +741,5 @@ export const manageSubscription = function manageSubscription() {
     result = Promise.reject(error);
   }
   return result;
-};
+}
 export { shouldMockIAPForceEnable };

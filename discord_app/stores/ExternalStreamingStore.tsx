@@ -1,15 +1,15 @@
-// === Module 11239: ExternalStreamingStore ===
+// === Module 11293: ExternalStreamingStore ===
 
-// Module 11239 (ExternalStreamingStore)
+// Module 11293 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import _modDef1354 from "module_1354" /* 1354 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7310 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7334 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
-import StreamerModeStore from "StreamerModeStore" /* 5059 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
+import StreamerModeStore from "StreamerModeStore" /* 5060 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -98,7 +98,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

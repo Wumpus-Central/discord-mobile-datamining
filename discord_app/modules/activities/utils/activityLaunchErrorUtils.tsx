@@ -1,16 +1,16 @@
-// === Module 10815: activityLaunchErrorUtils ===
+// === Module 10891: activityLaunchErrorUtils ===
 
-// Module 10815 (activityLaunchErrorUtils)
+// Module 10891 (activityLaunchErrorUtils)
 import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6053 */;
-import InteractionUtils from "InteractionUtils" /* 8636 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 10814 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10817 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6057 */;
+import InteractionUtils from "InteractionUtils" /* 8658 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 10890 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10893 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10816 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5661 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 10892 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5663 */;
 
 require = fn;
 let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
@@ -24,7 +24,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5661).DevShelfFetchState;
+const DevShelfFetchState = fn(5663).DevShelfFetchState;
 const AbortCodes = fn(1084).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };
@@ -170,7 +170,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/activityLaunchErrorUtils.tsx");
 
 export { ActivityLaunchFailErrorType };
-export const getActivityLaunchErrorInfo = function getActivityLaunchErrorInfo() {
+export function getActivityLaunchErrorInfo() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -179,4 +179,4 @@ export const getActivityLaunchErrorInfo = function getActivityLaunchErrorInfo() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

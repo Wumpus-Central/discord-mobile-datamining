@@ -1,15 +1,15 @@
-// === Module 9446: ProfileFrameSamplePreview ===
+// === Module 9477: ProfileFrameSamplePreview ===
 
-// Module 9446 (ProfileFrameSamplePreview)
+// Module 9477 (ProfileFrameSamplePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5288 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import _modDef7002 from "module_7002" /* 7002 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8735 */;
-import ProfileFrameDefault from "ProfileFrame" /* 8748 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8752 */;
-import _modDef9447 from "module_9447" /* 9447 */;
+import useToken from "useToken" /* 5289 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import _modDef7026 from "module_7026" /* 7026 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8738 */;
+import ProfileFrameDefault from "ProfileFrame" /* 8751 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8755 */;
+import _modDef9478 from "module_9478" /* 9478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,11 +18,11 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7340).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7364).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
-let obj2 = { profileFrameContainer: { flex: 1 }, profileContainer: { flex: 1, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.xs }, sampleProfile: { width: "100%", aspectRatio: fn(9422).SAMPLE_PROFILE_ASPECT_RATIO } };
+const createStyles = fn(5005);
+let obj2 = { profileFrameContainer: { flex: 1 }, profileContainer: { flex: 1, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.xs }, sampleProfile: { width: "100%", aspectRatio: fn(9453).SAMPLE_PROFILE_ASPECT_RATIO } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { flex: 1, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.xs };
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileF
                                                                 }
                                                                 const _Symbol = Symbol;
                                                                 if (cResult[69] === Symbol.for("react.memo_cache_sentinel")) {
-                                                                  const obj5 = { uri: _modDef9447 };
+                                                                  const obj5 = { uri: _modDef9478 };
                                                                   cResult[69] = obj5;
                                                                   let tmp83 = obj5;
                                                                 } else {
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileF
                                                     }
                                                   }
                                                   const obj11 = { style: tmp22, maskElement: tmp63, children: tmp69 };
-                                                  const tmp75 = timestampProducer(_modDef7002, obj11);
+                                                  const tmp75 = timestampProducer(_modDef7026, obj11);
                                                   cResult[52] = tmp63;
                                                   cResult[53] = tmp69;
                                                   cResult[54] = tmp22;
@@ -426,8 +426,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileF
   const obj7 = { style: { position: "absolute", top: overflowTop, bottom: overflowBottom, left: 0, width: overflowHorizontal, backgroundColor: "black" } };
   const obj8 = { style: { position: "absolute", top: overflowTop, bottom: overflowBottom, right: 0, width: overflowHorizontal, backgroundColor: "black" } };
   const obj9 = { style: { position: "absolute", top: overflowTop - xs, left: overflowHorizontal - xs, width: 2 * xs, height: 2 * xs, borderRadius: xs, backgroundColor: "black" } };
-  tmp13 = _modDef7002;
-  obj18.uri = _modDef9447;
+  tmp13 = _modDef7026;
+  obj18.uri = _modDef9478;
   obj17.source = obj18;
   obj17.style = tmp.sampleProfile;
   obj16.children = timestampProducer(FastImageDefault, obj17);

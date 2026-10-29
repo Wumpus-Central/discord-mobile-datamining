@@ -1,16 +1,16 @@
-// === Module 11149: useTenureBadging ===
+// === Module 11203: useTenureBadging ===
 
-// Module 11149 (useTenureBadging)
+// Module 11203 (useTenureBadging)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7747 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11150 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11151 */;
-import UserProfileStore from "UserProfileStore" /* 7738 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7769 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11204 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11205 */;
+import UserProfileStore from "UserProfileStore" /* 7760 */;
 import UserStore from "UserStore" /* 1389 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
 import PremiumConstants from "PremiumConstants" /* 1391 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
@@ -168,11 +168,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremium
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isPremiumExactlyResult = tmp(1988).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+    const isPremiumExactlyResult = tmp(1989).isPremiumExactly(stateFromStores, closure_6.TIER_2);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumExactlyResult;
     let tmp8 = isPremiumExactlyResult;
-    const tmpResult3 = tmp(1988);
+    const tmpResult3 = tmp(1989);
   } else {
     tmp8 = cResult[3];
   }

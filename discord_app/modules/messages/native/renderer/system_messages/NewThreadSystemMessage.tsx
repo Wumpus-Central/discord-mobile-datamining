@@ -1,20 +1,20 @@
-// === Module 8414: NewThreadSystemMessage ===
+// === Module 8436: NewThreadSystemMessage ===
 
-// Module 8414 (NewThreadSystemMessage)
+// Module 8436 (NewThreadSystemMessage)
 import util from "util" /* 1125 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
 
-export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
+export function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const messageReference = message.messageReference;
@@ -40,4 +40,4 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   obj2.threadOnClick = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: intl.formatToParts(util.t.veX9jq, obj2) };
-};
+}

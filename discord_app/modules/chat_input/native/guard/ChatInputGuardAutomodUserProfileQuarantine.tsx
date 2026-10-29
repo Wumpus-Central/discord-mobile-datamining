@@ -1,15 +1,15 @@
-// === Module 13620: ChatInputGuardAutomodUserProfileQuarantine ===
+// === Module 13853: ChatInputGuardAutomodUserProfileQuarantine ===
 
-// Module 13620 (ChatInputGuardAutomodUserProfileQuarantine)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4942 */;
-import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 12869 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13591 */;
+// Module 13853 (ChatInputGuardAutomodUserProfileQuarantine)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4943 */;
+import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 13090 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13824 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 
 require = fn;
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -200,7 +200,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return;
           }
         }
-        const tmp20 = jsx(tmp(13621).ChatXIcon, {});
+        const tmp20 = jsx(tmp(13854).ChatXIcon, {});
         cResult[12] = tmp20;
         const tmp19 = tmp20;
       } else {
@@ -249,7 +249,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
   }, items2);
   const obj = guildId(504);
-  const automodReason = guildId(4942).getAutomodReason(stateFromStores);
+  const automodReason = guildId(4943).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
     const intl2 = tmp(1125).intl;
     let stringResult = intl2.string(tmp(1125).t.Viksoo);
@@ -265,8 +265,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     stringResult1 = intl3.string(tmp(1125).t["8HW7r9"]);
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
-  const obj2 = guildId(4942);
-  obj3.icon = jsx(guildId(13621).ChatXIcon, {});
+  const obj2 = guildId(4943);
+  obj3.icon = jsx(guildId(13854).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 }));

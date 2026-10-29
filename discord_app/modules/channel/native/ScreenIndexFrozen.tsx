@@ -1,6 +1,6 @@
-// === Module 5196: ScreenIndexFrozen ===
+// === Module 5197: ScreenIndexFrozen ===
 
-// Module 5196 (ScreenIndexFrozen)
+// Module 5197 (ScreenIndexFrozen)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -25,14 +25,14 @@ function removeFrozenScreenIndexesChangedListener(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ScreenIndexFrozen.tsx");
 
-export const freezeScreenIndex = function freezeScreenIndex(shouldFreeze, arg1) {
+export function freezeScreenIndex(shouldFreeze, arg1) {
   if (shouldFreeze) {
     set.add(arg1);
   } else {
     set.delete(arg1);
   }
   const item = set1.forEach((fn) => fn());
-};
+}
 export { isScreenIndexFrozen };
 export { addFrozenScreenIndexesChangedListener };
 export { removeFrozenScreenIndexesChangedListener };

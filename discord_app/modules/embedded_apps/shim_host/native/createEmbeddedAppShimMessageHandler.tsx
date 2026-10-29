@@ -1,12 +1,12 @@
-// === Module 11508: createEmbeddedAppShimMessageHandler ===
+// === Module 11562: createEmbeddedAppShimMessageHandler ===
 
-// Module 11508 (createEmbeddedAppShimMessageHandler)
-import bridgeProtocol from "bridgeProtocol" /* 11510 */;
+// Module 11562 (createEmbeddedAppShimMessageHandler)
+import bridgeProtocol from "bridgeProtocol" /* 11564 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/embedded_apps/shim_host/native/createEmbeddedAppShimMessageHandler.tsx");
 
-export const createEmbeddedAppShimMessageHandler = function createEmbeddedAppShimMessageHandler(id, shellBridgeSecret, arg2) {
+export function createEmbeddedAppShimMessageHandler(id, shellBridgeSecret, arg2) {
   closure_2 = arg2;
   const map = new Map();
   return {
@@ -56,4 +56,4 @@ export const createEmbeddedAppShimMessageHandler = function createEmbeddedAppShi
       map.clear();
     }
   };
-};
+}

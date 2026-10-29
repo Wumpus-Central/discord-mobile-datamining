@@ -1,34 +1,34 @@
-// === Module 13221: CheckpointServersStatsScreen ===
+// === Module 13455: CheckpointServersStatsScreen ===
 
-// Module 13221 (CheckpointServersStatsScreen)
+// Module 13455 (CheckpointServersStatsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3057 from "module_3057" /* 3057 */;
-import _modDef3089 from "module_3089" /* 3089 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import GuildIcon from "GuildIcon" /* 6919 */;
-import CheckpointTextDefault from "CheckpointText" /* 13204 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13206 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13209 */;
-import _modDef13215 from "module_13215" /* 13215 */;
-import _modDef13216 from "module_13216" /* 13216 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13222 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13223 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13224 */;
+import _modDef3058 from "module_3058" /* 3058 */;
+import _modDef3090 from "module_3090" /* 3090 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import GuildIcon from "GuildIcon" /* 6943 */;
+import CheckpointTextDefault from "CheckpointText" /* 13436 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13438 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13442 */;
+import _modDef13443 from "module_13443" /* 13443 */;
+import _modDef13444 from "module_13444" /* 13444 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13456 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13457 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13458 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13015 */;
+import CheckpointStore from "CheckpointStore" /* 13236 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6050);
+const CheckpointConstants = fn(6054);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, globalContainer: null, header: null, heading: null, globalHeading: null, globe: null, title: null, titleText: null, guilds: null, globalGuilds: null, guildCard: null, guildContent: null, guildRankRow: null, guildDetails: null, guildName: null, topGuildIcon: null, guildIcon: null, globalGuildIcon: null };
 let obj3 = { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.globalContainer = { justifyContent: "flex-start", gap: nativeDefault.space.PX_24 };
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       ({ container, header, heading, title } = tmp4);
       if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-        const tmp12 = closure_6(tmp(9680).ServerIcon, obj2);
+        const tmp12 = closure_6(tmp(9712).ServerIcon, obj2);
         cResult[26] = tmp12;
         let tmp9 = tmp12;
       } else {
@@ -236,10 +236,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       const _Symbol = Symbol;
       if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1125).intl;
-        const toLocaleUpperCaseResult = intl.string(_modDef3089.Mb5E6r).toLocaleUpperCase();
+        const toLocaleUpperCaseResult = intl.string(_modDef3090.Mb5E6r).toLocaleUpperCase();
         cResult[27] = toLocaleUpperCaseResult;
         let tmp13 = toLocaleUpperCaseResult;
-        const stringResult = intl.string(_modDef3089.Mb5E6r);
+        const stringResult = intl.string(_modDef3090.Mb5E6r);
       } else {
         tmp13 = cResult[27];
       }
@@ -256,11 +256,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
             const obj3 = { children: null };
             const intl2 = tmp(1125).intl;
             const tmp26 = CheckpointDisplayTextDefault;
-            obj3.children = intl2.string(_modDef3057.F0fkrh).toLocaleUpperCase();
+            obj3.children = intl2.string(_modDef3058.F0fkrh).toLocaleUpperCase();
             const tmp27 = closure_6(tmp26, obj3);
             cResult[34] = tmp27;
             let tmp23 = tmp27;
-            const stringResult1 = intl2.string(_modDef3057.F0fkrh);
+            const stringResult1 = intl2.string(_modDef3058.F0fkrh);
           } else {
             tmp23 = cResult[34];
           }
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj4 = { variant: "heading-lg/medium", children: null };
                 const intl3 = tmp(1125).intl;
-                obj4.children = intl3.string(_modDef3089.IN1DaS);
+                obj4.children = intl3.string(_modDef3090.IN1DaS);
                 const tmp36 = closure_6(CheckpointTextDefault, obj4);
                 cResult[39] = tmp36;
                 let tmp32 = tmp36;
@@ -479,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         cResult[33] = tmp22;
         tmp20 = tmp22;
       }
-      const obj11 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: tmp13 };
+      const obj11 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp4.titleText, children: tmp13 };
       const tmp19 = closure_6(CheckpointTextDefault, obj11);
       cResult[28] = tmp4.titleText;
       cResult[29] = tmp13;
@@ -522,8 +522,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return tmp2(tmp3, obj, guild.id);
         }
       }
-      obj12.animatedUri = _modDef13215;
-      obj12.staticUri = _modDef13216;
+      obj12.animatedUri = _modDef13443;
+      obj12.staticUri = _modDef13444;
       obj12.style = tmp4.globe;
       const tmp60 = closure_6(tmp59, obj12);
       cResult[5] = tmp4.globe;
@@ -563,7 +563,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       }
     }
     if (tmp61 === Symbol.for("react.memo_cache_sentinel")) {
-      const obj13 = { children: null };
+      const obj13 = { isStepHeading: true, children: null };
       class B {
         constructor(arg0, arg1) {
           ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
@@ -594,11 +594,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         }
       }
       const intl4 = tmp(1125).intl;
-      obj13.children = intl4.string(_modDef3057.F0fkrh).toLocaleUpperCase();
+      obj13.children = intl4.string(_modDef3058.F0fkrh).toLocaleUpperCase();
       const tmp66 = closure_6(tmp65, obj13);
       cResult[7] = tmp66;
       let tmp62 = tmp66;
-      const stringResult2 = intl4.string(_modDef3057.F0fkrh);
+      const stringResult2 = intl4.string(_modDef3058.F0fkrh);
     } else {
       tmp62 = cResult[7];
     }
@@ -829,27 +829,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       const obj5 = { style: tmp.heading, children: null };
       const obj6 = { style: tmp.title, children: null };
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_6(tmp2(9680).ServerIcon, obj7), ];
-      const obj8 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+      const items1 = [closure_6(tmp2(9712).ServerIcon, obj7), ];
+      const obj8 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const tmp16 = CheckpointScreenDefault;
       const intl3 = tmp2(1125).intl;
       const tmp20 = CheckpointTextDefault;
-      obj8.children = intl3.string(_modDef3089.Mb5E6r).toLocaleUpperCase();
+      obj8.children = intl3.string(_modDef3090.Mb5E6r).toLocaleUpperCase();
       items1[1] = closure_6(tmp20, obj8);
       obj6.children = items1;
       const items2 = [closure_7(View, obj6), ];
       const obj9 = { children: null };
-      const stringResult = intl3.string(_modDef3089.Mb5E6r);
+      const stringResult = intl3.string(_modDef3090.Mb5E6r);
       const intl4 = tmp2(1125).intl;
       const tmp21 = CheckpointDisplayTextDefault;
-      obj9.children = intl4.string(_modDef3057.F0fkrh).toLocaleUpperCase();
+      obj9.children = intl4.string(_modDef3058.F0fkrh).toLocaleUpperCase();
       items2[1] = closure_6(tmp21, obj9);
       obj5.children = items2;
       const items3 = [closure_7(View, obj5), ];
       const obj10 = { variant: "heading-lg/medium", children: null };
-      const stringResult1 = intl4.string(_modDef3057.F0fkrh);
+      const stringResult1 = intl4.string(_modDef3058.F0fkrh);
       const intl5 = tmp2(1125).intl;
-      obj10.children = intl5.string(_modDef3089.IN1DaS);
+      obj10.children = intl5.string(_modDef3090.IN1DaS);
       items3[1] = closure_6(CheckpointTextDefault, obj10);
       obj4.children = items3;
       const items4 = [closure_7(View, obj4), ];
@@ -890,21 +890,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let obj = require("initialize");
   const obj15 = { animatedUri: null, staticUri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.animatedUri = _modDef13215;
-  obj15.staticUri = _modDef13216;
+  obj15.animatedUri = _modDef13443;
+  obj15.staticUri = _modDef13444;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15), ];
-  const obj16 = { children: null };
+  const obj16 = { isStepHeading: true, children: null };
   const intl = tmp2(1125).intl;
   const tmp10 = CheckpointDisplayTextDefault;
-  obj16.children = intl.string(_modDef3057.F0fkrh).toLocaleUpperCase();
+  obj16.children = intl.string(_modDef3058.F0fkrh).toLocaleUpperCase();
   items6[1] = closure_6(tmp10, obj16);
   obj14.children = items6;
   const items7 = [closure_7(View, obj14), ];
   const obj17 = { variant: "heading-lg/medium", children: null };
-  const stringResult2 = intl.string(_modDef3057.F0fkrh);
+  const stringResult2 = intl.string(_modDef3058.F0fkrh);
   const intl2 = tmp2(1125).intl;
-  obj17.children = intl2.string(_modDef3089.bhnqop);
+  obj17.children = intl2.string(_modDef3090.bhnqop);
   items7[1] = closure_6(CheckpointTextDefault, obj17);
   obj13.children = items7;
   const items8 = [closure_7(View, obj13), ];

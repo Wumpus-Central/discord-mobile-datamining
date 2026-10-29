@@ -1,15 +1,15 @@
-// === Module 11521: transformMessage ===
+// === Module 11575: transformMessage ===
 
-// Module 11521 (transformMessage)
+// Module 11575 (transformMessage)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import Server from "Server" /* 1997 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
-import useMessageAuthor from "useMessageAuthor" /* 6401 */;
-import transformUserDefault from "transformUser" /* 9294 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 11522 */;
+import Server from "Server" /* 1998 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
+import useMessageAuthor from "useMessageAuthor" /* 6425 */;
+import transformUserDefault from "transformUser" /* 9298 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 11576 */;
 import UserRecord from "UserRecord" /* 1403 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -271,7 +271,7 @@ const MessageEmbedTypes = fn(1084).MessageEmbedTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformMessage.tsx");
 
-export const transformMessageRecord = function transformMessageRecord(id) {
+export function transformMessageRecord(id) {
   let obj = { id: id.id, channel_id: id.channel_id, guild_id: null, author: null, content: null, timestamp: null, edited_timestamp: null, tts: null, mention_everyone: null, mentions: null, mention_roles: null, mention_channels: null, attachments: null, embeds: null, components: null, reactions: null, nonce: null, pinned: null, webhook_id: null, type: null, activity: null, application: null, application_id: null, message_reference: null, flags: null, sticker_items: null, poll: null, interaction_metadata: null, role_subscription_data: null, blocked: null };
   const channel = ChannelStore.getChannel(id.channel_id);
   let guild_id;
@@ -478,8 +478,8 @@ export const transformMessageRecord = function transformMessageRecord(id) {
   obj9.author_color = colorString;
   const merged2 = Object.assign(obj9);
   return obj;
-};
-export const transformServerMessage = function transformServerMessage(message) {
+}
+export function transformServerMessage(message) {
   let tmp;
   if (null != message.author) {
     tmp = new UserRecord(message.author);
@@ -611,4 +611,4 @@ export const transformServerMessage = function transformServerMessage(message) {
   obj7.author_color = colorString;
   const merged2 = Object.assign(obj7);
   return obj;
-};
+}

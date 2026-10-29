@@ -1,11 +1,11 @@
-// === Module 12578: ConjureCreateSheet ===
+// === Module 12797: ConjureCreateSheet ===
 
-// Module 12578 (ConjureCreateSheet)
+// Module 12797 (ConjureCreateSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 12257 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 12580 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 12584 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 12311 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 12791 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 12801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -94,7 +94,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -219,7 +219,7 @@ export default function ConjureCreateSheet(guildId) {
               const obj4 = { installScope, prompt: trimmed };
               c4 = 1;
               c3 = 1;
-              const obj5 = { value: callback((arg0) => trimmed(c2[15]).startConjurePrompt(arg0, trimmed), obj4), done: false };
+              const obj5 = { value: callback((arg0) => trimmed(onCreated[15]).startConjurePrompt(arg0, trimmed, [], trimmed), obj4), done: false };
               return obj5;
             }
           }
@@ -232,14 +232,14 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp12) {
         c3 = tmp;
         throw tmp12;
       }
     }
   });
-  const items1 = [callback, initialInstallScope, str, disabled];
+  const items1 = [callback, guildId, initialInstallScope, str, disabled];
   closure_12 = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -265,7 +265,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -443,7 +443,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -469,7 +469,7 @@ export default function ConjureCreateSheet(guildId) {
               const obj5 = { key: "ConjureImportInstallScope", stackingBehavior: "stack", header: null, hasIcons: false, options: null };
               const obj6 = { title: null };
               let intl = _null(1125).intl;
-              obj6.title = intl.string(v3(3863).NyVn6T);
+              obj6.title = intl.string(v3(3864).NyVn6T);
               obj5.header = obj6;
               const items = ["guild", "user"];
               obj5.options = items.map((item) => {
@@ -487,8 +487,8 @@ export default function ConjureCreateSheet(guildId) {
                   }
                 };
               });
-              const result = _null(7327).showSimpleActionSheet(obj5);
-              const obj3 = _null(7327);
+              const result = _null(7351).showSimpleActionSheet(obj5);
+              const obj3 = _null(7351);
             } else {
               dependencyMap = 1;
               v3 = 1;
@@ -505,7 +505,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp15) {
         v3 = tmp;
         throw tmp15;

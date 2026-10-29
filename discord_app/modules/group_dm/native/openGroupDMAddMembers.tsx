@@ -1,13 +1,13 @@
-// === Module 11332: openGroupDMAddMembers ===
+// === Module 11386: openGroupDMAddMembers ===
 
-// Module 11332 (openGroupDMAddMembers)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import ToastUtils from "ToastUtils" /* 5698 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11333 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11334 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11336 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11337 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+// Module 11386 (openGroupDMAddMembers)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import ToastUtils from "ToastUtils" /* 5700 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11387 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11388 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11390 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11391 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -60,10 +60,10 @@ export default function openGroupDMAddMembers(channelId, locationPage) {
   }
 };
 export { getGroupDMAddMembersAction };
-export const showGroupDMAddMembersRoadblock = function showGroupDMAddMembersRoadblock(groupDMAddMembersAction, CHANNEL_TEXT_AREA) {
+export function showGroupDMAddMembersRoadblock(groupDMAddMembersAction, CHANNEL_TEXT_AREA) {
   if ("upsell" === groupDMAddMembersAction) {
     openGroupDMNitroCapLimitSheetDefault(CHANNEL_TEXT_AREA);
   } else {
     ToastUtils.showMaxGroupMembers();
   }
-};
+}

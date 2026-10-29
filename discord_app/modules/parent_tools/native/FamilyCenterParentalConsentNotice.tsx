@@ -1,9 +1,9 @@
-// === Module 16431: FamilyCenterParentalConsentNotice ===
+// === Module 16669: FamilyCenterParentalConsentNotice ===
 
-// Module 16431 (FamilyCenterParentalConsentNotice)
+// Module 16669 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 16432 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 16670 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 let c5 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
               return tmp14;
             }
             const obj4 = { style: tmp3.container, text: cResult[5] };
-            const tmp17 = jsx(onPress(16432), { style: tmp3.container, text: cResult[5] });
+            const tmp17 = jsx(onPress(16670), { style: tmp3.container, text: cResult[5] });
             cResult[6] = tmp3.container;
             cResult[7] = cResult[5];
             cResult[8] = tmp17;
@@ -75,13 +75,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         }
         if (0 === daysRemaining) {
           const intl2 = S5kmfO(1125).intl;
-          S5kmfO = onPress(2535).S5kmfO;
+          S5kmfO = onPress(2536).S5kmfO;
           const obj5 = { learnMoreHook: tmp8 };
           let formatResult = intl2.format(S5kmfO, obj5);
         } else {
           const intl = S5kmfO(1125).intl;
           const obj6 = { count: daysRemaining, learnMoreHook: tmp8 };
-          formatResult = intl.format(onPress(2535)["5jm+T3"], obj6);
+          formatResult = intl.format(onPress(2536)["5jm+T3"], obj6);
         }
         cResult[3] = daysRemaining;
         cResult[4] = tmp8;
@@ -116,11 +116,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         if (0 === daysRemaining) {
           const intl2 = tmp2(1125).intl;
           const obj4 = { learnMoreHook };
-          let formatResult = intl2.format(tmp9(2535).S5kmfO, obj4);
+          let formatResult = intl2.format(tmp9(2536).S5kmfO, obj4);
         } else {
           const intl = tmp2(1125).intl;
           const obj5 = { count: daysRemaining, learnMoreHook };
-          formatResult = intl.format(tmp9(2535)["5jm+T3"], obj5);
+          formatResult = intl.format(tmp9(2536)["5jm+T3"], obj5);
         }
         obj3.text = formatResult;
         return jsx(FamilyCenterInlineWarningNoticeDefault, { style: tmp.container, text: null });

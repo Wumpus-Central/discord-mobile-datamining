@@ -1,13 +1,13 @@
-// === Module 9510: StorefrontCollectionActionCreators ===
+// === Module 9542: StorefrontCollectionActionCreators ===
 
-// Module 9510 (StorefrontCollectionActionCreators)
+// Module 9542 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import StoreUtils from "StoreUtils" /* 6418 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8747 */;
+import StoreUtils from "StoreUtils" /* 6442 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8750 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9508 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7702 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9540 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7725 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -182,7 +182,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
           closure_130_18 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -286,7 +286,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionPageFetchedAt <= closure_130_17) {
                         c7 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     }
                   }
@@ -372,7 +372,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -424,7 +424,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionsAfterFetchedAt <= TWELVE_HOURS_MS) {
                         c6 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     }
                   }
@@ -493,7 +493,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -542,7 +542,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -575,7 +575,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
                       }
                     }
                     c6 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 }
                 c4 = 1;
@@ -651,7 +651,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 
-export const maybeFetchCollectionsWithProducts = function maybeFetchCollectionsWithProducts() {
+export function maybeFetchCollectionsWithProducts() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -660,10 +660,10 @@ export const maybeFetchCollectionsWithProducts = function maybeFetchCollectionsW
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { getCollectionListKey };
 export { getCollectionPageKey };
-export const maybeFetchCollectionsForApplicationPage = function maybeFetchCollectionsForApplicationPage() {
+export function maybeFetchCollectionsForApplicationPage() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -672,9 +672,9 @@ export const maybeFetchCollectionsForApplicationPage = function maybeFetchCollec
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { getCollectionsAfterKey };
-export const maybeFetchCollectionsAfter = function maybeFetchCollectionsAfter() {
+export function maybeFetchCollectionsAfter() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -683,8 +683,8 @@ export const maybeFetchCollectionsAfter = function maybeFetchCollectionsAfter() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const maybeFetchCollectionsForApplication = function maybeFetchCollectionsForApplication() {
+}
+export function maybeFetchCollectionsForApplication() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -693,4 +693,4 @@ export const maybeFetchCollectionsForApplication = function maybeFetchCollection
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

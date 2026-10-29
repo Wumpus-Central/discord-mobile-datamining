@@ -1,18 +1,18 @@
-// === Module 9697: ThreadCreationHooks ===
+// === Module 9729: ThreadCreationHooks ===
 
-// Module 9697 (ThreadCreationHooks)
+// Module 9729 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ThreadHooks from "ThreadHooks" /* 7406 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7418 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7601 */;
-import MessageParserDefault from "MessageParser" /* 7790 */;
+import ThreadHooks from "ThreadHooks" /* 7429 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7441 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7624 */;
+import MessageParserDefault from "MessageParser" /* 7812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7439 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7462 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MessageStore from "MessageStore" /* 6045 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MessageStore from "MessageStore" /* 6049 */;
 
 const require = globalThis.__r;
 
@@ -147,11 +147,11 @@ function buildMessageActivity(activity) {
   }
   return tmp3;
 }
-function sendMessage(id, arr, items, key, fn) {
+function sendMessage(id, arg1, items, arg3, fn) {
   if (null != fn) {
-    if (null != key) {
-      if (key.length > 0) {
-        fn(id, key, arr, items);
+    if (null != arg3) {
+      if (arg3.length > 0) {
+        fn(id, arg3, arg1, items);
       }
     }
   }
@@ -160,12 +160,12 @@ function sendMessage(id, arr, items, key, fn) {
       const obj4 = MessageActionCreatorsDefault;
       id = id.id;
       const obj3 = { location: MessageSendLocation.THREAD_CREATION };
-      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arr), obj3);
+      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arg1), obj3);
     }
     return sendStickersResult;
   }
   obj = MessageActionCreatorsDefault;
-  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arr), undefined, { location: MessageSendLocation.THREAD_CREATION });
+  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arg1), undefined, { location: MessageSendLocation.THREAD_CREATION });
   const obj6 = { location: MessageSendLocation.THREAD_CREATION };
 }
 function createThread_() {
@@ -463,13 +463,13 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7666).DraftType;
-const SlowmodeType = fn(7795).SlowmodeType;
+const DraftType = fn(7689).DraftType;
+const SlowmodeType = fn(7818).SlowmodeType;
 const ThreadConstants = fn(1124);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1084);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(5009).MessageSendLocation;
+const MessageSendLocation = fn(5010).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -533,7 +533,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -628,7 +628,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -683,7 +683,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -778,7 +778,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -807,7 +807,7 @@ export const usePrivateThreadMode = tmp4;
 export { getIsPrivate };
 export { getDefaultThreadName };
 export const useCreateThreadCommon = tmp5;
-export const createThread = function createThread(arg0, name, type, auto_archive_duration, _location) {
+export function createThread(arg0, name, type, auto_archive_duration, _location) {
   const id = arg0;
   return createThread_(arg0, [], undefined, () => {
     const HTTP = HTTPUtils.HTTP;
@@ -816,7 +816,7 @@ export const createThread = function createThread(arg0, name, type, auto_archive
     request.body = body;
     return HTTP.post(request);
   });
-};
+}
 export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateForumPostCommon(parentChannel) {
   const cResult = require("c").c(10);
   parentChannel = parentChannel.parentChannel;
@@ -865,7 +865,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1111,7 +1111,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

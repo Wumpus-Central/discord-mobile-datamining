@@ -1,7 +1,7 @@
-// === Module 10829: conjureMediaTickets ===
+// === Module 10905: conjureMediaTickets ===
 
-// Module 10829 (conjureMediaTickets)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10762 */;
+// Module 10905 (conjureMediaTickets)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10837 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const map = new Map();
 const map1 = new Map();
 let result = size.fileFinishedImporting("modules/conjure/connection/conjureMediaTickets.tsx");
 
-export const getMediaTicket = function getMediaTicket(projectId) {
+export function getMediaTicket(projectId) {
   _require = projectId;
   value = map.get(projectId);
   if (null != value) {
@@ -56,12 +56,12 @@ export const getMediaTicket = function getMediaTicket(projectId) {
     let result = map1.set(projectId, cleanupPromise);
     return cleanupPromise;
   }
-};
-export const retireMediaTicket = function retireMediaTicket(id) {
+}
+export function retireMediaTicket(id) {
   map.delete(id);
   ConjureWorkerTickets.forgetEarlyTicket(id);
-};
-export const clearMediaTickets = function clearMediaTickets() {
+}
+export function clearMediaTickets() {
   map.clear();
   ConjureWorkerTickets.forgetEarlyTickets();
-};
+}

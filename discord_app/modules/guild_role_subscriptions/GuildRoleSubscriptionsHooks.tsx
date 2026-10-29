@@ -1,21 +1,21 @@
-// === Module 16840: GuildRoleSubscriptionsHooks ===
+// === Module 17078: GuildRoleSubscriptionsHooks ===
 
-// Module 16840 (GuildRoleSubscriptionsHooks)
+// Module 17078 (GuildRoleSubscriptionsHooks)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7392 */;
-import useRequestDefault from "useRequest" /* 12153 */;
-import subscriptionUtils from "subscriptionUtils" /* 16842 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7415 */;
+import useRequestDefault from "useRequest" /* 12207 */;
+import subscriptionUtils from "subscriptionUtils" /* 17080 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4929 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4930 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(4929).FetchState;
+const FetchState = fn(4930).FetchState;
 let closure_10 = [];
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchListingsForGuild(arg0, arg1) {
@@ -806,7 +806,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx");
 
 export const useFetchListingsForGuild = tmp2;
-export const useCreateSubscriptionGroupListing = function useCreateSubscriptionGroupListing() {
+export function useCreateSubscriptionGroupListing() {
   closure_2 = async function _createSubscriptionGroupListing(arg0) {
     if (c6 === 2) {
       c6 = 3;
@@ -818,7 +818,7 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -850,7 +850,7 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -898,8 +898,8 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
     },
     error: tmp2[0]
   };
-};
-export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionGroupListing() {
+}
+export function useUpdateSubscriptionGroupListing() {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
@@ -914,7 +914,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -947,7 +947,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -991,14 +991,14 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
     }, []),
     error: tmp2[0]
   };
-};
+}
 export const useSubscriptionListingsForGroup = tmp3;
 export const useSubscriptionListing = tmp4;
 export const useSubscriptionGroupListing = tmp5;
 export const useGroupListingsForGuild = tmp6;
 export const useSubscriptionListingsForGuild = tmp7;
 export const useFetchListingsForSubscriptions = tmp8;
-export const useDeleteSubscriptionListing = function useDeleteSubscriptionListing() {
+export function useDeleteSubscriptionListing() {
   closure_2 = async function _deleteSubscriptionListing(arg0) {
     if (c7 === 2) {
       c7 = 3;
@@ -1010,7 +1010,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1042,7 +1042,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
           c6 = 0;
           closure_131_0(false);
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -1089,9 +1089,9 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
       return applyArgumentsResult;
     }
   };
-};
+}
 export const useArchiveSubscriptionListing = tmp9;
-export const usePublishSubscriptionListing = function usePublishSubscriptionListing() {
+export function usePublishSubscriptionListing() {
   closure_2 = async function _publishSubscriptionListing(arg0) {
     if (c6 === 2) {
       c6 = 3;
@@ -1103,7 +1103,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1124,7 +1124,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             ({ guildId: closure_129_0, groupListingId: closure_129_1, listingId: closure_129_2 } = closure_0);
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {
@@ -1154,7 +1154,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
           c4 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -1203,9 +1203,9 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
       return closure_1(null);
     }
   };
-};
+}
 export const useSubscriptionsSettings = tmp10;
-export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSettings() {
+export function useUpdateSubscriptionsSettings() {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
@@ -1220,7 +1220,7 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1293,8 +1293,8 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
     }, []),
     error: tmp2[0]
   };
-};
-export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionGroupListing() {
+}
+export function useDeleteSubscriptionGroupListing() {
   closure_2 = async function _deleteSubscriptionGroupListing(arg0) {
     if (c6 === 2) {
       c6 = 3;
@@ -1306,7 +1306,7 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1338,7 +1338,7 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -1386,8 +1386,8 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
       return applyArgumentsResult;
     }
   };
-};
-export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSettings() {
+}
+export function useFetchSubscriptionsSettings() {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
@@ -1402,7 +1402,7 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1474,8 +1474,8 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
     }, []),
     error: tmp2[0]
   };
-};
-export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial() {
+}
+export function useUpdateSubscriptionsTrial() {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
@@ -1490,7 +1490,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1563,7 +1563,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
     }, []),
     error: tmp2[0]
   };
-};
+}
 export const useSubscriptionTrial = tmp11;
 export const useSubscriptionTrialsForGroup = tmp12;
 export const useSubscriptionTrialsForGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscriptionTrialsForGuild(arg0) {

@@ -1,36 +1,37 @@
-// === Module 6892: AppWindowContext ===
+// === Module 6916: AppWindowContext ===
 
-// Module 6892 (AppWindowContext)
+// Module 6916 (AppWindowContext)
 import c from "c" /* 576 */;
-import WindowIdUtils2 from "WindowIdUtils" /* 6832 */;
-import WindowInteractingUtils from "WindowInteractingUtils" /* 6893 */;
+import WindowIdUtils2 from "WindowIdUtils" /* 6855 */;
+import WindowInteractingUtils from "WindowInteractingUtils" /* 6917 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+import WindowStore from "WindowStore" /* 6854 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let componentDispatcher = new fn(1120).ComponentDispatcher();
 let obj = { appContext: fn(1084).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
-const WindowIdUtils = fn(6832);
+const WindowIdUtils = fn(6855);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWindowContextValue(appContext, renderWindow) {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWindowContextValue(appContext, renderWindow) {
   _require = renderWindow;
   const cResult = require("c").c(16);
   if (cResult[0] !== renderWindow) {
-    windowId = tmp(tmp2[5]).getWindowId(renderWindow);
+    windowId = tmp(tmp2[6]).getWindowId(renderWindow);
     cResult[0] = renderWindow;
     cResult[1] = windowId;
     let tmp4 = windowId;
-    const tmpResult = tmp(tmp2[5]);
+    const tmpResult = tmp(tmp2[6]);
   } else {
     tmp4 = cResult[1];
   }
   [windowId, _slicedToArray] = noop.useState(tmp4);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const componentDispatcher = new tmp(tmp2[4]).ComponentDispatcher();
+    const componentDispatcher = new tmp(tmp2[5]).ComponentDispatcher();
     cResult[2] = componentDispatcher;
     let tmp8 = componentDispatcher;
   } else {
@@ -60,10 +61,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWind
         }
         class E {
           constructor() {
-            result = closure_1_6.set(closure_1, closure_3);
+            result = closure_1_7.set(closure_1, closure_3);
             handleUnload = function handleUnload() { ... };
             listener = handleUnload.addEventListener("unload", handleUnload);
-            return () => { ... };
+            return /* F147205 */ function() { ... };
           }
         }
         const items = [tmp13, renderWindow, windowId];
@@ -97,7 +98,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWind
   windowId = tmp[0];
   noop = tmp[1];
   const memo = noop.useMemo(() => {
-    const componentDispatcher = new appContext(renderWindow[4]).ComponentDispatcher();
+    const componentDispatcher = new appContext(renderWindow[5]).ComponentDispatcher();
     return componentDispatcher;
   }, []);
   const items = [appContext, defaultView, memo, windowId];
@@ -164,7 +165,7 @@ const result3 = size.fileFinishedImporting("modules/main_app_window/web/AppWindo
 export default context;
 export const MainWindowDispatch = componentDispatcher;
 export { getWindowDispatchForElement };
-export const getWindowDispatchForEvent = function getWindowDispatchForEvent(target) {
+export function getWindowDispatchForEvent(target) {
   target = undefined;
   if (target != null) {
     target = target.target;
@@ -188,12 +189,12 @@ export const getWindowDispatchForEvent = function getWindowDispatchForEvent(targ
     tmp4 = tmp5;
   }
   return tmp4;
-};
+}
 export { getCurrentlyInteractingAppWindowContext };
-export const getAppWindowContextValue = function getAppWindowContextValue(arg0) {
+export function getAppWindowContextValue(arg0) {
   return map.get(arg0);
-};
-export const getCurrentlyInteractingAppContext = function getCurrentlyInteractingAppContext() {
+}
+export function getCurrentlyInteractingAppContext() {
   const currentlyInteractingWindowId = WindowInteractingUtils.getCurrentlyInteractingWindowId();
   let tmp2 = null;
   if (null != currentlyInteractingWindowId) {
@@ -208,11 +209,26 @@ export const getCurrentlyInteractingAppContext = function getCurrentlyInteractin
     appContext = tmp2.appContext;
   }
   return appContext;
-};
+}
+export function getFocusedOrLastFocusedAppWindowContext() {
+  let focusedWindowId = WindowStore.getFocusedWindowId();
+  if (focusedWindowId == null) {
+    focusedWindowId = WindowStore.getLastFocusedWindowId();
+  }
+  let tmp2 = null;
+  if (null != focusedWindowId) {
+    value = map.get(focusedWindowId);
+    if (value == null) {
+      value = null;
+    }
+    tmp2 = value;
+  }
+  return tmp2;
+}
 export const AppWindowContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function AppWindowContextProvider(children) {
   const cResult = c.c(3);
   children = children.children;
-  const tmp2 = closure_7(children.appContext, children.renderWindow);
+  const tmp2 = closure_8(children.appContext, children.renderWindow);
   if (cResult[0] === children) {
     if (cResult[1] === tmp2) {
       let tmp3 = cResult[2];
@@ -225,14 +241,14 @@ export const AppWindowContextProvider = ReactCompilerGating.isReactCompilerEnabl
   cResult[2] = tmp4;
   tmp3 = tmp4;
 }) : (function AppWindowContextProvider(appContext) {
-  return <context.Provider value={closure_7(appContext.appContext, appContext.renderWindow)}>{appContext.children}</context.Provider>;
+  return <context.Provider value={closure_8(appContext.appContext, appContext.renderWindow)}>{appContext.children}</context.Provider>;
 });
-export const useAppContext = function useAppContext() {
+export function useAppContext() {
   return noop.useContext(context).appContext;
-};
-export const useWindowDispatch = function useWindowDispatch() {
+}
+export function useWindowDispatch() {
   return noop.useContext(context).windowDispatch;
-};
-export const useRenderWindow = function useRenderWindow() {
+}
+export function useRenderWindow() {
   return noop.useContext(context).renderWindow;
-};
+}

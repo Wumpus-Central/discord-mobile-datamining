@@ -1,10 +1,10 @@
-// === Module 11589: ChannelCallNavigatorIcon ===
+// === Module 11643: ChannelCallNavigatorIcon ===
 
-// Module 11589 (ChannelCallNavigatorIcon)
+// Module 11643 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5622 */;
-import Pressables from "Pressables" /* 6944 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5623 */;
+import Pressables from "Pressables" /* 6968 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,12 +12,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(10921).resetFocusTimer;
+const resetFocusTimer = fn(10956).resetFocusTimer;
 const Constants = fn(1084);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { pressableContainer: { marginHorizontal: 4 }, pressable: { borderRadius: nativeDefault.radii.lg }, container: null, text: null, disabled: null, iconColor: null };
 let size = { flexDirection: "row", height: 32, width: 32, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = size;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
                       const obj3 = { accessibilityRole: "button", accessibilityLabel, disabled, style: tmp6.pressable, onPress: tmp7, children: null };
                       const items = [tmp24, children];
                       obj3.children = items;
-                      const tmp30 = closure_8(tmp(6944).PressableOpacity, obj3);
+                      const tmp30 = closure_8(tmp(6968).PressableOpacity, obj3);
                       cResult[21] = accessibilityLabel;
                       cResult[22] = children;
                       cResult[23] = disabled;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
       cResult[7] = theme;
       cResult[8] = tmp10;
       tmp9 = tmp10;
-      tmpResult = tmp(5011);
+      tmpResult = tmp(5012);
     }
   }
   const items2 = [tmp6.container, containerStyle, disabled2];

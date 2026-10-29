@@ -1,8 +1,8 @@
-// === Module 17302: mfa/MFAActionCreators ===
+// === Module 17541: mfa/MFAActionCreators ===
 
-// Module 17302 (mfa/MFAActionCreators)
-import MFAConstants from "MFAConstants" /* 17303 */;
-import MFA from "MFA" /* 17313 */;
+// Module 17541 (mfa/MFAActionCreators)
+import MFAConstants from "MFAConstants" /* 17542 */;
+import MFA from "MFA" /* 17552 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 const SELECT_NAMES = MFAConstants.SELECT_NAMES;
 const result = size.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
 
-export const openMFAModal = function openMFAModal(methods, arg1, cancel) {
+export function openMFAModal(methods, arg1, cancel) {
   _require = arg1;
   methods = methods.methods;
   methods.methods = methods.filter((type) => Object.hasOwn(SELECT_NAMES, type.type));
   require("MFAModal").openMFAModal(methods, function finish(arg0) {
     return MFA.trySubmit(arg0, closure_0);
   }, cancel);
-};
+}

@@ -1,9 +1,9 @@
-// === Module 17678: AgeGateUnderage ===
+// === Module 17916: AgeGateUnderage ===
 
-// Module 17678 (AgeGateUnderage)
+// Module 17916 (AgeGateUnderage)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6960 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7073 */;
+import NavigatorHeader from "NavigatorHeader" /* 6984 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7097 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
   const tmp8 = useWideAuthViewDefault();
   const tmp9 = closure_9(tmp8);
   let obj = onClose(576);
-  const navigation = onClose(1502).useNavigation();
+  const navigation = onClose(1503).useNavigation();
   if (cResult[0] === (undefined !== disableSwipe && disableSwipe)) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === navigation) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
         }
         const layoutEffect = navigation.useLayoutEffect(tmp11, tmp12);
         if (cResult[6] !== onClose) {
-          const fn2 = function f() {
+          const fn2 = function y() {
             onClose();
             return true;
           };
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
         } else {
           tmp15 = cResult[7];
         }
-        tmp(6966).useNavigatorBackPressHandler(tmp15);
+        tmp(6990).useNavigatorBackPressHandler(tmp15);
         if (cResult[8] !== tmp4) {
           const intl = tmp(1125).intl;
           const string = intl.string;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           if (cResult[10] !== tmp8) {
             let tmp22 = null;
             if (!tmp8) {
-              tmp22 = closure_6(tmp7(7104), {});
+              tmp22 = closure_6(tmp7(7128), {});
             }
             cResult[10] = tmp8;
             cResult[11] = tmp22;
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp7(7107), {});
-            const tmp29 = closure_6(tmp(7937).ShieldSpotIllustration, {});
+            const tmp28 = closure_6(tmp7(7131), {});
+            const tmp29 = closure_6(tmp(7960).ShieldSpotIllustration, {});
             cResult[12] = tmp29;
             cResult[13] = tmp28;
             let tmp26 = tmp28;
@@ -137,13 +137,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                     const obj3 = { children: null };
                     const obj4 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
                     const intl4 = tmp(1125).intl;
-                    obj4.children = intl4.format(tmp(1125).t["3axQdB"], { days: 30 });
-                    const items1 = [closure_6(tmp(5270).Text, obj4), ];
+                    obj4.children = intl4.format(tmp(1125).t.fjqIZp, { days: 30 });
+                    const items1 = [closure_6(tmp(5271).Text, obj4), ];
                     const obj5 = { style: tmp9.buttonWrapper, children: null };
                     const obj6 = { onPress: onClose, text: null, grow: true };
                     const intl5 = tmp(1125).intl;
                     obj6.text = intl5.string(tmp(1125).t.JhDw5o);
-                    obj5.children = closure_6(tmp(5280).Button, obj6);
+                    obj5.children = closure_6(tmp(5281).Button, obj6);
                     items1[1] = closure_6(View, obj5);
                     obj3.children = items1;
                     tmp43 = closure_8(closure_7, obj3);
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                   tmp42 = tmp43;
                 }
                 const obj7 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: cResult[19] };
-                const tmp41 = closure_6(tmp(5270).Text, obj7);
+                const tmp41 = closure_6(tmp(5271).Text, obj7);
                 cResult[20] = tmp9.body;
                 cResult[21] = cResult[19];
                 cResult[22] = tmp41;
@@ -172,22 +172,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                 const intl3 = tmp(1125).intl;
                 stringResult2 = intl3.string(tmp(1125).t.WqEH4D);
               }
-              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2064).getArticleURL(HelpdeskArticles.AGE_GATE) };
+              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2065).getArticleURL(HelpdeskArticles.AGE_GATE) };
               stringResult1 = intl2.format(tmp(1125).t.b0QzXe, obj8);
-              const tmp7Result = tmp7(2064);
+              const tmp7Result = tmp7(2065);
             }
             cResult[17] = tmp5;
             cResult[18] = underageMessage;
             cResult[19] = stringResult1;
           }
           const obj9 = { style: tmp9.header, children: cResult[9] };
-          const tmp32 = closure_6(tmp7(7103), obj9);
+          const tmp32 = closure_6(tmp7(7127), obj9);
           cResult[14] = cResult[9];
           cResult[15] = tmp9.header;
           cResult[16] = tmp32;
           tmp30 = tmp32;
         }
-        const tmpResult2 = tmp(6966);
+        const tmpResult2 = tmp(6990);
       }
     }
   }
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
   cResult[5] = items2;
   tmp12 = items2;
   tmp11 = fn;
-  const tmpResult = onClose(1502);
+  const tmpResult = onClose(1503);
 }) : (function AgeGateUnderage(onClose) {
   onClose = onClose.onClose;
   ({ underageMessage, existingUser } = onClose);
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
     const obj7 = { children: null };
     const obj8 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
     const intl4 = tmp5(tmp2[12]).intl;
-    obj8.children = intl4.format(tmp5(tmp2[12]).t["3axQdB"], { days: 30 });
+    obj8.children = intl4.format(tmp5(tmp2[12]).t.fjqIZp, { days: 30 });
     const items2 = [closure_6(tmp5(tmp2[18]).Text, obj8), ];
     const obj9 = { style: tmp4.buttonWrapper, children: null };
     const obj10 = { onPress: onClose, text: null, grow: true };

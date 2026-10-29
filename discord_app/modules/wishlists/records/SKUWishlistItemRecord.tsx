@@ -1,8 +1,8 @@
-// === Module 9406: SKUWishlistItemRecord ===
+// === Module 9437: SKUWishlistItemRecord ===
 
-// Module 9406 (SKUWishlistItemRecord)
-import SKURecord from "SKURecord" /* 2044 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9403 */;
+// Module 9437 (SKUWishlistItemRecord)
+import SKURecord from "SKURecord" /* 2045 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9434 */;
 
 const prototype = function SKUWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target);
@@ -52,6 +52,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
 
 export default prototype;
-export const isSKUWishlistItemRecord = function isSKUWishlistItemRecord(sku) {
+export function isSKUWishlistItemRecord(sku) {
   return sku instanceof prototype;
-};
+}

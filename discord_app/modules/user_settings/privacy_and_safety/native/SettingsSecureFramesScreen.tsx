@@ -1,13 +1,13 @@
-// === Module 17522: SettingsSecureFramesScreen ===
+// === Module 17761: SettingsSecureFramesScreen ===
 
-// Module 17522 (SettingsSecureFramesScreen)
+// Module 17761 (SettingsSecureFramesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
-import UserActionCreators from "UserActionCreators" /* 8707 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9229 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
+import UserActionCreators from "UserActionCreators" /* 8710 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9233 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -79,7 +79,7 @@ function UserListItem(userId) {
         }
         if (cResult[14] !== stateFromStores) {
           if (null != stateFromStores) {
-            const obj4 = { user: stateFromStores, guildId: "Array", size: "$ZodDate" };
+            const obj4 = { user: stateFromStores, guildId: "Array", size: -22199102278340690000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
             const Avatar = TableRow(tmp14[15]).Avatar;
             obj4.size = TableRow(tmp14[15]).AvatarSizes.REFRESH_MEDIUM_32;
             class F {
@@ -238,7 +238,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, header: null, list: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.header = { marginTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_8 };

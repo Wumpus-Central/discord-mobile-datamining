@@ -1,6 +1,6 @@
-// === Module 8180: ClipsConstants ===
+// === Module 8203: ClipsConstants ===
 
-// Module 8180 (ClipsConstants)
+// Module 8203 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1101 */;
 
@@ -47,7 +47,7 @@ export const CLIPS_MAX_TIMELINE_EVENTS = 1000;
 export const CLIPS_TIMELINE_BUFFER_MS = 500;
 export const EVENT_ID_DATA_KEY = "id";
 export const STREAK_KILL_IDS_DATA_KEY = "killIds";
-export const CLIP_NAME_TEMPLATE = (arg0) => "Clip - " + new Date(arg0).toLocaleString();
+export (arg0) => "Clip - " + new Date(arg0).toLocaleString()
 export const MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS = 15;
 export const CLIPS_SAVE_TIMEOUT_WARN_MS = result3;
 export const CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY = 30000;
@@ -71,7 +71,7 @@ export const ClipsHardwareClassification = { UNKNOWN: "unknown", BELOW_MINIMUM: 
 export const ClipsSaveNoOpReason = { MAX_CONCURRENT_SAVES: "max_concurrent_saves", NO_ELIGIBLE_SOURCE: "no_eligible_source", MODULE_NOT_LOADED: "module_not_loaded", BUFFER_WARMING_UP: "buffer_warming_up", BRIDGE_SHUTDOWN: "bridge_shutdown", RECORDING_NOT_READY: "recording_not_ready" };
 export const Emotion = { ANGER: "anger", CALM: "calm", DISGUST: "disgust", FEAR: "fear", HAPPY: "happy", NEUTRAL: "neutral", SAD: "sad", SURPRISED: "surprised" };
 export const ClipCropPreset = obj2;
-export const getClipCropAspectRatio = function getClipCropAspectRatio(arg0) {
+export function getClipCropAspectRatio(arg0) {
   if (obj2.PORTRAIT_9_16 === arg0) {
     return 0.5625;
   } else if (tmp.LANDSCAPE_16_9 === arg0) {
@@ -79,8 +79,8 @@ export const getClipCropAspectRatio = function getClipCropAspectRatio(arg0) {
   } else {
     return null;
   }
-};
-export const getClipCropBounds = function getClipCropBounds(bounds) {
+}
+export function getClipCropBounds(bounds) {
   bounds = undefined;
   if (bounds != null) {
     bounds = bounds.bounds;
@@ -106,7 +106,7 @@ export const getClipCropBounds = function getClipCropBounds(bounds) {
     }
     return tmp3;
   }
-};
+}
 export const ClipTrackType = obj3;
 export const CLIP_TRACK_COLORS = { [obj3.TEXT]: "#D53FAE", [obj3.IMAGE]: "#3F7FD5" };
 export const DEFAULT_TRACK_DURATION_SECONDS = 5;
@@ -114,14 +114,14 @@ export const MIN_TRACK_DURATION_SECONDS = 1;
 export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
 export const DEFAULT_TRACK_ROTATION_DEG = 0;
 export const TRACK_ROTATION_STEP_DEG = 15;
-export const snapTrackRotationDeg = function snapTrackRotationDeg(arg0) {
+export function snapTrackRotationDeg(arg0) {
   const result = (15 * Math.round(arg0 / 15) % 360 + 360) % 360;
   let diff = result;
   if (180 < result) {
     diff = result - 360;
   }
   return diff;
-};
+}
 export const TextStrokeWidth = obj4;
 export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = { [obj4.NONE]: 0, [obj4.SMALL]: 0.0625, [obj4.MEDIUM]: 0.125, [obj4.LARGE]: 0.25 };
 export const DEFAULT_TEXT_TRACK_STYLE = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: obj4.NONE, strokeColor: "#000000" };
@@ -138,9 +138,9 @@ export const DEFAULT_IMAGE_TRACK_WIDTH_FRACTION = 0.35;
 export const MIN_IMAGE_TRACK_WIDTH_FRACTION = 0.02;
 export const MAX_IMAGE_TRACK_WIDTH_FRACTION = 2;
 export const MAX_DEFAULT_IMAGE_TRACK_HEIGHT_FRACTION = 0.5;
-export const getDefaultImageTrackWidthFraction = function getDefaultImageTrackWidthFraction(arg0, arg1) {
+export function getDefaultImageTrackWidthFraction(arg0, arg1) {
   return Math.max(0.02, Math.min(0.35, 0.5 * arg0 / arg1));
-};
+}
 export const ImageTrackShadow = obj6;
 export const IMAGE_TRACK_SHADOW_TO_WIDTH_RATIO = { [obj6.NONE]: 0, [obj6.SMALL]: 0.02, [obj6.MEDIUM]: 0.05, [obj6.LARGE]: 0.1 };
 export const IMAGE_TRACK_SHADOW_OFFSET_TO_BLUR_RATIO = 0.4;

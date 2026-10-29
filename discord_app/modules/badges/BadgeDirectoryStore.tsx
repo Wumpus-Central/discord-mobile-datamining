@@ -1,13 +1,13 @@
-// === Module 8718: BadgeDirectoryStore ===
+// === Module 8721: BadgeDirectoryStore ===
 
-// Module 8718 (BadgeDirectoryStore)
+// Module 8721 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import privDefault from "priv" /* 1456 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8719 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8723 */;
+import privDefault from "priv" /* 1457 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8722 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8726 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -324,7 +324,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/BadgeDirectoryStore.tsx");
 
 export default badgeDirectoryStore;
-export const getSingleRequirementThreshold = function getSingleRequirementThreshold(arg0) {
+export function getSingleRequirementThreshold(arg0) {
   let num;
   if (arg0 != null) {
     const first = arg0.requirements[0];
@@ -336,8 +336,8 @@ export const getSingleRequirementThreshold = function getSingleRequirementThresh
     num = 0;
   }
   return num;
-};
-export const getObtainedAtFromBadge = function getObtainedAtFromBadge(current_tier) {
+}
+export function getObtainedAtFromBadge(current_tier) {
   if (null != current_tier) {
     let obtained_at;
     if (null != current_tier.current_tier) {
@@ -353,4 +353,4 @@ export const getObtainedAtFromBadge = function getObtainedAtFromBadge(current_ti
     }
     return obtained_at;
   }
-};
+}

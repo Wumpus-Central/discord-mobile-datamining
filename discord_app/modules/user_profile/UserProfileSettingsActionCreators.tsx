@@ -1,18 +1,18 @@
-// === Module 8690: UserProfileSettingsActionCreators ===
+// === Module 8693: UserProfileSettingsActionCreators ===
 
-// Module 8690 (UserProfileSettingsActionCreators)
+// Module 8693 (UserProfileSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef5840 from "module_5840" /* 5840 */;
-import GuildTagUtils from "GuildTagUtils" /* 8691 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import _modDef5842 from "module_5842" /* 5842 */;
+import GuildTagUtils from "GuildTagUtils" /* 8694 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 import UserStore from "UserStore" /* 1389 */;
-import UserProfileStore from "UserProfileStore" /* 7738 */;
+import UserProfileStore from "UserProfileStore" /* 7760 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
-export const setPendingChanges = function setPendingChanges(guildId) {
+export function setPendingChanges(guildId) {
   guildId = guildId.guildId;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0 }));
   const currentUser = UserStore.getCurrentUser();
@@ -68,7 +68,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (displayNameStyles2 == null) {
         displayNameStyles2 = null;
       }
-      obj.pendingDisplayNameStyles = _modDef5840(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
+      obj.pendingDisplayNameStyles = _modDef5842(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
     }
     if ("customTypingIndicatorStyle" in merged) {
       const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
@@ -80,7 +80,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (typingIndicatorStyle == null) {
         typingIndicatorStyle = null;
       }
-      obj.pendingCustomTypingIndicatorStyle = _modDef5840(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
+      obj.pendingCustomTypingIndicatorStyle = _modDef5842(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -283,7 +283,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (_modDef5840(tmp42, themeColors)) {
+          if (_modDef5842(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -325,4 +325,4 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     const merged1 = Object.assign(obj);
     DispatcherDefault.dispatch(obj4);
   }
-};
+}

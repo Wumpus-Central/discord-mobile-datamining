@@ -1,9 +1,9 @@
-// === Module 11269: isSocialLayerApplication ===
+// === Module 11323: isSocialLayerApplication ===
 
-// Module 11269 (isSocialLayerApplication)
+// Module 11323 (isSocialLayerApplication)
 import Constants from "Constants" /* 1084 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
-import scopes2 from "scopes" /* 9665 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6870 */;
+import scopes2 from "scopes" /* 9697 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;
@@ -17,7 +17,7 @@ export default function isSocialLayerApplication(application) {
   }
   return hasApplicationFlagResult;
 };
-export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorization(application, scopes) {
+export function isSocialLayerSDKAuthorization(application, scopes) {
   let hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
   if (!hasApplicationFlagResult) {
     hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
@@ -27,4 +27,4 @@ export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorizat
     hasApplicationFlagResult = scopes.some((item) => scopes2.isSocialLayerUmbrellaScope(item));
   }
   return hasApplicationFlagResult;
-};
+}

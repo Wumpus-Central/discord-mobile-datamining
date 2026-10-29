@@ -1,20 +1,20 @@
-// === Module 12975: useShareSearchResults ===
+// === Module 13196: useShareSearchResults ===
 
-// Module 12975 (useShareSearchResults)
-import formatResultsDefault from "formatResults" /* 12963 */;
-import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 12976 */;
+// Module 13196 (useShareSearchResults)
+import formatResultsDefault from "formatResults" /* 13184 */;
+import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 13197 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import FrecencyStore from "FrecencyStore" /* 6859 */;
+import FrecencyStore from "FrecencyStore" /* 6882 */;
 
 require = fn;
-const ALLOWED_TYPES = fn(12964).ALLOWED_TYPES;
+const ALLOWED_TYPES = fn(13185).ALLOWED_TYPES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
-export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
+export function makeAutocompleterSearchParams(arg0) {
   const query = QuickSwitcherActionCreators.getQuickSwitcherOptions(arg0);
   const queryMode = query.queryMode;
   let resultTypes = ALLOWED_TYPES;
@@ -29,8 +29,8 @@ export const makeAutocompleterSearchParams = function makeAutocompleterSearchPar
     resultTypes = items;
   }
   return { query: query.query, queryMode: queryMode2, resultTypes };
-};
-export const useShareSearchResults = function useShareSearchResults(targetDestination) {
+}
+export function useShareSearchResults(targetDestination) {
   targetDestination = targetDestination.targetDestination;
   const selectedDestinations = targetDestination.selectedDestinations;
   const originDestination = targetDestination.originDestination;
@@ -133,4 +133,4 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   const items8 = [results, "" !== query, queryMode2, targetDestination, stateFromStores1, selectedDestinations, current, originDestination, channelFilter, flag, stateFromStores2];
   obj5.results = flag.useMemo(() => formatResultsDefault({ results, hasQuery, queryMode: queryMode2, targetDestination, frequentChannels: stateFromStores1, selectedDestinations, pinnedDestinations: current, originDestination, channelFilter, includeMissingDMs: flag, isConnected: stateFromStores2 }), items8);
   return obj5;
-};
+}

@@ -9,6 +9,6 @@ shim = shim.getFluxApi();
 const result = size.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
 
 export const FLUX_API = shim;
-export const hasFluxApi = function hasFluxApi() {
+export function hasFluxApi() {
   return null != shim;
-};
+}

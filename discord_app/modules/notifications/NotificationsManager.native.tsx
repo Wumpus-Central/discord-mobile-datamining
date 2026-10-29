@@ -1,19 +1,19 @@
-// === Module 19223: NotificationsManager ===
+// === Module 19456: NotificationsManager ===
 
-// Module 19223 (NotificationsManager)
+// Module 19456 (NotificationsManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7926 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13546 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7949 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13779 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4938 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13543 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13776 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 require = fn;
 function haveNotSeenPromptSince(arg0, arg1) {
@@ -22,8 +22,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = _modDef2046().diff(tmp, "days") >= 1;
-      const obj = _modDef2046();
+      tmp4 = _modDef2047().diff(tmp, "days") >= 1;
+      const obj = _modDef2047();
     }
     tmp2 = tmp4;
   }
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(19224, dependencyMap.paths), closure_2_14, obj3);
+    obj2.openLazy(asyncRequireImpl(19457, dependencyMap.paths), closure_2_14, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -113,7 +113,7 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -156,7 +156,7 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
         obj8.notification_authorization_status = tmp7;
         obj7.track(closure_129_12.NOTIFICATION_PERMISSION_STATUS, obj8);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp11) {
       c3 = tmp;
@@ -164,11 +164,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(13543).PermissionPromptType;
+const PermissionPromptType = fn(13776).PermissionPromptType;
 const Constants = fn(1084);
 ({ RelationshipTypes: c10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(7903).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13544);
+let closure_13 = fn(7926).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13777);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } = NotificationPermissionConstants);
 const items = [, ];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
@@ -211,7 +211,7 @@ class NotificationsManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -254,7 +254,7 @@ class NotificationsManager extends tmp4 {
             return obj;
           } else {
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp8) {
           c2 = tmp;
@@ -273,7 +273,7 @@ class NotificationsManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -296,7 +296,7 @@ class NotificationsManager extends tmp4 {
               ({ message: closure_129_0, optimistic: closure_129_1, isPushNotification: closure_129_2, sendMessageOptions: closure_129_3 } = closure_0);
               c3 = 1;
               c4 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
           } else {
             if (1 === tmp5) {
@@ -378,7 +378,7 @@ class NotificationsManager extends tmp4 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -397,7 +397,7 @@ class NotificationsManager extends tmp4 {
                 invite2 = invite.invite;
                 c4 = 1;
                 c5 = 1;
-                return { value: "Reflect", done: true };
+                return { value: "Reflect", done: null };
               }
             } else {
               if (1 === tmp5) {
@@ -484,53 +484,95 @@ class NotificationsManager extends tmp4 {
       c3 = 0;
       c4 = 0;
       const iter = (async (arg0) => {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else {
-            let tmp6 = relationship2.type === constants2.PENDING_OUTGOING;
-            if (tmp6) {
-              c3 = 2;
-              c4 = 1;
-              return { value: closure_1_18(constants.FRIEND_REQUEST_SENT), done: false };
-            }
-          }
-        } else if (2 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else {
-            tmp6 = value;
-            if (!value) {
-              c3 = 3;
-              c4 = 1;
-              return { value: closure_1_20(constants.FRIEND_REQUEST_SENT), done: false };
-            }
-          }
-        } else if (arg0 === 1) {
+        if (c4 === 2) {
           c4 = 3;
-          throw value;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: "IconComponent" };
+          }
         } else {
-          tmp6 = value;
-          if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_2 = tmp5;
+                closure_1 = tmp2;
+                let relationship2;
+                relationship2 = relationship.relationship;
+                c3 = 1;
+                c4 = 1;
+                return { value: "Reflect", done: null };
+              }
+            } else {
+              if (1 === tmp5) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj4 = { value, done: true };
+                  return obj4;
+                } else {
+                  let tmp6 = relationship2.type === constants2.PENDING_OUTGOING;
+                  if (tmp6) {
+                    c3 = 2;
+                    c4 = 1;
+                    const obj5 = { value: closure_1_18(constants.FRIEND_REQUEST_SENT), done: false };
+                    return obj5;
+                  }
+                }
+              } else if (2 === tmp5) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj6 = { value, done: true };
+                  return obj6;
+                } else {
+                  tmp6 = value;
+                  if (!value) {
+                    c3 = 3;
+                    c4 = 1;
+                    const obj7 = { value: closure_1_20(constants.FRIEND_REQUEST_SENT), done: false };
+                    return obj7;
+                  }
+                }
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else {
+                tmp6 = value;
+                if (arg0 === 2) {
+                  c4 = 3;
+                  const obj = { value, done: true };
+                  return obj;
+                }
+              }
+              if (tmp6) {
+                closure_1_23(constants.FRIEND_REQUEST_SENT, constants3.FRIEND_REQUEST_SENT, 100);
+              }
+              c4 = 3;
+              return { value: "IconComponent", done: "IconComponent" };
+            }
+          } catch (tmp19) {
+            c4 = tmp;
+            throw tmp19;
           }
         }
-        if (tmp6) {
-          closure_1_23(constants.FRIEND_REQUEST_SENT, constants3.FRIEND_REQUEST_SENT, 100);
-        }
-        await "IconComponent";
-        closure_1 = tmp2;
-        relationship2 = relationship.relationship;
-        return "Reflect";
       })();
       iter.next();
       return iter;
@@ -558,7 +600,7 @@ class NotificationsManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -580,7 +622,7 @@ class NotificationsManager extends tmp4 {
               closure_129_2 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
           } else {
             if (1 === tmp5) {
@@ -625,7 +667,7 @@ class NotificationsManager extends tmp4 {
                 return obj;
               }
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             if (state === applyArgumentsResult(1104).AppStates.ACTIVE) {
               c3 = 3;
@@ -661,7 +703,7 @@ class NotificationsManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -678,7 +720,7 @@ class NotificationsManager extends tmp4 {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(7926).getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(7949).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -690,9 +732,9 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(13546).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(13779).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp14) {
           c3 = tmp;

@@ -1,9 +1,9 @@
-// === Module 7232: GuildOnboardingPromptsConstants ===
+// === Module 7256: GuildOnboardingPromptsConstants ===
 
-// Module 7232 (GuildOnboardingPromptsConstants)
+// Module 7256 (GuildOnboardingPromptsConstants)
 import util from "util" /* 1125 */;
 import _modDef1354 from "module_1354" /* 1354 */;
-import StringUtils from "StringUtils" /* 2030 */;
+import StringUtils from "StringUtils" /* 2031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -88,7 +88,7 @@ export const GuildOnboardingTab = { CUSTOMIZE: 0, [0]: "CUSTOMIZE", BROWSE: 1, [
 export { OnboardingPromptType };
 export const GuildOnboardingMode = { ONBOARDING_DEFAULT: 0, [0]: "ONBOARDING_DEFAULT", ONBOARDING_ADVANCED: 1, [1]: "ONBOARDING_ADVANCED" };
 export const OnboardingConnectionType = obj2;
-export const isDefaultPrompt = function isDefaultPrompt(options) {
+export function isDefaultPrompt(options) {
   if (options.options.length > 0) {
     return false;
   } else {
@@ -105,20 +105,20 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
     const tmp7 = _objectWithoutProperties(obj, closure_3);
     return _modDef1354(tmp7, _objectWithoutProperties(options, closure_4));
   }
-};
-export const getDefaultPrompt = function getDefaultPrompt() {
+}
+export function getDefaultPrompt() {
   const obj = { id: String(Date.now()), title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.vY91C9);
   obj.options = [];
   obj.type = obj.MULTIPLE_CHOICE;
   return obj;
-};
-export const getEmptyPrompt = function getEmptyPrompt(inOnboarding) {
+}
+export function getEmptyPrompt(inOnboarding) {
   obj = { id: String(Date.now()), title: "", options: [], singleSelect: false, required: false, inOnboarding, type: obj.MULTIPLE_CHOICE };
   return obj;
-};
-export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id) {
+}
+export function clientPromptToServerPrompt(id) {
   let obj = { id: id.id, options: null, title: id.title, single_select: id.singleSelect, disabled: id.disabled, required: id.required, in_onboarding: id.inOnboarding, type: id.type };
   const options = id.options;
   obj.options = options.map((id) => {
@@ -145,9 +145,9 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
     return obj;
   });
   return obj;
-};
+}
 export { serverPromptToClientPrompt };
-export const serverApiResponseToClientState = function serverApiResponseToClientState(defaultChannelIds) {
+export function serverApiResponseToClientState(defaultChannelIds) {
   const obj = { prompts: null, defaultChannelIds: defaultChannelIds.default_channel_ids, responses: null, mode: null, enabled: null, onboardingPromptsSeen: null, onboardingResponsesSeen: null, belowRequirements: null, connections: null, additionalConnections: null };
   const prompts = defaultChannelIds.prompts;
   obj.prompts = prompts.map(serverPromptToClientPrompt);
@@ -177,17 +177,17 @@ export const serverApiResponseToClientState = function serverApiResponseToClient
   }
   obj.additionalConnections = prop1;
   return obj;
-};
-export const isEmojiEmpty = function isEmojiEmpty(id) {
+}
+export function isEmojiEmpty(id) {
   let tmp = null == id;
   if (!tmp) {
     tmp = null == id.id && null == id.name;
     const tmp2 = null == id.id && null == id.name;
   }
   return tmp;
-};
+}
 export const EXCLUDED_ONBOARDING_PLATFORM_TYPES = set;
-export const getConnectionIdentifier = function getConnectionIdentifier(connection_type) {
+export function getConnectionIdentifier(connection_type) {
   if (connection_type.connection_type === obj2.APPLICATION) {
     const _HermesInternal2 = HermesInternal;
     let combined = "app:" + connection_type.application_id;
@@ -196,8 +196,8 @@ export const getConnectionIdentifier = function getConnectionIdentifier(connecti
     combined = "provider:" + connection_type.provider_id;
   }
   return combined;
-};
-export const parseConnectionIdentifier = function parseConnectionIdentifier(str) {
+}
+export function parseConnectionIdentifier(str) {
   [tmp2, tmp3] = str.split(":");
   if ("app" === tmp2) {
     if (undefined !== tmp3) {
@@ -221,9 +221,9 @@ export const parseConnectionIdentifier = function parseConnectionIdentifier(str)
       }
     }
   }
-};
+}
 export { validateOnboardingConnection };
-export const validateOnboardingConnections = function validateOnboardingConnections(arr) {
+export function validateOnboardingConnections(arr) {
   let items = [];
   new Set();
   function _loop(arg0) {
@@ -252,4 +252,4 @@ export const validateOnboardingConnections = function validateOnboardingConnecti
     continue;
   }
   return items;
-};
+}

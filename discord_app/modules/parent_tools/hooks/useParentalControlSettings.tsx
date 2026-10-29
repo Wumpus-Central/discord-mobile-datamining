@@ -1,20 +1,20 @@
-// === Module 16375: useParentalControlSettings ===
+// === Module 16613: useParentalControlSettings ===
 
-// Module 16375 (useParentalControlSettings)
+// Module 16613 (useParentalControlSettings)
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7127 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7435 */;
-import useUserLinks from "useUserLinks" /* 8157 */;
-import useSelectedTeen from "useSelectedTeen" /* 8159 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16376 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16379 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7151 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7458 */;
+import useUserLinks from "useUserLinks" /* 8180 */;
+import useSelectedTeen from "useSelectedTeen" /* 8182 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16614 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16617 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7683 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7706 */;
 
 require = fn;
-const SafetyToastType = fn(7453).SafetyToastType;
+const SafetyToastType = fn(7476).SafetyToastType;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useParentalControlledExplicitContentSettings() {
@@ -314,7 +314,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpda
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -342,17 +342,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpda
                 items2 = [closure_0];
               }
               c4 = 1;
-              selectedTeenId(7682).updateTeenConsents(tmp28, items1, items2);
+              selectedTeenId(7705).updateTeenConsents(tmp28, items1, items2);
               c2 = 2;
               c5 = 1;
-              const obj3 = selectedTeenId(7682);
+              const obj3 = selectedTeenId(7705);
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            selectedTeenId(7459).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = selectedTeenId(7459);
+            selectedTeenId(7482).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = selectedTeenId(7482);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -404,7 +404,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpda
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -432,17 +432,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpda
                 items2 = [closure_0];
               }
               c4 = 1;
-              selectedTeenId(7682).updateTeenConsents(tmp28, items1, items2);
+              selectedTeenId(7705).updateTeenConsents(tmp28, items1, items2);
               c2 = 2;
               c5 = 1;
-              const obj3 = selectedTeenId(7682);
+              const obj3 = selectedTeenId(7705);
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            selectedTeenId(7459).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = selectedTeenId(7459);
+            selectedTeenId(7482).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = selectedTeenId(7482);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -499,8 +499,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllowFr
   }
   return tmp7.mutualGuilds && !tmp7.all;
 }) : (function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8159).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16376).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8182).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(16614).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;

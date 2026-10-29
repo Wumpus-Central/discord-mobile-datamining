@@ -1,9 +1,9 @@
-// === Module 14395: useConjureHomeOwnProjects ===
+// === Module 14629: useConjureHomeOwnProjects ===
 
-// Module 14395 (useConjureHomeOwnProjects)
-import conjureHomeProjectOrder from "conjureHomeProjectOrder" /* 14396 */;
-import ConjureChatStore from "ConjureChatStore" /* 10734 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+// Module 14629 (useConjureHomeOwnProjects)
+import conjureHomeProjectOrder from "conjureHomeProjectOrder" /* 14630 */;
+import ConjureChatStore from "ConjureChatStore" /* 10808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 const require = globalThis.__r;
 

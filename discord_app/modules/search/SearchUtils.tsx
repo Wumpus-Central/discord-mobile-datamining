@@ -1,28 +1,28 @@
-// === Module 13463: SearchUtils ===
+// === Module 13696: SearchUtils ===
 
-// Module 13463 (SearchUtils)
+// Module 13696 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 13462 */;
-import SearchTokens from "SearchTokens" /* 13464 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 13695 */;
+import SearchTokens from "SearchTokens" /* 13697 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6698 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6722 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9748).SearchTabs;
+const SearchTabs = fn(9780).SearchTabs;
 const Constants = fn(1084);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);
@@ -35,7 +35,7 @@ const navigation2 = new QueryTokenizerDefault();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/SearchUtils.tsx");
 
-export const getSearchContextId = function getSearchContextId(searchContext) {
+export function getSearchContextId(searchContext) {
   const type = searchContext.type;
   if (constants.GUILD === type) {
     return searchContext.guildId;
@@ -49,8 +49,8 @@ export const getSearchContextId = function getSearchContextId(searchContext) {
     }
     return searchContext.channelId;
   }
-};
-export const getSearchHistoryStateId = function getSearchHistoryStateId(type) {
+}
+export function getSearchHistoryStateId(type) {
   type = type.type;
   if (constants.GUILD === type) {
     let channelId = type.guildId;
@@ -67,8 +67,8 @@ export const getSearchHistoryStateId = function getSearchHistoryStateId(type) {
     channelId = type.channelId;
   }
   return channelId;
-};
-export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, tab, searchResultsQuery) {
+}
+export function getSearchTabFetchId(searchContext, tab, searchResultsQuery) {
   const type = searchContext.type;
   if (constants.GUILD === type) {
     let channelId = searchContext.guildId;
@@ -85,9 +85,9 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, t
     channelId = searchContext.channelId;
   }
   return "" + channelId + "-" + tab + "-" + searchResultsQuery;
-};
-export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(cResult) {
-  const diffResult = _modDef2046().diff(_modDef2046(cResult), "s");
+}
+export function getChannelActiveAgoTimestamp(cResult) {
+  const diffResult = _modDef2047().diff(_modDef2047(cResult), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -125,9 +125,9 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef2046();
-};
-export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
+  const obj = _modDef2047();
+}
+export function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
   if (constants.CHANNEL === type) {
     const intl3 = util.intl;
@@ -139,8 +139,8 @@ export const getIndexingErrorText = function getIndexingErrorText(searchContext)
     const intl = util.intl;
     return intl.string(util.t.AXPbZr);
   }
-};
-export const getGuildIdFromSearchContext = function getGuildIdFromSearchContext(searchContext) {
+}
+export function getGuildIdFromSearchContext(searchContext) {
   const type = searchContext.type;
   if (constants.GUILD_CHANNEL !== type) {
     if (constants.GUILD !== type) {
@@ -162,8 +162,8 @@ export const getGuildIdFromSearchContext = function getGuildIdFromSearchContext(
     }
   }
   return searchContext.guildId;
-};
-export const getChannelIdFromSearchContext = function getChannelIdFromSearchContext(searchContext) {
+}
+export function getChannelIdFromSearchContext(searchContext) {
   const type = searchContext.type;
   if (constants.GUILD_CHANNEL !== type) {
     if (constants.CHANNEL !== type) {
@@ -173,8 +173,8 @@ export const getChannelIdFromSearchContext = function getChannelIdFromSearchCont
     }
   }
   return searchContext.channelId;
-};
-export const getTabTitle = function getTabTitle(id) {
+}
+export function getTabTitle(id) {
   if (SearchTabs.RECENT === id) {
     const intl10 = util.intl;
     return intl10.string(util.t.tWnHcL);
@@ -206,8 +206,8 @@ export const getTabTitle = function getTabTitle(id) {
     const intl = util.intl;
     return intl.string(util.t.B2panI);
   }
-};
-export const searchModeToSearchQueryParams = function searchModeToSearchQueryParams(searchMode) {
+}
+export function searchModeToSearchQueryParams(searchMode) {
   if (constants3.MOST_RELEVANT === searchMode) {
     return { sort_by: "relevance", sort_order: "desc" };
   } else if (constants3.OLDEST === searchMode) {
@@ -216,8 +216,8 @@ export const searchModeToSearchQueryParams = function searchModeToSearchQueryPar
     const NEWEST = constants3.NEWEST;
     return { sort_by: "timestamp", sort_order: "desc" };
   }
-};
-export const searchQueryParamsToSearchMode = function searchQueryParamsToSearchMode(sort_by) {
+}
+export function searchQueryParamsToSearchMode(sort_by) {
   if (null != sort_by.sort_by) {
     if (null != sort_by.sort_order) {
       if ("relevance" === sort_by.sort_by) {
@@ -231,8 +231,8 @@ export const searchQueryParamsToSearchMode = function searchQueryParamsToSearchM
     return NEWEST;
   }
   NEWEST = constants3.NEWEST;
-};
-export const getSearchOptionAnswer = function getSearchOptionAnswer(arg0) {
+}
+export function getSearchOptionAnswer(arg0) {
   if (SearchTokenTypes.FILTER_FROM === arg0) {
     const intl10 = util.intl;
     return intl10.string(util.t.E466pL);
@@ -271,9 +271,9 @@ export const getSearchOptionAnswer = function getSearchOptionAnswer(arg0) {
     const intl7 = util.intl;
     return intl7.string(util.t.Zbbc1E);
   }
-};
+}
 export { ShowDatePicker };
-export const setIncludeNSFW = function setIncludeNSFW(arg0, guildIdFromSearchContext) {
+export function setIncludeNSFW(arg0, guildIdFromSearchContext) {
   if (GuildNSFWAgreeStore.didAgree(guildIdFromSearchContext)) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
@@ -281,8 +281,8 @@ export const setIncludeNSFW = function setIncludeNSFW(arg0, guildIdFromSearchCon
       const tmp4 = null == currentUser.nsfwAllowed || currentUser.nsfwAllowed;
     }
   }
-};
-export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokenizeQueryResult) {
+}
+export function getSearchQueryFromTokens(tokenizeQueryResult) {
   const obj = {};
   const item = tokenizeQueryResult.forEach((type) => {
     type = type.type;
@@ -372,8 +372,8 @@ export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokeni
     const str3 = content.join(" ");
   }
   return obj;
-};
-export const getQueryContentString = function getQueryContentString(searchQueryFromTokens) {
+}
+export function getQueryContentString(searchQueryFromTokens) {
   let contents;
   if (searchQueryFromTokens != null) {
     contents = searchQueryFromTokens.contents;
@@ -399,8 +399,8 @@ export const getQueryContentString = function getQueryContentString(searchQueryF
   if (searchQueryFromTokens != null) {
     content = searchQueryFromTokens.content;
   }
-};
-export const getNonTokenQuery = function getNonTokenQuery(tokenizeQueryResult) {
+}
+export function getNonTokenQuery(tokenizeQueryResult) {
   const mapped = tokenizeQueryResult.map((type) => {
     let str = "";
     if (type.type === QueryTokenizerDefault.NON_TOKEN_TYPE) {
@@ -409,8 +409,8 @@ export const getNonTokenQuery = function getNonTokenQuery(tokenizeQueryResult) {
     return str;
   });
   return mapped.join(" ").trim();
-};
-export const getSelectionScope = function getSelectionScope(tokenizeQueryResult, focusOffset, anchorOffset) {
+}
+export function getSelectionScope(tokenizeQueryResult, focusOffset, anchorOffset) {
   closure_1 = focusOffset;
   closure_2 = anchorOffset;
   const found = tokenizeQueryResult.find((start, index) => {
@@ -437,8 +437,8 @@ export const getSelectionScope = function getSelectionScope(tokenizeQueryResult,
     tmp2 = obj;
   }
   return tmp2;
-};
-export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tokens) {
+}
+export function getAutocompleteMode(cursorScope, tokens) {
   let obj = cursorScope;
   if (cursorScope == null) {
     obj = {};
@@ -481,16 +481,16 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
     obj7 = { type: constants2.FILTER_ALL, filter: null, token: tmp4 };
     obj9 = SearchTokens;
   }
-};
-export const quoteChannelName = function quoteChannelName(channelName) {
+}
+export function quoteChannelName(channelName) {
   let combined = channelName;
   if (null != channelName.match(/([\\" ])/g)) {
     const _HermesInternal = HermesInternal;
     combined = "\"" + channelName.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + "\"";
   }
   return combined;
-};
-export const getFlattenedAutocompleteResults = function getFlattenedAutocompleteResults(arg0, arg1) {
+}
+export function getFlattenedAutocompleteResults(arg0, arg1) {
   closure_0 = arg1;
   importDefault = [];
   const item = _modDef12(arg0).forEach((results) => {
@@ -537,34 +537,34 @@ export const getFlattenedAutocompleteResults = function getFlattenedAutocomplete
     }
   });
   return importDefault.filter((resultText) => "" !== resultText.resultText);
-};
-export const getQueryFromTokens = function getQueryFromTokens(tokens) {
+}
+export function getQueryFromTokens(tokens) {
   let str = "";
   if (null != tokens) {
     const mapped = tokens.map((getFullMatch) => getFullMatch.getFullMatch());
     str = mapped.join("");
   }
   return str;
-};
-export const queryHasFilter = function queryHasFilter(errorcode, arg1) {
+}
+export function queryHasFilter(arg0, arg1) {
   closure_0 = arg1;
-  return navigation.tokenize(errorcode).some((type) => type.type === closure_0);
-};
-export const tokenizeQuery = function tokenizeQuery(searchQueryString) {
+  return navigation.tokenize(arg0).some((type) => type.type === closure_0);
+}
+export function tokenizeQuery(searchQueryString) {
   return navigation.tokenize(searchQueryString);
-};
-export const clearTokenCache = function clearTokenCache() {
+}
+export function clearTokenCache() {
   navigation.clearCache();
   navigation2.clearCache();
-};
-export const showDatePicker = function showDatePicker(arg0) {
+}
+export function showDatePicker(arg0) {
   let tmp = null;
   if (null != arg0) {
     tmp = obj[arg0];
   }
   return tmp;
-};
-export const filterHasAnswer = function filterHasAnswer(type, type2) {
+}
+export function filterHasAnswer(type, type2) {
   const isMatch = regex2.test(type.type);
   let tmp2 = null == type2 && isMatch;
   if (!tmp2) {
@@ -575,8 +575,8 @@ export const filterHasAnswer = function filterHasAnswer(type, type2) {
     tmp2 = tmp3;
   }
   return !tmp2;
-};
-export const refreshSearchTokens = function refreshSearchTokens() {
+}
+export function refreshSearchTokens() {
   const result = SearchTokens.rebuildSearchTokenConfigs();
   navigation.reset();
   _modDef12(SearchTokensDefault).forOwn((arg0, type) => {
@@ -592,8 +592,8 @@ export const refreshSearchTokens = function refreshSearchTokens() {
   });
   const obj4 = _modDef12(crossDMSearchTokensConfig);
   DispatcherDefault.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
-};
-export const getChannelDisplayName = function getChannelDisplayName(isDM) {
+}
+export function getChannelDisplayName(isDM) {
   const channelName = useChannelName.computeChannelName(isDM, UserStore, RelationshipStore);
   if (isDM.isDM()) {
     const user = UserStore.getUser(isDM.getRecipientId());
@@ -632,8 +632,8 @@ export const getChannelDisplayName = function getChannelDisplayName(isDM) {
     combined1 = "#" + combined;
   }
   return combined1;
-};
-export const getChannelPlaceholderName = function getChannelPlaceholderName(isGroupDM) {
+}
+export function getChannelPlaceholderName(isGroupDM) {
   if (isGroupDM.isGroupDM()) {
     return useChannelName.computeChannelName(isGroupDM, UserStore, RelationshipStore);
   } else if (isGroupDM.isDM()) {
@@ -650,10 +650,10 @@ export const getChannelPlaceholderName = function getChannelPlaceholderName(isGr
     }
     return name;
   }
-};
-export const removeInvalidPrivateChannelSearchTokens = function removeInvalidPrivateChannelSearchTokens(errorcode) {
+}
+export function removeInvalidPrivateChannelSearchTokens(arg0) {
   const items = [];
-  const item = navigation2.tokenize(errorcode).forEach((type) => {
+  const item = navigation2.tokenize(arg0).forEach((type) => {
     if (!tmp2) {
       items.push(type);
     }
@@ -664,8 +664,8 @@ export const removeInvalidPrivateChannelSearchTokens = function removeInvalidPri
     closure_1 = closure_1 + getFullMatch.getFullMatch();
   });
   return importDefault.trim();
-};
-export const getSearchAnalyticsIds = function getSearchAnalyticsIds(guildId, getSessionId) {
+}
+export function getSearchAnalyticsIds(guildId, getSessionId) {
   if (obj.isGuildLikeSearchContext(guildId)) {
     guild = GuildStore.getGuild(guildId.guildId);
     let hasItem;
@@ -688,4 +688,4 @@ export const getSearchAnalyticsIds = function getSearchAnalyticsIds(guildId, get
     }
   }
   return null;
-};
+}

@@ -1,13 +1,13 @@
-// === Module 6041: getSoundmojiASTFromString ===
+// === Module 6045: getSoundmojiASTFromString ===
 
-// Module 6041 (getSoundmojiASTFromString)
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import isSoundValidDefault from "isSoundValid" /* 7486 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 13006 */;
-import getSoundFromMessageDefault from "getSoundFromMessage" /* 15336 */;
-import getSoundStringDefault from "getSoundString" /* 15337 */;
-import SoundboardStore from "SoundboardStore" /* 6042 */;
-import MessageStore from "MessageStore" /* 6045 */;
+// Module 6045 (getSoundmojiASTFromString)
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import isSoundValidDefault from "isSoundValid" /* 7509 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 13227 */;
+import getSoundFromMessageDefault from "getSoundFromMessage" /* 15571 */;
+import getSoundStringDefault from "getSoundString" /* 15572 */;
+import SoundboardStore from "SoundboardStore" /* 6046 */;
+import MessageStore from "MessageStore" /* 6049 */;
 
 require = fn;
 const MessageStates = fn(1084).MessageStates;
@@ -92,7 +92,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   obj = SoundmojiRenderingExperiment;
 };
 export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
-export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
+export function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = SoundboardStore.getSoundById(soundId);
     const tmp9 = isSoundValidDefault(soundById, guildId, channelId);
@@ -123,4 +123,4 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
     }
   }
   obj = SoundmojiRenderingExperiment;
-};
+}

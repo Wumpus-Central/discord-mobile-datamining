@@ -1,10 +1,10 @@
-// === Module 9240: useIsSecureFramesKeyInconsistent ===
+// === Module 9244: useIsSecureFramesKeyInconsistent ===
 
-// Module 9240 (useIsSecureFramesKeyInconsistent)
-import SecureFramesUtils from "SecureFramesUtils" /* 9229 */;
+// Module 9244 (useIsSecureFramesKeyInconsistent)
+import SecureFramesUtils from "SecureFramesUtils" /* 9233 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7849 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7872 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -84,11 +84,11 @@ export const useAlertIfSecureFramesKeyInconsistent = ReactCompilerGating.isReact
           tmp5 = globalThis;
           _setTimeout = setTimeout;
           num = 1000;
-          tmp.current = setTimeout(() => { ... }, 1000);
+          tmp.current = setTimeout(/* F149067 */ function() { ... }, 1000);
           tmp3 = tmp;
         }
         current = tmp3.current;
-        return () => { ... };
+        return /* F149068 */ function() { ... };
       }
       tmp3 = closure_5;
       clearTimeoutResult = clearTimeout(closure_5.current);

@@ -1,8 +1,8 @@
-// === Module 18781: useControlsLock ===
+// === Module 19014: useControlsLock ===
 
-// Module 18781 (useControlsLock)
+// Module 19014 (useControlsLock)
 import c from "c" /* 576 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10938 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10973 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

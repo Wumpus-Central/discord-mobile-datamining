@@ -1,6 +1,6 @@
-// === Module 11838: createCompactNumberFormat ===
+// === Module 11892: createCompactNumberFormat ===
 
-// Module 11838 (createCompactNumberFormat)
+// Module 11892 (createCompactNumberFormat)
 import size from "module_2" /* 2 */;
 
 function toAsciiDigits(arg0, get) {
@@ -19,7 +19,7 @@ function toAsciiDigits(arg0, get) {
 }
 let result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx");
 
-export const createCompactNumberFormat = function createCompactNumberFormat(stateFromStores) {
+export function createCompactNumberFormat(stateFromStores) {
   const numberFormat = new Intl.NumberFormat(stateFromStores, { useGrouping: false });
   const map = new Map();
   let num = 0;
@@ -145,4 +145,4 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
       return numberFormat1.format(arg0);
     }
   };
-};
+}

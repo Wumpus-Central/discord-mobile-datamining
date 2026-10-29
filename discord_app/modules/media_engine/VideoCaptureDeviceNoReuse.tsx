@@ -1,7 +1,7 @@
-// === Module 15641: VideoCaptureDeviceNoReuse ===
+// === Module 15877: VideoCaptureDeviceNoReuse ===
 
-// Module 15641 (VideoCaptureDeviceNoReuse)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15877 (VideoCaptureDeviceNoReuse)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-video-capture-device-no-reuse", kind: "user", defaultConfig: { overrideDeviceReuse: false }, variations: null };

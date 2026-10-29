@@ -1,21 +1,21 @@
-// === Module 1500: KeyboardUIStore ===
+// === Module 1501: KeyboardUIStore ===
 
-// Module 1500 (KeyboardUIStore)
+// Module 1501 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1240 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1501 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1626 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ChatInputFocused from "ChatInputFocused" /* 1629 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1630 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1642 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1644 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1892 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1502 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1627 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import ChatInputFocused from "ChatInputFocused" /* 1630 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1631 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1643 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1645 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1893 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1381 */;
 import module_570 from "module_570" /* 570 */;
-import SafeAreaStore from "SafeAreaStore" /* 1631 */;
+import SafeAreaStore from "SafeAreaStore" /* 1632 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -278,7 +278,7 @@ const subscription = SafeAreaStore.subscribe(() => {
 let result = size.fileFinishedImporting("modules/keyboard/native/KeyboardUIStore.native.tsx");
 
 export default keyboardContexts;
-export const setKeyboardType = function setKeyboardType(keyboardParams) {
+export function setKeyboardType(keyboardParams) {
   _require = keyboardParams;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
@@ -310,8 +310,8 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
     tmp = APP_ENTRY_KEYS[Symbol.iterator]();
   }));
   const obj = require("ReactBatchUpdates");
-};
-export const setKeyboardContext = function setKeyboardContext(EXPRESSION, arg1) {
+}
+export function setKeyboardContext(EXPRESSION, arg1) {
   closure_0 = EXPRESSION;
   closure_1 = arg1;
   let DEFAULT_APP_ENTRY_KEY = arg2;
@@ -332,14 +332,14 @@ export const setKeyboardContext = function setKeyboardContext(EXPRESSION, arg1) 
     obj2.byAppEntry = obj3;
     return obj2;
   });
-};
-export const addKeyboardWillOpenChangedListener = function addKeyboardWillOpenChangedListener(arg0) {
+}
+export function addKeyboardWillOpenChangedListener(arg0) {
   closure_0 = arg0;
   set1.add(arg0);
   return () => set1.delete(closure_0);
-};
-export const addKeyboardTypeChangedListener = function addKeyboardTypeChangedListener(arg0) {
+}
+export function addKeyboardTypeChangedListener(arg0) {
   closure_0 = arg0;
   set.add(arg0);
   return () => set.delete(closure_0);
-};
+}

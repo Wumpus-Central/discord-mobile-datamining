@@ -1,23 +1,23 @@
-// === Module 4928: CreatorMonetizationRestrictionsUtils ===
+// === Module 4929: CreatorMonetizationRestrictionsUtils ===
 
-// Module 4928 (CreatorMonetizationRestrictionsUtils)
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4929 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 4929 (CreatorMonetizationRestrictionsUtils)
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4930 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
-const FetchState = fn(4929).FetchState;
-const constants = fn(4930).CreatorMonetizationRestrictions;
+const FetchState = fn(4930).FetchState;
+const constants = fn(4931).CreatorMonetizationRestrictions;
 const GuildFeatures = fn(1084).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx");
 
-export const isRestrictedFromShowingGuildPurchaseEntryPoints = function isRestrictedFromShowingGuildPurchaseEntryPoints(restrictions) {
+export function isRestrictedFromShowingGuildPurchaseEntryPoints(restrictions) {
   let hasItem = null != restrictions;
   if (hasItem) {
     hasItem = restrictions.includes(constants.NEW_PURCHASES_DISABLED);
   }
   return hasItem;
-};
-export const shouldHideGuildPurchaseEntryPoints = function shouldHideGuildPurchaseEntryPoints(guildId) {
+}
+export function shouldHideGuildPurchaseEntryPoints(guildId) {
   if (null == guildId) {
     return false;
   } else {
@@ -42,15 +42,15 @@ export const shouldHideGuildPurchaseEntryPoints = function shouldHideGuildPurcha
     }
     return flag;
   }
-};
-export const isRestrictedFromUpdatingCreatorMonetizationSettings = function isRestrictedFromUpdatingCreatorMonetizationSettings(restrictions) {
+}
+export function isRestrictedFromUpdatingCreatorMonetizationSettings(restrictions) {
   let hasItem = null != restrictions;
   if (hasItem) {
     hasItem = restrictions.includes(constants.SETTINGS_READ_ONLY);
   }
   return hasItem;
-};
-export const shouldRestrictUpdatingCreatorMonetizationSettings = function shouldRestrictUpdatingCreatorMonetizationSettings(id) {
+}
+export function shouldRestrictUpdatingCreatorMonetizationSettings(id) {
   if (null == id) {
     return false;
   } else {
@@ -75,11 +75,11 @@ export const shouldRestrictUpdatingCreatorMonetizationSettings = function should
     }
     return flag;
   }
-};
-export const isRestrictedFromMonetizationReapplication = function isRestrictedFromMonetizationReapplication(restrictions) {
+}
+export function isRestrictedFromMonetizationReapplication(restrictions) {
   let hasItem = null != restrictions;
   if (hasItem) {
     hasItem = restrictions.includes(constants.REAPPLICATION_DISABLED);
   }
   return hasItem;
-};
+}

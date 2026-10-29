@@ -1,9 +1,9 @@
-// === Module 15252: settings/NotifSettingsUtils ===
+// === Module 15487: settings/NotifSettingsUtils ===
 
-// Module 15252 (settings/NotifSettingsUtils)
+// Module 15487 (settings/NotifSettingsUtils)
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
-import notification_settings from "notification_settings" /* 15254 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15253 */;
+import notification_settings from "notification_settings" /* 15489 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15488 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -66,9 +66,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNotifSe
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsUtils.tsx");
 
-export const b64ToDeclarativeSettingsProto = function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
+export function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
   return user_settings_UserSettingsUtils.b64ToProto(notification_settings.DeclarativeSettings, declarative_settings_proto);
-};
+}
 export const useNotifSettingValue = tmp2;
 export const useNotifSettingToggleValue = tmp3;
 export const useNotifSettingRadioValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useNotifSettingRadioValue(arg0) {

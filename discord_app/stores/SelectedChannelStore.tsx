@@ -1,6 +1,6 @@
-// === Module 4907: SelectedChannelStore ===
+// === Module 4908: SelectedChannelStore ===
 
-// Module 4907 (SelectedChannelStore)
+// Module 4908 (SelectedChannelStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import router_utils from "router_utils" /* 1111 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5641 */;
-import GatedChannelStore from "GatedChannelStore" /* 4908 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5642 */;
+import GatedChannelStore from "GatedChannelStore" /* 4909 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -311,11 +311,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1084);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(4863).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4864).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -1090,7 +1090,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 
 export default selectedChannelStore;
-export const findFirstVoiceChannelId = function findFirstVoiceChannelId(id) {
+export function findFirstVoiceChannelId(id) {
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(id);
   const found = _modDef12.find(mutableBasicGuildChannelsForGuild, (type) => type.type === constants.GUILD_VOICE);
   id = undefined;
@@ -1098,5 +1098,5 @@ export const findFirstVoiceChannelId = function findFirstVoiceChannelId(id) {
     id = found.id;
   }
   return id;
-};
+}
 export { handleConnectionOpen };

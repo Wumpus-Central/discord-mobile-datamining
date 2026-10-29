@@ -1,17 +1,17 @@
-// === Module 19746: AgeUpdateFooter ===
+// === Module 19968: AgeUpdateFooter ===
 
-// Module 19746 (AgeUpdateFooter)
+// Module 19968 (AgeUpdateFooter)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef2833 from "module_2833" /* 2833 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6692 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
+import _modDef2834 from "module_2834" /* 2834 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeUpdat
           return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT });
         }
     };
-    const formatResult = intl.format(_modDef2833.ifObbX, obj2);
+    const formatResult = intl.format(_modDef2834.ifObbX, obj2);
     cResult[0] = formatResult;
     let first = formatResult;
   } else {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeUpdat
 }) : (function AgeUpdateFooter() {
   let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef2833.ifObbX, {
+  obj.children = intl.format(_modDef2834.ifObbX, {
     handleAgeVerifyHook() {
       const obj = AgeVerificationActionCreatorsDefault;
       return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT });

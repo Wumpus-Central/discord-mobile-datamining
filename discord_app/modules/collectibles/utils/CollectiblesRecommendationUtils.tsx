@@ -1,11 +1,11 @@
-// === Module 14751: CollectiblesRecommendationUtils ===
+// === Module 14986: CollectiblesRecommendationUtils ===
 
-// Module 14751 (CollectiblesRecommendationUtils)
+// Module 14986 (CollectiblesRecommendationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesRecommendationUtils.tsx");
 
-export const reorderCollectiblesByRecommendation = function reorderCollectiblesByRecommendation(items, arr) {
+export function reorderCollectiblesByRecommendation(items, arr) {
   if (items.length > 1) {
     if (0 !== arr.length) {
       const _Map = Map;
@@ -36,4 +36,4 @@ export const reorderCollectiblesByRecommendation = function reorderCollectiblesB
     }
   }
   return items;
-};
+}

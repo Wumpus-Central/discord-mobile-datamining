@@ -1,20 +1,20 @@
-// === Module 8445: PollResultSystemMessage ===
+// === Module 8467: PollResultSystemMessage ===
 
-// Module 8445 (PollResultSystemMessage)
+// Module 8467 (PollResultSystemMessage)
 import util from "util" /* 1125 */;
 import EmojiConstants from "EmojiConstants" /* 1392 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8446 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8468 */;
 import size from "module_2" /* 2 */;
 
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
 
-export const createPollResultSystemMessage = function createPollResultSystemMessage(message) {
+export function createPollResultSystemMessage(message) {
   const tmp3 = parsePollResultSystemMessageEmbedDefault(message.message.embeds[0]);
   if (null == tmp3) {
     return null;
@@ -89,4 +89,4 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     obj16.content = formatToPartsResult;
     return obj16;
   }
-};
+}

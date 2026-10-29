@@ -1,12 +1,12 @@
-// === Module 12371: conjureTipTurn ===
+// === Module 12425: conjureTipTurn ===
 
-// Module 12371 (conjureTipTurn)
-import conjureChatTurns from "conjureChatTurns" /* 10735 */;
+// Module 12425 (conjureTipTurn)
+import conjureChatTurns from "conjureChatTurns" /* 10809 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipTurn.tsx");
 
-export const newestSettledTurn = function newestSettledTurn(arr) {
+export function newestSettledTurn(arr) {
   let diff = arr.length - 1;
   if (0 <= diff) {
     while (true) {
@@ -35,8 +35,8 @@ export const newestSettledTurn = function newestSettledTurn(arr) {
     return null;
   }
   return null;
-};
-export const newestPublish = function newestPublish(arr) {
+}
+export function newestPublish(arr) {
   let tmp2;
   let diff = arr.length - 1;
   if (0 <= diff) {
@@ -57,8 +57,8 @@ export const newestPublish = function newestPublish(arr) {
     return tmp2;
   }
   return null;
-};
-export const hasNoTurns = function hasNoTurns(arr) {
+}
+export function hasNoTurns(arr) {
   return arr.every((kind) => {
     let tmp = "publish_notice" === kind.kind;
     if (!tmp) {
@@ -69,8 +69,8 @@ export const hasNoTurns = function hasNoTurns(arr) {
     }
     return tmp;
   });
-};
-export const hasOpenAsk = function hasOpenAsk(newestSettledTurnResult) {
+}
+export function hasOpenAsk(newestSettledTurnResult) {
   let tmp = null != newestSettledTurnResult.awaitingUser || null != newestSettledTurnResult.secretRequest || null != newestSettledTurnResult.settingsRequest;
   if (!tmp) {
     const intake = newestSettledTurnResult.intake;
@@ -84,8 +84,8 @@ export const hasOpenAsk = function hasOpenAsk(newestSettledTurnResult) {
     tmp = num > 0;
   }
   return tmp;
-};
-export const entryActivityAt = function entryActivityAt(atResult) {
+}
+export function entryActivityAt(atResult) {
   let num = atResult.finished_at;
   if (num == null) {
     num = 0;
@@ -95,4 +95,4 @@ export const entryActivityAt = function entryActivityAt(atResult) {
     num2 = 0;
   }
   return Math.max(atResult.created_at, num, num2);
-};
+}

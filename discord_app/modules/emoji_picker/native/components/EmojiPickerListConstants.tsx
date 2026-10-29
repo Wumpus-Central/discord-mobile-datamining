@@ -1,6 +1,6 @@
-// === Module 9862: EmojiPickerListConstants ===
+// === Module 9894: EmojiPickerListConstants ===
 
-// Module 9862 (EmojiPickerListConstants)
+// Module 9894 (EmojiPickerListConstants)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1240 */;
 import size from "module_2" /* 2 */;
 

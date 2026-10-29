@@ -1,8 +1,8 @@
-// === Module 16000: internalDeepLinks ===
+// === Module 16237: internalDeepLinks ===
 
-// Module 16000 (internalDeepLinks)
+// Module 16237 (internalDeepLinks)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import openURL from "openURL" /* 5692 */;
+import openURL from "openURL" /* 5694 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const set1 = new Set(["", "-"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
 
-export const resolveInternalDeepLink = function resolveInternalDeepLink(src) {
+export function resolveInternalDeepLink(src) {
   const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
   if (null == toURLSafeResult) {
     return null;
@@ -52,8 +52,8 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(src) {
     }
     tmpResult = URLUtilsDefault;
   }
-};
-export const openInternalDeepLink = function openInternalDeepLink(internalDeepLink) {
+}
+export function openInternalDeepLink(internalDeepLink) {
   openURL.default(internalDeepLink);
   return true;
-};
+}

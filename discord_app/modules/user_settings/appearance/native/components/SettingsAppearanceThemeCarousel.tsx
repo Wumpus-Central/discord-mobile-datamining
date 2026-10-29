@@ -1,28 +1,28 @@
-// === Module 16901: SettingsAppearanceThemeCarousel ===
+// === Module 17140: SettingsAppearanceThemeCarousel ===
 
-// Module 16901 (SettingsAppearanceThemeCarousel)
+// Module 17140 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5238 */;
-import timing from "timing" /* 5242 */;
-import timingPresets from "timingPresets" /* 5245 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5239 */;
+import timing from "timing" /* 5243 */;
+import timingPresets from "timingPresets" /* 5246 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16902 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17141 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const ThemeTypes = fn(1084).ThemeTypes;
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: c10 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = ReanimatedRexport.createAnimatedComponent(fn(1199).Icon);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, hintContainer: { alignSelf: "stretch" }, hintOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, hidden: { opacity: 0 }, labelGroup: null, swatchesGroup: null, badgeSlot: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };

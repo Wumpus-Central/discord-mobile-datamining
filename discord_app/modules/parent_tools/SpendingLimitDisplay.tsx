@@ -1,15 +1,15 @@
-// === Module 16467: SpendingLimitDisplay ===
+// === Module 16705: SpendingLimitDisplay ===
 
-// Module 16467 (SpendingLimitDisplay)
+// Module 16705 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef2535 from "module_2535" /* 2535 */;
-import PriceUtils from "PriceUtils" /* 7376 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7377 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 16378 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import PriceUtils from "PriceUtils" /* 7399 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7400 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 16616 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7680 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
 
 require = fn;
 function getSpendingLimitDisplayState(amount, arg1) {
@@ -34,7 +34,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = util.intl;
         const obj4 = { amount: PriceUtils.formatPrice(diff, currency) };
-        obj3.remainingText = intl.formatToPlainString(_modDef2535["+Q+bU1"], obj4);
+        obj3.remainingText = intl.formatToPlainString(_modDef2536["+Q+bU1"], obj4);
         let obj = obj3;
         const tmp5Result = PriceUtils;
       } else {

@@ -1,6 +1,6 @@
-// === Module 6516: PurchaseTokenUtils ===
+// === Module 6540: PurchaseTokenUtils ===
 
-// Module 6516 (PurchaseTokenUtils)
+// Module 6540 (PurchaseTokenUtils)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import v1 from "v1" /* 1278 */;
@@ -46,7 +46,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("utils/PurchaseTokenUtils.tsx");
 
 export { getPurchaseToken };
-export const getPurchaseTokenHash = function getPurchaseTokenHash() {
+export function getPurchaseTokenHash() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -55,4 +55,4 @@ export const getPurchaseTokenHash = function getPurchaseTokenHash() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

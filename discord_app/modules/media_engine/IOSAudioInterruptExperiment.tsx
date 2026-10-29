@@ -1,7 +1,7 @@
-// === Module 15637: IOSAudioInterruptExperiment ===
+// === Module 15873: IOSAudioInterruptExperiment ===
 
-// Module 15637 (IOSAudioInterruptExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15873 (IOSAudioInterruptExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-ios-audio-interrupt-handling", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/IOSAudioInterruptExperiment.tsx");
 
-export const getIOSAudioInterruptExperimentConfig = function getIOSAudioInterruptExperimentConfig(handleConnectionOpen) {
+export function getIOSAudioInterruptExperimentConfig(handleConnectionOpen) {
   return config.getConfig({ location: handleConnectionOpen });
-};
+}

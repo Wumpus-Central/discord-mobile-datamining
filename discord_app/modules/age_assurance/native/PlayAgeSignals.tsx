@@ -1,7 +1,7 @@
-// === Module 8115: PlayAgeSignals ===
+// === Module 8138: PlayAgeSignals ===
 
-// Module 8115 (PlayAgeSignals)
-import NativePlayAgeSignalsModuleDefault from "NativePlayAgeSignalsModule" /* 8116 */;
+// Module 8138 (PlayAgeSignals)
+import NativePlayAgeSignalsModuleDefault from "NativePlayAgeSignalsModule" /* 8139 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -33,7 +33,7 @@ let result = size.fileFinishedImporting("modules/age_assurance/native/PlayAgeSig
 export const AgeSignalsStatus = { UNSPECIFIED: 0, SHARED: 1, NOT_SHARED: 2, VERIFICATION_REQUIRED: 3 };
 export const AgeRangeSource = { UNSPECIFIED: 0, TIER_A: 1, TIER_B: 2, TIER_C: 3, TIER_D: 4 };
 export const SignificantChangeStatus = { UNSPECIFIED: 0, APPROVED: 1, PENDING: 2, DECLINED: 3 };
-export const getAgeSignals = function getAgeSignals() {
+export function getAgeSignals() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -42,4 +42,4 @@ export const getAgeSignals = function getAgeSignals() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

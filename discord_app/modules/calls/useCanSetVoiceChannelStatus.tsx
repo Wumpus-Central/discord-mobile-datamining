@@ -1,7 +1,7 @@
-// === Module 18829: useCanSetVoiceChannelStatus ===
+// === Module 19062: useCanSetVoiceChannelStatus ===
 
-// Module 18829 (useCanSetVoiceChannelStatus)
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 19062 (useCanSetVoiceChannelStatus)
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSe
   }, items1);
 });
 export { _canSetVoiceChannelStatus };
-export const canSetVoiceChannelStatus = function canSetVoiceChannelStatus(arg0) {
+export function canSetVoiceChannelStatus(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -116,4 +116,4 @@ export const canSetVoiceChannelStatus = function canSetVoiceChannelStatus(arg0) 
     }
     return canResult;
   });
-};
+}

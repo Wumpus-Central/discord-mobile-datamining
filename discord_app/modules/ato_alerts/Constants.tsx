@@ -1,6 +1,6 @@
-// === Module 10977: Constants ===
+// === Module 11012: Constants ===
 
-// Module 10977 (Constants)
+// Module 11012 (Constants)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/ato_alerts/Constants.tsx");
 
 export const LIKELY_ATO_MORE_TIPS_MODAL_KEY = "LIKELY_ATO_MORE_TIPS_MODAL";
 export const LEARN_MORE_HC_ARTICLE = "https://discord.com/safety/understanding-and-avoiding-common-scams";
-export const getLikelyAtoMoreTips = function getLikelyAtoMoreTips() {
+export function getLikelyAtoMoreTips() {
   const obj = { title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.wSZfJR);
@@ -28,4 +28,4 @@ export const getLikelyAtoMoreTips = function getLikelyAtoMoreTips() {
   obj3.description = intl6.string(util.t.eyjeJQ);
   items[2] = obj3;
   return items;
-};
+}

@@ -1,39 +1,39 @@
-// === Module 12051: AppDetailContent ===
+// === Module 12105: AppDetailContent ===
 
-// Module 12051 (AppDetailContent)
+// Module 12105 (AppDetailContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import TableRow from "TableRow" /* 6939 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7665 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9683 */;
-import AppLauncherContext from "AppLauncherContext" /* 11207 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11961 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11964 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 12026 */;
-import BillIcon from "BillIcon" /* 12058 */;
-import ShopIcon from "ShopIcon" /* 12060 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import TableRow from "TableRow" /* 6963 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9715 */;
+import AppLauncherContext from "AppLauncherContext" /* 11261 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12015 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12018 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 12080 */;
+import BillIcon from "BillIcon" /* 12112 */;
+import ShopIcon from "ShopIcon" /* 12114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9684);
+const ApplicationCommandIndexStore = fn(9716);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-let closure_12 = fn(6019).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(6023).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5004);
-let obj2 = { headerSpacer: { height: fn(12052).EXPANDED_HEADER_HEIGHT - fn(12052).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-let obj3 = { height: fn(12052).EXPANDED_HEADER_HEIGHT - fn(12052).SHEET_HANDLE_CONTAINER_HEIGHT };
+const createStyles = fn(5005);
+let obj2 = { headerSpacer: { height: fn(12106).EXPANDED_HEADER_HEIGHT - fn(12106).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(12106).EXPANDED_HEADER_HEIGHT - fn(12106).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
@@ -332,7 +332,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -374,7 +374,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
                     closure_129_0();
                   }
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -459,7 +459,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -501,7 +501,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
               closure_129_0();
             }
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -544,7 +544,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
     }
   }, items1);
   let obj2 = require("CommandRowButton");
-  return closure_13(tmp(6939).TableRow, {
+  return closure_13(tmp(6963).TableRow, {
     start: isFirstRow,
     end: isLastRow,
     label: command.displayName,

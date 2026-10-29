@@ -1,6 +1,6 @@
-// === Module 14136: SentGiftsStore ===
+// === Module 14369: SentGiftsStore ===
 
-// Module 14136 (SentGiftsStore)
+// Module 14369 (SentGiftsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;

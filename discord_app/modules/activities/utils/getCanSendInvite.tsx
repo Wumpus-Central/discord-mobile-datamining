@@ -1,18 +1,18 @@
-// === Module 14819: getCanSendInvite ===
+// === Module 15054: getCanSendInvite ===
 
-// Module 14819 (getCanSendInvite)
-import hasFlagDefault from "hasFlag" /* 7446 */;
-import isInviteActiveDefault from "isInviteActive" /* 11388 */;
-import getPartySize from "getPartySize" /* 11390 */;
-import hasPartySize from "hasPartySize" /* 11391 */;
-import isPartyFull from "isPartyFull" /* 11392 */;
+// Module 15054 (getCanSendInvite)
+import hasFlagDefault from "hasFlag" /* 7469 */;
+import isInviteActiveDefault from "isInviteActive" /* 11442 */;
+import getPartySize from "getPartySize" /* 11444 */;
+import hasPartySize from "hasPartySize" /* 11445 */;
+import isPartyFull from "isPartyFull" /* 11446 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ActivityActionTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");
 
-export const getCanSendInvite = function getCanSendInvite(findActivityResult, author, application1, id1) {
+export function getCanSendInvite(findActivityResult, author, application1, id1) {
   if (author.author.id === id1) {
     return false;
   } else if (isInviteActiveDefault(findActivityResult, author, application1.id)) {
@@ -38,4 +38,4 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
   } else {
     return false;
   }
-};
+}

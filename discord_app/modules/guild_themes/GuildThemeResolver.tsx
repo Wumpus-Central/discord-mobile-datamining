@@ -1,17 +1,17 @@
-// === Module 5213: GuildThemeResolver ===
+// === Module 5214: GuildThemeResolver ===
 
-// Module 5213 (GuildThemeResolver)
+// Module 5214 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildThemePresets from "GuildThemePresets" /* 5183 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5222 */;
-import Client from "Client" /* 5237 */;
+import GuildThemePresets from "GuildThemePresets" /* 5184 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5223 */;
+import Client from "Client" /* 5238 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5214 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5216 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5215 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5217 */;
 
 require = fn;
 function resolveSavedActiveGuildTheme(stateFromStores) {
@@ -418,7 +418,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeResolver.tsx");
 
 export { resolveRenderableGuildThemeSettings };
-export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSettings(customUserThemeSettings) {
+export function isRenderableGuildThemeSettings(customUserThemeSettings) {
   let tmp = null;
   if (null != customUserThemeSettings) {
     customUserThemeSettings = customUserThemeSettings.customUserThemeSettings;
@@ -450,11 +450,11 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
     }
   }
   return null != tmp;
-};
+}
 export { resolveSavedActiveGuildTheme };
 export const useEnabledGuildThemeForGuildId = tmp2;
 export { getActiveGuildThemeForGuildId };
-export const getActiveGuildTheme = function getActiveGuildTheme() {
+export function getActiveGuildTheme() {
   const guildId = SelectedGuildStore.getGuildId();
   let tmp11Result = null;
   if (null != guildId) {
@@ -481,7 +481,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
     obj = ServerThemeUserExperiment;
   }
   return tmp11Result;
-};
+}
 export const useActiveGuildThemeForGuildId = tmp3;
 export const useActiveGuildTheme = tmp4;
 export const useIsGuildThemePreviewActive = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGuildThemePreviewActive() {

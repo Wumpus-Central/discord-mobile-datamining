@@ -1,16 +1,16 @@
-// === Module 19702: AVErrorUtils ===
+// === Module 19924: AVErrorUtils ===
 
-// Module 19702 (AVErrorUtils)
+// Module 19924 (AVErrorUtils)
 import DurationsDefault from "Durations" /* 1101 */;
-import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 5859 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5767 */;
+import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 5861 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5769 */;
 
 require = fn;
 let closure_3 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
 
-export const getReportInboundErrors = function getReportInboundErrors() {
+export function getReportInboundErrors() {
   const WindowVisibilityVideoManager = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
   let result = WindowVisibilityVideoManager.isIncomingVideoEnabled();
   if (result) {
@@ -20,8 +20,8 @@ export const getReportInboundErrors = function getReportInboundErrors() {
     const nowResult = performance.now();
   }
   return result;
-};
-export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId) {
+}
+export function getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 15;
@@ -43,8 +43,8 @@ export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStats
     }
   }
   return tmp3;
-};
-export const getWarningFrameRate = function getWarningFrameRate() {
+}
+export function getWarningFrameRate() {
   let num = maxFrameRate;
   if (maxFrameRate === undefined) {
     num = 30;
@@ -62,4 +62,4 @@ export const getWarningFrameRate = function getWarningFrameRate() {
     num2 = num4;
   }
   return num2;
-};
+}

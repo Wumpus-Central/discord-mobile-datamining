@@ -5,7 +5,7 @@ import Constants from "Constants" /* 1095 */;
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
-import _modDef4280 from "module_4280" /* 4280 */;
+import _modDef4281 from "module_4281" /* 4281 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -364,7 +364,7 @@ const obj24 = {
   angle: 135,
   getName() {
     const intl = util.intl;
-    return intl.string(_modDef4280["+xs8ZP"]);
+    return intl.string(_modDef4281["+xs8ZP"]);
   },
   midpointPercentage: 35,
   unsupported_overlayOpacityMultiplier: 0.8
@@ -534,9 +534,9 @@ const obj33 = {
 const result = size.fileFinishedImporting("modules/client_themes/ClientThemesConstants.tsx");
 
 export const BASIC_DARK_THEMES = items;
-export const isSelectableGradientPreset = function isSelectableGradientPreset(id) {
+export function isSelectableGradientPreset(id) {
   return id.id !== preloaded_user_settings.BackgroundGradientPresetId.EASTER_EGG;
-};
+}
 export const LIGHT_BACKGROUND_GRADIENT_PRESETS = items2;
 export const DARK_BACKGROUND_GRADIENT_PRESETS = items11;
 export const HEXAGON_GRADIENT_PRESET = obj24;

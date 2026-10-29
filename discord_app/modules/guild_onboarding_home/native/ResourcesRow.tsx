@@ -1,19 +1,19 @@
-// === Module 18289: ResourcesRow ===
+// === Module 18523: ResourcesRow ===
 
-// Module 18289 (ResourcesRow)
+// Module 18523 (ResourcesRow)
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13402 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 18291 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13635 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 18525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(18290).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(18524).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 }, channelItem: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,9 +34,9 @@ export default function ResourcesRow(guildId) {
         onPress() {
           const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId.channelId);
         },
-        children: closure_1_5(guildId(5270).Text, { variant: "text-md/medium", color: "text-default", children: children.title })
+        children: closure_1_5(guildId(5271).Text, { variant: "text-md/medium", color: "text-default", children: children.title })
       };
-      return closure_1_5(guildId(6944).PressableOpacity, obj, children.channelId);
+      return closure_1_5(guildId(6968).PressableOpacity, obj, children.channelId);
     }),
 
   ];
@@ -45,7 +45,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18292, dependencyMap.paths), closure_4, { guildId });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18526, dependencyMap.paths), closure_4, { guildId });
         },
       children: null
     };
@@ -53,8 +53,8 @@ export default function ResourcesRow(guildId) {
     const intl = guildId(1125).intl;
     const obj4 = { count: arr.length - 2 };
     obj3.children = intl.format(guildId(1125).t.F6iMs4, obj4);
-    obj2.children = closure_5(guildId(5270).Text, obj3);
-    tmp6 = closure_5(guildId(6944).PressableOpacity, obj2);
+    obj2.children = closure_5(guildId(5271).Text, obj3);
+    tmp6 = closure_5(guildId(6968).PressableOpacity, obj2);
   }
   items[1] = tmp6;
   obj.children = items;

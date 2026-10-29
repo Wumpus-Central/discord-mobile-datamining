@@ -1,17 +1,17 @@
-// === Module 10500: GPlayManager ===
+// === Module 10533: GPlayManager ===
 
-// Module 10500 (GPlayManager)
+// Module 10533 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6498 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9832 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6522 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9864 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 7567 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 7590 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import IAPStore from "IAPStore" /* 7582 */;
 
 require = fn;
 function handleConnectionStateUpdated(connectionState) {
@@ -55,7 +55,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -87,7 +87,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               closure_130_11 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
           break;
           case 1:
@@ -100,7 +100,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               return obj6;
             } else if (closure_131_11.isPurchasingProduct(purchase2.productId)) {
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               closure_130_1 = closure_131_12.getState().analyticsByProductId[purchase2.productId];
               giftOptionsForKey = closure_131_25[purchase2.productId];
@@ -146,7 +146,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
                 const obj17 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
                 closure_131_1(closure_131_2[17]).dispatch(obj17);
                 c7 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else {
                 c6 = 7;
                 c7 = 1;
@@ -381,47 +381,88 @@ let closure_37 = async function _handleDowngradeCommand(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (1 === tmp4) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        return { value, done: true };
-      } else if (closure_130_14.EXECUTE === downgradeCommand2) {
-        c3 = 2;
-        c4 = 1;
-        return {
-          value: (function executePendingDowngrade() {
-                const self = this;
-                const apply = closure_1_38.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(),
-          done: false
-        };
-      } else if (closure_130_14.CLEAR === tmp26) {
-        closure_130_39();
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        const _Error = Error;
-        const _HermesInternal = HermesInternal;
-        const error = new Error("Invalid downgrade state " + downgradeCommand2);
-        throw error;
+        return { value: "IconComponent", done: "IconComponent" };
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp4;
+            c1 = 0;
+            let downgradeCommand2;
+            downgradeCommand2 = downgradeCommand.downgradeCommand;
+            c3 = 1;
+            c4 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (closure_130_14.EXECUTE === downgradeCommand2) {
+              c3 = 2;
+              c4 = 1;
+              const obj5 = {
+                value: (function executePendingDowngrade() {
+                            const self = this;
+                            const apply = closure_1_38.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          })(),
+                done: false
+              };
+              return obj5;
+            } else if (closure_130_14.CLEAR === tmp26) {
+              closure_130_39();
+            } else {
+              const _Error = Error;
+              const _HermesInternal = HermesInternal;
+              const error = new Error("Invalid downgrade state " + downgradeCommand2);
+              throw error;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+          c4 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp19) {
+        c4 = tmp;
+        throw tmp19;
+      }
     }
-    await "IconComponent";
-    downgradeCommand2 = downgradeCommand.downgradeCommand;
-    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -437,7 +478,7 @@ let closure_38 = async function _executePendingDowngrade() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -566,7 +607,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -623,7 +664,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
             });
           });
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       }
     } catch (tmp24) {
@@ -658,7 +699,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -678,7 +719,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
             state2 = state.state;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else {
           if (1 === tmp8) {
@@ -735,14 +776,14 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(7568);
+const PremiumPlanPurchasedStore = fn(7591);
 ({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9833).useGPlayAnalyticsStore;
-let Constants = fn(7560);
+const useGPlayAnalyticsStore = fn(9865).useGPlayAnalyticsStore;
+let Constants = fn(7583);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1084);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(5734).OrderStatus;
+const OrderStatus = fn(5736).OrderStatus;
 const SubscriptionPlanInfo = fn(1391).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");
@@ -753,7 +794,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(7555).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(7578).ProductIds.PREMIUM_TIER_2_MONTHLY];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
 

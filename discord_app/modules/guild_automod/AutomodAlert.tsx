@@ -1,12 +1,12 @@
-// === Module 7661: AutomodAlert ===
+// === Module 7684: AutomodAlert ===
 
-// Module 7661 (AutomodAlert)
+// Module 7684 (AutomodAlert)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodAlert.tsx");
 
 export const AutomodAlertActionType = { SET_COMPLETED: 1, [1]: "SET_COMPLETED", UNSET_COMPLETED: 2, [2]: "UNSET_COMPLETED", DELETE_USER_MESSAGE: 3, [3]: "DELETE_USER_MESSAGE", SUBMIT_FEEDBACK: 4, [4]: "SUBMIT_FEEDBACK" };
-export const parseAlertActionsExecution = function parseAlertActionsExecution(rawValue1) {
+export function parseAlertActionsExecution(rawValue1) {
   if (null == rawValue1) {
     return null;
   } else {
@@ -37,4 +37,4 @@ export const parseAlertActionsExecution = function parseAlertActionsExecution(ra
     }
     return tmp2;
   }
-};
+}

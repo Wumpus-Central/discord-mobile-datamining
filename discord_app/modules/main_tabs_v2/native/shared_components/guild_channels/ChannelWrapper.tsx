@@ -1,7 +1,7 @@
-// === Module 18164: ChannelWrapper ===
+// === Module 18398: ChannelWrapper ===
 
-// Module 18164 (ChannelWrapper)
-import ChannelListLayout from "ChannelListLayout" /* 11993 */;
+// Module 18398 (ChannelWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 12047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
 
-export const renderChannelWrapper = function renderChannelWrapper(children, fontScale) {
+export function renderChannelWrapper(children, fontScale) {
   ({ channel, layout, launchpad, panelVariant } = fontScale);
   if (panelVariant === undefined) {
     panelVariant = false;
@@ -48,4 +48,4 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   }
   items[2] = paddingThread;
   return <View style={items}>{children}</View>;
-};
+}

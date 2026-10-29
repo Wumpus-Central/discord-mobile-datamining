@@ -1,19 +1,19 @@
-// === Module 9871: DoubleTapEmojiUpdatedToast ===
+// === Module 9903: DoubleTapEmojiUpdatedToast ===
 
-// Module 9871 (DoubleTapEmojiUpdatedToast)
+// Module 9903 (DoubleTapEmojiUpdatedToast)
 import util from "util" /* 1125 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5303 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5014 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5304 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
 
 require = fn;
 const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 
-export const getToastEmojiEntity = function getToastEmojiEntity(id) {
+export function getToastEmojiEntity(id) {
   if (null != id.id) {
     const obj2 = { id: id.id, animated: null, size: null };
     const useReducedMotion = AccessibilityStore.useReducedMotion;
@@ -37,8 +37,8 @@ export const getToastEmojiEntity = function getToastEmojiEntity(id) {
     }
     return obj;
   }
-};
-export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
+}
+export function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
@@ -77,4 +77,4 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     ToastActionCreatorsDefault.open("DEFAULT_REACTION_EMOJI_UPDATED", obj4);
   }
   obj = useIsScreenReaderEnabled;
-};
+}

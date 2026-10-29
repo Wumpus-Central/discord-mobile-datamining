@@ -1,9 +1,9 @@
-// === Module 14767: VoiceChannelBadgeExperiment ===
+// === Module 15002: VoiceChannelBadgeExperiment ===
 
-// Module 14767 (VoiceChannelBadgeExperiment)
+// Module 15002 (VoiceChannelBadgeExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 5227 */;
-import createExperiment from "module_5224" /* 5224 */;
+import ExperimentConstants from "ExperimentConstants" /* 5228 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -39,6 +39,6 @@ export const useVoiceChannelBadgeExperiment = ReactCompilerGating.isReactCompile
 }) : (function useVoiceChannelBadgeExperiment(guildId) {
   return experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
 });
-export const getVoiceChannelBadgeExperiment = function getVoiceChannelBadgeExperiment(guildId) {
+export function getVoiceChannelBadgeExperiment(guildId) {
   return experiment.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
-};
+}

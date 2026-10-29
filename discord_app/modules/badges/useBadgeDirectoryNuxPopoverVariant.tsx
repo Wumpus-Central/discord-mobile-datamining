@@ -1,11 +1,11 @@
-// === Module 14610: useBadgeDirectoryNuxPopoverVariant ===
+// === Module 14844: useBadgeDirectoryNuxPopoverVariant ===
 
-// Module 14610 (useBadgeDirectoryNuxPopoverVariant)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8723 */;
-import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14611 */;
+// Module 14844 (useBadgeDirectoryNuxPopoverVariant)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8726 */;
+import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14845 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8718 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8721 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -275,6 +275,6 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/badges/useBadgeDirectoryNuxPopoverVariant.tsx");
 
 export const useBadgeDirectoryNuxPopoverState = tmp2;
-export const useBadgeDirectoryNuxPopoverVariant = function useBadgeDirectoryNuxPopoverVariant(arg0) {
+export function useBadgeDirectoryNuxPopoverVariant(arg0) {
   return closure_6(arg0).variantProps;
-};
+}

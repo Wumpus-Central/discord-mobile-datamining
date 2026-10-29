@@ -1,24 +1,24 @@
-// === Module 14375: QuestRewardCodeClaimBottomSheet ===
+// === Module 14609: QuestRewardCodeClaimBottomSheet ===
 
-// Module 14375 (QuestRewardCodeClaimBottomSheet)
+// Module 14609 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import ClipboardUtils from "ClipboardUtils" /* 7321 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9623 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import ClipboardUtils from "ClipboardUtils" /* 7345 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9655 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7811 */;
+import QuestStore from "QuestStore" /* 7834 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(6745).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6768).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = { wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, footer: { paddingBottom }, claimingIndicator: { position: "absolute", left: "50%", top: "50%", marginLeft: -12, marginTop: -12 }, codeCopyWrapperLoading: { opacity: 0.5 }, redemptionInstructions: { marginBottom: 24 } };
   return obj;
@@ -143,8 +143,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestR
                                     const obj2 = { text: null, icon: null };
                                     const intl = quest(1125).intl;
                                     obj2.text = intl.string(quest(1125).t.MSaeTe);
-                                    obj2.icon = quest(5718).CopyIcon;
-                                    rewardCode(5699).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+                                    obj2.icon = quest(5720).CopyIcon;
+                                    rewardCode(5701).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
                                   });
                                 }
                               };
@@ -567,8 +567,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestR
         const obj2 = { text: null, icon: null };
         const intl = quest(1125).intl;
         obj2.text = intl.string(quest(1125).t.MSaeTe);
-        obj2.icon = quest(5718).CopyIcon;
-        rewardCode(5699).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+        obj2.icon = quest(5720).CopyIcon;
+        rewardCode(5701).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
       });
     }
   }, items4);

@@ -1,10 +1,10 @@
-// === Module 19003: updateRules ===
+// === Module 19236: updateRules ===
 
-// Module 19003 (updateRules)
+// Module 19236 (updateRules)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import _modDef1948 from "module_1948" /* 1948 */;
-import LinkingDefault from "Linking" /* 5696 */;
+import _modDef1949 from "module_1949" /* 1949 */;
+import LinkingDefault from "Linking" /* 5698 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   ({ output, state } = node);
   let obj = node(576);
   const tmp = node;
-  const token = node(5288).useToken(nativeDefault.colors.TEXT_LINK);
+  const token = node(5289).useToken(nativeDefault.colors.TEXT_LINK);
   let str = "none";
-  if (noop.useContext(node(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
+  if (noop.useContext(node(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
     str = "underline";
   }
   if (cResult[0] === token) {
@@ -55,7 +55,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
       if (cResult[3] !== node.target) {
         const fn = function f() {
           const obj = LinkingDefault;
-          return obj.openURL(_modDef1948.sanitizeUrl(node.target));
+          return obj.openURL(_modDef1949.sanitizeUrl(node.target));
         };
         cResult[3] = node.target;
         cResult[4] = fn;
@@ -71,7 +71,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   cResult[1] = str;
   cResult[2] = obj5;
   tmp5 = obj5;
-  const obj2 = node(5288);
+  const obj2 = node(5289);
 }) : (function I18nLink(node) {
   node = node.node;
   let token;
@@ -100,7 +100,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   if (null == obj.onClick) {
     obj.onClick = () => {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef1948.sanitizeUrl(node.target));
+      return obj.openURL(_modDef1949.sanitizeUrl(node.target));
     };
   }
   const obj2 = node(token[6]);

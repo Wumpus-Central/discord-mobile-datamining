@@ -1,6 +1,6 @@
-// === Module 10822: conjurePreviewClaims ===
+// === Module 10898: conjurePreviewClaims ===
 
-// Module 10822 (conjurePreviewClaims)
+// Module 10898 (conjurePreviewClaims)
 import _slicedToArray from "module_32" /* 32 */;
 
 function forget(get, arg1) {
@@ -17,7 +17,7 @@ const map2 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewClaims.tsx");
 
-export const awaitConjurePreviewClaim = function awaitConjurePreviewClaim(projectId, id) {
+export function awaitConjurePreviewClaim(projectId, id) {
   map = id;
   value = map.get(id);
   if (null != value) {
@@ -64,8 +64,8 @@ export const awaitConjurePreviewClaim = function awaitConjurePreviewClaim(projec
     });
   }
   return resolved;
-};
-export const resolveConjurePreviewClaim = function resolveConjurePreviewClaim(projectId, id, upload_token) {
+}
+export function resolveConjurePreviewClaim(projectId, id, upload_token) {
   value = map.get(id);
   if (null != value) {
     map.delete(id);
@@ -103,8 +103,8 @@ export const resolveConjurePreviewClaim = function resolveConjurePreviewClaim(pr
     obj8.timer = timerId1;
     const result1 = map1.set(id, obj8);
   }
-};
-export const clearConjurePreviewClaims = function clearConjurePreviewClaims(projectId) {
+}
+export function clearConjurePreviewClaims(projectId) {
   const items = [...map];
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
@@ -132,4 +132,4 @@ export const clearConjurePreviewClaims = function clearConjurePreviewClaims(proj
     continue;
   }
   tmp = items[Symbol.iterator]();
-};
+}

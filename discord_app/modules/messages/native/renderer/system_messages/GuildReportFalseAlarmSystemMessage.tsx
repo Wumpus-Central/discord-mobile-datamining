@@ -1,22 +1,22 @@
-// === Module 8444: GuildReportFalseAlarmSystemMessage ===
+// === Module 8466: GuildReportFalseAlarmSystemMessage ===
 
-// Module 8444 (GuildReportFalseAlarmSystemMessage)
+// Module 8466 (GuildReportFalseAlarmSystemMessage)
 import util from "util" /* 1125 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8344 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8436 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8437 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8366 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8458 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8459 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx");
 
-export const createGuildReportFalseAlarmSystemMessage = function createGuildReportFalseAlarmSystemMessage(roleStyle) {
+export function createGuildReportFalseAlarmSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   const channel = ChannelStore.getChannel(message.channel_id);
   const tmp2 = resolveMessageContentColorsDefault(theme);
@@ -39,4 +39,4 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
   obj4.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp7);
   return obj4;
-};
+}

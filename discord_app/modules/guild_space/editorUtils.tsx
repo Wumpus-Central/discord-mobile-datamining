@@ -1,10 +1,10 @@
-// === Module 19304: editorUtils ===
+// === Module 19537: editorUtils ===
 
-// Module 19304 (editorUtils)
+// Module 19537 (editorUtils)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6409 */;
-import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 19305 */;
-import GuildSpaceTypes from "GuildSpaceTypes" /* 19306 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6433 */;
+import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 19538 */;
+import GuildSpaceTypes from "GuildSpaceTypes" /* 19539 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -31,12 +31,12 @@ function createDraftWidget(type, name, locked) {
 }
 let c3 = "draft:";
 let closure_4 = 0;
-let items = [fn(19306).GuildSpaceWidgetType.POPULAR_MUSIC, fn(19306).GuildSpaceWidgetType.LEADERBOARD];
+let items = [fn(19539).GuildSpaceWidgetType.POPULAR_MUSIC, fn(19539).GuildSpaceWidgetType.LEADERBOARD];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");
 
 export { createDraftWidget };
-export const createDefaultDraftWidgets = function createDefaultDraftWidgets(arg0) {
+export function createDefaultDraftWidgets(arg0) {
   closure_0 = arg0;
   return items.flatMap((item, order) => {
     closure_0 = item;
@@ -52,11 +52,11 @@ export const createDefaultDraftWidgets = function createDefaultDraftWidgets(arg0
     }
     return items;
   });
-};
-export const isDraftWidgetId = function isDraftWidgetId(widget_id) {
+}
+export function isDraftWidgetId(widget_id) {
   return widget_id.startsWith(c3);
-};
-export const filterCatalogWidgetsAtMaxInstances = function filterCatalogWidgetsAtMaxInstances(arr, arg1) {
+}
+export function filterCatalogWidgetsAtMaxInstances(arr, arg1) {
   const map = new Map();
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
@@ -75,8 +75,8 @@ export const filterCatalogWidgetsAtMaxInstances = function filterCatalogWidgetsA
     }
     return num < type.max_instances;
   });
-};
-export const toWidgetConfigUpdateRequest = function toWidgetConfigUpdateRequest(type) {
+}
+export function toWidgetConfigUpdateRequest(type) {
   if (type.type === GuildSpaceTypes.GuildSpaceWidgetType.IMAGE_TEXT) {
     const obj = { type: null, text: null, title: null };
     ({ type: obj.type, text: obj.text, title: obj.title } = type);
@@ -87,8 +87,8 @@ export const toWidgetConfigUpdateRequest = function toWidgetConfigUpdateRequest(
   } else {
     return type;
   }
-};
-export const getWidgetSaveError = function getWidgetSaveError(arg0, arg1) {
+}
+export function getWidgetSaveError(arg0, arg1) {
   if (arg0 instanceof HTTPUtils.HTTPResponseError) {
     const obj = { status: null, body: null };
     ({ status: obj.status, body: obj.body } = arg0);
@@ -126,4 +126,4 @@ export const getWidgetSaveError = function getWidgetSaveError(arg0, arg1) {
       continue;
     }
   }
-};
+}

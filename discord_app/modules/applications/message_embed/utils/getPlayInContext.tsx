@@ -1,9 +1,9 @@
-// === Module 13275: getPlayInContext ===
+// === Module 13508: getPlayInContext ===
 
-// Module 13275 (getPlayInContext)
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11456 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+// Module 13508 (getPlayInContext)
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11510 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 const require = globalThis.__r;
 
@@ -186,7 +186,7 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
   obj3.canLaunchInChannel = embeddedActivityLaunchability === require("getEmbeddedActivityLaunchability").EmbeddedActivityLaunchability.CAN_LAUNCH;
   return obj3;
 });
-export const getPlayInContext = function getPlayInContext(id, channel_id) {
+export function getPlayInContext(id, channel_id) {
   closure_0 = id;
   let channelId = channel_id;
   if (channel_id == null) {
@@ -227,7 +227,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11456).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11510).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
-};
+}

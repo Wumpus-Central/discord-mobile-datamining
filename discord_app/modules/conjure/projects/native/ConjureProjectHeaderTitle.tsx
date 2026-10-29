@@ -1,14 +1,14 @@
-// === Module 12328: ConjureProjectHeaderTitle ===
+// === Module 12382: ConjureProjectHeaderTitle ===
 
-// Module 12328 (ConjureProjectHeaderTitle)
+// Module 12382 (ConjureProjectHeaderTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import Pressables from "Pressables" /* 6944 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12210 */;
-import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12329 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import Pressables from "Pressables" /* 6968 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12264 */;
+import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { row: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, titles: { flex: 1, justifyContent: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (null != project) {
     const obj6 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = util.intl;
-    obj6.accessibilityLabel = intl.string(_modDef3863.FzfmQ8);
+    obj6.accessibilityLabel = intl.string(_modDef3864.FzfmQ8);
     const obj7 = { project, size: "list" };
     obj6.children = React4(ConjureProjectIconDefault, obj7);
     tmp9 = React4(Pressables.PressableOpacity, obj6);
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (null != project) {
     const obj2 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(_modDef3863.FzfmQ8);
+    obj2.accessibilityLabel = intl.string(_modDef3864.FzfmQ8);
     const obj3 = { project, size: "list" };
     obj2.children = React4(ConjureProjectIconDefault, obj3);
     tmp8 = React4(Pressables.PressableOpacity, obj2);

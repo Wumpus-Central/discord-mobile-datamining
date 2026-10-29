@@ -1,8 +1,8 @@
-// === Module 8300: AutomodErrorUtils ===
+// === Module 8322: AutomodErrorUtils ===
 
-// Module 8300 (AutomodErrorUtils)
+// Module 8322 (AutomodErrorUtils)
 import util from "util" /* 1125 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
@@ -101,7 +101,7 @@ export const InvalidRegexPatternError = prototype;
 export const AUTOMOD_ERROR_CODES = set;
 export { getAutomodErrorMessageFromErrorResponse };
 export { getAutomodErrorMessageFromMessageData };
-export const getAutomodErrorMessage = function getAutomodErrorMessage(messageData, errorResponseBody) {
+export function getAutomodErrorMessage(messageData, errorResponseBody) {
   const tmp = getAutomodErrorMessageFromErrorResponse(errorResponseBody);
   if (null != tmp) {
     return tmp;
@@ -111,4 +111,4 @@ export const getAutomodErrorMessage = function getAutomodErrorMessage(messageDat
   } else {
     stringResult = getAutomodErrorMessageFromMessageData(messageData);
   }
-};
+}

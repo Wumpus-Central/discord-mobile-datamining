@@ -1,14 +1,14 @@
-// === Module 16072: VoiceMessagesPlaybackManager ===
+// === Module 16308: VoiceMessagesPlaybackManager ===
 
-// Module 16072 (VoiceMessagesPlaybackManager)
+// Module 16308 (VoiceMessagesPlaybackManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5948 */;
-import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 16073 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import LifecycleManager from "LifecycleManager" /* 2001 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5950 */;
+import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 16309 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import LifecycleManager from "LifecycleManager" /* 2002 */;
 import size from "module_2" /* 2 */;
 
 const AppState = _mod17.AppState;
@@ -67,12 +67,12 @@ const voiceMessagesPlaybackManager = new VoiceMessagesPlaybackManager();
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx");
 
 export default voiceMessagesPlaybackManager;
-export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
+export function pauseCurrentAudioPlayer(arg0) {
   NativeAudioPlayerModuleDefault.pauseCurrentPlayer(arg0);
-};
-export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
+}
+export function playCurrentAudioPlayer() {
   const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
-};
-export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
+}
+export function handleVoiceMessageDeleted(id) {
   const result = NativeAudioPlayerModuleDefault.handleVoiceMessageDeleted(id);
-};
+}

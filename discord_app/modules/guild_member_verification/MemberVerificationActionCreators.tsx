@@ -1,14 +1,14 @@
-// === Module 6885: MemberVerificationActionCreators ===
+// === Module 6909: MemberVerificationActionCreators ===
 
-// Module 6885 (MemberVerificationActionCreators)
+// Module 6909 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5737 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5739 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import InviteStore from "InviteStore" /* 5736 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import InviteStore from "InviteStore" /* 5738 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -70,7 +70,7 @@ let closure_11 = async function _updateVerificationForm(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ let closure_11 = async function _updateVerificationForm(arg0) {
           obj7.form = obj8;
           closure_133_1(closure_133_2[8]).dispatch(obj7);
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp6) {
         c7 = tmp;
@@ -136,7 +136,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
           obj7.form = obj8;
           closure_131_1(closure_131_2[8]).dispatch(obj7);
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp6) {
         c5 = tmp;
@@ -202,7 +202,7 @@ let closure_13 = async function _enableVerificationForm(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ let closure_13 = async function _enableVerificationForm(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -255,7 +255,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -282,7 +282,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -296,7 +296,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           const obj7 = { memberOptions: { isPending: false } };
           const result = closure_133_0(closure_133_2[10]).updateImpersonatedData(closure_132_0, obj7);
           c9 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           c7 = 1;
           const HTTP = closure_133_0(closure_133_2[6]).HTTP;
@@ -460,6 +460,6 @@ export default {
   }
 };
 export const DISABLE_JOIN_REQUEST_COACHMARK = -1;
-export const showCoachmark = function showCoachmark(guildId) {
+export function showCoachmark(guildId) {
   DispatcherDefault.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId });
-};
+}

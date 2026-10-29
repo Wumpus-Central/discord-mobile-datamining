@@ -1,6 +1,6 @@
-// === Module 6959: ChangeEmailStore ===
+// === Module 6983: ChangeEmailStore ===
 
-// Module 6959 (ChangeEmailStore)
+// Module 6983 (ChangeEmailStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -101,13 +101,13 @@ export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() 
   ];
   return items;
 });
-export const setEmailToken = function setEmailToken(emailToken) {
+export function setEmailToken(emailToken) {
   _require = emailToken;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { emailToken };
     return obj.setState(obj);
   });
-};
-export const resetChangeEmailStore = function resetChangeEmailStore() {
+}
+export function resetChangeEmailStore() {
   ReactBatchUpdates.batchUpdates(() => state.setState(closure_1_2, true));
-};
+}

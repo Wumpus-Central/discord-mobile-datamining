@@ -1,6 +1,6 @@
-// === Module 17771: useHappeningNowScrollBehavior ===
+// === Module 18009: useHappeningNowScrollBehavior ===
 
-// Module 17771 (useHappeningNowScrollBehavior)
+// Module 18009 (useHappeningNowScrollBehavior)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHappe
   ];
   return items1;
 });
-export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapping(listRef) {
+export function useHappeningNowScrollSnapping(listRef) {
   const current = listRef.current;
   let num;
   if (current != null) {
@@ -91,4 +91,4 @@ export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapp
     } while (num2 < num);
   }
   return items;
-};
+}

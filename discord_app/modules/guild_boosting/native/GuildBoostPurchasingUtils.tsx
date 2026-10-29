@@ -1,11 +1,11 @@
-// === Module 7548: GuildBoostPurchasingUtils ===
+// === Module 7571: GuildBoostPurchasingUtils ===
 
-// Module 7548 (GuildBoostPurchasingUtils)
+// Module 7571 (GuildBoostPurchasingUtils)
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
 
 require = fn;
 function alertUnableToManageSub(body, source) {
@@ -27,7 +27,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp6) {
@@ -153,10 +153,10 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(2050).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(2050);
-                      num3 = numPremiumGuildSubscriptions + c1(2050).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(2050);
+                      const numPremiumGuildSubscriptions = closure_0(2051).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(2051);
+                      num3 = numPremiumGuildSubscriptions + c1(2051).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(2051);
                     }
                     tmp = sum > num3;
                   }
@@ -189,7 +189,7 @@ const PremiumConstants = fn(1391);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
 
-export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert() {
+export function launchGuildBoostFlowOrAlert() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -198,4 +198,4 @@ export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,16 +1,16 @@
-// === Module 5248: HapticUtils ===
+// === Module 5249: HapticUtils ===
 
-// Module 5248 (HapticUtils)
+// Module 5249 (HapticUtils)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5249 */;
-import Patterns from "Patterns" /* 5250 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
+import Patterns from "Patterns" /* 5251 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
 
 export const HapticFeedbackTypes = haptics_HapticFeedbackTypesDefault;
-export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT) {
+export function triggerHapticFeedback(IMPACT_LIGHT) {
   if (haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT === IMPACT_LIGHT) {
     const obj41 = Patterns;
     let str36 = "selection";
@@ -144,4 +144,4 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
   } else if (haptics_HapticFeedbackTypesDefault.EFFECT_TICK === IMPACT_LIGHT) {
     Patterns.trigger("effectTick");
   }
-};
+}

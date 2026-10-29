@@ -1,12 +1,12 @@
-// === Module 16673: OrbsArcadeRewardStatusLabel ===
+// === Module 16911: OrbsArcadeRewardStatusLabel ===
 
-// Module 16673 (OrbsArcadeRewardStatusLabel)
+// Module 16911 (OrbsArcadeRewardStatusLabel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import LockIcon from "LockIcon" /* 8603 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16663 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import LockIcon from "LockIcon" /* 8625 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function getStatusLabel(type, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { statusLabel: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

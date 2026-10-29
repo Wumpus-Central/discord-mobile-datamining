@@ -1,35 +1,35 @@
-// === Module 17836: RedesignGuildHeader ===
+// === Module 18074: RedesignGuildHeader ===
 
-// Module 17836 (RedesignGuildHeader)
+// Module 18074 (RedesignGuildHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import shared from "shared" /* 5011 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5086 */;
-import useThemeDefault from "useTheme" /* 5241 */;
-import spring from "spring" /* 5283 */;
-import springPresets from "springPresets" /* 5284 */;
-import ButtonConstants from "ButtonConstants" /* 5286 */;
-import useToken from "useToken" /* 5288 */;
-import useFontScale from "useFontScale" /* 5289 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9743 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10660 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11098 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12003 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15416 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17807 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17837 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17838 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import shared from "shared" /* 5012 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5087 */;
+import useThemeDefault from "useTheme" /* 5242 */;
+import spring from "spring" /* 5284 */;
+import springPresets from "springPresets" /* 5285 */;
+import ButtonConstants from "ButtonConstants" /* 5287 */;
+import useToken from "useToken" /* 5289 */;
+import useFontScale from "useFontScale" /* 5290 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9775 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10693 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11152 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12057 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15650 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18045 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18075 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18076 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import ActionSheetStore from "ActionSheetStore" /* 5247 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import ActionSheetStore from "ActionSheetStore" /* 5248 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11992);
+const RedesignChannelListConstants = fn(12046);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1084).GuildFeatures;
 const jsxProd = fn(21);
@@ -63,9 +63,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   return isThemeDarkResult;
 });
 fn(558);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = { bannerWrapper: { width: "100%", maxHeight: arg0 * v65535, aspectRatio, overflow: "hidden" }, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
   const obj3 = {};
@@ -74,7 +74,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -83,7 +83,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = { code: "function RedesignGuildHeaderTsx1(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};}" };
@@ -346,7 +346,7 @@ const __initData7 = { code: "function RedesignGuildHeaderTsx7(){const{scrollPosi
 const __initData8 = { code: "function RedesignGuildHeaderTsx8(){const{interpolate,pressed}=this.__closure;return{opacity:interpolate(pressed.get(),[0,1],[0,0.3])};}" };
 ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReanimatedGuildBanner(guild) {
-  const cResult = guild(bannerHeight[8]).c(49);
+  const cResult = guild(bannerHeight[8]).c(51);
   guild = guild.guild;
   const scrollPosition = guild.scrollPosition;
   bannerHeight = guild.bannerHeight;
@@ -361,15 +361,15 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reanim
   closure_18(scrollPosition(bannerHeight[26])(first).height);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ActionSheetStore, AccessibilityStore];
-    class T {
+    class P {
       constructor() {
         obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
         return obj;
       }
     }
     cResult[1] = items;
-    cResult[2] = T;
-    let tmp8 = T;
+    cResult[2] = P;
+    let tmp8 = P;
     let tmp7 = items;
   } else {
     tmp7 = cResult[1];
@@ -394,7 +394,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reanim
     }
     cResult[3] = sharedValue;
     cResult[4] = G;
-    class T {
+    class P {
       constructor() {
         obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
         return obj;
@@ -419,7 +419,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reanim
     }
     cResult[5] = sharedValue;
     cResult[6] = O;
-    class T {
+    class P {
       constructor() {
         obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
         return obj;
@@ -482,7 +482,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reanim
       }
     }
     const obj3 = { scrollPosition, interpolate: null, maxScrollPosition: null, bannerHeight: null };
-    class T {
+    class P {
       constructor() {
         obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
         return obj;
@@ -549,7 +549,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reanim
   let items = [ActionSheetStore, sharedValue];
   const stateFromStoresObject = guild(bannerHeight[27]).useStateFromStoresObject(items, () => ({ actionSheetOpen: null != key.getKey(), useReducedMotion: sharedValue.useReducedMotion }));
   ({ useReducedMotion, actionSheetOpen } = stateFromStoresObject);
-  let tmp17Result = scrollPosition(bannerHeight[15])(guild.id);
+  let tmp20Result = scrollPosition(bannerHeight[15])(guild.id);
   let obj = guild(bannerHeight[27]);
   const isFocused = guild(bannerHeight[28]).useIsFocused();
   const obj2 = guild(bannerHeight[28]);
@@ -624,20 +624,26 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reanim
     }
     const animatableSourceWithFallback = tmp(tmp2[32]).getAnimatableSourceWithFallback(hasItem, (hasItem) => AvatarUtilsDefault.getGuildBannerSource({ id: guild.id, banner: guild.banner }, hasItem));
     const obj8 = { style: animatedStyle, children: null };
-    const obj9 = { style: tmp3.bannerWrapper, onPress: callback2, onPressIn: callback, onPressOut: callback1, children: null };
-    const obj10 = { style: tmp13, source: animatableSourceWithFallback };
-    const items5 = [closure_13(tmp(tmp2[33]), obj10), , ];
+    const obj9 = { style: tmp3.bannerWrapper, accessibilityRole: "button", accessibilityLabel: guild.name, accessibilityHint: null, onPress: null, onPressIn: null, onPressOut: null, children: null };
+    const intl = tmp4(tmp2[33]).intl;
+    obj9.accessibilityHint = intl.string(tmp4(tmp2[33]).t["Gpyp/e"]);
+    obj9.onPress = callback2;
+    obj9.onPressIn = callback;
+    obj9.onPressOut = callback1;
+    const obj10 = { style: tmp14, source: animatableSourceWithFallback };
+    const items5 = [closure_13(tmp(tmp2[34]), obj10), ];
     const obj11 = { style: null };
     const items6 = [tmp3.bannerOverlay, animatedStyle1];
     obj11.style = items6;
     items5[1] = closure_13(tmp(tmp2[22]).View, obj11);
-    if (tmp17Result) {
-      tmp17Result = closure_13(tmp(tmp2[34]), {});
-    }
-    items5[2] = tmp17Result;
     obj9.children = items5;
-    obj8.children = closure_14(bannerHeight, obj9);
-    return closure_13(tmp(tmp2[22]).View, obj8);
+    const items7 = [closure_14(bannerHeight, obj9), ];
+    if (tmp20Result) {
+      tmp20Result = closure_13(tmp(tmp2[35]), {});
+    }
+    items7[1] = tmp20Result;
+    obj8.children = items7;
+    return closure_14(tmp(tmp2[22]).View, obj8);
   }
   const obj7 = { interpolate: guild(bannerHeight[22]).interpolate, pressed: sharedValue };
 });

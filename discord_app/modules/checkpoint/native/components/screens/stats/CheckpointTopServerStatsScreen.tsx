@@ -1,30 +1,30 @@
-// === Module 13225: CheckpointTopServerStatsScreen ===
+// === Module 13459: CheckpointTopServerStatsScreen ===
 
-// Module 13225 (CheckpointTopServerStatsScreen)
+// Module 13459 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3089 from "module_3089" /* 3089 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13217 */;
-import CheckpointStore from "CheckpointStore" /* 13015 */;
-import CheckpointConstants from "CheckpointConstants" /* 6050 */;
+import _modDef3090 from "module_3090" /* 3090 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13451 */;
+import CheckpointStore from "CheckpointStore" /* 13236 */;
+import CheckpointConstants from "CheckpointConstants" /* 6054 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5004 */;
+import createStyles from "createStyles" /* 5005 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
 const initialize = intl(504);
 const util = intl(1125);
-const Text_Text = intl(5270);
-const GuildIcon = intl(6919);
-const GuildIconDefault = sIDTV1(6919);
-const ServerIcon = intl(9680);
-const CheckpointStatsUtils = intl(13018);
-const CheckpointTextDefault = sIDTV1(13204);
-const CheckpointScreenDefault = sIDTV1(13206);
-const CheckpointCountUpStatNumberDefault = sIDTV1(13214);
-const CheckpointGuildStatsDefault = sIDTV1(13223);
-const CheckpointRankTagDefault = sIDTV1(13224);
+const Text_Text = intl(5271);
+const GuildIcon = intl(6943);
+const GuildIconDefault = sIDTV1(6943);
+const ServerIcon = intl(9712);
+const CheckpointStatsUtils = intl(13249);
+const CheckpointTextDefault = sIDTV1(13436);
+const CheckpointScreenDefault = sIDTV1(13438);
+const CheckpointCountUpStatNumberDefault = sIDTV1(13450);
+const CheckpointGuildStatsDefault = sIDTV1(13457);
+const CheckpointRankTagDefault = sIDTV1(13458);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let percentHook = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl2 = util.intl;
   let sIDTV1 = importDefault;
-  const stringResult = intl2.string(_modDef3089["M+a+t1"]);
+  const stringResult = intl2.string(_modDef3090["M+a+t1"]);
   if (null != percentHook) {
     const intl3 = util.intl;
     const obj6 = {
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return arg0;
         }
     };
-    const formatToPlainStringResult = intl3.formatToPlainString(_modDef3089.sIDTV1, obj6);
+    const formatToPlainStringResult = intl3.formatToPlainString(_modDef3090.sIDTV1, obj6);
   }
   const sIDTV1Result = CheckpointScreenDefault;
   const container = titleText.container;
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 tmp31 = cResult[36];
               }
               if (cResult[37] !== titleText.titleText) {
-                const obj8 = { variant: "heading-md/extrabold", style: titleText.titleText, children: stringResult.toLocaleUpperCase() };
+                const obj8 = { isStepHeading: true, variant: "heading-md/extrabold", style: titleText.titleText, children: stringResult.toLocaleUpperCase() };
                 const tmp38 = timestampProducer(CheckpointTextDefault, obj8);
                 cResult[37] = titleText.titleText;
                 cResult[38] = tmp38;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 const sIDTV1Result2 = CheckpointTextDefault;
                 if (null != percentHook) {
                   intl = util.intl;
-                  sIDTV1 = _modDef3089.sIDTV1;
+                  sIDTV1 = _modDef3090.sIDTV1;
                   const obj11 = { numDays: rounded, percent: percentHook, percentHook: null };
                   percentHook = function percentHook(children, arg1) {
                     return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 } else {
                   const intl4 = util.intl;
                   const obj12 = { numDays: rounded };
-                  formatResult = intl4.format(_modDef3089.nLCUQ4, obj12);
+                  formatResult = intl4.format(_modDef3090.nLCUQ4, obj12);
                 }
                 cResult[2] = titleText.card;
                 cResult[3] = titleText.container;
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3089["M+a+t1"]);
+  const stringResult = intl.string(_modDef3090["M+a+t1"]);
   let formatToPlainStringResult;
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return arg0;
         }
     };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3089.sIDTV1, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3090.sIDTV1, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.spotlightContainer, children: null };
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj11 = { style: tmp.copy, children: null };
   const obj12 = { style: tmp.title, children: null };
   const items5 = [timestampProducer(ServerIcon.ServerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY }), ];
-  const obj14 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  const obj14 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp8Result = CheckpointScreenDefault;
   obj14.children = stringResult.toLocaleUpperCase();
@@ -441,11 +441,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3089.sIDTV1, obj17);
+    let formatResult = intl4.format(_modDef3090.sIDTV1, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3089.nLCUQ4, obj18);
+    formatResult = intl3.format(_modDef3090.nLCUQ4, obj18);
   }
   const obj19 = { children: null };
   obj16.children = formatResult;

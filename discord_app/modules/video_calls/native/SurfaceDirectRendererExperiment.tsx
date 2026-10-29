@@ -1,12 +1,12 @@
-// === Module 5874: SurfaceDirectRendererExperiment ===
+// === Module 5876: SurfaceDirectRendererExperiment ===
 
-// Module 5874 (SurfaceDirectRendererExperiment)
+// Module 5876 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 const obj2 = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enableSurfaceDirectRenderer: true };
@@ -17,9 +17,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
 
 export const ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT = "2026-03-surface-direct-renderer";
-export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirectRendererExperimentEnabled() {
+export function isSurfaceDirectRendererExperimentEnabled() {
   return closure_3.getConfig({ location: "RTCConnection_media_engine_connect" }).enableSurfaceDirectRenderer;
-};
+}
 export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useSurfaceDirectRendererExperiment(arg0, cResult) {
   _require = arg0;
   cResult = require("c").c(4);

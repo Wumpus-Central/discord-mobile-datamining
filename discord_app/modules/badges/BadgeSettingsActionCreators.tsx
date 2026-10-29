@@ -1,6 +1,6 @@
-// === Module 16123: BadgeSettingsActionCreators ===
+// === Module 16360: BadgeSettingsActionCreators ===
 
-// Module 16123 (BadgeSettingsActionCreators)
+// Module 16360 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           closure_129_2 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -112,7 +112,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 
-export const updateBadgeSettings = function updateBadgeSettings() {
+export function updateBadgeSettings() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -121,4 +121,4 @@ export const updateBadgeSettings = function updateBadgeSettings() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

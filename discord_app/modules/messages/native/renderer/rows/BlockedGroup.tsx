@@ -1,12 +1,12 @@
-// === Module 8168: BlockedGroup ===
+// === Module 8191: BlockedGroup ===
 
-// Module 8168 (BlockedGroup)
+// Module 8191 (BlockedGroup)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1095 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import shared from "shared" /* 5011 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8166 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8169 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import shared from "shared" /* 5012 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8189 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8192 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -40,7 +40,7 @@ let closure_5 = apply.memoize((arg0) => {
 });
 const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
-export const generateBlockedGroupRowData = function generateBlockedGroupRowData(canUncollapse, theme, self) {
+export function generateBlockedGroupRowData(canUncollapse, theme, self) {
   const _self = self;
   ({ content, context } = canUncollapse);
   canUncollapse = !("canUncollapse" in canUncollapse);
@@ -63,4 +63,4 @@ export const generateBlockedGroupRowData = function generateBlockedGroupRowData(
   obj.revealed = revealed;
   obj.canUncollapse = canUncollapse;
   return obj;
-};
+}

@@ -1,16 +1,16 @@
-// === Module 9689: CommandPermissionContext ===
+// === Module 9721: CommandPermissionContext ===
 
-// Module 9689 (CommandPermissionContext)
+// Module 9721 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import Server from "Server" /* 1997 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7352 */;
+import Server from "Server" /* 1998 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7376 */;
 import noop from "module_19" /* 19 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -55,8 +55,8 @@ function computePermissions(isPrivate, arg1) {
   obj2.computedPermissions = deserializer.deserialize(0);
   return obj2;
 }
-const ChannelRecordBase = fn(4860).ChannelRecordBase;
-const isGuildNSFW = fn(4874).isGuildNSFW;
+const ChannelRecordBase = fn(4861).ChannelRecordBase;
+const isGuildNSFW = fn(4875).isGuildNSFW;
 const Constants = fn(1084);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const ReactCompilerGating = fn(558);
@@ -64,7 +64,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/CommandPermissionContext.tsx");
 
-export const buildPermissionContext = function buildPermissionContext(channel, items) {
+export function buildPermissionContext(channel, items) {
   let obj = channel;
   if (channel instanceof ChannelRecordBase) {
     obj = channel;
@@ -119,8 +119,8 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     obj4.allowNsfw = tmp24;
     return obj4;
   }
-};
-export const usePermissionContext = function usePermissionContext(channel, items) {
+}
+export function usePermissionContext(channel, items) {
   if (closure_15) {
     const cResult = require("c").c(37);
     let tmp25 = channel;
@@ -563,8 +563,8 @@ export const usePermissionContext = function usePermissionContext(channel, items
       }
     }
   }
-};
-export const computeCommandContextType = function computeCommandContextType(channel, applicationId) {
+}
+export function computeCommandContextType(channel, applicationId) {
   if (channel instanceof ChannelRecordBase) {
     let guild_id;
     if (channel != null) {
@@ -587,7 +587,7 @@ export const computeCommandContextType = function computeCommandContextType(chan
     }
   }
   return Server.InteractionContextType.GUILD;
-};
-export const getContextGuildId = function getContextGuildId(context) {
+}
+export function getContextGuildId(context) {
   return context instanceof ChannelRecordBase ? context.guild_id : context.id;
-};
+}

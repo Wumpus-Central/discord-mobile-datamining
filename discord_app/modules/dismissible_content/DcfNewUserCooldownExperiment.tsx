@@ -1,9 +1,9 @@
-// === Module 5057: DcfNewUserCooldownExperiment ===
+// === Module 5058: DcfNewUserCooldownExperiment ===
 
-// Module 5057 (DcfNewUserCooldownExperiment)
+// Module 5058 (DcfNewUserCooldownExperiment)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -33,6 +33,6 @@ export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled(
 }) : (function useDcfNewUserCooldown() {
   return closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;
 });
-export const getDcfNewUserCooldown = function getDcfNewUserCooldown() {
+export function getDcfNewUserCooldown() {
   return closure_2.getConfig({ location: "getDcfNewUserCooldown" }).newUserCooldownMs;
-};
+}

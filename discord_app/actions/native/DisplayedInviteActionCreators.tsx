@@ -1,14 +1,14 @@
-// === Module 9373: DisplayedInviteActionCreators ===
+// === Module 9405: DisplayedInviteActionCreators ===
 
-// Module 9373 (DisplayedInviteActionCreators)
+// Module 9405 (DisplayedInviteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8900 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 9088 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8903 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 9091 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
-export const showInvite = function showInvite(code, username, arg2) {
+export function showInvite(code, username, arg2) {
   let obj = arg2;
   if (arg2 == null) {
     obj = {};
@@ -18,7 +18,7 @@ export const showInvite = function showInvite(code, username, arg2) {
   DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId });
   const obj3 = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
   const invite = InstantInviteActionCreatorsDefault.resolveInvite(code, _location);
-};
-export const clearDisplayedInvite = function clearDisplayedInvite() {
+}
+export function clearDisplayedInvite() {
   DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
-};
+}

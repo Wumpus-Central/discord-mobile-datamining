@@ -1,17 +1,17 @@
-// === Module 9356: useGameProfileOpenCritic ===
+// === Module 9360: useGameProfileOpenCritic ===
 
-// Module 9356 (useGameProfileOpenCritic)
+// Module 9360 (useGameProfileOpenCritic)
 import util from "util" /* 1125 */;
-import OpenCriticTier from "OpenCriticTier" /* 9357 */;
-import _modDef9358 from "module_9358" /* 9358 */;
-import _modDef9359 from "module_9359" /* 9359 */;
-import _modDef9360 from "module_9360" /* 9360 */;
-import _modDef9361 from "module_9361" /* 9361 */;
+import OpenCriticTier from "OpenCriticTier" /* 9361 */;
+import _modDef9362 from "module_9362" /* 9362 */;
+import _modDef9363 from "module_9363" /* 9363 */;
+import _modDef9364 from "module_9364" /* 9364 */;
+import _modDef9365 from "module_9365" /* 9365 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
-export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
+export function getOpenCriticTierText(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
     const intl4 = util.intl;
     return intl4.string(util.t.aZej2g);
@@ -25,19 +25,19 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
     const intl = util.intl;
     return intl.string(util.t.jtVgSh);
   }
-};
-export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
+}
+export function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return _modDef9358;
+    return _modDef9362;
   } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
-    return _modDef9359;
+    return _modDef9363;
   } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
-    return _modDef9360;
+    return _modDef9364;
   } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
-    return _modDef9361;
+    return _modDef9365;
   }
-};
-export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {
+}
+export function getOpenCriticCircleRatingColor(tier) {
   let foregroundColor = "#fc430a";
   if (OpenCriticTier.OpenCriticTier.MIGHTY !== tier) {
     foregroundColor = "#9e00b4";
@@ -52,4 +52,4 @@ export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRating
     }
   }
   return { foregroundColor, backgroundColor: "#2e2e2e" };
-};
+}

@@ -1,8 +1,8 @@
-// === Module 15505: MenuPopout ===
+// === Module 15739: MenuPopout ===
 
-// Module 15505 (MenuPopout)
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10469 */;
-import Menu from "Menu" /* 15498 */;
+// Module 15739 (MenuPopout)
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10502 */;
+import Menu from "Menu" /* 15732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Menu/native/MenuPopout.tsx");
 
-export const MenuPopout = function MenuPopout(onRequestOpen) {
+export function MenuPopout(onRequestOpen) {
   ({ key, menuItems } = onRequestOpen);
   if (menuItems === undefined) {
     menuItems = [];
@@ -58,8 +58,8 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
     children: menuItems.map((item, index) => {
       const obj = { children: null };
       const merged = Object.assign(item);
-      obj.children = offset(menuItems(15504).MenuItem, { showIconFirst: true });
-      return offset(menuItems(15503).MenuGroup, obj, "chat-context-menu-group-" + index);
+      obj.children = offset(menuItems(15738).MenuItem, { showIconFirst: true });
+      return offset(menuItems(15737).MenuGroup, obj, "chat-context-menu-group-" + index);
     })
   }), items1);
   const items2 = [memo, key, onRequestOpen];
@@ -96,4 +96,4 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
     }
   }, { isShown });
   return offset(offsetAnimated, obj2);
-};
+}

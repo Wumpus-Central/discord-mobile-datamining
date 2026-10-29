@@ -1,15 +1,15 @@
-// === Module 14290: getAttachmentUploadAbortAlert ===
+// === Module 14524: getAttachmentUploadAbortAlert ===
 
-// Module 14290 (getAttachmentUploadAbortAlert)
+// Module 14524 (getAttachmentUploadAbortAlert)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import UploadUtils from "UploadUtils" /* 8178 */;
+import UploadUtils from "UploadUtils" /* 8201 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");
 
-export const getAttachmentUploadAbortAlertContent = function getAttachmentUploadAbortAlertContent(code) {
+export function getAttachmentUploadAbortAlertContent(code) {
   const intl = util.intl;
   const stringResult = intl.string(util.t.B3vFdU);
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
@@ -31,4 +31,4 @@ export const getAttachmentUploadAbortAlertContent = function getAttachmentUpload
   } else {
     return null;
   }
-};
+}

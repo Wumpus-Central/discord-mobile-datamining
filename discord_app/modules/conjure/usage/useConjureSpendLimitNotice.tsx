@@ -1,9 +1,9 @@
-// === Module 12336: useConjureSpendLimitNotice ===
+// === Module 12390: useConjureSpendLimitNotice ===
 
-// Module 12336 (useConjureSpendLimitNotice)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 10752 */;
+// Module 12390 (useConjureSpendLimitNotice)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 10827 */;
 
 const require = globalThis.__r;
 
@@ -81,13 +81,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const submitRequestURL = HelpdeskUtilsDefault.getSubmitRequestURL();
     if (null == formatResult) {
       intl = intl(1125).intl;
-      prop = prop(3863)["bw/n4C"];
+      prop = prop(3864)["bw/n4C"];
       const obj4 = { helpdeskURL: submitRequestURL };
       let formatResult1 = intl.format(prop, obj4);
     } else {
       const intl3 = intl(1125).intl;
       const obj6 = { limit: formatResult, helpdeskURL: submitRequestURL };
-      formatResult1 = intl3.format(prop(3863).GYqJXH, obj6);
+      formatResult1 = intl3.format(prop(3864).GYqJXH, obj6);
     }
     const obj = { blocked: true, message: formatResult1 };
   } else {
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
           const bound = Math.min(99, Math.floor(stateFromStores.spentUsd / stateFromStores.limitUsd * 100));
           const intl2 = intl(1125).intl;
           const obj7 = { percent: bound, limit: formatResult };
-          const formatToPlainStringResult = intl2.formatToPlainString(_modDef3863.GHgG2B, obj7);
+          const formatToPlainStringResult = intl2.formatToPlainString(_modDef3864.GHgG2B, obj7);
           cResult[9] = stateFromStores.limitUsd;
           cResult[10] = stateFromStores.spentUsd;
           cResult[11] = stateFromStores.state;
@@ -133,11 +133,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       if (null == formatResult) {
         const intl2 = tmp(1125).intl;
         const obj3 = { helpdeskURL: submitRequestURL };
-        let formatResult1 = intl2.format(_modDef3863["bw/n4C"], obj3);
+        let formatResult1 = intl2.format(_modDef3864["bw/n4C"], obj3);
       } else {
         const intl = tmp(1125).intl;
         const obj4 = { limit: formatResult, helpdeskURL: submitRequestURL };
-        formatResult1 = intl.format(_modDef3863.GYqJXH, obj4);
+        formatResult1 = intl.format(_modDef3864.GYqJXH, obj4);
       }
       const obj5 = { blocked: true, message: formatResult1 };
       return obj5;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
             const bound = Math.min(99, Math.floor(stateFromStores.spentUsd / stateFromStores.limitUsd * 100));
             const intl3 = tmp(1125).intl;
             const obj7 = { percent: bound, limit: formatResult };
-            obj6.message = intl3.formatToPlainString(_modDef3863.GHgG2B, obj7);
+            obj6.message = intl3.formatToPlainString(_modDef3864.GHgG2B, obj7);
             return obj6;
           }
         }

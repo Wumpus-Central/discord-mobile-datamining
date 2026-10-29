@@ -1,14 +1,14 @@
-// === Module 5738: QueryStringUtils ===
+// === Module 5740: QueryStringUtils ===
 
-// Module 5738 (QueryStringUtils)
+// Module 5740 (QueryStringUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/QueryStringUtils.tsx");
 
-export const getFirstQueryStringValue = function getFirstQueryStringValue(parsed) {
+export function getFirstQueryStringValue(parsed) {
   let first = parsed;
   if (Array.isArray(parsed)) {
     first = parsed[0];
   }
   return first;
-};
+}

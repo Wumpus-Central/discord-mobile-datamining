@@ -1,9 +1,9 @@
-// === Module 6672: StageChannelsConstants ===
+// === Module 6696: StageChannelsConstants ===
 
-// Module 6672 (StageChannelsConstants)
+// Module 6696 (StageChannelsConstants)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -22,7 +22,7 @@ export const EXPLICIT_END_STAGE_SHEET_KEY = "explicit-end-stage";
 export const STAGE_INVITE_STATE_KEY = "stage-invite";
 export const STAGE_BOOSTING_SHEET_KEY = "stage-boosting";
 export const RequestToSpeakPermissionStates = { EVERYONE: 1, [1]: "EVERYONE", NO_ONE: 2, [2]: "NO_ONE", ROLES: 3, [3]: "ROLES" };
-export const getStagePublicInfoText = function getStagePublicInfoText() {
+export function getStagePublicInfoText() {
   const intl = util.intl;
   const items = [intl.string(util.t["9XlQ9W"]), , , ];
   const intl2 = util.intl;
@@ -33,4 +33,4 @@ export const getStagePublicInfoText = function getStagePublicInfoText() {
   const intl4 = util.intl;
   items[3] = intl4.string(util.t.xfb7ZU);
   return items;
-};
+}

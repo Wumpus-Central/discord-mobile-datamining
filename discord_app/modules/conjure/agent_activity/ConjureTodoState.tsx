@@ -1,8 +1,8 @@
-// === Module 12345: ConjureTodoState ===
+// === Module 12399: ConjureTodoState ===
 
-// Module 12345 (ConjureTodoState)
-import conjureChatTurns from "conjureChatTurns" /* 10735 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12346 */;
+// Module 12399 (ConjureTodoState)
+import conjureChatTurns from "conjureChatTurns" /* 10809 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12400 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
@@ -15,7 +15,7 @@ export function todoMark(status, flag2) {
   }
   return str;
 }
-export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
+export function todoLabel(activeForm, todoMarkResult) {
   if ("in_progress" === todoMarkResult) {
     if (null != activeForm.activeForm) {
       if ("" !== activeForm.activeForm) {
@@ -25,19 +25,19 @@ export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
     }
   }
   text = activeForm.text;
-};
-export const checklistLive = function checklistLive(memo) {
+}
+export function checklistLive(memo) {
   const turnSettledResult = conjureChatTurns.turnSettled(memo);
   let tmp2 = !turnSettledResult;
   if (!turnSettledResult) {
     tmp2 = true !== memo.stopRequested;
   }
   return tmp2;
-};
-export const todoProgress = function todoProgress(todos) {
+}
+export function todoProgress(todos) {
   return { completed: todos.filter((status) => "completed" === status.status).length, total: todos.length };
-};
-export const messageChecklist = function messageChecklist(role) {
+}
+export function messageChecklist(role) {
   if ("assistant" !== role.role) {
     return null;
   } else {
@@ -54,8 +54,8 @@ export const messageChecklist = function messageChecklist(role) {
     }
     return latestTodosResult;
   }
-};
-export const supersededChecklists = function supersededChecklists(memo) {
+}
+export function supersededChecklists(memo) {
   const set = new Set();
   let diff = memo.length - 1;
   let flag = false;
@@ -95,4 +95,4 @@ export const supersededChecklists = function supersededChecklists(memo) {
     } while (0 <= diff);
   }
   return set;
-};
+}

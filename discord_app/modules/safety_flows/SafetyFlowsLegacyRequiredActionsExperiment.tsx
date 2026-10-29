@@ -1,9 +1,9 @@
-// === Module 19198: SafetyFlowsLegacyRequiredActionsExperiment ===
+// === Module 19433: SafetyFlowsLegacyRequiredActionsExperiment ===
 
-// Module 19198 (SafetyFlowsLegacyRequiredActionsExperiment)
+// Module 19433 (SafetyFlowsLegacyRequiredActionsExperiment)
 import Constants from "Constants" /* 1084 */;
-import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 19199 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 19434 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 function config() {
@@ -34,7 +34,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-safe
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsLegacyRequiredActionsExperiment.tsx");
 
 export default apexExperiment;
-export const shouldUseSafetyFlowsForRequiredAction = function shouldUseSafetyFlowsForRequiredAction(arg0) {
+export function shouldUseSafetyFlowsForRequiredAction(arg0) {
   ({ location: _location, requiredAction } = arg0);
   let tmp = null == requiredAction;
   if (!tmp) {
@@ -48,4 +48,4 @@ export const shouldUseSafetyFlowsForRequiredAction = function shouldUseSafetyFlo
     hasItem = requiredActions.has(requiredAction);
   }
   return hasItem;
-};
+}

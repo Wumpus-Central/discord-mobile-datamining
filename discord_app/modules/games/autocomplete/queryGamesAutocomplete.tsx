@@ -1,10 +1,10 @@
-// === Module 9105: queryGamesAutocomplete ===
+// === Module 9108: queryGamesAutocomplete ===
 
-// Module 9105 (queryGamesAutocomplete)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8617 */;
-import useGameAutocomplete2 from "useGameAutocomplete" /* 9106 */;
-import GameSearchSession from "GameSearchSession" /* 9108 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8616 */;
+// Module 9108 (queryGamesAutocomplete)
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8639 */;
+import useGameAutocomplete2 from "useGameAutocomplete" /* 9109 */;
+import GameSearchSession from "GameSearchSession" /* 9111 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8638 */;
 import debounce from "debounce" /* 551 */;
 
 require = fn;
@@ -12,11 +12,11 @@ let closure_3 = debounce((arg0, arg1) => {
   const useGameAutocomplete = useGameAutocomplete2.useGameAutocomplete;
   const items = [arg0, arg1];
   const many = useGameAutocomplete.fetchMany(items);
-}, fn(9106).GAME_AUTOCOMPLETE_DEBOUNCE_MS, { leading: true, maxWait: fn(9106).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS });
+}, fn(9109).GAME_AUTOCOMPLETE_DEBOUNCE_MS, { leading: true, maxWait: fn(9109).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 
-export const queryGamesAutocomplete = function queryGamesAutocomplete(query, DEFAULT, CHAT_MENTION) {
+export function queryGamesAutocomplete(query, DEFAULT, CHAT_MENTION) {
   let gameSearchSession = null;
   if (null != CHAT_MENTION) {
     gameSearchSession = GameSearchSession.getGameSearchSession(CHAT_MENTION, DEFAULT);
@@ -45,4 +45,4 @@ export const queryGamesAutocomplete = function queryGamesAutocomplete(query, DEF
     }
     return found;
   }
-};
+}

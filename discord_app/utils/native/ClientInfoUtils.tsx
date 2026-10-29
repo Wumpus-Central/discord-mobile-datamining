@@ -6,15 +6,15 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
 
-export const getConstants = function getConstants() {
+export function getConstants() {
   return NativeClientInfoModuleDefault.getConstants();
-};
-export const getBuildNumberLabel = function getBuildNumberLabel() {
+}
+export function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];
-  let str = "35320200000000";
-  if (items.includes("35320200000000")) {
+  let str = "35320300000000";
+  if (items.includes("35320300000000")) {
     const _HermesInternal = HermesInternal;
-    str = "dev (" + "35320200000000" + ")";
+    str = "dev (" + "35320300000000" + ")";
   }
   return str;
-};
+}

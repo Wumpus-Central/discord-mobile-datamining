@@ -1,6 +1,6 @@
-// === Module 13697: useGuildBoostPurchaseHandler ===
+// === Module 13930: useGuildBoostPurchaseHandler ===
 
-// Module 13697 (useGuildBoostPurchaseHandler)
+// Module 13930 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -54,8 +54,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             } else {
               let newAnalyticsLoadId = tmp2;
               newAnalyticsLoadId = undefined;
-              newAnalyticsLoadId = args(10482).getNewAnalyticsLoadId();
-              const obj7 = args(7550);
+              newAnalyticsLoadId = args(10515).getNewAnalyticsLoadId();
+              const obj7 = args(7573);
               c3 = 1;
               c4 = 1;
               const obj4 = {
@@ -88,9 +88,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            args(6732).closeApplyBoostModal();
+            args(6755).closeApplyBoostModal();
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c4 = tmp;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -153,8 +153,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10482).getNewAnalyticsLoadId();
-            const obj7 = args(7550);
+            newAnalyticsLoadId = args(10515).getNewAnalyticsLoadId();
+            const obj7 = args(7573);
             c3 = 1;
             c4 = 1;
             const obj4 = {
@@ -187,9 +187,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6732).closeApplyBoostModal();
+          args(6755).closeApplyBoostModal();
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp10) {
         c4 = tmp;

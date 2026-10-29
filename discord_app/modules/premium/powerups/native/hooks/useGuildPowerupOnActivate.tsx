@@ -1,16 +1,16 @@
-// === Module 13694: useGuildPowerupOnActivate ===
+// === Module 13927: useGuildPowerupOnActivate ===
 
-// Module 13694 (useGuildPowerupOnActivate)
-import BoostingActionCreators from "BoostingActionCreators" /* 6732 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8399 */;
+// Module 13927 (useGuildPowerupOnActivate)
+import BoostingActionCreators from "BoostingActionCreators" /* 6755 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8421 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7547 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7570 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5218);
+const GuildPowerupsConstants = fn(5219);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(6707).popWithKey(diff(7557).PREMIUM_KEY);
+                        return PERK(6731).popWithKey(diff(7580).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(6707).popWithKey(diff(7557).PREMIUM_KEY);
+                        return PERK(6731).popWithKey(diff(7580).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

@@ -1,6 +1,6 @@
-// === Module 18711: useNativeThemeUpdater ===
+// === Module 18945: useNativeThemeUpdater ===
 
-// Module 18711 (useNativeThemeUpdater)
+// Module 18945 (useNativeThemeUpdater)
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
   _require = noop.useRef(ThemeStore.theme);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
-      closure_0(18712).updateVisualRefresh(true);
+      closure_0(18946).updateVisualRefresh(true);
     };
     const items = [];
     cResult[0] = fn;
@@ -29,13 +29,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
   const layoutEffect = noop.useLayoutEffect(tmp2, tmp3);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function s() {
-      handleThemeUpdate(18713).updateTheme(ThemeStore.theme);
+      handleThemeUpdate(18947).updateTheme(ThemeStore.theme);
       handleThemeUpdate = function handleThemeUpdate() {
         const theme = ThemeStore.theme;
         if (theme !== handleThemeUpdate.current) {
           handleThemeUpdate.current = theme;
-          handleThemeUpdate(18713).updateTheme(theme);
-          const obj = handleThemeUpdate(18713);
+          handleThemeUpdate(18947).updateTheme(theme);
+          const obj = handleThemeUpdate(18947);
         }
       };
       ThemeStore.addChangeListener(handleThemeUpdate);
@@ -57,18 +57,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
 }) : (function useNativeThemeUpdater() {
   closure_0 = noop.useRef(ThemeStore.theme);
   const layoutEffect = noop.useLayoutEffect(() => {
-    closure_0(18712).updateVisualRefresh(true);
+    closure_0(18946).updateVisualRefresh(true);
   }, []);
   const layoutEffect1 = noop.useLayoutEffect(() => {
     function handleThemeUpdate() {
       const theme = ThemeStore.theme;
       if (theme !== handleThemeUpdate.current) {
         handleThemeUpdate.current = theme;
-        handleThemeUpdate(18713).updateTheme(theme);
-        const obj = handleThemeUpdate(18713);
+        handleThemeUpdate(18947).updateTheme(theme);
+        const obj = handleThemeUpdate(18947);
       }
     }
-    handleThemeUpdate(18713).updateTheme(ThemeStore.theme);
+    handleThemeUpdate(18947).updateTheme(ThemeStore.theme);
     ThemeStore.addChangeListener(handleThemeUpdate);
     return () => {
       ThemeStore.removeChangeListener(handleThemeUpdate);

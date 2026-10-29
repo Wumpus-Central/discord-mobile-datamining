@@ -1,8 +1,8 @@
-// === Module 6717: SpoilerChannelUtils ===
+// === Module 6740: SpoilerChannelUtils ===
 
-// Module 6717 (SpoilerChannelUtils)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6718 */;
+// Module 6740 (SpoilerChannelUtils)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6741 */;
 
 const require = globalThis.__r;
 
@@ -214,10 +214,10 @@ export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactC
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => isChannelSpoilerGated(ChannelStore.getChannel(closure_0), ChannelSpoilerAgreeStore, ChannelStore), items1);
 });
-export const shouldShowSpoilerGateForChannelId = function shouldShowSpoilerGateForChannelId(channelId) {
+export function shouldShowSpoilerGateForChannelId(channelId) {
   let tmp = null != channelId;
   if (tmp) {
     tmp = isChannelSpoilerGated(ChannelStore.getChannel(channelId));
   }
   return tmp;
-};
+}

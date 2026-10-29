@@ -1,11 +1,11 @@
-// === Module 12594: ConjureStaffAccess ===
+// === Module 12811: ConjureStaffAccess ===
 
-// Module 12594 (ConjureStaffAccess)
+// Module 12811 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -46,7 +46,7 @@ export const useConjureStaffAccessTarget = ReactCompilerGating.isReactCompilerEn
               tmp7 = closure_1_2;
               tmp8 = item10017;
               selectableChannels = closure_1_2.getSelectableChannels(tmp5.id);
-              found = selectableChannels.find(() => { ... });
+              found = selectableChannels.find(/* F152335 */ function() { ... });
               tmp10 = found;
               if (null != found) {
                 obj1 = { isStaff: null, guildId: null, channelId: null };
@@ -117,7 +117,7 @@ export const useConjureStaffAccessTarget = ReactCompilerGating.isReactCompilerEn
               tmp7 = closure_1_2;
               tmp8 = item10017;
               selectableChannels = closure_1_2.getSelectableChannels(tmp5.id);
-              found = selectableChannels.find(() => { ... });
+              found = selectableChannels.find(/* F152335 */ function() { ... });
               tmp10 = found;
               if (null != found) {
                 obj1 = { isStaff: null, guildId: null, channelId: null };

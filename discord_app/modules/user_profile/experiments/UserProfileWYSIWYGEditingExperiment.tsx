@@ -1,8 +1,8 @@
-// === Module 11227: UserProfileWYSIWYGEditingExperiment ===
+// === Module 11281: UserProfileWYSIWYGEditingExperiment ===
 
-// Module 11227 (UserProfileWYSIWYGEditingExperiment)
+// Module 11281 (UserProfileWYSIWYGEditingExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,6 +27,6 @@ export const useIsEligibleForUserProfileWYSIWYGEditing = ReactCompilerGating.isR
 }) : (function useIsEligibleForUserProfileWYSIWYGEditing(location) {
   return closure_2.useConfig({ location }).enabled;
 });
-export const getIsEligibleForUserProfileWYSIWYGEditing = function getIsEligibleForUserProfileWYSIWYGEditing(location) {
+export function getIsEligibleForUserProfileWYSIWYGEditing(location) {
   return closure_2.getConfig({ location }).enabled;
-};
+}

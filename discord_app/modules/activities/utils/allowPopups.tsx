@@ -1,13 +1,13 @@
-// === Module 11546: allowPopups ===
+// === Module 11600: allowPopups ===
 
-// Module 11546 (allowPopups)
-import Constants from "Constants" /* 2023 */;
+// Module 11600 (allowPopups)
+import Constants from "Constants" /* 2024 */;
 import size from "module_2" /* 2 */;
 
 Constants.APPLICATIONS_WITH_ALLOWED_POPUPS;
 const result = size.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
 
-export const allowPopups = function allowPopups(application) {
+export function allowPopups(application) {
   let prop = application;
   let flag = null;
   let tmp2 = null != application;
@@ -36,4 +36,4 @@ export const allowPopups = function allowPopups(application) {
     }
   }
   return tmp2;
-};
+}

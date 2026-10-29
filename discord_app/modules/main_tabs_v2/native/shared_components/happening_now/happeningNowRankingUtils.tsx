@@ -1,20 +1,20 @@
-// === Module 17770: happeningNowRankingUtils ===
+// === Module 18008: happeningNowRankingUtils ===
 
-// Module 17770 (happeningNowRankingUtils)
+// Module 18008 (happeningNowRankingUtils)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(16924);
+const HappeningNowConstants = fn(17163);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_7 } = HappeningNowConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
 
-export const cardSize = function cardSize(kind) {
+export function cardSize(kind) {
   switch (kind.kind) {
     case "placeholder":
       return hasOwnProperty;
@@ -45,10 +45,10 @@ export const cardSize = function cardSize(kind) {
     default:
       GlobalUtils.assertNever(kind);
   }
-};
+}
 export const HappeningNowWeights = { Stage: 7, Voice: 6, Stream: 5, Game: 4, Listening: 3, CustomStatus: 3, User: 2, Base: 1 };
 export const HAPPENING_NOW_OFFLINE_PENALTY = -1000;
-export const filterHappeningNowCards = function filterHappeningNowCards(length) {
+export function filterHappeningNowCards(length) {
   return length.filter((voiceState) => {
     let flag = false;
     if ("voiceState" in voiceState) {
@@ -92,8 +92,8 @@ export const filterHappeningNowCards = function filterHappeningNowCards(length) 
     }
     return tmp5;
   });
-};
-export const sortHappeningNowCards = function sortHappeningNowCards(result) {
+}
+export function sortHappeningNowCards(result) {
   const items = [
     function bigCardsFirst(kind) {
       switch (kind.kind) {
@@ -195,4 +195,4 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
     }
   ];
   return _mod12.orderBy(result, items, ["asc", "asc"]);
-};
+}

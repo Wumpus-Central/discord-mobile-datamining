@@ -1,18 +1,18 @@
-// === Module 12028: ApplicationCommandOptionValueParser ===
+// === Module 12082: ApplicationCommandOptionValueParser ===
 
-// Module 12028 (ApplicationCommandOptionValueParser)
+// Module 12082 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import Server from "Server" /* 1997 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import MessageParser from "MessageParser" /* 7790 */;
+import Server from "Server" /* 1998 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import MessageParser from "MessageParser" /* 7812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6805 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildRoleStore from "GuildRoleStore" /* 4910 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6828 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildRoleStore from "GuildRoleStore" /* 4911 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const MessageParserDefault = MessageParser;
@@ -43,7 +43,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5640).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5641).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -77,8 +77,8 @@ function getChannels(getGuildId, arr) {
     });
   }
 }
-let closure_6 = fn(4860).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(6020);
+let closure_6 = fn(4861).isGuildSelectableChannelType;
+const ChannelAutocompleteConstants = fn(6024);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 
@@ -154,7 +154,7 @@ class ApplicationCommandOptionValueParser {
         }
         obj = closure_1;
       }
-      if (type.type === channel(1997).ApplicationCommandOptionType.USER) {
+      if (type.type === channel(1998).ApplicationCommandOptionType.USER) {
         const matchUserResult = matchUser();
         if (null != matchUserResult) {
           return matchUserResult;
@@ -208,13 +208,13 @@ class ApplicationCommandOptionValueParser {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      if (type.type === channel(1997).ApplicationCommandOptionType.ROLE) {
+      if (type.type === channel(1998).ApplicationCommandOptionType.ROLE) {
         const matchRoleResult = matchRole();
         if (null != matchRoleResult) {
           return matchRoleResult;
         }
       }
-      if (type.type === channel(1997).ApplicationCommandOptionType.CHANNEL) {
+      if (type.type === channel(1998).ApplicationCommandOptionType.CHANNEL) {
         arr7 = closure_2_13;
         if (typeof matchPrefix === "function") {
           let firstResult = null;
@@ -239,7 +239,7 @@ class ApplicationCommandOptionValueParser {
         }
         obj8 = getChannels(obj.channel, type.channelTypes);
       }
-      if (type.type === channel(1997).ApplicationCommandOptionType.MENTIONABLE) {
+      if (type.type === channel(1998).ApplicationCommandOptionType.MENTIONABLE) {
         const matchRoleResult1 = matchRole();
         if (null != matchRoleResult1) {
           return matchRoleResult1;
@@ -293,7 +293,7 @@ export { getUsers };
 export { getRoles };
 export { getChannels };
 export { ApplicationCommandOptionValueParser };
-export const parseOptionValuesForSend = function parseOptionValuesForSend(channel, command, current) {
+export function parseOptionValuesForSend(channel, command, current) {
   if (null == command.options) {
     return {};
   } else {
@@ -326,7 +326,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
     }
     return obj3;
   }
-};
+}
 export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationCommandOptionValueParser(channel) {
   const cResult = obj2(576).c(2);
   channel = channel.channel;
@@ -400,7 +400,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj = closure_1;
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -454,13 +454,13 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -485,7 +485,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;
@@ -602,7 +602,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj = closure_1;
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -656,13 +656,13 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -687,7 +687,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1997).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1998).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;

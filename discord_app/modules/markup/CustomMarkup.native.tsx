@@ -1,12 +1,12 @@
-// === Module 6015: CustomMarkup ===
+// === Module 6019: CustomMarkup ===
 
-// Module 6015 (CustomMarkup)
-import _modDef1948 from "module_1948" /* 1948 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
-import MarkupReactRules from "MarkupReactRules" /* 5742 */;
-import MarkupTypes from "MarkupTypes" /* 6016 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6017 */;
-import MarkupRulesDefault from "MarkupRules" /* 6018 */;
+// Module 6019 (CustomMarkup)
+import _modDef1949 from "module_1949" /* 1949 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
+import MarkupReactRules from "MarkupReactRules" /* 5744 */;
+import MarkupTypes from "MarkupTypes" /* 6020 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6021 */;
+import MarkupRulesDefault from "MarkupRules" /* 6022 */;
 import size from "module_2" /* 2 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -20,19 +20,19 @@ function createRules(arg0) {
   items = [MarkupUtilsDefault.defaultRules, tmp, ];
   const obj2 = {};
   const obj3 = {};
-  const merged = Object.assign(_modDef1948.defaultRules.link);
+  const merged = Object.assign(_modDef1949.defaultRules.link);
   obj3.react = tmp[MarkupTypes.AST_KEY.LINK].react;
   obj2[MarkupTypes.AST_KEY.LINK] = obj3;
   const obj4 = {};
-  const merged1 = Object.assign(_modDef1948.defaultRules.url);
+  const merged1 = Object.assign(_modDef1949.defaultRules.url);
   obj4.react = tmp[MarkupTypes.AST_KEY.URL].react;
   obj2[MarkupTypes.AST_KEY.URL] = obj4;
   const obj5 = {};
-  const merged2 = Object.assign(_modDef1948.defaultRules.autolink);
+  const merged2 = Object.assign(_modDef1949.defaultRules.autolink);
   obj5.react = tmp[MarkupTypes.AST_KEY.AUTOLINK].react;
   obj2[MarkupTypes.AST_KEY.AUTOLINK] = obj5;
   const obj6 = {};
-  const merged3 = Object.assign(_modDef1948.defaultRules.blockQuote);
+  const merged3 = Object.assign(_modDef1949.defaultRules.blockQuote);
   obj6.react = tmp[MarkupTypes.AST_KEY.BLOCK_QUOTE].react;
   obj2[MarkupTypes.AST_KEY.BLOCK_QUOTE] = obj6;
   items[2] = obj2;
@@ -73,7 +73,7 @@ let items = [MarkupTypes.AST_KEY.URL, MarkupTypes.AST_KEY.AUTOLINK, MarkupTypes.
 const result = size.fileFinishedImporting("modules/markup/CustomMarkup.native.tsx");
 
 export { createRules };
-export const getParser = function getParser(arg0) {
+export function getParser(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -83,9 +83,9 @@ export const getParser = function getParser(arg0) {
     obj2 = {};
   }
   return MarkupUtilsDefault.reactParserFor(createRules(obj, obj2));
-};
+}
 export { createRulesWithoutLinks };
-export const getParserWithoutLinks = function getParserWithoutLinks(arg0) {
+export function getParserWithoutLinks(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -95,9 +95,9 @@ export const getParserWithoutLinks = function getParserWithoutLinks(arg0) {
     obj2 = {};
   }
   return MarkupUtilsDefault.reactParserFor(createRulesWithoutLinks(obj, obj2));
-};
+}
 export { createNotifCenterV2MessagePreviewRules };
-export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, arg1) {
+export function getNotifCenterV2MessagePreviewParser(arg0, arg1) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -107,8 +107,8 @@ export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2Mes
     obj2 = {};
   }
   return MarkupUtilsDefault.reactParserFor(createNotifCenterV2MessagePreviewRules(obj, obj2, roleStyle));
-};
-export const createWidgetMessageRules = function createWidgetMessageRules() {
+}
+export function createWidgetMessageRules() {
   items = [MarkupUtilsDefault.lockscreenWidgetMessageRules, ];
   const obj = {};
   const obj2 = {};
@@ -121,8 +121,8 @@ export const createWidgetMessageRules = function createWidgetMessageRules() {
   obj[MarkupTypes.AST_KEY.SPOILER] = obj3;
   items[1] = obj;
   return combineMarkupRulesDefault(items);
-};
-export const getWidgetMessageRules = function getWidgetMessageRules() {
+}
+export function getWidgetMessageRules() {
   const obj = MarkupUtilsDefault;
   items = [MarkupUtilsDefault.lockscreenWidgetMessageRules, ];
   const obj2 = {};
@@ -136,4 +136,4 @@ export const getWidgetMessageRules = function getWidgetMessageRules() {
   obj2[MarkupTypes.AST_KEY.SPOILER] = obj4;
   items[1] = obj2;
   return obj.reactParserFor(combineMarkupRulesDefault(items));
-};
+}

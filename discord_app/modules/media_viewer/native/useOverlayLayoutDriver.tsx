@@ -1,9 +1,9 @@
-// === Module 14463: useOverlayLayoutDriver ===
+// === Module 14697: useOverlayLayoutDriver ===
 
-// Module 14463 (useOverlayLayoutDriver)
+// Module 14697 (useOverlayLayoutDriver)
 import native from "native" /* 1199 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import timing from "timing" /* 5242 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import timing from "timing" /* 5243 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,9 +18,9 @@ const __initData4 = { code: "function useOverlayLayoutDriverTsx4(){const{interpo
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOverlayLayoutDriver() {
   const cResult = sharedValue(576).c(6);
   let obj = sharedValue(576);
-  sharedValue = sharedValue(5085).useSharedValue(0);
-  const obj2 = sharedValue(5085);
-  const mediaViewerDimensions = sharedValue(8821).useMediaViewerDimensions();
+  sharedValue = sharedValue(5086).useSharedValue(0);
+  const obj2 = sharedValue(5086);
+  const mediaViewerDimensions = sharedValue(8824).useMediaViewerDimensions();
   ({ height, width } = mediaViewerDimensions);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
@@ -48,11 +48,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOverlay
   cResult[4] = width;
   cResult[5] = items;
   tmp5 = items;
-  const obj3 = sharedValue(8821);
+  const obj3 = sharedValue(8824);
 }) : (function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(5085).useSharedValue(0);
-  let obj = sharedValue(5085);
-  const mediaViewerDimensions = sharedValue(8821).useMediaViewerDimensions();
+  sharedValue = sharedValue(5086).useSharedValue(0);
+  let obj = sharedValue(5086);
+  const mediaViewerDimensions = sharedValue(8824).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {

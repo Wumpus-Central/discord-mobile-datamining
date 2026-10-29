@@ -1,7 +1,7 @@
-// === Module 5781: DirectVideoStream ===
+// === Module 5783: DirectVideoStream ===
 
-// Module 5781 (DirectVideoStream)
-import inject from "inject" /* 2013 */;
+// Module 5783 (DirectVideoStream)
+import inject from "inject" /* 2014 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -36,10 +36,10 @@ prototype["release"] = function release() {
 const map = new Map();
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/DirectVideoStream.tsx");
 
-export const supportsDirectVideoStreams = function supportsDirectVideoStreams() {
+export function supportsDirectVideoStreams() {
   return null != window.createDiscordStream;
-};
-export const getDirectVideoStreamConsumerCount = function getDirectVideoStreamConsumerCount(arg0) {
+}
+export function getDirectVideoStreamConsumerCount(arg0) {
   value = map.get(arg0);
   let num;
   if (value != null) {
@@ -49,8 +49,8 @@ export const getDirectVideoStreamConsumerCount = function getDirectVideoStreamCo
     num = 0;
   }
   return num;
-};
-export const acquireDirectVideoStream = function acquireDirectVideoStream(streamId) {
+}
+export function acquireDirectVideoStream(streamId) {
   _require = streamId;
   value = map.get(streamId);
   if (null == value) {
@@ -89,4 +89,4 @@ export const acquireDirectVideoStream = function acquireDirectVideoStream(stream
       }
     }
   };
-};
+}

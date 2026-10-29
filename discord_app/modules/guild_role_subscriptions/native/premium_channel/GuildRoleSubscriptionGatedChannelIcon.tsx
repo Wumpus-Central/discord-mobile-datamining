@@ -1,9 +1,9 @@
-// === Module 17833: GuildRoleSubscriptionGatedChannelIcon ===
+// === Module 18071: GuildRoleSubscriptionGatedChannelIcon ===
 
-// Module 17833 (GuildRoleSubscriptionGatedChannelIcon)
+// Module 18071 (GuildRoleSubscriptionGatedChannelIcon)
 import c from "c" /* 576 */;
 import native from "native" /* 1199 */;
-import _modDef9897 from "module_9897" /* 9897 */;
+import _modDef9929 from "module_9929" /* 9929 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,17 +23,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Subscrip
     }
     return tmp6;
   }
-  const tmp7 = jsx(native.Icon, { source: _modDef9897, size: tmp4, disableColor: false !== locked });
+  const tmp7 = jsx(native.Icon, { source: _modDef9929, size: tmp4, disableColor: false !== locked });
   cResult[0] = tmp4;
   cResult[1] = false !== locked;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const obj2 = { source: _modDef9897, size: tmp4, disableColor: false !== locked };
+  const obj2 = { source: _modDef9929, size: tmp4, disableColor: false !== locked };
 }) : (function SubscriptionGatedChannelIcon(arg0) {
   ({ locked, isInMainTabsExperiment } = arg0);
-  const obj = { source: _modDef9897, size: null, disableColor: null };
+  const obj = { source: _modDef9929, size: null, disableColor: null };
   const Sizes = native.Icon.Sizes;
   obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
   obj.disableColor = false !== locked;
-  return jsx(native.Icon, { source: _modDef9897, size: null, disableColor: null });
+  return jsx(native.Icon, { source: _modDef9929, size: null, disableColor: null });
 });

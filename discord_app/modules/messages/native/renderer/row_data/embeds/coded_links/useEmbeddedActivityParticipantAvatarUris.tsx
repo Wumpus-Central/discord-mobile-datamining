@@ -1,9 +1,9 @@
-// === Module 14801: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 15036: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 14801 (useEmbeddedActivityParticipantAvatarUris)
+// Module 15036 (useEmbeddedActivityParticipantAvatarUris)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
     return found.map((getAvatarURL) => "" + getAvatarURL.getAvatarURL(guildId, 64));
   }, items3);
 });
-export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActivityParticipantAvatarUris(arg0) {
+export function getEmbeddedActivityParticipantAvatarUris(arg0) {
   ({ guildId: require, applicationId: dependencyMap, activity } = arg0);
   if (null == activity) {
     const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
@@ -129,4 +129,4 @@ export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActi
     return "" + avatarURL;
   });
   return mapped.filter(GlobalUtils.isNotNullish);
-};
+}

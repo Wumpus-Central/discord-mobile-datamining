@@ -1,9 +1,9 @@
-// === Module 7519: canChannelUseSoundboard ===
+// === Module 7542: canChannelUseSoundboard ===
 
-// Module 7519 (canChannelUseSoundboard)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+// Module 7542 (canChannelUseSoundboard)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
 
 export default canChannelUseSoundboard;
-export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceChannelUseSoundboard() {
+export function canSelectedVoiceChannelUseSoundboard() {
   const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
   let flag = false;
   if (null != channel) {
@@ -43,7 +43,7 @@ export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceCha
     }
   }
   return flag;
-};
+}
 export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanChannelUseSoundboard(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);

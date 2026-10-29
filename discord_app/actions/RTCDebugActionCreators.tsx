@@ -1,30 +1,30 @@
-// === Module 5774: RTCDebugActionCreators ===
+// === Module 5776: RTCDebugActionCreators ===
 
-// Module 5774 (RTCDebugActionCreators)
+// Module 5776 (RTCDebugActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DiscordNativeDefault from "DiscordNative" /* 4818 */;
+import DiscordNativeDefault from "DiscordNative" /* 4819 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 
-export const open = function open(section) {
+export function open(section) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN", section });
   const obj2 = { type: "RTC_DEBUG_MODAL_OPEN", section };
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_POPOUT_WINDOW_OPEN" });
-};
-export const close = function close() {
+}
+export function close() {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_CLOSE" });
-};
-export const openReplay = function openReplay() {
+}
+export function openReplay() {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY" });
-};
-export const setSection = function setSection(section) {
+}
+export function setSection(section) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_SET_SECTION", section });
-};
-export const setSimulcastDebugOverride = function setSimulcastDebugOverride(userId, context, quality) {
+}
+export function setSimulcastDebugOverride(userId, context, quality) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality });
-};
-export const chooseReplayPath = function chooseReplayPath() {
+}
+export function chooseReplayPath() {
   const fileManager = DiscordNativeDefault.fileManager;
   const obj = { filters: null };
   const items = [{ name: "All Files", extensions: ["*"] }];
@@ -36,4 +36,4 @@ export const chooseReplayPath = function chooseReplayPath() {
     }
     DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH", path: str });
   });
-};
+}

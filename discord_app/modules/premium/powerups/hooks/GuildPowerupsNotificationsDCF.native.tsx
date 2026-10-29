@@ -1,11 +1,11 @@
-// === Module 13660: GuildPowerupsNotificationsDCF ===
+// === Module 13893: GuildPowerupsNotificationsDCF ===
 
-// Module 13660 (GuildPowerupsNotificationsDCF)
+// Module 13893 (GuildPowerupsNotificationsDCF)
 import c from "c" /* 576 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7532 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 13654 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 13661 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7555 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 13887 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 13894 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

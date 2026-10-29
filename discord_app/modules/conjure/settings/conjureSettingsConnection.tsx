@@ -1,12 +1,12 @@
-// === Module 10846: conjureSettingsConnection ===
+// === Module 10922: conjureSettingsConnection ===
 
-// Module 10846 (conjureSettingsConnection)
+// Module 10922 (conjureSettingsConnection)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10777 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10830 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10852 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10751 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10826 */;
 
 require = fn;
 function noteSettingsWrite(arg0) {
@@ -37,7 +37,7 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -223,7 +223,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
         const backoff = closure_130_1.backoff;
         backoff.succeed();
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp29) {
       if (tmp4 === c4) {
@@ -346,7 +346,7 @@ export { fetchProjectSettings };
 export const CONJURE_SETTINGS_MAX_RETRIES = 5;
 export const CONJURE_SETTINGS_MIN_RELOAD_INTERVAL_MS = 5000;
 export { loadOverlayProjectSettings };
-export const retryFailedOverlayProjectSettings = function retryFailedOverlayProjectSettings(arg0) {
+export function retryFailedOverlayProjectSettings(arg0) {
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -356,8 +356,8 @@ export const retryFailedOverlayProjectSettings = function retryFailedOverlayProj
     }
     continue;
   }
-};
-export const submitProjectSettings = function submitProjectSettings() {
+}
+export function submitProjectSettings() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -366,8 +366,8 @@ export const submitProjectSettings = function submitProjectSettings() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestProjectRebuild = function requestProjectRebuild(arg0) {
+}
+export function requestProjectRebuild(arg0) {
   closure_0 = arg0;
   closure_1 = async function _kick() {
     await v3(tmp11[4]).fetchConjureWorker(closure_2_0, "/agent/rebuild", { method: "POST" });
@@ -393,4 +393,4 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
     }
     return applyArgumentsResult;
   })();
-};
+}

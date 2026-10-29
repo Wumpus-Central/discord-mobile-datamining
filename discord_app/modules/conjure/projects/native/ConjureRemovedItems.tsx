@@ -1,20 +1,20 @@
-// === Module 12319: ConjureRemovedItems ===
+// === Module 12373: ConjureRemovedItems ===
 
-// Module 12319 (ConjureRemovedItems)
+// Module 12373 (ConjureRemovedItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5072 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import Stack_Stack from "Stack/Stack" /* 6013 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6936 */;
-import FormCheckbox from "FormCheckbox" /* 6937 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import FolderIcon from "FolderIcon" /* 8582 */;
-import AppsIcon from "AppsIcon" /* 8614 */;
-import BotTagDefault from "BotTag" /* 9167 */;
-import RobotIcon from "RobotIcon" /* 12193 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5073 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import Stack_Stack from "Stack/Stack" /* 6015 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6960 */;
+import FormCheckbox from "FormCheckbox" /* 6961 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import FolderIcon from "FolderIcon" /* 8604 */;
+import AppsIcon from "AppsIcon" /* 8636 */;
+import BotTagDefault from "BotTag" /* 9170 */;
+import RobotIcon from "RobotIcon" /* 12247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 }, optionalLabel: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -298,7 +298,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemov
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef3863["+E2PqP"]);
+    obj2.children = intl.string(_modDef3864["+E2PqP"]);
     const tmp7 = timestampProducer(Text_Text.Text, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -336,7 +336,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemov
   const optionalItem = items.optionalItem;
   const obj = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl = util.intl;
-  obj.children = intl.string(_modDef3863["+E2PqP"]);
+  obj.children = intl.string(_modDef3864["+E2PqP"]);
   items = [timestampProducer(Text_Text.Text, obj), ];
   const obj2 = { items: items.items, children: null };
   let tmp2Result = null;
@@ -355,7 +355,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureRemovedItems.tsx");
 
 export default tmp4;
-export const formatWithAppTag = function formatWithAppTag(HmNT_r, targetAppName) {
+export function formatWithAppTag(HmNT_r, targetAppName) {
   const intl = util.intl;
   const obj = { app: null };
   const obj2 = { children: null };
@@ -363,13 +363,13 @@ export const formatWithAppTag = function formatWithAppTag(HmNT_r, targetAppName)
   obj2.children = items;
   obj.app = React5(noop.Fragment, obj2, "app");
   return intl.format(HmNT_r, obj);
-};
+}
 export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemoveEverythingField(arg0) {
   const cResult = c.c(10);
   ({ checked, onChange, items } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3863.gKA9tU);
+    const stringResult = intl.string(_modDef3864.gKA9tU);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -418,7 +418,7 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
   const obj2 = { hasIcons: false, children: null };
   const obj3 = { label: null, checked: null, onPress: null };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef3863.gKA9tU);
+  obj3.label = intl.string(_modDef3864.gKA9tU);
   obj3.checked = checked;
   obj3.onPress = onChange;
   obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);

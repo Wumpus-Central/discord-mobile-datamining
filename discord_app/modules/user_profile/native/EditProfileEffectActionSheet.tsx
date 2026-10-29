@@ -1,30 +1,30 @@
-// === Module 16157: EditProfileEffectActionSheet ===
+// === Module 16394: EditProfileEffectActionSheet ===
 
-// Module 16157 (EditProfileEffectActionSheet)
+// Module 16394 (EditProfileEffectActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8690 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8693 */;
-import useShopProductItems from "useShopProductItems" /* 8697 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8699 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8713 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11094 */;
-import EditProfileEffectSection from "EditProfileEffectSection" /* 16159 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8693 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8696 */;
+import useShopProductItems from "useShopProductItems" /* 8700 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8702 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8716 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11148 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 16396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7700 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7723 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileEffectRecord = fn(7691).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7714).isProfileEffectRecord;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1 }, previewContainer: { overflow: "hidden", height: 300, alignItems: "center" }, previewGradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -444,7 +444,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(8699)(previewSkuId);
+  const tmp2 = purchase(8702)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -468,11 +468,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11094), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [closure_9(purchase(11148), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5294), obj2);
+  items1[1] = closure_9(purchase(5295), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 });
@@ -626,13 +626,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditProf
   if (str == null) {
     str = "";
   }
-  const tmp4Result = isTryItOut(8712)(str);
+  const tmp4Result = isTryItOut(8715)(str);
   dependencyMap = tmp4Result;
   const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
   selectedProfileEffect = tmp6[0];
-  const tmp4 = isTryItOut(8712);
-  let obj = guildId(8696);
-  const analyticsLocations = isTryItOut(7289)(tmp2(7314).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+  const tmp4 = isTryItOut(8715);
+  let obj = guildId(8699);
+  const analyticsLocations = isTryItOut(7313)(tmp2(7338).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
   memo = memo.useMemo(() => {
     const obj = { type: AnalyticsLocationDefault.EDIT_PROFILE_EFFECT_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
@@ -677,8 +677,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditProf
   const obj4 = { title: null };
   const intl = guildId(1125).intl;
   obj4.title = intl.string(guildId(1125).t["/6nv6N"]);
-  obj3.header = closure_9(guildId(7284).BottomSheetTitleHeader, obj4);
-  const tmp2Result = isTryItOut(7289);
+  obj3.header = closure_9(guildId(7308).BottomSheetTitleHeader, obj4);
+  const tmp2Result = isTryItOut(7313);
   const items3 = [closure_9(closure_5, { style: tmp.container, children: closure_9(closure_13, { user, selectedProfileEffect, setSelectedProfileEffect: tmp6[1], guildId, isTryItOut }) }), ];
   const obj6 = { user, currentSkuId: null, selectedSkuId: null, isTryItOut: null, onApply: null, analyticsLocations: null, analyticsSource: null };
   let skuId;
@@ -695,9 +695,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditProf
   obj6.isTryItOut = isTryItOut;
   obj6.onApply = callback1;
   obj6.analyticsLocations = analyticsLocations;
-  obj6.analyticsSource = isTryItOut(7314).EDIT_PROFILE_EFFECT_SHEET;
-  items3[1] = closure_9(isTryItOut(8698), obj6);
+  obj6.analyticsSource = isTryItOut(7338).EDIT_PROFILE_EFFECT_SHEET;
+  items3[1] = closure_9(isTryItOut(8701), obj6);
   obj3.children = items3;
-  obj2.children = closure_10(guildId(5301).BottomSheet, obj3);
-  return closure_9(guildId(7289).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_10(guildId(5302).BottomSheet, obj3);
+  return closure_9(guildId(7313).AnalyticsLocationProvider, obj2);
 });

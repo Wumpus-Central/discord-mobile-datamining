@@ -1,20 +1,20 @@
-// === Module 15306: showVoiceChannelBlockedUserWarning ===
+// === Module 15541: showVoiceChannelBlockedUserWarning ===
 
-// Module 15306 (showVoiceChannelBlockedUserWarning)
+// Module 15541 (showVoiceChannelBlockedUserWarning)
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 require = fn;
-const SharedSpacesWarningStore = fn(15305);
+const SharedSpacesWarningStore = fn(15540);
 ({ queueBlockWarning: closure_4, dequeueBlockWarning: hasOwnProperty } = SharedSpacesWarningStore);
-const constants = fn(15307).VoiceChannelWarningSurfaces;
+const constants = fn(15542).VoiceChannelWarningSurfaces;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx");
 
-export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, items1) {
+export function showVoiceChannelBlockedUserWarning(channelId, items1) {
   const state = AppStateStore.getState();
   if (state === ConstantsIOS.AppStates.ACTIVE) {
     hasOwnProperty();
@@ -26,9 +26,9 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj3.blocked_user_ids = items;
     obj3.warning_surface = constants.POST_JOIN_SHEET;
     obj2.impressionProperties = obj3;
-    obj.openLazy(asyncRequireImpl(15308, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
-    const tmp11 = asyncRequireImpl(15308, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(15543, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
+    const tmp11 = asyncRequireImpl(15543, dependencyMap.paths);
   } else {
     React4();
   }
-};
+}

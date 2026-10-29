@@ -1,11 +1,11 @@
-// === Module 9704: buildFileSizeLimitEventProperties ===
+// === Module 9736: buildFileSizeLimitEventProperties ===
 
-// Module 9704 (buildFileSizeLimitEventProperties)
+// Module 9736 (buildFileSizeLimitEventProperties)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
-export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
+export function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);
   ({ userIndividualFileSizeLimit, numAttachments, preCompressionFileSizes, preCompressionAggregateSize, postCompressionFileSizes, postCompressionAggregateSize, attachmentMimeTypes, errorType } = arg0);
   if (undefined !== channelId) {
@@ -32,4 +32,4 @@ export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEven
   obj3.attachment_mimetypes = attachmentMimeTypes;
   obj3.error_type = errorType;
   return obj3;
-};
+}

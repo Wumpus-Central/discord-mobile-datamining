@@ -1,11 +1,11 @@
-// === Module 19770: websocketTelemetryHook ===
+// === Module 19992: websocketTelemetryHook ===
 
-// Module 19770 (websocketTelemetryHook)
+// Module 19992 (websocketTelemetryHook)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
-export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
+export function installWebsocketTelemetryHook(arg0) {
   closure_0 = arg0;
   function handleMessage(arg0, str) {
     const obj = {};
@@ -145,4 +145,4 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       _globalThis.__discordWebsocketTelemetryPatched = true;
     }
   }
-};
+}

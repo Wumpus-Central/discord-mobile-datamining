@@ -1,16 +1,16 @@
-// === Module 6058: CheckpointMessageComponentUtils ===
+// === Module 6062: CheckpointMessageComponentUtils ===
 
-// Module 6058 (CheckpointMessageComponentUtils)
+// Module 6062 (CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1125 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
-import CheckpointUtils from "CheckpointUtils" /* 6059 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
+import CheckpointUtils from "CheckpointUtils" /* 6063 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/checkpoint/2025/CheckpointMessageComponentUtils.tsx");
 
-export const transformCheckpoint2025CardComponent = function transformCheckpoint2025CardComponent(checkpoint_data) {
+export function transformCheckpoint2025CardComponent(checkpoint_data) {
   const obj = { version: checkpoint_data.version, cardId: checkpoint_data.card_id, powerLevel: checkpoint_data.power_level, powerLevelPercentile: checkpoint_data.power_level_percentile, numMessagesSent: checkpoint_data.num_messages_sent, totalVoiceMinutes: checkpoint_data.total_voice_minutes, numEmojisSent: checkpoint_data.num_emojis_sent, topGuild: null, topEmoji: null, topGame: null };
   let tmp;
   if (null != checkpoint_data.top_guild) {
@@ -42,8 +42,8 @@ export const transformCheckpoint2025CardComponent = function transformCheckpoint
   }
   obj.topGame = tmp7;
   return obj;
-};
-export const transformCheckpoint2025CardToRowGeneratedComponent = function transformCheckpoint2025CardToRowGeneratedComponent(checkpointData, message) {
+}
+export function transformCheckpoint2025CardToRowGeneratedComponent(checkpointData, message) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "short" });
   const obj = {};
   const merged = Object.assign(checkpointData);
@@ -86,4 +86,4 @@ export const transformCheckpoint2025CardToRowGeneratedComponent = function trans
   obj.topEmoji = tmp5;
   obj.clickable = undefined;
   return obj;
-};
+}

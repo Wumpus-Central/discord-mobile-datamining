@@ -1,15 +1,15 @@
-// === Module 16648: UserSettingsAppearanceThemeUtils ===
+// === Module 16886: UserSettingsAppearanceThemeUtils ===
 
-// Module 16648 (UserSettingsAppearanceThemeUtils)
+// Module 16886 (UserSettingsAppearanceThemeUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5069 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5904 */;
-import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 13279 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16649 */;
-import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 16650 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5070 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5906 */;
+import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 13512 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16887 */;
+import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 16888 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
@@ -20,7 +20,7 @@ const constants = fn(1391).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
-export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
+export function handleSaveTheme(found, analyticsLocations, isSynced) {
   if (found.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: isSynced, location_stack: analyticsLocations };
     AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
@@ -67,8 +67,8 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
     const _HermesInternal = HermesInternal;
     combined = "default " + found.theme;
   }
-};
-export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
+}
+export function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
   if ("system" !== theme.theme) {
     if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
       const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: false, location_stack: analyticsLocations };
@@ -103,8 +103,8 @@ export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(them
       combined = "default " + theme.theme;
     }
   }
-};
-export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, stateFromStores) {
+}
+export function getSyncedModeThemeIndex(memo2, stateFromStores) {
   const syncedClientTheme = ThemeStore.getSyncedClientTheme(stateFromStores);
   let prop;
   if (syncedClientTheme != null) {
@@ -139,19 +139,19 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, s
     num3 = findIndexResult2;
   }
   return num3;
-};
-export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme() {
+}
+export function enableSameAsDeviceTheme() {
   const result = SameAsDeviceThemeUtils.enableSameAsDeviceTheme(CustomThemeMobileStore.getCustomTheme());
-};
-export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
+}
+export function disableSameAsDeviceTheme() {
   ThemeActionCreators.setUseSystemTheme(SystemThemeState.OFF);
   const result = ThemeActionCreators.clearSyncedClientThemes();
-};
-export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
+}
+export function trackClientThemeUpdated(arg0) {
   ({ isPersisted, isSynced, themeName, analyticsLocations } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, { feature_name: constants.CLIENT_THEME, theme_name: themeName, is_persisted: isPersisted, is_synced: isSynced, location_stack: analyticsLocations });
-};
-export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
+}
+export function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   if (null != userPreset) {
     const findIndexResult = memo1.findIndex((type) => {
       let tmp = type.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
@@ -179,4 +179,4 @@ export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo
     }
     return num2;
   }
-};
+}

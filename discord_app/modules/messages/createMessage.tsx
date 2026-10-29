@@ -1,14 +1,14 @@
-// === Module 10241: createMessage ===
+// === Module 10274: createMessage ===
 
-// Module 10241 (createMessage)
+// Module 10274 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import createNonce from "createNonce" /* 10237 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7731 */;
+import createNonce from "createNonce" /* 10270 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7754 */;
 import UserRecord from "UserRecord" /* 1403 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const ReferencedMessageState = fn(7731).ReferencedMessageState;
+const ReferencedMessageState = fn(7754).ReferencedMessageState;
 const Constants = fn(1084);
 ({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: closure_11 } = Constants);
 const size = fn(2);
@@ -73,10 +73,10 @@ export default function createMessage(tts) {
   obj5.media_mention = mediaMention;
   return obj5;
 };
-export const userRecordToServer = function userRecordToServer(currentUser) {
+export function userRecordToServer(currentUser) {
   return { id: currentUser.id, username: currentUser.username, avatar: currentUser.avatar, discriminator: currentUser.discriminator, bot: currentUser.bot, global_name: currentUser.globalName, primary_guild: currentUser.primaryGuild };
-};
-export const createBotMessage = function createBotMessage(arg0) {
+}
+export function createBotMessage(arg0) {
   ({ messageId, embeds } = arg0);
   ({ channelId, content, loggingName } = arg0);
   if (messageId == null) {
@@ -94,4 +94,4 @@ export const createBotMessage = function createBotMessage(arg0) {
   obj2.state = constants.SENT;
   obj2.loggingName = loggingName;
   return obj2;
-};
+}

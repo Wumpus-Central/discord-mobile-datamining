@@ -1,19 +1,19 @@
-// === Module 8350: AddRecipientSystemMessage ===
+// === Module 8372: AddRecipientSystemMessage ===
 
-// Module 8350 (AddRecipientSystemMessage)
+// Module 8372 (AddRecipientSystemMessage)
 import util from "util" /* 1125 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");
 
-export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
+export function createAddRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
   const user = UserStore.getUser(first);
@@ -35,4 +35,4 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };
-};
+}

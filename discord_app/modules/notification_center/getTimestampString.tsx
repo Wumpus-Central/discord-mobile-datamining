@@ -1,8 +1,8 @@
-// === Module 6060: getTimestampString ===
+// === Module 6064: getTimestampString ===
 
-// Module 6060 (getTimestampString)
+// Module 6064 (getTimestampString)
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
+import _modDef2047 from "module_2047" /* 2047 */;
 import size from "module_2" /* 2 */;
 
 function getDurationString(seconds) {
@@ -49,16 +49,16 @@ let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: _modDef2046().diff(_modDef2046(since), "s"), getFormatter };
+  const obj = { seconds: _modDef2047().diff(_modDef2047(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 };
-export const getAbbreviatedFormatter = function getAbbreviatedFormatter() {
+export function getAbbreviatedFormatter() {
   const time = { minutes: util.t["XIGt+W"], hours: util.t.rhY1Rs, days: util.t.GBLpQ8, months: util.t.XzBNbS, years: util.t.I1E8p6 };
   return time;
-};
-export const getFullFormatter = function getFullFormatter() {
+}
+export function getFullFormatter() {
   const time = { minutes: util.t["GqQ/Y9"], hours: util.t.c5zfWZ, days: util.t.amjnaI, months: util.t.SoON3V, years: util.t["12B3Re"] };
   return time;
-};
+}
 export { getDurationString };

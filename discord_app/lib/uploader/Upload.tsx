@@ -1,12 +1,12 @@
-// === Module 8176: Upload ===
+// === Module 8199: Upload ===
 
-// Module 8176 (Upload)
+// Module 8199 (Upload)
 import _modDef12 from "module_12" /* 12 */;
 import _mod580 from "module_580" /* 580 */;
 import v1 from "v1" /* 1278 */;
-import UploadPlatform from "UploadPlatform" /* 8177 */;
-import UploadUtils from "UploadUtils" /* 8178 */;
-import FileUtilsAll from "FileUtils" /* 8182 */;
+import UploadPlatform from "UploadPlatform" /* 8200 */;
+import UploadUtils from "UploadUtils" /* 8201 */;
+import FileUtilsAll from "FileUtils" /* 8205 */;
 import size from "module_2" /* 2 */;
 
 const EventEmitter = _mod580.EventEmitter;
@@ -69,7 +69,7 @@ prototype["resetState"] = function resetState() {
 const result = size.fileFinishedImporting("lib/uploader/Upload.tsx");
 
 export default Upload;
-export const isResolvedUpload = function isResolvedUpload(file) {
+export function isResolvedUpload(file) {
   return undefined !== file.isVideo && undefined !== file.isImage;
-};
+}
 export const UploadOrigin = { FILE_ATTACHMENT: 0, [0]: "FILE_ATTACHMENT", IMAGE_PICKER: 1, [1]: "IMAGE_PICKER", IMAGE_EDITOR: 2, [2]: "IMAGE_EDITOR" };

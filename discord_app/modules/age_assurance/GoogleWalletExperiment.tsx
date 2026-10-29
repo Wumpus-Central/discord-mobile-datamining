@@ -1,8 +1,8 @@
-// === Module 8129: GoogleWalletExperiment ===
+// === Module 8152: GoogleWalletExperiment ===
 
-// Module 8129 (GoogleWalletExperiment)
+// Module 8152 (GoogleWalletExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,6 +27,6 @@ export const useIsGoogleWalletEnabled = ReactCompilerGating.isReactCompilerEnabl
 }) : (function useIsGoogleWalletEnabled(location) {
   return closure_2.useConfig({ location }).enabled;
 });
-export const isGoogleWalletEnabled = function isGoogleWalletEnabled(age_verification_methods) {
+export function isGoogleWalletEnabled(age_verification_methods) {
   return closure_2.getConfig({ location: age_verification_methods }).enabled;
-};
+}

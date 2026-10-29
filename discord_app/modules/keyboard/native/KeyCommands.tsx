@@ -1,8 +1,8 @@
-// === Module 6009: KeyCommands ===
+// === Module 6011: KeyCommands ===
 
-// Module 6009 (KeyCommands)
+// Module 6011 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 6010 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 6012 */;
 
 const require = globalThis.__r;
 
@@ -74,7 +74,7 @@ let result = size.fileFinishedImporting("modules/keyboard/native/KeyCommands.tsx
 
 export const KeyModifierFlags = NativeKeyCommandsModule;
 export const KeyInputs = { ESCAPE: "UIKeyInputEscape" };
-export const subscribeKeyCommand = function subscribeKeyCommand(arg0) {
+export function subscribeKeyCommand(arg0) {
   closure_0 = arg0;
   let items = [];
   items[HermesBuiltin.arraySpread(items, 0)] = arg0;
@@ -125,7 +125,7 @@ export const subscribeKeyCommand = function subscribeKeyCommand(arg0) {
       });
     }
   };
-};
+}
 export const useKeyCommands = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyCommands(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);

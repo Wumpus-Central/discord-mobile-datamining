@@ -1,34 +1,34 @@
-// === Module 9979: CustomEmojiContent ===
+// === Module 10011: CustomEmojiContent ===
 
-// Module 9979 (CustomEmojiContent)
+// Module 10011 (CustomEmojiContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4958 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import openUserSettings from "openUserSettings" /* 7526 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9826 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9977 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9981 */;
-import StarIcon from "StarIcon" /* 9983 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9986 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4959 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import openUserSettings from "openUserSettings" /* 7549 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9858 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10009 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10013 */;
+import StarIcon from "StarIcon" /* 10015 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10018 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4959 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4960 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(6920).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(6944).EmojiSourceDataTypes;
 const Constants = fn(1084);
 ({ UserSettingsSections: closure_11, AnalyticEvents: closure_12, AnalyticsPages: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { nitroWheel: { height: 32, width: 32 }, nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW }, emojiDescriptionWrapperOuter: { flexDirection: "row", flex: 1, alignItems: "center", gap: 8 }, starIcon: { height: 32, width: 32, margin: 0, padding: 0, flex: 0 }, starIconSelected: null, starIconUnselected: null, moreMenuIcon: null, bottomCtaButton: null, ctaDescriptionWrapper: null, betaTag: null, betaTagTextAddPack: null, betaTagTextRemovePack: null, favoriteButtonContainer: null };
 let obj3 = { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW };
 obj2.starIconSelected = { tintColor: nativeDefault.colors.ICON_FEEDBACK_WARNING };
@@ -277,7 +277,7 @@ export default function CustomEmojiContent(emojiNode) {
       if (sourceType !== isFavoriteEmoji.PACK) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9985, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10017, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
         }
         const intl5 = tmp2(nonce[28]).intl;
         obj22.accessibilityLabel = intl5.string(tmp2(nonce[28]).t.PdRCRg);

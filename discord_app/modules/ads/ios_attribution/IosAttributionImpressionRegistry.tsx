@@ -1,9 +1,9 @@
-// === Module 14361: IosAttributionImpressionRegistry ===
+// === Module 14595: IosAttributionImpressionRegistry ===
 
-// Module 14361 (IosAttributionImpressionRegistry)
+// Module 14595 (IosAttributionImpressionRegistry)
 import LoggerDefault from "Logger" /* 3 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14359 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 14363 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14593 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 14597 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
           closure_129_7 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -83,7 +83,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
             const result = closure_130_0(closure_130_1[4]).trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.NO_FRAMEWORK, closure_129_2);
             closure_130_7(closure_129_0, closure_129_3);
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const obj8 = { metadataSealed: closure_129_1, impressionId: closure_129_0, specs: null, signal: null };
             const items = [closure_129_4];
@@ -181,7 +181,7 @@ let closure_10 = async function _getImpressionToken(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -242,110 +242,49 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let impressionId2;
-            impressionId2 = impressionId.impressionId;
-            let activeIosAttributionFramework;
-            closure_129_2 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            activeIosAttributionFramework = closure_130_0(closure_130_1[3]).getActiveIosAttributionFramework();
-            if (null != activeIosAttributionFramework) {
-              if (null != closure_130_3[activeIosAttributionFramework]) {
-                c3 = 2;
-                c4 = 1;
-                const obj5 = {
-                  value: (function getImpressionToken() {
-                                const self = this;
-                                const apply = closure_1_10.apply;
-                                if (typeof apply === "unknown") {
-                                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                } else {
-                                  applyArgumentsResult = apply(self, arguments);
-                                }
-                                return applyArgumentsResult;
-                              })(impressionId2),
-                  done: false
-                };
-                return obj5;
-              }
-            }
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_129_2 = value;
-          let tmp9;
-          if (null != closure_129_2) {
-            obj = { impressionToken: closure_129_2 };
-            tmp9 = obj;
-          }
-          c4 = 3;
-          const obj7 = { value: tmp9, done: true };
-          return obj7;
-        }
-      } catch (tmp19) {
-        c4 = tmp;
-        throw tmp19;
+    closure_1 = tmp2;
+    const impressionId2 = impressionId.impressionId;
+    await "Reflect";
+    const activeIosAttributionFramework = closure_130_0(closure_130_1[3]).getActiveIosAttributionFramework();
+    if (null != activeIosAttributionFramework) {
+      if (null != closure_130_3[activeIosAttributionFramework]) {
+        c3 = 2;
+        c4 = 1;
+        return {
+          value: (function getImpressionToken() {
+                const self = this;
+                const apply = closure_1_10.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(impressionId2),
+          done: false
+        };
       }
     }
+    await "IconComponent";
+    closure_129_2 = value;
+    if (null != closure_129_2) {
+      const tmp9 = { impressionToken: closure_129_2 };
+    }
+    return tmp9;
   })();
   iter.next();
   return iter;
 };
 let obj = {};
-let obj2 = { viewThroughSpec: { kind: fn(14362).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
-obj[fn(14362).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
-let obj3 = { kind: fn(14362).IosAttributionFramework.AD_ATTRIBUTION_KIT };
+let obj2 = { viewThroughSpec: { kind: fn(14596).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
+obj[fn(14596).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
+let obj3 = { kind: fn(14596).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionImpressionRegistry.tsx");
 
-export const registerViewThroughImpression = function registerViewThroughImpression(metadataSealed) {
+export function registerViewThroughImpression(metadataSealed) {
   const impressionId = metadataSealed.impressionId;
   const framework = metadataSealed.framework;
   const impression = { framework, token: null, signAbort: null, registration: null };
@@ -367,8 +306,8 @@ export const registerViewThroughImpression = function registerViewThroughImpress
       map.delete(impressionId);
     }
   });
-};
-export const getStoreKitCredential = function getStoreKitCredential() {
+}
+export function getStoreKitCredential() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -377,8 +316,8 @@ export const getStoreKitCredential = function getStoreKitCredential() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const endImpression = function endImpression(id) {
+}
+export function endImpression(id) {
   value = map.get(id);
   if (null != value) {
     map.delete(id);
@@ -392,4 +331,4 @@ export const endImpression = function endImpression(id) {
       const endImpressionResult = IosAttributionNativeModule.endImpression(token);
     }
   }
-};
+}

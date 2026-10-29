@@ -1,11 +1,11 @@
-// === Module 7487: searchSounds ===
+// === Module 7510: searchSounds ===
 
-// Module 7487 (searchSounds)
+// Module 7510 (searchSounds)
 import debounceDefault from "debounce" /* 551 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
-import SoundboardUtils from "SoundboardUtils" /* 7488 */;
-import EmojiStore from "EmojiStore" /* 6760 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
+import SoundboardUtils from "SoundboardUtils" /* 7511 */;
+import EmojiStore from "EmojiStore" /* 6783 */;
 
 require = fn;
 function trackSearchStart(location_stack, channel_id) {
@@ -23,7 +23,7 @@ let result = size.fileFinishedImporting("modules/soundboard/searchSounds.tsx");
 
 export { trackSearchStart };
 export { trackSearchResultViewed };
-export const searchSounds = function searchSounds(arg0, availableSounds, stateFromStores, channel, arg4) {
+export function searchSounds(arg0, availableSounds, stateFromStores, channel, arg4) {
   closure_0 = arg0;
   closure_1 = stateFromStores;
   closure_3 = arg4;
@@ -113,4 +113,4 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
   }
   closure_7(sorted, arg4, id, arg0);
   return sorted;
-};
+}

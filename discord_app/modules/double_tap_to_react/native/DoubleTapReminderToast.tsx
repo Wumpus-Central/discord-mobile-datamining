@@ -1,20 +1,20 @@
-// === Module 9870: DoubleTapReminderToast ===
+// === Module 9902: DoubleTapReminderToast ===
 
-// Module 9870 (DoubleTapReminderToast)
+// Module 9902 (DoubleTapReminderToast)
 import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 4853 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8359 */;
-import DoubleTapEmojiUpdatedToast from "DoubleTapEmojiUpdatedToast" /* 9871 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 4854 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8381 */;
+import DoubleTapEmojiUpdatedToast from "DoubleTapEmojiUpdatedToast" /* 9903 */;
 import size from "module_2" /* 2 */;
 
 const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
 let result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapReminderToast.tsx");
 
-export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapReminderToast(name) {
+export function maybeShowDoubleTapReminderToast(name) {
   if (!obj.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER)) {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
@@ -52,4 +52,4 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     const tmpResult = DoubleTapToReactUtils;
   }
   obj = DismissibleContentUnsafeUtils;
-};
+}

@@ -1,8 +1,8 @@
-// === Module 13679: BoostGem ===
+// === Module 13912: BoostGem ===
 
-// Module 13679 (BoostGem)
+// Module 13912 (BoostGem)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7994 */;
+import inlineStyles from "inlineStyles" /* 8017 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,6 +1,6 @@
-// === Module 13143: ? ===
+// === Module 13374: ? ===
 
-// Module 13143
+// Module 13374
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_10_traveler_umber.webp.js");

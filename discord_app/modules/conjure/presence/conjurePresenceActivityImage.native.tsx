@@ -1,10 +1,10 @@
-// === Module 14538: conjurePresenceActivityImage ===
+// === Module 14772: conjurePresenceActivityImage ===
 
-// Module 14538 (conjurePresenceActivityImage)
-import _modDef14539 from "module_14539" /* 14539 */;
-import _modDef14540 from "module_14540" /* 14540 */;
+// Module 14772 (conjurePresenceActivityImage)
+import _modDef14773 from "module_14773" /* 14773 */;
+import _modDef14774 from "module_14774" /* 14774 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/presence/conjurePresenceActivityImage.native.tsx");
 
-export default { light: _modDef14539, dark: _modDef14540 };
+export default { light: _modDef14773, dark: _modDef14774 };

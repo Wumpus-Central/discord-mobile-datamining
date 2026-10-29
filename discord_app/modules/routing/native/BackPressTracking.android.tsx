@@ -1,6 +1,6 @@
-// === Module 6011: BackPressTracking ===
+// === Module 6013: BackPressTracking ===
 
-// Module 6011 (BackPressTracking)
+// Module 6013 (BackPressTracking)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/native/BackPressTracking.android.tsx");
 
-export const addBackPressListener = function addBackPressListener(fn) {
+export function addBackPressListener(fn) {
   closure_0 = BackHandler.addEventListener("hardwareBackPress", fn);
   closure_6 = closure_6 + 1;
   if (!c8) {
@@ -55,7 +55,7 @@ export const addBackPressListener = function addBackPressListener(fn) {
       }
     }
   };
-};
+}
 export const useTrackNavigationBackPress = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackNavigationBackPress(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);

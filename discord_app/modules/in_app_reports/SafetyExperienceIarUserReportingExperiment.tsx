@@ -1,8 +1,8 @@
-// === Module 14508: SafetyExperienceIarUserReportingExperiment ===
+// === Module 14742: SafetyExperienceIarUserReportingExperiment ===
 
-// Module 14508 (SafetyExperienceIarUserReportingExperiment)
+// Module 14742 (SafetyExperienceIarUserReportingExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_5224" /* 5224 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -34,6 +34,6 @@ export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerE
 }) : (function useIsIarUserReportingEnabled(location) {
   return experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled;
 });
-export const isIarUserReportingEnabled = function isIarUserReportingEnabled(location) {
+export function isIarUserReportingEnabled(location) {
   return experiment.getCurrentConfig({ location }, { autoTrackExposure: true }).enabled;
-};
+}

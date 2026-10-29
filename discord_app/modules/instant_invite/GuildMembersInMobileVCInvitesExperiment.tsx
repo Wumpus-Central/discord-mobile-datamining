@@ -1,7 +1,7 @@
-// === Module 9114: GuildMembersInMobileVCInvitesExperiment ===
+// === Module 9117: GuildMembersInMobileVCInvitesExperiment ===
 
-// Module 9114 (GuildMembersInMobileVCInvitesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 9117 (GuildMembersInMobileVCInvitesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-guild-members-in-mobile-vc-invites", kind: "guild", defaultConfig: { enabled: false }, variations: null };
@@ -12,6 +12,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/instant_invite/GuildMembersInMobileVCInvitesExperiment.tsx");
 
 export default apexExperiment;
-export const getGuildMembersInMobileVCInvitesExperiment = function getGuildMembersInMobileVCInvitesExperiment(location) {
+export function getGuildMembersInMobileVCInvitesExperiment(location) {
   return apexExperiment.getConfig({ location: location.location, guildId: location.guildId }).enabled;
-};
+}

@@ -1,14 +1,14 @@
-// === Module 12145: getAppDMApplication ===
+// === Module 12199: getAppDMApplication ===
 
-// Module 12145 (getAppDMApplication)
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import UserProfileStore from "UserProfileStore" /* 7738 */;
+// Module 12199 (getAppDMApplication)
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import UserProfileStore from "UserProfileStore" /* 7760 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
-export const getAppDMApplication = function getAppDMApplication(channel) {
+export function getAppDMApplication(channel) {
   let recipientId;
   if (channel.isPrivate()) {
     recipientId = channel.getRecipientId();
@@ -38,4 +38,4 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
     appIdForBotUserId = tmp6;
   }
   return ApplicationStore.getApplication(appIdForBotUserId);
-};
+}

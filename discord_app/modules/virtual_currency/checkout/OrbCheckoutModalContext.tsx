@@ -1,12 +1,12 @@
-// === Module 14734: OrbCheckoutModalContext ===
+// === Module 14969: OrbCheckoutModalContext ===
 
-// Module 14734 (OrbCheckoutModalContext)
+// Module 14969 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7696 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7719 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
-import SKUStore from "SKUStore" /* 6860 */;
+import SKUStore from "SKUStore" /* 6883 */;
 import v1 from "v1" /* 1278 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
@@ -392,6 +392,6 @@ export const OrbCheckoutModalContextProvider = ReactCompilerGating.isReactCompil
     return obj;
   }, items)}>{children.children}</redux.Provider>;
 });
-export const useOrbCheckoutModalContext = function useOrbCheckoutModalContext() {
+export function useOrbCheckoutModalContext() {
   return React3(closure_9);
-};
+}

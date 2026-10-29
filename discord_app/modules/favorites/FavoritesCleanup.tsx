@@ -1,15 +1,15 @@
-// === Module 10896: FavoritesCleanup ===
+// === Module 10801: FavoritesCleanup ===
 
-// Module 10896 (FavoritesCleanup)
+// Module 10801 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1101 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6858 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7447 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6881 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7470 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import FavoriteStore from "FavoriteStore" /* 4859 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import FavoriteStore from "FavoriteStore" /* 4860 */;
 
 require = fn;
 function getFavoriteThreadIdsForCleanup(categoryId) {
@@ -49,7 +49,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -85,13 +85,13 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4860).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4861).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1095).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
 
 export { getFavoriteThreadIdsForCleanup };
-export const loadFavoriteThreadsForCleanup = function loadFavoriteThreadsForCleanup() {
+export function loadFavoriteThreadsForCleanup() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -100,8 +100,8 @@ export const loadFavoriteThreadsForCleanup = function loadFavoriteThreadsForClea
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getFavoritesCleanupCandidates = function getFavoritesCleanupCandidates(days) {
+}
+export function getFavoritesCleanupCandidates(days) {
   days = days.days;
   if (Number.isSafeInteger(days)) {
     if (days >= 1) {
@@ -157,4 +157,4 @@ export const getFavoritesCleanupCandidates = function getFavoritesCleanupCandida
     }
   }
   return [];
-};
+}

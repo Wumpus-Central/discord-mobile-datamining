@@ -1,26 +1,26 @@
-// === Module 17921: ConjureChannelRow ===
+// === Module 18159: ConjureChannelRow ===
 
-// Module 17921 (ConjureChannelRow)
+// Module 18159 (ConjureChannelRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import MagicWandIcon from "MagicWandIcon" /* 12212 */;
-import BaseChannelItem from "BaseChannelItem" /* 13507 */;
-import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 14402 */;
-import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 17922 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 17923 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import MagicWandIcon from "MagicWandIcon" /* 12266 */;
+import BaseChannelItem from "BaseChannelItem" /* 13740 */;
+import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 14636 */;
+import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 18160 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 18161 */;
 import noop from "module_19" /* 19 */;
 
 const BaseChannelItemDefault = BaseChannelItem;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
-let obj2 = { container: { marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5005);
+let obj2 = { container: { marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureChannelRow.tsx");
 
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3863.uk6jhJ);
+    const stringResult = intl.string(_modDef3864.uk6jhJ);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3863.uk6jhJ);
+    const stringResult1 = intl2.string(_modDef3864.uk6jhJ);
     cResult[3] = stringResult1;
     let tmp10 = stringResult1;
   } else {
@@ -142,17 +142,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   obj.onPress = openConjureProjectsSheetDefault;
   obj.style = tmp.container;
   const intl = tmp6(1125).intl;
-  obj.accessibilityLabel = intl.string(_modDef3863.uk6jhJ);
+  obj.accessibilityLabel = intl.string(_modDef3864.uk6jhJ);
   obj.accessibilityState = { selected };
   obj.mode = DEFAULT;
   obj.unread = hasUnread;
   const obj2 = { name: null, mode: null };
   const intl2 = tmp6(1125).intl;
-  obj2.name = intl2.string(_modDef3863.uk6jhJ);
+  obj2.name = intl2.string(_modDef3864.uk6jhJ);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(13507).BaseChannelName, { name: null, mode: null });
+  obj.name = jsx(tmp6(13740).BaseChannelName, { name: null, mode: null });
   const tmp2Result = BaseChannelItemDefault;
-  obj.icon = jsx(tmp6(13507).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp6(12212).MagicWandIcon });
+  obj.icon = jsx(tmp6(13740).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp6(12266).MagicWandIcon });
   obj.channelInfo = jsx(ChannelBadgeDefault, { mentionCount: tmp4.badgeCount, isNewChannel: false });
   return <tmp2Result onPress={null} style={null} accessible accessibilityLabel={null} accessibilityState={null} mode={null} unread={null} name={null} icon={null} channelInfo={null} />;
 });

@@ -1,16 +1,16 @@
-// === Module 14769: SurveyIndication ===
+// === Module 15004: SurveyIndication ===
 
-// Module 14769 (SurveyIndication)
+// Module 15004 (SurveyIndication)
 import util from "util" /* 1125 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6706 */;
-import _modDef14770 from "module_14770" /* 14770 */;
-import _modDef14771 from "module_14771" /* 14771 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6730 */;
+import _modDef15005 from "module_15005" /* 15005 */;
+import _modDef15006 from "module_15006" /* 15006 */;
 import size from "module_2" /* 2 */;
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");
 
-export const createSurveyIndication = function createSurveyIndication(message, forcedTheme, pushFeedbackType) {
+export function createSurveyIndication(message, forcedTheme, pushFeedbackType) {
   let TOP_MESSAGE_PUSH = pushFeedbackType;
   if (pushFeedbackType === NotificationTypes.TOP_MESSAGE_PUSH) {
     let GwWhce = util.t.GwWhce;
@@ -26,12 +26,12 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   }
   const obj2 = { content: intl.formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: null };
   obj.notificationType = TOP_MESSAGE_PUSH;
-  const tmp2Result = tmp2(8309);
+  const tmp2Result = tmp2(8331);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef14770;
+    let tmp7Result = _modDef15005;
   } else {
-    tmp7Result = _modDef14771;
+    tmp7Result = _modDef15006;
   }
   obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj2;
-};
+}

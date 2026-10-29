@@ -1,14 +1,14 @@
-// === Module 19132: InteractionModalManager ===
+// === Module 19367: InteractionModalManager ===
 
-// Module 19132 (InteractionModalManager)
+// Module 19367 (InteractionModalManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 16065 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 19144 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 19147 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 16301 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 19379 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 19382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import InteractionStore from "InteractionStore" /* 8302 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import InteractionStore from "InteractionStore" /* 8324 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 let require = fn;
 let closure_8 = async function _handleInteractionModalCreate(arg0) {
@@ -22,7 +22,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp19) {
       c4 = tmp;

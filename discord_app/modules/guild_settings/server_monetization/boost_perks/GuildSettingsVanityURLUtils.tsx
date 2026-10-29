@@ -1,6 +1,6 @@
-// === Module 19295: GuildSettingsVanityURLUtils ===
+// === Module 19528: GuildSettingsVanityURLUtils ===
 
-// Module 19295 (GuildSettingsVanityURLUtils)
+// Module 19528 (GuildSettingsVanityURLUtils)
 import util from "util" /* 1125 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 ({ AbortCodes: c2, GuildFeatures: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx");
 
-export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCode(code) {
+export function getErrorMessageFromErrorCode(code) {
   if (constants.UNKNOWN_CHANNEL === code) {
     const intl7 = util.intl;
     return intl7.string(util.t.ETCmRa);
@@ -31,8 +31,8 @@ export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCod
     const intl = util.intl;
     return intl.string(util.t.ckQidX);
   }
-};
-export const canSeeVanityUrlSettings = function canSeeVanityUrlSettings(guild) {
+}
+export function canSeeVanityUrlSettings(guild) {
   const features = guild.features;
   let hasItem = features.has(constants2.VANITY_URL);
   if (!hasItem) {
@@ -44,4 +44,4 @@ export const canSeeVanityUrlSettings = function canSeeVanityUrlSettings(guild) {
     hasItem = hasItem1;
   }
   return hasItem;
-};
+}

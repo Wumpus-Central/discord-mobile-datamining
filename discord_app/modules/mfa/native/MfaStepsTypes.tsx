@@ -1,6 +1,6 @@
-// === Module 17305: MfaStepsTypes ===
+// === Module 17544: MfaStepsTypes ===
 
-// Module 17305 (MfaStepsTypes)
+// Module 17544 (MfaStepsTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/mfa/native/MfaStepsTypes.tsx");

@@ -1,10 +1,10 @@
-// === Module 10045: ChannelSummariesExperiment ===
+// === Module 10077: ChannelSummariesExperiment ===
 
-// Module 10045 (ChannelSummariesExperiment)
-import ChannelConstants from "ChannelConstants" /* 4863 */;
-import GuildRecord from "GuildRecord" /* 4874 */;
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 10077 (ChannelSummariesExperiment)
+import ChannelConstants from "ChannelConstants" /* 4864 */;
+import GuildRecord from "GuildRecord" /* 4875 */;
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import Constants from "Constants" /* 1084 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -122,17 +122,17 @@ function canGuildUseConversationSummaries(guild, arg1) {
 }
 const result = size.fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
 
-export const channelEligibleForSummaries = function channelEligibleForSummaries(channel) {
+export function channelEligibleForSummaries(channel) {
   return canSeeChannelSummaries(channel, true, false);
-};
+}
 export { canSeeChannelSummaries };
 export { canGuildUseConversationSummaries };
-export const useChannelSummariesExperiment = function useChannelSummariesExperiment(channel) {
+export function useChannelSummariesExperiment(channel) {
   if (flag === undefined) {
     flag = false;
   }
   return canSeeChannelSummaries(channel, flag);
-};
+}
 export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildEligibleForSummaries(id, arg1) {
   _require = id;
   const cResult = require("c").c(5);

@@ -1,8 +1,8 @@
-// === Module 14094: canManageChannelList ===
+// === Module 14327: canManageChannelList ===
 
-// Module 14094 (canManageChannelList)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 14327 (canManageChannelList)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const Permissions = fn(1084).Permissions;
 const size = fn(2);
@@ -15,7 +15,7 @@ export default function canManageChannelList(containingCategory, guild) {
   }
   return PermissionStore.can(Permissions.MANAGE_CHANNELS, tmp);
 };
-export const getContainingCategory = function getContainingCategory(parent_id) {
+export function getContainingCategory(parent_id) {
   if (null == parent_id.parent_id) {
     return null;
   } else {
@@ -29,11 +29,11 @@ export const getContainingCategory = function getContainingCategory(parent_id) {
     }
     return tmp2;
   }
-};
-export const canViewChannelList = function canViewChannelList(channel) {
+}
+export function canViewChannelList(channel) {
   let canResult = null == channel;
   if (!canResult) {
     canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
   }
   return canResult;
-};
+}

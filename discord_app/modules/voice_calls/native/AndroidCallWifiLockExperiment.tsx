@@ -1,7 +1,7 @@
-// === Module 15964: AndroidCallWifiLockExperiment ===
+// === Module 16200: AndroidCallWifiLockExperiment ===
 
-// Module 15964 (AndroidCallWifiLockExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 16200 (AndroidCallWifiLockExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-android-call-wifi-lock", defaultConfig: { acquireWifiLock: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/native/AndroidCallWifiLockExperiment.tsx");
 
-export const shouldAcquireCallWifiLock = function shouldAcquireCallWifiLock() {
+export function shouldAcquireCallWifiLock() {
   return config.getConfig({ location: "VoiceNotificationManager" }).acquireWifiLock;
-};
+}

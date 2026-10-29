@@ -1,8 +1,8 @@
-// === Module 5236: GameServerExperiment ===
+// === Module 5237: GameServerExperiment ===
 
-// Module 5236 (GameServerExperiment)
+// Module 5237 (GameServerExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_5224" /* 5224 */;
+import createExperiment from "module_5225" /* 5225 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,9 +13,9 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_server/GameServerExperiment.tsx");
 
 export const GameServerExperiment = experiment;
-export const getGameServerEnabled = function getGameServerEnabled(guildId, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
+export function getGameServerEnabled(guildId, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
   return experiment.getCurrentConfig({ guildId, location: maybeGetGameServerHostingGuildEligiblePopoutDCF }, { autoTrackExposure: false }).enabled;
-};
+}
 export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameServerEnabled(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {

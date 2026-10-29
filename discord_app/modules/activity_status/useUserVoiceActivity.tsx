@@ -1,9 +1,9 @@
-// === Module 10672: useUserVoiceActivity ===
+// === Module 10705: useUserVoiceActivity ===
 
-// Module 10672 (useUserVoiceActivity)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+// Module 10705 (useUserVoiceActivity)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {
@@ -75,7 +75,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1095).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "useCallback", voiceChannel: "PX_16" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
 const ReactCompilerGating = fn(558);
 function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserV
   return userId(guildId[6]).useStateFromStoresObject(items, () => getVisibleUserVoiceActivity({ userId, guildId, includeNonDiscoverable }, { ChannelStore, PermissionStore, VoiceStateStore }), items1);
 });
 export { getUserVoiceState };
-export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
+export function canViewUserVoiceChannel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_6;
@@ -212,5 +212,5 @@ export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
       voiceStateForUser = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
     }
   }
-};
+}
 export { getVisibleUserVoiceActivity };

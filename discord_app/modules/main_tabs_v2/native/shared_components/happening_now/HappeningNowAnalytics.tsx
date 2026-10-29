@@ -1,6 +1,6 @@
-// === Module 17762: HappeningNowAnalytics ===
+// === Module 18000: HappeningNowAnalytics ===
 
-// Module 17762 (HappeningNowAnalytics)
+// Module 18000 (HappeningNowAnalytics)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -70,7 +70,7 @@ function getItemChannelId(channelId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx");
 
-export const getAffinityProperties = function getAffinityProperties(data) {
+export function getAffinityProperties(data) {
   const id = AuthenticationStore.getId();
   if (obj.extractTimestamp(id) % 25 === 0) {
     const obj2 = {};
@@ -87,4 +87,4 @@ export const getAffinityProperties = function getAffinityProperties(data) {
     obj10 = {};
   }
   return obj10;
-};
+}

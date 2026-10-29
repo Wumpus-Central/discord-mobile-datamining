@@ -1,13 +1,13 @@
-// === Module 19058: AppInfoUtils ===
+// === Module 19291: AppInfoUtils ===
 
-// Module 19058 (AppInfoUtils)
+// Module 19291 (AppInfoUtils)
 import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
 import size from "module_2" /* 2 */;
 
 const constants = ClientInfoUtils.getConstants();
 const result = size.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
-export const getAppMajorVersion = function getAppMajorVersion() {
+export function getAppMajorVersion() {
   if (undefined === closure_0) {
     return -1;
   } else {
@@ -19,4 +19,4 @@ export const getAppMajorVersion = function getAppMajorVersion() {
     }
     return num;
   }
-};
+}

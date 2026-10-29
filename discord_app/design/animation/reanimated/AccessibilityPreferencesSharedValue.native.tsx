@@ -1,7 +1,7 @@
-// === Module 5244: reanimated/AccessibilityPreferencesSharedValue ===
+// === Module 5245: reanimated/AccessibilityPreferencesSharedValue ===
 
-// Module 5244 (reanimated/AccessibilityPreferencesSharedValue)
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+// Module 5245 (reanimated/AccessibilityPreferencesSharedValue)
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
 import size from "module_2" /* 2 */;
 
 const mutable = ReanimatedRexport.makeMutable({ reduceMotion: false, prefersCrossfades: false, screenReaderEnabled: false });

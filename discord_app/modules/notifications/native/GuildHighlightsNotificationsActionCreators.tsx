@@ -1,10 +1,10 @@
-// === Module 10076: GuildHighlightsNotificationsActionCreators ===
+// === Module 10108: GuildHighlightsNotificationsActionCreators ===
 
-// Module 10076 (GuildHighlightsNotificationsActionCreators)
+// Module 10108 (GuildHighlightsNotificationsActionCreators)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import Constants2 from "Constants" /* 10077 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import Constants2 from "Constants" /* 10109 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ let constants = Constants2.NotificationUserFeedbackReasons;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
 
-export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(guild_id2, message, notificationType, MESSAGE_EMBED, arg4) {
+export function openGuildHighlightNotificationForPush(guild_id2, message, notificationType, MESSAGE_EMBED, arg4) {
   _require = guild_id2;
   importDefault = message;
   dependencyMap = notificationType;
@@ -60,5 +60,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     AnalyticsUtilsDefault.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj3);
   };
   obj2.feedbackSettings = obj3;
-  obj.openLazy(require("asyncRequireImpl")(10078, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-};
+  obj.openLazy(require("asyncRequireImpl")(10110, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+}

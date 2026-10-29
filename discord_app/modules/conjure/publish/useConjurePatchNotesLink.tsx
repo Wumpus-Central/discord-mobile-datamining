@@ -1,16 +1,16 @@
-// === Module 12418: useConjurePatchNotesLink ===
+// === Module 12472: useConjurePatchNotesLink ===
 
-// Module 12418 (useConjurePatchNotesLink)
+// Module 12472 (useConjurePatchNotesLink)
 import router_utils from "router_utils" /* 1111 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11803 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11857 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10749 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10824 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6808).canPublishProject;
+const canPublishProject = fn(6831).canPublishProject;
 const Routes = fn(1084).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -211,11 +211,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   return tmp8;
 });
-export const openConjureSentPatchNotes = function openConjureSentPatchNotes(sent) {
+export function openConjureSentPatchNotes(sent) {
   ({ guildId, channelId, messageId } = sent);
   router_utils.transitionTo(Routes.CHANNEL(guildId, channelId, messageId));
-};
-export const conjurePatchNotesEditorProps = function conjurePatchNotesEditorProps(projectId, arg1) {
+}
+export function conjurePatchNotesEditorProps(projectId, arg1) {
   ({ publishedRevision, fallbackGuildId } = arg1);
   const project = ConjureProjectStore.getProject(projectId);
   let publishGuildIdResult = null;
@@ -233,4 +233,4 @@ export const conjurePatchNotesEditorProps = function conjurePatchNotesEditorProp
     }
   }
   return tmp5;
-};
+}

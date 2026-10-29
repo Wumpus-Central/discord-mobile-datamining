@@ -1,6 +1,6 @@
-// === Module 12069: getItemSubtitleForMaxPlayers ===
+// === Module 12123: getItemSubtitleForMaxPlayers ===
 
-// Module 12069 (getItemSubtitleForMaxPlayers)
+// Module 12123 (getItemSubtitleForMaxPlayers)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export default function getItemSubtitleForMaxPlayers(count) {
   }
   return formatToPlainStringResult;
 };
-export const getItemSubtitleForMaxPlayersShort = function getItemSubtitleForMaxPlayersShort(arg0) {
+export function getItemSubtitleForMaxPlayersShort(arg0) {
   if (arg0 > 0) {
     const _HermesInternal = HermesInternal;
     let combined = "1 - " + arg0;
@@ -26,8 +26,8 @@ export const getItemSubtitleForMaxPlayersShort = function getItemSubtitleForMaxP
     combined = intl.string(util.t.zMNEiF);
   }
   return combined;
-};
-export const getItemSubtitleForMaxPlayersShorter = function getItemSubtitleForMaxPlayersShorter(arg0) {
+}
+export function getItemSubtitleForMaxPlayersShorter(arg0) {
   if (arg0 > 0) {
     const _HermesInternal = HermesInternal;
     let combined = "1-" + arg0;
@@ -36,4 +36,4 @@ export const getItemSubtitleForMaxPlayersShorter = function getItemSubtitleForMa
     combined = intl.string(util.t.zMNEiF);
   }
   return combined;
-};
+}

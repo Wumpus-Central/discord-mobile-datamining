@@ -1,7 +1,7 @@
-// === Module 4845: ShopMarketingFatigueExperiment ===
+// === Module 4846: ShopMarketingFatigueExperiment ===
 
-// Module 4845 (ShopMarketingFatigueExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 4846 (ShopMarketingFatigueExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-shop-marketing-fatigue", kind: "user", defaultConfig: { enforceFatigue: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/dismissible_content/ShopMarketingFatigueExperiment.tsx");
 
-export const getShopMarketingEnforcesFatigue = function getShopMarketingEnforcesFatigue() {
+export function getShopMarketingEnforcesFatigue() {
   return config.getConfig({ location: "getShopMarketingEnforcesFatigue" }).enforceFatigue;
-};
+}

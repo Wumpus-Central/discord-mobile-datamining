@@ -1,11 +1,11 @@
-// === Module 16158: useProfileEffectSections ===
+// === Module 16395: useProfileEffectSections ===
 
-// Module 16158 (useProfileEffectSections)
+// Module 16395 (useProfileEffectSections)
 import util from "util" /* 1125 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7697 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7720 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7685 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7700 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7708 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7723 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  let profileEffects = stateFromStores(7697).getProfileEffects(stateFromStores, tmp12);
+  let profileEffects = stateFromStores(7720).getProfileEffects(stateFromStores, tmp12);
   if (cResult[10] === tmp13) {
     if (cResult[11] === stateFromStores) {
       let tmp17 = cResult[12];
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   cResult[11] = stateFromStores;
   cResult[12] = U;
   tmp17 = U;
-  const tmpResult4 = stateFromStores(7697);
+  const tmpResult4 = stateFromStores(7720);
 }) : (function useProfileEffectSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14748)(useMemo(() => {
+  return first(14983)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileEffects = obj.getProfileEffects(stateFromStores, first);
     const reduced = profileEffects.reduce((premium_purchase, skuId) => {

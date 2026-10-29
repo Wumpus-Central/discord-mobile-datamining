@@ -1,11 +1,11 @@
-// === Module 12361: ConjureRepliedMessage ===
+// === Module 12415: ConjureRepliedMessage ===
 
-// Module 12361 (ConjureRepliedMessage)
+// Module 12415 (ConjureRepliedMessage)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureRepliedMessage.tsx");
 
-export const repliedMessagesById = function repliedMessagesById(memo) {
+export function repliedMessagesById(memo) {
   const map = new Map();
   const iter = memo[Symbol.iterator]();
   const nextResult = iter.next();
@@ -33,4 +33,4 @@ export const repliedMessagesById = function repliedMessagesById(memo) {
     }
   }
   return map;
-};
+}

@@ -1,29 +1,29 @@
-// === Module 9197: FormComponents ===
+// === Module 9200: FormComponents ===
 
-// Module 9197 (FormComponents)
+// Module 9200 (FormComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import UserUtils from "UserUtils" /* 5058 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import NativeViewDefault from "NativeView" /* 6922 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7450 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7846 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9198 */;
-import GuildTagDefault from "GuildTag" /* 9258 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14429 */;
+import UserUtils from "UserUtils" /* 5059 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import NativeViewDefault from "NativeView" /* 6946 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7473 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7869 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9201 */;
+import GuildTagDefault from "GuildTag" /* 9262 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14663 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
 
 require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;
@@ -123,7 +123,7 @@ let obj3 = { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MO
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/FormComponents.tsx");
 
-export const VoicePanelFormSection = function VoicePanelFormSection(style) {
+export function VoicePanelFormSection(style) {
   if (closure_10) {
     let tmp14 = dependencyMap;
     const cResult = c.c(11);
@@ -178,7 +178,7 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
     obj5.children = React5(TableRowGroup.TableRowGroup, obj6);
     return React5(NativeViewDefault, obj5);
   }
-};
+}
 export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (function MemberRowItem(user) {
   const cResult = user(nick[7]).c(48);
   user = user.user;

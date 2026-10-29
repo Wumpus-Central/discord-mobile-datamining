@@ -1,28 +1,28 @@
-// === Module 18278: GuildRoleSubscriptionPurchasePreviewCard ===
+// === Module 18512: GuildRoleSubscriptionPurchasePreviewCard ===
 
-// Module 18278 (GuildRoleSubscriptionPurchasePreviewCard)
+// Module 18512 (GuildRoleSubscriptionPurchasePreviewCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useChannelNameDefault from "useChannelName" /* 5640 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7110 */;
-import LayoutUtils from "LayoutUtils" /* 9991 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16855 */;
-import EmojiIconDefault from "EmojiIcon" /* 16868 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useChannelNameDefault from "useChannelName" /* 5641 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7134 */;
+import LayoutUtils from "LayoutUtils" /* 10023 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17093 */;
+import EmojiIconDefault from "EmojiIcon" /* 17106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, header: { flexDirection: "row" }, image: null, separator: null, contentContainer: null, contentHeader: null, emojiGallery: null, emojiTruncatedContainer: null, showAllButton: null, showAllButtonUnderline: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.xl };
 obj2.image = size;
@@ -164,7 +164,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiG
   }
   const substr = emojiIds.slice(0, maxEmojis);
   let emojiTruncatedContainer = emojiIds.length - maxEmojis;
-  const GappedList = Text(9991).GappedList;
+  const GappedList = Text(10023).GappedList;
   if (cResult[10] !== guildId) {
     class I {
       constructor(arg0) {
@@ -199,7 +199,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiG
       }
     }
     const obj4 = { style: tmp2.emojiTruncatedContainer, children: null };
-    Text = Text(5270).Text;
+    Text = Text(5271).Text;
     const obj5 = { variant: "text-sm/bold", color: "text-default", children: null };
     const items = ["+", emojiTruncatedContainer];
     obj5.children = items;
@@ -358,11 +358,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       items2 = cResult[5];
     }
     if (cResult[6] !== stateFromStores) {
-      const channelIcon = tmp(8539).getChannelIcon(stateFromStores);
+      const channelIcon = tmp(8561).getChannelIcon(stateFromStores);
       cResult[6] = stateFromStores;
       cResult[7] = channelIcon;
       let tmp12 = channelIcon;
-      const tmpResult2 = tmp(8539);
+      const tmpResult2 = tmp(8561);
     } else {
       tmp12 = cResult[7];
     }
@@ -385,7 +385,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     }
     if (cResult[11] !== tmp9) {
       const obj5 = { variant: "text-md/semibold", color: "text-default", children: tmp9 };
-      const tmp22 = closure_8(tmp(5270).Text, obj5);
+      const tmp22 = closure_8(tmp(5271).Text, obj5);
       cResult[11] = tmp9;
       cResult[12] = tmp22;
       let tmp20 = tmp22;
@@ -413,13 +413,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   let title = intl.string(channelId(1125).t.bz1PZX);
   if (null != stateFromStores) {
     const obj2 = { style: { flexDirection: "row", alignItems: "center" }, children: null };
-    const obj3 = { size: tmp(1199).Icon.Sizes.REFRESH_SMALL_16, source: tmp(8539).getChannelIcon(stateFromStores) };
+    const obj3 = { size: tmp(1199).Icon.Sizes.REFRESH_SMALL_16, source: tmp(8561).getChannelIcon(stateFromStores) };
     const items2 = [closure_8(tmp(1199).Icon, obj3), closure_8(tmp(1199).Spacer, { size: 4 }), ];
     const obj4 = { variant: "text-md/semibold", color: "text-default", children: tmp4 };
-    items2[2] = closure_8(tmp(5270).Text, obj4);
+    items2[2] = closure_8(tmp(5271).Text, obj4);
     obj2.children = items2;
     title = closure_9(closure_6, obj2);
-    const tmpResult = tmp(8539);
+    const tmpResult = tmp(8561);
   }
   return closure_8(closure_15, { title, description: description.description });
 });
@@ -497,7 +497,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const first1 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useTierEmojiIds(listingId, guildId), 1)[0];
   const first2 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useChannelBenefits(listingId), 1)[0];
   const first3 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useIntangibleBenefits(listingId), 1)[0];
-  const formattedSubscriptionPlan = listingId(18274).useFormattedSubscriptionPlan(listingId);
+  const formattedSubscriptionPlan = listingId(18508).useFormattedSubscriptionPlan(listingId);
   const first4 = first2[0];
   const first5 = first3[0];
   const size = first1.size;
@@ -530,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       }
       if (cResult[9] !== first) {
         const obj9 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: first };
-        const tmp24 = closure_8(tmp(5270).Text, obj9);
+        const tmp24 = closure_8(tmp(5271).Text, obj9);
         cResult[9] = first;
         cResult[10] = tmp24;
         let tmp22 = tmp24;
@@ -547,7 +547,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       }
       if (cResult[12] !== formattedSubscriptionPlan) {
         const obj10 = { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan };
-        const tmp30 = closure_8(tmp(5270).Text, obj10);
+        const tmp30 = closure_8(tmp(5271).Text, obj10);
         cResult[12] = formattedSubscriptionPlan;
         cResult[13] = tmp30;
         let tmp28 = tmp30;
@@ -573,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
             }
             if (cResult[22] !== listingId) {
               const obj11 = { listingId };
-              const tmp45 = closure_8(guildId(18280), obj11);
+              const tmp45 = closure_8(guildId(18514), obj11);
               cResult[22] = listingId;
               cResult[23] = tmp45;
               let tmp42 = tmp45;
@@ -686,7 +686,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
               const obj28 = { children: null };
               items4[2] = tmp48Result5;
               obj14.children = items4;
-              obj13.children = closure_9(tmp(9991).GappedList, obj14);
+              obj13.children = closure_9(tmp(10023).GappedList, obj14);
               items1[1] = closure_8(closure_6, obj13);
               const obj29 = { onPress: tmp11 };
               items1[2] = closure_8(closure_17, obj29);
@@ -727,7 +727,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       tmp31 = tmp34;
     }
     const obj54 = { source: tmp13, style: tmp4.image };
-    const tmp17 = closure_8(guildId(5705), obj54);
+    const tmp17 = closure_8(guildId(5707), obj54);
     cResult[5] = tmp4.image;
     cResult[6] = tmp13;
     cResult[7] = tmp17;
@@ -735,13 +735,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   }
   function handleShowAllPerks() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
+    obj.openLazy(asyncRequireImpl(18513, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
   }
   cResult[0] = guildId;
   cResult[1] = listingId;
   cResult[2] = handleShowAllPerks;
   tmp11 = handleShowAllPerks;
-  const obj7 = listingId(18274);
+  const obj7 = listingId(18508);
 }) : (function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   listingId = listingId.listingId;
   const guildId = listingId.guildId;
@@ -756,19 +756,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const size = first.size;
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.header, children: null };
-  const formattedSubscriptionPlan = listingId(18274).useFormattedSubscriptionPlan(listingId);
-  const obj6 = listingId(18274);
+  const formattedSubscriptionPlan = listingId(18508).useFormattedSubscriptionPlan(listingId);
+  const obj6 = listingId(18508);
   const tmp11 = guildId;
   if (str == null) {
     str = "";
   }
-  const items = [closure_8(guildId(5705), { source: { uri: str }, style: tmp.image }), closure_8(listingId(1199).Spacer, { size: 16 }), ];
+  const items = [closure_8(guildId(5707), { source: { uri: str }, style: tmp.image }), closure_8(listingId(1199).Spacer, { size: 16 }), ];
   const obj10 = { children: null };
-  const items1 = [closure_8(listingId(5270).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), closure_8(listingId(1199).Spacer, { size: 4 }), closure_8(listingId(5270).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
+  const items1 = [closure_8(listingId(5271).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), closure_8(listingId(1199).Spacer, { size: 4 }), closure_8(listingId(5271).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
   obj10.children = items1;
   items[2] = closure_9(closure_6, obj10);
   obj8.children = items;
-  const items2 = [closure_9(closure_6, obj8), closure_8(listingId(1199).Spacer, { size: 16 }), closure_8(tmp11(18280), { listingId }), ];
+  const items2 = [closure_9(closure_6, obj8), closure_8(listingId(1199).Spacer, { size: 16 }), closure_8(tmp11(18514), { listingId }), ];
   let tmp8Result6 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result6) {
     const items3 = [closure_8(tmp4(1199).Spacer, { size: 24 }), , ];
@@ -834,12 +834,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     const obj44 = { children: null };
     items6[2] = tmp8Result5;
     obj12.children = items6;
-    obj11.children = closure_9(tmp4(9991).GappedList, obj12);
+    obj11.children = closure_9(tmp4(10023).GappedList, obj12);
     items3[1] = closure_8(closure_6, obj11);
     const obj45 = {
       onPress: function handleShowAllPerks() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
+          obj.openLazy(asyncRequireImpl(18513, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
         }
     };
     items3[2] = closure_8(closure_17, obj45);

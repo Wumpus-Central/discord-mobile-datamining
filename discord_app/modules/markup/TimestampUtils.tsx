@@ -1,9 +1,9 @@
-// === Module 8536: TimestampUtils ===
+// === Module 8558: TimestampUtils ===
 
-// Module 8536 (TimestampUtils)
+// Module 8558 (TimestampUtils)
 import DurationsDefault from "Durations" /* 1101 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import DateUtils from "DateUtils" /* 4829 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import DateUtils from "DateUtils" /* 4830 */;
 import size from "module_2" /* 2 */;
 
 const TIMESTAMP_FORMATS = {
@@ -32,25 +32,25 @@ const TIMESTAMP_FORMATS = {
     return DateUtils.dateFormat(date, "L LTS");
   },
   R(toDate) {
-    const result = _modDef2046.relativeTimeThreshold("s");
-    const result1 = _modDef2046.relativeTimeThreshold("s", 60);
-    const result2 = _modDef2046.relativeTimeThreshold("ss");
-    const result3 = _modDef2046.relativeTimeThreshold("ss", -1);
-    const result4 = _modDef2046.relativeTimeThreshold("m");
-    const result5 = _modDef2046.relativeTimeThreshold("m", 60);
+    const result = _modDef2047.relativeTimeThreshold("s");
+    const result1 = _modDef2047.relativeTimeThreshold("s", 60);
+    const result2 = _modDef2047.relativeTimeThreshold("ss");
+    const result3 = _modDef2047.relativeTimeThreshold("ss", -1);
+    const result4 = _modDef2047.relativeTimeThreshold("m");
+    const result5 = _modDef2047.relativeTimeThreshold("m", 60);
     try {
-      const tmpResult = _modDef2046;
-      let fromNowResult = _modDef2046(toDate.toDate()).fromNow();
-      const tmpResultResult = _modDef2046(toDate.toDate());
-      const result6 = _modDef2046.relativeTimeThreshold("s", result);
-      const tmpResult5 = _modDef2046;
-      const result7 = _modDef2046.relativeTimeThreshold("ss", result2);
-      const tmpResult6 = _modDef2046;
-      const result8 = _modDef2046.relativeTimeThreshold("m", result4);
+      const tmpResult = _modDef2047;
+      let fromNowResult = _modDef2047(toDate.toDate()).fromNow();
+      const tmpResultResult = _modDef2047(toDate.toDate());
+      const result6 = _modDef2047.relativeTimeThreshold("s", result);
+      const tmpResult5 = _modDef2047;
+      const result7 = _modDef2047.relativeTimeThreshold("ss", result2);
+      const tmpResult6 = _modDef2047;
+      const result8 = _modDef2047.relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult8 = _modDef2046;
-        fromNowResult = _modDef2046(toDate.toDate()).fromNow();
-        const tmpResult4Result = _modDef2046(toDate.toDate());
+        const tmpResult8 = _modDef2047;
+        fromNowResult = _modDef2047(toDate.toDate()).fromNow();
+        const tmpResult4Result = _modDef2047(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {
@@ -65,9 +65,9 @@ let result = size.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
 export { TIMESTAMP_FORMATS };
 export const DEFAULT_TIMESTAMP_FORMAT = "f";
 export const TIMESTAMP_REGEX = regExp;
-export const formatTimestampMention = function formatTimestampMention(mention) {
+export function formatTimestampMention(mention) {
   ({ timestamp, format } = mention);
-  const tmp = _modDef2046;
+  const tmp = _modDef2047;
   const tmpResult = tmp(Number(timestamp) * DurationsDefault.Millis.SECOND);
   if (tmpResult.isValid()) {
     let f;
@@ -85,9 +85,9 @@ export const formatTimestampMention = function formatTimestampMention(mention) {
     return null;
   }
   const NumberResult = Number(timestamp);
-};
-export const parseTimestamp = function parseTimestamp(timestamp, format) {
-  const tmp = _modDef2046;
+}
+export function parseTimestamp(timestamp, format) {
+  const tmp = _modDef2047;
   const tmpResult = tmp(Number(timestamp) * DurationsDefault.Millis.SECOND);
   let tmp3 = null;
   if (tmpResult.isValid()) {
@@ -104,8 +104,8 @@ export const parseTimestamp = function parseTimestamp(timestamp, format) {
     tmp3 = obj;
   }
   return tmp3;
-};
-export const unparseTimestamp = function unparseTimestamp(timestamp, format) {
+}
+export function unparseTimestamp(timestamp, format) {
   if (null != format) {
     const _HermesInternal2 = HermesInternal;
     let combined = "<t:" + timestamp + ":" + format + ">";
@@ -114,4 +114,4 @@ export const unparseTimestamp = function unparseTimestamp(timestamp, format) {
     combined = "<t:" + timestamp + ">";
   }
   return combined;
-};
+}

@@ -1,12 +1,12 @@
-// === Module 7774: SafePostTTIScheduler ===
+// === Module 7796: SafePostTTIScheduler ===
 
-// Module 7774 (SafePostTTIScheduler)
-import PostTTIScheduler from "PostTTIScheduler" /* 7775 */;
+// Module 7796 (SafePostTTIScheduler)
+import PostTTIScheduler from "PostTTIScheduler" /* 7797 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");
 
-export const waitSafelyForPostTTI = function waitSafelyForPostTTI(arg0) {
+export function waitSafelyForPostTTI(arg0) {
   return new Promise((arg0) => {
     closure_0 = arg0;
     const timeout = setTimeout(() => {
@@ -17,4 +17,4 @@ export const waitSafelyForPostTTI = function waitSafelyForPostTTI(arg0) {
       closure_0();
     });
   });
-};
+}

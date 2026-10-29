@@ -1,25 +1,25 @@
-// === Module 18927: VoicePanelScreenshareButton ===
+// === Module 19160: VoicePanelScreenshareButton ===
 
-// Module 18927 (VoicePanelScreenshareButton)
+// Module 19160 (VoicePanelScreenshareButton)
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import useAlertStore from "useAlertStore" /* 5946 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14251 */;
+import useAlertStore from "useAlertStore" /* 5948 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14486 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1627);
+const MetaQuestUtils = fn(1628);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13689).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13922).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18928).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19161).MobilePhoneShareIcon;
 }
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

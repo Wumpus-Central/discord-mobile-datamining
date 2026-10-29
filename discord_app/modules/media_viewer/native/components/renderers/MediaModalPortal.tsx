@@ -1,14 +1,14 @@
-// === Module 8797: MediaModalPortal ===
+// === Module 8800: MediaModalPortal ===
 
-// Module 8797 (MediaModalPortal)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8798 */;
+// Module 8800 (MediaModalPortal)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8801 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ requireNativeComponent, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
 const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
@@ -369,7 +369,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const muted = paused.muted;
   ({ onLoad: dependencyMap, portal } = paused);
   ({ style, pointerEvents } = paused);
-  const tmp2 = muted(7094)(() => {
+  const tmp2 = muted(7118)(() => {
     let tmp;
     if (dependencyMap != null) {
       tmp = dependencyMap();
@@ -398,7 +398,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8799).unregisterView(portal);
+        muted(8802).unregisterView(portal);
         set.add(portal);
       };
     }
@@ -435,9 +435,9 @@ export function createPortalControls(portal) {
     }
   };
 }
-export const markPortalAlive = function markPortalAlive(portal) {
+export function markPortalAlive(portal) {
   set.delete(portal);
-};
-export const isPortalExpired = function isPortalExpired(portal) {
+}
+export function isPortalExpired(portal) {
   return set.has(portal);
-};
+}

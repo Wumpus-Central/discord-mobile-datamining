@@ -1,11 +1,11 @@
-// === Module 9335: SKUUtils ===
+// === Module 9339: SKUUtils ===
 
-// Module 9335 (SKUUtils)
+// Module 9339 (SKUUtils)
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import matchPathCompat from "matchPathCompat" /* 5040 */;
-import StoreUtils from "StoreUtils" /* 6418 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import matchPathCompat from "matchPathCompat" /* 5041 */;
+import StoreUtils from "StoreUtils" /* 6442 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -26,7 +26,7 @@ const items = [["YYYY-MM-DD", "MMMM DD, Y"], ["YYYY-MM", "MMMM Y"], ["MM-DD", "M
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/SKUUtils.tsx");
 
-export const getSKUIdFromURL = function getSKUIdFromURL(pathname) {
+export function getSKUIdFromURL(pathname) {
   const obj = matchPathCompat;
   const matchPathResult = obj.matchPath(pathname, { path: timestampProducer.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") });
   let skuId = null;
@@ -34,14 +34,14 @@ export const getSKUIdFromURL = function getSKUIdFromURL(pathname) {
     skuId = matchPathResult.params.skuId;
   }
   return skuId;
-};
-export const getGenreURLSlugFromId = function getGenreURLSlugFromId(arg0) {
+}
+export function getGenreURLSlugFromId(arg0) {
   return closure_9[arg0];
-};
-export const getGenreIdFromURLSlug = function getGenreIdFromURLSlug(arg0) {
+}
+export function getGenreIdFromURLSlug(arg0) {
   return closure_8[arg0];
-};
-export const getGenreText = function getGenreText(arg0) {
+}
+export function getGenreText(arg0) {
   if (GameGenres.ACTION === arg0) {
     const intl70 = util.intl;
     return intl70.string(util.t["1o2/IM"]);
@@ -253,8 +253,8 @@ export const getGenreText = function getGenreText(arg0) {
     const intl = util.intl;
     return intl.string(util.t["9b4eUr"]);
   }
-};
-export const canUserInstall = function canUserInstall(type) {
+}
+export function canUserInstall(type) {
   const obj = StoreUtils;
   const result = obj.nativePlatformTypeToSKUOperatingSystem(PlatformUtils.getPlatform());
   let hasItem = type.type === constants.DURABLE_PRIMARY;
@@ -266,8 +266,8 @@ export const canUserInstall = function canUserInstall(type) {
     hasItem = supportedOperatingSystems.includes(result);
   }
   return hasItem;
-};
-export const getReadablePreorderReleaseDate = function getReadablePreorderReleaseDate(arg0) {
+}
+export function getReadablePreorderReleaseDate(arg0) {
   ({ preorderReleaseAt, preorderApproximateReleaseDate } = arg0);
   if (null != preorderReleaseAt) {
     return preorderReleaseAt.format("MMMM DD");
@@ -277,7 +277,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef2046(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef2047(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }
@@ -285,7 +285,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     }
     return preorderApproximateReleaseDate;
   }
-};
-export const isThirdPartySKU = function isThirdPartySKU(arg0) {
+}
+export function isThirdPartySKU(arg0) {
   return arg0 === constants2.SOCIAL_LAYER_GAME_ITEM;
-};
+}

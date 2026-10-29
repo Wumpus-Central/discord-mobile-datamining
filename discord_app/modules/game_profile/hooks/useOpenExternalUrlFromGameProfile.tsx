@@ -1,8 +1,8 @@
-// === Module 9286: useOpenExternalUrlFromGameProfile ===
+// === Module 9290: useOpenExternalUrlFromGameProfile ===
 
-// Module 9286 (useOpenExternalUrlFromGameProfile)
-import openURLDefault from "openURL" /* 5692 */;
-import GameUtilsDefault from "GameUtils" /* 9287 */;
+// Module 9290 (useOpenExternalUrlFromGameProfile)
+import openURLDefault from "openURL" /* 5694 */;
+import GameUtilsDefault from "GameUtils" /* 9291 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ let closure_10 = async function _getDeepLinkUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenE
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenE
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenE
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenE
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;

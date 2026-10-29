@@ -1,8 +1,8 @@
-// === Module 5190: useWindowSizeClassifier ===
+// === Module 5191: useWindowSizeClassifier ===
 
-// Module 5190 (useWindowSizeClassifier)
+// Module 5191 (useWindowSizeClassifier)
 import c from "c" /* 576 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 5191 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 5192 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -47,7 +47,7 @@ export const WINDOW_SIZE_THRESHOLD_SMALL = 360;
 export const WINDOW_SIZE_THRESHOLD_LARGE = 600;
 export const WINDOW_SIZE_THRESHOLD_XLARGE = 840;
 export { WindowSizeClassifier };
-export const getWindowSizeClassifier = function getWindowSizeClassifier() {
+export function getWindowSizeClassifier() {
   const obj = useBaseAppContainerDimensions;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
@@ -60,4 +60,4 @@ export const getWindowSizeClassifier = function getWindowSizeClassifier() {
     XLARGE = obj.XLARGE;
   }
   return XLARGE;
-};
+}

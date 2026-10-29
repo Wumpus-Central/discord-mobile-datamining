@@ -1,23 +1,23 @@
-// === Module 8375: UserJoinSystemMessage ===
+// === Module 8397: UserJoinSystemMessage ===
 
-// Module 8375 (UserJoinSystemMessage)
+// Module 8397 (UserJoinSystemMessage)
 import util from "util" /* 1125 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8376 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8390 */;
-import transformSticker from "transformSticker" /* 8391 */;
-import WelcomeCTAUtils from "WelcomeCTAUtils" /* 8394 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8398 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8412 */;
+import transformSticker from "transformSticker" /* 8413 */;
+import WelcomeCTAUtils from "WelcomeCTAUtils" /* 8416 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 require = fn;
 const SystemChannelFlags = fn(1084).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
 
-export const createUserJoinSystemMessage = function createUserJoinSystemMessage(message) {
+export function createUserJoinSystemMessage(message) {
   message = message.message;
   if (message.author.bot) {
     ({ message: message2, roleStyle } = message);
@@ -81,4 +81,4 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
     const merged3 = Object.assign(createCommonMessageDefault(message));
     return obj9;
   }
-};
+}

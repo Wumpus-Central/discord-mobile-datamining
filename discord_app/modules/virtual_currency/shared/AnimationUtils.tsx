@@ -1,6 +1,6 @@
-// === Module 14192: AnimationUtils ===
+// === Module 14425: AnimationUtils ===
 
-// Module 14192 (AnimationUtils)
+// Module 14425 (AnimationUtils)
 import size from "module_2" /* 2 */;
 
 const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = { EARN: 0.25, SPEND: 0.3 };
@@ -8,7 +8,7 @@ let result = size.fileFinishedImporting("modules/virtual_currency/shared/Animati
 
 export const EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS = 3000;
 export { ORB_LOTTIE_COUNTER_ANIMATION_FACTORS };
-export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounterAnimationConfigs(diff, targetTime) {
+export function getOrbBalanceCounterAnimationConfigs(diff, targetTime) {
   targetTime = targetTime.targetTime;
   if (targetTime.isRenderedWithoutLottieAnimation) {
     const obj2 = { duration: targetTime, delay: 0 };
@@ -27,4 +27,4 @@ export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounte
     obj.delay = num2;
     return obj;
   }
-};
+}

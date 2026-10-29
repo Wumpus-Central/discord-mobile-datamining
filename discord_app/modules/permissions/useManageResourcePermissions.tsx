@@ -1,10 +1,10 @@
-// === Module 8978: useManageResourcePermissions ===
+// === Module 8981: useManageResourcePermissions ===
 
-// Module 8978 (useManageResourcePermissions)
+// Module 8981 (useManageResourcePermissions)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -60,7 +60,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8977);
+const PermissionsConstants = fn(8980);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
 const Permissions = fn(1095).Permissions;
 let closure_11 = {
@@ -123,7 +123,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
     }
     cResult[0] = isGuildStageVoice;
     cResult[1] = items2;
-    tmpResult = tmp(4870);
+    tmpResult = tmp(4871);
   } else {
     const tmp12 = first1(cResult[1], 2);
     first = tmp12[0];
@@ -288,7 +288,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
   }
   return obj4;
 });
-export const getManageResourcePermissions = function getManageResourcePermissions(guild) {
+export function getManageResourcePermissions(guild) {
   let obj = c6;
   if (c6 === undefined) {
     obj = PermissionStore;
@@ -350,4 +350,4 @@ export const getManageResourcePermissions = function getManageResourcePermission
     };
   }
   return obj6;
-};
+}

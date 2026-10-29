@@ -1,8 +1,8 @@
-// === Module 7564: BlockedPaymentsCountryExperiment ===
+// === Module 7587: BlockedPaymentsCountryExperiment ===
 
-// Module 7564 (BlockedPaymentsCountryExperiment)
+// Module 7587 (BlockedPaymentsCountryExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -49,6 +49,6 @@ export const useIsPaymentsBlocked = ReactCompilerGating.isReactCompilerEnabled()
 }) : (function useIsPaymentsBlocked() {
   return closure_3.useConfig({ location: "dc120b_3" }).enabled;
 });
-export const getIsPaymentsBlocked = function getIsPaymentsBlocked() {
+export function getIsPaymentsBlocked() {
   return closure_3.getConfig({ location: "1ee357_1" }).enabled;
-};
+}

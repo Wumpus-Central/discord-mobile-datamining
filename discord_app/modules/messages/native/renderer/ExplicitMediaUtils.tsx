@@ -1,18 +1,18 @@
-// === Module 8645: ExplicitMediaUtils ===
+// === Module 8667: ExplicitMediaUtils ===
 
-// Module 8645 (ExplicitMediaUtils)
+// Module 8667 (ExplicitMediaUtils)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7426 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7432 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7449 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7455 */;
 import size from "module_2" /* 2 */;
 
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
 
-export const getAttachmentObscurityProps = function getAttachmentObscurityProps(shouldAgeVerify) {
+export function getAttachmentObscurityProps(shouldAgeVerify) {
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
   let num = attachment.flags;
   if (num == null) {
@@ -74,8 +74,8 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   obj5.obscureHideControls = isVerifiedTeenResult;
   obj5.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
   return obj5;
-};
-export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemObscurityProps(arg0) {
+}
+export function getUnfurledMediaItemObscurityProps(arg0) {
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
   const obj = ObscuredMediaUtils;
@@ -130,7 +130,7 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     stringResult1 = intl.string(util.t["3Gc2XP"]);
   }
   const obj2 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: mediaItem };
-};
+}
 export function getAttachmentObscurityDefaults() {
   return { isSpoiler: false, spoiler: "" };
 }

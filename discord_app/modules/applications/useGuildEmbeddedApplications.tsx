@@ -1,12 +1,12 @@
-// === Module 9013: useGuildEmbeddedApplications ===
+// === Module 9016: useGuildEmbeddedApplications ===
 
-// Module 9013 (useGuildEmbeddedApplications)
+// Module 9016 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 require = fn;
 const initialize = fn(504);
@@ -43,7 +43,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;

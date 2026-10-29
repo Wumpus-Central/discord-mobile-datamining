@@ -1,23 +1,23 @@
-// === Module 12247: SelectComponentActionSheet ===
+// === Module 12301: SelectComponentActionSheet ===
 
-// Module 12247 (SelectComponentActionSheet)
+// Module 12301 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5072 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import FormCheckbox from "FormCheckbox" /* 6937 */;
-import TableRow from "TableRow" /* 6939 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9168 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5073 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import FormCheckbox from "FormCheckbox" /* 6961 */;
+import TableRow from "TableRow" /* 6963 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9171 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(5302).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(5303).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" }, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.tagListIconWrapper = size;
@@ -274,10 +274,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
     const obj3 = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1125).intl;
     obj3.text = intl3.string(tmp6(1125).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5280).Button, obj3);
+    tmp5Result = closure_8(tmp6(5281).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(7284).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(7308).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -311,8 +311,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
         }
         onQueryChange(ref);
       };
-      tmp5Result4 = closure_8(selectedOptions(9027), obj4);
-      const tmp13 = selectedOptions(9027);
+      tmp5Result4 = closure_8(selectedOptions(9030), obj4);
+      const tmp13 = selectedOptions(9030);
     }
   }
   children[1] = tmp5Result4;

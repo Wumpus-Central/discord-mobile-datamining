@@ -1,7 +1,7 @@
-// === Module 7074: useIsWindowLarge ===
+// === Module 7098: useIsWindowLarge ===
 
-// Module 7074 (useIsWindowLarge)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5190 */;
+// Module 7098 (useIsWindowLarge)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5191 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const result1 = size.fileFinishedImporting("modules/screen/native/useIsWindowLar
 export default function useIsWindowLarge() {
   return useWindowSizeClassifierDefault() >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
 };
-export const getIsWindowLarge = function getIsWindowLarge() {
+export function getIsWindowLarge() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
   return windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
-};
+}

@@ -1,9 +1,9 @@
-// === Module 10835: conjureDevicePermissions ===
+// === Module 10911: conjureDevicePermissions ===
 
-// Module 10835 (conjureDevicePermissions)
+// Module 10911 (conjureDevicePermissions)
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import _modDef3863 from "module_3863" /* 3863 */;
+import _modDef3864 from "module_3864" /* 3864 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -11,7 +11,7 @@ const obj = {
     isSupported: PlatformUtils.isDesktop,
     getLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3863["2KIefJ"]);
+      return intl.string(_modDef3864["2KIefJ"]);
     }
   },
   connect_user_to_voice: {
@@ -20,7 +20,7 @@ const obj = {
     },
     getLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3863["5Hp3Nx"]);
+      return intl.string(_modDef3864["5Hp3Nx"]);
     }
   }
 };
@@ -28,21 +28,21 @@ const keys = Object.keys(obj);
 const result = size.fileFinishedImporting("modules/conjure/device_permissions/conjureDevicePermissions.tsx");
 
 export const CONJURE_DEVICE_PERMISSION_NAMES = keys;
-export const isConjureDevicePermissionName = function isConjureDevicePermissionName(str) {
+export function isConjureDevicePermissionName(str) {
   let hasOwnResult = typeof str === "string";
   if (typeof str === "string") {
     const _Object = Object;
     hasOwnResult = Object.hasOwn(obj, str);
   }
   return hasOwnResult;
-};
-export const isConjureDevicePermissionSupported = function isConjureDevicePermissionSupported(permission) {
+}
+export function isConjureDevicePermissionSupported(permission) {
   return obj[permission].isSupported();
-};
-export const getConjureDevicePermissionLabel = function getConjureDevicePermissionLabel(permission) {
+}
+export function getConjureDevicePermissionLabel(permission) {
   return obj[permission].getLabel();
-};
-export const getConjureDevicePermissionPromptTitle = function getConjureDevicePermissionPromptTitle(app) {
+}
+export function getConjureDevicePermissionPromptTitle(app) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3863.vBSfKU, { app });
-};
+  return intl.formatToPlainString(_modDef3864.vBSfKU, { app });
+}

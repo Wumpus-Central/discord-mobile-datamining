@@ -1,16 +1,16 @@
-// === Module 16880: StreamOutputVolumeSetting ===
+// === Module 17119: StreamOutputVolumeSetting ===
 
-// Module 16880 (StreamOutputVolumeSetting)
+// Module 17119 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5775 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5887 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11657 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5777 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5889 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11711 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 fn(558);
@@ -64,7 +64,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStreamVol
     return num;
   });
 });
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasStreamVolumeSetting() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -111,7 +111,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(8365).MobileUserSettings.VOICE,
+  parent: fn(8387).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: tmp2,
   onValueChange: function onStreamValueSettingValueChange(arg0) {

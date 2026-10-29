@@ -1,19 +1,19 @@
-// === Module 4839: Uint8ArrayUtils ===
+// === Module 4840: Uint8ArrayUtils ===
 
-// Module 4839 (Uint8ArrayUtils)
+// Module 4840 (Uint8ArrayUtils)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
 
-export const hasBit = function hasBit(dismissedContents, CHANNEL_NOTICE_INVITE) {
+export function hasBit(dismissedContents, CHANNEL_NOTICE_INVITE) {
   let tmp = 0 !== dismissedContents.length;
   if (tmp) {
     const _Math = Math;
     tmp = dismissedContents[Math.floor(Math, CHANNEL_NOTICE_INVITE / 8)] & 1 << CHANNEL_NOTICE_INVITE % 8;
   }
   return tmp;
-};
-export const addBit = function addBit(dismissedContents, CHANNEL_NOTICE_INVITE) {
+}
+export function addBit(dismissedContents, CHANNEL_NOTICE_INVITE) {
   const rounded = Math.floor(CHANNEL_NOTICE_INVITE / 8);
   let tmp2 = dismissedContents;
   if (dismissedContents.length <= rounded) {
@@ -24,8 +24,8 @@ export const addBit = function addBit(dismissedContents, CHANNEL_NOTICE_INVITE) 
   }
   tmp2[rounded] = tmp2[rounded] | 1 << CHANNEL_NOTICE_INVITE % 8;
   return tmp2;
-};
-export const removeBit = function removeBit(dismissedContents, arg1) {
+}
+export function removeBit(dismissedContents, arg1) {
   let tmp = 0 !== dismissedContents.length;
   if (tmp) {
     const _Math = Math;
@@ -37,11 +37,11 @@ export const removeBit = function removeBit(dismissedContents, arg1) {
     dismissedContents[rounded] = dismissedContents[rounded] & ~1 << arg1 % 8;
   }
   return dismissedContents;
-};
-export const isUint8Array = function isUint8Array(arg0) {
+}
+export function isUint8Array(arg0) {
   return arg0 instanceof Uint8Array;
-};
-export const isSerializedUint8Array = function isSerializedUint8Array(__tag__) {
+}
+export function isSerializedUint8Array(__tag__) {
   let tmp = null != __tag__ && typeof __tag__ === "object";
   if (tmp) {
     tmp = "__tag__" in __tag__;
@@ -50,4 +50,4 @@ export const isSerializedUint8Array = function isSerializedUint8Array(__tag__) {
     tmp = "uint8array" === __tag__.__tag__;
   }
   return tmp;
-};
+}

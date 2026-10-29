@@ -1,13 +1,13 @@
-// === Module 9280: useShouldOpenGameProfileModal ===
+// === Module 9284: useShouldOpenGameProfileModal ===
 
-// Module 9280 (useShouldOpenGameProfileModal)
+// Module 9284 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import utils from "utils" /* 5648 */;
-import GameFlags from "GameFlags" /* 9281 */;
+import utils from "utils" /* 5649 */;
+import GameFlags from "GameFlags" /* 9285 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2019 */;
+import GameStore from "GameStore" /* 2020 */;
 
 const require = globalThis.__r;
 
@@ -316,7 +316,7 @@ export { RejectionReason };
 export { trackEntryPoint };
 export { isGameDisabled };
 export { gameIsAcceptable };
-export const gameIdIsAcceptable = function gameIdIsAcceptable(arg0) {
+export function gameIdIsAcceptable(arg0) {
   const game = GameStore.getGame(arg0);
   if (null == game) {
     const items = [obj.NoMatch];
@@ -335,4 +335,4 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(arg0) {
     tmp9Result = utils;
   }
   return 0 === arr.length;
-};
+}

@@ -1,6 +1,6 @@
-// === Module 4904: deserializeChannels ===
+// === Module 4905: deserializeChannels ===
 
-// Module 4904 (deserializeChannels)
+// Module 4905 (deserializeChannels)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/cache/deserializeChannels.tsx");
 
 export default deserializeChannels;
-export const deserializeChannelEntries = function deserializeChannelEntries(guildChannels) {
+export function deserializeChannelEntries(guildChannels) {
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     let first = tmp4[0];
@@ -34,8 +34,8 @@ export const deserializeChannelEntries = function deserializeChannelEntries(guil
     continue;
   }
   tmp = guildChannels[Symbol.iterator]();
-};
-export const deserializeChannel = function deserializeChannel(permissionOverwrites_) {
+}
+export function deserializeChannel(permissionOverwrites_) {
   permissionOverwrites_ = permissionOverwrites_.permissionOverwrites_;
   if (null != permissionOverwrites_) {
     for (const key10006 in permissionOverwrites_) {
@@ -48,4 +48,4 @@ export const deserializeChannel = function deserializeChannel(permissionOverwrit
     }
   }
   return permissionOverwrites_;
-};
+}

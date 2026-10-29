@@ -1,19 +1,19 @@
-// === Module 15313: ActivityTrackingStore ===
+// === Module 15548: ActivityTrackingStore ===
 
-// Module 15313 (ActivityTrackingStore)
+// Module 15548 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7854 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11252 */;
-import RunningGameStore from "RunningGameStore" /* 2018 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7877 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11306 */;
+import RunningGameStore from "RunningGameStore" /* 2019 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DetectableGameStore from "DetectableGameStore" /* 2036 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2040 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import DetectableGameStore from "DetectableGameStore" /* 2037 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2041 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 require = fn;
 function stopActivity(applicationId) {
@@ -69,7 +69,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4851).Interval();
+    const interval = new tmp3(4852).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);

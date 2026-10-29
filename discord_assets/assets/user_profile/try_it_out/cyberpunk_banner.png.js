@@ -1,6 +1,6 @@
-// === Module 16183: ? ===
+// === Module 16420: ? ===
 
-// Module 16183
+// Module 16420
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/user_profile/try_it_out/cyberpunk_banner.png.js");

@@ -1,11 +1,11 @@
-// === Module 10833: requestConjureDevicePermissions ===
+// === Module 10909: requestConjureDevicePermissions ===
 
-// Module 10833 (requestConjureDevicePermissions)
+// Module 10909 (requestConjureDevicePermissions)
 import DurationsDefault from "Durations" /* 1101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import FramesStore from "FramesStore" /* 6810 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10834 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import FramesStore from "FramesStore" /* 6833 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10910 */;
 
 const require = fn;
 let closure_10 = async function _requestConjureDevicePermissions(arg0) {
@@ -19,7 +19,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -134,7 +134,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
           };
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -238,7 +238,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
     }
   }
 };
-const FrameLayoutModes = fn(6811).FrameLayoutModes;
+const FrameLayoutModes = fn(6834).FrameLayoutModes;
 const set = new Set();
 const SECOND = DurationsDefault.Millis.SECOND;
 const size = fn(2);
@@ -255,7 +255,7 @@ export default function requestConjureDevicePermissions() {
   return applyArgumentsResult;
 };
 export const UNANSWERED_REQUEST_DELAY_MS = SECOND;
-export const getConjureDevicePermissionStatus = function getConjureDevicePermissionStatus(applicationId, permission) {
+export function getConjureDevicePermissionStatus(applicationId, permission) {
   if (obj.isConjureDevicePermissionSupported(permission)) {
     const obj2 = { permission, state: null };
     let str = ConjureDevicePermissionStore.getDecision(applicationId, permission);
@@ -268,4 +268,4 @@ export const getConjureDevicePermissionStatus = function getConjureDevicePermiss
     obj3 = { permission, state: "unsupported" };
   }
   return obj3;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 15130: useOutboundPromotionRedemptionEndDate ===
+// === Module 15365: useOutboundPromotionRedemptionEndDate ===
 
-// Module 15130 (useOutboundPromotionRedemptionEndDate)
+// Module 15365 (useOutboundPromotionRedemptionEndDate)
 import c from "c" /* 576 */;
-import DateUtils from "DateUtils" /* 4829 */;
+import DateUtils from "DateUtils" /* 4830 */;
 import noop from "module_19" /* 19 */;
-import hooks from "module_2046" /* 2046 */;
+import hooks from "module_2047" /* 2047 */;
 
 require = fn;
 let closure_4 = hooks.duration(30, "days");

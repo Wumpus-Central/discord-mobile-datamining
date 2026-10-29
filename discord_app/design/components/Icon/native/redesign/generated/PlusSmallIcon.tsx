@@ -1,10 +1,10 @@
-// === Module 9500: PlusSmallIcon ===
+// === Module 9531: PlusSmallIcon ===
 
-// Module 9500 (PlusSmallIcon)
+// Module 9531 (PlusSmallIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod9501 from "module_9501" /* 9501 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod9532 from "module_9532" /* 9532 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const PlusSmallIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9501;
+    const tmpResult = _mod9532;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const PlusSmallIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9501, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9532, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

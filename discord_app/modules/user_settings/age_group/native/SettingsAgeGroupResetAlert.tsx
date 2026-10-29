@@ -1,7 +1,7 @@
-// === Module 16290: SettingsAgeGroupResetAlert ===
+// === Module 16528: SettingsAgeGroupResetAlert ===
 
-// Module 16290 (SettingsAgeGroupResetAlert)
-import _modDef3091 from "module_3091" /* 3091 */;
+// Module 16528 (SettingsAgeGroupResetAlert)
+import _modDef3092 from "module_3092" /* 3092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -48,13 +48,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
               c2 = 1;
               c1 = 2;
               c3 = 1;
-              const obj6 = { value: tmp3(6696).resetAgeVerification(), done: false };
+              const obj6 = { value: tmp3(6720).resetAgeVerification(), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
             c2 = 0;
             const intl = tmp3(1125).intl;
-            tmp3(5698).presentError(intl.string(tmp3(1125).t.fEptJP));
+            tmp3(5700).presentError(intl.string(tmp3(1125).t.fEptJP));
             const _Error = Error;
             const error = new Error("Reset failed");
             throw error;
@@ -67,11 +67,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
             const obj7 = { value, done: true };
             return obj7;
           } else {
-            tmp3(5946).dismissAlert(closure_2_6);
+            tmp3(5948).dismissAlert(closure_2_6);
             tmp3.goBack();
             c2 = 0;
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp29) {
           if (tmp4 === c2) {
@@ -101,9 +101,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let intl = tmp(1125).intl;
-    const stringResult = intl.string(_modDef3091["bD//cU"]);
+    const stringResult = intl.string(_modDef3092["bD//cU"]);
     const intl2 = tmp(1125).intl;
-    const stringResult1 = intl2.string(_modDef3091.FbTAmI);
+    const stringResult1 = intl2.string(_modDef3092.FbTAmI);
     cResult[2] = stringResult;
     cResult[3] = stringResult1;
     let tmp8 = stringResult1;
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = tmp(1125).intl;
-    const stringResult2 = intl3.string(_modDef3091.V822Mp);
+    const stringResult2 = intl3.string(_modDef3092.V822Mp);
     cResult[4] = stringResult2;
     let tmp12 = stringResult2;
   } else {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   }
   if (cResult[5] !== tmp5) {
     const obj3 = { variant: "destructive", onPress: tmp5, text: tmp12 };
-    const tmp17 = closure_4(tmp(5950).AlertActionButton, obj3, "confirm");
+    const tmp17 = closure_4(tmp(5952).AlertActionButton, obj3, "confirm");
     cResult[5] = tmp5;
     cResult[6] = tmp17;
     let tmp15 = tmp17;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     const obj4 = { variant: "secondary", text: null };
     const intl4 = tmp(1125).intl;
     obj4.text = intl4.string(tmp(1125).t["ETE/oC"]);
-    const tmp20 = closure_4(tmp(5950).AlertActionButton, obj4, "cancel");
+    const tmp20 = closure_4(tmp(5952).AlertActionButton, obj4, "cancel");
     cResult[7] = tmp20;
     let tmp18 = tmp20;
   } else {
@@ -144,8 +144,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     let obj6 = { children: null };
     const items = [tmp15, tmp18];
     obj6.children = items;
-    obj5.actions = closure_5(tmp(5950).AlertActions, obj6);
-    const tmp24 = closure_4(tmp(5950).AlertModal, obj5);
+    obj5.actions = closure_5(tmp(5952).AlertActions, obj6);
+    const tmp24 = closure_4(tmp(5952).AlertModal, obj5);
     cResult[8] = tmp15;
     cResult[9] = tmp24;
     let tmp21 = tmp24;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -182,13 +182,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(6696).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(6720).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           const intl = tmp3(1125).intl;
-          tmp3(5698).presentError(intl.string(tmp3(1125).t.fEptJP));
+          tmp3(5700).presentError(intl.string(tmp3(1125).t.fEptJP));
           const _Error = Error;
           const error = new Error("Reset failed");
           throw error;
@@ -201,11 +201,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          tmp3(5946).dismissAlert(closure_1_6);
+          tmp3(5948).dismissAlert(closure_1_6);
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp29) {
         if (tmp4 === dependencyMap) {
@@ -220,9 +220,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   _require = require("useNavigation").useNavigation();
   let obj2 = { title: null, content: null, actions: null };
   let intl = require("util").intl;
-  obj2.title = intl.string(_modDef3091["bD//cU"]);
+  obj2.title = intl.string(_modDef3092["bD//cU"]);
   const intl2 = require("util").intl;
-  obj2.content = intl2.string(_modDef3091.FbTAmI);
+  obj2.content = intl2.string(_modDef3092.FbTAmI);
   const obj3 = { children: null };
   const obj4 = {
     variant: "destructive",
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     text: null
   };
   const intl3 = require("util").intl;
-  obj4.text = intl3.string(_modDef3091.V822Mp);
+  obj4.text = intl3.string(_modDef3092.V822Mp);
   const items = [closure_4(require("AlertModal").AlertActionButton, obj4, "confirm"), ];
   let obj5 = { variant: "secondary", text: null };
   const intl4 = require("util").intl;

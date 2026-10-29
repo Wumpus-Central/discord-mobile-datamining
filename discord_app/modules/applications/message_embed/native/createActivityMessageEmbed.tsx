@@ -1,13 +1,13 @@
-// === Module 14791: createActivityMessageEmbed ===
+// === Module 15026: createActivityMessageEmbed ===
 
-// Module 14791 (createActivityMessageEmbed)
-import createAppMessageEmbed from "createAppMessageEmbed" /* 13272 */;
-import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 14444 */;
+// Module 15026 (createActivityMessageEmbed)
+import createAppMessageEmbed from "createAppMessageEmbed" /* 13505 */;
+import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 14678 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
-export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
+export function createActivityMessageEmbed(app) {
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
   const appMessageEmbed = createAppMessageEmbed.createAppMessageEmbed({ theme, embedUrl, message, app });
@@ -37,4 +37,4 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
-};
+}

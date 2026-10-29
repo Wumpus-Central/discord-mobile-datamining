@@ -1,8 +1,8 @@
-// === Module 11740: StageChannelListStore ===
+// === Module 11794: StageChannelListStore ===
 
-// Module 11740 (StageChannelListStore)
+// Module 11794 (StageChannelListStore)
 import c from "c" /* 576 */;
-import _mod4919 from "module_4919" /* 4919 */;
+import _mod4920 from "module_4920" /* 4920 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveS
   } else {
     first = cResult[0];
   }
-  const tmp5 = _slicedToArray(closure_4(first, _mod4919.shallow), 2);
+  const tmp5 = _slicedToArray(closure_4(first, _mod4920.shallow), 2);
   const first1 = tmp5[0];
   closure_1 = tmp7;
   if (cResult[1] !== tmp5[1]) {
@@ -77,7 +77,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveS
     const items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _mod4919.shallow), 2);
+  }, _mod4920.shallow), 2);
   const first = tmp[0];
   closure_1 = tmp3;
   let items = [tmp[1]];
@@ -112,11 +112,11 @@ export const useActiveSpeakerPillState = ReactCompilerGating.isReactCompilerEnab
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4919.shallow);
+  return closure_4(first, _mod4920.shallow);
 }) : (function useActiveSpeakerPillState() {
   return closure_4((arg0) => {
     const items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod4919.shallow);
+  }, _mod4920.shallow);
 });

@@ -1,20 +1,20 @@
-// === Module 10168: GIFPickerUtils ===
+// === Module 10201: GIFPickerUtils ===
 
-// Module 10168 (GIFPickerUtils)
+// Module 10201 (GIFPickerUtils)
 import Constants from "Constants" /* 1084 */;
-import GifProvider from "GifProvider" /* 10167 */;
+import GifProvider from "GifProvider" /* 10200 */;
 import size from "module_2" /* 2 */;
 
 const SearchTypes = Constants.SearchTypes;
 const result = size.fileFinishedImporting("utils/GIFPickerUtils.tsx");
 
-export const isKlipyProvider = function isKlipyProvider(arg0) {
+export function isKlipyProvider(arg0) {
   return arg0 === GifProvider.GIF_PROVIDER_EMBED_NAME;
-};
-export const shouldUseAnimatedWebPThumbnail = function shouldUseAnimatedWebPThumbnail(arg0) {
+}
+export function shouldUseAnimatedWebPThumbnail(arg0) {
   return arg0 === GifProvider.GIF_PROVIDER_EMBED_NAME;
-};
-export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(providerName) {
+}
+export function getGIFThumbnailForFavorite(providerName) {
   if (providerName.providerName === GifProvider.GIF_PROVIDER_EMBED_NAME) {
     const thumbnail = providerName.thumbnail;
     if (null != thumbnail) {
@@ -28,8 +28,8 @@ export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(pr
       return uri;
     }
   }
-};
-export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(analyticsID, TRENDING_GIFS, arg2) {
+}
+export function calculateAnalyticsMetadata(analyticsID, TRENDING_GIFS, arg2) {
   if (null != TRENDING_GIFS) {
     const obj2 = {};
     obj2[TRENDING_GIFS] = 1;
@@ -61,4 +61,4 @@ export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(an
   obj4.num_modifiers = Object.keys(obj).length;
   obj4.modifiers = obj;
   return obj4;
-};
+}

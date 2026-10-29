@@ -1,14 +1,14 @@
-// === Module 8534: transformNativeMarkupEmoji ===
+// === Module 8556: transformNativeMarkupEmoji ===
 
-// Module 8534 (transformNativeMarkupEmoji)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
-import MarkupTypes from "MarkupTypes" /* 6016 */;
+// Module 8556 (transformNativeMarkupEmoji)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
+import MarkupTypes from "MarkupTypes" /* 6020 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupEmoji.tsx");
 
-export const transformNativeEmoji = function transformNativeEmoji(value, disableAnimatedEmoji) {
+export function transformNativeEmoji(value, disableAnimatedEmoji) {
   if ("unicode" === value.type) {
     value = value.value;
     const result = UnicodeEmojisDefault.convertSurrogateToName(value, false);
@@ -36,4 +36,4 @@ export const transformNativeEmoji = function transformNativeEmoji(value, disable
     obj7.frozenSrc = emojiURL1;
     return obj7;
   }
-};
+}

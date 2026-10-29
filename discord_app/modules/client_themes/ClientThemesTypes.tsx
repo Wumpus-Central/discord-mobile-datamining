@@ -4,14 +4,14 @@
 import ThemeConstants from "ThemeConstants" /* 1207 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import design_shared from "design/shared" /* 5012 */;
+import design_shared from "design/shared" /* 5013 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ThemeConstants.PROTO_THEME_MAP_WEB_REFRESH;
 const result = size.fileFinishedImporting("modules/client_themes/ClientThemesTypes.tsx");
 
 export const ClientThemeType = design_shared.ClientThemeType;
-export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(arg0) {
+export function getProtoThemeFromBaseTheme(arg0) {
   closure_0 = arg0;
   const entries = Object.entries(closure_3);
   const found = entries.find((item) => {
@@ -29,4 +29,4 @@ export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(ar
     UNSET = parseInt(found[0]);
   }
   return UNSET;
-};
+}

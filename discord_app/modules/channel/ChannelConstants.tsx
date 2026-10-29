@@ -1,6 +1,6 @@
-// === Module 4863: ChannelConstants ===
+// === Module 4864: ChannelConstants ===
 
-// Module 4863 (ChannelConstants)
+// Module 4864 (ChannelConstants)
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = { CONJURE: "conjuring", ROLE_SUBSCRIPTIONS: "role-subscriptions", SERVER_MONETIZATION_ONBOARDING: "server-monetization-onboarding", GAME_SHOP: "game-shop", GUILD_SHOP: "shop", MEMBER_APPLICATIONS: "member-applications", GUILD_HOME: "@home", CHANNEL_BROWSER: "channel-browser", GUILD_ONBOARDING: "onboarding", CUSTOMIZE_COMMUNITY: "customize-community", MEMBER_SAFETY: "member-safety", GUILD_BOOSTS: "boosts", GAME_SERVERS: "game-servers", REPORT_TO_MOD: "report-to-mod", GUILD_OFFICIAL_MESSAGES: "official-messages", GUILD_SPACE: "guild-space" };
@@ -11,19 +11,19 @@ const result = size.fileFinishedImporting("modules/channel/ChannelConstants.tsx"
 
 export { StaticChannelRoute };
 export const StaticChannelRoutes = set;
-export const isStaticChannelRoute = function isStaticChannelRoute(channelId) {
+export function isStaticChannelRoute(channelId) {
   return set.has(channelId);
-};
-export const buildGuildStaticChannelId = function buildGuildStaticChannelId(arg0, arg1) {
+}
+export function buildGuildStaticChannelId(arg0, arg1) {
   return "" + arg0 + "-" + arg1;
-};
-export const isGuildHomeChannel = function isGuildHomeChannel(channelId) {
+}
+export function isGuildHomeChannel(channelId) {
   let hasItem;
   if (channelId != null) {
     hasItem = channelId.includes(obj.GUILD_HOME);
   }
   return hasItem;
-};
+}
 export const ChannelFlags = frozen;
 export const MAX_CHANNEL_TOPIC_LENGTH = 1024;
 export const MAX_FORUM_CHANNEL_TOPIC_LENGTH = 4096;

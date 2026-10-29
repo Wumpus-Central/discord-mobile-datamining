@@ -1,11 +1,11 @@
-// === Module 18487: useFriendRequestCounts ===
+// === Module 18721: useFriendRequestCounts ===
 
-// Module 18487 (useFriendRequestCounts)
+// Module 18721 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7766 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7788 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -47,7 +47,7 @@ const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequest
 
 export { getIncomingFriendRequestCount };
 export const useIncomingFriendRequestCount = tmp2;
-export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCount() {
+export function getOutgoingFriendRequestCount() {
   let tmp = items1;
   if (items1 === undefined) {
     const items = [closure_5, ];
@@ -57,4 +57,4 @@ export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCo
   [obj, obj2] = tmp;
   const outgoingCount = obj.getOutgoingCount();
   return outgoingCount + obj2.getPendingOutgoingCount();
-};
+}

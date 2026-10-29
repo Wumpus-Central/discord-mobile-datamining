@@ -1,13 +1,13 @@
-// === Module 11990: MessagePreviewMarkup ===
+// === Module 12044: MessagePreviewMarkup ===
 
-// Module 11990 (MessagePreviewMarkup)
-import privDefault from "priv" /* 1456 */;
-import _modDef1948 from "module_1948" /* 1948 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5679 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6017 */;
-import MarkupRulesDefault from "MarkupRules" /* 6018 */;
-import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 11991 */;
+// Module 12044 (MessagePreviewMarkup)
+import privDefault from "priv" /* 1457 */;
+import _modDef1949 from "module_1949" /* 1949 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5681 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6021 */;
+import MarkupRulesDefault from "MarkupRules" /* 6022 */;
+import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 12045 */;
 
 require = fn;
 function getOrParseMessagePreviewMarkupAST(arg0) {
@@ -38,20 +38,20 @@ let closure_3 = tmp2;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
 
-export const renderASTToReact = function renderASTToReact(layout) {
+export function renderASTToReact(layout) {
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
   const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
   const tmpResult = combineMarkupRulesDefault(items);
-  const obj = _modDef1948;
-  return obj.reactFor(_modDef1948.ruleOutput(tmpResult, "react"))(tree, initialParserState);
-};
-export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
+  const obj = _modDef1949;
+  return obj.reactFor(_modDef1949.ruleOutput(tmpResult, "react"))(tree, initialParserState);
+}
+export function getMessagePreviewASTParser(layout) {
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
   const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
   const tmpResult = combineMarkupRulesDefault(items);
   return MarkupUtilsDefault.astParserFor(tmpResult);
-};
-export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fontScale) {
+}
+export function renderMessagePreviewMarkup(fontScale) {
   ({ content, muted, layout } = fontScale);
   ({ guildId, channelId } = fontScale);
   if (layout === undefined) {
@@ -78,9 +78,9 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
     const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout, color, num, maxFontSizeMultiplier)];
     const tmp7Result = combineMarkupRulesDefault(items);
-    const obj2 = _modDef1948;
-    return obj2.reactFor(_modDef1948.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
+    const obj2 = _modDef1949;
+    return obj2.reactFor(_modDef1949.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
   }
-};
+}
 export const messagePreviewASTCache = tmp2;
 export { getOrParseMessagePreviewMarkupAST };

@@ -1,10 +1,10 @@
-// === Module 10162: useExpressionPickerInsets ===
+// === Module 10195: useExpressionPickerInsets ===
 
-// Module 10162 (useExpressionPickerInsets)
+// Module 10195 (useExpressionPickerInsets)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5629 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

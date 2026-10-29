@@ -1,8 +1,8 @@
-// === Module 13271: useMaybeFetchCheckpointData ===
+// === Module 13504: useMaybeFetchCheckpointData ===
 
-// Module 13271 (useMaybeFetchCheckpointData)
-import GameActionCreators from "GameActionCreators" /* 7444 */;
-import CheckpointStore2 from "CheckpointStore" /* 13015 */;
+// Module 13504 (useMaybeFetchCheckpointData)
+import GameActionCreators from "GameActionCreators" /* 7467 */;
+import CheckpointStore2 from "CheckpointStore" /* 13236 */;
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

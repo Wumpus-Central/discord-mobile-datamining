@@ -1,14 +1,14 @@
-// === Module 14762: InteractionStatus ===
+// === Module 14997: InteractionStatus ===
 
-// Module 14762 (InteractionStatus)
+// Module 14997 (InteractionStatus)
 import util from "util" /* 1125 */;
-import InteractionUtils from "InteractionUtils" /* 8636 */;
+import InteractionUtils from "InteractionUtils" /* 8658 */;
 import size from "module_2" /* 2 */;
 
 const constants = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERAL_SUCCESS: 999, [999]: "EPHEMERAL_SUCCESS" };
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
 
-export const createInteractionStatus = function createInteractionStatus(message, interaction) {
+export function createInteractionStatus(message, interaction) {
   const interactionStatusViewState = InteractionUtils.getInteractionStatusViewState(message, interaction);
   if (InteractionUtils.InteractionStatusViewState.SENDING === interactionStatusViewState) {
     const obj2 = { text: null, state: null };
@@ -41,4 +41,4 @@ export const createInteractionStatus = function createInteractionStatus(message,
     const obj7 = { text: "", state: constants.EPHEMERAL_SUCCESS };
     return obj7;
   }
-};
+}

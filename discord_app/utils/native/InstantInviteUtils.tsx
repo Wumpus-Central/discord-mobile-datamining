@@ -1,16 +1,16 @@
-// === Module 9086: utils/InstantInviteUtils ===
+// === Module 9089: utils/InstantInviteUtils ===
 
-// Module 9086 (utils/InstantInviteUtils)
+// Module 9089 (utils/InstantInviteUtils)
 import util from "util" /* 1125 */;
-import canViewInviteModal from "canViewInviteModal" /* 8938 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4934 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import canViewInviteModal from "canViewInviteModal" /* 8941 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4935 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4934);
+let GuildChannelStore = fn(4935);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = fn(1084).Permissions;
@@ -202,7 +202,7 @@ export const INVITE_OPTIONS_25_TIMES = obj16;
 export const INVITE_OPTIONS_50_TIMES = obj17;
 export const INVITE_OPTIONS_100_TIMES = obj18;
 export const MAX_USES_OPTIONS = items1;
-export const getInviteChannelId = function getInviteChannelId(channelId, stateFromStores) {
+export function getInviteChannelId(channelId, stateFromStores) {
   if (null == stateFromStores) {
     return null;
   } else {
@@ -235,8 +235,8 @@ export const getInviteChannelId = function getInviteChannelId(channelId, stateFr
     }
     return id;
   }
-};
-export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
+}
+export function shouldRenderInvite(channels, guild) {
   let vanityURLCode;
   if (guild != null) {
     vanityURLCode = guild.vanityURLCode;
@@ -258,7 +258,7 @@ export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
     tmp6 = tmp8;
   }
   return tmp6;
-};
+}
 export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowInviteInActionBar(id) {
   const _require = id;
   const cResult = require("c").c(7);

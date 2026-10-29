@@ -1,9 +1,9 @@
-// === Module 11552: useTrackActivityVideoPip ===
+// === Module 11606: useTrackActivityVideoPip ===
 
-// Module 11552 (useTrackActivityVideoPip)
+// Module 11606 (useTrackActivityVideoPip)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11412 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11466 */;
 
 const require = globalThis.__r;
 
@@ -30,9 +30,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   }
   let obj = require("c");
   const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
-  const tmp8 = stateFromStores(6695)(stateFromStores);
+  const tmp8 = stateFromStores(6719)(stateFromStores);
   dependencyMap = tmp8;
-  const tmp9 = stateFromStores(11496)();
+  const tmp9 = stateFromStores(11550)();
   noop = tmp9;
   if (cResult[2] === arg0) {
     if (cResult[3] === tmp9) {
@@ -75,9 +75,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   _require = arg0;
   const items = [ChannelCallLifecycleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
-  let tmp2 = stateFromStores(6695)(stateFromStores);
+  let tmp2 = stateFromStores(6719)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(11496)();
+  const tmp3 = stateFromStores(11550)();
   noop = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = noop.useEffect(() => {

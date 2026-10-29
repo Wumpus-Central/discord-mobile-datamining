@@ -1,7 +1,7 @@
-// === Module 18215: useICYMIEmptyLoadingAnalytics ===
+// === Module 18449: useICYMIEmptyLoadingAnalytics ===
 
-// Module 18215 (useICYMIEmptyLoadingAnalytics)
-import ICYMIAnalytics3 from "ICYMIAnalytics" /* 15911 */;
+// Module 18449 (useICYMIEmptyLoadingAnalytics)
+import ICYMIAnalytics3 from "ICYMIAnalytics" /* 16147 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

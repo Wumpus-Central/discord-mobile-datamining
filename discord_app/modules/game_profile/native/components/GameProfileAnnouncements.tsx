@@ -1,22 +1,22 @@
-// === Module 9374: GameProfileAnnouncements ===
+// === Module 9406: GameProfileAnnouncements ===
 
-// Module 9374 (GameProfileAnnouncements)
+// Module 9406 (GameProfileAnnouncements)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import DateUtils from "DateUtils" /* 4829 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import CustomMarkupAll from "CustomMarkup" /* 6015 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7074 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9278 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9283 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9366 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 9375 */;
-import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 9376 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 9379 */;
-import ReactionIcon from "ReactionIcon" /* 9381 */;
-import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 9386 */;
+import DateUtils from "DateUtils" /* 4830 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import CustomMarkupAll from "CustomMarkup" /* 6019 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7098 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9282 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9287 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9398 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 9407 */;
+import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 9408 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 9411 */;
+import ReactionIcon from "ReactionIcon" /* 9413 */;
+import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 9418 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -24,14 +24,14 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(9332).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(9336).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 120;
 let c11 = 160;
 const PlatformUtils = fn(1381);
 let closure_13 = null;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" }, skeletonCardsScroller: null, smallCardsContainer: null, skeletonCardsContainer: null, card: null, cardBody: null, smallCardMedia: null, mediaImage: null, metadataRow: null, reactionInfo: null, embedContentArea: null, embedAuthorRow: null, embedAuthorIcon: null, embedProviderIcon: null, embedMedia: null, pollAnswers: null, pollAnswerOption: null, pollMoreOptions: null, skeletonCard: null, skeletonCardLarge: null, skeletonAnimationRoot: null, skeletonCardImage: null, skeletonCardBody: null, skeletonCardContent: null, skeletonCardMetadata: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" };
 obj.skeletonCardsScroller = { marginHorizontal: -nativeDefault.space.PX_16 };
@@ -231,7 +231,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const obj = require("c");
   const tmp = _require;
-  const tmp11 = onPress(tmp(9368).GameProfileSectionSkeleton, { showViewAllSkeleton: true, skeletonTitleWidth: 200, children: onPress(GameProfileSkeletonCardRowDefault, { style: skeletonCardsScroller, contentContainerStyle: skeletonCardsContainer, children: tmp7 }) });
+  const tmp11 = onPress(tmp(9400).GameProfileSectionSkeleton, { showViewAllSkeleton: true, skeletonTitleWidth: 200, children: onPress(GameProfileSkeletonCardRowDefault, { style: skeletonCardsScroller, contentContainerStyle: skeletonCardsContainer, children: tmp7 }) });
   cResult[2] = tmp4.skeletonCardsContainer;
   cResult[3] = tmp4.skeletonCardsScroller;
   cResult[4] = tmp7;
@@ -1220,7 +1220,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
                               }
                               if (cResult[38] !== tmp44) {
                                 const obj2 = { variant: "text-xs/medium", color: "text-muted", children: tmp44 };
-                                const tmp53 = onPress(tmp(5270).Text, obj2);
+                                const tmp53 = onPress(tmp(5271).Text, obj2);
                                 cResult[38] = tmp44;
                                 cResult[39] = tmp53;
                                 let tmp51 = tmp53;
@@ -1290,13 +1290,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
                             const _Date = Date;
                             const date = new Date(message.timestamp);
                             obj6.createdAt = date;
-                            obj6.expiryLabel = tmp(9376).getPollExpiryLabel(poll);
+                            obj6.expiryLabel = tmp(9408).getPollExpiryLabel(poll);
                             const formatResult = intl2.format(tmp(1125).t.t0FTsH, obj6);
                             cResult[35] = message.timestamp;
                             cResult[36] = poll;
                             cResult[37] = formatResult;
                             tmp44 = formatResult;
-                            const tmpResult = tmp(9376);
+                            const tmpResult = tmp(9408);
                           }
                         }
                       }
@@ -1317,7 +1317,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
                       const intl = tmp(1125).intl;
                       const obj9 = { count: tmp8 };
                       obj8.children = intl.format(tmp(1125).t["mv/nIa"], obj9);
-                      tmp38 = onPress(tmp(5270).Text, obj8);
+                      tmp38 = onPress(tmp(5271).Text, obj8);
                     }
                     cResult[27] = cResult[11];
                     cResult[28] = tmp4.pollMoreOptions;
@@ -1345,7 +1345,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
       const cardBody = tmp4.cardBody;
       if (cResult[23] !== poll.question.text) {
         const obj10 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-        const tmp23 = onPress(tmp(5270).Text, obj10);
+        const tmp23 = onPress(tmp(5271).Text, obj10);
         cResult[23] = poll.question.text;
         cResult[24] = tmp23;
         let tmp21 = tmp23;
@@ -1441,7 +1441,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
     };
     const obj3 = { style: tmp.cardBody, children: null };
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    const items = [onPress(message(5270).Text, obj4), , ];
+    const items = [onPress(message(5271).Text, obj4), , ];
     const obj5 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -1461,7 +1461,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
       const intl = tmp13(1125).intl;
       const obj6 = { count: diff };
       obj.children = intl.format(tmp13(1125).t["mv/nIa"], obj6);
-      tmp9Result = tmp9(tmp13(5270).Text, obj);
+      tmp9Result = tmp9(tmp13(5271).Text, obj);
     }
     items1[1] = tmp9Result;
     obj5.children = items1;
@@ -1473,9 +1473,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(9376).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(9408).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1125).t.t0FTsH, obj9);
-    obj7.children = onPress(message(5270).Text, obj8);
+    obj7.children = onPress(message(5271).Text, obj8);
     items[2] = onPress(closure_5, obj7);
     obj3.children = items;
     obj2.children = closure_9(closure_5, obj3);

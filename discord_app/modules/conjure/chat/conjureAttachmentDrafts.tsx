@@ -1,10 +1,10 @@
-// === Module 12344: conjureAttachmentDrafts ===
+// === Module 12398: conjureAttachmentDrafts ===
 
-// Module 12344 (conjureAttachmentDrafts)
+// Module 12398 (conjureAttachmentDrafts)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12206 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12236 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12260 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12290 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
@@ -42,8 +42,8 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-function getConjureAttachmentDrafts(projectId, chat) {
-  const tmp = zustandStore.getState().draftsByProject[projectId];
+function getConjureAttachmentDrafts(substr, chat) {
+  const tmp = zustandStore.getState().draftsByProject[substr];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[chat];
@@ -131,17 +131,17 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10733).sendUserMessage;
+const sendUserMessage = fn(10807).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5199).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5200).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3863.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef3864.JZ59Bo, obj);
 }
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
@@ -162,7 +162,7 @@ let result = size.fileFinishedImporting("modules/conjure/chat/conjureAttachmentD
 export const ConjureAttachmentDraftStore = zustandStore;
 export { getConjureAttachmentDrafts };
 export { conjureAttachmentTooLargeText };
-export const uploadConjureAttachment = function uploadConjureAttachment(arg0, size, name, contentType) {
+export function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
     const tmpResult = conjureAttachmentRequests;
     let result = tmpResult.uploadAttachmentBytes(arg0, size, name, contentType);
@@ -172,12 +172,12 @@ export const uploadConjureAttachment = function uploadConjureAttachment(arg0, si
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3863.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3864.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }
   return result;
-};
+}
 export const useConjureAttachmentDraftList = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAttachmentDraftList(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
@@ -217,8 +217,8 @@ export const useConjureAttachmentDraftList = ReactCompilerGating.isReactCompiler
     return tmp2;
   });
 });
-export const addConjureAttachmentDrafts = function addConjureAttachmentDrafts(projectId, chat, mapped) {
-  closure_0 = projectId;
+export function addConjureAttachmentDrafts(substr, chat, mapped) {
+  closure_0 = substr;
   closure_1 = chat;
   if (0 !== mapped.length) {
     mapped = mapped.map((draft) => {
@@ -232,18 +232,18 @@ export const addConjureAttachmentDrafts = function addConjureAttachmentDrafts(pr
       return obj;
     });
     const items = [];
-    HermesBuiltin.arraySpread(mapped.map((draft) => draft.draft), HermesBuiltin.arraySpread(getConjureAttachmentDrafts(projectId, chat), 0));
-    setDrafts(projectId, chat, items);
+    HermesBuiltin.arraySpread(mapped.map((draft) => draft.draft), HermesBuiltin.arraySpread(getConjureAttachmentDrafts(substr, chat), 0));
+    setDrafts(substr, chat, items);
     for (const item10006 of mapped) {
       let upload = item10006.upload;
       let tmp10Result = tmp10(item10006.draft);
       continue;
     }
-    const arraySpreadResult = HermesBuiltin.arraySpread(getConjureAttachmentDrafts(projectId, chat), 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(getConjureAttachmentDrafts(substr, chat), 0);
   }
-};
-export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(id, chat, arg2) {
-  closure_0 = arg2;
+}
+export function removeConjureAttachmentDraft(id, chat, id) {
+  closure_0 = id;
   const tmp = zustandStore.getState().draftsByProject[id];
   let tmp2;
   if (tmp != null) {
@@ -276,19 +276,19 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
     obj3.draftsByProject = obj4;
     zustandStore.setState(obj3);
   }
-};
-export const clearConjureAttachmentDrafts = function clearConjureAttachmentDrafts(projectId, chat) {
-  const arr = getConjureAttachmentDrafts(projectId, chat);
+}
+export function clearConjureAttachmentDrafts(substr, chat) {
+  const arr = getConjureAttachmentDrafts(substr, chat);
   if (0 !== arr.length) {
     for (const item10010 of arr) {
       let tmp4 = discardDraft(arg0, item10010);
       continue;
     }
-    setDrafts(projectId, chat, closure_7);
+    setDrafts(substr, chat, closure_7);
   }
-};
+}
 export { takeConjureAttachmentRefs };
-export const sendConjureCardReply = function sendConjureCardReply(projectId, implementation_prompt, arg2) {
+export function sendConjureCardReply(projectId, implementation_prompt, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -315,4 +315,4 @@ export const sendConjureCardReply = function sendConjureCardReply(projectId, imp
     sendUserMessage(projectId, implementation_prompt, items, obj2);
   }
   items1 = [];
-};
+}

@@ -1,6 +1,6 @@
-// === Module 8384: GuildProductSystemMessageUtils ===
+// === Module 8406: GuildProductSystemMessageUtils ===
 
-// Module 8384 (GuildProductSystemMessageUtils)
+// Module 8406 (GuildProductSystemMessageUtils)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
@@ -8,11 +8,11 @@ import size from "module_2" /* 2 */;
 const NOOP = Constants.NOOP;
 const result = size.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
 
-export const getGuildProductPurchaseSystemMessageContentMobile = function getGuildProductPurchaseSystemMessageContentMobile(username) {
+export function getGuildProductPurchaseSystemMessageContentMobile(username) {
   let usernameHook = username.usernameOnClickHandler;
   if (usernameHook === undefined) {
     usernameHook = NOOP;
   }
   const intl = util.intl;
   return intl.formatToParts(util.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
-};
+}

@@ -1,9 +1,9 @@
-// === Module 8688: BioMaxLengthExperiment ===
+// === Module 8691: BioMaxLengthExperiment ===
 
-// Module 8688 (BioMaxLengthExperiment)
+// Module 8691 (BioMaxLengthExperiment)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1084 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,6 +27,6 @@ export const useBioMaxLength = ReactCompilerGating.isReactCompilerEnabled() ? (f
 }) : (function useBioMaxLength(location) {
   return closure_2.useConfig({ location: location.location }).maxLength;
 });
-export const getBioMaxLength = function getBioMaxLength(location) {
+export function getBioMaxLength(location) {
   return closure_2.getConfig({ location: location.location }).maxLength;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 9873: useBurstToggleCoachmark ===
+// === Module 9905: useBurstToggleCoachmark ===
 
-// Module 9873 (useBurstToggleCoachmark)
+// Module 9905 (useBurstToggleCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9840 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9872 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_9 = fn(4840).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(5004);
+let closure_9 = fn(4841).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+const createStyles = fn(5005);
 let obj2 = { upsellImageContainer: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, height: 40, width: 40, display: "flex", alignItems: "center", justifyContent: "center" };
 obj2.upsellImageContainer = size;
@@ -85,14 +85,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
       }
     }
     cResult[3] = items2;
-    tmpResult4 = tmp(2050);
+    tmpResult4 = tmp(2051);
   } else {
     class C {
       constructor() {
         return closure_1_6.getCurrentUser();
       }
     }
-    const tmp11 = _slicedToArray(tmp(7532).useSelectedDismissibleContent(cResult[3]), 2);
+    const tmp11 = _slicedToArray(tmp(7555).useSelectedDismissibleContent(cResult[3]), 2);
     _require = tmp12;
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
           return closure_1_8(closure_1_11, {});
         }
       }
-      tmp(9874);
+      tmp(9906);
       class C {
         constructor() {
           return closure_1_6.getCurrentUser();
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     cResult[9] = tmp15;
     cResult[10] = tmp11[0] === closure_9;
     cResult[11] = obj2;
-    const tmpResult5 = tmp(7532);
+    const tmpResult5 = tmp(7555);
   }
   const tmpResult = require("initialize");
 }) : (function useBurstToggleCoachmark(arg0) {
@@ -178,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
   } else {
     items2 = [];
   }
-  obj2 = first(2050);
-  const tmp5 = _slicedToArray(first(7532).useSelectedDismissibleContent(items2), 2);
+  obj2 = first(2051);
+  const tmp5 = _slicedToArray(first(7555).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(7532);
-  const coachmark = first(9874).useCoachmark(arg0, memo);
+  const tmpResult = first(7555);
+  const coachmark = first(9906).useCoachmark(arg0, memo);
   return tmp5[1];
 });

@@ -1,6 +1,6 @@
-// === Module 4851: Timers ===
+// === Module 4852: Timers ===
 
-// Module 4851 (Timers)
+// Module 4852 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -233,7 +233,7 @@ prototype5["_flush"] = function _flush() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -328,13 +328,13 @@ prototype5["_flush"] = function _flush() {
 export { Timeout };
 export { DelayedCall };
 export { Interval };
-export const timeoutPromise = function timeoutPromise(result) {
+export function timeoutPromise(result) {
   closure_0 = result;
   return new Promise((arg0) => {
     closure_0 = arg0;
     const timerId = setTimeout(() => closure_0(), closure_0);
   });
-};
+}
 export const DEFAULT_BATCH_INVOCATION_DELAY_MS = 32;
 export const BatchInvocationManagerResetError = prototype3;
 export { BatchInvocationManager };

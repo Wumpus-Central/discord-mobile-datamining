@@ -1,17 +1,17 @@
-// === Module 8980: EditGuildEventChannelSelection ===
+// === Module 8983: EditGuildEventChannelSelection ===
 
-// Module 8980 (EditGuildEventChannelSelection)
+// Module 8983 (EditGuildEventChannelSelection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import StageChannelUpsellDefault from "StageChannelUpsell" /* 8981 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import StageChannelUpsellDefault from "StageChannelUpsell" /* 8984 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6819 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
 
 require = fn;
 const View = fn(17).View;
@@ -19,7 +19,7 @@ const Constants = fn(1084);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flexDirection: "column" }, channelSelectorButton: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND }, channelIcon: { marginRight: 8 }, channelTypeText: { flex: 1, marginBottom: 8 }, channelNameText: { flex: 1 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,14 +31,14 @@ export default function EditGuildEventChannelSelection(guild) {
   const guildEventId = guild.guildEventId;
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
   const tmp = closure_13();
-  const inputStyles = guild(7059).useInputStyles({ hasLeadingIcon: true });
+  const inputStyles = guild(7083).useInputStyles({ hasLeadingIcon: true });
   closure_5 = tmp5;
-  let obj = guild(7059);
-  closure_6 = guild(8976).useGetEventChannelsByType(guild.id, channelType);
-  let obj2 = guild(8976);
-  guild(8961).useChannelsUserCanStartStageIn(guild);
-  const tmp7 = channel(5640)(channel);
-  let obj3 = guild(8961);
+  let obj = guild(7083);
+  closure_6 = guild(8979).useGetEventChannelsByType(guild.id, channelType);
+  let obj2 = guild(8979);
+  guild(8964).useChannelsUserCanStartStageIn(guild);
+  const tmp7 = channel(5641)(channel);
+  let obj3 = guild(8964);
   const items = [closure_5];
   closure_8 = guild(504).useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, guild));
   let obj4 = guild(504);
@@ -46,16 +46,16 @@ export default function EditGuildEventChannelSelection(guild) {
   const items2 = [guildEventId];
   constants = guild(504).useStateFromStores(items1, () => GuildScheduledEventStore.getGuildScheduledEvent(guildEventId), items2);
   if (null != channel) {
-    let channelIcon = tmp2(8539).getChannelIcon(channel);
-    const tmp2Result = tmp2(8539);
+    let channelIcon = tmp2(8561).getChannelIcon(channel);
+    const tmp2Result = tmp2(8561);
   } else {
-    channelIcon = channel(8963);
+    channelIcon = channel(8966);
   }
   if (null != channel) {
-    let LocationIcon = tmp2(8539).getChannelIconComponent(channel);
-    const tmp2Result2 = tmp2(8539);
+    let LocationIcon = tmp2(8561).getChannelIconComponent(channel);
+    const tmp2Result2 = tmp2(8561);
   } else {
-    LocationIcon = tmp2(8964).LocationIcon;
+    LocationIcon = tmp2(8967).LocationIcon;
   }
   let intl = tmp2(1125).intl;
   let string = intl.string;
@@ -68,7 +68,7 @@ export default function EditGuildEventChannelSelection(guild) {
   const obj6 = { style: null, children: null };
   const items3 = [tmp.container, guild.style];
   obj6.style = items3;
-  const items4 = [closure_11(guild(5270).Heading, { style: tmp.channelTypeText, variant: "text-sm/semibold", color: "text-subtle", children: stringResult }), ];
+  const items4 = [closure_11(guild(5271).Heading, { style: tmp.channelTypeText, variant: "text-sm/semibold", color: "text-subtle", children: stringResult }), ];
   const obj8 = { accessibilityLabel: stringResult, accessibilityHint: null, accessibilityValue: null, accessibilityRole: "button", style: null, onPress: null, children: null };
   const intl2 = tmp2(1125).intl;
   obj8.accessibilityHint = intl2.string(guild(1125).t.AaXbMD);
@@ -91,8 +91,8 @@ export default function EditGuildEventChannelSelection(guild) {
           guildId: guild.id,
           onCreate(channel) {
                 const obj2 = { channel, guildEvent, recurrenceId };
-                const result = guild(8940).openCreateOrEditGuildEventModal(closure_1_0, obj2);
-                const obj = guild(8940);
+                const result = guild(8943).openCreateOrEditGuildEventModal(closure_1_0, obj2);
+                const obj = guild(8943);
               }
         };
         tmp4 = closure_2_11(StageChannelUpsellDefault, obj2);
@@ -117,8 +117,8 @@ export default function EditGuildEventChannelSelection(guild) {
         if (null != found) {
           closure_1_4(found);
         }
-        channel(5246).hideActionSheet();
-        const obj = channel(5246);
+        channel(5247).hideActionSheet();
+        const obj = channel(5247);
       },
       selectedItem: null,
       hasIcons: false
@@ -128,8 +128,8 @@ export default function EditGuildEventChannelSelection(guild) {
       id = channel.id;
     }
     obj4.selectedItem = id;
-    obj3.openLazy(asyncRequireImpl(8959, dependencyMap.paths), "SelectUpdatesChannel", obj4);
-    const tmp9 = asyncRequireImpl(8959, dependencyMap.paths);
+    obj3.openLazy(asyncRequireImpl(8962, dependencyMap.paths), "SelectUpdatesChannel", obj4);
+    const tmp9 = asyncRequireImpl(8962, dependencyMap.paths);
   };
   if (null != LocationIcon) {
     const obj9 = { style: tmp.channelIcon };
@@ -138,13 +138,13 @@ export default function EditGuildEventChannelSelection(guild) {
     const obj10 = { source: channelIcon, style: tmp.channelIcon };
     tmp12Result = closure_11(tmp2(1199).Icon, obj10);
   }
-  const items6 = [tmp12Result, closure_11(guild(5270).Text, { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 }), ];
+  const items6 = [tmp12Result, closure_11(guild(5271).Text, { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 }), ];
   const obj11 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };
   const obj5 = guild(504);
   const obj7 = { style: tmp.channelTypeText, variant: "text-sm/semibold", color: "text-subtle", children: stringResult };
-  items6[2] = closure_11(guild(1199).Icon, { source: channel(8960) });
+  items6[2] = closure_11(guild(1199).Icon, { source: channel(8963) });
   obj8.children = items6;
-  items4[1] = closure_12(guild(6944).PressableOpacity, obj8);
+  items4[1] = closure_12(guild(6968).PressableOpacity, obj8);
   obj6.children = items4;
   return closure_12(View, obj6);
 };

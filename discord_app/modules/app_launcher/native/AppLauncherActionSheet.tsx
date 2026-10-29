@@ -1,20 +1,20 @@
-// === Module 12144: AppLauncherActionSheet ===
+// === Module 12198: AppLauncherActionSheet ===
 
-// Module 12144 (AppLauncherActionSheet)
+// Module 12198 (AppLauncherActionSheet)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5301 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 5616 */;
-import AppLauncherContext from "AppLauncherContext" /* 11207 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11208 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11209 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 11988 */;
-import getAppDMApplication from "getAppDMApplication" /* 12145 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5302 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 5617 */;
+import AppLauncherContext from "AppLauncherContext" /* 11261 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11262 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11263 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12042 */;
+import getAppDMApplication from "getAppDMApplication" /* 12199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherActionSheet(chatInputRef) {

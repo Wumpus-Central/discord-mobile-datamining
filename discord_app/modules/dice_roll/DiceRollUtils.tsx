@@ -1,12 +1,12 @@
-// === Module 13513: DiceRollUtils ===
+// === Module 13746: DiceRollUtils ===
 
-// Module 13513 (DiceRollUtils)
+// Module 13746 (DiceRollUtils)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
 
-export const getBarText = function getBarText(flag, results) {
+export function getBarText(flag, results) {
   if (flag) {
     const intl2 = util.intl;
     let str = intl2.string(util.t["x/FIRX"]);
@@ -19,4 +19,4 @@ export const getBarText = function getBarText(flag, results) {
     }
   }
   return str;
-};
+}

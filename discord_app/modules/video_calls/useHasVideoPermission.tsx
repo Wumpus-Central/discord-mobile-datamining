@@ -1,9 +1,9 @@
-// === Module 11629: useHasVideoPermission ===
+// === Module 11683: useHasVideoPermission ===
 
-// Module 11629 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6687 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 11683 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6711 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 
@@ -64,11 +64,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasVi
     return tmp;
   }, items1);
 });
-export const getVideoPermission = function getVideoPermission(channel) {
+export function getVideoPermission(channel) {
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     const obj = StreamPermissionUtils;
     isPrivateResult = obj.canStreamInChannel(channel, GuildStore, PermissionStore, false);
   }
   return isPrivateResult;
-};
+}

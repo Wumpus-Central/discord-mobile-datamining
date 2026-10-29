@@ -1,16 +1,16 @@
-// === Module 11588: StageChannelParticipantUtils ===
+// === Module 11642: StageChannelParticipantUtils ===
 
-// Module 11588 (StageChannelParticipantUtils)
+// Module 11642 (StageChannelParticipantUtils)
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import UserUtils from "UserUtils" /* 5058 */;
+import UserUtils from "UserUtils" /* 5059 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
-export const participantMemberInfo = function participantMemberInfo(participant) {
+export function participantMemberInfo(participant) {
   if (obj.isNewUser(participant.user)) {
     const intl5 = util.intl;
     return intl5.string(util.t.VaCdhQ);
@@ -53,4 +53,4 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     return stringResult;
   }
   obj = UserUtils;
-};
+}

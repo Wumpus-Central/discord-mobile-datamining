@@ -1,11 +1,11 @@
-// === Module 16231: GuildIdentitySettingsUtils ===
+// === Module 16468: GuildIdentitySettingsUtils ===
 
-// Module 16231 (GuildIdentitySettingsUtils)
+// Module 16468 (GuildIdentitySettingsUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
 
-export const canResetThemeColors = function canResetThemeColors(pendingThemeColors, themeColors) {
+export function canResetThemeColors(pendingThemeColors, themeColors) {
   if (undefined === pendingThemeColors) {
     let tmp3 = null != themeColors;
   } else {
@@ -23,4 +23,4 @@ export const canResetThemeColors = function canResetThemeColors(pendingThemeColo
     }
   }
   return tmp3;
-};
+}

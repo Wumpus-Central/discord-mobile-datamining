@@ -1,11 +1,11 @@
-// === Module 12079: ApplicationCommandValidationUtils ===
+// === Module 12133: ApplicationCommandValidationUtils ===
 
-// Module 12079 (ApplicationCommandValidationUtils)
+// Module 12133 (ApplicationCommandValidationUtils)
 import util from "util" /* 1125 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6019 */;
-import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 10233 */;
-import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 12080 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6023 */;
+import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 10266 */;
+import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 12134 */;
 import size from "module_2" /* 2 */;
 
 function validateOptionContent(allowEmptyValues) {
@@ -63,7 +63,7 @@ function validateOptionContent(allowEmptyValues) {
 const getValidationErrorText = ApplicationCommandConstants.getValidationErrorText;
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
 
-export const getValidationResults = function getValidationResults(activeCommand, optionValues, guild_id, id, allowEmptyValues) {
+export function getValidationResults(activeCommand, optionValues, guild_id, id, allowEmptyValues) {
   const obj = {};
   const options = activeCommand.options;
   if (null == options) {
@@ -76,5 +76,5 @@ export const getValidationResults = function getValidationResults(activeCommand,
     }
     return obj;
   }
-};
+}
 export { validateOptionContent };

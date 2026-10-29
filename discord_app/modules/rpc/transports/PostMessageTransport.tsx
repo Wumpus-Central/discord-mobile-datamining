@@ -1,19 +1,19 @@
-// === Module 11513: PostMessageTransport ===
+// === Module 11567: PostMessageTransport ===
 
-// Module 11513 (PostMessageTransport)
+// Module 11567 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1101 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11514 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
-import FramesStore from "FramesStore" /* 6810 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import FramesStore from "FramesStore" /* 6833 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6413).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6437).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9, RPCCloseCodes: c10, RPCErrors: closure_11, RPCCommands: closure_12 } = Constants);
-const asLaunched = fn(6811).asLaunched;
+const asLaunched = fn(6834).asLaunched;
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const map1 = new Map();
@@ -58,9 +58,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
           const obj = closure_1_1(1264);
-          obj2.channel_id = closure_1_0(4925).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4925);
-          obj2.guild_id = closure_1_0(4925).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.channel_id = closure_1_0(4926).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4926);
+          obj2.guild_id = closure_1_0(4926).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -141,7 +141,7 @@ class PostMessageTransport extends EventEmitter {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -297,7 +297,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_7.id);
               c7 = 0;
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -346,7 +346,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -393,7 +393,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             c5 = 0;
@@ -552,7 +552,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "IconComponent" };
                                 }
                               } else {
                                 try {
@@ -617,7 +617,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                         const pendingTicketRefreshes2 = tmp60.pendingTicketRefreshes;
                                         pendingTicketRefreshes2.delete(source.iframeId);
                                         c5 = 3;
-                                        return { value: "IconComponent", done: null };
+                                        return { value: "IconComponent", done: "IconComponent" };
                                       }
                                     } else if (arg0 === 1) {
                                       c5 = 3;

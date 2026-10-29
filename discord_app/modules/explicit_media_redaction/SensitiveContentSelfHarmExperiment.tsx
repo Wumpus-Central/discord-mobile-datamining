@@ -1,8 +1,8 @@
-// === Module 7428: SensitiveContentSelfHarmExperiment ===
+// === Module 7451: SensitiveContentSelfHarmExperiment ===
 
-// Module 7428 (SensitiveContentSelfHarmExperiment)
+// Module 7451 (SensitiveContentSelfHarmExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,6 +28,6 @@ export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactC
 }) : (function useIsSensitiveContentSelfHarmEnabled(location) {
   return apexExperiment.useConfig({ location }).enabled;
 });
-export const isSensitiveContentSelfHarmEnabled = function isSensitiveContentSelfHarmEnabled(location) {
+export function isSensitiveContentSelfHarmEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
-};
+}

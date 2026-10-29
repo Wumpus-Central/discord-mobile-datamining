@@ -1,15 +1,15 @@
-// === Module 16022: commands/userProfile ===
+// === Module 16259: commands/userProfile ===
 
-// Module 16022 (commands/userProfile)
+// Module 16259 (commands/userProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 const RPCCommands = fn(1084).RPCCommands;
 const weakMap = new WeakMap();
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15987);
+const CONTEXT_MENU_ICON_NAMES = fn(16215);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
-  scope: fn(6413).RPC_EMBEDDED_APP_SCOPE,
+  scope: fn(6437).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {
     socket = socket.socket;
     const user_id = socket.args.user_id;
@@ -24,7 +24,7 @@ obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

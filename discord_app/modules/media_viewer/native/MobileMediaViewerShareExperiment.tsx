@@ -1,8 +1,8 @@
-// === Module 8889: MobileMediaViewerShareExperiment ===
+// === Module 8892: MobileMediaViewerShareExperiment ===
 
-// Module 8889 (MobileMediaViewerShareExperiment)
+// Module 8892 (MobileMediaViewerShareExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,9 +14,9 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_viewer/native/MobileMediaViewerShareExperiment.tsx");
 
 export const MobileMediaViewerShareExperiment = apexExperiment;
-export const getMobileMediaViewerShareExperimentEnabled = function getMobileMediaViewerShareExperimentEnabled(shareMediaSource) {
+export function getMobileMediaViewerShareExperimentEnabled(shareMediaSource) {
   return apexExperiment.getConfig({ location: shareMediaSource }).enabled;
-};
+}
 export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileMediaViewerShareExperimentEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {

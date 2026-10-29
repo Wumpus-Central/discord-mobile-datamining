@@ -1,12 +1,12 @@
-// === Module 10812: useEmbeddedAppCSP ===
+// === Module 10888: useEmbeddedAppCSP ===
 
-// Module 10812 (useEmbeddedAppCSP)
+// Module 10888 (useEmbeddedAppCSP)
 import c from "c" /* 576 */;
-import getURLForApplication from "getURLForApplication" /* 5659 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10811 */;
-import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 10813 */;
+import getURLForApplication from "getURLForApplication" /* 5661 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10887 */;
+import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 10889 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10810 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10886 */;
 
 require = fn;
 const initialize = fn(504);
@@ -39,7 +39,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

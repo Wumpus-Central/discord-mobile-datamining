@@ -1,24 +1,24 @@
-// === Module 13928: DiscoverabilityModal ===
+// === Module 14161: DiscoverabilityModal ===
 
-// Module 13928 (DiscoverabilityModal)
+// Module 14161 (DiscoverabilityModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import util from "util" /* 1125 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import Navigator from "Navigator" /* 7131 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13821 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 13835 */;
-import NUFActionCreators from "NUFActionCreators" /* 13842 */;
+import Navigator from "Navigator" /* 7155 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14054 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 14068 */;
+import NUFActionCreators from "NUFActionCreators" /* 14075 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(13814).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14047).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(5304).NAV_BAR_HEIGHT + 32 } };
+const createStyles = fn(5005);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(5305).NAV_BAR_HEIGHT + 32 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function DiscoverabilityLandingScene() {
@@ -155,9 +155,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Discov
   const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function v(arg0) {
-      const result = allowPhone(13842).startContactSyncForDiscoverability(arg0);
-      const obj = allowPhone(13842);
-      const result1 = allowPhone(13842).closeDiscoverabilityModal(false);
+      const result = allowPhone(14075).startContactSyncForDiscoverability(arg0);
+      const obj = allowPhone(14075);
+      const result1 = allowPhone(14075).closeDiscoverabilityModal(false);
     };
     cResult[3] = fn2;
     let tmp8 = fn2;
@@ -200,9 +200,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Discov
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(13842).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(13842);
-    const result1 = allowPhone(13842).closeDiscoverabilityModal(false);
+    const result = allowPhone(14075).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(14075);
+    const result1 = allowPhone(14075).closeDiscoverabilityModal(false);
   }, []);
   const obj2 = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();

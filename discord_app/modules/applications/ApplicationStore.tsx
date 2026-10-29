@@ -1,10 +1,10 @@
-// === Module 2042: ApplicationStore ===
+// === Module 2043: ApplicationStore ===
 
-// Module 2042 (ApplicationStore)
+// Module 2043 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 function addApplication(fromServer) {
   value = map.get(fromServer.id);
@@ -114,7 +114,7 @@ const map2 = new Map();
 const map3 = new Map();
 const map4 = new Map();
 const map5 = new Map();
-let set = new Set();
+const set = new Set();
 let closure_10 = { botUserIdToAppUsage: {} };
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStore extends PersistedStore {
@@ -345,27 +345,6 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
   INTEGRATION_CREATE: handleIntegrationsChanged,
   INTEGRATION_UPDATE: handleIntegrationsChanged,
   INTEGRATION_DELETE: handleIntegrationsChanged,
-  BILLING_PAYMENTS_FETCH_SUCCESS: function handleFetchPayments(arg0) {
-    set = new Set();
-    const iter = arg0.payments[Symbol.iterator]();
-    while (iter !== undefined) {
-      let sku = iter.next().sku;
-      let application;
-      if (sku != null) {
-        application = sku.application;
-      }
-      let tmp2 = application;
-      let hasItem = null == application;
-      if (!hasItem) {
-        hasItem = set.has(tmp2.id);
-      }
-      if (!hasItem) {
-        let tmp8 = addApplication(ApplicationRecord.createFromServer(tmp2));
-      }
-      continue;
-    }
-    return set.size > 0;
-  },
   PAYMENT_UPDATE: function handleUpdatePayment(payment) {
     payment = payment.payment;
     const sku = payment.sku;

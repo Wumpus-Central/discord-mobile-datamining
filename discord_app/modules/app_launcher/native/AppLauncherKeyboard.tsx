@@ -1,28 +1,28 @@
-// === Module 11945: AppLauncherKeyboard ===
+// === Module 11999: AppLauncherKeyboard ===
 
-// Module 11945 (AppLauncherKeyboard)
+// Module 11999 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import native from "native" /* 5070 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import BottomSheetModal from "BottomSheetModal" /* 5305 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6007 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 11956 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 11957 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1501 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import native from "native" /* 5071 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import BottomSheetModal from "BottomSheetModal" /* 5306 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6009 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12010 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(11946).KEYBOARD_ANIMATION_CONFIG;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
+const KEYBOARD_ANIMATION_CONFIG = fn(12000).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, onboardingHeader: null, onboardingNavigatorContent: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj.onboardingHeader = { borderWidth: 2, borderBottomWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -380,20 +380,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11207).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(5305).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11207).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(5305).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11207).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(11261).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(5306).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(11261).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(5306).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(11261).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(5747).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(5749).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(5747);
+        const trackWithMetadataResult = trackWithMetadata(5749);
       }
     }
   }, items4);

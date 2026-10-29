@@ -1,16 +1,16 @@
-// === Module 8374: ChannelPinnedMessageSystemMessage ===
+// === Module 8396: ChannelPinnedMessageSystemMessage ===
 
-// Module 8374 (ChannelPinnedMessageSystemMessage)
+// Module 8396 (ChannelPinnedMessageSystemMessage)
 import util from "util" /* 1125 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8358 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8380 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
 
-export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
+export function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true } };
@@ -49,4 +49,4 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
   const merged1 = Object.assign(tmp9);
   obj13.accessibilityActions = items;
   return obj13;
-};
+}

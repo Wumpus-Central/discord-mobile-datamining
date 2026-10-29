@@ -1,13 +1,13 @@
-// === Module 16104: ProfilePendingImageUtils ===
+// === Module 16340: ProfilePendingImageUtils ===
 
-// Module 16104 (ProfilePendingImageUtils)
+// Module 16340 (ProfilePendingImageUtils)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7122 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7146 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 
-export const createPendingImage = function createPendingImage(assetOrigin) {
+export function createPendingImage(assetOrigin) {
   let NEW_ASSET = assetOrigin.assetOrigin;
   if (NEW_ASSET === undefined) {
     NEW_ASSET = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
@@ -26,4 +26,4 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     GlobalUtils.assertNever(NEW_ASSET);
     const tmp3Result = GlobalUtils;
   }
-};
+}

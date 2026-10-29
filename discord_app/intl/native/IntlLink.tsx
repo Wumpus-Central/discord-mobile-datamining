@@ -1,14 +1,14 @@
-// === Module 10819: IntlLink ===
+// === Module 10895: IntlLink ===
 
-// Module 10819 (IntlLink)
+// Module 10895 (IntlLink)
 import nativeDefault from "native" /* 587 */;
-import _modDef1948 from "module_1948" /* 1948 */;
-import LinkingDefault from "Linking" /* 5696 */;
+import _modDef1949 from "module_1949" /* 1949 */;
+import LinkingDefault from "Linking" /* 5698 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -26,12 +26,12 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
   const cResult = target(576).c(7);
   target = target.target;
   const children = target.children;
-  const tmp4 = closure_5(noop.useContext(target(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  const tmp4 = closure_5(noop.useContext(target(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
   if (typeof target === "string") {
     if (cResult[0] !== target) {
       const fn = function s() {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef1948.sanitizeUrl(target));
+        return obj.openURL(_modDef1949.sanitizeUrl(target));
       };
       cResult[0] = target;
       cResult[1] = fn;
@@ -77,7 +77,7 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
   if (typeof target === "string") {
     let fn = function y() {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef1948.sanitizeUrl(target));
+      return obj.openURL(_modDef1949.sanitizeUrl(target));
     };
     let str = "link";
   } else {
@@ -97,6 +97,6 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1199).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1199).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 });

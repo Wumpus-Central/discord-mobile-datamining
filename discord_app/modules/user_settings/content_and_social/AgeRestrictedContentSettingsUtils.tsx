@@ -1,12 +1,12 @@
-// === Module 7352: AgeRestrictedContentSettingsUtils ===
+// === Module 7376: AgeRestrictedContentSettingsUtils ===
 
-// Module 7352 (AgeRestrictedContentSettingsUtils)
+// Module 7376 (AgeRestrictedContentSettingsUtils)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6694 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 7353 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6718 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 7377 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -152,7 +152,7 @@ export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEna
   }
   return tmp4;
 });
-export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefault() {
+export function getViewNsfwCommandsOrDefault() {
   const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
   let flag = ViewNsfwCommands.getSetting();
   const currentUser = UserStore.getCurrentUser();
@@ -176,8 +176,8 @@ export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefaul
     tmp4 = tmp5;
   }
   return tmp4;
-};
-export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() {
+}
+export function getViewNsfwGuildsOrDefault() {
   const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.getSetting();
   const currentUser = UserStore.getCurrentUser();
@@ -201,4 +201,4 @@ export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() 
     tmp4 = tmp5;
   }
   return tmp4;
-};
+}

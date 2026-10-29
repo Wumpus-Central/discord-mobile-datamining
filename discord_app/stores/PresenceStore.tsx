@@ -1,12 +1,12 @@
-// === Module 5748: PresenceStore ===
+// === Module 5750: PresenceStore ===
 
-// Module 5748 (PresenceStore)
+// Module 5750 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1354 from "module_1354" /* 1354 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5749 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5751 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -552,7 +552,7 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0, arg1
   }
   return this.findActivity(arg0, (application_id) => application_id.application_id === closure_0, tmp, true);
 };
-prototype["findActivity"] = function findActivity(arg0, cResult) {
+prototype["findActivity"] = function findActivity(arg0, arg1) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -570,7 +570,7 @@ prototype["findActivity"] = function findActivity(arg0, cResult) {
   if (flag) {
     combined = activities.concat(self.getHiddenActivities(arg0, tmp));
   }
-  return combined.find(cResult);
+  return combined.find(arg1);
 };
 prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
   return activityMetadata[arg0];

@@ -1,10 +1,10 @@
-// === Module 11333: GroupDMNitroUpsellModel ===
+// === Module 11387: GroupDMNitroUpsellModel ===
 
-// Module 11333 (GroupDMNitroUpsellModel)
+// Module 11387 (GroupDMNitroUpsellModel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -121,14 +121,14 @@ export const useGroupDMNitroAudience = ReactCompilerGating.isReactCompilerEnable
   });
 });
 export { isGroupDMNitroUpsellAudience };
-export const shouldUseGroupDMParticipantLimitUI = function shouldUseGroupDMParticipantLimitUI(enabled, arg1) {
+export function shouldUseGroupDMParticipantLimitUI(enabled, arg1) {
   let tmp = enabled;
   if (!enabled) {
     tmp = arg1 > MAX_GROUP_DM_PARTICIPANTS;
   }
   return tmp;
-};
-export const getGroupDMNitroCapCTAMessage = function getGroupDMNitroCapCTAMessage(groupDMNitroAudience) {
+}
+export function getGroupDMNitroCapCTAMessage(groupDMNitroAudience) {
   if ("upgrade" === groupDMNitroAudience) {
     let yZOtoD = util.t.KfitWs;
   } else if ("acquire" === groupDMNitroAudience) {
@@ -137,8 +137,8 @@ export const getGroupDMNitroCapCTAMessage = function getGroupDMNitroCapCTAMessag
     yZOtoD = util.t.yZOtoD;
   }
   return yZOtoD;
-};
-export const getGroupDMNitroUpsellRoute = function getGroupDMNitroUpsellRoute(audience, acquisitionStrategy) {
+}
+export function getGroupDMNitroUpsellRoute(audience, acquisitionStrategy) {
   let tmp2 = tmp;
   if ("upgrade" !== audience) {
     tmp2 = "acquire" === audience;
@@ -154,8 +154,8 @@ export const getGroupDMNitroUpsellRoute = function getGroupDMNitroUpsellRoute(au
   } else {
     return obj2.NONE;
   }
-};
-export const getGroupDMAddMembersEntryAction = function getGroupDMAddMembersEntryAction(audience) {
+}
+export function getGroupDMAddMembersEntryAction(audience) {
   audience = audience.audience;
   let str = "open";
   if (audience.memberCount >= audience.recipientLimit) {
@@ -173,4 +173,4 @@ export const getGroupDMAddMembersEntryAction = function getGroupDMAddMembersEntr
     str = str3;
   }
   return str;
-};
+}

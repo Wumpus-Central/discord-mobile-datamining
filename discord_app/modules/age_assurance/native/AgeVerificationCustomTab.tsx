@@ -1,10 +1,10 @@
-// === Module 7951: AgeVerificationCustomTab ===
+// === Module 7974: AgeVerificationCustomTab ===
 
-// Module 7951 (AgeVerificationCustomTab)
+// Module 7974 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5730 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5732 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -180,7 +180,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
         c3 = 0;
@@ -237,7 +237,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAgeVe
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationCustomTab.tsx");
 
-export const openAgeVerificationCustomTab = function openAgeVerificationCustomTab() {
+export function openAgeVerificationCustomTab() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -246,8 +246,8 @@ export const openAgeVerificationCustomTab = function openAgeVerificationCustomTa
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resumeAgeVerificationCustomTab = function resumeAgeVerificationCustomTab() {
+}
+export function resumeAgeVerificationCustomTab() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -256,13 +256,13 @@ export const resumeAgeVerificationCustomTab = function resumeAgeVerificationCust
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setAgeVerificationCustomTabCopy = function setAgeVerificationCustomTabCopy(copy) {
+}
+export function setAgeVerificationCustomTabCopy(copy) {
   if (closure_6.getState().isOpen) {
     const obj2 = { copy };
     closure_6.setState(obj2);
   }
-};
+}
 export { releaseAgeVerificationCustomTab };
 export function getIsAgeVerificationCustomTabAwaitingResult() {
   return c7;

@@ -1,31 +1,31 @@
-// === Module 11787: ConjureChatScene ===
+// === Module 11841: ConjureChatScene ===
 
-// Module 11787 (ConjureChatScene)
+// Module 11841 (ConjureChatScene)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6966 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10731 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10765 */;
-import restartFrames from "restartFrames" /* 10802 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11800 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11803 */;
-import conjurePreviewTargets from "conjurePreviewTargets" /* 11808 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12216 */;
-import ConjureConnectToolSheet from "ConjureConnectToolSheet" /* 12263 */;
-import ConjureHistorySheet from "ConjureHistorySheet" /* 12274 */;
-import ConjureChatMoreSheet from "ConjureChatMoreSheet" /* 12298 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6990 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 10805 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
+import restartFrames from "restartFrames" /* 10878 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11854 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11857 */;
+import conjurePreviewTargets from "conjurePreviewTargets" /* 11862 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12270 */;
+import ConjureConnectToolSheet from "ConjureConnectToolSheet" /* 12317 */;
+import ConjureHistorySheet from "ConjureHistorySheet" /* 12328 */;
+import ConjureChatMoreSheet from "ConjureChatMoreSheet" /* 12352 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10758 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10749 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10833 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10824 */;
 
 const require = globalThis.__r;
 const ConjureRemixSheetDefault = ConjureRemixSheet;
@@ -36,11 +36,11 @@ const ConjureHistorySheetDefault = ConjureHistorySheet;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Keyboard: closure_7, View: closure_8 } = get_ActivityIndicator);
-const closeConnection = fn(10733).closeConnection;
-const isLaunched = fn(6811).isLaunched;
+const closeConnection = fn(10807).closeConnection;
+const isLaunched = fn(6834).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_18 = createStyles.createStyles((paddingBottom) => {
   const obj = { content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom }, contentBare: null, centered: null, listError: null, segments: null, panes: null, pane: null, chatPane: null, paneHidden: null, paneBackstage: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom };
@@ -319,7 +319,7 @@ export default function ConjureChatScene(guildId) {
     prop2 = stateFromStores2.bot_permissions_changed;
   }
   const tmpResult25 = require("conjureTraceRequests");
-  const obj10 = { installScope: install_scope, previewReady: true === preview_ready, integrationInstalled: null, botPermissionsChanged: null };
+  let obj10 = { installScope: install_scope, previewReady: true === preview_ready, integrationInstalled: null, botPermissionsChanged: null };
   let prop3;
   if (stateFromStores2 != null) {
     prop3 = stateFromStores2.integration_installed;
@@ -357,7 +357,7 @@ export default function ConjureChatScene(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -405,9 +405,9 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_130_18;
           obj7.onClose = function onClose() {
-            const result = c0(11801).repairConjureGuildHints(closure_1_7, closure_1_18);
-            const obj = c0(11801);
-            result.finally(() => application(10757).getProject(closure_1_1)).catch(() => {
+            const result = c0(11855).repairConjureGuildHints(closure_1_7, closure_1_18);
+            const obj = c0(11855);
+            result.finally(() => application(10832).getProject(closure_1_1)).catch(() => {
 
             });
           };
@@ -577,7 +577,7 @@ export default function ConjureChatScene(guildId) {
     let obj2 = require;
     let obj3 = dependencyMap;
     const intl = util.intl;
-    obj.label = intl.string(_modDef3863["1HH2p9"]);
+    obj.label = intl.string(_modDef3864["1HH2p9"]);
     const items = [obj];
     if (availability.modes.length > 0) {
       let tmp = closure_20;
@@ -619,19 +619,19 @@ export default function ConjureChatScene(guildId) {
       let fn;
       if (closure_20) {
         if (closure_28) {
-          fn = (color) => setFrameSurface(closure_1_0(11118).ChevronSmallDownIcon, { size: "xs", color });
+          fn = (color) => setFrameSurface(closure_1_0(11172).ChevronSmallDownIcon, { size: "xs", color });
         }
       }
       obj.renderTrailingIcon = fn;
       const intl = util.intl;
-      obj.menuLabel = intl.string(_modDef3863.I2ucou);
+      obj.menuLabel = intl.string(_modDef3864.I2ucou);
       let fn2;
       if (closure_28) {
         fn2 = () => projectId(navigation[36])({
           targets,
           target,
           onChange(mode) {
-            const previewTarget = closure_2_0(11808).selectPreviewTarget(mode, closure_1_12, closure_1_15, closure_1_17);
+            const previewTarget = closure_2_0(11862).selectPreviewTarget(mode, closure_1_12, closure_1_15, closure_1_17);
             closure_1_19(false);
           }
         });
@@ -672,7 +672,7 @@ export default function ConjureChatScene(guildId) {
   }, items18);
   const items19 = [previewAppId];
   const effect3 = obj2.useEffect(() => null != previewAppId ? (() => closure_0(navigation[39]).leaveConjurePreviewFrame(previewAppId)) : undefined, items19);
-  const obj11 = { items: memo2, pageWidth: projectId(tmp2[37])().width - 2 * c19, onSetActiveIndex: callback1 };
+  let obj11 = { items: memo2, pageWidth: projectId(tmp2[37])().width - 2 * c19, onSetActiveIndex: callback1 };
   ({ publishOptions, publish, indicator, label } = projectId(tmp2[40])(projectId, guildId));
   closure_32 = tmp4(tmp2[41])(projectId, publish, publishOptions);
   if (projectGuildId == null) {
@@ -708,88 +708,142 @@ export default function ConjureChatScene(guildId) {
   }, items23);
   closure_38 = obj2.useRef(false);
   _require = tmp38(function*(arg0) {
-    if (1 === tmp8) {
-      if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        return { value, done: true };
-      } else if (ref.current) {
-        c7 = 3;
-      } else {
-        ref.current = true;
-        const obj8 = { text: null, icon: null };
-        const intl2 = closure_0(navigation[33]).intl;
-        obj8.text = intl2.string(projectId(navigation[34]).qqlUiW);
-        obj8.icon = closure_0(navigation[47]).UndoIcon;
-        projectId(navigation[46]).open("CONJURE_VERSION_RESTORING", obj8);
-        c5 = 2;
-        projectId(navigation[46]);
-        c6 = 4;
-        c7 = 1;
-        return { value: closure_0(navigation[48]).restoreSourceHistoryEntry(closure_1, closure_130_0.sha), done: false };
-      }
-    } else if (2 === tmp8) {
-      c5 = 0;
-      ref.current = false;
-      throw closure_4;
-    } else if (3 === tmp8) {
-      const intl = closure_0(navigation[33]).intl;
-      closure_0(navigation[49]).presentError(intl.string(projectId(navigation[34])["PSdo+w"]));
-      c5 = 0;
-      ref.current = false;
+    if (c7 === 2) {
       c7 = 3;
-      return { value: undefined, done: true };
-    } else {
-      if (4 === tmp8) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          ref.current = false;
-          c7 = 3;
-          return { value, done: true };
-        } else {
-          c5 = 1;
-          const obj13 = { text: null, icon: null };
-          const intl3 = closure_0(navigation[33]).intl;
-          const obj16 = { title: null };
-          obj16.title = closure_0(navigation[50]).versionTitle(closure_130_0.subject).short;
-          obj13.text = intl3.formatToPlainString(projectId(navigation[34]).Z4n6LX, obj16);
-          obj13.icon = closure_0(navigation[47]).UndoIcon;
-          projectId(navigation[46]).open("CONJURE_VERSION_RESTORED", obj13);
-          closure_0(navigation[50]);
-          projectId(navigation[46]);
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c5 = 0;
-        ref.current = false;
-        c7 = 3;
-        return { value, done: true };
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        closure_130_2 = value;
-        if (null != closure_130_2) {
-          closure_0(navigation[49]).presentError(closure_130_2);
-          closure_0(navigation[49]);
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_3 = tmp4;
+            closure_2 = tmp8;
+            closure_130_1 = undefined;
+            closure_130_0 = closure_0;
+            let tmp57 = closure_1;
+            if (closure_1 === undefined) {
+              tmp57 = null;
+            }
+            closure_130_1 = tmp57;
+            closure_130_2 = undefined;
+            c6 = 1;
+            c7 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else {
+          if (1 === tmp8) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else if (ref.current) {
+              c7 = 3;
+            } else {
+              ref.current = true;
+              c5 = 1;
+              const obj8 = { text: null, icon: null };
+              const intl2 = closure_0(navigation[33]).intl;
+              obj8.text = intl2.string(projectId(navigation[34]).qqlUiW);
+              obj8.icon = closure_0(navigation[47]).UndoIcon;
+              projectId(navigation[46]).open("CONJURE_VERSION_RESTORING", obj8);
+              c5 = 2;
+              const obj7 = projectId(navigation[46]);
+              c6 = 4;
+              c7 = 1;
+              const obj10 = { value: closure_0(navigation[48]).restoreSourceHistoryEntry(closure_1, closure_130_0.sha), done: false };
+              return obj10;
+            }
+          } else if (2 === tmp8) {
+            c5 = 0;
+            ref.current = false;
+            throw closure_4;
+          } else if (3 === tmp8) {
+            c5 = 1;
+            const intl = closure_0(navigation[33]).intl;
+            closure_0(navigation[49]).presentError(intl.string(projectId(navigation[34])["PSdo+w"]));
+            c5 = 0;
+            ref.current = false;
+            c7 = 3;
+            const obj11 = { value: undefined, done: true };
+            return obj11;
+          } else {
+            if (4 === tmp8) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                ref.current = false;
+                c7 = 3;
+                const obj12 = { value, done: true };
+                return obj12;
+              } else {
+                c5 = 1;
+                const obj13 = { text: null, icon: null };
+                const intl3 = closure_0(navigation[33]).intl;
+                const obj16 = { title: null };
+                const obj15 = projectId(navigation[46]);
+                obj16.title = closure_0(navigation[50]).versionTitle(closure_130_0.subject).short;
+                obj13.text = intl3.formatToPlainString(projectId(navigation[34]).Z4n6LX, obj16);
+                obj13.icon = closure_0(navigation[47]).UndoIcon;
+                obj15.open("CONJURE_VERSION_RESTORED", obj13);
+                const obj18 = closure_0(navigation[50]);
+              }
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              ref.current = false;
+              c7 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              closure_130_2 = value;
+              if (null != closure_130_2) {
+                closure_0(navigation[49]).presentError(closure_130_2);
+                const obj14 = closure_0(navigation[49]);
+              }
+            }
+            c5 = 0;
+            ref.current = false;
+          }
+          c6 = 5;
+          c7 = 1;
+          const obj17 = { value: closure_0(navigation[51]).rewindDataAfterVersionRestore(closure_1, closure_130_1), done: false };
+          return obj17;
+        }
+      } catch (tmp58) {
+        closure_4 = tmp58;
+        if (tmp5 === c5) {
+          c7 = tmp3;
+          throw tmp58;
+        } else if (tmp2 === tmp60) {
+          c6 = tmp;
+        } else {
+          c6 = tmp3;
         }
       }
-      c5 = 0;
-      ref.current = false;
     }
-    yield closure_0(navigation[51]).rewindDataAfterVersionRestore(closure_1, closure_130_1);
-    closure_3 = tmp4;
-    closure_130_0 = closure_0;
-    let tmp57 = closure_1;
-    if (closure_1 === undefined) {
-      tmp57 = null;
-    }
-    closure_130_1 = tmp57;
-    return "Reflect";
   });
   const items24 = [projectId];
   callback5 = obj2.useCallback(function() {
@@ -878,7 +932,7 @@ export default function ConjureChatScene(guildId) {
       callback10();
     }
   }, items33);
-  const obj12 = { projectId, refreshApplicationId: null };
+  let obj12 = { projectId, refreshApplicationId: null };
   const modes2 = availability.modes;
   const tmpResult37 = require("initialize");
   let tmp105 = null;
@@ -893,7 +947,7 @@ export default function ConjureChatScene(guildId) {
   preview = tmp4ResultResult;
   const tmp4Result = projectId(tmp2[59]);
   conjureRemoveTarget = require("conjureRemoveApp").useConjureRemoveTarget(projectId);
-  const effect5 = obj2.useEffect(() => () => projectId(5246).hideActionSheet(closure_1_0(12298).CONJURE_CHAT_MORE_SHEET_KEY), []);
+  const effect5 = obj2.useEffect(() => () => projectId(5247).hideActionSheet(closure_1_0(12352).CONJURE_CHAT_MORE_SHEET_KEY), []);
   const items34 = [conjureDebugPaneEnabled, tmp61, guildId, callback4, callback7, callback6, callback3, callback2, callback8, isConjureMcpUiEnabled, tmp97, tmp4ResultResult, stateFromStores, conjureRemoveTarget];
   if (projectName != null) {
     let tmp114 = null;
@@ -902,7 +956,7 @@ export default function ConjureChatScene(guildId) {
       tmp114 = setFrameSurface(result2, obj13);
     }
     const items35 = [tmp114, ];
-    const obj14 = { onBack: callback9, showBorder: null, title: null, actions: null };
+    let obj14 = { onBack: callback9, showBorder: null, title: null, actions: null };
     let tmp119 = !tmp55;
     if (tmp55) {
       tmp119 = !projectExists;
@@ -913,7 +967,7 @@ export default function ConjureChatScene(guildId) {
     if (projectExists) {
       tmp121 = stateFromStores;
     }
-    const obj15 = { project: tmp121, title: projectName, onPressIcon: callback2 };
+    let obj15 = { project: tmp121, title: projectName, onPressIcon: callback2 };
     obj14.title = setFrameSurface(tmp4(tmp2[63]), obj15);
     let tmp112Result = null;
     if (projectExists) {
@@ -931,7 +985,7 @@ export default function ConjureChatScene(guildId) {
         };
         let tmp117Result = null;
         if (null != indicator) {
-          const obj17 = { indicator };
+          let obj17 = { indicator };
           tmp117Result = tmp117(tmp4(tmp2[66]), obj17);
         }
         obj16.badge = tmp117Result;
@@ -944,7 +998,7 @@ export default function ConjureChatScene(guildId) {
         tmp117Result6 = tmp117(tmp4(tmp2[64]), obj16);
         const tmp4Result8 = tmp4(tmp2[64]);
       }
-      const obj18 = { children: null };
+      let obj18 = { children: null };
       const items36 = [tmp117Result6, ];
       const obj19 = { IconComponent: tmp(tmp2[67]).MoreHorizontalIcon, onPress: tmp109, accessibilityLabel: null };
       let intl2 = tmp(tmp2[33]).intl;

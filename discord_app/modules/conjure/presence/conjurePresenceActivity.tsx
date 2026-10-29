@@ -1,6 +1,6 @@
-// === Module 10681: conjurePresenceActivity ===
+// === Module 10714: conjurePresenceActivity ===
 
-// Module 10681 (conjurePresenceActivity)
+// Module 10714 (conjurePresenceActivity)
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/conjure/presence/conjurePrese
 
 export const CONJURE_PRESENCE_ACTIVITY_NAME = "Conjuring";
 export const CONJURE_PRESENCE_ACTIVITY_LINES = ["Something magical", "Brewing something new", "Casting spells", "Stirring the cauldron", "Weaving a spell", "Summoning ideas"];
-export const isConjurePresenceActivity = function isConjurePresenceActivity(activity) {
+export function isConjurePresenceActivity(activity) {
   let type;
   if (activity != null) {
     type = activity.type;
@@ -23,4 +23,4 @@ export const isConjurePresenceActivity = function isConjurePresenceActivity(acti
     tmp2 = null == activity.application_id;
   }
   return tmp2;
-};
+}

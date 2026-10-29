@@ -1,8 +1,8 @@
-// === Module 7642: guild_mod_dash_member_safety/DateUtils ===
+// === Module 7665: guild_mod_dash_member_safety/DateUtils ===
 
-// Module 7642 (guild_mod_dash_member_safety/DateUtils)
+// Module 7665 (guild_mod_dash_member_safety/DateUtils)
 import util from "util" /* 1125 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7643 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7666 */;
 import size from "module_2" /* 2 */;
 
 function getJoinedAtDateFormatter() {
@@ -18,23 +18,23 @@ const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/
 export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
 export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
 export { MembersTableDateFormats };
-export const getMembersTableTimestampFormatter = function getMembersTableTimestampFormatter(arg0) {
+export function getMembersTableTimestampFormatter(arg0) {
   if (arg0 === obj.JOINED_AT) {
     let tmp2 = getJoinedAtDateFormatter;
   } else if (arg0 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
   return tmp2;
-};
-export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1) {
+}
+export function formatDateRelativeTime(arg0, arg1) {
   if (arg1 === obj.JOINED_AT) {
     let tmp2 = getJoinedAtDateFormatter;
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
   return threads_getTimestampStringDefault(arg0, tmp2, false);
-};
-export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
+}
+export function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {
     const _Date2 = Date;
     let date = new Date(joinedAt);
@@ -43,4 +43,4 @@ export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
     date = new Date();
   }
   return date.getTime();
-};
+}

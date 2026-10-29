@@ -1,20 +1,23 @@
-// === Module 10856: openConjureHomeScreen ===
+// === Module 10932: openConjureHomeScreen ===
 
-// Module 10856 (openConjureHomeScreen)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6843 */;
-import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 6895 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9599 */;
+// Module 10932 (openConjureHomeScreen)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6866 */;
+import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 6919 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9631 */;
 import size from "module_2" /* 2 */;
 
-PostConnectionCallbackStore.addPostConnectionCallback;
-const openConjureHomeScreen = "openConjureHomeScreen";
-let c5 = 0;
-let result = size.fileFinishedImporting("modules/conjure/home/native/openConjureHomeScreen.tsx");
-
-export default function openConjureHomeScreen(projectId) {
+function openConjureHomeScreen(projectId) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let flag = obj.focusComposer;
+  if (flag === undefined) {
+    flag = false;
+  }
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   let result = null != rootNavigationRef && rootNavigationRef.isReady();
   if (result) {
@@ -25,15 +28,27 @@ export default function openConjureHomeScreen(projectId) {
     const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
     const tmpResult2 = KeyboardManagerUtils;
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    const obj2 = { projectId, requestId: null };
+    const obj3 = { projectId, requestId: null };
     const sum = c5 + 1;
     c5 = sum;
-    obj2.requestId = sum;
-    rootNavigationRef.navigate("conjure", obj2, { pop: true });
+    obj3.requestId = sum;
+    if (null != projectId) {
+      let obj4 = {};
+      const merged = Object.assign(obj4);
+      tmp9("conjure", obj3, { pop: true });
+    }
+    const obj5 = { focusComposer: flag };
+    obj4 = obj5;
   }
-};
+}
+PostConnectionCallbackStore.addPostConnectionCallback;
+openConjureHomeScreen = "openConjureHomeScreen";
+let c5 = 0;
+let result = size.fileFinishedImporting("modules/conjure/home/native/openConjureHomeScreen.tsx");
+
+export default openConjureHomeScreen;
 export const CONJURE_HOME_LINK_WAIT_MS = 10000;
-export const openConjureHomeScreenWhenReady = function openConjureHomeScreenWhenReady(projectId) {
+export function openConjureHomeScreenWhenReady(projectId) {
   closure_0 = projectId;
   c1 = false;
   const timeout = setTimeout(() => {
@@ -42,23 +57,7 @@ export const openConjureHomeScreenWhenReady = function openConjureHomeScreenWhen
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       const result = RootNavigationRef.runWhenRootNavigationReady(() => {
-        const rootNavigationRef = closure_0(dependencyMap[1]).getRootNavigationRef();
-        let result = null != rootNavigationRef && rootNavigationRef.isReady();
-        if (result) {
-          result = closure_0(dependencyMap[2]).isConjureMobileEnabled(openConjureHomeScreen);
-          const tmp2Result = closure_0(dependencyMap[2]);
-        }
-        if (result) {
-          const result1 = closure_0(dependencyMap[3]).dismissGlobalKeyboard();
-          const tmp2Result2 = closure_0(dependencyMap[3]);
-          c1(dependencyMap[4]).hideAllActionSheets();
-          const obj2 = { projectId, requestId: null };
-          sum = sum + 1;
-          obj2.requestId = sum;
-          rootNavigationRef.navigate("conjure", obj2, { pop: true });
-          const obj5 = c1(dependencyMap[4]);
-        }
-        const obj = closure_0(dependencyMap[1]);
+        openConjureHomeScreen(projectId);
       });
     }
   }, 10000);
@@ -66,29 +65,13 @@ export const openConjureHomeScreenWhenReady = function openConjureHomeScreenWhen
     if (!c1) {
       c1 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(dependencyMap);
-      let result = ConjureGuildExperiment.hasConjureGuildWithoutExposure(openConjureHomeScreen);
+      clearTimeout(closure_2);
+      const result = ConjureGuildExperiment.hasConjureGuildWithoutExposure(openConjureHomeScreen);
       if (result) {
-        let result1 = RootNavigationRef.runWhenRootNavigationReady(() => {
-          const rootNavigationRef = closure_0(dependencyMap[1]).getRootNavigationRef();
-          let result = null != rootNavigationRef && rootNavigationRef.isReady();
-          if (result) {
-            result = closure_0(dependencyMap[2]).isConjureMobileEnabled(openConjureHomeScreen);
-            const tmp2Result = closure_0(dependencyMap[2]);
-          }
-          if (result) {
-            const result1 = closure_0(dependencyMap[3]).dismissGlobalKeyboard();
-            const tmp2Result2 = closure_0(dependencyMap[3]);
-            c1(dependencyMap[4]).hideAllActionSheets();
-            const obj2 = { projectId, requestId: null };
-            sum = sum + 1;
-            obj2.requestId = sum;
-            rootNavigationRef.navigate("conjure", obj2, { pop: true });
-            const obj5 = c1(dependencyMap[4]);
-          }
-          const obj = closure_0(dependencyMap[1]);
+        const result1 = RootNavigationRef.runWhenRootNavigationReady(() => {
+          openConjureHomeScreen(projectId);
         });
       }
     }
   });
-};
+}

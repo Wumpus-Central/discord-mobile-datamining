@@ -1,14 +1,14 @@
-// === Module 15971: validateConjureAppFrame ===
+// === Module 16207: validateConjureAppFrame ===
 
-// Module 15971 (validateConjureAppFrame)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5639 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6818 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15972 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+// Module 16207 (validateConjureAppFrame)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5640 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6841 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16208 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const RPCErrors = fn(1084).RPCErrors;
@@ -26,7 +26,7 @@ export default function validateConjureAppFrame(arg0) {
   }
 };
 export const isConjureApplication = isConjureApplicationDefault;
-export const isUserScopedConjureApplication = function isUserScopedConjureApplication(applicationId) {
+export function isUserScopedConjureApplication(applicationId) {
   const result = ConjureProjectStore.findProjectByApplicationId(applicationId);
   if (null != result) {
     return "user" === result.install_scope;
@@ -45,12 +45,12 @@ export const isUserScopedConjureApplication = function isUserScopedConjureApplic
     }
     return result1;
   }
-};
-export const isVoiceChannelInFrameGuild = function isVoiceChannelInFrameGuild(frame, channelId) {
+}
+export function isVoiceChannelInFrameGuild(frame, channelId) {
   let guildId;
   if (frame.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY) {
     guildId = frame.surface.guildId;
   }
   const channel = ChannelStore.getChannel(channelId);
   return null != guildId && null != channel && channel.isGuildVocal() && channel.getGuildId() === guildId;
-};
+}

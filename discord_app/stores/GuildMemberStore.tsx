@@ -1,6 +1,6 @@
-// === Module 4916: GuildMemberStore ===
+// === Module 4917: GuildMemberStore ===
 
-// Module 4916 (GuildMemberStore)
+// Module 4917 (GuildMemberStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -8,20 +8,20 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
-import mappers from "mappers" /* 1985 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1996 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4914 */;
-import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 4917 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4922 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4923 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4924 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4925 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1985 */;
+import mappers from "mappers" /* 1986 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1997 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 4915 */;
+import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 4918 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4923 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4924 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4925 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildRoleStore from "GuildRoleStore" /* 4910 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildRoleStore from "GuildRoleStore" /* 4911 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import size from "module_2" /* 2 */;
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "ix", hoistRoleId: "Array", iconRoleId: "prototype", highestRoleId: "Array" };
+    return { colorString: null, colorStrings: null, colorRoleId: "application", hoistRoleId: "guild", iconRoleId: "jsxs", highestRoleId: "Array" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {
@@ -1704,7 +1704,7 @@ const guildMemberStore = new GuildMemberStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/GuildMemberStore.tsx");
 
 export default guildMemberStore;
-export const getUserCommunicationDisabledVersion = function getUserCommunicationDisabledVersion(arg0, arg1) {
+export function getUserCommunicationDisabledVersion(arg0, arg1) {
   const items = [];
   items[constants.GUILD] = arg0;
   items[constants.USER] = arg1;
@@ -1714,16 +1714,16 @@ export const getUserCommunicationDisabledVersion = function getUserCommunication
     num = closure_19[joined];
   }
   return num;
-};
-export const getCommunicationDisabledUserKey = function getCommunicationDisabledUserKey(arg0, arg1) {
+}
+export function getCommunicationDisabledUserKey(arg0, arg1) {
   const items = [];
   items[constants.GUILD] = arg0;
   items[constants.USER] = arg1;
   return items.join("-");
-};
-export const getUserIdFromCommunicationDisabledUserKey = function getUserIdFromCommunicationDisabledUserKey(arg0) {
+}
+export function getUserIdFromCommunicationDisabledUserKey(arg0) {
   return arg0.split("-")[constants.USER];
-};
-export const getGuildIdFromCommunicationDisabledUserKey = function getGuildIdFromCommunicationDisabledUserKey(arg0) {
+}
+export function getGuildIdFromCommunicationDisabledUserKey(arg0) {
   return arg0.split("-")[constants.GUILD];
-};
+}

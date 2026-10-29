@@ -1,6 +1,6 @@
-// === Module 13265: useAutoSelectTraitOption ===
+// === Module 13498: useAutoSelectTraitOption ===
 
-// Module 13265 (useAutoSelectTraitOption)
+// Module 13498 (useAutoSelectTraitOption)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

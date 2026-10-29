@@ -1,11 +1,11 @@
-// === Module 7830: SessionAdGenerator ===
+// === Module 7853: SessionAdGenerator ===
 
-// Module 7830 (SessionAdGenerator)
+// Module 7853 (SessionAdGenerator)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import v1 from "v1" /* 1278 */;
-import SessionUtils from "SessionUtils" /* 7616 */;
+import SessionUtils from "SessionUtils" /* 7639 */;
 
 require = fn;
 let closure_3 = 12 * DurationsDefault.Millis.HOUR;
@@ -13,7 +13,7 @@ let c4 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
 
-export const getOrRefreshAdSession = function getOrRefreshAdSession() {
+export function getOrRefreshAdSession() {
   let flag = shouldExtendSession;
   if (shouldExtendSession === undefined) {
     flag = false;
@@ -44,14 +44,14 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession() {
   _null = obj3;
   DispatcherDefault.dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = _null;
-};
+}
 export function clearAdSession() {
   c4 = null;
 }
 export function getCurrentAdSession() {
   return c4;
 }
-export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
+export function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
     const obj2 = { category: "ad", message: null };
@@ -63,4 +63,4 @@ export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp
     const diff = timestamp - createdAtTimestamp.lastUsedTimestamp;
     return diff > SessionUtils.SESSION_IDLE_TIMEOUT_MILLIS || timestamp - createdAtTimestamp.createdAtTimestamp > closure_3;
   }
-};
+}

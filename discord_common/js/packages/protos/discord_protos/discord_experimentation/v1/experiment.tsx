@@ -1,11 +1,11 @@
-// === Module 8524: experiment ===
+// === Module 8546: experiment ===
 
-// Module 8524 (experiment)
+// Module 8546 (experiment)
 import _mod1209 from "module_1209" /* 1209 */;
 import timestamp from "timestamp" /* 1238 */;
 import wrappers from "wrappers" /* 1239 */;
-import rules from "rules" /* 8525 */;
-import duration from "duration" /* 8526 */;
+import rules from "rules" /* 8547 */;
+import duration from "duration" /* 8548 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -28,7 +28,7 @@ const obj16 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEAS
 const MessageType = fn(1209).MessageType;
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -244,13 +244,14 @@ class Experiment$Type extends MessageType {
           }
     };
     items[45] = { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 };
+    items[46] = { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.Experiment", items, T);
     return tmp1;
   }
 }
 const prototype = Experiment$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { id: "0", name: "", creatorId: "0", version: 0, editorId: "0", title: "", description: "", revision: 0, hashKey: "", unitType: 0, variations: [], rules: [], phase: 0, surfaces: [], owningTeamId: "", cachedNotificationChannelId: "0", exposureTracking: 0, assignmentMode: 0, enableEditRawJsonUi: false, winningVariationId: 0, extraOutcomeContext: "", type: 0, isTemplate: false, fieldNumbersToCopy: [], engineFeatureFlags: [], isAutomatedChange: false, suppressEditorMention: false, customUnitPrefix: 0, exposurePoints: [], dynamicConfigModel: "", growthbookTags: [], allocateRightToLeft: false, isManaged: false, eligibilityPersistence: 0, isFeatureFlag: false };
+  const obj = { id: "0", name: "", creatorId: "0", version: 0, editorId: "0", title: "", description: "", revision: 0, hashKey: "", unitType: 0, variations: [], rules: [], phase: 0, surfaces: [], owningTeamId: "", cachedNotificationChannelId: "0", exposureTracking: 0, assignmentMode: 0, enableEditRawJsonUi: false, winningVariationId: 0, extraOutcomeContext: "", type: 0, isTemplate: false, fieldNumbersToCopy: [], engineFeatureFlags: [], isAutomatedChange: false, suppressEditorMention: false, customUnitPrefix: 0, exposurePoints: [], dynamicConfigModel: "", growthbookTags: [], allocateRightToLeft: false, isManaged: false, eligibilityPersistence: 0, isFeatureFlag: false, isOfficialHoldout: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -531,6 +532,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (false !== id.isFeatureFlag) {
     tag.tag(49, _mod1209.WireType.Varint).bool(id.isFeatureFlag);
     const tagResult45 = tag.tag(49, _mod1209.WireType.Varint);
+  }
+  if (false !== id.isOfficialHoldout) {
+    tag.tag(50, _mod1209.WireType.Varint).bool(id.isOfficialHoldout);
+    const tagResult46 = tag.tag(50, _mod1209.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

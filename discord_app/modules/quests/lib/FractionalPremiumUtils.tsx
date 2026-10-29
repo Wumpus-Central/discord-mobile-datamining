@@ -1,16 +1,16 @@
-// === Module 9627: FractionalPremiumUtils ===
+// === Module 9659: FractionalPremiumUtils ===
 
-// Module 9627 (FractionalPremiumUtils)
+// Module 9659 (FractionalPremiumUtils)
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import DateUtils from "DateUtils" /* 4829 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7816 */;
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import DateUtils from "DateUtils" /* 4830 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7839 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
-export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
+export function getDurationStringOfFractionalPremium(arr) {
   const fractionalPremiumUnitsHoursFromSkuIds = PremiumUtils.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
     const intl2 = util.intl;
@@ -22,12 +22,12 @@ export const getDurationStringOfFractionalPremium = function getDurationStringOf
     formatToPlainStringResult = intl.formatToPlainString(util.t.J9Lu4h, obj3);
   }
   return formatToPlainStringResult;
-};
-export const getFractionalPremiumQuestRewards = function getFractionalPremiumQuestRewards(rewardsConfig) {
+}
+export function getFractionalPremiumQuestRewards(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   return rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
-};
-export const getFractionalPremiumQuestRewardName = function getFractionalPremiumQuestRewardName(rewardsConfig) {
+}
+export function getFractionalPremiumQuestRewardName(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   const found = rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
   const flatMapResult = found.flatMap((quantity) => Array(quantity.quantity).fill(quantity.skuId));
@@ -41,4 +41,4 @@ export const getFractionalPremiumQuestRewardName = function getFractionalPremium
   const diffAsUnitsResult = DateUtils.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * DurationsDefault.Millis.HOUR);
   obj.time = DateUtils.unitsAsStrings(diffAsUnitsResult, time);
   return intl.formatToPlainString(util.t["4SqnVD"], obj);
-};
+}

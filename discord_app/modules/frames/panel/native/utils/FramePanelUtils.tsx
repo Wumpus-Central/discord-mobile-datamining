@@ -1,25 +1,25 @@
-// === Module 19154: FramePanelUtils ===
+// === Module 19389: FramePanelUtils ===
 
-// Module 19154 (FramePanelUtils)
+// Module 19389 (FramePanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FramesStore from "FramesStore" /* 6810 */;
+import FramesStore from "FramesStore" /* 6833 */;
 
 require = fn;
-const asLaunched = fn(6811).asLaunched;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const asLaunched = fn(6834).asLaunched;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
 
-export const isFramePanelFullscreen = function isFramePanelFullscreen() {
+export function isFramePanelFullscreen() {
   const tmp = asLaunched(FramesStore.getMainFrame());
   let tmp2 = null != tmp;
   if (tmp2) {
     tmp2 = tmp.data.activityPanelMode === ActivityPanelModes.PANEL;
   }
   return tmp2;
-};
+}
 export const useIsActivityPanelFullscreen = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivityPanelFullscreen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

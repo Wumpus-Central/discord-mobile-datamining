@@ -1,6 +1,6 @@
-// === Module 16838: useRestorePurchases ===
+// === Module 17076: useRestorePurchases ===
 
-// Module 16838 (useRestorePurchases)
+// Module 17076 (useRestorePurchases)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -30,7 +30,7 @@ export default function useRestorePurchases() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

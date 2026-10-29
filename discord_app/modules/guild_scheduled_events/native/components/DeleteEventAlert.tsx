@@ -1,16 +1,16 @@
-// === Module 9079: DeleteEventAlert ===
+// === Module 9082: DeleteEventAlert ===
 
-// Module 9079 (DeleteEventAlert)
+// Module 9082 (DeleteEventAlert)
 import util from "util" /* 1125 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6819 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
           }
           guildId(recurrenceId[9]).hideActionSheet();
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp17) {
         c2 = tmp;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8922);
+            const obj8 = v1(8925);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -329,9 +329,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             const obj = { value, done: true };
             return obj;
           }
-          v1(5246).hideActionSheet();
+          v1(5247).hideActionSheet();
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

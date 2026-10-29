@@ -1,13 +1,13 @@
-// === Module 10032: MediaPlaybackFacts ===
+// === Module 10064: MediaPlaybackFacts ===
 
-// Module 10032 (MediaPlaybackFacts)
+// Module 10064 (MediaPlaybackFacts)
 import size from "module_2" /* 2 */;
 
 const map = new Map();
 const re1 = /\/[^/?#]+\/\d+\/(\d+)\/[^/?#]+/;
 let result = size.fileFinishedImporting("modules/messages/MediaPlaybackFacts.tsx");
 
-export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id) {
+export function rememberMediaPlaybackFacts(id) {
   id = id.id;
   if (null != id) {
     if ("" !== id) {
@@ -33,8 +33,8 @@ export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id
       const result = map.set(id, obj);
     }
   }
-};
-export const mediaItemIdFromSource = function mediaItemIdFromSource(arg0) {
+}
+export function mediaItemIdFromSource(arg0) {
   if (null != arg0) {
     if ("" !== arg0) {
       const match = re1.exec(arg0);
@@ -49,8 +49,8 @@ export const mediaItemIdFromSource = function mediaItemIdFromSource(arg0) {
     }
   }
   return null;
-};
-export const getMediaPlaybackFacts = function getMediaPlaybackFacts(arg0) {
+}
+export function getMediaPlaybackFacts(arg0) {
   let tmp = null;
   if (null != arg0) {
     tmp = null;
@@ -75,8 +75,8 @@ export const getMediaPlaybackFacts = function getMediaPlaybackFacts(arg0) {
     tmp5 = value;
   }
   return tmp5;
-};
-export const resolveReportedMediaFacts = function resolveReportedMediaFacts(mediaSource, fileDurationSec) {
+}
+export function resolveReportedMediaFacts(mediaSource, fileDurationSec) {
   let tmp = null;
   if (null != mediaSource) {
     tmp = null;
@@ -124,7 +124,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   }
   obj.fileDurationSec = fileDurationSec;
   return obj;
-};
-export const clearMediaPlaybackFactsForTest = function clearMediaPlaybackFactsForTest() {
+}
+export function clearMediaPlaybackFactsForTest() {
   map.clear();
-};
+}

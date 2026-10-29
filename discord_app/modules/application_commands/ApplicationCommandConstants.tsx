@@ -1,8 +1,8 @@
-// === Module 6019: ApplicationCommandConstants ===
+// === Module 6023: ApplicationCommandConstants ===
 
-// Module 6019 (ApplicationCommandConstants)
+// Module 6023 (ApplicationCommandConstants)
 import util from "util" /* 1125 */;
-import Server from "Server" /* 1997 */;
+import Server from "Server" /* 1998 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];
@@ -27,7 +27,7 @@ export const AUTOCOMPLETE_OPTION_DEBOUNCE_TIME = 500;
 export const EMPTY_COMMANDS = frozen;
 export const EMPTY_COMMANDS_SECTION = frozen1;
 export const APPLICATION_USER_INSTALL_BETA_USER_LIMIT = 200;
-export const getValidationErrorText = function getValidationErrorText(option) {
+export function getValidationErrorText(option) {
   if (null != option.choices) {
     const intl9 = util.intl;
     return intl9.string(util.t.xi5aah);
@@ -59,4 +59,4 @@ export const getValidationErrorText = function getValidationErrorText(option) {
       return intl.string(util.t.EkDo1i);
     }
   }
-};
+}

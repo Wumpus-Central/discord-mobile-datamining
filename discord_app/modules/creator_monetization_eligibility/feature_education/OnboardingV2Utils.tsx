@@ -1,10 +1,10 @@
-// === Module 17959: OnboardingV2Utils ===
+// === Module 18197: OnboardingV2Utils ===
 
-// Module 17959 (OnboardingV2Utils)
+// Module 18197 (OnboardingV2Utils)
 import Constants from "Constants" /* 1084 */;
-import GuildRecord from "GuildRecord" /* 4874 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7397 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildRecord from "GuildRecord" /* 4875 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7420 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -112,7 +112,7 @@ export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGatin
   }
   const obj3 = require("GuildRoleSubscriptionSettingUtils");
 });
-export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
+export function canSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
   guild = GuildStore.getGuild(arg0);
   if (null == guild) {
     return false;
@@ -133,4 +133,4 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
       return tmp5;
     }
   }
-};
+}

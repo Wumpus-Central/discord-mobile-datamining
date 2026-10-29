@@ -1,12 +1,12 @@
-// === Module 12977: PlaygroundAccessExperiment ===
+// === Module 13198: PlaygroundAccessExperiment ===
 
-// Module 12977 (PlaygroundAccessExperiment)
+// Module 13198 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let obj2 = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };
@@ -96,7 +96,7 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
   }
   return tmp2;
 });
-export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitcher_action) {
+export function getHasPlaygroundAccess(quickswitcher_action) {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -115,4 +115,4 @@ export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitc
     enabled = apexExperiment.getConfig(obj).enabled;
   }
   return enabled;
-};
+}

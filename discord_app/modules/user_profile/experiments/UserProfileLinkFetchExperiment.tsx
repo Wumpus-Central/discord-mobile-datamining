@@ -1,7 +1,7 @@
-// === Module 8706: UserProfileLinkFetchExperiment ===
+// === Module 8709: UserProfileLinkFetchExperiment ===
 
-// Module 8706 (UserProfileLinkFetchExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8709 (UserProfileLinkFetchExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-profile-link-fetch", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileLinkFetchExperiment.tsx");
 
-export const getIsUserProfileLinkFetchEnabled = function getIsUserProfileLinkFetchEnabled(showUserProfileActionSheet) {
+export function getIsUserProfileLinkFetchEnabled(showUserProfileActionSheet) {
   return config.getConfig({ location: showUserProfileActionSheet }).enabled;
-};
+}

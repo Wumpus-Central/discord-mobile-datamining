@@ -1,10 +1,10 @@
-// === Module 17168: SupportUtils ===
+// === Module 17407: SupportUtils ===
 
-// Module 17168 (SupportUtils)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import LinkingDefault from "Linking" /* 5696 */;
+// Module 17407 (SupportUtils)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import LinkingDefault from "Linking" /* 5698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 
 const require = fn;
 let closure_6 = async function _emailSupport() {
@@ -18,7 +18,7 @@ let closure_6 = async function _emailSupport() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_6 = async function _emailSupport() {
       } else {
         openURL(value);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp11) {
       c3 = tmp;
@@ -75,7 +75,7 @@ let closure_6 = async function _emailSupport() {
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/SupportUtils.tsx");
 
-export const emailSupport = function emailSupport() {
+export function emailSupport() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -84,4 +84,4 @@ export const emailSupport = function emailSupport() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

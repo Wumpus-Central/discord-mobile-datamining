@@ -1,15 +1,15 @@
-// === Module 9299: botScopedAccess ===
+// === Module 9303: botScopedAccess ===
 
-// Module 9299 (botScopedAccess)
+// Module 9303 (botScopedAccess)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9290 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import validateScopeDefault from "validateScope" /* 9298 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9300 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9294 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import validateScopeDefault from "validateScope" /* 9302 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9304 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -17,7 +17,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");
 
-export const isBotScopeOnly = function isBotScopeOnly(authorization, scope) {
+export function isBotScopeOnly(authorization, scope) {
   const scopes = authorization.authorization.scopes;
   if (scopes.has(OAuth2Scopes.OAuth2Scopes.BOT)) {
     const _Set = Set;
@@ -27,8 +27,8 @@ export const isBotScopeOnly = function isBotScopeOnly(authorization, scope) {
   } else {
     return false;
   }
-};
-export const botCanViewChannel = function botCanViewChannel(socket, context) {
+}
+export function botCanViewChannel(socket, context) {
   const bot = socket.application.bot;
   let id;
   if (bot != null) {
@@ -41,8 +41,8 @@ export const botCanViewChannel = function botCanViewChannel(socket, context) {
     const permissions = PermissionUtilsAll.computePermissions(obj2);
     return BigFlagUtilsAll.has(permissions, constants2.VIEW_CHANNEL);
   }
-};
-export const canBotScopeReadMessages = function canBotScopeReadMessages(socket, channel) {
+}
+export function canBotScopeReadMessages(socket, channel) {
   const scopes = socket.authorization.scopes;
   if (scopes.has(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ)) {
     return true;
@@ -56,8 +56,8 @@ export const canBotScopeReadMessages = function canBotScopeReadMessages(socket, 
     }
     return type === constants.GUILD_APP && null != channel.application_id && channel.application_id === socket.application.id;
   }
-};
-export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(socket, guild_id) {
+}
+export function validateBotScopeHasGuildAccess(socket, guild_id) {
   if (isPostMessageSocketDefault(socket)) {
     if (guild_id !== getGuildIdForEmbeddedSurfaceDefault(socket.context.surface)) {
       const obj2 = { errorCode: constants3.INVALID_PERMISSIONS };
@@ -69,8 +69,8 @@ export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildA
     const tmp7 = new RPCErrorDefault(obj, "Access to guild data via BotScope only available for embedded apps");
     throw tmp7;
   }
-};
-export const validateBotScopeHasChannelAccess = function validateBotScopeHasChannelAccess(socket, arg1) {
+}
+export function validateBotScopeHasChannelAccess(socket, arg1) {
   const channel = ChannelStore.getChannel(arg1);
   if (null == channel) {
     const obj = { errorCode: constants3.INVALID_CHANNEL };
@@ -116,4 +116,4 @@ export const validateBotScopeHasChannelAccess = function validateBotScopeHasChan
       throw tmp5;
     }
   }
-};
+}

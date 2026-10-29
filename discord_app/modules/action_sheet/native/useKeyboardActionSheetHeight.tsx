@@ -1,11 +1,11 @@
-// === Module 10958: useKeyboardActionSheetHeight ===
+// === Module 10993: useKeyboardActionSheetHeight ===
 
-// Module 10958 (useKeyboardActionSheetHeight)
+// Module 10993 (useKeyboardActionSheetHeight)
 import c from "c" /* 576 */;
-import useWindowDimensions from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1630 */;
-import NavigatorConstants from "NavigatorConstants" /* 5304 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5632 */;
+import useWindowDimensions from "useWindowDimensions" /* 1497 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1631 */;
+import NavigatorConstants from "NavigatorConstants" /* 5305 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5633 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeybo
   }
   return { minimum, maximum };
 });
-export const getKeyboardActionSheetHeight = function getKeyboardActionSheetHeight() {
+export function getKeyboardActionSheetHeight() {
   const safeAreaInsets = useSafeAreaInsets.getSafeAreaInsets();
   const windowDimensions = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
   const customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
@@ -69,4 +69,4 @@ export const getKeyboardActionSheetHeight = function getKeyboardActionSheetHeigh
     minimum = Math.max(0, maximum - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE);
   }
   return { minimum, maximum };
-};
+}

@@ -1,10 +1,10 @@
-// === Module 12347: ConjureSecretRequestState ===
+// === Module 12401: ConjureSecretRequestState ===
 
-// Module 12347 (ConjureSecretRequestState)
+// Module 12401 (ConjureSecretRequestState)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import conjureChatTurns from "conjureChatTurns" /* 10735 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import conjureChatTurns from "conjureChatTurns" /* 10809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +12,10 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3863.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3864.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3863.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3864.sMQt5O);
   }
   return tmp5;
 }
@@ -44,17 +44,17 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
 
-export const markMcpSecretRequestSaved = function markMcpSecretRequestSaved(request_id) {
+export function markMcpSecretRequestSaved(request_id) {
   if (null != request_id) {
     set.add(request_id);
   }
-};
-export const unmarkMcpSecretRequestSaved = function unmarkMcpSecretRequestSaved(request_id) {
+}
+export function unmarkMcpSecretRequestSaved(request_id) {
   if (null != request_id) {
     set.delete(request_id);
   }
-};
-export const secretRequestStatuses = function secretRequestStatuses(memo, secrets) {
+}
+export function secretRequestStatuses(memo, secrets) {
   let set1 = null;
   if (null != secrets) {
     const _Set = Set;
@@ -141,7 +141,7 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, secret
     }
   }
   return map;
-};
+}
 export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecretRequestStatusChanged(cardId, arg1) {
   closure_1 = arg1;
   const cResult = c.c(3);

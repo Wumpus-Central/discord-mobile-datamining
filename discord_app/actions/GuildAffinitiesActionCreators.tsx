@@ -1,6 +1,6 @@
-// === Module 8871: GuildAffinitiesActionCreators ===
+// === Module 8874: GuildAffinitiesActionCreators ===
 
-// Module 8871 (GuildAffinitiesActionCreators)
+// Module 8874 (GuildAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
@@ -9,7 +9,7 @@ import size from "module_2" /* 2 */;
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
 
-export const fetchGuildAffinities = function fetchGuildAffinities() {
+export function fetchGuildAffinities() {
   const HTTP = HTTPUtils.HTTP;
   const obj = { url: Endpoints.GUILD_AFFINITIES, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   value = HTTP.get(obj);
@@ -18,4 +18,4 @@ export const fetchGuildAffinities = function fetchGuildAffinities() {
   }, () => {
     DispatcherDefault.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
   });
-};
+}

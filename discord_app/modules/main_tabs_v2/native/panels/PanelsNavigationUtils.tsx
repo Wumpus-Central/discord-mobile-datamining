@@ -1,15 +1,15 @@
-// === Module 17701: PanelsNavigationUtils ===
+// === Module 17939: PanelsNavigationUtils ===
 
-// Module 17701 (PanelsNavigationUtils)
+// Module 17939 (PanelsNavigationUtils)
 import v1 from "v1" /* 1278 */;
-import CommonActions2 from "CommonActions" /* 1507 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import CommonActions2 from "CommonActions" /* 1508 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
-export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {
+export function convertPortraitToLandscapeScreens() {
   const store = RootNavigationRef.getRootNavigationRef();
   if (null != store) {
     const state1 = store.getState();
@@ -65,8 +65,8 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
       const tmpResult = NavigationRouteUtils;
     }
   }
-};
-export const convertLandscapeToPortraitScreens = function convertLandscapeToPortraitScreens() {
+}
+export function convertLandscapeToPortraitScreens() {
   const store = RootNavigationRef.getRootNavigationRef();
   if (null != store) {
     const state1 = store.getState();
@@ -148,4 +148,4 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
       const tmpResult = NavigationRouteUtils;
     }
   }
-};
+}

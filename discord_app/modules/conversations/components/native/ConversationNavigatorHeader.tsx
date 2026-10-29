@@ -1,23 +1,23 @@
-// === Module 9789: ConversationNavigatorHeader ===
+// === Module 9821: ConversationNavigatorHeader ===
 
-// Module 9789 (ConversationNavigatorHeader)
+// Module 9821 (ConversationNavigatorHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 5288 */;
-import useChannelNameDefault from "useChannelName" /* 5640 */;
-import HeaderShared from "HeaderShared" /* 9733 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9790 */;
+import useToken from "useToken" /* 5289 */;
+import useChannelNameDefault from "useChannelName" /* 5641 */;
+import HeaderShared from "HeaderShared" /* 9765 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9822 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;
@@ -78,7 +78,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Convers
     cResult[9] = tmp18;
     tmp15 = tmp18;
   }
-  const tmp14 = jsx(channelId(9733).GenericHeaderTitle, { title, subtitle: tmp12, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  const tmp14 = jsx(channelId(9765).GenericHeaderTitle, { title, subtitle: tmp12, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   cResult[4] = tmp12;
   cResult[5] = title;
   cResult[6] = tmp14;
@@ -97,7 +97,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Convers
   const obj = channelId(504);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(9733).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(9765).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
@@ -146,7 +146,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderW
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorHeader.tsx");
 
-export const conversationNavigatorListHeaderOptions = function conversationNavigatorListHeaderOptions(route, navigation, backgroundColor) {
+export function conversationNavigatorListHeaderOptions(route, navigation, backgroundColor) {
   _require = route;
   let obj = {
     headerShown: true,
@@ -175,8 +175,8 @@ export const conversationNavigatorListHeaderOptions = function conversationNavig
     return <closure_7 channelId={navigation.params.channelId} title={null} />;
   };
   return obj;
-};
-export const conversationNavigatorFocusHeaderOptions = function conversationNavigatorFocusHeaderOptions(route, navigation, backgroundColor) {
+}
+export function conversationNavigatorFocusHeaderOptions(route, navigation, backgroundColor) {
   _require = route;
   let obj = {
     headerShown: true,
@@ -216,4 +216,4 @@ export const conversationNavigatorFocusHeaderOptions = function conversationNavi
     return tmp2;
   };
   return obj;
-};
+}

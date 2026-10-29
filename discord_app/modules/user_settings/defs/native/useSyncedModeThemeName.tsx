@@ -1,9 +1,9 @@
-// === Module 16934: useSyncedModeThemeName ===
+// === Module 17173: useSyncedModeThemeName ===
 
-// Module 16934 (useSyncedModeThemeName)
+// Module 17173 (useSyncedModeThemeName)
 import util from "util" /* 1125 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import _modDef2769 from "module_2769" /* 2769 */;
+import _modDef2770 from "module_2770" /* 2770 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled
       }
       if (null != prop) {
         const intl = util.intl;
-        let stringResult = intl.string(_modDef2769.yl1iMm);
+        let stringResult = intl.string(_modDef2770.yl1iMm);
       } else {
         let prop1;
         if (syncedClientTheme != null) {
@@ -77,7 +77,7 @@ export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled
     }
     if (null != prop) {
       const intl = util.intl;
-      let stringResult = intl.string(_modDef2769.yl1iMm);
+      let stringResult = intl.string(_modDef2770.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {

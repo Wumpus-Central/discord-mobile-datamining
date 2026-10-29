@@ -1,12 +1,12 @@
-// === Module 16961: RoleColorsSetting ===
+// === Module 17200: RoleColorsSetting ===
 
-// Module 16961 (RoleColorsSetting)
+// Module 17200 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15949 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16185 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -71,13 +71,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleCol
 function onRoleColorSettingValueChange(roleStyle) {
   AccessibilityActionCreators.setRoleStyle(roleStyle);
 }
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(8365).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8387).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: tmp3

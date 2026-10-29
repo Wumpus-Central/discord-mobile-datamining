@@ -1,8 +1,8 @@
-// === Module 13258: showNitroLockedToast ===
+// === Module 13491: showNitroLockedToast ===
 
-// Module 13258 (showNitroLockedToast)
-import ToastUtils from "ToastUtils" /* 5698 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6398 */;
+// Module 13491 (showNitroLockedToast)
+import ToastUtils from "ToastUtils" /* 5700 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6422 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");

@@ -1,6 +1,6 @@
-// === Module 7336: getHigherContrastColor ===
+// === Module 7360: getHigherContrastColor ===
 
-// Module 7336 (getHigherContrastColor)
+// Module 7360 (getHigherContrastColor)
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -8,7 +8,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/utils/getHigherContrastColor.tsx");
 
-export const getHigherContrastColor = function getHigherContrastColor(backgroundColor) {
+export function getHigherContrastColor(backgroundColor) {
   backgroundColor = backgroundColor.backgroundColor;
   [tmp2, tmp3] = backgroundColor.colors;
   let hex2intResult = backgroundColor;
@@ -26,4 +26,4 @@ export const getHigherContrastColor = function getHigherContrastColor(background
   const contrast = utils_ColorUtils.getContrast(hex2intResult, hex2intResult1);
   utils_ColorUtils;
   return tmp2;
-};
+}

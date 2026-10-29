@@ -1,15 +1,15 @@
-// === Module 18956: useExternalPipSelectedTile ===
+// === Module 19189: useExternalPipSelectedTile ===
 
-// Module 18956 (useExternalPipSelectedTile)
+// Module 19189 (useExternalPipSelectedTile)
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15311 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15546 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const VoicePanelPIPModes = fn(18731).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(18965).VoicePanelPIPModes;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExter
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            return () => { ... };
+            return /* F159279 */ function() { ... };
           }
         }
         let items = [];
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExter
       } else {
         class E {
           constructor() {
-            return () => { ... };
+            return /* F159279 */ function() { ... };
           }
         }
         tmp7 = cResult[6];
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExter
       attachResult = batchedStoreListener.attach("useExternalPipSelectedTile");
       closure_1 = closure_1.subscribeFromItem(update);
       updateResult = update();
-      return () => { ... };
+      return /* F159278 */ function() { ... };
     }
   }
   const items1 = [arg0, arg1, str];

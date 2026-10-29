@@ -1,6 +1,6 @@
-// === Module 6694: AgeGatedFeature ===
+// === Module 6718: AgeGatedFeature ===
 
-// Module 6694 (AgeGatedFeature)
+// Module 6718 (AgeGatedFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx");

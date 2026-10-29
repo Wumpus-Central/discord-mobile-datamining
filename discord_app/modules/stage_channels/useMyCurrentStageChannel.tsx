@@ -1,10 +1,10 @@
-// === Module 11613: useMyCurrentStageChannel ===
+// === Module 11667: useMyCurrentStageChannel ===
 
-// Module 11613 (useMyCurrentStageChannel)
+// Module 11667 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

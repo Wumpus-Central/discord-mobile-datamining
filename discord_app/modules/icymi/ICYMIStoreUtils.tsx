@@ -1,11 +1,11 @@
-// === Module 18182: ICYMIStoreUtils ===
+// === Module 18416: ICYMIStoreUtils ===
 
-// Module 18182 (ICYMIStoreUtils)
-import ICYMIItemTypes from "ICYMIItemTypes" /* 18183 */;
+// Module 18416 (ICYMIStoreUtils)
+import ICYMIItemTypes from "ICYMIItemTypes" /* 18417 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6045 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import ICYMIStore from "ICYMIStore" /* 8860 */;
+import MessageStore from "MessageStore" /* 6049 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import ICYMIStore from "ICYMIStore" /* 8863 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_8 = async function _hydrateNextPage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_8 = async function _hydrateNextPage() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -75,7 +75,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       } else {
         const recommendedGuilds = closure_130_1(closure_130_2[12]).getRecommendedGuilds();
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp36) {
       c4 = tmp;
@@ -303,7 +303,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGravityMe
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIStoreUtils.tsx");
 
-export const getViewableFeedItemsArray = function getViewableFeedItemsArray(viewableItems) {
+export function getViewableFeedItemsArray(viewableItems) {
   let tmp3;
   const items = [...ICYMIStore.getUnreadDisplayItems(), ...ICYMIStore.getReadDisplayItems()];
   let id = null;
@@ -335,8 +335,8 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
     }
     return items1;
   }
-};
-export const hydrateNextPage = function hydrateNextPage() {
+}
+export function hydrateNextPage() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -345,8 +345,8 @@ export const hydrateNextPage = function hydrateNextPage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates() {
+}
+export function regenerateFeedAndClearReadStates() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -355,7 +355,7 @@ export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearR
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useGravityMessage = tmp2;
 export const useGravityMessageItem = tmp3;
 export const useICYMIMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useICYMIMessage(arg0, arg1) {

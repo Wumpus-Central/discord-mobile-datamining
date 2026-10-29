@@ -1,11 +1,11 @@
-// === Module 8205: utils/TimeUtils ===
+// === Module 8227: utils/TimeUtils ===
 
-// Module 8205 (utils/TimeUtils)
+// Module 8227 (utils/TimeUtils)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("utils/native/TimeUtils.tsx");
 
-export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes) {
+export function getTimeFormat(playableDuration, padMinutes) {
   padMinutes = undefined;
   if (padMinutes != null) {
     padMinutes = padMinutes.padMinutes;
@@ -26,4 +26,4 @@ export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes
   }
   const StringResult2 = String(result1);
   combined = "" + StringResult2 + ":" + String(result).padStart(2, "0");
-};
+}

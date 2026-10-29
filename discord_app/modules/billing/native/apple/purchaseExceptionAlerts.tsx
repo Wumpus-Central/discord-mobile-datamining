@@ -1,6 +1,6 @@
-// === Module 14916: purchaseExceptionAlerts ===
+// === Module 15151: purchaseExceptionAlerts ===
 
-// Module 14916 (purchaseExceptionAlerts)
+// Module 15151 (purchaseExceptionAlerts)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ const obj2 = { 4000006: null };
 obj2[4000006] = { title: util.t.ifAVZr, body: util.t.meauFg };
 const result = size.fileFinishedImporting("modules/billing/native/apple/purchaseExceptionAlerts.tsx");
 
-export const getPurchaseExceptionAlert = function getPurchaseExceptionAlert(message) {
+export function getPurchaseExceptionAlert(message) {
   if (null != message) {
     if ("" !== message) {
       const match = re2.exec(message);
@@ -32,4 +32,4 @@ export const getPurchaseExceptionAlert = function getPurchaseExceptionAlert(mess
     }
   }
   return null;
-};
+}

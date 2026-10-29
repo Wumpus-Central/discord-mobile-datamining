@@ -1,10 +1,10 @@
-// === Module 11636: getStreamSettingsForPreset ===
+// === Module 11690: getStreamSettingsForPreset ===
 
-// Module 11636 (getStreamSettingsForPreset)
+// Module 11690 (getStreamSettingsForPreset)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5881 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 11637 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5850 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5883 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 11691 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5852 */;
 import size from "module_2" /* 2 */;
 
 function getApplicationStreamPresetValues() {
@@ -64,7 +64,7 @@ const result = size.fileFinishedImporting("modules/go_live/utils/getStreamSettin
 
 export default getStreamSettingsForPreset;
 export { getApplicationStreamPresetValues };
-export const getMaxSettingsForPreset = function getMaxSettingsForPreset(PRESET_MOBILE_DEFAULT) {
+export function getMaxSettingsForPreset(PRESET_MOBILE_DEFAULT) {
   const tmp = getApplicationStreamPresetValues()[PRESET_MOBILE_DEFAULT];
   let first;
   if (tmp != null) {
@@ -74,7 +74,7 @@ export const getMaxSettingsForPreset = function getMaxSettingsForPreset(PRESET_M
     first = null;
   }
   return first;
-};
-export const canStreamWithPreset = function canStreamWithPreset(arg0, user, guildPremiumTier, arg3) {
+}
+export function canStreamWithPreset(arg0, user, guildPremiumTier, arg3) {
   return null != getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3);
-};
+}

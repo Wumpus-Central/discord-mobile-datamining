@@ -1,26 +1,26 @@
-// === Module 17933: preloadChannelAppFrame ===
+// === Module 18171: preloadChannelAppFrame ===
 
-// Module 17933 (preloadChannelAppFrame)
-import getURLForApplicationDefault from "getURLForApplication" /* 5659 */;
-import AgeGateUtils from "AgeGateUtils" /* 6697 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6717 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
-import createProxyTicket from "createProxyTicket" /* 10767 */;
-import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 10809 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import FramesStore from "FramesStore" /* 6810 */;
+// Module 18171 (preloadChannelAppFrame)
+import getURLForApplicationDefault from "getURLForApplication" /* 5661 */;
+import AgeGateUtils from "AgeGateUtils" /* 6721 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6740 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6868 */;
+import createProxyTicket from "createProxyTicket" /* 10842 */;
+import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 10885 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import FramesStore from "FramesStore" /* 6833 */;
 
 require = fn;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1084);
 ({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/preloadChannelAppFrame.tsx");
 
-export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
+export function preloadChannelAppFrame(id) {
   const channel = ChannelStore.getChannel(id);
   let application_id;
   if (channel != null) {
@@ -60,4 +60,4 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
       }
     }
   }
-};
+}

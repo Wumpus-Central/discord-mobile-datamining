@@ -1,15 +1,15 @@
-// === Module 12794: useGuildProfileCTA ===
+// === Module 13015: useGuildProfileCTA ===
 
-// Module 12794 (useGuildProfileCTA)
+// Module 13015 (useGuildProfileCTA)
 import FlagUtils from "FlagUtils" /* 1402 */;
-import GuildTagUtils from "GuildTagUtils" /* 8691 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8914 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 12795 */;
+import GuildTagUtils from "GuildTagUtils" /* 8694 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8917 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 13016 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import InviteStore from "InviteStore" /* 5736 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import InviteStore from "InviteStore" /* 5738 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -581,7 +581,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
 });
 export { CTATypes };
 export const GuildProfileCTAContext = obj2;
-export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfileFromInvite, code) {
+export function getGuildProfileCTAType(guildProfileFromInvite, code) {
   ({ id, features } = guildProfileFromInvite);
   const id1 = AuthenticationStore.getId();
   const user = UserStore.getUser(id1);
@@ -683,4 +683,4 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     return APPLY_TO_JOIN;
   }
   tmp7 = null != joinedAt;
-};
+}

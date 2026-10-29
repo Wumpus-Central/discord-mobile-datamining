@@ -1,8 +1,8 @@
-// === Module 11557: ModeratorOverlayState ===
+// === Module 11611: ModeratorOverlayState ===
 
-// Module 11557 (ModeratorOverlayState)
+// Module 11611 (ModeratorOverlayState)
 import c from "c" /* 576 */;
-import _mod4919 from "module_4919" /* 4919 */;
+import _mod4920 from "module_4920" /* 4920 */;
 import identity from "module_1266" /* 1266 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -34,7 +34,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   } else {
     first = cResult[0];
   }
-  const obj2 = closure_2(first, _mod4919.shallow);
+  const obj2 = closure_2(first, _mod4920.shallow);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function o(dismissOverlay) {
       return dismissOverlay.dismissOverlay;
@@ -44,7 +44,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   } else {
     tmp6 = cResult[1];
   }
-  const tmp5Result = closure_2(tmp6, _mod4919.shallow);
+  const tmp5Result = closure_2(tmp6, _mod4920.shallow);
   closure_1 = tmp5Result;
   if (cResult[2] === arg0) {
     if (cResult[5] === arg0) {
@@ -77,7 +77,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   cResult[4] = hasItem;
 }) : (function useModeratorOverlayChannelState(arg0) {
   closure_0 = arg0;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4919.shallow);
-  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4919.shallow).has(arg0), () => closure_1(closure_0)];
+  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4920.shallow);
+  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4920.shallow).has(arg0), () => closure_1(closure_0)];
   return items;
 });

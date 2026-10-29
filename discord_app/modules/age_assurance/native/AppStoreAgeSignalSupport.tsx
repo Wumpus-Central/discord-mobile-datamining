@@ -1,8 +1,8 @@
-// === Module 7966: AppStoreAgeSignalSupport ===
+// === Module 7989: AppStoreAgeSignalSupport ===
 
-// Module 7966 (AppStoreAgeSignalSupport)
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
+// Module 7989 (AppStoreAgeSignalSupport)
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 26;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/AppStore
 
 export const MIN_AGE_GATE = 13;
 export const ADULT_AGE_GATE = 18;
-export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupported() {
+export function isAppStoreAgeSignalSupported() {
   if (obj.isMetaQuest()) {
     return false;
   } else {
@@ -46,4 +46,4 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
     tmpResult = DeviceUtils;
   }
   obj = MetaQuestUtils;
-};
+}

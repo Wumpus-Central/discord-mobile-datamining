@@ -1,11 +1,11 @@
-// === Module 5775: BaseConnectionEvent ===
+// === Module 5777: BaseConnectionEvent ===
 
-// Module 5775 (BaseConnectionEvent)
-import destroy from "destroy" /* 5776 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 5784 */;
-import BaseConnection from "BaseConnection" /* 5788 */;
-import MediaEngineDummy from "MediaEngineDummy" /* 5848 */;
-import Constants from "Constants" /* 5754 */;
+// Module 5777 (BaseConnectionEvent)
+import destroy from "destroy" /* 5778 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 5786 */;
+import BaseConnection from "BaseConnection" /* 5790 */;
+import MediaEngineDummy from "MediaEngineDummy" /* 5850 */;
+import Constants from "Constants" /* 5756 */;
 import size from "module_2" /* 2 */;
 
 const constants = Constants.MediaEngineImplementations;
@@ -18,7 +18,7 @@ export const DesktopSourceEndReason = { SOURCE_NOT_FOUND: 0, [0]: "SOURCE_NOT_FO
 export const FilterTargetType = { INPUT_DEVICE: "input_device", STREAM: "stream" };
 export const FilterSettingsGraph = { NONE: "", BACKGROUND_BLUR: "background_blur", BACKGROUND_REPLACEMENT: "background_replacement" };
 export const FilterSettingsKey = { CAMERA_BACKGROUND_PREVIEW: "cameraBackgroundPreview", CAMERA_BACKGROUND_LIVE: "cameraBackgroundLive" };
-export const determineMediaEngine = function determineMediaEngine() {
+export function determineMediaEngine() {
   const items = [, ];
   ({ NATIVE: arr[0], WEBRTC: arr[1] } = constants);
   let DUMMY = items.find((item) => {
@@ -36,8 +36,8 @@ export const determineMediaEngine = function determineMediaEngine() {
     DUMMY = constants.DUMMY;
   }
   return DUMMY;
-};
-export const initializeMediaEngine = function initializeMediaEngine(BaseConnectionEvent) {
+}
+export function initializeMediaEngine(BaseConnectionEvent) {
   if (constants.NATIVE === BaseConnectionEvent) {
     let _default = destroy.default;
   } else {
@@ -47,4 +47,4 @@ export const initializeMediaEngine = function initializeMediaEngine(BaseConnecti
     _default = MediaEngineDummy.default;
   }
   return new _default();
-};
+}

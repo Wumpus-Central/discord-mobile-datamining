@@ -1,13 +1,13 @@
-// === Module 18571: guild_automod/PermissionUtils ===
+// === Module 18805: guild_automod/PermissionUtils ===
 
-// Module 18571 (guild_automod/PermissionUtils)
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 18805 (guild_automod/PermissionUtils)
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(12870).AutomodTriggerType;
+const AutomodTriggerType = fn(13091).AutomodTriggerType;
 const Constants = fn(1084);
 ({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 fn(558);
@@ -200,7 +200,7 @@ function hasMentionRaidLimitAccess(guildId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/PermissionUtils.tsx");
 
-export const canCurrentUserManageMessageFilters = function canCurrentUserManageMessageFilters(guild_id) {
+export function canCurrentUserManageMessageFilters(guild_id) {
   let tmp = null != guild_id;
   if (tmp) {
     guild = GuildStore.getGuild(guild_id);
@@ -211,15 +211,15 @@ export const canCurrentUserManageMessageFilters = function canCurrentUserManageM
     tmp = canResult;
   }
   return tmp;
-};
-export const canCurrentUserManageAutomod = function canCurrentUserManageAutomod(arg0) {
+}
+export function canCurrentUserManageAutomod(arg0) {
   guild = GuildStore.getGuild(arg0);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
   }
   return canResult;
-};
+}
 export const useCanCurrentUserManageAutomod = tmp3;
 export { hasMentionRaidLimitAccess };
 export const useHasMentionRaidLimitAccess = tmp4;

@@ -1,9 +1,9 @@
-// === Module 9696: useMessageMaxLength ===
+// === Module 9728: useMessageMaxLength ===
 
-// Module 9696 (useMessageMaxLength)
+// Module 9728 (useMessageMaxLength)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -32,6 +32,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessa
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => PremiumUtilsDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_1_4 : closure_1_5);
 });
-export const getMaxMessageLength = function getMaxMessageLength() {
+export function getMaxMessageLength() {
   return PremiumUtilsDefault.canUseIncreasedMessageLength(UserStore.getCurrentUser()) ? React4 : hasOwnProperty;
-};
+}

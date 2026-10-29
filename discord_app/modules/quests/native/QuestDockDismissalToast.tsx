@@ -1,14 +1,14 @@
-// === Module 16720: QuestDockDismissalToast ===
+// === Module 16958: QuestDockDismissalToast ===
 
-// Module 16720 (QuestDockDismissalToast)
+// Module 16958 (QuestDockDismissalToast)
 import util from "util" /* 1125 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5722 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5724 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismissalToast.tsx");
 
-export const displayQuestDismissalToast = function displayQuestDismissalToast() {
+export function displayQuestDismissalToast() {
   const obj2 = { text: null, icon: null, position: "bottom" };
   const intl = util.intl;
   obj2.text = intl.formatToPlainString(util.t.dYE1px, {
@@ -18,4 +18,4 @@ export const displayQuestDismissalToast = function displayQuestDismissalToast() 
   });
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("QUEST_BAR_DISMISS_TOAST", obj2);
-};
+}

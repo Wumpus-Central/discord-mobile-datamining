@@ -1,8 +1,8 @@
-// === Module 10974: InappropriateConversationsDefaultOn ===
+// === Module 11009: InappropriateConversationsDefaultOn ===
 
-// Module 10974 (InappropriateConversationsDefaultOn)
+// Module 11009 (InappropriateConversationsDefaultOn)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-default-on", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -12,9 +12,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx");
 
 export const InappropriateConversationsDefaultOn = tmp2;
-export const isEligibleForInappropriateConversationDefaultOn = function isEligibleForInappropriateConversationDefaultOn(location) {
+export function isEligibleForInappropriateConversationDefaultOn(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}
 export const useIsEligibleForInappropriateConversationDefaultOn = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForInappropriateConversationDefaultOn(location) {
   const cResult = c.c(2);
   const _location = location.location;

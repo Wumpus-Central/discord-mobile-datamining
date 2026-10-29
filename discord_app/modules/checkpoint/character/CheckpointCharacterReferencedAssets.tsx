@@ -1,9 +1,9 @@
-// === Module 13195: CheckpointCharacterReferencedAssets ===
+// === Module 13428: CheckpointCharacterReferencedAssets ===
 
-// Module 13195 (CheckpointCharacterReferencedAssets)
-import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 13029 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13030 */;
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13196 */;
+// Module 13428 (CheckpointCharacterReferencedAssets)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13260 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13261 */;
+import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 13427 */;
 import size from "module_2" /* 2 */;
 
 let set = new Set([1, 8]);
@@ -20,7 +20,7 @@ let closure_3 = keys.map((name) => {
 });
 const result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx");
 
-export const getCheckpointCharacterVisibleTextureNames = function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, MobileLandscape) {
+export function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, MobileLandscape) {
   closure_0 = arg0;
   closure_1 = chapterID;
   closure_2 = MobileLandscape;
@@ -50,13 +50,15 @@ export const getCheckpointCharacterVisibleTextureNames = function getCheckpointC
     }
   });
   return set;
-};
-export const getCheckpointCharacterReferencedAssets = function getCheckpointCharacterReferencedAssets(checkpointCharacterLoadedTextureNames) {
+}
+export function getCheckpointCharacterReferencedAssets(checkpointCharacterLoadedTextureNames, arg1) {
+  closure_1 = arg1;
   let obj = {};
   const item = closure_3.forEach((name) => {
     name = name.name;
     if (set.has(name)) {
-      let url = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name].url;
+      let url = CheckpointCharacterTextureUtils.getCheckpointCharacterTextureUrl(name, closure_1);
+      const tmpResult = CheckpointCharacterTextureUtils;
     } else {
       url = CheckpointCharacterRiveTraits.CHECKPOINT_CHARACTER_BLANK_TEXTURE.url;
     }
@@ -64,4 +66,4 @@ export const getCheckpointCharacterReferencedAssets = function getCheckpointChar
     obj[name.swapKey] = obj;
   });
   return obj;
-};
+}

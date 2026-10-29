@@ -1,16 +1,16 @@
-// === Module 12046: getCollectionItemAssetUrl ===
+// === Module 12100: getCollectionItemAssetUrl ===
 
-// Module 12046 (getCollectionItemAssetUrl)
+// Module 12100 (getCollectionItemAssetUrl)
 import Constants from "Constants" /* 1084 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
 ({ API_ENDPOINT: c3, CDN_HOST: closure_4 } = window.GLOBAL_ENV);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
 
-export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0) {
+export function getCollectionItemAssetUrl(arg0) {
   ({ itemId, hash, containerWidth } = arg0);
   if (containerWidth === undefined) {
     containerWidth = 1024;
@@ -32,4 +32,4 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
     combined = "" + protocol + React3 + Endpoints.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(itemId, hash, str3) + "?" + str1;
   }
   return combined;
-};
+}

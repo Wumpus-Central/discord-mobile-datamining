@@ -1,19 +1,19 @@
-// === Module 18138: useNotificationCenterItemsLoader ===
+// === Module 18372: useNotificationCenterItemsLoader ===
 
-// Module 18138 (useNotificationCenterItemsLoader)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7242 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18139 */;
+// Module 18372 (useNotificationCenterItemsLoader)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7266 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18373 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6851 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6822 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18137 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6874 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6845 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18371 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 let c10 = 100;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -306,7 +306,7 @@ export const useNotificationCenterItemsLoader = ReactCompilerGating.isReactCompi
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             }
                           } else {
                             try {
@@ -690,7 +690,7 @@ export const useNotificationCenterItemsLoader = ReactCompilerGating.isReactCompi
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

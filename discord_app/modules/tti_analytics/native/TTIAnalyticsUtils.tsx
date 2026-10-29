@@ -1,21 +1,21 @@
-// === Module 7619: TTIAnalyticsUtils ===
+// === Module 7642: TTIAnalyticsUtils ===
 
-// Module 7619 (TTIAnalyticsUtils)
+// Module 7642 (TTIAnalyticsUtils)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5193 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5876 */;
-import AppStartInfo2 from "AppStartInfo" /* 7780 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5194 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5878 */;
+import AppStartInfo2 from "AppStartInfo" /* 7802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7620 */;
-import ExperimentStore from "ExperimentStore" /* 5226 */;
+import CacheStore from "CacheStore" /* 7643 */;
+import ExperimentStore from "ExperimentStore" /* 5227 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
 
@@ -112,7 +112,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
           }
         })();
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp6) {
       c6 = tmp;
@@ -247,7 +247,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
         const merged2 = Object.assign(closure_133_0);
         closure_134_1(closure_134_2[19]).track(closure_134_10.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp7) {
       c8 = tmp;
@@ -333,7 +333,7 @@ let closure_28 = async function _trackAppUIViewed() {
       const obj9 = { value, done: true };
       return obj9;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -497,7 +497,7 @@ let closure_28 = async function _trackAppUIViewed() {
           })(closure_131_6);
         }
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp66) {
       c6 = tmp;
@@ -537,7 +537,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -573,7 +573,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
         closure_133_0 = ThemeStore(closure_3, closure_2, value);
         closure_132_1(closure_132_2[19]).track(closure_132_10.APP_LAUNCH_COMPLETED, closure_133_0, { logEventProperties: true });
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp21) {
       c8 = tmp;
@@ -582,8 +582,8 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7779).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(4863).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7801).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(4864).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1278);
 const load_id = v1.v4();
@@ -600,7 +600,7 @@ export { getDeviceMetadata };
 export function currentLoadId() {
   return closure_16;
 }
-export const trackAppOpened = function trackAppOpened(launcher) {
+export function trackAppOpened(launcher) {
   AppStartPerformanceDefault.mark("\u{1F3C3}", "Track app_opened");
   SentryUtilsDefault.addBreadcrumb({ category: "lifecycle", message: "App opened", data: { openFrom: launcher } });
   const obj3 = { category: "lifecycle", message: "App opened", data: { openFrom: launcher } };
@@ -610,8 +610,8 @@ export const trackAppOpened = function trackAppOpened(launcher) {
   obj5.load_id = load_id;
   obj5.theme = ThemeStore.theme;
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_OPENED, obj5, { logEventProperties: true });
-};
-export const trackAppUIViewed = function trackAppUIViewed() {
+}
+export function trackAppUIViewed() {
   let tmp = ModalScreen;
   if (ModalScreen === undefined) {
     tmp = getRedesignScreenName();
@@ -636,11 +636,11 @@ export const trackAppUIViewed = function trackAppUIViewed() {
       return applyArgumentsResult;
     })(tmp, obj, hasCacheResult);
   }
-};
+}
 export function getLastTrackedAppUiViewed2Properties() {
   return c26;
 }
-export const trackAppLaunchCompleted = function trackAppLaunchCompleted() {
+export function trackAppLaunchCompleted() {
   let str = unknown;
   if (unknown === undefined) {
     str = getRedesignScreenName();
@@ -665,4 +665,4 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted() {
       return applyArgumentsResult;
     })(str, hasCacheResult);
   }
-};
+}

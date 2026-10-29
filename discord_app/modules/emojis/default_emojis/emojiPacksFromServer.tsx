@@ -1,7 +1,7 @@
-// === Module 4957: emojiPacksFromServer ===
+// === Module 4958: emojiPacksFromServer ===
 
-// Module 4957 (emojiPacksFromServer)
-import EmojiTypes from "EmojiTypes" /* 4953 */;
+// Module 4958 (emojiPacksFromServer)
+import EmojiTypes from "EmojiTypes" /* 4954 */;
 import size from "module_2" /* 2 */;
 
 function indexEmojiPacks(arg0) {
@@ -28,11 +28,11 @@ function indexEmojiPacks(arg0) {
 const result = size.fileFinishedImporting("modules/emojis/default_emojis/emojiPacksFromServer.tsx");
 
 export { indexEmojiPacks };
-export const emojiPacksFromServer = function emojiPacksFromServer(packs) {
+export function emojiPacksFromServer(packs) {
   return indexEmojiPacks(packs.map((id) => {
     const obj = { id: id.id, name: id.name, description: id.description, available: id.available, representativeEmojiId: id.representative_emoji_id, emojis: null };
     const emojis = id.emojis;
     obj.emojis = emojis.map((id) => ({ id: id.id, packId: id.id, name: id.name, animated: id.animated, require_colons: id.require_colons, available: id.available, managed: id.managed, roles: id.roles, type: EmojiTypes.EmojiTypes.PACK }));
     return obj;
   }));
-};
+}

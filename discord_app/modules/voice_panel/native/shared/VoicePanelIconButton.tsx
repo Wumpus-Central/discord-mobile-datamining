@@ -1,9 +1,9 @@
-// === Module 18767: VoicePanelIconButton ===
+// === Module 19000: VoicePanelIconButton ===
 
-// Module 18767 (VoicePanelIconButton)
+// Module 19000 (VoicePanelIconButton)
 import c from "c" /* 576 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7204 */;
-import IconButton from "IconButton" /* 7991 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7228 */;
+import IconButton from "IconButton" /* 8014 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

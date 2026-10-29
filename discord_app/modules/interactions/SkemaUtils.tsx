@@ -1,6 +1,6 @@
-// === Module 8638: SkemaUtils ===
+// === Module 8660: SkemaUtils ===
 
-// Module 8638 (SkemaUtils)
+// Module 8660 (SkemaUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 function getFirstSkemaFieldError(errors, arg1) {
@@ -35,6 +35,6 @@ const _errors = "_errors";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/SkemaUtils.tsx");
 
-export const getFirstSkemaError = function getFirstSkemaError(errors) {
+export function getFirstSkemaError(errors) {
   return getFirstSkemaFieldError(errors, undefined);
-};
+}

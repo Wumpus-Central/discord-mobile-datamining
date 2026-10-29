@@ -1,13 +1,13 @@
-// === Module 7455: UserLimitedAccessUtils ===
+// === Module 7478: UserLimitedAccessUtils ===
 
-// Module 7455 (UserLimitedAccessUtils)
+// Module 7478 (UserLimitedAccessUtils)
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
-export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(status, arg1) {
+export function isLimitedAccessErrorCode(status, arg1) {
   let tmp = status >= 400;
   if (tmp) {
     tmp = status < 500;
@@ -22,4 +22,4 @@ export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(status
     tmp = arg1 <= AbortCodes.USER_LIMITED_ACCESS_MAX;
   }
   return tmp;
-};
+}

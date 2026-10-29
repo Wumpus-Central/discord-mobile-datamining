@@ -1,14 +1,14 @@
-// === Module 13692: useGuildPowerupCardFooterConfig ===
+// === Module 13925: useGuildPowerupCardFooterConfig ===
 
-// Module 13692 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13655 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13659 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 13925 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13888 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13892 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5218);
+const GuildPowerupsConstants = fn(5219);
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4, PowerupActiveStatusType: hasOwnProperty } = GuildPowerupsConstants);
 const GuildFeatures = fn(1084).GuildFeatures;
 const ReactCompilerGating = fn(558);
@@ -50,8 +50,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   const stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
   let tmp12 = tmp5.type !== constants.INACTIVE;
   if (!tmp12) {
-    tmp12 = skuId.skuId === tmp(5221).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp13 = skuId.skuId === tmp(5221).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    tmp12 = skuId.skuId === tmp(5222).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    const tmp13 = skuId.skuId === tmp(5222).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
   }
   let tmp14 = tmp12;
   if (!tmp12) {

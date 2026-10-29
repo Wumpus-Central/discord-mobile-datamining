@@ -1,10 +1,10 @@
-// === Module 13980: RestrictedScheduleNotificationUtils ===
+// === Module 14213: RestrictedScheduleNotificationUtils ===
 
-// Module 13980 (RestrictedScheduleNotificationUtils)
+// Module 14213 (RestrictedScheduleNotificationUtils)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1125 */;
-import _modDef2535 from "module_2535" /* 2535 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 13981 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 14214 */;
 import size from "module_2" /* 2 */;
 
 function isOnlyDayLoss(label, label2) {
@@ -32,13 +32,13 @@ function isOnlyDayLoss(label, label2) {
 }
 let obj = { Created: "created", Enabled: "enabled", Disabled: "disabled", Updated: "updated", Removed: "removed", Multiple: "multiple" };
 let map = new Map();
-let obj2 = { [Created]: _modDef2535["5V7eBH"], [Enabled]: _modDef2535.iefrVg, [Disabled]: _modDef2535["k+s9cM"], [Updated]: _modDef2535.Nm6hZV, [Multiple]: _modDef2535.Nm6hZV, [Removed]: _modDef2535.jR6uOs };
+let obj2 = { [Created]: _modDef2536["5V7eBH"], [Enabled]: _modDef2536.iefrVg, [Disabled]: _modDef2536["k+s9cM"], [Updated]: _modDef2536.Nm6hZV, [Multiple]: _modDef2536.Nm6hZV, [Removed]: _modDef2536.jR6uOs };
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
 
 export const RestrictedScheduleNotificationKind = obj;
 export const EMPTY_SCHEDULE_SNAPSHOT = map;
-export const toScheduleSnapshot = function toScheduleSnapshot(restrictedSchedule) {
+export function toScheduleSnapshot(restrictedSchedule) {
   if (null != restrictedSchedule) {
     if (0 !== restrictedSchedule.rules.length) {
       const _Map = Map;
@@ -50,8 +50,8 @@ export const toScheduleSnapshot = function toScheduleSnapshot(restrictedSchedule
     }
     return map;
   }
-};
-export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult) {
+}
+export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult) {
   function record(Created, value) {
     if (0 === closure_4) {
       closure_0 = Created;
@@ -197,22 +197,22 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
     return obj10;
   }
   let set = new Set(items1);
-};
-export const getRestrictedScheduleNotificationTitle = function getRestrictedScheduleNotificationTitle(kind) {
+}
+export function getRestrictedScheduleNotificationTitle(kind) {
   const intl = util.intl;
   return intl.string(obj2[kind]);
-};
-export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
+}
+export function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
     result = FamilyCenterRestrictedHoursUtils.formatRestrictedScheduleInAppSubtitle(rule);
   }
   if (result == null) {
     const intl = util.intl;
-    result = intl.string(_modDef2535["8OlpoY"]);
+    result = intl.string(_modDef2536["8OlpoY"]);
   }
   return result;
-};
-export const restrictedScheduleNotificationKey = function restrictedScheduleNotificationKey(kind) {
+}
+export function restrictedScheduleNotificationKey(kind) {
   return "restricted-schedule-" + kind;
-};
+}

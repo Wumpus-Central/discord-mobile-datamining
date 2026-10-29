@@ -1,20 +1,20 @@
-// === Module 12480: conjurePlanExperienceSurfaces ===
+// === Module 12534: conjurePlanExperienceSurfaces ===
 
-// Module 12480 (conjurePlanExperienceSurfaces)
+// Module 12534 (conjurePlanExperienceSurfaces)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 12481 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 12535 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSurfaces.tsx");
 
-export const conjurePlanExperiencePlacement = function conjurePlanExperiencePlacement(app_channel_names, kind) {
+export function conjurePlanExperiencePlacement(app_channel_names, kind) {
   if ("frame" !== kind.kind) {
     return null;
   } else {
     const intl = util.intl;
-    closure_0 = intl.string(_modDef3863["6/3tGY"]);
+    closure_0 = intl.string(_modDef3864["6/3tGY"]);
     const surfaces3 = kind.surfaces;
     const items = [];
     if (!surfaces3.includes(ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL)) {
@@ -58,8 +58,8 @@ export const conjurePlanExperiencePlacement = function conjurePlanExperiencePlac
       mapped = kind.app_channels;
     }
   }
-};
-export const conjurePlanDesignExperienceId = function conjurePlanDesignExperienceId(experiences) {
+}
+export function conjurePlanDesignExperienceId(experiences) {
   const result = conjurePlanDesign.conjurePlanDesignSurface(experiences);
   require = result;
   let tmp2 = null;
@@ -81,4 +81,4 @@ export const conjurePlanDesignExperienceId = function conjurePlanDesignExperienc
     tmp2 = id;
   }
   return tmp2;
-};
+}

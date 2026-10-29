@@ -1,20 +1,20 @@
-// === Module 19354: GuildSettingsModalAuditLogFilter ===
+// === Module 19587: GuildSettingsModalAuditLogFilter ===
 
-// Module 19354 (GuildSettingsModalAuditLogFilter)
+// Module 19587 (GuildSettingsModalAuditLogFilter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5072 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6863 */;
-import FormRadio from "FormRadio" /* 7024 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10871 */;
-import AuditLogUtils from "AuditLogUtils" /* 19352 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19355 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5073 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6886 */;
+import FormRadio from "FormRadio" /* 7048 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10776 */;
+import AuditLogUtils from "AuditLogUtils" /* 19585 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19350 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19583 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1084).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -99,10 +99,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   guildId = guildId.guildId;
   let tmp4 = closure_12();
   dependencyMap = tmp4;
-  const bottom = guildId(1630)().bottom;
+  const bottom = guildId(1631)().bottom;
   let obj = filterType(576);
-  const navigation = filterType(1502).useNavigation();
-  let obj2 = filterType(1502);
+  const navigation = filterType(1503).useNavigation();
+  let obj2 = filterType(1503);
   let obj3 = first;
   first = navigation(first.useState(""), 2)[0];
   if (cResult[0] === data) {
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          const tmp26 = closure_9(filterType(7181).SearchBar, obj5);
+                          const tmp26 = closure_9(filterType(7205).SearchBar, obj5);
                           cResult[25] = tmp20;
                           cResult[26] = tmp26;
                           let tmp24 = tmp26;
@@ -761,7 +761,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   obj6.children = items4;
   return closure_11(closure_10, obj6);
 });
-export const createAuditLogFilterUserData = function createAuditLogFilterUserData(userIdFilter) {
+export function createAuditLogFilterUserData(userIdFilter) {
   _require = userIdFilter;
   const items = [];
   let obj = { label: null, value: null, selected: null, index: 0 };
@@ -807,8 +807,8 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
     return num;
   });
   return items;
-};
-export const createAuditLogFilterActionData = function createAuditLogFilterActionData(actionFilter) {
+}
+export function createAuditLogFilterActionData(actionFilter) {
   closure_0 = actionFilter;
   const mapped = AuditLogUtils.ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
@@ -822,4 +822,4 @@ export const createAuditLogFilterActionData = function createAuditLogFilterActio
     }
     return num;
   });
-};
+}

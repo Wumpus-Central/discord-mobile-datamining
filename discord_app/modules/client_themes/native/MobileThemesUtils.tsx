@@ -1,17 +1,17 @@
-// === Module 5238: MobileThemesUtils ===
+// === Module 5239: MobileThemesUtils ===
 
-// Module 5238 (MobileThemesUtils)
+// Module 5239 (MobileThemesUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
-import _modDef2769 from "module_2769" /* 2769 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5032 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5240 */;
+import _modDef2770 from "module_2770" /* 2770 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5032 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5033 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5241 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5239 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5240 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 const require = globalThis.__r;
@@ -19,11 +19,11 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2769.yl1iMm);
+  return intl.string(_modDef2770.yl1iMm);
 }
 const ClientThemesConstants = fn(1252);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_7, HEXAGON_GRADIENT_PRESET: closure_8, REFRESH_STANDARD_BACKGROUND_THEMES: closure_9 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
@@ -175,7 +175,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
 export { isHexagonCampaignMobileTheme };
-export const isNitroGatedMobileTheme = function isNitroGatedMobileTheme(themes) {
+export function isNitroGatedMobileTheme(themes) {
   let tmp3 = themes.type !== ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME;
   if (tmp3) {
     let result = themes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
@@ -191,11 +191,11 @@ export const isNitroGatedMobileTheme = function isNitroGatedMobileTheme(themes) 
     tmp3 = tmp5;
   }
   return tmp3;
-};
+}
 export { getCustomBackgroundGradient };
 export const useCustomBackgroundGradient = tmp4;
 export const usePerModeCustomBackgroundGradient = tmp5;
-export const getAllMobileThemes = function getAllMobileThemes() {
+export function getAllMobileThemes() {
   const customThemeDisplaySettings = CustomThemeMobileStore.getCustomThemeDisplaySettings();
   let tmp2 = null;
   if (undefined !== customThemeDisplaySettings) {
@@ -235,7 +235,7 @@ export const getAllMobileThemes = function getAllMobileThemes() {
     HermesBuiltin.arraySpread(tmp14, HermesBuiltin.arraySpread(React6, 0));
   }
   return items3;
-};
+}
 export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllMobileThemes(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
@@ -295,10 +295,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp16 = items2;
       }
-      tmpResult6 = tmp(5032);
+      tmpResult6 = tmp(5033);
     }
     tmp16 = closure_7;
-    tmpResult5 = tmp(5031);
+    tmpResult5 = tmp(5032);
   }
   if (null != tmp4) {
     const items3 = [];
@@ -335,10 +335,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp12 = items2;
       }
-      tmp2Result2 = tmp2(5032);
+      tmp2Result2 = tmp2(5033);
     }
     tmp12 = closure_7;
-    tmp2Result = tmp2(5031);
+    tmp2Result = tmp2(5032);
   }
   if (null != tmp) {
     const items3 = [];

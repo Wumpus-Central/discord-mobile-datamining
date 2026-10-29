@@ -1,12 +1,12 @@
-// === Module 8759: ApplicationPresenceUtils ===
+// === Module 8762: ApplicationPresenceUtils ===
 
-// Module 8759 (ApplicationPresenceUtils)
-import ChannelStore from "ChannelStore" /* 4856 */;
+// Module 8762 (ApplicationPresenceUtils)
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
 
-export const shouldDisableUserPresenceInChannel = function shouldDisableUserPresenceInChannel(bot, channelId) {
+export function shouldDisableUserPresenceInChannel(bot, channelId) {
   const channel = ChannelStore.getChannel(channelId);
   let tmp = null != channel && bot.bot && channel.isPrivate();
   if (tmp) {
@@ -14,4 +14,4 @@ export const shouldDisableUserPresenceInChannel = function shouldDisableUserPres
     tmp = null == rawRecipients.find((id) => id.id === bot.id);
   }
   return tmp;
-};
+}

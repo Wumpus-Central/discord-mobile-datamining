@@ -1,14 +1,14 @@
-// === Module 16122: showInvalidProfileUpdateToastNative ===
+// === Module 16359: showInvalidProfileUpdateToastNative ===
 
-// Module 16122 (showInvalidProfileUpdateToastNative)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
+// Module 16359 (showInvalidProfileUpdateToastNative)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 
-export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(intl2) {
+export function showGenericProfileUpdateFailureToast(intl2) {
   ToastActionCreatorsDefault.open("USER_SETTINGS_UPDATE_FAILURE", { text: intl2, variant: "critical" });
-};
-export const showGenericGuildProfileUpdateFailureToast = function showGenericGuildProfileUpdateFailureToast(intl2) {
+}
+export function showGenericGuildProfileUpdateFailureToast(intl2) {
   ToastActionCreatorsDefault.open("USER_SETTINGS_UPDATE_FAILURE", { text: intl2, variant: "critical" });
-};
+}

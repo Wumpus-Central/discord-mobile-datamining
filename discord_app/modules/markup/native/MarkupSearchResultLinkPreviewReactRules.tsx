@@ -1,11 +1,11 @@
-// === Module 18403: MarkupSearchResultLinkPreviewReactRules ===
+// === Module 18637: MarkupSearchResultLinkPreviewReactRules ===
 
-// Module 18403 (MarkupSearchResultLinkPreviewReactRules)
-import MarkupMessagePreviewReactRules from "MarkupMessagePreviewReactRules" /* 11991 */;
+// Module 18637 (MarkupSearchResultLinkPreviewReactRules)
+import MarkupMessagePreviewReactRules from "MarkupMessagePreviewReactRules" /* 12045 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
-export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {
+export function createSearchResultLinkPreviewReactRules() {
   return MarkupMessagePreviewReactRules.createMessagePreviewReactRules({ customEmojiSize: 16 });
-};
+}

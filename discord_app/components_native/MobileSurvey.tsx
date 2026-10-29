@@ -1,21 +1,21 @@
-// === Module 18667: MobileSurvey ===
+// === Module 18901: MobileSurvey ===
 
-// Module 18667 (MobileSurvey)
+// Module 18901 (MobileSurvey)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import LinkingDefault from "Linking" /* 5696 */;
-import _modDef11708 from "module_11708" /* 11708 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 17352 */;
+import LinkingDefault from "Linking" /* 5698 */;
+import _modDef11762 from "module_11762" /* 11762 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 17591 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SurveyStore from "SurveyStore" /* 7892 */;
+import SurveyStore from "SurveyStore" /* 7915 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
                 return obj;
               }
               c0 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp9) {
               c0 = tmp;
               throw tmp9;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
         }
       }
       let obj2 = { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: tmp17 };
-      const tmp21 = jsx(stateFromStores(6014), { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: tmp17 });
+      const tmp21 = jsx(stateFromStores(6018), { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: tmp17 });
       cResult[13] = stateFromStores.cta;
       cResult[14] = stateFromStores.prompt;
       cResult[15] = tmp14;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
               return obj;
             }
             c0 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;
@@ -279,10 +279,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef11708 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef11762 });
     };
-    tmp5 = jsx(stateFromStores(6014), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(6014);
+    tmp5 = jsx(stateFromStores(6018), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(6018);
   }
   return tmp5;
 });

@@ -1,10 +1,10 @@
-// === Module 16573: useBountyAppStoreOverlayPlayback ===
+// === Module 16811: useBountyAppStoreOverlayPlayback ===
 
-// Module 16573 (useBountyAppStoreOverlayPlayback)
+// Module 16811 (useBountyAppStoreOverlayPlayback)
 import c from "c" /* 576 */;
-import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay" /* 16574 */;
-import useBountiesModalTiming from "useBountiesModalTiming" /* 16576 */;
-import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet" /* 16577 */;
+import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay" /* 16812 */;
+import useBountiesModalTiming from "useBountiesModalTiming" /* 16814 */;
+import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet" /* 16815 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,11 +12,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyAppStoreOverlayPlayback.tsx");
 
-export const getBountyVideoEndMode = function getBountyVideoEndMode(bounty) {
+export function getBountyVideoEndMode(bounty) {
   const result = useBountyVideoEndAppStoreOverlay.canUseBountyVideoEndAppStoreOverlay(bounty);
   const BountyVideoEndMode = useBountiesModalTiming.BountyVideoEndMode;
   return result ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
-};
+}
 export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
   const cResult = c.c(26);
   ({ bounty, sourceQuestContent, isActive, endMode, playerRef, handleVideoEnd } = handleVideoPaused);

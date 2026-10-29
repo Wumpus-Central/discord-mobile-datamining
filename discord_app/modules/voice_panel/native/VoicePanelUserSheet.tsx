@@ -1,15 +1,15 @@
-// === Module 18852: VoicePanelUserSheet ===
+// === Module 19085: VoicePanelUserSheet ===
 
-// Module 18852 (VoicePanelUserSheet)
+// Module 19085 (VoicePanelUserSheet)
 import nativeDefault from "native" /* 587 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
-import UserProfileActivity from "UserProfileActivity" /* 14531 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 18851 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7471 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
+import UserProfileActivity from "UserProfileActivity" /* 14765 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19084 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let c14 = 48;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { wrapper: { gap: 12, padding: 16 }, card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg }, header: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 16 }, user: { display: "flex", gap: 8, flexDirection: "row", alignItems: "center", flex: 1, minWidth: 0 }, avatar: null, username: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg };
 obj2.avatar = { maxWidth: 48, maxHeight: 48, borderRadius: nativeDefault.radii.round };
@@ -49,43 +49,25 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Overfl
     first = cResult[0];
   }
   if (cResult[1] !== userId) {
-    class S {
-      constructor() {
-        obj = { relationshipType: closure_9.getRelationshipType(userId), isIgnored: closure_9.isIgnored(userId) };
-        return obj;
-      }
-    }
+    const fn = function v() {
+      return { relationshipType: RelationshipStore.getRelationshipType(userId), isIgnored: RelationshipStore.isIgnored(userId) };
+    };
     cResult[1] = userId;
-    cResult[2] = S;
+    cResult[2] = fn;
+    let tmp12 = fn;
   } else {
-    class S {
-      constructor() {
-        obj = { relationshipType: closure_9.getRelationshipType(userId), isIgnored: closure_9.isIgnored(userId) };
-        return obj;
-      }
-    }
+    tmp12 = cResult[2];
   }
   const obj2 = userId(analyticsLocations[15]);
-  const stateFromStoresObject = userId(analyticsLocations[16]).useStateFromStoresObject(first, S);
+  const stateFromStoresObject = userId(analyticsLocations[16]).useStateFromStoresObject(first, tmp12);
   const relationshipType = stateFromStoresObject.relationshipType;
   const BLOCKED = RelationshipTypes.BLOCKED;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
-      constructor() {
-        obj = { relationshipType: closure_9.getRelationshipType(userId), isIgnored: closure_9.isIgnored(userId) };
-        return obj;
-      }
-    }
     const items1 = [UserStore];
     cResult[3] = items1;
-    const tmp14 = items1;
+    let tmp14 = items1;
   } else {
-    class S {
-      constructor() {
-        obj = { relationshipType: closure_9.getRelationshipType(userId), isIgnored: closure_9.isIgnored(userId) };
-        return obj;
-      }
-    }
+    tmp14 = cResult[3];
   }
   if (cResult[4] !== userId) {
     class V {
@@ -114,19 +96,19 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Overfl
       }
     }
     const obj3 = { autoTrackExposure: false };
-    cResult[6] = tmp21;
+    cResult[6] = tmp22;
     cResult[7] = obj3;
-    let tmp20 = obj3;
+    let tmp21 = obj3;
   } else {
     class V {
       constructor() {
         return closure_10.getUser(userId);
       }
     }
-    tmp20 = cResult[7];
+    tmp21 = cResult[7];
   }
   const tmpResult3 = userId(analyticsLocations[16]);
-  const tidaWebformEnabled = channelId(analyticsLocations[19]).useExperiment(tmp21, tmp20).tidaWebformEnabled;
+  const tidaWebformEnabled = channelId(analyticsLocations[19]).useExperiment(tmp22, tmp21).tidaWebformEnabled;
   if (cResult[8] === analyticsLocations) {
     class V {
       constructor() {
@@ -356,8 +338,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
   const tmpResult4 = channelId(504);
   const stateFromStores2 = channelId(504).useStateFromStores(tmp13, tmp14);
   const tmpResult5 = channelId(504);
-  const name = channelId(6025).useName(guildId, channelId, stateFromStores);
-  const live = userId(14585)(userId).live;
+  const name = channelId(6029).useName(guildId, channelId, stateFromStores);
+  const live = userId(14819)(userId).live;
   noop = tmp17;
   if (cResult[8] !== (null == stateFromStores || null == stateFromStores1 || null == stateFromStores2)) {
     class C {
@@ -424,8 +406,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
   const items2 = [UserStore];
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
-  const name = channelId(6025).useName(guildId, channelId, stateFromStores);
-  const live = userId(14585)(userId).live;
+  const name = channelId(6029).useName(guildId, channelId, stateFromStores);
+  const live = userId(14819)(userId).live;
   noop = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = noop.useEffect(() => {
@@ -438,11 +420,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(9450).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(9450);
+          const cachedSourceFromURI = channelId(9481).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(9481);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
-        const obj2 = { bottom: true, style: tmp.wrapper, children: null };
+        const obj2 = { style: tmp.wrapper, children: null };
         const obj6 = { style: tmp.header, children: null };
         const obj7 = { style: tmp.user, children: null };
         if (null != avatarDecoration) {
@@ -450,18 +432,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
           let tmp11Result = closure_12(channelId(1199).Avatar, obj8);
         } else {
           const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: v48, height: v48, style: tmp.avatar };
-          tmp11Result = closure_12(tmp7(5705), size);
-          const tmp7Result = tmp7(5705);
+          tmp11Result = closure_12(tmp7(5707), size);
+          const tmp7Result = tmp7(5707);
         }
-        const obj9 = { scrollable: true, children: null };
-        const obj10 = { children: null };
+        const obj9 = { children: null };
         const items4 = [tmp11Result, ];
-        const obj11 = { variant: "text-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-        items4[1] = closure_12(channelId(5270).Text, obj11);
+        const obj10 = { variant: "text-md/semibold", style: tmp.username, lineClamp: 1, children: name };
+        items4[1] = closure_12(channelId(5271).Text, obj10);
         obj7.children = items4;
         const items5 = [closure_13(closure_6, obj7), ];
-        const obj12 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
-        items5[1] = closure_12(closure_16, obj12);
+        const obj11 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
+        items5[1] = closure_12(closure_16, obj11);
         obj6.children = items5;
         const items6 = [
           closure_13(closure_6, obj6),
@@ -474,12 +455,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
                 }),
 
         ];
-        const obj13 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
-        items6[2] = closure_12(tmp7(14588), obj13);
+        const obj12 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
+        items6[2] = closure_12(tmp7(14822), obj12);
         obj2.children = items6;
-        obj10.children = closure_13(channelId(7257).SafeAreaPaddingView, obj2);
-        obj9.children = closure_12(channelId(5305).BottomSheetScrollView, obj10);
-        return closure_12(channelId(5301).BottomSheet, obj9);
+        obj9.children = closure_13(closure_6, obj2);
+        return closure_12(channelId(5302).BottomSheet, obj9);
       }
     }
   }

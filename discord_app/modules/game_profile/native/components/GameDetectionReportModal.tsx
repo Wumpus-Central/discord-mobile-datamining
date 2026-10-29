@@ -1,18 +1,18 @@
-// === Module 9535: GameDetectionReportModal ===
+// === Module 9567: GameDetectionReportModal ===
 
-// Module 9535 (GameDetectionReportModal)
+// Module 9567 (GameDetectionReportModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import components_Button_Button from "components/Button/Button" /* 5280 */;
-import NavigatorHeader from "NavigatorHeader" /* 6960 */;
-import TableRadioRow from "TableRadioRow" /* 7020 */;
-import TableRadioGroup from "TableRadioGroup" /* 7021 */;
-import TextInput from "TextInput" /* 7044 */;
-import Navigator from "Navigator" /* 7131 */;
-import TextArea from "TextArea" /* 7216 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9278 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import NavigatorHeader from "NavigatorHeader" /* 6984 */;
+import TableRadioRow from "TableRadioRow" /* 7044 */;
+import TableRadioGroup from "TableRadioGroup" /* 7045 */;
+import TextInput from "TextInput" /* 7068 */;
+import Navigator from "Navigator" /* 7155 */;
+import TextArea from "TextArea" /* 7240 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9282 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
@@ -177,7 +177,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           tmp7 = closure_0;
           tmp8 = closure_2;
           obj2 = closure_0(closure_2[17]);
-          obj.headerLeft = obj2.getHeaderBackButton(() => { ... });
+          obj.headerLeft = obj2.getHeaderBackButton(/* F149344 */ function() { ... });
           obj.headerRight = function headerRight() { ... };
           setOptionsResult1 = closure_2.setOptions(obj);
         } else {
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           tmp21 = closure_0;
           tmp22 = closure_2;
           obj5 = closure_0(closure_2[17]);
-          obj6.headerLeft = obj5.getHeaderBackButton(() => { ... });
+          obj6.headerLeft = obj5.getHeaderBackButton(/* F149346 */ function() { ... });
           obj6.headerRight = function headerRight() { ... };
           setOptionsResult2 = closure_2.setOptions(obj6);
         }
@@ -320,7 +320,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           }, 100);
         },
       hasIcons: null,
-      children: false
+      children: true
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[14]).intl;

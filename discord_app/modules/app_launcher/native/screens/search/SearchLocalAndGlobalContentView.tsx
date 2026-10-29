@@ -1,19 +1,19 @@
-// === Module 12025: SearchLocalAndGlobalContentView ===
+// === Module 12079: SearchLocalAndGlobalContentView ===
 
-// Module 12025 (SearchLocalAndGlobalContentView)
+// Module 12079 (SearchLocalAndGlobalContentView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import TableRow from "TableRow" /* 6939 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7665 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9683 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11208 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11961 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11964 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11966 */;
-import CommandRowButton from "CommandRowButton" /* 12026 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5014 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import TableRow from "TableRow" /* 6963 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9715 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11262 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12015 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12018 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12020 */;
+import CommandRowButton from "CommandRowButton" /* 12080 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,9 +47,9 @@ function keyExtractor(type, arg1) {
   return id;
 }
 const View = fn(17).View;
-const getSection = fn(9684).getSection;
-const FetchState = fn(11977).FetchState;
-const AppLauncherNativeConstants = fn(1501);
+const getSection = fn(9716).getSection;
+const FetchState = fn(12031).FetchState;
+const AppLauncherNativeConstants = fn(1502);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const jsxProd = fn(21);
@@ -60,7 +60,7 @@ const array = new Array(6);
 let closure_17 = array.fill("placeholder");
 const array2 = new Array(3);
 let closure_18 = array2.fill({ type: obj.PLACERHOLDER });
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj3 = { sectionHeader: { marginBottom: 8 }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, loadingCommandAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, divider: null, commandsHeaderContainer: null, commandsCTA: null, commandsCTAUnderlayColor: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj3.loadingCommandAppIcon = size;
@@ -209,15 +209,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(11961).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12015).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(11966), obj2);
+    tmp4 = closure_10(onPressSend(12020), obj2);
   }
-  obj = hasOptions(11961);
-  const tmpResult = hasOptions(12026);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11208).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(12015);
+  const tmpResult = hasOptions(12080);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11262).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
@@ -239,15 +239,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11208).AppLauncherSectionName.SEARCH };
-  obj4.subLabel = hasOptions(9683).getSectionName(application);
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11262).AppLauncherSectionName.SEARCH };
+  obj4.subLabel = hasOptions(9715).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12026), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(6939).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(12080), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(6963).TableRow, obj4);
 });
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderCommandRow(arg0) {
@@ -538,7 +538,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
 size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx");
 
-export const SearchLocalAndGlobalContentView = function SearchLocalAndGlobalContentView(context) {
+export function SearchLocalAndGlobalContentView(context) {
   context = context.context;
   const onScroll = context.onScroll;
   const entrypoint = context.entrypoint;
@@ -786,4 +786,4 @@ export const SearchLocalAndGlobalContentView = function SearchLocalAndGlobalCont
   const tmp2Result = onScroll(entrypoint[30]);
   items12[3] = tmp27Result6;
   return applicationResults(tmp2Result, { ListHeaderComponent: fetchState(applicationResults2, { children: items12 }), contentContainerStyle: memo2, scrollIndicatorInsets: memo3, renderItem: callback3, keyExtractor, data: memo1, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", automaticallyAdjustsScrollIndicatorInsets: false, showsVerticalScrollIndicator: false, onViewableItemsChanged: tmp9Result5.useTrackSearchItems(callback2, memo1, query).handleViewableItemsChanged, preserveScrollMomentum: true, onScroll: callback4, animatedOnScroll: appLauncherFlashListProps.onScroll, ref: appLauncherFlashListProps.scrollerRef, simultaneousHandlers: appLauncherFlashListProps.gestureRef, animatedProps: appLauncherFlashListProps.animatedProps }, query);
-};
+}

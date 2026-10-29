@@ -1,22 +1,22 @@
-// === Module 15997: validateOpenInviteDialog ===
+// === Module 16234: validateOpenInviteDialog ===
 
-// Module 15997 (validateOpenInviteDialog)
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6812 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
-import canViewInviteModal from "canViewInviteModal" /* 8938 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9290 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9300 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 16234 (validateOpenInviteDialog)
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6835 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
+import canViewInviteModal from "canViewInviteModal" /* 8941 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9294 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9304 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 require = fn;
 const RPCErrors = fn(1084).RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
-export const validateOpenInviteDialog = function validateOpenInviteDialog(socket) {
+export function validateOpenInviteDialog(socket) {
   if (isPostMessageSocketDefault(socket)) {
     ({ source, surface } = socket.context);
     const tmp11 = getChannelIdForEmbeddedSurfaceDefault(surface);
@@ -74,4 +74,4 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
     const tmpResult21 = new RPCErrorDefault(obj, "command not available from \"" + socket.source.type + "\" transport");
     throw tmpResult21;
   }
-};
+}

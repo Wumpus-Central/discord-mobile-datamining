@@ -1,19 +1,19 @@
-// === Module 18093: useYouBarAccessibilityLabel ===
+// === Module 18327: useYouBarAccessibilityLabel ===
 
-// Module 18093 (useYouBarAccessibilityLabel)
+// Module 18327 (useYouBarAccessibilityLabel)
 import util from "util" /* 1125 */;
-import UserUtils from "UserUtils" /* 5058 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10671 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10672 */;
-import isGameActivityDefault from "isGameActivity" /* 10679 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10683 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6533 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import UserUtils from "UserUtils" /* 5059 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10704 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10705 */;
+import isGameActivityDefault from "isGameActivity" /* 10712 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10716 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const require = globalThis.__r;
 
@@ -128,7 +128,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
               } else {
                 found1 = undefined;
                 if (activities != null) {
-                  found1 = activities.find(() => { ... });
+                  found1 = activities.find(/* F157045 */ function() { ... });
                 }
                 if (null != found1) {
                   tmp17 = closure_1;
@@ -171,7 +171,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
         tmp23 = tag;
         items1[1] = tag;
         items1[2] = text;
-        found2 = items1.filter(() => { ... });
+        found2 = items1.filter(/* F157046 */ function() { ... });
         str2 = ", ";
         return found2.join(", ");
       } else {
@@ -187,7 +187,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   tmp21 = A;
   const tmpResult3 = name(gameMentionsAsPlainText[13]);
 }) : (function useYouBarAccessibilityLabel(id) {
-  _require = id(5058).useName(id);
+  _require = id(5059).useName(id);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -198,7 +198,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(5058);
+  let obj = id(5059);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;

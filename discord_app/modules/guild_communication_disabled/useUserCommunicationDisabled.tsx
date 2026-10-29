@@ -1,10 +1,10 @@
-// === Module 8367: useUserCommunicationDisabled ===
+// === Module 8389: useUserCommunicationDisabled ===
 
-// Module 8367 (useUserCommunicationDisabled)
+// Module 8389 (useUserCommunicationDisabled)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4923 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4924 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -35,11 +35,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserCom
       if (prop == null) {
         prop = null;
       }
-      const items1 = [prop, tmp(4923).isMemberCommunicationDisabled(stateFromStores)];
+      const items1 = [prop, tmp(4924).isMemberCommunicationDisabled(stateFromStores)];
       cResult[5] = stateFromStores;
       cResult[6] = items1;
       let tmp9 = items1;
-      const tmpResult2 = tmp(4923);
+      const tmpResult2 = tmp(4924);
     } else {
       tmp9 = cResult[6];
     }
@@ -124,7 +124,7 @@ export const useCurrentUserCommunicationDisabled = ReactCompilerGating.isReactCo
   }
   return closure_4(id, arg0);
 });
-export const userCommunicationDisabled = function userCommunicationDisabled(id, guildId) {
+export function userCommunicationDisabled(id, guildId) {
   let member = null;
   if (null != guildId) {
     member = null;
@@ -141,4 +141,4 @@ export const userCommunicationDisabled = function userCommunicationDisabled(id, 
   }
   const items = [prop, CommunicationDisabledUtils.isMemberCommunicationDisabled(member)];
   return items;
-};
+}

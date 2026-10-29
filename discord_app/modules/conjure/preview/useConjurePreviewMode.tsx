@@ -1,16 +1,16 @@
-// === Module 11793: useConjurePreviewMode ===
+// === Module 11847: useConjurePreviewMode ===
 
-// Module 11793 (useConjurePreviewMode)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10765 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10766 */;
-import leaveFrame from "leaveFrame" /* 10803 */;
+// Module 11847 (useConjurePreviewMode)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10841 */;
+import leaveFrame from "leaveFrame" /* 10879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const isLaunched = fn(6811).isLaunched;
+const isLaunched = fn(6834).isLaunched;
 const ReactCompilerGating = fn(558);
 let closure_7 = [];
 function resolvePreviewAppChannel(arg0, arg1, arr) {

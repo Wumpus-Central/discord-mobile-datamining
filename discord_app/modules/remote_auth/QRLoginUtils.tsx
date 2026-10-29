@@ -1,13 +1,13 @@
-// === Module 15352: QRLoginUtils ===
+// === Module 15587: QRLoginUtils ===
 
-// Module 15352 (QRLoginUtils)
+// Module 15587 (QRLoginUtils)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /^\/ra\/([\w-]+)$/;
 const result = size.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
 
-export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host, pathname) {
+export function findRemoteAuthFingerprint(host, pathname) {
   if (null != host) {
     if (null != pathname) {
       if (obj.isDiscordHostname(host)) {
@@ -22,4 +22,4 @@ export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host
     }
   }
   return null;
-};
+}

@@ -1,15 +1,15 @@
-// === Module 8691: GuildTagUtils ===
+// === Module 8694: GuildTagUtils ===
 
-// Module 8691 (GuildTagUtils)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4942 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 8694 (GuildTagUtils)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4943 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(8306);
+const GuildTagConstants = fn(8328);
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
 const GuildFeatures = fn(1084).GuildFeatures;
 fn(558);
@@ -111,7 +111,7 @@ function getUserPrimaryGuild(primaryGuild) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
 
-export const guildHasTag = function guildHasTag(guild) {
+export function guildHasTag(guild) {
   let tag;
   if (guild != null) {
     const profile = guild.profile;
@@ -120,12 +120,12 @@ export const guildHasTag = function guildHasTag(guild) {
     }
   }
   return null != tag;
-};
-export const guildSupportsTags = function guildSupportsTags(guild) {
+}
+export function guildSupportsTags(guild) {
   const features = guild.features;
   return features.has(GuildFeatures.GUILD_TAGS);
-};
-export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge) {
+}
+export function getGuildTagBadgeUrl(guildId, badge) {
   if (SIZE_12 === undefined) {
     SIZE_12 = SIZE_12.SIZE_12;
   }
@@ -136,7 +136,7 @@ export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge) 
       return "https://" + CDN_HOST + "/clan-badges/" + guildId + "/" + badge + ".png?size=" + hasOwnProperty[SIZE_12];
     }
   }
-};
+}
 export { getUserPrimaryGuild };
 export const useUserPrimaryGuild = tmp3;
 export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldDisplayGuildTag(arg0, arg1, arg2) {
@@ -278,7 +278,7 @@ export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabl
   }
   obj6 = {};
 });
-export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId1, arg2) {
+export function shouldDisplayGuildTag(id, guildId1, arg2) {
   let tmp = arg2;
   const user = UserStore.getUser(id);
   if (undefined === arg2) {
@@ -305,4 +305,4 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId1
     return tmp5;
   }
   obj = {};
-};
+}

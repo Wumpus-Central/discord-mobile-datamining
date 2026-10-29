@@ -1,11 +1,11 @@
-// === Module 8438: PublicGuildsUtils ===
+// === Module 8460: PublicGuildsUtils ===
 
-// Module 8438 (PublicGuildsUtils)
+// Module 8460 (PublicGuildsUtils)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import isCrosspostDefault from "isCrosspost" /* 8440 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8439 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import isCrosspostDefault from "isCrosspost" /* 8462 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8461 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/public_guilds/PublicGuildsUtils.tsx");
 
-export const isPublicSystemMessage = function isPublicSystemMessage(message) {
+export function isPublicSystemMessage(message) {
   let tmp = isCrosspostDefault(message);
   if (tmp) {
     tmp = message.messageReference.guild_id === React3;
@@ -27,13 +27,13 @@ export const isPublicSystemMessage = function isPublicSystemMessage(message) {
     tmp = tmp4;
   }
   return tmp;
-};
-export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return require("module_8441");
-};
-export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
+}
+export function getPublicSystemMessageAvatar() {
+  return require("module_8463");
+}
+export function trackEnableCommunityFlow(fromStep) {
   const obj = AnalyticsUtilsDefault;
   const obj2 = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(fromStep.guildId));
   obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj2);
-};
+}

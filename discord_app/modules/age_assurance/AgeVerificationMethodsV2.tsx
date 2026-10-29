@@ -1,6 +1,6 @@
-// === Module 7964: AgeVerificationMethodsV2 ===
+// === Module 7987: AgeVerificationMethodsV2 ===
 
-// Module 7964 (AgeVerificationMethodsV2)
+// Module 7987 (AgeVerificationMethodsV2)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -73,7 +73,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
 
-export const fetchAgeVerificationMethodsV2 = function fetchAgeVerificationMethodsV2() {
+export function fetchAgeVerificationMethodsV2() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -82,8 +82,8 @@ export const fetchAgeVerificationMethodsV2 = function fetchAgeVerificationMethod
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchAgeVerificationMethodsV2SuspendedUser = function fetchAgeVerificationMethodsV2SuspendedUser() {
+}
+export function fetchAgeVerificationMethodsV2SuspendedUser() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -92,4 +92,4 @@ export const fetchAgeVerificationMethodsV2SuspendedUser = function fetchAgeVerif
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

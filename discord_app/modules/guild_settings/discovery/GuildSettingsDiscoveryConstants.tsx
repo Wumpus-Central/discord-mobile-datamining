@@ -1,6 +1,6 @@
-// === Module 18206: GuildSettingsDiscoveryConstants ===
+// === Module 18440: GuildSettingsDiscoveryConstants ===
 
-// Module 18206 (GuildSettingsDiscoveryConstants)
+// Module 18440 (GuildSettingsDiscoveryConstants)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
@@ -614,7 +614,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/discovery/Guil
 
 export const GuildPrimaryCategory = obj;
 export const SUGGESTED_TAGS_FOR_CATEGORIES = { [obj.GENERAL_CHATTING]: items, [obj.GAMING]: items1, [obj.MUSIC]: items2, [obj.ENTERTAINMENT]: items3, [obj.CREATIVE_ARTS]: items4, [obj.SCIENCE_AND_TECH]: items5, [obj.EDUCATION]: items6, [obj.SPORTS]: items7, [obj.FASHION_AND_BEAUTY]: items8, [obj.RELATIONSHIPS_AND_IDENTITY]: items9, [obj.TRAVEL_AND_FOOD]: items10, [obj.FITNESS_AND_HEALTH]: items11, [obj.FINANCE]: items12, [obj.OTHER]: items13, [obj.EMOJI]: items14, [obj.BOTS]: items15 };
-export const calculateLocaleOptions = function calculateLocaleOptions() {
+export function calculateLocaleOptions() {
   const availableLocales = util.getAvailableLocales();
   const mapped = availableLocales.map((value) => {
     value = value.value;
@@ -629,4 +629,4 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
     return obj;
   });
   return mapped.filter((value) => !closure_1_2.includes(value.value));
-};
+}

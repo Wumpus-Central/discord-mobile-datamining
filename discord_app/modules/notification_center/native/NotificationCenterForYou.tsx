@@ -1,28 +1,28 @@
-// === Module 18136: NotificationCenterForYou ===
+// === Module 18370: NotificationCenterForYou ===
 
-// Module 18136 (NotificationCenterForYou)
+// Module 18370 (NotificationCenterForYou)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import parseURLDefault from "parseURL" /* 5732 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6823 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6824 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18139 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18141 */;
+import parseURLDefault from "parseURL" /* 5734 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6846 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6847 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18373 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18375 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6873 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
 import UserStore from "UserStore" /* 1389 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6822 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18137 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6845 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18371 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const MainTabsConstants = fn(11222);
+const MainTabsConstants = fn(11276);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 const jsx = fn(21).jsx;
 let items = [, , , , ];
 ({ YOU: arr[0], SETTINGS: arr[1] } = RootNavigatorScreen);
@@ -31,7 +31,7 @@ let set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterForYou.tsx");
 
-export const NotificationCenterForYou = (panelVariant) => {
+export (panelVariant) => {
   let flag = panelVariant.panelVariant;
   if (flag === undefined) {
     flag = false;
@@ -433,4 +433,4 @@ export const NotificationCenterForYou = (panelVariant) => {
     const arr = Array.from(Array(10));
   }
   return tmp43Result;
-};
+}

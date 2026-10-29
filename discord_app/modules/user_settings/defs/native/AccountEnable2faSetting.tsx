@@ -1,22 +1,22 @@
-// === Module 16311: AccountEnable2faSetting ===
+// === Module 16549: AccountEnable2faSetting ===
 
-// Module 16311 (AccountEnable2faSetting)
+// Module 16549 (AccountEnable2faSetting)
 import util from "util" /* 1125 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import SettingsAccountUtils from "SettingsAccountUtils" /* 16239 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 16312 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import SettingsAccountUtils from "SettingsAccountUtils" /* 16477 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 16550 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cDgKte);
   },
-  parent: fn(8365).MobileUserSettings.ACCOUNT,
+  parent: fn(8387).MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
     const currentUser = UserStore.getCurrentUser();
     let verified;

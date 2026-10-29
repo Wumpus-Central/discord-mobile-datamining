@@ -1,22 +1,22 @@
-// === Module 14390: openQuestCollectibleRewardModal ===
+// === Module 14624: openQuestCollectibleRewardModal ===
 
-// Module 14390 (openQuestCollectibleRewardModal)
+// Module 14624 (openQuestCollectibleRewardModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import getQuestLogger from "getQuestLogger" /* 7818 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9604 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9623 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14177 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import getQuestLogger from "getQuestLogger" /* 7841 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9636 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9655 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14410 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6745).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6768).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { title: { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -101,7 +101,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestCo
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/openQuestCollectibleRewardModal.tsx");
 
-export const openQuestCollectibleRewardModal = function openQuestCollectibleRewardModal(onSuccess) {
+export function openQuestCollectibleRewardModal(onSuccess) {
   ({ quest: require, product } = onSuccess);
   const questLogger = getQuestLogger.getQuestLogger({ location: QuestsExperimentLocations.QUEST_HOME_MOBILE });
   if (null != product) {
@@ -117,4 +117,4 @@ export const openQuestCollectibleRewardModal = function openQuestCollectibleRewa
     questLogger.warn("Product is null");
   }
   const obj2 = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
-};
+}

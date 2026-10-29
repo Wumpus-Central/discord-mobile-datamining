@@ -1,7 +1,7 @@
-// === Module 15332: isUserSettingsOpen ===
+// === Module 15567: isUserSettingsOpen ===
 
-// Module 15332 (isUserSettingsOpen)
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+// Module 15567 (isUserSettingsOpen)
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -65,7 +65,7 @@ function isUserSettingsOpen() {
                             let someResult = null != routes1;
                             if (someResult) {
                               const routes = state.routes;
-                              someResult = routes.some(() => { ... });
+                              someResult = routes.some(/* F125910 */ function() { ... });
                             }
                             tmp = someResult;
                           }
@@ -136,7 +136,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                         let someResult = null != routes1;
                         if (someResult) {
                           const routes = state.routes;
-                          someResult = routes.some(() => { ... });
+                          someResult = routes.some(/* F125910 */ function() { ... });
                         }
                         tmp = someResult;
                       }
@@ -203,7 +203,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                     let someResult = null != routes1;
                     if (someResult) {
                       const routes = state.routes;
-                      someResult = routes.some(() => { ... });
+                      someResult = routes.some(/* F125910 */ function() { ... });
                     }
                     tmp = someResult;
                   }

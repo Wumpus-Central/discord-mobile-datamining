@@ -1,11 +1,11 @@
-// === Module 12608: ConjureDebugJson ===
+// === Module 12825: ConjureDebugJson ===
 
-// Module 12608 (ConjureDebugJson)
+// Module 12825 (ConjureDebugJson)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugJson.tsx");
 
-export const extractLogJson = function extractLogJson(message) {
+export function extractLogJson(message) {
   if (message.length > 16000) {
     return null;
   } else {
@@ -55,4 +55,4 @@ export const extractLogJson = function extractLogJson(message) {
       const str3 = message.slice(tmp3);
     }
   }
-};
+}

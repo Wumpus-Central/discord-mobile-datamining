@@ -1,6 +1,6 @@
-// === Module 10813: EmbeddedAppCSPActionCreators ===
+// === Module 10889: EmbeddedAppCSPActionCreators ===
 
-// Module 10813 (EmbeddedAppCSPActionCreators)
+// Module 10889 (EmbeddedAppCSPActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
         closure_130_1(closure_130_2[2]).dispatch(obj8);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp24) {
       closure_3 = tmp24;
@@ -79,7 +79,7 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/csp/EmbeddedAppCSPActionCreators.tsx");
 
-export const fetchEmbeddedAppCSP = function fetchEmbeddedAppCSP() {
+export function fetchEmbeddedAppCSP() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -88,4 +88,4 @@ export const fetchEmbeddedAppCSP = function fetchEmbeddedAppCSP() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,13 +1,13 @@
-// === Module 10759: conjureUnread ===
+// === Module 10834: conjureUnread ===
 
-// Module 10759 (conjureUnread)
+// Module 10834 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectMute from "conjureProjectMute" /* 10760 */;
+import conjureProjectMute from "conjureProjectMute" /* 10835 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectBadge(arg0) {
@@ -263,7 +263,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
 export { ackConjureProject };
-export const isConjureProjectUnread = function isConjureProjectUnread(id) {
+export function isConjureProjectUnread(id) {
   const mentionCount = ReadStateStore.getMentionCount(id, ReadStateTypes.CONJURING_PROJECT);
   const ackMessageIdResult = ReadStateStore.ackMessageId(id, ReadStateTypes.CONJURING_PROJECT);
   let tmp3 = mentionCount > 0;
@@ -275,10 +275,10 @@ export const isConjureProjectUnread = function isConjureProjectUnread(id) {
     tmp3 = tmp5;
   }
   return tmp3;
-};
-export const getConjureProjectMentionCount = function getConjureProjectMentionCount(id) {
+}
+export function getConjureProjectMentionCount(id) {
   return ReadStateStore.getMentionCount(id, ReadStateTypes.CONJURING_PROJECT);
-};
+}
 export const useConjureProjectBadge = tmp2;
 export const useConjureUnreadSummary = tmp3;
 export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompilerEnabled() ? (function useAckConjureProjectWhileViewing(projectId, arg1) {

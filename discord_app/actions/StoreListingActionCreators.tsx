@@ -1,12 +1,12 @@
-// === Module 16016: StoreListingActionCreators ===
+// === Module 16253: StoreListingActionCreators ===
 
-// Module 16016 (StoreListingActionCreators)
+// Module 16253 (StoreListingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import StoreUtils from "StoreUtils" /* 6418 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import SKUStore from "SKUStore" /* 6860 */;
-import StoreListingStore from "StoreListingStore" /* 16017 */;
+import StoreUtils from "StoreUtils" /* 6442 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import SKUStore from "SKUStore" /* 6883 */;
+import StoreListingStore from "StoreListingStore" /* 16254 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StoreListingActionCreators.tsx");
 
-export const fetchStoreListingsForApplications = function fetchStoreListingsForApplications(arr) {
+export function fetchStoreListingsForApplications(arr) {
   const found = arr.filter((item) => {
     application = application.getApplication(item);
     if (null == application) {
@@ -43,8 +43,8 @@ export const fetchStoreListingsForApplications = function fetchStoreListingsForA
     });
   }
   return resolved;
-};
-export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(application_id) {
+}
+export function fetchAllStoreListingsForApplication(application_id) {
   const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: { application_id }, oldFormErrors: true, rejectWithError: null };
   let obj = StoreUtils;
   let obj2 = { application_id };
@@ -62,8 +62,8 @@ export const fetchAllStoreListingsForApplication = function fetchAllStoreListing
     DispatcherDefault.dispatch(obj2);
     return body.body;
   });
-};
-export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
+}
+export function fetchStoreListingForSku(skuId) {
   _require = skuId;
   value = SKUStore.get(skuId);
   let result = null != value;
@@ -97,4 +97,4 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
   }).catch(() => {
     DispatcherDefault.dispatch({ type: "SKU_FETCH_FAIL", skuId });
   });
-};
+}

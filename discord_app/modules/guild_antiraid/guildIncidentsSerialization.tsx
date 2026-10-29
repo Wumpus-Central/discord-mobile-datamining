@@ -1,11 +1,11 @@
-// === Module 4876: guildIncidentsSerialization ===
+// === Module 4877: guildIncidentsSerialization ===
 
-// Module 4876 (guildIncidentsSerialization)
+// Module 4877 (guildIncidentsSerialization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");
 
-export const fromServerGuildIncidentsData = function fromServerGuildIncidentsData(incidents_data) {
+export function fromServerGuildIncidentsData(incidents_data) {
   if (null != incidents_data) {
     const _Object = Object;
     if (0 !== Object.keys(incidents_data).length) {
@@ -42,8 +42,8 @@ export const fromServerGuildIncidentsData = function fromServerGuildIncidentsDat
     }
   }
   return null;
-};
-export const toServerGuildIncidentsData = function toServerGuildIncidentsData(incidentsData) {
+}
+export function toServerGuildIncidentsData(incidentsData) {
   let tmp = null;
   if (null != incidentsData) {
     tmp = null;
@@ -78,4 +78,4 @@ export const toServerGuildIncidentsData = function toServerGuildIncidentsData(in
     tmp2 = null == incidentsData.raidDetectedAt && null == incidentsData.dmSpamDetectedAt && null == incidentsData.dmsDisabledUntil && null == incidentsData.invitesDisabledUntil && null == incidentsData.lockdownDurationHours;
   }
   return tmp;
-};
+}

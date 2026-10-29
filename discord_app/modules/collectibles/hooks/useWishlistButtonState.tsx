@@ -1,10 +1,10 @@
-// === Module 9453: useWishlistButtonState ===
+// === Module 9484: useWishlistButtonState ===
 
-// Module 9453 (useWishlistButtonState)
+// Module 9484 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7738 */;
+import UserProfileStore from "UserProfileStore" /* 7760 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");
 
-export const useWishlistButtonState = function useWishlistButtonState(onRemoveSuccess) {
+export function useWishlistButtonState(onRemoveSuccess) {
   ({ userId: require, skuId } = onRemoveSuccess);
   ({ location: _location, onAddSuccess } = onRemoveSuccess);
   onRemoveSuccess = onRemoveSuccess.onRemoveSuccess;
@@ -65,7 +65,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -189,4 +189,4 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
       }
     }), items3)
   };
-};
+}

@@ -1,9 +1,9 @@
-// === Module 5936: VideoQualityStats ===
+// === Module 5938: VideoQualityStats ===
 
-// Module 5936 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5758 */;
-import Histogram from "Histogram" /* 5919 */;
-import SystemResourcesDefault from "SystemResources" /* 5927 */;
+// Module 5938 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5760 */;
+import Histogram from "Histogram" /* 5921 */;
+import SystemResourcesDefault from "SystemResources" /* 5929 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -786,7 +786,7 @@ export const Decoders = obj3;
 export const VideoStoppedReasons = obj6;
 export { parseEncoder };
 export { parseDecoder };
-export const parseCodecType = function parseCodecType(name) {
+export function parseCodecType(name) {
   if (null == name) {
     let AV1 = obj.UNKNOWN;
   } else {
@@ -809,7 +809,7 @@ export const parseCodecType = function parseCodecType(name) {
     }
   }
   return AV1;
-};
+}
 export { RawVideoStats };
 export { InboundStats };
 export { OutboundStats };

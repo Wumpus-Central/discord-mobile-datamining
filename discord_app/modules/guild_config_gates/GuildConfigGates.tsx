@@ -1,9 +1,9 @@
-// === Module 19449: GuildConfigGates ===
+// === Module 19682: GuildConfigGates ===
 
-// Module 19449 (GuildConfigGates)
+// Module 19682 (GuildConfigGates)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 19450 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 19683 */;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;
@@ -40,7 +40,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 
-export const useGuildVerificationRoleEnabled = function useGuildVerificationRoleEnabled(arg0) {
+export function useGuildVerificationRoleEnabled(arg0) {
   const data = closure_6(arg0).data;
   let flag;
   if (data != null) {
@@ -126,8 +126,8 @@ export const useGuildVerificationRoleEnabled = function useGuildVerificationRole
     flag = false;
   }
   return flag;
-};
-export const useApplicationIdentityLinkedRolesEnabled = function useApplicationIdentityLinkedRolesEnabled(arg0) {
+}
+export function useApplicationIdentityLinkedRolesEnabled(arg0) {
   const data = closure_6(arg0).data;
   let flag;
   if (data != null) {
@@ -137,4 +137,4 @@ export const useApplicationIdentityLinkedRolesEnabled = function useApplicationI
     flag = false;
   }
   return flag;
-};
+}

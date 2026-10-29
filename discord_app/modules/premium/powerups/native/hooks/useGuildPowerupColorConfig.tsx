@@ -1,6 +1,6 @@
-// === Module 13707: useGuildPowerupColorConfig ===
+// === Module 13940: useGuildPowerupColorConfig ===
 
-// Module 13707 (useGuildPowerupColorConfig)
+// Module 13940 (useGuildPowerupColorConfig)
 import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 

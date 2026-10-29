@@ -1,23 +1,23 @@
-// === Module 12412: useConjureVoiceChannelPin ===
+// === Module 12466: useConjureVoiceChannelPin ===
 
-// Module 12412 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5640 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10841 */;
+// Module 12466 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5641 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10917 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 10753 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 10828 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4934).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1084);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 let ReactCompilerGating = fn(558);
@@ -300,7 +300,7 @@ export const useConjureVoiceChannelPinForm = ReactCompilerGating.isReactCompiler
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -422,7 +422,7 @@ export const useConjureVoiceChannelPinForm = ReactCompilerGating.isReactCompiler
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

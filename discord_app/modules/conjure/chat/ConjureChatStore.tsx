@@ -1,16 +1,17 @@
-// === Module 10734: ConjureChatStore ===
+// === Module 10808: ConjureChatStore ===
 
-// Module 10734 (ConjureChatStore)
+// Module 10808 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import conjureChatTurns from "conjureChatTurns" /* 10735 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10736 */;
-import conjureChatHistory from "conjureChatHistory" /* 10737 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10738 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import conjureChatTurns from "conjureChatTurns" /* 10809 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10810 */;
+import conjureChatHistory from "conjureChatHistory" /* 10811 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10812 */;
+import conjureAgentHiddenMessages from "conjureAgentHiddenMessages" /* 10813 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -187,7 +188,7 @@ function applyAgentReactions(arr) {
       for (const item10022 of steps) {
         if ("reaction" === item10022.kind) {
           if (null != item10022.message_id) {
-            let obj2 = map(10738);
+            let obj2 = map(10812);
             let result = obj2.agentReactionFromStep(item10022);
             if (null != result) {
               let result1 = map.set(item10022.message_id, tmp10);
@@ -454,11 +455,11 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     }
   },
   CONJURE_CHAT_MESSAGE_APPEND: function handleChatMessageAppend(optimisticId) {
-    ({ projectId, id } = optimisticId);
+    ({ projectId, content, id } = optimisticId);
     optimisticId = optimisticId.optimisticId;
     const held = optimisticId.held;
     c2 = undefined;
-    ({ content, userId, timestamp, attachments } = optimisticId);
+    ({ userId, timestamp, attachments } = optimisticId);
     let items2 = map.get(projectId);
     if (items2 == null) {
       items2 = [];
@@ -478,21 +479,25 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             }
             return tmp;
           });
-          if (!obj4.hasOpenTurn(mapped)) {
-            mapped.push(conjureChatHistory.newMessage("assistant", ""));
-            const tmp16Result = conjureChatHistory;
+          let result = conjureAgentHiddenMessages.isConjureAgentHiddenMessage(content);
+          if (!result) {
+            result = conjureChatTurns.hasOpenTurn(mapped);
+            const tmp24Result = conjureChatTurns;
           }
-          const result = map.set(projectId, mapped);
+          if (!result) {
+            mapped.push(conjureChatHistory.newMessage("assistant", ""));
+            const tmp24Result2 = conjureChatHistory;
+          }
+          const result1 = map.set(projectId, mapped);
           recordThinkingTransition(projectId);
-          obj4 = conjureChatTurns;
         }
       }
       return false;
     } else {
       const obj2 = { ts: timestamp, id, userId, attachments };
       const newMessageResult = conjureChatHistory.newMessage("user", content, obj2);
-      let hasOpenTurnResult = true === held;
-      if (hasOpenTurnResult) {
+      let result3 = true === held;
+      if (result3) {
         newMessageResult.held = true;
       }
       let num = -1;
@@ -505,20 +510,24 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         const arraySpreadResult = HermesBuiltin.arraySpread(items2.slice(0, num), 0);
         items[arraySpreadResult] = newMessageResult;
         HermesBuiltin.arraySpread(items2.slice(num + 1), arraySpreadResult + 1);
-        const result1 = map.set(projectId, items);
+        const result2 = map.set(projectId, items);
         recordThinkingTransition(projectId);
       } else {
         const items1 = [];
         items1[HermesBuiltin.arraySpread(items2, 0)] = newMessageResult;
-        if (!hasOpenTurnResult) {
-          hasOpenTurnResult = conjureChatTurns.hasOpenTurn(items1);
-          const tmp22Result = conjureChatTurns;
+        if (!result3) {
+          result3 = conjureAgentHiddenMessages.isConjureAgentHiddenMessage(content);
+          const tmp19Result = conjureAgentHiddenMessages;
         }
-        if (!hasOpenTurnResult) {
+        if (!result3) {
+          result3 = conjureChatTurns.hasOpenTurn(items1);
+          const tmp19Result3 = conjureChatTurns;
+        }
+        if (!result3) {
           items1.push(conjureChatHistory.newMessage("assistant", ""));
-          const tmp22Result2 = conjureChatHistory;
+          const tmp19Result4 = conjureChatHistory;
         }
-        const result2 = map.set(projectId, items1);
+        const result4 = map.set(projectId, items1);
         recordThinkingTransition(projectId);
       }
     }
@@ -792,7 +801,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10737).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10811).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -810,7 +819,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10735);
+        tmpResult = id(10809);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -837,9 +846,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10737).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10811).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10737);
+          const tmpResult2 = id(10811);
         } else {
           const items1 = [, ];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(value.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(value.slice(0, findLastIndexResult), 0));
@@ -853,7 +862,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10737);
+      const obj2 = id(10811);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -949,8 +958,8 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     if (!tmp2) {
       let tmp5 = null != value;
       if (tmp5) {
-        tmp5 = -1 !== step(10735).resolveTurnIndex(value, undefined);
-        let obj2 = step(10735);
+        tmp5 = -1 !== step(10809).resolveTurnIndex(value, undefined);
+        let obj2 = step(10809);
       }
       tmp2 = tmp5;
     }
@@ -1191,7 +1200,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 const items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef3863.lmiuFX);
+                obj2.message = intl.string(_modDef3864.lmiuFX);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp7 = obj;
@@ -1249,10 +1258,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatStore.tsx");
 
 export default conjureChatStore;
-export const getOlderHistoryCursor = function getOlderHistoryCursor(arg0) {
+export function getOlderHistoryCursor(arg0) {
   value = map5.get(arg0);
   if (value == null) {
     value = null;
   }
   return value;
-};
+}

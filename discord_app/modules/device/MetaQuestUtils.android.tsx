@@ -1,6 +1,6 @@
-// === Module 1627: MetaQuestUtils ===
+// === Module 1628: MetaQuestUtils ===
 
-// Module 1627 (MetaQuestUtils)
+// Module 1628 (MetaQuestUtils)
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1380 */;
 import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1365 */;
 
@@ -9,10 +9,10 @@ NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
-export const isMetaQuest = function isMetaQuest() {
+export function isMetaQuest() {
   return NativeMetaQuestModule.isMetaQuest();
-};
-export const isQuestRelease = function isQuestRelease() {
+}
+export function isQuestRelease() {
   constants = ClientInfoUtilsAll.getConstants();
   let flag;
   if (constants != null) {
@@ -25,5 +25,5 @@ export const isQuestRelease = function isQuestRelease() {
     flag = false;
   }
   return flag;
-};
+}
 export const isThumbstickScrollDevice = NativeMetaQuestModule;

@@ -1,10 +1,10 @@
-// === Module 8207: CloudUploaderUtils ===
+// === Module 8229: CloudUploaderUtils ===
 
-// Module 8207 (CloudUploaderUtils)
+// Module 8229 (CloudUploaderUtils)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UploadUtils from "UploadUtils" /* 8178 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import UploadUtils from "UploadUtils" /* 8201 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
 
@@ -17,7 +17,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
 
 export default { getUploadPayload };
-export const prepareMessagePayload = function prepareMessagePayload(Authorization, arr, arg2, arg3) {
+export function prepareMessagePayload(Authorization, arr, arg2, arg3) {
   const items = [];
   const item = arr.forEach((item, index) => {
     const merged = Object.assign(UploadUtils.getAttachmentPayload(item, index));
@@ -46,5 +46,5 @@ export const prepareMessagePayload = function prepareMessagePayload(Authorizatio
   result = {};
   const merged1 = Object.assign(arg2);
   result.attachments = items;
-};
+}
 export { getUploadPayload };

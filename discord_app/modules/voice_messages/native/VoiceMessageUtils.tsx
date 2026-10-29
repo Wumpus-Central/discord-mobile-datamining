@@ -1,15 +1,15 @@
-// === Module 13383: VoiceMessageUtils ===
+// === Module 13616: VoiceMessageUtils ===
 
-// Module 13383 (VoiceMessageUtils)
+// Module 13616 (VoiceMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5775 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 13384 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5777 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 13617 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -24,7 +24,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -80,14 +80,14 @@ let closure_22 = async function _startAudioRecording(arg0) {
         if (closure_130_11.getState().recordingId !== closure_129_0) {
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           closure_130_9(closure_130_12.STARTED);
           const _Date = Date;
           closure_130_10(Date.now());
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       }
     } catch (tmp22) {
@@ -145,7 +145,7 @@ let closure_26 = async function _endAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -221,7 +221,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -255,7 +255,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
         closure_129_23();
         closure_129_7(closure_128_0);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -263,9 +263,9 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13293);
+const VoiceMessagesUIStore = fn(13526);
 ({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: closure_7, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13294);
+const VoiceMessageConstants = fn(13527);
 ({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 let c19 = null;
@@ -287,7 +287,7 @@ let closure_21 = apply.throttle((arg0) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
 
-export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
+export function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
   if (arg0.length > value3) {
     arr = downsampleWaveformDefault(arg0, tmp);
@@ -295,8 +295,8 @@ export const generateBase64EncodedWaveform = function generateBase64EncodedWavef
   const mapped = arr.map((item) => Math.min(item, closure_1_13));
   const uint8Array = new Uint8Array(mapped);
   return byteLengthDefault.fromByteArray(uint8Array);
-};
-export const startAudioRecording = function startAudioRecording() {
+}
+export function startAudioRecording() {
   const self = this;
   const apply = closure_22.apply;
   if (typeof apply === "unknown") {
@@ -305,8 +305,8 @@ export const startAudioRecording = function startAudioRecording() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const endAudioRecording = function endAudioRecording() {
+}
+export function endAudioRecording() {
   const self = this;
   const apply = closure_26.apply;
   if (typeof apply === "unknown") {
@@ -315,9 +315,9 @@ export const endAudioRecording = function endAudioRecording() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { stopAndCacheAudioRecording };
-export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, startTimeMillis) {
+export function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, startTimeMillis) {
   if (null != startTimeMillis) {
     const obj2 = { recording_start_timestamp: startTimeMillis, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
     const _Date = Date;
@@ -328,9 +328,9 @@ export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCEL
     AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_RECORDED, obj2);
     initialize_secs = null;
   }
-};
-export const triggerHaptic = function triggerHaptic() {
+}
+export function triggerHaptic() {
   const obj = HapticUtils;
   const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
   const result = obj.triggerHapticFeedback(PlatformUtils.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
-};
+}

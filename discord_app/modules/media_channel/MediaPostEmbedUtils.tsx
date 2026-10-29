@@ -1,16 +1,16 @@
-// === Module 6033: MediaPostEmbedUtils ===
+// === Module 6037: MediaPostEmbedUtils ===
 
-// Module 6033 (MediaPostEmbedUtils)
+// Module 6037 (MediaPostEmbedUtils)
 import util from "util" /* 1125 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import LinkUtils from "LinkUtils" /* 5642 */;
-import findCodedLinks from "findCodedLinks" /* 5735 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6025 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6034 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import LinkUtils from "LinkUtils" /* 5643 */;
+import findCodedLinks from "findCodedLinks" /* 5737 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6029 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6038 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 
-export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(arg0) {
+export function getMediaPostEmbedCommonData(arg0) {
   ({ mediaPostEmbedData, guild, parentChannel, user, canAccess } = arg0);
   ({ postThread, selectedGuildId } = arg0);
   if (canAccess === undefined) {
@@ -121,8 +121,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     ({ flags: obj5.flags, content_scan_version: obj5.contentScanVersion } = mediaPostEmbedData);
     return obj6;
   }
-};
-export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(url) {
+}
+export function getMediaPostEmbedChannelId(url) {
   let tryParseChannelPathResult;
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
@@ -144,8 +144,8 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
       return channelId;
     }
   }
-};
-export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPath(url) {
+}
+export function getMediaPostEmbedChannelPath(url) {
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
@@ -156,8 +156,8 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
       const tmpResult = findCodedLinks;
     }
   }
-};
-export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {
+}
+export function canUseMediaPostEmbed(guildId, isMediaChannel) {
   guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
@@ -171,4 +171,4 @@ export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMed
     }
   }
   return false;
-};
+}

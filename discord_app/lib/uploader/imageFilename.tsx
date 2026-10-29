@@ -1,6 +1,6 @@
-// === Module 8206: imageFilename ===
+// === Module 8228: imageFilename ===
 
-// Module 8206 (imageFilename)
+// Module 8228 (imageFilename)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]);
@@ -11,7 +11,7 @@ const set3 = new Set([".jxr", ".wdp", ".hdp"]);
 const re5 = /\.(jxr|wdp|hdp)$/i;
 const result = size.fileFinishedImporting("lib/uploader/imageFilename.tsx");
 
-export const isHeicFile = function isHeicFile(type) {
+export function isHeicFile(type) {
   if (set.has(type.type)) {
     return true;
   } else {
@@ -31,8 +31,8 @@ export const isHeicFile = function isHeicFile(type) {
     }
     return hasItem;
   }
-};
-export const isJxrFile = function isJxrFile(file) {
+}
+export function isJxrFile(file) {
   if (set2.has(file.type)) {
     return true;
   } else {
@@ -52,8 +52,8 @@ export const isJxrFile = function isJxrFile(file) {
     }
     return hasItem;
   }
-};
-export const heicMimeType = function heicMimeType(file) {
+}
+export function heicMimeType(file) {
   let str = "";
   if ("" !== file.type) {
     let str3 = file.type;
@@ -68,15 +68,15 @@ export const heicMimeType = function heicMimeType(file) {
     }
   }
   return str3;
-};
-export const jxrMimeType = function jxrMimeType(file) {
+}
+export function jxrMimeType(file) {
   let str = "image/jxr";
   if ("" !== file.type) {
     str = file.type;
   }
   return str;
-};
-export const renameToJpegExtension = function renameToJpegExtension(name) {
+}
+export function renameToJpegExtension(name) {
   if (re2.test(name)) {
     let replaced = name.replace(re2, ".jpg");
   } else if (re5.test(name)) {
@@ -86,4 +86,4 @@ export const renameToJpegExtension = function renameToJpegExtension(name) {
     replaced = "" + name + ".jpg";
   }
   return replaced;
-};
+}

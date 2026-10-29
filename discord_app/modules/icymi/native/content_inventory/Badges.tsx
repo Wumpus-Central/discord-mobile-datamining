@@ -1,24 +1,24 @@
-// === Module 14547: Badges ===
+// === Module 14781: Badges ===
 
-// Module 14547 (Badges)
+// Module 14781 (Badges)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import utils from "utils" /* 8654 */;
-import TrophyIcon from "TrophyIcon" /* 9340 */;
-import GameControllerIcon from "GameControllerIcon" /* 9650 */;
-import TimerIcon2 from "TimerIcon" /* 11347 */;
-import RetryIcon2 from "RetryIcon" /* 11939 */;
-import FireIcon2 from "FireIcon" /* 14415 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 14545 */;
-import NewUserIcon from "NewUserIcon" /* 14548 */;
-import FlashIcon2 from "FlashIcon" /* 14550 */;
-import TrendingType from "TrendingType" /* 14552 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import utils from "utils" /* 8676 */;
+import TrophyIcon from "TrophyIcon" /* 9344 */;
+import GameControllerIcon from "GameControllerIcon" /* 9682 */;
+import TimerIcon2 from "TimerIcon" /* 11401 */;
+import RetryIcon2 from "RetryIcon" /* 11993 */;
+import FireIcon2 from "FireIcon" /* 14649 */;
+import useTimestampTickedNow from "useTimestampTickedNow" /* 14779 */;
+import NewUserIcon from "NewUserIcon" /* 14782 */;
+import FlashIcon2 from "FlashIcon" /* 14784 */;
+import TrendingType from "TrendingType" /* 14786 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 
 require = fn;
 const View = fn(17).View;
@@ -27,7 +27,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -82,10 +82,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActiveTimest
   const tmpResult = utils;
 }) : (function ActiveTimestamp(style) {
   const entry = style.entry;
-  const now = entry(14545).useTimestampTickedNow().now;
+  const now = entry(14779).useTimestampTickedNow().now;
   const items = [entry, now];
   const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
-  return closure_6(entry(5270).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });
+  return closure_6(entry(5271).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });
 });
 let closure_14 = tmp6;
 ReactCompilerGating = fn(558);

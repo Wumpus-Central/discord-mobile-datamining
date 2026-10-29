@@ -1,10 +1,10 @@
-// === Module 7952: AgeVerificationAuthSession ===
+// === Module 7975: AgeVerificationAuthSession ===
 
-// Module 7952 (AgeVerificationAuthSession)
+// Module 7975 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5731 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5733 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ function getIsAgeVerificationAuthSessionOpen() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationAuthSession.tsx");
 
-export const openAgeVerificationAuthSession = function openAgeVerificationAuthSession() {
+export function openAgeVerificationAuthSession() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -130,8 +130,8 @@ export const openAgeVerificationAuthSession = function openAgeVerificationAuthSe
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const closeAgeVerificationAuthSession = function closeAgeVerificationAuthSession() {
+}
+export function closeAgeVerificationAuthSession() {
   if (c7 != null) {
     obj2.remove();
   }
@@ -142,7 +142,7 @@ export const closeAgeVerificationAuthSession = function closeAgeVerificationAuth
     NativeBrowserManagerModuleIOSDefault.closeAuthSession();
   }
   obj2 = c7;
-};
+}
 export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c6;
 }

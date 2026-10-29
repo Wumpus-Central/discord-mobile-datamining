@@ -1,10 +1,10 @@
-// === Module 5223: ServerThemeExperiment ===
+// === Module 5224: ServerThemeExperiment ===
 
-// Module 5223 (ServerThemeExperiment)
+// Module 5224 (ServerThemeExperiment)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1084 */;
-import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5235 */;
-import createExperiment from "module_5224" /* 5224 */;
+import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5236 */;
+import createExperiment from "module_5225" /* 5225 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -106,7 +106,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/experiments/
 
 export const ServerThemeExperiment = experiment;
 export { resolveServerThemeConfig };
-export const getServerThemeEnabled = function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
+export function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
   let currentConfig = experiment.getCurrentConfig({ guildId, location: GuildPowerupsConstants }, { autoTrackExposure: false });
   if (null != guildId) {
     const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
@@ -122,9 +122,9 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
     currentConfig = defaultConfig;
   }
   return currentConfig.enabled;
-};
+}
 export const useServerThemeEnabled = tmp3;
-export const getServerThemeRollbackEnabled = function getServerThemeRollbackEnabled(guildId, GuildPowerupsManager) {
+export function getServerThemeRollbackEnabled(guildId, GuildPowerupsManager) {
   let currentConfig = experiment.getCurrentConfig({ guildId, location: GuildPowerupsManager }, { autoTrackExposure: false });
   if (null != guildId) {
     const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
@@ -140,7 +140,7 @@ export const getServerThemeRollbackEnabled = function getServerThemeRollbackEnab
     currentConfig = defaultConfig;
   }
   return currentConfig.rollbackEnabled;
-};
+}
 export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerThemeRollbackEnabled(guildId, location) {
   const cResult = c.c(11);
   if (cResult[0] === guildId) {

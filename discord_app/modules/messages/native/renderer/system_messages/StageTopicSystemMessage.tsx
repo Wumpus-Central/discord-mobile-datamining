@@ -1,15 +1,15 @@
-// === Module 8431: StageTopicSystemMessage ===
+// === Module 8453: StageTopicSystemMessage ===
 
-// Module 8431 (StageTopicSystemMessage)
+// Module 8453 (StageTopicSystemMessage)
 import util from "util" /* 1125 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageTopicSystemMessage.tsx");
 
-export const createStageTopicSystemMessage = function createStageTopicSystemMessage(roleStyle) {
+export function createStageTopicSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { content: null };
@@ -17,4 +17,4 @@ export const createStageTopicSystemMessage = function createStageTopicSystemMess
   obj2.content = intl.formatToParts(util.t.ro3RM0, { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), topic: message.content });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
-};
+}

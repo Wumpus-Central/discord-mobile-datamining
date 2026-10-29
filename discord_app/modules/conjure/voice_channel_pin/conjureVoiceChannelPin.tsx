@@ -1,12 +1,12 @@
-// === Module 10841: conjureVoiceChannelPin ===
+// === Module 10917: conjureVoiceChannelPin ===
 
-// Module 10841 (conjureVoiceChannelPin)
+// Module 10917 (conjureVoiceChannelPin)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10127 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
+import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10160 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 require = fn;
 function canPinVoiceChannel(arg0) {
@@ -36,7 +36,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/conjureVoiceChannelPin.tsx");
 
-export const parseVoiceChannelPinOutcome = function parseVoiceChannelPinOutcome(voice_channel_pin) {
+export function parseVoiceChannelPinOutcome(voice_channel_pin) {
   if (null != voice_channel_pin) {
     if (typeof voice_channel_pin === "object") {
       ({ status, channel_id } = voice_channel_pin);
@@ -120,9 +120,9 @@ export const parseVoiceChannelPinOutcome = function parseVoiceChannelPinOutcome(
       return tmp;
     }
   }
-};
+}
 export { canPinVoiceChannel };
-export const resolveVoiceChannelPin = function resolveVoiceChannelPin(projectId, outcome) {
+export function resolveVoiceChannelPin(projectId, outcome) {
   DispatcherDefault.dispatch({ type: "CONJURE_VOICE_CHANNEL_PIN_RESOLVED", projectId, outcome });
   try {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
@@ -137,8 +137,8 @@ export const resolveVoiceChannelPin = function resolveVoiceChannelPin(projectId,
   } catch (err) {
   }
   const obj2 = { type: "CONJURE_VOICE_CHANNEL_PIN_RESOLVED", projectId, outcome };
-};
-export const pinVoiceChannel = function pinVoiceChannel() {
+}
+export function pinVoiceChannel() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -147,4 +147,4 @@ export const pinVoiceChannel = function pinVoiceChannel() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

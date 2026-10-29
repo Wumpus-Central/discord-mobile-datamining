@@ -1,39 +1,36 @@
-// === Module 18647: ConjureHomeScreen ===
+// === Module 18881: ConjureHomeScreen ===
 
-// Module 18647 (ConjureHomeScreen)
+// Module 18881 (ConjureHomeScreen)
 import nativeDefault from "native" /* 587 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureStandaloneScreenDefault from "ConjureStandaloneScreen" /* 11785 */;
-import ConjureGlobalScreenContextDefault from "ConjureGlobalScreenContext" /* 11788 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureHomeScreen = "ConjureHomeScreen";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, centered: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.centered = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_24 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_24 };
+const obj4 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/home/native/ConjureHomeScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHomeScreen(navigation) {
-  let tmp2 = dependencyMap;
-  const cResult = navigation(576).c(17);
+  const cResult = navigation(first[8]).c(27);
   navigation = navigation.navigation;
-  const tmp4 = closure_10();
-  ({ projectId, requestId } = navigation.route.params);
-  const obj = navigation(576);
-  const isFocused = navigation(1503).useIsFocused();
+  closure_11();
+  ({ projectId, requestId, focusComposer } = navigation.route.params);
+  const obj = navigation(first[8]);
+  const isFocused = navigation(first[9]).useIsFocused();
   if (cResult[0] !== navigation) {
-    const fn = function n() {
+    const fn = function l() {
       if (navigation.canGoBack()) {
         let goBackResult = navigation.goBack();
       } else {
@@ -43,130 +40,153 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureH
     };
     cResult[0] = navigation;
     cResult[1] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[1];
   }
-  const obj2 = navigation(1503);
-  const conjureForMeGuildId = navigation(12355).useConjureForMeGuildId(ConjureHomeScreen);
+  const obj2 = navigation(first[9]);
+  const conjureForMeGuildId = navigation(first[10]).useConjureForMeGuildId(ConjureHomeScreen);
   if (cResult[2] === isFocused) {
     if (cResult[3] === projectId) {
-      if (cResult[4] === requestId) {
-        let tmp8 = cResult[5];
-      }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GatewayConnectionStore];
-        class B {
+        class T {
           constructor() {
-            return closure_1_6.isConnectedOrOverlay();
+            return closure_1_7.isConnectedOrOverlay();
           }
         }
         cResult[6] = items;
-        cResult[7] = B;
-        let tmp11 = B;
+        cResult[7] = T;
+        let tmp11 = T;
         let tmp10 = items;
       } else {
         tmp10 = cResult[6];
         tmp11 = cResult[7];
       }
-      let centered = tmp(504).useStateFromStores(tmp10, tmp11);
-      if (cResult[8] === tmp6) {
-        if (cResult[9] === tmp8) {
-          if (cResult[10] === centered) {
-            if (cResult[11] === tmp4.centered) {
-              if (cResult[12] === conjureForMeGuildId) {
-                if (cResult[14] === tmp4.container) {
-                  if (cResult[15] === tmp13) {
-                    let tmp26 = cResult[16];
-                  }
-                  return tmp26;
-                }
-                class B {
-                  constructor() {
-                    return closure_1_6.isConnectedOrOverlay();
-                  }
-                }
-                const obj3 = { style: tmp4.container, children: cResult[13] };
-                const tmp28 = closure_7(closure_5, obj3);
-                cResult[14] = tmp4.container;
-                cResult[15] = cResult[13];
-                cResult[16] = tmp28;
-                tmp26 = tmp28;
+      const stateFromStores = tmp(tmp2[11]).useStateFromStores(tmp10, tmp11);
+      let tmp14;
+      if (true === focusComposer) {
+        if (requestId == null) {
+          requestId = 0;
+        }
+        tmp14 = requestId;
+      }
+      requestId = tmp14;
+      [first, _slicedToArray] = noop.useState();
+      noop = noop.useRef(false);
+      if (cResult[8] !== navigation) {
+        class A {
+          constructor() {
+            return navigation.addListener("transitionEnd", (data) => {
+              if (!data.data.closing) {
+                ref.current = true;
               }
+            });
+          }
+        }
+        const items1 = [navigation];
+        class T {
+          constructor() {
+            return closure_1_7.isConnectedOrOverlay();
+          }
+        }
+        cResult[8] = navigation;
+        cResult[9] = A;
+        cResult[10] = items1;
+        let tmp20 = items1;
+      } else {
+        class A {
+          constructor() {
+            return navigation.addListener("transitionEnd", (data) => {
+              if (!data.data.closing) {
+                ref.current = true;
+              }
+            });
+          }
+        }
+        tmp20 = cResult[10];
+      }
+      const effect = noop.useEffect(A, tmp20);
+      if (cResult[11] === tmp14) {
+        class A {
+          constructor() {
+            return navigation.addListener("transitionEnd", (data) => {
+              if (!data.data.closing) {
+                ref.current = true;
+              }
+            });
+          }
+        }
+      }
+      class O {
+        constructor() {
+          if (null != closure_1) {
+            tmp2 = closure_2;
+            if (closure_2 !== tmp) {
+              ready = function ready() {
+                ref.current = true;
+                closure_3(closure_1);
+              };
+              tmp3 = closure_4;
+              if (closure_4.current) {
+                tmp4 = ready;
+                if (ready.isFocused()) {
+                  tmp7 = globalThis;
+                  _requestAnimationFrame = requestAnimationFrame;
+                  closure_1 = requestAnimationFrame(ready);
+                  return () => cancelAnimationFrame(closure_1);
+                }
+              }
+              tmp5 = globalThis;
+              _setTimeout = setTimeout;
+              num = 1000;
+              closure_2 = setTimeout(ready, 1000);
+              tmp6 = ready;
+              str = "transitionEnd";
+              closure_3 = ready.addListener("transitionEnd", (data) => {
+                if (!data.data.closing) {
+                  if (typeof ready === "function") {
+                    closure_4.current = true;
+                    closure_3(requestId);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                }
+              });
+              return () => {
+                clearTimeout(closure_2);
+                closure_3();
+              };
             }
           }
+          return;
         }
       }
-      if (null != conjureForMeGuildId) {
-        const obj4 = { value: null, children: null };
-        class B {
-          constructor() {
-            return closure_1_6.isConnectedOrOverlay();
-          }
-        }
-        const obj5 = { guildId: conjureForMeGuildId, onClose: tmp6 };
-        tmp2 = closure_7(ConjureStandaloneScreenDefault, obj5);
-        obj4.children = tmp2;
-        let tmp18 = closure_7(ConjureGlobalScreenContextDefault.Provider, obj4);
-      } else if (centered) {
-        const obj6 = { style: null, children: null };
-        class B {
-          constructor() {
-            return closure_1_6.isConnectedOrOverlay();
-          }
-        }
-        const obj7 = { variant: "heading-lg/semibold", color: "text-default", children: null };
-        const intl = tmp(1125).intl;
-        obj7.children = intl.string(_modDef3863["c+8IMp"]);
-        const items1 = [closure_7(tmp(5270).Text, obj7), , ];
-        const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
-        const intl2 = tmp(1125).intl;
-        obj8.children = intl2.string(_modDef3863["5PqGKy"]);
-        items1[1] = closure_7(tmp(5270).Text, obj8);
-        const obj9 = { variant: "secondary", size: "sm", text: null, onPress: null };
-        const intl3 = tmp(1125).intl;
-        obj9.text = intl3.string(tmp(1125).t["13/7kX"]);
-        obj9.onPress = tmp6;
-        items1[2] = closure_7(tmp(5280).Button, obj9);
-        obj6.children = items1;
-        tmp18 = closure_8(closure_5, obj6);
-      } else {
-        const obj10 = { style: null, children: null };
-        class B {
-          constructor() {
-            return closure_1_6.isConnectedOrOverlay();
-          }
-        }
-        obj10.children = closure_7(closure_4, {});
-        tmp18 = closure_7(closure_5, obj10);
-      }
-      cResult[8] = tmp6;
-      cResult[9] = tmp8;
-      cResult[10] = centered;
-      centered = tmp4.centered;
-      cResult[11] = centered;
-      cResult[12] = conjureForMeGuildId;
-      cResult[13] = tmp18;
-      const tmpResult2 = tmp(504);
+      const items2 = [tmp14, first, navigation];
+      cResult[11] = tmp14;
+      cResult[12] = navigation;
+      cResult[13] = first;
+      cResult[14] = O;
+      cResult[15] = items2;
+      const tmpResult2 = tmp(tmp2[11]);
     }
   }
-  const obj11 = { routeFocused: isFocused, projectId, requestId };
   cResult[2] = isFocused;
   cResult[3] = projectId;
   cResult[4] = requestId;
-  cResult[5] = obj11;
-  tmp8 = obj11;
-  const tmpResult = navigation(12355);
+  cResult[5] = { routeFocused: null, projectId, requestId };
+  const obj3 = { routeFocused: null, projectId, requestId };
+  const tmpResult = navigation(first[10]);
 }) : (function ConjureHomeScreen(navigation) {
   navigation = navigation.navigation;
-  const tmp = closure_10();
+  let first;
+  closure_6 = undefined;
+  let ref;
+  const tmp = closure_11();
   const params = navigation.route.params;
   const projectId = params.projectId;
-  const requestId = params.requestId;
-  const isFocused = navigation(requestId[8]).useIsFocused();
+  let num = params.requestId;
+  const isFocused = navigation(num[9]).useIsFocused();
   const items = [navigation];
-  const callback = isFocused.useCallback(() => {
+  const callback = num.useCallback(() => {
     if (navigation.canGoBack()) {
       let goBackResult = navigation.goBack();
     } else {
@@ -174,43 +194,101 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureH
     }
     return goBackResult;
   }, items);
-  const obj = navigation(requestId[8]);
-  const conjureForMeGuildId = navigation(requestId[9]).useConjureForMeGuildId(ConjureHomeScreen);
-  const items1 = [isFocused, projectId, requestId];
-  const memo = isFocused.useMemo(() => ({ routeFocused: isFocused, projectId, requestId }), items1);
-  navigation(requestId[10]);
-  [][0] = GatewayConnectionStore;
-  const obj3 = { style: tmp.container, children: null };
+  const obj = navigation(num[9]);
+  const conjureForMeGuildId = navigation(num[10]).useConjureForMeGuildId(ConjureHomeScreen);
+  const items1 = [isFocused, projectId, num];
+  const memo = num.useMemo(() => ({ routeFocused: isFocused, projectId, requestId: num }), items1);
+  const obj3 = navigation(num[10]);
+  const items2 = [ref];
+  let tmp9;
+  const stateFromStores = navigation(num[11]).useStateFromStores(items2, () => ref.isConnectedOrOverlay());
+  if (true === params.focusComposer) {
+    if (num == null) {
+      num = 0;
+    }
+    tmp9 = num;
+  }
+  num = tmp9;
+  const tmp11 = isFocused(num.useState(), 2);
+  first = tmp11[0];
+  closure_6 = tmp11[1];
+  ref = obj2.useRef(false);
+  const items3 = [navigation];
+  const effect = obj2.useEffect(() => navigation.addListener("transitionEnd", (data) => {
+    if (!data.data.closing) {
+      ref.current = true;
+    }
+  }), items3);
+  const items4 = [tmp9, first, navigation];
+  const effect1 = obj2.useEffect(() => {
+    if (null != num) {
+      if (first !== tmp) {
+        function ready() {
+          ref.current = true;
+          closure_1_6(num);
+        }
+        if (ref.current) {
+          if (navigation.isFocused()) {
+            const _requestAnimationFrame = requestAnimationFrame;
+            navigation = requestAnimationFrame(ready);
+            return () => cancelAnimationFrame(closure_0);
+          }
+        }
+        const _setTimeout = setTimeout;
+        const timeout = setTimeout(ready, 1000);
+        closure_2 = navigation.addListener("transitionEnd", (data) => {
+          if (!data.data.closing) {
+            ref.current = true;
+            closure_1_6(num);
+          }
+        });
+        return () => {
+          clearTimeout(closure_1);
+          closure_2();
+        };
+      }
+    }
+  }, items4);
+  const obj5 = { style: tmp.container, children: null };
   if (null != conjureForMeGuildId) {
-    const obj4 = { value: memo, children: null };
-    const obj5 = { guildId: conjureForMeGuildId, onClose: callback };
-    obj4.children = closure_7(projectId(tmp3[12]), obj5);
-    let tmp10Result = closure_7(projectId(tmp3[11]).Provider, obj4);
+    const obj6 = { value: memo, children: null };
+    const obj7 = { guildId: conjureForMeGuildId, onClose: callback, focusRequest: null };
+    let tmp23 = null;
+    if (null != tmp9) {
+      tmp23 = null;
+      if (first === tmp9) {
+        tmp23 = tmp9;
+      }
+    }
+    obj7.focusRequest = tmp23;
+    obj6.children = closure_8(projectId(tmp3[13]), obj7);
+    let tmp15Result = closure_8(projectId(tmp3[12]).Provider, obj6);
+    const tmp22 = projectId(tmp3[13]);
   } else {
-    const obj6 = { style: null, children: null };
-    if (tmp9) {
-      obj6.style = tmp.centered;
-      const obj7 = { variant: "heading-lg/semibold", color: "text-default", children: null };
-      const intl = tmp2(tmp3[14]).intl;
-      obj7.children = intl.string(projectId(tmp3[15])["c+8IMp"]);
-      const items2 = [closure_7(tmp2(tmp3[13]).Text, obj7), , ];
-      const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
-      const intl2 = tmp2(tmp3[14]).intl;
-      obj8.children = intl2.string(projectId(tmp3[15])["5PqGKy"]);
-      items2[1] = closure_7(tmp2(tmp3[13]).Text, obj8);
-      const obj9 = { variant: "secondary", size: "sm", text: null, onPress: null };
-      const intl3 = tmp2(tmp3[14]).intl;
-      obj9.text = intl3.string(tmp2(tmp3[14]).t["13/7kX"]);
-      obj9.onPress = callback;
-      items2[2] = closure_7(tmp2(tmp3[16]).Button, obj9);
-      obj6.children = items2;
-      tmp10Result = closure_8(closure_5, obj6);
+    const obj8 = { style: null, children: null };
+    if (stateFromStores) {
+      obj8.style = tmp.centered;
+      const obj9 = { variant: "heading-lg/semibold", color: "text-default", children: null };
+      const intl = tmp2(tmp3[15]).intl;
+      obj9.children = intl.string(projectId(tmp3[16])["c+8IMp"]);
+      const items5 = [closure_8(tmp2(tmp3[14]).Text, obj9), , ];
+      const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
+      const intl2 = tmp2(tmp3[15]).intl;
+      obj10.children = intl2.string(projectId(tmp3[16])["5PqGKy"]);
+      items5[1] = closure_8(tmp2(tmp3[14]).Text, obj10);
+      const obj11 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      const intl3 = tmp2(tmp3[15]).intl;
+      obj11.text = intl3.string(tmp2(tmp3[15]).t["13/7kX"]);
+      obj11.onPress = callback;
+      items5[2] = closure_8(tmp2(tmp3[17]).Button, obj11);
+      obj8.children = items5;
+      tmp15Result = closure_9(tmp16, obj8);
     } else {
-      obj6.style = tmp.centered;
-      obj6.children = closure_7(closure_4, {});
-      tmp10Result = closure_7(closure_5, obj6);
+      obj8.style = tmp.centered;
+      obj8.children = closure_8(first, {});
+      tmp15Result = closure_8(tmp16, obj8);
     }
   }
-  obj3.children = tmp10Result;
-  return closure_7(closure_5, obj3);
+  obj5.children = tmp15Result;
+  return closure_8(closure_6, obj5);
 });

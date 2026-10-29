@@ -1,8 +1,8 @@
-// === Module 7025: ChangeEmailUtils ===
+// === Module 7049: ChangeEmailUtils ===
 
-// Module 7025 (ChangeEmailUtils)
+// Module 7049 (ChangeEmailUtils)
 import util from "util" /* 1125 */;
-import VerificationConstants from "VerificationConstants" /* 7019 */;
+import VerificationConstants from "VerificationConstants" /* 7043 */;
 import size from "module_2" /* 2 */;
 
 const ChangeEmailReasons = VerificationConstants.ChangeEmailReasons;
@@ -26,6 +26,6 @@ const dependencyMap = {
 };
 const result = size.fileFinishedImporting("modules/verification/ChangeEmailUtils.tsx");
 
-export const getChangeEmailReasonDisplayText = function getChangeEmailReasonDisplayText(value) {
+export function getChangeEmailReasonDisplayText(value) {
   return dependencyMap[value]();
-};
+}

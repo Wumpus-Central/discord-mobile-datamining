@@ -1,23 +1,23 @@
-// === Module 8728: useIsScreenLandscape ===
+// === Module 8731: useIsScreenLandscape ===
 
-// Module 8728 (useIsScreenLandscape)
+// Module 8731 (useIsScreenLandscape)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1497 */;
+import DimensionsStore from "DimensionsStore" /* 1498 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
 
-export const getIsScreenLandscape = function getIsScreenLandscape() {
+export function getIsScreenLandscape() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "main";
   }
   return DimensionsStore.getState().byAppEntry[str].screenIsLandscape;
-};
+}
 export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsScreenLandscape() {
   const cResult = c.c(2);
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();

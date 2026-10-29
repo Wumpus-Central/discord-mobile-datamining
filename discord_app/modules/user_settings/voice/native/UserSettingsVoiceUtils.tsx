@@ -1,11 +1,11 @@
-// === Module 11670: UserSettingsVoiceUtils ===
+// === Module 11724: UserSettingsVoiceUtils ===
 
-// Module 11670 (UserSettingsVoiceUtils)
+// Module 11724 (UserSettingsVoiceUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5887 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11671 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5889 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11725 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -28,18 +28,18 @@ function getSelectedNoiseSuppressionOption() {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
-export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
+export function handleAutomaticGainControlChange(arg0) {
   const result = AudioActionCreatorsDefault.setAutomaticGainControl(arg0, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
-};
-export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
+}
+export function handleEchoCancellationChange(arg0) {
   AudioActionCreatorsDefault.setEchoCancellation(arg0, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
-};
-export const handleNoiseSuppressionChange = function handleNoiseSuppressionChange(arg0) {
+}
+export function handleNoiseSuppressionChange(arg0) {
   ({ KRISP, STANDARD } = obj);
   obj = AudioActionCreatorsDefault;
   obj.setNoiseCancellation(arg0 === KRISP, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
   AudioActionCreatorsDefault.setNoiseSuppression(arg0 === STANDARD, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
-};
+}
 export { NoiseSuppressionOpt };
 export { getSelectedNoiseSuppressionOption };
 export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedNoiseSuppressionOption() {

@@ -1,78 +1,78 @@
-// === Module 18148: ForYouItemImage ===
+// === Module 18382: ForYouItemImage ===
 
-// Module 18148 (ForYouItemImage)
+// Module 18382 (ForYouItemImage)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6823 */;
-import Pressables from "Pressables" /* 6944 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8775 */;
-import _modDef9151 from "module_9151" /* 9151 */;
-import _modDef18150 from "module_18150" /* 18150 */;
-import _modDef18151 from "module_18151" /* 18151 */;
-import _modDef18152 from "module_18152" /* 18152 */;
-import _modDef18153 from "module_18153" /* 18153 */;
-import _modDef18154 from "module_18154" /* 18154 */;
-import _modDef18155 from "module_18155" /* 18155 */;
-import _modDef18156 from "module_18156" /* 18156 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6846 */;
+import Pressables from "Pressables" /* 6968 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8778 */;
+import _modDef9154 from "module_9154" /* 9154 */;
+import _modDef18384 from "module_18384" /* 18384 */;
+import _modDef18385 from "module_18385" /* 18385 */;
+import _modDef18386 from "module_18386" /* 18386 */;
+import _modDef18387 from "module_18387" /* 18387 */;
+import _modDef18388 from "module_18388" /* 18388 */;
+import _modDef18389 from "module_18389" /* 18389 */;
+import _modDef18390 from "module_18390" /* 18390 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getFallbackIcon(type, fallbackImage) {
   if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES === type) {
-    const obj2 = { icon: _modDef9151, color: fallbackImage.fallbackImage.color };
+    const obj2 = { icon: _modDef9154, color: fallbackImage.fallbackImage.color };
     return obj2;
   } else if (NotificationCenterItemsTypes.NotificationCenterItems.FRIEND_REQUEST_REMINDER === type) {
-    const obj3 = { icon: _modDef18150, color: fallbackImage.fallbackImage.color };
+    const obj3 = { icon: _modDef18384, color: fallbackImage.fallbackImage.color };
     return obj3;
   } else {
     if (NotificationCenterItemsTypes.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED !== type) {
       if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES !== type) {
         if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES !== type) {
           if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES === type) {
-            const obj4 = { icon: _modDef18152, color: fallbackImage.fallbackImage.color };
+            const obj4 = { icon: _modDef18386, color: fallbackImage.fallbackImage.color };
             return obj4;
           } else {
-            const obj = { icon: _modDef18153, color: fallbackImage.fallbackImage.color };
+            const obj = { icon: _modDef18387, color: fallbackImage.fallbackImage.color };
             return obj;
           }
         }
       }
     }
-    const obj5 = { icon: _modDef18151, color: fallbackImage.fallbackImageV2.color, backgroundStyle: fallbackImage.guildGridBackground };
+    const obj5 = { icon: _modDef18385, color: fallbackImage.fallbackImageV2.color, backgroundStyle: fallbackImage.guildGridBackground };
     return obj5;
   }
 }
 function getLifecycleIcon(item_enum) {
   if (item_enum === NotificationCenterItemsTypes.ItemEnum.UPDATE_PROFILE) {
-    const obj2 = { source: _modDef18154 };
-    let tmp5 = jsx(FastImageDefault, { source: _modDef18154 });
+    const obj2 = { source: _modDef18388 };
+    let tmp5 = jsx(FastImageDefault, { source: _modDef18388 });
   } else {
     if (item_enum !== NotificationCenterItemsTypes.ItemEnum.FIND_FRIENDS) {
       if (item_enum !== NotificationCenterItemsTypes.ItemEnum.ADD_FRIEND) {
         if (item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE) {
-          const obj3 = { source: _modDef18156, style: { width: "105%" } };
-          tmp5 = jsx(FastImageDefault, { source: _modDef18156, style: { width: "105%" } });
+          const obj3 = { source: _modDef18390, style: { width: "105%" } };
+          tmp5 = jsx(FastImageDefault, { source: _modDef18390, style: { width: "105%" } });
         } else {
-          const obj = { source: _modDef18153 };
-          tmp5 = jsx(native.Icon, { source: _modDef18153 });
+          const obj = { source: _modDef18387 };
+          tmp5 = jsx(native.Icon, { source: _modDef18387 });
         }
       }
     }
-    const obj4 = { source: _modDef18155, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
-    tmp5 = jsx(native.Icon, { source: _modDef18155, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE });
+    const obj4 = { source: _modDef18389, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
+    tmp5 = jsx(native.Icon, { source: _modDef18389, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE });
   }
   return tmp5;
 }
 const View = fn(17).View;
-const getGuildAcronym = fn(4874).getGuildAcronym;
-const Constants = fn(18149);
+const getGuildAcronym = fn(4875).getGuildAcronym;
+const Constants = fn(18383);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -91,7 +91,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj = { fallbackImage: { color: nativeDefault.colors.WHITE }, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
 let obj4 = { color: nativeDefault.colors.WHITE };
 obj.fallbackImageV2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

@@ -1,6 +1,6 @@
-// === Module 5277: TypographyVariantRemap ===
+// === Module 5278: TypographyVariantRemap ===
 
-// Module 5277 (TypographyVariantRemap)
+// Module 5278 (TypographyVariantRemap)
 import size from "module_2" /* 2 */;
 
 const obj = { text: null, heading: null };

@@ -1,11 +1,11 @@
-// === Module 4912: GuildRoleRecordUtils ===
+// === Module 4913: GuildRoleRecordUtils ===
 
-// Module 4912 (GuildRoleRecordUtils)
+// Module 4913 (GuildRoleRecordUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4911 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4913 */;
-import PlainRecord from "PlainRecord" /* 4871 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4912 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4914 */;
+import PlainRecord from "PlainRecord" /* 4872 */;
 import size from "module_2" /* 2 */;
 
 function fromServerArray(id, roles) {
@@ -111,16 +111,16 @@ function fromSerialized(guildId, id) {
 const GuildRoleRecordTypeTag = GuildRoleRecord.GuildRoleRecordTypeTag;
 let result = size.fileFinishedImporting("utils/GuildRoleRecordUtils.tsx");
 
-export const isGuildRoleRecord = function isGuildRoleRecord(arg0) {
+export function isGuildRoleRecord(arg0) {
   return React4(GuildRoleRecordTypeTag, arg0);
-};
+}
 export { fromServerArray };
 export { fromServer };
-export const constructGuildRoleInPlace = function constructGuildRoleInPlace(arg0) {
+export function constructGuildRoleInPlace(arg0) {
   return React3(GuildRoleRecordTypeTag, arg0);
-};
+}
 export { fromSerialized };
-export const fromSyncOperation = function fromSyncOperation(id, roles, partition) {
+export function fromSyncOperation(id, roles, partition) {
   if ("full_sync" === roles.op) {
     return fromServerArray(id, roles.items);
   } else {
@@ -138,16 +138,16 @@ export const fromSyncOperation = function fromSyncOperation(id, roles, partition
     }
     return obj;
   }
-};
-export const fromSerializedPartition = function fromSerializedPartition(id, roles) {
+}
+export function fromSerializedPartition(id, roles) {
   const obj = {};
   for (const key10006 in arg1) {
     obj[key10006] = fromSerialized(arg0, arg1[key10006]);
     continue;
   }
   return obj;
-};
-export const toSerializedPartition = function toSerializedPartition(unsafeMutableRoles) {
+}
+export function toSerializedPartition(unsafeMutableRoles) {
   const obj = {};
   for (const key10004 in arg0) {
     let tmp2 = arg0[key10004];
@@ -159,4 +159,4 @@ export const toSerializedPartition = function toSerializedPartition(unsafeMutabl
     continue;
   }
   return obj;
-};
+}

@@ -1,22 +1,22 @@
-// === Module 14613: BadgeDirectoryNuxCoachmark ===
+// === Module 14847: BadgeDirectoryNuxCoachmark ===
 
-// Module 14613 (BadgeDirectoryNuxCoachmark)
+// Module 14847 (BadgeDirectoryNuxCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11156 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11160 */;
-import GameTimeTier9LargeBadge from "GameTimeTier9LargeBadge" /* 14614 */;
-import StreamingTier10LargeBadge from "StreamingTier10LargeBadge" /* 14618 */;
-import GameDiversityTier8LargeBadge from "GameDiversityTier8LargeBadge" /* 14622 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11210 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11214 */;
+import GameTimeTier9LargeBadge from "GameTimeTier9LargeBadge" /* 14848 */;
+import StreamingTier10LargeBadge from "StreamingTier10LargeBadge" /* 14852 */;
+import GameDiversityTier8LargeBadge from "GameDiversityTier8LargeBadge" /* 14856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const dependencyMap2 = { single: [60], pair: [48, 48], trio: [42, 60, 42] };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { graphicRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 60, gap: nativeDefault.space.PX_8 }, noProgressGraphicRow: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 60, gap: nativeDefault.space.PX_8 };
 obj2.noProgressGraphicRow = { gap: nativeDefault.space.PX_12 };
@@ -103,9 +103,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Progre
   if ("fallback" === map.type) {
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_6(tmp(14626).GameDiversityTier9LargeBadge, { width: 42, height: 42 });
-      const tmp14 = closure_6(tmp(14630).GameDiversityTier10LargeBadge, { width: 60, height: 60 });
-      const tmp15 = closure_6(tmp(14622).GameDiversityTier8LargeBadge, { width: 42, height: 42 });
+      const tmp13 = closure_6(tmp(14860).GameDiversityTier9LargeBadge, { width: 42, height: 42 });
+      const tmp14 = closure_6(tmp(14864).GameDiversityTier10LargeBadge, { width: 60, height: 60 });
+      const tmp15 = closure_6(tmp(14856).GameDiversityTier8LargeBadge, { width: 42, height: 42 });
       cResult[6] = tmp13;
       cResult[7] = tmp14;
       cResult[8] = tmp15;
@@ -165,7 +165,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Progre
   const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(badgeIconUrls.badgeIconUrls);
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
-    const items = [closure_6(tmp2(14626).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14630).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14622).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
+    const items = [closure_6(tmp2(14860).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14864).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14856).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
     obj2.children = items;
     return closure_7(View, obj2);
   } else {

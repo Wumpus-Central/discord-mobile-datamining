@@ -1,6 +1,6 @@
-// === Module 14221: EmojiRowUtils ===
+// === Module 14455: EmojiRowUtils ===
 
-// Module 14221 (EmojiRowUtils)
+// Module 14455 (EmojiRowUtils)
 import FlagUtils from "FlagUtils" /* 1402 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 ({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");
 
-export const shouldShowEmojiRow = function shouldShowEmojiRow(arg0, message, isActiveChannelOrUnarchivableThread) {
+export function shouldShowEmojiRow(arg0, message, isActiveChannelOrUnarchivableThread) {
   let tmp = arg0;
   if (arg0) {
     tmp = isActiveChannelOrUnarchivableThread;
@@ -26,4 +26,4 @@ export const shouldShowEmojiRow = function shouldShowEmojiRow(arg0, message, isA
     tmp = !FlagUtils.hasFlag(message.flags, constants.EPHEMERAL);
   }
   return tmp;
-};
+}

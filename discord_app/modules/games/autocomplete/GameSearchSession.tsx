@@ -1,9 +1,9 @@
-// === Module 9108: GameSearchSession ===
+// === Module 9111: GameSearchSession ===
 
-// Module 9108 (GameSearchSession)
+// Module 9111 (GameSearchSession)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtils from "AnalyticsUtils" /* 1264 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8617 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8639 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsUtilsDefault = AnalyticsUtils;
@@ -201,7 +201,7 @@ let result = size.fileFinishedImporting("modules/games/autocomplete/GameSearchSe
 
 export const GAME_SEARCH_SESSION_IDLE_MS = 60000;
 export { GameSearchSession };
-export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, DEFAULT) {
+export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
   value = map.get(CHAT_MENTION);
   if (null == value) {
     if (typeof GameSearchSession === "function") {
@@ -351,4 +351,4 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, 
     }
   }
   return value;
-};
+}

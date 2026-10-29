@@ -1,14 +1,14 @@
-// === Module 19006: updateDynamicSuperProperties ===
+// === Module 19239: updateDynamicSuperProperties ===
 
-// Module 19006 (updateDynamicSuperProperties)
+// Module 19239 (updateDynamicSuperProperties)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6836 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7606 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6859 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7629 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
-export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
+export function updateDynamicSuperProperties() {
   const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
   const superProperties = discord_common_AnalyticsUtils.getSuperProperties();
   let uuid;
@@ -35,4 +35,4 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
     const result = discord_common_AnalyticsUtils.extendSuperProperties(obj3);
     const tmpResult = discord_common_AnalyticsUtils;
   }
-};
+}

@@ -1,8 +1,8 @@
-// === Module 11330: LinkedGameOrgInvitesExperiment ===
+// === Module 11384: LinkedGameOrgInvitesExperiment ===
 
-// Module 11330 (LinkedGameOrgInvitesExperiment)
+// Module 11384 (LinkedGameOrgInvitesExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,6 +28,6 @@ export const useLinkedGameOrgInvitesEnabled = ReactCompilerGating.isReactCompile
 }) : (function useLinkedGameOrgInvitesEnabled(location) {
   return apexExperiment.useConfig({ location }).enabled;
 });
-export const getLinkedGameOrgInvitesEnabled = function getLinkedGameOrgInvitesEnabled(MessageCodedLinkManager) {
+export function getLinkedGameOrgInvitesEnabled(MessageCodedLinkManager) {
   return apexExperiment.getConfig({ location: MessageCodedLinkManager }).enabled;
-};
+}

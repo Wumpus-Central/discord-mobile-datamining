@@ -1,8 +1,8 @@
-// === Module 16005: activityShareLink ===
+// === Module 16242: activityShareLink ===
 
-// Module 16005 (activityShareLink)
+// Module 16242 (activityShareLink)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import findCodedLinks from "findCodedLinks" /* 5735 */;
+import findCodedLinks from "findCodedLinks" /* 5737 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const items = [findCodedLinks.parseQuestsEmbedCode];
 const result = size.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
-export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(str, name, link) {
+export function resolveActivityShareMessageContent(str, name, link) {
   _require = false;
   const replaced = str.replaceAll(URLUtilsDefault.URL_REGEX, (arg0) => {
     closure_0 = arg0;
@@ -33,4 +33,4 @@ export const resolveActivityShareMessageContent = function resolveActivityShareM
     combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(require("util").t.dZJpdG, obj);
   }
   return combined;
-};
+}

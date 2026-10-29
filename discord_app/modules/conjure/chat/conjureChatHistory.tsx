@@ -1,8 +1,8 @@
-// === Module 10737: conjureChatHistory ===
+// === Module 10811: conjureChatHistory ===
 
-// Module 10737 (conjureChatHistory)
+// Module 10811 (conjureChatHistory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10736 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10810 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -190,7 +190,7 @@ let result = size.fileFinishedImporting("modules/conjure/chat/conjureChatHistory
 
 export { newMessage };
 export { newMessageFromHistory };
-export const messagesFromHistory = function messagesFromHistory(entries) {
+export function messagesFromHistory(entries) {
   const mapped = entries.map(newMessageFromHistory);
   const map = new Map();
   _slicedToArray = [];
@@ -336,8 +336,8 @@ export const messagesFromHistory = function messagesFromHistory(entries) {
     });
   }
   return flatMapResult;
-};
-export const foldDividers = function foldDividers(items) {
+}
+export function foldDividers(items) {
   const map = new Map();
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -387,5 +387,5 @@ export const foldDividers = function foldDividers(items) {
       }
     });
   }
-};
+}
 export const TURN_ENTRY_PREFIX = "turn:";

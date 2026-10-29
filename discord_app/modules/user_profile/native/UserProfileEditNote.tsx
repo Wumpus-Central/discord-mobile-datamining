@@ -1,8 +1,8 @@
-// === Module 14601: UserProfileEditNote ===
+// === Module 14835: UserProfileEditNote ===
 
-// Module 14601 (UserProfileEditNote)
-import NavigatorHeader from "NavigatorHeader" /* 6960 */;
-import NoteActionCreatorsDefault from "NoteActionCreators" /* 14602 */;
+// Module 14835 (UserProfileEditNote)
+import NavigatorHeader from "NavigatorHeader" /* 6984 */;
+import NoteActionCreatorsDefault from "NoteActionCreators" /* 14836 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1084).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           constructor() {
             obj = { headerLeft: null, headerRight: null };
             obj2 = closure_0(closure_2[11]);
-            obj.headerLeft = obj2.getHeaderConditionalBackButton(() => new Promise(() => { ... }));
+            obj.headerLeft = obj2.getHeaderConditionalBackButton(() => new Promise(/* F163838 */ function() { ... }));
             obj.headerRight = function headerRight() {
               const obj = { text: null, disabled: null, onPress: null };
               const intl = userId(onClose[14]).intl;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         constructor() {
           obj = { headerLeft: null, headerRight: null };
           obj2 = closure_0(closure_2[11]);
-          obj.headerLeft = obj2.getHeaderConditionalBackButton(() => new Promise(() => { ... }));
+          obj.headerLeft = obj2.getHeaderConditionalBackButton(() => new Promise(/* F163838 */ function() { ... }));
           obj.headerRight = function headerRight() {
             const obj = { text: null, disabled: null, onPress: null };
             const intl = userId(onClose[14]).intl;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        closure_1_1(11110)({
+        closure_1_1(11164)({
           location: "UserProfileEditNote",
           hasUnsavedChanges: str !== closure_6,
           onReset() {

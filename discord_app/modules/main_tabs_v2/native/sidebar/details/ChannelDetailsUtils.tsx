@@ -1,14 +1,14 @@
-// === Module 11353: ChannelDetailsUtils ===
+// === Module 11407: ChannelDetailsUtils ===
 
-// Module 11353 (ChannelDetailsUtils)
+// Module 11407 (ChannelDetailsUtils)
 import ChannelTypes from "ChannelTypes" /* 1105 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10058 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10090 */;
 import size from "module_2" /* 2 */;
 
 const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
-export const getChannelDetailsButtons = function getChannelDetailsButtons(channel) {
+export function getChannelDetailsButtons(channel) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
@@ -24,7 +24,7 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
     found = items.filter((item) => item !== constants.MUTE);
   }
   return found;
-};
-export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(navigation, PERMISSIONS, channelId, source) {
+}
+export function navigateToChannelDetailsScreen(navigation, PERMISSIONS, channelId, source) {
   navigation.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
-};
+}

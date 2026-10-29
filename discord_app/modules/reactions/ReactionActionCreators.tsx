@@ -1,18 +1,18 @@
-// === Module 8318: ReactionActionCreators ===
+// === Module 8340: ReactionActionCreators ===
 
-// Module 8318 (ReactionActionCreators)
+// Module 8340 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import util from "util" /* 1125 */;
-import EmojiUtils from "EmojiUtils" /* 4954 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5261 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8319 */;
+import EmojiUtils from "EmojiUtils" /* 4955 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5262 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8341 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MessageStore from "MessageStore" /* 6045 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MessageStore from "MessageStore" /* 6049 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -108,7 +108,7 @@ let closure_15 = async function _getReactors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_15 = async function _getReactors(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -218,7 +218,7 @@ let closure_17 = async function _addReaction(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -250,7 +250,7 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -282,7 +282,7 @@ let closure_17 = async function _addReaction(arg0) {
               obj5.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
               closure_134_1(closure_134_2[6]).show(obj5);
               c8 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           }
           c7 = 2;
@@ -455,7 +455,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
             closure_2_12(error, () => closure_2_18(closure_1_0, closure_1_1, { isRetry: true }), { isRetry });
           });
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp9) {
         c6 = tmp;
@@ -536,7 +536,7 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -619,7 +619,7 @@ let closure_23 = async function _removeReaction(arg0) {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -651,7 +651,7 @@ let closure_23 = async function _removeReaction(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -742,7 +742,7 @@ let closure_23 = async function _removeReaction(arg0) {
                 obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -786,7 +786,7 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(5011).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(5012).AccessibilityAnnouncer;
                   intl = channelId(1125).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };
@@ -841,7 +841,7 @@ let closure_25 = async function _getOptimisticEmojiColors(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -906,7 +906,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionActionCreators.tsx");
 
 export { ReactionLocations };
-export const getReactors = function getReactors() {
+export function getReactors() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -915,12 +915,12 @@ export const getReactors = function getReactors() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { addReaction };
-export const playBurstReaction = function playBurstReaction(arg0) {
+export function playBurstReaction(arg0) {
   ({ channelId, messageId, emoji, key } = arg0);
   DispatcherDefault.dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
-};
+}
 export { removeAllReactions };
 export { removeEmojiReactions };
 export { removeReaction };

@@ -1,6 +1,6 @@
-// === Module 7856: RobloxSubgameTypes ===
+// === Module 7879: RobloxSubgameTypes ===
 
-// Module 7856 (RobloxSubgameTypes)
+// Module 7879 (RobloxSubgameTypes)
 import size from "module_2" /* 2 */;
 
 class ROBLOX_PROTOCOL_URL {
@@ -22,7 +22,7 @@ export const NativeRobloxSubgameKeys = { UNIVERSE_ID: "universeid", PLACE_ID: "p
 export const ROBLOX_URL_SCHEME = "roblox";
 export { ROBLOX_PROTOCOL_URL };
 export { ROBLOX_WEB_URL };
-export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
+export (arg0) => {
   if (typeof ROBLOX_PROTOCOL_URL === "function") {
     const _HermesInternal = HermesInternal;
     if (typeof ROBLOX_WEB_URL === "function") {
@@ -35,4 +35,4 @@ export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

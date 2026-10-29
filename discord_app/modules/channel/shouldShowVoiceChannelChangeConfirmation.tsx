@@ -1,16 +1,16 @@
-// === Module 7915: shouldShowVoiceChannelChangeConfirmation ===
+// === Module 7938: shouldShowVoiceChannelChangeConfirmation ===
 
-// Module 7915 (shouldShowVoiceChannelChangeConfirmation)
-import GameConsoleStore from "GameConsoleStore" /* 5751 */;
+// Module 7938 (shouldShowVoiceChannelChangeConfirmation)
+import GameConsoleStore from "GameConsoleStore" /* 5753 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
-export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
+export function shouldShowVoiceChannelChangeConfirmation(id) {
   if (UnsyncedUserSettingsStore.disableVoiceChannelChangeAlert) {
     return false;
   } else {
@@ -32,4 +32,4 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
       return false;
     }
   }
-};
+}

@@ -1,11 +1,11 @@
-// === Module 12601: ConjureTimeFormat ===
+// === Module 12818: ConjureTimeFormat ===
 
-// Module 12601 (ConjureTimeFormat)
+// Module 12818 (ConjureTimeFormat)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTimeFormat.tsx");
 
-export const formatClockTime = function formatClockTime(ts) {
+export function formatClockTime(ts) {
   let str = arg1;
   if (arg1 === undefined) {
     str = "seconds";
@@ -40,4 +40,4 @@ export const formatClockTime = function formatClockTime(ts) {
       return combined1;
     }
   }
-};
+}

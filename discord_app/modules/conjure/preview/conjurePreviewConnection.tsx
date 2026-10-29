@@ -1,23 +1,23 @@
-// === Module 10776: conjurePreviewConnection ===
+// === Module 10851: conjurePreviewConnection ===
 
-// Module 10776 (conjurePreviewConnection)
+// Module 10851 (conjurePreviewConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureChatConnection from "conjureChatConnection" /* 10754 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
-import conjurePreviewTicket from "conjurePreviewTicket" /* 10764 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10777 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10779 */;
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10799 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 10822 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10823 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10827 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 10829 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10830 */;
-import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10831 */;
+import conjureChatConnection from "conjureChatConnection" /* 10829 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
+import conjurePreviewTicket from "conjurePreviewTicket" /* 10839 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10852 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10854 */;
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10875 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 10898 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10899 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10903 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 10905 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
+import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10907 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1389 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 require = fn;
 let closure_6 = async function _refetchWidgetData() {
@@ -31,7 +31,7 @@ let closure_6 = async function _refetchWidgetData() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -171,7 +171,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -203,7 +203,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
         closure_129_0 = value;
         if (closure_129_0.ok) {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -480,7 +480,7 @@ export const previewStepHandlers = {
     const tmpResult2 = ConjurePublishActionCreators;
   }
 };
-export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(projectId, arg1) {
+export function sendOverlayBackgroundBlur(projectId, arg1) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   if (null == conjureSocket) {
     return false;
@@ -492,8 +492,8 @@ export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(proj
       return false;
     }
   }
-};
-export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
+}
+export function getPreviewScreenshotUrl() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -502,8 +502,8 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const uploadOverlayBackground = function uploadOverlayBackground() {
+}
+export function uploadOverlayBackground() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -512,8 +512,8 @@ export const uploadOverlayBackground = function uploadOverlayBackground() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetOverlayBackground = function resetOverlayBackground() {
+}
+export function resetOverlayBackground() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -522,8 +522,8 @@ export const resetOverlayBackground = function resetOverlayBackground() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getOverlayBackgroundUrl = function getOverlayBackgroundUrl() {
+}
+export function getOverlayBackgroundUrl() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -532,4 +532,4 @@ export const getOverlayBackgroundUrl = function getOverlayBackgroundUrl() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

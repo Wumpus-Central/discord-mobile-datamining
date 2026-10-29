@@ -1,11 +1,11 @@
-// === Module 14563: useStreamRequestActivities ===
+// === Module 14797: useStreamRequestActivities ===
 
-// Module 14563 (useStreamRequestActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9256 */;
+// Module 14797 (useStreamRequestActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9260 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6533 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
 
 const require = globalThis.__r;
 
@@ -87,11 +87,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStrea
   return noop.useMemo(() => stateFromStores.filter(isStreamRequestActivity), items1);
 });
 export { isStreamRequestActivity };
-export const getStreamRequestActivities = function getStreamRequestActivities(userId, guildId) {
+export function getStreamRequestActivities(userId, guildId) {
   if (AuthenticationStore.getId() === userId) {
     let activities = SelfPresenceStore.getActivities();
   } else {
     activities = PresenceStore.getActivities(userId, guildId);
   }
   return activities.filter(isStreamRequestActivity);
-};
+}

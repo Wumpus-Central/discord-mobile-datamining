@@ -1,6 +1,6 @@
-// === Module 8929: guildEventEmbedFetchQueue ===
+// === Module 8932: guildEventEmbedFetchQueue ===
 
-// Module 8929 (guildEventEmbedFetchQueue)
+// Module 8932 (guildEventEmbedFetchQueue)
 import size from "module_2" /* 2 */;
 
 class GuildEventEmbedFetchQueueError extends Error {
@@ -235,7 +235,7 @@ export { GuildEventEmbedFetchQueueError };
 export const scheduleGuildEventFetch = schedule;
 export const onGuildEventFetchCapacity = onCapacity;
 export const scheduleGuildEventEmbedFetch = obj2.schedule;
-export const resetGuildEventEmbedFetchQueueForTest = function resetGuildEventEmbedFetchQueueForTest() {
+export function resetGuildEventEmbedFetchQueueForTest() {
   navigation.reset();
   obj2.reset();
-};
+}

@@ -1,7 +1,7 @@
-// === Module 14905: PremiumOfferReminderExperiment ===
+// === Module 15140: PremiumOfferReminderExperiment ===
 
-// Module 14905 (PremiumOfferReminderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15140 (PremiumOfferReminderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-premium-offer-reminder-xp", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -12,6 +12,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/PremiumOfferReminderExperiment.tsx");
 
 export const PremiumOfferReminderExperiment = apexExperiment;
-export const isPremiumOfferReminderExperimentEnabled = function isPremiumOfferReminderExperimentEnabled(location) {
+export function isPremiumOfferReminderExperimentEnabled(location) {
   return apexExperiment.getConfig({ location: location.location }).enabled;
-};
+}

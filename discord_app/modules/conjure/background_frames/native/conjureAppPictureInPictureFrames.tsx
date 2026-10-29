@@ -1,19 +1,19 @@
-// === Module 18332: conjureAppPictureInPictureFrames ===
+// === Module 18566: conjureAppPictureInPictureFrames ===
 
-// Module 18332 (conjureAppPictureInPictureFrames)
+// Module 18566 (conjureAppPictureInPictureFrames)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
-import closeFrameDefault from "closeFrame" /* 14081 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 14099 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18328 */;
-import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 18331 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import FramesStore from "FramesStore" /* 6810 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10880 */;
+import closeFrameDefault from "closeFrame" /* 14314 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 14332 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18562 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 18565 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import FramesStore from "FramesStore" /* 6833 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 require = fn;
 function canFloat(id) {
@@ -85,12 +85,12 @@ function closeToMakeRoom(frameId) {
     const obj = { text: null };
     const intl = util.intl;
     const obj2 = { appName: tmp3 };
-    obj.text = intl.formatToPlainString(_modDef3863.jmMirO, obj2);
+    obj.text = intl.formatToPlainString(_modDef3864.jmMirO, obj2);
     ToastActionCreatorsDefault.open("CONJURE_APP_PIP_CLOSED_TO_MAKE_ROOM", obj);
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const items = [FramesStore, UnsyncedUserSettingsStore, ConjureProjectStore];
 let ReactCompilerGating = fn(558);
@@ -99,11 +99,11 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/conjure/background_frames/native/conjureAppPictureInPictureFrames.tsx");
 
 export const FLOATING_APP_STORES = items;
-export const getFloatableFrames = function getFloatableFrames() {
+export function getFloatableFrames() {
   const allFrames = FramesStore.getAllFrames();
   return allFrames.filter(canFloat);
-};
-export const getStrandedFloatingFrames = function getStrandedFloatingFrames() {
+}
+export function getStrandedFloatingFrames() {
   const allFrames = FramesStore.getAllFrames();
   return allFrames.filter((id) => {
     let tmp3 = isConjureAppChannelFrameDefault(id);
@@ -135,13 +135,13 @@ export const getStrandedFloatingFrames = function getStrandedFloatingFrames() {
     }
     return tmp3;
   });
-};
+}
 export { isConjureAppPictureInPictureFrame };
 export { getConjureAppPictureInPictureFrameIds };
-export const useConjureAppPictureInPictureFrameIds = function useConjureAppPictureInPictureFrameIds() {
+export function useConjureAppPictureInPictureFrameIds() {
   return initialize.useStateFromStoresArray(items, getConjureAppPictureInPictureFrameIds);
-};
-export const enterConjureAppPictureInPicture = function enterConjureAppPictureInPicture(id) {
+}
+export function enterConjureAppPictureInPicture(id) {
   const frame = FramesStore.getFrame(id);
   if (null != frame) {
     let tmp3 = isConjureAppChannelFrameDefault(frame);
@@ -196,8 +196,8 @@ export const enterConjureAppPictureInPicture = function enterConjureAppPictureIn
       }
     }
   }
-};
-export const exitConjureAppPictureInPicture = function exitConjureAppPictureInPicture(id) {
+}
+export function exitConjureAppPictureInPicture(id) {
   const tmp = timestampProducer(FramesStore.getFrame(id));
   let layoutMode;
   if (tmp != null) {
@@ -207,4 +207,4 @@ export const exitConjureAppPictureInPicture = function exitConjureAppPictureInPi
     const obj2 = { frameId: id, layoutMode: tmp3.FOCUSED };
     const result = FramesActionCreatorsDefault.updateFrameLayoutMode(obj2);
   }
-};
+}

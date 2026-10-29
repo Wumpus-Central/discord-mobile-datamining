@@ -1,11 +1,11 @@
-// === Module 19244: RelationshipManager ===
+// === Module 19477: RelationshipManager ===
 
-// Module 19244 (RelationshipManager)
+// Module 19477 (RelationshipManager)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import shared from "shared" /* 5011 */;
-import RelationshipUtilsAll from "RelationshipUtils" /* 19245 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import shared from "shared" /* 5012 */;
+import RelationshipUtilsAll from "RelationshipUtils" /* 19478 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 import size from "module_2" /* 2 */;
 
 function handleRelationshipAdd(relationship) {

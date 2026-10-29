@@ -1,23 +1,23 @@
-// === Module 8369: CallSystemMessage ===
+// === Module 8391: CallSystemMessage ===
 
-// Module 8369 (CallSystemMessage)
+// Module 8391 (CallSystemMessage)
 import util from "util" /* 1125 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
-import DateUtils from "DateUtils" /* 4829 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8370 */;
-import useIsCallActive from "useIsCallActive" /* 8371 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
+import DateUtils from "DateUtils" /* 4830 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8392 */;
+import useIsCallActive from "useIsCallActive" /* 8393 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 
 require = fn;
 const ME = fn(1084).ME;
-const ParticipantTypes = fn(5668).ParticipantTypes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 
-export const createCallSystemMessage = function createCallSystemMessage(message) {
+export function createCallSystemMessage(message) {
   message = message.message;
   const id = AuthenticationStore.getId();
   const channelId = message.getChannelId();
@@ -79,4 +79,4 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   obj3.rawMilliseconds = timestamp.valueOf();
   const merged = Object.assign(createCommonMessageDefault(message));
   return obj3;
-};
+}

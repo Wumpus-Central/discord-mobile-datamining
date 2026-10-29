@@ -1,13 +1,13 @@
-// === Module 14368: QuestMatchingUtils ===
+// === Module 14602: QuestMatchingUtils ===
 
-// Module 14368 (QuestMatchingUtils)
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7817 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7831 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7833 */;
-import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 13954 */;
+// Module 14602 (QuestMatchingUtils)
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7840 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7854 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
+import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 14187 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11234 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11288 */;
 
 require = fn;
 function questMatchesActivity(arg0, id) {
@@ -76,16 +76,16 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6745);
+const QuestConstants = fn(6768);
 ({ DISCORD_APPLICATION_ID: metroRequire, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: closure_7, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8 } = QuestConstants);
 const ActivityGamePlatforms = fn(1084).ActivityGamePlatforms;
-let closure_10 = fn(2023).XBOX_ACTIVITY_APPLICATION_ID;
+let closure_10 = fn(2024).XBOX_ACTIVITY_APPLICATION_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
 export { questMatchesActivity };
 export { getQuestByActivity };
-export const getQuestByApplicationId = function getQuestByApplicationId(arg0, arg1) {
+export function getQuestByApplicationId(arg0, arg1) {
   const obj = arg0[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
@@ -100,8 +100,8 @@ export const getQuestByApplicationId = function getQuestByApplicationId(arg0, ar
     }
     continue;
   }
-};
-export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQuestsByApplicationId(arr, arg1) {
+}
+export function allPlayOnDesktopQuestsByApplicationId(arr, arg1) {
   closure_0 = arg1;
   arr = Array.from(arr.values());
   return arr.filter((quest) => {
@@ -118,8 +118,8 @@ export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQu
     }
     return hasPlayOnDesktopTaskResult;
   });
-};
-export const getQuestsFromActivities = function getQuestsFromActivities(result, arg1) {
+}
+export function getQuestsFromActivities(result, arg1) {
   if (null != arg1) {
     if (null != result) {
       const obj = arg1[Symbol.iterator]();
@@ -134,8 +134,8 @@ export const getQuestsFromActivities = function getQuestsFromActivities(result, 
     }
   }
   return null;
-};
-export const getEligibleQuestsForApplicationId = function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
+}
+export function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
   closure_0 = applicationId;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -185,8 +185,8 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
     const arr = Array.from(quests.values());
   }
   return items;
-};
-export const getQuestApplicationIdsForRunningGame = function getQuestApplicationIdsForRunningGame(pid, arg1) {
+}
+export function getQuestApplicationIdsForRunningGame(pid, arg1) {
   const obj = getApplicationIdsForGameDefault(arg1);
   const applicationIdForPID = SocialSdkApplicationStore.getApplicationIdForPID(pid.pid);
   if (null != applicationIdForPID) {
@@ -197,4 +197,4 @@ export const getQuestApplicationIdsForRunningGame = function getQuestApplication
     }
   }
   return obj;
-};
+}

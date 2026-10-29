@@ -1,17 +1,17 @@
-// === Module 15962: DeclarativeNotificationSettingsRedesignExperiment ===
+// === Module 16198: DeclarativeNotificationSettingsRedesignExperiment ===
 
-// Module 15962 (DeclarativeNotificationSettingsRedesignExperiment)
+// Module 16198 (DeclarativeNotificationSettingsRedesignExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-09-declarative-notification-settings-redesign", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = size.fileFinishedImporting("modules/notifications/DeclarativeNotificationSettingsRedesignExperiment.tsx");
 
-export const isDeclarativeNotificationSettingsRedesignEnabled = function isDeclarativeNotificationSettingsRedesignEnabled(getAssignedNotifSettingsAndMappings) {
+export function isDeclarativeNotificationSettingsRedesignEnabled(getAssignedNotifSettingsAndMappings) {
   return closure_2.getConfig({ location: getAssignedNotifSettingsAndMappings }).enabled;
-};
+}
 export const useIsDeclarativeNotificationSettingsRedesignEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDeclarativeNotificationSettingsRedesignEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {

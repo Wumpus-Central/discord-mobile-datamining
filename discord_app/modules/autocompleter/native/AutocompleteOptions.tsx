@@ -1,33 +1,33 @@
-// === Module 10230: AutocompleteOptions ===
+// === Module 10263: AutocompleteOptions ===
 
-// Module 10230 (AutocompleteOptions)
+// Module 10263 (AutocompleteOptions)
 import util from "util" /* 1125 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6743 */;
-import StickersActionCreators from "StickersActionCreators" /* 10189 */;
-import executeCommandDefault from "executeCommand" /* 10232 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8338 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8339 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8616 */;
-import StickersStore from "StickersStore" /* 6801 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6766 */;
+import StickersActionCreators from "StickersActionCreators" /* 10222 */;
+import executeCommandDefault from "executeCommand" /* 10265 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8360 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8361 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8638 */;
+import StickersStore from "StickersStore" /* 6824 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
 const Constants = fn(1084);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(6020);
+const ChannelAutocompleteConstants = fn(6024);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10231).AutocompleteTypes;
+const AutocompleteTypes = fn(10264).AutocompleteTypes;
 const EmojiConstants = fn(1392);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(6019).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+const executeCommand = apply.debounce(executeCommandDefault, fn(6023).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
-export const getAutocompleteOptions = function getAutocompleteOptions(channel, arg1) {
+export function getAutocompleteOptions(channel, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -272,7 +272,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(7479).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7502).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }
@@ -284,8 +284,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const obj4 = { id: null, animated: null, size: null };
                 ({ id: obj3.id, animated: obj3.animated } = name);
                 obj4.size = size;
-                let url = flag(1414).getEmojiURL(obj4);
-                const obj2 = flag(1414);
+                let url = flag(1415).getEmojiURL(obj4);
+                const obj2 = flag(1415);
               } else {
                 url = name.url;
               }
@@ -362,4 +362,4 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     },
     [closure_16.CHOICES]: obj8
   };
-};
+}

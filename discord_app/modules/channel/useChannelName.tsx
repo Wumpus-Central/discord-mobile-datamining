@@ -1,12 +1,12 @@
-// === Module 5640: useChannelName ===
+// === Module 5641: useChannelName ===
 
-// Module 5640 (useChannelName)
+// Module 5641 (useChannelName)
 import util from "util" /* 1125 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5226 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ExperimentStore from "ExperimentStore" /* 5227 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
 export { computeDefaultGroupDmNameFromUserIds };
 export { computeDefaultGroupDmName };
 export const useComputedGroupDmName = tmp3;
-export const computeGroupDmName = function computeGroupDmName(stateFromStores) {
+export function computeGroupDmName(stateFromStores) {
   if (!stateFromStores.isObfuscated()) {
     if (stateFromStores.isMultiUserDM()) {
       const name = stateFromStores.name;
@@ -337,10 +337,10 @@ export const computeGroupDmName = function computeGroupDmName(stateFromStores) {
       return tmp;
     }
   }
-};
+}
 export { computeChannelName };
 export { escapeChannelName };
-export const unescapeChannelName = function unescapeChannelName(str) {
+export function unescapeChannelName(str) {
   str = str.replace(/\\"/g, "\"");
   return str.replace(/\\\\/g, "\\");
-};
+}

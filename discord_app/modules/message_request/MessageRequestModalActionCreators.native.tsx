@@ -1,21 +1,21 @@
-// === Module 13589: MessageRequestModalActionCreators ===
+// === Module 13822: MessageRequestModalActionCreators ===
 
-// Module 13589 (MessageRequestModalActionCreators)
+// Module 13822 (MessageRequestModalActionCreators)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import common_AlertDefault from "common/Alert" /* 6014 */;
-import MessageRequestConstants from "MessageRequestConstants" /* 13586 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import common_AlertDefault from "common/Alert" /* 6018 */;
+import MessageRequestConstants from "MessageRequestConstants" /* 13819 */;
 import size from "module_2" /* 2 */;
 
 const type = MessageRequestConstants.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
 
-export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRequestConfirmModal(arg0) {
+export function openAcceptMessageRequestConfirmModal(arg0) {
   ({ channelId, onConfirm, onCancel } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, channel_id: channelId });
   const obj2 = { type, channel_id: channelId };
@@ -32,8 +32,8 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
   obj4.onCancel = onCancel;
   obj4.confirmColor = common_AlertDefault.Colors.BRAND;
   actions_AlertActionCreatorsDefault.show(obj4);
-};
-export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
+}
+export function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13590, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
-};
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13823, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+}

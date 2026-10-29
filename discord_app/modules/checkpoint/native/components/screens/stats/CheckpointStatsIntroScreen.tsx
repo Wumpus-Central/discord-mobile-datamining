@@ -1,17 +1,17 @@
-// === Module 13207: CheckpointStatsIntroScreen ===
+// === Module 13445: CheckpointStatsIntroScreen ===
 
-// Module 13207 (CheckpointStatsIntroScreen)
+// Module 13445 (CheckpointStatsIntroScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckpointTextDefault from "CheckpointText" /* 13204 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13206 */;
+import CheckpointTextDefault from "CheckpointText" /* 13436 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 }, title: null, titleText: null };
 let obj3 = { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     cResult[8] = tmp11;
     tmp8 = tmp11;
   }
-  const tmp7 = React4(CheckpointTextDefault, { variant: "heading-md/extrabold", style: titleText, children: tmp4 });
+  const tmp7 = React4(CheckpointTextDefault, { isStepHeading: true, variant: "heading-md/extrabold", style: titleText, children: tmp4 });
   cResult[2] = tmp3.titleText;
   cResult[3] = tmp4;
   cResult[4] = tmp7;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, children: null };
   const items = [icon, ];
-  const obj4 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  const obj4 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const tmp2 = CheckpointScreenDefault;
   obj4.children = title.toLocaleUpperCase();
   items[1] = React4(CheckpointTextDefault, obj4);

@@ -1,13 +1,13 @@
-// === Module 1449: ImageLoaderUtils ===
+// === Module 1450: ImageLoaderUtils ===
 
-// Module 1449 (ImageLoaderUtils)
+// Module 1450 (ImageLoaderUtils)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1450 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1451 */;
-import privDefault from "priv" /* 1456 */;
-import _modDef1490 from "module_1490" /* 1490 */;
-import ImageUtils from "ImageUtils" /* 1493 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1897 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1451 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1452 */;
+import privDefault from "priv" /* 1457 */;
+import _modDef1491 from "module_1491" /* 1491 */;
+import ImageUtils from "ImageUtils" /* 1494 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -44,8 +44,8 @@ function getSrcWithWidthAndHeight(quality) {
       const items = [, ];
       [arr[0], tmp6] = src.split("?");
       let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1490.parse(tmp6);
-      const tmp2Result = _modDef1490;
+      items[1] = _modDef1491.parse(tmp6);
+      const tmp2Result = _modDef1491;
       [tmp8, tmp9] = items;
       if (null != format) {
         tmp9.format = format;
@@ -103,7 +103,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
       if (!tmp2Result3.isEmpty(tmp9)) {
-        _modDef1490;
+        _modDef1491;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -122,11 +122,11 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/image_upload/ImageLoaderUtils.tsx");
 
 export const getDevicePixelRatio = getDevicePixelRatioDefault;
-export const isImageLoaded = function isImageLoaded(arg0) {
+export function isImageLoaded(arg0) {
   value = closure_10.get(arg0);
   return null != value && value.loaded;
-};
-export const loadImage = function loadImage(url, bind) {
+}
+export function loadImage(url, bind) {
   value = closure_10.get(url);
   let obj3 = value;
   if (null != value) {
@@ -176,7 +176,7 @@ export const loadImage = function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -224,7 +224,7 @@ export const loadImage = function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else {
                     try {
@@ -261,7 +261,7 @@ export const loadImage = function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F143319 */ function() { ... });
+                            image.onerror = closure_2_4(/* F144867 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });
@@ -345,8 +345,8 @@ export const loadImage = function loadImage(url, bind) {
       }
     }
   };
-};
-export const getBestMediaProxySize = function getBestMediaProxySize(size, arg1) {
+}
+export function getBestMediaProxySize(size, arg1) {
   closure_0 = size;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -366,9 +366,9 @@ export const getBestMediaProxySize = function getBestMediaProxySize(size, arg1) 
     found1 = closure_9[closure_9.length - 1];
   }
   return found1;
-};
+}
 export { getSrcWithWidthAndHeight };
-export const getImageSrc = function getImageSrc(format) {
+export function getImageSrc(format) {
   ({ width, height, maxWidth, maxHeight, ratio } = format);
   if (ratio === undefined) {
     ratio = 1;
@@ -409,4 +409,4 @@ export const getImageSrc = function getImageSrc(format) {
   }
   const tmp10 = getDevicePixelRatioDefault();
   return getSrcWithWidthAndHeight({ src: format.src, sourceWidth: width, sourceHeight: height, targetWidth: bound * tmp10, targetHeight: bound1 * tmp10, format, quality, animated: flag, srcIsAnimated: flag2 });
-};
+}

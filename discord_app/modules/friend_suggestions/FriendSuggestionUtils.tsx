@@ -1,11 +1,11 @@
-// === Module 17745: FriendSuggestionUtils ===
+// === Module 17983: FriendSuggestionUtils ===
 
-// Module 17745 (FriendSuggestionUtils)
+// Module 17983 (FriendSuggestionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
-export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
+export function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
   let contactNames;
   if (suggestedFriend != null) {
     contactNames = suggestedFriend.contactNames;
@@ -41,4 +41,4 @@ export const getSuggestedContactNameForSuggestion = function getSuggestedContact
       }
     }
   }
-};
+}

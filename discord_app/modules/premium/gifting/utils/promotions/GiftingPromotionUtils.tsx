@@ -1,13 +1,13 @@
-// === Module 10524: GiftingPromotionUtils ===
+// === Module 10557: GiftingPromotionUtils ===
 
-// Module 10524 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10529 */;
-import MarketingComponentType from "MarketingComponentType" /* 10530 */;
+// Module 10557 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10562 */;
+import MarketingComponentType from "MarketingComponentType" /* 10563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9551 */;
+import PromotionsStore from "PromotionsStore" /* 9583 */;
 
 require = fn;
 const SubscriptionPlans = fn(1391).SubscriptionPlans;
@@ -157,11 +157,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = tmp2;
-export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
+export function getRewardAssetIdMap(arr) {
   const map = new Map();
   const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
   return map;
-};
+}
 export const useShouldShowSelectFreeSkuStep = tmp3;
 export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
   const items = [, , ];
@@ -203,7 +203,7 @@ export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isR
   return tmp3;
 });
 export { useIsPlanEligibleForGiftingPromotion };
-export const createGradientStyle = function createGradientStyle(gradient, arg1) {
+export function createGradientStyle(gradient, arg1) {
   if (null != gradient) {
     let obj = arg1;
     if (arg1 == null) {
@@ -243,16 +243,16 @@ export const createGradientStyle = function createGradientStyle(gradient, arg1) 
     obj2.background = "linear-gradient(" + result + "deg, " + joined + ")";
     return obj2;
   }
-};
-export const createBackgroundStyle = function createBackgroundStyle(arg0) {
+}
+export function createBackgroundStyle(arg0) {
   if (null != arg0) {
     const obj = { backgroundImage: null, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" };
     const _HermesInternal = HermesInternal;
     obj.backgroundImage = "url(" + arg0 + ")";
     return obj;
   }
-};
-export const combinePromotionStyles = function combinePromotionStyles(backgroundImage, background) {
+}
+export function combinePromotionStyles(backgroundImage, background) {
   if (null != backgroundImage) {
     if (null != background) {
       const _HermesInternal = HermesInternal;
@@ -277,8 +277,8 @@ export const combinePromotionStyles = function combinePromotionStyles(background
     tmp = obj;
   }
   return tmp;
-};
-export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
+}
+export function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (null == PromotionsStore.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
@@ -304,4 +304,4 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
   } else {
     return false;
   }
-};
+}

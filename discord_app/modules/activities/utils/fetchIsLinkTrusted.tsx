@@ -1,6 +1,6 @@
-// === Module 16001: fetchIsLinkTrusted ===
+// === Module 16238: fetchIsLinkTrusted ===
 
-// Module 16001 (fetchIsLinkTrusted)
+// Module 16238 (fetchIsLinkTrusted)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,7 +22,7 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -90,7 +90,7 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -207,7 +207,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
 
-export const fetchIsLinkTrusted = function fetchIsLinkTrusted() {
+export function fetchIsLinkTrusted() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -216,4 +216,4 @@ export const fetchIsLinkTrusted = function fetchIsLinkTrusted() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

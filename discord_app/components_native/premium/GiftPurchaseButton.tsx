@@ -1,10 +1,10 @@
-// === Module 15140: GiftPurchaseButton ===
+// === Module 15375: GiftPurchaseButton ===
 
-// Module 15140 (GiftPurchaseButton)
+// Module 15375 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import IAPStore from "IAPStore" /* 7582 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
   dependencyMap = tmp4;
   const obj = require("c");
   const buttonTextColorStyles = require("ButtonHooks").useButtonTextColorStyles(str);
-  const merged = Object.assign(tmp(5270).TextStyleSheet["text-sm/semibold"]);
+  const merged = Object.assign(tmp(5271).TextStyleSheet["text-sm/semibold"]);
   const merged1 = Object.assign(buttonTextColorStyles);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionStore];
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
   const tmpResult = require("ButtonHooks");
   const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
   if (cResult[4] !== planId) {
-    const productIdForGift = tmp(7555).getProductIdForGift(planId);
+    const productIdForGift = tmp(7578).getProductIdForGift(planId);
     cResult[4] = planId;
     cResult[5] = productIdForGift;
     let tmp12 = productIdForGift;
-    const tmpResult8 = tmp(7555);
+    const tmpResult8 = tmp(7578);
   } else {
     tmp12 = cResult[5];
   }
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
   if (tmp23) {
     tmp23 = stateFromStores.planId === planId;
   }
-  const analyticsLocations = recipientUserId(7289)().analyticsLocations;
+  const analyticsLocations = recipientUserId(7313)().analyticsLocations;
   const tmpResult11 = require("initialize");
   const createOrReuseGiftOrder = require("createOrReuseGiftOrder").useCreateOrReuseGiftOrder("GiftPurchaseButton");
   if (cResult[12] === tmp4) {
@@ -121,9 +121,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
             if (cResult[17] === recipientUserId) {
               let tmp26 = cResult[18];
             }
-            const BaseTextButton = tmp(5281).BaseTextButton;
+            const BaseTextButton = tmp(5282).BaseTextButton;
             const obj4 = { style: obj3, basePlanId: planId, isCurrentPlan: tmp23, isGift: true, product: stateFromStores2 };
-            const tmp28 = recipientUserId(15141)(obj4);
+            const tmp28 = recipientUserId(15376)(obj4);
             if (cResult[19] === BaseTextButton) {
               if (cResult[20] === tmp26) {
                 if (cResult[21] === stateFromStores1) {
@@ -247,17 +247,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
   const callback = analyticsLocations.useCallback(productIdForGift(function*() {
     yield createOrReuseGiftOrder({ planId, recipientUserId, productId: productIdForGift });
     closure_128_0 = value;
-    const premiumTypeFromPlanId = planId(2050).getPremiumTypeFromPlanId(closure_129_0);
+    const premiumTypeFromPlanId = planId(2051).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(10480).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(10513).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "IconComponent";
     const obj7 = { title: null, body: null };
     const intl = planId(1125).intl;
     obj7.title = intl.string(planId(1125).t.R0RpRX);
     const intl2 = planId(1125).intl;
     obj7.body = intl2.string(planId(1125).t.CKsXk3);
-    tmp3(5945).show(obj7);
+    tmp3(5947).show(obj7);
   }), items3);
   const tmpResult = planId(recipientUserId[14]);
   obj3.children = jsx(planId(recipientUserId[19]).BaseTextButton, { textElement: analyticsLocation(recipientUserId[20])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });

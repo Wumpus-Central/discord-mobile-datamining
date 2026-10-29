@@ -6,7 +6,7 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
-export const ensureValidMode = function ensureValidMode(typescript) {
+export function ensureValidMode(typescript) {
   let str = "typescript";
   if ("typescript" === typescript) {
     str = typescript;
@@ -14,4 +14,4 @@ export const ensureValidMode = function ensureValidMode(typescript) {
     FluxApi;
   }
   return str;
-};
+}

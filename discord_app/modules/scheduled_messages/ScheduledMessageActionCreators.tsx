@@ -1,6 +1,6 @@
-// === Module 14273: ScheduledMessageActionCreators ===
+// === Module 14507: ScheduledMessageActionCreators ===
 
-// Module 14273 (ScheduledMessageActionCreators)
+// Module 14507 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -18,7 +18,7 @@ let closure_7 = async function _createScheduledMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_7 = async function _createScheduledMessage(arg0) {
           closure_131_4 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -128,7 +128,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
           closure_131_9 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -233,7 +233,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
         obj.dispatch(obj13);
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -261,7 +261,7 @@ let closure_9 = async function _deleteScheduledMessage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -321,7 +321,7 @@ let closure_9 = async function _deleteScheduledMessage() {
           closure_131_1(closure_131_2[3]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -350,7 +350,7 @@ let closure_10 = async function _sendScheduledMessageNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -410,7 +410,7 @@ let closure_10 = async function _sendScheduledMessageNow() {
           closure_131_1(closure_131_2[3]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -470,7 +470,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 
-export const createScheduledMessage = function createScheduledMessage() {
+export function createScheduledMessage() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -479,8 +479,8 @@ export const createScheduledMessage = function createScheduledMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateScheduledMessage = function updateScheduledMessage() {
+}
+export function updateScheduledMessage() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -489,8 +489,8 @@ export const updateScheduledMessage = function updateScheduledMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteScheduledMessage = function deleteScheduledMessage() {
+}
+export function deleteScheduledMessage() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -499,8 +499,8 @@ export const deleteScheduledMessage = function deleteScheduledMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendScheduledMessageNow = function sendScheduledMessageNow() {
+}
+export function sendScheduledMessageNow() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -509,8 +509,8 @@ export const sendScheduledMessageNow = function sendScheduledMessageNow() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchScheduledMessages = function fetchScheduledMessages() {
+}
+export function fetchScheduledMessages() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -519,4 +519,4 @@ export const fetchScheduledMessages = function fetchScheduledMessages() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

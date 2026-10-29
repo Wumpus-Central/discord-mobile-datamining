@@ -1,15 +1,15 @@
-// === Module 10131: UploaderBase ===
+// === Module 10164: UploaderBase ===
 
-// Module 10131 (UploaderBase)
+// Module 10164 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8184 */;
-import UploadTargets from "UploadTargets" /* 8208 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8207 */;
+import UploadTargets from "UploadTargets" /* 8230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1084).AbortCodes;
-const FileUploadErrorTypes = fn(5009).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5010).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(580).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

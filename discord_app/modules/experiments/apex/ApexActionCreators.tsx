@@ -1,10 +1,10 @@
-// === Module 11260: ApexActionCreators ===
+// === Module 11314: ApexActionCreators ===
 
-// Module 11260 (ApexActionCreators)
+// Module 11314 (ApexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import experiment from "experiment" /* 8524 */;
+import apex_ApexTypes from "apex/ApexTypes" /* 1456 */;
+import experiment from "experiment" /* 8546 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
@@ -57,7 +57,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -143,7 +143,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
 
-export const fetchApexExperimentsMetadata = function fetchApexExperimentsMetadata() {
+export function fetchApexExperimentsMetadata() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -249,8 +249,8 @@ export const fetchApexExperimentsMetadata = function fetchApexExperimentsMetadat
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchUserExperimentAssignments = function fetchUserExperimentAssignments() {
+}
+export function fetchUserExperimentAssignments() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -259,8 +259,8 @@ export const fetchUserExperimentAssignments = function fetchUserExperimentAssign
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchInstallationExperiments = function fetchInstallationExperiments() {
+}
+export function fetchInstallationExperiments() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -269,4 +269,4 @@ export const fetchInstallationExperiments = function fetchInstallationExperiment
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

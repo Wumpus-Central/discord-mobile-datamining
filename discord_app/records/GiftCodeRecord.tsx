@@ -1,11 +1,11 @@
-// === Module 10485: GiftCodeRecord ===
+// === Module 10518: GiftCodeRecord ===
 
-// Module 10485 (GiftCodeRecord)
-import _modDef2046 from "module_2046" /* 2046 */;
+// Module 10518 (GiftCodeRecord)
+import _modDef2047 from "module_2047" /* 2047 */;
 import Record from "Record" /* 1404 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7600 */;
-import PromotionRecord from "PromotionRecord" /* 9552 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2048 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7623 */;
+import PromotionRecord from "PromotionRecord" /* 9584 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2049 */;
 
 const require = fn;
 let closure_6 = fn(1391).PremiumSubscriptionSKUToPremiumType;
@@ -31,7 +31,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef2046(user.expires_at);
+    tmp5 = _modDef2047(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -88,8 +88,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef2046().isAfter(expiresAt);
-    const obj = _modDef2046();
+    isAfterResult = _modDef2047().isAfter(expiresAt);
+    const obj = _modDef2047();
   }
   return isAfterResult;
 };

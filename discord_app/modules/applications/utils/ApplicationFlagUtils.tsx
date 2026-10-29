@@ -1,8 +1,8 @@
-// === Module 6847: ApplicationFlagUtils ===
+// === Module 6870: ApplicationFlagUtils ===
 
-// Module 6847 (ApplicationFlagUtils)
+// Module 6870 (ApplicationFlagUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 function getApplicationFlags(application) {
   if (null == application) {
@@ -45,6 +45,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
 
 export { getApplicationFlags };
-export const hasApplicationFlag = function hasApplicationFlag(application, EMBEDDED_FIRST_PARTY) {
+export function hasApplicationFlag(application, EMBEDDED_FIRST_PARTY) {
   return BigFlagUtilsAll.has(getApplicationFlags(application), EMBEDDED_FIRST_PARTY);
-};
+}

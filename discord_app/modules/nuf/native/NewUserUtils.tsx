@@ -1,20 +1,20 @@
-// === Module 19201: NewUserUtils ===
+// === Module 19436: NewUserUtils ===
 
-// Module 19201 (NewUserUtils)
+// Module 19436 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1111 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Link from "Link" /* 1503 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7926 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13820 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13927 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17696 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 19200 */;
-import InterestPickerExperiment from "InterestPickerExperiment" /* 19202 */;
+import Link from "Link" /* 1504 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7949 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14053 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14160 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17934 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 19435 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 19437 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 17648 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 17886 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ let closure_15 = async function _shouldSkipContactSyncStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -105,7 +105,7 @@ let closure_21 = async function _getNextOnboardingStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -138,7 +138,7 @@ let closure_21 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -227,12 +227,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(13544);
+const NotificationPermissionConstants = fn(13777);
 ({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1084);
 ({ PlatformTypes: closure_9, Routes: c10 } = Constants);
-const ContactPermissions = fn(13815).ContactPermissions;
-let closure_12 = fn(7903).NotificationAuthorizationStatus;
+const ContactPermissions = fn(14048).ContactPermissions;
+let closure_12 = fn(7926).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -246,7 +246,7 @@ let closure_16 = asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -326,7 +326,7 @@ let closure_16 = asyncGeneratorStep(async () => {
             } else {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           }
         } else if (arg0 === 1) {
@@ -375,7 +375,7 @@ let closure_17 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -485,7 +485,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9083).hasDeferredInvite,
+    shouldShowStep: fn(9086).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }
@@ -494,14 +494,14 @@ let items = [
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
 
-export const getKeyForOnboardingStep = function getKeyForOnboardingStep(onboardingStepIndex) {
+export function getKeyForOnboardingStep(onboardingStepIndex) {
   let key;
   if (items[onboardingStepIndex] != null) {
     key = tmp.key;
   }
   return key;
-};
-export const continueToNextStep = function continueToNextStep(onboardingStepIndex, current) {
+}
+export function continueToNextStep(onboardingStepIndex, current) {
   _require = current;
   let key;
   if (items[onboardingStepIndex] != null) {
@@ -533,5 +533,5 @@ export const continueToNextStep = function continueToNextStep(onboardingStepInde
       }, 500);
     }
   }
-};
+}
 export { getNextOnboardingStep };

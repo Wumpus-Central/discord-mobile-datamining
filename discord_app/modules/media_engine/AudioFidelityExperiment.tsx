@@ -1,8 +1,8 @@
-// === Module 15576: AudioFidelityExperiment ===
+// === Module 15812: AudioFidelityExperiment ===
 
-// Module 15576 (AudioFidelityExperiment)
+// Module 15812 (AudioFidelityExperiment)
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 let obj = { kind: "user", name: "2026-08-audio-fidelity", defaultConfig: { capSampleRate: false, capChannelCount: false, condition: "none" }, variations: null };
@@ -12,10 +12,10 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/AudioFidelityExperiment.tsx");
 
-export const getAudioFidelityExperimentConfig = function getAudioFidelityExperimentConfig(location) {
+export function getAudioFidelityExperimentConfig(location) {
   return closure_2.getConfig({ location: location.location });
-};
-export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, krispEnabled) {
+}
+export function getVoiceFidelityCaps(location, krispEnabled) {
   let echoCancellationEnabled = krispEnabled.krispEnabled;
   if (!echoCancellationEnabled) {
     echoCancellationEnabled = krispEnabled.noiseSuppressionEnabled;
@@ -61,4 +61,4 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
   } else {
     return { maxSampleRateHz: 0, maxChannelCount: 0 };
   }
-};
+}

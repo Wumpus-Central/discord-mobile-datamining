@@ -1,10 +1,10 @@
-// === Module 8348: EmojiColorUtils ===
+// === Module 8370: EmojiColorUtils ===
 
-// Module 8348 (EmojiColorUtils)
+// Module 8370 (EmojiColorUtils)
 import _modDef683 from "module_683" /* 683 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4960 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import utils_ColorDefault from "utils/Color" /* 5002 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4961 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import utils_ColorDefault from "utils/Color" /* 5003 */;
 import size from "module_2" /* 2 */;
 
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
@@ -117,7 +117,7 @@ let c4 = "#36393e";
 const result = size.fileFinishedImporting("modules/emojis/utils/EmojiColorUtils.tsx");
 
 export { buildPlatformedThemedEmojiColorPalette };
-export const buildEmojiColorPalette = function buildEmojiColorPalette(colors, stateFromStores, stateFromStores1) {
+export function buildEmojiColorPalette(colors, stateFromStores, stateFromStores1) {
   if (null != colors) {
     if (colors.length >= 1) {
       const obj2 = { colors, saturationFactor: stateFromStores };
@@ -158,4 +158,4 @@ export const buildEmojiColorPalette = function buildEmojiColorPalette(colors, st
     }
   }
   return null;
-};
+}

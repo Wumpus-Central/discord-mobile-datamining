@@ -1,10 +1,10 @@
-// === Module 14709: DynamicBadgeTooltip ===
+// === Module 14944: DynamicBadgeTooltip ===
 
-// Module 14709 (DynamicBadgeTooltip)
+// Module 14944 (DynamicBadgeTooltip)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import Pressables from "Pressables" /* 6944 */;
-import useTooltip from "useTooltip" /* 9875 */;
+import Pressables from "Pressables" /* 6968 */;
+import useTooltip from "useTooltip" /* 9907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -63,8 +63,8 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
             tmp = globalThis;
             _setTimeout = setTimeout;
             num = 2500;
-            closure_0 = setTimeout(() => { ... }, 2500);
-            return () => { ... };
+            closure_0 = setTimeout(/* F154337 */ function() { ... }, 2500);
+            return /* F154338 */ function() { ... };
           } else {
             return;
           }
@@ -82,8 +82,8 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
             tmp = globalThis;
             _setTimeout = setTimeout;
             num = 2500;
-            closure_0 = setTimeout(() => { ... }, 2500);
-            return () => { ... };
+            closure_0 = setTimeout(/* F154337 */ function() { ... }, 2500);
+            return /* F154338 */ function() { ... };
           } else {
             return;
           }
@@ -96,7 +96,7 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class E {
         constructor() {
-          tmp = closure_1(() => { ... });
+          tmp = closure_1(/* F154339 */ function() { ... });
           return;
         }
       }
@@ -104,7 +104,7 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
     } else {
       class E {
         constructor() {
-          tmp = closure_1(() => { ... });
+          tmp = closure_1(/* F154339 */ function() { ... });
           return;
         }
       }
@@ -112,7 +112,7 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
     if (cResult[9] === accessibilityLabel) {
       class E {
         constructor() {
-          tmp = closure_1(() => { ... });
+          tmp = closure_1(/* F154339 */ function() { ... });
           return;
         }
       }

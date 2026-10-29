@@ -1,16 +1,16 @@
-// === Module 19328: BaseRuleInfo ===
+// === Module 19561: BaseRuleInfo ===
 
-// Module 19328 (BaseRuleInfo)
+// Module 19561 (BaseRuleInfo)
 import util from "util" /* 1125 */;
-import Constants from "Constants" /* 12870 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19315 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19316 */;
+import Constants from "Constants" /* 13091 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19548 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19549 */;
 import size from "module_2" /* 2 */;
 
 const AutomodTriggerType = Constants.AutomodTriggerType;
 const result = size.fileFinishedImporting("modules/guild_automod/BaseRuleInfo.tsx");
 
-export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, rule) {
+export function getBaseRuleInfo(triggerType, rule) {
   let tmp = null;
   if (null != triggerType) {
     if (AutomodTriggerType.KEYWORD !== triggerType) {
@@ -102,4 +102,4 @@ export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, rule) {
     flag = true;
   }
   return tmp;
-};
+}

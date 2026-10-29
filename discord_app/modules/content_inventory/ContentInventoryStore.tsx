@@ -1,9 +1,9 @@
-// === Module 8861: ContentInventoryStore ===
+// === Module 8864: ContentInventoryStore ===
 
-// Module 8861 (ContentInventoryStore)
+// Module 8864 (ContentInventoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import matchUtils from "matchUtils" /* 8862 */;
+import matchUtils from "matchUtils" /* 8865 */;
 
 require = fn;
 let map = new Map();
@@ -17,8 +17,8 @@ const prototype = ContentInventoryStore.prototype;
 prototype["getFeeds"] = function getFeeds() {
   return map;
 };
-prototype["getFeed"] = function getFeed(GLOBAL_FEED) {
-  return map.get(GLOBAL_FEED);
+prototype["getFeed"] = function getFeed(arg0) {
+  return map.get(arg0);
 };
 prototype["getFeedState"] = function getFeedState(arg0) {
   return map1.get(arg0);

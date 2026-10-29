@@ -1,25 +1,25 @@
-// === Module 7268: DropdownOptionsActionSheet ===
+// === Module 7292: DropdownOptionsActionSheet ===
 
-// Module 7268 (DropdownOptionsActionSheet)
+// Module 7292 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import components_Button_Button from "components/Button/Button" /* 5280 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5301 */;
-import BottomSheetModal from "BottomSheetModal" /* 5305 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5302 */;
+import BottomSheetModal from "BottomSheetModal" /* 5306 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7308 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6760 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7231 */;
+import EmojiStore from "EmojiStore" /* 6783 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7255 */;
 
 require = fn;
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function DropdownOptionRow(option) {
@@ -104,7 +104,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                   }
                   if (cResult[19] !== option.title) {
                     const obj2 = { variant: "text-md/normal", children: option.title };
-                    const tmp33 = closure_8(tmp(5270).Text, obj2);
+                    const tmp33 = closure_8(tmp(5271).Text, obj2);
                     cResult[19] = option.title;
                     cResult[20] = tmp33;
                     let tmp31 = tmp33;
@@ -129,7 +129,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                         }
                       }
                       const obj3 = { label: tmp34, selected: tmp11, leading: tmp16, trailing: tmp28, onPress: tmp13 };
-                      const tmp41 = closure_8(onSelect(7271), obj3);
+                      const tmp41 = closure_8(onSelect(7295), obj3);
                       cResult[25] = tmp16;
                       cResult[26] = tmp13;
                       cResult[27] = tmp34;
@@ -153,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                 if (canBeNew) {
                   tmp29 = null;
                   if (option.isUnseen) {
-                    tmp29 = closure_8(tmp(7269).Badge, { type: "new", variant: "primary" });
+                    tmp29 = closure_8(tmp(7293).Badge, { type: "new", variant: "primary" });
                   }
                 }
                 cResult[16] = canBeNew;
@@ -178,8 +178,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
             const obj9 = { id: null, animated: null, size: null };
             ({ id: obj6.id, animated: obj6.animated } = stateFromStores);
             obj9.size = EMOJI_URL_BASE_SIZE;
-            emojiURL = onSelect(1414).getEmojiURL(obj9);
-            const tmp22Result = onSelect(1414);
+            emojiURL = onSelect(1415).getEmojiURL(obj9);
+            const tmp22Result = onSelect(1415);
           }
           obj8.src = emojiURL;
           const emoji7 = option.emoji;
@@ -191,9 +191,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
             str = "";
           }
           obj8.name = str;
-          obj7.children = closure_8(onSelect(7263), obj8);
+          obj7.children = closure_8(onSelect(7287), obj8);
           let tmp20Result = closure_8(View, obj7);
-          const tmp23 = onSelect(7263);
+          const tmp23 = onSelect(7287);
         } else {
           const emoji6 = option.emoji;
           let name1;

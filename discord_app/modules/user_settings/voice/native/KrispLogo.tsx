@@ -1,16 +1,16 @@
-// === Module 11674: KrispLogo ===
+// === Module 11728: KrispLogo ===
 
-// Module 11674 (KrispLogo)
+// Module 11728 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import shared from "shared" /* 5011 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import LinkingDefault from "Linking" /* 5696 */;
-import _modDef11675 from "module_11675" /* 11675 */;
-import _modDef11676 from "module_11676" /* 11676 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import shared from "shared" /* 5012 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import LinkingDefault from "Linking" /* 5698 */;
+import _modDef11729 from "module_11729" /* 11729 */;
+import _modDef11730 from "module_11730" /* 11730 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
@@ -54,10 +54,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLog
   const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   const tmpResult = initialize;
   if (tmpResult2.isThemeLight(stateFromStores)) {
-    let tmp8Result = _modDef11675;
+    let tmp8Result = _modDef11729;
     let tmp10 = importDefault;
   } else {
-    tmp8Result = _modDef11676;
+    tmp8Result = _modDef11730;
     tmp10 = importDefault;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLog
   }
   if (cResult[3] !== tmp8Result) {
     const obj2 = { style: closure_12.logo, source: tmp8Result, accessibilityLabel: tmp11 };
-    const tmp16 = v65535(tmp10(5705), obj2);
+    const tmp16 = v65535(tmp10(5707), obj2);
     cResult[3] = tmp8Result;
     cResult[4] = tmp16;
     let tmp13 = tmp16;
@@ -113,10 +113,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLog
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef11675;
+    let tmp4Result = _modDef11729;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef11676;
+    tmp4Result = _modDef11730;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLog
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [v65535(tmp6(5705), obj4), ];
+  const items1 = [v65535(tmp6(5707), obj4), ];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);

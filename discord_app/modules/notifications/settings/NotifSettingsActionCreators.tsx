@@ -1,13 +1,13 @@
-// === Module 17609: NotifSettingsActionCreators ===
+// === Module 17847: NotifSettingsActionCreators ===
 
-// Module 17609 (NotifSettingsActionCreators)
+// Module 17847 (NotifSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import notification_settings from "notification_settings" /* 15254 */;
+import notification_settings from "notification_settings" /* 15489 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15253 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15488 */;
 
 require = fn;
 function skipEdit(edit) {
@@ -34,7 +34,7 @@ let closure_10 = async function _persistPendingEdit() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Failed to take ownership of apply; current is", NotifSettingsProtoStore.applyingEdit);
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               const protoToB64Result = user_settings_UserSettingsUtils.protoToB64(notification_settings.DeclarativeSettings, pendingEdit.partialSettings);
               if (null != protoToB64Result) {
@@ -91,7 +91,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Not persisting proto because there is nothing to change");
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             c7 = 3;
@@ -215,7 +215,7 @@ let closure_11 = async function _reload() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -351,7 +351,7 @@ let closure_7 = new LoggerDefault("NotifSettingsActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsActionCreators.tsx");
 
-export const schedulePersistPendingEditsIfNeeded = function schedulePersistPendingEditsIfNeeded() {
+export function schedulePersistPendingEditsIfNeeded() {
   const pendingEdit = NotifSettingsProtoStore.pendingEdit;
   if (null != pendingEdit) {
     if (!tmp2) {
@@ -363,8 +363,8 @@ export const schedulePersistPendingEditsIfNeeded = function schedulePersistPendi
     }
     tmp2 = null != pendingEdit.timeout || tmp.isApplyingEdit;
   }
-};
-export const updateNotifSettingToggleValue = function updateNotifSettingToggleValue(CALLS, toggle) {
+}
+export function updateNotifSettingToggleValue(CALLS, toggle) {
   updateNotifSettingValue(CALLS, {
     createNew() {
       const DeclarativeNotifSetting = toggle(dependencyMap[6]).DeclarativeNotifSetting;
@@ -377,12 +377,12 @@ export const updateNotifSettingToggleValue = function updateNotifSettingToggleVa
       return toggle.toggle !== toggle;
     }
   });
-};
-export const updateNotifSettingRadioValue = function updateNotifSettingRadioValue(CALLS, radio) {
+}
+export function updateNotifSettingRadioValue(CALLS, radio) {
   updateNotifSettingValue(CALLS, {
     update(radio) {
       radio.radio = radio;
       return radio.radio !== radio;
     }
   });
-};
+}

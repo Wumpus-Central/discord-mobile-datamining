@@ -1,8 +1,8 @@
-// === Module 11110: maybeShowUnsavedChangesAlert ===
+// === Module 11164: maybeShowUnsavedChangesAlert ===
 
-// Module 11110 (maybeShowUnsavedChangesAlert)
+// Module 11164 (maybeShowUnsavedChangesAlert)
 import util from "util" /* 1125 */;
-import AlertModal from "AlertModal" /* 5950 */;
+import AlertModal from "AlertModal" /* 5952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -133,16 +133,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5195).dismissKeyboard();
-    const obj = onReset(5195);
+    onReset(5196).dismissKeyboard();
+    const obj = onReset(5196);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5246).hideActionSheet();
-      const tmp7Result = tmp7(5246);
-      tmp7(5945).close();
-      const tmp4Result = tmp4(5946);
+      tmp7(5247).hideActionSheet();
+      const tmp7Result = tmp7(5247);
+      tmp7(5947).close();
+      const tmp4Result = tmp4(5948);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(5945);
+      const tmp7Result3 = tmp7(5947);
     } else {
       const obj4 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
       const intl = tmp4(1125).intl;
@@ -160,10 +160,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(5945).show(obj4);
-      const tmp7Result4 = tmp7(5945);
+      tmp7(5947).show(obj4);
+      const tmp7Result4 = tmp7(5947);
     }
-    obj2 = onReset(11111);
+    obj2 = onReset(11165);
   } else {
     onContinue();
   }

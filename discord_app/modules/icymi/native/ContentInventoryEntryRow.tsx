@@ -1,10 +1,10 @@
-// === Module 18227: ContentInventoryEntryRow ===
+// === Module 18461: ContentInventoryEntryRow ===
 
-// Module 18227 (ContentInventoryEntryRow)
-import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 18228 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 18235 */;
+// Module 18461 (ContentInventoryEntryRow)
+import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 18462 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 18469 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentI
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8650).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8650).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8650).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8672).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8672).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8672).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           if (visible == null) {
             visible = false;
           }
@@ -90,9 +90,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentI
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8650).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8650).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8650).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8672).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8672).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8672).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

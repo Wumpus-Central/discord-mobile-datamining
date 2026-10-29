@@ -1,15 +1,15 @@
-// === Module 16966: DisplayNameStylesFontOrder ===
+// === Module 17205: DisplayNameStylesFontOrder ===
 
-// Module 16966 (DisplayNameStylesFontOrder)
+// Module 17205 (DisplayNameStylesFontOrder)
 import c from "c" /* 576 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5032 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 16129 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5033 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 16366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DisplayNameStylesConstants = fn(1407);
 ({ FLYWHEEL_FONTS, HEXAGON_CAMPAIGN_FONTS: c3 } = DisplayNameStylesConstants);
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({ HexagonCampaignPerk: closure_4, HexagonCampaignPerkAvailability: hasOwnProperty } = HexagonCampaignConstants);
 let items = [fn(1409).DisplayNameFont.DEFAULT, fn(1409).DisplayNameFont.ZILLA_SLAB, fn(1409).DisplayNameFont.CHERRY_BOMB, fn(1409).DisplayNameFont.CHICLE, fn(1409).DisplayNameFont.MUSEO_MODERNO, fn(1409).DisplayNameFont.NEO_CASTEL, fn(1409).DisplayNameFont.PIXELIFY, fn(1409).DisplayNameFont.SINISTRE];
 const items1 = [...FLYWHEEL_FONTS];

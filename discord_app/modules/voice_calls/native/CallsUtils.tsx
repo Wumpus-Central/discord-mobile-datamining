@@ -1,133 +1,89 @@
-// === Module 9186: CallsUtils ===
+// === Module 9189: CallsUtils ===
 
-// Module 9186 (CallsUtils)
+// Module 9189 (CallsUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1125 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5887 */;
-import AVError from "AVError" /* 5933 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6669 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7902 */;
-import _modDef9190 from "module_9190" /* 9190 */;
-import _modDef9191 from "module_9191" /* 9191 */;
-import _modDef9192 from "module_9192" /* 9192 */;
-import useIsVideoModeDefault from "useIsVideoMode" /* 11652 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5889 */;
+import AVError from "AVError" /* 5935 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6693 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7925 */;
+import _modDef9193 from "module_9193" /* 9193 */;
+import _modDef9194 from "module_9194" /* 9194 */;
+import _modDef9195 from "module_9195" /* 9195 */;
+import useIsVideoModeDefault from "useIsVideoMode" /* 11706 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
-import AudioRouteStore from "AudioRouteStore" /* 5770 */;
-import AudioManagerStore from "AudioManagerStore" /* 9187 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
+import AudioRouteStore from "AudioRouteStore" /* 5772 */;
+import AudioManagerStore from "AudioManagerStore" /* 9190 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_16 = async function _handleToggleVideo(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag3 = closure_1;
+  if (closure_1 === undefined) {
+    flag3 = true;
+  }
+  closure_130_1 = flag3;
+  await "Reflect";
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c5 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          c3 = 0;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag3 = closure_1;
-          if (closure_1 === undefined) {
-            flag3 = true;
-          }
-          closure_130_1 = flag3;
-          closure_130_2 = undefined;
-          let channelVideoLimit;
-          let reachedLimit;
-          let limit;
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
+      closure_130_2 = closure_131_10.isVideoEnabled();
+      const channelVideoLimit = closure_131_0(closure_131_3[12]).getChannelVideoLimit(closure_130_0);
+      const reachedLimit = channelVideoLimit.reachedLimit;
+      const limit = channelVideoLimit.limit;
+      if (reachedLimit) {
+        if (closure_130_1) {
+          const obj5 = { title: null, body: null };
+          const intl = closure_131_0(closure_131_3[14]).intl;
+          obj5.title = intl.string(closure_131_0(closure_131_3[14]).t["3ffmE+"]);
+          const intl2 = closure_131_0(closure_131_3[14]).intl;
+          obj5.body = intl2.formatToPlainString(closure_131_0(closure_131_3[14]).t.x9mtl4, { limit: limit.toString() });
+          closure_131_1(closure_131_3[13]).show(obj5);
+          closure_131_1(closure_131_3[13]);
+          { limit: limit.toString() };
         }
+      } else if (closure_130_2) {
+        closure_131_1(closure_131_3[16]).setVideoEnabled(false);
+        closure_131_1(closure_131_3[16]);
       } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_130_2 = closure_131_10.isVideoEnabled();
-            channelVideoLimit = closure_131_0(closure_131_3[12]).getChannelVideoLimit(closure_130_0);
-            reachedLimit = channelVideoLimit.reachedLimit;
-            limit = channelVideoLimit.limit;
-            if (reachedLimit) {
-              if (closure_130_1) {
-                const obj5 = { title: null, body: null };
-                const intl = closure_131_0(closure_131_3[14]).intl;
-                obj5.title = intl.string(closure_131_0(closure_131_3[14]).t["3ffmE+"]);
-                const intl2 = closure_131_0(closure_131_3[14]).intl;
-                const obj7 = { limit: limit.toString() };
-                obj5.body = intl2.formatToPlainString(closure_131_0(closure_131_3[14]).t.x9mtl4, obj7);
-                closure_131_1(closure_131_3[13]).show(obj5);
-                const obj6 = closure_131_1(closure_131_3[13]);
-              }
-            } else if (closure_130_2) {
-              closure_131_1(closure_131_3[16]).setVideoEnabled(false);
-              const tmp12Result = closure_131_1(closure_131_3[16]);
-            } else {
-              c4 = 2;
-              c5 = 1;
-              const obj8 = { value: closure_131_1(closure_131_3[15]).requestPermission(closure_131_15.CAMERA), done: false };
-              return obj8;
-            }
-            c5 = 3;
-            const obj12 = closure_131_0(closure_131_3[12]);
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          if (value) {
-            closure_131_1(closure_131_3[16]).setVideoEnabled(true);
-            const obj = closure_131_1(closure_131_3[16]);
-          }
-        }
-        c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
+        c4 = 2;
+        c5 = 1;
+        return { value: closure_131_1(closure_131_3[15]).requestPermission(closure_131_15.CAMERA), done: false };
       }
-    } catch (tmp31) {
-      c5 = tmp;
-      throw tmp31;
+      c5 = 3;
+      closure_131_0(closure_131_3[12]);
+    }
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    if (value) {
+      closure_131_1(closure_131_3[16]).setVideoEnabled(true);
+      closure_131_1(closure_131_3[16]);
     }
   }
+  return value;
 };
 const NativeModules = fn(17).NativeModules;
-const NativePermissionTypes = fn(7903).NativePermissionTypes;
+const NativePermissionTypes = fn(7926).NativePermissionTypes;
 let apply = apply_mod;
 let closure_17 = apply.debounce((arg0) => {
   const AudioRoutePicker = NativeModules.AudioRoutePicker;
@@ -139,7 +95,7 @@ let apply = apply_mod;
 let closure_18 = apply.debounce((fn) => {
   fn();
 }, 1);
-const audioDeviceToIconMap = { EARPIECE: _modDef9190, BLUETOOTH_HEADSET: _modDef9191, WIRED_HEADSET: _modDef9192, SPEAKERPHONE: _modDef9192, INVALID: _modDef9192 };
+const audioDeviceToIconMap = { EARPIECE: _modDef9193, BLUETOOTH_HEADSET: _modDef9194, WIRED_HEADSET: _modDef9195, SPEAKERPHONE: _modDef9195, INVALID: _modDef9195 };
 const constants = { TYPE_UNKNOWN: 0, [0]: "TYPE_UNKNOWN", TYPE_BUILTIN_EARPIECE: 1, [1]: "TYPE_BUILTIN_EARPIECE", TYPE_BUILTIN_SPEAKER: 2, [2]: "TYPE_BUILTIN_SPEAKER", TYPE_WIRED_HEADSET: 3, [3]: "TYPE_WIRED_HEADSET", TYPE_WIRED_HEADPHONES: 4, [4]: "TYPE_WIRED_HEADPHONES", TYPE_LINE_ANALOG: 5, [5]: "TYPE_LINE_ANALOG", TYPE_LINE_DIGITAL: 6, [6]: "TYPE_LINE_DIGITAL", TYPE_BLUETOOTH_SCO: 7, [7]: "TYPE_BLUETOOTH_SCO", TYPE_BLUETOOTH_A2DP: 8, [8]: "TYPE_BLUETOOTH_A2DP", TYPE_HDMI: 9, [9]: "TYPE_HDMI", TYPE_HDMI_ARC: 10, [10]: "TYPE_HDMI_ARC", TYPE_USB_DEVICE: 11, [11]: "TYPE_USB_DEVICE", TYPE_USB_ACCESSORY: 12, [12]: "TYPE_USB_ACCESSORY", TYPE_DOCK: 13, [13]: "TYPE_DOCK", TYPE_FM: 14, [14]: "TYPE_FM", TYPE_BUILTIN_MIC: 15, [15]: "TYPE_BUILTIN_MIC", TYPE_FM_TUNER: 16, [16]: "TYPE_FM_TUNER", TYPE_TV_TUNER: 17, [17]: "TYPE_TV_TUNER", TYPE_TELEPHONY: 18, [18]: "TYPE_TELEPHONY", TYPE_AUX_LINE: 19, [19]: "TYPE_AUX_LINE", TYPE_IP: 20, [20]: "TYPE_IP", TYPE_BUS: 21, [21]: "TYPE_BUS", TYPE_USB_HEADSET: 22, [22]: "TYPE_USB_HEADSET", TYPE_HEARING_AID: 23, [23]: "TYPE_HEARING_AID", TYPE_BUILTIN_SPEAKER_SAFE: 24, [24]: "TYPE_BUILTIN_SPEAKER_SAFE", TYPE_REMOTE_SUBMIX: 25, [25]: "TYPE_REMOTE_SUBMIX", TYPE_BLE_HEADSET: 26, [26]: "TYPE_BLE_HEADSET", TYPE_BLE_SPEAKER: 27, [27]: "TYPE_BLE_SPEAKER", TYPE_ECHO_REFERENCE: 28, [28]: "TYPE_ECHO_REFERENCE", TYPE_HDMI_EARC: 29, [29]: "TYPE_HDMI_EARC", TYPE_BLE_BROADCAST: 30, [30]: "TYPE_BLE_BROADCAST", TYPE_DOCK_ANALOG: 31, [31]: "TYPE_DOCK_ANALOG" };
 const PlatformUtils = fn(1381);
 const ReactCompilerGating = fn(558);
@@ -161,10 +117,10 @@ const tmp2 = PlatformUtils.isAndroid() ? (() => {
 }) : (() => {
   const items = [ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore, AudioRouteStore];
   const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(11652).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
+    isVideoMode = isEnabled(11706).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(5771).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(5771).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(5773).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(5773).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -196,12 +152,12 @@ const tmp2 = PlatformUtils.isAndroid() ? (() => {
     dependencyMap(isEnabled);
   }, items2);
   const obj = isEnabled(504);
-  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9191 : 9192) };
+  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9194 : 9195) };
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/CallsUtils.tsx");
 
-export const handleToggleVideo = function handleToggleVideo() {
+export function handleToggleVideo() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -210,54 +166,54 @@ export const handleToggleVideo = function handleToggleVideo() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const handleToggleSelfDeaf = function handleToggleSelfDeaf() {
+}
+export function handleToggleSelfDeaf() {
   AudioActionCreatorsDefault.toggleSelfDeaf();
-};
-export const handleToggleSelfMute = function handleToggleSelfMute() {
+}
+export function handleToggleSelfMute() {
   AudioActionCreatorsDefault.toggleSelfMute();
-};
-export const showSuppressedAlert = function showSuppressedAlert() {
+}
+export function showSuppressedAlert() {
   const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t.FJSZVM);
   const intl2 = util.intl;
   obj2.body = intl2.string(util.t.etJjgW);
   actions_AlertActionCreatorsDefault.show(obj2);
-};
-export const showServerMuteAlert = function showServerMuteAlert() {
+}
+export function showServerMuteAlert() {
   const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t["+JQCa/"]);
   const intl2 = util.intl;
   obj2.body = intl2.string(util.t.hsNm7d);
   actions_AlertActionCreatorsDefault.show(obj2);
-};
-export const showServerDeafenAlert = function showServerDeafenAlert() {
+}
+export function showServerDeafenAlert() {
   const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t.QZ7WSS);
   const intl2 = util.intl;
   obj2.body = intl2.string(util.t.Tl9JpL);
   actions_AlertActionCreatorsDefault.show(obj2);
-};
-export const showCameraDisabledAlert = function showCameraDisabledAlert() {
+}
+export function showCameraDisabledAlert() {
   const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t.OYzPcW);
   const intl2 = util.intl;
   obj2.body = intl2.string(util.t.oBH7Y2);
   actions_AlertActionCreatorsDefault.show(obj2);
-};
-export const showScreenshareDisabledAlert = function showScreenshareDisabledAlert() {
+}
+export function showScreenshareDisabledAlert() {
   const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t["/x4knx"]);
   const intl2 = util.intl;
   obj2.body = intl2.string(util.t.PpfzUE);
   actions_AlertActionCreatorsDefault.show(obj2);
-};
-export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshareRequirementAlert() {
+}
+export function showMinOSScreenshareRequirementAlert() {
   const intl = util.intl;
   const errorInfo = AVError.getErrorInfo(AVError.AVError.SCREENSHARE_OS_NOT_SUPPORTED);
   let errorCode;
@@ -271,23 +227,23 @@ export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshar
   const intl3 = util.intl;
   obj3.body = "" + intl3.string(util.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
   actions_AlertActionCreatorsDefault.show(obj3);
-};
-export const showTabletRequirementAlert = function showTabletRequirementAlert() {
+}
+export function showTabletRequirementAlert() {
   const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t["1N0dxa"]);
   const intl2 = util.intl;
   obj2.body = intl2.string(util.t.qqDFVb);
   actions_AlertActionCreatorsDefault.show(obj2);
-};
-export const handleDisconnect = function handleDisconnect(channel) {
+}
+export function handleDisconnect(channel) {
   const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
   const result1 = PrivateChannelCallUtils.dismissVoiceChannelScreens(channel, () => {
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(null);
   });
-};
+}
 export { audioDeviceToIconMap };
-export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(deviceType) {
+export function getAudioDeviceToDisplayText(deviceType) {
   const obj = { EARPIECE: null, BLUETOOTH_HEADSET: null, WIRED_HEADSET: null, SPEAKERPHONE: null, INVALID: null };
   const intl = util.intl;
   obj.EARPIECE = intl.string(util.t.Ouoi6E);
@@ -306,7 +262,7 @@ export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(
     stringResult = obj[deviceType.simpleDeviceType];
   }
   return stringResult;
-};
+}
 export const useMaskedSpeakerStates = tmp2;
 export const useImmediateMaskedSpeakerStates = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = require("c").c(14);
@@ -326,7 +282,7 @@ export const useImmediateMaskedSpeakerStates = ReactCompilerGating.isReactCompil
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   const tmp9 = useIsVideoModeDefault();
   _require = tmp9;
-  let tmp10 = stateFromStores === tmp(5771).RouteTypes.SPEAKER;
+  let tmp10 = stateFromStores === tmp(5773).RouteTypes.SPEAKER;
   const tmp11 = stateFromStores === require("VoiceCallTypes").RouteTypes.BLUETOOTH;
   if (!tmp10) {
     tmp10 = tmp11;
@@ -365,7 +321,7 @@ export const useImmediateMaskedSpeakerStates = ReactCompilerGating.isReactCompil
         }
       }
       const effect = noop.useEffect(O, tmp16);
-      const tmp8Result = tmp8(tmp11 ? 9191 : 9192);
+      const tmp8Result = tmp8(tmp11 ? 9194 : 9195);
       if (cResult[10] === isAudioRouteEnabled) {
         class O {
           constructor() {
@@ -438,5 +394,5 @@ export const useImmediateMaskedSpeakerStates = ReactCompilerGating.isReactCompil
     closure_3(closure_1);
   }, items2);
   const obj = require("initialize");
-  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9191 : 9192) };
+  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9194 : 9195) };
 });

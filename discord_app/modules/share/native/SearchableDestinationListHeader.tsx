@@ -1,18 +1,18 @@
-// === Module 12973: SearchableDestinationListHeader ===
+// === Module 13194: SearchableDestinationListHeader ===
 
-// Module 12973 (SearchableDestinationListHeader)
+// Module 13194 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Link from "Link" /* 1503 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import NavigatorHeader from "NavigatorHeader" /* 6960 */;
-import _mod6969 from "module_6969" /* 6969 */;
-import HeaderShared from "HeaderShared" /* 9733 */;
+import Link from "Link" /* 1504 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import NavigatorHeader from "NavigatorHeader" /* 6984 */;
+import _mod6993 from "module_6993" /* 6993 */;
+import HeaderShared from "HeaderShared" /* 9765 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
   subtitleColor = subtitleColor.subtitleColor;
   ({ headerRight, headerStatusBarHeight, onClose } = subtitleColor);
   const tmp4 = closure_5();
-  const context = noop.useContext(subtitle(1503).NavigationRouteContext);
+  const context = noop.useContext(subtitle(1504).NavigationRouteContext);
   const obj = subtitle(576);
   const tmp5 = subtitleColor;
   let isIOSResult = subtitle(1381).isIOS();
@@ -51,8 +51,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     if (cResult[3] !== onClose) {
       let headerCloseButton;
       if (null != onClose) {
-        headerCloseButton = subtitle(6960).getHeaderCloseButton(onClose);
-        const tmpResult = subtitle(6960);
+        headerCloseButton = subtitle(6984).getHeaderCloseButton(onClose);
+        const tmpResult = subtitle(6984);
       }
       cResult[3] = onClose;
       cResult[4] = headerCloseButton;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     if (headerStatusBarHeight == null) {
       let num3 = 0;
       if (!isIOSResult) {
-        num3 = subtitleColor(1630)().top;
+        num3 = subtitleColor(1631)().top;
       }
       headerStatusBarHeight = num3 + tmp5(587).space.PX_8;
     }
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     const obj3 = { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
     ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp4);
     obj3.headerStatusBarHeight = headerStatusBarHeight;
-    const tmp17 = jsx(subtitle(6969).Header, { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
+    const tmp17 = jsx(subtitle(6993).Header, { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
     cResult[5] = headerRight;
     cResult[6] = tmp4.header;
     cResult[7] = tmp4.headerLeftContainer;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod6969.Header, {
+  return jsx(_mod6993.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

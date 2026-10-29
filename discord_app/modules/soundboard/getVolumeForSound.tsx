@@ -1,9 +1,9 @@
-// === Module 16070: getVolumeForSound ===
+// === Module 16306: getVolumeForSound ===
 
-// Module 16070 (getVolumeForSound)
-import UserSettings from "UserSettings" /* 4832 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5895 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+// Module 16306 (getVolumeForSound)
+import UserSettings from "UserSettings" /* 4833 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5897 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 const size = fn(2);
@@ -26,10 +26,10 @@ export default function getVolumeForSound(arg0) {
   const result = PerceptualVolumeUtils.amplitudeToPerceptual(tmp) / 100;
   return Math.min(arg0 * result * Math.min(MediaEngineStore.getOutputVolume() / 100, 1), 1);
 };
-export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
+export function getPerceptualSoundboardVolume(USER) {
   let num = USER;
   if (USER == null) {
     num = 100;
   }
   return PerceptualVolumeUtils.amplitudeToPerceptual(num) / 100;
-};
+}

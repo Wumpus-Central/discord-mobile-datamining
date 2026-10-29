@@ -1,15 +1,17 @@
-// === Module 18485: FriendsNavigator ===
+// === Module 18719: FriendsNavigator ===
 
-// Module 18485 (FriendsNavigator)
+// Module 18719 (FriendsNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import native from "native" /* 5070 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5182 */;
-import HeaderShared from "HeaderShared" /* 9733 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9739 */;
-import _modDef13756 from "module_13756" /* 13756 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
+import native from "native" /* 5071 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5183 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7098 */;
+import HeaderShared from "HeaderShared" /* 9765 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9771 */;
+import _modDef13989 from "module_13989" /* 13989 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,9 +20,9 @@ let closure_3 = ["children"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9777);
+const NativeStackNavigator = fn(9809);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj3 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj3.header = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, shadowColor: "transparent" };
@@ -39,7 +41,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reques
   }
   if (cResult[1] !== onPress) {
     const obj2 = { isModal: true, children: null };
-    const obj3 = { source: _modDef13756, onPress, accessibilityLabel: first };
+    const obj3 = { source: _modDef13989, onPress, accessibilityLabel: first };
     obj2.children = React5(HeaderShared.HeaderIconButton, obj3);
     const tmp10 = React5(PressableNavigatorButtonWrapperDefault, obj2);
     cResult[1] = onPress;
@@ -51,7 +53,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reques
   return tmp6;
 }) : (function RequestsSettingsModalButton(onPress) {
   const obj = { isModal: true, children: null };
-  const obj2 = { source: _modDef13756, onPress: onPress.onPress, accessibilityLabel: null };
+  const obj2 = { source: _modDef13989, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = React5(HeaderShared.HeaderIconButton, obj2);
@@ -64,7 +66,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
-      return closure_0(7619).trackAppUIViewed();
+      return closure_0(7642).trackAppUIViewed();
     };
     const items = [];
     cResult[0] = fn;
@@ -98,12 +100,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
                 obj.onPress = function onPress() {
                   return navigation.navigate("add-friends", { sourcePage: "Friends Screen Header" });
                 };
-                return closure_2_7(navigation(9733).HeaderTextButton, obj);
+                return closure_2_7(navigation(9765).HeaderTextButton, obj);
               };
               return obj;
             },
         getComponent() {
-              return closure_0(18486).default;
+              return closure_0(18720).default;
             }
       };
       const tmp13 = closure_7(closure_9.Screen, obj2);
@@ -120,7 +122,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj4.title = intl.string(tmp(1125).t.jD1qzM);
       obj3.options = obj4;
       obj3.getComponent = function getComponent() {
-        return closure_0(18492).default;
+        return closure_0(18726).default;
       };
       const tmp17 = closure_7(closure_9.Screen, obj3);
       cResult[6] = tmp17;
@@ -136,7 +138,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj6.title = intl2.string(tmp(1125).t["3hF1W4"]);
       obj5.options = obj6;
       obj5.getComponent = function getComponent() {
-        return closure_0(18495).default;
+        return closure_0(18729).default;
       };
       const tmp21 = closure_7(closure_9.Screen, obj5);
       cResult[7] = tmp21;
@@ -152,7 +154,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj8.title = intl3.string(tmp(1125).t.w5uwoI);
       obj7.options = obj8;
       obj7.getComponent = function getComponent() {
-        return closure_0(18496).default;
+        return closure_0(18730).default;
       };
       const tmp25 = closure_7(closure_9.Screen, obj7);
       cResult[8] = tmp25;
@@ -168,7 +170,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj10.title = intl4.string(tmp(1125).t.zIJnA6);
       obj9.options = obj10;
       obj9.getComponent = function getComponent() {
-        return closure_0(18497).default;
+        return closure_0(18731).default;
       };
       const tmp29 = closure_7(closure_9.Screen, obj9);
       cResult[9] = tmp29;
@@ -184,7 +186,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj12.title = intl5.string(tmp(1125).t.QzVsOs);
       obj11.options = obj12;
       obj11.getComponent = function getComponent() {
-        return closure_0(18508).default;
+        return closure_0(18742).default;
       };
       const tmp33 = closure_7(closure_9.Screen, obj11);
       cResult[10] = tmp33;
@@ -200,7 +202,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj14.title = intl6.string(tmp(1125).t["1uAmCw"]);
       obj13.options = obj14;
       obj13.getComponent = function getComponent() {
-        return closure_0(18509).default;
+        return closure_0(18743).default;
       };
       const tmp37 = closure_7(closure_9.Screen, obj13);
       cResult[11] = tmp37;
@@ -216,7 +218,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj16.title = intl7.string(tmp(1125).t.XT4hVl);
       obj15.options = obj16;
       obj15.getComponent = function getComponent() {
-        return closure_0(18510).default;
+        return closure_0(18744).default;
       };
       const tmp41 = closure_7(closure_9.Screen, obj15);
       cResult[12] = tmp41;
@@ -243,7 +245,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
               return obj;
             },
         getComponent() {
-              return closure_0(18512).default;
+              return closure_0(18746).default;
             }
       };
       const tmp45 = closure_7(closure_9.Screen, obj17);
@@ -260,7 +262,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj19.title = intl8.string(tmp(1125).t.oHVeHc);
       obj18.options = obj19;
       obj18.getComponent = function getComponent() {
-        return closure_0(18515).default;
+        return closure_0(18749).default;
       };
       const tmp49 = closure_7(closure_9.Screen, obj18);
       cResult[14] = tmp49;
@@ -276,7 +278,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj21.title = intl9.string(tmp(1125).t.tFY5Zb);
       obj20.options = obj21;
       obj20.getComponent = function getComponent() {
-        return closure_0(18516).default;
+        return closure_0(18750).default;
       };
       const tmp53 = closure_7(closure_9.Screen, obj20);
       cResult[15] = tmp53;
@@ -342,7 +344,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   const tmpResult = require("Navigator");
 }) : (function FriendsNavigator() {
   _require = closure_10();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7619).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7642).trackAppUIViewed(), []);
   closure_1 = require("Navigator").useAccessibilityNativeStackOptions();
   let obj2 = {
     screenOptions(arg0) {
@@ -402,12 +404,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
           obj.onPress = function onPress() {
             return navigation.navigate("add-friends", { sourcePage: "Friends Screen Header" });
           };
-          return closure_2_7(navigation(9733).HeaderTextButton, obj);
+          return closure_2_7(navigation(9765).HeaderTextButton, obj);
         };
         return obj;
       },
       getComponent() {
-        return closure_0(18486).default;
+        return closure_0(18720).default;
       }
     }),
   ,
@@ -427,7 +429,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj5.title = intl.string(require("util").t.jD1qzM);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(18492).default;
+    return closure_0(18726).default;
   };
   items[1] = closure_7(closure_9.Screen, obj4);
   const obj6 = { name: "gdm", options: null, getComponent: null };
@@ -436,7 +438,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj7.title = intl2.string(require("util").t["3hF1W4"]);
   obj6.options = obj7;
   obj6.getComponent = function getComponent() {
-    return closure_0(18495).default;
+    return closure_0(18729).default;
   };
   items[2] = closure_7(closure_9.Screen, obj6);
   const obj8 = { name: "add-friend", options: null, getComponent: null };
@@ -445,7 +447,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj9.title = intl3.string(require("util").t.w5uwoI);
   obj8.options = obj9;
   obj8.getComponent = function getComponent() {
-    return closure_0(18496).default;
+    return closure_0(18730).default;
   };
   items[3] = closure_7(closure_9.Screen, obj8);
   const obj10 = { name: "add-friends", options: null, getComponent: null };
@@ -454,7 +456,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj11.title = intl4.string(require("util").t.zIJnA6);
   obj10.options = obj11;
   obj10.getComponent = function getComponent() {
-    return closure_0(18497).default;
+    return closure_0(18731).default;
   };
   items[4] = closure_7(closure_9.Screen, obj10);
   const obj12 = { name: "username-search", options: null, getComponent: null };
@@ -463,7 +465,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj13.title = intl5.string(require("util").t.QzVsOs);
   obj12.options = obj13;
   obj12.getComponent = function getComponent() {
-    return closure_0(18508).default;
+    return closure_0(18742).default;
   };
   items[5] = closure_7(closure_9.Screen, obj12);
   const obj14 = { name: "suggested-friends", options: null, getComponent: null };
@@ -472,7 +474,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj15.title = intl6.string(require("util").t["1uAmCw"]);
   obj14.options = obj15;
   obj14.getComponent = function getComponent() {
-    return closure_0(18509).default;
+    return closure_0(18743).default;
   };
   items[6] = closure_7(closure_9.Screen, obj14);
   const obj16 = { name: "requests-settings", options: null, getComponent: null };
@@ -481,7 +483,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj17.title = intl7.string(require("util").t.XT4hVl);
   obj16.options = obj17;
   obj16.getComponent = function getComponent() {
-    return closure_0(18510).default;
+    return closure_0(18744).default;
   };
   items[7] = closure_7(closure_9.Screen, obj16);
   items[8] = closure_7(closure_9.Screen, {
@@ -501,7 +503,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       return obj;
     },
     getComponent() {
-      return closure_0(18512).default;
+      return closure_0(18746).default;
     }
   });
   const obj19 = { name: "spam-requests", options: null, getComponent: null };
@@ -510,7 +512,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj20.title = intl8.string(require("util").t.oHVeHc);
   obj19.options = obj20;
   obj19.getComponent = function getComponent() {
-    return closure_0(18515).default;
+    return closure_0(18749).default;
   };
   items[9] = closure_7(closure_9.Screen, obj19);
   const obj21 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -519,7 +521,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj22.title = intl9.string(require("util").t.tFY5Zb);
   obj21.options = obj22;
   obj21.getComponent = function getComponent() {
-    return closure_0(18516).default;
+    return closure_0(18750).default;
   };
   items[10] = closure_7(closure_9.Screen, obj21);
   obj2.children = items;
@@ -530,69 +532,129 @@ let obj5 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.MOBILE_
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/FriendsNavigator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedFriendsNavigator() {
-  const cResult = c.c(12);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedFriendsNavigator(route) {
+  const cResult = c.c(16);
   const tmp4 = useColorThemeBackgroundDefault();
   ({ left, right } = useSafeAreaInsetsDefault());
-  const tmp6 = closure_10();
-  if (cResult[0] === left) {
-    if (cResult[1] === right) {
+  const tmp6 = useIsWindowLargeDefault();
+  const params = route.route.params;
+  let str;
+  if (params != null) {
+    const params2 = params.params;
+    if (params2 != null) {
+      str = params2.presentation;
+    }
+  }
+  if (str == null) {
+    str = "modal";
+  }
+  if (cResult[0] === tmp6) {
+    if (cResult[1] === str) {
       let tmp7 = cResult[2];
     }
-    if (cResult[3] === tmp6.container) {
-      if (cResult[4] === tmp7) {
-        let tmp8 = cResult[5];
-      }
-      const _Symbol = Symbol;
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = React5(closure_12, {});
-        cResult[6] = tmp13;
-        let tmp10 = tmp13;
-      } else {
-        tmp10 = cResult[6];
-      }
-      if (cResult[7] !== tmp8) {
-        const obj2 = { style: tmp8, children: tmp10 };
-        const tmp17 = React5(View, obj2);
-        cResult[7] = tmp8;
-        cResult[8] = tmp17;
-        let tmp14 = tmp17;
-      } else {
-        tmp14 = cResult[8];
-      }
-      if (cResult[9] === tmp4) {
-        if (cResult[10] === tmp14) {
-          let tmp18 = cResult[11];
+    const tmp10 = closure_10();
+    if (cResult[3] === tmp7) {
+      if (cResult[4] === left) {
+        if (cResult[5] === right) {
+          let tmp11 = cResult[6];
         }
-        return tmp18;
+        if (cResult[7] === tmp10.container) {
+          if (cResult[8] === tmp11) {
+            let tmp13 = cResult[9];
+          }
+          const _Symbol = Symbol;
+          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp18 = React5(closure_12, {});
+            cResult[10] = tmp18;
+            let tmp15 = tmp18;
+          } else {
+            tmp15 = cResult[10];
+          }
+          if (cResult[11] !== tmp13) {
+            const obj2 = { style: tmp13, children: tmp15 };
+            const tmp22 = React5(View, obj2);
+            cResult[11] = tmp13;
+            cResult[12] = tmp22;
+            let tmp19 = tmp22;
+          } else {
+            tmp19 = cResult[12];
+          }
+          if (cResult[13] === tmp4) {
+            if (cResult[14] === tmp19) {
+              let tmp23 = cResult[15];
+            }
+            return tmp23;
+          }
+          const obj3 = { gradient: tmp4, children: tmp19 };
+          const tmp25 = React5(native.ThemeContextProvider, obj3);
+          cResult[13] = tmp4;
+          cResult[14] = tmp19;
+          cResult[15] = tmp25;
+          tmp23 = tmp25;
+        }
+        const items = [tmp10.container, tmp11];
+        cResult[7] = tmp10.container;
+        cResult[8] = tmp11;
+        cResult[9] = items;
+        tmp13 = items;
       }
-      const obj3 = { gradient: tmp4, children: tmp14 };
-      const tmp20 = React5(native.ThemeContextProvider, obj3);
-      cResult[9] = tmp4;
-      cResult[10] = tmp14;
-      cResult[11] = tmp20;
-      tmp18 = tmp20;
     }
-    const items = [tmp6.container, tmp7];
-    cResult[3] = tmp6.container;
-    cResult[4] = tmp7;
-    cResult[5] = items;
-    tmp8 = items;
+    let tmp12 = !tmp7;
+    if (!tmp7) {
+      const obj4 = { paddingLeft: left, paddingRight: right };
+      tmp12 = obj4;
+    }
+    cResult[3] = tmp7;
+    cResult[4] = left;
+    cResult[5] = right;
+    cResult[6] = tmp12;
+    tmp11 = tmp12;
   }
-  const obj4 = { paddingLeft: left, paddingRight: right };
-  cResult[0] = left;
-  cResult[1] = right;
-  cResult[2] = obj4;
-  tmp7 = obj4;
+  let isIpadOSResult = tmp6;
+  if (tmp6) {
+    isIpadOSResult = DeviceUtils.isIpadOS();
+    const tmpResult = DeviceUtils;
+  }
+  if (isIpadOSResult) {
+    isIpadOSResult = "modal" === str;
+  }
+  cResult[0] = tmp6;
+  cResult[1] = str;
+  cResult[2] = isIpadOSResult;
+  tmp7 = isIpadOSResult;
   const tmp5 = useSafeAreaInsetsDefault();
-}) : (function ThemedFriendsNavigator() {
-  const tmp = useColorThemeBackgroundDefault();
+}) : (function ThemedFriendsNavigator(route) {
+  const tmp2 = useColorThemeBackgroundDefault();
   ({ left, right } = useSafeAreaInsetsDefault());
-  const tmp2 = useSafeAreaInsetsDefault();
-  const obj = { gradient: tmp, children: null };
-  const obj2 = { style: null, children: React5(closure_12, {}) };
-  const items = [closure_10().container, { paddingLeft: left, paddingRight: right }];
-  obj2.style = items;
-  obj.children = React5(View, obj2);
-  return React5(native.ThemeContextProvider, obj);
+  const tmp4 = useIsWindowLargeDefault();
+  const params = route.route.params;
+  let str;
+  if (params != null) {
+    const params2 = params.params;
+    if (params2 != null) {
+      str = params2.presentation;
+    }
+  }
+  if (str == null) {
+    str = "modal";
+  }
+  let isIpadOSResult = tmp4;
+  if (tmp4) {
+    isIpadOSResult = DeviceUtils.isIpadOS();
+  }
+  if (isIpadOSResult) {
+    isIpadOSResult = "modal" === str;
+  }
+  const tmp3 = useSafeAreaInsetsDefault();
+  const obj2 = { gradient: tmp2, children: null };
+  const items = [closure_10().container, ];
+  let tmp10 = !isIpadOSResult;
+  if (!isIpadOSResult) {
+    const obj3 = { paddingLeft: left, paddingRight: right };
+    tmp10 = obj3;
+  }
+  const tmp7 = closure_10();
+  items[1] = tmp10;
+  obj2.children = React5(View, { style: items, children: React5(closure_12, {}) });
+  return React5(native.ThemeContextProvider, obj2);
 });

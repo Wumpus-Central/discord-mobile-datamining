@@ -1,11 +1,11 @@
-// === Module 7443: useGame ===
+// === Module 7466: useGame ===
 
-// Module 7443 (useGame)
+// Module 7466 (useGame)
 import DurationsDefault from "Durations" /* 1101 */;
-import GameActionCreators from "GameActionCreators" /* 7444 */;
+import GameActionCreators from "GameActionCreators" /* 7467 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2019 */;
+import GameStore from "GameStore" /* 2020 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

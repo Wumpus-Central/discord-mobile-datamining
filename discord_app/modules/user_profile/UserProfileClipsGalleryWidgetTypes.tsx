@@ -1,15 +1,15 @@
-// === Module 7746: UserProfileClipsGalleryWidgetTypes ===
+// === Module 7768: UserProfileClipsGalleryWidgetTypes ===
 
-// Module 7746 (UserProfileClipsGalleryWidgetTypes)
+// Module 7768 (UserProfileClipsGalleryWidgetTypes)
 import _modDef1354 from "module_1354" /* 1354 */;
-import WidgetType from "WidgetType" /* 7739 */;
+import WidgetType from "WidgetType" /* 7761 */;
 import size from "module_2" /* 2 */;
 
 function isUploadedWidgetClip(status) {
   return "uploading" !== status.status;
 }
 function convertClip(gameId) {
-  const obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };
+  const obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags, clip_events_timeline: gameId.clipEventsTimeline };
   if ("saved" === gameId.status) {
     const obj5 = {};
     const merged = Object.assign(obj);

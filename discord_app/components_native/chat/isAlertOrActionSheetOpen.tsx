@@ -1,15 +1,15 @@
-// === Module 10055: isAlertOrActionSheetOpen ===
+// === Module 10087: isAlertOrActionSheetOpen ===
 
-// Module 10055 (isAlertOrActionSheetOpen)
-import useAlertStore2 from "useAlertStore" /* 5946 */;
-import ActionSheetStore from "ActionSheetStore" /* 5247 */;
-import AlertStore from "AlertStore" /* 10056 */;
+// Module 10087 (isAlertOrActionSheetOpen)
+import useAlertStore2 from "useAlertStore" /* 5948 */;
+import ActionSheetStore from "ActionSheetStore" /* 5248 */;
+import AlertStore from "AlertStore" /* 10088 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
 
-export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(selectedChannelId) {
+export function isAlertOrActionSheetOpen(selectedChannelId) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = ActionSheetStore;
@@ -28,4 +28,4 @@ export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(select
     tmp = tmp3;
   }
   return tmp;
-};
+}

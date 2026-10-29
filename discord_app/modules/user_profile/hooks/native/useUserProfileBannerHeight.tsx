@@ -1,9 +1,9 @@
-// === Module 8758: useUserProfileBannerHeight ===
+// === Module 8761: useUserProfileBannerHeight ===
 
-// Module 8758 (useUserProfileBannerHeight)
+// Module 8761 (useUserProfileBannerHeight)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import Constants from "Constants" /* 7340 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import Constants from "Constants" /* 7364 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

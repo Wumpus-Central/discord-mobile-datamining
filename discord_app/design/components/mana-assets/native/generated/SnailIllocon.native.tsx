@@ -1,23 +1,23 @@
-// === Module 12428: SnailIllocon ===
+// === Module 12482: SnailIllocon ===
 
-// Module 12428 (SnailIllocon)
+// Module 12482 (SnailIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import assetHelpers from "assetHelpers" /* 7031 */;
-import _modDef12429 from "module_12429" /* 12429 */;
-import _modDef12430 from "module_12430" /* 12430 */;
-import _modDef12431 from "module_12431" /* 12431 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import assetHelpers from "assetHelpers" /* 7055 */;
+import _modDef12483 from "module_12483" /* 12483 */;
+import _modDef12484 from "module_12484" /* 12484 */;
+import _modDef12485 from "module_12485" /* 12485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12429 }, 3: null };
-const obj2 = { uri: _modDef12429 };
-obj[2] = { uri: _modDef12430 };
-const obj3 = { uri: _modDef12430 };
-obj[3] = { uri: _modDef12431 };
+let obj = { 1: null, 2: { uri: _modDef12483 }, 3: null };
+const obj2 = { uri: _modDef12483 };
+obj[2] = { uri: _modDef12484 };
+const obj3 = { uri: _modDef12484 };
+obj[3] = { uri: _modDef12485 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12431 };
+const obj4 = { uri: _modDef12485 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SnailIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const SnailIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7031).getAssetSource(obj);
+  obj.source = num(7055).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

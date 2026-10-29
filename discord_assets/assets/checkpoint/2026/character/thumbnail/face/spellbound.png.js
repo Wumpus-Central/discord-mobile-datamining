@@ -1,6 +1,6 @@
-// === Module 6301: ? ===
+// === Module 6325: ? ===
 
-// Module 6301
+// Module 6325
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/face/spellbound.png.js");

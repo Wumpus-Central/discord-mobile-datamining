@@ -1,11 +1,11 @@
-// === Module 5673: AppLauncherBadgeUtils ===
+// === Module 5675: AppLauncherBadgeUtils ===
 
-// Module 5673 (AppLauncherBadgeUtils)
+// Module 5675 (AppLauncherBadgeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
-export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {
+export function getNewestBadgeableVersion(arg0) {
   ({ storeState, surface } = arg0);
   const timestamp = Date.now();
   const dateRangesForSurfaces = storeState.dateRangesForSurfaces;
@@ -31,4 +31,4 @@ export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0
     }
   }
   return num;
-};
+}

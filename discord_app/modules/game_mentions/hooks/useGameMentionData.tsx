@@ -1,10 +1,10 @@
-// === Module 8615: useGameMentionData ===
+// === Module 8637: useGameMentionData ===
 
-// Module 8615 (useGameMentionData)
+// Module 8637 (useGameMentionData)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 8618 */;
-import GameStore from "GameStore" /* 2019 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8616 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8640 */;
+import GameStore from "GameStore" /* 2020 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8638 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
 
-export const getGameMentionData = function getGameMentionData(gameId) {
+export function getGameMentionData(gameId) {
   const currentUser = UserStore.getCurrentUser();
   const game = GameStore.getGame(gameId);
   const gameById = GameAutocompleteStore.getGameById(gameId);
@@ -40,7 +40,7 @@ export const getGameMentionData = function getGameMentionData(gameId) {
     tmp4 = obj;
   }
   return tmp4;
-};
+}
 export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameMentionData(gameId) {
   _require = gameId;
   const cResult = require("c").c(4);

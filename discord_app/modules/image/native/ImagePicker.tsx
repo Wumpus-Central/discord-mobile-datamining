@@ -1,70 +1,118 @@
-// === Module 8187: ImagePicker ===
+// === Module 8210: ImagePicker ===
 
-// Module 8187 (ImagePicker)
+// Module 8210 (ImagePicker)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 8188 */;
-import AndroidPhotoPickerExperiment from "AndroidPhotoPickerExperiment" /* 8189 */;
-import launchCameraAll from "launchCamera" /* 8190 */;
-import openPickerDefault from "openPicker" /* 8192 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 8211 */;
+import launchCameraAll from "launchCamera" /* 8212 */;
+import openPickerDefault from "openPicker" /* 8214 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
 require = fn;
-function getNativeLibraryOptions(mediaType) {
-  if ("any" !== mediaType.mediaType) {
-    let str = mediaType.mediaType;
-  } else {
-    PlatformUtils;
-    str = "mixed";
-  }
-  let selections = mediaType.selections;
-  if (selections == null) {
-    selections = [];
-  }
-  let str2;
-  if (obj2.isIOS()) {
-    str2 = "pageSheet";
-  }
-  obj2 = PlatformUtils;
-  const tmp3 = !mediaType.disableNewIOSPicker;
-  const tmp4Result = ImagePickerUtils;
-  const tmp6 = !ImagePickerUtils.isActionPickSupported();
-  let enabled = PlatformUtils.isAndroid();
-  if (enabled) {
-    enabled = AndroidPhotoPickerExperiment.getAndroidPhotoPickerExperimentConfig({ location: "ImagePicker" }).enabled;
-    const tmp4Result4 = AndroidPhotoPickerExperiment;
-  }
-  const obj3 = {};
-  const merged = Object.assign(mediaType);
-  obj3.mediaType = str;
-  obj3.presentationStyle = str2;
-  obj3.selection = selections;
-  obj3.useNewIOSPicker = tmp3;
-  obj3.forceGetContent = tmp6;
-  obj3.enableAndroidPhotoPicker = enabled;
-  return obj3;
-}
 const ThemeTypes = fn(1095).ThemeTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/image/native/ImagePicker.tsx");
 
 export default {
-  launchImageLibrary(mediaType, arg1) {
-    launchCameraAll.launchImageLibrary(getNativeLibraryOptions(mediaType), arg1);
+  launchImageLibrary(mediaType, fn) {
+    if ("any" !== mediaType.mediaType) {
+      let str = mediaType.mediaType;
+    } else {
+      PlatformUtils;
+      str = "mixed";
+    }
+    let selections = mediaType.selections;
+    if (selections == null) {
+      selections = [];
+    }
+    const obj = launchCameraAll;
+    const tmp3 = !mediaType.disableNewIOSPicker;
+    let str2;
+    if (obj3.isIOS()) {
+      str2 = "pageSheet";
+    }
+    obj3 = PlatformUtils;
+    const obj4 = {};
+    const tmp4Result = ImagePickerUtils;
+    const merged = Object.assign(mediaType);
+    obj4.mediaType = str;
+    obj4.presentationStyle = str2;
+    obj4.selection = selections;
+    obj4.useNewIOSPicker = tmp3;
+    obj4.forceGetContent = !ImagePickerUtils.isActionPickSupported();
+    obj4.enableAndroidPhotoPicker = true;
+    obj.launchImageLibrary(obj4, fn);
+    const tmp5 = !ImagePickerUtils.isActionPickSupported();
   },
   launchImageLibraryAsync(arg0) {
-    closure_0 = arg0;
-    return new Promise((mediaType) => {
-      launchCameraAll.launchImageLibrary(getNativeLibraryOptions(mediaType), (arg0) => {
-        mediaType(arg0);
-      });
+    let mediaType = arg0;
+    return new Promise((arg0) => {
+      mediaType = arg0;
+      if ("any" !== mediaType.mediaType) {
+        let str = tmp.mediaType;
+      } else {
+        PlatformUtils;
+        str = "mixed";
+      }
+      let selections = tmp.selections;
+      if (selections == null) {
+        selections = [];
+      }
+      const obj = launchCameraAll;
+      const tmp4 = !mediaType.disableNewIOSPicker;
+      let str2;
+      if (obj3.isIOS()) {
+        str2 = "pageSheet";
+      }
+      const fn = (arg0) => {
+        closure_0(arg0);
+      };
+      obj3 = PlatformUtils;
+      const obj4 = {};
+      const tmp5Result = ImagePickerUtils;
+      const merged = Object.assign(tmp);
+      obj4.mediaType = str;
+      obj4.presentationStyle = str2;
+      obj4.selection = selections;
+      obj4.useNewIOSPicker = tmp4;
+      obj4.forceGetContent = !ImagePickerUtils.isActionPickSupported();
+      obj4.enableAndroidPhotoPicker = true;
+      obj.launchImageLibrary(obj4, fn);
+      const tmp6 = !ImagePickerUtils.isActionPickSupported();
     });
   },
   canUseAndroidPhotoPicker(mediaType) {
     let isAndroidResult = PlatformUtils.isAndroid();
     if (isAndroidResult) {
-      isAndroidResult = true === launchCameraAll.canUseAndroidPhotoPicker(getNativeLibraryOptions(mediaType));
+      if ("any" !== mediaType.mediaType) {
+        let str2 = mediaType.mediaType;
+      } else {
+        PlatformUtils;
+        str2 = "mixed";
+      }
+      let selections = mediaType.selections;
+      if (selections == null) {
+        selections = [];
+      }
+      const obj2 = launchCameraAll;
+      const tmp7 = !mediaType.disableNewIOSPicker;
+      let str3;
+      if (tmpResult3.isIOS()) {
+        str3 = "pageSheet";
+      }
+      tmpResult3 = PlatformUtils;
+      const obj3 = {};
+      const tmpResult4 = ImagePickerUtils;
+      const merged = Object.assign(mediaType);
+      obj3.mediaType = str2;
+      obj3.presentationStyle = str3;
+      obj3.selection = selections;
+      obj3.useNewIOSPicker = tmp7;
+      obj3.forceGetContent = !ImagePickerUtils.isActionPickSupported();
+      obj3.enableAndroidPhotoPicker = true;
+      isAndroidResult = true === obj2.canUseAndroidPhotoPicker(obj3);
+      const tmp8 = !ImagePickerUtils.isActionPickSupported();
     }
     return isAndroidResult;
   },

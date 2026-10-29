@@ -1,6 +1,6 @@
-// === Module 8309: renderer/EmbedUtils ===
+// === Module 8331: renderer/EmbedUtils ===
 
-// Module 8309 (renderer/EmbedUtils)
+// Module 8331 (renderer/EmbedUtils)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -9,10 +9,10 @@ const Image = _mod17.Image;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
 
-export const getAssetUriForEmbed = function getAssetUriForEmbed(Image) {
+export function getAssetUriForEmbed(Image) {
   return Image.resolveAssetSource(Image).uri;
-};
-export const isWebviewVideo = function isWebviewVideo(video) {
+}
+export function isWebviewVideo(video) {
   video = video.video;
   let tmp = null != video;
   if (tmp) {
@@ -22,4 +22,4 @@ export const isWebviewVideo = function isWebviewVideo(video) {
     tmp = video.type !== MessageEmbedTypes.GIFV;
   }
   return tmp;
-};
+}

@@ -1,13 +1,13 @@
-// === Module 15283: BlockedUserUtils ===
+// === Module 15518: BlockedUserUtils ===
 
-// Module 15283 (BlockedUserUtils)
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+// Module 15518 (BlockedUserUtils)
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/BlockedUserUtils.tsx");
 
-export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnoredUsers(mapped, afkChannelId) {
+export function filterOutBlockedOrIgnoredUsers(mapped, afkChannelId) {
   const found = mapped.filter((item) => afkChannelId(dependencyMap[1]).isNotNullish(item));
   return found.filter((id) => {
     id = id.id;
@@ -18,8 +18,8 @@ export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnored
     }
     return !hasItem;
   });
-};
-export const filterOutBlockedOrIgnoredUserIds = function filterOutBlockedOrIgnoredUserIds(arr, arg1) {
+}
+export function filterOutBlockedOrIgnoredUserIds(arr, arg1) {
   return arr.filter((item) => {
     if (null != set) {
       let hasItem = set.has(item);
@@ -28,8 +28,8 @@ export const filterOutBlockedOrIgnoredUserIds = function filterOutBlockedOrIgnor
     }
     return !hasItem;
   });
-};
-export const hasBlockedOrIgnoredUserIds = function hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredUserIds) {
+}
+export function hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredUserIds) {
   return items.some((item) => {
     if (null != blockedOrIgnoredUserIds) {
       let hasItem = blockedOrIgnoredUserIds.has(item);
@@ -38,4 +38,4 @@ export const hasBlockedOrIgnoredUserIds = function hasBlockedOrIgnoredUserIds(it
     }
     return hasItem;
   });
-};
+}

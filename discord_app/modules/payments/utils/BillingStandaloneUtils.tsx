@@ -1,6 +1,6 @@
-// === Module 7552: BillingStandaloneUtils ===
+// === Module 7575: BillingStandaloneUtils ===
 
-// Module 7552 (BillingStandaloneUtils)
+// Module 7575 (BillingStandaloneUtils)
 import v1 from "v1" /* 1278 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
@@ -25,7 +25,7 @@ function goToStandalonePremiumCheckout(planId, arg1, arg2) {
 ({ Endpoints: c3, Routes: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/payments/utils/BillingStandaloneUtils.tsx");
 
-export const goToBillingStandalonePageWithHandoff = function goToBillingStandalonePageWithHandoff(Routes, arg1, arg2) {
+export function goToBillingStandalonePageWithHandoff(Routes, arg1, arg2) {
   closure_0 = Routes;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -38,12 +38,12 @@ export const goToBillingStandalonePageWithHandoff = function goToBillingStandalo
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants.HANDOFF, body: { key: v4Result }, oldFormErrors: true, rejectWithError: false };
   return HTTP.post(request).then((result) => closure_1(result, uRL), (arg0) => closure_2(arg0, result));
-};
+}
 export { goToStandalonePremiumCheckout };
-export const goToStandalonePremiumCheckoutWeb = function goToStandalonePremiumCheckoutWeb(planId, arg1) {
+export function goToStandalonePremiumCheckoutWeb(planId, arg1) {
   return goToStandalonePremiumCheckout(planId, (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
     window.open(searchParams.href);
   }, arg1);
-};
+}

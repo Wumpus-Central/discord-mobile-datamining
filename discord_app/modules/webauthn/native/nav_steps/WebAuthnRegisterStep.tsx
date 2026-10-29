@@ -1,11 +1,11 @@
-// === Module 16342: WebAuthnRegisterStep ===
+// === Module 16580: WebAuthnRegisterStep ===
 
-// Module 16342 (WebAuthnRegisterStep)
+// Module 16580 (WebAuthnRegisterStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 7078 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 7102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { flexContainer: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 16 }, centerFlex: { display: "flex", alignItems: "center" }, margin: { marginTop: 16, textAlign: "center" }, radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md } };
 let closure_9 = createStyles.createStyles(obj2);
 let obj4 = { PASSKEY_CREDENTIAL_MANAGER: 0, [0]: "PASSKEY_CREDENTIAL_MANAGER", PASSKEY_DEVICE: 1, [1]: "PASSKEY_DEVICE", OTHER_AND_ANDROID_NONDISCOVERABLE: 2, [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE" };
@@ -121,11 +121,11 @@ const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/Web
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthnRegisterStep() {
   const cResult = navigation(576).c(33);
   const obj = navigation(576);
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   const tmp5 = closure_9();
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const first = tmp7[0];
-  const obj2 = navigation(1502);
+  const obj2 = navigation(1503);
   [tmp10, tmp11] = noop.useState("");
   obj4 = navigation(1381);
   const tmp9 = _slicedToArray(noop.useState(""), 2);
@@ -151,9 +151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   }
   dependencyMap = tmp18;
   const tmp6Result = _slicedToArray(noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
-  const announceError = navigation(16343).useAnnounceError(tmp10);
+  const announceError = navigation(16581).useAnnounceError(tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp22 = closure_7(tmp(16344).KeyImage, {});
+    const tmp22 = closure_7(tmp(16582).KeyImage, {});
     cResult[4] = tmp22;
     let tmp20 = tmp22;
   } else {
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
         let tmp29 = "" !== tmp10;
         if (tmp29) {
           const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-          tmp29 = closure_7(tmp(5270).Text, obj6);
+          tmp29 = closure_7(tmp(5271).Text, obj6);
         }
         cResult[10] = tmp10;
         cResult[11] = tmp29;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
                     const rect = { bottom: true, left: true, right: true, style: tmp5.flexContainer, children: null };
                     const items = [tmp31, tmp35, tmp43];
                     rect.children = items;
-                    const tmp46 = closure_8(tmp(7257).SafeAreaPaddingView, rect);
+                    const tmp46 = closure_8(tmp(7281).SafeAreaPaddingView, rect);
                     cResult[28] = tmp5.flexContainer;
                     cResult[29] = tmp43;
                     cResult[30] = tmp31;
@@ -253,8 +253,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
                 }
                 const obj7 = { children: null };
                 const obj8 = { text: tmp39, disabled: first, loading: first, onPress: tmp42, size: "lg" };
-                obj7.children = closure_7(tmp(5280).Button, obj8);
-                const tmp44 = closure_7(tmp(6731).ButtonGroup, obj7);
+                obj7.children = closure_7(tmp(5281).Button, obj8);
+                const tmp44 = closure_7(tmp(6754).ButtonGroup, obj7);
                 cResult[24] = first;
                 cResult[25] = tmp39;
                 cResult[26] = tmp42;
@@ -301,17 +301,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
       tmp31 = tmp34;
     }
     const obj10 = { style: tmp5.margin, variant: "text-md/normal", children: cResult[6] };
-    const tmp27 = closure_7(tmp(5270).Text, obj10);
+    const tmp27 = closure_7(tmp(5271).Text, obj10);
     cResult[7] = tmp5.margin;
     cResult[8] = cResult[6];
     cResult[9] = tmp27;
     tmp26 = tmp27;
   }
-  const tmpResult = navigation(16343);
+  const tmpResult = navigation(16581);
 }) : (function WebAuthnRegisterStep() {
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   const tmp4 = closure_9();
-  const obj = navigation(1502);
+  const obj = navigation(1503);
   const tmp5 = authenticatorSelection;
   [tmp7, tmp8] = authenticatorSelection(onRegisterSuccess.useState(false), 2);
   importDefault = tmp8;
@@ -330,10 +330,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1381);
-  const announceError = navigation(16343).useAnnounceError(tmp10);
+  const announceError = navigation(16581).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(16344).KeyImage, {}), , ];
+  const items3 = [closure_7(navigation(16582).KeyImage, {}), , ];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1125).intl;
   const string = intl.string;
@@ -344,11 +344,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
     stringResult = string(t.Lh5vTW);
   }
   obj5.children = stringResult;
-  items3[1] = closure_7(navigation(5270).Text, obj5);
+  items3[1] = closure_7(navigation(5271).Text, obj5);
   let tmp19Result = "" !== tmp10;
   if (tmp19Result) {
     const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp19Result = closure_7(tmp(5270).Text, obj6);
+    tmp19Result = closure_7(tmp(5271).Text, obj6);
   }
   items3[2] = tmp19Result;
   obj4.children = items3;
@@ -368,7 +368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
     string2Result = string2(t2.oibaQa);
   }
   const obj8 = {
-    children: closure_7(navigation(5280).Button, {
+    children: closure_7(navigation(5281).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
       size: "lg"
     })
   };
-  items4[2] = closure_7(navigation(6731).ButtonGroup, obj8);
+  items4[2] = closure_7(navigation(6754).ButtonGroup, obj8);
   rect.children = items4;
-  return closure_8(navigation(7257).SafeAreaPaddingView, rect);
+  return closure_8(navigation(7281).SafeAreaPaddingView, rect);
 });

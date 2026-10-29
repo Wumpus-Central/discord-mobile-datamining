@@ -1,6 +1,6 @@
-// === Module 2033: DOMUtils ===
+// === Module 2034: DOMUtils ===
 
-// Module 2033 (DOMUtils)
+// Module 2034 (DOMUtils)
 import size from "module_2" /* 2 */;
 
 const re0 = /input/i;
@@ -8,7 +8,7 @@ const re1 = /textarea/i;
 const set = new Set(["text", "password", "number", "date", "datetime-local", "time", "week", "month", "email", "search", "tel", "url"]);
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/DOMUtils.tsx");
 
-export const isElement = function isElement(ownerDocument, name) {
+export function isElement(ownerDocument, name) {
   if (null == ownerDocument) {
     return false;
   } else {
@@ -32,16 +32,16 @@ export const isElement = function isElement(ownerDocument, name) {
       return null != defaultView[str] && ownerDocument instanceof defaultView[str];
     }
   }
-};
-export const cssValueToNumber = function cssValueToNumber(match) {
+}
+export function cssValueToNumber(match) {
   const parsed = parseInt(match, 10);
   let num = 0;
   if (!isNaN(parsed)) {
     num = parsed;
   }
   return num;
-};
-export const isInputLikeElement = function isInputLikeElement(getAttribute) {
+}
+export function isInputLikeElement(getAttribute) {
   if (null == getAttribute) {
     return false;
   } else if ("true" === getAttribute.getAttribute("contenteditable")) {
@@ -60,14 +60,14 @@ export const isInputLikeElement = function isInputLikeElement(getAttribute) {
     }
     return false;
   }
-};
-export const removeNode = function removeNode(parentNode) {
+}
+export function removeNode(parentNode) {
   if (null != parentNode.parentNode) {
     parentNode = parentNode.parentNode;
     parentNode.removeChild(parentNode);
   }
-};
-export const eventOwnerDocument = function eventOwnerDocument(target) {
+}
+export function eventOwnerDocument(target) {
   target = target.target;
   if (null == target) {
     return null;
@@ -79,8 +79,8 @@ export const eventOwnerDocument = function eventOwnerDocument(target) {
       ownerDocument = target.document;
     }
   }
-};
-export const clickedOnVisibleImage = function clickedOnVisibleImage(arg0, arg1, arg2, arg3) {
+}
+export function clickedOnVisibleImage(arg0, arg1, arg2, arg3) {
   ({ width, height } = arg2);
   ({ width: width2, height: height2 } = arg3);
   ({ top, left } = arg3);
@@ -97,8 +97,8 @@ export const clickedOnVisibleImage = function clickedOnVisibleImage(arg0, arg1, 
     tmp6 = arg0 <= sum1 + result;
   }
   return tmp6;
-};
-export const getParentElementByClassName = function getParentElementByClassName(parentElement, arg1) {
+}
+export function getParentElementByClassName(parentElement, arg1) {
   parentElement = parentElement.parentElement;
   if (null != parentElement) {
     const classList = parentElement.classList;
@@ -108,8 +108,8 @@ export const getParentElementByClassName = function getParentElementByClassName(
     return parentElement;
   }
   return null;
-};
-export const getParentElementByAttribute = function getParentElementByAttribute(parentElement, arg1) {
+}
+export function getParentElementByAttribute(parentElement, arg1) {
   parentElement = parentElement.parentElement;
   if (null != parentElement) {
     while (null == parentElement.getAttribute(arg1)) {
@@ -118,4 +118,4 @@ export const getParentElementByAttribute = function getParentElementByAttribute(
     return parentElement;
   }
   return null;
-};
+}

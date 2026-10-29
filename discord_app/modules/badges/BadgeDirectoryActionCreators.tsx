@@ -1,6 +1,6 @@
-// === Module 8723: BadgeDirectoryActionCreators ===
+// === Module 8726: BadgeDirectoryActionCreators ===
 
-// Module 8723 (BadgeDirectoryActionCreators)
+// Module 8726 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1389 */;
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -182,7 +182,7 @@ let closure_11 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -306,7 +306,7 @@ const subscription = Dispatcher.subscribe("LOGOUT", () => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
 
-export const fetchBadgeDirectory = function fetchBadgeDirectory() {
+export function fetchBadgeDirectory() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -315,8 +315,8 @@ export const fetchBadgeDirectory = function fetchBadgeDirectory() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchBadge = function fetchBadge() {
+}
+export function fetchBadge() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -325,8 +325,8 @@ export const fetchBadge = function fetchBadge() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
+}
+export function fetchBadgeSummary(GIFTING, id) {
   let tmp = id;
   if (id == null) {
     const currentUser = UserStore.getCurrentUser();
@@ -376,7 +376,7 @@ export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
       }
     }
   }
-};
-export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
+}
+export function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
   Dispatcher.dispatch({ type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId });
-};
+}

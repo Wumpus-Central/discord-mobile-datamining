@@ -1,14 +1,14 @@
-// === Module 13373: AppLauncherButtonIcon ===
+// === Module 13606: AppLauncherButtonIcon ===
 
-// Module 13373 (AppLauncherButtonIcon)
+// Module 13606 (AppLauncherButtonIcon)
 import c from "c" /* 576 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5197 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5198 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const KeyboardTypes = PlusLargeIcon(1628);
-const AppsIcon = PlusLargeIcon(8614);
-const PlusLargeIcon2 = PlusLargeIcon(10880);
+const KeyboardTypes = PlusLargeIcon(1629);
+const AppsIcon = PlusLargeIcon(8636);
+const PlusLargeIcon2 = PlusLargeIcon(10785);
 require = fn;
 let closure_3 = ["style"];
 const View = fn(17).View;

@@ -1,11 +1,11 @@
-// === Module 11397: getFrameSurfaces ===
+// === Module 11451: getFrameSurfaces ===
 
-// Module 11397 (getFrameSurfaces)
+// Module 11451 (getFrameSurfaces)
 import Constants from "Constants" /* 1084 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9683 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6870 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9715 */;
 import size from "module_2" /* 2 */;
 
 function getFrameSurfaces(application) {
@@ -42,14 +42,14 @@ const ApplicationFlags = Constants.ApplicationFlags;
 let result = size.fileFinishedImporting("modules/frames/utils/getFrameSurfaces.tsx");
 
 export { getFrameSurfaces };
-export const isFrameApp = function isFrameApp(application) {
+export function isFrameApp(application) {
   return getFrameSurfaces(application).size > 0;
-};
-export const canOpenFrame = function canOpenFrame(app) {
+}
+export function canOpenFrame(app) {
   const obj = getFrameSurfaces(app);
   let hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
   if (!hasItem) {
     hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL);
   }
   return hasItem;
-};
+}

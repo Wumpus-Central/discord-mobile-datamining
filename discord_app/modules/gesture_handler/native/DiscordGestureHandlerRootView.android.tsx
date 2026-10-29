@@ -1,9 +1,9 @@
-// === Module 16084: DiscordGestureHandlerRootView ===
+// === Module 16320: DiscordGestureHandlerRootView ===
 
-// Module 16084 (DiscordGestureHandlerRootView)
+// Module 16320 (DiscordGestureHandlerRootView)
 import c from "c" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 16085 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 16321 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

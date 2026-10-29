@@ -1,11 +1,11 @@
-// === Module 7387: useRoleSubscriptionsVisibleInGuild ===
+// === Module 7410: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 7387 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7388 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7389 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 7395 */;
-import ImpersonateStore from "ImpersonateStore" /* 4909 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 7410 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7411 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7412 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 7418 */;
+import ImpersonateStore from "ImpersonateStore" /* 4910 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
@@ -99,13 +99,13 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 
-export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles) {
+export function areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(id1);
   if (!hasRoleSubscriptionsInGuild) {
     hasRoleSubscriptionsInGuild = useHasRoleSubscriptionInGuild.computeHasRoleSubscriptionsInGuild(id1, unsafeMutableRoles);
   }
   return hasRoleSubscriptionsInGuild;
-};
+}
 export const useRoleSubscriptionsVisibleInGuild = tmp2;
 export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowRoleSubscriptionsInChannelList(arg0) {
   let tmp = closure_7(arg0);

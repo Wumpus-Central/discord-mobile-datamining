@@ -174,7 +174,7 @@ function getToken(id) {
 }
 let result = size.fileFinishedImporting("../discord_common/js/shared/lib/TokenManager.tsx");
 
-export const init = function init() {
+export function init() {
   if (!c13) {
     const Storage = Storage6.Storage;
     closure_8 = Storage.get(React3);
@@ -234,17 +234,17 @@ export const init = function init() {
     obj3 = { decryptedToken: null, wasEncrypted: false };
     const tmp5 = Storage2.get(React2) || {};
   }
-};
-export const getAnalyticsToken = function getAnalyticsToken() {
+}
+export function getAnalyticsToken() {
   if (null != __analytics__) {
     let tmp2 = dependencyMap[tmp];
   } else {
     tmp2 = global;
   }
   return tmp2;
-};
+}
 export { getToken };
-export const setAnalyticsToken = function setAnalyticsToken(analyticsToken) {
+export function setAnalyticsToken(analyticsToken) {
   if (null != analyticsToken) {
     if (c13) {
       setSecondaryToken(analyticsToken, __analytics__);
@@ -256,8 +256,8 @@ export const setAnalyticsToken = function setAnalyticsToken(analyticsToken) {
   } else {
     removeToken(__analytics__);
   }
-};
-export const setToken = function setToken(token, id) {
+}
+export function setToken(token, id) {
   if (null != token) {
     if (c13) {
       global = token;
@@ -270,8 +270,8 @@ export const setToken = function setToken(token, id) {
   } else {
     removeToken(id);
   }
-};
-export const hideToken = function hideToken() {
+}
+export function hideToken() {
   if (!c12) {
     if (c13) {
       c12 = true;
@@ -285,8 +285,8 @@ export const hideToken = function hideToken() {
       throw error;
     }
   }
-};
-export const showToken = function showToken() {
+}
+export function showToken() {
   if (c12) {
     if (c13) {
       c12 = false;
@@ -307,9 +307,9 @@ export const showToken = function showToken() {
       throw error;
     }
   }
-};
+}
 export { removeToken };
-export const removeAnalyticsToken = function removeAnalyticsToken() {
+export function removeAnalyticsToken() {
   return removeToken(__analytics__);
-};
+}
 export { encryptAndStoreTokens };

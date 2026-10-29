@@ -1,22 +1,22 @@
-// === Module 18116: YouBarButton ===
+// === Module 18350: YouBarButton ===
 
-// Module 18116 (YouBarButton)
+// Module 18350 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import IconButton from "IconButton" /* 7991 */;
-import ClipView from "ClipView" /* 9437 */;
-import shared_components_BadgeDefault from "shared_components/Badge" /* 9738 */;
+import IconButton from "IconButton" /* 8014 */;
+import ClipView from "ClipView" /* 9468 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9770 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16712);
+const YouBarConstants = fn(16950);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { buttonContainer: { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "ix", bottom: "Array", padding: "prototype", minWidth: "Array" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "application", bottom: "guild", padding: "jsxs", minWidth: "Array" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
@@ -127,7 +127,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "ix", bottom: "Array", padding: "prototype", minWidth: "Array" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "application", bottom: "guild", padding: "jsxs", minWidth: "Array" };
     return rect;
   }, items);
 });

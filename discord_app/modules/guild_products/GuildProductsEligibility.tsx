@@ -1,7 +1,7 @@
-// === Module 7395: GuildProductsEligibility ===
+// === Module 7418: GuildProductsEligibility ===
 
-// Module 7395 (GuildProductsEligibility)
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 7418 (GuildProductsEligibility)
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ export const useGuildEligibleForGuildProducts = ReactCompilerGating.isReactCompi
     }
   }, items1);
 });
-export const isGuildEligibleForGuildProducts = function isGuildEligibleForGuildProducts(id) {
+export function isGuildEligibleForGuildProducts(id) {
   if (null == id) {
     return false;
   } else {
@@ -92,4 +92,4 @@ export const isGuildEligibleForGuildProducts = function isGuildEligibleForGuildP
     }
     return tmp3;
   }
-};
+}

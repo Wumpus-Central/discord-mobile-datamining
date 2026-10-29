@@ -1,7 +1,7 @@
-// === Module 17807: useIsGameCommunityServerPreview ===
+// === Module 18045: useIsGameCommunityServerPreview ===
 
-// Module 17807 (useIsGameCommunityServerPreview)
-import LurkingStore from "LurkingStore" /* 4937 */;
+// Module 18045 (useIsGameCommunityServerPreview)
+import LurkingStore from "LurkingStore" /* 4938 */;
 
 const require = globalThis.__r;
 
@@ -55,11 +55,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGam
     return type === JoinGuildSources.GAME_COMMUNITY_UPSELL;
   }, items1);
 });
-export const isGameCommunityServerPreview = function isGameCommunityServerPreview(id) {
+export function isGameCommunityServerPreview(id) {
   const lurkingSourceForGuild = LurkingStore.getLurkingSourceForGuild(id);
   let type;
   if (lurkingSourceForGuild != null) {
     type = lurkingSourceForGuild.type;
   }
   return type === JoinGuildSources.GAME_COMMUNITY_UPSELL;
-};
+}

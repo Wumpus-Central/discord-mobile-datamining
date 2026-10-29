@@ -1,15 +1,15 @@
-// === Module 18926: useSoundboardConfig ===
+// === Module 19159: useSoundboardConfig ===
 
-// Module 18926 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18768 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18802 */;
+// Module 19159 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19001 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19035 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 const require = globalThis.__r;
 
-const canChannelUseSoundboardDefault = tmp4(7519);
+const canChannelUseSoundboardDefault = tmp4(7542);
 require = fn;
 const SoundboardButtonLocation = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
 const ReactCompilerGating = fn(558);

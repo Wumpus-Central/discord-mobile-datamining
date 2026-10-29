@@ -1,8 +1,8 @@
-// === Module 9616: BountyTypes ===
+// === Module 9648: BountyTypes ===
 
-// Module 9616 (BountyTypes)
-import BountyAspectRatio from "BountyAspectRatio" /* 9617 */;
-import AssetUtils from "AssetUtils" /* 9618 */;
+// Module 9648 (BountyTypes)
+import BountyAspectRatio from "BountyAspectRatio" /* 9649 */;
+import AssetUtils from "AssetUtils" /* 9650 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -38,7 +38,7 @@ function videoRenditionsFromServer(video_renditions) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
-export const bountyCtaFromServer = function bountyCtaFromServer(url) {
+export function bountyCtaFromServer(url) {
   const obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
@@ -53,8 +53,8 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   }
   obj.ios = tmp2;
   return obj;
-};
-export const bountyFromServer = function bountyFromServer(creative_content) {
+}
+export function bountyFromServer(creative_content) {
   const obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon), videoPreview: null, imagePreview: null, videoHls: null, videoRenditions: null, cta: null, rewardTimerSeconds: null, videoDurationSeconds: null };
   obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
   obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
@@ -82,4 +82,4 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
   obj.rewardTimerSeconds = num;
   obj.videoDurationSeconds = creative_content.video_duration_seconds;
   return obj;
-};
+}

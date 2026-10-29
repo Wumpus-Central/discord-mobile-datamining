@@ -1,19 +1,19 @@
-// === Module 13995: playInAppMessageSound ===
+// === Module 14228: playInAppMessageSound ===
 
-// Module 13995 (playInAppMessageSound)
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import SoundUtils from "SoundUtils" /* 11566 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13979 */;
+// Module 14228 (playInAppMessageSound)
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import SoundUtils from "SoundUtils" /* 11620 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 14212 */;
 
 require = fn;
-let closure_3 = fn(13996).isInAppMessageSoundsEnabled;
+let closure_3 = fn(14229).isInAppMessageSoundsEnabled;
 const InAppNotificationTypes = fn(1084).InAppNotificationTypes;
 const message1 = "message1";
 let timestamp = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/native/playInAppMessageSound.tsx");
 
-export const playInAppMessageSound = function playInAppMessageSound(notification) {
+export function playInAppMessageSound(notification) {
   if (notification.type === InAppNotificationTypes.MESSAGE) {
     if (obj2.isMetaQuest()) {
       if (closure_3()) {
@@ -29,4 +29,4 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
     }
     obj2 = MetaQuestUtils;
   }
-};
+}

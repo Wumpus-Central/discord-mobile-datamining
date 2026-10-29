@@ -1,7 +1,7 @@
-// === Module 17628: PlainTextExperiment ===
+// === Module 17866: PlainTextExperiment ===
 
-// Module 17628 (PlainTextExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 17866 (PlainTextExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-07-react-native-plain-text", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
 
-export const usePlainTextExperiment = function usePlainTextExperiment(RootThemeContextProvider) {
+export function usePlainTextExperiment(RootThemeContextProvider) {
   return closure_0.useConfig({ location: RootThemeContextProvider }).enabled;
-};
+}

@@ -1,9 +1,9 @@
-// === Module 19595: useArchiveOrDelete ===
+// === Module 19828: useArchiveOrDelete ===
 
-// Module 19595 (useArchiveOrDelete)
+// Module 19828 (useArchiveOrDelete)
 import util from "util" /* 1125 */;
-import ToastUtilsAll from "ToastUtils" /* 5698 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16855 */;
+import ToastUtilsAll from "ToastUtils" /* 5700 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
             const obj4 = { title, body, confirmText, confirmColor: tmp2(1199).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(5945).confirm(obj4), done: false };
+            const obj5 = { value: v2(5947).confirm(obj4), done: false };
             return obj5;
           }
         } else {

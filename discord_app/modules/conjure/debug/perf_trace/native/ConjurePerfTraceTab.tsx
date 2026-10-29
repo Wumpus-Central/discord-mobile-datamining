@@ -1,29 +1,29 @@
-// === Module 12597: ConjurePerfTraceTab ===
+// === Module 12814: ConjurePerfTraceTab ===
 
-// Module 12597 (ConjurePerfTraceTab)
+// Module 12814 (ConjurePerfTraceTab)
 import nativeDefault from "native" /* 587 */;
 import v1 from "v1" /* 1278 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import Card from "Card" /* 6941 */;
-import FileManagerUtils from "FileManagerUtils" /* 8733 */;
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10771 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12600 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12602 */;
-import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12605 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import Card from "Card" /* 6965 */;
+import FileManagerUtils from "FileManagerUtils" /* 8736 */;
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10846 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12817 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12819 */;
+import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12822 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10739 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10814 */;
 
-const ConjureHeaderIconButtonDefault = tmp5(12330);
+const ConjureHeaderIconButtonDefault = tmp5(12384);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { list: { paddingHorizontal: nativeDefault.space.PX_16 }, placeholder: null, header: null, tools: null, search: null, rowSlot: null, rowBody: null, rowTop: null, rowName: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.placeholder = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -65,17 +65,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     }
     ({ rowBody, rowTop } = tmp4);
     if (cResult[5] !== trace) {
-      const perfTraceStatusResult = tmp(10771).perfTraceStatus(trace);
+      const perfTraceStatusResult = tmp(10846).perfTraceStatus(trace);
       cResult[5] = trace;
       cResult[6] = perfTraceStatusResult;
       let tmp11 = perfTraceStatusResult;
-      const tmpResult = tmp(10771);
+      const tmpResult = tmp(10846);
     } else {
       tmp11 = cResult[6];
     }
     if (cResult[7] !== tmp11) {
       const obj2 = { status: tmp11 };
-      const tmp16 = closure_8(trace(12604), obj2);
+      const tmp16 = closure_8(trace(12821), obj2);
       cResult[7] = tmp11;
       cResult[8] = tmp16;
       let tmp13 = tmp16;
@@ -87,17 +87,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
         let tmp17 = cResult[11];
       }
       if (cResult[12] !== trace) {
-        const perfTraceDurationResult = tmp(12600).perfTraceDuration(trace);
+        const perfTraceDurationResult = tmp(12817).perfTraceDuration(trace);
         cResult[12] = trace;
         cResult[13] = perfTraceDurationResult;
         let tmp20 = perfTraceDurationResult;
-        const tmpResult3 = tmp(12600);
+        const tmpResult3 = tmp(12817);
       } else {
         tmp20 = cResult[13];
       }
       if (cResult[14] !== tmp20) {
         const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp20 };
-        const tmp24 = closure_8(tmp(5270).Text, obj3);
+        const tmp24 = closure_8(tmp(5271).Text, obj3);
         cResult[14] = tmp20;
         cResult[15] = tmp24;
         let tmp22 = tmp24;
@@ -111,17 +111,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
               let tmp25 = cResult[20];
             }
             if (cResult[21] !== trace) {
-              const perfTraceSummaryResult = tmp(12600).perfTraceSummary(trace);
+              const perfTraceSummaryResult = tmp(12817).perfTraceSummary(trace);
               cResult[21] = trace;
               cResult[22] = perfTraceSummaryResult;
               let tmp29 = perfTraceSummaryResult;
-              const tmpResult4 = tmp(12600);
+              const tmpResult4 = tmp(12817);
             } else {
               tmp29 = cResult[22];
             }
             if (cResult[23] !== tmp29) {
               const obj4 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 2, children: tmp29 };
-              const tmp33 = closure_8(tmp(5270).Text, obj4);
+              const tmp33 = closure_8(tmp(5271).Text, obj4);
               cResult[23] = tmp29;
               cResult[24] = tmp33;
               let tmp31 = tmp33;
@@ -132,7 +132,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
               let tmp35 = null;
               if (null != tmp5) {
                 const obj5 = { variant: "text-xs/normal", color: "text-feedback-critical", lineClamp: 2, children: tmp5 };
-                tmp35 = closure_8(tmp(5270).Text, obj5);
+                tmp35 = closure_8(tmp(5271).Text, obj5);
               }
               cResult[25] = tmp5;
               cResult[26] = tmp35;
@@ -166,7 +166,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
                     }
                   }
                   const obj7 = { variant: "primary", onPress: tmp10, accessibilityLabel: trace.name, children: tmp37 };
-                  const tmp43 = closure_8(tmp(6941).Card, obj7);
+                  const tmp43 = closure_8(tmp(6965).Card, obj7);
                   cResult[32] = tmp37;
                   cResult[33] = tmp10;
                   cResult[34] = trace.name;
@@ -200,14 +200,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
       tmp25 = tmp28;
     }
     const obj10 = { variant: "text-sm/semibold", color: "text-default", style: tmp4.rowName, lineClamp: 1, children: trace.name };
-    const tmp19 = closure_8(tmp(5270).Text, obj10);
+    const tmp19 = closure_8(tmp(5271).Text, obj10);
     cResult[9] = tmp4.rowName;
     cResult[10] = trace.name;
     cResult[11] = tmp19;
     tmp17 = tmp19;
   }
   const fn = function f() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12598, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12815, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
   };
   cResult[2] = projectId;
   cResult[3] = trace.id;
@@ -227,7 +227,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj2 = {
     variant: "primary",
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12598, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12815, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
     },
     accessibilityLabel: trace.name,
     children: null
@@ -235,7 +235,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(12604);
+  const tmp9 = trace(12821);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   const items = [closure_8(tmp9, obj5), closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", style: tmp.rowName, lineClamp: 1, children: trace.name }), ];
   const obj8 = { variant: "text-xs/normal", color: "text-subtle", children: null };
@@ -261,7 +261,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
 ReactCompilerGating = fn(558);
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 function openPerfTrace(projectId, traceId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12598, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12815, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/native/ConjurePerfTraceTab.tsx");
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     combined = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                    const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                    const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp12) {
                 dependencyMap = tmp;
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       cResult[8] = tmp18;
     }
     if (cResult[9] !== tmp12) {
-      const tmpResult3 = tmp(12602);
+      const tmpResult3 = tmp(12819);
       cResult[9] = tmp12;
       class B {
         constructor() {
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     combined = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                    const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                    const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp12) {
                 dependencyMap = tmp;
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           return;
         }
       }
-      const sumPerfTraceStatsResult = tmp(12602).sumPerfTraceStats(tmp12);
+      const sumPerfTraceStatsResult = tmp(12819).sumPerfTraceStats(tmp12);
     }
     if (cResult[11] === tmp12) {
       if (cResult[12] === projectId) {
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -583,7 +583,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       combined = tmp4;
                       c1 = 1;
                       dependencyMap = 1;
-                      const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                      const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                       return obj6;
                     }
                   } else if (1 === tmp4) {
@@ -597,7 +597,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     } else {
                       c1 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                      const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -609,7 +609,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     return obj;
                   } else {
                     dependencyMap = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp12) {
                   dependencyMap = tmp;
@@ -650,8 +650,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
               return jsx(PerfTraceRow, obj);
             }
           }
-          const tmp37 = closure_8(tmp(5270).Text, { variant: "text-sm/medium", color: "text-default", children: "No traces yet" });
-          const tmp38 = closure_8(tmp(5270).Text, { variant: "text-sm/normal", color: "text-muted", children: "Turns and project operations over 100ms show up here as they run. Periodic checks and live preview requests show up only when they take a second or fail." });
+          const tmp37 = closure_8(tmp(5271).Text, { variant: "text-sm/medium", color: "text-default", children: "No traces yet" });
+          const tmp38 = closure_8(tmp(5271).Text, { variant: "text-sm/normal", color: "text-muted", children: "Turns and project operations over 100ms show up here as they run. Periodic checks and live preview requests show up only when they take a second or fail." });
           cResult[16] = tmp38;
           class B {
             constructor() {
@@ -692,7 +692,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -709,7 +709,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -723,7 +723,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -735,7 +735,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -812,7 +812,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -829,7 +829,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -843,7 +843,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -855,7 +855,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -950,7 +950,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -967,7 +967,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       combined = tmp4;
                       c1 = 1;
                       dependencyMap = 1;
-                      const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                      const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                       return obj6;
                     }
                   } else if (1 === tmp4) {
@@ -981,7 +981,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     } else {
                       c1 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                      const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -993,7 +993,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     return obj;
                   } else {
                     dependencyMap = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp12) {
                   dependencyMap = tmp;
@@ -1058,7 +1058,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -1075,7 +1075,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -1089,7 +1089,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -1101,7 +1101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -1137,7 +1137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           }
           const obj4 = { IconComponent: null, onPress: null, accessibilityLabel: "Export as JSON" };
           ConjureHeaderIconButtonDefault;
-          obj4.IconComponent = tmp(5720).DownloadIcon;
+          obj4.IconComponent = tmp(5722).DownloadIcon;
           obj4.onPress = tmp21;
           class B {
             constructor() {
@@ -1178,7 +1178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -1195,7 +1195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -1209,7 +1209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -1221,7 +1221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       return obj;
                     } else {
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp12) {
                     dependencyMap = tmp;
@@ -1305,7 +1305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -1322,7 +1322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   combined = tmp4;
                   c1 = 1;
                   dependencyMap = 1;
-                  const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+                  const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
                   return obj6;
                 }
               } else if (1 === tmp4) {
@@ -1336,7 +1336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 } else {
                   c1 = 2;
                   dependencyMap = 1;
-                  const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+                  const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -1348,7 +1348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 return obj;
               } else {
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp12) {
               dependencyMap = tmp;
@@ -1373,12 +1373,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp21 = B;
   }
   const tmp10 = _slicedToArray(noop.useState(""), 2);
-  const filterPerfTracesResult = projectId(12605).filterPerfTraces(stateFromStoresArray, first1);
+  const filterPerfTracesResult = projectId(12822).filterPerfTraces(stateFromStoresArray, first1);
   cResult[4] = first1;
   cResult[5] = stateFromStoresArray;
   cResult[6] = filterPerfTracesResult;
   tmp12 = filterPerfTracesResult;
-  const tmpResult4 = projectId(12605);
+  const tmpResult4 = projectId(12822);
 }) : (function ConjurePerfTraceTab(projectId) {
   projectId = projectId.projectId;
   let first;
@@ -1450,7 +1450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1467,7 +1467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
               combined = tmp4;
               c1 = 1;
               dependencyMap = 1;
-              const obj6 = { value: combined(8733).clearFolder("cache", combined1), done: false };
+              const obj6 = { value: combined(8736).clearFolder("cache", combined1), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -1481,7 +1481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             } else {
               c1 = 2;
               dependencyMap = 1;
-              const obj8 = { value: combined(8733).removeFile("cache", closure_128_1), done: false };
+              const obj8 = { value: combined(8736).removeFile("cache", closure_128_1), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -1493,7 +1493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp12) {
           dependencyMap = tmp;

@@ -1,18 +1,18 @@
-// === Module 11200: BioMarkupUtils ===
+// === Module 11254: BioMarkupUtils ===
 
-// Module 11200 (BioMarkupUtils)
-import privDefault from "priv" /* 1456 */;
-import _modDef1948 from "module_1948" /* 1948 */;
-import MarkupReactRulesDefault from "MarkupReactRules" /* 5742 */;
-import MarkupRulesDefault from "MarkupRules" /* 6018 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 6017 */;
-import MarkupParser_mod from "MarkupParser" /* 8377 */;
-import MarkupUtils from "MarkupUtils" /* 5741 */;
+// Module 11254 (BioMarkupUtils)
+import privDefault from "priv" /* 1457 */;
+import _modDef1949 from "module_1949" /* 1949 */;
+import MarkupReactRulesDefault from "MarkupReactRules" /* 5744 */;
+import MarkupRulesDefault from "MarkupRules" /* 6022 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 6021 */;
+import MarkupParser_mod from "MarkupParser" /* 8399 */;
+import MarkupUtils from "MarkupUtils" /* 5743 */;
 import apply from "module_12" /* 12 */;
 
 let combineMarkupRules = combineMarkupRules_mod;
 const items = [MarkupRulesDefault.PROFILE_BIO_RULES, MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
-const MarkupReactRules = fn(5742);
+const MarkupReactRules = fn(5744);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
@@ -44,12 +44,12 @@ let tmp4 = new privDefault({ max: 2000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");
 
-export const parseBioReact = function parseBioReact(bio, arg1, arg2, arg3) {
+export function parseBioReact(bio, arg1, arg2, arg3) {
   const merged = Object.assign(closure_4);
   const merged1 = Object.assign(arg2);
   return closure_5(bio, arg1, {}, arg3);
-};
-export const getOrParseBioAST = function getOrParseBioAST(arg0, guildId) {
+}
+export function getOrParseBioAST(arg0, guildId) {
   let str = guildId;
   if (guildId == null) {
     str = "";
@@ -63,8 +63,8 @@ export const getOrParseBioAST = function getOrParseBioAST(arg0, guildId) {
     value = tmp4;
   }
   return value;
-};
-export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(cResult, guildId) {
+}
+export function parseBioReactWithCachedAST(cResult, guildId) {
   if (0 === cResult.trim().length) {
     return null;
   } else {
@@ -81,8 +81,8 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(cR
       const result = closure_3.set(combined, tmp5);
       value = tmp5;
     }
-    const obj3 = _modDef1948;
-    return obj3.reactFor(_modDef1948.ruleOutput(importDefaultResultResult, "react"))(value);
+    const obj3 = _modDef1949;
+    return obj3.reactFor(_modDef1949.ruleOutput(importDefaultResultResult, "react"))(value);
   }
-};
+}
 export const parseBioReactWithoutScrolling = MarkupParser.reactParserFor(combineMarkupRules(items1));

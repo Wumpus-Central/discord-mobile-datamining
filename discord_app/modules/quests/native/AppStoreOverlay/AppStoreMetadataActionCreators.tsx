@@ -1,9 +1,9 @@
-// === Module 14345: AppStoreMetadataActionCreators ===
+// === Module 14579: AppStoreMetadataActionCreators ===
 
-// Module 14345 (AppStoreMetadataActionCreators)
+// Module 14579 (AppStoreMetadataActionCreators)
 import DurationsDefault from "Durations" /* 1101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
 const require = fn;
@@ -29,10 +29,10 @@ LocaleStore.addChangeListener(clearMetadataCache);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreMetadataActionCreators.tsx");
 
-export const getAppStoreMetadataCacheKey = function getAppStoreMetadataCacheKey(os) {
+export function getAppStoreMetadataCacheKey(os) {
   return "" + os.os + "#" + os.storeAppId;
-};
-export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
+}
+export function fetchAppStoreMetadata(os) {
   os = os.os;
   const storeAppId = os.storeAppId;
   const combined = "" + os + "#" + storeAppId;
@@ -65,7 +65,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -156,4 +156,4 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
       return tmp7;
     }
   }
-};
+}

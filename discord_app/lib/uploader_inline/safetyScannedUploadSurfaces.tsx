@@ -1,7 +1,7 @@
-// === Module 7119: safetyScannedUploadSurfaces ===
+// === Module 7143: safetyScannedUploadSurfaces ===
 
-// Module 7119 (safetyScannedUploadSurfaces)
-import ImageCroppingConstants from "ImageCroppingConstants" /* 7120 */;
+// Module 7143 (safetyScannedUploadSurfaces)
+import ImageCroppingConstants from "ImageCroppingConstants" /* 7144 */;
 import size from "module_2" /* 2 */;
 
 const UploadTypes = ImageCroppingConstants.UploadTypes;
@@ -9,7 +9,7 @@ const SafetyScannedUploadSurface = { USER_DEFAULT_PROFILE_AVATAR: "USER_DEFAULT_
 const result = size.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
 
 export { SafetyScannedUploadSurface };
-export const getSafetyScannedUploadSurfaceForProfileCustomization = function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
+export function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
   if (UploadTypes.AVATAR === arg0) {
     if (null != arg1) {
       let USER_DEFAULT_PROFILE_AVATAR = obj.USER_GUILD_PROFILE_AVATAR;
@@ -27,4 +27,4 @@ export const getSafetyScannedUploadSurfaceForProfileCustomization = function get
   } else {
     return null;
   }
-};
+}

@@ -1,21 +1,21 @@
-// === Module 17915: NewMemberActionsProgress ===
+// === Module 18153: NewMemberActionsProgress ===
 
-// Module 17915 (NewMemberActionsProgress)
+// Module 18153 (NewMemberActionsProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5294 */;
+import LinearGradientDefault from "LinearGradient" /* 5295 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7362 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8333 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7385 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8355 */;
 
 require = fn;
 const View = fn(17).View;
-const StaticChannelRoute = fn(4863).StaticChannelRoute;
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const StaticChannelRoute = fn(4864).StaticChannelRoute;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };
@@ -87,7 +87,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Progre
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");
 
-export const NewMemberActionsProgress = function NewMemberActionsProgress(guildId) {
+export function NewMemberActionsProgress(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
   const tmp = closure_12();
@@ -172,4 +172,4 @@ export const NewMemberActionsProgress = function NewMemberActionsProgress(guildI
     }
   }
   return tmp7;
-};
+}

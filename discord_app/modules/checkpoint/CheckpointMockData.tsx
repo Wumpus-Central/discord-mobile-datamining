@@ -1,6 +1,6 @@
-// === Module 13017: CheckpointMockData ===
+// === Module 13248: CheckpointMockData ===
 
-// Module 13017 (CheckpointMockData)
+// Module 13248 (CheckpointMockData)
 import size from "module_2" /* 2 */;
 
 const CheckpointMockStats = { DEFAULT: 0, [0]: "DEFAULT", NO_PERSONAL_DATA: 1, [1]: "NO_PERSONAL_DATA", ZERO_DATA: 2, [2]: "ZERO_DATA" };
@@ -9,7 +9,7 @@ const obj2 = { voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 }, 
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointMockData.tsx");
 
 export { CheckpointMockStats };
-export const getMockCheckpointStats = function getMockCheckpointStats(arg0) {
+export function getMockCheckpointStats(arg0) {
   if (obj.DEFAULT === arg0) {
     return closure_1;
   } else if (obj.NO_PERSONAL_DATA === arg0) {
@@ -17,4 +17,4 @@ export const getMockCheckpointStats = function getMockCheckpointStats(arg0) {
   } else if (obj.ZERO_DATA === arg0) {
     return obj2;
   }
-};
+}

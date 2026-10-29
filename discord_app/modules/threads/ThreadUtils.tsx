@@ -1,18 +1,18 @@
-// === Module 8340: ThreadUtils ===
+// === Module 8362: ThreadUtils ===
 
-// Module 8340 (ThreadUtils)
+// Module 8362 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7246 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7643 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8329 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7270 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7666 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8351 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4938 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
 
 const require = globalThis.__r;
 
@@ -32,23 +32,23 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadUtils.tsx");
 
 export const getTimestampString = threads_getTimestampStringDefault;
-export const getTimestampAccessibilityLabel = function getTimestampAccessibilityLabel(extractTimestampResult) {
+export function getTimestampAccessibilityLabel(extractTimestampResult) {
   return threads_getTimestampStringDefault(extractTimestampResult, getAccessibilityLabelFormatter);
-};
-export const trackThreadBrowserTab = function trackThreadBrowserTab() {
+}
+export function trackThreadBrowserTab() {
   AppAnalyticsUtils.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
-};
-export const trackThreadBrowserOpened = function trackThreadBrowserOpened() {
+}
+export function trackThreadBrowserOpened() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "Modal";
   }
   AppAnalyticsUtils.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
-};
-export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutOpened() {
+}
+export function trackActiveThreadsPopoutOpened() {
   AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
-};
-export const trackThreadNotificationSettingsUpdated = function trackThreadNotificationSettingsUpdated(getGuildId, flags) {
+}
+export function trackThreadNotificationSettingsUpdated(getGuildId, flags) {
   const result = ThreadAnalyticsUtils.collectThreadMetadata(getGuildId);
   if (null != result) {
     const guildId = getGuildId.getGuildId();
@@ -112,7 +112,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     const tmpResult3 = NotificationSettingsUtils;
     AnalyticsUtilsDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj2);
   }
-};
+}
 export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled() ? (function useLastMessageTimestamp(id) {
   _require = id;
   const cResult = require("c").c(11);
@@ -154,8 +154,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   if (cResult[5] !== createTimestamp) {
     let valueOfResult = null;
     if (null != createTimestamp) {
-      valueOfResult = _modDef2046(createTimestamp).valueOf();
-      const obj4 = _modDef2046(createTimestamp);
+      valueOfResult = _modDef2047(createTimestamp).valueOf();
+      const obj4 = _modDef2047(createTimestamp);
     }
     cResult[5] = createTimestamp;
     cResult[6] = valueOfResult;
@@ -199,8 +199,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef2046(createTimestamp).valueOf();
-    const obj3 = _modDef2046(createTimestamp);
+    valueOfResult = _modDef2047(createTimestamp).valueOf();
+    const obj3 = _modDef2047(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

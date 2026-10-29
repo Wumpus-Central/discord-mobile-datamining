@@ -1,9 +1,9 @@
-// === Module 8916: ActivitiesInTextUtils ===
+// === Module 8919: ActivitiesInTextUtils ===
 
-// Module 8916 (ActivitiesInTextUtils)
+// Module 8919 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1105 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 
@@ -109,7 +109,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 
 export { isActivityInTextSupportedForChannel };
-export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel) {
+export function isActivitiesInTextEnabled(channel) {
   let flag = false;
   if (null != channel) {
     flag = false;
@@ -127,7 +127,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
     }
   }
   return flag;
-};
+}
 export const useIsActivitiesInTextEnabled = tmp2;
 export { getIsAppLauncherEnabled };
 export const useIsAppLauncherEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAppLauncherEnabled(arg0) {

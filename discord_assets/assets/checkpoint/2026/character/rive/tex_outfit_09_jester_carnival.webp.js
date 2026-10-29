@@ -1,6 +1,6 @@
-// === Module 13135: ? ===
+// === Module 13366: ? ===
 
-// Module 13135
+// Module 13366
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_09_jester_carnival.webp.js");

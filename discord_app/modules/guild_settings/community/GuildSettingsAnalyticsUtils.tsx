@@ -1,13 +1,13 @@
-// === Module 19492: GuildSettingsAnalyticsUtils ===
+// === Module 19725: GuildSettingsAnalyticsUtils ===
 
-// Module 19492 (GuildSettingsAnalyticsUtils)
+// Module 19725 (GuildSettingsAnalyticsUtils)
 import util from "util" /* 1125 */;
-import NumberUtils from "NumberUtils" /* 1900 */;
-import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 19510 */;
+import NumberUtils from "NumberUtils" /* 1901 */;
+import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 19743 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5230 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 19493 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 19726 */;
 
 const require = globalThis.__r;
 
@@ -233,7 +233,7 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
   let obj = require("initialize");
   return { analytics, notice: getNotice(errorCode, tmp) };
 });
-export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(communicators, communicatorsChange, stateFromStores, arg3) {
+export function getGuildAnalyticsCardProps(communicators, communicatorsChange, stateFromStores, arg3) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -275,4 +275,4 @@ export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(co
     const intl2 = util.intl;
     formatToPlainStringResult = intl2.string(util.t.xO2msf);
   }
-};
+}

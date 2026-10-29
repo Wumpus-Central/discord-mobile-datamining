@@ -1,20 +1,20 @@
-// === Module 6673: StageChannelPermissionUtils ===
+// === Module 6697: StageChannelPermissionUtils ===
 
-// Module 6673 (StageChannelPermissionUtils)
+// Module 6697 (StageChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4864 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
-import LurkingStore from "LurkingStore" /* 4937 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4865 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
+import LurkingStore from "LurkingStore" /* 4938 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import StageInstanceStore from "StageInstanceStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import StageInstanceStore from "StageInstanceStore" /* 4862 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4874).isGuildOwner;
+const isGuildOwner = fn(4875).isGuildOwner;
 const Constants = fn(1084);
 ({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
 fn(558);
@@ -199,7 +199,7 @@ function createOrUpdateModeratorOverwrite(id, type, deny) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
 
-export const createModeratorOverwrite = function createModeratorOverwrite(id, MEMBER, arg2) {
+export function createModeratorOverwrite(id, MEMBER, arg2) {
   let tmp;
   if (arg2 != null) {
     tmp = arg2.permissionOverwrites[id];
@@ -222,9 +222,9 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
   }
   obj.allow = BigFlagUtilsAll.combine(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
-};
+}
 export { createOrUpdateModeratorOverwrite };
-export const removeModeratorOverwrite = function removeModeratorOverwrite(id, MEMBER, name) {
+export function removeModeratorOverwrite(id, MEMBER, name) {
   let tmp;
   if (name != null) {
     tmp = name.permissionOverwrites[id];
@@ -247,8 +247,8 @@ export const removeModeratorOverwrite = function removeModeratorOverwrite(id, ME
   }
   obj.allow = BigFlagUtilsAll.remove(allow, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   return obj;
-};
-export const isEmptyOverwrite = function isEmptyOverwrite(id) {
+}
+export function isEmptyOverwrite(id) {
   ({ allow, deny } = id);
   let equalsResult = BigFlagUtilsAll.equals(allow, PermissionUtilsAll.NONE);
   if (equalsResult) {
@@ -256,7 +256,7 @@ export const isEmptyOverwrite = function isEmptyOverwrite(id) {
     const tmpResult = BigFlagUtilsAll;
   }
   return equalsResult;
-};
+}
 export const useCanCreateStageChannelByGuild = tmp3;
 export const useCanUpdateStageChannelModerators = tmp4;
 export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanModerateRequestToSpeak(arg0) {
@@ -301,7 +301,7 @@ export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerE
     return canResult;
   }, items1);
 });
-export const canLurkerListen = function canLurkerListen(channel) {
+export function canLurkerListen(channel) {
   const tmp = null == channel || !channel.isGuildStageVoice();
   let tmp2 = !tmp;
   if (!tmp) {
@@ -316,4 +316,4 @@ export const canLurkerListen = function canLurkerListen(channel) {
     tmp2 = isLurkingResult;
   }
   return tmp2;
-};
+}

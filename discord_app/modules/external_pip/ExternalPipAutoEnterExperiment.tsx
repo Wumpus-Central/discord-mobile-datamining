@@ -1,7 +1,7 @@
-// === Module 18725: ExternalPipAutoEnterExperiment ===
+// === Module 18959: ExternalPipAutoEnterExperiment ===
 
-// Module 18725 (ExternalPipAutoEnterExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 18959 (ExternalPipAutoEnterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-android-seamless-pip", defaultConfig: { autoEnterEnabled: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/external_pip/ExternalPipAutoEnterExperiment.tsx");
 
-export const isExternalPipAutoEnterEnabled = function isExternalPipAutoEnterEnabled() {
+export function isExternalPipAutoEnterEnabled() {
   return config.getConfig({ location: "ExternalPipView" }).autoEnterEnabled;
-};
+}

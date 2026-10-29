@@ -1,18 +1,18 @@
-// === Module 18377: GuildVoiceOrStageChannelRow ===
+// === Module 18611: GuildVoiceOrStageChannelRow ===
 
-// Module 18377 (GuildVoiceOrStageChannelRow)
+// Module 18611 (GuildVoiceOrStageChannelRow)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6723 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6729 */;
-import ChannelListLayout from "ChannelListLayout" /* 11993 */;
-import renderChannelBadge from "renderChannelBadge" /* 13409 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18378 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 18379 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 18381 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6746 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6752 */;
+import ChannelListLayout from "ChannelListLayout" /* 12047 */;
+import renderChannelBadge from "renderChannelBadge" /* 13642 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18612 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 18613 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 18615 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4861 */;
+import StageInstanceStore from "StageInstanceStore" /* 4862 */;
 
 require = fn;
 function getVoiceChannelSubtitle(voiceStates, messagesTabLayout) {
@@ -115,9 +115,9 @@ function getVoiceChannelSubtitle(voiceStates, messagesTabLayout) {
   obj = ChannelListLayout;
 }
 const View = fn(17).View;
-const layout = fn(9748).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9780).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildVoiceChannelSubtitle(channel) {
@@ -180,7 +180,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildV
     tmp11 = getVoiceChannelSubtitle(voiceStates, layout);
   }
   const tmpResult = channel(504);
-  const result = channel(18378).renderChannelSubtitle({ subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id });
+  const result = channel(18612).renderChannelSubtitle({ subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id });
   cResult[4] = id;
   cResult[5] = guild_id;
   cResult[6] = stateFromStores;
@@ -188,7 +188,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildV
   cResult[8] = result;
   tmp10 = result;
   const obj3 = { subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id };
-  const tmpResult2 = channel(18378);
+  const tmpResult2 = channel(18612);
 }) : (function GuildVoiceChannelSubtitle(channel) {
   channel = channel.channel;
   const voiceStates = channel.voiceStates;

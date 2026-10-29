@@ -1,10 +1,10 @@
-// === Module 11696: transferToPlayStation ===
+// === Module 11750: transferToPlayStation ===
 
-// Module 11696 (transferToPlayStation)
+// Module 11750 (transferToPlayStation)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11697 */;
-import ConsoleCommands from "ConsoleCommands" /* 11701 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11751 */;
+import ConsoleCommands from "ConsoleCommands" /* 11755 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       } else {
         closure_132_1(closure_132_2[4])(closure_131_2.id, closure_131_0);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp29) {
       c6 = tmp;
@@ -134,7 +134,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -210,7 +210,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/transferToPlayStation.tsx");
 
-export const transferToPlayStation = function transferToPlayStation() {
+export function transferToPlayStation() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -219,4 +219,4 @@ export const transferToPlayStation = function transferToPlayStation() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

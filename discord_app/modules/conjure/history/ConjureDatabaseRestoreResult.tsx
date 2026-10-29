@@ -1,11 +1,11 @@
-// === Module 12270: databaseRestoreResultFromStatus ===
+// === Module 12324: databaseRestoreResultFromStatus ===
 
-// Module 12270 (databaseRestoreResultFromStatus)
+// Module 12324 (databaseRestoreResultFromStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/history/ConjureDatabaseRestoreResult.tsx");
 
-export const databaseRestoreResultFromStatus = function databaseRestoreResultFromStatus(status, message) {
+export function databaseRestoreResultFromStatus(status, message) {
   if (202 === status) {
     const obj2 = { ok: false, code: "unconfirmed", message };
     let obj = obj2;
@@ -22,4 +22,4 @@ export const databaseRestoreResultFromStatus = function databaseRestoreResultFro
     obj = { ok: false, code: str, message };
   }
   return obj;
-};
+}

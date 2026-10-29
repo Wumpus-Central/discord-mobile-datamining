@@ -1,17 +1,17 @@
-// === Module 18327: conjureBackgroundFrames ===
+// === Module 18561: conjureBackgroundFrames ===
 
-// Module 18327 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10765 */;
-import leaveFrame from "leaveFrame" /* 10803 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15971 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18328 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18330 */;
+// Module 18561 (conjureBackgroundFrames)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
+import leaveFrame from "leaveFrame" /* 10879 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10880 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 16207 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18562 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18564 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6810 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import FramesStore from "FramesStore" /* 6833 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
@@ -98,7 +98,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }, items);
 });
 export { closeBackgroundedConjureAppFrames };
-export const returnToConjureFrameSurface = function returnToConjureFrameSurface(frame) {
+export function returnToConjureFrameSurface(frame) {
   if (frame.intent === constants.INLINE) {
     if (!obj3.isConjurePreviewSurface(frame.surface)) {
       if (tmp6Result.isConjureApplication(frame.applicationId)) {
@@ -235,4 +235,4 @@ export const returnToConjureFrameSurface = function returnToConjureFrameSurface(
     obj3 = conjurePreviewSurface;
   }
   return false;
-};
+}

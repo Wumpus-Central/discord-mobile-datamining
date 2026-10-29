@@ -1,6 +1,6 @@
-// === Module 7454: ClaimAccountModalActionCreators ===
+// === Module 7477: ClaimAccountModalActionCreators ===
 
-// Module 7454 (ClaimAccountModalActionCreators)
+// Module 7477 (ClaimAccountModalActionCreators)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");

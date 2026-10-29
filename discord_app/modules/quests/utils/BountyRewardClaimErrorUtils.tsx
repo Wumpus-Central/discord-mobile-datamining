@@ -1,13 +1,13 @@
-// === Module 16579: BountyRewardClaimErrorUtils ===
+// === Module 16817: BountyRewardClaimErrorUtils ===
 
-// Module 16579 (BountyRewardClaimErrorUtils)
+// Module 16817 (BountyRewardClaimErrorUtils)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const set = new Set([260021]);
 const result = size.fileFinishedImporting("modules/quests/utils/BountyRewardClaimErrorUtils.tsx");
 
-export const resolveBountyRewardClaimErrorMessage = function resolveBountyRewardClaimErrorMessage(code) {
+export function resolveBountyRewardClaimErrorMessage(code) {
   code = undefined;
   if (code != null) {
     code = code.code;
@@ -26,4 +26,4 @@ export const resolveBountyRewardClaimErrorMessage = function resolveBountyReward
   }
   const intl = util.intl;
   message = intl.string(util.t.uLjCfn);
-};
+}

@@ -1,10 +1,10 @@
-// === Module 14366: MobileQuestVideoWatchCtaCopy ===
+// === Module 14600: MobileQuestVideoWatchCtaCopy ===
 
-// Module 14366 (MobileQuestVideoWatchCtaCopy)
+// Module 14600 (MobileQuestVideoWatchCtaCopy)
 import util from "util" /* 1125 */;
-import QuestConstants from "QuestConstants" /* 6745 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7833 */;
-import VQRemainingTimeTruncationExperimentDefault from "VQRemainingTimeTruncationExperiment" /* 14367 */;
+import QuestConstants from "QuestConstants" /* 6768 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
+import VQRemainingTimeTruncationExperimentDefault from "VQRemainingTimeTruncationExperiment" /* 14601 */;
 import size from "module_2" /* 2 */;
 
 function formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress, truncate) {
@@ -37,7 +37,7 @@ const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
 const result = size.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export { formatWatchRemainingDurationShort };
-export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
+export function getVideoQuestWatchCtaText(questTaskDetails) {
   VQRemainingTimeTruncationExperimentDefault;
   if (questTaskDetails.percentComplete > 0) {
     const intl2 = util.intl;
@@ -51,8 +51,8 @@ export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(ques
     formatToPlainStringResult = intl.formatToPlainString(util.t.CHrvqg, obj);
   }
   return formatToPlainStringResult;
-};
-export const getBountyWatchCtaText = function getBountyWatchCtaText(watchVideoTaskDetailsFromProgress) {
+}
+export function getBountyWatchCtaText(watchVideoTaskDetailsFromProgress) {
   if (watchVideoTaskDetailsFromProgress.percentComplete > 0) {
     const intl2 = util.intl;
     const obj2 = { durationShort: formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress) };
@@ -65,8 +65,8 @@ export const getBountyWatchCtaText = function getBountyWatchCtaText(watchVideoTa
     formatToPlainStringResult = intl.formatToPlainString(util.t.CHrvqg, obj);
   }
   return formatToPlainStringResult;
-};
-export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
+}
+export function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
   const remainingTaskTime = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);
   ({ minutes, seconds } = remainingTaskTime);
   if (minutes > 0) {
@@ -97,4 +97,4 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
     formatToPlainStringResult = intl.formatToPlainString(util.t["0BZpdi"], obj5);
   }
   tmp = questTaskDetails.percentComplete > 0;
-};
+}

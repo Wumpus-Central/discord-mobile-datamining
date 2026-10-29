@@ -1,25 +1,25 @@
-// === Module 11961: AppLauncherNativeUtils ===
+// === Module 12015: AppLauncherNativeUtils ===
 
-// Module 11961 (AppLauncherNativeUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef1987 from "module_1987" /* 1987 */;
-import Server from "Server" /* 1997 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5670 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7665 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8337 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9683 */;
-import FrecencySection from "FrecencySection" /* 11962 */;
+// Module 12015 (AppLauncherNativeUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import _modDef1988 from "module_1988" /* 1988 */;
+import Server from "Server" /* 1998 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8359 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9715 */;
+import FrecencySection from "FrecencySection" /* 12016 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const BuiltInSectionId = fn(6019).BuiltInSectionId;
+const BuiltInSectionId = fn(6023).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLogAppLauncherEmptyStateView(arg0, arg1) {
@@ -71,7 +71,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLogAppL
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
-export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
+export function handleApplicationSelected(entrypoint) {
   ({ application, navigation, sectionName, navigates } = entrypoint);
   ({ location: _location, context, installOnDemand, query, searchResultsPosition } = entrypoint);
   if (navigates === undefined) {
@@ -99,15 +99,15 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     const obj3 = { application, context, installOnDemand, sectionName, entrypoint };
     navigation.navigate(constants.APPLICATION_VIEW, obj3);
   }
-};
-export const handleViewAllSelected = function handleViewAllSelected(arg0) {
+}
+export function handleViewAllSelected(arg0) {
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
   const obj = AppAnalyticsUtils;
   obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, { section_name: sectionName, num: sectionItemType === FrecencySection.SectionItemType.APPS ? applications.length : commands.length });
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
-};
-export const handleApplicationCommandSelected = function handleApplicationCommandSelected(arg0) {
+}
+export function handleApplicationCommandSelected(arg0) {
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
@@ -138,8 +138,8 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       navigation.navigate(constants.COMMAND_VIEW, obj6);
     }
   }
-};
-export const getInitialOptionValues = function getInitialOptionValues(option) {
+}
+export function getInitialOptionValues(option) {
   option = option.option;
   ({ prefilledValues, roles } = option);
   let found;
@@ -254,10 +254,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     const items15 = [{ type: "text", text: "" }];
     return items15;
   }
-};
-export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
+}
+export function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1987;
+    let applicationIconSource = _modDef1988;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
@@ -270,7 +270,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
     isRealApplicationResult = AppLauncherUtils.isRealApplication(application);
   }
   return applicationIconSource;
-};
+}
 export const useLogAppLauncherEmptyStateView = tmp3;
 export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompilerEnabled() ? (function useHandleActivityItemSelected(onActivityItemSelected) {
   const cResult = sectionName(entrypoint[16]).c(23);

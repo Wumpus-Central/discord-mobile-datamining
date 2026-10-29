@@ -1,7 +1,7 @@
-// === Module 15333: splitAgeRestrictedActivities ===
+// === Module 15568: splitAgeRestrictedActivities ===
 
-// Module 15333 (splitAgeRestrictedActivities)
-import ContentClassificationReference from "ContentClassificationReference" /* 5647 */;
+// Module 15568 (splitAgeRestrictedActivities)
+import ContentClassificationReference from "ContentClassificationReference" /* 5648 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");

@@ -1,7 +1,7 @@
-// === Module 12286: conjurePublishHistoryRequests ===
+// === Module 12340: conjurePublishHistoryRequests ===
 
-// Module 12286 (conjurePublishHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10830 */;
+// Module 12340 (conjurePublishHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -44,7 +44,7 @@ let closure_4 = async function _fetchPublishHistoryNotes() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjurePublishHistoryRequests.tsx");
 
-export const fetchPublishHistory = function fetchPublishHistory() {
+export function fetchPublishHistory() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -53,8 +53,8 @@ export const fetchPublishHistory = function fetchPublishHistory() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchPublishHistoryNotes = function fetchPublishHistoryNotes() {
+}
+export function fetchPublishHistoryNotes() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -63,4 +63,4 @@ export const fetchPublishHistoryNotes = function fetchPublishHistoryNotes() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

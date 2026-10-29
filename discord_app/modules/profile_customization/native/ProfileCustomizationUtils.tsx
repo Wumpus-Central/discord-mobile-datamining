@@ -1,10 +1,10 @@
-// === Module 8775: profile_customization/ProfileCustomizationUtils ===
+// === Module 8778: profile_customization/ProfileCustomizationUtils ===
 
-// Module 8775 (profile_customization/ProfileCustomizationUtils)
+// Module 8778 (profile_customization/ProfileCustomizationUtils)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import VideoBackground from "VideoBackground" /* 8776 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import VideoBackground from "VideoBackground" /* 8779 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -91,7 +91,7 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
     pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
   }
 });
-export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, avatarSrcOverride, stateFromStores) {
+export function getAvatarSource(getAvatarURL, guildId, avatarSrcOverride, stateFromStores) {
   if (null == getAvatarURL) {
     return null;
   } else {
@@ -110,4 +110,4 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, a
       memoizedImageSourceResult = VideoBackground.memoizedImageSource(userAvatarURL);
     }
   }
-};
+}

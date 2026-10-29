@@ -1,9 +1,9 @@
-// === Module 12894: useSafetyHubAccountStanding ===
+// === Module 13115: useSafetyHubAccountStanding ===
 
-// Module 12894 (useSafetyHubAccountStanding)
+// Module 13115 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubStore from "SafetyHubStore" /* 7957 */;
+import SafetyHubStore from "SafetyHubStore" /* 7980 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

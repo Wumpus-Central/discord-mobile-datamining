@@ -1,13 +1,13 @@
-// === Module 7869: GuildRoomStore ===
+// === Module 7892: GuildRoomStore ===
 
-// Module 7869 (GuildRoomStore)
+// Module 7892 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7870 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 7893 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 
 require = fn;
 function resolveCreatingNotes(roomId, objects) {

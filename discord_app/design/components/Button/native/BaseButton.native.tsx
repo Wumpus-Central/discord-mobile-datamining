@@ -1,14 +1,14 @@
-// === Module 5290: Button/BaseButton ===
+// === Module 5291: Button/BaseButton ===
 
-// Module 5290 (Button/BaseButton)
+// Module 5291 (Button/BaseButton)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import native from "native" /* 5070 */;
-import ButtonHooks from "ButtonHooks" /* 5287 */;
+import native from "native" /* 5071 */;
+import ButtonHooks from "ButtonHooks" /* 5288 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 5085 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 5086 */;
 
 require = fn;
 let closure_2 = ["style"];
@@ -16,7 +16,7 @@ let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1084).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5291).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5292).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeOverrideVariant(arg0) {
@@ -40,7 +40,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThem
   }
   return DARK;
 });
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonPressAnimationPropsIfPressed(arg0, arg1, onLayout, onPressIn, onPressOut) {

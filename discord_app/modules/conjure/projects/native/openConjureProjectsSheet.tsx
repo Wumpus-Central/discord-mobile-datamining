@@ -1,10 +1,10 @@
-// === Module 14402: openConjureProjectsSheet ===
+// === Module 14636: openConjureProjectsSheet ===
 
-// Module 14402 (openConjureProjectsSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10856 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+// Module 14636 (openConjureProjectsSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10932 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 require = fn;
 const size = fn(2);
@@ -16,5 +16,5 @@ export default function openConjureProjectsSheet() {
       openConjureHomeScreenDefault();
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14403, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14637, dependencyMap.paths), "ConjureProjectsSheet");
 };

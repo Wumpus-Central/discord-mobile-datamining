@@ -1,12 +1,12 @@
-// === Module 12886: useContentHarmTypes ===
+// === Module 13107: useContentHarmTypes ===
 
-// Module 12886 (useContentHarmTypes)
+// Module 13107 (useContentHarmTypes)
 import c from "c" /* 576 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7426 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7449 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -16,10 +16,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnabled
   dependencyMap = arg1;
   const cResult = require("c").c(18);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const eligibleHarmTypesConfigsForContext = tmp(7426).getEligibleHarmTypesConfigsForContext();
+    const eligibleHarmTypesConfigsForContext = tmp(7449).getEligibleHarmTypesConfigsForContext();
     cResult[0] = eligibleHarmTypesConfigsForContext;
     let first = eligibleHarmTypesConfigsForContext;
-    const tmpResult = tmp(7426);
+    const tmpResult = tmp(7449);
   } else {
     first = cResult[0];
   }
@@ -74,7 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnabled
       tmp16 = cResult[9];
     }
     const tmpResult6 = tmp(504);
-    stateFromStores2 = tmpResult6.useStateFromStores(tmp14, tmp15, tmp16, tmp(7434).areSettingsEqual);
+    stateFromStores2 = tmpResult6.useStateFromStores(tmp14, tmp15, tmp16, tmp(7457).areSettingsEqual);
     if (null != stateFromStores1) {
       let id;
       if (stateFromStores != null) {
@@ -230,10 +230,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnabled
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7430).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7453).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7426).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7426);
+    NONE = tmp(7449).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7449);
   }
   return NONE;
 });

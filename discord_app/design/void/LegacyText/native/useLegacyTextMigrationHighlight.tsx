@@ -1,12 +1,12 @@
-// === Module 9001: useLegacyTextMigrationHighlight ===
+// === Module 9004: useLegacyTextMigrationHighlight ===
 
-// Module 9001 (useLegacyTextMigrationHighlight)
+// Module 9004 (useLegacyTextMigrationHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 5273 */;
+import DevSettingsStore from "DevSettingsStore" /* 5274 */;
 
 require = fn;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

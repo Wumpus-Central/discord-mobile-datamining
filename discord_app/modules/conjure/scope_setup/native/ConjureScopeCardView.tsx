@@ -1,18 +1,19 @@
-// === Module 12508: ConjureScopeCardView ===
+// === Module 12562: ConjureScopeCardView ===
 
-// Module 12508 (ConjureScopeCardView)
+// Module 12562 (ConjureScopeCardView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12509 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12563 */;
+import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
-let obj2 = { container: { gap: nativeDefault.space.PX_4 } };
+const createStyles = fn(5005);
+const obj2 = { container: { gap: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { gap: nativeDefault.space.PX_4 };
@@ -20,76 +21,76 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/scope_setup/native/ConjureScopeCardView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureScopeCardView(arg0) {
-  const cResult = c.c(15);
+  const cResult = c.c(10);
   ({ projectId, card, onInputFocusChange } = arg0);
   const tmp4 = closure_6();
-  if (cResult[0] === card.backText) {
-    if (cResult[1] === card.clarification) {
-      if (cResult[2] === card.hideSubmit) {
-        if (cResult[3] === card.onBack) {
-          if (cResult[4] === card.onSubmit) {
-            if (cResult[5] === card.submitText) {
-              if (cResult[6] === onInputFocusChange) {
-                if (cResult[7] === projectId) {
-                  let tmp5 = cResult[8];
-                }
-                if (cResult[9] !== card.failure) {
-                  let tmp8 = null;
-                  if (null != card.failure) {
-                    const obj2 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: card.failure };
-                    tmp8 = React4(Text_Text.Text, obj2);
-                  }
-                  cResult[9] = card.failure;
-                  cResult[10] = tmp8;
-                  let tmp7 = tmp8;
-                } else {
-                  tmp7 = cResult[10];
-                }
-                if (cResult[11] === tmp4.container) {
-                  if (cResult[12] === tmp5) {
-                    if (cResult[13] === tmp7) {
-                      let tmp10 = cResult[14];
-                    }
-                    return tmp10;
-                  }
-                }
-                const obj3 = { style: tmp4.container, children: null };
-                const items = [tmp5, tmp7];
-                obj3.children = items;
-                const tmp13 = hasOwnProperty(View, obj3);
-                cResult[11] = tmp4.container;
-                cResult[12] = tmp5;
-                cResult[13] = tmp7;
-                cResult[14] = tmp13;
-                tmp10 = tmp13;
-              }
+  if (cResult[0] === card) {
+    if (cResult[1] === onInputFocusChange) {
+      if (cResult[2] === projectId) {
+        if (cResult[4] !== card.failure) {
+          let tmp12 = null;
+          if (null != card.failure) {
+            const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: card.failure };
+            tmp12 = React4(Text_Text.Text, obj3);
+          }
+          cResult[4] = card.failure;
+          cResult[5] = tmp12;
+          let tmp11 = tmp12;
+        } else {
+          tmp11 = cResult[5];
+        }
+        if (cResult[6] === tmp4.container) {
+          if (cResult[7] === tmp5) {
+            if (cResult[8] === tmp11) {
+              let tmp14 = cResult[9];
             }
+            return tmp14;
           }
         }
+        const obj4 = { style: tmp4.container, children: null };
+        const items = [cResult[3], tmp11];
+        obj4.children = items;
+        const tmp17 = hasOwnProperty(View, obj4);
+        cResult[6] = tmp4.container;
+        cResult[7] = cResult[3];
+        cResult[8] = tmp11;
+        cResult[9] = tmp17;
+        tmp14 = tmp17;
       }
     }
   }
-  const tmp6 = React4(ConjureClarificationCardDefault, { projectId, clarification: card.clarification, onSubmit: card.onSubmit, submitText: card.submitText, onBack: card.onBack, backText: card.backText, hideSubmit: card.hideSubmit, onInputFocusChange }, card.clarification.id);
-  cResult[0] = card.backText;
-  cResult[1] = card.clarification;
-  cResult[2] = card.hideSubmit;
-  cResult[3] = card.onBack;
-  cResult[4] = card.onSubmit;
-  cResult[5] = card.submitText;
-  cResult[6] = onInputFocusChange;
-  cResult[7] = projectId;
-  cResult[8] = tmp6;
-  tmp5 = tmp6;
-  const obj4 = { projectId, clarification: card.clarification, onSubmit: card.onSubmit, submitText: card.submitText, onBack: card.onBack, backText: card.backText, hideSubmit: card.hideSubmit, onInputFocusChange };
-}) : (function ConjureScopeCardView(card) {
-  card = card.card;
-  ({ projectId, onInputFocusChange } = card);
+  if (true === card.serverStep) {
+    const obj5 = { projectId, card };
+    let tmp8 = React4(ConjureScopeServerCardDefault, obj5, card.clarification.id);
+  } else {
+    const obj9 = { projectId, clarification: null, onSubmit: null, submitText: null, onBack: null, backText: null, hideSubmit: null, onInputFocusChange: null };
+    ({ clarification: obj2.clarification, onSubmit: obj2.onSubmit, submitText: obj2.submitText, onBack: obj2.onBack, backText: obj2.backText, hideSubmit: obj2.hideSubmit } = card);
+    obj9.onInputFocusChange = onInputFocusChange;
+    tmp8 = React4(ConjureClarificationCardDefault, obj9, card.clarification.id);
+  }
+  cResult[0] = card;
+  cResult[1] = onInputFocusChange;
+  cResult[2] = projectId;
+  cResult[3] = tmp8;
+}) : (function ConjureScopeCardView(onInputFocusChange) {
+  ({ projectId, card } = onInputFocusChange);
   const obj = { style: closure_6().container, children: null };
-  const items = [React4(ConjureClarificationCardDefault, { projectId, clarification: card.clarification, onSubmit: card.onSubmit, submitText: card.submitText, onBack: card.onBack, backText: card.backText, hideSubmit: card.hideSubmit, onInputFocusChange }, card.clarification.id), ];
+  if (true === card.serverStep) {
+    const obj3 = { projectId, card };
+    let tmp6 = React4(ConjureScopeServerCardDefault, obj3, card.clarification.id);
+    let tmp3 = React4;
+  } else {
+    tmp3 = React4;
+    const obj4 = { projectId, clarification: null, onSubmit: null, submitText: null, onBack: null, backText: null, hideSubmit: null, onInputFocusChange: null };
+    ({ clarification: obj2.clarification, onSubmit: obj2.onSubmit, submitText: obj2.submitText, onBack: obj2.onBack, backText: obj2.backText, hideSubmit: obj2.hideSubmit } = card);
+    obj4.onInputFocusChange = onInputFocusChange.onInputFocusChange;
+    tmp6 = React4(ConjureClarificationCardDefault, obj4, card.clarification.id);
+  }
+  const items = [tmp6, ];
   let tmp3Result = null;
   if (null != card.failure) {
-    const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: card.failure };
-    tmp3Result = React4(Text_Text.Text, obj3);
+    const obj7 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: card.failure };
+    tmp3Result = tmp3(Text_Text.Text, obj7);
   }
   items[1] = tmp3Result;
   obj.children = items;

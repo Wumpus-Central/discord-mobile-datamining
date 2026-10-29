@@ -3,7 +3,7 @@
 // Module 500 (QosToken)
 import LoggerDefault from "Logger" /* 3 */;
 import ProtoUtils from "ProtoUtils" /* 1246 */;
-import qos_token from "qos_token" /* 15705 */;
+import qos_token from "qos_token" /* 15941 */;
 import DerivedQosDataStore from "DerivedQosDataStore" /* 501 */;
 
 require = fn;
@@ -28,6 +28,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/qos/QosToken.tsx");
 
 export { buildQosTokenFromDerivedData };
-export const buildQosToken = function buildQosToken(userId, isUserActive) {
+export function buildQosToken(userId, isUserActive) {
   return buildQosTokenFromDerivedData(DerivedQosDataStore.getForUser(userId), isUserActive);
-};
+}

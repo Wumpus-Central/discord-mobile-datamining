@@ -1,12 +1,12 @@
-// === Module 16326: account/MFAUtils ===
+// === Module 16564: account/MFAUtils ===
 
-// Module 16326 (account/MFAUtils)
+// Module 16564 (account/MFAUtils)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import MFAUtils from "MFAUtils" /* 7080 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import MFAUtils from "MFAUtils" /* 7104 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -94,7 +94,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMFAAvai
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
 
-export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(stateFromStores) {
+export function getSMSBackupDisabledMessage(stateFromStores) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -135,7 +135,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
       string3Result = string3(YJGvuD["3iKih7"]);
     }
   }
-};
+}
 export const useIsMFAEnabled = tmp3;
 export const MFAAvailability = obj2;
 export const useMFAAvailability = tmp4;
@@ -175,7 +175,7 @@ export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnab
           tmp2 = closure_2;
           guildsArray = closure_2.getGuildsArray();
           tmp3 = null;
-          if (!guildsArray.some(() => { ... })) {
+          if (!guildsArray.some(/* F155242 */ function() { ... })) {
             return null;
           } else {
             tmp4 = closure_0;
@@ -224,7 +224,7 @@ export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnab
           tmp2 = closure_2;
           guildsArray = closure_2.getGuildsArray();
           tmp3 = null;
-          if (!guildsArray.some(() => { ... })) {
+          if (!guildsArray.some(/* F155242 */ function() { ... })) {
             return null;
           } else {
             tmp4 = closure_0;

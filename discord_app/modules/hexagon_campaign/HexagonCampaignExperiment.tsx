@@ -1,9 +1,9 @@
-// === Module 5033: HexagonCampaignExperiment ===
+// === Module 5034: HexagonCampaignExperiment ===
 
-// Module 5033 (HexagonCampaignExperiment)
+// Module 5034 (HexagonCampaignExperiment)
 import c from "c" /* 576 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5032 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
 import size from "module_2" /* 2 */;
@@ -31,9 +31,9 @@ const result1 = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCamp
 
 export const HexagonCampaignClientExperiment = apexExperiment;
 export const useIsHexagonCampaignEnabled = tmp3;
-export const getIsHexagonCampaignEnabled = function getIsHexagonCampaignEnabled(location) {
+export function getIsHexagonCampaignEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
-};
+}
 export const useIsHexagonCampaignQuestHomeRedirectEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsHexagonCampaignQuestHomeRedirectEnabled(location) {
   const cResult = c.c(5);
   if (cResult[0] !== location) {
@@ -68,10 +68,10 @@ export const useIsHexagonCampaignQuestHomeRedirectEnabled = ReactCompilerGating.
   }
   return tmp2;
 });
-export const useIsHexagonCampaignQuestHomeHeaderEnabled = function useIsHexagonCampaignQuestHomeHeaderEnabled(HexagonCampaignQuestHomeHeader) {
+export function useIsHexagonCampaignQuestHomeHeaderEnabled(HexagonCampaignQuestHomeHeader) {
   let tmp = closure_3(HexagonCampaignQuestHomeHeader);
   if (tmp) {
     tmp = !HexagonCampaignUtils.isHexagonCampaignTakeoverOver();
   }
   return tmp;
-};
+}

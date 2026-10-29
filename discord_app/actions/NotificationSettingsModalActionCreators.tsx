@@ -1,20 +1,20 @@
-// === Module 7251: NotificationSettingsModalActionCreators ===
+// === Module 7275: NotificationSettingsModalActionCreators ===
 
-// Module 7251 (NotificationSettingsModalActionCreators)
+// Module 7275 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import shared from "shared" /* 5011 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7246 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7248 */;
+import shared from "shared" /* 5012 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7270 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;
-fn(4949).NotificationSettingsUpdateType;
+fn(4950).NotificationSettingsUpdateType;
 const constants = fn(1094).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -135,7 +135,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -190,7 +190,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp11) {
           c3 = tmp;

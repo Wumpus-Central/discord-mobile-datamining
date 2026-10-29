@@ -1,17 +1,20 @@
-// === Module 12192: ConjurePublishSheet ===
+// === Module 12246: ConjurePublishSheet ===
 
-// Module 12192 (ConjurePublishSheet)
+// Module 12246 (ConjurePublishSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useChannelNameDefault from "useChannelName" /* 5640 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import AppsIcon2 from "AppsIcon" /* 8614 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 11803 */;
+import util from "util" /* 1125 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useChannelNameDefault from "useChannelName" /* 5641 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import TableSwitchRow from "TableSwitchRow" /* 7355 */;
+import AppsIcon2 from "AppsIcon" /* 8636 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -27,7 +30,8 @@ function PublishSheetBody(entryPoint) {
   entryPoint = entryPoint.entryPoint;
   noop = undefined;
   closure_5 = undefined;
-  closure_6 = async function _handlePublish() {
+  let AppsIcon;
+  closure_7 = async function _handlePublish() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -38,7 +42,7 @@ function PublishSheetBody(entryPoint) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -67,12 +71,12 @@ function PublishSheetBody(entryPoint) {
           throw tmp36;
         } else if (2 === tmp8) {
           c3 = 1;
-          const intl = tmp4(tmp36[23]).intl;
-          showCriticalToast(intl.string(v3(tmp36[24]).Fi7boI));
+          const intl = tmp4(tmp36[25]).intl;
+          showCriticalToast(intl.string(v3(tmp36[26]).Fi7boI));
           c3 = 0;
           closure_128_3.current = false;
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -91,7 +95,7 @@ function PublishSheetBody(entryPoint) {
             }
           } else {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
         c3 = 0;
@@ -112,11 +116,11 @@ function PublishSheetBody(entryPoint) {
     }
   };
   const tmp = closure_13();
-  const tmp4 = entryPoint(12199)(project, publish);
+  const tmp4 = entryPoint(12253)(project, publish);
   dependencyMap = tmp4;
-  entryPoint(6008)(() => true, tmp4.saving);
+  entryPoint(6010)(() => true, tmp4.saving);
   closure_3 = noop.useRef(false);
-  const context = noop.useContext(entryPoint(5616));
+  const context = noop.useContext(entryPoint(5617));
   let transitionState;
   if (context != null) {
     transitionState = context.transitionState;
@@ -135,194 +139,212 @@ function PublishSheetBody(entryPoint) {
     };
   }, items);
   ({ editable, identity, sharing, appChannelsPrivate } = tmp4);
+  let isPrivate;
+  if (appChannelsPrivate != null) {
+    isPrivate = appChannelsPrivate.isPrivate;
+  }
+  if (true === isPrivate) {
+    AppsIcon = publish(8635).AppsLockIcon;
+    let tmp12 = publish;
+  } else {
+    AppsIcon = publish(8636).AppsIcon;
+    tmp12 = publish;
+  }
   if (tmp4.initial) {
-    if (tmp4.initialChannelNames.length > 0) {
-      obj2 = { channelNames: tmp4.initialChannelNames, appChannelsPrivate, disabled: tmp4.saving };
-      appChannelsPrivate = [closure_7(closure_21, obj2, "app-channels")];
-      let items1 = appChannelsPrivate;
-    } else {
-      items1 = [];
-    }
+    const initialChannelNames = tmp4.initialChannelNames;
+    let mapped = initialChannelNames.map((label) => React5(closure_20, { icon: AppsIcon, label }, "channel:" + label));
   } else {
     const channels = tmp4.channels;
-    const mapped = channels.map((channel) => closure_1_7(closure_1_22, { channel }, channel.id));
-    const items2 = [];
-    const components = tmp4.components;
-    HermesBuiltin.arraySpread(components.map((label) => {
-      const surface = label.surface;
-      return closure_1_7(closure_1_20, { icon: obj2[surface], label: label.label }, surface);
-    }), HermesBuiltin.arraySpread(mapped, 0));
-    let obj3 = { startExpanded: editable, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, children: null };
-    let intl = publish(1125).intl;
-    obj3.dismissAccessibilityLabel = intl.string(tmp2(3863).NEPcoi);
-    let obj4 = { style: tmp.content, children: null };
-    if (editable) {
-      const obj5 = {
-        iconURL: identity.iconURL,
-        size: 48,
-        radius: 12,
-        disabled: tmp4.saving,
-        onChange: identity.setIcon,
-        onError(text) {
-              if (null != text) {
-                obj2 = { text, variant: "critical" };
-                entryPoint(5699).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-                obj = entryPoint(5699);
-              }
-            }
-      };
-      let tmp19Result = closure_7(publish(12205).ConjureAppIconTile, obj5);
-    } else {
-      const obj6 = { project, size: "dialog" };
-      tmp19Result = closure_7(tmp2(12210), obj6);
-    }
-    const items3 = [tmp19Result, , , , , ];
-    if (editable) {
-      const obj7 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
-      const intl2 = publish(1125).intl;
-      obj7.label = intl2.string(tmp2(3863).knevPu);
-      ({ name: obj10.value, setName: obj10.onChange } = tmp4);
-      obj7.maxLength = publish(6809).MAX_PROJECT_NAME_LENGTH;
-      ({ saving: obj10.disabled, nameError } = tmp4);
-      const obj8 = { children: null };
-      obj7.errorMessage = nameError;
-      const items4 = [closure_7(publish(7044).TextInput, obj7), ];
-      const obj9 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
-      const intl3 = publish(1125).intl;
-      obj9.label = intl3.string(tmp2(3863).ynaGa1);
-      const intl4 = publish(1125).intl;
-      obj9.placeholder = intl4.string(tmp2(3863)["I+3UTL"]);
-      ({ description: obj12.value, setDescription: obj12.onChange } = identity);
-      obj9.maxLength = publish(6809).MAX_APP_DESCRIPTION_LENGTH;
-      obj9.disabled = tmp4.saving;
-      items4[1] = closure_7(publish(7216).TextArea, obj9);
-      obj8.children = items4;
-      let tmp21Result = closure_9(closure_8, obj8);
-    } else {
-      const obj11 = { style: tmp.nameGroup, children: null };
-      const obj13 = { variant: "heading-lg/semibold", color: "text-strong", lineClamp: 1, children: tmp4.displayName };
-      const items5 = [closure_7(publish(5270).Text, obj13), ];
-      let tmp19Result4 = null;
-      if ("" !== tmp4.description) {
-        const obj14 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
-        tmp19Result4 = closure_7(publish(5270).Text, obj14);
-      }
-      items5[1] = tmp19Result4;
-      obj11.children = items5;
-      tmp21Result = closure_9(tmp22, obj11);
-    }
-    items3[1] = tmp21Result;
-    const obj15 = { title: null, rows: null };
-    const intl5 = publish(1125).intl;
-    obj15.title = intl5.string(tmp2(3863).BqNMms);
-    obj15.rows = items2;
-    items3[2] = closure_7(closure_19, obj15);
-    const obj16 = { title: null, following: null, rows: null };
-    const intl6 = publish(1125).intl;
-    obj16.title = intl6.string(tmp2(3863).LnqeFd);
-    obj16.following = items2.length > 0;
-    const devicePermissions = tmp4.devicePermissions;
-    obj16.rows = devicePermissions.map((item) => {
-      obj = { icon: closure_1_11[item], label: null };
-      const intl = publish(1125).intl;
-      obj.label = intl.string(publish(12199).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
-      return closure_1_7(closure_1_20, obj, item);
-    });
-    items3[3] = closure_7(closure_19, obj16);
-    let tmp21Result2 = null;
-    if (null != sharing) {
-      const obj17 = { title: null };
-      const intl7 = publish(1125).intl;
-      obj17.title = intl7.string(tmp2(3863).esTM8y);
-      const items6 = [closure_7(closure_18, obj17), ];
-      const obj18 = { style: tmp.sharingRow, children: null };
-      if (null != sharing.guild) {
-        const obj19 = { guild: sharing.guild, size: publish(6919).GuildIconSizes.SMALL_36 };
-        let tmp19Result5 = closure_7(tmp2(6919), obj19);
-        const tmp2Result = tmp2(6919);
-      } else {
-        const obj20 = { style: tmp.onlyMeIcon, children: null };
-        const obj21 = { size: "xs", color: tmp2(587).colors.ICON_DEFAULT };
-        obj20.children = closure_7(publish(12214).UserIcon, obj21);
-        tmp19Result5 = closure_7(tmp22, obj20);
-      }
-      const items7 = [tmp19Result5, ];
-      const obj22 = { style: tmp.rowText, children: null };
-      guild = sharing.guild;
-      let name;
-      if (guild != null) {
-        name = guild.name;
-      }
-      if (name == null) {
-        const intl8 = publish(1125).intl;
-        name = intl8.string(tmp2(3863)["37xgkF"]);
-      }
-      const obj23 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: name };
-      const items8 = [closure_7(publish(5270).Text, obj23), ];
-      let tmp19Result6 = null;
-      if (null != sharing.caption) {
-        const obj24 = { variant: "text-xs/normal", color: "text-subtle", children: sharing.caption };
-        tmp19Result6 = closure_7(publish(5270).Text, obj24);
-      }
-      const obj25 = { children: null };
-      items8[1] = tmp19Result6;
-      obj22.children = items8;
-      items7[1] = closure_9(tmp22, obj22);
-      obj18.children = items7;
-      items6[1] = closure_9(tmp22, obj18);
-      obj25.children = items6;
-      tmp21Result2 = closure_9(tmp22, obj25);
-    }
-    items3[4] = tmp21Result2;
-    const obj26 = { style: tmp.footer, children: null };
-    const obj27 = { variant: "text-sm/normal", color: "text-subtle", children: tmp4.note };
-    const items9 = [closure_7(publish(5270).Text, obj27), ];
-    const obj55 = { style: tmp.actions, children: null };
-    const obj56 = { variant: "secondary", size: "md", grow: true, text: null, disabled: null, onPress: null };
-    const intl9 = publish(1125).intl;
-    obj56.text = intl9.string(publish(1125).t["ETE/oC"]);
-    obj56.disabled = tmp4.saving;
-    obj56.onPress = hidePublishSheet;
-    const items10 = [closure_7(publish(5280).Button, obj56), ];
-    const obj57 = { variant: "primary", size: "md", grow: true, text: null, disabled: null, loading: null, onPress: null };
-    ({ label: obj28.text, disabled } = publish);
-    if (!disabled) {
-      disabled = null != tmp4.nameError;
-    }
-    obj57.disabled = disabled;
-    obj57.loading = tmp4.saving;
-    obj57.onPress = function handlePublish() {
-      const self = this;
-      const apply = closure_6.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    };
-    items10[1] = closure_7(publish(5280).Button, obj57);
-    obj55.children = items10;
-    items9[1] = closure_9(closure_5, obj55);
-    obj26.children = items9;
-    items3[5] = closure_9(closure_5, obj26);
-    obj4.children = items3;
-    obj3.children = closure_9(closure_5, obj4);
-    return closure_7(publish(7334).ActionSheet, obj3);
+    mapped = channels.map((channel) => closure_7(closure_1_22, { channel }, channel.id));
   }
+  const items1 = [
+    ...mapped,
+    ...components.map((label) => {
+      const surface = label.surface;
+      return closure_7(closure_1_20, { icon: obj2[surface], label: label.label }, surface);
+    })
+  ];
+  components = tmp4.components;
+  obj2 = { startExpanded: editable, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, children: null };
+  let intl = tmp12(1125).intl;
+  obj2.dismissAccessibilityLabel = intl.string(entryPoint(3864).NEPcoi);
+  let obj3 = { style: tmp.content, children: null };
+  if (editable) {
+    let obj4 = {
+      iconURL: identity.iconURL,
+      size: 48,
+      radius: 12,
+      disabled: tmp4.saving,
+      onChange: identity.setIcon,
+      onError(text) {
+          if (null != text) {
+            obj2 = { text, variant: "critical" };
+            entryPoint(5701).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+            obj = entryPoint(5701);
+          }
+        }
+    };
+    let tmp15Result = tmp15(tmp12(12259).ConjureAppIconTile, obj4);
+  } else {
+    const obj5 = { project, size: "dialog" };
+    tmp15Result = tmp15(tmp2(12264), obj5);
+  }
+  const items2 = [tmp15Result, , , , , , ];
+  if (editable) {
+    const obj6 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
+    const intl2 = tmp12(1125).intl;
+    obj6.label = intl2.string(tmp2(3864).knevPu);
+    ({ name: obj9.value, setName: obj9.onChange } = tmp4);
+    obj6.maxLength = tmp12(6832).MAX_PROJECT_NAME_LENGTH;
+    ({ saving: obj9.disabled, nameError } = tmp4);
+    const obj7 = { children: null };
+    obj6.errorMessage = nameError;
+    const items3 = [tmp15(tmp12(7068).TextInput, obj6), ];
+    const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
+    const intl3 = tmp12(1125).intl;
+    obj8.label = intl3.string(tmp2(3864).ynaGa1);
+    const intl4 = tmp12(1125).intl;
+    obj8.placeholder = intl4.string(tmp2(3864)["I+3UTL"]);
+    ({ description: obj11.value, setDescription: obj11.onChange } = identity);
+    obj8.maxLength = tmp12(6832).MAX_APP_DESCRIPTION_LENGTH;
+    obj8.disabled = tmp4.saving;
+    items3[1] = tmp15(tmp12(7240).TextArea, obj8);
+    obj7.children = items3;
+    let tmp16Result = closure_9(closure_8, obj7);
+  } else {
+    const obj10 = { style: tmp.nameGroup, children: null };
+    const obj12 = { variant: "heading-lg/semibold", color: "text-strong", lineClamp: 1, children: tmp4.displayName };
+    const items4 = [tmp15(tmp12(5271).Text, obj12), ];
+    let tmp15Result6 = null;
+    if ("" !== tmp4.description) {
+      const obj13 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
+      tmp15Result6 = tmp15(tmp12(5271).Text, obj13);
+    }
+    items4[1] = tmp15Result6;
+    obj10.children = items4;
+    tmp16Result = closure_9(tmp17, obj10);
+  }
+  items2[1] = tmp16Result;
+  const obj14 = { title: null, rows: null };
+  const intl5 = tmp12(1125).intl;
+  obj14.title = intl5.string(entryPoint(3864).BqNMms);
+  obj14.rows = items1;
+  items2[2] = closure_7(closure_19, obj14);
+  let tmp15Result7 = null;
+  if (null != appChannelsPrivate) {
+    const obj15 = { channelCount: tmp4.initialChannelNames.length, appChannelsPrivate, disabled: tmp4.saving };
+    tmp15Result7 = tmp15(closure_21, obj15);
+  }
+  items2[3] = tmp15Result7;
+  const obj16 = { title: null, following: null, rows: null };
+  const intl6 = tmp12(1125).intl;
+  obj16.title = intl6.string(entryPoint(3864).LnqeFd);
+  obj16.following = items1.length > 0 && null == appChannelsPrivate;
+  const devicePermissions = tmp4.devicePermissions;
+  obj16.rows = devicePermissions.map((item) => {
+    obj = { icon: closure_1_11[item], label: null };
+    const intl = publish(1125).intl;
+    obj.label = intl.string(publish(12253).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
+    return closure_7(closure_1_20, obj, item);
+  });
+  items2[4] = closure_7(closure_19, obj16);
+  let tmp16Result2 = null;
+  if (null != sharing) {
+    const obj17 = { title: null };
+    const intl7 = tmp12(1125).intl;
+    obj17.title = intl7.string(tmp2(3864).esTM8y);
+    const items5 = [tmp15(closure_18, obj17), ];
+    const obj18 = { style: tmp.sharingRow, children: null };
+    if (null != sharing.guild) {
+      const obj19 = { guild: sharing.guild, size: tmp12(6943).GuildIconSizes.SMALL_36 };
+      let tmp15Result8 = tmp15(tmp2(6943), obj19);
+      const tmp2Result = tmp2(6943);
+    } else {
+      const obj20 = { style: tmp.onlyMeIcon, children: null };
+      const obj21 = { size: "xs", color: tmp2(587).colors.ICON_DEFAULT };
+      obj20.children = tmp15(tmp12(12268).UserIcon, obj21);
+      tmp15Result8 = tmp15(tmp17, obj20);
+    }
+    const items6 = [tmp15Result8, ];
+    const obj22 = { style: tmp.rowText, children: null };
+    guild = sharing.guild;
+    let name;
+    if (guild != null) {
+      name = guild.name;
+    }
+    if (name == null) {
+      const intl8 = tmp12(1125).intl;
+      name = intl8.string(tmp2(3864)["37xgkF"]);
+    }
+    const obj23 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: name };
+    const items7 = [tmp15(tmp12(5271).Text, obj23), ];
+    let tmp15Result9 = null;
+    if (null != sharing.caption) {
+      const obj24 = { variant: "text-xs/normal", color: "text-subtle", children: sharing.caption };
+      tmp15Result9 = tmp15(tmp12(5271).Text, obj24);
+    }
+    const obj25 = { children: null };
+    items7[1] = tmp15Result9;
+    obj22.children = items7;
+    items6[1] = closure_9(tmp17, obj22);
+    obj18.children = items6;
+    items5[1] = closure_9(tmp17, obj18);
+    obj25.children = items5;
+    tmp16Result2 = closure_9(tmp17, obj25);
+  }
+  items2[5] = tmp16Result2;
+  const obj26 = { style: tmp.footer, children: null };
+  let tmp15Result10 = null;
+  if (null != tmp4.note) {
+    const obj27 = { variant: "text-sm/normal", color: "text-subtle", children: tmp4.note };
+    tmp15Result10 = tmp15(tmp12(5271).Text, obj27);
+  }
+  const items8 = [tmp15Result10, ];
+  const obj28 = { style: tmp.actions, children: null };
+  const obj55 = { variant: "secondary", size: "md", grow: true, text: null, disabled: null, onPress: null };
+  const intl9 = tmp12(1125).intl;
+  obj55.text = intl9.string(tmp12(1125).t["ETE/oC"]);
+  obj55.disabled = tmp4.saving;
+  obj55.onPress = hidePublishSheet;
+  const items9 = [closure_7(tmp12(5281).Button, obj55), ];
+  const obj56 = { variant: "primary", size: "md", grow: true, text: publish.label, disabled: null, loading: null, onPress: null };
+  let disabled = publish.disabled;
+  if (!disabled) {
+    disabled = null != tmp4.nameError;
+  }
+  obj56.disabled = disabled;
+  obj56.loading = tmp4.saving;
+  obj56.onPress = function handlePublish() {
+    const self = this;
+    const apply = closure_7.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  items9[1] = closure_7(tmp12(5281).Button, obj56);
+  obj28.children = items9;
+  items8[1] = closure_9(closure_5, obj28);
+  obj26.children = items8;
+  items2[6] = closure_9(closure_5, obj26);
+  obj3.children = items2;
+  obj2.children = closure_9(closure_5, obj3);
+  return closure_7(tmp12(7358).ActionSheet, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjurePublishSheet = "ConjurePublishSheet";
-let obj = { screen_capture: fn(9514).ScreenIcon, connect_user_to_voice: fn(8609).VoiceNormalIcon };
+let obj = { screen_capture: fn(9546).ScreenIcon, connect_user_to_voice: fn(8631).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6809).ConjureSupportedSurface.BOT] = fn(12193).RobotIcon;
-obj2[fn(6809).ConjureSupportedSurface.ACTIVITY] = fn(12195).ActivitiesIcon;
-obj2[fn(6809).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12197).BadgeIcon;
-obj2[fn(6809).ConjureSupportedSurface.AUTOMOD] = fn(10992).ShieldIcon;
-const createStyles = fn(5004);
-let obj4 = { content: { gap: nativeDefault.space.PX_16 }, nameGroup: null, sectionTitle: null, followingSection: null, row: null, sharingRow: null, onlyMeIcon: null, rowText: null, appChannelsPrivate: null, footer: null, actions: null };
+obj2[fn(6832).ConjureSupportedSurface.BOT] = fn(12247).RobotIcon;
+obj2[fn(6832).ConjureSupportedSurface.ACTIVITY] = fn(12249).ActivitiesIcon;
+obj2[fn(6832).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12251).BadgeIcon;
+obj2[fn(6832).ConjureSupportedSurface.AUTOMOD] = fn(11027).ShieldIcon;
+const createStyles = fn(5005);
+let obj4 = { content: { gap: nativeDefault.space.PX_16 }, nameGroup: null, sectionTitle: null, followingSection: null, row: null, sharingRow: null, onlyMeIcon: null, rowText: null, footer: null, actions: null };
 let obj5 = { gap: nativeDefault.space.PX_16 };
 obj4.nameGroup = { gap: nativeDefault.space.PX_8 };
 let obj6 = { gap: nativeDefault.space.PX_8 };
@@ -331,16 +353,14 @@ let obj7 = { marginBottom: nativeDefault.space.PX_4 };
 obj4.followingSection = { marginTop: -nativeDefault.space.PX_8 };
 let obj8 = { marginTop: -nativeDefault.space.PX_8 };
 obj4.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32 + nativeDefault.space.PX_4 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32 + nativeDefault.space.PX_4 };
+const obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32 + nativeDefault.space.PX_4 };
 obj4.sharingRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4 };
-const obj10 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4 };
+let obj10 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4 };
 obj4.onlyMeIcon = { padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj4.rowText = { flex: 1 };
-let obj11 = { padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
-obj4.appChannelsPrivate = { marginTop: nativeDefault.space.PX_12 };
-const obj12 = { marginTop: nativeDefault.space.PX_12 };
+const obj11 = { padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj4.footer = { gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj13 = { gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj12 = { gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj4.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 let closure_13 = createStyles.createStyles(obj4);
 let ReactCompilerGating = fn(558);
@@ -374,43 +394,88 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   const stateFromStores = projectId(504).useStateFromStores(first, tmp7, tmp8);
   importDefault = tmp10;
   if (cResult[4] !== (null == tmp4 || null == stateFromStores)) {
-    const fn2 = function x() {
-      if (closure_1) {
-        ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishSheet);
+    class C {
+      constructor() {
+        if (closure_1) {
+          tmp = closure_1;
+          tmp2 = closure_2;
+          obj = closure_1(closure_2[15]);
+          tmp3 = ConjurePublishSheet;
+          hideActionSheetResult = obj.hideActionSheet(ConjurePublishSheet);
+        }
+        return;
       }
-    };
+    }
     const items2 = [tmp10];
     cResult[4] = tmp10;
-    cResult[5] = fn2;
+    cResult[5] = C;
     cResult[6] = items2;
     let tmp12 = items2;
-    let tmp11 = fn2;
   } else {
-    tmp11 = cResult[5];
+    class C {
+      constructor() {
+        if (closure_1) {
+          tmp = closure_1;
+          tmp2 = closure_2;
+          obj = closure_1(closure_2[15]);
+          tmp3 = ConjurePublishSheet;
+          hideActionSheetResult = obj.hideActionSheet(ConjurePublishSheet);
+        }
+        return;
+      }
+    }
     tmp12 = cResult[6];
   }
-  const effect = noop.useEffect(tmp11, tmp12);
+  const effect = noop.useEffect(C, tmp12);
   if (cResult[7] === entryPoint) {
-    if (cResult[8] === stateFromStores) {
-      if (cResult[9] === tmp4) {
-        let tmp14 = cResult[10];
+    class C {
+      constructor() {
+        if (closure_1) {
+          tmp = closure_1;
+          tmp2 = closure_2;
+          obj = closure_1(closure_2[15]);
+          tmp3 = ConjurePublishSheet;
+          hideActionSheetResult = obj.hideActionSheet(ConjurePublishSheet);
+        }
+        return;
       }
-      return tmp14;
     }
   }
-  let tmp15 = null;
+  let tmp14 = null;
   if (null != tmp4) {
-    tmp15 = null;
+    class C {
+      constructor() {
+        if (closure_1) {
+          tmp = closure_1;
+          tmp2 = closure_2;
+          obj = closure_1(closure_2[15]);
+          tmp3 = ConjurePublishSheet;
+          hideActionSheetResult = obj.hideActionSheet(ConjurePublishSheet);
+        }
+        return;
+      }
+    }
     if (null != stateFromStores) {
+      class C {
+        constructor() {
+          if (closure_1) {
+            tmp = closure_1;
+            tmp2 = closure_2;
+            obj = closure_1(closure_2[15]);
+            tmp3 = ConjurePublishSheet;
+            hideActionSheetResult = obj.hideActionSheet(ConjurePublishSheet);
+          }
+          return;
+        }
+      }
       obj2 = { project: stateFromStores, publish: tmp4, entryPoint };
-      tmp15 = closure_7(PublishSheetBody, obj2);
+      tmp14 = closure_7(PublishSheetBody, obj2);
     }
   }
   cResult[7] = entryPoint;
   cResult[8] = stateFromStores;
   cResult[9] = tmp4;
-  cResult[10] = tmp15;
-  tmp14 = tmp15;
+  cResult[10] = tmp14;
   const tmpResult = projectId(504);
 }) : (function ConjurePublishSheet(projectId) {
   projectId = projectId.projectId;
@@ -519,7 +584,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   ({ icon, label } = arg0);
   const tmp4 = closure_13();
   if (cResult[0] !== icon) {
-    obj2 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
+    obj2 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
     const tmp8 = React5(icon, obj2);
     cResult[0] = icon;
     cResult[1] = tmp8;
@@ -528,7 +593,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     tmp5 = cResult[1];
   }
   if (cResult[2] !== label) {
-    const obj3 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: label };
+    const obj3 = { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: label };
     const tmp11 = React5(Text_Text.Text, obj3);
     cResult[2] = label;
     cResult[3] = tmp11;
@@ -556,149 +621,74 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
 }) : (function ContentRow(arg0) {
   ({ icon, label } = arg0);
   obj = { style: closure_13().row, children: null };
-  const items = [React5(icon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }), React5(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: label })];
+  const items = [React5(icon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), React5(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: label })];
   obj.children = items;
   return React6(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppChannelList(arg0) {
-  const cResult = require("c").c(16);
-  ({ channelNames, appChannelsPrivate, disabled } = arg0);
-  const tmp4 = closure_13();
-  _require = tmp4;
-  let isPrivate;
-  if (appChannelsPrivate != null) {
-    isPrivate = appChannelsPrivate.isPrivate;
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppChannelsPrivateSection(arg0) {
+  const cResult = c.c(10);
+  ({ channelCount, appChannelsPrivate, disabled } = arg0);
+  const isPrivate = appChannelsPrivate.isPrivate;
+  let str = "text-muted";
+  if (isPrivate) {
+    str = "text-default";
   }
-  if (true === isPrivate) {
-    let AppsIcon = tmp(8613).AppsLockIcon;
+  if (cResult[0] !== channelCount) {
+    const intl = util.intl;
+    obj2 = { count: channelCount };
+    const formatToPlainStringResult = intl.formatToPlainString(_modDef3864.Td1mlg, obj2);
+    cResult[0] = channelCount;
+    cResult[1] = formatToPlainStringResult;
+    let tmp4 = formatToPlainStringResult;
   } else {
-    AppsIcon = tmp(8614).AppsIcon;
+    tmp4 = cResult[1];
   }
-  if (cResult[0] === AppsIcon) {
-    if (cResult[1] === channelNames) {
-      if (cResult[2] === tmp4) {
-        if (cResult[7] === appChannelsPrivate) {
-          if (cResult[8] === channelNames.length) {
-            if (cResult[9] === disabled) {
-              if (cResult[10] === tmp6) {
-                if (cResult[11] === tmp4) {
-                  let tmp11 = cResult[12];
-                }
-                if (cResult[13] === tmp7) {
-                  if (cResult[14] === tmp11) {
-                    let tmp16 = cResult[15];
-                  }
-                  return tmp16;
-                }
-                obj2 = { children: null };
-                let items = [tmp7, tmp11];
-                obj2.children = items;
-                const tmp19 = closure_9(View, obj2);
-                cResult[13] = tmp7;
-                cResult[14] = tmp11;
-                cResult[15] = tmp19;
-                tmp16 = tmp19;
-              }
-            }
+  if (cResult[2] === str) {
+    if (cResult[3] === tmp4) {
+      let tmp7 = cResult[4];
+    }
+    if (cResult[5] === appChannelsPrivate.setPrivate) {
+      if (cResult[6] === disabled) {
+        if (cResult[7] === isPrivate) {
+          if (cResult[8] === tmp7) {
+            let tmp9 = cResult[9];
           }
+          return tmp9;
         }
-        let tmp13Result = null;
-        if (null != appChannelsPrivate) {
-          const obj3 = { style: tmp4.appChannelsPrivate, children: null };
-          let str = "text-muted";
-          if (tmp6) {
-            str = "text-default";
-          }
-          const obj4 = { start: true, end: true, label: null, value: null, disabled: null, onValueChange: null };
-          const obj5 = { variant: "text-md/medium", color: str, children: null };
-          const intl = tmp(1125).intl;
-          const obj6 = { count: channelNames.length };
-          obj5.children = intl.formatToPlainString(AppsIcon(3863).Td1mlg, obj6);
-          obj4.label = closure_7(tmp(5270).Text, obj5);
-          obj4.value = tmp6;
-          obj4.disabled = disabled;
-          obj4.onValueChange = appChannelsPrivate.setPrivate;
-          obj3.children = closure_7(tmp(7331).TableSwitchRow, obj4);
-          tmp13Result = closure_7(View, obj3);
-        }
-        cResult[7] = appChannelsPrivate;
-        cResult[8] = channelNames.length;
-        cResult[9] = disabled;
-        cResult[10] = tmp6;
-        cResult[11] = tmp4;
-        cResult[12] = tmp13Result;
-        tmp11 = tmp13Result;
       }
     }
+    const obj3 = { start: true, end: true, label: tmp7, value: isPrivate, disabled, onValueChange: appChannelsPrivate.setPrivate };
+    const tmp11 = React5(TableSwitchRow.TableSwitchRow, obj3);
+    cResult[5] = appChannelsPrivate.setPrivate;
+    cResult[6] = disabled;
+    cResult[7] = isPrivate;
+    cResult[8] = tmp7;
+    cResult[9] = tmp11;
+    tmp9 = tmp11;
   }
-  if (cResult[4] === AppsIcon) {
-    if (cResult[5] === tmp4) {
-      let tmp8 = cResult[6];
-    }
-    const mapped = channelNames.map(tmp8);
-    cResult[0] = AppsIcon;
-    cResult[1] = channelNames;
-    cResult[2] = tmp4;
-    cResult[3] = mapped;
+  const tmp8 = React5(Text_Text.Text, { variant: "text-md/medium", color: str, children: tmp4 });
+  cResult[2] = str;
+  cResult[3] = tmp4;
+  cResult[4] = tmp8;
+  tmp7 = tmp8;
+}) : (function AppChannelsPrivateSection(appChannelsPrivate) {
+  appChannelsPrivate = appChannelsPrivate.appChannelsPrivate;
+  const isPrivate = appChannelsPrivate.isPrivate;
+  ({ channelCount, disabled } = appChannelsPrivate);
+  let str = "text-muted";
+  if (isPrivate) {
+    str = "text-default";
   }
-  const fn = function o(children) {
-    obj = { style: row.row, children: null };
-    const items = [React5(AppsIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), React5(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children })];
-    obj.children = items;
-    return React6(View, obj, children);
-  };
-  cResult[4] = AppsIcon;
-  cResult[5] = tmp4;
-  cResult[6] = fn;
-  tmp8 = fn;
-  obj = require("c");
-}) : (function AppChannelList(disabled) {
-  ({ channelNames, appChannelsPrivate } = disabled);
-  let AppsIcon;
-  const tmp = closure_13();
-  const row = tmp;
-  let isPrivate;
-  if (appChannelsPrivate != null) {
-    isPrivate = appChannelsPrivate.isPrivate;
-  }
-  if (true === isPrivate) {
-    AppsIcon = tmp4(8613).AppsLockIcon;
-    let tmp7 = tmp4;
-  } else {
-    AppsIcon = tmp4(8614).AppsIcon;
-    tmp7 = tmp4;
-  }
-  const children = [
-    channelNames.map((children) => {
-      obj = { style: row.row, children: null };
-      const items = [React5(AppsIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), React5(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children })];
-      obj.children = items;
-      return React6(View, obj, children);
-    }),
-
-  ];
-  let tmp11Result = null;
-  if (null != appChannelsPrivate) {
-    obj = { style: tmp.appChannelsPrivate, children: null };
-    let str = "text-muted";
-    if (tmp3) {
-      str = "text-default";
-    }
-    obj2 = { start: true, end: true, label: null, value: null, disabled: null, onValueChange: null };
-    const obj3 = { variant: "text-md/medium", color: str, children: null };
-    const intl = tmp7(1125).intl;
-    const obj4 = { count: channelNames.length };
-    obj3.children = intl.formatToPlainString(AppsIcon(3863).Td1mlg, obj4);
-    obj2.label = closure_7(tmp7(5270).Text, obj3);
-    obj2.value = tmp3;
-    obj2.disabled = disabled.disabled;
-    obj2.onValueChange = appChannelsPrivate.setPrivate;
-    obj.children = closure_7(tmp7(7331).TableSwitchRow, obj2);
-    tmp11Result = closure_7(View, obj);
-  }
-  children[1] = tmp11Result;
-  return closure_9(View, { children });
+  obj = { start: true, end: true, label: null, value: null, disabled: null, onValueChange: null };
+  obj2 = { variant: "text-md/medium", color: str, children: null };
+  const intl = util.intl;
+  obj2.children = intl.formatToPlainString(_modDef3864.Td1mlg, { count: channelCount });
+  obj.label = React5(Text_Text.Text, obj2);
+  obj.value = isPrivate;
+  obj.disabled = disabled;
+  obj.onValueChange = appChannelsPrivate.setPrivate;
+  return React5(TableSwitchRow.TableSwitchRow, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelRow(channel) {

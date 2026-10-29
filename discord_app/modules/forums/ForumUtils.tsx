@@ -1,11 +1,11 @@
-// === Module 7441: ForumUtils ===
+// === Module 7464: ForumUtils ===
 
-// Module 7441 (ForumUtils)
+// Module 7464 (ForumUtils)
 import util from "util" /* 1125 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4865 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 4866 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import ReadStateStore from "ReadStateStore" /* 6829 */;
 
 require = fn;
 function getCreationDefaultFormatter() {
@@ -14,12 +14,12 @@ function getCreationDefaultFormatter() {
   time.month = intl.string(util.t["nBNJ/L"]);
   return time;
 }
-const ForumTimestampFormats = fn(7417).ForumTimestampFormats;
-const ChannelFlags = fn(4863).ChannelFlags;
+const ForumTimestampFormats = fn(7440).ForumTimestampFormats;
+const ChannelFlags = fn(4864).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");
 
-export const getForumPostReadStates = function getForumPostReadStates(isArchivedThread, guild) {
+export function getForumPostReadStates(isArchivedThread, guild) {
   let tmp = items;
   if (items === undefined) {
     items = [ReadStateStore];
@@ -39,8 +39,8 @@ export const getForumPostReadStates = function getForumPostReadStates(isArchived
   }
   obj2.hasUnreads = isForumPostUnreadResult;
   return obj2;
-};
-export const getForumPostReadStatesById = function getForumPostReadStatesById(item) {
+}
+export function getForumPostReadStatesById(item) {
   let tmp = arg1;
   if (arg1 === undefined) {
     const items = [ChannelStore, GuildStore, ReadStateStore];
@@ -72,15 +72,15 @@ export const getForumPostReadStatesById = function getForumPostReadStatesById(it
     }
     return tmp11;
   }
-};
-export const getForumTimestampFormatter = function getForumTimestampFormatter(arg0, DURATION_AGO) {
+}
+export function getForumTimestampFormatter(arg0, DURATION_AGO) {
   if (DURATION_AGO === ForumTimestampFormats.POSTED_DURATION_AGO) {
     if (arg0 === ThreadSortOrder.ThreadSortOrder.CREATION_DATE) {
       return getCreationDefaultFormatter;
     }
   }
-};
-export const canDisplayPostUnreadMessageCount = function canDisplayPostUnreadMessageCount(id, items) {
+}
+export function canDisplayPostUnreadMessageCount(id, items) {
   [obj] = items;
   let hasTrackedUnreadResult = obj.hasTrackedUnread(id);
   const hasOpenedThreadResult = obj.hasOpenedThread(id);
@@ -91,12 +91,12 @@ export const canDisplayPostUnreadMessageCount = function canDisplayPostUnreadMes
     hasTrackedUnreadResult = tmp3;
   }
   return hasTrackedUnreadResult;
-};
-export const isForumPostPinned = function isForumPostPinned(id) {
+}
+export function isForumPostPinned(id) {
   const channel = ChannelStore.getChannel(id);
   let hasFlagResult;
   if (channel != null) {
     hasFlagResult = channel.hasFlag(ChannelFlags.PINNED);
   }
   return true === hasFlagResult;
-};
+}

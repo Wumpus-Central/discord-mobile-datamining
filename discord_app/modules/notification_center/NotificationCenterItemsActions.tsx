@@ -1,14 +1,14 @@
-// === Module 18139: NotificationCenterItemsActions ===
+// === Module 18373: NotificationCenterItemsActions ===
 
-// Module 18139 (NotificationCenterItemsActions)
+// Module 18373 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6711 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6824 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6822 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6845 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0) {
@@ -22,7 +22,7 @@ let closure_6 = async function _fetchNotificationCenterItems(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -287,7 +287,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         } else {
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp19) {
         closure_3 = tmp19;
@@ -305,16 +305,16 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
 
-export const setNotificationCenterActive = function setNotificationCenterActive(active) {
+export function setNotificationCenterActive(active) {
   DispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_SET_ACTIVE", active });
-};
-export const setNotificationCenterTabFocused = function setNotificationCenterTabFocused(isFocused) {
+}
+export function setNotificationCenterTabFocused(isFocused) {
   DispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_TAB_FOCUSED", focused: isFocused });
-};
-export const resetNotificationCenter = function resetNotificationCenter() {
+}
+export function resetNotificationCenter() {
   DispatcherDefault.dispatch({ type: "RESET_NOTIFICATION_CENTER" });
-};
-export const fetchNotificationCenterItems = function fetchNotificationCenterItems() {
+}
+export function fetchNotificationCenterItems() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -323,8 +323,8 @@ export const fetchNotificationCenterItems = function fetchNotificationCenterItem
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const markNotificationCenterItemAcked = function markNotificationCenterItemAcked(local_id) {
+}
+export function markNotificationCenterItemAcked(local_id) {
   if (null != local_id.local_id) {
     const items = [local_id.local_id];
     const obj3 = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: items };
@@ -340,18 +340,18 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     }
     obj = NotificationCenterUtils;
   }
-};
-export const markNotificationCenterLocalItemsAcked = function markNotificationCenterLocalItemsAcked(found) {
+}
+export function markNotificationCenterLocalItemsAcked(found) {
   DispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: found });
-};
+}
 export { markNotificationCenterRemoteItemAcked };
-export const markNotificationCenterMentionAcked = function markNotificationCenterMentionAcked(arg0) {
+export function markNotificationCenterMentionAcked(arg0) {
   const obj2 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
   const items = [arg0];
   obj2.ids = items;
   DispatcherDefault.dispatch(obj2);
-};
-export const bulkMarkNotificationCenterItemsAcked = function bulkMarkNotificationCenterItemsAcked() {
+}
+export function bulkMarkNotificationCenterItemsAcked() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -360,8 +360,8 @@ export const bulkMarkNotificationCenterItemsAcked = function bulkMarkNotificatio
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteNotificationCenterItem = function deleteNotificationCenterItem() {
+}
+export function deleteNotificationCenterItem() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -370,4 +370,4 @@ export const deleteNotificationCenterItem = function deleteNotificationCenterIte
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,20 +1,20 @@
-// === Module 16870: GuildRoleSubscriptionBenefitRow ===
+// === Module 17108: GuildRoleSubscriptionBenefitRow ===
 
-// Module 16870 (GuildRoleSubscriptionBenefitRow)
+// Module 17108 (GuildRoleSubscriptionBenefitRow)
 import c from "c" /* 576 */;
 import native from "native" /* 1199 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useChannelNameDefault from "useChannelName" /* 5640 */;
-import EmojiIconDefault from "EmojiIcon" /* 16868 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useChannelNameDefault from "useChannelName" /* 5641 */;
+import EmojiIconDefault from "EmojiIcon" /* 17106 */;
+import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17109 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BenefitRow(arg0) {
@@ -120,7 +120,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
     first = cResult[0];
   }
   if (cResult[1] !== benefit.ref_id) {
-    const fn = function f() {
+    const fn = function h() {
       return ChannelStore.getChannel(benefit.ref_id);
     };
     const items1 = [benefit.ref_id];
@@ -135,95 +135,90 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   }
   const obj = benefit(576);
   const stateFromStores = benefit(504).useStateFromStores(first, tmp6, tmp7);
-  const tmp10 = useChannelNameDefault(stateFromStores);
+  const tmp9 = useChannelNameDefault(stateFromStores);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp(1125).intl;
     const _HermesInternal = HermesInternal;
     obj2.children = "[" + intl.string(tmp(1125).t.bz1PZX) + "]";
-    const tmp13 = closure_5(tmp(5270).Text, obj2);
-    cResult[4] = tmp13;
-    let tmp11 = tmp13;
+    const tmp12 = closure_5(tmp(5271).Text, obj2);
+    cResult[4] = tmp12;
+    let tmp10 = tmp12;
   } else {
-    tmp11 = cResult[4];
+    tmp10 = cResult[4];
   }
   if (null == stateFromStores) {
     if (cResult[16] !== benefit) {
-      if (null != benefit.emoji_id) {
-        let str3 = benefit.emoji_id;
-      } else {
-        str3 = "";
-        if (null != benefit.emoji_name) {
-          str3 = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
-          const tmp9Result = UnicodeEmojisDefault;
-        }
-      }
+      const benefitEmojiId = tmp(17109).getBenefitEmojiId(benefit);
       cResult[16] = benefit;
-      cResult[17] = str3;
+      cResult[17] = benefitEmojiId;
+      let tmp26 = benefitEmojiId;
+      const tmpResult3 = tmp(17109);
     } else {
-      if (cResult[18] === benefit.description) {
-        if (cResult[19] === guildId) {
-          if (cResult[20] === tmp27) {
-            if (cResult[21] === tmp11) {
-              let tmp29 = cResult[22];
-            }
-            return tmp29;
+      tmp26 = cResult[17];
+    }
+    if (cResult[18] === benefit.description) {
+      if (cResult[19] === guildId) {
+        if (cResult[20] === tmp26) {
+          if (cResult[21] === tmp10) {
+            let tmp28 = cResult[22];
           }
+          return tmp28;
         }
       }
-      const obj3 = { emojiId: cResult[17], guildId, title: tmp11, description: benefit.description };
-      const tmp32 = closure_5(closure_8, obj3);
-      cResult[18] = benefit.description;
-      cResult[19] = guildId;
-      cResult[20] = cResult[17];
-      cResult[21] = tmp11;
-      cResult[22] = tmp32;
-      tmp29 = tmp32;
     }
+    const obj3 = { emojiId: tmp26, guildId, title: tmp10, description: benefit.description };
+    const tmp31 = closure_5(closure_8, obj3);
+    cResult[18] = benefit.description;
+    cResult[19] = guildId;
+    cResult[20] = tmp26;
+    cResult[21] = tmp10;
+    cResult[22] = tmp31;
+    tmp28 = tmp31;
   } else {
     ({ channelTitle: channelTitle2, channelIcon } = channelTitle);
     if (cResult[5] !== stateFromStores) {
-      const channelIcon1 = tmp(8539).getChannelIcon(stateFromStores);
+      const channelIcon1 = tmp(8561).getChannelIcon(stateFromStores);
       cResult[5] = stateFromStores;
       cResult[6] = channelIcon1;
-      let tmp14 = channelIcon1;
-      const tmpResult2 = tmp(8539);
+      let tmp13 = channelIcon1;
+      const tmpResult4 = tmp(8561);
     } else {
-      tmp14 = cResult[6];
+      tmp13 = cResult[6];
     }
     if (cResult[7] === channelTitle.channelIcon) {
-      if (cResult[8] === tmp14) {
-        let tmp16 = cResult[9];
+      if (cResult[8] === tmp13) {
+        let tmp15 = cResult[9];
       }
-      if (cResult[10] !== tmp10) {
-        const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp10 };
-        const tmp21 = closure_5(tmp(5270).Text, obj4);
-        cResult[10] = tmp10;
-        cResult[11] = tmp21;
-        let tmp19 = tmp21;
+      if (cResult[10] !== tmp9) {
+        const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp9 };
+        const tmp20 = closure_5(tmp(5271).Text, obj4);
+        cResult[10] = tmp9;
+        cResult[11] = tmp20;
+        let tmp18 = tmp20;
       } else {
-        tmp19 = cResult[11];
+        tmp18 = cResult[11];
       }
       if (cResult[12] === channelTitle.channelTitle) {
-        if (cResult[13] === tmp16) {
+        if (cResult[13] === tmp15) {
         }
       }
       const obj5 = { style: channelTitle2, children: null };
-      channelTitle2 = [tmp16, tmp19];
+      channelTitle2 = [tmp15, tmp18];
       obj5.children = channelTitle2;
-      const tmp25 = closure_6(View, obj5);
+      const tmp24 = closure_6(View, obj5);
       channelTitle = channelTitle.channelTitle;
       cResult[12] = channelTitle;
-      cResult[13] = tmp16;
-      cResult[14] = tmp19;
-      cResult[15] = tmp25;
+      cResult[13] = tmp15;
+      cResult[14] = tmp18;
+      cResult[15] = tmp24;
     }
-    const obj6 = { style: channelIcon, size: tmp(1199).Icon.Sizes.CUSTOM, source: tmp14 };
-    const tmp18 = closure_5(tmp(1199).Icon, obj6);
+    const obj6 = { style: channelIcon, size: tmp(1199).Icon.Sizes.CUSTOM, source: tmp13 };
+    const tmp17 = closure_5(tmp(1199).Icon, obj6);
     cResult[7] = channelTitle.channelIcon;
-    cResult[8] = tmp14;
-    cResult[9] = tmp18;
-    tmp16 = tmp18;
+    cResult[8] = tmp13;
+    cResult[9] = tmp17;
+    tmp15 = tmp17;
   }
   const tmpResult = benefit(504);
 }) : (function ChannelBenefitRow(benefit) {
@@ -236,27 +231,24 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1125).intl;
   obj2.children = "[" + intl.string(benefit(1125).t.bz1PZX) + "]";
-  let tmp8 = closure_5(benefit(5270).Text, obj2);
+  let tmp7 = closure_5(benefit(5271).Text, obj2);
   if (null != stateFromStores) {
     const obj3 = { style: tmp.channelTitle, children: null };
-    const obj4 = { style: tmp.channelIcon, size: tmp2(1199).Icon.Sizes.CUSTOM, source: tmp2(8539).getChannelIcon(stateFromStores) };
+    const obj4 = { style: tmp.channelIcon, size: tmp2(1199).Icon.Sizes.CUSTOM, source: tmp2(8561).getChannelIcon(stateFromStores) };
     const items2 = [closure_5(tmp2(1199).Icon, obj4), ];
-    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    items2[1] = closure_5(tmp2(5270).Text, obj5);
+    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp5 };
+    items2[1] = closure_5(tmp2(5271).Text, obj5);
     obj3.children = items2;
-    tmp8 = closure_6(View, obj3);
-    const tmp2Result = tmp2(8539);
+    tmp7 = closure_6(View, obj3);
+    const tmp2Result = tmp2(8561);
   }
-  if (null != benefit.emoji_id) {
-    let str = benefit.emoji_id;
-  } else {
-    str = "";
-    if (null != benefit.emoji_name) {
-      str = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
-      const tmp5Result = UnicodeEmojisDefault;
-    }
-  }
-  return closure_5(closure_8, { emojiId: str, guildId: benefit.guildId, title: tmp8, description: benefit.description });
+  const obj6 = { emojiId: null, guildId: null, title: null, description: null };
+  tmp5 = useChannelNameDefault(stateFromStores);
+  obj6.emojiId = benefit(17109).getBenefitEmojiId(benefit);
+  obj6.guildId = benefit.guildId;
+  obj6.title = tmp7;
+  obj6.description = benefit.description;
+  return closure_5(closure_8, obj6);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
@@ -266,55 +258,43 @@ export const IntangibleBenefitRow = ReactCompilerGating.isReactCompilerEnabled()
   const cResult = c.c(9);
   ({ benefit, guildId } = arg0);
   if (cResult[0] !== benefit) {
-    if (null != benefit.emoji_id) {
-      let str = benefit.emoji_id;
-    } else {
-      str = "";
-      if (null != benefit.emoji_name) {
-        str = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
-      }
-    }
+    const benefitEmojiId = GuildRoleSubscriptionBenefitUtils.getBenefitEmojiId(benefit);
     cResult[0] = benefit;
-    cResult[1] = str;
+    cResult[1] = benefitEmojiId;
+    let tmp4 = benefitEmojiId;
+    const tmpResult = GuildRoleSubscriptionBenefitUtils;
   } else {
-    if (cResult[2] !== benefit.name) {
-      const obj3 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
-      const tmp10 = hasOwnProperty(Text_Text.Text, obj3);
-      cResult[2] = benefit.name;
-      cResult[3] = tmp10;
-      let tmp8 = tmp10;
-    } else {
-      tmp8 = cResult[3];
-    }
-    if (cResult[4] === benefit.description) {
-      if (cResult[5] === guildId) {
-        if (cResult[6] === tmp4) {
-          if (cResult[7] === tmp8) {
-            let tmp11 = cResult[8];
-          }
-          return tmp11;
+    tmp4 = cResult[1];
+  }
+  if (cResult[2] !== benefit.name) {
+    const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
+    const tmp8 = hasOwnProperty(Text_Text.Text, obj2);
+    cResult[2] = benefit.name;
+    cResult[3] = tmp8;
+    let tmp6 = tmp8;
+  } else {
+    tmp6 = cResult[3];
+  }
+  if (cResult[4] === benefit.description) {
+    if (cResult[5] === guildId) {
+      if (cResult[6] === tmp4) {
+        if (cResult[7] === tmp6) {
+          let tmp9 = cResult[8];
         }
+        return tmp9;
       }
     }
-    const obj4 = { emojiId: cResult[1], guildId, title: tmp8, description: benefit.description };
-    const tmp14 = hasOwnProperty(closure_8, obj4);
-    cResult[4] = benefit.description;
-    cResult[5] = guildId;
-    cResult[6] = cResult[1];
-    cResult[7] = tmp8;
-    cResult[8] = tmp14;
-    tmp11 = tmp14;
   }
+  const tmp10 = hasOwnProperty(closure_8, { emojiId: tmp4, guildId, title: tmp6, description: benefit.description });
+  cResult[4] = benefit.description;
+  cResult[5] = guildId;
+  cResult[6] = tmp4;
+  cResult[7] = tmp6;
+  cResult[8] = tmp10;
+  tmp9 = tmp10;
+  const obj3 = { emojiId: tmp4, guildId, title: tmp6, description: benefit.description };
 }) : (function IntangibleBenefitRow(benefit) {
   benefit = benefit.benefit;
-  if (null != benefit.emoji_id) {
-    let str = benefit.emoji_id;
-  } else {
-    str = "";
-    if (null != benefit.emoji_name) {
-      str = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
-    }
-  }
-  const obj2 = { emojiId: str, guildId: benefit.guildId, title: hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name }), description: benefit.description };
-  return hasOwnProperty(closure_8, obj2);
+  const obj = { emojiId: GuildRoleSubscriptionBenefitUtils.getBenefitEmojiId(benefit), guildId: benefit.guildId, title: hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name }), description: benefit.description };
+  return hasOwnProperty(closure_8, obj);
 });

@@ -1,16 +1,16 @@
-// === Module 12831: system_message/GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 13052: system_message/GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 12831 (system_message/GuildRoleSubscriptionSystemMessageUtils)
+// Module 13052 (system_message/GuildRoleSubscriptionSystemMessageUtils)
 import Constants from "Constants" /* 1084 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7601 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8382 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7624 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8404 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx");
 
-export const handleRoleSubscriptionPurchaseSystemMessageCtaClicked = function handleRoleSubscriptionPurchaseSystemMessageCtaClicked(messageChannel, message, stickerId) {
+export function handleRoleSubscriptionPurchaseSystemMessageCtaClicked(messageChannel, message, stickerId) {
   const obj = MessageActionCreatorsDefault;
   obj.sendGreetMessage(messageChannel.id, stickerId, MessageActionCreatorsDefault.getSendMessageOptionsForReply({ channel: messageChannel, message, shouldMention: true, showMentionToggle: true }));
   const obj3 = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
@@ -19,4 +19,4 @@ export const handleRoleSubscriptionPurchaseSystemMessageCtaClicked = function ha
   const merged = Object.assign(roleSubscriptionPurchaseSystemMessageEventProperties);
   obj6.sticker_id = stickerId;
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED, obj6);
-};
+}

@@ -1,23 +1,23 @@
-// === Module 13990: InAppNotificationUtils ===
+// === Module 14223: InAppNotificationUtils ===
 
-// Module 13990 (InAppNotificationUtils)
+// Module 14223 (InAppNotificationUtils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import v1 from "v1" /* 1278 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5638 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5639 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(13991).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(14224).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: metroRequire, InAppNotificationTypes: closure_7, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
 
-export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
+export function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
       return REACTION_MILESTONE_COUNTS.has(_mod12.sumBy(reactions, (count_details) => {
@@ -41,18 +41,18 @@ export const isReactionMilestoneNotification = function isReactionMilestoneNotif
     }
   }
   return false;
-};
-export const generateInAppNotificationId = function generateInAppNotificationId() {
+}
+export function generateInAppNotificationId() {
   return v1.v4();
-};
-export const getMessagePreviewTextVariant = function getMessagePreviewTextVariant() {
+}
+export function getMessagePreviewTextVariant() {
   let str = "text-md/medium";
   if (obj.isIOS()) {
     str = "text-md/normal";
   }
   return str;
-};
-export const getNotificationDuration = function getNotificationDuration(ALERT) {
+}
+export function getNotificationDuration(ALERT) {
   if (constants3.MESSAGE !== ALERT) {
     if (constants3.MESSAGE_FAILED_TO_SEND !== ALERT) {
       if (constants3.FORUM_THREAD_CREATED !== ALERT) {
@@ -78,7 +78,7 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
     }
   }
   return 5 * DurationsDefault.Millis.SECOND;
-};
+}
 export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPreviewableMedia(hasFlag) {
   const cResult = c.c(2);
   if (cResult[0] !== hasFlag) {
@@ -178,7 +178,7 @@ export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled
     return hasFlagResult;
   }, items);
 });
-export const extractMetadataFromNotification = function extractMetadataFromNotification(notification) {
+export function extractMetadataFromNotification(notification) {
   const type = notification.type;
   if (constants3.MESSAGE !== type) {
     if (constants3.REACTION !== type) {
@@ -280,8 +280,8 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
   channelId = id5;
   tmp4 = id4;
   tmp3 = id6;
-};
-export const trackDismissed = function trackDismissed(arg0) {
+}
+export function trackDismissed(arg0) {
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
-};
+}

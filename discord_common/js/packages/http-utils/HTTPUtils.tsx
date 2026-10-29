@@ -612,7 +612,7 @@ export const put = bindResult2;
 export const patch = bindResult3;
 export const del = noop;
 export const HTTP = { get: bindResult, post: bindResult1, put: bindResult2, patch: bindResult3, del: noop };
-export const getAPIBaseURL = function getAPIBaseURL(arg0) {
+export function getAPIBaseURL(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -625,7 +625,7 @@ export const getAPIBaseURL = function getAPIBaseURL(arg0) {
     str = "/v" + window.GLOBAL_ENV.API_VERSION;
   }
   return text + str;
-};
+}
 export function setRequestPatch(arg0) {
   global = arg0;
 }
@@ -635,7 +635,7 @@ export function setAwaitOnline(arg0) {
 export function setRejectWithMigratedError(arg0) {
   global = arg0;
 }
-export const rejectWithMigratedError = function rejectWithMigratedError() {
+export function rejectWithMigratedError() {
   return global();
-};
+}
 export { encodeProperties };

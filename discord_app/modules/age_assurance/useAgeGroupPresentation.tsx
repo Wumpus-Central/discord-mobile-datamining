@@ -1,13 +1,13 @@
-// === Module 10053: useAgeGroupPresentation ===
+// === Module 10085: useAgeGroupPresentation ===
 
-// Module 10053 (useAgeGroupPresentation)
+// Module 10085 (useAgeGroupPresentation)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6692 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -39,14 +39,14 @@ let result = size.fileFinishedImporting("modules/age_assurance/useAgeGroupPresen
 
 export { AgeGroupState };
 export const useAgeGroupState = tmp2;
-export const handleOpenAgeGatedContentArticle = function handleOpenAgeGatedContentArticle() {
+export function handleOpenAgeGatedContentArticle() {
   const obj = AgeVerificationActionCreatorsDefault;
   obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
-};
-export const handleShowAgeVerification = function handleShowAgeVerification() {
+}
+export function handleShowAgeVerification() {
   const obj = AgeVerificationActionCreatorsDefault;
   const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
-};
+}
 export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeGroupValueLabel() {
   const obj = c;
   const cResult = obj.c(3);

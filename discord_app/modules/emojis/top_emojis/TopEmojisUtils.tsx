@@ -1,16 +1,16 @@
-// === Module 9865: TopEmojisUtils ===
+// === Module 9897: TopEmojisUtils ===
 
-// Module 9865 (TopEmojisUtils)
-import TopEmojisActionCreators from "TopEmojisActionCreators" /* 9866 */;
+// Module 9897 (TopEmojisUtils)
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 9898 */;
 import UserStore from "UserStore" /* 1389 */;
-import EmojiStore from "EmojiStore" /* 6760 */;
-import TopEmojiStore from "TopEmojiStore" /* 6762 */;
+import EmojiStore from "EmojiStore" /* 6783 */;
+import TopEmojiStore from "TopEmojiStore" /* 6785 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
-export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
+export function maybeFetchTopEmojisByGuild(guildId) {
   if (null != guildId) {
     if (null != UserStore.getCurrentUser()) {
       const topEmojisMetadata = EmojiStore.getTopEmojisMetadata(guildId);
@@ -25,4 +25,4 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
       }
     }
   }
-};
+}

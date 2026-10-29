@@ -1,6 +1,6 @@
-// === Module 17147: NotificationActionCreators ===
+// === Module 17386: NotificationActionCreators ===
 
-// Module 17147 (NotificationActionCreators)
+// Module 17386 (NotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import Constants from "Constants" /* 1084 */;

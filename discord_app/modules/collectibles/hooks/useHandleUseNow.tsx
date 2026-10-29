@@ -1,6 +1,6 @@
-// === Module 11223: hooks/useHandleUseNow ===
+// === Module 11277: hooks/useHandleUseNow ===
 
-// Module 11223 (hooks/useHandleUseNow)
+// Module 11277 (hooks/useHandleUseNow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const isExternalProduct = fn(1086).isExternalProduct;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");
 
-export const useHandleUseNow = function useHandleUseNow(product) {
+export function useHandleUseNow(product) {
   product = product.product;
   require = product;
   const onSuccess = product.onSuccess;
@@ -79,7 +79,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -97,7 +97,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
             closure_130_0 = undefined;
             if (!memo) {
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               tmp4(true);
               const obj5 = {};
@@ -191,4 +191,4 @@ export const useHandleUseNow = function useHandleUseNow(product) {
     }
   }), items1);
   return obj3;
-};
+}

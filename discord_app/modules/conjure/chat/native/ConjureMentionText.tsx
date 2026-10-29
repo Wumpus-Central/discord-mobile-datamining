@@ -1,10 +1,10 @@
-// === Module 12402: ConjureMentionText ===
+// === Module 12456: ConjureMentionText ===
 
-// Module 12402 (ConjureMentionText)
-import UserUtils from "UserUtils" /* 5058 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 12233 */;
-import conjureMentions from "conjureMentions" /* 12391 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12398 */;
+// Module 12456 (ConjureMentionText)
+import UserUtils from "UserUtils" /* 5059 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 12287 */;
+import conjureMentions from "conjureMentions" /* 12445 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12452 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -75,13 +75,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   const cResult = variant(576).c(9);
   ({ text, variant } = arg0);
   let obj = variant(576);
-  const requestConjureMentionedUsers = variant(12391).useRequestConjureMentionedUsers(text);
+  const requestConjureMentionedUsers = variant(12445).useRequestConjureMentionedUsers(text);
   if (cResult[0] !== text) {
-    const splitConjureMentionsResult = variant(12391).splitConjureMentions(text);
+    const splitConjureMentionsResult = variant(12445).splitConjureMentions(text);
     cResult[0] = text;
     cResult[1] = splitConjureMentionsResult;
     let arr = splitConjureMentionsResult;
-    const tmpResult = variant(12391);
+    const tmpResult = variant(12445);
   } else {
     arr = cResult[1];
   }
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   cResult[2] = arr;
   cResult[3] = variant;
   cResult[4] = mapped;
-  let obj2 = variant(12391);
+  let obj2 = variant(12445);
 }) : (function ConjureMentionText(text) {
   text = text.text;
   require = text;

@@ -14,14 +14,14 @@ const BINARY_READ_OPTIONS = {
 const result = size.fileFinishedImporting("utils/ProtoUtils.tsx");
 
 export { BINARY_READ_OPTIONS };
-export const b64ToProto = function b64ToProto(fromBinary, actionData) {
+export function b64ToProto(fromBinary, actionData) {
   let fromBinaryResult = null;
   if (null != actionData) {
     const obj = _mod1209;
     fromBinaryResult = fromBinary.fromBinary(obj.base64decode(actionData), obj);
   }
   return fromBinaryResult;
-};
-export const protoToB64 = function protoToB64(toBinary, favoriteGifs) {
+}
+export function protoToB64(toBinary, favoriteGifs) {
   return _mod1209.base64encode(toBinary.toBinary(favoriteGifs));
-};
+}

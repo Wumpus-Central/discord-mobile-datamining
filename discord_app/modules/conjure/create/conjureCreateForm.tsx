@@ -1,11 +1,11 @@
-// === Module 12579: conjureCreateForm ===
+// === Module 12798: conjureCreateForm ===
 
-// Module 12579 (conjureCreateForm)
+// Module 12798 (conjureCreateForm)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/create/conjureCreateForm.tsx");
 
-export const createSubmissionBlocker = function createSubmissionBlocker(idea) {
+export function createSubmissionBlocker(idea) {
   let str2 = "submitting";
   if (!idea.submitting) {
     let str3 = "idea";
@@ -19,8 +19,8 @@ export const createSubmissionBlocker = function createSubmissionBlocker(idea) {
     str2 = str3;
   }
   return str2;
-};
-export const isCreateDisabled = function isCreateDisabled(idea) {
+}
+export function isCreateDisabled(idea) {
   let str2 = "submitting";
   if (!idea.submitting) {
     let str3 = "idea";
@@ -34,8 +34,8 @@ export const isCreateDisabled = function isCreateDisabled(idea) {
     str2 = str3;
   }
   return "idea" === str2 || "submitting" === str2;
-};
-export const isConjureEligibleGuild = function isConjureEligibleGuild(arr, guildId) {
+}
+export function isConjureEligibleGuild(arr, guildId) {
   closure_0 = guildId;
   return arr.some((id) => id.id === closure_0);
-};
+}

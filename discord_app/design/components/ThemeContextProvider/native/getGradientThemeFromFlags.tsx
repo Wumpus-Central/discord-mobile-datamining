@@ -1,12 +1,12 @@
-// === Module 5179: getGradientThemeFromFlags ===
+// === Module 5180: getGradientThemeFromFlags ===
 
-// Module 5179 (getGradientThemeFromFlags)
-import native from "native" /* 5070 */;
+// Module 5180 (getGradientThemeFromFlags)
+import native from "native" /* 5071 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
 
-export const getGradientThemeFromFlags = function getGradientThemeFromFlags(primaryColor) {
+export function getGradientThemeFromFlags(primaryColor) {
   native;
   let str = "dark";
   if (!hasThemeFlagResult) {
@@ -17,4 +17,4 @@ export const getGradientThemeFromFlags = function getGradientThemeFromFlags(prim
     str = str2;
   }
   return str;
-};
+}

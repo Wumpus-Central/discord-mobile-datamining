@@ -1,7 +1,7 @@
-// === Module 7069: FreeFormErrorLabel ===
+// === Module 7093: FreeFormErrorLabel ===
 
-// Module 7069 (FreeFormErrorLabel)
-import shared from "shared" /* 5011 */;
+// Module 7093 (FreeFormErrorLabel)
+import shared from "shared" /* 5012 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,11 +16,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Label(ar
   const cResult = require("c").c(8);
   ({ children, style } = arg0);
   if (cResult[0] !== children) {
-    const nodeText = tmp(5175).getNodeText(children);
+    const nodeText = tmp(5176).getNodeText(children);
     cResult[0] = children;
     cResult[1] = nodeText;
     let tmp4 = nodeText;
-    const tmpResult = tmp(5175);
+    const tmpResult = tmp(5176);
   } else {
     tmp4 = cResult[1];
   }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Label(ar
 }) : (function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(5175).getNodeText(children);
+  nodeText = nodeText(5176).getNodeText(children);
   const items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -74,5 +74,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Label(ar
       AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
-  return jsx(nodeText(5270).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(5271).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 });

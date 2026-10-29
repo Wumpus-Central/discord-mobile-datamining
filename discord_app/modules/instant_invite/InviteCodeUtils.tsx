@@ -1,9 +1,9 @@
-// === Module 5737: InviteCodeUtils ===
+// === Module 5739: InviteCodeUtils ===
 
-// Module 5737 (InviteCodeUtils)
+// Module 5739 (InviteCodeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef1490 from "module_1490" /* 1490 */;
-import QueryStringUtils from "QueryStringUtils" /* 5738 */;
+import _modDef1491 from "module_1491" /* 1491 */;
+import QueryStringUtils from "QueryStringUtils" /* 5740 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function generateInviteKeyFromExtraData(arg0) {
       obj[message] = targetMessageId;
     }
   }
-  const json = _modDef1490.stringify(obj);
+  const json = _modDef1491.stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/InviteCodeUtils.tsx");
 
 export { readSnowflake };
-export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlParams(match2, search) {
+export function generateInviteKeyFromUrlParams(match2, search) {
   if (null == search) {
     return match2;
   } else {
@@ -53,7 +53,7 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       substr = search.substring(1);
     }
     try {
-      const parsed = _modDef1490.parse(substr);
+      const parsed = _modDef1491.parse(substr);
       const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
       const tmp12 = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[channel]));
       const obj4 = { baseCode: match2, guildScheduledEventId: firstQueryStringValue, targetChannelId: tmp12, targetMessageId: null };
@@ -68,15 +68,15 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       return tmp;
     }
   }
-};
+}
 export { generateInviteKeyFromExtraData };
-export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(inviteKey) {
+export function parseExtraDataFromInviteKey(inviteKey) {
   [tmp2, tmp3] = inviteKey.split("?");
   if (null == tmp3) {
     const obj2 = { baseCode: tmp2 };
     return obj2;
   } else {
-    const parsed = _modDef1490.parse(tmp3);
+    const parsed = _modDef1491.parse(tmp3);
     const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
     const firstQueryStringValue1 = QueryStringUtils.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
@@ -104,21 +104,21 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     return obj;
   }
   const tmp = _slicedToArray(inviteKey.split("?"), 2);
-};
-export const parseInviteCodeFromInviteKey = function parseInviteCodeFromInviteKey(code) {
+}
+export function parseInviteCodeFromInviteKey(code) {
   return _slicedToArray(code.split("?"), 1)[0];
-};
-export const getInviteKeySearchSuffix = function getInviteKeySearchSuffix(inviteKeyFromExtraData) {
+}
+export function getInviteKeySearchSuffix(inviteKeyFromExtraData) {
   const index = inviteKeyFromExtraData.indexOf("?");
   let str = "";
   if (index >= 0) {
     str = inviteKeyFromExtraData.substring(index);
   }
   return str;
-};
-export const getInviteInstanceId = function getInviteInstanceId(code, id) {
+}
+export function getInviteInstanceId(code, id) {
   if (null != id) {
     const _HermesInternal = HermesInternal;
     return "" + id + ":" + _slicedToArray(code.split("?"), 1)[0];
   }
-};
+}

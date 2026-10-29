@@ -1,13 +1,13 @@
-// === Module 15646: ErrorCommonUtils ===
+// === Module 15882: ErrorCommonUtils ===
 
-// Module 15646 (ErrorCommonUtils)
+// Module 15882 (ErrorCommonUtils)
 import LastFewActions from "LastFewActions" /* 509 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
-export const getUpdatedOptions = function getUpdatedOptions(extra) {
+export function getUpdatedOptions(extra) {
   const obj = {};
   const merged = Object.assign(extra);
   extra = undefined;
@@ -28,4 +28,4 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   const merged3 = Object.assign(obj5);
   obj.extra = {};
   return obj;
-};
+}

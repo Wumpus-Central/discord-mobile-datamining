@@ -1,6 +1,6 @@
-// === Module 9816: useChatBottomManagerUIStore ===
+// === Module 9848: useChatBottomManagerUIStore ===
 
-// Module 9816 (useChatBottomManagerUIStore)
+// Module 9848 (useChatBottomManagerUIStore)
 import Storage3 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
 import module_570 from "module_570" /* 570 */;
@@ -164,7 +164,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChatIsA
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
 
 export default obj;
-export const updateChatInputContainerHeight = function updateChatInputContainerHeight(num, arg1) {
+export function updateChatInputContainerHeight(num, arg1) {
   closure_0 = num;
   closure_1 = arg1;
   if (typeof num === "number") {
@@ -176,8 +176,8 @@ export const updateChatInputContainerHeight = function updateChatInputContainerH
     const result = chatInputContainerHeight.set(closure_0, closure_1);
     return { chatInputContainerHeight };
   });
-};
-export const updateShowingAutoComplete = function updateShowingAutoComplete(arg0, arg1) {
+}
+export function updateShowingAutoComplete(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   obj.setState((showingAutoComplete) => {
@@ -185,8 +185,8 @@ export const updateShowingAutoComplete = function updateShowingAutoComplete(arg0
     const result = showingAutoComplete.set(closure_0, closure_1);
     return { showingAutoComplete };
   });
-};
-export const updateShouldShowJumpToPresentButton = function updateShouldShowJumpToPresentButton(arg0, arg1, arg2) {
+}
+export function updateShouldShowJumpToPresentButton(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -199,9 +199,9 @@ export const updateShouldShowJumpToPresentButton = function updateShouldShowJump
     const result = showJumpToPresentButtonChannelId.set(closure_1, tmp2);
     return { showJumpToPresentButtonChannelId };
   });
-};
+}
 export const useChatInputContainerHeight = tmp3;
-export const updateSmallSuggestionBarHeight = function updateSmallSuggestionBarHeight(arg0, arg1) {
+export function updateSmallSuggestionBarHeight(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   obj.setState((smallSuggestionBarHeight) => {
@@ -216,10 +216,10 @@ export const updateSmallSuggestionBarHeight = function updateSmallSuggestionBarH
       return obj;
     }
   });
-};
+}
 export const useSmallSuggestionBarHeight = tmp4;
 export const useChatShowingAutoComplete = tmp5;
-export const updateIsAtBottom = function updateIsAtBottom(arg0, arg1) {
+export function updateIsAtBottom(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   obj.setState((isAtBottom) => {
@@ -234,7 +234,7 @@ export const updateIsAtBottom = function updateIsAtBottom(arg0, arg1) {
       return obj;
     }
   });
-};
+}
 export const useChatIsAtBottom = tmp6;
 export const useBestActiveChatInputContainerHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useBestActiveChatInputContainerHeight() {
   obj = c;

@@ -1,6 +1,6 @@
-// === Module 12610: ConjureDebugFormat ===
+// === Module 12827: ConjureDebugFormat ===
 
-// Module 12610 (ConjureDebugFormat)
+// Module 12827 (ConjureDebugFormat)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugFormat.tsx");
@@ -14,7 +14,7 @@ export function debugLogEnv(source) {
   }
   str2 = source;
 }
-export const formatBytes = function formatBytes(r2_bytes) {
+export function formatBytes(r2_bytes) {
   if (Number.isFinite(r2_bytes)) {
     if (r2_bytes >= 0) {
       if (r2_bytes < 1024) {
@@ -59,8 +59,8 @@ export const formatBytes = function formatBytes(r2_bytes) {
     }
   }
   return "\u2014";
-};
-export const formatMs = function formatMs(wall_ms_total) {
+}
+export function formatMs(wall_ms_total) {
   if (Number.isFinite(wall_ms_total)) {
     if (wall_ms_total >= 0) {
       if (wall_ms_total < 1) {
@@ -97,15 +97,15 @@ export const formatMs = function formatMs(wall_ms_total) {
     }
   }
   return "\u2014";
-};
-export const formatCount = function formatCount(cache_read_input_tokens) {
+}
+export function formatCount(cache_read_input_tokens) {
   let str = "\u2014";
   if (Number.isFinite(cache_read_input_tokens)) {
     str = cache_read_input_tokens.toLocaleString();
   }
   return str;
-};
-export const formatObservedAt = function formatObservedAt(observedAt) {
+}
+export function formatObservedAt(observedAt) {
   const date = new Date(observedAt);
   if (Number.isNaN(date.getTime())) {
     return observedAt;
@@ -124,8 +124,8 @@ export const formatObservedAt = function formatObservedAt(observedAt) {
     }
     toLocaleTimeStringResult = date.toLocaleString();
   }
-};
-export const shortBuildLabel = function shortBuildLabel(build) {
+}
+export function shortBuildLabel(build) {
   const parts = build.split("/");
   const found = parts.filter((item) => "" !== item);
   let arr3 = found[found.length - 1];
@@ -137,4 +137,4 @@ export const shortBuildLabel = function shortBuildLabel(build) {
     substr = arr3.slice(0, 12);
   }
   return substr;
-};
+}

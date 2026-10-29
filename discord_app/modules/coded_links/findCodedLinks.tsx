@@ -1,20 +1,20 @@
-// === Module 5735: findCodedLinks ===
+// === Module 5737: findCodedLinks ===
 
-// Module 5735 (findCodedLinks)
+// Module 5737 (findCodedLinks)
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1378 */;
 import Url from "Url" /* 1386 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5737 */;
-import CodedLink from "CodedLink" /* 5739 */;
-import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 5740 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6022 */;
-import keysSorter from "keysSorter" /* 6757 */;
-import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7799 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7843 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8521 */;
-import Authorize from "Authorize" /* 9664 */;
-import storefrontCodedLink2 from "storefrontCodedLink" /* 11270 */;
-import InviteStore from "InviteStore" /* 5736 */;
-import RegexUtils_mod from "RegexUtils" /* 5644 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5739 */;
+import CodedLink from "CodedLink" /* 5741 */;
+import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 5742 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6026 */;
+import keysSorter from "keysSorter" /* 6780 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7822 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7866 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8543 */;
+import Authorize from "Authorize" /* 9696 */;
+import storefrontCodedLink2 from "storefrontCodedLink" /* 11324 */;
+import InviteStore from "InviteStore" /* 5738 */;
+import RegexUtils_mod from "RegexUtils" /* 5645 */;
 
 require = fn;
 function getPathsFromURL(target) {
@@ -847,7 +847,7 @@ let result = size.fileFinishedImporting("modules/coded_links/findCodedLinks.tsx"
 
 export default findCodedLinks;
 export const DEVLINK_REGEX = tmp3;
-export const remainingPathFromDiscordHostMatch = function remainingPathFromDiscordHostMatch(parseURLSafelyResult) {
+export function remainingPathFromDiscordHostMatch(parseURLSafelyResult) {
   let replaced;
   if (parseURLSafelyResult.host != null) {
     replaced = str.replace(/^www[.]/i, "");
@@ -981,9 +981,9 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
     tmp3 = tmp19;
   }
   return tmp3;
-};
+}
 export { getPathsFromURL };
-export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
+export function isSuspiciousCodedLink(arr) {
   if (arr.includes("\\")) {
     const url = parseURLSafely(arr);
     if (null == url) {
@@ -1018,9 +1018,9 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
     }
   }
   return false;
-};
+}
 export { parseQuestsEmbedCode };
-export const parseUserProfileEmbedCode = function parseUserProfileEmbedCode(target) {
+export function parseUserProfileEmbedCode(target) {
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
@@ -1034,8 +1034,8 @@ export const parseUserProfileEmbedCode = function parseUserProfileEmbedCode(targ
     tmp3 = null;
   }
   return tmp3;
-};
-export const parseGameServerShareCode = function parseGameServerShareCode(target) {
+}
+export function parseGameServerShareCode(target) {
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
@@ -1049,9 +1049,9 @@ export const parseGameServerShareCode = function parseGameServerShareCode(target
     tmp3 = null;
   }
   return tmp3;
-};
+}
 export { parseURLSafely };
-export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
+export function findCodedLink(sanitizeUrlResult) {
   if (null == sanitizeUrlResult) {
     let items = [];
   } else {
@@ -1530,8 +1530,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     obj = findCodedLinkUrlsDefault(str);
   }
   return items[0];
-};
-export const containsCodedLink = function containsCodedLink(sanitizeWhitespaceResult) {
+}
+export function containsCodedLink(sanitizeWhitespaceResult) {
   if (null == sanitizeWhitespaceResult) {
     return tmp;
   } else {
@@ -2014,4 +2014,4 @@ export const containsCodedLink = function containsCodedLink(sanitizeWhitespaceRe
       const obj2 = findCodedLinkUrlsDefault(str2);
     }
   }
-};
+}

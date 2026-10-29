@@ -1,12 +1,12 @@
-// === Module 12331: ConjurePublishStatusBadge ===
+// === Module 12385: ConjurePublishStatusBadge ===
 
-// Module 12331 (ConjurePublishStatusBadge)
+// Module 12385 (ConjurePublishStatusBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import timing from "timing" /* 5242 */;
-import ConjureHeaderIconButton from "ConjureHeaderIconButton" /* 12330 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12332 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import timing from "timing" /* 5243 */;
+import ConjureHeaderIconButton from "ConjureHeaderIconButton" /* 12384 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12386 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -14,9 +14,9 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { dot: null, spinner: null };
-let size = { width: fn(12330).CONJURE_HEADER_BADGE_SIZE, height: fn(12330).CONJURE_HEADER_BADGE_SIZE, borderRadius: fn(12330).CONJURE_HEADER_BADGE_SIZE / 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let size = { width: fn(12384).CONJURE_HEADER_BADGE_SIZE, height: fn(12384).CONJURE_HEADER_BADGE_SIZE, borderRadius: fn(12384).CONJURE_HEADER_BADGE_SIZE / 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.dot = size;
 obj2.spinner = { width: 12, height: 12 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -28,9 +28,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
   const tmp4 = closure_6();
   let obj = sharedValue(576);
   const tmp = sharedValue;
-  const token = sharedValue(5288).useToken(nativeDefault.colors.BACKGROUND_BRAND);
-  let obj2 = sharedValue(5288);
-  sharedValue = sharedValue(5085).useSharedValue(0);
+  const token = sharedValue(5289).useToken(nativeDefault.colors.BACKGROUND_BRAND);
+  let obj2 = sharedValue(5289);
+  sharedValue = sharedValue(5086).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
       const obj = ReanimatedRexport;
@@ -49,7 +49,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
     tmp9 = cResult[2];
   }
   const effect = noop.useEffect(tmp8, tmp9);
-  const obj3 = sharedValue(5085);
+  const obj3 = sharedValue(5086);
   const fn2 = function p() {
     const obj = { transform: null };
     const items = [{ rotate: "" + sharedValue.get() + "deg" }];
@@ -59,7 +59,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
   fn2.__closure = { rotation: sharedValue };
   fn2.__workletHash = 16804123436708;
   fn2.__initData = __initData;
-  const animatedStyle = tmp(5085).useAnimatedStyle(fn2);
+  const animatedStyle = tmp(5086).useAnimatedStyle(fn2);
   if (cResult[3] === animatedStyle) {
     if (cResult[4] === tmp4.spinner) {
       let tmp12 = cResult[5];
@@ -93,12 +93,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
   cResult[4] = tmp4.spinner;
   cResult[5] = items1;
   tmp12 = items1;
-  const tmpResult = tmp(5085);
+  const tmpResult = tmp(5086);
 }) : (function ConjurePublishSpinner() {
   const tmp = closure_6();
-  const token = sharedValue(5288).useToken(nativeDefault.colors.BACKGROUND_BRAND);
-  let obj = sharedValue(5288);
-  sharedValue = sharedValue(5085).useSharedValue(0);
+  const token = sharedValue(5289).useToken(nativeDefault.colors.BACKGROUND_BRAND);
+  let obj = sharedValue(5289);
+  sharedValue = sharedValue(5086).useSharedValue(0);
   let items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
@@ -106,7 +106,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
     const result = sharedValue.set(obj.withRepeat(obj2.withTiming(360, { duration: 800, easing: ReanimatedRexport.Easing.linear }), -1, false));
     return () => sharedValue(dependencyMap[9]).cancelAnimation(closure_1_0);
   }, items);
-  let obj2 = sharedValue(5085);
+  let obj2 = sharedValue(5086);
   const fn = function _() {
     const obj = { transform: null };
     const items = [{ rotate: "" + sharedValue.get() + "deg" }];
@@ -116,7 +116,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
   fn.__closure = { rotation: sharedValue };
   fn.__workletHash = 12889163918279;
   fn.__initData = __initData2;
-  const animatedStyle = sharedValue(5085).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(5086).useAnimatedStyle(fn);
   const obj4 = { style: null, children: jsx(ProgressCircleDefault, { percent: 70, size: 12, strokeWidth: 2, color: token, style: tmp.spinner }) };
   const items1 = [tmp.spinner, animatedStyle];
   obj4.style = items1;
@@ -153,10 +153,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   }
   return tmp4;
 });
-export const conjurePublishBadgeSize = function conjurePublishBadgeSize(indicator) {
+export function conjurePublishBadgeSize(indicator) {
   let num = 12;
   if ("publishing" !== indicator) {
     num = ConjureHeaderIconButton.CONJURE_HEADER_BADGE_SIZE;
   }
   return num;
-};
+}

@@ -1,6 +1,6 @@
-// === Module 8831: NativeVideo ===
+// === Module 8834: NativeVideo ===
 
-// Module 8831 (NativeVideo)
+// Module 8834 (NativeVideo)
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 0;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { overflow: "hidden" }, content: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.content = {};
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
                 num = arg1;
               }
               if (null != ref.current) {
-                const Commands = closure_0(8832).Commands;
+                const Commands = closure_0(8835).Commands;
                 Commands.seek(tmp.current, arg0, num);
               }
             },
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
                 tmp3 = null != ref.current;
               }
               if (tmp3) {
-                const Commands = closure_0(8832).Commands;
+                const Commands = closure_0(8835).Commands;
                 Commands.reset(ref.current);
               }
               dependencyMap((arg0) => {
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
           }
         }
       };
-      const items3 = [closure_10(ref(8832), obj10), ];
+      const items3 = [closure_10(ref(8835), obj10), ];
       let tmp33Result = null != obj4.poster && tmp24 !== id;
       if (tmp33Result) {
         const obj11 = { accessible: false, style: tmp4.content, source: null, resizeMode: null };
@@ -327,8 +327,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
           str2 = str4;
         }
         obj11.resizeMode = str2;
-        tmp33Result = closure_10(ref(5705), obj11);
-        const tmp34Result = ref(5705);
+        tmp33Result = closure_10(ref(5707), obj11);
+        const tmp34Result = ref(5707);
       }
       items3[1] = tmp33Result;
       obj7.children = items3;
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
         num = 100;
       }
       if (null != ref.current) {
-        const Commands = merged(8832).Commands;
+        const Commands = merged(8835).Commands;
         Commands.seek(tmp.current, arg0, num);
       }
     },
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
         tmp3 = null != ref.current;
       }
       if (tmp3) {
-        const Commands = merged(8832).Commands;
+        const Commands = merged(8835).Commands;
         Commands.reset(ref.current);
       }
       dependencyMap((arg0) => {
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
   const items1 = [tmp2.container, obj2.style];
   obj5.style = items1;
   const items2 = [
-    closure_10(ref(8832), {
+    closure_10(ref(8835), {
       ref,
       style: tmp2.content,
       sourceId: id,
@@ -679,8 +679,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NativeVi
       str2 = str4;
     }
     obj7.resizeMode = str2;
-    tmp25Result = closure_10(ref(5705), obj7);
-    const tmp26Result = ref(5705);
+    tmp25Result = closure_10(ref(5707), obj7);
+    const tmp26Result = ref(5707);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;

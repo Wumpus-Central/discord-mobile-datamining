@@ -1,10 +1,10 @@
-// === Module 7460: useCanRing ===
+// === Module 7483: useCanRing ===
 
-// Module 7460 (useCanRing)
+// Module 7483 (useCanRing)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6532 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import CallStore from "CallStore" /* 6556 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 const require = globalThis.__r;
 
@@ -212,7 +212,7 @@ export const useCanRing = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   return stateFromStores2;
 });
-export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
+export function canRingUsersInChannel(channel) {
   const CALLABLE = ChannelTypesSets.CALLABLE;
   if (CALLABLE.has(channel.type)) {
     const call = CallStore.getCall(channel.id);
@@ -220,4 +220,4 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
   } else {
     return false;
   }
-};
+}

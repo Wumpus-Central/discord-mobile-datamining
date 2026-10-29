@@ -1,33 +1,33 @@
-// === Module 11328: useMemberListAction ===
+// === Module 11382: useMemberListAction ===
 
-// Module 11328 (useMemberListAction)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9083 */;
-import useCanInviteToAnyLinkedGameOrganizationDefault from "useCanInviteToAnyLinkedGameOrganization" /* 11329 */;
-import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11332 */;
-import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11344 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11350 */;
-import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11354 */;
+// Module 11382 (useMemberListAction)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5035 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9086 */;
+import useCanInviteToAnyLinkedGameOrganizationDefault from "useCanInviteToAnyLinkedGameOrganization" /* 11383 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11386 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11398 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11404 */;
+import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const openGroupDMAddMembersDefault = openGroupDMAddMembers;
 
 require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10658).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10691).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1084);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "useCallback", listActionHeight: "PX_16" };
-const createStyles = fn(5004);
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "Reflect" };
+const createStyles = fn(5005);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

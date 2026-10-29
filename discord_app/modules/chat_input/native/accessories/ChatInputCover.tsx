@@ -1,7 +1,7 @@
-// === Module 13380: ChatInputCover ===
+// === Module 13613: ChatInputCover ===
 
-// Module 13380 (ChatInputCover)
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+// Module 13613 (ChatInputCover)
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -119,13 +119,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputC
             tmp = arg0;
           }
           if (tmp) {
-            tmp = dependencyMap !== flag(1628).KeyboardTypes.SYSTEM;
+            tmp = dependencyMap !== flag(1629).KeyboardTypes.SYSTEM;
           }
           if (tmp) {
             tmp = closure_1_3;
           }
           if (tmp) {
-            const obj = { type: flag(1628).KeyboardTypes.SYSTEM };
+            const obj = { type: flag(1629).KeyboardTypes.SYSTEM };
             closure_1_2(obj);
           }
         }

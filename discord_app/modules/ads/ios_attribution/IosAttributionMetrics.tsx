@@ -1,10 +1,10 @@
-// === Module 14363: IosAttributionMetrics ===
+// === Module 14597: IosAttributionMetrics ===
 
-// Module 14363 (IosAttributionMetrics)
+// Module 14597 (IosAttributionMetrics)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6503 */;
-import MetricEvents from "MetricEvents" /* 6508 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6527 */;
+import MetricEvents from "MetricEvents" /* 6532 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttrib
 
 export const IosAttributionImpressionResult = { REGISTERED: "registered", NO_FRAMEWORK: "no_framework", NO_METADATA: "no_metadata", NOT_SKAN_ENABLED: "not_skan_enabled", SIGN_FAILED: "sign_failed", NO_TOKEN: "no_token" };
 export const IosAttributionClickResult = { ATTRIBUTED: "attributed", NO_IMPRESSION: "no_impression", NOT_READY: "not_ready" };
-export const trackIosAttributionImpression = function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttributionFramework, id) {
+export function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttributionFramework, id) {
   let str = activeIosAttributionFramework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
   const items = ["result:" + NO_FRAMEWORK, ];
@@ -31,8 +31,8 @@ export const trackIosAttributionImpression = function trackIosAttributionImpress
   obj3.attribution_result = NO_FRAMEWORK;
   AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED, obj3);
   const tmpResult = AnalyticsUtilsDefault;
-};
-export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
+}
+export function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
   let str = framework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
   const items = ["result:" + ATTRIBUTED, ];
@@ -51,4 +51,4 @@ export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIB
   obj3.attribution_result = ATTRIBUTED;
   AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED, obj3);
   const tmpResult = AnalyticsUtilsDefault;
-};
+}

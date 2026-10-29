@@ -1,19 +1,19 @@
-// === Module 18641: Settings ===
+// === Module 18875: Settings ===
 
-// Module 18641 (Settings)
+// Module 18875 (Settings)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import DeviceUtils from "DeviceUtils" /* 4961 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7074 */;
-import profileModalTransition from "profileModalTransition" /* 18519 */;
-import SettingsNavigatorDefault from "SettingsNavigator" /* 18642 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import DeviceUtils from "DeviceUtils" /* 4962 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7098 */;
+import profileModalTransition from "profileModalTransition" /* 18753 */;
+import SettingsNavigatorDefault from "SettingsNavigator" /* 18876 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { containerOuter: { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, containerOuterTablet: null, container: null, containerTablet: null };
 let obj3 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.containerOuterTablet = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 };
@@ -44,42 +44,49 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     tmp8 = cResult[1];
   }
   const tmp10 = closure_6();
+  if (tmp7) {
+    if (tmpResult2.isIpadOS()) {
+      let containerOuter = tmp10.containerOuter;
+    }
+    const tmp11 = tmp8 ? tmp10.containerTablet : tmp10.container;
+    const _Symbol = Symbol;
+    if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+      const tmp15 = jsx(SettingsNavigatorDefault, {});
+      cResult[9] = tmp15;
+      let tmp13 = tmp15;
+    } else {
+      tmp13 = cResult[9];
+    }
+    if (cResult[10] !== tmp11) {
+      const obj3 = { style: tmp11, children: tmp13 };
+      const tmp19 = <View style={tmp11}>{tmp13}</View>;
+      cResult[10] = tmp11;
+      cResult[11] = tmp19;
+      let tmp16 = tmp19;
+    } else {
+      tmp16 = cResult[11];
+    }
+    if (cResult[12] === containerOuter) {
+      if (cResult[13] === tmp16) {
+        let tmp20 = cResult[14];
+      }
+      return tmp20;
+    }
+    const obj4 = { style: containerOuter, children: tmp16 };
+    const tmp23 = <View style={containerOuter}>{tmp16}</View>;
+    cResult[12] = containerOuter;
+    cResult[13] = tmp16;
+    cResult[14] = tmp23;
+    tmp20 = tmp23;
+    tmpResult2 = DeviceUtils;
+  }
   if (cResult[2] === left) {
     if (cResult[3] === top) {
       if (cResult[4] === containerOuterTablet) {
         if (cResult[5] === tmp10.containerOuter) {
           if (cResult[6] === tmp10.containerOuterTablet) {
             if (cResult[7] === tmp8) {
-              const tmp12 = tmp8 ? tmp10.containerTablet : tmp10.container;
-              const _Symbol = Symbol;
-              if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp16 = jsx(SettingsNavigatorDefault, {});
-                cResult[9] = tmp16;
-                let tmp14 = tmp16;
-              } else {
-                tmp14 = cResult[9];
-              }
-              if (cResult[10] !== tmp12) {
-                const obj3 = { style: tmp12, children: tmp14 };
-                const tmp20 = <View style={tmp12}>{tmp14}</View>;
-                cResult[10] = tmp12;
-                cResult[11] = tmp20;
-                let tmp17 = tmp20;
-              } else {
-                tmp17 = cResult[11];
-              }
-              if (cResult[12] === cResult[8]) {
-                if (cResult[13] === tmp17) {
-                  let tmp21 = cResult[14];
-                }
-                return tmp21;
-              }
-              const obj4 = { style: cResult[8], children: tmp17 };
-              const tmp24 = <View style={cResult[8]}>{tmp17}</View>;
-              cResult[12] = cResult[8];
-              cResult[13] = tmp17;
-              cResult[14] = tmp24;
-              tmp21 = tmp24;
+              containerOuter = cResult[8];
             }
           }
         }
@@ -105,48 +112,45 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   cResult[8] = items1;
   const tmp6 = useSafeAreaInsetsDefault();
 }) : (function Settings() {
-  const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
-  const rect = useSafeAreaInsetsDefault();
-  const top = rect.top;
-  const left = rect.left;
-  const right = rect.right;
-  let tmp5 = useIsWindowLargeDefault();
+  const reportProfileModalTransition = top(right[7]).useReportProfileModalTransition();
+  const rect = left(right[8])();
+  top = rect.top;
+  left = rect.left;
+  right = rect.right;
+  const tmp5 = left(right[9])();
+  noop = tmp5;
+  let tmp6 = tmp5;
   if (tmp5) {
-    tmp5 = !DeviceUtils.isIpadOS();
-    const tmpResult = DeviceUtils;
+    tmp6 = !tmp(tmp2[10]).isIpadOS();
+    const tmpResult = tmp(tmp2[10]);
   }
-  closure_3 = tmp5;
-  const tmp6 = closure_6();
   closure_4 = tmp6;
-  let items = [tmp6, tmp5, top, left, right];
+  const tmp7 = closure_6();
+  let containerOuter = tmp7;
+  let items = [tmp7, tmp5, tmp6, top, left, right];
   let obj2 = {
     style: noop.useMemo(() => {
       if (closure_3) {
-        const items = [closure_4.containerOuterTablet, ];
+        if (obj.isIpadOS()) {
+          containerOuter = containerOuter.containerOuter;
+        }
+        return containerOuter;
+      }
+      if (closure_4) {
+        const items = [tmp3.containerOuterTablet, ];
         const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
         items[1] = obj2;
-        let items1 = items;
+        containerOuter = items;
       } else {
-        items1 = [closure_4.containerOuter, ];
-        const obj = { paddingLeft: left, paddingRight: right };
-        items1[1] = obj;
+        containerOuter = [tmp3.containerOuter, ];
+        const obj3 = { paddingLeft: left, paddingRight: right };
+        containerOuter[1] = obj3;
       }
-      return items1;
     }, items),
     children: null
   };
-  obj2.children = <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{jsx(SettingsNavigatorDefault, {})}</View>;
-  return <View style={noop.useMemo(() => {
-    if (closure_3) {
-      const items = [closure_4.containerOuterTablet, ];
-      const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
-      items[1] = obj2;
-      let items1 = items;
-    } else {
-      items1 = [closure_4.containerOuter, ];
-      const obj = { paddingLeft: left, paddingRight: right };
-      items1[1] = obj;
-    }
-    return items1;
-  }, items)}>{null}</View>;
+  const obj = top(right[7]);
+  tmp = top;
+  obj2.children = containerOuter(closure_4, { style: tmp6 ? tmp7.containerTablet : tmp7.container, children: containerOuter(left(right[11]), {}) });
+  return containerOuter(closure_4, obj2);
 });

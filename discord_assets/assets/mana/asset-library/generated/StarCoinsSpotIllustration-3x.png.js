@@ -1,6 +1,6 @@
-// === Module 19564: ? ===
+// === Module 19797: ? ===
 
-// Module 19564
+// Module 19797
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StarCoinsSpotIllustration-3x.png.js");

@@ -1,17 +1,17 @@
-// === Module 13986: FocusModeUtils ===
+// === Module 14219: FocusModeUtils ===
 
-// Module 13986 (FocusModeUtils)
+// Module 14219 (FocusModeUtils)
 import c from "c" /* 576 */;
 import wrappers from "wrappers" /* 1239 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6533 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
 
 const require = globalThis.__r;
 
-const AlertActionCreatorsDefault = tmp5(5944);
+const AlertActionCreatorsDefault = tmp5(5946);
 require = fn;
-const constants = fn(4949).NotificationSettingsUpdateType;
+const constants = fn(4950).NotificationSettingsUpdateType;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
@@ -68,7 +68,7 @@ export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled() 
   }
   return setting;
 });
-export const getFocusModeEnabled = function getFocusModeEnabled() {
+export function getFocusModeEnabled() {
   const FocusMode = UserSettings.FocusMode;
   let setting = FocusMode.getSetting();
   const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;
@@ -86,8 +86,8 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
     setting = time - date1.getTime() > 0;
   }
   return setting;
-};
-export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
+}
+export function setFocusMode(quiet_mode_enabled, arg1) {
   _require = quiet_mode_enabled;
   importDefault = arg1;
   const FocusMode = require("UserSettings").FocusMode;
@@ -129,4 +129,4 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     const tmp5Result = AlertActionCreatorsDefault;
   }
   const obj2 = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
-};
+}

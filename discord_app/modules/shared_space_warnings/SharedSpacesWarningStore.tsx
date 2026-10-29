@@ -1,6 +1,6 @@
-// === Module 15305: SharedSpacesWarningStore ===
+// === Module 15540: SharedSpacesWarningStore ===
 
-// Module 15305 (SharedSpacesWarningStore)
+// Module 15540 (SharedSpacesWarningStore)
 import DurationsDefault from "Durations" /* 1101 */;
 
 const require = globalThis.__r;
@@ -9,34 +9,34 @@ let closure_2 = 3 * DurationsDefault.Millis.DAY;
 let closure_3 = 2 * DurationsDefault.Millis.DAY;
 const HOUR = DurationsDefault.Millis.HOUR;
 const module_570 = fn(570);
-fn(5200);
+fn(5201);
 const obj3 = { name: "shared-spaces-warning-storage", storage: null };
-const module_5200 = fn(5200);
-obj3.storage = module_5200.createJSONStorage(() => require("LocalStorageWrapper"));
-const obj7 = module_570.create(module_5200.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj3));
+const module_5201 = fn(5201);
+obj3.storage = module_5201.createJSONStorage(() => require("LocalStorageWrapper"));
+const obj7 = module_570.create(module_5201.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj3));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 
 export const useSharedSpacesWarningStore = obj7;
-export const getChannelDismissTimestamp = function getChannelDismissTimestamp(arg0) {
+export function getChannelDismissTimestamp(arg0) {
   return obj7.getState().channelDismissTimestamps[arg0];
-};
-export const getUserDismissTimestamp = function getUserDismissTimestamp(arg0) {
+}
+export function getUserDismissTimestamp(arg0) {
   return obj7.getState().userDismissTimestamps[arg0];
-};
-export const getGlobalDismissTimestamp = function getGlobalDismissTimestamp() {
+}
+export function getGlobalDismissTimestamp() {
   return obj7.getState().globalDismissTimestamp;
-};
-export const isBlockedWarningQueued = function isBlockedWarningQueued() {
+}
+export function isBlockedWarningQueued() {
   return obj7.getState().queuedWarning;
-};
-export const queueBlockWarning = function queueBlockWarning() {
+}
+export function queueBlockWarning() {
   obj7.setState({ queuedWarning: true });
-};
-export const dequeueBlockWarning = function dequeueBlockWarning() {
+}
+export function dequeueBlockWarning() {
   obj7.setState({ queuedWarning: false });
-};
-export const setDismissalTimeForChannel = function setDismissalTimeForChannel(arg0) {
+}
+export function setDismissalTimeForChannel(arg0) {
   closure_0 = arg0;
   obj7.setState((channelDismissTimestamps) => {
     const obj = { channelDismissTimestamps: null };
@@ -46,8 +46,8 @@ export const setDismissalTimeForChannel = function setDismissalTimeForChannel(ar
     obj.channelDismissTimestamps = obj2;
     return obj;
   });
-};
-export const setDismissalTimeForUser = function setDismissalTimeForUser(blockedUserId) {
+}
+export function setDismissalTimeForUser(blockedUserId) {
   closure_0 = blockedUserId;
   obj7.setState((userDismissTimestamps) => {
     const obj = { userDismissTimestamps: null, globalDismissTimestamp: null };
@@ -58,8 +58,8 @@ export const setDismissalTimeForUser = function setDismissalTimeForUser(blockedU
     obj.globalDismissTimestamp = Date.now();
     return obj;
   });
-};
-export const setDismissalTimeForUsers = function setDismissalTimeForUsers(arg0) {
+}
+export function setDismissalTimeForUsers(arg0) {
   closure_0 = Array.from(arg0).reduce((acc, item) => {
     acc[item] = Date.now();
     return acc;
@@ -72,8 +72,8 @@ export const setDismissalTimeForUsers = function setDismissalTimeForUsers(arg0) 
     obj.globalDismissTimestamp = Date.now();
     return obj;
   });
-};
-export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarningInCooldownForUsers(arg0) {
+}
+export function voiceBlockedWarningInCooldownForUsers(arg0) {
   let num = obj7.getState().globalDismissTimestamp;
   if (num == null) {
     num = 0;
@@ -97,8 +97,8 @@ export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarnin
     const arr = Array.from(arg0);
   }
   return everyResult;
-};
-export const userBlockedWarningInCooldown = function userBlockedWarningInCooldown(arg0) {
+}
+export function userBlockedWarningInCooldown(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -121,11 +121,11 @@ export const userBlockedWarningInCooldown = function userBlockedWarningInCooldow
     tmp5 = num2 > Date.now() - closure_3;
   }
   return tmp5;
-};
-export const gdmBlockedWarningInCooldown = function gdmBlockedWarningInCooldown(arg0) {
+}
+export function gdmBlockedWarningInCooldown(arg0) {
   let num = obj7.getState().channelDismissTimestamps[arg0];
   if (num == null) {
     num = 0;
   }
   return num > Date.now() - closure_2;
-};
+}

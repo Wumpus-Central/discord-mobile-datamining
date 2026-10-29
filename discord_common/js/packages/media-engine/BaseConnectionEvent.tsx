@@ -1,6 +1,6 @@
-// === Module 5792: discord_common/BaseConnectionEvent ===
+// === Module 5794: discord_common/BaseConnectionEvent ===
 
-// Module 5792 (discord_common/BaseConnectionEvent)
+// Module 5794 (discord_common/BaseConnectionEvent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnectionEvent.tsx");

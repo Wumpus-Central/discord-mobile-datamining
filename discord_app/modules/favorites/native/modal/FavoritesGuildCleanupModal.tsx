@@ -1,16 +1,16 @@
-// === Module 17844: FavoritesGuildCleanupModal ===
+// === Module 18082: FavoritesGuildCleanupModal ===
 
-// Module 17844 (FavoritesGuildCleanupModal)
+// Module 18082 (FavoritesGuildCleanupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3445 from "module_3445" /* 3445 */;
-import useChannelNameDefault from "useChannelName" /* 5640 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6936 */;
-import TableRadioRow from "TableRadioRow" /* 7020 */;
-import Modal from "Modal" /* 11188 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17847 */;
+import _modDef3446 from "module_3446" /* 3446 */;
+import useChannelNameDefault from "useChannelName" /* 5641 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6960 */;
+import TableRadioRow from "TableRadioRow" /* 7044 */;
+import Modal from "Modal" /* 11242 */;
+import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 18085 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroller: { flex: 1 }, content: null, actions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -621,7 +621,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     const obj2 = { cleanup: null };
     const obj3 = { title: null, headerLeft: null, render: null };
     let intl = util.intl;
-    obj3.title = intl.string(_modDef3445["b081B+"]);
+    obj3.title = intl.string(_modDef3446["b081B+"]);
     obj3.headerLeft = function headerLeft() {
       const obj = { text: null, size: "sm", variant: "tertiary", onPress: null };
       const intl = require("util").intl;
@@ -652,13 +652,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     let obj = { cleanup: null };
     const obj2 = { title: null, headerLeft: null, render: null };
     let intl = require("util").intl;
-    obj2.title = intl.string(_modDef3445["b081B+"]);
+    obj2.title = intl.string(_modDef3446["b081B+"]);
     obj2.headerLeft = function headerLeft() {
       const obj = { text: null, size: "sm", variant: "tertiary", onPress: null };
       const intl = closure_1_0(1125).intl;
       obj.text = intl.string(closure_1_0(1125).t["ETE/oC"]);
       obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5280).Button, obj);
+      return closure_1_6(closure_1_0(5281).Button, obj);
     };
     obj2.render = function render() {
       return closure_1_6(closure_1_11, {});

@@ -1,12 +1,12 @@
-// === Module 15428: getTransformedBadgeColors ===
+// === Module 15662: getTransformedBadgeColors ===
 
-// Module 15428 (getTransformedBadgeColors)
+// Module 15662 (getTransformedBadgeColors)
 import _modDef683 from "module_683" /* 683 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
 
-export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0) {
+export function getTransformedBadgeColors(arg0) {
   ({ primaryTintColor, primaryTintLuminances, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights } = arg0);
   if (null == primaryTintColor) {
     let items = [];
@@ -42,4 +42,4 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
     }
     obj = _modDef683;
   }
-};
+}

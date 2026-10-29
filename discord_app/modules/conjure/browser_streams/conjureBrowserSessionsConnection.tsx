@@ -1,8 +1,8 @@
-// === Module 10769: conjureBrowserSessionsConnection ===
+// === Module 10844: conjureBrowserSessionsConnection ===
 
-// Module 10769 (conjureBrowserSessionsConnection)
+// Module 10844 (conjureBrowserSessionsConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/browser_streams/conjureBrowserSessionsConnection.tsx");
@@ -12,9 +12,9 @@ export const browserSessionsFrameHandlers = {
     DispatcherDefault.dispatch({ type: "CONJURE_BROWSER_SESSIONS_SET", projectId: projectId.projectId, sessions: sessions.sessions });
   }
 };
-export const refreshBrowserSessions = function refreshBrowserSessions(projectId) {
+export function refreshBrowserSessions(projectId) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   if (conjureSocket != null) {
     const result = conjureSocket.sendRefreshBrowserSessions();
   }
-};
+}

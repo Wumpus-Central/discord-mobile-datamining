@@ -1,14 +1,14 @@
-// === Module 6902: DesktopNativeUtils ===
+// === Module 6926: DesktopNativeUtils ===
 
-// Module 6902 (DesktopNativeUtils)
+// Module 6926 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
-import Client from "Client" /* 5237 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5755 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 6903 */;
-import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6904 */;
-import IPCEvents from "IPCEvents" /* 6905 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 6906 */;
+import Client from "Client" /* 5238 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5757 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 6927 */;
+import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6928 */;
+import IPCEvents from "IPCEvents" /* 6929 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 6930 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -65,7 +65,7 @@ let closure_28 = async function _transcodeImageToPng(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -708,7 +708,7 @@ obj2.bounceDock = function bounceDock(arg0) {
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -742,7 +742,7 @@ obj2.bounceDock = function bounceDock(arg0) {
               const dock = closure_129_0.dock;
               dock.cancelBounce(closure_128_0);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -817,7 +817,7 @@ obj2.copy = function copy(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -846,7 +846,7 @@ obj2.copy = function copy(arg0) {
           return obj;
         }
         v3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp9) {
         v3 = tmp;
         throw tmp9;
@@ -868,7 +868,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -903,7 +903,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(6906).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(6930).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -940,7 +940,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj11 = closure_0(6906);
+            const obj11 = closure_0(6930);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -981,7 +981,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
           return obj;
         } else {
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp41) {
         c4 = tmp;
@@ -1004,7 +1004,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1051,7 +1051,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp13) {
         c3 = tmp;
@@ -1088,7 +1088,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1137,7 +1137,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(6906).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(6930).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1145,7 +1145,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(6906);
+                const obj9 = unknown(6930);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
@@ -1269,7 +1269,7 @@ obj2.saveFile = function saveFile(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1586,7 +1586,7 @@ obj2.waitForIPCReady = function waitForIPCReady() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1730,7 +1730,7 @@ obj2.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -2153,7 +2153,7 @@ obj2.stopCPUProfiling = function stopCPUProfiling() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -2917,7 +2917,7 @@ obj2.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

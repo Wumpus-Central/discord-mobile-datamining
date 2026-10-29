@@ -1,9 +1,9 @@
-// === Module 7444: GameActionCreators ===
+// === Module 7467: GameActionCreators ===
 
-// Module 7444 (GameActionCreators)
+// Module 7467 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameStore from "GameStore" /* 2019 */;
+import GameStore from "GameStore" /* 2020 */;
 
 function requestGames() {
   const self = this;
@@ -53,7 +53,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -100,7 +100,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -129,7 +129,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         v3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp10) {
       v3 = tmp;
@@ -137,7 +137,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4851).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4852).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -160,7 +160,7 @@ const batchInvocationManager = new fn(4851).BatchInvocationManager(function() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameActionCreators.tsx");
 
-export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementalData() {
+export function fetchGamesWithSupplementalData() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -169,4 +169,4 @@ export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementa
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

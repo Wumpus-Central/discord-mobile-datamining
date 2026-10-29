@@ -1,27 +1,27 @@
-// === Module 18657: BurstReactionAnimationContainer ===
+// === Module 18891: BurstReactionAnimationContainer ===
 
-// Module 18657 (BurstReactionAnimationContainer)
+// Module 18891 (BurstReactionAnimationContainer)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5070 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import timing from "timing" /* 5242 */;
+import native from "native" /* 5071 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import timing from "timing" /* 5243 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(4962).BACKDROP_OPACITY;
+obj3.opacity = fn(4963).BACKDROP_OPACITY;
 obj2.background = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
@@ -55,7 +55,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
         dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
         closure_1_4(true);
         ref.current = true;
-        const result = fill(5248).triggerHapticFeedback(first(5249).IMPACT_HEAVY);
+        const result = fill(5249).triggerHapticFeedback(first(5250).IMPACT_HEAVY);
       }
       const subscription = first(584).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
       return () => {
@@ -119,8 +119,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
     }
     return obj2;
   };
-  let tmpResult = fill(5085);
-  fn2.__closure = { animationData, showAnimation: dismissTextContainer, withTiming: fill(5242).withTiming, runOnJS: fill(5085).runOnJS, handleComponentFinish };
+  let tmpResult = fill(5086);
+  fn2.__closure = { animationData, showAnimation: dismissTextContainer, withTiming: fill(5243).withTiming, runOnJS: fill(5086).runOnJS, handleComponentFinish };
   fn2.__workletHash = 3096942457868;
   fn2.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(fn2);
@@ -129,7 +129,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
   } else {
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      let items1 = [tmp(4840).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+      let items1 = [tmp(4841).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
       cResult[3] = items1;
       let tmp12 = items1;
     } else {
@@ -156,7 +156,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
           const items = [markAsDismissed.fill, animatedStyle];
           obj2.style = items;
           const obj3 = {
-            activeOpacity: fill(4962).BACKDROP_OPACITY,
+            activeOpacity: fill(4963).BACKDROP_OPACITY,
             onPress() {
               return constants(() => markAsDismissed(constants.UNKNOWN));
             },
@@ -174,17 +174,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
                 closure_1_7();
               }
             };
-            tmpResult = animatedStyle(first(5262), obj7);
+            tmpResult = animatedStyle(first(5263), obj7);
           }
           obj5.children = tmpResult;
           items1[1] = animatedStyle(handleComponentFinish, obj5);
-          let tmp6Result = markAsDismissed.visibleContent === fill(4840).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+          let tmp6Result = markAsDismissed.visibleContent === fill(4841).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
           if (tmp6Result) {
             const obj8 = { children: null };
             const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
             const intl = fill(1125).intl;
             obj9.children = intl.string(fill(1125).t.QpPMih);
-            const items2 = [animatedStyle(fill(5270).Text, obj9), ];
+            const items2 = [animatedStyle(fill(5271).Text, obj9), ];
             const obj17 = { style: tmp4.dismissTextBackground };
             items2[1] = animatedStyle(handleComponentFinish, obj17);
             obj8.children = items2;
@@ -193,11 +193,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
           items1[2] = tmp6Result;
           obj3.children = items1;
           obj2.children = closure_1_10(closure_5, obj3);
-          obj.children = animatedStyle(first(5085).View, obj2);
+          obj.children = animatedStyle(first(5086).View, obj2);
           return animatedStyle(fill(1199).OverlayView, obj);
         }
     };
-    tmp2 = animatedStyle(animationData(10442), obj4);
+    tmp2 = animatedStyle(animationData(10475), obj4);
     cResult[4] = animatedStyle;
     cResult[5] = animationData;
     cResult[6] = dismissTextContainer;
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       ref.current = true;
-      const result = handleEffectReceived(5248).triggerHapticFeedback(first(5249).IMPACT_HEAVY);
+      const result = handleEffectReceived(5249).triggerHapticFeedback(first(5250).IMPACT_HEAVY);
     }
     const subscription = first(584).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -271,7 +271,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
   let tmp8 = null;
   if (null != animationData) {
     let obj3 = { contentTypes: null, children: null };
-    let items = [tmp6(4840).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [tmp6(4841).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj3.contentTypes = items;
     obj3.children = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -280,7 +280,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       const items = [markAsDismissed.fill, closure_7];
       obj2.style = items;
       const obj3 = {
-        activeOpacity: closure_0(4962).BACKDROP_OPACITY,
+        activeOpacity: closure_0(4963).BACKDROP_OPACITY,
         onPress() {
           closure_4(false);
           closure_5.current = false;
@@ -301,17 +301,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(5262), obj7);
+        tmpResult = closure_1_8(first(5263), obj7);
       }
       obj5.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj5);
-      let tmp6Result = markAsDismissed.visibleContent === closure_0(4840).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+      let tmp6Result = markAsDismissed.visibleContent === closure_0(4841).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj8 = { children: null };
         const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
         const intl = closure_0(1125).intl;
         obj9.children = intl.string(closure_0(1125).t.QpPMih);
-        const items2 = [closure_1_8(closure_0(5270).Text, obj9), ];
+        const items2 = [closure_1_8(closure_0(5271).Text, obj9), ];
         const obj17 = { style: tmp4.dismissTextBackground };
         items2[1] = closure_1_8(handleComponentFinish, obj17);
         obj8.children = items2;
@@ -320,11 +320,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       items1[2] = tmp6Result;
       obj3.children = items1;
       obj2.children = closure_1_10(closure_5, obj3);
-      obj.children = closure_1_8(first(5085).View, obj2);
+      obj.children = closure_1_8(first(5086).View, obj2);
       return closure_1_8(closure_0(1199).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10442), obj3);
-    let tmp11 = animationData(10442);
+    tmp8 = closure_8(animationData(10475), obj3);
+    let tmp11 = animationData(10475);
   }
   return tmp8;
 });

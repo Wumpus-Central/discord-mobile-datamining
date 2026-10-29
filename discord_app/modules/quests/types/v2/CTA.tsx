@@ -1,11 +1,11 @@
-// === Module 7826: CTA ===
+// === Module 7849: CTA ===
 
-// Module 7826 (CTA)
+// Module 7849 (CTA)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
 
-export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_config) {
+export function questCtaConfigFromServer(cta_config) {
   let tmp;
   if (null != cta_config.android) {
     const obj = { androidAppId: cta_config.android.android_app_id };
@@ -20,4 +20,4 @@ export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_co
   obj3.ios = tmp2;
   ({ link: obj2.link, button_label: obj2.buttonLabel, subtitle: obj2.subtitle } = cta_config);
   return obj3;
-};
+}

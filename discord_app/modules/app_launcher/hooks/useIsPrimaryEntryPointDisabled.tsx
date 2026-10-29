@@ -1,14 +1,14 @@
-// === Module 12066: useIsPrimaryEntryPointDisabled ===
+// === Module 12120: useIsPrimaryEntryPointDisabled ===
 
-// Module 12066 (useIsPrimaryEntryPointDisabled)
+// Module 12120 (useIsPrimaryEntryPointDisabled)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import getPlatformDefault from "getPlatform" /* 5669 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 8916 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11456 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 11967 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import getPlatformDefault from "getPlatform" /* 5671 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 8919 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11510 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12021 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

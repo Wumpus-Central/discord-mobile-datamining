@@ -1,23 +1,23 @@
-// === Module 12464: BeeIllocon ===
+// === Module 12518: BeeIllocon ===
 
-// Module 12464 (BeeIllocon)
+// Module 12518 (BeeIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import assetHelpers from "assetHelpers" /* 7031 */;
-import _modDef12465 from "module_12465" /* 12465 */;
-import _modDef12466 from "module_12466" /* 12466 */;
-import _modDef12467 from "module_12467" /* 12467 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import assetHelpers from "assetHelpers" /* 7055 */;
+import _modDef12519 from "module_12519" /* 12519 */;
+import _modDef12520 from "module_12520" /* 12520 */;
+import _modDef12521 from "module_12521" /* 12521 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12465 }, 3: null };
-const obj2 = { uri: _modDef12465 };
-obj[2] = { uri: _modDef12466 };
-const obj3 = { uri: _modDef12466 };
-obj[3] = { uri: _modDef12467 };
+let obj = { 1: null, 2: { uri: _modDef12519 }, 3: null };
+const obj2 = { uri: _modDef12519 };
+obj[2] = { uri: _modDef12520 };
+const obj3 = { uri: _modDef12520 };
+obj[3] = { uri: _modDef12521 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12467 };
+const obj4 = { uri: _modDef12521 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const BeeIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7031).getAssetSource(obj);
+  obj.source = num(7055).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

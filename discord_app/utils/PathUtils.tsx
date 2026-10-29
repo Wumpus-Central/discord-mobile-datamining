@@ -1,11 +1,11 @@
-// === Module 15560: PathUtils ===
+// === Module 15796: PathUtils ===
 
-// Module 15560 (PathUtils)
+// Module 15796 (PathUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PathUtils.tsx");
 
-export const pathJoin = function pathJoin() {
+export function pathJoin() {
   const items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {
@@ -13,8 +13,8 @@ export const pathJoin = function pathJoin() {
   }
   const found = items.filter((item) => item.length > 0);
   return found.join(str);
-};
-export const pathBasename = function pathBasename(str, arg1) {
+}
+export function pathBasename(str, arg1) {
   let arr = str;
   const parts = str.split(/[/\\]/);
   if ("" !== parts[parts.length - 1]) {
@@ -25,8 +25,8 @@ export const pathBasename = function pathBasename(str, arg1) {
     substr = arr.slice(0, -arg1.length);
   }
   return substr;
-};
-export const pathFilenameWithoutExt = function pathFilenameWithoutExt(str) {
+}
+export function pathFilenameWithoutExt(str) {
   let arr = str;
   const parts = str.split(/[/\\]/);
   if ("" !== parts[parts.length - 1]) {
@@ -38,4 +38,4 @@ export const pathFilenameWithoutExt = function pathFilenameWithoutExt(str) {
     substr = arr.slice(0, lastIndexOfResult);
   }
   return substr;
-};
+}

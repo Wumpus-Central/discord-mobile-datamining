@@ -1,13 +1,13 @@
-// === Module 2018: RunningGameStore ===
+// === Module 2019: RunningGameStore ===
 
-// Module 2018 (RunningGameStore)
+// Module 2019 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11240 */;
-import OverlayTypes from "OverlayTypes" /* 15559 */;
-import GameStore from "GameStore" /* 2019 */;
-import DetectableGameStore from "DetectableGameStore" /* 2036 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2040 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11294 */;
+import OverlayTypes from "OverlayTypes" /* 15795 */;
+import GameStore from "GameStore" /* 2020 */;
+import DetectableGameStore from "DetectableGameStore" /* 2037 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2041 */;
 
 require = fn;
 const Store = initializeDefault.Store;
@@ -134,19 +134,19 @@ export default runningGameStore;
 export function gameKey() {
   return "";
 }
-export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
+export function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
     const items = [DetectableGameStore, LibraryApplicationStore, GameStore];
   }
   return { source: OverlayTypes.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: OverlayTypes.OverlayMethod.Disabled, reason: "Dummy implementation" };
-};
+}
 export function isDetectionEnabled() {
   return false;
 }
 export function maybeTransformSubgame(arg0) {
   return arg0;
 }
-export const transformForGameSettings = function transformForGameSettings(arg0) {
+export function transformForGameSettings(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.played = "";
@@ -154,4 +154,4 @@ export const transformForGameSettings = function transformForGameSettings(arg0) 
   obj.verified = false;
   obj.detectable = false;
   return obj;
-};
+}

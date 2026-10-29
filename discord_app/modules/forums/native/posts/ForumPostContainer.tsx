@@ -1,20 +1,20 @@
-// === Module 13351: ForumPostContainer ===
+// === Module 13584: ForumPostContainer ===
 
-// Module 13351 (ForumPostContainer)
+// Module 13584 (ForumPostContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import Card from "Card" /* 6941 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11037 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import Card from "Card" /* 6965 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(7205);
+const ReanimatedHelperTypes = fn(7229);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

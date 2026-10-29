@@ -1,16 +1,16 @@
-// === Module 5026: themes ===
+// === Module 5027: themes ===
 
-// Module 5026 (themes)
+// Module 5027 (themes)
 import Constants from "Constants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 const ThemeTypes = Constants.ThemeTypes;
 const result = size.fileFinishedImporting("design/utils/shared/themes.tsx");
 
-export const isThemeLight = function isThemeLight(theme) {
+export function isThemeLight(theme) {
   return theme === ThemeTypes.LIGHT;
-};
-export const isThemeDark = function isThemeDark(theme) {
+}
+export function isThemeDark(theme) {
   if (ThemeTypes.ASH !== theme) {
     if (ThemeTypes.ONYX !== theme) {
       if (ThemeTypes.DARK !== theme) {
@@ -19,4 +19,4 @@ export const isThemeDark = function isThemeDark(theme) {
     }
   }
   return true;
-};
+}

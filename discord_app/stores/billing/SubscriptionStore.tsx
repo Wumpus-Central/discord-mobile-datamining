@@ -1,6 +1,6 @@
-// === Module 2055: SubscriptionStore ===
+// === Module 2056: SubscriptionStore ===
 
-// Module 2055 (SubscriptionStore)
+// Module 2056 (SubscriptionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1390 */;
@@ -17,8 +17,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(2048).isNoneSubscription;
-const SubscriptionRecord = fn(2056).SubscriptionRecord;
+const isNoneSubscription = fn(2049).isNoneSubscription;
+const SubscriptionRecord = fn(2057).SubscriptionRecord;
 const Constants = fn(1084);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;
@@ -366,7 +366,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
 
 export default subscriptionStore;
-export const getSubscriptionOfType = function getSubscriptionOfType(arg0, fn) {
+export function getSubscriptionOfType(arg0, fn) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -395,4 +395,4 @@ export const getSubscriptionOfType = function getSubscriptionOfType(arg0, fn) {
     }
     return null;
   }
-};
+}

@@ -1,6 +1,6 @@
-// === Module 5670: ApplicationCommandTypes ===
+// === Module 5672: ApplicationCommandTypes ===
 
-// Module 5670 (ApplicationCommandTypes)
+// Module 5672 (ApplicationCommandTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");

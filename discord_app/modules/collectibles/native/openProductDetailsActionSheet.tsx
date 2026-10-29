@@ -1,17 +1,17 @@
-// === Module 8702: openProductDetailsActionSheet ===
+// === Module 8705: openProductDetailsActionSheet ===
 
-// Module 8702 (openProductDetailsActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7684 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7696 */;
+// Module 8705 (openProductDetailsActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7707 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7719 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop Product Preview";
 const result = size.fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
 
 export const PRODUCT_DETAILS_ACTION_SHEET_KEY = "Shop Product Preview";
-export const openProductDetailsActionSheet = function openProductDetailsActionSheet(arg0, stack) {
+export function openProductDetailsActionSheet(arg0, stack) {
   ({ product, initialVariantIndex } = arg0);
   if (initialVariantIndex === undefined) {
     initialVariantIndex = 0;
@@ -32,12 +32,12 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   }
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8703, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8706, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
   const obj2 = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-};
-export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
+}
+export function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   CollectiblesActionCreators.productDetailsOpened(skuId);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8703, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
-};
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8706, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
+}

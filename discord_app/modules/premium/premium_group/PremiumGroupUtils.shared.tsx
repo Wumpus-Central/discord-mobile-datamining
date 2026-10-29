@@ -1,15 +1,15 @@
-// === Module 8454: ? ===
+// === Module 8476: ? ===
 
-// Module 8454
-import PremiumUtils from "PremiumUtils" /* 2050 */;
-import PriceUtils from "PriceUtils" /* 7376 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2054 */;
+// Module 8476
+import PremiumUtils from "PremiumUtils" /* 2051 */;
+import PriceUtils from "PriceUtils" /* 7399 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2055 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
 
-export const getPriceString = function getPriceString(hasAnyPremiumGroup, arg1) {
+export function getPriceString(hasAnyPremiumGroup, arg1) {
   if (null != hasAnyPremiumGroup) {
     if (hasAnyPremiumGroup.hasAnyPremiumGroup) {
       const planIdFromItems = hasAnyPremiumGroup.planIdFromItems;
@@ -33,4 +33,4 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup, arg1) 
     }
   }
   return null;
-};
+}

@@ -1,14 +1,14 @@
-// === Module 14821: isMostRecentDeadEndInvite ===
+// === Module 15056: isMostRecentDeadEndInvite ===
 
-// Module 14821 (isMostRecentDeadEndInvite)
+// Module 15056 (isMostRecentDeadEndInvite)
 import Constants from "Constants" /* 1084 */;
-import isInviteActiveDefault from "isInviteActive" /* 11388 */;
+import isInviteActiveDefault from "isInviteActive" /* 11442 */;
 import size from "module_2" /* 2 */;
 
 const ActivityActionTypes = Constants.ActivityActionTypes;
 const result = size.fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");
 
-export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, messages, id2, findActivityResult) {
+export function isMostRecentDeadEndInvite(id, messages, id2, findActivityResult) {
   closure_0 = id2;
   closure_1 = findActivityResult;
   return !messages.hasAnyAfter(id, (activity) => {
@@ -29,4 +29,4 @@ export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, 
     }
     return tmp;
   }, 25);
-};
+}

@@ -1,8 +1,8 @@
-// === Module 19028: ManagerRegistry ===
+// === Module 19261: ManagerRegistry ===
 
-// Module 19028 (ManagerRegistry)
+// Module 19261 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 19764 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 19986 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -72,6 +72,7 @@ const obj = {
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
   DeclarativeSystemNotifPermissionManager: null,
+  DeviceSilentModeManager: null,
   DiceRollLifecycleManager: null,
   DmSettingsUpsellManager: null,
   TopEmojisDataManager: null,
@@ -305,6 +306,13 @@ obj.DeclarativeSystemNotifPermissionManager = {
   inlineRequire() {
     return require("DeclarativeSystemNotifPermissionManager").default;
   }
+};
+obj.DeviceSilentModeManager = {
+  actions: ["FRAME_LAUNCH"],
+  inlineRequire() {
+    return require("DeviceSilentModeManager").default;
+  },
+  hasStoreChangeListeners: true
 };
 obj.DiceRollLifecycleManager = {
   actions: ["CHANNEL_SELECT", "DICE_ROLL_START"],
@@ -886,7 +894,7 @@ obj.OrbsArcadeFetchManager = {
   neverLoadBeforeConnectionOpen: true
 };
 obj.QuestFetchManager = {
-  actions: ["QUESTS_FETCH_CURRENT_QUESTS_BEGIN", "POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE", "RUNNING_NON_GAMES_CHANGE", "USER_SETTINGS_PROTO_UPDATE", "START_SESSION", "LOGOUT"],
+  actions: ["QUESTS_FETCH_CURRENT_QUESTS_BEGIN", "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", "POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE", "RUNNING_NON_GAMES_CHANGE", "USER_SETTINGS_PROTO_UPDATE", "START_SESSION", "LOGOUT"],
   inlineRequire() {
     return require("QuestFetchManager").default;
   },

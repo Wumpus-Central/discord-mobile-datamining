@@ -1,12 +1,12 @@
-// === Module 9832: GPlayActionCreators ===
+// === Module 9864: GPlayActionCreators ===
 
-// Module 9832 (GPlayActionCreators)
+// Module 9864 (GPlayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IAPStore from "IAPStore" /* 7559 */;
+import IAPStore from "IAPStore" /* 7582 */;
 
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
@@ -48,7 +48,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -98,7 +98,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           closure_145_20 = undefined;
           c21 = 1;
           c22 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -387,7 +387,7 @@ let closure_38 = async function _loadUserCountry() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -421,7 +421,7 @@ let closure_38 = async function _loadUserCountry() {
         const obj6 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
         closure_129_1(closure_129_2[14]).dispatch(obj6);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -481,7 +481,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -506,7 +506,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
             const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
             closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(7555).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(7578).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
             let tmp53 = !hasItem;
             closure_131_2 = tmp53;
@@ -659,11 +659,11 @@ let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let subscriptionId = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(9833);
+const GPlayAnalyticsStore = fn(9865);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
 let Constants = fn(1084);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(7560);
+Constants = fn(7583);
 const GPlayBillingResult = Constants.GPlayBillingResult;
 const GPlaySkusType = Constants.GPlaySkusType;
 const PremiumConstants = fn(1391);
@@ -682,7 +682,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -707,7 +707,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -806,7 +806,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -825,7 +825,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -858,7 +858,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -899,7 +899,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -924,7 +924,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1045,7 +1045,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1064,7 +1064,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1097,7 +1097,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1138,7 +1138,7 @@ asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1167,7 +1167,7 @@ asyncGeneratorStep(async () => {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -1192,7 +1192,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1211,7 +1211,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1244,7 +1244,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1286,9 +1286,9 @@ map1 = new Map();
 const set1 = new Set();
 const tmp11 = new BackoffDefault(5000, 300000, true);
 let closure_36 = new BackoffDefault(1000, 60000);
-asyncGeneratorStep(async (arg0, arg1) => {
-  if (c8 === 2) {
-    c8 = 3;
+asyncGeneratorStep(async (arg0, arg1, arg2) => {
+  if (c9 === 2) {
+    c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp7 === 3) {
     if (arg0 === 1) {
@@ -1297,74 +1297,74 @@ asyncGeneratorStep(async (arg0, arg1) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
-      c8 = 2;
-      if (0 === v2) {
+      c9 = 2;
+      if (0 === c8) {
         if (arg0 === 1) {
-          c8 = 3;
+          c9 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
+          c9 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp5;
-          closure_131_0 = closure_0;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          closure_131_1 = state.getState().analyticsByProductId[closure_0];
-          c6 = 1;
-          v2 = 2;
-          c8 = 1;
-          const obj5 = { value: BillingManager.purchase(closure_0, _true), done: false };
+          closure_5 = tmp3;
+          closure_4 = tmp5;
+          closure_132_0 = closure_0;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          closure_132_1 = state.getState().analyticsByProductId[closure_0];
+          let v0 = 1;
+          c8 = 2;
+          c9 = 1;
+          const obj5 = { value: BillingManager.purchase(closure_0, _true, closure_2), done: false };
           return obj5;
         }
       } else if (1 === tmp8) {
-        c6 = 0;
-        closure_131_4 = closure_5;
+        v0 = 0;
+        closure_132_4 = closure_6;
         const obj6 = { tags: null };
-        const obj7 = { productId: closure_131_0 };
+        const obj7 = { productId: closure_132_0 };
         obj6.tags = obj7;
-        captureGPlayBillingException(closure_131_4, obj6);
-        closure_2 = closure_131_1;
-        if (closure_131_1 == null) {
-          closure_2 = {};
+        captureGPlayBillingException(closure_132_4, obj6);
+        closure_3 = closure_132_1;
+        if (closure_132_1 == null) {
+          closure_3 = {};
         }
-        closure_131_2 = closure_2;
-        const succeededOnlyFields = closure_131_2.succeededOnlyFields;
-        closure_131_3 = v2(closure_131_2, closure_3);
+        closure_132_2 = closure_3;
+        const succeededOnlyFields = closure_132_2.succeededOnlyFields;
+        closure_132_3 = v0(closure_132_2, closure_3);
         const obj8 = {};
-        const merged = Object.assign(closure_131_3);
+        const merged = Object.assign(closure_132_3);
         obj8.location = "purchase";
-        obj8.product_id = closure_131_0;
-        obj8.error = closure_131_4.message;
+        obj8.product_id = closure_132_0;
+        obj8.error = closure_132_4.message;
         _true(closure_2[19]).track(constants.GPLAY_PURCHASE_FAILED, obj8);
-        throw closure_131_4;
+        throw closure_132_4;
       } else if (arg0 === 1) {
-        c8 = 3;
+        c9 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
+        v0 = 0;
+        c9 = 3;
         const obj = { value, done: true };
         return obj;
       } else {
-        c6 = 0;
-        c8 = 3;
-        return { value: "IconComponent", done: null };
+        v0 = 0;
+        c9 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
       }
-    } catch (tmp39) {
-      closure_5 = tmp39;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp39;
+    } catch (tmp40) {
+      closure_6 = tmp40;
+      if (tmp4 === v0) {
+        c9 = tmp2;
+        throw tmp40;
       } else {
-        v2 = tmp;
+        c8 = tmp;
       }
     }
   }
@@ -1380,7 +1380,7 @@ let closure_0 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1490,7 +1490,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1509,7 +1509,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1542,7 +1542,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1584,7 +1584,7 @@ let result = size.fileFinishedImporting("actions/native/GPlayActionCreators.tsx"
 export const loadSubscriptionSkus = importDefaultResultResult;
 export const loadInAppSkus = importDefaultResultResult1;
 export const loadSkus = importDefaultResultResult2;
-export const ensureSkusLoaded = function ensureSkusLoaded(items) {
+export function ensureSkusLoaded(items) {
   closure_0 = items;
   if (obj.isAndroid()) {
     if (items.every((item) => null != product.getProduct(item))) {
@@ -1610,7 +1610,7 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -1704,8 +1704,8 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
   }
   obj = closure_0(getUserCountry[18]);
   tmp = closure_0;
-};
-export const retainInAppSkus = function retainInAppSkus(c0) {
+}
+export function retainInAppSkus(c0) {
   closure_0 = c0;
   let item = c0.forEach((item) => {
     let num = map1.get(item);
@@ -1796,8 +1796,8 @@ export const retainInAppSkus = function retainInAppSkus(c0) {
     });
   };
   return obj3;
-};
-export const loadUserCountry = function loadUserCountry() {
+}
+export function loadUserCountry() {
   const self = this;
   const apply = closure_38.apply;
   if (typeof apply === "unknown") {
@@ -1806,8 +1806,8 @@ export const loadUserCountry = function loadUserCountry() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const purchase = function purchase() {
+}
+export function purchase() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -1816,8 +1816,8 @@ export const purchase = function purchase() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const subscribe = function subscribe() {
+}
+export function subscribe() {
   const self = this;
   const apply = closure_39.apply;
   if (typeof apply === "unknown") {
@@ -1826,8 +1826,8 @@ export const subscribe = function subscribe() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const verifyPurchase = function verifyPurchase() {
+}
+export function verifyPurchase() {
   const self = this;
   const apply = closure_40.apply;
   if (typeof apply === "unknown") {
@@ -1836,8 +1836,8 @@ export const verifyPurchase = function verifyPurchase() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(productId) {
+}
+export function sendPaymentCompleteAnalytics(productId) {
   const tmp = state.getState().analyticsByProductId[productId.productId];
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
@@ -1851,8 +1851,8 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
     React6(productId.productId);
     const obj2 = _true(getUserCountry[19]);
   }
-};
-export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, c7, c5) {
+}
+export function updatePendingDowngrade(arg0, c6, c7, c5) {
   const items = [IAPStore.getProduct(arg0), IAPStore.getProduct(c6)];
   [tmp, tmp2] = items;
   if (null != tmp2) {
@@ -1873,11 +1873,11 @@ export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, 
       const obj2 = _true(getUserCountry[14]);
     }
   }
-};
-export const downgradeSubscription = function downgradeSubscription(pendingDowngrade) {
+}
+export function downgradeSubscription(pendingDowngrade) {
   ({ purchaseToken, subscriptionId, newSubscriptionSkuId } = pendingDowngrade);
   const HTTP = closure_0(getUserCountry[22]).HTTP;
   const request = { url: constants2.DOWNGRADE_SUBSCRIPTION, body: { purchase_token: purchaseToken, subscription_id: subscriptionId, subscription_sku_id: newSubscriptionSkuId }, rejectWithError: false };
   return HTTP.post(request);
-};
+}
 export const getUserCountry = importDefaultResultResult3;

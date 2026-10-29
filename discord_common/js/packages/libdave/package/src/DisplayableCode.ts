@@ -1,11 +1,11 @@
-// === Module 9216: DisplayableCode ===
+// === Module 9220: DisplayableCode ===
 
-// Module 9216 (DisplayableCode)
+// Module 9220 (DisplayableCode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
 
-export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
+export function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
   if (toByteArrayResult.byteLength < desiredLength) {
     const _Error4 = Error;
     const error = new Error("data.byteLength must be greater than or equal to desiredLength");
@@ -56,4 +56,4 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
     }
     return str3;
   }
-};
+}

@@ -1,32 +1,32 @@
-// === Module 16896: SettingsAppearanceThemePickerScreen ===
+// === Module 17135: SettingsAppearanceThemePickerScreen ===
 
-// Module 16896 (SettingsAppearanceThemePickerScreen)
+// Module 17135 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
-import themes2 from "themes" /* 5026 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5238 */;
-import timing from "timing" /* 5242 */;
-import timingPresets from "timingPresets" /* 5245 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import QuestTypes from "QuestTypes" /* 6748 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6916 */;
-import Pressables from "Pressables" /* 6944 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 14073 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16120 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16121 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16647 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16648 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16649 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 16897 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16899 */;
+import themes2 from "themes" /* 5027 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5032 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5239 */;
+import timing from "timing" /* 5243 */;
+import timingPresets from "timingPresets" /* 5246 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import QuestTypes from "QuestTypes" /* 6771 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6940 */;
+import Pressables from "Pressables" /* 6968 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 14306 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16357 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16358 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16885 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16886 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16887 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 17136 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17138 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 import UserStore from "UserStore" /* 1389 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
@@ -47,11 +47,11 @@ function needsHexagonCampaignEnrollment(themes) {
 const View = fn(17).View;
 const ThemeConstants = fn(1207);
 ({ SystemTheme: map1, SystemThemeState: closure_14 } = ThemeConstants);
-const HexagonCampaignPerk = fn(5029).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5030).HexagonCampaignPerk;
 const ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj2 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_24, marginBottom: null };
 const PlatformUtils = fn(1381);
 let num = 0;
@@ -71,52 +71,52 @@ let closure_22 = items.map((item) => {
   return internal.resolveSemanticColor(item, nativeDefault.colors.CARD_SECONDARY_BG);
 });
 let cardSecondaryStops = items.map((item, index) => index);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj6 = { width: "100%", gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 let closure_24 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_25 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_26 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj12 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_27 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj14 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let closure_28 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj16 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_29 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_DEFAULT }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj18 = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_30 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj20 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_31 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_SUBTLE }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj22 = { color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_32 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj24 = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_33 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_MUTED }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj26 = { borderColor: nativeDefault.colors.BORDER_MUTED };
 let closure_34 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj28 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_35 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_NORMAL }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj30 = { borderColor: nativeDefault.colors.BORDER_NORMAL };
 let closure_36 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj32 = { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON };
 let closure_37 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.TEXT_SUBTLE }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj34 = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_38 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, items);
-createStyles = fn(5004);
+createStyles = fn(5005);
 const obj36 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_39 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_BRAND }, items);
 function getSegmentedControlItems() {
@@ -190,8 +190,8 @@ function ThemePicker(defaultIndex) {
   [tmp12, c13] = canGoBack(hasSaveButton.useState(str), 2);
   const tmp8Result = canGoBack(hasSaveButton.useState(str), 2);
   closure_14 = tmp14;
-  const headerHeight = require("module_6969").useHeaderHeight();
-  const tmp3Result = require("module_6969");
+  const headerHeight = require("module_6993").useHeaderHeight();
+  const tmp3Result = require("module_6993");
   [tmp16, c15] = canGoBack(hasSaveButton.useState(0), 2);
   const callback = obj2.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
@@ -354,7 +354,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -457,7 +457,7 @@ function ThemePicker(defaultIndex) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -497,7 +497,7 @@ function ThemePicker(defaultIndex) {
                 callback1(tmp12);
                 close();
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
           }
@@ -556,7 +556,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

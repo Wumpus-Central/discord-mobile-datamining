@@ -1,14 +1,14 @@
-// === Module 8474: VoiceSessionUtils ===
+// === Module 8496: VoiceSessionUtils ===
 
-// Module 8474 (VoiceSessionUtils)
+// Module 8496 (VoiceSessionUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMessageAuthor from "useMessageAuthor" /* 6401 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8370 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8475 */;
+import useMessageAuthor from "useMessageAuthor" /* 6425 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8392 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8497 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7767 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7789 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -149,7 +149,7 @@ export const useSortedVoiceSessionParticipants = ReactCompilerGating.isReactComp
   const items1 = [tmp, stateFromStores];
   return noop.useMemo(() => maybeSortByProbability.maybeSortByProbability(closure_0, stateFromStores, "VoiceSessionUtils - participants"), items1);
 });
-export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
+export function getVoiceSessionMessageContent(channel_id) {
   _require = ChannelStore.getChannel(channel_id.channel_id);
   let tmp2 = getHumanizedCallDurationDefault(channel_id);
   const messageAuthor = require("useMessageAuthor").getMessageAuthor(channel_id);
@@ -207,4 +207,4 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     formatToPlainStringResult = intl2.formatToPlainString(tmp3(1125).t.atbXuX, obj3);
   }
   return formatToPlainStringResult;
-};
+}

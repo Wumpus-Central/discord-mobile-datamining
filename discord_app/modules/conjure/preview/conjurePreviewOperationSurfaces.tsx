@@ -1,7 +1,7 @@
-// === Module 10801: conjurePreviewOperationSurfaces ===
+// === Module 10877: conjurePreviewOperationSurfaces ===
 
-// Module 10801 (conjurePreviewOperationSurfaces)
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10799 */;
+// Module 10877 (conjurePreviewOperationSurfaces)
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10875 */;
 import size from "module_2" /* 2 */;
 
 function bestEffort(arg0, fn) {
@@ -12,7 +12,7 @@ function bestEffort(arg0, fn) {
 }
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewOperationSurfaces.tsx");
 
-export const createPreviewOperationSurfaces = function createPreviewOperationSurfaces(arg0) {
+export function createPreviewOperationSurfaces(arg0) {
   closure_0 = arg0;
   let map = new Map();
   return {
@@ -78,4 +78,4 @@ export const createPreviewOperationSurfaces = function createPreviewOperationSur
       return drainResult;
     }
   };
-};
+}

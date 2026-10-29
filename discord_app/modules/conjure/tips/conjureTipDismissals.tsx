@@ -1,6 +1,6 @@
-// === Module 12373: conjureTipDismissals ===
+// === Module 12427: conjureTipDismissals ===
 
-// Module 12373 (conjureTipDismissals)
+// Module 12427 (conjureTipDismissals)
 import Storage5 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
@@ -102,7 +102,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/tips/conjureTipDismissals.tsx");
 
 export { isConjureTipDismissed };
-export const dismissConjureTip = function dismissConjureTip(tip, tip2) {
+export function dismissConjureTip(tip, tip2) {
   let tmp = ideasIntroAnchorId;
   if (ideasIntroAnchorId === undefined) {
     tmp = null;
@@ -189,7 +189,7 @@ export const dismissConjureTip = function dismissConjureTip(tip, tip2) {
       const result2 = Storage2.set(conjureTipDismissals, obj5);
     }
   }
-};
+}
 export const useConjureTipDismissalsVersion = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureTipDismissalsVersion() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

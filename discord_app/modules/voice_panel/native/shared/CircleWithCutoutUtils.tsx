@@ -1,8 +1,8 @@
-// === Module 11424: CircleWithCutoutUtils ===
+// === Module 11478: CircleWithCutoutUtils ===
 
-// Module 11424 (CircleWithCutoutUtils)
+// Module 11478 (CircleWithCutoutUtils)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7994 */;
+import inlineStyles from "inlineStyles" /* 8017 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -142,11 +142,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CircleWi
   size.children = items1;
   return React4(inlineStylesDefault, size);
 });
-export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, c13) {
+export function getBadgeTop(badgeRadius, buttonRadius, c13) {
   return buttonRadius - buttonRadius * Math.cos(c13 * closure_5) - badgeRadius;
-};
-export const getBadgeLeft = function getBadgeLeft(badgeRadius, buttonRadius, c13) {
+}
+export function getBadgeLeft(badgeRadius, buttonRadius, c13) {
   return buttonRadius + buttonRadius * Math.sin(c13 * closure_5) - badgeRadius;
-};
+}
 export { getCutoutCenterX };
 export { getCutoutCenterY };

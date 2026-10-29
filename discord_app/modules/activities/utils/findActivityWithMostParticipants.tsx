@@ -1,7 +1,7 @@
-// === Module 17766: findActivityWithMostParticipants ===
+// === Module 18004: findActivityWithMostParticipants ===
 
-// Module 17766 (findActivityWithMostParticipants)
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+// Module 18004 (findActivityWithMostParticipants)
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
@@ -21,7 +21,7 @@ export default function findActivityWithMostParticipants(arr) {
     }, arr[0]);
   }
 };
-export const findActivityWithMostNonBlockedOrIgnoredParticipants = function findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel) {
+export function findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel) {
   if (0 === embeddedActivitiesForChannel.length) {
     return null;
   } else if (1 === length) {
@@ -41,4 +41,4 @@ export const findActivityWithMostNonBlockedOrIgnoredParticipants = function find
     });
     return embeddedActivitiesForChannel;
   }
-};
+}

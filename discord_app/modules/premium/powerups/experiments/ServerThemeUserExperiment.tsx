@@ -1,8 +1,8 @@
-// === Module 5222: ServerThemeUserExperiment ===
+// === Module 5223: ServerThemeUserExperiment ===
 
-// Module 5222 (ServerThemeUserExperiment)
+// Module 5223 (ServerThemeUserExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,9 +14,9 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeUserExperiment.tsx");
 
 export const ServerThemeUserExperiment = apexExperiment;
-export const getServerThemeUserEnabled = function getServerThemeUserEnabled(GuildPowerupsConstants) {
+export function getServerThemeUserEnabled(GuildPowerupsConstants) {
   return apexExperiment.getConfig({ location: GuildPowerupsConstants }).enabled;
-};
+}
 export const useServerThemeUserEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerThemeUserEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {

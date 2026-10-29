@@ -1,6 +1,6 @@
-// === Module 15331: PinotMemberSettingStore ===
+// === Module 15566: PinotMemberSettingStore ===
 
-// Module 15331 (PinotMemberSettingStore)
+// Module 15566 (PinotMemberSettingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

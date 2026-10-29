@@ -1,6 +1,6 @@
-// === Module 12819: PremiumGiftingIntentUtils ===
+// === Module 13040: PremiumGiftingIntentUtils ===
 
-// Module 12819 (PremiumGiftingIntentUtils)
+// Module 13040 (PremiumGiftingIntentUtils)
 import Constants from "Constants" /* 1084 */;
 import PremiumConstants from "PremiumConstants" /* 1391 */;
 import size from "module_2" /* 2 */;
@@ -16,7 +16,7 @@ items1[2] = items3;
 const map = new Map(items1);
 const result = size.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
 
-export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
+export function getPremiumGiftingIntentAnalyticsLocation(arg0) {
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {
     ({ FRIEND_ANNIVERSARIES_CHAT: obj2.chat, FRIEND_ANNIVERSARIES_ACTION_BUTTON: obj2.actionButton, FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK: obj2.actionButtonCoachmark } = AnalyticsLocations);
     let obj = { chat: null, actionButton: null, actionButtonCoachmark: null };
@@ -25,15 +25,15 @@ export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGifti
     obj = {};
   }
   return obj;
-};
-export const getGiftIntentTypeForLocation = function getGiftIntentTypeForLocation(arg0) {
+}
+export function getGiftIntentTypeForLocation(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = null;
   }
   return value;
-};
-export const parseGiftIntentType = function parseGiftIntentType(giftIntentType) {
+}
+export function parseGiftIntentType(giftIntentType) {
   let tmp = null;
   if (typeof giftIntentType === "number") {
     tmp = null;
@@ -45,4 +45,4 @@ export const parseGiftIntentType = function parseGiftIntentType(giftIntentType) 
     }
   }
   return tmp;
-};
+}

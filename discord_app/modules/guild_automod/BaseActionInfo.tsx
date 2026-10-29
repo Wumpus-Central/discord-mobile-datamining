@@ -1,20 +1,20 @@
-// === Module 19323: BaseActionInfo ===
+// === Module 19556: BaseActionInfo ===
 
-// Module 19323 (BaseActionInfo)
+// Module 19556 (BaseActionInfo)
 import util from "util" /* 1125 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const Constants = fn(12870);
+const Constants = fn(13091);
 ({ AutomodActionType: hasOwnProperty, AutomodTriggerType: metroRequire } = Constants);
-const getFriendlyDurationString = fn(4918).getFriendlyDurationString;
+const getFriendlyDurationString = fn(4919).getFriendlyDurationString;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/BaseActionInfo.tsx");
 
-export const getBaseActionInfo = function getBaseActionInfo(actionType, metadata, triggerType) {
+export function getBaseActionInfo(actionType, metadata, triggerType) {
   if (constants.BLOCK_MESSAGE !== actionType) {
     if (constants.FLAG_TO_CHANNEL !== actionType) {
       if (constants.USER_COMMUNICATION_DISABLED !== actionType) {
@@ -124,4 +124,4 @@ export const getBaseActionInfo = function getBaseActionInfo(actionType, metadata
     }
   }
   flag = true;
-};
+}

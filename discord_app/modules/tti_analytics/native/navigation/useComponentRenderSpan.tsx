@@ -1,10 +1,10 @@
-// === Module 18262: useComponentRenderSpan ===
+// === Module 18496: useComponentRenderSpan ===
 
-// Module 18262 (useComponentRenderSpan)
+// Module 18496 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12909 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 12912 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18263 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13130 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 13133 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18497 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ let current2 = ReactCompilerGating.isReactCompilerEnabled();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/useComponentRenderSpan.tsx");
 
-export const useNavigationTTIRegionMeasurement = function useNavigationTTIRegionMeasurement(exclude, regionId) {
+export function useNavigationTTIRegionMeasurement(exclude, regionId) {
   if (current2) {
     closure_129_0 = exclude;
     closure_129_1 = regionId;
@@ -1010,4 +1010,4 @@ export const useNavigationTTIRegionMeasurement = function useNavigationTTIRegion
     obj2 = { onLayout: callback1 };
     let obj = require("NavTTISurfaceContext");
   }
-};
+}

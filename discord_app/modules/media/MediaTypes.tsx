@@ -1,11 +1,11 @@
-// === Module 6056: MediaTypes ===
+// === Module 6060: MediaTypes ===
 
-// Module 6056 (MediaTypes)
+// Module 6060 (MediaTypes)
 import Constants from "Constants" /* 1084 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import Server from "Server" /* 1997 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
+import Server from "Server" /* 1998 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
 import size from "module_2" /* 2 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {
@@ -43,11 +43,11 @@ const result = size.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
 export { ContentScanFlags };
 export const ImageEncoder = { NATIVE: "native", JPEGLI: "jpegli", JPEG_IOS: "jpeg_ios", PASSTHROUGH: "passthrough", WIC: "wic", IMAGEIO: "imageio", SYSIMG_STUB: "sysimg_stub", SYSIMG_UNKNOWN: "sysimg_unknown" };
-export const toContentScanMetadata = function toContentScanMetadata(version) {
+export function toContentScanMetadata(version) {
   return { version: version.version, flags: version.flags };
-};
+}
 export const UnfurledMediaItemFlags = obj2;
-export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
+export function toUnfurledMediaItem(media) {
   const size = { url: media.url, proxyUrl: media.proxy_url, height: media.height, width: media.width, placeholder: media.placeholder, placeholderVersion: media.placeholder_version, contentType: media.content_type, originalContentType: media.original_content_type, loadingState: media.loading_state, contentScanMetadata: null, flags: null };
   let tmp;
   if (null != media.content_scan_metadata) {
@@ -62,9 +62,9 @@ export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
   }
   size.flags = num;
   return size;
-};
+}
 export { messageAttachmentToUnfurledMediaItem };
-export const getUnfurledMediaItemType = function getUnfurledMediaItemType(contentType) {
+export function getUnfurledMediaItemType(contentType) {
   let str = "IMAGE";
   if (!obj.isImageContentType(contentType.contentType)) {
     let str3 = "INVALID";
@@ -82,8 +82,8 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(conten
     tmpResult = MediaFormatTesters;
   }
   return str;
-};
-export const messageAttachmentToMediaItem = function messageAttachmentToMediaItem(found2, tmp2Result) {
+}
+export function messageAttachmentToMediaItem(found2, tmp2Result) {
   const obj = {};
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
   let str = "IMAGE";
@@ -99,12 +99,12 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
   obj.alt = found2.description;
   obj.sourceMetadata = { message: tmp2Result, identifier: { type: "attachment", attachmentId: found2.id, filename: found2.filename, title: found2.title, size: found2.size } };
   return obj;
-};
-export const embedMediaToMediaItem = function embedMediaToMediaItem(thumbnail, sourceMetadata, IMAGE) {
+}
+export function embedMediaToMediaItem(thumbnail, sourceMetadata, IMAGE) {
   const size = { type: IMAGE, url: thumbnail.url, proxyUrl: thumbnail.proxyURL, width: thumbnail.width, height: thumbnail.height, placeholder: thumbnail.placeholder, placeholderVersion: thumbnail.placeholderVersion, sourceMetadata, contentType: thumbnail.contentType };
   return size;
-};
-export const isVisualUnfurledMediaItem = function isVisualUnfurledMediaItem(width) {
+}
+export function isVisualUnfurledMediaItem(width) {
   let tmp = null != width.width;
   if (tmp) {
     tmp = width.width > 0;
@@ -116,8 +116,8 @@ export const isVisualUnfurledMediaItem = function isVisualUnfurledMediaItem(widt
     tmp = width.height > 0;
   }
   return tmp;
-};
-export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
+}
+export function getMediaItemDisplayUrl(type) {
   if (null == type) {
     return null;
   } else {
@@ -142,4 +142,4 @@ export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
     }
     return proxyUrl;
   }
-};
+}

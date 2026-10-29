@@ -1,15 +1,15 @@
-// === Module 8628: NativeChatCapabilities ===
+// === Module 8650: NativeChatCapabilities ===
 
-// Module 8628 (NativeChatCapabilities)
+// Module 8650 (NativeChatCapabilities)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeChatModuleDefault from "NativeChatModule" /* 8629 */;
+import NativeChatModuleDefault from "NativeChatModule" /* 8651 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/chat/native/NativeChatCapabilities.tsx");
 
-export const nativeChatSupportsAudioEmbeds = function nativeChatSupportsAudioEmbeds() {
+export function nativeChatSupportsAudioEmbeds() {
   let flag = null;
   if (null != closure_3) {
     return closure_3;
@@ -37,4 +37,4 @@ export const nativeChatSupportsAudioEmbeds = function nativeChatSupportsAudioEmb
     closure_3 = tmp3;
     obj = PlatformUtils;
   }
-};
+}

@@ -1,10 +1,10 @@
-// === Module 18004: ChannelAffinitiesV2ActionCreators ===
+// === Module 18238: ChannelAffinitiesV2ActionCreators ===
 
-// Module 18004 (ChannelAffinitiesV2ActionCreators)
+// Module 18238 (ChannelAffinitiesV2ActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ConsentStore from "ConsentStore" /* 6705 */;
-import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 18002 */;
+import ConsentStore from "ConsentStore" /* 6729 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 18236 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -12,7 +12,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx");
 
-export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
+export function fetchChannelAffinitiesV2() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -48,4 +48,4 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
     return nextPromise;
   }
   nextPromise = Promise.resolve();
-};
+}

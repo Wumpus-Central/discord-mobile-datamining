@@ -1,7 +1,7 @@
-// === Module 7308: useStartProviderConnection ===
+// === Module 7332: useStartProviderConnection ===
 
-// Module 7308 (useStartProviderConnection)
-import LinkingDefault from "Linking" /* 5696 */;
+// Module 7332 (useStartProviderConnection)
+import LinkingDefault from "Linking" /* 5698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEna
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -158,7 +158,7 @@ export const useStartProviderConnection = ReactCompilerGating.isReactCompilerEna
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

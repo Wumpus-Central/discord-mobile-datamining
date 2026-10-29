@@ -1,21 +1,21 @@
-// === Module 10756: conjureProjectSockets ===
+// === Module 10831: conjureProjectSockets ===
 
-// Module 10756 (conjureProjectSockets)
+// Module 10831 (conjureProjectSockets)
 import size from "module_2" /* 2 */;
 
 const map = new Map();
 let result = size.fileFinishedImporting("modules/conjure/connection/conjureProjectSockets.tsx");
 
-export const getConjureSocket = function getConjureSocket(projectId) {
+export function getConjureSocket(projectId) {
   return map.get(projectId);
-};
-export const setConjureSocket = function setConjureSocket(projectId, ws) {
+}
+export function setConjureSocket(projectId, ws) {
   const result = map.set(projectId, ws);
-};
-export const deleteConjureSocket = function deleteConjureSocket(projectId) {
+}
+export function deleteConjureSocket(projectId) {
   map.delete(projectId);
-};
-export const sendOnConjureSocket = function sendOnConjureSocket(projectId, arg1, fn) {
+}
+export function sendOnConjureSocket(projectId, arg1, fn) {
   value = map.get(projectId);
   try {
     if (null == value) {
@@ -29,4 +29,4 @@ export const sendOnConjureSocket = function sendOnConjureSocket(projectId, arg1,
   } catch (err) {
     return false;
   }
-};
+}

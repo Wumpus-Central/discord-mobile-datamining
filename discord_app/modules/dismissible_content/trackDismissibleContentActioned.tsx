@@ -1,20 +1,20 @@
-// === Module 5678: trackDismissibleContentActioned ===
+// === Module 5680: trackDismissibleContentActioned ===
 
-// Module 5678 (trackDismissibleContentActioned)
+// Module 5680 (trackDismissibleContentActioned)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import dismissible_content from "dismissible_content" /* 4840 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4844 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5677 */;
+import dismissible_content from "dismissible_content" /* 4841 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4845 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5679 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4843 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4844 */;
 
 require = fn;
-const getCurrentlyShownCounts = fn(4848).getCurrentlyShownCounts;
+const getCurrentlyShownCounts = fn(4849).getCurrentlyShownCounts;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/trackDismissibleContentActioned.tsx");
 
-export const trackDismissibleContentActioned = function trackDismissibleContentActioned(content) {
+export function trackDismissibleContentActioned(content) {
   let obj = dismissAction;
   if (dismissAction === undefined) {
     obj = {};
@@ -35,4 +35,4 @@ export const trackDismissibleContentActioned = function trackDismissibleContentA
     ({ version: obj5.version, snowflakeId: obj5.snowflake_id } = obj);
     obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_ACTIONED, obj7);
   }
-};
+}

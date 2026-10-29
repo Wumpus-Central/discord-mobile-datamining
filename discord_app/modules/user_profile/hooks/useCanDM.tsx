@@ -1,12 +1,12 @@
-// === Module 13251: useCanDM ===
+// === Module 13485: useCanDM ===
 
-// Module 13251 (useCanDM)
-import UserSettings from "UserSettings" /* 4832 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7766 */;
-import LurkingStore from "LurkingStore" /* 4937 */;
+// Module 13485 (useCanDM)
+import UserSettings from "UserSettings" /* 4833 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7788 */;
+import LurkingStore from "LurkingStore" /* 4938 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 
 const require = globalThis.__r;
 
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanDM
   }
   const tmpResult = require("initialize");
   stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
-  const RestrictedGuildIds = tmp(4832).RestrictedGuildIds;
+  const RestrictedGuildIds = tmp(4833).RestrictedGuildIds;
   setting = RestrictedGuildIds.useSetting();
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class F {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanDM
     return tmp;
   });
 });
-export const canDm = function canDm(userId, guildId) {
+export function canDm(userId, guildId) {
   let isLurkingResult = null != guildId;
   const id = AuthenticationStore.getId();
   if (isLurkingResult) {
@@ -200,4 +200,4 @@ export const canDm = function canDm(userId, guildId) {
     tmp8 = setting;
   }
   return tmp8;
-};
+}

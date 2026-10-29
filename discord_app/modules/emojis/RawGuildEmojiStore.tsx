@@ -1,7 +1,7 @@
-// === Module 6761: RawGuildEmojiStore ===
+// === Module 6784: RawGuildEmojiStore ===
 
-// Module 6761 (RawGuildEmojiStore)
-import EmojiTypes from "EmojiTypes" /* 4953 */;
+// Module 6784 (RawGuildEmojiStore)
+import EmojiTypes from "EmojiTypes" /* 4954 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -47,8 +47,8 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
-const TypeTag = fn(4872).TypeTag;
-const LibdiscoreStore = fn(4879).LibdiscoreStore;
+const TypeTag = fn(4873).TypeTag;
+const LibdiscoreStore = fn(4880).LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,10 +1,10 @@
-// === Module 17083: ChatSetting ===
+// === Module 17322: ChatSetting ===
 
-// Module 17083 (ChatSetting)
+// Module 17322 (ChatSetting)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import ImageTextIcon from "ImageTextIcon" /* 17084 */;
-import SettingBuilders from "SettingBuilders" /* 11248 */;
+import ImageTextIcon from "ImageTextIcon" /* 17323 */;
+import SettingBuilders from "SettingBuilders" /* 11302 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

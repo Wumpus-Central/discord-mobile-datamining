@@ -1,13 +1,13 @@
-// === Module 7687: CollectiblesProductRecord ===
+// === Module 7710: CollectiblesProductRecord ===
 
-// Module 7687 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 2047 */;
+// Module 7710 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 2048 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7688 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7694 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7711 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7717 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7689);
+const CollectiblesItemRecord = fn(7712);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1084);
@@ -45,9 +45,9 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.bundledProducts = mapped;
   let tmp11;
   if (null != preview_assets) {
-    ({ fg_static: obj2.fgStatic, fg_animated: obj2.fgAnimated, bg_static: obj2.bgStatic, bg_animated: obj2.bgAnimated } = preview_assets);
-    tmp11 = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
-    const obj3 = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
+    ({ fg_static: obj2.fgStatic, fg_video: obj2.fgVideo, fg_animated: obj2.fgAnimated, bg_static: obj2.bgStatic, bg_animated: obj2.bgAnimated } = preview_assets);
+    tmp11 = { fgStatic: null, fgVideo: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
+    const obj3 = { fgStatic: null, fgVideo: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
   }
   obj.previewAssets = tmp11;
   let mapped1;
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 255, categoryWillUnpublishAt: 255, isCategoryReward: null, prices: "72952773756d8776abb1f02e0c8ab235", previewAssets: "img_account_sync_battlenet_light_and_dark", googleSkuIds: "png", eligibleOffers: true, variants: "/assets/images/platforms", bundledProducts: 255, isFirstParty: 255 };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "unicodeVersion", items: null, categorySkuId: null, categoryWillUnpublishAt: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: null };
               let str;
               if (first != null) {
                 str = first.optionValue;

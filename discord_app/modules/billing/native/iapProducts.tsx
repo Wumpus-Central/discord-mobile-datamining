@@ -1,6 +1,6 @@
-// === Module 14171: billing/iapProducts ===
+// === Module 14404: billing/iapProducts ===
 
-// Module 14171 (billing/iapProducts)
+// Module 14404 (billing/iapProducts)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/billing/native/iapProducts.tsx");

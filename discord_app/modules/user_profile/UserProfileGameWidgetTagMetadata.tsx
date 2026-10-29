@@ -1,8 +1,8 @@
-// === Module 14640: UserProfileGameWidgetTagMetadata ===
+// === Module 14874: UserProfileGameWidgetTagMetadata ===
 
-// Module 14640 (UserProfileGameWidgetTagMetadata)
+// Module 14874 (UserProfileGameWidgetTagMetadata)
 import util from "util" /* 1125 */;
-import WidgetGameTag from "WidgetGameTag" /* 14641 */;
+import WidgetGameTag from "WidgetGameTag" /* 14875 */;
 import size from "module_2" /* 2 */;
 
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
@@ -109,7 +109,7 @@ let closure_2 = {
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTagMetadata.tsx");
 
 export const WidgetGameTagIconRole = obj;
-export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(arg0) {
+export function buildWidgetGameTagMetadata(arg0) {
   const obj = {};
   const keys = Object.keys(closure_2);
   const iter = keys[Symbol.iterator]();
@@ -126,4 +126,4 @@ export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(ar
     continue;
   }
   return obj;
-};
+}

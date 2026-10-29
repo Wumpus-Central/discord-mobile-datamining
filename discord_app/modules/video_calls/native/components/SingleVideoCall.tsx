@@ -1,12 +1,12 @@
-// === Module 11725: SingleVideoCall ===
+// === Module 11779: SingleVideoCall ===
 
-// Module 11725 (SingleVideoCall)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5746 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8705 */;
+// Module 11779 (SingleVideoCall)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5748 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(10921);
+const ChannelCallStore = fn(10956);
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -18,8 +18,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleVi
   ({ participant, channel } = arg0);
   const obj = channel(576);
   const tmp4 = analyticsLocations;
-  ({ bottom, right } = analyticsLocations(1630)());
-  analyticsLocations = analyticsLocations(7289)().analyticsLocations;
+  ({ bottom, right } = analyticsLocations(1631)());
+  analyticsLocations = analyticsLocations(7313)().analyticsLocations;
   if (cResult[0] !== channel.id) {
     function handleDoubleTap() {
       React4();
@@ -49,15 +49,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleVi
           }
         }
       }
-      const obj2 = { gestureEnabled: true, participant, avatarSize: channel(1199).AvatarSizes.PROFILE, resizeMode: channel(11475).ResizeMode.AUTO, statusStyle: tmp8, onSingleTap, onDoubleTap: tmp6, onLongPress: tmp7 };
-      const tmp13 = jsx(tmp4(11485), { gestureEnabled: true, participant, avatarSize: channel(1199).AvatarSizes.PROFILE, resizeMode: channel(11475).ResizeMode.AUTO, statusStyle: tmp8, onSingleTap, onDoubleTap: tmp6, onLongPress: tmp7 });
+      const obj2 = { gestureEnabled: true, participant, avatarSize: channel(1199).AvatarSizes.PROFILE, resizeMode: channel(11529).ResizeMode.AUTO, statusStyle: tmp8, onSingleTap, onDoubleTap: tmp6, onLongPress: tmp7 };
+      const tmp13 = jsx(tmp4(11539), { gestureEnabled: true, participant, avatarSize: channel(1199).AvatarSizes.PROFILE, resizeMode: channel(11529).ResizeMode.AUTO, statusStyle: tmp8, onSingleTap, onDoubleTap: tmp6, onLongPress: tmp7 });
       cResult[8] = tmp6;
       cResult[9] = tmp7;
       cResult[10] = participant;
       cResult[11] = tmp8;
       cResult[12] = tmp13;
       tmp9 = tmp13;
-      const tmp4Result = tmp4(11485);
+      const tmp4Result = tmp4(11539);
     }
     const obj3 = { marginRight: right, marginBottom: bottom };
     cResult[5] = bottom;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleVi
   cResult[3] = channel.id;
   cResult[4] = onLongPress;
   tmp7 = onLongPress;
-  const tmp5 = analyticsLocations(1630)();
+  const tmp5 = analyticsLocations(1631)();
 }) : (function SingleVideoCall(channel) {
   channel = channel.channel;
   let bottom;

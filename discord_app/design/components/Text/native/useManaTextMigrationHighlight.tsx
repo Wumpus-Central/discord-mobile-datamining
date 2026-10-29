@@ -1,13 +1,13 @@
-// === Module 5272: useManaTextMigrationHighlight ===
+// === Module 5273: useManaTextMigrationHighlight ===
 
-// Module 5272 (useManaTextMigrationHighlight)
+// Module 5273 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 5273 */;
+import DevSettingsStore from "DevSettingsStore" /* 5274 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
-import createStyles from "createStyles" /* 5004 */;
+import createStyles from "createStyles" /* 5005 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -103,7 +103,7 @@ export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompiler
   }
   obj = initialize;
 });
-export const withManaTextMigrationHighlight = function withManaTextMigrationHighlight(fromEntriesResult) {
+export function withManaTextMigrationHighlight(fromEntriesResult) {
   let proxy = fromEntriesResult;
   if (closure_6) {
     const _Proxy = Proxy;
@@ -125,4 +125,4 @@ export const withManaTextMigrationHighlight = function withManaTextMigrationHigh
     proxy = new Proxy(fromEntriesResult, obj);
   }
   return proxy;
-};
+}

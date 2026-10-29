@@ -1,6 +1,6 @@
-// === Module 6190: ? ===
+// === Module 6214: ? ===
 
-// Module 6190
+// Module 6214
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/streamer_vintage.png.js");

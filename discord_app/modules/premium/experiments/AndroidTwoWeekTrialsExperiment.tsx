@@ -1,7 +1,7 @@
-// === Module 14906: AndroidTwoWeekTrialsExperiment ===
+// === Module 15141: AndroidTwoWeekTrialsExperiment ===
 
-// Module 14906 (AndroidTwoWeekTrialsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15141 (AndroidTwoWeekTrialsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: null };
@@ -12,9 +12,9 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
 
 export const AndroidTwoWeekTrialsExperiment = apexExperiment;
-export const isAndroidTwoWeekTrialsExperimentEnabled = function isAndroidTwoWeekTrialsExperimentEnabled(location) {
+export function isAndroidTwoWeekTrialsExperimentEnabled(location) {
   return apexExperiment.getConfig({ location: location.location }).enabled;
-};
-export const isAndroidTwoWeekTrialsTrialCTAEnabled = function isAndroidTwoWeekTrialsTrialCTAEnabled(location) {
+}
+export function isAndroidTwoWeekTrialsTrialCTAEnabled(location) {
   return apexExperiment.getConfig({ location: location.location }).trialCTAEnabled;
-};
+}

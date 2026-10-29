@@ -1,6 +1,6 @@
-// === Module 1412: FamilyCenterModels ===
+// === Module 1413: FamilyCenterModels ===
 
-// Module 1412 (FamilyCenterModels)
+// Module 1413 (FamilyCenterModels)
 import user from "user" /* 1397 */;
 import Record from "Record" /* 1404 */;
 
@@ -263,7 +263,7 @@ let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterModels
 export const JS_DAY_TO_DAY_OF_WEEK = frozen;
 export { ScheduleRuleRecord };
 export { RestrictedScheduleRecord };
-export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleRecord(restrictedSchedule) {
+export function ensureRestrictedScheduleRecord(restrictedSchedule) {
   let tmp2 = null;
   if (null != restrictedSchedule) {
     let tmp3 = restrictedSchedule;
@@ -289,4 +289,4 @@ export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleR
     }
   }
   return tmp2;
-};
+}

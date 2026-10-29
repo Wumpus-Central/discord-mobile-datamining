@@ -1,26 +1,26 @@
-// === Module 18021: GuildsBarAnimatedItemWrapper ===
+// === Module 18255: GuildsBarAnimatedItemWrapper ===
 
-// Module 18021 (GuildsBarAnimatedItemWrapper)
+// Module 18255 (GuildsBarAnimatedItemWrapper)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import native from "native" /* 5070 */;
-import spring from "spring" /* 5283 */;
-import useToken from "useToken" /* 5288 */;
+import native from "native" /* 5071 */;
+import spring from "spring" /* 5284 */;
+import useToken from "useToken" /* 5289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5291).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(18009);
+const IOS_POINTER_STYLE = fn(5292).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(18243);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const CORNER_SPRING_PHYSICS = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -33,7 +33,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };
@@ -470,7 +470,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
                     let AccessibilityAnnouncer = require;
                     const intl = util.intl;
                     const t = util.t;
-                    AccessibilityAnnouncer = AccessibilityAnnouncer(5013).AccessibilityAnnouncer;
+                    AccessibilityAnnouncer = AccessibilityAnnouncer(5014).AccessibilityAnnouncer;
                     AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
                     ref.current = expanded;
                     const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);
@@ -959,7 +959,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(5013).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(5014).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);

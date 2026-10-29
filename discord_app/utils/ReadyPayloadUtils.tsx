@@ -1,15 +1,15 @@
-// === Module 15251: ReadyPayloadUtils ===
+// === Module 15486: ReadyPayloadUtils ===
 
-// Module 15251 (ReadyPayloadUtils)
+// Module 15486 (ReadyPayloadUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4882 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4899 */;
-import ChannelReaderDefault from "ChannelReader" /* 4903 */;
-import isCacheEnabled from "isCacheEnabled" /* 7757 */;
-import GuildVersionsDefault from "GuildVersions" /* 7761 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7762 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4883 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4900 */;
+import ChannelReaderDefault from "ChannelReader" /* 4904 */;
+import isCacheEnabled from "isCacheEnabled" /* 7779 */;
+import GuildVersionsDefault from "GuildVersions" /* 7783 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7784 */;
 import size from "module_2" /* 2 */;
 
 function hydrateGuild(guild) {
@@ -234,7 +234,7 @@ let channels = null;
 let closure_5 = {};
 let result = size.fileFinishedImporting("utils/ReadyPayloadUtils.tsx");
 
-export const hydrateReadySupplementalPayload = function hydrateReadySupplementalPayload(arg0, identifyStartTime) {
+export function hydrateReadySupplementalPayload(arg0, identifyStartTime) {
   ({ guilds, merged_members: require, merged_presences } = arg0);
   let merged = Object.assign(arg0, Object.assign({ guilds: 0, merged_members: 0, merged_presences: 0 }));
   let friends;
@@ -338,8 +338,8 @@ export const hydrateReadySupplementalPayload = function hydrateReadySupplemental
   obj2.presences = items;
   obj2.guilds = mapped;
   return obj2;
-};
-export const preloadReadyPayloadData = function preloadReadyPayloadData() {
+}
+export function preloadReadyPayloadData() {
   const databaseResult = DatabaseDaosDefault.database();
   if (obj2.isCacheEnabled()) {
     let committedVersions = GuildVersionsDefault.getCommittedVersions();
@@ -368,8 +368,8 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     [tmp, tmp2, tmp3] = result;
     return { guildVersions, guildChannels, databaseOk };
   });
-};
-export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTime, databaseOk) {
+}
+export function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTime, databaseOk) {
   ({ users, private_channels, merged_members: require, guilds } = pinotReadyAction);
   const merged = Object.assign(pinotReadyAction, Object.assign({ users: 0, private_channels: 0, merged_members: 0, guilds: 0 }));
   const obj = DatabaseDaosDefault;
@@ -453,9 +453,9 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
   }
   obj2.private_channels = private_channels;
   return obj2;
-};
-export const hydrateInitialGuild = function hydrateInitialGuild(guild, identifyStartTime) {
+}
+export function hydrateInitialGuild(guild, identifyStartTime) {
   const obj = { guild, identifyTime: identifyStartTime };
   return hydratePreviouslyUnavailableGuild(guild);
-};
+}
 export { hydratePreviouslyUnavailableGuild };

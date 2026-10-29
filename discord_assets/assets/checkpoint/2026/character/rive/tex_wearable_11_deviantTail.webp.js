@@ -1,6 +1,6 @@
-// === Module 13188: ? ===
+// === Module 13419: ? ===
 
-// Module 13188
+// Module 13419
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_11_deviantTail.webp.js");

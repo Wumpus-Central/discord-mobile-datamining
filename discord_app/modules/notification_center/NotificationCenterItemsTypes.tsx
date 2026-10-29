@@ -1,6 +1,6 @@
-// === Module 6823: NotificationCenterItemsTypes ===
+// === Module 6846: NotificationCenterItemsTypes ===
 
-// Module 6823 (NotificationCenterItemsTypes)
+// Module 6846 (NotificationCenterItemsTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");

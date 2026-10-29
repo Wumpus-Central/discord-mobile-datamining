@@ -1,6 +1,6 @@
-// === Module 5850: StreamSettingsConstants ===
+// === Module 5852: StreamSettingsConstants ===
 
-// Module 5850 (StreamSettingsConstants)
+// Module 5852 (StreamSettingsConstants)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import PremiumConstants from "PremiumConstants" /* 1391 */;
@@ -496,7 +496,7 @@ items5[2] = obj22;
 const result = size.fileFinishedImporting("modules/go_live/StreamSettingsConstants.tsx");
 
 export { ApplicationStreamResolutions };
-export const getApplicationResolution = function getApplicationResolution(arg0) {
+export function getApplicationResolution(arg0) {
   if (obj.RESOLUTION_480 === arg0) {
     return obj.RESOLUTION_480;
   } else if (obj.RESOLUTION_720 === arg0) {
@@ -513,10 +513,10 @@ export const getApplicationResolution = function getApplicationResolution(arg0) 
     const error = new Error("Unknown resolution: " + arg0);
     throw error;
   }
-};
+}
 export const ApplicationStreamFPS = obj2;
 export const ApplicationStreamPresets = obj3;
-export const getApplicationFramerate = function getApplicationFramerate(arg0) {
+export function getApplicationFramerate(arg0) {
   if (obj2.FPS_5 === arg0) {
     return obj2.FPS_5;
   } else if (obj2.FPS_15 === arg0) {
@@ -531,11 +531,11 @@ export const getApplicationFramerate = function getApplicationFramerate(arg0) {
     const error = new Error("Unknown frame rate: " + arg0);
     throw error;
   }
-};
+}
 export const ApplicationStreamSettingRequirements = items;
 export const ApplicationStreamResolutionButtons = items1;
 export const GoLiveDeviceResolutionButtons = items2;
-export const makeResolutionLabel = function makeResolutionLabel(resolution) {
+export function makeResolutionLabel(resolution) {
   if (resolution === obj.RESOLUTION_SOURCE) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.XjXqzh);
@@ -545,7 +545,7 @@ export const makeResolutionLabel = function makeResolutionLabel(resolution) {
     stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
-};
+}
 export const ApplicationStreamResolutionButtonsWithSuffixLabel = items3;
 export const ApplicationStreamFPSButtons = items4;
 export const ApplicationStreamFPSButtonsWithSuffixLabel = items5;

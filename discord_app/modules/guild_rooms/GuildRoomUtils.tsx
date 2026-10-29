@@ -1,10 +1,10 @@
-// === Module 7872: GuildRoomUtils ===
+// === Module 7895: GuildRoomUtils ===
 
-// Module 7872 (GuildRoomUtils)
-import GuildRoomTypes from "GuildRoomTypes" /* 7870 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 7871 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 7874 */;
-import GuildRoomStore from "GuildRoomStore" /* 7869 */;
+// Module 7895 (GuildRoomUtils)
+import GuildRoomTypes from "GuildRoomTypes" /* 7893 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 7894 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 7897 */;
+import GuildRoomStore from "GuildRoomStore" /* 7892 */;
 
 require = fn;
 function serverGuildRoomObjectToClient(object_type) {
@@ -37,11 +37,11 @@ function serverGuildRoomObjectToClient(object_type) {
   }
   return obj8;
 }
-let closure_3 = fn(7873).GUILD_ROOM_BACKGROUND_CONFIG;
+let closure_3 = fn(7896).GUILD_ROOM_BACKGROUND_CONFIG;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomUtils.tsx");
 
-export const findSeat = function findSeat(seat, position, channelId) {
+export function findSeat(seat, position, channelId) {
   const room = GuildRoomStore.getRoom(channelId);
   let background;
   if (room != null) {
@@ -59,8 +59,8 @@ export const findSeat = function findSeat(seat, position, channelId) {
   }
   const values = Object.values(seats);
   found = values.find((position) => position.position.x === position.x && position.position.y === tmp.y);
-};
-export const serverGuildRoomToClient = function serverGuildRoomToClient(body) {
+}
+export function serverGuildRoomToClient(body) {
   const obj = { roomId: body.room_id, users: null, background: body.background, objects: null };
   const users = body.users;
   obj.users = users.reduce((set, userId) => {
@@ -75,4 +75,4 @@ export const serverGuildRoomToClient = function serverGuildRoomToClient(body) {
     return set;
   }, new Map());
   return obj;
-};
+}

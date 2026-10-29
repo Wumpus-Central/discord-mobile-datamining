@@ -1,21 +1,21 @@
-// === Module 6533: SelfPresenceStore ===
+// === Module 6557: SelfPresenceStore ===
 
-// Module 6533 (SelfPresenceStore)
+// Module 6557 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1354 from "module_1354" /* 1354 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7543 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10686 */;
-import SpotifyStore from "SpotifyStore" /* 6534 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7566 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10719 */;
+import SpotifyStore from "SpotifyStore" /* 6558 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import DetectableGameStore from "DetectableGameStore" /* 2036 */;
-import IdleStore from "IdleStore" /* 6668 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2040 */;
-import LocalActivityStore from "LocalActivityStore" /* 11233 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import SessionsStore from "SessionsStore" /* 5752 */;
+import DetectableGameStore from "DetectableGameStore" /* 2037 */;
+import IdleStore from "IdleStore" /* 6692 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2041 */;
+import LocalActivityStore from "LocalActivityStore" /* 11287 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import SessionsStore from "SessionsStore" /* 5754 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -146,7 +146,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5748).sortActivity;
+const sortActivity = fn(5750).sortActivity;
 const Constants = fn(1084);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityTypes: map1, AppStates: closure_14 } = Constants);
@@ -206,13 +206,13 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
   }
   return this.findActivity((application_id) => application_id.application_id === closure_0, flag);
 };
-prototype["findActivity"] = function findActivity(cResult) {
+prototype["findActivity"] = function findActivity(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
   activities = this.getActivities(flag);
-  return activities.find(cResult);
+  return activities.find(arg0);
 };
 SelfPresenceStore.displayName = "SelfPresenceStore";
 const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {

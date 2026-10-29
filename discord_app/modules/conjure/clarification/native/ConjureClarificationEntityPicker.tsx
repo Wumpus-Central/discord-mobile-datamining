@@ -1,22 +1,22 @@
-// === Module 12518: ConjureClarificationEntityPicker ===
+// === Module 12564: ConjureClarificationEntityPicker ===
 
-// Module 12518 (ConjureClarificationEntityPicker)
+// Module 12564 (ConjureClarificationEntityPicker)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import TableRow from "TableRow" /* 6939 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import ConjureUtils from "ConjureUtils" /* 7382 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12243 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12245 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12354 */;
-import ConjureClarification from "ConjureClarification" /* 12512 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12519 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12520 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import TableRow from "TableRow" /* 6963 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import ConjureUtils from "ConjureUtils" /* 7405 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12297 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12299 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12408 */;
+import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12565 */;
+import ConjureClarification from "ConjureClarification" /* 12566 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12568 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
-import GuildStore from "GuildStore" /* 4878 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -538,7 +538,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                       let obj = { content: null, key: null, stackingBehavior: "stack" };
                                       obj4.selectedChannel = found;
                                       const intl = util.intl;
-                                      obj4.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
+                                      obj4.noChannelOptionLabel = intl.string(_modDef3864["jtBVV+"]);
                                       obj4.onSelect = function onSelect(id) {
                                         if (null == id) {
                                           let items = [];
@@ -718,7 +718,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                     let obj = { content: null, key: null, stackingBehavior: "stack" };
                                     obj4.selectedChannel = found;
                                     const intl = util.intl;
-                                    obj4.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
+                                    obj4.noChannelOptionLabel = intl.string(_modDef3864["jtBVV+"]);
                                     obj4.onSelect = function onSelect(id) {
                                       if (null == id) {
                                         let items = [];

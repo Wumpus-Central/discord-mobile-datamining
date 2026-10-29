@@ -1,54 +1,54 @@
-// === Module 8160: FamilyCenterUtils ===
+// === Module 8183: FamilyCenterUtils ===
 
-// Module 8160 (FamilyCenterUtils)
+// Module 8183 (FamilyCenterUtils)
 import util from "util" /* 1125 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import _modDef2535 from "module_2535" /* 2535 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7682 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7680 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7705 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7681);
+const FamilyCenterConstants = fn(7704);
 ({ ACTION_TO_TEXT: closure_4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty, FamilyCenterFailureCode: metroRequire, TeenActionDisplayType: closure_7, UserLinkStatus: closure_8, UserLinkType: closure_9 } = FamilyCenterConstants);
 let c10 = 86400;
 let c11 = 172800;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.tsx");
 
-export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
+export function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
   const intl = util.intl;
-  obj.today = intl.string(_modDef2535.VjIAQQ);
+  obj.today = intl.string(_modDef2536.VjIAQQ);
   const intl2 = util.intl;
-  obj.yesterday = intl2.string(_modDef2535["2a8xHY"]);
-  obj.days = _modDef2535.Xt6oND;
+  obj.yesterday = intl2.string(_modDef2536["2a8xHY"]);
+  obj.days = _modDef2536.Xt6oND;
   return obj;
-};
-export const getActivityWindowTimestampFormatter = function getActivityWindowTimestampFormatter(arg0) {
+}
+export function getActivityWindowTimestampFormatter(arg0) {
   const obj = { today: null, yesterday: null, days: null };
   const intl = util.intl;
   const string = intl.string;
-  const tmp4 = _modDef2535;
+  const tmp4 = _modDef2536;
   if (arg0) {
     obj.today = string(tmp4["2AtcIs"]);
     const intl3 = util.intl;
-    obj.yesterday = intl3.string(_modDef2535.stOECr);
-    obj.days = _modDef2535.n8n5Ba;
+    obj.yesterday = intl3.string(_modDef2536.stOECr);
+    obj.days = _modDef2536.n8n5Ba;
     let tmp5 = obj;
   } else {
     obj.today = string(tmp4.g1ZX6m);
     const intl2 = util.intl;
-    obj.yesterday = intl2.string(_modDef2535.s3qSVt);
-    obj.days = _modDef2535.f1UJiC;
+    obj.yesterday = intl2.string(_modDef2536.s3qSVt);
+    obj.days = _modDef2536.f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
-};
-export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  const diffResult = _modDef2046().diff(_modDef2046(time), "s");
+}
+export function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
+  const diffResult = _modDef2047().diff(_modDef2047(time), "s");
   const tmp3 = timestampFormatter();
-  const obj = _modDef2046();
-  _modDef2046(time).format("LL");
+  const obj = _modDef2047();
+  _modDef2047(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -65,11 +65,11 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
     yesterday = intl.formatToPlainString(tmp3.days, obj3);
   }
   return yesterday;
-};
-export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  const diffResult = _modDef2046().diff(_modDef2046(arg0), "s");
+}
+export function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
+  const diffResult = _modDef2047().diff(_modDef2047(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef2046(arg0);
+  _modDef2047(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {
@@ -98,27 +98,27 @@ export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMES
     yesterday = intl.formatToPlainString(time.date, obj5);
   }
   return yesterday;
-};
-export const isUserAction = function isUserAction(action) {
+}
+export function isUserAction(action) {
   return action.display_type === constants2.USER_ADD || action.display_type === constants2.USER_INTERACTION || action.display_type === constants2.USER_CALLED;
-};
-export const isGuildAction = function isGuildAction(action) {
+}
+export function isGuildAction(action) {
   return action.display_type === constants2.GUILD_ADD || action.display_type === tmp.GUILD_INTERACTION;
-};
-export const isPurchase = function isPurchase(action) {
+}
+export function isPurchase(action) {
   return action.display_type === constants2.PURCHASES;
-};
-export const isGift = function isGift(action) {
+}
+export function isGift(action) {
   return action.display_type === constants2.GIFTS;
-};
-export const getFailureCodeForAPIError = function getFailureCodeForAPIError(arg0) {
+}
+export function getFailureCodeForAPIError(arg0) {
   let GENERIC_ERROR = hasOwnProperty[arg0.code];
   if (GENERIC_ERROR == null) {
     GENERIC_ERROR = constants.GENERIC_ERROR;
   }
   return GENERIC_ERROR;
-};
-export const getSortedActivityTypeConfigs = function getSortedActivityTypeConfigs() {
+}
+export function getSortedActivityTypeConfigs() {
   const map = new Map(React4);
   if (0 === map.size) {
     let items = [];
@@ -128,11 +128,11 @@ export const getSortedActivityTypeConfigs = function getSortedActivityTypeConfig
     const arr = Array.from(map.entries());
   }
   return items;
-};
-export const getActivityTypeTextConfigs = function getActivityTypeTextConfigs() {
+}
+export function getActivityTypeTextConfigs() {
   return new Map(React4);
-};
-export const formatTotalTime = function formatTotalTime(arg0) {
+}
+export function formatTotalTime(arg0) {
   const rounded = Math.floor(arg0 / 60);
   const result = arg0 % 60;
   if (rounded > 0) {
@@ -143,15 +143,15 @@ export const formatTotalTime = function formatTotalTime(arg0) {
     combined = "" + result + "m";
   }
   return combined;
-};
-export const getOrFetchLinkedUsers = function getOrFetchLinkedUsers() {
+}
+export function getOrFetchLinkedUsers() {
   if (FamilyCenterStore.getAreLinkedUsersProcessed()) {
     return FamilyCenterStore.getLinkedUsers();
   } else {
     const linkedUsers = FamilyCenterActionCreatorsDefault.fetchLinkedUsers();
   }
-};
-export const hasActiveParentLinks = function hasActiveParentLinks() {
+}
+export function hasActiveParentLinks() {
   const values = Object.values(FamilyCenterStore.getLinkedUsers());
   return values.some((link_status) => {
     let tmp = link_status.link_status === constants.ACTIVE;
@@ -160,8 +160,8 @@ export const hasActiveParentLinks = function hasActiveParentLinks() {
     }
     return tmp;
   });
-};
-export const isParentallyControlled = function isParentallyControlled() {
+}
+export function isParentallyControlled() {
   const values = Object.values(FamilyCenterStore.getLinkedUsers());
   return values.some((link_status) => {
     let tmp = link_status.link_status === constants.ACTIVE;
@@ -170,13 +170,13 @@ export const isParentallyControlled = function isParentallyControlled() {
     }
     return tmp;
   });
-};
-export const getTopUserOrGuildDescription = function getTopUserOrGuildDescription(dms_sent, call_count) {
+}
+export function getTopUserOrGuildDescription(dms_sent, call_count) {
   if (call_count > 0) {
     if (0 === dms_sent) {
       const intl3 = util.intl;
       const obj2 = { callCount: call_count };
-      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2535["L/Cj7S"], obj2);
+      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2536["L/Cj7S"], obj2);
     }
     return formatToPlainStringResult;
   }
@@ -184,10 +184,10 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === call_count) {
       const intl2 = util.intl;
       const obj3 = { messageCount: dms_sent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2535["6X1F0i"], obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef2536["6X1F0i"], obj3);
     }
   }
   const intl = util.intl;
-  formatToPlainStringResult = intl.formatToPlainString(_modDef2535.IYqGMG, { messageCount: dms_sent, callCount: call_count });
+  formatToPlainStringResult = intl.formatToPlainString(_modDef2536.IYqGMG, { messageCount: dms_sent, callCount: call_count });
   const obj = { messageCount: dms_sent, callCount: call_count };
-};
+}

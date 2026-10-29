@@ -1,7 +1,7 @@
-// === Module 7867: GuildRoomActionCreators ===
+// === Module 7890: GuildRoomActionCreators ===
 
-// Module 7867 (GuildRoomActionCreators)
-import _guildRoomConnectAll from "_guildRoomConnect" /* 7868 */;
+// Module 7890 (GuildRoomActionCreators)
+import _guildRoomConnectAll from "_guildRoomConnect" /* 7891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ for (const key10024 in require("_guildRoomConnect")) {
   continue;
 }
 
-export const guildRoomConnect = function guildRoomConnect() {
+export function guildRoomConnect() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -48,8 +48,8 @@ export const guildRoomConnect = function guildRoomConnect() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const guildRoomUpdate = function guildRoomUpdate() {
+}
+export function guildRoomUpdate() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -58,4 +58,4 @@ export const guildRoomUpdate = function guildRoomUpdate() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,8 +1,8 @@
-// === Module 18905: useControlsHiddenPresentation ===
+// === Module 19138: useControlsHiddenPresentation ===
 
-// Module 18905 (useControlsHiddenPresentation)
-import spring from "spring" /* 5283 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 10939 */;
+// Module 19138 (useControlsHiddenPresentation)
+import spring from "spring" /* 5284 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 10974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

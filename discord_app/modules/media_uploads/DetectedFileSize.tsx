@@ -1,6 +1,6 @@
-// === Module 8212: DetectedFileSize ===
+// === Module 8234: DetectedFileSize ===
 
-// Module 8212 (DetectedFileSize)
+// Module 8234 (DetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _getDetectedFileSize(arg0) {
@@ -14,7 +14,7 @@ let closure_1 = async function _getDetectedFileSize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_1 = async function _getDetectedFileSize(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_uploads/DetectedFileSize.tsx");
 
-export const getDetectedFileSize = function getDetectedFileSize() {
+export function getDetectedFileSize() {
   const self = this;
   const apply = closure_1.apply;
   if (typeof apply === "unknown") {
@@ -109,4 +109,4 @@ export const getDetectedFileSize = function getDetectedFileSize() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

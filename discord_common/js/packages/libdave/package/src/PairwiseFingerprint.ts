@@ -1,7 +1,7 @@
-// === Module 9218: PairwiseFingerprint ===
+// === Module 9222: PairwiseFingerprint ===
 
-// Module 9218 (PairwiseFingerprint)
-import KeyFingerprint from "KeyFingerprint" /* 9217 */;
+// Module 9222 (PairwiseFingerprint)
+import KeyFingerprint from "KeyFingerprint" /* 9221 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -43,7 +43,7 @@ let closure_4 = { N: 16384, r: 8, p: 2, dkLen: 64 };
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
 
-export const generatePairwiseFingerprint = function generatePairwiseFingerprint() {
+export function generatePairwiseFingerprint() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -52,4 +52,4 @@ export const generatePairwiseFingerprint = function generatePairwiseFingerprint(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

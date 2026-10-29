@@ -1,15 +1,15 @@
-// === Module 11762: ParticipantTitle ===
+// === Module 11816: ParticipantTitle ===
 
-// Module 11762 (ParticipantTitle)
+// Module 11816 (ParticipantTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import getParticipantTitleDefault from "getParticipantTitle" /* 11743 */;
+import getParticipantTitleDefault from "getParticipantTitle" /* 11797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

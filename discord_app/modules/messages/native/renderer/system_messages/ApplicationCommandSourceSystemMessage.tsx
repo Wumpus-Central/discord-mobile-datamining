@@ -1,20 +1,20 @@
-// === Module 8412: ApplicationCommandSourceSystemMessage ===
+// === Module 8434: ApplicationCommandSourceSystemMessage ===
 
-// Module 8412 (ApplicationCommandSourceSystemMessage)
+// Module 8434 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6020 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import ApplicationCommands from "ApplicationCommands" /* 8413 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6024 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import ApplicationCommands from "ApplicationCommands" /* 8435 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;
 const COMMAND_SENTINEL = ChannelAutocompleteConstants.COMMAND_SENTINEL;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx");
 
-export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(message) {
+export function createApplicationCommandSourceSystemMessage(message) {
   message = message.message;
   const applicationCommand = ApplicationCommands.getApplicationCommand(message.content);
   const application = message.application;
@@ -43,4 +43,4 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
     }
   }
   return null;
-};
+}

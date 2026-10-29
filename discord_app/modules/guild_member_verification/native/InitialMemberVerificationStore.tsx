@@ -1,6 +1,6 @@
-// === Module 6914: InitialMemberVerificationStore ===
+// === Module 6938: InitialMemberVerificationStore ===
 
-// Module 6914 (InitialMemberVerificationStore)
+// Module 6938 (InitialMemberVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 
@@ -32,6 +32,6 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
 
 export default initialMemberVerificationStore;
-export const setInitialVerification = function setInitialVerification(guildId, state) {
+export function setInitialVerification(guildId, state) {
   DispatcherDefault.dispatch({ type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state });
-};
+}

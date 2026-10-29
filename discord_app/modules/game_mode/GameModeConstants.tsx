@@ -1,6 +1,6 @@
-// === Module 5007: GameModeConstants ===
+// === Module 5008: GameModeConstants ===
 
-// Module 5007 (GameModeConstants)
+// Module 5008 (GameModeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_mode/GameModeConstants.tsx");

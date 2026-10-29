@@ -1,6 +1,6 @@
-// === Module 10166: GIFPickerActionCreators ===
+// === Module 10199: GIFPickerActionCreators ===
 
-// Module 10166 (GIFPickerActionCreators)
+// Module 10199 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
 import frecency_user_settings from "frecency_user_settings" /* 1244 */;
@@ -8,13 +8,13 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import v1 from "v1" /* 1278 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9752 */;
-import GifProvider from "GifProvider" /* 10167 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10168 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10165 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9784 */;
+import GifProvider from "GifProvider" /* 10200 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10201 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10198 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -76,7 +76,7 @@ const re15 = /\.(webp|avif|gif)(\?|$)/i;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/GIFPickerActionCreators.tsx");
 
-export const trackSearchStart = function trackSearchStart(arg0) {
+export function trackSearchStart(arg0) {
   if (null != arg0) {
     const obj2 = {};
     obj2[arg0] = 1;
@@ -86,8 +86,8 @@ export const trackSearchStart = function trackSearchStart(arg0) {
   }
   const obj3 = AppAnalyticsUtilsDefault;
   obj3.trackWithMetadata(constants.SEARCH_STARTED, { search_type: constants3.GIF, load_id: GIFPickerViewStore.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: GifProvider.GIF_PROVIDER });
-};
-export const trackSearchResultViewed = function trackSearchResultViewed(totalResults, TRENDING_GIFS) {
+}
+export function trackSearchResultViewed(totalResults, TRENDING_GIFS) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -113,8 +113,8 @@ export const trackSearchResultViewed = function trackSearchResultViewed(totalRes
   const merged4 = Object.assign(obj5);
   obj7.gif_provider = GifProvider.GIF_PROVIDER;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_RESULT_VIEWED, obj7);
-};
-export const search = function search(query, arg1, arg2) {
+}
+export function search(query, arg1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -130,8 +130,8 @@ export const search = function search(query, arg1, arg2) {
       closure_14(query, arg1, limit);
     }
   }
-};
-export const fetchSuggestions = function fetchSuggestions(resultQuery) {
+}
+export function fetchSuggestions(resultQuery) {
   _require = resultQuery;
   let tmp = "" !== resultQuery;
   if (tmp) {
@@ -147,11 +147,11 @@ export const fetchSuggestions = function fetchSuggestions(resultQuery) {
       DispatcherDefault.dispatch({ type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query, items: body.body });
     });
   }
-};
-export const resetSearch = function resetSearch() {
+}
+export function resetSearch() {
   DispatcherDefault.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
-};
-export const trackSelectGIF = function trackSelectGIF(arg0) {
+}
+export function trackSelectGIF(arg0) {
   ({ query, gifId } = arg0);
   ({ type, index, offset, limit, results, totalResults } = arg0);
   const result = GIFPickerUtils.calculateAnalyticsMetadata(GIFPickerViewStore.getAnalyticsID(), type, { offset, limit, results, totalResults });
@@ -168,15 +168,15 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
     request.body = obj4;
     HTTP.post(request);
   }
-};
-export const initializeSearch = function initializeSearch() {
+}
+export function initializeSearch() {
   const replaced = v1.v4().replace(re12, "");
   const str = v1.v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, { search_type: constants3.GIF, load_id: replaced });
   const obj3 = { search_type: constants3.GIF, load_id: replaced };
   DispatcherDefault.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: replaced });
-};
-export const fetchTrending = function fetchTrending() {
+}
+export function fetchTrending() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants2.GIFS_TRENDING, query: { locale: LocaleStore.locale, media_format: GIFPickerViewStore.getSelectedFormat() }, oldFormErrors: true, rejectWithError: true };
   value = HTTP.get(request);
@@ -184,8 +184,8 @@ export const fetchTrending = function fetchTrending() {
     ({ categories, gifs } = body.body);
     DispatcherDefault.dispatch({ type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: categories, trendingGIFPreview: gifs[0] });
   });
-};
-export const fetchTrendingGIFs = function fetchTrendingGIFs(limit) {
+}
+export function fetchTrendingGIFs(limit) {
   _require = limit;
   importDefault = Date.now();
   const TRENDING_GIFS = constants4.TRENDING_GIFS;
@@ -231,8 +231,8 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(limit) {
   }, () => {
     startTime(dependencyMap[8]).dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
   });
-};
-export const gifUrlKey = function gifUrlKey(uri) {
+}
+export function gifUrlKey(uri) {
   let str1 = uri;
   const toURLSafeResult = URLUtilsDefault.toURLSafe(uri);
   let tmp4 = uri;
@@ -246,8 +246,8 @@ export const gifUrlKey = function gifUrlKey(uri) {
     obj2 = AttachmentUrlUtilsAll;
   }
   return tmp4;
-};
-export const addFavoriteGIF = function addFavoriteGIF(size) {
+}
+export function addFavoriteGIF(size) {
   _require = size;
   const FrecencyUserSettingsActionCreators = require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", async (gifs) => {
@@ -365,8 +365,8 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
     src = size.src;
     const tmpResult12 = URLUtilsDefault;
   }, constants5.INFREQUENT_USER_ACTION);
-};
-export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
+}
+export function removeFavoriteGIF(uri) {
   _require = uri;
   const FrecencyUserSettingsActionCreators = require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", async (gifs) => {
@@ -389,12 +389,12 @@ export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
     obj3.total_num_favorited = apply.size(gifs.gifs);
     obj4.track(constants.GIF_UNFAVORITED, obj3);
   }, constants5.INFREQUENT_USER_ACTION);
-};
-export const fetchTrendingSearchTerms = function fetchTrendingSearchTerms() {
+}
+export function fetchTrendingSearchTerms() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants2.GIFS_TRENDING_SEARCH, query: { limit: 5, locale: LocaleStore.locale }, oldFormErrors: true, rejectWithError: true };
   value = HTTP.get(request);
   value.then((items) => {
     DispatcherDefault.dispatch({ type: "GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS", items: items.body });
   });
-};
+}

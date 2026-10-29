@@ -1,25 +1,25 @@
-// === Module 8930: GuildEventRsvpUtils ===
+// === Module 8933: GuildEventRsvpUtils ===
 
-// Module 8930 (GuildEventRsvpUtils)
+// Module 8933 (GuildEventRsvpUtils)
 import util from "util" /* 1125 */;
-import ScheduleUtils from "ScheduleUtils" /* 8924 */;
-import useEventException from "useEventException" /* 8931 */;
-import useEventSchedule from "useEventSchedule" /* 8932 */;
+import ScheduleUtils from "ScheduleUtils" /* 8927 */;
+import useEventException from "useEventException" /* 8934 */;
+import useEventSchedule from "useEventSchedule" /* 8935 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6819 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4862);
+const GuildScheduledEventsConstants = fn(4863);
 ({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } = GuildScheduledEventsConstants);
 const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
 
-export const getExistingRsvp = function getExistingRsvp(id, nextRecurrenceIdInEvent) {
+export function getExistingRsvp(id, nextRecurrenceIdInEvent) {
   return GuildScheduledEventStore.getRsvp(id, nextRecurrenceIdInEvent, AuthenticationStore.getId());
-};
+}
 export { ResponseOptions };
-export const getResponseOptions = function getResponseOptions() {
+export function getResponseOptions() {
   const obj = { name: null, value: null };
   const intl = util.intl;
   obj.name = intl.string(util.t.uoorxi);
@@ -31,8 +31,8 @@ export const getResponseOptions = function getResponseOptions() {
   obj2.value = obj.RECURRENCE;
   items[1] = obj2;
   return items;
-};
-export const handleRsvp = function handleRsvp(openRsvpPicker) {
+}
+export function handleRsvp(openRsvpPicker) {
   ({ eventId, recurrenceId, guildId, updateRsvp, onRsvp } = openRsvpPicker);
   const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
   if (null != guildScheduledEvent) {
@@ -87,4 +87,4 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     obj5 = useEventSchedule;
   }
-};
+}

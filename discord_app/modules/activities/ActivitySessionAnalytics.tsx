@@ -1,29 +1,29 @@
-// === Module 15982: ActivitySessionAnalytics ===
+// === Module 16224: ActivitySessionAnalytics ===
 
-// Module 15982 (ActivitySessionAnalytics)
+// Module 16224 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import v1 from "v1" /* 1278 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import getPlatformDefault from "getPlatform" /* 5669 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5940 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6503 */;
-import MetricEvents from "MetricEvents" /* 6508 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9689 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10815 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11441 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11442 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11449 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14368 */;
+import getPlatformDefault from "getPlatform" /* 5671 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5942 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6527 */;
+import MetricEvents from "MetricEvents" /* 6532 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6870 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9721 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10891 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11495 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11496 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11503 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14602 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import QuestStore from "QuestStore" /* 7811 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import QuestStore from "QuestStore" /* 7834 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
 import UserStore from "UserStore" /* 1389 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15983 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16225 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
 
 require = fn;
 function resolveFrameLaunchContext(applicationId, arg1) {
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -201,7 +201,7 @@ let result = size.fileFinishedImporting("modules/activities/ActivitySessionAnaly
 
 export { activeSessionIds };
 export const awaitingAnalyticsContext = obj2;
-export const getShelfItemTrackingProperties = function getShelfItemTrackingProperties(activity) {
+export function getShelfItemTrackingProperties(activity) {
   let releasePhase;
   if (activity != null) {
     activity = activity.activity;
@@ -211,8 +211,8 @@ export const getShelfItemTrackingProperties = function getShelfItemTrackingPrope
     }
   }
   return { releasePhase };
-};
-export const trackFrameSessionStart = function trackFrameSessionStart(applicationId, analyticsContext) {
+}
+export function trackFrameSessionStart(applicationId, analyticsContext) {
   closure_0 = applicationId;
   let result = analyticsContext;
   const obj = pendingFrameLaunch;
@@ -414,11 +414,11 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       const tmp26Result8 = AnalyticsUtilsDefault;
     }
   }
-};
-export const getActiveAnalyticsSessionIDs = function getActiveAnalyticsSessionIDs(id) {
+}
+export function getActiveAnalyticsSessionIDs(id) {
   return obj[id];
-};
-export const trackFrameSessionStartFailed = function trackFrameSessionStartFailed() {
+}
+export function trackFrameSessionStartFailed() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -427,8 +427,8 @@ export const trackFrameSessionStartFailed = function trackFrameSessionStartFaile
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId) {
+}
+export function trackFrameSessionEnd(applicationId) {
   const currentUser = UserStore.getCurrentUser();
   if (null != obj[applicationId]) {
     if (null != currentUser) {
@@ -497,4 +497,4 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       const tmp11Result6 = AnalyticsUtilsDefault;
     }
   }
-};
+}

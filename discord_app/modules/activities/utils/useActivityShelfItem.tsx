@@ -1,25 +1,25 @@
-// === Module 11967: useActivityShelfItem ===
+// === Module 12021: useActivityShelfItem ===
 
-// Module 11967 (useActivityShelfItem)
+// Module 12021 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Server from "Server" /* 1997 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4925 */;
-import getPlatformDefault from "getPlatform" /* 5669 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7289 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7293 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10808 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11495 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11496 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11548 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11968 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11969 */;
+import Server from "Server" /* 1998 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
+import getPlatformDefault from "getPlatform" /* 5671 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6870 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7313 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7317 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10884 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11549 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11550 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11602 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12022 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
 
 require = fn;
-const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2024).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1084).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
@@ -199,7 +199,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnActivit
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -248,7 +248,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnActivit
                     }
                   }
                   c2 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp22) {
                 c2 = tmp;
@@ -338,7 +338,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnActivit
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -388,7 +388,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnActivit
               }
             }
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp22) {
           dependencyMap = tmp;
@@ -408,7 +408,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnActivit
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -471,7 +471,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnActivit
             return obj;
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } catch (tmp24) {
           dependencyMap = tmp;
           throw tmp24;

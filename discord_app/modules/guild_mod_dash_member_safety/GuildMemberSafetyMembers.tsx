@@ -1,13 +1,13 @@
-// === Module 7640: GuildMemberSafetyMembers ===
+// === Module 7663: GuildMemberSafetyMembers ===
 
-// Module 7640 (GuildMemberSafetyMembers)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4931 */;
-import _modDef5840 from "module_5840" /* 5840 */;
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7641 */;
-import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7642 */;
-import SortUtils from "SortUtils" /* 7644 */;
-import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7645 */;
-import isSpam from "isSpam" /* 7651 */;
+// Module 7663 (GuildMemberSafetyMembers)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4932 */;
+import _modDef5842 from "module_5842" /* 5842 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7664 */;
+import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7665 */;
+import SortUtils from "SortUtils" /* 7667 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7668 */;
+import isSpam from "isSpam" /* 7674 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -173,7 +173,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj2[tmp6];
-        if (_modDef5840(tmp15, obj[tmp6])) {
+        if (_modDef5842(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -211,7 +211,7 @@ Object.defineProperty(prototype, "version", {
 });
 
 export { MemberSafetySecondaryIndex };
-export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
+export function hasUnusualDmActivity(arg0) {
   let tmp = null != arg0;
   if (tmp) {
     const _Date = Date;
@@ -220,5 +220,5 @@ export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
     tmp = time >= closure_4 - MemberSafetyElasticSearchQueryTypes.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
-};
+}
 export { GuildMemberSafetyMembers };

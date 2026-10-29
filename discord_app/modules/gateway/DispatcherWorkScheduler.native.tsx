@@ -1,10 +1,10 @@
-// === Module 15216: DispatcherWorkScheduler ===
+// === Module 15451: DispatcherWorkScheduler ===
 
-// Module 15216 (DispatcherWorkScheduler)
+// Module 15451 (DispatcherWorkScheduler)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
-import BasicWorkScheduler2 from "BasicWorkScheduler" /* 15217 */;
-import DispatcherWorkConstants from "DispatcherWorkConstants" /* 15215 */;
+import BasicWorkScheduler2 from "BasicWorkScheduler" /* 15452 */;
+import DispatcherWorkConstants from "DispatcherWorkConstants" /* 15450 */;
 import size from "module_2" /* 2 */;
 
 ({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: c2, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: closure_4, WorkIdleDeadline: hasOwnProperty } = DispatcherWorkConstants);
@@ -48,7 +48,7 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
 };
 let result = size.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
-export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
+export function createDispatcherWorkScheduler() {
   if (typeof DispatcherWorkScheduler === "function") {
     const tmp7 = new DispatcherWorkScheduler(tmp2, tmp, tmp3, new.target, undefined);
     importDefault = tmp7;
@@ -59,4 +59,4 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

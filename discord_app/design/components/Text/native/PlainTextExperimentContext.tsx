@@ -1,6 +1,6 @@
-// === Module 5274: PlainTextExperimentContext ===
+// === Module 5275: PlainTextExperimentContext ===
 
-// Module 5274 (PlainTextExperimentContext)
+// Module 5275 (PlainTextExperimentContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,6 +30,6 @@ export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEn
 }) : (function PlainTextExperimentProvider(enabled) {
   return <closure_4 value={enabled.enabled}>{enabled.children}</closure_4>;
 });
-export const usePlainTextExperimentEnabled = function usePlainTextExperimentEnabled() {
+export function usePlainTextExperimentEnabled() {
   return noop.useContext(closure_4);
-};
+}

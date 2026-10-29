@@ -1,14 +1,14 @@
-// === Module 8639: StringSelectActionComponentUtils ===
+// === Module 8661: StringSelectActionComponentUtils ===
 
-// Module 8639 (StringSelectActionComponentUtils)
-import Server from "Server" /* 1997 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8633 */;
+// Module 8661 (StringSelectActionComponentUtils)
+import Server from "Server" /* 1998 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8655 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
 
-export const getInitialStringSelectOptions = function getInitialStringSelectOptions(selectionActionComponent, containerId) {
+export function getInitialStringSelectOptions(selectionActionComponent, containerId) {
   const interactionComponentState = LocalInteractionComponentStateStore.getInteractionComponentState(containerId, selectionActionComponent.id);
   let type;
   if (interactionComponentState != null) {
@@ -22,4 +22,4 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
     mapped = found.map((value) => value.value);
   }
   return mapped;
-};
+}

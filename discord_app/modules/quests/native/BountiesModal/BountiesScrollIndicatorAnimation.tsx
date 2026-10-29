@@ -1,17 +1,17 @@
-// === Module 16606: BountiesScrollIndicatorAnimation ===
+// === Module 16844: BountiesScrollIndicatorAnimation ===
 
-// Module 16606 (BountiesScrollIndicatorAnimation)
+// Module 16844 (BountiesScrollIndicatorAnimation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 5139 */;
-import useToken from "useToken" /* 5288 */;
+import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 5140 */;
+import useToken from "useToken" /* 5289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

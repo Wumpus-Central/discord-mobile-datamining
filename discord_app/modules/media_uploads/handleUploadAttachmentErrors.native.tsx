@@ -1,19 +1,19 @@
-// === Module 9701: handleUploadAttachmentErrors ===
+// === Module 9733: handleUploadAttachmentErrors ===
 
-// Module 9701 (handleUploadAttachmentErrors)
+// Module 9733 (handleUploadAttachmentErrors)
 import util from "util" /* 1125 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import FileUtils from "FileUtils" /* 8182 */;
-import UploadLimits from "UploadLimits" /* 8198 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9702 */;
-import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 14290 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import FileUtils from "FileUtils" /* 8205 */;
+import UploadLimits from "UploadLimits" /* 8220 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9734 */;
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 14524 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ AbortCodes: c3, MAX_UPLOAD_COUNT: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
 
-export const handleUploadMessageAttachmentsErrors = function handleUploadMessageAttachmentsErrors(arg0) {
+export function handleUploadMessageAttachmentsErrors(arg0) {
   ({ guildId, code, reason } = arg0);
   if (undefined === code) {
     return false;
@@ -67,4 +67,4 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     }
     return flag;
   }
-};
+}

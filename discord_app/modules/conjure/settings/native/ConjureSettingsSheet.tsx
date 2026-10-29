@@ -1,24 +1,24 @@
-// === Module 12216: ConjureSettingsSheet ===
+// === Module 12270: ConjureSettingsSheet ===
 
-// Module 12216 (ConjureSettingsSheet)
+// Module 12270 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
-import _modDef3863 from "module_3863" /* 3863 */;
+import _modDef3864 from "module_3864" /* 3864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10733 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10747 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6808 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10807 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10822 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6831 */;
 
 const require = fn;
 const View = fn(17).View;
-let ConjureProjectStore = fn(6808);
+let ConjureProjectStore = fn(6831);
 ({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { project: _modDef3863.W0eQfN, app: _modDef3863.lFaJYF, secrets: _modDef3863.vDpCPU, model: _modDef3863.Rs3qc9, linked: _modDef3863.fBEHdq, experimental: _modDef3863["0Pe9uw"] };
-const createStyles = fn(5004);
+let obj = { project: _modDef3864.W0eQfN, app: _modDef3864.lFaJYF, secrets: _modDef3864.vDpCPU, model: _modDef3864.Rs3qc9, linked: _modDef3864.fBEHdq, experimental: _modDef3864["0Pe9uw"] };
+const createStyles = fn(5005);
 let closure_15 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
@@ -160,7 +160,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
     return obj;
   }), items);
   const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(8935);
+  obj = tabs(8938);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -182,10 +182,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12261).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12315).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9179).SegmentedControl, obj5);
+    tmp10Result = closure_12(tmp5(9182).SegmentedControl, obj5);
   }
   obj3.children = tmp10Result;
   return closure_12(View, obj3);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else {
     first = cResult[0];
   }
-  closure_15(ref(5629)(first).insets.bottom);
+  closure_15(ref(5630)(first).insets.bottom);
   ref = noop.useRef(null);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ConjureProjectStore];
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     tmp13 = cResult[5];
   }
   if (cResult[6] !== projectId) {
-    class O {
+    class R {
       constructor() {
         modelSettings = closure_8.getModelSettings(closure_0);
         tierSettings = undefined;
@@ -250,11 +250,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     const items3 = [projectId];
     cResult[6] = projectId;
-    cResult[7] = O;
+    cResult[7] = R;
     cResult[8] = items3;
     let tmp16 = items3;
   } else {
-    class O {
+    class R {
       constructor() {
         modelSettings = closure_8.getModelSettings(closure_0);
         tierSettings = undefined;
@@ -267,9 +267,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     tmp16 = cResult[8];
   }
   const tmpResult = projectId(504);
-  const stateFromStores1 = projectId(504).useStateFromStores(tmp13, O, tmp16);
+  const stateFromStores1 = projectId(504).useStateFromStores(tmp13, R, tmp16);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class R {
       constructor() {
         modelSettings = closure_8.getModelSettings(closure_0);
         tierSettings = undefined;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     cResult[9] = items4;
     const tmp18 = items4;
   } else {
-    class O {
+    class R {
       constructor() {
         modelSettings = closure_8.getModelSettings(closure_0);
         tierSettings = undefined;
@@ -332,7 +332,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     cResult[13] = stateFromStores;
     cResult[14] = tmp23;
-    const tmp22 = tmp23;
   } else {
     class N {
       constructor() {
@@ -364,6 +363,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     }
   }
+  if (cResult[17] !== !tmp22) {
+    class N {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+    tmp28[0] = tmp26;
+    cResult[17] = tmp26;
+    cResult[18] = tmp28;
+  } else {
+    class N {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+  }
   const tmpResult4 = projectId(504);
   if (stateFromStores != null) {
     class N {
@@ -379,24 +394,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     }
   }
-  const tmp5Result = tmp5(12217);
-  closure_3 = tmp5(12217)(projectId, undefined);
-  if (cResult[17] === isPreview) {
+  const tmp5Result = tmp5(12271);
+  closure_3 = tmp5(12271)(projectId, undefined, tmp28);
+  if (cResult[19] === isPreview) {
     class N {
       constructor() {
         return "open" === closure_7.getConnState(closure_0);
       }
     }
   }
-  cResult[17] = isPreview;
-  cResult[18] = note;
-  cResult[19] = notifyAgent;
-  cResult[20] = onSaved;
-  cResult[21] = projectId;
-  cResult[22] = scopeKeys;
-  cResult[23] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
+  cResult[19] = isPreview;
+  cResult[20] = note;
+  cResult[21] = notifyAgent;
+  cResult[22] = onSaved;
+  cResult[23] = projectId;
+  cResult[24] = scopeKeys;
+  cResult[25] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
   let obj3 = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
-  const tmp5ResultResult = tmp5(12217)(projectId, undefined);
+  const tmp5ResultResult = tmp5(12271)(projectId, undefined, tmp28);
 }) : (function ConjureSettingsSheet(projectId) {
   projectId = projectId.projectId;
   let stateFromStores1;
@@ -413,13 +428,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   let found;
   let saving;
   let canSave;
+  obj = stateFromStores1;
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, onSaved, isPreview } = projectId);
   const ref = noop.useRef(null);
-  const tmp3 = canSave(ref(stateFromStores1[13])({ includeKeyboardHeight: true }).insets.bottom);
+  let tmp2 = canSave(ref(stateFromStores1[13])({ includeKeyboardHeight: true }).insets.bottom);
   let items = [memo];
   const items1 = [projectId];
   const stateFromStores = projectId(stateFromStores1[14]).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
-  const obj2 = projectId(stateFromStores1[14]);
+  let obj3 = projectId(stateFromStores1[14]);
   const items2 = [isScoped];
   const items3 = [projectId];
   stateFromStores1 = projectId(stateFromStores1[14]).useStateFromStores(items2, () => {
@@ -430,43 +446,43 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     return null != tierSettings;
   }, items3);
-  let obj3 = projectId(stateFromStores1[14]);
+  let obj4 = projectId(stateFromStores1[14]);
   const items4 = [closure_7];
   const items5 = [projectId];
-  let tmp9 = null != stateFromStores;
+  let tmp8 = null != stateFromStores;
   const stateFromStores2 = projectId(stateFromStores1[14]).useStateFromStores(items4, () => "open" === ConjureConnectionStore.getConnState(projectId), items5);
-  if (tmp9) {
-    tmp9 = closure_10(stateFromStores);
+  if (tmp8) {
+    tmp8 = closure_10(stateFromStores);
   }
-  asyncGeneratorStep = tmp9;
-  let tmp11 = null != stateFromStores;
-  if (tmp11) {
-    tmp11 = loaded(stateFromStores);
+  asyncGeneratorStep = tmp8;
+  let tmp10 = null != stateFromStores;
+  if (tmp10) {
+    tmp10 = loaded(stateFromStores);
   }
-  _slicedToArray = tmp11;
+  _slicedToArray = tmp10;
   let guild_id;
-  let obj4 = projectId(stateFromStores1[14]);
+  let obj5 = projectId(stateFromStores1[14]);
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = ref(stateFromStores1[15])(projectId, guild_id);
+  const tmpResultResult = ref(obj[15])(projectId, guild_id, { readOnly: !tmp8 });
   noop = tmpResultResult;
-  const tmp16 = ref(stateFromStores1[16])({ projectId, scopeKeys, note, notifyAgent, onSaved, isPreview });
-  closure_6 = tmp16;
-  const tmp17 = ref(stateFromStores1[17])(projectId, tmp11);
-  closure_7 = tmp18;
-  isScoped = tmp16.isScoped;
-  loaded = tmp16.loaded;
+  const tmp15 = ref(obj[16])({ projectId, scopeKeys, note, notifyAgent, onSaved, isPreview });
+  closure_6 = tmp15;
+  const tmp16 = ref(obj[17])(projectId, tmp10);
+  closure_7 = tmp17;
+  isScoped = tmp15.isScoped;
+  loaded = tmp15.loaded;
   if (loaded) {
-    loaded = tmp16.valueCount > 0 || 0 === tmp16.secretCount;
-    const tmp19 = tmp16.valueCount > 0 || 0 === tmp16.secretCount;
+    loaded = tmp15.valueCount > 0 || 0 === tmp15.secretCount;
+    const tmp18 = tmp15.valueCount > 0 || 0 === tmp15.secretCount;
   }
-  closure_10 = tmp20;
-  const items6 = [tmp11, tmp17.callers.length > 0, stateFromStores1, tmp9, loaded, tmp16.secretCount > 0];
-  memo = obj.useMemo(() => {
+  closure_10 = tmp19;
+  const items6 = [tmp10, tmp16.callers.length > 0, stateFromStores1, tmp8, loaded, tmp15.secretCount > 0];
+  memo = obj2.useMemo(() => {
     let tmp2 = closure_3;
     if (!closure_3) {
       tmp2 = closure_4;
@@ -492,9 +508,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     return items;
   }, items6);
-  const tmp21 = _slicedToArray(noop.useState(null), 2);
-  closure_12 = tmp22;
-  const items7 = [tmp21[0], initialTab];
+  const tmp20 = _slicedToArray(noop.useState(null), 2);
+  closure_12 = tmp21;
+  const items7 = [tmp20[0], initialTab];
   found = items7.find((item) => {
     let hasItem = null != item;
     if (hasItem) {
@@ -505,26 +521,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (found == null) {
     found = memo[0];
   }
-  saving = tmp9;
-  if (tmp9) {
+  saving = tmp8;
+  if (tmp8) {
     saving = tmpResultResult.saving;
   }
   if (!saving) {
-    saving = tmp16.saving;
+    saving = tmp15.saving;
   }
-  canSave = tmp16.canSave;
+  let hasItem = tmp8;
+  if (!tmp8) {
+    hasItem = isScoped;
+  }
+  if (!hasItem) {
+    hasItem = memo.includes("app");
+  }
+  if (!hasItem) {
+    hasItem = memo.includes("secrets");
+  }
+  canSave = tmp15.canSave;
   if (!canSave) {
     let canSave2 = !isScoped;
     if (!isScoped) {
-      canSave2 = tmp9;
+      canSave2 = tmp8;
     }
     if (canSave2) {
       canSave2 = tmpResultResult.canSave;
     }
     canSave = canSave2;
   }
-  const items8 = [tmp16, canSave, tmp9, tmpResultResult, saving, isScoped, found, memo];
-  const callback = obj.useCallback(asyncGeneratorStep(async () => {
+  const items8 = [tmp15, canSave, tmp8, tmpResultResult, saving, isScoped, found, memo];
+  const callback = obj2.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -535,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -622,14 +648,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     }
   }), items8);
-  let obj5 = { ref, startExpanded: true, keyboardShouldPersistTaps: "always", dismissAccessibilityLabel: null, header: null, children: null };
-  const intl = tmp5(tmp2[18]).intl;
-  obj5.dismissAccessibilityLabel = intl.string(ref(stateFromStores1[8]).bA4VU5);
-  const intl2 = tmp5(tmp2[18]).intl;
-  const tmpResult2 = ref(stateFromStores1[8]);
-  const obj6 = {
+  const obj7 = { ref, startExpanded: true, keyboardShouldPersistTaps: "always", dismissAccessibilityLabel: null, header: null, children: null };
+  const intl = tmp4(obj[18]).intl;
+  obj7.dismissAccessibilityLabel = intl.string(ref(obj[8]).bA4VU5);
+  const intl2 = tmp4(obj[18]).intl;
+  const tmpResult2 = ref(obj[8]);
+  const obj8 = {
     title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe),
-    trailing: closure_12(projectId(stateFromStores1[19]).ActionSheetCloseButton, {
+    trailing: closure_12(projectId(obj[19]).ActionSheetCloseButton, {
       onPress() {
         const current = ref.current;
         let closeActionSheetResult;
@@ -640,22 +666,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     })
   };
-  obj5.header = closure_12(projectId(stateFromStores1[20]).BottomSheetTitleHeader, obj6);
-  const obj8 = { style: tmp3.container, children: null };
+  obj7.header = closure_12(projectId(obj[20]).BottomSheetTitleHeader, obj8);
+  const obj10 = { style: tmp2.container, children: null };
   let tmp25Result = null;
   if (!isScoped) {
     tmp25Result = null;
     if (memo.length > 1) {
       tmp25Result = null;
       if (null != found) {
-        const obj9 = { tabs: memo, selected: found, onSelect: tmp22 };
-        tmp25Result = tmp25(closure_16, obj9, memo.join(","));
+        const obj11 = { tabs: memo, selected: found, onSelect: tmp21 };
+        tmp25Result = tmp25(closure_16, obj11, memo.join(","));
       }
     }
   }
   const items9 = [tmp25Result, , , , , , , , ];
   if (isScoped) {
-    let fields = tmp16.fields;
+    let fields = tmp15.fields;
   } else {
     fields = null;
   }
@@ -664,28 +690,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (!isScoped) {
     tmp27Result = null;
     if ("project" === found) {
-      const obj10 = { spacing: tmp(tmp2[10]).space.PX_24, children: null };
-      let fields1 = null;
-      if (tmp9) {
-        fields1 = tmpResultResult.fields;
-      }
-      const items10 = [fields1, ];
-      const obj11 = { projectId, canEdit: tmp11 };
-      items10[1] = tmp25(tmp(tmp2[22]), obj11, projectId);
-      obj10.children = items10;
-      tmp27Result = tmp27(tmp5(tmp2[21]).Stack, obj10);
+      const obj12 = { spacing: tmp(obj[10]).space.PX_24, children: null };
+      const items10 = [tmpResultResult.fields, ];
+      const obj13 = { projectId, canEdit: tmp10 };
+      items10[1] = tmp25(tmp(obj[22]), obj13, projectId);
+      obj12.children = items10;
+      tmp27Result = tmp27(tmp4(obj[21]).Stack, obj12);
     }
   }
   items9[2] = tmp27Result;
-  let tmp25Result4 = null;
+  let tmp25Result5 = null;
   if (!isScoped) {
-    tmp25Result4 = null;
+    tmp25Result5 = null;
     if ("linked" === found) {
-      const obj12 = { linkedApps: tmp17 };
-      tmp25Result4 = tmp25(tmp(tmp2[23]), obj12);
+      const obj14 = { linkedApps: tmp16 };
+      tmp25Result5 = tmp25(tmp(obj[23]), obj14);
     }
   }
-  items9[3] = tmp25Result4;
+  items9[3] = tmp25Result5;
   let experimentalFields = null;
   if (!isScoped) {
     experimentalFields = null;
@@ -698,41 +720,51 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (!isScoped) {
     secretFields = null;
     if ("secrets" === found) {
-      secretFields = tmp16.secretFields;
+      secretFields = tmp15.secretFields;
     }
   }
   items9[5] = secretFields;
-  let tmp25Result5 = null;
+  let tmp25Result6 = null;
   if (!isScoped) {
-    tmp25Result5 = null;
+    tmp25Result6 = null;
     if ("model" === found) {
-      const obj13 = { projectId };
-      tmp25Result5 = tmp25(tmp5(tmp2[24]).ConjureModelSettingsContent, obj13);
+      const obj15 = { projectId };
+      tmp25Result6 = tmp25(tmp4(obj[24]).ConjureModelSettingsContent, obj15);
     }
   }
-  items9[6] = tmp25Result5;
-  let tmp38 = null;
+  items9[6] = tmp25Result6;
+  let tmp37 = null;
   if (!isScoped) {
-    tmp38 = null;
+    tmp37 = null;
     if (null == found) {
       if (stateFromStores2) {
-        const obj14 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl3 = tmp5(tmp2[18]).intl;
-        obj14.children = intl3.string(tmp(tmp2[8]).lJJayk);
-        let tmp25Result6 = tmp25(tmp5(tmp2[25]).Text, obj14);
+        const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
+        const intl3 = tmp4(obj[18]).intl;
+        obj16.children = intl3.string(tmp(obj[8]).lJJayk);
+        let tmp25Result7 = tmp25(tmp4(obj[25]).Text, obj16);
       } else {
-        tmp25Result6 = tmp25(tmp5(tmp2[26]).ActivityIndicator, {});
+        tmp25Result7 = tmp25(tmp4(obj[26]).ActivityIndicator, {});
       }
     }
   }
-  items9[7] = tmp38;
-  const intl4 = tmp5(tmp2[18]).intl;
-  if (isScoped) {
-    let A7dQd9 = tmp(tmp2[8]).A7dQd9;
+  items9[7] = tmp37;
+  if (!hasItem) {
+    items9[8] = null;
+    obj10.children = items9;
+    obj7.children = tmp27(tmp28, obj10);
+    return tmp25(tmp4(obj[28]).ActionSheet, obj7);
   } else {
-    A7dQd9 = tmp5(tmp2[18]).t["R3BPH+"];
+    const intl4 = tmp4(obj[18]).intl;
+    if (isScoped) {
+      let A7dQd9 = tmp(obj[8]).A7dQd9;
+    } else {
+      A7dQd9 = tmp4(obj[18]).t["R3BPH+"];
+    }
+    obj = { text: intl4.string(A7dQd9), variant: "primary", loading: saving, disabled: !canSave, onPress: callback };
+    tmp25(tmp4(obj[27]).Button, obj);
   }
-  const obj7 = {
+  const obj6 = { readOnly: !tmp8 };
+  const obj9 = {
     onPress() {
       const current = ref.current;
       let closeActionSheetResult;
@@ -742,11 +774,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       return closeActionSheetResult;
     }
   };
-  const tmp28 = closure_6;
-  const tmpResult = ref(stateFromStores1[15]);
-  items9[8] = closure_12(projectId(stateFromStores1[27]).Button, { text: intl4.string(A7dQd9), variant: "primary", loading: saving, disabled: !canSave, onPress: callback });
-  obj8.children = items9;
-  obj5.children = found(tmp28, obj8);
-  return closure_12(projectId(stateFromStores1[28]).ActionSheet, obj5);
+  tmp28 = closure_6;
+  const tmpResult = ref(obj[15]);
 });
 export const CONJURE_SETTINGS_SHEET_KEY = "ConjureSettingsSheet";

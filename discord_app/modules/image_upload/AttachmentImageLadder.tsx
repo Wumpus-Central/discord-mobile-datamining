@@ -1,6 +1,6 @@
-// === Module 1451: AttachmentImageLadder ===
+// === Module 1452: AttachmentImageLadder ===
 
-// Module 1451 (AttachmentImageLadder)
+// Module 1452 (AttachmentImageLadder)
 import size from "module_2" /* 2 */;
 
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
@@ -8,14 +8,14 @@ let result = size.fileFinishedImporting("modules/image_upload/AttachmentImageLad
 
 export const ATTACHMENT_LADDER = items;
 export const ATTACHMENT_LADDER_MAX_UPSCALE = 1.1;
-export const getSnapDownMaxUpscale = function getSnapDownMaxUpscale(minSnapDownDpr, arg1) {
+export function getSnapDownMaxUpscale(minSnapDownDpr, arg1) {
   let maxUpscale = null;
   if (arg1 >= minSnapDownDpr.minSnapDownDpr) {
     maxUpscale = minSnapDownDpr.maxUpscale;
   }
   return maxUpscale;
-};
-export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) {
+}
+export function snapAttachmentDimensions(arg0) {
   ({ targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale } = arg0);
   const bound = Math.max(targetWidth, targetHeight);
   if (bound <= 0) {
@@ -86,4 +86,4 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
     size2.height = bound4;
     return size2;
   }
-};
+}

@@ -1,19 +1,19 @@
-// === Module 12258: ConjureEffortTiers ===
+// === Module 12312: ConjureEffortTiers ===
 
-// Module 12258 (ConjureEffortTiers)
+// Module 12312 (ConjureEffortTiers)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12259 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12313 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
-let obj = { simple: _modDef3863.Mqb8mc, balanced: _modDef3863.zCZfA6, complex: _modDef3863["8l2atm"] };
+let obj = { simple: _modDef3864.Mqb8mc, balanced: _modDef3864.zCZfA6, complex: _modDef3864["8l2atm"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
-export const conjureTierLabel = function conjureTierLabel(value) {
+export function conjureTierLabel(value) {
   let stringResult = value;
   const modelTierMessageResult = ConjureModelLabels.modelTierMessage(value);
   if (null != modelTierMessageResult) {
@@ -21,12 +21,12 @@ export const conjureTierLabel = function conjureTierLabel(value) {
     stringResult = intl.string(modelTierMessageResult);
   }
   return stringResult;
-};
-export const conjureTierDescription = function conjureTierDescription(tier) {
+}
+export function conjureTierDescription(tier) {
   const intl = util.intl;
   return intl.string(obj[tier]);
-};
-export const conjureTierModel = function conjureTierModel(settings, tiers, tier) {
+}
+export function conjureTierModel(settings, tiers, tier) {
   const models = settings.models;
   let tmp;
   if (models != null) {
@@ -45,8 +45,8 @@ export const conjureTierModel = function conjureTierModel(settings, tiers, tier)
     tmp = null;
   }
   return tmp;
-};
-export const conjureWithTier = function conjureWithTier(tier, tier2) {
+}
+export function conjureWithTier(tier, tier2) {
   let tmp = tier;
   if (tier2 !== tier.tier) {
     const thinking = tier.thinking;
@@ -56,8 +56,8 @@ export const conjureWithTier = function conjureWithTier(tier, tier2) {
     tmp = obj;
   }
   return tmp;
-};
-export const conjurePickTierModel = function conjurePickTierModel(settings, tier, arg2) {
+}
+export function conjurePickTierModel(settings, tier, arg2) {
   obj = {};
   const merged = Object.assign(settings);
   const obj2 = {};
@@ -65,8 +65,8 @@ export const conjurePickTierModel = function conjurePickTierModel(settings, tier
   obj2[tier] = arg2;
   obj.models = obj2;
   return obj;
-};
-export const conjureCeilingSupportsFast = function conjureCeilingSupportsFast(settings, tiers, main) {
+}
+export function conjureCeilingSupportsFast(settings, tiers, main) {
   ({ tier, models } = settings);
   let tmp;
   if (models != null) {
@@ -95,8 +95,8 @@ export const conjureCeilingSupportsFast = function conjureCeilingSupportsFast(se
     tmp5 = true === supports_fast;
   }
   return tmp5;
-};
-export const conjureNormalizeFast = function conjureNormalizeFast(conjurePickTierModelResult) {
+}
+export function conjureNormalizeFast(conjurePickTierModelResult) {
   const tmp = _objectWithoutProperties(conjurePickTierModelResult, closure_4);
   let tmp2 = tmp;
   if (true === conjurePickTierModelResult.fast) {
@@ -106,15 +106,15 @@ export const conjureNormalizeFast = function conjureNormalizeFast(conjurePickTie
     tmp2 = obj;
   }
   return tmp2;
-};
-export const conjureCanPickModel = function conjureCanPickModel(choices) {
+}
+export function conjureCanPickModel(choices) {
   return choices.main.length > 0;
-};
-export const conjureCustomizeMessage = function conjureCustomizeMessage(choices) {
+}
+export function conjureCustomizeMessage(choices) {
   if (choices.main.length > 0) {
-    let qSViP4 = _modDef3863.eGqPbV;
+    let qSViP4 = _modDef3864.eGqPbV;
   } else {
-    qSViP4 = _modDef3863.qSViP4;
+    qSViP4 = _modDef3864.qSViP4;
   }
   return qSViP4;
-};
+}

@@ -1,13 +1,13 @@
-// === Module 14997: PromotionStringUtils ===
+// === Module 15232: PromotionStringUtils ===
 
-// Module 14997 (PromotionStringUtils)
+// Module 15232 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import PriceUtils from "PriceUtils" /* 7376 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2054 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import PriceUtils from "PriceUtils" /* 7399 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2055 */;
 
 require = fn;
 const PremiumConstants = fn(1391);
@@ -66,7 +66,7 @@ export const useFormatStringWithCommonPremiumParams = ReactCompilerGating.isReac
   }
   return arr.replace(/\{price\}/g, str);
 });
-export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArticle, helpArticleId) {
+export function getHelpArticleLinkProps(helpArticle, helpArticleId) {
   let id1;
   if (helpArticle != null) {
     id1 = helpArticle.id;
@@ -95,4 +95,4 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
     const intl = util.intl;
     linkText = intl.string(util.t["sBp+u0"]);
   }
-};
+}

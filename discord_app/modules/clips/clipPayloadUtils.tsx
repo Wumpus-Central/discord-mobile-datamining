@@ -1,24 +1,24 @@
-// === Module 8179: clipPayloadUtils ===
+// === Module 8202: clipPayloadUtils ===
 
-// Module 8179 (clipPayloadUtils)
+// Module 8202 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(8180);
+const ClipsConstants = fn(8203);
 ({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: metroRequire, GameEventType: closure_7, CLIP_RUNTIME: closure_8 } = ClipsConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const SpeakingFlags = fn(5754).SpeakingFlags;
+const SpeakingFlags = fn(5756).SpeakingFlags;
 const ServerClipGameEventType = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 let obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
-export const getClipCreatedAt = function getClipCreatedAt(createdAt) {
+export function getClipCreatedAt(createdAt) {
   return new Date(createdAt).toISOString();
-};
-export const getClipSyncTimestamp = function getClipSyncTimestamp(clip) {
+}
+export function getClipSyncTimestamp(clip) {
   if (null != clip.syncTimestamp) {
     const editMetadata = clip.editMetadata;
     let end;
@@ -34,13 +34,13 @@ export const getClipSyncTimestamp = function getClipSyncTimestamp(clip) {
     const date = new Date(clip.syncTimestamp - (clip.length - length));
     return date.toISOString();
   }
-};
-export const getClipParticipantIds = function getClipParticipantIds(users) {
+}
+export function getClipParticipantIds(users) {
   return users.slice(0, React4);
-};
+}
 export { ServerClipGameEventType };
 export const ServerClipEmotionType = obj2;
-export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
+export function getClipEventsTimeline(clip) {
   _require = clip;
   const timeline = clip.timeline;
   let num;
@@ -131,4 +131,4 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       num2 = 0;
     }
   }
-};
+}

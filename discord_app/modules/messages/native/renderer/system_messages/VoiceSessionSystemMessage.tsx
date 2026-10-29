@@ -1,11 +1,11 @@
-// === Module 8473: VoiceSessionSystemMessage ===
+// === Module 8495: VoiceSessionSystemMessage ===
 
-// Module 8473 (VoiceSessionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8370 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+// Module 8495 (VoiceSessionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8392 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx");
 
-export const createVoiceSessionSystemMessage = function createVoiceSessionSystemMessage(message) {
+export function createVoiceSessionSystemMessage(message) {
   ({ message, roleStyle } = message);
   _require = ChannelStore.getChannel(message.channel_id);
   const tmp3 = getHumanizedCallDurationDefault(message);
@@ -64,4 +64,4 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };
-};
+}

@@ -1,9 +1,9 @@
-// === Module 15632: KeyboardLayoutMapUtils ===
+// === Module 15868: KeyboardLayoutMapUtils ===
 
-// Module 15632 (KeyboardLayoutMapUtils)
+// Module 15868 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 15631 */;
+import keyCodeDefault from "keyCode" /* 15867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
@@ -37,7 +37,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_19 = async function _createKeyboardMapper() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -190,7 +190,7 @@ let closure_19 = async function _createKeyboardMapper() {
           }
         });
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -230,7 +230,7 @@ let closure_21 = async function _resetKeyboardMapper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -263,7 +263,7 @@ let closure_21 = async function _resetKeyboardMapper() {
           obj.reset();
         }
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -346,7 +346,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(7648);
+const KeyboardConstants = fn(7671);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1381);
@@ -972,7 +972,7 @@ export const BACKTICK_CODES = set;
 export const DefaultKeyboardLayout = frozen;
 export { normalizeKeyMap };
 export { initializeKeyboardMapper };
-export const __DEV_overrideLayoutMapKey = function __DEV_overrideLayoutMapKey(arg0, arg1) {
+export function __DEV_overrideLayoutMapKey(arg0, arg1) {
   obj5._set(arg0, arg1);
   if (_null != null) {
     const result = _null._initializeInternalLayoutMap();
@@ -980,9 +980,9 @@ export const __DEV_overrideLayoutMapKey = function __DEV_overrideLayoutMapKey(ar
   if (_null != null) {
     _null.updateCaches();
   }
-};
+}
 export { getKeyboardMapper };
-export const resetKeyboardMapper = function resetKeyboardMapper() {
+export function resetKeyboardMapper() {
   const self = this;
   const apply = closure_21.apply;
   if (typeof apply === "unknown") {
@@ -991,8 +991,8 @@ export const resetKeyboardMapper = function resetKeyboardMapper() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getLayoutMap = function getLayoutMap() {
+}
+export function getLayoutMap() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -1027,10 +1027,10 @@ export const getLayoutMap = function getLayoutMap() {
     }
   }
   return layoutMap;
-};
+}
 export { reverseLookupCodeFromKey };
 export { getExactKeyboardEventMatchFromAny };
-export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAny(keyCode) {
+export function getKeyboardEventShapeFromAny(keyCode) {
   const tmp = getExactKeyboardEventMatchFromAny(keyCode);
   if (null != tmp) {
     return tmp;
@@ -1081,8 +1081,8 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
       return null;
     }
   }
-};
-export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKey(codeToKeyLanguageCorrection) {
+}
+export function getKeyboardEventShapeFromKey(codeToKeyLanguageCorrection) {
   let tmp2;
   if (null != codeToKeyLanguageCorrection) {
     tmp2 = normalizeKey(codeToKeyLanguageCorrection);
@@ -1123,8 +1123,8 @@ export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKe
       }
     }
   }
-};
-export const getKeyboardEventShapeFromKeycode = function getKeyboardEventShapeFromKeycode(keyCode) {
+}
+export function getKeyboardEventShapeFromKeycode(keyCode) {
   const obj = getKeyboardMapper();
   let result;
   if (obj != null) {
@@ -1156,4 +1156,4 @@ export const getKeyboardEventShapeFromKeycode = function getKeyboardEventShapeFr
       return tmp;
     }
   }
-};
+}

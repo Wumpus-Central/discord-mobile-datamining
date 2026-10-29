@@ -1,19 +1,19 @@
-// === Module 4954: EmojiUtils ===
+// === Module 4955: EmojiUtils ===
 
-// Module 4954 (EmojiUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import ImageUtils from "ImageUtils" /* 1493 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import EmojiTypes from "EmojiTypes" /* 4953 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4960 */;
+// Module 4955 (EmojiUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import ImageUtils from "ImageUtils" /* 1494 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import EmojiTypes from "EmojiTypes" /* 4954 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4961 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiPackStore from "EmojiPackStore" /* 4955 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+import EmojiPackStore from "EmojiPackStore" /* 4956 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 import UserStore from "UserStore" /* 1389 */;
 
-const PremiumTypeUtils = isPremiumResult(1988);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(4928);
-const RoleSubscriptionEmojiUtils = isPremiumResult(4958);
+const PremiumTypeUtils = isPremiumResult(1989);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(4929);
+const RoleSubscriptionEmojiUtils = isPremiumResult(4959);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -178,7 +178,7 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
 const Permissions = fn(1084).Permissions;
 const EmojiConstants = fn(1392);
@@ -324,7 +324,7 @@ export default {
     return ImageUtils.dataUriFileSize(base64) > v65535;
   }
 };
-export const countEmoji = function countEmoji(arr, arg1) {
+export function countEmoji(arr, arg1) {
   closure_0 = arg1;
   importDefault = 0;
   dependencyMap = 0;
@@ -358,8 +358,8 @@ export const countEmoji = function countEmoji(arr, arg1) {
     }
   });
   return { unicode: importDefault, custom: dependencyMap, customExternal, managed, managedExternal, animated };
-};
-export const getEmojiColors = function getEmojiColors() {
+}
+export function getEmojiColors() {
   const self = this;
   const apply = closure_21.apply;
   if (typeof apply === "unknown") {
@@ -368,8 +368,8 @@ export const getEmojiColors = function getEmojiColors() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
+}
+export function getEmojiUrl(arg0, arg1) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 32;
@@ -386,8 +386,8 @@ export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
     emojiURL = EmojiUtilsPlatformedDefault.getURL(tmp);
   }
   return emojiURL;
-};
-export const getAllEmojiNamesString = function getAllEmojiNamesString(emojiByIdOrName) {
+}
+export function getAllEmojiNamesString(emojiByIdOrName) {
   if ("allNamesString" in emojiByIdOrName) {
     let allNamesString = emojiByIdOrName.allNamesString;
   } else {
@@ -395,4 +395,4 @@ export const getAllEmojiNamesString = function getAllEmojiNamesString(emojiByIdO
     allNamesString = ":" + emojiByIdOrName.name + ":";
   }
   return allNamesString;
-};
+}

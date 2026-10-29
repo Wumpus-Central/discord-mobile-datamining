@@ -1,9 +1,9 @@
-// === Module 18118: useICYMITabBadge ===
+// === Module 18352: useICYMITabBadge ===
 
-// Module 18118 (useICYMITabBadge)
+// Module 18352 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ICYMIStore from "ICYMIStore" /* 8860 */;
+import ICYMIStore from "ICYMIStore" /* 8863 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -43,6 +43,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useICYMI
   obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);
   return obj;
 });
-export const icymiTabBadgeShown = function icymiTabBadgeShown() {
+export function icymiTabBadgeShown() {
   return ICYMIStore.hasNewContent();
-};
+}

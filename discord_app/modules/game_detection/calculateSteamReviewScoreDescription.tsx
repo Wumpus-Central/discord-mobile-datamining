@@ -1,12 +1,12 @@
-// === Module 9353: calculateSteamReviewScoreDescription ===
+// === Module 9357: calculateSteamReviewScoreDescription ===
 
-// Module 9353 (calculateSteamReviewScoreDescription)
-import GameDetectionTypes from "GameDetectionTypes" /* 2039 */;
+// Module 9357 (calculateSteamReviewScoreDescription)
+import GameDetectionTypes from "GameDetectionTypes" /* 2040 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
-export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {
+export function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {
   let num = 50;
   let num2 = 50;
   if (isRecentRating) {
@@ -55,4 +55,4 @@ export const calculateSteamReviewScoreDescription = function calculateSteamRevie
     }
   }
   NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS;
-};
+}

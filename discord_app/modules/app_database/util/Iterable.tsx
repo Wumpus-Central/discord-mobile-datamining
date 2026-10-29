@@ -1,6 +1,6 @@
-// === Module 7626: Iterable ===
+// === Module 7649: Iterable ===
 
-// Module 7626 (Iterable)
+// Module 7649 (Iterable)
 import size from "module_2" /* 2 */;
 
 class Chained {
@@ -24,11 +24,11 @@ prototype["next"] = function next() {
     }
     return iter2;
   }
-  return { done: true, value: "a" };
+  return { done: true, value: "Array" };
 };
 const result = size.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
 
-export const chain = function chain() {
+export function chain() {
   if (typeof Chained === "function") {
     const obj = Object.create(Chained.prototype);
     obj.index = 0;
@@ -37,4 +37,4 @@ export const chain = function chain() {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

@@ -1,12 +1,12 @@
-// === Module 11655: MobileVoiceOverlayStore ===
+// === Module 11709: MobileVoiceOverlayStore ===
 
-// Module 11655 (MobileVoiceOverlayStore)
+// Module 11709 (MobileVoiceOverlayStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -50,11 +50,11 @@ const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(DispatcherDefault, {
 const result = size.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
 
 export default mobileVoiceOverlayStore;
-export const isMobileOverlaySupported = function isMobileOverlaySupported() {
+export function isMobileOverlaySupported() {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !MetaQuestUtils.isMetaQuest();
     const tmpResult = MetaQuestUtils;
   }
   return isAndroidResult;
-};
+}

@@ -1,16 +1,16 @@
-// === Module 16933: LightModeThemeSetting ===
+// === Module 17172: LightModeThemeSetting ===
 
-// Module 16933 (LightModeThemeSetting)
+// Module 17172 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16934 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17173 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 
 require = fn;
 const SystemTheme = fn(1207).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.NoFvjZ);
   },
-  parent: fn(8365).MobileUserSettings.APPEARANCE,
+  parent: fn(8387).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

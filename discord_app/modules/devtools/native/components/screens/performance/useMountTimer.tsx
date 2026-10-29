@@ -1,6 +1,6 @@
-// === Module 17380: useMountTimer ===
+// === Module 17619: useMountTimer ===
 
-// Module 17380 (useMountTimer)
+// Module 17619 (useMountTimer)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

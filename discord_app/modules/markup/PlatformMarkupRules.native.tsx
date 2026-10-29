@@ -1,18 +1,18 @@
-// === Module 8538: PlatformMarkupRules ===
+// === Module 8560: PlatformMarkupRules ===
 
-// Module 8538 (PlatformMarkupRules)
+// Module 8560 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1125 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef1948 from "module_1948" /* 1948 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2029 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 6027 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6028 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6039 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 8533 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8539 */;
-import useGameMentionData from "useGameMentionData" /* 8615 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import _modDef1949 from "module_1949" /* 1949 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2030 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 6031 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6032 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6043 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 8555 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8561 */;
+import useGameMentionData from "useGameMentionData" /* 8637 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -51,7 +51,7 @@ let obj = {
   silentPrefix: null
 };
 let obj2 = {};
-let merged = Object.assign(_modDef1948.defaultRules.escape);
+let merged = Object.assign(_modDef1949.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;
@@ -374,7 +374,7 @@ obj.silentPrefix = {
 let result = size.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
-export const decorateWithIcon = function decorateWithIcon(content) {
+export function decorateWithIcon(content) {
   let mapped = content;
   if (null != content) {
     mapped = content;
@@ -403,8 +403,8 @@ export const decorateWithIcon = function decorateWithIcon(content) {
     }
   }
   return mapped;
-};
-export const hydrateGameMention = function hydrateGameMention(gameId, channelId) {
+}
+export function hydrateGameMention(gameId, channelId) {
   const gameMentionData = useGameMentionData.getGameMentionData(gameId);
   let gameIcon;
   if (gameMentionData != null) {
@@ -421,4 +421,4 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
   }
   obj2.displayName = gameName;
   return obj2;
-};
+}

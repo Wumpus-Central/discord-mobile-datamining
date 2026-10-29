@@ -1,9 +1,9 @@
-// === Module 6406: isMessageMentioned ===
+// === Module 6430: isMessageMentioned ===
 
-// Module 6406 (isMessageMentioned)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 6430 (isMessageMentioned)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);
@@ -64,7 +64,7 @@ export default function isMessageMentioned(suppressRoles) {
   }
   return isMentioned({ userId: suppressRoles.userId, channelId: message.channel_id, mentionEveryone: message.mentionEveryone, mentionUsers: message.mentions, mentionRoles: message.mentionRoles, suppressEveryone, suppressRoles: flag });
 };
-export const isRawMessageMentioned = function isRawMessageMentioned(suppressRoles) {
+export function isRawMessageMentioned(suppressRoles) {
   ({ rawMessage, suppressEveryone } = suppressRoles);
   if (suppressEveryone === undefined) {
     suppressEveryone = false;
@@ -96,5 +96,5 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   obj.suppressEveryone = suppressEveryone;
   obj.suppressRoles = flag;
   return isMentioned(obj);
-};
+}
 export { isMentioned };

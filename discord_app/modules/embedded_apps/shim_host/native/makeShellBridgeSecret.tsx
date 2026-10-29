@@ -1,6 +1,6 @@
-// === Module 11527: makeShellBridgeSecret ===
+// === Module 11581: makeShellBridgeSecret ===
 
-// Module 11527 (makeShellBridgeSecret)
+// Module 11581 (makeShellBridgeSecret)
 import v1 from "v1" /* 1278 */;
 import size from "module_2" /* 2 */;
 

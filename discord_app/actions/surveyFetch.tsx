@@ -1,18 +1,18 @@
-// === Module 7893: surveyFetch ===
+// === Module 7916: surveyFetch ===
 
-// Module 7893 (surveyFetch)
+// Module 7916 (surveyFetch)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import TypeUtils from "TypeUtils" /* 4868 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6711 */;
+import TypeUtils from "TypeUtils" /* 4869 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/surveyFetch.tsx");
 
-export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_seen) {
+export function surveyFetch(surveyOverride, disable_auto_seen) {
   const obj = {};
   if (null != surveyOverride) {
     obj.survey_override = surveyOverride;
@@ -78,4 +78,4 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
   }, () => {
     DispatcherDefault.dispatch({ type: "SURVEY_FETCHED", survey: null });
   });
-};
+}

@@ -1,8 +1,8 @@
-// === Module 14246: useCanSearchForumPostsByChannelId ===
+// === Module 11085: useCanSearchForumPostsByChannelId ===
 
-// Module 14246 (useCanSearchForumPostsByChannelId)
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
+// Module 11085 (useCanSearchForumPostsByChannelId)
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
 
 const require = globalThis.__r;
 

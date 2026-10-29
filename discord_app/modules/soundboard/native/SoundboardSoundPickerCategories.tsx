@@ -1,22 +1,22 @@
-// === Module 18821: SoundboardSoundPickerCategories ===
+// === Module 19054: SoundboardSoundPickerCategories ===
 
-// Module 18821 (SoundboardSoundPickerCategories)
+// Module 19054 (SoundboardSoundPickerCategories)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5249 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
-import ClockIcon from "ClockIcon" /* 5727 */;
-import GuildIconDefault from "GuildIcon" /* 6919 */;
-import Pressables from "Pressables" /* 6944 */;
-import SoundboardTypes from "SoundboardTypes" /* 7481 */;
-import LockIcon from "LockIcon" /* 8603 */;
-import TrophyIcon from "TrophyIcon" /* 9340 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9717 */;
-import _modDef10193 from "module_10193" /* 10193 */;
-import _modDef18819 from "module_18819" /* 18819 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
+import ClockIcon from "ClockIcon" /* 5729 */;
+import GuildIconDefault from "GuildIcon" /* 6943 */;
+import Pressables from "Pressables" /* 6968 */;
+import SoundboardTypes from "SoundboardTypes" /* 7504 */;
+import LockIcon from "LockIcon" /* 8625 */;
+import TrophyIcon from "TrophyIcon" /* 9344 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9749 */;
+import _modDef10226 from "module_10226" /* 10226 */;
+import _modDef19052 from "module_19052" /* 19052 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
@@ -26,13 +26,13 @@ let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(18804).setSearchQuery;
+const setSearchQuery = fn(19037).setSearchQuery;
 const Constants = fn(1084);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
 let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
 obj.item = size;
@@ -74,7 +74,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp30 = cResult[3];
       }
-      let tmp12 = _modDef10193;
+      let tmp12 = _modDef10226;
       let tmp11 = null;
       let tmp14 = tmp30;
       let tmp13 = null;
@@ -111,7 +111,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp20 = cResult[7];
       }
-      tmp12 = _modDef18819;
+      tmp12 = _modDef19052;
       tmp11 = null;
       tmp14 = tmp20;
       tmp13 = null;
@@ -125,7 +125,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp16 = cResult[8];
       }
-      tmp12 = _modDef18819;
+      tmp12 = _modDef19052;
       tmp11 = null;
       tmp14 = tmp16;
       tmp13 = null;
@@ -273,7 +273,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10193;
+    tmp6 = _modDef10226;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -286,13 +286,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef18819;
+    tmp6 = _modDef19052;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef18819;
+    tmp6 = _modDef19052;
     tmp7 = null;
     tmp14Result = null;
   } else {

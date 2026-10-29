@@ -1,15 +1,15 @@
-// === Module 16929: SettingsAppearancePickerUtils ===
+// === Module 17168: SettingsAppearancePickerUtils ===
 
-// Module 16929 (SettingsAppearancePickerUtils)
+// Module 17168 (SettingsAppearancePickerUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1242 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
-import ColorUtils from "ColorUtils" /* 5001 */;
-import utils_ColorDefault from "utils/Color" /* 5002 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5238 */;
-import useToken from "useToken" /* 5288 */;
+import ColorUtils from "ColorUtils" /* 5002 */;
+import utils_ColorDefault from "utils/Color" /* 5003 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5239 */;
+import useToken from "useToken" /* 5289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -144,8 +144,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(5002)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5002)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(5003)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5003)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -174,7 +174,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx");
 
-export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThemes(themes) {
+export function convertThemesToAnimatedThemes(themes) {
   let num = prop;
   if (prop === undefined) {
     num = 0.7;
@@ -206,7 +206,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
     continue;
   }
   return items1;
-};
+}
 export const useLaunchWelcomeSystemTheme = ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchWelcomeSystemTheme() {
   const cResult = c.c(5);
   const tmp6 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
@@ -260,7 +260,7 @@ export const useLaunchWelcomeSystemTheme = ReactCompilerGating.isReactCompilerEn
   return tmp15;
 }) : (function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5288).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5289).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

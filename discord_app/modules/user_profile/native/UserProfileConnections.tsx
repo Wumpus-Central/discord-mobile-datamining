@@ -1,28 +1,28 @@
-// === Module 14676: UserProfileConnections ===
+// === Module 14911: UserProfileConnections ===
 
-// Module 14676 (UserProfileConnections)
+// Module 14911 (UserProfileConnections)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native2 from "native" /* 1199 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import shared from "shared" /* 5011 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useToken from "useToken" /* 5288 */;
-import ToastUtils from "ToastUtils" /* 5698 */;
-import TableRow from "TableRow" /* 6939 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import ClipboardUtils from "ClipboardUtils" /* 7321 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7339 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8894 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11311 */;
-import _modDef11316 from "module_11316" /* 11316 */;
-import _modDef11317 from "module_11317" /* 11317 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 14680 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import shared from "shared" /* 5012 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useToken from "useToken" /* 5289 */;
+import ToastUtils from "ToastUtils" /* 5700 */;
+import TableRow from "TableRow" /* 6963 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import ClipboardUtils from "ClipboardUtils" /* 7345 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7363 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8897 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11365 */;
+import _modDef11370 from "module_11370" /* 11370 */;
+import _modDef11371 from "module_11371" /* 11371 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 14915 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2065 */;
-import StreamerModeStore from "StreamerModeStore" /* 5059 */;
+import LocaleStore from "LocaleStore" /* 2066 */;
+import StreamerModeStore from "StreamerModeStore" /* 5060 */;
 
 require = fn;
 function generateMetadataForPlatform(arg0) {
@@ -53,17 +53,17 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(7340);
+let Constants = fn(7364);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1084);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(7312).MetadataFields;
+const MetadataFields = fn(7336).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1199).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1199);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
 let obj4 = { marginBottom: nativeDefault.space.PX_8 };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -121,7 +121,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11317, color: WHITE };
+      const obj4 = { source: _modDef11371, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -129,7 +129,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11316, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11370, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -155,10 +155,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11316, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11370, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11317, color: WHITE };
+    const obj5 = { source: _modDef11371, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -843,7 +843,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8716).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8719).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -896,7 +896,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         const obj5 = { label: str, icon: tmp14, onPress: tmp8, onLongPress: tmp8, accessibilityLabel: joined, accessibilityHint: tmp12, accessibilityRole: "button" };
-        const tmp20 = closure_12(tmp(6939).TableRow, obj5);
+        const tmp20 = closure_12(tmp(6963).TableRow, obj5);
         cResult[13] = tmp12;
         cResult[14] = joined;
         cResult[15] = tmp8;
@@ -908,7 +908,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp15;
       if (null != tmp5) {
         const obj6 = { size, source: tmp5, style: tmp4.applicationIcon };
-        tmp15 = closure_12(tmp(5704).BaseIconImage, obj6);
+        tmp15 = closure_12(tmp(5706).BaseIconImage, obj6);
       }
       cResult[10] = tmp5;
       cResult[11] = tmp4;
@@ -933,7 +933,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[3] = trackUserProfileAction;
   cResult[4] = fn;
   tmp8 = fn;
-  let obj2 = trackUserProfileAction(8716);
+  let obj2 = trackUserProfileAction(8719);
 }) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
@@ -1275,8 +1275,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
 }) : (function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5070).useThemeContext().theme;
-  const obj = userId(5070);
+  const theme = userId(5071).useThemeContext().theme;
+  const obj = userId(5071);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -1284,7 +1284,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14677)(userId));
+  ({ connections, appIdentities } = theme(14912)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -1298,8 +1298,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
     obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(7023).TableRowGroup, obj5);
-    return closure_12(tmp5(7339), obj4);
+    obj4.children = closure_12(tmp2(7047).TableRowGroup, obj5);
+    return closure_12(tmp5(7363), obj4);
   }
   return null;
 });

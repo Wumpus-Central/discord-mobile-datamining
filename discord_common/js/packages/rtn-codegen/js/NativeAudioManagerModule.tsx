@@ -1,6 +1,6 @@
-// === Module 9188: NativeAudioManagerModule ===
+// === Module 9191: NativeAudioManagerModule ===
 
-// Module 9188 (NativeAudioManagerModule)
+// Module 9191 (NativeAudioManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 
 export default enforcing;
 export { AudioDeviceType };
-export const getInvalidAndroidDevice = function getInvalidAndroidDevice() {
+export function getInvalidAndroidDevice() {
   obj = { deviceType: 0, simpleDeviceType: obj.INVALID, deviceId: -1, deviceName: "Invalid" };
   return obj;
-};
+}

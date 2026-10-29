@@ -1,13 +1,13 @@
-// === Module 8423: getRoleIcon ===
+// === Module 8445: getRoleIcon ===
 
-// Module 8423 (getRoleIcon)
+// Module 8445 (getRoleIcon)
 import util from "util" /* 1125 */;
-import useRoleIconProps from "useRoleIconProps" /* 7318 */;
+import useRoleIconProps from "useRoleIconProps" /* 7342 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/getRoleIcon.tsx");
 
-export const getRoleIcon = function getRoleIcon(size) {
+export function getRoleIcon(size) {
   size = size.size;
   ({ guildId, roleId } = size);
   const obj = useRoleIconProps;
@@ -27,4 +27,4 @@ export const getRoleIcon = function getRoleIcon(size) {
     obj4.alt = intl.formatToPlainString(util.t["9+YWrE"], obj6);
     return obj4;
   }
-};
+}

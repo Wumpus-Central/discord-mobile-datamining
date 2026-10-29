@@ -1,13 +1,13 @@
-// === Module 17882: ServerPreviewBannerControls ===
+// === Module 18120: ServerPreviewBannerControls ===
 
-// Module 17882 (ServerPreviewBannerControls)
+// Module 18120 (ServerPreviewBannerControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef6965 from "module_6965" /* 6965 */;
-import transitionToGuild from "transitionToGuild" /* 7485 */;
-import IconButton from "IconButton" /* 7991 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 17883 */;
+import _modDef6989 from "module_6989" /* 6989 */;
+import transitionToGuild from "transitionToGuild" /* 7508 */;
+import IconButton from "IconButton" /* 8014 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 18121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1084).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { row: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.row = rect;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPr
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6965, onPress: first, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+    const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6989, onPress: first, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
     const tmp10 = timestampProducer(IconButton.IconButton, obj2);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPr
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6965, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6989, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];

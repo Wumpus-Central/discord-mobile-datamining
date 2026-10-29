@@ -1,34 +1,34 @@
-// === Module 14900: PoggermodeActionCreators ===
+// === Module 15135: PoggermodeActionCreators ===
 
-// Module 14900 (PoggermodeActionCreators)
+// Module 15135 (PoggermodeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import trackPoggermodeSettingsUpdatedDefault from "trackPoggermodeSettingsUpdated" /* 14903 */;
+import trackPoggermodeSettingsUpdatedDefault from "trackPoggermodeSettingsUpdated" /* 15138 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7786 */;
-import PoggermodeStore from "PoggermodeStore" /* 14901 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7808 */;
+import PoggermodeStore from "PoggermodeStore" /* 15136 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 
-export const updatePoggermodeSettings = function updatePoggermodeSettings(settings) {
+export function updatePoggermodeSettings(settings) {
   DispatcherDefault.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings });
   const merged = Object.assign(PoggermodeSettingsStore.getState());
   const merged1 = Object.assign(settings);
   trackPoggermodeSettingsUpdatedDefault({});
-};
-export const updateCombo = function updateCombo(arg0) {
+}
+export function updateCombo(arg0) {
   const merged = Object.assign(arg0);
   DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO" });
-};
-export const clearMessageCombo = function clearMessageCombo(arg0) {
+}
+export function clearMessageCombo(arg0) {
   const obj2 = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
   const obj3 = {};
   const merged = Object.assign(arg0);
   obj3.displayed = true;
   obj2.comboMessage = obj3;
   DispatcherDefault.dispatch(obj2);
-};
-export const updateComboOnMessageSend = function updateComboOnMessageSend(channelId, id) {
+}
+export function updateComboOnMessageSend(channelId, id) {
   id = AuthenticationStore.getId();
   const iter = PoggermodeStore.getUserCombo(id, channelId);
   if (null != iter) {
@@ -57,4 +57,4 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(channe
   }
   DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 });
   const obj5 = { type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 };
-};
+}

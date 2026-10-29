@@ -1,8 +1,8 @@
-// === Module 13006: SoundmojiRenderingExperiment ===
+// === Module 13227: SoundmojiRenderingExperiment ===
 
-// Module 13006 (SoundmojiRenderingExperiment)
+// Module 13227 (SoundmojiRenderingExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,9 +13,9 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiRenderingExperiment.tsx");
 
-export const getSoundmojiRenderingExperiment = function getSoundmojiRenderingExperiment(location) {
+export function getSoundmojiRenderingExperiment(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}
 export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundmojiRenderingExperiment(location) {
   const cResult = c.c(2);
   const _location = location.location;

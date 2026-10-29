@@ -1,14 +1,14 @@
-// === Module 9511: GameProfileSimilarGames ===
+// === Module 9543: GameProfileSimilarGames ===
 
-// Module 9511 (GameProfileSimilarGames)
+// Module 9543 (GameProfileSimilarGames)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9278 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9283 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9366 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 9375 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 9512 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9282 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9287 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9398 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 9407 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 9544 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -16,25 +16,27 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9332).MOBILE_GAME_PROFILE_MAX_WIDTH;
+let closure_6 = fn(9336).MOBILE_GAME_PROFILE_MAX_WIDTH;
 const jsx = fn(21).jsx;
-let c9 = 1.34;
+let c8 = 0.75;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 }, header: null, card: null, spacer: null, listPadding: null, coverArtContainer: null, coverArt: null, skeletonCards: null, skeletonArtwork: null };
 let obj3 = { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 };
 obj.header = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
-obj.card = { gap: nativeDefault.space.PX_4 };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+obj.card = { gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm };
 obj.spacer = { width: PX_12 };
 obj.listPadding = { width: PX_16 };
-let obj5 = { gap: nativeDefault.space.PX_4 };
+let obj5 = { gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm };
 obj.coverArtContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.coverArt = { width: "100%", height: "100%" };
 let obj6 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.skeletonCards = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj7 = { paddingHorizontal: nativeDefault.space.PX_16 };
+const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.skeletonArtwork = { borderRadius: nativeDefault.radii.sm };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -73,12 +75,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ListPa
 });
 ReactCompilerGating = fn(558);
 let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SimilarGameCard(game) {
-  const cResult = game(shouldOpenGameProfile[7]).c(38);
+  const cResult = game(shouldOpenGameProfile[7]).c(34);
   game = game.game;
   const trackAction = game.trackAction;
   const cardWidth = game.cardWidth;
   let tmp4 = closure_12();
-  const result = cardWidth * c9;
+  const result = cardWidth / c8;
   if (cResult[0] === cardWidth) {
     if (cResult[1] === result) {
       let tmp6 = cResult[2];
@@ -115,291 +117,106 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             if (cResult[15] !== game.name) {
               const intl = tmp(tmp2[11]).intl;
               let obj4 = { gameName: game.name };
-              cResult[15] = game.name;
-              cResult[16] = intl.formatToPlainString(tmp(tmp2[11]).t["8QLQB+"], obj4);
-              class A {
-                constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  obj = { similarGameId: game.id };
-                  tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-                  tmp4 = shouldOpenGameProfile;
-                  if (shouldOpenGameProfile) {
-                    tmp5 = gameId;
-                    tmp6 = null;
-                    tmp4 = null != gameId;
-                  }
-                  if (tmp4) {
-                    tmp7 = closure_1;
-                    obj2 = closure_1(tmp2[10]);
-                    obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-                    tmp8 = gameId;
-                    obj1.gameId = gameId;
-                    obj5 = { shouldOpenGameProfile: true, gameId: null };
-                    obj5.gameId = gameId;
-                    obj1.gameProfileModalChecks = obj5;
-                    obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-                    openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-                  }
-                  return;
-                }
-              }
               const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[11]).t["8QLQB+"], obj4);
+              cResult[15] = game.name;
+              cResult[16] = formatToPlainStringResult;
+              let tmp13 = formatToPlainStringResult;
+            } else {
+              tmp13 = cResult[16];
             }
-            const _Math = Math;
-            const rounded = Math.ceil(result);
-            const _Math2 = Math;
-            const rounded1 = Math.ceil(cardWidth);
             if (cResult[17] === tmp6) {
               if (cResult[18] === tmp4.coverArtContainer) {
-                let tmp18 = cResult[19];
-                let tmp19 = cResult[20];
+                let tmp15 = cResult[19];
               }
-              if (cResult[21] !== tmp4.coverArt) {
+              if (cResult[20] !== tmp4.coverArt) {
                 const obj5 = { style: tmp4.coverArt };
-                const tmp22 = jsx(tmp8(tmp2[12]), { style: tmp4.coverArt });
-                cResult[21] = tmp4.coverArt;
-                cResult[22] = tmp22;
-                let tmp20 = tmp22;
+                const tmp18 = jsx(tmp8(tmp2[12]), { style: tmp4.coverArt });
+                cResult[20] = tmp4.coverArt;
+                cResult[21] = tmp18;
+                let tmp16 = tmp18;
               } else {
-                tmp20 = cResult[22];
+                tmp16 = cResult[21];
               }
-              if (cResult[23] === tmp4.coverArt) {
-                if (cResult[24] === tmp20) {
-                  let tmp23 = cResult[25];
+              if (cResult[22] === tmp4.coverArt) {
+                if (cResult[23] === tmp16) {
+                  let tmp19 = cResult[24];
                 }
-                if (cResult[26] === game) {
-                  if (cResult[27] === tmp18) {
-                    if (cResult[28] === tmp23) {
-                      if (cResult[29] === rounded) {
-                        if (cResult[30] === rounded1) {
-                          if (cResult[31] === tmp19) {
-                            let tmp26 = cResult[32];
+                if (cResult[25] === game) {
+                  if (cResult[26] === tmp15) {
+                    if (cResult[27] === tmp19) {
+                      let tmp22 = cResult[28];
+                    }
+                    if (cResult[29] === tmp10) {
+                      if (cResult[30] === tmp22) {
+                        if (cResult[31] === tmp12) {
+                          if (cResult[32] === tmp13) {
+                            let tmp26 = cResult[33];
                           }
-                          if (cResult[33] === tmp10) {
-                            if (cResult[34] === tmp26) {
-                              if (cResult[35] === tmp12) {
-                                if (cResult[36] === tmp13) {
-                                  let tmp29 = cResult[37];
-                                }
-                                return tmp29;
-                              }
-                            }
-                          }
-                          const obj6 = { style: tmp12, onPress: tmp10, accessibilityRole: "button", accessibilityLabel: tmp13, children: tmp26 };
-                          class A {
-                            constructor() {
-                              tmp2 = closure_2;
-                              tmp = closure_0;
-                              obj = { similarGameId: game.id };
-                              tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-                              tmp4 = shouldOpenGameProfile;
-                              if (shouldOpenGameProfile) {
-                                tmp5 = gameId;
-                                tmp6 = null;
-                                tmp4 = null != gameId;
-                              }
-                              if (tmp4) {
-                                tmp7 = closure_1;
-                                obj2 = closure_1(tmp2[10]);
-                                obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-                                tmp8 = gameId;
-                                obj1.gameId = gameId;
-                                obj5 = { shouldOpenGameProfile: true, gameId: null };
-                                obj5.gameId = gameId;
-                                obj1.gameProfileModalChecks = obj5;
-                                obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-                                openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-                              }
-                              return;
-                            }
-                          }
-                          cResult[33] = tmp10;
-                          cResult[34] = tmp26;
-                          cResult[35] = tmp12;
-                          cResult[36] = tmp13;
-                          cResult[37] = tmp32;
-                          tmp29 = tmp32;
+                          return tmp26;
                         }
                       }
                     }
+                    const obj6 = { style: tmp12, onPress: tmp10, accessibilityRole: "button", accessibilityLabel: tmp13, children: tmp22 };
+                    const tmp29 = <closure_4 style={tmp12} onPress={tmp10} accessibilityRole="button" accessibilityLabel={tmp13}>{tmp22}</closure_4>;
+                    cResult[29] = tmp10;
+                    cResult[30] = tmp22;
+                    cResult[31] = tmp12;
+                    cResult[32] = tmp13;
+                    cResult[33] = tmp29;
+                    tmp26 = tmp29;
                   }
                 }
-                const obj7 = { game, coverImageSize: rounded, iconImageSize: rounded1, coverContainerStyle: tmp19, iconContainerStyle: tmp18, loadingPlaceholder: null };
-                class A {
-                  constructor() {
-                    tmp2 = closure_2;
-                    tmp = closure_0;
-                    obj = { similarGameId: game.id };
-                    tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-                    tmp4 = shouldOpenGameProfile;
-                    if (shouldOpenGameProfile) {
-                      tmp5 = gameId;
-                      tmp6 = null;
-                      tmp4 = null != gameId;
-                    }
-                    if (tmp4) {
-                      tmp7 = closure_1;
-                      obj2 = closure_1(tmp2[10]);
-                      obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-                      tmp8 = gameId;
-                      obj1.gameId = gameId;
-                      obj5 = { shouldOpenGameProfile: true, gameId: null };
-                      obj5.gameId = gameId;
-                      obj1.gameProfileModalChecks = obj5;
-                      obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-                      openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-                    }
-                    return;
-                  }
-                }
-                const tmp28 = jsx(tmp8(tmp2[13]), { game, coverImageSize: rounded, iconImageSize: rounded1, coverContainerStyle: tmp19, iconContainerStyle: tmp18, loadingPlaceholder: null });
-                cResult[26] = game;
-                cResult[27] = tmp18;
-                cResult[28] = tmp23;
-                cResult[29] = rounded;
-                cResult[30] = rounded1;
-                cResult[31] = tmp19;
-                cResult[32] = tmp28;
-                tmp26 = tmp28;
+                const obj7 = { game, size: tmp(tmp2[13]).GameCoverArtSize.SMALL, imageSize: 256, style: tmp15, accessible: false, loadingPlaceholder: tmp19 };
+                const tmp25 = jsx(tmp8(tmp2[13]), { game, size: tmp(tmp2[13]).GameCoverArtSize.SMALL, imageSize: 256, style: tmp15, accessible: false, loadingPlaceholder: tmp19 });
+                cResult[25] = game;
+                cResult[26] = tmp15;
+                cResult[27] = tmp19;
+                cResult[28] = tmp25;
+                tmp22 = tmp25;
+                const tmp8Result = tmp8(tmp2[13]);
               }
-              const obj8 = { style: tmp4.coverArt, children: tmp20 };
-              const tmp25 = jsx(tmp(tmp2[12]).GameProfileSkeletonContainer, { style: tmp4.coverArt, children: tmp20 });
-              class A {
-                constructor() {
-                  tmp2 = closure_2;
-                  tmp = closure_0;
-                  obj = { similarGameId: game.id };
-                  tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-                  tmp4 = shouldOpenGameProfile;
-                  if (shouldOpenGameProfile) {
-                    tmp5 = gameId;
-                    tmp6 = null;
-                    tmp4 = null != gameId;
-                  }
-                  if (tmp4) {
-                    tmp7 = closure_1;
-                    obj2 = closure_1(tmp2[10]);
-                    obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-                    tmp8 = gameId;
-                    obj1.gameId = gameId;
-                    obj5 = { shouldOpenGameProfile: true, gameId: null };
-                    obj5.gameId = gameId;
-                    obj1.gameProfileModalChecks = obj5;
-                    obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-                    openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-                  }
-                  return;
-                }
-              }
-              cResult[24] = tmp20;
-              cResult[25] = tmp25;
-              tmp23 = tmp25;
+              const obj8 = { style: tmp4.coverArt, children: tmp16 };
+              const tmp21 = jsx(tmp(tmp2[12]).GameProfileSkeletonContainer, { style: tmp4.coverArt, children: tmp16 });
+              cResult[22] = tmp4.coverArt;
+              cResult[23] = tmp16;
+              cResult[24] = tmp21;
+              tmp19 = tmp21;
             }
-            const items = [, ];
-            class A {
-              constructor() {
-                tmp2 = closure_2;
-                tmp = closure_0;
-                obj = { similarGameId: game.id };
-                tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-                tmp4 = shouldOpenGameProfile;
-                if (shouldOpenGameProfile) {
-                  tmp5 = gameId;
-                  tmp6 = null;
-                  tmp4 = null != gameId;
-                }
-                if (tmp4) {
-                  tmp7 = closure_1;
-                  obj2 = closure_1(tmp2[10]);
-                  obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-                  tmp8 = gameId;
-                  obj1.gameId = gameId;
-                  obj5 = { shouldOpenGameProfile: true, gameId: null };
-                  obj5.gameId = gameId;
-                  obj1.gameProfileModalChecks = obj5;
-                  obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-                  openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-                }
-                return;
-              }
-            }
-            items[1] = tmp6;
-            const items1 = [tmp4.coverArtContainer, tmp6];
+            const items = [tmp4.coverArtContainer, tmp6];
             cResult[17] = tmp6;
             cResult[18] = tmp4.coverArtContainer;
-            cResult[19] = items1;
-            cResult[20] = items;
-            tmp19 = items;
-            tmp18 = items1;
+            cResult[19] = items;
+            tmp15 = items;
           }
-          const items2 = [tmp4.card, tmp11];
+          const items1 = [tmp4.card, tmp11];
           cResult[12] = tmp4.card;
-          class A {
-            constructor() {
-              tmp2 = closure_2;
-              tmp = closure_0;
-              obj = { similarGameId: game.id };
-              tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-              tmp4 = shouldOpenGameProfile;
-              if (shouldOpenGameProfile) {
-                tmp5 = gameId;
-                tmp6 = null;
-                tmp4 = null != gameId;
-              }
-              if (tmp4) {
-                tmp7 = closure_1;
-                obj2 = closure_1(tmp2[10]);
-                obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-                tmp8 = gameId;
-                obj1.gameId = gameId;
-                obj5 = { shouldOpenGameProfile: true, gameId: null };
-                obj5.gameId = gameId;
-                obj1.gameProfileModalChecks = obj5;
-                obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-                openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-              }
-              return;
-            }
-          }
-          cResult[14] = items2;
-          tmp12 = items2;
+          cResult[13] = tmp11;
+          cResult[14] = items1;
+          tmp12 = items1;
         }
       }
     }
-    class A {
-      constructor() {
-        tmp2 = closure_2;
-        tmp = closure_0;
-        obj = { similarGameId: game.id };
-        tmp3 = trackAction(closure_0(closure_2[8]).GameProfileTrackActionActions.ClickSimilarGame, obj);
-        tmp4 = shouldOpenGameProfile;
-        if (shouldOpenGameProfile) {
-          tmp5 = gameId;
-          tmp6 = null;
-          tmp4 = null != gameId;
-        }
-        if (tmp4) {
-          tmp7 = closure_1;
-          obj2 = closure_1(tmp2[10]);
-          obj1 = { gameId: null, gameProfileModalChecks: null, source: null };
-          tmp8 = gameId;
-          obj1.gameId = gameId;
-          obj5 = { shouldOpenGameProfile: true, gameId: null };
-          obj5.gameId = gameId;
-          obj1.gameProfileModalChecks = obj5;
-          obj1.source = tmp(tmp2[8]).GameProfileSources.SimilarGames;
-          openGameProfileModalResult = obj2.openGameProfileModal(obj1);
-        }
-        return;
+    const fn = function y() {
+      trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.ClickSimilarGame, { similarGameId: game.id });
+      let tmp4 = shouldOpenGameProfile;
+      if (shouldOpenGameProfile) {
+        tmp4 = null != gameId;
       }
-    }
+      if (tmp4) {
+        const obj3 = { gameId, gameProfileModalChecks: null, source: null };
+        const obj4 = { shouldOpenGameProfile: true, gameId };
+        obj3.gameProfileModalChecks = obj4;
+        obj3.source = GameProfileAnalyticUtils.GameProfileSources.SimilarGames;
+        GameProfileActionCreatorsDefault.openGameProfileModal(obj3);
+      }
+      const obj = { similarGameId: game.id };
+    };
     cResult[5] = game.id;
     cResult[6] = gameId;
     cResult[7] = shouldOpenGameProfile;
     cResult[8] = trackAction;
-    cResult[9] = A;
-    tmp10 = A;
+    cResult[9] = fn;
+    tmp10 = fn;
   }
   const size = { width: cardWidth, height: result };
   cResult[0] = cardWidth;
@@ -413,12 +230,10 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const cardWidth = game.cardWidth;
   let shouldOpenGameProfile;
   const tmp = closure_12();
-  const result = cardWidth * c9;
-  const size = { width: cardWidth, height: result };
   let obj = { gameId: game.id, source: game(shouldOpenGameProfile[8]).GameProfileSources.SimilarGames };
-  const tmp3Result = trackAction(shouldOpenGameProfile[9])(obj);
-  shouldOpenGameProfile = tmp3Result.shouldOpenGameProfile;
-  const gameId = tmp3Result.gameId;
+  const tmp2Result = trackAction(shouldOpenGameProfile[9])(obj);
+  shouldOpenGameProfile = tmp2Result.shouldOpenGameProfile;
+  const gameId = tmp2Result.gameId;
   const items = [game.id, trackAction, shouldOpenGameProfile, gameId];
   let obj2 = {
     style: null,
@@ -445,18 +260,17 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj2.style = items1;
   const intl = game(shouldOpenGameProfile[11]).intl;
   obj2.accessibilityLabel = intl.formatToPlainString(game(shouldOpenGameProfile[11]).t["8QLQB+"], { gameName: game.name });
-  let obj4 = { game, coverImageSize: null, iconImageSize: null, coverContainerStyle: null, iconContainerStyle: null, loadingPlaceholder: null };
+  let obj4 = { game, size: null, imageSize: 256, style: null, accessible: false, loadingPlaceholder: null };
   let obj3 = { gameName: game.name };
-  const tmp3 = trackAction(shouldOpenGameProfile[9]);
-  obj4.coverImageSize = Math.ceil(result);
-  obj4.iconImageSize = Math.ceil(cardWidth);
-  const items2 = [tmp.coverArtContainer, size];
-  obj4.coverContainerStyle = items2;
-  const items3 = [tmp.coverArtContainer, size];
-  obj4.iconContainerStyle = items3;
+  const tmp2 = trackAction(shouldOpenGameProfile[9]);
+  obj4.size = game(shouldOpenGameProfile[13]).GameCoverArtSize.SMALL;
+  const items2 = [tmp.coverArtContainer, ];
+  const size = { width: cardWidth, height: cardWidth / c8 };
+  items2[1] = size;
+  obj4.style = items2;
   const obj5 = { style: tmp.coverArt, children: jsx(trackAction(shouldOpenGameProfile[12]), { style: tmp.coverArt }) };
   obj4.loadingPlaceholder = jsx(game(shouldOpenGameProfile[12]).GameProfileSkeletonContainer, { style: tmp.coverArt, children: jsx(trackAction(shouldOpenGameProfile[12]), { style: tmp.coverArt }) });
-  obj2.children = jsx(trackAction(shouldOpenGameProfile[13]), { game, coverImageSize: null, iconImageSize: null, coverContainerStyle: null, iconContainerStyle: null, loadingPlaceholder: null });
+  obj2.children = jsx(trackAction(shouldOpenGameProfile[13]), { game, size: null, imageSize: 256, style: null, accessible: false, loadingPlaceholder: null });
   return <closure_4 style={null} onPress={gameId.useCallback(() => {
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.ClickSimilarGame, { similarGameId: game.id });
     let tmp4 = shouldOpenGameProfile;
@@ -478,7 +292,7 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const cResult = c.c(12);
   ({ animationDelayMs, cardWidth } = arg0);
   const tmp4 = closure_12();
-  const result = cardWidth * c9;
+  const result = cardWidth / c8;
   if (cResult[0] === cardWidth) {
     if (cResult[1] === result) {
       let tmp6 = cResult[2];
@@ -530,7 +344,7 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj = { animationDelayMs: animationDelayMs.animationDelayMs, style: { width: cardWidth }, children: null };
   const obj2 = { style: null };
   const items = [closure_12().skeletonArtwork, ];
-  const size = { width: cardWidth, height: cardWidth * c9 };
+  const size = { width: cardWidth, height: cardWidth / c8 };
   items[1] = size;
   obj2.style = items;
   obj.children = jsx(GameProfileSkeletonDefault, { style: null });
@@ -564,7 +378,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const obj2 = { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 };
-    const tmp12 = jsx(tmp(9368).GameProfileSectionSkeleton, { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 });
+    const tmp12 = jsx(tmp(9400).GameProfileSectionSkeleton, { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 });
     cResult[5] = tmp4.container;
     cResult[6] = tmp4.header;
     cResult[7] = tmp8;
@@ -584,7 +398,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj = { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null };
   const obj2 = { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, key) => <closure_16 key={key} animationDelayMs={key * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS} cardWidth={cardWidth} />) };
   obj.children = jsx(GameProfileSkeletonCardRowDefault, { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, key) => <closure_16 key={key} animationDelayMs={key * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS} cardWidth={cardWidth} />) });
-  return jsx(cardWidth(9368).GameProfileSectionSkeleton, { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null });
+  return jsx(cardWidth(9400).GameProfileSectionSkeleton, { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null });
 }));
 ReactCompilerGating = fn(558);
 let obj8 = { borderRadius: nativeDefault.radii.sm };
@@ -642,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             }
           }
           const obj3 = { style: container, headerStyle: header, title: tmp9, children: tmp13 };
-          const tmp20 = jsx(tmp5(9368), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
+          const tmp20 = jsx(tmp5(9400), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
           cResult[10] = tmp4.container;
           cResult[11] = tmp4.header;
           cResult[12] = tmp13;
@@ -650,8 +464,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           tmp18 = tmp20;
         }
       }
-      const obj4 = { horizontal: true, renderScrollComponent: tmp5(9348), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum };
-      const tmp17 = jsx(tmp(7256).FlashList, { horizontal: true, renderScrollComponent: tmp5(9348), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum });
+      const obj4 = { horizontal: true, renderScrollComponent: tmp5(9352), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum };
+      const tmp17 = jsx(tmp(7280).FlashList, { horizontal: true, renderScrollComponent: tmp5(9352), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum });
       cResult[6] = similarGames;
       cResult[7] = tmp11;
       cResult[8] = sum;
@@ -685,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       obj3.title = intl.string(trackAction(1125).t["6rLyQB"]);
       const obj5 = {
         horizontal: true,
-        renderScrollComponent: tmp2(9348),
+        renderScrollComponent: tmp2(9352),
         data: similarGames,
         renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -697,9 +511,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       };
-      obj3.children = jsx(trackAction(7256).FlashList, {
+      obj3.children = jsx(trackAction(7280).FlashList, {
         horizontal: true,
-        renderScrollComponent: tmp2(9348),
+        renderScrollComponent: tmp2(9352),
         data: similarGames,
         renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -711,8 +525,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       });
-      tmp7 = jsx(tmp2(9368), { style: null, headerStyle: null, title: null, children: null });
-      const tmp2Result = tmp2(9368);
+      tmp7 = jsx(tmp2(9400), { style: null, headerStyle: null, title: null, children: null });
+      const tmp2Result = tmp2(9400);
     }
   }
   return tmp7;

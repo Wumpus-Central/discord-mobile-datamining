@@ -1,8 +1,8 @@
-// === Module 6072: CheckpointExperiments ===
+// === Module 6076: CheckpointExperiments ===
 
-// Module 6072 (CheckpointExperiments)
+// Module 6076 (CheckpointExperiments)
 import c from "c" /* 576 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1453 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -30,9 +30,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCheckpo
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiments.tsx");
 
 export const useIsCheckpointEnabled = tmp2;
-export const getIsCheckpointEnabled = function getIsCheckpointEnabled(getCheckpointClickable) {
+export function getIsCheckpointEnabled(getCheckpointClickable) {
   return closure_2.getConfig({ location: getCheckpointClickable }).enabled;
-};
+}
 export const useIsCheckpointCardEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCheckpointCardEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
@@ -47,6 +47,6 @@ export const useIsCheckpointCardEnabled = ReactCompilerGating.isReactCompilerEna
 }) : (function useIsCheckpointCardEnabled(location) {
   return closure_3.useConfig({ location }).enabled;
 });
-export const getIsCheckpointCardEnabled = function getIsCheckpointCardEnabled(transformCheckpoint2026CardComponent) {
+export function getIsCheckpointCardEnabled(transformCheckpoint2026CardComponent) {
   return closure_3.getConfig({ location: transformCheckpoint2026CardComponent }).enabled;
-};
+}

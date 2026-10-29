@@ -1,8 +1,8 @@
-// === Module 9239: SecureFramesDeeplinkExperiment ===
+// === Module 9243: SecureFramesDeeplinkExperiment ===
 
-// Module 9239 (SecureFramesDeeplinkExperiment)
+// Module 9243 (SecureFramesDeeplinkExperiment)
 import c from "c" /* 576 */;
-import createExperimentDefault from "createExperiment" /* 5225 */;
+import createExperimentDefault from "createExperiment" /* 5226 */;
 
 require = fn;
 const obj = { kind: "user", id: "2024-09_secure_frames_deeplink", label: "Secure Frames Deeplinks", defaultConfig: { enabled: false }, treatments: null };
@@ -35,6 +35,6 @@ export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactComp
 }) : (function useSecureFramesDeeplinkExperiment(location) {
   return closure_2.useExperiment({ location: location.location }, { autoTrackExposure: true });
 });
-export const getSecureFramesDeeplinkExperiment = function getSecureFramesDeeplinkExperiment(location) {
+export function getSecureFramesDeeplinkExperiment(location) {
   return closure_2.getCurrentConfig({ location: location.location }, { autoTrackExposure: true });
-};
+}

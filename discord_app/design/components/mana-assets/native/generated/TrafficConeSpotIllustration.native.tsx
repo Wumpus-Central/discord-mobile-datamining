@@ -1,23 +1,23 @@
-// === Module 7027: TrafficConeSpotIllustration ===
+// === Module 7051: TrafficConeSpotIllustration ===
 
-// Module 7027 (TrafficConeSpotIllustration)
+// Module 7051 (TrafficConeSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import _modDef7028 from "module_7028" /* 7028 */;
-import _modDef7029 from "module_7029" /* 7029 */;
-import _modDef7030 from "module_7030" /* 7030 */;
-import assetHelpers from "assetHelpers" /* 7031 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import _modDef7052 from "module_7052" /* 7052 */;
+import _modDef7053 from "module_7053" /* 7053 */;
+import _modDef7054 from "module_7054" /* 7054 */;
+import assetHelpers from "assetHelpers" /* 7055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7028 }, 3: null };
-let obj2 = { uri: _modDef7028 };
-obj[2] = { uri: _modDef7029 };
-const obj3 = { uri: _modDef7029 };
-obj[3] = { uri: _modDef7030 };
+let obj = { 1: null, 2: { uri: _modDef7052 }, 3: null };
+let obj2 = { uri: _modDef7052 };
+obj[2] = { uri: _modDef7053 };
+const obj3 = { uri: _modDef7053 };
+obj[3] = { uri: _modDef7054 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef7030 };
+const obj4 = { uri: _modDef7054 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx");
 

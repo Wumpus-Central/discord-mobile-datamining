@@ -1,18 +1,18 @@
-// === Module 19699: AVErrorContext ===
+// === Module 19921: AVErrorContext ===
 
-// Module 19699 (AVErrorContext)
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5775 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6680 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7849 */;
+// Module 19921 (AVErrorContext)
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5777 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6704 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7872 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");
 
-export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext() {
+export function getVoiceChannelErrorContext() {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   const obj = { channelId: voiceChannelId, mediaSessionId: null, rtcConnectionId: null, mediaContext: null };
   const mediaSessionId = RTCConnectionStore.getMediaSessionId();
@@ -42,8 +42,8 @@ export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext(
   obj4.audioOutputDeviceName = name2;
   const merged = Object.assign(obj4);
   return obj;
-};
-export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
+}
+export function getStreamErrorContext(streamKey) {
   ({ channelId, ownerId } = StreamKeyUtils.decodeStreamKey(streamKey));
   const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
   const obj2 = { channelId, mediaSessionId: null, rtcConnectionId: null, mediaContext: null, streamKey: null, userId: null };
@@ -83,8 +83,8 @@ export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
   obj3.audioOutputDeviceName = name2;
   const merged = Object.assign(obj3);
   return obj2;
-};
-export const getCommonErrorContext = function getCommonErrorContext() {
+}
+export function getCommonErrorContext() {
   const videoDevices = MediaEngineStore.getVideoDevices();
   const tmp2 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
   let name;
@@ -107,4 +107,4 @@ export const getCommonErrorContext = function getCommonErrorContext() {
   }
   obj2.audioOutputDeviceName = name2;
   return obj2;
-};
+}

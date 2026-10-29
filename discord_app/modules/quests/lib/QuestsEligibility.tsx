@@ -1,11 +1,11 @@
-// === Module 9596: QuestsEligibility ===
+// === Module 9628: QuestsEligibility ===
 
-// Module 9596 (QuestsEligibility)
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+// Module 9628 (QuestsEligibility)
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");
 
-export const getIsEligibleForQuests = function getIsEligibleForQuests() {
+export function getIsEligibleForQuests() {
   return !MetaQuestUtils.isMetaQuest();
-};
+}

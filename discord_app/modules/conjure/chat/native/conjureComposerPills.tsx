@@ -1,24 +1,24 @@
-// === Module 12552: conjureComposerPills ===
+// === Module 12607: conjureComposerPills ===
 
-// Module 12552 (conjureComposerPills)
+// Module 12607 (conjureComposerPills)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import UserUtils from "UserUtils" /* 5058 */;
-import _modDef12102 from "module_12102" /* 12102 */;
-import ChatInputParser from "ChatInputParser" /* 12553 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import UserUtils from "UserUtils" /* 5059 */;
+import _modDef12156 from "module_12156" /* 12156 */;
+import ChatInputParser from "ChatInputParser" /* 12608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1389 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12235 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12289 */;
 
 require = fn;
 const Image = fn(17).Image;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
-export const conjureFilePillIcon = function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef12102).uri;
-};
-export const conjurePillText = function conjurePillText(current, name, combined) {
+export function conjureFilePillIcon() {
+  return Image.resolveAssetSource(_modDef12156).uri;
+}
+export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
   let tmp2 = combined;
   if (current.has(combined)) {
@@ -48,19 +48,19 @@ export const conjurePillText = function conjurePillText(current, name, combined)
     }
   }
   return tmp2;
-};
-export const conjureUserPillLabel = function conjureUserPillLabel(id) {
+}
+export function conjureUserPillLabel(id) {
   const user = UserStore.getUser(id);
   let name = id;
   if (null != user) {
     name = UserUtils.getName(user);
   }
   return "@" + name;
-};
-export const decodeConjurePills = function decodeConjurePills(draft) {
+}
+export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12391).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12445).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -77,7 +77,7 @@ export const decodeConjurePills = function decodeConjurePills(draft) {
         }
         if (combined == null) {
           const intl = util.intl;
-          combined = intl.string(_modDef3863.ff9Q4C);
+          combined = intl.string(_modDef3864.ff9Q4C);
         }
       }
       const combined1 = "\u2060" + combined;
@@ -111,7 +111,7 @@ export const decodeConjurePills = function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef12102).uri;
+        uri = Image.resolveAssetSource(_modDef12156).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);
@@ -119,13 +119,13 @@ export const decodeConjurePills = function decodeConjurePills(draft) {
     }),
     pills: map
   };
-};
-export const encodeConjurePills = function encodeConjurePills(chat, current) {
-  const items = [...current.keys()];
+}
+export function encodeConjurePills(current, current2) {
+  const items = [...current2.keys()];
   const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
   return sorted.reduce((acc, item) => {
     const parts = acc.split(item);
-    value = current.get(item);
+    value = current2.get(item);
     let raw;
     if (value != null) {
       raw = value.raw;
@@ -134,9 +134,9 @@ export const encodeConjurePills = function encodeConjurePills(chat, current) {
       raw = item;
     }
     return parts.join(raw);
-  }, chat);
-};
-export const conjurePillNodes = function conjurePillNodes(arr, current, style) {
+  }, current);
+}
+export function conjurePillNodes(arr, current, style) {
   const items = [];
   while (tmp !== undefined) {
     [first, tmp6] = tmp2;
@@ -166,4 +166,4 @@ export const conjurePillNodes = function conjurePillNodes(arr, current, style) {
     continue;
   }
   return items;
-};
+}

@@ -1,14 +1,14 @@
-// === Module 12957: getInlineForwardOptions ===
+// === Module 13178: getInlineForwardOptions ===
 
-// Module 12957 (getInlineForwardOptions)
+// Module 13178 (getInlineForwardOptions)
 import Constants from "Constants" /* 1084 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
 import size from "module_2" /* 2 */;
 
 const MessageReferenceTypes = Constants.MessageReferenceTypes;
 const result = size.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
-export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
+export function getInlineForwardOptions(message, nativeSyntheticEventData) {
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
   if ("media" === targetKind) {
     const messageReference = message.messageReference;
@@ -55,4 +55,4 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
       obj = {};
     }
   }
-};
+}

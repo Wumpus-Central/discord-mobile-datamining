@@ -1,8 +1,8 @@
-// === Module 13299: CustomTypingIndicatorExperiment ===
+// === Module 13532: CustomTypingIndicatorExperiment ===
 
-// Module 13299 (CustomTypingIndicatorExperiment)
+// Module 13532 (CustomTypingIndicatorExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,6 +24,6 @@ export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompile
 }) : (function useCustomTypingIndicatorConfig(location) {
   return apexExperiment.useConfig({ location });
 });
-export const getCustomTypingIndicatorConfig = function getCustomTypingIndicatorConfig(location) {
+export function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });
-};
+}

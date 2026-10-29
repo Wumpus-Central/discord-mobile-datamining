@@ -1,11 +1,11 @@
-// === Module 7705: CollectiblesMarketingRecord ===
+// === Module 7728: CollectiblesMarketingRecord ===
 
-// Module 7705 (CollectiblesMarketingRecord)
-import CollectiblesMarketingBadgeRecord from "CollectiblesMarketingBadgeRecord" /* 7706 */;
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7707 */;
-import CollectiblesMarketingBannerRecord from "CollectiblesMarketingBannerRecord" /* 7708 */;
-import CollectiblesMarketingCoachmarkRecord from "CollectiblesMarketingCoachmarkRecord" /* 7709 */;
-import CollectiblesMarketingTabTooltipRecord from "CollectiblesMarketingTabTooltipRecord" /* 7710 */;
+// Module 7728 (CollectiblesMarketingRecord)
+import CollectiblesMarketingBadgeRecord from "CollectiblesMarketingBadgeRecord" /* 7729 */;
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7730 */;
+import CollectiblesMarketingBannerRecord from "CollectiblesMarketingBannerRecord" /* 7731 */;
+import CollectiblesMarketingCoachmarkRecord from "CollectiblesMarketingCoachmarkRecord" /* 7732 */;
+import CollectiblesMarketingTabTooltipRecord from "CollectiblesMarketingTabTooltipRecord" /* 7733 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = CollectiblesMarketingBadgeRecord.CollectiblesMarketingBadgeRecord;
@@ -36,7 +36,7 @@ prototype["fromServer"] = function fromServer(marketings) {
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingRecord.tsx");
 
 export const CollectiblesMarketingsRecord = prototype;
-export const rehydratePersistedMarketings = function rehydratePersistedMarketings(arg0) {
+export function rehydratePersistedMarketings(arg0) {
   const entries = Object.entries(arg0);
   if (typeof prototype === "function") {
     const obj = Object.create(prototype.prototype);
@@ -45,4 +45,4 @@ export const rehydratePersistedMarketings = function rehydratePersistedMarketing
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

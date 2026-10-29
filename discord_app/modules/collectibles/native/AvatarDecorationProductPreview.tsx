@@ -1,17 +1,17 @@
-// === Module 14714: AvatarDecorationProductPreview ===
+// === Module 14949: AvatarDecorationProductPreview ===
 
-// Module 14714 (AvatarDecorationProductPreview)
+// Module 14949 (AvatarDecorationProductPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import useShopProductItems from "useShopProductItems" /* 8697 */;
-import useCurrentUser from "useCurrentUser" /* 8704 */;
+import useShopProductItems from "useShopProductItems" /* 8700 */;
+import useCurrentUser from "useCurrentUser" /* 8707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_4 = createStyles.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

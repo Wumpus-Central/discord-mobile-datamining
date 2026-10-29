@@ -1,9 +1,9 @@
-// === Module 13213: CheckpointStatNumber ===
+// === Module 13440: CheckpointStatNumber ===
 
-// Module 13213 (CheckpointStatNumber)
+// Module 13440 (CheckpointStatNumber)
 import c from "c" /* 576 */;
-import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5153 */;
-import CheckpointTextDefault from "CheckpointText" /* 13204 */;
+import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5154 */;
+import CheckpointTextDefault from "CheckpointText" /* 13436 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,12 +21,12 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6050).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6054).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 2.5675675675675675;
 let c8 = 28.7;
 let closure_9 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2, ":": 2, A: 4, M: 6, P: 4, a: 4, m: 6, p: 4 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
 const ReactCompilerGating = fn(558);
 function getCheckpointStatNumberWidth(end) {
@@ -40,8 +40,8 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointStatNumber.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointStatNumber(arg0) {
-  const cResult = c.c(30);
-  ({ value, color, size } = arg0);
+  const cResult = c.c(31);
+  ({ value, color, size, isStepHeading } = arg0);
   if (undefined === color) {
     color = CHECKPOINT_PRIMARY;
   }
@@ -90,49 +90,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 let tmp19 = cResult[17];
               }
               if (cResult[18] === tmp18) {
-                if (cResult[19] === value) {
-                  let tmp20 = cResult[20];
-                }
-                if (cResult[21] === tmp17) {
-                  if (cResult[22] === tmp20) {
-                    let tmp24 = cResult[23];
+                if (cResult[19] === isStepHeading) {
+                  if (cResult[20] === value) {
+                    let tmp20 = cResult[21];
                   }
-                  if (cResult[24] === tmp19) {
-                    if (cResult[25] === tmp24) {
-                      let tmp27 = cResult[26];
+                  if (cResult[22] === tmp17) {
+                    if (cResult[23] === tmp20) {
+                      let tmp24 = cResult[24];
                     }
-                    if (cResult[27] === tmp10) {
-                      if (cResult[28] === tmp27) {
-                        let tmp31 = cResult[29];
+                    if (cResult[25] === tmp19) {
+                      if (cResult[26] === tmp24) {
+                        let tmp27 = cResult[27];
                       }
-                      return tmp31;
+                      if (cResult[28] === tmp10) {
+                        if (cResult[29] === tmp27) {
+                          let tmp31 = cResult[30];
+                        }
+                        return tmp31;
+                      }
+                      const obj3 = { style: tmp10, children: tmp27 };
+                      const tmp34 = <View style={tmp10}>{tmp27}</View>;
+                      cResult[28] = tmp10;
+                      cResult[29] = tmp27;
+                      cResult[30] = tmp34;
+                      tmp31 = tmp34;
                     }
-                    const obj3 = { style: tmp10, children: tmp27 };
-                    const tmp34 = <View style={tmp10}>{tmp27}</View>;
-                    cResult[27] = tmp10;
-                    cResult[28] = tmp27;
-                    cResult[29] = tmp34;
-                    tmp31 = tmp34;
+                    const obj4 = { style: tmp19, children: tmp24 };
+                    const tmp30 = <View style={tmp19}>{tmp24}</View>;
+                    cResult[25] = tmp19;
+                    cResult[26] = tmp24;
+                    cResult[27] = tmp30;
+                    tmp27 = tmp30;
                   }
-                  const obj4 = { style: tmp19, children: tmp24 };
-                  const tmp30 = <View style={tmp19}>{tmp24}</View>;
-                  cResult[24] = tmp19;
-                  cResult[25] = tmp24;
-                  cResult[26] = tmp30;
-                  tmp27 = tmp30;
+                  const obj5 = { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: tmp17, fallback: tmp20 };
+                  const tmp26 = jsx(CheckpointNumbersRive.CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: tmp17, fallback: tmp20 });
+                  cResult[22] = tmp17;
+                  cResult[23] = tmp20;
+                  cResult[24] = tmp26;
+                  tmp24 = tmp26;
                 }
-                const obj5 = { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: tmp17, fallback: tmp20 };
-                const tmp26 = jsx(CheckpointNumbersRive.CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: tmp17, fallback: tmp20 });
-                cResult[21] = tmp17;
-                cResult[22] = tmp20;
-                cResult[23] = tmp26;
-                tmp24 = tmp26;
               }
-              const obj6 = { variant: "heading-xl/bold", style: tmp18, children: value };
-              const tmp23 = jsx(CheckpointTextDefault, { variant: "heading-xl/bold", style: tmp18, children: value });
+              const obj6 = { variant: "heading-xl/bold", style: tmp18, isStepHeading, children: value };
+              const tmp23 = jsx(CheckpointTextDefault, { variant: "heading-xl/bold", style: tmp18, isStepHeading, children: value });
               cResult[18] = tmp18;
-              cResult[19] = value;
-              cResult[20] = tmp23;
+              cResult[19] = isStepHeading;
+              cResult[20] = value;
+              cResult[21] = tmp23;
               tmp20 = tmp23;
             }
             const items = [tmp4.rive, tmp15];
@@ -170,14 +173,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   cResult[1] = value;
   cResult[2] = result1;
   tmp8 = result1;
-}) : (function CheckpointStatNumber(value) {
-  value = value.value;
+}) : (function CheckpointStatNumber(isStepHeading) {
+  value = isStepHeading.value;
   require = value;
-  let color = value.color;
+  let color = isStepHeading.color;
   if (color === undefined) {
     color = CHECKPOINT_PRIMARY;
   }
-  let num = value.size;
+  let num = isStepHeading.size;
   if (num === undefined) {
     num = 40;
   }
@@ -212,16 +215,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   obj2.style = items4;
   const memo3 = num2.useMemo(() => ({ color }), items3);
   const tmp = closure_10();
-  obj2.children = jsx(require("CheckpointNumbersRive").CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: memo2, fallback: jsx(color(num[7]), { variant: "heading-xl/bold", style: memo3, children: value }) });
+  obj2.children = jsx(require("CheckpointNumbersRive").CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: memo2, fallback: jsx(color(num[7]), { variant: "heading-xl/bold", style: memo3, isStepHeading: isStepHeading.isStepHeading, children: value }) });
   obj.children = <c4 style={null}>{null}</c4>;
   return <c4 style={memo}>{null}</c4>;
 });
-export const isCheckpointStatNumberShrunk = function isCheckpointStatNumberShrunk(value) {
+export function isCheckpointStatNumberShrunk(value) {
   const tmp = getTextPixels(value);
   let num = 1;
   if (tmp > c8) {
     num = c8 / tmp;
   }
   return num < 1;
-};
+}
 export { getCheckpointStatNumberWidth };

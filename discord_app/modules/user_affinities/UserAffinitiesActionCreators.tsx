@@ -1,11 +1,11 @@
-// === Module 9116: UserAffinitiesActionCreators ===
+// === Module 9119: UserAffinitiesActionCreators ===
 
-// Module 9116 (UserAffinitiesActionCreators)
+// Module 9119 (UserAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UserAffinitiesTypes from "UserAffinitiesTypes" /* 9117 */;
-import ConsentStore from "ConsentStore" /* 6705 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7767 */;
+import UserAffinitiesTypes from "UserAffinitiesTypes" /* 9120 */;
+import ConsentStore from "ConsentStore" /* 6729 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7789 */;
 
 require = fn;
 const Constants = fn(1084);
@@ -13,7 +13,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesActionCreators.tsx");
 
-export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
+export function fetchUserAffinitiesV2() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -84,8 +84,8 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
     return nextPromise;
   }
   nextPromise = Promise.resolve();
-};
-export const setDevToolsUserAffinityOverride = function setDevToolsUserAffinityOverride(userId) {
+}
+export function setDevToolsUserAffinityOverride(userId) {
   let tmp2 = null;
   if (null != userId) {
     const obj3 = { otherUserId: userId.userId, userSegment: UserAffinitiesTypes.AffineUserSegment.HFU_MAU, otherUserSegment: UserAffinitiesTypes.AffineUserSegment.HFU_MAU, isFriend: false, dmProbability: null, dmRank: 1, vcProbability: null, vcRank: 1, serverMessageProbability: 0, serverMessageRank: 1, communicationProbability: null, communicationRank: 1 };
@@ -93,4 +93,4 @@ export const setDevToolsUserAffinityOverride = function setDevToolsUserAffinityO
     tmp2 = obj3;
   }
   DispatcherDefault.dispatch({ type: "DEV_TOOLS_SET_USER_AFFINITY_OVERRIDE", override: tmp2 });
-};
+}

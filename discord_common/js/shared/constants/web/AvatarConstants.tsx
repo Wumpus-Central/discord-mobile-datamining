@@ -1,6 +1,6 @@
-// === Module 1416: AvatarConstants ===
+// === Module 1417: AvatarConstants ===
 
-// Module 1416 (AvatarConstants)
+// Module 1417 (AvatarConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { SIZE_16: "SIZE_16", SIZE_20: "SIZE_20", SIZE_24: "SIZE_24", SIZE_32: "SIZE_32", SIZE_40: "SIZE_40", SIZE_44: "SIZE_44", SIZE_48: "SIZE_48", SIZE_56: "SIZE_56", SIZE_72: "SIZE_72", SIZE_80: "SIZE_80", SIZE_96: "SIZE_96", SIZE_120: "SIZE_120", SIZE_152: "SIZE_152", DEPRECATED_SIZE_30: "DEPRECATED_SIZE_30", DEPRECATED_SIZE_60: "DEPRECATED_SIZE_60", DEPRECATED_SIZE_100: "DEPRECATED_SIZE_100" };
@@ -21,20 +21,20 @@ export const VoiceStatus = obj2;
 export const StatusBackdropColors = { BLACK: "black", WHITE: "white" };
 export const StatusBackdropOpacity = { HIGH: 0.7, [0.7]: "HIGH", LOW: 0.45, [0.45]: "LOW" };
 export const AvatarSizeSpecs = frozen;
-export const getAvatarSpecs = function getAvatarSpecs(arg0) {
+export function getAvatarSpecs(arg0) {
   return frozen[arg0];
-};
-export const getAvatarSize = function getAvatarSize(num) {
+}
+export function getAvatarSize(num) {
   let size = num;
   if (typeof num !== "number") {
     size = frozen[num].size;
   }
   return size;
-};
-export const getStatusSize = function getStatusSize(arg0) {
+}
+export function getStatusSize(arg0) {
   return frozen[arg0].status;
-};
-export const getVoiceStatus = function getVoiceStatus(arg0, arg1) {
+}
+export function getVoiceStatus(arg0, arg1) {
   if (arg1) {
     let PLAYING_SOUNDBOARD = obj2.PLAYING_SOUNDBOARD;
   } else {
@@ -44,4 +44,4 @@ export const getVoiceStatus = function getVoiceStatus(arg0, arg1) {
     }
   }
   return PLAYING_SOUNDBOARD;
-};
+}

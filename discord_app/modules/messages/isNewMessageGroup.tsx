@@ -1,10 +1,10 @@
-// === Module 10041: isNewMessageGroup ===
+// === Module 10073: isNewMessageGroup ===
 
-// Module 10041 (isNewMessageGroup)
+// Module 10073 (isNewMessageGroup)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import DateUtils from "DateUtils" /* 4829 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6852 */;
+import DateUtils from "DateUtils" /* 4830 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6875 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -129,7 +129,7 @@ let closure_6 = 7 * DurationsDefault.Millis.MINUTE;
 const result = size.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
 
 export default isNewMessageGroup;
-export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag) {
+export function isNewGroupItem(isForumPost, type, hasFlag) {
   let tmp = null == type;
   if (!tmp) {
     let tmp3 = type.type === constants2.MESSAGE && type.content.id === type.content.channel_id;
@@ -143,4 +143,4 @@ export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag
     tmp = tmp3;
   }
   return tmp;
-};
+}

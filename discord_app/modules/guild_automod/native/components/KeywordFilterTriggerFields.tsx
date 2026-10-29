@@ -1,15 +1,15 @@
-// === Module 19341: KeywordFilterTriggerFields ===
+// === Module 19574: KeywordFilterTriggerFields ===
 
-// Module 19341 (KeywordFilterTriggerFields)
+// Module 19574 (KeywordFilterTriggerFields)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import TableRowGroup from "TableRowGroup" /* 7023 */;
-import KeywordsRowDefault from "KeywordsRow" /* 19335 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+import TableRowGroup from "TableRowGroup" /* 7047 */;
+import KeywordsRowDefault from "KeywordsRow" /* 19568 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(12870);
+const Constants = fn(13091);
 ({ MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: c3, MAX_KEYWORDS_PER_KEYWORD_FILTER: closure_4 } = Constants);
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);

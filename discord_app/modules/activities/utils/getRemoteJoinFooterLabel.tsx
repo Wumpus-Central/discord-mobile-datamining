@@ -1,6 +1,6 @@
-// === Module 14816: getRemoteJoinFooterLabel ===
+// === Module 15051: getRemoteJoinFooterLabel ===
 
-// Module 14816 (getRemoteJoinFooterLabel)
+// Module 15051 (getRemoteJoinFooterLabel)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");
 
-export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remoteJoinPlatform) {
+export function getRemoteJoinFooterLabel(remoteJoinPlatform) {
   if (ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {
     const intl5 = util.intl;
     return intl5.string(util.t.aqN8U9);
@@ -25,4 +25,4 @@ export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remote
     const intl = util.intl;
     return intl.string(util.t["R/1GpG"]);
   }
-};
+}

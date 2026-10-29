@@ -1,9 +1,9 @@
-// === Module 11824: ConjureDesignFeedbackOverlay ===
+// === Module 11878: ConjureDesignFeedbackOverlay ===
 
-// Module 11824 (ConjureDesignFeedbackOverlay)
+// Module 11878 (ConjureDesignFeedbackOverlay)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
-import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 11825 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
+import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 11879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, highlight: { position: "absolute", borderWidth: 2, borderColor: nativeDefault.colors.TEXT_BRAND, borderRadius: nativeDefault.radii.xs }, marker: null, pending: null, hint: null, hintText: null };
 let size = { position: "absolute", width: 24, height: 24, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_BRAND, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.marker = size;
@@ -69,8 +69,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
       return () => {
         closure_1_9.current = false;
         if (ref.current) {
-          first(5246).hideActionSheet(projectId(11825).CONJURE_DESIGN_REMARK_SHEET_KEY);
-          const obj = first(5246);
+          first(5247).hideActionSheet(projectId(11879).CONJURE_DESIGN_REMARK_SHEET_KEY);
+          const obj = first(5247);
         }
       };
     };
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
   if (cResult[5] !== projectId) {
     const fn3 = function y() {
       return () => {
-        const result = projectId(10779).inspectConjurePreviewPoint(closure_1_0, projectId(10798).CONJURE_INSPECT_CLEAR_POINT);
+        const result = projectId(10854).inspectConjurePreviewPoint(closure_1_0, projectId(10874).CONJURE_INSPECT_CLEAR_POINT);
       };
     };
     const items2 = [projectId];
@@ -310,14 +310,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5246).hideActionSheet(projectId(11825).CONJURE_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(5246);
+        size(5247).hideActionSheet(projectId(11879).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(5247);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(10779).inspectConjurePreviewPoint(closure_1_0, projectId(10798).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(10854).inspectConjurePreviewPoint(closure_1_0, projectId(10874).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(10779).inspectConjurePreviewPoint(point, point);
+        const result = projectId(10854).inspectConjurePreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -386,12 +386,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
             closure_8(true);
           }
         });
-        const obj2 = projectId(10779);
+        const obj2 = projectId(10854);
       }
     }
   }, items4);
   const intl = projectId(1125).intl;
-  const tmp19 = size(3863);
+  const tmp19 = size(3864);
   if (first2) {
     let prop = tmp19["URbF/7"];
     let tmp21 = tmp18;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
   }
   let obj = { style: tmp.surface, onLayout: callback, onPress: callback2, accessibilityRole: "button", accessibilityLabel: null, testID: "conjure-design-surface", children: null };
   const intl2 = tmp16(1125).intl;
-  obj.accessibilityLabel = intl2.string(tmp21(3863)["DesV7/"]);
+  obj.accessibilityLabel = intl2.string(tmp21(3864)["DesV7/"]);
   let obj2 = { style: tmp.surface, pointerEvents: "none", children: null };
   let tmp24Result = null;
   if (null != first1) {
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     items6[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp24(tmp16(5270).Text, obj6);
+    obj5.children = tmp24(tmp16(5271).Text, obj6);
     items6[2] = tmp24(tmp27, obj5);
     obj2.children = items6;
     obj.children = closure_9(tmp27, obj2);

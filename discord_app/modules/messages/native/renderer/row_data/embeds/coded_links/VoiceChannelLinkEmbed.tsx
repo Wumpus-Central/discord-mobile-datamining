@@ -1,28 +1,28 @@
-// === Module 14807: VoiceChannelLinkEmbed ===
+// === Module 15042: VoiceChannelLinkEmbed ===
 
-// Module 14807 (VoiceChannelLinkEmbed)
+// Module 15042 (VoiceChannelLinkEmbed)
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useChannelName from "useChannelName" /* 5640 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8307 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8539 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import useChannelName from "useChannelName" /* 5641 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8329 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8561 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(4874).getGuildAcronym;
+const getGuildAcronym = fn(4875).getGuildAcronym;
 const Permissions = fn(1084).Permissions;
-const InviteTypes = fn(7844).InviteTypes;
+const InviteTypes = fn(7867).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
 
-export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(code, theme) {
+export function createVoiceChannelLinkEmbed(code, theme) {
   const tmp = _slicedToArray(code.split("/"), 2);
   const channel = ChannelStore.getChannel(tmp[1]);
   guild = GuildStore.getGuild(tmp[0]);
@@ -108,4 +108,4 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
     }
   }
   return null;
-};
+}

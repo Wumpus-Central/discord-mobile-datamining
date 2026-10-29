@@ -1,13 +1,13 @@
-// === Module 7646: MemberSafetySupplementalUtils ===
+// === Module 7669: MemberSafetySupplementalUtils ===
 
-// Module 7646 (MemberSafetySupplementalUtils)
+// Module 7669 (MemberSafetySupplementalUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import shared from "shared" /* 5011 */;
-import useThemeDefault from "useTheme" /* 5241 */;
-import PlatformsDefault from "Platforms" /* 6537 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7647 */;
+import shared from "shared" /* 5012 */;
+import useThemeDefault from "useTheme" /* 5242 */;
+import PlatformsDefault from "Platforms" /* 6561 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -38,7 +38,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -144,14 +144,14 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
-export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
+export function registerFetchedSupplementals(guildId, memberIds) {
   closure_0 = guildId;
   const item = memberIds.forEach((item) => {
     closure_5[closure_0 + item] = constants.SUCCEEDED;
   });
-};
+}
 export { JoinSourceType };
-export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
+export function getJoinSourceTypeLabel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
@@ -196,9 +196,9 @@ export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
     const intl = util.intl;
     return intl.string(util.t.DvMBkS);
   }
-};
+}
 export const IntegrationType = obj2;
-export const getIntegrationLabel = function getIntegrationLabel(arg0) {
+export function getIntegrationLabel(arg0) {
   if (obj2.TWITCH === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.AVGAkw);
@@ -209,7 +209,7 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
     const intl = util.intl;
     return intl.string(util.t.gmCUFw);
   }
-};
+}
 export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetIntegrationIconString(arg0) {
   let str2 = c.c(4);
   obj2 = PlatformsDefault;
@@ -260,7 +260,7 @@ export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEn
   }
   return tmp5;
 });
-export const fetchMemberSupplemental = function fetchMemberSupplemental() {
+export function fetchMemberSupplemental() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -269,4 +269,4 @@ export const fetchMemberSupplemental = function fetchMemberSupplemental() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

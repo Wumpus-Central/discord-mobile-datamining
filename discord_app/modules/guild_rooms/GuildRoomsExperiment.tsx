@@ -1,12 +1,12 @@
-// === Module 7900: GuildRoomsExperiment ===
+// === Module 7923: GuildRoomsExperiment ===
 
-// Module 7900 (GuildRoomsExperiment)
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+// Module 7923 (GuildRoomsExperiment)
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(5224);
+const createExperiment = fn(5225);
 let obj2 = { kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: null };
 let items = [{ id: 1, label: "Enable Guild Rooms in this guild", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 2, label: "Enable Guild Rooms without Interactions", config: { enabled: true, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 3, label: "Enable Guild Rooms with Room Variants", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }, { id: 4, label: "Enable Guild Rooms without Postures", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: false } }, { id: 5, label: "Enable Guild Rooms with Room 2 Default and Selector", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }];
 obj2.treatments = items;
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
 
 export const GUILD_ROOMS_EXPERIMENT_ID = "2026-06_guild_rooms";
-export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable) {
+export function getGuildRoomsConfig(guildId, disable) {
   const obj = { autoTrackExposure: true };
   const merged = Object.assign(disable);
   let flag;
@@ -36,7 +36,7 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
   }
   obj.disable = flag;
   return closure_3.getCurrentConfig(guildId, obj);
-};
+}
 export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildRoomsExperiment(guildId, disable) {
   _require = guildId;
   const cResult = require("c").c(7);

@@ -1,8 +1,8 @@
-// === Module 10766: conjurePreviewFrameSurfaces ===
+// === Module 10841: conjurePreviewFrameSurfaces ===
 
-// Module 10766 (conjurePreviewFrameSurfaces)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+// Module 10841 (conjurePreviewFrameSurfaces)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, declaredBy: ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL }, , ];
@@ -15,16 +15,16 @@ const items2 = [EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL];
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewFrameSurfaces.tsx");
 
 export const CONJURE_PREVIEW_LAUNCH_SURFACE_TYPES = items1;
-export const previewFrameLaunchType = function previewFrameLaunchType(APP_CHANNEL) {
+export function previewFrameLaunchType(APP_CHANNEL) {
   if (APP_CHANNEL === EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN) {
     APP_CHANNEL = EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;
   }
   return APP_CHANNEL;
-};
-export const declaresPreviewFrame = function declaresPreviewFrame(previewSupportedSurfaces) {
+}
+export function declaresPreviewFrame(previewSupportedSurfaces) {
   return items.some((declaredBy) => previewSupportedSurfaces.includes(declaredBy.declaredBy));
-};
-export const previewFrameSurfaceOptions = function previewFrameSurfaceOptions(previewSupportedSurfaces) {
+}
+export function previewFrameSurfaceOptions(previewSupportedSurfaces) {
   const found = items.filter((item) => {
     let hasItem;
     if (previewSupportedSurfaces != null) {
@@ -37,8 +37,8 @@ export const previewFrameSurfaceOptions = function previewFrameSurfaceOptions(pr
     mapped = items2;
   }
   return mapped;
-};
-export const resolvePreviewFrameSurface = function resolvePreviewFrameSurface(first1, cResult) {
+}
+export function resolvePreviewFrameSurface(first1, cResult) {
   let tmp = first1;
   if (null == first1) {
     let APP_CHANNEL = cResult[0];
@@ -48,4 +48,4 @@ export const resolvePreviewFrameSurface = function resolvePreviewFrameSurface(fi
     tmp = APP_CHANNEL;
   }
   return tmp;
-};
+}

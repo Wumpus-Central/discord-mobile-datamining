@@ -1,10 +1,10 @@
-// === Module 15495: subscriptionSettingsDeepLink ===
+// === Module 15729: subscriptionSettingsDeepLink ===
 
-// Module 15495 (subscriptionSettingsDeepLink)
+// Module 15729 (subscriptionSettingsDeepLink)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import openUserSettings from "openUserSettings" /* 7526 */;
+import openUserSettings from "openUserSettings" /* 7549 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2056 */;
 
 require = fn;
 function openNitroHome() {
@@ -36,7 +36,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
         closure_130_11();
         closure_130_8();
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -91,7 +91,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5246).default;
+            closure_0 = closure_0(5247).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1125).intl;
@@ -111,7 +111,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15496).showSimpleActionSheet(obj);
+            const result = closure_0(15730).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;
@@ -138,7 +138,7 @@ let c7 = "subscription-settings-deep-link";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/subscriptionSettingsDeepLink.tsx");
 
-export const openSubscriptionSettingsFromDeepLink = function openSubscriptionSettingsFromDeepLink() {
+export function openSubscriptionSettingsFromDeepLink() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -147,4 +147,4 @@ export const openSubscriptionSettingsFromDeepLink = function openSubscriptionSet
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

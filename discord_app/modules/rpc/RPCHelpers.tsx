@@ -1,31 +1,31 @@
-// === Module 11520: RPCHelpers ===
+// === Module 11574: RPCHelpers ===
 
-// Module 11520 (RPCHelpers)
+// Module 11574 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import UrlDefault from "Url" /* 1386 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5659 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6025 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7601 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
-import transformUserDefault from "transformUser" /* 9294 */;
-import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9295 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import transformMessage from "transformMessage" /* 11521 */;
-import LeakyBucketDefault from "LeakyBucket" /* 11523 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5661 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6029 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7624 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
+import transformUserDefault from "transformUser" /* 9298 */;
+import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9299 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import transformMessage from "transformMessage" /* 11575 */;
+import LeakyBucketDefault from "LeakyBucket" /* 11577 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import MessageStore from "MessageStore" /* 6045 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import MessageStore from "MessageStore" /* 6049 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
 import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 import URLUtils from "URLUtils" /* 1383 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 5644 */;
+import RegexUtils from "RegexUtils" /* 5645 */;
 
 require = fn;
 function validateOrigin(arg0) {
@@ -59,7 +59,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -184,7 +184,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -231,7 +231,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -244,8 +244,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4860).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6413);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4861).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6437);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1084);
 ({ ActivityActionTypes: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, MAX_MESSAGES_PER_CHANNEL: closure_18, RPCCloseCodes: closure_19, RPCErrors: closure_20, RTCConnectionStates: closure_21 } = Constants);
@@ -302,13 +302,13 @@ export const VALIDATE_SOCKET_CALLS_PER_PERIOD_LOW = 2;
 export const VALIDATE_SOCKET_CALLS_PER_PERIOD_HIGH = 60;
 export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
 export { VALIDATE_SOCKET_THROTTLERS };
-export const containsSameValues = function containsSameValues(arg0, arg1) {
+export function containsSameValues(arg0, arg1) {
   const obj = _modDef12;
   return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
-};
+}
 export { validateOrigin };
 export { transformBigFlag };
-export const transformRole = function transformRole(id) {
+export function transformRole(id) {
   const obj = { id: id.id, name: id.name, color: id.color, colors: null, hoist: null, position: null, permissions: null, managed: null, mentionable: null, icon: null, unicode_emoji: null, tags: null, flags: null };
   let colors = id.colors;
   if (colors == null) {
@@ -324,53 +324,54 @@ export const transformRole = function transformRole(id) {
   obj.permissions = str;
   ({ managed: obj.managed, mentionable: obj.mentionable, icon: obj.icon, unicodeEmoji: obj.unicode_emoji, tags: obj.tags, flags: obj.flags } = id);
   return obj;
-};
-export const transformGuildMember = function transformGuildMember(userId) {
-  const obj = { user_id: userId.userId, guild_id: userId.guildId, nick: null, avatar: null, avatar_decoration_data: null, banner: null, roles: null, joined_at: null, premium_since: null, communication_disabled_until: null, pending: null, flags: null };
-  let nick = userId.nick;
+}
+export function transformGuildMember(currentGuildMember) {
+  const obj = { user_id: currentGuildMember.userId, guild_id: currentGuildMember.guildId, nick: null, avatar: null, avatar_decoration_data: null, banner: null, roles: null, joined_at: null, premium_since: null, communication_disabled_until: null, pending: null, flags: null, color_string: null };
+  let nick = currentGuildMember.nick;
   if (nick == null) {
     nick = null;
   }
   obj.nick = nick;
-  let avatar = userId.avatar;
+  let avatar = currentGuildMember.avatar;
   if (avatar == null) {
     avatar = null;
   }
   obj.avatar = avatar;
-  obj.avatar_decoration_data = transformAvatarDecorationDefault(userId.avatarDecoration);
-  let banner = userId.banner;
+  obj.avatar_decoration_data = transformAvatarDecorationDefault(currentGuildMember.avatarDecoration);
+  let banner = currentGuildMember.banner;
   if (banner == null) {
     banner = null;
   }
   obj.banner = banner;
-  ({ roles: obj.roles, joinedAt } = userId);
+  ({ roles: obj.roles, joinedAt } = currentGuildMember);
   if (joinedAt == null) {
     joinedAt = null;
   }
   obj.joined_at = joinedAt;
-  let premiumSince = userId.premiumSince;
+  let premiumSince = currentGuildMember.premiumSince;
   if (premiumSince == null) {
     premiumSince = null;
   }
   obj.premium_since = premiumSince;
-  let prop = userId.communicationDisabledUntil;
+  let prop = currentGuildMember.communicationDisabledUntil;
   if (prop == null) {
     prop = null;
   }
   obj.communication_disabled_until = prop;
-  let flag = userId.isPending;
+  let flag = currentGuildMember.isPending;
   if (flag == null) {
     flag = false;
   }
   obj.pending = flag;
-  let num = userId.flags;
+  let num = currentGuildMember.flags;
   if (num == null) {
     num = 0;
   }
   obj.flags = num;
+  obj.color_string = currentGuildMember.colorString;
   return obj;
-};
-export const transformChannel = function transformChannel(channel, result) {
+}
+export function transformChannel(channel, result) {
   let nSFW = channel;
   closure_1 = result;
   const items = [];
@@ -408,10 +409,10 @@ export const transformChannel = function transformChannel(channel, result) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(6025).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(6029).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9294)(user);
+          obj.user = closure_1(9298)(user);
           return obj;
         }
       });
@@ -424,13 +425,13 @@ export const transformChannel = function transformChannel(channel, result) {
       }
     }
   });
-};
+}
 export { transformVoiceState };
-export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
+export function transformBaseRelationship(relationshipType, user) {
   const obj = { type: relationshipType, user: transformUserDefault(user), presence: { status: PresenceStore.getStatus(user.id, null), activity: null } };
   return obj;
-};
-export const transformApplicationRelationship = function transformApplicationRelationship(presence, id) {
+}
+export function transformApplicationRelationship(presence, id) {
   let tmp = presence;
   if (null != id) {
     const obj = {};
@@ -446,8 +447,8 @@ export const transformApplicationRelationship = function transformApplicationRel
     tmp = obj;
   }
   return tmp;
-};
-export const isMatchingOrigin = function isMatchingOrigin(str) {
+}
+export function isMatchingOrigin(str) {
   if (null == str) {
     return false;
   } else {
@@ -480,8 +481,8 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
       }
     }
   }
-};
-export const hasMessageReadPermission = function hasMessageReadPermission(channel, id, scopes) {
+}
+export function hasMessageReadPermission(channel, id, scopes) {
   guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
     let application_id = guild.application_id;
@@ -493,8 +494,8 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
     hasItem = scopes.has(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ);
   }
   return hasItem;
-};
-export const getVoiceConnectionState = function getVoiceConnectionState(state) {
+}
+export function getVoiceConnectionState(state) {
   if (constants5.RTC_CONNECTED !== state) {
     if (constants5.RTC_CONNECTING !== state) {
       if (constants5.RTC_DISCONNECTED !== state) {
@@ -503,8 +504,8 @@ export const getVoiceConnectionState = function getVoiceConnectionState(state) {
     }
   }
   return state.replace(/^RTC_/, "VOICE_");
-};
-export const validateActivityInvite = function validateActivityInvite(arg0, id, join) {
+}
+export function validateActivityInvite(arg0, id, join) {
   let tmp = arg0 === constants2.JOIN;
   if (tmp) {
     let tmp4 = null != id && null != id.id;
@@ -514,8 +515,8 @@ export const validateActivityInvite = function validateActivityInvite(arg0, id, 
     tmp = tmp4;
   }
   return tmp;
-};
-export const validateSocketApplication = function validateSocketApplication() {
+}
+export function validateSocketApplication() {
   const self = this;
   const apply = closure_27.apply;
   if (typeof apply === "unknown") {
@@ -524,8 +525,8 @@ export const validateSocketApplication = function validateSocketApplication() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const processSocketThrottlers = function processSocketThrottlers() {
+}
+export function processSocketThrottlers() {
   const self = this;
   const apply = closure_28.apply;
   if (typeof apply === "unknown") {
@@ -534,16 +535,16 @@ export const processSocketThrottlers = function processSocketThrottlers() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
+}
+export function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
     const _Set = Set;
     const items = [map1];
     const set = new Set(items);
     authorization.authorization.scopes = set;
   }
-};
-export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {
+}
+export function getDeprecatedVoiceSettingsWithShortcut(fn) {
   const settings = MediaEngineStore.getSettings();
   const obj = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
   const obj3 = { available_devices: null, device_id: null, volume: null };
@@ -561,22 +562,22 @@ export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoic
   obj.mode = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: fn(settings), delay: settings.modeOptions.delay };
   ({ automaticGainControl: obj.automatic_gain_control, echoCancellation: obj.echo_cancellation, noiseSuppression: obj.noise_suppression, qos: obj.qos, silenceWarning: obj.silence_warning, deaf: obj.deaf, mute: obj.mute } = settings);
   return obj;
-};
-export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, fn) {
+}
+export function getVoiceSettingsWithShortcut(arg0, fn) {
   const settings = MediaEngineStore.getSettings(arg0);
   const obj = { input_mode: { type: settings.mode, shortcut: fn(settings) }, local_mutes: Object.keys(settings.localMutes), local_volumes: null, self_mute: null, self_deaf: null };
   ({ localVolumes: obj.local_volumes, mute: obj.self_mute, deaf: obj.self_deaf } = settings);
   return obj;
-};
-export const validatePostMessageTransport = function validatePostMessageTransport(transport) {
+}
+export function validatePostMessageTransport(transport) {
   if (transport !== constants.POST_MESSAGE) {
     const obj = { errorCode: constants4.INVALID_COMMAND };
     const _HermesInternal = HermesInternal;
     const tmp32 = new RPCErrorDefault(obj, "command not available from \"" + transport + " transport");
     throw tmp32;
   }
-};
-export const validateApplication = function validateApplication(application) {
+}
+export function validateApplication(application) {
   if (null == application.id) {
     const obj = { errorCode: constants4.INVALID_COMMAND };
     const tmp7 = new RPCErrorDefault(obj, "Invalid application");
@@ -584,4 +585,4 @@ export const validateApplication = function validateApplication(application) {
   } else {
     return application.id;
   }
-};
+}

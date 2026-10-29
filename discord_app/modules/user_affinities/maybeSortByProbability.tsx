@@ -1,12 +1,12 @@
-// === Module 8475: maybeSortByProbability ===
+// === Module 8497: maybeSortByProbability ===
 
-// Module 8475 (maybeSortByProbability)
-import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8476 */;
+// Module 8497 (maybeSortByProbability)
+import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8498 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
-export const maybeSortByProbability = function maybeSortByProbability(reduced, stateFromStores, location) {
+export function maybeSortByProbability(reduced, stateFromStores, location) {
   let sort = reduced;
   const voiceUserAffinitySortType = VoiceUserAffinityExperiment.getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
@@ -57,4 +57,4 @@ export const maybeSortByProbability = function maybeSortByProbability(reduced, s
       return num - num2;
     });
   }
-};
+}

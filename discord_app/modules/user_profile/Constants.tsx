@@ -1,15 +1,15 @@
-// === Module 8709: Constants ===
+// === Module 8712: Constants ===
 
-// Module 8709 (Constants)
+// Module 8712 (Constants)
 import Constants from "Constants" /* 1084 */;
-import BadgeId from "BadgeId" /* 8710 */;
+import BadgeId from "BadgeId" /* 8713 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
-export const getBadgeName = function getBadgeName(GIFTING) {
+export function getBadgeName(GIFTING) {
   const str = BadgeId.BadgeId[GIFTING];
   if (null != str) {
     let formatted = str.toLowerCase();
@@ -18,7 +18,7 @@ export const getBadgeName = function getBadgeName(GIFTING) {
     formatted = String(GIFTING);
   }
   return formatted;
-};
+}
 export const USER_PROFILE_POPOUT_KEY = "user-profile-popout";
 export const UserProfileSections = { FEATURED: "FEATURED", USER_INFO: "USER_INFO", BOT_INFO: "BOT_INFO", ACTIVITY: "ACTIVITY", MUTUALS: "MUTUALS", MUTUAL_GUILDS: "MUTUAL_GUILDS", MUTUAL_FRIENDS: "MUTUAL_FRIENDS", BOT_DATA_ACCESS: "BOT_DATA_ACCESS", WIDGETS: "WIDGETS", WISHLIST: "WISHLIST", MAIN: "MAIN" };
 export const UserProfileSubsections = { ROLES: "ROLES", CONNECTIONS: "CONNECTIONS", APPS: "APPS", NOTE: "NOTE", RECENT_ACTIVITY: "RECENT_ACTIVITY" };
@@ -32,7 +32,7 @@ export const TrackUserProfileEditActions = { PRESS_ADD_GAME: "PRESS_ADD_GAME", G
 export const ClipsGalleryClipSources = { PICKER: "PICKER", SUGGESTED: "SUGGESTED" };
 export const TrackUserProfileWishlistActions = { WISHLIST_ITEM_CLICKED: "WISHLIST_ITEM_CLICKED", WISHLIST_TOGGLE_PRIVATE: "WISHLIST_TOGGLE_PRIVATE", WISHLIST_TOGGLE_PUBLIC: "WISHLIST_TOGGLE_PUBLIC", PRESS_WISHLIST_BREADCRUMB_CARD: "PRESS_WISHLIST_BREADCRUMB_CARD", PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD: "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD", VIEW_WISHLIST: "VIEW_WISHLIST", PRESS_EDIT_WISHLIST: "PRESS_EDIT_WISHLIST", PRESS_ADD_WISHLIST_ITEM: "PRESS_ADD_WISHLIST_ITEM" };
 export const TrackUserProfileUi = { USER_PROFILE: "USER_PROFILE", PROFILE_FRAME: "PROFILE_FRAME" };
-export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(icon) {
+export function getBadgeAssetFromCDN(icon) {
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
     let combined = "https://" + CDN_HOST + "/badge-icons/" + icon + ".png";
@@ -42,7 +42,7 @@ export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(icon) {
     combined = "" + location.protocol + tmp + Endpoints.BADGE_ICON(icon);
   }
   return combined;
-};
+}
 export const UserProfileInteractionSources = { ACTIVITY: "ACTIVITY", AVATAR: "AVATAR", STATUS: "STATUS" };
 export const UserProfileInteractionTypes = { REPLY: "REPLY", REACT: "REACT" };
 export const UserProfileToastTypes = { WIDGET_ADDED: "WIDGET_ADDED", WIDGET_REMOVED: "WIDGET_REMOVED", PROFILE_SAVE_GENERIC_FAILURE: "PROFILE_SAVE_GENERIC_FAILURE", SOMETHING_WENT_WRONG: "SOMETHING_WENT_WRONG" };

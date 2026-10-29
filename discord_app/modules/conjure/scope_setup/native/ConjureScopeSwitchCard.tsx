@@ -1,9 +1,9 @@
-// === Module 12506: ConjureScopeSwitchCard ===
+// === Module 12560: ConjureScopeSwitchCard ===
 
-// Module 12506 (ConjureScopeSwitchCard)
+// Module 12560 (ConjureScopeSwitchCard)
 import c from "c" /* 576 */;
-import useConjureScopeCards from "useConjureScopeCards" /* 12507 */;
-import ConjureScopeCardViewDefault from "ConjureScopeCardView" /* 12508 */;
+import useConjureScopeCards from "useConjureScopeCards" /* 12561 */;
+import ConjureScopeCardViewDefault from "ConjureScopeCardView" /* 12562 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

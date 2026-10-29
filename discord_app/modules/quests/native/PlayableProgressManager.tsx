@@ -1,9 +1,9 @@
-// === Module 19758: PlayableProgressManager ===
+// === Module 19980: PlayableProgressManager ===
 
-// Module 19758 (PlayableProgressManager)
+// Module 19980 (PlayableProgressManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PlayableStore from "PlayableStore" /* 19759 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
+import PlayableStore from "PlayableStore" /* 19981 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
 
 let closure_1 = new LoggerDefault("PlayableProgressManager");
 const prototype = function PlayableProgressManager() {

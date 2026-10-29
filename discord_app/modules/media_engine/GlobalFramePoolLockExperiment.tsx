@@ -1,7 +1,7 @@
-// === Module 15575: GlobalFramePoolLockExperiment ===
+// === Module 15811: GlobalFramePoolLockExperiment ===
 
-// Module 15575 (GlobalFramePoolLockExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+// Module 15811 (GlobalFramePoolLockExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 const obj = { kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: null };
 let obj2 = { 1: null };
@@ -11,7 +11,7 @@ const config = apex_ApexExperimentDefault(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
 
-export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoolLockExperimentConfig(disable) {
+export function getGlobalFramePoolLockExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
@@ -23,4 +23,4 @@ export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoo
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;
-};
+}

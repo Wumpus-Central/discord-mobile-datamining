@@ -1,25 +1,25 @@
-// === Module 5747: AppAnalyticsUtils ===
+// === Module 5749: AppAnalyticsUtils ===
 
-// Module 5747 (AppAnalyticsUtils)
+// Module 5749 (AppAnalyticsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import ChannelRecord from "ChannelRecord" /* 4860 */;
-import ChannelConstants from "ChannelConstants" /* 4863 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
+import ChannelRecord from "ChannelRecord" /* 4861 */;
+import ChannelConstants from "ChannelConstants" /* 4864 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4934 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5230 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildRoleStore from "GuildRoleStore" /* 4910 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import PresenceStore from "PresenceStore" /* 5748 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
-import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4935 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildRoleStore from "GuildRoleStore" /* 4911 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import PresenceStore from "PresenceStore" /* 5750 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+import VoiceStateStore from "VoiceStateStore" /* 5668 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
@@ -217,7 +217,7 @@ export { collectGuildAnalyticsMetadata };
 export function collectStaticChannelRouteAnalyticsMetadata(arg0, channel_static_route) {
   return { channel_static_route, channel_hidden: false };
 }
-export const collectChannelAnalyticsMetadataFromId = function collectChannelAnalyticsMetadataFromId(channelId) {
+export function collectChannelAnalyticsMetadataFromId(channelId) {
   if (null == channelId) {
     return null;
   } else {
@@ -228,9 +228,9 @@ export const collectChannelAnalyticsMetadataFromId = function collectChannelAnal
     }
     return tmp3;
   }
-};
+}
 export { collectChannelAnalyticsMetadata };
-export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetadata(id) {
+export function collectVoiceAnalyticsMetadata(id) {
   if (null == id) {
     return null;
   } else {
@@ -259,13 +259,13 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(15342).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(15577).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }
-};
+}
 export { trackWithMetadata };
-export const getRecipientFriendCounts = function getRecipientFriendCounts(recipients) {
+export function getRecipientFriendCounts(recipients) {
   let num = 0;
   while (tmp !== undefined) {
     if (RelationshipStore.isFriend(tmp2)) {
@@ -274,9 +274,9 @@ export const getRecipientFriendCounts = function getRecipientFriendCounts(recipi
     continue;
   }
   return { friendCount: num, nonFriendCount: recipients.length - num };
-};
+}
 export { getVoiceStateMetadata };
-export const getCustomStatusMetadata = function getCustomStatusMetadata(arg0, arg1) {
+export function getCustomStatusMetadata(arg0, arg1) {
   closure_0 = arg1;
   const obj = { custom_status_count: 0 };
   let tmp = obj(12);
@@ -290,4 +290,4 @@ export const getCustomStatusMetadata = function getCustomStatusMetadata(arg0, ar
     }
   });
   return obj;
-};
+}

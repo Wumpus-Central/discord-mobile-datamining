@@ -1,13 +1,13 @@
-// === Module 11261: getMessageJumpData ===
+// === Module 11315: getMessageJumpData ===
 
-// Module 11261 (getMessageJumpData)
+// Module 11315 (getMessageJumpData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1896 */;
-import Client from "Client" /* 5237 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1897 */;
+import Client from "Client" /* 5238 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -106,8 +106,8 @@ export const useMessageJumpAndroidKeyboardHeight = ReactCompilerGating.isReactCo
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let num2 = 0;
     if (tmpResult.isAndroid()) {
-      num2 = tmp(1896).getSystemKeyboardHeight();
-      const tmpResult2 = tmp(1896);
+      num2 = tmp(1897).getSystemKeyboardHeight();
+      const tmpResult2 = tmp(1897);
     }
     cResult[0] = num2;
     let first = num2;

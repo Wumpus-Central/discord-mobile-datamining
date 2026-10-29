@@ -1,10 +1,10 @@
-// === Module 17414: UserSettingsDesignSystemAlertModal ===
+// === Module 17653: UserSettingsDesignSystemAlertModal ===
 
-// Module 17414 (UserSettingsDesignSystemAlertModal)
+// Module 17653 (UserSettingsDesignSystemAlertModal)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5280 */;
-import useAlertStore from "useAlertStore" /* 5946 */;
-import AlertModal from "AlertModal" /* 5950 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import useAlertStore from "useAlertStore" /* 5948 */;
+import AlertModal from "AlertModal" /* 5952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoMod
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -59,7 +59,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoMod
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c0 = tmp;
@@ -108,7 +108,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoMod
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoMod
           return obj;
         } else {
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp10) {
         c0 = tmp;
@@ -150,7 +150,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoMod
   obj.actions = items;
   return jsx(AlertModal.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
 });
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 ReactCompilerGating = fn(558);
 const size = fn(2);

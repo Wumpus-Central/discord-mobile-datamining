@@ -1,13 +1,13 @@
-// === Module 16583: AdsVideoUtils ===
+// === Module 16821: AdsVideoUtils ===
 
-// Module 16583 (AdsVideoUtils)
+// Module 16821 (AdsVideoUtils)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [-1000, -1003, -1004, -1008];
 const result = size.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 
-export const isSourceError = function isSourceError(error) {
+export function isSourceError(error) {
   if (error != null) {
     const code = error.error.code;
   }
@@ -32,4 +32,4 @@ export const isSourceError = function isSourceError(error) {
     const tmpResult = PlatformUtils;
   }
   return isIOSResult;
-};
+}

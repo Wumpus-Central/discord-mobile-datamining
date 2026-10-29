@@ -1,16 +1,16 @@
-// === Module 8761: ? ===
+// === Module 8764: ? ===
 
-// Module 8761
+// Module 8764
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1084 */;
-import native from "native" /* 5070 */;
+import native from "native" /* 5071 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const ThemeTypes = Constants.ThemeTypes;
 const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
-export const getIllustrationSource = function getIllustrationSource(theme, light) {
+export function getIllustrationSource(theme, light) {
   if (theme === ThemeTypes.LIGHT) {
     light = light.light;
   } else if (theme === ThemeTypes.DARK) {
@@ -32,7 +32,7 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
     lightResult = light.dark();
   }
   return lightResult;
-};
+}
 export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useIllustrationSource(fn) {
   const cResult = c.c(3);
   const theme = native.useThemeContext().theme;

@@ -1,25 +1,25 @@
-// === Module 8480: GiftIntentEmbed ===
+// === Module 8502: GiftIntentEmbed ===
 
-// Module 8480 (GiftIntentEmbed)
+// Module 8502 (GiftIntentEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import UserUtilsDefault from "UserUtils" /* 5058 */;
-import _modDef5703 from "module_5703" /* 5703 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8309 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8484 */;
-import _modDef8485 from "module_8485" /* 8485 */;
-import _modDef8486 from "module_8486" /* 8486 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8481 */;
+import UserUtilsDefault from "UserUtils" /* 5059 */;
+import _modDef5705 from "module_5705" /* 5705 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8331 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8506 */;
+import _modDef8507 from "module_8507" /* 8507 */;
+import _modDef8508 from "module_8508" /* 8508 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8503 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const GiftIntentType = fn(1391).GiftIntentType;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_6 = createStyles.createNativeStyleProperties({ headerTextColor: nativeDefault.colors.TEXT_STRONG, subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BORDER_MUTED });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
 
-export const createGiftIntentEmbed = function createGiftIntentEmbed(message, theme) {
+export function createGiftIntentEmbed(message, theme) {
   const giftingPrompt = message.giftingPrompt;
   if (null == giftingPrompt) {
     return null;
@@ -65,15 +65,15 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj9.giftIntentType = giftIntentType;
         ({ headerTextColor: obj4.headerTextColor, subHeaderTextColor: obj4.subHeaderTextColor, backgroundColor: obj4.backgroundColor, borderColor: obj4.borderColor } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5703);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5705);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8485);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8486);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8507);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8508);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;
       }
     }
   }
-};
+}

@@ -1,12 +1,12 @@
-// === Module 19460: GuildTemplateSettingsUtils ===
+// === Module 19693: GuildTemplateSettingsUtils ===
 
-// Module 19460 (GuildTemplateSettingsUtils)
+// Module 19693 (GuildTemplateSettingsUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7602 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7625 */;
 
 const require = globalThis.__r;
 
@@ -53,13 +53,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanView
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateSettingsUtils.tsx");
 
-export const isGuildTemplateNameValid = function isGuildTemplateNameValid(str) {
+export function isGuildTemplateNameValid(str) {
   let tmp = null != str;
   if (tmp) {
     tmp = str.trim().length >= 2;
   }
   return tmp;
-};
+}
 export const useCanViewAllChannels = tmp2;
 export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildTemplate(arg0) {
   _require = arg0;
@@ -75,11 +75,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (
         closure_0 = asyncGeneratorStep(async (arg0) => {
           closure_129_0 = closure_0;
           tmp3(null);
-          await closure_2_1(7462).loadTemplatesForGuild(closure_0);
+          await closure_2_1(7485).loadTemplatesForGuild(closure_0);
           if (1 === tmp7) {
             c4 = 0;
             closure_129_1 = closure_3;
-            const aPIError = new closure_0(6409).APIError(closure_129_1);
+            const aPIError = new closure_0(6433).APIError(closure_129_1);
             tmp3(aPIError);
             closure_1(closure_129_0);
             c6 = 3;
@@ -180,11 +180,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (
     closure_0 = async function _fetchGuildTemplate2(arg0) {
       closure_129_0 = closure_0;
       tmp3(null);
-      await closure_2_1(7462).loadTemplatesForGuild(closure_0);
+      await closure_2_1(7485).loadTemplatesForGuild(closure_0);
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new closure_2_0(6409).APIError(closure_129_1);
+        const aPIError = new closure_2_0(6433).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

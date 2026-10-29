@@ -1,14 +1,14 @@
-// === Module 7614: SkippedClientHeartbeatUtil ===
+// === Module 7637: SkippedClientHeartbeatUtil ===
 
-// Module 7614 (SkippedClientHeartbeatUtil)
-import sampleWithUserId from "sampleWithUserId" /* 7615 */;
+// Module 7637 (SkippedClientHeartbeatUtil)
+import sampleWithUserId from "sampleWithUserId" /* 7638 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
 
-export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeatSkipped() {
+export function shouldLogClientHeartbeatSkipped() {
   const currentUser = UserStore.getCurrentUser();
   let tmp = null != currentUser;
   if (tmp) {
@@ -19,4 +19,4 @@ export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeat
     tmp = isStaffResult;
   }
   return tmp;
-};
+}

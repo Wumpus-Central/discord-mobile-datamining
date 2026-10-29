@@ -1,6 +1,6 @@
-// === Module 17327: CaptchaTestActionCreators ===
+// === Module 17566: CaptchaTestActionCreators ===
 
-// Module 17327 (CaptchaTestActionCreators)
+// Module 17566 (CaptchaTestActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -19,7 +19,7 @@ let closure_4 = async function _testCaptcha() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -51,7 +51,7 @@ let closure_4 = async function _testCaptcha() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -66,7 +66,7 @@ const result = size.fileFinishedImporting("modules/captcha/tooling/CaptchaTestAc
 
 export const CaptchaDeciderType = { HCAPTCHA_RQDATA: "hCaptchaRqdata", SMITE_RQDATA: "SmiteRqdata", RECAPTCHA: "Recaptcha", RECAPTCHA_ENTERPRISE: "RecaptchaEnterprise" };
 export const HCaptchaDifficulty = { EASY: 1, [1]: "EASY", MODERATE: 2, [2]: "MODERATE", DIFFICULT: 3, [3]: "DIFFICULT", VERY_DIFFICULT: 4, [4]: "VERY_DIFFICULT" };
-export const testCaptcha = function testCaptcha() {
+export function testCaptcha() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -75,4 +75,4 @@ export const testCaptcha = function testCaptcha() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

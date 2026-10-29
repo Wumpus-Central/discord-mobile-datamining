@@ -1,8 +1,8 @@
-// === Module 7858: DCDSendUtils ===
+// === Module 7881: DCDSendUtils ===
 
-// Module 7858 (DCDSendUtils)
+// Module 7881 (DCDSendUtils)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 7859 */;
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 7882 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 ({ Linking: c3, NativeModules: closure_4 } = get_ActivityIndicator);
 const result = size.fileFinishedImporting("modules/instant_invite/native/DCDSendUtils.tsx");
 
-export const sendSMS = function sendSMS(body, recipients) {
+export function sendSMS(body, recipients) {
   if (obj.isAndroid()) {
     let str = body.body;
     if (str == null) {
@@ -27,8 +27,8 @@ export const sendSMS = function sendSMS(body, recipients) {
     DCDSend.sendSMS(body, recipients);
   }
   obj = PlatformUtils;
-};
-export const sendMail = function sendMail(subject, subject) {
+}
+export function sendMail(subject, subject) {
   if (obj.isAndroid()) {
     let str = subject.subject;
     if (str == null) {
@@ -48,8 +48,8 @@ export const sendMail = function sendMail(subject, subject) {
     DCDSend.sendMail(subject, subject);
   }
   obj = PlatformUtils;
-};
-export const canSendSMS = function canSendSMS() {
+}
+export function canSendSMS() {
   if (obj.isAndroid()) {
     let resolved = Promise.resolve(NativeIntentsModuleDefault.canSendSMS());
   } else {
@@ -57,8 +57,8 @@ export const canSendSMS = function canSendSMS() {
     resolved = DCDSend.canSendSMS();
   }
   return resolved;
-};
-export const canSendMail = function canSendMail() {
+}
+export function canSendMail() {
   if (obj.isAndroid()) {
     let resolved = Promise.resolve(NativeIntentsModuleDefault.canSendMail());
   } else {
@@ -66,8 +66,8 @@ export const canSendMail = function canSendMail() {
     resolved = DCDSend.canSendMail();
   }
   return resolved;
-};
-export const canOpenUrlScheme = function canOpenUrlScheme(roblox) {
+}
+export function canOpenUrlScheme(roblox) {
   _require = roblox;
   if (obj.isAndroid()) {
     try {
@@ -88,4 +88,4 @@ export const canOpenUrlScheme = function canOpenUrlScheme(roblox) {
     return promise;
   }
   obj = require("PlatformUtils");
-};
+}

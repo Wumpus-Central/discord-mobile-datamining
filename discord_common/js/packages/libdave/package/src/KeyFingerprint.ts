@@ -1,6 +1,6 @@
-// === Module 9217: KeyFingerprint ===
+// === Module 9221: KeyFingerprint ===
 
-// Module 9217 (KeyFingerprint)
+// Module 9221 (KeyFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _generateKeyFingerprint(arg0) {
@@ -14,7 +14,7 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/KeyFingerprint.ts");
 
-export const generateKeyFingerprint = function generateKeyFingerprint() {
+export function generateKeyFingerprint() {
   const self = this;
   const apply = closure_1.apply;
   if (typeof apply === "unknown") {
@@ -80,4 +80,4 @@ export const generateKeyFingerprint = function generateKeyFingerprint() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

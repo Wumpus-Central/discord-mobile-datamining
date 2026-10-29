@@ -1,7 +1,7 @@
-// === Module 8694: useShouldConvertBioEmoji ===
+// === Module 8697: useShouldConvertBioEmoji ===
 
-// Module 8694 (useShouldConvertBioEmoji)
-import UserSettings from "UserSettings" /* 4832 */;
+// Module 8697 (useShouldConvertBioEmoji)
+import UserSettings from "UserSettings" /* 4833 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShoul
   }
   return setting;
 });
-export const getShouldConvertBioEmoji = function getShouldConvertBioEmoji() {
+export function getShouldConvertBioEmoji() {
   const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
   let setting = UseLegacyChatInput.getSetting();
   if (!setting) {
@@ -32,4 +32,4 @@ export const getShouldConvertBioEmoji = function getShouldConvertBioEmoji() {
     setting = !UseRichChatInput.getSetting();
   }
   return setting;
-};
+}

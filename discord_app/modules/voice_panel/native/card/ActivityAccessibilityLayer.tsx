@@ -1,9 +1,9 @@
-// === Module 18863: ActivityAccessibilityLayer ===
+// === Module 19096: ActivityAccessibilityLayer ===
 
-// Module 18863 (ActivityAccessibilityLayer)
+// Module 19096 (ActivityAccessibilityLayer)
 import c from "c" /* 576 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5303 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6007 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5304 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6009 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,10 +12,10 @@ require = fn;
 let closure_2 = ["isActivityFocused"];
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const IS_IOS = fn(10939).IS_IOS;
+const IS_IOS = fn(10974).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles({ fill: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function FocusedActivityAccessibilityLayer(channelId) {

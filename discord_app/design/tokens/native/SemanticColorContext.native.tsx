@@ -1,16 +1,16 @@
-// === Module 5174: SemanticColorContext ===
+// === Module 5175: SemanticColorContext ===
 
-// Module 5174 (SemanticColorContext)
+// Module 5175 (SemanticColorContext)
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import native from "native" /* 5175 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 5179 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5180 */;
+import native from "native" /* 5176 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 5180 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5181 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
-export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(primaryColor) {
+export function getSemanticColorContextFromThemeContext(primaryColor) {
   primaryColor = primaryColor.primaryColor;
   const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(primaryColor);
   ({ contrast, saturation, enabledExperiments } = primaryColor);
@@ -55,4 +55,4 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
   obj6.isProfileTheme = null != primaryColor;
   obj6.enabledExperiments = enabledExperiments;
   return obj6;
-};
+}

@@ -1,27 +1,27 @@
-// === Module 10219: StickerPickerEmptyState ===
+// === Module 10252: StickerPickerEmptyState ===
 
-// Module 10219 (StickerPickerEmptyState)
+// Module 10252 (StickerPickerEmptyState)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HapticUtils from "HapticUtils" /* 5248 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5249 */;
-import StickersHooks from "StickersHooks" /* 10188 */;
-import StickerDefault from "Sticker" /* 10204 */;
+import HapticUtils from "HapticUtils" /* 5249 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
+import StickersHooks from "StickersHooks" /* 10221 */;
+import StickerDefault from "Sticker" /* 10237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6801 */;
+import StickersStore from "StickersStore" /* 6824 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const EMPTY_STATE_STICKERS = fn(4835).EMPTY_STATE_STICKERS;
+const EMPTY_STATE_STICKERS = fn(4836).EMPTY_STATE_STICKERS;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_13 = createStyles.createStyles({ header: { marginBottom: 8, textAlign: "center" }, blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 }, premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 }, nitroWheel: { width: 32 }, stickersRow: { flexDirection: "row", alignSelf: "center" }, sticker: { paddingHorizontal: 2 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyStateSticker(arg0) {
@@ -280,8 +280,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7289)(analyticsLocations(7314).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7289);
+  analyticsLocations = analyticsLocations(7313)(analyticsLocations(7338).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7313);
   const items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(6944).PressableOpacity, obj, id);
+      return closure_1_11(sticker(6968).PressableOpacity, obj, id);
     })
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -342,16 +342,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(6944).PressableOpacity, obj, id);
+      return closure_1_11(sticker(6968).PressableOpacity, obj, id);
     })
   };
-  obj9.source = analyticsLocations(9935);
+  obj9.source = analyticsLocations(9967);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5705), obj9);
+  obj8.icon = closure_11(analyticsLocations(5707), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10213)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10246)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

@@ -1,18 +1,18 @@
-// === Module 5004: createStyles ===
+// === Module 5005: createStyles ===
 
-// Module 5004 (createStyles)
+// Module 5005 (createStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import native from "native" /* 5070 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import SemanticColorContext from "SemanticColorContext" /* 5174 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5238 */;
-import timing from "timing" /* 5242 */;
-import timingPresets from "timingPresets" /* 5245 */;
+import native from "native" /* 5071 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import SemanticColorContext from "SemanticColorContext" /* 5175 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5239 */;
+import timing from "timing" /* 5243 */;
+import timingPresets from "timingPresets" /* 5246 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5005 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5028 */;
+import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
 
 const require = globalThis.__r;
 
@@ -126,11 +126,11 @@ let closure_12 = { code: "function createStylesTsx2(){const{resolvedStyles,withT
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Styles/native/createStyles.tsx");
 
-export const experimental_createToken = function experimental_createToken(arg0) {
+export function experimental_createToken(arg0) {
   closure_0 = arg0;
   return { [closure_1_8]: (arg0) => closure_0(arg0) };
-};
-export const createStyles = function createStyles(rect) {
+}
+export function createStyles(rect) {
   _require = rect;
   let map = new Map();
   dependencyMap = typeof rect === "function";
@@ -140,7 +140,7 @@ export const createStyles = function createStyles(rect) {
     items = undefined;
     const cResult = closure_0(576).c(4);
     const obj = closure_0(576);
-    const themeContext = closure_0(5070).useThemeContext();
+    const themeContext = closure_0(5071).useThemeContext();
     if (cResult[0] === items) {
       if (cResult[1] === themeContext) {
         obj4 = cResult[2];
@@ -154,7 +154,7 @@ export const createStyles = function createStyles(rect) {
     }
     let fromEntries = globalThis;
     const items1 = [];
-    const obj2 = closure_0(5070);
+    const obj2 = closure_0(5071);
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp6 = createCacheKey();
     value = items.get(tmp6);
@@ -207,7 +207,7 @@ export const createStyles = function createStyles(rect) {
   }) : (function useStyles() {
     items = [...arguments];
     let obj3;
-    const themeContext = closure_0(5070).useThemeContext();
+    const themeContext = closure_0(5071).useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp2 = createCacheKey();
@@ -252,11 +252,11 @@ export const createStyles = function createStyles(rect) {
       const result = obj2.set(tmp2, obj3);
       return obj3;
     }
-    const obj = closure_0(5070);
+    const obj = closure_0(5071);
     obj2 = themeContext;
   });
-};
-export const createLegacyClassComponentStyles = function createLegacyClassComponentStyles(arg0) {
+}
+export function createLegacyClassComponentStyles(arg0) {
   closure_0 = arg0;
   const map = new Map();
   return function readStyles(key) {
@@ -291,7 +291,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
     }
     obj = obj2;
   };
-};
+}
 export const useLegacyClassComponentStyles = ReactCompilerGating.isReactCompilerEnabled() ? (function useLegacyClassComponentStyles(fn) {
   const cResult = c.c(3);
   const themeContext = native.useThemeContext();
@@ -309,7 +309,7 @@ export const useLegacyClassComponentStyles = ReactCompilerGating.isReactCompiler
 }) : (function useLegacyClassComponentStyles(fn) {
   return fn(native.useThemeContext());
 });
-export const createStyleProperties = function createStyleProperties(getButtonColorTokens) {
+export function createStyleProperties(getButtonColorTokens) {
   _require = getButtonColorTokens;
   const map = new Map();
   dependencyMap = typeof getButtonColorTokens === "function";
@@ -373,9 +373,9 @@ export const createStyleProperties = function createStyleProperties(getButtonCol
       return tmp4Result;
     }
   });
-};
+}
 export { processColorOrThrow };
-export const createNativeStyleProperties = function createNativeStyleProperties(arg0) {
+export function createNativeStyleProperties(arg0) {
   closure_0 = arg0;
   const map = new Map();
   return function readStyleProperties(theme) {
@@ -445,8 +445,8 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       const tmp2Result = native;
     }
   };
-};
-export const createAnimatedThemedStyles = function createAnimatedThemedStyles(obj) {
+}
+export function createAnimatedThemedStyles(obj) {
   let arr = items;
   if (items === undefined) {
     arr = items;
@@ -618,4 +618,4 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(ob
     fn.__initData = __initData2;
     return obj4.useAnimatedStyle(fn);
   });
-};
+}

@@ -1,12 +1,12 @@
-// === Module 19747: PendingRequestList ===
+// === Module 19969: PendingRequestList ===
 
-// Module 19747 (PendingRequestList)
+// Module 19969 (PendingRequestList)
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef2535 from "module_2535" /* 2535 */;
-import _modDef2833 from "module_2833" /* 2833 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16435 */;
-import _modDef16483 from "module_16483" /* 16483 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import _modDef2834 from "module_2834" /* 2834 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16673 */;
+import _modDef16721 from "module_16721" /* 16721 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -353,31 +353,31 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
     avatar = request.parent_avatar;
   }
   const obj = request(504);
-  const pendingRequestResolution = request(19745).usePendingRequestResolution(request.parent_id);
+  const pendingRequestResolution = request(19967).usePendingRequestResolution(request.parent_id);
   ({ isConnected, isResolved } = pendingRequestResolution);
-  const tmp2Result = request(19745);
+  const tmp2Result = request(19967);
   const obj2 = { style: tmp.row, children: null };
-  const result = request(19748).formatPendingRequestSentText(request.created_at);
+  const result = request(19970).formatPendingRequestSentText(request.created_at);
   const obj3 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
-  const tmp2Result2 = request(19748);
+  const tmp2Result2 = request(19970);
   obj3.source = AvatarUtilsDefault.getUserAvatarSource({ id: request.parent_id, avatar });
   const items1 = [closure_7(request(1199).Avatar, obj3), , ];
   const obj5 = { style: tmp.details, children: null };
-  const items2 = [closure_7(request(5270).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName }), , ];
+  const items2 = [closure_7(request(5271).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName }), , ];
   let tmp13Result = username1 !== globalName;
   if (tmp13Result) {
     const obj7 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: username1 };
-    tmp13Result = closure_7(tmp2(5270).Text, obj7);
+    tmp13Result = closure_7(tmp2(5271).Text, obj7);
   }
   items2[1] = tmp13Result;
-  items2[2] = closure_7(request(5270).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
+  items2[2] = closure_7(request(5271).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
   obj5.children = items2;
   items1[1] = closure_8(closure_5, obj5);
   if (isResolved) {
     const intl3 = tmp2(1125).intl;
     const obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj8.children = intl3.string(isConnected ? obj8.YQP5dE : obj8["2HvOvh"]);
-    closure_7(tmp2(5270).Text, obj8);
+    closure_7(tmp2(5271).Text, obj8);
     const tmp22 = isConnected ? obj8.YQP5dE : obj8["2HvOvh"];
   } else {
     const obj9 = { style: tmp.actions, children: null };
@@ -386,7 +386,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
       const obj10 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
       const intl2 = tmp2(1125).intl;
       const obj11 = { name: request.parent_username };
-      obj10.accessibilityLabel = intl2.formatToPlainString(_modDef2535["4GtllP"], obj11);
+      obj10.accessibilityLabel = intl2.formatToPlainString(_modDef2536["4GtllP"], obj11);
       obj10.disabled = actionsDisabled;
       obj10.onPress = function onPress() {
         return dependencyMap(request.parent_id);
@@ -398,11 +398,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         const obj12 = { size: "small", color: tmp.declineIcon.color };
         let tmp13Result6 = closure_7(closure_4, obj12);
       } else {
-        const obj13 = { size: tmp2(1199).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef16483 };
+        const obj13 = { size: tmp2(1199).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef16721 };
         tmp13Result6 = closure_7(tmp2(1199).Icon, obj13);
       }
       obj10.children = tmp13Result6;
-      items3[1] = closure_7(tmp2(6944).PressableOpacity, obj10);
+      items3[1] = closure_7(tmp2(6968).PressableOpacity, obj10);
       obj9.children = items3;
       items1[2] = closure_8(closure_5, obj9);
       obj2.children = items1;
@@ -411,7 +411,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
       const obj14 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
       const intl = tmp2(1125).intl;
       const obj15 = { name: request.parent_username };
-      obj14.accessibilityLabel = intl.formatToPlainString(_modDef2535.jc1Ip7, obj15);
+      obj14.accessibilityLabel = intl.formatToPlainString(_modDef2536.jc1Ip7, obj15);
       obj14.disabled = actionsDisabled;
       obj14.onPress = function onPress() {
         return importDefault(request.parent_id);
@@ -424,10 +424,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         let tmp13Result7 = closure_7(closure_4, obj16);
       } else {
         const obj17 = { size: "sm", color: nativeDefault.colors.WHITE };
-        tmp13Result7 = closure_7(tmp2(9249).CheckmarkLargeBoldIcon, obj17);
+        tmp13Result7 = closure_7(tmp2(9253).CheckmarkLargeBoldIcon, obj17);
       }
       obj14.children = tmp13Result7;
-      closure_7(tmp2(6944).PressableOpacity, obj14);
+      closure_7(tmp2(6968).PressableOpacity, obj14);
     }
   }
   const obj4 = { id: request.parent_id, avatar };
@@ -859,7 +859,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PendingR
   const items1 = [c7(c5, { style: tmp.dividerLine }), , ];
   const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1125).intl;
-  obj7.children = intl.string(_modDef2833["/SbB94"]);
+  obj7.children = intl.string(_modDef2834["/SbB94"]);
   items1[1] = c7(require("Text/Text").Text, obj7);
   items1[2] = c7(c5, { style: tmp.dividerLine });
   obj5.children = items1;
@@ -885,11 +885,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PendingR
   const obj11 = { style: tmp.details, children: null };
   const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1125).intl;
-  obj12.children = intl2.string(_modDef2833.z9gkwZ);
+  obj12.children = intl2.string(_modDef2834.z9gkwZ);
   const items4 = [c7(require("Text/Text").Text, obj12), ];
   const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1125).intl;
-  obj13.children = intl3.string(_modDef2833["9t4+vC"]);
+  obj13.children = intl3.string(_modDef2834["9t4+vC"]);
   items4[1] = c7(require("Text/Text").Text, obj13);
   obj11.children = items4;
   items3[1] = closure_8(c5, obj11);
@@ -905,7 +905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PendingR
   const items6 = [c7(require("Pressables").PressableOpacity, obj15), ];
   const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl5 = tmp5(1125).intl;
-  obj17.accessibilityLabel = intl5.string(_modDef2833.z9gkwZ);
+  obj17.accessibilityLabel = intl5.string(_modDef2834.z9gkwZ);
   obj17.onPress = onInviteAnotherGuardian;
   const items7 = [, ];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);

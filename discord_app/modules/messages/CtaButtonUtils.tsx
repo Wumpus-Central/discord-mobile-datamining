@@ -1,11 +1,11 @@
-// === Module 12929: CtaButtonUtils ===
+// === Module 13150: CtaButtonUtils ===
 
-// Module 12929 (CtaButtonUtils)
+// Module 13150 (CtaButtonUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 12930 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12931 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11071 */;
+import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 13151 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13152 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11125 */;
 
 require = fn;
 const CtaButtonType = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen", AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review" };
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/CtaButtonUtils.tsx");
 
 export { CtaButtonType };
-export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
+export function getCtaButtonType(id, channel_id) {
   const obj = useShouldRenderReportFalsePositiveButton;
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
@@ -30,7 +30,7 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
     tmpResult = AgeVerificationSystemNotificationUtils;
   }
   return CONNECT_TO_TEEN;
-};
+}
 export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled() ? (function useCtaButtonType(id, channel_id) {
   const obj = c;
   const cResult = obj.c(2);

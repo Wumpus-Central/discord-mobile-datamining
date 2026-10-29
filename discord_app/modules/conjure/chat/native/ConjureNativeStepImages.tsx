@@ -1,18 +1,18 @@
-// === Module 12474: ConjureNativeStepImages ===
+// === Module 12528: ConjureNativeStepImages ===
 
-// Module 12474 (ConjureNativeStepImages)
+// Module 12528 (ConjureNativeStepImages)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12238 */;
-import openConjureNativeImages from "openConjureNativeImages" /* 12239 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12292 */;
+import openConjureNativeImages from "openConjureNativeImages" /* 12293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 }, thumb: null, placeholder: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
 obj2.thumb = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

@@ -1,20 +1,20 @@
-// === Module 9733: HeaderShared ===
+// === Module 9765: HeaderShared ===
 
-// Module 9733 (HeaderShared)
+// Module 9765 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import useToken from "useToken" /* 5288 */;
-import Pressables from "Pressables" /* 6944 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6961 */;
-import _mod6969 from "module_6969" /* 6969 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9735 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9740 */;
-import ChannelActionsDefault from "ChannelActions" /* 9745 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14252 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import useToken from "useToken" /* 5289 */;
+import Pressables from "Pressables" /* 6968 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6985 */;
+import _mod6993 from "module_6993" /* 6993 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9767 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9772 */;
+import ChannelActionsDefault from "ChannelActions" /* 9777 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14487 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,17 +28,17 @@ let closure_3 = ["title", "subtitle", "color", "subtitleColor", "icon", "maxFont
 let closure_4 = ["labelStyle"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9734).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9766).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 }, actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 }, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 let obj5 = {};
-let merged = Object.assign(fn(5270).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(5271).TextStyleSheet["text-md/semibold"]);
 obj5.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj5;
 let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
@@ -230,7 +230,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GenericHeade
   }
   const tmp5 = closure_11();
   closure_5 = tmp5;
-  const tmp6 = color(6961)("os-drawn");
+  const tmp6 = color(6985)("os-drawn");
   if (null == subtitle) {
     if (null == tmp6) {
       let renderTitleContainerResult = renderTitleContainer("header");
@@ -288,7 +288,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
     const obj3 = { labelStyle: tmp10, displayMode: "default", backImage: tmp12, truncatedLabel: null, accessibilityLabel: null };
     ({ label: obj2.truncatedLabel, label: obj2.accessibilityLabel } = tmp5);
     const merged = Object.assign(tmp5);
-    const tmp18 = React6(_mod6969.HeaderBackButton, obj3);
+    const tmp18 = React6(_mod6993.HeaderBackButton, obj3);
     cResult[7] = tmp5;
     cResult[8] = tmp10;
     cResult[9] = tmp18;
@@ -313,7 +313,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
   const items = [closure_11().backButtonLabel, labelStyle.labelStyle];
   obj.labelStyle = items;
   const merged1 = Object.assign(merged);
-  return React6(_mod6969.HeaderBackButton, obj);
+  return React6(_mod6993.HeaderBackButton, obj);
 });
 let closure_14 = tmp6;
 ReactCompilerGating = fn(558);
@@ -340,9 +340,9 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     };
   }
   const obj = navigation(576);
-  const text = navigation(1503).useTheme().colors.text;
-  const tmpResult = navigation(1503);
-  const gradientTop = navigation(9742).useGradientTop();
+  const text = navigation(1504).useTheme().colors.text;
+  const tmpResult = navigation(1504);
+  const gradientTop = navigation(9774).useGradientTop();
   const sum = num + MIN_HEADER_HEIGHT;
   if (cResult[0] === num) {
     if (cResult[1] === sum) {
@@ -454,7 +454,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   cResult[1] = sum;
   cResult[2] = obj6;
   tmp9 = obj6;
-  const tmpResult2 = navigation(9742);
+  const tmpResult2 = navigation(9774);
 }) : (function HeaderInner(style) {
   ({ navigation, options, back, shouldHandleSafeArea } = style);
   if (shouldHandleSafeArea === undefined) {
@@ -596,19 +596,19 @@ export function getRenderHeaderTextButton(intl, onPress) {
     return React6(closure_14, { label, onPress });
   };
 }
-export const renderHeader = function renderHeader(arg0) {
+export function renderHeader(arg0) {
   const merged = Object.assign(arg0);
   return React6(memoResult, {});
-};
+}
 export { getRenderBackImage };
-export const getRenderModalBackImage = function getRenderModalBackImage(navigation) {
+export function getRenderModalBackImage(navigation) {
   _require = navigation;
   return require("PlatformUtils").isAndroid() ? undefined : (() => React6(PressableNavigatorModalIconDefault, { navigation }));
-};
-export const getRenderModalCloseImage = function getRenderModalCloseImage(navigation) {
+}
+export function getRenderModalCloseImage(navigation) {
   _require = navigation;
   return require("PlatformUtils").isAndroid() ? undefined : (() => React6(PressableNavigatorModalIconDefault, { navigation, type: "close" }));
-};
+}
 export const Header = memoResult;
 export function getDefaultStackHeaderProps(navigation) {
   closure_0 = navigation;
@@ -624,7 +624,7 @@ export function getDefaultStackHeaderProps(navigation) {
     headerBackVisible: false
   };
 }
-export const getDefaultChannelStackHeaderProps = function getDefaultChannelStackHeaderProps(navigation, route) {
+export function getDefaultChannelStackHeaderProps(navigation, route) {
   closure_0 = route;
   const routes = navigation.getState().routes;
   let str = routes.findIndex((key) => key.key === closure_0.key);
@@ -653,7 +653,7 @@ export const getDefaultChannelStackHeaderProps = function getDefaultChannelStack
     },
     headerBackVisible: false
   };
-};
+}
 export const HeaderIconButton = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderIconButton(arg0) {
   const cResult = c.c(9);
   ({ accessibilityLabel, onPress, source, resizeMode, color } = arg0);

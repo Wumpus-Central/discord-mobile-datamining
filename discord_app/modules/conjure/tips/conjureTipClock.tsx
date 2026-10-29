@@ -1,6 +1,6 @@
-// === Module 12372: conjureTipClock ===
+// === Module 12426: conjureTipClock ===
 
-// Module 12372 (conjureTipClock)
+// Module 12426 (conjureTipClock)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

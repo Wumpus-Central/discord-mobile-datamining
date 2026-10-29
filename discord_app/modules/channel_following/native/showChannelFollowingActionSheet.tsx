@@ -1,7 +1,7 @@
-// === Module 13599: showChannelFollowingActionSheet ===
+// === Module 13832: showChannelFollowingActionSheet ===
 
-// Module 13599 (showChannelFollowingActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+// Module 13832 (showChannelFollowingActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,11 +11,11 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");
 
-export const showChannelFollowingActionSheet = function showChannelFollowingActionSheet(id, guildId, targetChannelId, targetGuildId) {
+export function showChannelFollowingActionSheet(id, guildId, targetChannelId, targetGuildId) {
   _require = id;
   importDefault = guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(require("asyncRequireImpl")(13600, dependencyMap.paths), "NewChannelFollower." + id, {
+  obj.openLazy(require("asyncRequireImpl")(13833, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,
@@ -64,7 +64,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
             onSuccess() {
               closure_1(dependencyMap[5]).openLazy({
                 importer() {
-                  return closure_1_0(paths[4])(paths[6], paths.paths).then(() => { ... });
+                  return closure_1_0(paths[4])(paths[6], paths.paths).then(/* F163643 */ function() { ... });
                 },
                 hideActionSheet: true,
                 isDismissable: false
@@ -80,7 +80,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
             importer() {
               return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
                 closure_0 = result.default;
-                return () => { ... };
+                return /* F165916 */ function() { ... };
               });
             },
             hideActionSheet: true,
@@ -111,4 +111,4 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return closure_1(dependencyMap[2]).hideActionSheet();
     }
   });
-};
+}

@@ -1,9 +1,9 @@
-// === Module 7737: handleExplicitMediaScanTimeoutForMessage ===
+// === Module 7759: handleExplicitMediaScanTimeoutForMessage ===
 
-// Module 7737 (handleExplicitMediaScanTimeoutForMessage)
+// Module 7759 (handleExplicitMediaScanTimeoutForMessage)
 import _mod12 from "module_12" /* 12 */;
-import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7429 */;
-import findComponentMediaDefault from "findComponentMedia" /* 7436 */;
+import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7452 */;
+import findComponentMediaDefault from "findComponentMedia" /* 7459 */;
 import size from "module_2" /* 2 */;
 
 function failOverComponentMedia(components) {
@@ -28,7 +28,7 @@ function failOverComponentMedia(components) {
 const FAILOVER_SCAN_VERSION = ExplicitMediaRedactionConstants.FAILOVER_SCAN_VERSION;
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx");
 
-export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
+export function handleExplicitMediaScanTimeoutForMessage(message) {
   let attachments = message.attachments;
   let embeds = message.embeds;
   const attachments1 = attachments.map((item) => {
@@ -93,4 +93,4 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
     }
   }
   return message.merge({ attachments: attachments1, embeds: embeds1, components, messageSnapshots: messageSnapshots1 });
-};
+}

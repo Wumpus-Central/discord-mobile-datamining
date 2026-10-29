@@ -1,17 +1,17 @@
-// === Module 19043: AutomodRemovedContentActionCreators ===
+// === Module 19276: AutomodRemovedContentActionCreators ===
 
-// Module 19043 (AutomodRemovedContentActionCreators)
+// Module 19276 (AutomodRemovedContentActionCreators)
 import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodRemovedContentActionCreators.native.tsx");
 
-export const showRemovedMessageToast = function showRemovedMessageToast(arg0, channel_id) {
+export function showRemovedMessageToast(arg0, channel_id) {
   const channel = ChannelStore.getChannel(channel_id);
   let name;
   if (channel != null) {
@@ -28,7 +28,7 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
     obj2.text = intl.formatToPlainString(util.t["9U3Wb3"], obj3);
     ToastActionCreatorsDefault.open(combined, obj2);
   }
-};
-export const openRemovedContentModal = function openRemovedContentModal(action) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19044, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
-};
+}
+export function openRemovedContentModal(action) {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19277, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
+}

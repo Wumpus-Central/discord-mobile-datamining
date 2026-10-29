@@ -1,28 +1,28 @@
-// === Module 9396: SKUPreview ===
+// === Module 9427: SKUPreview ===
 
-// Module 9396 (SKUPreview)
+// Module 9427 (SKUPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 5171 */;
-import useToken from "useToken" /* 5288 */;
-import useShopProductItems from "useShopProductItems" /* 8697 */;
-import WishlistItemCardBase from "WishlistItemCardBase" /* 9397 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9421 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9423 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9434 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9446 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9448 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9449 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 5172 */;
+import useToken from "useToken" /* 5289 */;
+import useShopProductItems from "useShopProductItems" /* 8700 */;
+import WishlistItemCardBase from "WishlistItemCardBase" /* 9428 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9452 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9454 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9465 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9477 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9479 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9480 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7689).transformSKUToCollectiblesItem;
+let closure_5 = fn(7712).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1084).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles((width, height) => {
   const obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
   size = { width: WishlistItemCardBase.DEFAULT_ITEM_SIZE, height: WishlistItemCardBase.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
@@ -38,7 +38,7 @@ let closure_8 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(9397).DEFAULT_ITEM_SIZE, height: fn(9397).DEFAULT_ITEM_SIZE };
+let size = { width: fn(9428).DEFAULT_ITEM_SIZE, height: fn(9428).DEFAULT_ITEM_SIZE };
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesPreview(arg0) {
   const cResult = c.c(53);
@@ -365,7 +365,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collec
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9397).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9428).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);

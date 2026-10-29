@@ -1,17 +1,18 @@
-// === Module 2023: Constants ===
+// === Module 2024: Constants ===
 
-// Module 2023 (Constants)
-import Constants from "Constants" /* 1084 */;
-import Server from "Server" /* 1997 */;
-import Constants2 from "Constants" /* 2024 */;
-import ActivityApplications from "ActivityApplications" /* 2025 */;
+// Module 2024 (Constants)
+import Constants2 from "Constants" /* 1084 */;
+import Server from "Server" /* 1998 */;
+import ActivityApplications from "ActivityApplications" /* 2026 */;
+import Constants from "Constants" /* 2025 */;
 import size from "module_2" /* 2 */;
 
-const ChannelTypes = Constants.ChannelTypes;
-const OrientationLockState = Constants2.OrientationLockState;
+const ChannelTypes = Constants2.ChannelTypes;
+const OrientationLockState = Constants.OrientationLockState;
 const items = ["1037680572660727838", "235088799074484224", "1007373802981822582", "1067803140071620628", "1194351737264406548", "1245041113882955918", "1245040907732910201", "1245040436427489471", "1208090049871351890", "1235205910863806484", "1227719606223765687"];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
+({ ActivityIntent, ActivityLayoutMode } = Constants);
 const obj = { label_type: Server.EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
 const obj2 = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: OrientationLockState.UNLOCKED, tablet_default_orientation_lock_state: OrientationLockState.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
 const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
@@ -78,12 +79,12 @@ export const STAFF_RELEASE_PHASES = ["in_development", "activities_team", "emplo
 export const EXCLUDE_FULL_SCREEN_APPS = items;
 export const SHARE_INTERACTION_APPS = items1;
 export const ActivityFeedbackReasons = { ADS: "ADS", FAILED_LOAD: "FAILED_LOAD", LAGGING: "LAGGING", CONFUSING: "CONFUSING", NOT_FUN: "NOT_FUN", OTHER: "OTHER" };
-export const ActivityIntent = { PLAY: 0, [0]: "PLAY", SPECTATE: 1, [1]: "SPECTATE" };
 export const ActivityTooltipName = { BETRAYAL_MARKETING_TOOLTIP: "BETRAYAL_MARKETING_TOOLTIP", FISHINGTON_MARKETING_TOOLTIP: "FISHINGTON_MARKETING_TOOLTIP", POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP", YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP" };
+export { ActivityIntent };
+export { ActivityLayoutMode };
 export { OrientationLockState };
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = { UNHANDLED: -1, [-1]: "UNHANDLED", PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
-export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };
 export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj2;
 export const SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES = items4;
 export const SUPPORTED_ACTIVITIES_CHANNEL_TYPES = items5;
@@ -99,7 +100,6 @@ export function getAppIntentScheme(arg0) {
   }
 }
 export const PRIVATE_APPS_HELP_ARTICLE = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-export const DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY = "disallowed_navigation_error_close_activity";
 export const ACTIVITY_LOCKED_ASPECT_RATIO = 0.5625;
 export const ActivityPopoutWindowLayouts = { NORMAL: "normal", FULL_SCREEN: "full-screen" };
 export const INVITE_EXPIRATION_MS = 21600000;

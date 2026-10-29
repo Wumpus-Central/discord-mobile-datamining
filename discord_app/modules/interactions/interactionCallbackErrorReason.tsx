@@ -1,15 +1,15 @@
-// === Module 6052: interactionCallbackErrorReason ===
+// === Module 6056: interactionCallbackErrorReason ===
 
-// Module 6052 (interactionCallbackErrorReason)
+// Module 6056 (interactionCallbackErrorReason)
 import util from "util" /* 1125 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6053 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6057 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/interactionCallbackErrorReason.tsx");
 
-export const interactionCallbackErrorReason = function interactionCallbackErrorReason(reason, applicationId) {
+export function interactionCallbackErrorReason(reason, applicationId) {
   if (InteractionCallbackErrorDefault.ReasonCodes.TIMEOUT === reason) {
     const application = ApplicationStore.getApplication(applicationId);
     if (null != application) {
@@ -66,4 +66,4 @@ export const interactionCallbackErrorReason = function interactionCallbackErrorR
     const intl8 = util.intl;
     return intl8.string(util.t.hHGrWz);
   }
-};
+}

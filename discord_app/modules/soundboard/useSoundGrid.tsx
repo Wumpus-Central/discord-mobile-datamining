@@ -1,20 +1,20 @@
-// === Module 18806: useSoundGrid ===
+// === Module 19039: useSoundGrid ===
 
-// Module 18806 (useSoundGrid)
+// Module 19039 (useSoundGrid)
 import c from "c" /* 576 */;
-import SoundboardTypes from "SoundboardTypes" /* 7481 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8399 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8978 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 18807 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 18809 */;
+import SoundboardTypes from "SoundboardTypes" /* 7504 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8421 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8981 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 19040 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 19042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4936 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import PermissionStore from "PermissionStore" /* 4937 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
 import UserStore from "UserStore" /* 1389 */;
-import SoundboardStore from "SoundboardStore" /* 6042 */;
+import SoundboardStore from "SoundboardStore" /* 6046 */;
 
 require = fn;
 function createSoundItems(items, sortSoundsFn) {
@@ -152,7 +152,7 @@ function addCurrentGuildSection(items, stateFromStores1, arg2) {
     items.push(obj3);
   }
 }
-const SoundboardConstants = fn(6044);
+const SoundboardConstants = fn(6048);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1391).PremiumTypes;
 fn(558);

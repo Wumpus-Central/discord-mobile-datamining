@@ -1,17 +1,17 @@
-// === Module 11507: createWebViewController ===
+// === Module 11561: createWebViewController ===
 
-// Module 11507 (createWebViewController)
+// Module 11561 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11511 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ComponentActions = fn(1084).ComponentActions;
-let closure_5 = fn(2023).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(6413).TransportTypes;
+let closure_4 = fn(10873).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
+let ComponentActions = fn(1084).ComponentActions;
+const TransportTypes = fn(6437).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
 
@@ -28,9 +28,9 @@ export default function createWebViewController(id, contextSource) {
     }
     return applyArgumentsResult;
   }
-  closure_5 = async function _postMessageToWebView(arg0) {
+  ComponentActions = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10796)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10872)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;
@@ -92,7 +92,7 @@ export default function createWebViewController(id, contextSource) {
     } catch (tmp18) {
       const _SyntaxError = SyntaxError;
       if (tmp18 instanceof SyntaxError) {
-        if (tmp2.data === closure_5) {
+        if (tmp2.data === closure_4) {
           dependencyMap();
         }
       } else {
@@ -101,7 +101,7 @@ export default function createWebViewController(id, contextSource) {
     }
   });
   let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
-  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, { id, data: { contextSource: contextSource.contextSource } });
+  ComponentDispatch.dispatch(ComponentActions.IFRAME_MOUNT, { id, data: { contextSource: contextSource.contextSource } });
   return {
     iframeId: id,
     shellBridgeSecret,

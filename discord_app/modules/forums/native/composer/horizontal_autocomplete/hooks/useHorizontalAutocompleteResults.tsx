@@ -1,7 +1,7 @@
-// === Module 10229: useHorizontalAutocompleteResults ===
+// === Module 10262: useHorizontalAutocompleteResults ===
 
-// Module 10229 (useHorizontalAutocompleteResults)
-import AutocompleteOptions from "AutocompleteOptions" /* 10230 */;
+// Module 10262 (useHorizontalAutocompleteResults)
+import AutocompleteOptions from "AutocompleteOptions" /* 10263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
 
-export const useHorizontalAutocompleteResults = function useHorizontalAutocompleteResults(channel) {
+export function useHorizontalAutocompleteResults(channel) {
   channel = channel.channel;
   const selection = channel.selection;
   const text = channel.text;
@@ -137,4 +137,4 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     return type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI;
   }), items6);
   return obj2;
-};
+}

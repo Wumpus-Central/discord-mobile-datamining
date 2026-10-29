@@ -1,10 +1,10 @@
-// === Module 12496: ConjurePlanAutomodOutcomes ===
+// === Module 12550: ConjurePlanAutomodOutcomes ===
 
-// Module 12496 (ConjurePlanAutomodOutcomes)
+// Module 12550 (ConjurePlanAutomodOutcomes)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 4918 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 4919 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
 import size from "module_2" /* 2 */;
 
 const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;
@@ -17,28 +17,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.Vi4cjL);
+      return intl.string(_modDef3864.Vi4cjL);
     },
     blockedStyle: false
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.YdnZ8q);
+      return intl.string(_modDef3864.YdnZ8q);
     },
     blockedStyle: true
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.QGrx9O);
+      return intl.string(_modDef3864.QGrx9O);
     },
     blockedStyle: true
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.RGzFNK);
+      return intl.string(_modDef3864.RGzFNK);
     },
     blockedStyle: false
   }
@@ -47,33 +47,33 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.YdnZ8q);
+      return intl.string(_modDef3864.YdnZ8q);
     },
     tone: "red"
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863["8ockl9"]);
+      return intl.string(_modDef3864["8ockl9"]);
     },
     tone: "blurple"
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.RGzFNK);
+      return intl.string(_modDef3864.RGzFNK);
     },
     tone: "green"
   }
 };
-export const groupPlanAutomodExamples = function groupPlanAutomodExamples(examples) {
+export function groupPlanAutomodExamples(examples) {
   const mapped = closure_4.map((section) => {
     examples = section;
     return { section, examples: examples.filter((item) => closure_2_5[item.outcome] === closure_0) };
   });
   return mapped.filter((examples) => examples.examples.length > 0);
-};
-export const planAutomodReasonText = function planAutomodReasonText(example) {
+}
+export function planAutomodReasonText(example) {
   let formatToPlainStringResult = null;
   if ("timeout" === example.outcome) {
     formatToPlainStringResult = null;
@@ -124,7 +124,7 @@ export const planAutomodReasonText = function planAutomodReasonText(example) {
     tmp7 = joined;
   }
   return tmp7;
-};
-export const renderPlanAutomodExampleContent = function renderPlanAutomodExampleContent(content) {
+}
+export function renderPlanAutomodExampleContent(content) {
   return MarkupUtilsDefault.parseEmbedTitleWithoutLinks(content, true);
-};
+}

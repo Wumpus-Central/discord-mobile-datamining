@@ -1,13 +1,13 @@
-// === Module 9635: QuestHomeHeroTypes ===
+// === Module 9667: QuestHomeHeroTypes ===
 
-// Module 9635 (QuestHomeHeroTypes)
-import AssetUtils from "AssetUtils" /* 9618 */;
-import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9636 */;
+// Module 9667 (QuestHomeHeroTypes)
+import AssetUtils from "AssetUtils" /* 9650 */;
+import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9668 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
-export const questHomeHeroFromServer = function questHomeHeroFromServer(creative_content) {
+export function questHomeHeroFromServer(creative_content) {
   creative_content = creative_content.creative_content;
   const obj = { id: creative_content.id, labelTitle: creative_content.label_title, labelSubtitle: creative_content.label_subtitle, heroImage: AssetUtils.resolveAdCreativeCdnUrl(creative_content.hero_image), heroVideo: null, sponsorImage: null, cta: null, questIds: null, questHomeEntrypoint: null, shelfImage: null, shelfVideo: null, features: null, startsAt: null, endsAt: null };
   obj.heroVideo = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.hero_video);
@@ -37,4 +37,4 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(creative
   obj.features = features;
   ({ starts_at: obj.startsAt, ends_at: obj.endsAt } = creative_content);
   return obj;
-};
+}

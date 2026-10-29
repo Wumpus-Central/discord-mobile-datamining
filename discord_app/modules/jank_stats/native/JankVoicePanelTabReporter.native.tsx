@@ -1,14 +1,14 @@
-// === Module 18933: JankVoicePanelTabReporter ===
+// === Module 19166: JankVoicePanelTabReporter ===
 
-// Module 18933 (JankVoicePanelTabReporter)
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17714 */;
+// Module 19166 (JankVoicePanelTabReporter)
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let VoicePanelModes = fn(10939).VoicePanelModes;
-const VoicePanelControlsModes = fn(10937).VoicePanelControlsModes;
+let VoicePanelModes = fn(10974).VoicePanelModes;
+const VoicePanelControlsModes = fn(10972).VoicePanelControlsModes;
 const map = new Map();
 function isDrawerShown(drawerMode, arg1) {
   let tmp = drawerMode.drawerMode && !drawerMode.hidden;
@@ -238,7 +238,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }, items2);
   return null;
 }));
-export const reportJankVoicePanelTabRequest = function reportJankVoicePanelTabRequest(disableControlsUpdate, disableControlsUpdate, arg2) {
+export function reportJankVoicePanelTabRequest(disableControlsUpdate, disableControlsUpdate, arg2) {
   ({ tab, controlsProps } = disableControlsUpdate);
   value = map.get(disableControlsUpdate);
   let tmp2 = null != value;
@@ -278,4 +278,4 @@ export const reportJankVoicePanelTabRequest = function reportJankVoicePanelTabRe
       tmp10(disableControlsUpdate, `chat`);
     }
   }
-};
+}

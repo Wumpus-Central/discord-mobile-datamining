@@ -1,11 +1,11 @@
-// === Module 8827: common/Video ===
+// === Module 8830: common/Video ===
 
-// Module 8827 (common/Video)
+// Module 8830 (common/Video)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7169 */;
-import openMediaModal from "openMediaModal" /* 8788 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7193 */;
+import openMediaModal from "openMediaModal" /* 8791 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, video: null };
 let obj3 = { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -33,7 +33,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
   }
   _require = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(8828);
+    const tmpResult = tmp(8831);
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -48,8 +48,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
         if (closure_0) {
           tmp = closure_1_7;
           str = "change";
-          closure_0 = closure_1_7.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_7.addEventListener("change", /* F148634 */ function() { ... });
+          return /* F148635 */ function() { ... };
         } else {
           return;
         }
@@ -67,8 +67,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
         if (closure_0) {
           tmp = closure_1_7;
           str = "change";
-          closure_0 = closure_1_7.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_7.addEventListener("change", /* F148634 */ function() { ... });
+          return /* F148635 */ function() { ... };
         } else {
           return;
         }
@@ -83,8 +83,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
         if (closure_0) {
           tmp = closure_1_7;
           str = "change";
-          closure_0 = closure_1_7.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_7.addEventListener("change", /* F148634 */ function() { ... });
+          return /* F148635 */ function() { ... };
         } else {
           return;
         }
@@ -98,8 +98,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
         if (closure_0) {
           tmp = closure_1_7;
           str = "change";
-          closure_0 = closure_1_7.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_7.addEventListener("change", /* F148634 */ function() { ... });
+          return /* F148635 */ function() { ... };
         } else {
           return;
         }
@@ -112,8 +112,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
         if (closure_0) {
           tmp = closure_1_7;
           str = "change";
-          closure_0 = closure_1_7.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_7.addEventListener("change", /* F148634 */ function() { ... });
+          return /* F148635 */ function() { ... };
         } else {
           return;
         }
@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
     props = controls.props;
   }
   const merged = Object.assign(props);
-  return jsx(pauseWhileAppInactive(8828).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
+  return jsx(pauseWhileAppInactive(8831).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
 });
 let closure_10 = tmp4;
 const PureComponent = noop.PureComponent;
@@ -352,12 +352,12 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5070).ThemeContext;
+Video.contextType = fn(5071).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 
 export default Video;
-export const createVideoControls = function createVideoControls(NOOP) {
+export function createVideoControls(NOOP) {
   ref = ref.createRef();
   c5 = 0;
   c6 = 0;
@@ -422,5 +422,5 @@ export const createVideoControls = function createVideoControls(NOOP) {
       }
     }
   };
-};
+}
 export const VideoComponent = tmp4;

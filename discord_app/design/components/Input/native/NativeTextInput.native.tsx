@@ -1,13 +1,13 @@
-// === Module 7062: NativeTextInput ===
+// === Module 7086: NativeTextInput ===
 
-// Module 7062 (NativeTextInput)
+// Module 7086 (NativeTextInput)
 import c from "c" /* 576 */;
-import native from "native" /* 5070 */;
-import native2 from "native" /* 5175 */;
-import useMountEffect from "useMountEffect" /* 5299 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7064 */;
+import native from "native" /* 5071 */;
+import native2 from "native" /* 5176 */;
+import useMountEffect from "useMountEffect" /* 5300 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7088 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -80,7 +80,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
         const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { value: "useCallback", defaultValue: "PX_16" };
+          const obj2 = { value: "Array", defaultValue: "Reflect" };
           cResult[8] = obj2;
           let tmp11 = obj2;
         } else {
@@ -143,7 +143,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
       current.setNativeProps(obj);
     }
   });
-  return { value: "useCallback", defaultValue: "PX_16" };
+  return { value: "Array", defaultValue: "Reflect" };
 });
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePanGestureWrapper(arg0) {

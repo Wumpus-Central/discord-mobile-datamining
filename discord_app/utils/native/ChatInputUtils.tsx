@@ -1,12 +1,12 @@
-// === Module 5195: ChatInputUtils ===
+// === Module 5196: ChatInputUtils ===
 
-// Module 5195 (ChatInputUtils)
-import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5196 */;
-import useKeyboardType from "useKeyboardType" /* 5197 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5198 */;
+// Module 5196 (ChatInputUtils)
+import KeyboardUIStore from "KeyboardUIStore" /* 1501 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5197 */;
+import useKeyboardType from "useKeyboardType" /* 5198 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5199 */;
 import size from "module_2" /* 2 */;
 
 function getHighestIndexForScreenIndexMap(map1) {
@@ -133,7 +133,7 @@ export function createInputRefTracker(id, screenIndex) {
     }
   };
 }
-export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex() {
+export function getHighestActiveScreenIndex() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = map1;
@@ -168,8 +168,8 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
       const arr = Array.from(obj.keys());
     }
   }
-};
-export const getChatInputRef = function getChatInputRef(id, screenIndex) {
+}
+export function getChatInputRef(id, screenIndex) {
   if (null != id) {
     value = map.get(id);
     let current;
@@ -181,8 +181,8 @@ export const getChatInputRef = function getChatInputRef(id, screenIndex) {
     }
     return current;
   }
-};
-export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(id) {
+}
+export function getBestActiveInputForChannelId(id) {
   if (null != id) {
     value = map.get(id);
     if (null != value) {
@@ -194,16 +194,16 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
       return current;
     }
   }
-};
-export const getBestActiveInput = function getBestActiveInput() {
+}
+export function getBestActiveInput() {
   const tmp = getHighestIndexForScreenIndexMap(map1);
   let current;
   if (tmp != null) {
     current = tmp.current;
   }
   return current;
-};
-export const dismissKeyboard = function dismissKeyboard() {
+}
+export function dismissKeyboard() {
   const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   const tmp4 = getHighestIndexForScreenIndexMap(map1);
   let current;
@@ -222,4 +222,4 @@ export const dismissKeyboard = function dismissKeyboard() {
   const tmpResult = useKeyboardType;
   const result1 = PortalKeyboardUIStore.closePortalKeyboardRequest();
   const tmpResult4 = PortalKeyboardUIStore;
-};
+}

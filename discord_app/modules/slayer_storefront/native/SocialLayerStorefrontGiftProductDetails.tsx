@@ -1,14 +1,14 @@
-// === Module 10614: SocialLayerStorefrontGiftProductDetails ===
+// === Module 10647: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 10614 (SocialLayerStorefrontGiftProductDetails)
+// Module 10647 (SocialLayerStorefrontGiftProductDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7293 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9449 */;
-import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10595 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7317 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9480 */;
+import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10628 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const constants = fn(1084).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginHorizontal: nativeDefault.space.PX_16 }, text: null, appInfo: null, appIcon: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.text = { flex: 1, gap: nativeDefault.space.PX_4 };
@@ -155,9 +155,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = closure_8();
-  getOrFetchApplication = getOrFetchApplication(7293).useGetOrFetchApplication(sku.applicationId);
-  let obj = getOrFetchApplication(7293);
-  const userPrice = getOrFetchApplication(10595).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
+  getOrFetchApplication = getOrFetchApplication(7317).useGetOrFetchApplication(sku.applicationId);
+  let obj = getOrFetchApplication(7317);
+  const userPrice = getOrFetchApplication(10628).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
   const items = [getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let applicationIconSource = null;
@@ -181,17 +181,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
     }
     const items2 = [tmp8Result, ];
     const obj8 = { variant: "text-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-    items2[1] = closure_6(tmp2(5270).Text, obj8);
+    items2[1] = closure_6(tmp2(5271).Text, obj8);
     obj6.children = items2;
     tmp6Result = closure_7(View, obj6);
   }
-  const items3 = [tmp6Result, closure_6(getOrFetchApplication(5270).Text, { variant: "text-md/semibold", children: sku.name })];
+  const items3 = [tmp6Result, closure_6(getOrFetchApplication(5271).Text, { variant: "text-md/semibold", children: sku.name })];
   obj5.children = items3;
   items1[1] = closure_7(View, obj5);
   let tmp8Result2 = null != userPrice;
   if (tmp8Result2) {
     const obj10 = { variant: "text-md/semibold", children: userPrice };
-    tmp8Result2 = closure_6(tmp2(5270).Text, obj10);
+    tmp8Result2 = closure_6(tmp2(5271).Text, obj10);
   }
   items1[2] = tmp8Result2;
   obj4.children = items1;

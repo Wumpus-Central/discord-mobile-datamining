@@ -1,10 +1,10 @@
-// === Module 17846: useFavoritesGuildCategories ===
+// === Module 18084: useFavoritesGuildCategories ===
 
-// Module 17846 (useFavoritesGuildCategories)
+// Module 18084 (useFavoritesGuildCategories)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FavoritesHooks from "FavoritesHooks" /* 10884 */;
-import FavoriteStore from "FavoriteStore" /* 4859 */;
+import FavoritesHooks from "FavoritesHooks" /* 10789 */;
+import FavoriteStore from "FavoriteStore" /* 4860 */;
 
 require = fn;
 function areCategoriesEqual(arr, arg1) {

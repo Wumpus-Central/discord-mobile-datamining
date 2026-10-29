@@ -21,6 +21,6 @@ export const EmojiSprites = { NonDiversityPerRow: 42, [42]: "NonDiversityPerRow"
 export const EmojiDisabledReasons = { DISALLOW_EXTERNAL: 0, [0]: "DISALLOW_EXTERNAL", GUILD_SUBSCRIPTION_UNAVAILABLE: 1, [1]: "GUILD_SUBSCRIPTION_UNAVAILABLE", PREMIUM_LOCKED: 2, [2]: "PREMIUM_LOCKED", ONLY_GUILD_EMOJIS_ALLOWED: 3, [3]: "ONLY_GUILD_EMOJIS_ALLOWED", ROLE_SUBSCRIPTION_LOCKED: 4, [4]: "ROLE_SUBSCRIPTION_LOCKED", ROLE_SUBSCRIPTION_UNAVAILABLE: 5, [5]: "ROLE_SUBSCRIPTION_UNAVAILABLE", DISALLOW_CUSTOM: 6, [6]: "DISALLOW_CUSTOM" };
 export const EmojiIntention = obj;
 export const EmojiInteractionPoint = { EmojiButtonMouseEntered: "EMOJI_BUTTON_MOUSE_ENTERED", EmojiButtonFocused: "EMOJI_BUTTON_FOCUSED", ChatInputExpressionPressed: "CHAT_INPUT_EXPRESSION_PRESSED", ChatInputSuggestionsShown: "CHAT_INPUT_SUGGESTIONS_SHOWN", SearchEmojiKeybindPressed: "SEARCH_EMOJI_KEYBIND_PRESSED", AutocompleteTyped: "AUTOCOMPLETE_TYPED", AutocompleteWrapperShown: "AUTOCOMPLETE_WRAPPER_SHOWN", GuildLeaveModalShown: "GUILD_LEAVE_MODAL_SHOWN", AddReactionPopoutMouseEntered: "ADD_REACTION_POPOUT_MOUSE_ENTERED", AddReactionPopoutFocused: "ADD_REACTION_POPOUT_FOCUSED", MessageContextMenuMouseEntered: "MESSAGE_CONTEXT_MENU_MOUSE_ENTERED", EmojiPickerActionSheetOpened: "EMOJI_PICKER_ACTION_SHEET_OPENED", TrackOpenPopoutUsed: "TRACK_OPEN_POPOUT_USED", CustomEmojiTooltipShown: "CUSTOM_EMOJI_TOOLTIP_SHOWN" };
-export const isExternalEmojiAllowedForIntention = function isExternalEmojiAllowedForIntention(arg0) {
+export function isExternalEmojiAllowedForIntention(arg0) {
   return !set.has(arg0);
-};
+}

@@ -1,8 +1,8 @@
-// === Module 7690: AvatarDecorationRecord ===
+// === Module 7713: AvatarDecorationRecord ===
 
-// Module 7690 (AvatarDecorationRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1991 */;
+// Module 7713 (AvatarDecorationRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1992 */;
 
 require = fn;
 const prototype = function AvatarDecorationRecord(arg0) {
@@ -30,6 +30,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/AvatarDecorationRecord.tsx");
 
 export default prototype;
-export const isAvatarDecorationRecord = function isAvatarDecorationRecord(first1) {
+export function isAvatarDecorationRecord(first1) {
   return first1 instanceof prototype;
-};
+}

@@ -1,10 +1,10 @@
-// === Module 7227: GuildOnboardingStore ===
+// === Module 7251: GuildOnboardingStore ===
 
-// Module 7227 (GuildOnboardingStore)
+// Module 7251 (GuildOnboardingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;
@@ -85,7 +85,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboard
 
 export default guildOnboardingStore;
 export { GuildOnboardingStatus };
-export const isOnboarding = function isOnboarding(arg0) {
+export function isOnboarding(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
     const items = [, ];
@@ -93,4 +93,4 @@ export const isOnboarding = function isOnboarding(arg0) {
     hasItem = items.includes(arg0);
   }
   return hasItem;
-};
+}

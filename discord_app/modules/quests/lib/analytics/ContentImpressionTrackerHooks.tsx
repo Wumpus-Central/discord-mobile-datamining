@@ -1,12 +1,12 @@
-// === Module 9640: ContentImpressionTrackerHooks ===
+// === Module 9672: ContentImpressionTrackerHooks ===
 
-// Module 9640 (ContentImpressionTrackerHooks)
+// Module 9672 (ContentImpressionTrackerHooks)
 import c from "c" /* 576 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
-import QuestImpressionContext from "QuestImpressionContext" /* 9641 */;
+import AdCreativeType from "AdCreativeType" /* 6775 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7859 */;
+import QuestImpressionContext from "QuestImpressionContext" /* 9673 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7811 */;
+import QuestStore from "QuestStore" /* 7834 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -202,9 +202,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestStat
     }
     const stateFromStores = obj(504).useStateFromStores(first, tmp5, tmp6);
     if (null == stateFromStores) {
-      return null !== adCreativeType(6695)(null);
+      return null !== adCreativeType(6719)(null);
     } else if (cResult[5] !== stateFromStores) {
-      obj = obj(7836);
+      obj = obj(7859);
       const questStatus = obj.getQuestStatus(stateFromStores);
       cResult[5] = stateFromStores;
       cResult[6] = questStatus;

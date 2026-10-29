@@ -1,7 +1,7 @@
-// === Module 14423: ServerTagUpsellOnGuildProfileExperiment ===
+// === Module 14657: ServerTagUpsellOnGuildProfileExperiment ===
 
-// Module 14423 (ServerTagUpsellOnGuildProfileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 14657 (ServerTagUpsellOnGuildProfileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-server-tag-upsell-on-guild-profile", kind: "user", defaultConfig: { enabled: false, ignoreSubscriptionPlatform: false }, variations: null };

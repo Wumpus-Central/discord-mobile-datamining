@@ -1,6 +1,6 @@
-// === Module 7775: PostTTIScheduler ===
+// === Module 7797: PostTTIScheduler ===
 
-// Module 7775 (PostTTIScheduler)
+// Module 7797 (PostTTIScheduler)
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -13,12 +13,12 @@ const promise = new Promise((resolve) => {
 });
 const result = size.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
 
-export const schedulePostTTIEvent = function schedulePostTTIEvent(arg0) {
+export function schedulePostTTIEvent(arg0) {
   closure_0 = arg0;
   promise.then(() => {
     closure_0();
   });
-};
-export const notifyAboutTTI = function notifyAboutTTI() {
+}
+export function notifyAboutTTI() {
   obj.resolve(null);
-};
+}

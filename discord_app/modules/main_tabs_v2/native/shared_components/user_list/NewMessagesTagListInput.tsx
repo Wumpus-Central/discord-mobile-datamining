@@ -1,11 +1,11 @@
-// === Module 13487: NewMessagesTagListInput ===
+// === Module 13720: NewMessagesTagListInput ===
 
-// Module 13487 (NewMessagesTagListInput)
+// Module 13720 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10654 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5014 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10687 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, header: null, showSearchButton: null };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
 const PlatformUtils = fn(1381);
@@ -44,7 +44,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const mapped = items.map(UserStore.getUser);
     const found = mapped.filter(onSelectUser(1385).isNotNullish);
-    const mapped1 = found.map(tags(10654));
+    const mapped1 = found.map(tags(10687));
     cResult[0] = selectedUserIds;
     cResult[1] = mapped1;
     tags = mapped1;
@@ -69,7 +69,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[9] !== tmp4.header) {
             const obj2 = { style: tmp4.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp16 };
-            const tmp20 = jsx(onSelectUser(5270).Text, { style: tmp4.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp16 });
+            const tmp20 = jsx(onSelectUser(5271).Text, { style: tmp4.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp16 });
             cResult[9] = tmp4.header;
             cResult[10] = tmp20;
             let tmp18 = tmp20;
@@ -119,7 +119,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
             const obj4 = { autoFocus, focusOnAdd: true, footer: tmp10, icon: tmp18, onChangeText, onFocus, onRemove: tmp21, placeholder: tmp22, tags, ref: tagListInputRef };
-            const tmp27 = jsx(tags(9027), { autoFocus, focusOnAdd: true, footer: tmp10, icon: tmp18, onChangeText, onFocus, onRemove: tmp21, placeholder: tmp22, tags, ref: tagListInputRef });
+            const tmp27 = jsx(tags(9030), { autoFocus, focusOnAdd: true, footer: tmp10, icon: tmp18, onChangeText, onFocus, onRemove: tmp21, placeholder: tmp22, tags, ref: tagListInputRef });
             cResult[15] = autoFocus;
             cResult[16] = onChangeText;
             cResult[17] = onFocus;
@@ -163,12 +163,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       const obj5 = { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null };
       if (forceSearchResults) {
-        let CirclePlusIcon = onSelectUser(13488).ChevronLargeRightIcon;
+        let CirclePlusIcon = onSelectUser(13721).ChevronLargeRightIcon;
       } else {
-        CirclePlusIcon = onSelectUser(11195).CirclePlusIcon;
+        CirclePlusIcon = onSelectUser(11249).CirclePlusIcon;
       }
       obj5.children = <CirclePlusIcon size="xs" />;
-      jsx(onSelectUser(6944).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null });
+      jsx(onSelectUser(6968).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null });
     }
   }
   cResult[2] = forceSearchResults;

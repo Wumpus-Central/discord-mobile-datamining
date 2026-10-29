@@ -1,15 +1,13 @@
-// === Module 11237: ConjurePagesStore ===
+// === Module 11291: ConjurePagesStore ===
 
-// Module 11237 (ConjurePagesStore)
+// Module 11291 (ConjurePagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let closure_0 = { chatOpen: true, debugOpen: false, previewSelection: null, chatScroll: null };
 let c1 = null;
 let c2 = false;
-let c3 = false;
-let c4 = null;
-let c5 = "";
+let c3 = "";
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -23,9 +21,6 @@ prototype["getProjectId"] = function getProjectId() {
 prototype["isOnPage"] = function isOnPage() {
   return c2;
 };
-prototype["isOverlayOpen"] = function isOverlayOpen() {
-  return c3;
-};
 prototype["getShownProjectId"] = function getShownProjectId() {
   let tmp = null;
   if (c2) {
@@ -33,11 +28,8 @@ prototype["getShownProjectId"] = function getShownProjectId() {
   }
   return tmp;
 };
-prototype["getExitRoute"] = function getExitRoute() {
-  return c4;
-};
 prototype["getHomePrompt"] = function getHomePrompt() {
-  return c5;
+  return c3;
 };
 prototype["getScrollTop"] = function getScrollTop(arg0) {
   let num = map.get(arg0);
@@ -75,40 +67,6 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
     }
     return flag;
   },
-  CONJURE_PAGES_NAVIGATE: function handleNavigate(projectId) {
-    let flag = projectId.projectId !== projectId;
-    if (flag) {
-      projectId = projectId.projectId;
-      flag = true;
-    }
-    return flag;
-  },
-  CONJURE_PAGES_OVERLAY_SET: function handleOverlaySet(open) {
-    open = open.open;
-    let flag = open !== c3;
-    if (flag) {
-      c3 = open;
-      flag = true;
-    }
-    return flag;
-  },
-  CONJURE_PAGES_PIN_SET: function handlePinSet(pinned) {
-    pinned = pinned.pinned;
-    let tmp = !pinned;
-    if (pinned) {
-      tmp = !c3;
-    }
-    let flag = !tmp;
-    if (!tmp) {
-      c3 = false;
-      flag = true;
-    }
-    return flag;
-  },
-  CONJURE_PAGES_EXIT_ROUTE_SAVE: function handleExitRouteSave(route) {
-    route = route.route;
-    return false;
-  },
   CONJURE_PAGES_HOME_PROMPT_SAVE: function handleHomePromptSave(prompt) {
     const _prompt = prompt.prompt;
     return false;
@@ -145,9 +103,7 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     c1 = null;
     c2 = false;
-    c3 = false;
-    c4 = null;
-    c5 = "";
+    c3 = "";
     map.clear();
     map1.clear();
     set.clear();

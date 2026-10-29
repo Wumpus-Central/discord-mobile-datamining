@@ -1,9 +1,9 @@
-// === Module 7819: QuestServerUtils ===
+// === Module 7842: QuestServerUtils ===
 
-// Module 7819 (QuestServerUtils)
-import _mod6519 from "module_6519" /* 6519 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7816 */;
-import Quest from "Quest" /* 7820 */;
+// Module 7842 (QuestServerUtils)
+import _mod6543 from "module_6543" /* 6543 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7839 */;
+import Quest from "Quest" /* 7843 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -78,19 +78,19 @@ function _questsEntitlementFromServer(skuId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestServerUtils.tsx");
 
-export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
+export function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = _mod6519.match(config.config);
+    const match = _mod6543.match(config.config);
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
-};
-export const questConfigFromServer = function questConfigFromServer(body) {
-  const match = _mod6519.match(body);
+}
+export function questConfigFromServer(body) {
+  const match = _mod6543.match(body);
   return match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
-};
-export const questUserStatusFromServer = function questUserStatusFromServer(body) {
+}
+export function questUserStatusFromServer(body) {
   const obj = { userId: body.user_id, questId: body.quest_id, enrolledAt: body.enrolled_at, completedAt: body.completed_at, claimedAt: body.claimed_at, claimedTier: null, orbQuantityClaimed: null, lastStreamHeartbeatAt: null, streamProgressSeconds: null, dismissedQuestContent: null, progress: null };
   let claimed_tier = body.claimed_tier;
   if (claimed_tier == null) {
@@ -105,10 +105,10 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
   ({ last_stream_heartbeat_at: obj.lastStreamHeartbeatAt, stream_progress_seconds: obj.streamProgressSeconds, dismissed_quest_content: obj.dismissedQuestContent } = body);
   obj.progress = progressFromServer(body.progress);
   return obj;
-};
-export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
+}
+export function questWithUserStatusFromServer(body) {
   const obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
-  const match = _mod6519.match(body.config);
+  const match = _mod6543.match(body.config);
   obj.config = match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {
@@ -131,11 +131,11 @@ export const questWithUserStatusFromServer = function questWithUserStatusFromSer
   obj.userStatus = tmp;
   ({ targeted_content: obj.targetedContent, traffic_metadata_sealed: obj.trafficMetadataSealed } = body);
   return obj;
-};
-export const excludedQuestFromServer = function excludedQuestFromServer(id) {
+}
+export function excludedQuestFromServer(id) {
   return { id: id.id, replacementId: id.replacement_id };
-};
-export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestWithUserStatusFromServer(id) {
+}
+export function getClaimedQuestWithUserStatusFromServer(id) {
   const obj = { id: id.id, config: null, userStatus: null };
   const config = id.config;
   const obj2 = { id: config.id, startsAt: config.starts_at, expiresAt: config.expires_at, features: config.features, messages: { questName: config.messages.quest_name, gamePublisher: config.messages.game_publisher, gameTitle: config.messages.game_title }, assets: { hero: config.assets.hero, heroVideo: config.assets.hero_video, questBarHero: config.assets.quest_bar_hero, questBarHeroVideo: config.assets.quest_bar_hero_video, gameTile: config.assets.game_tile, logotype: config.assets.logotype, logotypeLight: config.assets.logotype_light, logotypeDark: config.assets.logotype_dark, gameTileLight: config.assets.game_tile_light, gameTileDark: config.assets.game_tile_dark }, colors: { primary: config.colors.primary, secondary: config.colors.secondary }, rewards: null, cosponsorMetadata: Quest.questCosponsorMetadataFromServer(config.cosponsor_metadata) };
@@ -162,8 +162,8 @@ export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestW
   }
   obj.userStatus = tmp;
   return obj;
-};
-export const questsRewardCodeFromServer = function questsRewardCodeFromServer(body) {
+}
+export function questsRewardCodeFromServer(body) {
   const obj = { userId: body.user_id, questId: body.quest_id, code: body.code, platform: body.platform, claimedAt: body.claimed_at, tier: null };
   let tier = body.tier;
   if (tier == null) {
@@ -171,10 +171,10 @@ export const questsRewardCodeFromServer = function questsRewardCodeFromServer(bo
   }
   obj.tier = tier;
   return obj;
-};
-export const questsEntitlementsFromServer = function questsEntitlementsFromServer(body) {
+}
+export function questsEntitlementsFromServer(body) {
   const obj = { claimedAt: body.claimed_at, items: null, errors: body.errors };
   const entitlements = body.entitlements;
   obj.items = entitlements.map(_questsEntitlementFromServer);
   return obj;
-};
+}

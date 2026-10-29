@@ -1,7 +1,7 @@
-// === Module 15627: WindowsMediaFoundationGpuEncodeIntel ===
+// === Module 15863: WindowsMediaFoundationGpuEncodeIntel ===
 
-// Module 15627 (WindowsMediaFoundationGpuEncodeIntel)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 15863 (WindowsMediaFoundationGpuEncodeIntel)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-wmf-gpu-encode-intel", kind: "user", defaultConfig: { enabled: false }, variations: null };
@@ -11,6 +11,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/WindowsMediaFoundationGpuEncodeIntel.tsx");
 
-export const getWmfGpuEncodeIntel = function getWmfGpuEncodeIntel(MediaEngineStore) {
+export function getWmfGpuEncodeIntel(MediaEngineStore) {
   return config.getConfig({ location: MediaEngineStore });
-};
+}

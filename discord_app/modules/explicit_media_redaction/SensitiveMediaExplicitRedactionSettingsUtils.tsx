@@ -1,11 +1,11 @@
-// === Module 7433: SensitiveMediaExplicitRedactionSettingsUtils ===
+// === Module 7456: SensitiveMediaExplicitRedactionSettingsUtils ===
 
-// Module 7433 (SensitiveMediaExplicitRedactionSettingsUtils)
+// Module 7456 (SensitiveMediaExplicitRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5687 */;
-import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 7434 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5689 */;
+import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 7457 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -83,7 +83,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
   }
 }
-const ExplicitContentFilterTypes = fn(4834).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(4835).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1208).ExplicitContentRedaction.SHOW;
@@ -129,7 +129,7 @@ const result = size.fileFinishedImporting("modules/explicit_media_redaction/Sens
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj3;
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj4;
 export { resolveExplicitContentSettingWithDefaults };
-export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefaultsForTeen(isDm) {
+export function resolveSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;
   if (flag === undefined) {
     flag = false;
@@ -150,8 +150,8 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
   } else {
     return preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
-};
-export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {
+}
+export function getExplicitContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
     const ExplicitContentSettings = UserSettings.ExplicitContentSettings;
@@ -173,8 +173,8 @@ export const getExplicitContentSettingOrDefault = function getExplicitContentSet
   }
   obj.explicitContentFriendDm = resolveExplicitContentSettingWithDefaults({ setting: prop2, isDm: true, isFriend: true });
   return obj;
-};
-export const updateExplicitContentSetting = function updateExplicitContentSetting(arg0) {
+}
+export function updateExplicitContentSetting(arg0) {
   const ExplicitContentSettings = UserSettings.ExplicitContentSettings;
   const setting = ExplicitContentSettings.getSetting();
   let prop;
@@ -197,8 +197,8 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
   const merged1 = Object.assign(arg0);
   ExplicitContentSettings2.updateSetting({});
   obj2 = {};
-};
-export const shouldRedactMessageMediaForForum = function shouldRedactMessageMediaForForum() {
+}
+export function shouldRedactMessageMediaForForum() {
   if (null == UserStore.getCurrentUser()) {
     return false;
   } else {
@@ -224,4 +224,4 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     const tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     return SensitiveMediaRedactionSettingUtils.getShouldObscureForSetting(tmp10Result);
   }
-};
+}

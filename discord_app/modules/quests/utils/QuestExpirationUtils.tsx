@@ -1,19 +1,19 @@
-// === Module 7817: QuestExpirationUtils ===
+// === Module 7840: QuestExpirationUtils ===
 
-// Module 7817 (QuestExpirationUtils)
+// Module 7840 (QuestExpirationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/utils/QuestExpirationUtils.tsx");
 
-export const isQuestConfigExpired = function isQuestConfigExpired(expiresAt) {
+export function isQuestConfigExpired(expiresAt) {
   const date = new Date(expiresAt.expiresAt);
   return new Date(expiresAt.expiresAt).valueOf() <= Date.now();
-};
-export const isQuestExpired = function isQuestExpired(config) {
+}
+export function isQuestExpired(config) {
   const date = new Date(config.config.expiresAt);
   return new Date(config.config.expiresAt).valueOf() <= Date.now();
-};
-export const findNextUpcomingExpirationEpochMs = function findNextUpcomingExpirationEpochMs(arg0) {
+}
+export function findNextUpcomingExpirationEpochMs(arg0) {
   let tmp = null;
   const timestamp = Date.now();
   while (tmp3 !== undefined) {
@@ -34,4 +34,4 @@ export const findNextUpcomingExpirationEpochMs = function findNextUpcomingExpira
     continue;
   }
   return tmp;
-};
+}

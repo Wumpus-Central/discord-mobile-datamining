@@ -1,25 +1,25 @@
-// === Module 16219: UserProfileEditFormTabs ===
+// === Module 16456: UserProfileEditFormTabs ===
 
-// Module 16219 (UserProfileEditFormTabs)
+// Module 16456 (UserProfileEditFormTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import ChatInputUtils from "ChatInputUtils" /* 5195 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8769 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14638 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14658 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16218 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16220 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16221 */;
+import ChatInputUtils from "ChatInputUtils" /* 5196 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8772 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14872 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14893 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16455 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16457 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16458 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7340).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7364).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING }, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING };
 obj.page = { paddingHorizontal: PROFILE_SIDE_PADDING, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };

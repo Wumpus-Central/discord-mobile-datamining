@@ -1,23 +1,23 @@
-// === Module 17445: UserSettingsDesignSystemBadge ===
+// === Module 17684: UserSettingsDesignSystemBadge ===
 
-// Module 17445 (UserSettingsDesignSystemBadge)
+// Module 17684 (UserSettingsDesignSystemBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import Stack_Stack from "Stack/Stack" /* 6013 */;
-import Card from "Card" /* 6941 */;
-import TableRadioGroup from "TableRadioGroup" /* 7021 */;
-import TextInput from "TextInput" /* 7044 */;
-import Badge from "Badge" /* 7269 */;
-import TableSwitchRow from "TableSwitchRow" /* 7331 */;
-import LockIcon from "LockIcon" /* 8603 */;
-import TagIcon from "TagIcon" /* 9494 */;
-import StarIcon3 from "StarIcon" /* 9983 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11174 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11176 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11178 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11180 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import Stack_Stack from "Stack/Stack" /* 6015 */;
+import Card from "Card" /* 6965 */;
+import TableRadioGroup from "TableRadioGroup" /* 7045 */;
+import TextInput from "TextInput" /* 7068 */;
+import Badge from "Badge" /* 7293 */;
+import TableSwitchRow from "TableSwitchRow" /* 7355 */;
+import LockIcon from "LockIcon" /* 8625 */;
+import TagIcon from "TagIcon" /* 9525 */;
+import StarIcon3 from "StarIcon" /* 10015 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11228 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11230 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11232 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, preview: null, badgeRow: null, narrow: null, comparisonLabel: null, comparisonCell: null, layoutCase: null, inlineRow: null, trailingRow: null, inlineBadge: null, selfStart: null, selfStartParent: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.preview = { minHeight: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center" };
@@ -275,8 +275,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
   const tmp4 = closure_9();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = closure_7(tmp(5270).Heading, { variant: "text-lg/bold", children: "Variants" });
-    const tmp9 = closure_7(tmp(5270).Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." });
+    const tmp8 = closure_7(tmp(5271).Heading, { variant: "text-lg/bold", children: "Variants" });
+    const tmp9 = closure_7(tmp(5271).Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." });
     cResult[0] = tmp8;
     cResult[1] = tmp9;
     tmp5 = tmp8;
@@ -342,8 +342,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
     let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
     items = [tmp5, tmp6, tmp10];
     obj3.children = items;
-    obj2.children = closure_8(tmp(6013).Stack, obj3);
-    const tmp17 = closure_7(tmp(6941).Card, obj2);
+    obj2.children = closure_8(tmp(6015).Stack, obj3);
+    const tmp17 = closure_7(tmp(6965).Card, obj2);
     cResult[4] = tmp10;
     cResult[5] = tmp17;
     let tmp13 = tmp17;

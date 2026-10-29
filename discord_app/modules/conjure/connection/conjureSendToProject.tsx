@@ -1,7 +1,7 @@
-// === Module 12356: conjureSendToProject ===
+// === Module 12410: conjureSendToProject ===
 
-// Module 12356 (conjureSendToProject)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10762 */;
+// Module 12410 (conjureSendToProject)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10837 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
         clearTimeout(closure_131_2);
         closure_131_6.close();
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp31) {
       url = tmp31;
@@ -152,7 +152,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/connection/conjureSendToProject.tsx");
 
-export const sendConjureMessageToProject = function sendConjureMessageToProject() {
+export function sendConjureMessageToProject() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -161,4 +161,4 @@ export const sendConjureMessageToProject = function sendConjureMessageToProject(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

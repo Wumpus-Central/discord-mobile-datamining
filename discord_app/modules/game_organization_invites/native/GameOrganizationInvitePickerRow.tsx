@@ -1,28 +1,28 @@
-// === Module 11356: GameOrganizationInvitePickerRow ===
+// === Module 11410: GameOrganizationInvitePickerRow ===
 
-// Module 11356 (GameOrganizationInvitePickerRow)
+// Module 11410 (GameOrganizationInvitePickerRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef2403 from "module_2403" /* 2403 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import FastImageDefault from "FastImage" /* 5705 */;
-import Stack_Stack from "Stack/Stack" /* 6013 */;
-import TableRow from "TableRow" /* 6939 */;
-import _modDef7301 from "module_7301" /* 7301 */;
-import GroupIcon from "GroupIcon" /* 8597 */;
-import InviteButtonDefault from "InviteButton" /* 9169 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11357 */;
+import _modDef2404 from "module_2404" /* 2404 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5707 */;
+import Stack_Stack from "Stack/Stack" /* 6015 */;
+import TableRow from "TableRow" /* 6963 */;
+import _modDef7325 from "module_7325" /* 7325 */;
+import GroupIcon from "GroupIcon" /* 8619 */;
+import InviteButtonDefault from "InviteButton" /* 9172 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11411 */;
 import noop from "module_19" /* 19 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(9164).useInstantInviteSendStates;
-const InviteSendStates = fn(7844).InviteSendStates;
+let closure_4 = fn(9167).useInstantInviteSendStates;
+const InviteSendStates = fn(7867).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { icon: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.md };
 obj.icon = size;
@@ -63,7 +63,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj2 = { uri: organization.iconUrl };
           let tmp16 = obj2;
         } else {
-          tmp16 = _modDef7301;
+          tmp16 = _modDef7325;
         }
         cResult[8] = organization.iconUrl;
         cResult[9] = tmp16;
@@ -121,7 +121,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
               const intl = util.intl;
               const obj8 = { count: memberCount, max: maxMembers };
-              obj7.children = intl.formatToPlainString(_modDef2403.VuENGl, obj8);
+              obj7.children = intl.formatToPlainString(_modDef2404.VuENGl, obj8);
               items[1] = timestampProducer(Text_Text.Text, obj7);
               obj5.children = items;
               tmp24 = React5(Stack_Stack.Stack, obj5);
@@ -185,7 +185,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7301;
+    tmp2Result = _modDef7325;
   }
   const obj3 = { icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }), label: organization.name, subLabel: null, trailing: null, onPress: null, disabled: null };
   let tmp11;
@@ -197,7 +197,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
-      obj7.children = intl.formatToPlainString(_modDef2403.VuENGl, obj8);
+      obj7.children = intl.formatToPlainString(_modDef2404.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
       tmp11 = React5(Stack_Stack.Stack, obj5);

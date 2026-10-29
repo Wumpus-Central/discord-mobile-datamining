@@ -1,14 +1,14 @@
-// === Module 11267: useLoadMessageContentEntries ===
+// === Module 11321: useLoadMessageContentEntries ===
 
-// Module 11267 (useLoadMessageContentEntries)
+// Module 11321 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
-import Server from "Server" /* 1997 */;
-import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8649 */;
-import useAvatarColor from "useAvatarColor" /* 8651 */;
+import Server from "Server" /* 1998 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8671 */;
+import useAvatarColor from "useAvatarColor" /* 8673 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ApplicationStore from "ApplicationStore" /* 2043 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp6) {
       c4 = tmp;
       throw tmp6;
@@ -115,7 +115,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             }
                           } else {
                             try {
@@ -173,7 +173,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
                                 return obj;
                               } else {
                                 v3 = 3;
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "IconComponent" };
                               }
                             } catch (tmp8) {
                               v3 = tmp;
@@ -195,7 +195,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -219,7 +219,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -255,7 +255,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
           return obj;
         }
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp11) {
         c1 = tmp;
         throw tmp11;
@@ -274,7 +274,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -305,7 +305,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -323,7 +323,7 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -353,7 +353,7 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -386,7 +386,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -414,7 +414,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                   let obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -441,7 +441,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             }
                           } else {
                             try {
@@ -469,7 +469,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                                 return obj;
                               } else {
                                 c0 = 3;
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "IconComponent" };
                               }
                             } catch (tmp7) {
                               c0 = tmp;
@@ -550,7 +550,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                       })());
                     }
                     v3 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp4) {
                   v3 = tmp;
@@ -589,7 +589,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
             return obj5;
           } else {
             c11 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           if (3 === tmp8) {
@@ -697,10 +697,10 @@ function isMessageRenderable(message) {
   }
   return true;
 }
-const ImageSizes = fn(2023).ImageSizes;
-const promiseDeduper = new fn(5132).PromiseDeduper();
-const promiseDeduper3 = new fn(5132).PromiseDeduper();
-const promiseDeduper4 = new fn(5132).PromiseDeduper();
+const ImageSizes = fn(2024).ImageSizes;
+const promiseDeduper = new fn(5133).PromiseDeduper();
+const promiseDeduper3 = new fn(5133).PromiseDeduper();
+const promiseDeduper4 = new fn(5133).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
     tmp27 = cResult[4];
   }
   const tmp19Result = _slicedToArray(set2.useState(tmp21), 2);
-  const colorStore = tmp(8651).useColorStore(tmp27);
+  const colorStore = tmp(8673).useColorStore(tmp27);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     _require = asyncGeneratorStep(async (arg0, arg1) => {
       if (c7 === 2) {
@@ -770,7 +770,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1075,7 +1075,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
   cResult[12] = arr2;
   cResult[13] = arr;
   cResult[14] = set2;
-  const tmpResult = tmp(8651);
+  const tmpResult = tmp(8673);
 }) : (function useLoadMessageContentEntries(arg0) {
   closure_1 = first1.useRef(new Map());
   const map = new Map();
@@ -1102,7 +1102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

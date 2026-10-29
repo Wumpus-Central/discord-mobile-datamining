@@ -1,12 +1,12 @@
-// === Module 12287: ConjureNativeMarkdown ===
+// === Module 12341: ConjureNativeMarkdown ===
 
-// Module 12287 (ConjureNativeMarkdown)
+// Module 12341 (ConjureNativeMarkdown)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import conjureMarkup from "conjureMarkup" /* 12231 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12288 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 12289 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import conjureMarkup from "conjureMarkup" /* 12285 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12342 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 12343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let obj2 = {};
 const merged = Object.assign(CONJURE_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };
@@ -34,11 +34,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
   let tmp4 = closure_9();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(12288).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(12342).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(12288);
+    const tmpResult = tmp(12342);
   } else {
     marker = cResult[1];
   }
@@ -91,11 +91,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
         const obj = { style: null, children: null };
         const items = [list.item, { paddingLeft: children.depth * PX_16 }];
         obj.style = items;
-        const obj3 = { style: list.marker, children: closure_2_4(closure_0(5270).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
+        const obj3 = { style: list.marker, children: closure_2_4(closure_0(5271).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
         const items1 = [closure_2_4(View, obj3), ];
         const obj5 = { style: list.itemText, children: null };
-        const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_0(12231).parseConjureMarkup(children.text, true, obj2) };
-        obj5.children = closure_2_4(closure_0(5270).Text, obj6);
+        const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_0(12285).parseConjureMarkup(children.text, true, obj2) };
+        obj5.children = closure_2_4(closure_0(5271).Text, obj6);
         items1[1] = closure_2_4(View, obj5);
         obj.children = items1;
         return closure_2_5(View, obj, index);

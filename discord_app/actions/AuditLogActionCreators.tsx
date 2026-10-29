@@ -1,9 +1,9 @@
-// === Module 19355: AuditLogActionCreators ===
+// === Module 19588: AuditLogActionCreators ===
 
-// Module 19355 (AuditLogActionCreators)
+// Module 19588 (AuditLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19350 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19583 */;
 
 require = fn;
 function makeRequest(arg0, arg1) {
@@ -39,7 +39,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/AuditLogActionCreators.tsx");
 
-export const fetchLogs = function fetchLogs(guildId, userId, targetId, action) {
+export function fetchLogs(guildId, userId, targetId, action) {
   if (!tmp) {
     if (null != guildId) {
       DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
@@ -51,8 +51,8 @@ export const fetchLogs = function fetchLogs(guildId, userId, targetId, action) {
     }
   }
   tmp = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
-};
-export const fetchNextLogPage = function fetchNextLogPage(guildId) {
+}
+export function fetchNextLogPage(guildId) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -76,8 +76,8 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
     }
     tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
   }
-};
-export const filterByAction = function filterByAction(navigation, guildId) {
+}
+export function filterByAction(navigation, guildId) {
   if (!tmp2) {
     if (null != guildId) {
       const obj = { type: "AUDIT_LOG_FILTER_BY_ACTION", action: navigation };
@@ -99,8 +99,8 @@ export const filterByAction = function filterByAction(navigation, guildId) {
     }
   }
   tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
-};
-export const filterByUserId = function filterByUserId(id, guildId) {
+}
+export function filterByUserId(id, guildId) {
   if (!tmp2) {
     if (null != guildId) {
       const obj = { type: "AUDIT_LOG_FILTER_BY_USER", userId: id };
@@ -109,7 +109,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          const obj2 = { userId: id, action: "Array", targetId: "application" };
+          const obj2 = { userId: id, action: "Array", targetId: "toCharArray$esjava$1" };
           const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(guildId, obj2).then((body) => {
             ({ audit_log_entries, integrations, users, webhooks, guild_scheduled_events, auto_moderation_rules, threads, application_commands } = body.body);
@@ -122,8 +122,8 @@ export const filterByUserId = function filterByUserId(id, guildId) {
     }
   }
   tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
-};
-export const filterByTargetId = function filterByTargetId(targetId, arg1) {
+}
+export function filterByTargetId(targetId, arg1) {
   if (!tmp2) {
     if (null != arg1) {
       const obj = { type: "AUDIT_LOG_FILTER_BY_TARGET", targetId };
@@ -145,4 +145,4 @@ export const filterByTargetId = function filterByTargetId(targetId, arg1) {
     }
   }
   tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
-};
+}

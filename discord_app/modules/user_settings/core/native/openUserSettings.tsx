@@ -1,16 +1,16 @@
-// === Module 7526: openUserSettings ===
+// === Module 7549: openUserSettings ===
 
-// Module 7526 (openUserSettings)
+// Module 7549 (openUserSettings)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7527 */;
+import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7550 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;
 const result = size.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen, fn, arg2) => {
+export (screen, fn, arg2) => {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -37,4 +37,4 @@ export const openUserSettings = (screen, fn, arg2) => {
     }
   }
   tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
-};
+}

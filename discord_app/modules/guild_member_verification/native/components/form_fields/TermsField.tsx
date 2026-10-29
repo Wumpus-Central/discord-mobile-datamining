@@ -1,17 +1,17 @@
-// === Module 6932: TermsField ===
+// === Module 6956: TermsField ===
 
-// Module 6932 (TermsField)
+// Module 6956 (TermsField)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import TermsFieldListDefault from "TermsFieldList" /* 6933 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6936 */;
+import TermsFieldListDefault from "TermsFieldList" /* 6957 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

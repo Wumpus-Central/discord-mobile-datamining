@@ -1,16 +1,16 @@
-// === Module 16421: DataHarvestActionCreators ===
+// === Module 16659: DataHarvestActionCreators ===
 
-// Module 16421 (DataHarvestActionCreators)
+// Module 16659 (DataHarvestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7114 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7138 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
 
-export const getDataHarvestStatus = function getDataHarvestStatus() {
+export function getDataHarvestStatus() {
   DispatcherDefault.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false });
@@ -20,8 +20,8 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   }).catch((error) => {
     DispatcherDefault.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error });
   });
-};
-export const requestDataHarvest = function requestDataHarvest(mapped) {
+}
+export function requestDataHarvest(mapped) {
   const harvest = UserSettingsAccountActionCreators.requestHarvest(mapped);
   return harvest.then((body) => {
     if (tmp) {
@@ -30,4 +30,4 @@ export const requestDataHarvest = function requestDataHarvest(mapped) {
     }
     return body;
   });
-};
+}

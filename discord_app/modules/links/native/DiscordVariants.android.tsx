@@ -1,13 +1,13 @@
-// === Module 18106: DiscordVariants ===
+// === Module 18340: DiscordVariants ===
 
-// Module 18106 (DiscordVariants)
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 7859 */;
-import DiscordVariantTypes from "DiscordVariantTypes" /* 18107 */;
+// Module 18340 (DiscordVariants)
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 7882 */;
+import DiscordVariantTypes from "DiscordVariantTypes" /* 18341 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/links/native/DiscordVariants.android.tsx");
 
-export const getCurrentVariant = function getCurrentVariant() {
+export function getCurrentVariant() {
   const currentDiscordVariant = NativeIntentsModuleDefault.getCurrentDiscordVariant();
   const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
   let found = DISCORD_VARIANT_LIST.find((item) => item === closure_0);
@@ -15,8 +15,8 @@ export const getCurrentVariant = function getCurrentVariant() {
     found = null;
   }
   return found;
-};
-export const isVariantInstalled = function isVariantInstalled(item) {
+}
+export function isVariantInstalled(item) {
   const currentDiscordVariant = NativeIntentsModuleDefault.getCurrentDiscordVariant();
   const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
   let found = DISCORD_VARIANT_LIST.find((item) => item === closure_0);
@@ -30,8 +30,8 @@ export const isVariantInstalled = function isVariantInstalled(item) {
     const tmpResult = NativeIntentsModuleDefault;
   }
   return resolved;
-};
-export const launchVariant = function launchVariant(arg0) {
+}
+export function launchVariant(arg0) {
   const currentDiscordVariant = NativeIntentsModuleDefault.getCurrentDiscordVariant();
   const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
   let found = DISCORD_VARIANT_LIST.find((item) => item === closure_0);
@@ -45,4 +45,4 @@ export const launchVariant = function launchVariant(arg0) {
     const tmpResult = NativeIntentsModuleDefault;
   }
   return resolved;
-};
+}

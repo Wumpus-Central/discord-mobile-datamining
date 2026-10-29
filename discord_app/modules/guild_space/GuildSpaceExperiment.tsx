@@ -1,9 +1,9 @@
-// === Module 7366: GuildSpaceExperiment ===
+// === Module 7389: GuildSpaceExperiment ===
 
-// Module 7366 (GuildSpaceExperiment)
+// Module 7389 (GuildSpaceExperiment)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1084 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,14 +12,14 @@ const apexExperiment = ApexExperiment.createApexExperiment({ kind: "guild", name
 const result = size.fileFinishedImporting("modules/guild_space/GuildSpaceExperiment.tsx");
 
 export const GuildSpaceExperiment = apexExperiment;
-export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEnabled(id, GuildSettingsModalOverview) {
+export function getGuildSpaceExperimentEnabled(id, GuildSettingsModalOverview) {
   let enabled = null != id;
   if (enabled) {
     const obj = { guildId: id, location: GuildSettingsModalOverview };
     enabled = apexExperiment.getConfig(obj).enabled;
   }
   return enabled;
-};
+}
 export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSpaceExperimentEnabled(arg0, location) {
   let tmp = arg0;
   const cResult = c.c(3);

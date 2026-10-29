@@ -1,10 +1,10 @@
-// === Module 5032: HexagonCampaignPerkAvailability ===
+// === Module 5033: HexagonCampaignPerkAvailability ===
 
-// Module 5032 (HexagonCampaignPerkAvailability)
+// Module 5033 (HexagonCampaignPerkAvailability)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
-import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5033 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5032 */;
+import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5034 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -63,7 +63,7 @@ export const useHexagonCampaignPerkAvailability = ReactCompilerGating.isReactCom
   });
   return HexagonCampaignUtils.getHexagonCampaignPerkAvailability({ perk, premiumType: stateFromStores, isCampaignEnabled: isHexagonCampaignEnabled });
 });
-export const getHexagonCampaignPerkAvailabilityForCurrentUser = function getHexagonCampaignPerkAvailabilityForCurrentUser(CLIENT_THEME, MobileThemesUtils) {
+export function getHexagonCampaignPerkAvailabilityForCurrentUser(CLIENT_THEME, MobileThemesUtils) {
   const obj2 = { perk: CLIENT_THEME, premiumType: null, isCampaignEnabled: null };
   const currentUser = UserStore.getCurrentUser();
   let premiumType;
@@ -74,12 +74,12 @@ export const getHexagonCampaignPerkAvailabilityForCurrentUser = function getHexa
   const obj = HexagonCampaignUtils;
   obj2.isCampaignEnabled = HexagonCampaignExperiment.getIsHexagonCampaignEnabled(MobileThemesUtils);
   return obj.getHexagonCampaignPerkAvailability(obj2);
-};
-export const isHexagonCampaignPerkExpiredForCurrentUser = function isHexagonCampaignPerkExpiredForCurrentUser(CLIENT_THEME, arg1) {
+}
+export function isHexagonCampaignPerkExpiredForCurrentUser(CLIENT_THEME, arg1) {
   const currentUser = UserStore.getCurrentUser();
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
   return HexagonCampaignUtils.isHexagonCampaignPerkExpired(CLIENT_THEME, premiumType, arg1);
-};
+}

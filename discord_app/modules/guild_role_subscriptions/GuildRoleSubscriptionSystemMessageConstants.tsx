@@ -1,8 +1,8 @@
-// === Module 8383: GuildRoleSubscriptionSystemMessageConstants ===
+// === Module 8405: GuildRoleSubscriptionSystemMessageConstants ===
 
-// Module 8383 (GuildRoleSubscriptionSystemMessageConstants)
+// Module 8405 (GuildRoleSubscriptionSystemMessageConstants)
 import util from "util" /* 1125 */;
-import StickersTypes from "StickersTypes" /* 6524 */;
+import StickersTypes from "StickersTypes" /* 6548 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ id: "781323471249604648", format_type: StickersTypes.StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" }, , , , ];
@@ -16,18 +16,18 @@ const obj4 = { id: "781324722394103808", format_type: StickersTypes.StickerForma
 items[4] = { id: "813951723822645278", format_type: StickersTypes.StickerFormat.APNG, description: "Cheerful Choco gives thumbs up", name: "Nice" };
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
 
-export const getJoinButtonLabels = function getJoinButtonLabels() {
+export function getJoinButtonLabels() {
   const intl = util.intl;
   const items = [intl.string(util.t.b6wEe6), ];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.i8o9hX);
   return items;
-};
-export const getRenewButtonLabels = function getRenewButtonLabels() {
+}
+export function getRenewButtonLabels() {
   const intl = util.intl;
   const items = [intl.string(util.t.vqnToc), ];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t["9yh+dM"]);
   return items;
-};
+}
 export const STICKERS = items;

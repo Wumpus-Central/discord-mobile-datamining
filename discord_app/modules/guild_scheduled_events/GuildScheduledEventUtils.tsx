@@ -1,21 +1,21 @@
-// === Module 9057: GuildScheduledEventUtils ===
+// === Module 9060: GuildScheduledEventUtils ===
 
-// Module 9057 (GuildScheduledEventUtils)
+// Module 9060 (GuildScheduledEventUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef2046 from "module_2046" /* 2046 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4862 */;
+import _modDef2047 from "module_2047" /* 2047 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4863 */;
 import size from "module_2" /* 2 */;
 
 ({ UpcomingGuildEventNoticeTypes: c2, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: closure_4, ACKED_RECENTLY_WINDOW_DAYS: hasOwnProperty } = GuildScheduledEventsConstants);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
-export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
-  const obj = _modDef2046();
+export function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
+  const obj = _modDef2047();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
   const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = _modDef2046(arg1);
+      const obj4 = _modDef2047(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {
@@ -43,4 +43,4 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
     const tmpResult = SnowflakeUtilsDefault;
   }
   const date = new Date(guildScheduledEvent.scheduled_start_time);
-};
+}

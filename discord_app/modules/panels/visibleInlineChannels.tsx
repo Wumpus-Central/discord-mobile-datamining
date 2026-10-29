@@ -1,12 +1,12 @@
-// === Module 6855: visibleInlineChannels ===
+// === Module 6878: visibleInlineChannels ===
 
-// Module 6855 (visibleInlineChannels)
+// Module 6878 (visibleInlineChannels)
 import size from "module_2" /* 2 */;
 
 const map = new Map();
 let result = size.fileFinishedImporting("modules/panels/visibleInlineChannels.tsx");
 
-export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
+export function registerVisibleInlineChannel(channelId, windowId) {
   value = map.get(channelId);
   if (null == value) {
     const _Set = Set;
@@ -15,8 +15,8 @@ export const registerVisibleInlineChannel = function registerVisibleInlineChanne
     value = set;
   }
   value.add(windowId);
-};
-export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
+}
+export function unregisterVisibleInlineChannel(channelId, windowId) {
   value = map.get(channelId);
   if (null != value) {
     value.delete(windowId);
@@ -24,8 +24,8 @@ export const unregisterVisibleInlineChannel = function unregisterVisibleInlineCh
       map.delete(channelId);
     }
   }
-};
-export const isChannelVisibleInline = function isChannelVisibleInline(channelId, fn) {
+}
+export function isChannelVisibleInline(channelId, fn) {
   value = map.get(channelId);
   if (null == value) {
     return false;
@@ -39,4 +39,4 @@ export const isChannelVisibleInline = function isChannelVisibleInline(channelId,
     }
     return false;
   }
-};
+}

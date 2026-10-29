@@ -1,12 +1,12 @@
-// === Module 12359: ConjureTurnStart ===
+// === Module 12413: ConjureTurnStart ===
 
-// Module 12359 (ConjureTurnStart)
+// Module 12413 (ConjureTurnStart)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureTurnStart.tsx");
 
-export const conjureTurnStartedAt = function conjureTurnStartedAt(findOpenTurnResult) {
+export function conjureTurnStartedAt(findOpenTurnResult) {
   let turn_id = findOpenTurnResult.turn_id;
   if (turn_id == null) {
     const steps = findOpenTurnResult.steps;
@@ -25,4 +25,4 @@ export const conjureTurnStartedAt = function conjureTurnStartedAt(findOpenTurnRe
     return created_at;
   }
   created_at = findOpenTurnResult.created_at;
-};
+}

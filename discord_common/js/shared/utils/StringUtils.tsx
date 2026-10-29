@@ -1,8 +1,8 @@
-// === Module 2031: utils/StringUtils ===
+// === Module 2032: utils/StringUtils ===
 
-// Module 2031 (utils/StringUtils)
-import _mod2032 from "module_2032" /* 2032 */;
-import DOMUtils from "DOMUtils" /* 2033 */;
+// Module 2032 (utils/StringUtils)
+import _mod2033 from "module_2033" /* 2033 */;
+import DOMUtils from "DOMUtils" /* 2034 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /[\u0300-\u036f]/g;
@@ -20,7 +20,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2032;
+    closure_0 = _mod2033;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {
@@ -36,7 +36,7 @@ if (null == String.prototype.normalize) {
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
 
 export const cssValueToNumber = DOMUtils.cssValueToNumber;
-export const upperCaseFirstChar = function upperCaseFirstChar(item) {
+export function upperCaseFirstChar(item) {
   let str = "";
   if (null != item) {
     const formatted = item.charAt(0).toUpperCase();
@@ -45,8 +45,8 @@ export const upperCaseFirstChar = function upperCaseFirstChar(item) {
     const str2 = item.charAt(0);
   }
   return str;
-};
-export const truncateText = (name, arg1) => {
+}
+export (name, arg1) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
@@ -74,8 +74,8 @@ export const truncateText = (name, arg1) => {
     }
   }
   return str2;
-};
-export const getAcronym = function getAcronym(name) {
+}
+export function getAcronym(name) {
   let str = "";
   if (null != name) {
     const str3 = name.replace(/'s /g, " ");
@@ -83,6 +83,6 @@ export const getAcronym = function getAcronym(name) {
     const str4 = name.replace(/'s /g, " ").replace(/\w+/g, (arg0) => arg0[0]);
   }
   return str;
-};
+}
 export const stripDiacritics = fn;
 export const normalize = fullNormalize;

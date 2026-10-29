@@ -1,21 +1,21 @@
-// === Module 10884: FavoritesHooks ===
+// === Module 10789: FavoritesHooks ===
 
-// Module 10884 (FavoritesHooks)
+// Module 10789 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1988 */;
-import FavoritesUtils from "FavoritesUtils" /* 4881 */;
-import FavoritesLimits from "FavoritesLimits" /* 10885 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1989 */;
+import FavoritesUtils from "FavoritesUtils" /* 4882 */;
+import FavoritesLimits from "FavoritesLimits" /* 10790 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
 import UserStore from "UserStore" /* 1389 */;
-import FavoriteStore from "FavoriteStore" /* 4859 */;
+import FavoriteStore from "FavoriteStore" /* 4860 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4869).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(4870).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1391).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesLimits() {
@@ -209,7 +209,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorit
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 
-export const getFavoritesLimits = function getFavoritesLimits() {
+export function getFavoritesLimits() {
   const isPremiumExactlyResult = PremiumTypeUtilsDefault.isPremiumExactly(UserStore.getCurrentUser(), PremiumTypes.TIER_2);
   if (isPremiumExactlyResult) {
     let FREE_FAVORITE_LIMIT = MAX_FAVORITE_CHANNELS;
@@ -217,12 +217,12 @@ export const getFavoritesLimits = function getFavoritesLimits() {
     FREE_FAVORITE_LIMIT = FavoritesLimits.FREE_FAVORITE_LIMIT;
   }
   return { favoriteLimit: FREE_FAVORITE_LIMIT, canUpsellFavoriteLimit: !isPremiumExactlyResult };
-};
+}
 export const useFavoritesLimitUpsell = tmp2;
 export const useFavorites = tmp3;
 export const useFavorite = tmp4;
 export const useFavoritedChannelIds = tmp5;
-export const getFavoritesCategories = function getFavoritesCategories() {
+export function getFavoritesCategories() {
   if (favoriteChannels === undefined) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
@@ -261,7 +261,7 @@ export const getFavoritesCategories = function getFavoritesCategories() {
     return num - num2;
   });
   return items;
-};
+}
 export const useIsFavoritesGuildSelected = tmp6;
 export const useFavoritesAwareChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesAwareChannel(arg0) {
   let tmp = arg0;

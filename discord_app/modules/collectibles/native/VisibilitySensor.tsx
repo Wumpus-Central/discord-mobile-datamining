@@ -1,9 +1,9 @@
-// === Module 17499: VisibilitySensor ===
+// === Module 17738: VisibilitySensor ===
 
-// Module 17499 (VisibilitySensor)
+// Module 17738 (VisibilitySensor)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,20 +1,20 @@
-// === Module 16649: ClientThemesBackgroundActionCreators ===
+// === Module 16887: ClientThemesBackgroundActionCreators ===
 
-// Module 16649 (ClientThemesBackgroundActionCreators)
+// Module 16887 (ClientThemesBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
-export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {
+export function updateBackgroundGradientPreset(id) {
   DispatcherDefault.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id });
-};
-export const updateMobilePendingThemeIndex = function updateMobilePendingThemeIndex(mobileThemesIndex) {
+}
+export function updateMobilePendingThemeIndex(mobileThemesIndex) {
   DispatcherDefault.dispatch({ type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex });
-};
-export const resetBackgroundGradientPreset = function resetBackgroundGradientPreset() {
+}
+export function resetBackgroundGradientPreset() {
   DispatcherDefault.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
-};
-export const resetPreviewClientTheme = function resetPreviewClientTheme() {
+}
+export function resetPreviewClientTheme() {
   DispatcherDefault.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
-};
+}

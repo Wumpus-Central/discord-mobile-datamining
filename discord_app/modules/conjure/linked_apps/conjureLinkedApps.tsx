@@ -1,9 +1,9 @@
-// === Module 12249: conjureLinkedApps ===
+// === Module 12303: conjureLinkedApps ===
 
-// Module 12249 (conjureLinkedApps)
+// Module 12303 (conjureLinkedApps)
 import util from "util" /* 1125 */;
-import _modDef3863 from "module_3863" /* 3863 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10830 */;
+import _modDef3864 from "module_3864" /* 3864 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -35,7 +35,7 @@ let closure_5 = async function _linkConjureApp(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_5 = async function _linkConjureApp(arg0) {
           closure_131_0 = value;
           if (closure_131_0.ok) {
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -100,7 +100,7 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -150,24 +150,24 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
     }
   })();
 };
-let obj = { auto: { label: _modDef3863["2TTprm"], description: _modDef3863["1ck6o0"] }, preview: null, published: null };
-let obj2 = { label: _modDef3863["2TTprm"], description: _modDef3863["1ck6o0"] };
-obj.preview = { label: _modDef3863.bUZ6jT, description: _modDef3863.DP2NVW };
-let obj3 = { label: _modDef3863.bUZ6jT, description: _modDef3863.DP2NVW };
-obj.published = { label: _modDef3863.yXd0cc, description: _modDef3863["YY+UD8"] };
+let obj = { auto: { label: _modDef3864["2TTprm"], description: _modDef3864["1ck6o0"] }, preview: null, published: null };
+let obj2 = { label: _modDef3864["2TTprm"], description: _modDef3864["1ck6o0"] };
+obj.preview = { label: _modDef3864.bUZ6jT, description: _modDef3864.DP2NVW };
+let obj3 = { label: _modDef3864.bUZ6jT, description: _modDef3864.DP2NVW };
+obj.published = { label: _modDef3864.yXd0cc, description: _modDef3864["YY+UD8"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/linked_apps/conjureLinkedApps.tsx");
 
 export const CONJURE_LINKED_APP_BUILDS = ["auto", "preview", "published"];
-export const linkedAppBuildLabel = function linkedAppBuildLabel(build) {
+export function linkedAppBuildLabel(build) {
   const intl = util.intl;
   return intl.string(obj[build].label);
-};
-export const linkedAppBuildDescription = function linkedAppBuildDescription(value) {
+}
+export function linkedAppBuildDescription(value) {
   const intl = util.intl;
   return intl.string(obj[value].description);
-};
-export const fetchLinkedAppCallers = function fetchLinkedAppCallers() {
+}
+export function fetchLinkedAppCallers() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -176,8 +176,8 @@ export const fetchLinkedAppCallers = function fetchLinkedAppCallers() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const linkConjureApp = function linkConjureApp() {
+}
+export function linkConjureApp() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -186,8 +186,8 @@ export const linkConjureApp = function linkConjureApp() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const unlinkConjureApp = function unlinkConjureApp() {
+}
+export function unlinkConjureApp() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -196,4 +196,4 @@ export const unlinkConjureApp = function unlinkConjureApp() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

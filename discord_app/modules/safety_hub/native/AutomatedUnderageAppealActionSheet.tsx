@@ -1,24 +1,24 @@
-// === Module 12896: AutomatedUnderageAppealActionSheet ===
+// === Module 13117: AutomatedUnderageAppealActionSheet ===
 
-// Module 12896 (AutomatedUnderageAppealActionSheet)
+// Module 13117 (AutomatedUnderageAppealActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6692 */;
-import TableRow from "TableRow" /* 6939 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
-import SafetyHubActionCreators from "SafetyHubActionCreators" /* 12893 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12895 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
+import TableRow from "TableRow" /* 6963 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
+import SafetyHubActionCreators from "SafetyHubActionCreators" /* 13114 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13116 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7957 */;
+import SafetyHubStore from "SafetyHubStore" /* 7980 */;
 
 require = fn;
 let View = fn(17).View;
-const SafetyHubConstants = fn(7933);
+const SafetyHubConstants = fn(7956);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 }, header: { alignItems: "center" }, content: null, moreInfo: null, learnMore: null, footer: null, number: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
 obj2.content = { flex: 1, gap: nativeDefault.space.PX_16 };
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   }
   const tmpResult = onClose(504);
   const stateFromStores1 = onClose(504).useStateFromStores(tmp9, tmp10);
-  const bottom = classificationId(1630)().bottom;
+  const bottom = classificationId(1631)().bottom;
   if (cResult[4] !== onClose) {
     class T {
       constructor() {
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
           }
         }
         obj2.children = obj6.string(tmp(1125).t["yvx//1"]);
-        const tmp29 = closure_8(tmp(5270).Text, obj2);
+        const tmp29 = closure_8(tmp(5271).Text, obj2);
         cResult[17] = tmp29;
         const tmp28 = tmp29;
       } else {
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
           }
         }
         tmp37[1] = tmp33;
-        obj4.children = closure_8(tmp(7023).TableRowGroup, tmp37);
+        obj4.children = closure_8(tmp(7047).TableRowGroup, tmp37);
         const tmp38 = closure_8(View, obj4);
         cResult[22] = tmp33;
         cResult[23] = tmp38;
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
         const intl2 = tmp(1125).intl;
         obj7.subLabel = intl2.string(tmp(1125).t.NHq382);
         obj7.onPress = tmp18;
-        obj5.children = closure_8(tmp(6939).TableRow, obj7);
+        obj5.children = closure_8(tmp(6963).TableRow, obj7);
         const tmp43 = closure_8(tmp42, obj5);
         cResult[25] = tmp43;
         const tmp41 = tmp43;
@@ -560,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
               return closure_5.getIsLoadingAgeVerification();
             }
           }
-          const tmp57 = closure_8(tmp(5270).Text, obj11);
+          const tmp57 = closure_8(tmp(5271).Text, obj11);
           cResult[35] = tmp4.learnMore;
           cResult[36] = tmp57;
         } else {
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
         cResult[40] = tmp61;
       }
       const obj14 = { onPress: Q, loading: stateFromStores1, disabled: stateFromStores1, text: tmp48 };
-      const tmp52 = closure_8(tmp(5280).Button, obj14);
+      const tmp52 = closure_8(tmp(5281).Button, obj14);
       cResult[31] = stateFromStores1;
       class R {
         constructor() {
@@ -657,7 +657,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   let obj = onClose(504);
   const items1 = [callback1];
   const stateFromStores1 = onClose(504).useStateFromStores(items1, () => callback1.getIsLoadingAgeVerification());
-  const bottom = classificationId(1630)().bottom;
+  const bottom = classificationId(1631)().bottom;
   const items2 = [onClose];
   const callback = stateFromStores.useCallback(() => {
     if (onClose != null) {
@@ -693,16 +693,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   const obj8 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = onClose(1125).intl;
   obj8.children = intl.string(onClose(1125).t["9SDLnj"]);
-  const items5 = [closure_8(onClose(5270).Text, obj8), ];
+  const items5 = [closure_8(onClose(5271).Text, obj8), ];
   const obj9 = { variant: "heading-md/medium", color: "text-default", children: null };
   const intl2 = onClose(1125).intl;
   obj9.children = intl2.string(onClose(1125).t["yvx//1"]);
-  items5[1] = closure_8(onClose(5270).Text, obj9);
+  items5[1] = closure_8(onClose(5271).Text, obj9);
   obj7.children = items5;
   const items6 = [closure_9(callback, obj7), , , ];
   const obj10 = { children: null };
   let obj2 = onClose(504);
-  obj10.children = closure_8(onClose(7023).TableRowGroup, {
+  obj10.children = closure_8(onClose(7047).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
       ({ title, description } = item);
@@ -725,8 +725,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   obj14.onPress = function openForm() {
     return classificationId(number[16]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj13.children = closure_8(onClose(6939).TableRow, obj14);
-  obj12.children = closure_8(onClose(7023).TableRowGroup, obj13);
+  obj13.children = closure_8(onClose(6963).TableRow, obj14);
+  obj12.children = closure_8(onClose(7047).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
   const obj15 = { style: tmp.footer, children: null };
   const obj16 = {
@@ -739,15 +739,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   };
   const intl6 = onClose(1125).intl;
   obj16.text = intl6.string(onClose(1125).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5280).Button, obj16), ];
+  const items7 = [closure_8(onClose(5281).Button, obj16), ];
   const obj17 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1125).intl;
   obj17.children = intl7.format(onClose(1125).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
-  items7[1] = closure_8(onClose(5270).Text, obj17);
+  items7[1] = closure_8(onClose(5271).Text, obj17);
   obj15.children = items7;
   items6[3] = closure_9(callback, obj15);
   obj5.children = items6;
   obj4.children = closure_9(callback, obj5);
-  obj3.children = closure_8(onClose(5305).BottomSheetScrollView, obj4);
-  return closure_8(onClose(5301).BottomSheet, obj3);
+  obj3.children = closure_8(onClose(5306).BottomSheetScrollView, obj4);
+  return closure_8(onClose(5302).BottomSheet, obj3);
 });

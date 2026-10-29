@@ -1,20 +1,20 @@
-// === Module 11452: confirmActivityAgeGateAlert ===
+// === Module 11506: confirmActivityAgeGateAlert ===
 
-// Module 11452 (confirmActivityAgeGateAlert)
+// Module 11506 (confirmActivityAgeGateAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11453 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -64,7 +64,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confirm
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
 
-export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(arg0) {
+export function confirmActivityAgeGateAlert(arg0) {
   ({ application, onAgree, onDisagree } = arg0);
   const intl = util.intl;
   const formatToPlainStringResult = intl.formatToPlainString(util.t.OgmIqy, { applicationName: application.name });
@@ -81,4 +81,4 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
   obj3.onCancel = onDisagree;
   obj3.confirmColor = native.ButtonColors.RED;
   return Promise.resolve(AlertActionCreatorsDefault.show(obj3));
-};
+}

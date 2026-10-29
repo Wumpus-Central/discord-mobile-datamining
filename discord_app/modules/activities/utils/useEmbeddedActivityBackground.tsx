@@ -1,6 +1,6 @@
-// === Module 11548: useEmbeddedActivityBackground ===
+// === Module 11602: useEmbeddedActivityBackground ===
 
-// Module 11548 (useEmbeddedActivityBackground)
+// Module 11602 (useEmbeddedActivityBackground)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
                 tmp3 = closure_1;
                 obj = applicationId(closure_1[4]);
                 assets = obj.getAssets(tmp);
-                nextPromise = assets.then(() => { ... });
+                nextPromise = assets.then(/* F150995 */ function() { ... });
               }
               return;
             }
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
                 tmp3 = closure_1;
                 obj = applicationId(closure_1[4]);
                 assets = obj.getAssets(tmp);
-                nextPromise = assets.then(() => { ... });
+                nextPromise = assets.then(/* F150995 */ function() { ... });
               }
               return;
             }
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
                 tmp3 = closure_1;
                 obj = applicationId(closure_1[4]);
                 assets = obj.getAssets(tmp);
-                nextPromise = assets.then(() => { ... });
+                nextPromise = assets.then(/* F150995 */ function() { ... });
               }
               return;
             }

@@ -1,19 +1,19 @@
-// === Module 8882: ForumPostMediaUtils ===
+// === Module 8885: ForumPostMediaUtils ===
 
-// Module 8882 (ForumPostMediaUtils)
+// Module 8885 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import UserSettings from "UserSettings" /* 4832 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6049 */;
+import UserSettings from "UserSettings" /* 4833 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6053 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7440 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import MessageStore from "MessageStore" /* 6045 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7463 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
+import MessageStore from "MessageStore" /* 6049 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -872,7 +872,7 @@ function isValidVideoAttachment(filename) {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumPostMediaUtils.tsx");
 
-export const getEmbedColor = function getEmbedColor(firstResult, flag) {
+export function getEmbedColor(firstResult, flag) {
   if (null != firstResult) {
     if (null != firstResult.embeds[0]) {
       const color = firstResult.embeds[0].color;
@@ -887,7 +887,7 @@ export const getEmbedColor = function getEmbedColor(firstResult, flag) {
       return int2hslResult;
     }
   }
-};
+}
 export { isValidImageAttachment };
 export { isValidVideoAttachment };
 export { isMediaAttachment };
@@ -906,7 +906,7 @@ export const useFirstMediaIsEmbed = ReactCompilerGating.isReactCompilerEnabled()
   const tmp2 = closure_14(arg0, arg1);
   return null == tmp[0] && null == closure_15(arg0)[0] && null != closure_14(arg0, arg1)[0];
 });
-export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMediaToOriginalPostModal(uploads, id) {
+export function shouldShowAddMediaToOriginalPostModal(uploads, id) {
   const channel = ChannelStore.getChannel(id);
   if (null == channel) {
     return false;
@@ -971,8 +971,8 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
     }
     return tmp8;
   }
-};
-export const messageContainsGifOrVideo = function messageContainsGifOrVideo(media) {
+}
+export function messageContainsGifOrVideo(media) {
   return media.reduce((containsVideo, isVideo) => {
     const obj = { containsVideo: containsVideo.containsVideo || isVideo.isVideo, containsGif: null };
     let containsGif = containsVideo.containsGif;
@@ -983,4 +983,4 @@ export const messageContainsGifOrVideo = function messageContainsGifOrVideo(medi
     obj.containsGif = containsGif;
     return obj;
   }, { containsVideo: false, containsGif: false });
-};
+}

@@ -1,10 +1,10 @@
-// === Module 9686: ApplicationCommandFrecencyStore ===
+// === Module 9718: ApplicationCommandFrecencyStore ===
 
-// Module 9686 (ApplicationCommandFrecencyStore)
+// Module 9718 (ApplicationCommandFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FrecencyDefault from "Frecency" /* 5766 */;
+import FrecencyDefault from "Frecency" /* 5768 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -25,7 +25,7 @@ function handleUserSettingsProtoStoreChange() {
     return obj;
   }), global.pendingUsages);
 }
-const ApplicationCommandConstants = fn(6019);
+const ApplicationCommandConstants = fn(6023);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let global = { pendingUsages: [] };
@@ -136,7 +136,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
 
 export default applicationCommandFrecencyStore;
-export const getTopRealCommands = function getTopRealCommands(arg0) {
+export function getTopRealCommands(arg0) {
   const set = new Set();
   const iter = arg0[Symbol.iterator]();
   while (iter !== undefined) {
@@ -155,8 +155,8 @@ export const getTopRealCommands = function getTopRealCommands(arg0) {
     return items;
   }
   str = iter.next();
-};
-export const getFilteredTopCommands = function getFilteredTopCommands(arr, arg1) {
+}
+export function getFilteredTopCommands(arr, arg1) {
   closure_0 = arg1;
   const found = arr.filter((arr) => {
     const hasItem = arr.includes(":");
@@ -175,4 +175,4 @@ export const getFilteredTopCommands = function getFilteredTopCommands(arr, arg1)
     return tmp2;
   });
   return found.map((item) => item.split(":")[0]);
-};
+}

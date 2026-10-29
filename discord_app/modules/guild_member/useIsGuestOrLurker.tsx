@@ -1,8 +1,8 @@
-// === Module 11744: useIsGuestOrLurker ===
+// === Module 11798: useIsGuestOrLurker ===
 
-// Module 11744 (useIsGuestOrLurker)
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
-import GuildStore from "GuildStore" /* 4878 */;
+// Module 11798 (useIsGuestOrLurker)
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+import GuildStore from "GuildStore" /* 4879 */;
 
 const require = globalThis.__r;
 
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGue
     return true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
   }, items1);
 });
-export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, id) {
+export function isGuestOrLurkerInGuild(guild_id, id) {
   guild = GuildStore.getGuild(guild_id);
   let hasItem;
   if (guild != null) {
@@ -82,4 +82,4 @@ export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, 
     isGuestOrLurkerResult = GuildMemberStore.isGuestOrLurker(guild_id, id);
   }
   return isGuestOrLurkerResult;
-};
+}

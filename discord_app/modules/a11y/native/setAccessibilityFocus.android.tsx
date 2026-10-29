@@ -1,13 +1,13 @@
-// === Module 6007: setAccessibilityFocus ===
+// === Module 6009: setAccessibilityFocus ===
 
-// Module 6007 (setAccessibilityFocus)
+// Module 6009 (setAccessibilityFocus)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
 ({ AccessibilityInfo: closure_0, findNodeHandle: closure_1 } = get_ActivityIndicator);
 let result = size.fileFinishedImporting("modules/a11y/native/setAccessibilityFocus.android.tsx");
 
-export const setAccessibilityFocus = function setAccessibilityFocus(arg0) {
+export function setAccessibilityFocus(arg0) {
   ({ ref, delay } = arg0);
   if (delay === undefined) {
     delay = 0;
@@ -23,4 +23,4 @@ export const setAccessibilityFocus = function setAccessibilityFocus(arg0) {
       }, delay);
     }
   }
-};
+}

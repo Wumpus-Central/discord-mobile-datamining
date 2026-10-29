@@ -1,8 +1,8 @@
-// === Module 7825: Reward ===
+// === Module 7848: Reward ===
 
-// Module 7825 (Reward)
-import QuestTypes from "QuestTypes" /* 6748 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7816 */;
+// Module 7848 (Reward)
+import QuestTypes from "QuestTypes" /* 6771 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7839 */;
 import size from "module_2" /* 2 */;
 
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {
@@ -58,9 +58,9 @@ function _questRewardV2FromServer(type) {
 }
 const result = size.fileFinishedImporting("modules/quests/types/v2/Reward.tsx");
 
-export const questRewardsConfigV2FromServer = function questRewardsConfigV2FromServer(rewards_config) {
+export function questRewardsConfigV2FromServer(rewards_config) {
   const obj = { assignmentMethod: rewards_config.assignment_method, rewards: null, rewardsExpireAt: rewards_config.rewards_expire_at, platforms: rewards_config.platforms };
   const rewards = rewards_config.rewards;
   obj.rewards = rewards.map(_questRewardV2FromServer);
   return obj;
-};
+}

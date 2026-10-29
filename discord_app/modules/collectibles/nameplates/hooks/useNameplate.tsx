@@ -1,9 +1,9 @@
-// === Module 8744: useNameplate ===
+// === Module 8747: useNameplate ===
 
-// Module 8744 (useNameplate)
-import utils from "utils" /* 1989 */;
+// Module 8747 (useNameplate)
+import utils from "utils" /* 1990 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildMemberStore from "GuildMemberStore" /* 4917 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

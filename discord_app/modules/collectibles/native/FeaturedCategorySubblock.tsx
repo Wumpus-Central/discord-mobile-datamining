@@ -1,22 +1,22 @@
-// === Module 17501: FeaturedCategorySubblock ===
+// === Module 17740: FeaturedCategorySubblock ===
 
-// Module 17501 (FeaturedCategorySubblock)
+// Module 17740 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7684 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 17499 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7707 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 17738 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7685 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7708 */;
 
-const FastImageDefault = tmp12(5705);
+const FastImageDefault = tmp12(5707);
 require = fn;
 let closure_4 = fn(1086).CollectiblesMobileShopScreen;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -109,11 +109,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
   subblock = subblock.subblock;
   let stateFromStores;
   const tmp = closure_9();
-  importDefault = subblock(1502).useNavigation();
-  let obj = subblock(1502);
-  dependencyMap = subblock(9391).useCollectiblesAnalyticsContext();
+  importDefault = subblock(1503).useNavigation();
+  let obj = subblock(1503);
+  dependencyMap = subblock(9423).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(9391);
+  let obj2 = subblock(9423);
   let items = [stateFromStores];
   stateFromStores = subblock(504).useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
   let obj3 = subblock(504);
@@ -130,8 +130,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  let obj5 = { onChange: subblock(17481).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  let obj4 = subblock(17481);
+  let obj5 = { onChange: subblock(17720).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj4 = subblock(17720);
   const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1125).intl;
   obj6.accessibilityLabel = intl.formatToPlainString(subblock(1125).t.FNtLb3, { category: subblock.name });
@@ -187,13 +187,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
   }
   const items1 = [tmp11Result, ];
   const obj8 = { radius: nativeDefault.radii.lg };
-  let result = subblock(7697).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7720).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj11 = { style: tmp.limitedTimeBadge };
-    result = closure_7(tmp2(9454).LimitedTimeBadge, obj11);
+    result = closure_7(tmp2(9485).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
   obj6.children = items1;
-  obj5.children = closure_8(subblock(6944).PressableOpacity, obj6);
+  obj5.children = closure_8(subblock(6968).PressableOpacity, obj6);
   return closure_7(tmp13, obj5);
 });

@@ -1,16 +1,16 @@
-// === Module 13989: useFormattedMessagePreview ===
+// === Module 14222: useFormattedMessagePreview ===
 
-// Module 13989 (useFormattedMessagePreview)
+// Module 14222 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1100 */;
 import util from "util" /* 1125 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5638 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6401 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8371 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8376 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8474 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5639 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6425 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8393 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8398 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8496 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4947 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -431,7 +431,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
     }
     const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
     const tmpResult6 = tmp(504);
-    const tmpResult7 = tmp(6401);
+    const tmpResult7 = tmp(6425);
     const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, actorNick: null, otherUser: null, otherUserNick: null, isBlocked: null, isIgnored: null, isCallActive: null };
     let nick1;
     if (null != author.actor) {

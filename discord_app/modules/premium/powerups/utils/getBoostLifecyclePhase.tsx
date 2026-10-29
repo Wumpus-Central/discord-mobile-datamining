@@ -1,6 +1,6 @@
-// === Module 13740: getBoostLifecyclePhase ===
+// === Module 13973: getBoostLifecyclePhase ===
 
-// Module 13740 (getBoostLifecyclePhase)
+// Module 13973 (getBoostLifecyclePhase)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/utils/getBoo
 
 export const BOOST_EXPIRING_DISPLAY_WINDOW_DAYS = 3;
 export const BOOST_EXPIRING_DISPLAY_WINDOW_MS = 259200000;
-export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, first1) {
+export function getBoostLifecycleInfo(ended, first1) {
   if (!ended.ended) {
     if (null != ended.endsAt) {
       const endsAt = ended.endsAt;
@@ -22,8 +22,8 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, first
       }
     }
   }
-};
-export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {
+}
+export function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {
   const phase = boostLifecycleInfo.phase;
   if ("gave" === phase) {
     return SnowflakeUtilsDefault.extractTimestamp(id.id);
@@ -41,4 +41,4 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
     }
     return time;
   }
-};
+}

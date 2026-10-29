@@ -1,9 +1,9 @@
-// === Module 6502: CaptchaStore ===
+// === Module 6526: CaptchaStore ===
 
-// Module 6502 (CaptchaStore)
+// Module 6526 (CaptchaStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6503 */;
-import MetricEvents from "MetricEvents" /* 6508 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6527 */;
+import MetricEvents from "MetricEvents" /* 6532 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -15,10 +15,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
 
 export const useCaptchaStore = obj3;
-export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
+export function isCaptchaStoreVolumeEmpty() {
   return 0 === Object.keys(obj3.getState().captchaServeVolume).length;
-};
-export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(arg0) {
+}
+export function incrementCaptchaServeVolume(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj3.setState((arg0) => {
@@ -41,8 +41,8 @@ export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(
       }
     });
   });
-};
-export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
+}
+export function flushCaptchaServeVolume() {
   const entries = Object.entries(obj3.getState().captchaServeVolume);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
@@ -58,4 +58,4 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
   obj3 = ReactBatchUpdates;
   obj3.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
   tmp2 = entries[Symbol.iterator]();
-};
+}

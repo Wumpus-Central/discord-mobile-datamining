@@ -1,8 +1,8 @@
-// === Module 9665: scopes ===
+// === Module 9697: scopes ===
 
-// Module 9665 (scopes)
+// Module 9697 (scopes)
 import util from "util" /* 1125 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
 import size from "module_2" /* 2 */;
 
 let items = [
@@ -48,7 +48,7 @@ export const FAKE_SCOPES = items;
 export const OrderedAccountScopes = items1;
 export const ValidScopes = combined;
 export const RemovedScopes = ["rpc.api"];
-export const getScopeNames = function getScopeNames(nextResult, c2) {
+export function getScopeNames(nextResult, c2) {
   if (OAuth2Scopes.OAuth2Scopes.IDENTIFY === nextResult) {
     const intl65 = util.intl;
     const items = [intl65.string(util.t.DD9KQh)];
@@ -307,11 +307,11 @@ export const getScopeNames = function getScopeNames(nextResult, c2) {
     const items57 = [nextResult];
     return items57;
   }
-};
-export const isSocialLayerUmbrellaScope = function isSocialLayerUmbrellaScope(item) {
+}
+export function isSocialLayerUmbrellaScope(item) {
   return item === OAuth2Scopes.OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE || item === OAuth2Scopes.OAuth2Scopes.SDK_SOCIAL_LAYER;
-};
-export const getSecurityMessage = function getSecurityMessage(scopes) {
+}
+export function getSecurityMessage(scopes) {
   if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE)) {
     if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
       const intl = util.intl;
@@ -331,4 +331,4 @@ export const getSecurityMessage = function getSecurityMessage(scopes) {
   }
   const intl2 = util.intl;
   formatResult = intl2.format(util.t.o0GMBD, {});
-};
+}

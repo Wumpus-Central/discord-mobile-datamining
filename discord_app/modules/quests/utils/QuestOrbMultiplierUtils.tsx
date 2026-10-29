@@ -1,9 +1,9 @@
-// === Module 9626: QuestOrbMultiplierUtils ===
+// === Module 9658: QuestOrbMultiplierUtils ===
 
-// Module 9626 (QuestOrbMultiplierUtils)
+// Module 9658 (QuestOrbMultiplierUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1395 */;
 import user from "user" /* 1397 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
 import size from "module_2" /* 2 */;
 
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", XBOX_GAME_PASS: "XBOX_GAME_PASS", INELIGIBLE: "INELIGIBLE" };
@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("modules/quests/utils/QuestOrbMultipli
 
 export const QuestOrbMultiplierEligibilityType = obj;
 export const QuestOrbMultiplierSource = obj2;
-export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility) {
+export function shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility) {
   return items.includes(orbMultiplierEligibility);
-};
-export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {
+}
+export function getQuestOrbMultiplierSource(perks) {
   if (obj.canUseMoreQuestOrbs(perks)) {
     obj2 = PerksStateUtils;
     perks = undefined;
@@ -47,4 +47,4 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
     return null;
   }
   obj = PremiumUtilsDefault;
-};
+}

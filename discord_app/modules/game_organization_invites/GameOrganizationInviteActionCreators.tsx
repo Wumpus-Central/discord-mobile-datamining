@@ -1,10 +1,10 @@
-// === Module 11361: GameOrganizationInviteActionCreators ===
+// === Module 11415: GameOrganizationInviteActionCreators ===
 
-// Module 11361 (GameOrganizationInviteActionCreators)
+// Module 11415 (GameOrganizationInviteActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_4 = fn(11068).GameOrganizationInviteAcceptStatus;
+let closure_4 = fn(11122).GameOrganizationInviteAcceptStatus;
 const Endpoints = fn(1084).Endpoints;
 let obj = {
   resolveGameOrganizationInvite(arg0) {
@@ -20,7 +20,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -92,7 +92,7 @@ let obj = {
             tmp3(tmp44[3]).dispatch(obj15);
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp44) {
           if (tmp4 === c3) {
@@ -118,7 +118,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -155,7 +155,7 @@ let obj = {
             const obj7 = { type: "INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS", guildIds: closure_129_0, gameOrganizations: body };
             tmp2(584).dispatch(obj7);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -164,8 +164,64 @@ let obj = {
       }
     })();
   },
-  acceptGameOrganizationInvite(code, arg1) {
-    closure_1 = arg1;
+  fetchCharacterEligibility(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              let body;
+              const HTTP = tmp5(1294).HTTP;
+              const obj4 = { url: Endpoints.GAME_ORGANIZATION_INVITE_CHARACTERS(tmp5), rejectWithError: true };
+              dependencyMap = 1;
+              c3 = 1;
+              const obj5 = { value: HTTP.get(obj4), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            body = value.body;
+            const obj7 = { type: "GAME_ORGANIZATION_CHARACTER_ELIGIBILITY_FETCH_SUCCESS", code: closure_129_0, characters: body.characters };
+            tmp2(584).dispatch(obj7);
+            c3 = 3;
+            return { value: "IconComponent", done: "IconComponent" };
+          }
+        } catch (tmp17) {
+          c3 = tmp;
+          throw tmp17;
+        }
+      }
+    })();
+  },
+  acceptGameOrganizationInvite(code, id) {
+    closure_1 = id;
     return (async () => {
       if (c5 === 2) {
         c5 = 3;
@@ -177,7 +233,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

@@ -1,11 +1,11 @@
-// === Module 9717: PremiumFeatureUpsellUtils ===
+// === Module 9749: PremiumFeatureUpsellUtils ===
 
-// Module 9717 (PremiumFeatureUpsellUtils)
+// Module 9749 (PremiumFeatureUpsellUtils)
 import Constants from "Constants" /* 1084 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5063 */;
-import SoundboardTypes from "SoundboardTypes" /* 7481 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5064 */;
+import SoundboardTypes from "SoundboardTypes" /* 7504 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsPages = Constants.AnalyticsPages;
@@ -13,17 +13,17 @@ const items = [EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE
 const set = new Set();
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
-export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
+export function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
   let tmp = categoryInfo.type === SoundboardTypes.SoundboardSoundGridSectionType.GUILD;
   if (tmp) {
     tmp = categoryInfo.guild.id !== guild_id;
   }
   return tmp;
-};
-export const isEmojiPickerUpsellFeature = function isEmojiPickerUpsellFeature(featureName) {
+}
+export function isEmojiPickerUpsellFeature(featureName) {
   return items.includes(featureName);
-};
-export const getAnalyticsPage = function getAnalyticsPage(featureName) {
+}
+export function getAnalyticsPage(featureName) {
   if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_ANIMATED_EMOJI;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
@@ -56,8 +56,8 @@ export const getAnalyticsPage = function getAnalyticsPage(featureName) {
     }
     return null;
   }
-};
-export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
+}
+export function getUpsellType(EMOJIS_EVERYWHERE) {
   if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.ANIMATED_EMOJI;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE === EMOJIS_EVERYWHERE) {
@@ -90,4 +90,4 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     }
     return null;
   }
-};
+}

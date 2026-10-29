@@ -1,8 +1,8 @@
-// === Module 5219: GameServerConstants ===
+// === Module 5220: GameServerConstants ===
 
-// Module 5219 (GameServerConstants)
+// Module 5220 (GameServerConstants)
 import UserStoreConstants from "UserStoreConstants" /* 1401 */;
-import GameServerProviderType from "GameServerProviderType" /* 5220 */;
+import GameServerProviderType from "GameServerProviderType" /* 5221 */;
 import size from "module_2" /* 2 */;
 
 const obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };
@@ -73,5 +73,5 @@ export { NewGamesCoachmarkContent };
 export const GameServerGameProvider = { SHOCKBYTE: 0, [0]: "SHOCKBYTE" };
 export const GAME_SERVER_SUPPORT_URLS = obj5;
 export const GAME_SERVER_TOS = { [GameServerProviderType.GameServerProviderType.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" };
-export const GAME_SERVER_SURVEY_URL = (arg0, arg1) => "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=" + arg0 + "&guild_id=" + arg1;
+export (arg0, arg1) => "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=" + arg0 + "&guild_id=" + arg1
 export const GAME_SERVER_POWERUP_SKU_ID = "0";

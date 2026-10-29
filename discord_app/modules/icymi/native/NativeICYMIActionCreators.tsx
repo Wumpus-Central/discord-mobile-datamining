@@ -1,6 +1,6 @@
-// === Module 18192: NativeICYMIActionCreators ===
+// === Module 18426: NativeICYMIActionCreators ===
 
-// Module 18192 (NativeICYMIActionCreators)
+// Module 18426 (NativeICYMIActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

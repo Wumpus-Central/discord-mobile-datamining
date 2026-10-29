@@ -1,10 +1,10 @@
-// === Module 17018: EmojiSmilingFaceWithHornsIcon ===
+// === Module 17257: EmojiSmilingFaceWithHornsIcon ===
 
-// Module 17018 (EmojiSmilingFaceWithHornsIcon)
+// Module 17257 (EmojiSmilingFaceWithHornsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5704 */;
-import _mod17019 from "module_17019" /* 17019 */;
+import BaseIconImage from "BaseIconImage" /* 5706 */;
+import _mod17258 from "module_17258" /* 17258 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiSmilingFaceWithHornsIcon = ReactCompilerGating.isReactCompiler
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod17019;
+    const tmpResult = _mod17258;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiSmilingFaceWithHornsIcon = ReactCompilerGating.isReactCompiler
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17019, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17258, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

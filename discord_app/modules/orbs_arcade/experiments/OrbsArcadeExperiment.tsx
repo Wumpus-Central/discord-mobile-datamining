@@ -1,7 +1,7 @@
-// === Module 16667: OrbsArcadeExperiment ===
+// === Module 16905: OrbsArcadeExperiment ===
 
-// Module 16667 (OrbsArcadeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 16905 (OrbsArcadeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-orbs-arcade", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

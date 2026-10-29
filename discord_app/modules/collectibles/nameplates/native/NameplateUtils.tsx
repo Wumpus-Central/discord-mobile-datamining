@@ -1,12 +1,12 @@
-// === Module 9443: NameplateUtils ===
+// === Module 9474: NameplateUtils ===
 
-// Module 9443 (NameplateUtils)
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1986 */;
+// Module 9474 (NameplateUtils)
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1987 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 
-export const getNameplateAssets = function getNameplateAssets(nameplate) {
+export function getNameplateAssets(nameplate) {
   const skuId = nameplate.skuId;
   const obj = { staticImageUrl: null, animatedImageUrl: null };
   const obj2 = CollectiblesAssetUtils;
@@ -15,4 +15,4 @@ export const getNameplateAssets = function getNameplateAssets(nameplate) {
   const obj4 = CollectiblesAssetUtils;
   obj.animatedImageUrl = obj4.getCollectiblesItemAssetUrl({ skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.ANIMATED });
   return obj;
-};
+}

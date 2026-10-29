@@ -1,13 +1,13 @@
-// === Module 17379: startFrameMonitor ===
+// === Module 17618: startFrameMonitor ===
 
-// Module 17379 (startFrameMonitor)
+// Module 17618 (startFrameMonitor)
 import size from "module_2" /* 2 */;
 
 let c0 = 16.666666666666668;
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
 
 export const FRAME_BUDGET_MS = 16.666666666666668;
-export const startFrameMonitor = function startFrameMonitor() {
+export function startFrameMonitor() {
   closure_1 = performance.now();
   c2 = false;
   const frames = 0;
@@ -50,4 +50,4 @@ export const startFrameMonitor = function startFrameMonitor() {
       return obj;
     }
   };
-};
+}

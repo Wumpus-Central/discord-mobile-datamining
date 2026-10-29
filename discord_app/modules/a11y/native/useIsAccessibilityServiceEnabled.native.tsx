@@ -1,8 +1,8 @@
-// === Module 8315: useIsAccessibilityServiceEnabled ===
+// === Module 8337: useIsAccessibilityServiceEnabled ===
 
-// Module 8315 (useIsAccessibilityServiceEnabled)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5303 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5948 */;
+// Module 8337 (useIsAccessibilityServiceEnabled)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5304 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5950 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -21,13 +21,13 @@ const state = module_570.create((arg0) => {
 });
 let result = size.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
 
-export const getIsAccessibilityServiceEnabled = function getIsAccessibilityServiceEnabled() {
+export function getIsAccessibilityServiceEnabled() {
   let accessibilityServiceEnabled = useIsScreenReaderEnabled.getIsScreenReaderEnabled();
   if (!accessibilityServiceEnabled) {
     accessibilityServiceEnabled = state.getState().accessibilityServiceEnabled;
   }
   return accessibilityServiceEnabled;
-};
+}
 export const useIsAccessibilityServiceEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAccessibilityServiceEnabled() {
   let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {

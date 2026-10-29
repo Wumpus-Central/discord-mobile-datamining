@@ -1,9 +1,9 @@
-// === Module 12379: ConjureNativeStatusLine ===
+// === Module 12433: ConjureNativeStatusLine ===
 
-// Module 12379 (ConjureNativeStatusLine)
+// Module 12433 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import MagicWandIcon from "MagicWandIcon" /* 12212 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import MagicWandIcon from "MagicWandIcon" /* 12266 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [nativeDefault.colors.TEXT_BRAND, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, nativeDefault.colors.TEXT_FEEDBACK_WARNING, nativeDefault.colors.TEXT_FEEDBACK_INFO];
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 }, glyphGutter: { width: 40, marginRight: 12, alignItems: "center" }, label: { flex: 1 }, trailing: null, chevron: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 };
 obj2.trailing = { flexShrink: 0, marginLeft: nativeDefault.space.PX_8 };
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
 });
 export const LANE_TINT_COUNT = items.length;
 export { laneTintIndexFor };
-export const laneTintFor = function laneTintFor(str) {
+export function laneTintFor(str) {
   let length;
   let num = 0;
   let num2 = 0;
@@ -365,7 +365,7 @@ export const laneTintFor = function laneTintFor(str) {
     } while (num2 < length);
   }
   return items[num % items.length];
-};
+}
 export const MESSAGE_AVATAR_SIZE = 40;
 export const MESSAGE_EDGE_INSET = 12;
 export const MESSAGE_AVATAR_GAP = 12;

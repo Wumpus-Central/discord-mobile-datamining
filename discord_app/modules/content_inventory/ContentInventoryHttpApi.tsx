@@ -1,6 +1,6 @@
-// === Module 14662: ContentInventoryHttpApi ===
+// === Module 14897: ContentInventoryHttpApi ===
 
-// Module 14662 (ContentInventoryHttpApi)
+// Module 14897 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
           closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -118,7 +118,7 @@ let closure_7 = async function _getContentInventoryOutbox() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -293,7 +293,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         } else {
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp19) {
         closure_4 = tmp19;
@@ -307,12 +307,12 @@ let closure_9 = async function _postTrackToContentInventory() {
     }
   })();
 };
-const ContentInventoryFeedKey = fn(8876).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8879).ContentInventoryFeedKey;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");
 
-export const getMyContentInventory = function getMyContentInventory() {
+export function getMyContentInventory() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -321,8 +321,8 @@ export const getMyContentInventory = function getMyContentInventory() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getContentInventoryOutbox = function getContentInventoryOutbox() {
+}
+export function getContentInventoryOutbox() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -331,8 +331,8 @@ export const getContentInventoryOutbox = function getContentInventoryOutbox() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteContentInventoryEntryHistory = function deleteContentInventoryEntryHistory() {
+}
+export function deleteContentInventoryEntryHistory() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -341,8 +341,8 @@ export const deleteContentInventoryEntryHistory = function deleteContentInventor
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const postTrackToContentInventory = function postTrackToContentInventory() {
+}
+export function postTrackToContentInventory() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -351,4 +351,4 @@ export const postTrackToContentInventory = function postTrackToContentInventory(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

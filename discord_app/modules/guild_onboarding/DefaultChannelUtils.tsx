@@ -1,10 +1,10 @@
-// === Module 7233: DefaultChannelUtils ===
+// === Module 7257: DefaultChannelUtils ===
 
-// Module 7233 (DefaultChannelUtils)
+// Module 7257 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
-import GatedChannelStore from "GatedChannelStore" /* 4908 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
+import GatedChannelStore from "GatedChannelStore" /* 4909 */;
+import ChannelStore from "ChannelStore" /* 4857 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled
     VIEW_CHANNEL = constants2.VIEW_CHANNEL;
   });
 });
-export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
+export function canChannelBeDefault(guild_id, id) {
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const GUILD_VOCAL = constants.GUILD_VOCAL;
@@ -87,4 +87,4 @@ export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
     return isChannelGatedResult;
   }
   VIEW_CHANNEL = constants2.VIEW_CHANNEL;
-};
+}

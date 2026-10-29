@@ -1,14 +1,14 @@
-// === Module 13431: GuildDirectoryMoreMenu ===
+// === Module 13664: GuildDirectoryMoreMenu ===
 
-// Module 13431 (GuildDirectoryMoreMenu)
+// Module 13664 (GuildDirectoryMoreMenu)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import ReportModals from "ReportModals" /* 8140 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 13425 */;
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 13432 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13434 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import ReportModals from "ReportModals" /* 8163 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 13658 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 13665 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13667 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
                     return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
                   }
                 }
-                ContextMenu = ContextMenu(9795).ContextMenu;
+                ContextMenu = ContextMenu(9827).ContextMenu;
                 const obj3 = { items: arr, children: R };
                 tmp = <ContextMenu items={arr}>{R}</ContextMenu>;
                 cResult[23] = arr;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
         }
       }
       tmp9[0] = PencilIcon;
-      PencilIcon = ContextMenu(10154).PencilIcon;
+      PencilIcon = ContextMenu(10187).PencilIcon;
       tmp9[1] = PencilIcon;
       tmp9[2] = tmp4;
       cResult[14] = tmp4;
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1125).intl;
     obj.label = intl.string(entry(1125).t.XnuOvN);
-    obj.IconComponent = entry(10154).PencilIcon;
+    obj.IconComponent = entry(10187).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
     let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1125).intl;
     obj2.label = intl2.string(entry(1125).t.KUxYWH);
-    obj2.IconComponent = entry(5725).TrashIcon;
+    obj2.IconComponent = entry(5727).TrashIcon;
     obj2.action = function handleRemove() {
       const obj2 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
       const intl = util.intl;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
     const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1125).intl;
     obj3.label = intl3.string(entry(1125).t.Aen9eh);
-    obj3.IconComponent = entry(10005).FlagIcon;
+    obj3.IconComponent = entry(10037).FlagIcon;
     obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -324,11 +324,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
           obj.variant = "secondary";
           const intl = entry(1125).intl;
           obj.accessibilityLabel = intl.string(entry(1125).t.PdRCRg);
-          obj.icon = jsx(entry(9678).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(7991).IconButton, { ref: ref.ref });
+          obj.icon = jsx(entry(9710).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8014).IconButton, { ref: ref.ref });
         }
     };
-    tmp9 = jsx(entry(9795).ContextMenu, {
+    tmp9 = jsx(entry(9827).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -338,8 +338,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
           obj.variant = "secondary";
           const intl = entry(1125).intl;
           obj.accessibilityLabel = intl.string(entry(1125).t.PdRCRg);
-          obj.icon = jsx(entry(9678).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(7991).IconButton, { ref: ref.ref });
+          obj.icon = jsx(entry(9710).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8014).IconButton, { ref: ref.ref });
         }
     });
   }

@@ -1,25 +1,25 @@
-// === Module 18906: VoicePanelConsoleStatus ===
+// === Module 19139: VoicePanelConsoleStatus ===
 
-// Module 18906 (VoicePanelConsoleStatus)
+// Module 19139 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5070 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
-import spring from "spring" /* 5283 */;
+import native from "native" /* 5071 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import spring from "spring" /* 5284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EDGE_GUTTER = fn(10942).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(10937).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(10977).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(10972).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 36;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { consoleParentContainer: { zIndex: 1, position: "absolute", bottom: 0, overflow: "hidden", left: -0.5, right: 0, alignItems: "center" }, consoleContainer: { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" }, consoleItemContainer: { flexDirection: "row", alignItems: "center", height: 36, marginHorizontal: 18 }, consoleText: { textAlign: "left", marginStart: 4, flex: 1 }, blockingControlCover: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" };
 obj2.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(10939).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(10974).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 const __initData = { code: "function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,\"respect-motion-settings\",function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}" };
 const __initData2 = { code: "function VoicePanelConsoleStatusTsx2(finished){const{shouldShow,runOnJS,cleanUp}=this.__closure;if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}}" };
@@ -634,10 +634,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/Voi
 
 export default tmp4;
 export const CONSOLE_STATUS_HEIGHT = 36;
-export const renderVoicePanelConsoleStatus = function renderVoicePanelConsoleStatus(arg0, arg1, state, cleanUp) {
+export function renderVoicePanelConsoleStatus(arg0, arg1, state, cleanUp) {
   const obj = {};
   const merged = Object.assign(arg1);
   obj.state = state;
   obj.cleanUp = cleanUp;
   return timestampProducer(closure_17, obj, arg0);
-};
+}

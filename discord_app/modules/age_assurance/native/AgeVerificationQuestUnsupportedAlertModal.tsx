@@ -1,10 +1,11 @@
-// === Module 7953: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 7976: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 7953 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 7976 (AgeVerificationQuestUnsupportedAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import AlertModal from "AlertModal" /* 5950 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import _modDef3092 from "module_3092" /* 3092 */;
+import AlertModal from "AlertModal" /* 5952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +18,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3091.gUqXQN);
+    const stringResult = intl.string(_modDef3092.gUqXQN);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3091.yBHwMy);
+    const stringResult1 = intl2.string(_modDef3092.yBHwMy);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -28,14 +29,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     [tmp4, tmp5] = cResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { title: tmp4, content: tmp5, actions: null };
+    const obj2 = { title: tmp4, content: tmp5, actions: null, trackingProps: null };
     const obj3 = { children: null };
     const obj4 = { text: null };
     const intl3 = util.intl;
     obj4.text = intl3.string(util.t["NX+WJN"]);
     obj3.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
     obj2.actions = jsx(AlertModal.AlertActions, { children: null });
-    const tmp11 = jsx(AlertModal.AlertModal, { title: tmp4, content: tmp5, actions: null });
+    const obj5 = { impression: null };
+    const obj6 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_AGE_VERIFICATION_QUEST_UNSUPPORTED };
+    obj5.impression = obj6;
+    obj2.trackingProps = obj5;
+    const tmp11 = jsx(AlertModal.AlertModal, { title: tmp4, content: tmp5, actions: null, trackingProps: null });
     cResult[2] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -43,16 +48,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   }
   return tmp9;
 }) : (function AgeVerificationQuestUnsupportedAlertModal() {
-  const obj = { title: null, content: null, actions: null };
+  const obj = { title: null, content: null, actions: null, trackingProps: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3091.gUqXQN);
+  obj.title = intl.string(_modDef3092.gUqXQN);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3091.yBHwMy);
+  obj.content = intl2.string(_modDef3092.yBHwMy);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t["NX+WJN"]);
   obj2.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
   obj.actions = jsx(AlertModal.AlertActions, { children: null });
-  return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
+  const obj4 = { impression: { impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_AGE_VERIFICATION_QUEST_UNSUPPORTED } };
+  obj.trackingProps = obj4;
+  return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null, trackingProps: null });
 });

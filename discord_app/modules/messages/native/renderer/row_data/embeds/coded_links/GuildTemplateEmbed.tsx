@@ -1,17 +1,17 @@
-// === Module 14803: GuildTemplateEmbed ===
+// === Module 15038: GuildTemplateEmbed ===
 
-// Module 14803 (GuildTemplateEmbed)
+// Module 15038 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7464 */;
-import Constants from "Constants" /* 7844 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8169 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8307 */;
-import _modDef12812 from "module_12812" /* 12812 */;
-import _modDef12813 from "module_12813" /* 12813 */;
-import _modDef14804 from "module_14804" /* 14804 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7602 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7487 */;
+import Constants from "Constants" /* 7867 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8192 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8329 */;
+import _modDef13033 from "module_13033" /* 13033 */;
+import _modDef13034 from "module_13034" /* 13034 */;
+import _modDef15039 from "module_15039" /* 15039 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7625 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -19,7 +19,7 @@ const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;
 const InviteTypes = Constants.InviteTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx");
 
-export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, theme) {
+export function createGuildTemplateEmbed(code, theme) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   const guildTemplate = GuildTemplateStore.getGuildTemplate(code);
   if (null == guildTemplate) {
@@ -42,9 +42,9 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef12812;
+      let tmpResult = _modDef13033;
     } else {
-      tmpResult = _modDef12813;
+      tmpResult = _modDef13034;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -63,7 +63,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef14804).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15039).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj10.acceptLabelText = intl6.string(util.t["a3Gl+e"]);
@@ -72,4 +72,4 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     return obj10;
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);
-};
+}

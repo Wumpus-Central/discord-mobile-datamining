@@ -1,19 +1,19 @@
-// === Module 18344: SearchScreenSearchBar ===
+// === Module 18578: SearchScreenSearchBar ===
 
-// Module 18344 (SearchScreenSearchBar)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import mergeProps from "mergeProps" /* 5177 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7063 */;
-import layout_SearchBarDefault from "layout/SearchBar" /* 18345 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 18347 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 18352 */;
+// Module 18578 (SearchScreenSearchBar)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import mergeProps from "mergeProps" /* 5178 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7087 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 18579 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 18581 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 18586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -25,11 +25,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp4 = closure_7();
   ref1 = noop.useRef(null);
   if (cResult[0] !== ref) {
-    const mergeRefsResult = tmp(5177).mergeRefs(ref, ref1);
+    const mergeRefsResult = tmp(5178).mergeRefs(ref, ref1);
     cResult[0] = ref;
     cResult[1] = mergeRefsResult;
     let tmp6 = mergeRefsResult;
-    const tmpResult = tmp(5177);
+    const tmpResult = tmp(5178);
   } else {
     tmp6 = cResult[1];
   }

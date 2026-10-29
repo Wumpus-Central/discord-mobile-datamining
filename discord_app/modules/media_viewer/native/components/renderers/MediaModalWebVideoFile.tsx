@@ -1,8 +1,8 @@
-// === Module 8826: MediaModalWebVideoFile ===
+// === Module 8829: MediaModalWebVideoFile ===
 
-// Module 8826 (MediaModalWebVideoFile)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8790 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8825 */;
+// Module 8829 (MediaModalWebVideoFile)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8793 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -442,7 +442,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = { ref, style, source: { html: combined, baseUrl: ref }, baseURL: ref, playerState, onDataReceived: callback, onToggleOverlay, javaScriptCanOpenWindowsAutomatically: true, onError, onLoad, onLoadStart };
   return jsx(controls(playerState[3]), { ref, style, source: { html: combined, baseUrl: ref }, baseURL: ref, playerState, onDataReceived: callback, onToggleOverlay, javaScriptCanOpenWindowsAutomatically: true, onError, onLoad, onLoadStart }, source.uri);
 }));
-export const createWebFileVideoControls = function createWebFileVideoControls() {
+export function createWebFileVideoControls() {
   const ref = noop.createRef();
   noop = 0;
   closure_5 = 0;
@@ -512,4 +512,4 @@ export const createWebFileVideoControls = function createWebFileVideoControls() 
       }
     }
   };
-};
+}

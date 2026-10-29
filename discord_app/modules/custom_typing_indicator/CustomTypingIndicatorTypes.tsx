@@ -1,6 +1,6 @@
-// === Module 1410: CustomTypingIndicatorTypes ===
+// === Module 1411: CustomTypingIndicatorTypes ===
 
-// Module 1410 (CustomTypingIndicatorTypes)
+// Module 1411 (CustomTypingIndicatorTypes)
 import user from "user" /* 1397 */;
 import size from "module_2" /* 2 */;
 
@@ -8,17 +8,17 @@ const result = size.fileFinishedImporting("modules/custom_typing_indicator/Custo
 
 export const CUSTOM_TYPING_INDICATOR_EMOJI_COUNT = 3;
 export const EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = { emojis: [], typingSuggestion: user.TypingSuggestion.UNSPECIFIED, animation: user.TypingIndicatorAnimation.UNSPECIFIED };
-export const hasCustomTypingIndicatorEmojis = function hasCustomTypingIndicatorEmojis(emojis) {
+export function hasCustomTypingIndicatorEmojis(emojis) {
   return 3 === emojis.length;
-};
-export const isValidCustomTypingIndicatorEmojiSelection = function isValidCustomTypingIndicatorEmojiSelection(arg0) {
+}
+export function isValidCustomTypingIndicatorEmojiSelection(arg0) {
   let tmp = 0 === arg0.length;
   if (!tmp) {
     tmp = 3 === arg0.length;
   }
   return tmp;
-};
-export const getCustomTypingIndicatorEmojisKey = function getCustomTypingIndicatorEmojisKey(emojis) {
+}
+export function getCustomTypingIndicatorEmojisKey(emojis) {
   const mapped = emojis.map((id) => {
     let str;
     if (id != null) {
@@ -37,16 +37,16 @@ export const getCustomTypingIndicatorEmojisKey = function getCustomTypingIndicat
     return str;
   });
   return mapped.join(":");
-};
-export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveCustomTypingIndicatorAnimation(config) {
+}
+export function getEffectiveCustomTypingIndicatorAnimation(config) {
   if (3 === config.emojis.length) {
     let UNSPECIFIED = config.animation;
   } else {
     UNSPECIFIED = user.TypingIndicatorAnimation.UNSPECIFIED;
   }
   return UNSPECIFIED;
-};
-export const serializeTypingIndicatorStyle = function serializeTypingIndicatorStyle(typingIndicatorStyle) {
+}
+export function serializeTypingIndicatorStyle(typingIndicatorStyle) {
   let obj = { emojis: null, animation: typingIndicatorStyle.animation, typing_suggestion: typingIndicatorStyle.typingSuggestion };
   const emojis = typingIndicatorStyle.emojis;
   obj.emojis = emojis.map((id) => {
@@ -59,8 +59,8 @@ export const serializeTypingIndicatorStyle = function serializeTypingIndicatorSt
     return obj;
   });
   return obj;
-};
-export const parseServerTypingIndicatorStyle = function parseServerTypingIndicatorStyle(typing_indicator_style) {
+}
+export function parseServerTypingIndicatorStyle(typing_indicator_style) {
   let tmp = null;
   if (null != typing_indicator_style) {
     let emojis = typing_indicator_style.emojis;
@@ -102,4 +102,4 @@ export const parseServerTypingIndicatorStyle = function parseServerTypingIndicat
     tmp = obj;
   }
   return tmp;
-};
+}

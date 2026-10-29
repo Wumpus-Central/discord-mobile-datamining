@@ -1,6 +1,6 @@
-// === Module 9330: ObscuredSurfaceContext ===
+// === Module 9334: ObscuredSurfaceContext ===
 
-// Module 9330 (ObscuredSurfaceContext)
+// Module 9334 (ObscuredSurfaceContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext({ obscured: false });
@@ -11,6 +11,6 @@ const result1 = size.fileFinishedImporting("modules/safety_common/ObscuredSurfac
 
 export const ObscuredSurfaceContext = context;
 export const OBSCURED_VALUE = { obscured: true };
-export const useObscuredSurface = function useObscuredSurface() {
+export function useObscuredSurface() {
   return noop.useContext(context);
-};
+}

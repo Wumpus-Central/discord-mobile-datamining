@@ -1,9 +1,9 @@
-// === Module 13254: CheckpointCardFrame ===
+// === Module 13239: CheckpointCardFrame ===
 
-// Module 13254 (CheckpointCardFrame)
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1897 */;
-import timing from "timing" /* 5242 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6071 */;
+// Module 13239 (CheckpointCardFrame)
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1898 */;
+import timing from "timing" /* 5243 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6075 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let c10 = 43.5;
 let c11 = 40;
 let c12 = "M0 40H30L40 30V0H10L0 10V40Z";
 let c13 = 150;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_14 = createStyles.createStyles({ canvas: { overflow: "hidden", transformOrigin: "top left" }, layer: { position: "absolute", top: 0, left: 0 }, logo: { position: "absolute", top: 4, left: 4, width: 40, height: 40, alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function CheckpointCardFrameTsx1(){const{isArtLoaded,withTiming,CARD_ART_FADE_IN_DURATION_MS}=this.__closure;return{opacity:isArtLoaded?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};}" };
 const __initData2 = { code: "function CheckpointCardFrameTsx2(){const{isArtLoaded,withTiming,CARD_ART_FADE_IN_DURATION_MS}=this.__closure;return{opacity:isArtLoaded?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};}" };
@@ -27,7 +27,7 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/ca
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointCardFrame(arg0) {
   const cResult = recapCardBackgroundImage(joined[6]).c(92);
-  ({ character, canvasWidth, canvasHeight, scale, clydeSize, characterLayout, children } = arg0);
+  ({ character, cardColorPalette, canvasWidth, canvasHeight, scale, clydeSize, characterLayout, children } = arg0);
   if (undefined === canvasHeight) {
     canvasHeight = height;
   }
@@ -37,9 +37,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   const tmp4 = closure_14();
   const id = noop.useId();
-  if (cResult[0] !== character) {
-    const cardColors = recapCardBackgroundImage(tmp2[7]).getCardColors(character);
-    cResult[0] = character;
+  if (cResult[0] !== cardColorPalette) {
+    const cardColors = recapCardBackgroundImage(tmp2[7]).getCardColors(cardColorPalette);
+    cResult[0] = cardColorPalette;
     cResult[1] = cardColors;
     let tmp6 = cardColors;
     const tmpResult = recapCardBackgroundImage(tmp2[7]);
@@ -92,27 +92,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           const tmp27 = _slicedToArray(obj2.useState(null), 2);
           noop = tmp27[1];
           absoluteFill = tmp28;
-          class G {
-            constructor() {
-              opacity = 0;
-              if (closure_5) {
-                tmp = closure_0;
-                tmp2 = closure_2;
-                obj = closure_0(closure_2[11]);
-                obj1 = { duration: null };
-                tmp3 = c13;
-                obj1.duration = c13;
-                num2 = 1;
-                opacity = obj.withTiming(1, obj1);
-              }
-              return { opacity };
+          const fn = function q() {
+            let opacity = 0;
+            if (closure_5) {
+              const obj2 = { duration };
+              opacity = timing.withTiming(1, obj2);
             }
-          }
+            return { opacity };
+          };
           const obj4 = { isArtLoaded: tmp27[0] === joined, withTiming: recapCardBackgroundImage(tmp2[11]).withTiming, CARD_ART_FADE_IN_DURATION_MS: v150 };
-          G.__closure = obj4;
-          G.__workletHash = 7810000693516;
-          G.__initData = __initData;
-          const animatedStyle = recapCardBackgroundImage(tmp2[10]).useAnimatedStyle(G);
+          fn.__closure = obj4;
+          fn.__workletHash = 7810000693516;
+          fn.__initData = __initData;
+          const animatedStyle = recapCardBackgroundImage(tmp2[10]).useAnimatedStyle(fn);
           const result = canvasWidth * num;
           const result1 = canvasHeight * num;
           if (cResult[16] === result) {
@@ -170,135 +162,124 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                       if (cResult[38] === canvasWidth) {
                         if (cResult[39] === tmp4.layer) {
                           if (cResult[40] === tmp42) {
-                            const tmp45 = cResult[41];
+                            let tmp45 = cResult[41];
                           }
+                          const _HermesInternal2 = HermesInternal;
+                          const combined1 = "texture-" + joined;
                           if (cResult[42] === animatedStyle) {
                             if (cResult[43] === tmp4.layer) {
-                              let tmp49 = cResult[44];
+                              let tmp50 = cResult[44];
                             }
                             if (cResult[45] !== tmp8) {
                               const obj7 = { d: tmp8 };
-                              const tmp52 = closure_7(recapCardBackgroundImage(tmp2[12]).Path, obj7);
+                              const tmp53 = closure_7(recapCardBackgroundImage(tmp2[12]).Path, obj7);
                               cResult[45] = tmp8;
-                              cResult[46] = tmp52;
-                              let tmp50 = tmp52;
+                              cResult[46] = tmp53;
+                              let tmp51 = tmp53;
                             } else {
-                              tmp50 = cResult[46];
+                              tmp51 = cResult[46];
                             }
                             if (cResult[47] === id) {
-                              if (cResult[48] === tmp50) {
-                                let tmp53 = cResult[49];
+                              if (cResult[48] === tmp51) {
+                                let tmp54 = cResult[49];
                               }
                               if (cResult[50] !== recapCardBackgroundImage) {
                                 const obj8 = { uri: recapCardBackgroundImage };
                                 cResult[50] = recapCardBackgroundImage;
                                 cResult[51] = obj8;
-                                let tmp56 = obj8;
+                                let tmp57 = obj8;
                               } else {
-                                tmp56 = cResult[51];
+                                tmp57 = cResult[51];
                               }
-                              const _HermesInternal2 = HermesInternal;
-                              const combined1 = "url(#" + id + ")";
+                              const _HermesInternal3 = HermesInternal;
+                              const combined2 = "url(#" + id + ")";
                               if (cResult[52] === tmp40) {
                                 if (cResult[53] === recapCardBackgroundImage) {
-                                  let tmp58 = cResult[54];
+                                  let tmp59 = cResult[54];
                                 }
-                                if (cResult[55] === tmp56) {
-                                  if (cResult[56] === combined1) {
-                                    if (cResult[57] === tmp58) {
+                                if (cResult[55] === tmp57) {
+                                  if (cResult[56] === combined2) {
+                                    if (cResult[57] === tmp59) {
                                       if (cResult[58] === tmp11) {
-                                        let tmp59 = cResult[59];
+                                        let tmp60 = cResult[59];
                                       }
                                       if (cResult[60] === canvasWidth) {
-                                        if (cResult[61] === tmp53) {
-                                          if (cResult[62] === tmp59) {
-                                            let tmp66 = cResult[63];
+                                        if (cResult[61] === tmp54) {
+                                          if (cResult[62] === tmp60) {
+                                            let tmp67 = cResult[63];
                                           }
-                                          if (cResult[64] === joined) {
-                                            if (cResult[65] === tmp49) {
-                                              if (cResult[66] === tmp66) {
-                                                let tmp71 = cResult[67];
+                                          if (cResult[64] === combined1) {
+                                            if (cResult[65] === tmp50) {
+                                              if (cResult[66] === tmp67) {
+                                                let tmp72 = cResult[67];
                                               }
                                               if (cResult[68] !== primaryBackgroundColor) {
                                                 const size3 = { style: absoluteFill.absoluteFill, width: v40, height: null, children: null };
-                                                class Te {
+                                                class Ie {
                                                   constructor() {
                                                     return closure_6(recapCardBackgroundImage);
                                                   }
                                                 }
                                                 const obj9 = { d, fill: primaryBackgroundColor };
                                                 size3.children = closure_7(recapCardBackgroundImage(tmp2[12]).Path, obj9);
-                                                const tmp78 = obj6(tmp2[12]);
+                                                const tmp83 = closure_7(obj6(tmp2[12]), size3);
                                                 cResult[68] = primaryBackgroundColor;
-                                                cResult[69] = closure_7(obj6(tmp2[12]), size3);
-                                                class G {
-                                                  constructor() {
-                                                    opacity = 0;
-                                                    if (closure_5) {
-                                                      tmp = closure_0;
-                                                      tmp2 = closure_2;
-                                                      obj = closure_0(closure_2[11]);
-                                                      obj1 = { duration: null };
-                                                      tmp3 = c13;
-                                                      obj1.duration = c13;
-                                                      num2 = 1;
-                                                      opacity = obj.withTiming(1, obj1);
-                                                    }
-                                                    return { opacity };
-                                                  }
-                                                }
-                                                const tmp82 = closure_7(obj6(tmp2[12]), size3);
+                                                cResult[69] = tmp83;
+                                                let tmp76 = tmp83;
+                                                const tmp79 = obj6(tmp2[12]);
+                                              } else {
+                                                tmp76 = cResult[69];
                                               }
                                               if (cResult[70] !== tmp37) {
                                                 const obj10 = { size: "custom", color: obj6(tmp2[14]).colors.BLACK, style: tmp37 };
-                                                const tmp86 = closure_7(recapCardBackgroundImage(tmp2[13]).ClydeIcon, obj10);
-                                                class Te {
+                                                const tmp87 = closure_7(recapCardBackgroundImage(tmp2[13]).ClydeIcon, obj10);
+                                                class Ie {
                                                   constructor() {
                                                     return closure_6(recapCardBackgroundImage);
                                                   }
                                                 }
                                                 cResult[70] = tmp37;
-                                                cResult[71] = tmp86;
-                                                let tmp83 = tmp86;
+                                                cResult[71] = tmp87;
+                                                let tmp84 = tmp87;
                                               } else {
-                                                tmp83 = cResult[71];
+                                                tmp84 = cResult[71];
                                               }
                                               if (cResult[72] === tmp4.logo) {
-                                                if (cResult[73] === tmp75) {
-                                                  if (cResult[74] === tmp83) {
-                                                    let tmp87 = cResult[75];
+                                                if (cResult[73] === tmp76) {
+                                                  if (cResult[74] === tmp84) {
+                                                    let tmp88 = cResult[75];
                                                   }
                                                   if (cResult[76] === animatedStyle) {
                                                     if (cResult[77] === joined) {
                                                       if (cResult[78] === tmp38) {
                                                         if (cResult[79] === tmp40) {
                                                           if (cResult[80] === arr) {
-                                                            let tmp91 = cResult[81];
+                                                            let tmp92 = cResult[81];
                                                           }
                                                           if (cResult[82] === children) {
                                                             if (cResult[83] === tmp41) {
                                                               if (cResult[84] === tmp45) {
-                                                                if (cResult[85] === tmp71) {
-                                                                  if (cResult[86] === tmp87) {
-                                                                    if (cResult[87] === tmp91) {
-                                                                      let tmp96 = cResult[88];
+                                                                if (cResult[85] === tmp72) {
+                                                                  if (cResult[86] === tmp88) {
+                                                                    if (cResult[87] === tmp92) {
+                                                                      let tmp97 = cResult[88];
                                                                     }
                                                                     if (cResult[89] === tmp34) {
-                                                                      if (cResult[90] === tmp96) {
-                                                                        let tmp100 = cResult[91];
+                                                                      if (cResult[90] === tmp97) {
+                                                                        let tmp101 = cResult[91];
                                                                       }
-                                                                      return tmp100;
+                                                                      return tmp101;
                                                                     }
-                                                                    const obj11 = { style: tmp34, children: tmp96 };
-                                                                    class Te {
+                                                                    const obj11 = { style: tmp34, children: tmp97 };
+                                                                    class Ie {
                                                                       constructor() {
                                                                         return closure_6(recapCardBackgroundImage);
                                                                       }
                                                                     }
                                                                     cResult[89] = tmp34;
-                                                                    cResult[90] = tmp96;
-                                                                    cResult[91] = tmp103;
-                                                                    tmp100 = tmp103;
+                                                                    cResult[90] = tmp97;
+                                                                    cResult[91] = tmp104;
+                                                                    tmp101 = tmp104;
                                                                   }
                                                                 }
                                                               }
@@ -306,53 +287,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                                           }
                                                           const obj12 = { style: tmp41, children: null };
                                                           const items1 = [, , , , ];
-                                                          class Te {
+                                                          class Ie {
                                                             constructor() {
                                                               return closure_6(recapCardBackgroundImage);
                                                             }
                                                           }
-                                                          items1[1] = tmp71;
-                                                          items1[2] = tmp87;
+                                                          items1[1] = tmp72;
+                                                          items1[2] = tmp88;
                                                           items1[3] = children;
-                                                          items1[4] = tmp91;
+                                                          items1[4] = tmp92;
                                                           obj12.children = items1;
-                                                          const tmp99 = closure_8(closure_6, obj12);
+                                                          const tmp100 = closure_8(closure_6, obj12);
                                                           cResult[82] = children;
                                                           cResult[83] = tmp41;
-                                                          class G {
-                                                            constructor() {
-                                                              opacity = 0;
-                                                              if (closure_5) {
-                                                                tmp = closure_0;
-                                                                tmp2 = closure_2;
-                                                                obj = closure_0(closure_2[11]);
-                                                                obj1 = { duration: null };
-                                                                tmp3 = c13;
-                                                                obj1.duration = c13;
-                                                                num2 = 1;
-                                                                opacity = obj.withTiming(1, obj1);
-                                                              }
-                                                              return { opacity };
-                                                            }
-                                                          }
-                                                          cResult[85] = tmp71;
-                                                          cResult[86] = tmp87;
-                                                          cResult[87] = tmp91;
-                                                          cResult[88] = tmp99;
-                                                          tmp96 = tmp99;
+                                                          cResult[84] = tmp45;
+                                                          cResult[85] = tmp72;
+                                                          cResult[86] = tmp88;
+                                                          cResult[87] = tmp92;
+                                                          cResult[88] = tmp100;
+                                                          tmp97 = tmp100;
                                                         }
                                                       }
                                                     }
                                                   }
-                                                  let tmp92 = null != tmp38;
-                                                  if (tmp92) {
-                                                    tmp92 = arr.length > 0;
+                                                  let tmp93 = null != tmp38;
+                                                  if (tmp93) {
+                                                    tmp93 = arr.length > 0;
                                                   }
-                                                  if (tmp92) {
+                                                  if (tmp93) {
                                                     const obj13 = { style: null, children: null };
                                                     const items2 = [tmp38, animatedStyle];
                                                     obj13.style = items2;
-                                                    class Te {
+                                                    class Ie {
                                                       constructor() {
                                                         return closure_6(recapCardBackgroundImage);
                                                       }
@@ -367,10 +333,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                                         }
                                                       }, uri);
                                                     });
-                                                    tmp92 = closure_7(tmp95, obj13, joined);
+                                                    const _HermesInternal4 = HermesInternal;
+                                                    tmp93 = closure_7(tmp96, obj13, "character-" + joined);
                                                   }
                                                   cResult[76] = animatedStyle;
-                                                  class Te {
+                                                  class Ie {
                                                     constructor() {
                                                       return closure_6(recapCardBackgroundImage);
                                                     }
@@ -379,169 +346,107 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                                   cResult[78] = tmp38;
                                                   cResult[79] = tmp40;
                                                   cResult[80] = arr;
-                                                  cResult[81] = tmp92;
-                                                  tmp91 = tmp92;
+                                                  cResult[81] = tmp93;
+                                                  tmp92 = tmp93;
                                                 }
                                               }
                                               const obj15 = { style: null, children: null };
-                                              class Te {
+                                              class Ie {
                                                 constructor() {
                                                   return closure_6(recapCardBackgroundImage);
                                                 }
                                               }
-                                              const items3 = [tmp75, tmp83];
+                                              const items3 = [tmp76, tmp84];
                                               obj15.children = items3;
-                                              const tmp90 = closure_8(closure_6, obj15);
+                                              const tmp91 = closure_8(closure_6, obj15);
                                               cResult[72] = tmp4.logo;
-                                              cResult[73] = tmp75;
-                                              cResult[74] = tmp83;
-                                              class G {
-                                                constructor() {
-                                                  opacity = 0;
-                                                  if (closure_5) {
-                                                    tmp = closure_0;
-                                                    tmp2 = closure_2;
-                                                    obj = closure_0(closure_2[11]);
-                                                    obj1 = { duration: null };
-                                                    tmp3 = c13;
-                                                    obj1.duration = c13;
-                                                    num2 = 1;
-                                                    opacity = obj.withTiming(1, obj1);
-                                                  }
-                                                  return { opacity };
-                                                }
-                                              }
-                                              cResult[75] = tmp90;
-                                              tmp87 = tmp90;
+                                              cResult[73] = tmp76;
+                                              cResult[74] = tmp84;
+                                              cResult[75] = tmp91;
+                                              tmp88 = tmp91;
                                             }
                                           }
-                                          const obj16 = { style: tmp49, children: tmp66 };
-                                          class Te {
+                                          const obj16 = { style: tmp50, children: tmp67 };
+                                          class Ie {
                                             constructor() {
                                               return closure_6(recapCardBackgroundImage);
                                             }
                                           }
-                                          cResult[64] = joined;
-                                          cResult[65] = tmp49;
-                                          cResult[66] = tmp66;
-                                          cResult[67] = tmp74;
-                                          tmp71 = tmp74;
+                                          cResult[64] = combined1;
+                                          cResult[65] = tmp50;
+                                          cResult[66] = tmp67;
+                                          cResult[67] = tmp75;
+                                          tmp72 = tmp75;
                                         }
                                       }
                                       const size4 = { width: canvasWidth, height: null, children: null };
-                                      class Te {
+                                      class Ie {
                                         constructor() {
                                           return closure_6(recapCardBackgroundImage);
                                         }
                                       }
-                                      const items4 = [tmp53, tmp59];
+                                      const items4 = [tmp54, tmp60];
                                       size4.children = items4;
-                                      const tmp70 = closure_8(obj6(tmp2[12]), size4);
+                                      const tmp71 = closure_8(obj6(tmp2[12]), size4);
                                       cResult[60] = canvasWidth;
-                                      cResult[61] = tmp53;
-                                      cResult[62] = tmp59;
-                                      class G {
-                                        constructor() {
-                                          opacity = 0;
-                                          if (closure_5) {
-                                            tmp = closure_0;
-                                            tmp2 = closure_2;
-                                            obj = closure_0(closure_2[11]);
-                                            obj1 = { duration: null };
-                                            tmp3 = c13;
-                                            obj1.duration = c13;
-                                            num2 = 1;
-                                            opacity = obj.withTiming(1, obj1);
-                                          }
-                                          return { opacity };
-                                        }
-                                      }
-                                      cResult[63] = tmp70;
-                                      tmp66 = tmp70;
+                                      cResult[61] = tmp54;
+                                      cResult[62] = tmp60;
+                                      cResult[63] = tmp71;
+                                      tmp67 = tmp71;
                                     }
                                   }
                                 }
-                                const obj17 = { href: tmp56 };
-                                class Te {
+                                const obj17 = { href: tmp57 };
+                                class Ie {
                                   constructor() {
                                     return closure_6(recapCardBackgroundImage);
                                   }
                                 }
                                 const merged = Object.assign(tmp11);
                                 obj17.preserveAspectRatio = "xMidYMid slice";
-                                obj17.clipPath = combined1;
-                                obj17.onLoad = tmp58;
-                                const tmp65 = closure_7(tmp61, obj17);
-                                cResult[55] = tmp56;
-                                cResult[56] = combined1;
-                                class G {
-                                  constructor() {
-                                    opacity = 0;
-                                    if (closure_5) {
-                                      tmp = closure_0;
-                                      tmp2 = closure_2;
-                                      obj = closure_0(closure_2[11]);
-                                      obj1 = { duration: null };
-                                      tmp3 = c13;
-                                      obj1.duration = c13;
-                                      num2 = 1;
-                                      opacity = obj.withTiming(1, obj1);
-                                    }
-                                    return { opacity };
-                                  }
-                                }
+                                obj17.clipPath = combined2;
+                                obj17.onLoad = tmp59;
+                                const tmp66 = closure_7(tmp62, obj17);
+                                cResult[55] = tmp57;
+                                cResult[56] = combined2;
+                                cResult[57] = tmp59;
                                 cResult[58] = tmp11;
-                                cResult[59] = tmp65;
-                                tmp59 = tmp65;
+                                cResult[59] = tmp66;
+                                tmp60 = tmp66;
                               }
-                              class Te {
+                              class Ie {
                                 constructor() {
                                   return closure_6(recapCardBackgroundImage);
                                 }
                               }
                               cResult[52] = tmp40;
                               cResult[53] = recapCardBackgroundImage;
-                              cResult[54] = Te;
-                              tmp58 = Te;
+                              cResult[54] = Ie;
+                              tmp59 = Ie;
                             }
                             const obj18 = { children: null };
-                            const obj19 = { id: null, children: tmp50 };
+                            const obj19 = { id: null, children: tmp51 };
                             obj18.children = closure_7(recapCardBackgroundImage(tmp2[12]).ClipPath, obj19);
-                            const tmp55 = closure_7(recapCardBackgroundImage(tmp2[12]).Defs, obj18);
+                            const tmp56 = closure_7(recapCardBackgroundImage(tmp2[12]).Defs, obj18);
                             cResult[47] = id;
-                            cResult[48] = tmp50;
-                            cResult[49] = tmp55;
-                            tmp53 = tmp55;
+                            cResult[48] = tmp51;
+                            cResult[49] = tmp56;
+                            tmp54 = tmp56;
                           }
-                          const items5 = [tmp4.layer, animatedStyle];
+                          const items5 = [tmp4.layer, ];
                           cResult[42] = animatedStyle;
                           cResult[43] = tmp4.layer;
                           cResult[44] = items5;
-                          tmp49 = items5;
+                          tmp50 = items5;
                         }
                       }
                       const size5 = { style: tmp4.layer, width: canvasWidth, height, children: tmp42 };
+                      const tmp48 = closure_7(obj6(tmp2[12]), size5);
                       cResult[38] = canvasWidth;
                       cResult[39] = tmp4.layer;
                       cResult[40] = tmp42;
-                      cResult[41] = closure_7(obj6(tmp2[12]), size5);
-                      class G {
-                        constructor() {
-                          opacity = 0;
-                          if (closure_5) {
-                            tmp = closure_0;
-                            tmp2 = closure_2;
-                            obj = closure_0(closure_2[11]);
-                            obj1 = { duration: null };
-                            tmp3 = c13;
-                            obj1.duration = c13;
-                            num2 = 1;
-                            opacity = obj.withTiming(1, obj1);
-                          }
-                          return { opacity };
-                        }
-                      }
-                      const tmp48 = closure_7(obj6(tmp2[12]), size5);
+                      cResult[41] = tmp48;
+                      tmp45 = tmp48;
                     }
                     const obj20 = { d: tmp8, fill: secondaryBackgroundColor };
                     const tmp44 = closure_7(recapCardBackgroundImage(tmp2[12]).Path, obj20);
@@ -601,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       cResult[7] = character;
       cResult[8] = size;
       cResult[9] = items8;
-      class Te {
+      class Ie {
         constructor() {
           return closure_6(recapCardBackgroundImage);
         }
@@ -639,7 +544,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let v150;
   const tmp = closure_14();
   const id = clydeSize.useId();
-  const cardColors = character(num[7]).getCardColors(character);
+  const cardColors = character(num[7]).getCardColors(character.cardColorPalette);
   const recapCardBackgroundImage = cardColors.recapCardBackgroundImage;
   ({ primaryBackgroundColor, secondaryBackgroundColor } = cardColors);
   const combined = "M44 34V0H" + canvasWidth + "V284H0V43.5H34L38 38L44 34Z";
@@ -673,7 +578,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   d = tmp11[1];
   v150 = tmp12;
   let set = new Set();
-  class L {
+  class D {
     constructor() {
       opacity = 0;
       if (closure_13) {
@@ -690,10 +595,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
   }
   const tmp3Result = character(num[10]);
-  L.__closure = { isArtLoaded: tmp11[0] === joined, withTiming: character(num[11]).withTiming, CARD_ART_FADE_IN_DURATION_MS: v150 };
-  L.__workletHash = 11056092560943;
-  L.__initData = __initData2;
-  const animatedStyle = tmp3Result.useAnimatedStyle(L);
+  D.__closure = { isArtLoaded: tmp11[0] === joined, withTiming: character(num[11]).withTiming, CARD_ART_FADE_IN_DURATION_MS: v150 };
+  D.__workletHash = 11056092560943;
+  D.__initData = __initData2;
+  const animatedStyle = tmp3Result.useAnimatedStyle(D);
   const items2 = [canvasWidth, num, num2];
   const items3 = [canvasWidth, num, num2];
   const memo2 = obj.useMemo(() => {
@@ -761,7 +666,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   items9[1] = size1(character(num[12]).Image, obj10);
   size3.children = items9;
   obj7.children = memo(tmp23, size3);
-  items7[1] = size1(canvasWidth(num[10]).View, obj7, joined);
+  items7[1] = size1(canvasWidth(num[10]).View, obj7, "texture-" + joined);
   const obj11 = { style: tmp.logo, children: null };
   const size4 = { style: characterLayout.absoluteFill, width: v40, height: v40, children: null };
   const obj9 = { id, children: size1(character(num[12]).Path, { d: combined }) };
@@ -802,7 +707,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         }
       }, uri);
     });
-    tmp18Result = tmp18(tmp21(tmp4[10]).View, obj14, joined);
+    const _HermesInternal = HermesInternal;
+    tmp18Result = tmp18(tmp21(tmp4[10]).View, obj14, "character-" + joined);
   }
   items7[4] = tmp18Result;
   obj6.children = items7;

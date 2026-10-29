@@ -1,8 +1,8 @@
-// === Module 7954: AgeVerificationIncodeExperiment ===
+// === Module 7977: AgeVerificationIncodeExperiment ===
 
-// Module 7954 (AgeVerificationIncodeExperiment)
+// Module 7977 (AgeVerificationIncodeExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,6 +27,6 @@ export const useIsAgeVerificationIncodeEnabled = ReactCompilerGating.isReactComp
 }) : (function useIsAgeVerificationIncodeEnabled(location) {
   return closure_2.useConfig({ location }).enabled;
 });
-export const isAgeVerificationIncodeEnabled = function isAgeVerificationIncodeEnabled(entryPoint) {
+export function isAgeVerificationIncodeEnabled(entryPoint) {
   return closure_2.getConfig({ location: entryPoint }).enabled;
-};
+}

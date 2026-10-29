@@ -1,13 +1,13 @@
-// === Module 14513: ShopThisLookUtils ===
+// === Module 14747: ShopThisLookUtils ===
 
-// Module 14513 (ShopThisLookUtils)
+// Module 14747 (ShopThisLookUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 14514 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 14748 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
-export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {
+export function isShoppableCollectibleSku(stateFromStores) {
   type = stateFromStores;
   if (null == stateFromStores) {
     return tmp;
@@ -33,4 +33,4 @@ export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stat
       flag = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
     }
   }
-};
+}

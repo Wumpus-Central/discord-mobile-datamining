@@ -1,8 +1,8 @@
-// === Module 7471: frameDeepLinks ===
+// === Module 7494: frameDeepLinks ===
 
-// Module 7471 (frameDeepLinks)
+// Module 7494 (frameDeepLinks)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/frameDeepLinks.tsx");
 
-export const queueFrameDeepLink = function queueFrameDeepLink(channelId, hash) {
+export function queueFrameDeepLink(channelId, hash) {
   let substr = hash;
   if (hash.startsWith("#")) {
     substr = hash.slice(1);
@@ -34,8 +34,8 @@ export const queueFrameDeepLink = function queueFrameDeepLink(channelId, hash) {
     const obj3 = { type: "FRAME_DEEP_LINK_QUEUED", channelId };
     DispatcherDefault.dispatch(obj3);
   }
-};
-export const setFrameRelaunchDeepLink = function setFrameRelaunchDeepLink(frameDeepLinkChannelId, applicationId, substr) {
+}
+export function setFrameRelaunchDeepLink(frameDeepLinkChannelId, applicationId, substr) {
   if (substr.length > 0) {
     const obj2 = { hash: substr, expiresAt: Infinity, applicationId };
     const result = map.set(frameDeepLinkChannelId, obj2);
@@ -49,8 +49,8 @@ export const setFrameRelaunchDeepLink = function setFrameRelaunchDeepLink(frameD
       map.delete(frameDeepLinkChannelId);
     }
   }
-};
-export const queueFrameDeepLinkFromUrl = function queueFrameDeepLinkFromUrl(channelId, arr) {
+}
+export function queueFrameDeepLinkFromUrl(channelId, arr) {
   const index = arr.indexOf("#");
   if (-1 !== index) {
     const substr = arr.slice(index);
@@ -78,8 +78,8 @@ export const queueFrameDeepLinkFromUrl = function queueFrameDeepLinkFromUrl(chan
       DispatcherDefault.dispatch(obj3);
     }
   }
-};
-export const getFrameDeepLinkChannelId = function getFrameDeepLinkChannelId(frame) {
+}
+export function getFrameDeepLinkChannelId(frame) {
   if (null == frame) {
     return null;
   } else {
@@ -91,8 +91,8 @@ export const getFrameDeepLinkChannelId = function getFrameDeepLinkChannelId(fram
     }
     return channelId;
   }
-};
-export const takeFrameDeepLink = function takeFrameDeepLink(channelId, applicationId) {
+}
+export function takeFrameDeepLink(channelId, applicationId) {
   value = map.get(channelId);
   let tmp2 = null;
   if (null != value) {
@@ -109,7 +109,7 @@ export const takeFrameDeepLink = function takeFrameDeepLink(channelId, applicati
     }
   }
   return tmp2;
-};
-export const clearFrameDeepLinks = function clearFrameDeepLinks() {
+}
+export function clearFrameDeepLinks() {
   map.clear();
-};
+}

@@ -1,14 +1,14 @@
-// === Module 13545: NotificationPermissionUtil ===
+// === Module 13778: NotificationPermissionUtil ===
 
-// Module 13545 (NotificationPermissionUtil)
+// Module 13778 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7926 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 13553 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7949 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 13786 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13543 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13776 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -22,7 +22,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -166,9 +166,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(13544).EventActionType;
+const EventActionType = fn(13777).EventActionType;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-let closure_10 = fn(7903).NotificationAuthorizationStatus;
+let closure_10 = fn(7926).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeePushNotificationNudge() {
@@ -283,7 +283,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -314,7 +314,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
                 tmp4(true);
               }
               c2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp12) {
             c2 = tmp;
@@ -357,7 +357,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -388,7 +388,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
               tmp4(true);
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp12) {
           c2 = tmp;
@@ -412,7 +412,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 
-export const requestPushNotificationPermission = function requestPushNotificationPermission() {
+export function requestPushNotificationPermission() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -421,9 +421,9 @@ export const requestPushNotificationPermission = function requestPushNotificatio
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useShowReactivationPrompt = tmp2;
-export const enableProvisionalPushNotification = function enableProvisionalPushNotification() {
+export function enableProvisionalPushNotification() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -432,7 +432,7 @@ export const enableProvisionalPushNotification = function enableProvisionalPushN
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useCanSeePushNotificationNudge = tmp3;
 export const useShouldShowPushNotificationNudgeByPromptType = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowPushNotificationNudgeByPromptType(arg0) {
   const cResult = c.c(6);

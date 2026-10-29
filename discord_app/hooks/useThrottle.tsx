@@ -1,6 +1,6 @@
-// === Module 11768: useThrottle ===
+// === Module 11822: useThrottle ===
 
-// Module 11768 (useThrottle)
+// Module 11822 (useThrottle)
 import _mod12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ function useThrottledFunction(callback4, arg1) {
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useThrottle.tsx");
 
-export const useThrottledState = (memo, arg1) => {
+export (memo, arg1) => {
   let current = memo;
   _require = memo;
   let items = cResult;
@@ -75,5 +75,5 @@ export const useThrottledState = (memo, arg1) => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 export { useThrottledFunction };

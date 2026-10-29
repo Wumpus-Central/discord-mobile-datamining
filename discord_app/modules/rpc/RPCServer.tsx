@@ -1,16 +1,16 @@
-// === Module 9293: RPCServer ===
+// === Module 9297: RPCServer ===
 
-// Module 9293 (RPCServer)
+// Module 9297 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import transformUserDefault from "transformUser" /* 9294 */;
-import RPCErrorDefault from "RPCError" /* 9296 */;
-import validateScopeDefault from "validateScope" /* 9298 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 9301 */;
+import transformUserDefault from "transformUser" /* 9298 */;
+import RPCErrorDefault from "RPCError" /* 9300 */;
+import validateScopeDefault from "validateScope" /* 9302 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9305 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(6413).TransportTypes;
+const TransportTypes = fn(6437).TransportTypes;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -95,7 +95,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

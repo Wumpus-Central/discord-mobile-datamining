@@ -1,9 +1,9 @@
-// === Module 13901: InviteErrorUtils ===
+// === Module 14134: InviteErrorUtils ===
 
-// Module 13901 (InviteErrorUtils)
+// Module 14134 (InviteErrorUtils)
 import util from "util" /* 1125 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InviteErrorUtils.tsx");
 
-export const getDescriptiveInviteError = function getDescriptiveInviteError(code) {
+export function getDescriptiveInviteError(code) {
   if (constants.TOO_MANY_USER_GUILDS === code) {
     const currentUser = UserStore.getCurrentUser();
     if (!obj7.canUseIncreasedGuildCap(currentUser)) {
@@ -71,8 +71,8 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
   } else {
     return null;
   }
-};
-export const getInviteError = function getInviteError(arg0) {
+}
+export function getInviteError(arg0) {
   if (constants.TOO_MANY_USER_GUILDS === arg0) {
     const intl8 = util.intl;
     return intl8.string(util.t.iLyuDO);
@@ -99,4 +99,4 @@ export const getInviteError = function getInviteError(arg0) {
     const intl = util.intl;
     return intl.string(util.t.dDZRdy);
   }
-};
+}

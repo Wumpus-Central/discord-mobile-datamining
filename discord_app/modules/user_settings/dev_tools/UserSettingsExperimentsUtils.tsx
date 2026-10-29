@@ -1,7 +1,7 @@
-// === Module 12817: UserSettingsExperimentsUtils ===
+// === Module 13038: UserSettingsExperimentsUtils ===
 
-// Module 12817 (UserSettingsExperimentsUtils)
-import flattenDefault from "flatten" /* 5830 */;
+// Module 13038 (UserSettingsExperimentsUtils)
+import flattenDefault from "flatten" /* 5832 */;
 import size from "module_2" /* 2 */;
 
 function matchesDeep(item10014, item10021) {
@@ -40,22 +40,22 @@ function matchesDeep(item10014, item10021) {
 const re2 = /^(\d{4}-\d{1,2})/;
 const result = size.fileFinishedImporting("modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx");
 
-export const getExperimentDateFromId = function getExperimentDateFromId(arg0) {
+export function getExperimentDateFromId(arg0) {
   const match = re2.exec(arg0);
   let tmp2 = null;
   if (null != match) {
     tmp2 = match[1];
   }
   return tmp2;
-};
-export const getEntries = function getEntries(arg0) {
+}
+export function getEntries(arg0) {
   return Array.from(Object.entries(arg0)).map((item) => {
     [tmp, tmp2] = item;
     return { id, experiment };
   });
-};
+}
 export { matchesDeep };
-export const sortEntries = function sortEntries(entries, memo1) {
+export function sortEntries(entries, memo1) {
   const substr = entries.slice();
   return substr.sort((id, id2) => {
     id = undefined;
@@ -105,8 +105,8 @@ export const sortEntries = function sortEntries(entries, memo1) {
     const title = id.experiment.title;
     return title.localeCompare(id2.experiment.title);
   });
-};
-export const getBestMatches = function getBestMatches(tmpResult3, str) {
+}
+export function getBestMatches(tmpResult3, str) {
   const parts = str.split(/\s+/g);
   const found = parts.filter((item) => "" !== item);
   if (0 === found.length) {
@@ -136,4 +136,4 @@ export const getBestMatches = function getBestMatches(tmpResult3, str) {
     const found1 = items.filter((item) => undefined !== item);
     return flattenDefault(found1.reverse());
   }
-};
+}

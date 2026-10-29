@@ -1,8 +1,8 @@
-// === Module 5925: NetworkQuality ===
+// === Module 5927: NetworkQuality ===
 
-// Module 5925 (NetworkQuality)
-import TimeUtils from "TimeUtils" /* 5758 */;
-import NetworkStore from "NetworkStore" /* 5926 */;
+// Module 5927 (NetworkQuality)
+import TimeUtils from "TimeUtils" /* 5760 */;
+import NetworkStore from "NetworkStore" /* 5928 */;
 
 require = fn;
 const Constants = fn(1084);

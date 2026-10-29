@@ -1,22 +1,22 @@
-// === Module 15636: AudioSettingsPending ===
+// === Module 15872: AudioSettingsPending ===
 
-// Module 15636 (AudioSettingsPending)
+// Module 15872 (AudioSettingsPending)
 import _slicedToArray from "module_32" /* 32 */;
 
 let dependencyMap = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsPending.tsx");
 
-export const getPendingAudioSettings = function getPendingAudioSettings(STREAM, arg1) {
+export function getPendingAudioSettings(STREAM, arg1) {
   return dependencyMap["" + STREAM + ":" + arg1];
-};
-export const updatePendingSettings = function updatePendingSettings(context, userId, arg2) {
+}
+export function updatePendingSettings(context, userId, arg2) {
   const combined = "" + context + ":" + userId;
   const merged = Object.assign(dependencyMap[combined]);
   const merged1 = Object.assign(arg2);
   dependencyMap[combined] = {};
-};
-export const drainPendingAudioSettings = function drainPendingAudioSettings(fn) {
+}
+export function drainPendingAudioSettings(fn) {
   for (const key10006 in closure_1) {
     let tmp3 = _slicedToArray(key10006.split(":"), 2);
     let items = [, ];
@@ -26,4 +26,4 @@ export const drainPendingAudioSettings = function drainPendingAudioSettings(fn) 
     continue;
   }
   dependencyMap = {};
-};
+}

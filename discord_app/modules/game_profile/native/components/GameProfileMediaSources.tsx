@@ -1,9 +1,9 @@
-// === Module 9343: GameProfileMediaSources ===
+// === Module 9347: GameProfileMediaSources ===
 
-// Module 9343 (GameProfileMediaSources)
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2034 */;
-import StoreUtils from "StoreUtils" /* 6418 */;
+// Module 9347 (GameProfileMediaSources)
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2035 */;
+import StoreUtils from "StoreUtils" /* 6442 */;
 import size_mod from "module_2" /* 2 */;
 
 let c2 = 366;
@@ -15,7 +15,7 @@ export const MEDIA_ITEM_MAX_WIDTH = 366;
 export const MEDIA_ITEM_MAX_HEIGHT = 200;
 export const MEDIA_ITEM_ASPECT_RATIO = 1.83;
 export const MEDIA_VIEWER_ITEM_SIZE = size;
-export const getCarouselPreviewPixelSize = function getCarouselPreviewPixelSize() {
+export function getCarouselPreviewPixelSize() {
   let devicePixelRatio = arg0;
   if (arg0 === undefined) {
     devicePixelRatio = ImageLoaderUtils.getDevicePixelRatio();
@@ -23,8 +23,8 @@ export const getCarouselPreviewPixelSize = function getCarouselPreviewPixelSize(
   const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(c2 * devicePixelRatio);
   size = { width: bestMediaProxySize, height: Math.round(bestMediaProxySize / 1.83) };
   return size;
-};
-export const buildMediaEntries = function buildMediaEntries(game) {
+}
+export function buildMediaEntries(game) {
   if (null == game) {
     let items = [];
   } else {
@@ -48,8 +48,8 @@ export const buildMediaEntries = function buildMediaEntries(game) {
     }), arraySpreadResult);
   }
   return items;
-};
-export const buildMediaViewerSources = function buildMediaViewerSources(arr2, cResult) {
+}
+export function buildMediaViewerSources(arr2, cResult) {
   const styles = cResult;
   let map = dimensions;
   if (dimensions === undefined) {
@@ -85,4 +85,4 @@ export const buildMediaViewerSources = function buildMediaViewerSources(arr2, cR
     obj.disableDownload = true;
     return obj;
   });
-};
+}

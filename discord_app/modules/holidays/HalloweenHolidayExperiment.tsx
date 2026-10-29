@@ -1,7 +1,7 @@
-// === Module 19125: HalloweenHolidayExperiment ===
+// === Module 19360: HalloweenHolidayExperiment ===
 
-// Module 19125 (HalloweenHolidayExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 19360 (HalloweenHolidayExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-halloween-holiday", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

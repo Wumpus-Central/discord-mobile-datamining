@@ -1,9 +1,9 @@
-// === Module 12330: ConjureHeaderIconButton ===
+// === Module 12384: ConjureHeaderIconButton ===
 
-// Module 12330 (ConjureHeaderIconButton)
+// Module 12384 (ConjureHeaderIconButton)
 import c from "c" /* 576 */;
-import Pressables from "Pressables" /* 6944 */;
-import ClipView from "ClipView" /* 9437 */;
+import Pressables from "Pressables" /* 6968 */;
+import ClipView from "ClipView" /* 9468 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles((width) => {
   const obj = { button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" }, icon: { width: 24, height: 24 }, disabledIcon: { opacity: 0.5 }, badge: null };
   const size = { position: "absolute", left: 24 - width, top: 24 - width, width, height: width, alignItems: "center", justifyContent: "center" };
@@ -179,6 +179,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureH
     tmp3Result = closure_5(View, obj5);
   }
   obj.children = tmp3Result;
-  return closure_5(badgeSize(6944).PressableOpacity, obj);
+  return closure_5(badgeSize(6968).PressableOpacity, obj);
 });
 export const CONJURE_HEADER_BADGE_SIZE = 8;

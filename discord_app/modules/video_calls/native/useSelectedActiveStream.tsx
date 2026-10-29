@@ -1,8 +1,8 @@
-// === Module 14888: useSelectedActiveStream ===
+// === Module 15123: useSelectedActiveStream ===
 
-// Module 14888 (useSelectedActiveStream)
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
+// Module 15123 (useSelectedActiveStream)
+import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
 
 const require = globalThis.__r;
 

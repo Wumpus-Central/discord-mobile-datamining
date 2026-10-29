@@ -1,11 +1,11 @@
-// === Module 5682: CountryCodeUtils ===
+// === Module 5684: CountryCodeUtils ===
 
-// Module 5682 (CountryCodeUtils)
+// Module 5684 (CountryCodeUtils)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1125 */;
-import CountriesDefault from "Countries" /* 5683 */;
-import CountryCodes from "CountryCodes" /* 5684 */;
-import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 5685 */;
+import CountriesDefault from "Countries" /* 5685 */;
+import CountryCodes from "CountryCodes" /* 5686 */;
+import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 5687 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "United States";
@@ -1034,7 +1034,7 @@ const dependencyMap = {
 const result = size.fileFinishedImporting("modules/i18n/CountryCodeUtils.tsx");
 
 export const DEFAULT_COUNTRY_CODE_NAME = "United States";
-export const getCountryCodeByCountryName = function getCountryCodeByCountryName(arg0) {
+export function getCountryCodeByCountryName(arg0) {
   closure_0 = arg0;
   const found = CountriesDefault.find((name) => name.name === closure_0);
   if (null != found) {
@@ -1042,8 +1042,8 @@ export const getCountryCodeByCountryName = function getCountryCodeByCountryName(
     ({ name: obj.name, phoneCountryCode: obj.code, alpha2: obj.alpha2 } = found);
     return obj;
   }
-};
-export const getCountryCodeByAlpha2 = function getCountryCodeByAlpha2(countryCode) {
+}
+export function getCountryCodeByAlpha2(countryCode) {
   closure_0 = countryCode;
   const found = CountriesDefault.find((alpha2) => alpha2.alpha2 === closure_0);
   if (null != found) {
@@ -1051,8 +1051,8 @@ export const getCountryCodeByAlpha2 = function getCountryCodeByAlpha2(countryCod
     ({ name: obj.name, phoneCountryCode: obj.code, alpha2: obj.alpha2 } = found);
     return obj;
   }
-};
-export const getDefaultCountryCode = function getDefaultCountryCode() {
+}
+export function getDefaultCountryCode() {
   closure_0 = c3;
   const found = CountriesDefault.find((name) => name.name === closure_0);
   let tmp4;
@@ -1063,18 +1063,18 @@ export const getDefaultCountryCode = function getDefaultCountryCode() {
   }
   _modDef38(null != tmp4, "Default country code cannot be missing.");
   return tmp4;
-};
-export const getI18NCountryName = function getI18NCountryName(alpha2) {
+}
+export function getI18NCountryName(alpha2) {
   return dependencyMap[alpha2]();
-};
-export const getI18NCountryNameSafe = function getI18NCountryNameSafe(arg0) {
+}
+export function getI18NCountryNameSafe(arg0) {
   let tmp = arg0;
   if (null != dependencyMap[arg0]) {
     tmp = tmp2();
   }
   return tmp;
-};
-export const convertToAlpha2 = function convertToAlpha2(countryCode) {
+}
+export function convertToAlpha2(countryCode) {
   if (2 === countryCode.length) {
     const tmp17 = CountryCodes.CountryCodes[countryCode];
     if (null == tmp17) {
@@ -1101,4 +1101,4 @@ export const convertToAlpha2 = function convertToAlpha2(countryCode) {
       return tmp3;
     }
   }
-};
+}

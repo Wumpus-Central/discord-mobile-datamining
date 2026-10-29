@@ -1,8 +1,8 @@
-// === Module 18418: EnglishAnalyzer ===
+// === Module 18652: EnglishAnalyzer ===
 
-// Module 18418 (EnglishAnalyzer)
+// Module 18652 (EnglishAnalyzer)
 import _modDef12 from "module_12" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 18419 */;
+import snowballStemmer from "snowballStemmer" /* 18653 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -103,17 +103,17 @@ function highlightAST(content, set, flag) {
 let set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"]);
 const result = size.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
-export const analyze = function analyze(str) {
+export function analyze(str) {
   const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
   const tmpResult = _modDef12(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
   return mapped1.reject(isStopWord).map(snowballStemmer.snowballStem).value();
-};
+}
 export { shouldHighlight };
 export { highlightAST };
-export const createASTHighlighter = function createASTHighlighter(str) {
+export function createASTHighlighter(str) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -140,4 +140,4 @@ export const createASTHighlighter = function createASTHighlighter(str) {
     highlightAST(content, set, tmp3);
     return content;
   };
-};
+}

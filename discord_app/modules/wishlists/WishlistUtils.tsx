@@ -1,21 +1,21 @@
-// === Module 14668: WishlistUtils ===
+// === Module 14903: WishlistUtils ===
 
-// Module 14668 (WishlistUtils)
+// Module 14903 (WishlistUtils)
 import util from "util" /* 1125 */;
-import StorefrontUtils from "StorefrontUtils" /* 7372 */;
+import StorefrontUtils from "StorefrontUtils" /* 7395 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKURecord from "SKURecord" /* 2044 */;
+import SKURecord from "SKURecord" /* 2045 */;
 
 require = fn;
-let closure_4 = fn(9404).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(9405).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(9406).isSKUWishlistItemRecord;
+let closure_4 = fn(9435).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(9436).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(9437).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1084).SKUProductLines;
 const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
 
-export const createNitroSuggestedSku = function createNitroSuggestedSku() {
+export function createNitroSuggestedSku() {
   const obj = { id: PremiumSubscriptionSKUs.TIER_2, productLine: SKUProductLines.PREMIUM, name: null, features: null, genres: null, manifests: null, availableRegions: null, locales: null, bundledSkuIds: null, selectedOptions: null, eligibleOffers: null, prices: null };
   const intl = util.intl;
   obj.name = intl.string(util.t.lG6a5x);
@@ -31,8 +31,8 @@ export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   obj.prices = {};
   const set1 = new Set();
   return new SKURecord(obj);
-};
-export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnMobile(sku, isWishlistOwner) {
+}
+export function isEligibleWishlistItemOnMobile(sku, isWishlistOwner) {
   isWishlistOwner = isWishlistOwner.isWishlistOwner;
   if (isSKUWishlistItemRecord(sku)) {
     if (sku.sku.productLine === SKUProductLines.SOCIAL_LAYER_GAME_ITEM) {
@@ -47,8 +47,8 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
   if (!tmp2) {
     tmp2 = closure_5(sku);
   }
-};
-export const buildReorderedWishlistData = function buildReorderedWishlistData(set, arg1, arg2, arg3) {
+}
+export function buildReorderedWishlistData(set, arg1, arg2, arg3) {
   if (arg2 < arg3) {
     let skuId;
     if (arg1[arg3] != null) {
@@ -85,4 +85,4 @@ export const buildReorderedWishlistData = function buildReorderedWishlistData(se
   const items = [...arg1];
   items.splice(arg3, 0, _slicedToArray(items.splice(arg2, 1), 1)[0]);
   return { newWishlistData: set.set("items", items), previousSkuId: skuId2, nextSkuId: skuId3 };
-};
+}

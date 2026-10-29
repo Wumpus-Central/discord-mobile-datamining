@@ -1,14 +1,14 @@
-// === Module 15552: useAccessibilityNativeStackFocusTracking ===
+// === Module 15788: useAccessibilityNativeStackFocusTracking ===
 
-// Module 15552 (useAccessibilityNativeStackFocusTracking)
-import setAccessibilityFocusPreviousDefault from "setAccessibilityFocusPrevious" /* 5947 */;
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5949 */;
+// Module 15788 (useAccessibilityNativeStackFocusTracking)
+import setAccessibilityFocusPreviousDefault from "setAccessibilityFocusPrevious" /* 5949 */;
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5951 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
 
-export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
+export function useAccessibilityNativeStackFocusTracking() {
   return noop.useMemo(() => {
     c0 = false;
     return {
@@ -25,4 +25,4 @@ export const useAccessibilityNativeStackFocusTracking = function useAccessibilit
       }
     };
   }, []);
-};
+}

@@ -1,14 +1,14 @@
-// === Module 18315: JoinRequestOtherApplications ===
+// === Module 18549: JoinRequestOtherApplications ===
 
-// Module 18315 (JoinRequestOtherApplications)
+// Module 18549 (JoinRequestOtherApplications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DateUtils from "DateUtils" /* 4829 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5038 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import CircleXIcon from "CircleXIcon" /* 7054 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7303 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18312 */;
+import DateUtils from "DateUtils" /* 4830 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5039 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import CircleXIcon from "CircleXIcon" /* 7078 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7327 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18546 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { label: { marginHorizontal: 16, marginBottom: 8 }, container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: nativeDefault.radii.md }, row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 16 }, divider: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.divider = size;
@@ -79,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[2] === userId) {
         let tmp5 = cResult[3];
       }
-      row = tmp(18316).useOtherGuildJoinRequestsForUser(tmp5);
+      row = tmp(18550).useOtherGuildJoinRequestsForUser(tmp5);
       if (0 === row.length) {
         return null;
       } else {
@@ -94,7 +94,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         if (cResult[5] !== tmp4.label) {
           let obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp4.label, children: tmp6 };
-          const tmp10 = closure_6(tmp(5270).Text, obj2);
+          const tmp10 = closure_6(tmp(5271).Text, obj2);
           cResult[5] = tmp4.label;
           cResult[6] = tmp10;
           let tmp8 = tmp10;
@@ -173,7 +173,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[13] = fn;
         tmp13 = fn;
       }
-      const tmpResult = tmp(18316);
+      const tmpResult = tmp(18550);
     }
   }
   let obj5 = { guildId, userId, selectedJoinRequestId };
@@ -194,7 +194,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
     const intl = tmp2(1125).intl;
     obj3.children = intl.string(tmp2(1125).t["hxa+G3"]);
-    let items = [closure_6(tmp2(5270).Text, obj3), ];
+    let items = [closure_6(tmp2(5271).Text, obj3), ];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

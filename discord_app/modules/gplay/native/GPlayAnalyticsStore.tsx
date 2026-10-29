@@ -1,6 +1,6 @@
-// === Module 9833: GPlayAnalyticsStore ===
+// === Module 9865: GPlayAnalyticsStore ===
 
-// Module 9833 (GPlayAnalyticsStore)
+// Module 9865 (GPlayAnalyticsStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ let closure_2 = Object.freeze({ analyticsByProductId: {} });
 const useGPlayAnalyticsStore = module_570.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/gplay/native/GPlayAnalyticsStore.tsx");
 
-export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
+export function setGPlayAnalytics(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
@@ -23,8 +23,8 @@ export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
       return obj;
     });
   });
-};
-export const deleteGPlayAnalytics = function deleteGPlayAnalytics(arg0) {
+}
+export function deleteGPlayAnalytics(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj.setState((analyticsByProductId) => {
@@ -34,5 +34,5 @@ export const deleteGPlayAnalytics = function deleteGPlayAnalytics(arg0) {
       return { analyticsByProductId };
     });
   });
-};
+}
 export { useGPlayAnalyticsStore };

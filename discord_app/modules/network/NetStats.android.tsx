@@ -1,16 +1,16 @@
-// === Module 7604: NetStats ===
+// === Module 7627: NetStats ===
 
-// Module 7604 (NetStats)
+// Module 7627 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import configure from "configure" /* 1482 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5193 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5934 */;
+import configure from "configure" /* 1483 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5194 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7605 */;
-import GuildStore from "GuildStore" /* 4878 */;
-import NetworkUtils_mod from "utils/NetworkUtils" /* 1481 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7628 */;
+import GuildStore from "GuildStore" /* 4879 */;
+import NetworkUtils_mod from "utils/NetworkUtils" /* 1482 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1482).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1483).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;
@@ -158,7 +158,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -226,7 +226,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -411,7 +411,7 @@ const subscription2 = Dispatcher.subscribe("MESSAGE_SEND_FAILED", (arg0) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/network/NetStats.android.tsx");
 
-export const isSlowNetwork = function isSlowNetwork() {
+export function isSlowNetwork() {
   let tmp = global.type === configure.NetInfoStateType.cellular;
   if (tmp) {
     let isNetworkRoaming = null != closure_10.signalStrengthLevel;
@@ -427,7 +427,7 @@ export const isSlowNetwork = function isSlowNetwork() {
     tmp = isNetworkRoaming;
   }
   return tmp;
-};
-export const getSignalStrength = function getSignalStrength() {
+}
+export function getSignalStrength() {
   return closure_10.signalStrengthLevel;
-};
+}

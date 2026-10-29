@@ -1,16 +1,16 @@
-// === Module 7070: Login ===
+// === Module 7094: Login ===
 
-// Module 7070 (Login)
+// Module 7094 (Login)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5270 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
-import Pressables from "Pressables" /* 6944 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7072 */;
+import Text_Text from "Text/Text" /* 5271 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
+import Pressables from "Pressables" /* 6968 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7096 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7071 */;
+import PhoneStore from "PhoneStore" /* 7095 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ const View = fn(17).View;
 const AuthStates = fn(1084).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -180,7 +180,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -250,7 +250,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           closure_129_4(false);
           v32 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp47) {
         if (tmp5 === c3) {
@@ -265,91 +265,32 @@ export default function Login(isMultiAccount) {
     }
   }), items1);
   _require = asyncGeneratorStep(async (isMultiAccount, arg1) => {
-    if (c8 === 2) {
-      c8 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (isMultiAccount === 1) {
-        throw value;
-      } else if (isMultiAccount === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c8 = 2;
-        if (0 === c7) {
-          if (isMultiAccount === 1) {
-            c8 = 3;
-            throw value;
-          } else if (isMultiAccount === 2) {
-            c8 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp7;
-            closure_131_2 = undefined;
-            closure_131_0 = isMultiAccount;
-            closure_131_1 = closure_1;
-            let flag = closure_2;
-            if (closure_2 === undefined) {
-              flag = false;
-            }
-            closure_131_2 = flag;
-            let authenticationErrorsFromV6OrEarlierAPIError;
-            c7 = 1;
-            c8 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === tmp7) {
-          if (isMultiAccount === 1) {
-            c8 = 3;
-            throw value;
-          } else if (isMultiAccount === 2) {
-            c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            tmp3(true);
-            tmp22({});
-            c6 = 1;
-            const obj6 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
-            c7 = 3;
-            c8 = 1;
-            const obj8 = { value: navigation(ref[21]).login(obj6), done: false };
-            return obj8;
-          }
-        } else {
-          if (2 === tmp7) {
-            c6 = 0;
-            closure_131_4 = tmp22;
-            tmp3(false);
-            authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(ref[25]).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
-            callback(authenticationErrorsFromV6OrEarlierAPIError);
-            c8 = 3;
-            const obj2 = isMultiAccount(ref[25]);
-          } else if (isMultiAccount === 1) {
-            c8 = 3;
-            throw value;
-          } else if (isMultiAccount !== 2) {
-            c6 = 0;
-          }
-          c6 = 0;
-          c8 = 3;
-          const obj = { value, done: true };
-          return obj;
-        }
-      } catch (tmp22) {
-        if (tmp4 === c6) {
-          c8 = tmp2;
-          throw tmp22;
-        } else {
-          c7 = tmp;
-        }
-      }
+    closure_131_0 = isMultiAccount;
+    closure_131_1 = closure_1;
+    let flag = closure_2;
+    if (closure_2 === undefined) {
+      flag = false;
     }
+    closure_131_2 = flag;
+    await "Reflect";
+    tmp3(true);
+    tmp22({});
+    await navigation(ref[21]).login({ login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount });
+    if (2 === tmp7) {
+      c6 = 0;
+      closure_131_4 = tmp22;
+      tmp3(false);
+      const authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(ref[25]).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
+      callback(authenticationErrorsFromV6OrEarlierAPIError);
+      c8 = 3;
+      isMultiAccount(ref[25]);
+    } else if (isMultiAccount === 1) {
+      c8 = 3;
+      throw value;
+    } else if (isMultiAccount !== 2) {
+      c6 = 0;
+    }
+    return value;
   });
   const items2 = [callback, flag];
   const callback1 = noop.useCallback(function() {
@@ -374,7 +315,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

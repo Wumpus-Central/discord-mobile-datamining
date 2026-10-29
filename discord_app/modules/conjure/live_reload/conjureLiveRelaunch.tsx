@@ -1,14 +1,14 @@
-// === Module 10826: conjureLiveRelaunch ===
+// === Module 10902: conjureLiveRelaunch ===
 
-// Module 10826 (conjureLiveRelaunch)
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10779 */;
+// Module 10902 (conjureLiveRelaunch)
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10854 */;
 import size from "module_2" /* 2 */;
 
 const map = new Map();
 const map1 = new Map();
 let result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveRelaunch.tsx");
 
-export const relaunchAppFramesForBuild = function relaunchAppFramesForBuild(applicationId, build) {
+export function relaunchAppFramesForBuild(applicationId, build) {
   let flag = map.get(applicationId) !== build;
   if (flag) {
     const result = map.set(applicationId, build);
@@ -30,8 +30,8 @@ export const relaunchAppFramesForBuild = function relaunchAppFramesForBuild(appl
     flag = true;
   }
   return flag;
-};
-export const reloadAppFramesAfterDeploy = function reloadAppFramesAfterDeploy(application_id) {
+}
+export function reloadAppFramesAfterDeploy(application_id) {
   value = map1.get(application_id);
   if (null != value) {
     if (value.source !== "deploy") {
@@ -44,4 +44,4 @@ export const reloadAppFramesAfterDeploy = function reloadAppFramesAfterDeploy(ap
   const result = map1.set(application_id, { source: "deploy", at: Date.now() });
   const obj2 = { source: "deploy", at: Date.now() };
   ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
-};
+}

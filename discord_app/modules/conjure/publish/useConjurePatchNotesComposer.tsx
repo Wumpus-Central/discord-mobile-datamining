@@ -1,18 +1,18 @@
-// === Module 12420: useConjurePatchNotesComposer ===
+// === Module 12474: useConjurePatchNotesComposer ===
 
-// Module 12420 (useConjurePatchNotesComposer)
-import ConjureUtils from "ConjureUtils" /* 7382 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12421 */;
+// Module 12474 (useConjurePatchNotesComposer)
+import ConjureUtils from "ConjureUtils" /* 7405 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4934 */;
+import GuildChannelStore from "GuildChannelStore" /* 4935 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5009).MessageSendLocation;
+let closure_7 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5010).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesComposer.tsx");
 
@@ -106,7 +106,7 @@ export default function useConjurePatchNotesComposer(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ export default function useConjurePatchNotesComposer(projectId) {
             c2 = 0;
             if (closure_129_0.cancelled) {
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               closure_1_10(false);
               closure_1_11(true);
@@ -230,7 +230,7 @@ export default function useConjurePatchNotesComposer(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
