@@ -4,6 +4,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/themes/native/updateTheme.tsx");
 
-export const updateTheme = function updateTheme(arg0) {
+export function updateTheme(arg0) {
   NativeThemeModuleDefault.updateTheme(arg0);
-};
+}

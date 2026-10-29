@@ -570,7 +570,7 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0, arg1
   }
   return this.findActivity(arg0, (application_id) => application_id.application_id === closure_0, tmp, true);
 };
-prototype["findActivity"] = function findActivity(arg0, cResult) {
+prototype["findActivity"] = function findActivity(arg0, arg1) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -588,7 +588,7 @@ prototype["findActivity"] = function findActivity(arg0, cResult) {
   if (flag) {
     combined = activities.concat(self.getHiddenActivities(arg0, tmp));
   }
-  return combined.find(cResult);
+  return combined.find(arg1);
 };
 prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
   return activityMetadata[arg0];

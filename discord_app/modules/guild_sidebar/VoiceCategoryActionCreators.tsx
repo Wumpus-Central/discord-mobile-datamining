@@ -4,9 +4,9 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/VoiceCategoryActionCreators.tsx");
 
-export const voiceCategoryExpand = function voiceCategoryExpand(guildId) {
+export function voiceCategoryExpand(guildId) {
   DispatcherDefault.dispatch({ type: "VOICE_CATEGORY_EXPAND", guildId, expand: true });
-};
-export const voiceCategoryCollapse = function voiceCategoryCollapse(guildId) {
+}
+export function voiceCategoryCollapse(guildId) {
   DispatcherDefault.dispatch({ type: "VOICE_CATEGORY_COLLAPSE", guildId, expand: false });
-};
+}

@@ -11,13 +11,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10058);
+const ChannelDetailsConstants = fn(10090);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1084).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1381);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_15 = createStyles.createStyles({
   hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 },
   topic: { overflow: "hidden" },
@@ -591,7 +591,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === tmp7) {
         }
-        Text = Text(5270).Text;
+        Text = Text(5271).Text;
         const obj3 = {
           variant: "heading-sm/normal",
           color: "interactive-text-default",
@@ -626,7 +626,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { textAlign: channel.textAlign };
         obj2.style = obj3;
         obj2.children = stateFromStores;
-        tmp4 = closure_11(channel(5270).Text, obj2);
+        tmp4 = closure_11(channel(5271).Text, obj2);
       }
       return tmp4;
     };
@@ -670,7 +670,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === tmp7) {
         }
-        Text = Text(5270).Text;
+        Text = Text(5271).Text;
         const obj3 = {
           variant: "heading-sm/normal",
           color: "interactive-text-default",
@@ -696,7 +696,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { textAlign: channel.textAlign };
         obj2.style = obj3;
         obj2.children = stateFromStores;
-        tmp4 = closure_11(channel(5270).Text, obj2);
+        tmp4 = closure_11(channel(5271).Text, obj2);
       }
       return tmp4;
     };

@@ -14,7 +14,7 @@ items1[2] = items3;
 const map = new Map(items1);
 const result = size.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
 
-export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
+export function getPremiumGiftingIntentAnalyticsLocation(arg0) {
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {
     ({
       FRIEND_ANNIVERSARIES_CHAT: obj2.chat,
@@ -27,15 +27,15 @@ export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGifti
     obj = {};
   }
   return obj;
-};
-export const getGiftIntentTypeForLocation = function getGiftIntentTypeForLocation(arg0) {
+}
+export function getGiftIntentTypeForLocation(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = null;
   }
   return value;
-};
-export const parseGiftIntentType = function parseGiftIntentType(giftIntentType) {
+}
+export function parseGiftIntentType(giftIntentType) {
   let tmp = null;
   if (typeof giftIntentType === "number") {
     tmp = null;
@@ -47,4 +47,4 @@ export const parseGiftIntentType = function parseGiftIntentType(giftIntentType) 
     }
   }
   return tmp;
-};
+}

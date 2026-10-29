@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -21,7 +21,7 @@ export default {
     );
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(9284, dependencyMap.paths),
+      asyncRequireImpl(9288, dependencyMap.paths),
       "game-profile-" + gameId,
       { gameId, source, sourceUserId },
       stackingBehavior,
@@ -31,7 +31,7 @@ export default {
     gameId = gameId.gameId;
     ({ source, initialScrollOffset, initialTab } = gameId);
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(9284, dependencyMap.paths), "game-profile-" + gameId, {
+    obj.openLazy(asyncRequireImpl(9288, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
       initialScrollOffset,

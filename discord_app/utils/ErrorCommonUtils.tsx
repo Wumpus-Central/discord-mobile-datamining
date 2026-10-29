@@ -5,7 +5,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
-export const getUpdatedOptions = function getUpdatedOptions(extra) {
+export function getUpdatedOptions(extra) {
   const obj = {};
   const merged = Object.assign(extra);
   extra = undefined;
@@ -26,4 +26,4 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   const merged3 = Object.assign(obj5);
   obj.extra = {};
   return obj;
-};
+}

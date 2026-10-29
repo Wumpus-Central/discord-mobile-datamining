@@ -1,5 +1,5 @@
 // discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Tracking from "../../tracking/Tracking.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -7,7 +7,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let c3 = "create-forum-post";
 let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 
-export const openCreateForumPostModal = function openCreateForumPostModal(guildId) {
+export function openCreateForumPostModal(guildId) {
   const result = Tracking.trackMobileForumComposerOpened({
     guildId: guildId.guildId,
     channelId: guildId.parentChannelId,
@@ -25,9 +25,9 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     location: guildId.analyticsLocationObject,
   };
   tmp4 = null != guildId.isEdit && guildId.isEdit;
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10123, dependencyMap.paths), guildId, c3);
-};
-export const closeCreateForumPostModal = function closeCreateForumPostModal() {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10156, dependencyMap.paths), guildId, c3);
+}
+export function closeCreateForumPostModal() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -36,4 +36,4 @@ export const closeCreateForumPostModal = function closeCreateForumPostModal() {
     const result = Tracking.trackMobileForumComposerDismissed();
   }
   ModalActionCreatorsDefault.popWithKey(c3);
-};
+}

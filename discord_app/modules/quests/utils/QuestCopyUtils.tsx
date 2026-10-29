@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ QuestHomeSortMethods: c2, RewardFilterTypes: c3, TaskFilterTypes: closure_4 } = QuestConstants);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
 
-export const getContextualEntrypointHeading = function getContextualEntrypointHeading(taskDetails) {
+export function getContextualEntrypointHeading(taskDetails) {
   ({ quest, thirdPartyTaskDetails } = taskDetails);
   const userStatus = quest.userStatus;
   let completedAt;
@@ -56,8 +56,8 @@ export const getContextualEntrypointHeading = function getContextualEntrypointHe
       return intl.formatToPlainString(util.t.EQa7os, obj);
     }
   }
-};
-export const getDisclosureText = function getDisclosureText(arg0) {
+}
+export function getDisclosureText(arg0) {
   ({ gamePublisher, gameTitle, cosponsorName } = arg0);
   let nPg6f1 = dependencyMap;
   ({ adCreativeType, isTargetedDisclosure, isContextualDisclosure, isVideoQuest } = arg0);
@@ -99,11 +99,11 @@ export const getDisclosureText = function getDisclosureText(arg0) {
       formatToPlainStringResult1 = formatToPlainString(t["5bQWNG"], obj3);
     }
   }
-};
-export const getExternalCtaLabel = function getExternalCtaLabel(quest) {
+}
+export function getExternalCtaLabel(quest) {
   return quest.config.ctaConfig.buttonLabel;
-};
-export const getSortMethodText = function getSortMethodText(dependencyMap) {
+}
+export function getSortMethodText(dependencyMap) {
   if (constants.SUGGESTED === dependencyMap) {
     const intl4 = util.intl;
     return intl4.string(util.t.gBfXPZ);
@@ -117,8 +117,8 @@ export const getSortMethodText = function getSortMethodText(dependencyMap) {
     const intl = util.intl;
     return intl.string(util.t["BB+2tX"]);
   }
-};
-export const getFilterTypeText = function getFilterTypeText(filter) {
+}
+export function getFilterTypeText(filter) {
   if (constants2.VIRTUAL_CURRENCY === filter) {
     const intl5 = util.intl;
     return intl5.string(util.t.ElYQFS);
@@ -135,8 +135,8 @@ export const getFilterTypeText = function getFilterTypeText(filter) {
     const intl = util.intl;
     return intl.string(util.t["1nJR4p"]);
   }
-};
-export const getFilterGroupHeadingText = function getFilterGroupHeadingText(arg0) {
+}
+export function getFilterGroupHeadingText(arg0) {
   if ("reward" === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.vjLqAU);
@@ -144,14 +144,14 @@ export const getFilterGroupHeadingText = function getFilterGroupHeadingText(arg0
     const intl = util.intl;
     return intl.string(util.t.Hufmss);
   }
-};
-export const getQuestUrl = function getQuestUrl(id) {
+}
+export function getQuestUrl(id) {
   return "" + location.protocol + "//" + location.host + "/quests/" + id;
-};
-export const getCtaLink = function getCtaLink(config) {
+}
+export function getCtaLink(config) {
   return config.ctaConfig.link;
-};
-export const copyShareLink = function copyShareLink(id, ctaContent) {
+}
+export function copyShareLink(id, ctaContent) {
   const obj = captureAdUserAction;
   obj.captureAdUserAction({
     type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
@@ -174,8 +174,8 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
     impressionId: ctaContent.impressionId,
   };
   ClipboardUtils.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
-};
-export const getDefaultReward = function getDefaultReward(config) {
+}
+export function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -184,4 +184,4 @@ export const getDefaultReward = function getDefaultReward(config) {
   } else {
     return config.rewardsConfig.rewards[0];
   }
-};
+}

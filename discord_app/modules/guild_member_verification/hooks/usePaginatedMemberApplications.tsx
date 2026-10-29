@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const result = fn(5038).MAX_RESULTS_PER_PAGE * fn(5038).MAX_VISIBLE_PAGES;
+const result = fn(5039).MAX_RESULTS_PER_PAGE * fn(5039).MAX_VISIBLE_PAGES;
 const metroRequire = result;
 const size = fn(2);
 const result1 = size.fileFinishedImporting(
@@ -12,7 +12,7 @@ const result1 = size.fileFinishedImporting(
 );
 
 export const MEMBER_APPLICATION_FETCH_LIMIT = result;
-export const usePaginatedMemberApplications = function usePaginatedMemberApplications(guildId) {
+export function usePaginatedMemberApplications(guildId) {
   guildId = guildId.guildId;
   const guildJoinRequests = guildId.guildJoinRequests;
   error = undefined;
@@ -37,7 +37,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -70,8 +70,8 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   ref2 = 2;
                   ref.current = true;
                   const tmp51 = (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
-                    const tmp2 = status2 === guildId(5038).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (guildId2 === guildId(5038).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                    const tmp2 = status2 === guildId(5039).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                    if (guildId2 === guildId(5039).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                       if (!flag) {
                         if (0 !== status.length) {
                           const obj2 = {
@@ -170,4 +170,4 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
     }, items),
     error,
   };
-};
+}

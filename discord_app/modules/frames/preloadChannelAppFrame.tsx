@@ -11,14 +11,14 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1084);
 ({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/preloadChannelAppFrame.tsx");
 
-export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
+export function preloadChannelAppFrame(id) {
   const channel = ChannelStore.getChannel(id);
   let application_id;
   if (channel != null) {
@@ -58,4 +58,4 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
       }
     }
   }
-};
+}

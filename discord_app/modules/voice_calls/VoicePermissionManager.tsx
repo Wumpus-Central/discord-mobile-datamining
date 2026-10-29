@@ -11,7 +11,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
 const InputModes = fn(1084).InputModes;
-const NativePermissionTypes = fn(7903).NativePermissionTypes;
+const NativePermissionTypes = fn(7926).NativePermissionTypes;
 let c11 = null;
 class VoicePermissionManager extends tmp2 {
   constructor() {
@@ -87,7 +87,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
 
 export default voicePermissionManager;
-export const shouldImmediatelyRequestVoicePermissions = function shouldImmediatelyRequestVoicePermissions(id, id2) {
+export function shouldImmediatelyRequestVoicePermissions(id, id2) {
   const channel = ChannelStore.getChannel(id2);
   let isListenModeCapableResult;
   if (channel != null) {
@@ -98,4 +98,4 @@ export const shouldImmediatelyRequestVoicePermissions = function shouldImmediate
     isSpeakerResult = StageChannelRoleStore.isSpeaker(id, id2);
   }
   return isSpeakerResult;
-};
+}

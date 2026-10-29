@@ -6,14 +6,14 @@ import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.na
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const useWindowDimensionsDefault = tmp4(1496);
-const useChatLayoutDefault = tmp4(5189);
-const YouScreenDefault = tmp4(18518);
+const useWindowDimensionsDefault = tmp4(1497);
+const useChatLayoutDefault = tmp4(5190);
+const YouScreenDefault = tmp4(18752);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11222).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11276).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" },
   androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none },

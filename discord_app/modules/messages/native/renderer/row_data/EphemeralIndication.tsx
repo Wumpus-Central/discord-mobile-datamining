@@ -10,7 +10,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");
 
-export const createEphemeralIndication = function createEphemeralIndication(message) {
+export function createEphemeralIndication(message) {
   if (message.hasFlag(constants2.EPHEMERAL)) {
     const interactionMetadata = message.interactionMetadata;
     let ephemerality_reason;
@@ -54,4 +54,4 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       return obj5;
     }
   }
-};
+}

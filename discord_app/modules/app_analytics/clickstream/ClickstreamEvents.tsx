@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");
 
-export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, arr) {
+export function getClickstreamDrainEvent(arg0, arr) {
   new Date();
   if (AnalyticEvents.GUILD_VIEWED_CLICKSTREAM === arg0) {
     const obj2 = {
@@ -63,4 +63,4 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, 
     const error = new Error("getClickstreamDrainEvent: Unknown event: " + arg0);
     throw error;
   }
-};
+}

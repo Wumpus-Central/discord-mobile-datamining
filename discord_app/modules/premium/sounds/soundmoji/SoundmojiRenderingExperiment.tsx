@@ -11,9 +11,9 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiRenderingExperiment.tsx");
 
-export const getSoundmojiRenderingExperiment = function getSoundmojiRenderingExperiment(location) {
+export function getSoundmojiRenderingExperiment(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}
 export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSoundmojiRenderingExperiment(location) {
       const cResult = c.c(2);

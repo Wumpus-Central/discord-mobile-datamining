@@ -8,7 +8,7 @@ const GuildVisibility = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO
 const result = size.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
 
 export { GuildVisibility };
-export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
+export function getGuildTraits(fromGuildProfileResult) {
   const set = new Set(fromGuildProfileResult.features);
   let APPLY_TO_JOIN = obj.INVITE_ONLY;
   if (set.has(constants.COMMUNITY)) {
@@ -62,8 +62,8 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
     APPLY_TO_JOIN = tmp.APPLY_TO_JOIN;
   }
   tmp3 = set.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL) && set.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
-};
-export const isPremiumGuild = function isPremiumGuild(has) {
+}
+export function isPremiumGuild(has) {
   let premiumTier = has;
   if (null == has) {
     return tmp;
@@ -83,8 +83,8 @@ export const isPremiumGuild = function isPremiumGuild(has) {
     }
     obj = GuildRecordUtils;
   }
-};
-export const isDiscoverableGuild = function isDiscoverableGuild(features) {
+}
+export function isDiscoverableGuild(features) {
   let hasItem = null != features;
   if (hasItem) {
     const _Set = Set;
@@ -92,4 +92,4 @@ export const isDiscoverableGuild = function isDiscoverableGuild(features) {
     hasItem = set.has(constants.DISCOVERABLE);
   }
   return hasItem;
-};
+}

@@ -4,8 +4,8 @@ import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7779).ACCEPT_INVITE_MODAL_KEY;
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const ACCEPT_INVITE_MODAL_KEY = fn(7801).ACCEPT_INVITE_MODAL_KEY;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/getScreenAnalyticsName.tsx");
 
@@ -68,7 +68,7 @@ export default function getScreenAnalyticsName() {
     tmpResult = NavigationRouteUtils;
   }
 }
-export const getChannelScreenName = function getChannelScreenName(channelId) {
+export function getChannelScreenName(channelId) {
   if (isStaticChannelRoute(channelId)) {
     return channelId;
   } else {
@@ -99,4 +99,4 @@ export const getChannelScreenName = function getChannelScreenName(channelId) {
     }
     return str;
   }
-};
+}

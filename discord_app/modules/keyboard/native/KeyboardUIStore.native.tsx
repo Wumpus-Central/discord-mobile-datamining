@@ -9,7 +9,7 @@ import KeyboardTypes from "KeyboardTypes.tsx";
 import ChatInputFocused from "ChatInputFocused.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NativeSafeAreaInsetsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01644_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01645_KeyboardChatScrollView.js";
 import KeyboardStateDebuggingDefault from "../KeyboardStateDebugging.tsx";
 import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
 import 00570__ from "../../../../_runtime/metro/00570__.js";
@@ -276,7 +276,7 @@ const subscription = SafeAreaStore.subscribe(() => {
 let result = size.fileFinishedImporting("modules/keyboard/native/KeyboardUIStore.native.tsx");
 
 export default keyboardContexts;
-export const setKeyboardType = function setKeyboardType(keyboardParams) {
+export function setKeyboardType(keyboardParams) {
   _require = keyboardParams;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
@@ -308,8 +308,8 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
     tmp = APP_ENTRY_KEYS[Symbol.iterator]();
   }));
   const obj = require("ReactBatchUpdates");
-};
-export const setKeyboardContext = function setKeyboardContext(EXPRESSION, arg1) {
+}
+export function setKeyboardContext(EXPRESSION, arg1) {
   closure_0 = EXPRESSION;
   closure_1 = arg1;
   let DEFAULT_APP_ENTRY_KEY = arg2;
@@ -330,14 +330,14 @@ export const setKeyboardContext = function setKeyboardContext(EXPRESSION, arg1) 
     obj2.byAppEntry = obj3;
     return obj2;
   });
-};
-export const addKeyboardWillOpenChangedListener = function addKeyboardWillOpenChangedListener(arg0) {
+}
+export function addKeyboardWillOpenChangedListener(arg0) {
   closure_0 = arg0;
   set1.add(arg0);
   return () => set1.delete(closure_0);
-};
-export const addKeyboardTypeChangedListener = function addKeyboardTypeChangedListener(arg0) {
+}
+export function addKeyboardTypeChangedListener(arg0) {
   closure_0 = arg0;
   set.add(arg0);
   return () => set.delete(closure_0);
-};
+}

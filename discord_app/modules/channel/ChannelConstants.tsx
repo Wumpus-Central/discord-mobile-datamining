@@ -53,19 +53,19 @@ const result = size.fileFinishedImporting("modules/channel/ChannelConstants.tsx"
 
 export { StaticChannelRoute };
 export const StaticChannelRoutes = set;
-export const isStaticChannelRoute = function isStaticChannelRoute(channelId) {
+export function isStaticChannelRoute(channelId) {
   return set.has(channelId);
-};
-export const buildGuildStaticChannelId = function buildGuildStaticChannelId(arg0, arg1) {
+}
+export function buildGuildStaticChannelId(arg0, arg1) {
   return "" + arg0 + "-" + arg1;
-};
-export const isGuildHomeChannel = function isGuildHomeChannel(channelId) {
+}
+export function isGuildHomeChannel(channelId) {
   let hasItem;
   if (channelId != null) {
     hasItem = channelId.includes(obj.GUILD_HOME);
   }
   return hasItem;
-};
+}
 export const ChannelFlags = frozen;
 export const MAX_CHANNEL_TOPIC_LENGTH = 1024;
 export const MAX_FORUM_CHANNEL_TOPIC_LENGTH = 4096;

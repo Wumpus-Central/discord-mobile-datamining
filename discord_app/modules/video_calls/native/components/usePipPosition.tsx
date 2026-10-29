@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = _slicedToArray(
         noop.useState(() => {
           const Storage = closure_0(510).Storage;
-          return Storage.get(CameraPreviewPosition, closure_0(11414).DEFAULT_PIP_POSITION);
+          return Storage.get(CameraPreviewPosition, closure_0(11468).DEFAULT_PIP_POSITION);
         }),
         2,
       );

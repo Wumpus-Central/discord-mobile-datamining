@@ -8,7 +8,7 @@ import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(9747).SearchResultContentEntityTypes;
+const constants = fn(9779).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           smartSearchStatus === tmp(tmp2[15]).SmartSearchStatus.LOADED;
       }
     };
-export const trackMessageItemPress = function trackMessageItemPress(messageId) {
+export function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   const message = SearchMessageStore.getMessage(messageId);
@@ -503,4 +503,4 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   obj2.index = index;
   obj2.entityType = constants.MESSAGE;
   const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
-};
+}

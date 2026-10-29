@@ -49,7 +49,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -163,7 +163,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");
 
-export const fetchGuildHomeSettings = function fetchGuildHomeSettings() {
+export function fetchGuildHomeSettings() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -172,8 +172,8 @@ export const fetchGuildHomeSettings = function fetchGuildHomeSettings() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchNewMemberActions = function fetchNewMemberActions() {
+}
+export function fetchNewMemberActions() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -182,8 +182,8 @@ export const fetchNewMemberActions = function fetchNewMemberActions() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const clearNewMemberActions = function clearNewMemberActions() {
+}
+export function clearNewMemberActions() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -192,8 +192,8 @@ export const clearNewMemberActions = function clearNewMemberActions() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const selectHomeResourceChannel = function selectHomeResourceChannel(guild_id, channelId) {
+}
+export function selectHomeResourceChannel(guild_id, channelId) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -219,8 +219,8 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(guil
       transitionToChannel.transitionToChannel(channelId, { navigationReplace: false });
     }
   }
-};
-export const selectNewMemberActionChannel = function selectNewMemberActionChannel(guild_id, id) {
+}
+export function selectNewMemberActionChannel(guild_id, id) {
   const channel = ChannelStore.getChannel(id);
   const actionForChannel = GuildOnboardingHomeSettingsStore.getActionForChannel(guild_id, id);
   let isFullServerPreviewResult = null == guild_id;
@@ -243,8 +243,8 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
     AnalyticsUtilsDefault.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj2);
   }
   transitionToChannel.transitionToChannel(id);
-};
-export const completeNewMemberAction = function completeNewMemberAction(guildId, channelId) {
+}
+export function completeNewMemberAction(guildId, channelId) {
   DispatcherDefault.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId });
   if (!ImpersonateStore.isFullServerPreview(guildId)) {
     const channel = ChannelStore.getChannel(channelId);
@@ -280,4 +280,4 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
     HTTP.post(obj5);
   }
   const obj2 = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };
-};
+}

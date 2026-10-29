@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
-export const isLinkTrusted = function isLinkTrusted(target) {
+export function isLinkTrusted(target) {
   if (null == target.target) {
     return tmp;
   } else {
@@ -17,4 +17,4 @@ export const isLinkTrusted = function isLinkTrusted(target) {
     }
     title = target.title;
   }
-};
+}

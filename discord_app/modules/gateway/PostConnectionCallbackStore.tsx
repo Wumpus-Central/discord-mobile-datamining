@@ -21,7 +21,7 @@ const subscription2 = Dispatcher.subscribe("NUF_COMPLETE", processCallbacks);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/PostConnectionCallbackStore.tsx");
 
-export const addPostConnectionCallback = function addPostConnectionCallback(arg0) {
+export function addPostConnectionCallback(arg0) {
   if (GatewayConnectionStore.isConnectedOrOverlay()) {
     if (null == NewUserStore.getType()) {
       closure_0 = arg0;
@@ -30,4 +30,4 @@ export const addPostConnectionCallback = function addPostConnectionCallback(arg0
     }
   }
   closure_2.push(arg0);
-};
+}

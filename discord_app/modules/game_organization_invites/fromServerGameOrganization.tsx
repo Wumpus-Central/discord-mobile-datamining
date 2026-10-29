@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/fromServerGameOrganization.tsx");
 
-export const fromServerGameOrganization = function fromServerGameOrganization(game_organization) {
+export function fromServerGameOrganization(game_organization) {
   return {
     id: game_organization.game_organization_id,
     name: game_organization.name,
@@ -13,11 +13,11 @@ export const fromServerGameOrganization = function fromServerGameOrganization(ga
     memberCount: game_organization.member_count,
     maxMembers: game_organization.max_members,
   };
-};
-export const fromServerGameOrganizationApplication = function fromServerGameOrganizationApplication(application) {
+}
+export function fromServerGameOrganizationApplication(application) {
   return { id: application.id, name: application.name, iconUrl: application.icon_url };
-};
-export const fromServerGameOrganizationGuild = function fromServerGameOrganizationGuild(guild) {
+}
+export function fromServerGameOrganizationGuild(guild) {
   return {
     id: guild.id,
     name: guild.name,
@@ -25,4 +25,7 @@ export const fromServerGameOrganizationGuild = function fromServerGameOrganizati
     memberCount: guild.approximate_member_count,
     presenceCount: guild.approximate_presence_count,
   };
-};
+}
+export function fromServerGameOrganizationCharacter(id) {
+  return { id: id.id, name: id.name, eligible: id.eligible, description: id.description, iconUrl: id.icon_url };
+}

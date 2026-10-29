@@ -5,14 +5,14 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import ReferencedMessageStore from "../../../../replies/ReferencedMessageStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7731).ReferencedMessageState;
+const ReferencedMessageState = fn(7754).ReferencedMessageState;
 const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx",
 );
 
-export const createThreadStarterSystemMessage = function createThreadStarterSystemMessage(message) {
+export function createThreadStarterSystemMessage(message) {
   message = message.message;
   const type = message.type;
   _modDef38(
@@ -28,4 +28,4 @@ export const createThreadStarterSystemMessage = function createThreadStarterSyst
     tmp5 = obj;
   }
   return tmp5;
-};
+}

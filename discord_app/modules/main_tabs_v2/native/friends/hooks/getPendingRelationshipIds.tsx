@@ -8,7 +8,7 @@ const RelationshipTypes = fn(1084).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/hooks/getPendingRelationshipIds.tsx");
 
-export const getPendingRelationshipIds = function getPendingRelationshipIds(mutableRelationships) {
+export function getPendingRelationshipIds(mutableRelationships) {
   const pendingIncomingIds = [];
   const pendingOutgoingIds = [];
   const spamIds = [];
@@ -50,4 +50,4 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
   const reversed1 = pendingOutgoingIds.reverse();
   const reversed2 = spamIds.reverse();
   return { pendingIncomingIds, pendingOutgoingIds, spamIds, ignoredUserIds };
-};
+}

@@ -36,7 +36,7 @@ let closure_13 = async function _pickImage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ let closure_13 = async function _pickImage() {
             closure_130_0(obj);
           }
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp17) {
         c4 = tmp;
@@ -194,7 +194,7 @@ let closure_3 = ["description", "imageUploadSize", "image", "setImage", "disable
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-            const tmp24 = closure_8(tmp(5280).Button, obj5);
+            const tmp24 = closure_8(tmp(5281).Button, obj5);
             cResult[15] = tmp15;
             cResult[16] = tmp5;
             cResult[17] = tmp14;
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp4,
           };
-          const tmp21 = closure_8(tmp(5270).Text, obj6);
+          const tmp21 = closure_8(tmp(5271).Text, obj6);
           cResult[12] = tmp4;
           cResult[13] = tmp13.imageDescription;
           cResult[14] = tmp21;
@@ -397,13 +397,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: tmp2.imageSelectionRow, children: null };
       const obj2 = { style: tmp2.buttonColumn, children: null };
       const items = [
-        closure_8(tmp6(5270).Text, {
+        closure_8(tmp6(5271).Text, {
           style: tmp2.imageDescription,
           variant: "text-sm/medium",
           color: "text-default",
           children: children.description,
         }),
-        closure_8(tmp6(5280).Button, {
+        closure_8(tmp6(5281).Button, {
           text: stringResult,
           variant: "secondary",
           onPress: function handleSelectImage() {

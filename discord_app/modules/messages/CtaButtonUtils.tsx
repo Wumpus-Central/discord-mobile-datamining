@@ -17,7 +17,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/CtaButtonUtils.tsx");
 
 export { CtaButtonType };
-export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
+export function getCtaButtonType(id, channel_id) {
   const obj = useShouldRenderReportFalsePositiveButton;
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
@@ -33,7 +33,7 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
     tmpResult = AgeVerificationSystemNotificationUtils;
   }
   return CONNECT_TO_TEEN;
-};
+}
 export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCtaButtonType(id, channel_id) {
       const obj = c;

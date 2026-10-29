@@ -1266,7 +1266,7 @@ export const Decoders = obj3;
 export const VideoStoppedReasons = obj6;
 export { parseEncoder };
 export { parseDecoder };
-export const parseCodecType = function parseCodecType(name) {
+export function parseCodecType(name) {
   if (null == name) {
     let AV1 = obj.UNKNOWN;
   } else {
@@ -1289,7 +1289,7 @@ export const parseCodecType = function parseCodecType(name) {
     }
   }
   return AV1;
-};
+}
 export { RawVideoStats };
 export { InboundStats };
 export { OutboundStats };

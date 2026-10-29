@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/premium/getTrialCtaOverride.tsx");
 
-export const getTrialCtaOverride = function getTrialCtaOverride(premiumTrialOffer, TIER_2) {
+export function getTrialCtaOverride(premiumTrialOffer, TIER_2) {
   let result = null;
   if (null != TIER_2) {
     let isReferralTrial;
@@ -23,4 +23,4 @@ export const getTrialCtaOverride = function getTrialCtaOverride(premiumTrialOffe
     }
   }
   return result;
-};
+}

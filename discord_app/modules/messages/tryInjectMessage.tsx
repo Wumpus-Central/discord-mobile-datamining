@@ -13,7 +13,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/tryInjectMessage.tsx");
 
-export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id2) {
+export function tryCreateInjectedMessage(id, id2) {
   if (map.get(id2.id) === id.id) {
     const obj3 = {
       channelId: id2.id,
@@ -98,4 +98,4 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id
     tmp22 = obj5;
   }
   return tmp22;
-};
+}

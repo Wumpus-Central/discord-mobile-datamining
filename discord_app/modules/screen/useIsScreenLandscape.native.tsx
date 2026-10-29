@@ -9,13 +9,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
 
-export const getIsScreenLandscape = function getIsScreenLandscape() {
+export function getIsScreenLandscape() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "main";
   }
   return DimensionsStore.getState().byAppEntry[str].screenIsLandscape;
-};
+}
 export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsScreenLandscape() {
       const cResult = c.c(2);

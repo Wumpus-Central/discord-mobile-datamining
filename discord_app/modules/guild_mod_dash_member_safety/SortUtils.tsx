@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/SortUtils.tsx");
 
-export const getSortValueForMember = function getSortValueForMember(joinedAt, ORDER_BY_UNSPECIFIED) {
+export function getSortValueForMember(joinedAt, ORDER_BY_UNSPECIFIED) {
   const joinedAtTimestamp = guild_mod_dash_member_safety_DateUtils.getJoinedAtTimestamp(joinedAt.joinedAt);
   if (MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC === ORDER_BY_UNSPECIFIED) {
     return joinedAtTimestamp;
@@ -20,4 +20,4 @@ export const getSortValueForMember = function getSortValueForMember(joinedAt, OR
   } else {
     return -joinedAtTimestamp;
   }
-};
+}

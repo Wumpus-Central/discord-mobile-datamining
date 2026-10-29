@@ -9,7 +9,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({
   HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4,
   HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty,
@@ -127,7 +127,7 @@ export const useTrackHexagonCampaignContentViewed = ReactCompilerGating.isReactC
         }
       }, items);
     };
-export const trackHexagonCampaignPerkAction = function trackHexagonCampaignPerkAction(contentSurface) {
+export function trackHexagonCampaignPerkAction(contentSurface) {
   ({ perks, content, sourceQuestContent } = contentSurface);
   if (sourceQuestContent === undefined) {
     sourceQuestContent = content;
@@ -143,4 +143,4 @@ export const trackHexagonCampaignPerkAction = function trackHexagonCampaignPerkA
   obj2.content_surface = contentSurface.contentSurface;
   obj2.ad_content_id = ad_content_id;
   obj.track(AnalyticEvents.QUEST_PROMOTIONAL_EVENT_USER_ACTION, obj2);
-};
+}

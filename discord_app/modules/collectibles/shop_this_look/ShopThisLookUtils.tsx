@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
-export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {
+export function isShoppableCollectibleSku(stateFromStores) {
   type = stateFromStores;
   if (null == stateFromStores) {
     return tmp;
@@ -31,4 +31,4 @@ export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stat
       flag = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
     }
   }
-};
+}

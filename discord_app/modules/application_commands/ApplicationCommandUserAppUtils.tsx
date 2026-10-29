@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
-export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {
+export function getEphemeralReasonMessage(ephemerality_reason1) {
   if (EphemeralMessageReason.EphemeralMessageReason.FEATURE_LIMITED === ephemerality_reason1) {
     const intl19 = util.intl;
     return intl19.string(util.t.WCvmrR);
@@ -64,4 +64,4 @@ export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephe
     const intl = util.intl;
     return intl.string(util.t["v/OAcs"]);
   }
-};
+}

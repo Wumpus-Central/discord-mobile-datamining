@@ -15,7 +15,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp35) {
       c5 = tmp;
       throw tmp35;
@@ -107,7 +107,7 @@ const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");
 
-export const beginConsoleTransfer = function beginConsoleTransfer() {
+export function beginConsoleTransfer() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -116,4 +116,4 @@ export const beginConsoleTransfer = function beginConsoleTransfer() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

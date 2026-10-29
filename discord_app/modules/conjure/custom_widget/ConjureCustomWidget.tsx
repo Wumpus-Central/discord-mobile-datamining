@@ -16,7 +16,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
       const cResult = require("c").c(5);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, tmp(1452).ApexExperimentStore];
+        const items = [GuildStore, tmp(1453).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -65,7 +65,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
         items1,
       );
     };
-export const composeConjureCustomWidgetPrompt = function composeConjureCustomWidgetPrompt(arg0) {
+export function composeConjureCustomWidgetPrompt(arg0) {
   const items = [
     "Build a profile card (an application profile widget) for my Discord profile.",
     "Read the data from the public source below \u2014 it must be reachable without a login.",
@@ -74,4 +74,4 @@ export const composeConjureCustomWidgetPrompt = function composeConjureCustomWid
     arg0,
   ];
   return items.join("\n");
-};
+}

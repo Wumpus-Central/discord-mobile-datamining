@@ -92,9 +92,9 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(17636);
+const RegistrationUIStore = fn(17874);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(17637);
+const RegistrationConstants = fn(17875);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -102,7 +102,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
-export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFieldsCompleted(email, isConsentRequired) {
+export function hasAllRegistrationFieldsCompleted(email, isConsentRequired) {
   isConsentRequired = isConsentRequired.isConsentRequired;
   let tmp = null != email.email || null != email.phoneToken;
   if (tmp) {
@@ -129,7 +129,7 @@ export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFiel
     tmp = tmp2;
   }
   return tmp;
-};
+}
 export { trackRegTransition };
 export function getTrackRegTransition(arg0) {
   return (arg0) => {
@@ -210,9 +210,9 @@ export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled
           tmp();
         }
       };
-      return jsx(require("../../../../_runtime/metro/06969__.js").HeaderBackButton, {});
+      return jsx(require("../../../../_runtime/metro/06993__.js").HeaderBackButton, {});
     };
-export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
+export function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {
     const _HermesInternal7 = HermesInternal;
     return "" + error_code + ": Captcha was not completed";
@@ -244,4 +244,4 @@ export const getCommonErrorDetails = function getCommonErrorDetails(error_code) 
     const _HermesInternal = HermesInternal;
     return "" + error_code + ": Phone number already associated with an account";
   }
-};
+}

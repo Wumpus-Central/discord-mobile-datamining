@@ -14,18 +14,18 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(9746);
+const ChannelDetailsStore = fn(9778);
 ({
   deleteChannelDetailsSearchState: closure_7,
   useChannelDetailsSearchActiveSource: closure_8,
   useIsChannelDetailsSearchActive: closure_9,
 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10058);
+const ChannelDetailsConstants = fn(10090);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   detailsContainer: null,
   information: null,

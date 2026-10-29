@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
-export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
+export function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {
     return null;
   } else {
@@ -27,4 +27,4 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
     ({ name: obj3.subtitle, type: obj3.type } = subtitle);
     return { subtitle: null, type: null };
   }
-};
+}

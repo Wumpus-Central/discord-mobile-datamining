@@ -24,7 +24,7 @@ const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
 ({ SEARCH_DATE_FORMAT: metroRequire, SearchTokenTypes: closure_7, SearchTypes: closure_8 } = Constants);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx");
 
-export const getSearchTokenLabel = function getSearchTokenLabel(searchContext, item) {
+export function getSearchTokenLabel(searchContext, item) {
   if (constants.FILTER_FROM === item) {
     const intl9 = util.intl;
     return intl9.string(util.t["6iuVMn"]);
@@ -61,8 +61,8 @@ export const getSearchTokenLabel = function getSearchTokenLabel(searchContext, i
     const error = new Error("[getSearchTokenLabel] Unhandled search token type: " + item);
     throw error;
   }
-};
-export const getSearchTokenSubLabel = function getSearchTokenSubLabel(cResult) {
+}
+export function getSearchTokenSubLabel(cResult) {
   if (constants.FILTER_FROM === cResult) {
     const intl8 = util.intl;
     return intl8.string(util.t.kkGlww);
@@ -93,8 +93,8 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(cResult) {
     const error = new Error("[getSearchTokenSubLabel] Unhandled search token type: " + cResult);
     throw error;
   }
-};
-export const getSearchTokenIcon = function getSearchTokenIcon(cResult) {
+}
+export function getSearchTokenIcon(cResult) {
   if (constants.FILTER_FROM === cResult) {
     return UserIcon.UserIcon;
   } else if (constants.FILTER_HAS === cResult) {
@@ -117,8 +117,8 @@ export const getSearchTokenIcon = function getSearchTokenIcon(cResult) {
     const error = new Error("[getSearchTokenIcon] Unhandled search token type: " + cResult);
     throw error;
   }
-};
-export const getSearchTokenPressHandler = function getSearchTokenPressHandler(searchContext, token, CONTEXT_MENU) {
+}
+export function getSearchTokenPressHandler(searchContext, token, CONTEXT_MENU) {
   closure_0 = searchContext;
   closure_1 = token;
   closure_2 = CONTEXT_MENU;
@@ -211,11 +211,11 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
     });
     SearchPlatformUtilsDefault.syncAutocomplete(searchTokenType);
   };
-};
-export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
+}
+export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(13464));
+  const keys = Object.keys(items(13697));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;
@@ -232,4 +232,4 @@ export const getSearchFilterSuggestions = function getSearchFilterSuggestions(te
     obj = SearchTokens;
   });
   return items;
-};
+}

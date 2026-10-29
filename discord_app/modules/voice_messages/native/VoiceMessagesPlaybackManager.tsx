@@ -73,12 +73,12 @@ const voiceMessagesPlaybackManager = new VoiceMessagesPlaybackManager();
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx");
 
 export default voiceMessagesPlaybackManager;
-export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
+export function pauseCurrentAudioPlayer(arg0) {
   NativeAudioPlayerModuleDefault.pauseCurrentPlayer(arg0);
-};
-export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
+}
+export function playCurrentAudioPlayer() {
   const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
-};
-export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
+}
+export function handleVoiceMessageDeleted(id) {
   const result = NativeAudioPlayerModuleDefault.handleVoiceMessageDeleted(id);
-};
+}

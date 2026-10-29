@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
 
-export const getCardProductName = function getCardProductName(product) {
+export function getCardProductName(product) {
   if (null == product) {
     let str2 = "";
     if (null != product) {
@@ -34,8 +34,8 @@ export const getCardProductName = function getCardProductName(product) {
     }
     name = product.name;
   }
-};
-export const getProductName = function getProductName(product) {
+}
+export function getProductName(product) {
   if (null == product) {
     return "";
   } else {
@@ -53,8 +53,8 @@ export const getProductName = function getProductName(product) {
     }
     name = product.name;
   }
-};
-export const getPurchasedProductName = function getPurchasedProductName(baseVariantName) {
+}
+export function getPurchasedProductName(baseVariantName) {
   if (null == baseVariantName) {
     return "";
   } else {
@@ -70,8 +70,8 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
     }
     name = baseVariantName.name;
   }
-};
-export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(product) {
+}
+export function getProductNameAndTypeLabel(product) {
   if (null == product) {
     const productType = CollectiblesProductUtils.getProductType(product);
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === productType) {
@@ -106,4 +106,4 @@ export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(pr
     }
     name = product.name;
   }
-};
+}

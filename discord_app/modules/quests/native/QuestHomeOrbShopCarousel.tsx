@@ -17,7 +17,7 @@ import BountyStore from "../BountyStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6745).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6768).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let PX_20 = nativeDefault.space.PX_20;
@@ -64,8 +64,8 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: { width: PX_12 } };
       return React6(View, obj);
     };
-const data = Array.from({ length: fn(16627).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(5004);
+const data = Array.from({ length: fn(16865).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const createStyles = fn(5005);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
   const obj2 = { marginTop: nativeDefault.space.PX_32 };
@@ -111,7 +111,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       });
     };
 fn(558);
-let obj3 = { length: fn(16627).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
+let obj3 = { length: fn(16865).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? function QuestHomeOrbShopCarouselHeading(arg0) {
@@ -478,17 +478,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = undefined !== embedded && embedded;
       let ONYX = obtainableOrbRewards(504).useStateFromStores(tmp8, tmp9);
       if (tmp5) {
-        ONYX = obtainableOrbRewards(16141).ThemeTypes.ONYX;
+        ONYX = obtainableOrbRewards(16378).ThemeTypes.ONYX;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(16641).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+        let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(16879).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
       } else {
-        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(9388).COLLECTIBLES_SHOP_CARD_WIDTH;
+        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(9420).COLLECTIBLES_SHOP_CARD_WIDTH;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(16641).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
+        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(16879).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
       } else {
-        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(9388).COLLECTIBLES_SHOP_CARD_HEIGHT;
+        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(9420).COLLECTIBLES_SHOP_CARD_HEIGHT;
       }
       if (cResult[2] !== COLLECTIBLES_SHOP_CARD_WIDTH) {
         const sum = COLLECTIBLES_SHOP_CARD_WIDTH + PX_12;

@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
-export const getBadgeTooltip = function getBadgeTooltip(badgeCategory, visibility) {
+export function getBadgeTooltip(badgeCategory, visibility) {
   if (visibility === GuildTraits.GuildVisibility.PUBLIC) {
     const intl3 = util.intl;
     let stringResult = intl3.string(util.t.op2cJ6);
@@ -69,4 +69,4 @@ export const getBadgeTooltip = function getBadgeTooltip(badgeCategory, visibilit
     obj.tooltipTitle = intl4.string(util.t["iZRkC/"]);
     return obj;
   }
-};
+}

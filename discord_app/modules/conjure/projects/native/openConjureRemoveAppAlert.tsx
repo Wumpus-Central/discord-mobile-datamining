@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
@@ -232,7 +232,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     } else {
                       try {
@@ -300,7 +300,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                               const obj3 = tmp2(first[7]);
                             }
                             v3 = 3;
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "IconComponent" };
                           }
                         }
                       } catch (tmp40) {
@@ -378,7 +378,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -398,13 +398,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp37 = tmp3;
                 let deleteProject = dependencyMap;
                 if (_slicedToArray) {
-                  tmp37 = tmp37(10757);
+                  tmp37 = tmp37(10832);
                   deleteProject = tmp37.deleteProject;
                   let deleteProjectResult = deleteProject(user.id);
                 } else {
                   const obj5 = { alsoRemovePreviewBot };
-                  deleteProjectResult = tmp37(10823).unpublishProject(user.id, obj5);
-                  const tmp37Result = tmp37(10823);
+                  deleteProjectResult = tmp37(10899).unpublishProject(user.id, obj5);
+                  const tmp37Result = tmp37(10899);
                 }
                 deleteProjectResult.catch(() => null);
                 dependencyMap = 1;
@@ -425,7 +425,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (true !== ok) {
                 const intl = tmp3(1125).intl;
-                const tmp23 = tmp2(3863);
+                const tmp23 = tmp2(3864);
                 if (closure_129_4) {
                   let PJ2Fkn = tmp23["0XDHob"];
                 } else {
@@ -439,13 +439,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 if (!closure_129_4) {
                   const obj7 = { text: null, variant: "success" };
-                  const obj = tmp2(5699);
-                  obj7.text = tmp3(12297).conjureRemoveAppSuccess(closure_129_1);
+                  const obj = tmp2(5701);
+                  obj7.text = tmp3(12351).conjureRemoveAppSuccess(closure_129_1);
                   obj.open("CONJURE_APP_REMOVED", obj7);
-                  const obj3 = tmp3(12297);
+                  const obj3 = tmp3(12351);
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
           } catch (tmp40) {

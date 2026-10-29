@@ -13,13 +13,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["initialRouteName"];
 let closure_4 = ["initialRouteName"];
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9777);
+const NativeStackNavigator = fn(9809);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   navigator: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -57,16 +57,16 @@ export default noop.memo(
         const analyticsLocations = useAnalyticsLocationsDefault(
           AnalyticsLocationDefault.APP_LAUNCHER,
         ).analyticsLocations;
-        const navigationContainerRef = entrypoint(1503).useNavigationContainerRef();
-        const obj2 = entrypoint(1503);
-        const trackNavigationBackPress = entrypoint(6011).useTrackNavigationBackPress(navigationContainerRef);
+        const navigationContainerRef = entrypoint(1504).useNavigationContainerRef();
+        const obj2 = entrypoint(1504);
+        const trackNavigationBackPress = entrypoint(6013).useTrackNavigationBackPress(navigationContainerRef);
         const tmp8 = closure_12();
-        const obj3 = entrypoint(6011);
+        const obj3 = entrypoint(6013);
         if (overrideParams == null) {
-          overrideParams = obj4.useKeyboardContextForType(entrypoint(1628).KeyboardTypes.APP_LAUNCHER);
+          overrideParams = obj4.useKeyboardContextForType(entrypoint(1629).KeyboardTypes.APP_LAUNCHER);
         }
-        obj4 = entrypoint(5197);
-        const accessibilityNativeStackOptions = entrypoint(7131).useAccessibilityNativeStackOptions();
+        obj4 = entrypoint(5198);
+        const accessibilityNativeStackOptions = entrypoint(7155).useAccessibilityNativeStackOptions();
         if (cResult[0] !== overrideParams) {
           const initialRouteName = overrideParams.initialRouteName;
           const tmp14 = _objectWithoutProperties(overrideParams, closure_3);
@@ -203,7 +203,7 @@ export default noop.memo(
                                                                 }
                                                                 const obj5 = { value: tmp70, children: tmp61 };
                                                                 const tmp73 = closure_9(
-                                                                  entrypoint(11207).AppLauncherContext.Provider,
+                                                                  entrypoint(11261).AppLauncherContext.Provider,
                                                                   obj5,
                                                                 );
                                                                 cResult[66] = tmp70;
@@ -255,15 +255,15 @@ export default noop.memo(
                                           }
                                           const obj8 = { children: null };
                                           const obj9 = { ref: navigationContainerRef, children: tmp58 };
-                                          obj8.children = closure_9(entrypoint(1503).NavigationContainer, obj9);
-                                          const tmp63 = closure_9(entrypoint(1503).NavigationIndependentTree, obj8);
+                                          obj8.children = closure_9(entrypoint(1504).NavigationContainer, obj9);
+                                          const tmp63 = closure_9(entrypoint(1504).NavigationIndependentTree, obj8);
                                           cResult[45] = navigationContainerRef;
                                           cResult[46] = tmp58;
                                           cResult[47] = tmp63;
                                           tmp61 = tmp63;
                                         }
                                         const obj10 = { value: analyticsLocations, children: tmp54 };
-                                        const tmp60 = closure_9(entrypoint(7289).AnalyticsLocationProvider, obj10);
+                                        const tmp60 = closure_9(entrypoint(7313).AnalyticsLocationProvider, obj10);
                                         cResult[42] = analyticsLocations;
                                         cResult[43] = tmp54;
                                         cResult[44] = tmp60;
@@ -386,7 +386,7 @@ export default noop.memo(
         cResult[7] = tmp8.navigator;
         cResult[8] = items2;
         tmp18 = items2;
-        const tmpResult = entrypoint(7131);
+        const tmpResult = entrypoint(7155);
       }
     : function AppLauncherNavigator(bottomSheetExpandReasonRef) {
         bottomSheetExpandReasonRef = bottomSheetExpandReasonRef.bottomSheetExpandReasonRef;

@@ -31,31 +31,31 @@ prototype["startFetchingBlockedDomains"] = function startFetchingBlockedDomains(
 };
 
 export const ExperimentCacher = LIBDISCORE_JSI.ExperimentCacher;
-export const rustMultiply = function rustMultiply(arg0, arg1) {
+export function rustMultiply(arg0, arg1) {
   return LIBDISCORE_JSI.rustMultiply(arg0, arg1);
-};
-export const consumeLogs = function consumeLogs() {
+}
+export function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
-};
+}
 export const monotonicNowMs = clock.monotonicNowMs;
 export const BlockedDomainsStore = prototype;
-export const getFluxApi = function getFluxApi() {
+export function getFluxApi() {
   return LIBDISCORE_JSI.fluxApi;
-};
-export const crash = function crash() {
+}
+export function crash() {
   LIBDISCORE_JSI.crash();
-};
-export const registerDevLogListener = function registerDevLogListener(arg0) {
+}
+export function registerDevLogListener(arg0) {
   const result = LIBDISCORE_JSI.registerDevLogListener(arg0);
-};
-export const generateLaunchSignature = function generateLaunchSignature(globalObject) {
+}
+export function generateLaunchSignature(globalObject) {
   return LIBDISCORE_JSI.generateLaunchSignature(globalObject);
-};
-export const getHttpClientAPI = function getHttpClientAPI() {
+}
+export function getHttpClientAPI() {
   return {
     httpRequest: LIBDISCORE_JSI.httpRequest,
     getHttpRequestStatus: LIBDISCORE_JSI.getHttpRequestStatus,
     cancelHttpRequest: LIBDISCORE_JSI.cancelHttpRequest,
     getTrackedRequestCount: LIBDISCORE_JSI.getTrackedRequestCount,
   };
-};
+}

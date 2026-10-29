@@ -62,10 +62,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
 
-export const trackForwardStart = function trackForwardStart(channel_id, id, source) {
+export function trackForwardStart(channel_id, id, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_STARTED, { channel_id, message_id: id, source });
-};
-export const trackForwardCancel = function trackForwardCancel(arg0) {
+}
+export function trackForwardCancel(arg0) {
   ({ channelId, messageId, numDestinationChanges, numQueryChanges } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_CANCELLED, {
     channel_id: channelId,
@@ -73,8 +73,8 @@ export const trackForwardCancel = function trackForwardCancel(arg0) {
     num_destination_changes: numDestinationChanges,
     num_query_changes: numQueryChanges,
   });
-};
-export const trackForwardSent = function trackForwardSent(arg0) {
+}
+export function trackForwardSent(arg0) {
   ({ channelId, messageId } = arg0);
   ({
     hasError,
@@ -108,10 +108,10 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj2);
     const tmp13Result = AppAnalyticsUtils;
   }
-};
-export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {
+}
+export function trackForwardCopyLink(channel_id, id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_COPY_LINK, { channel_id, message_id: id });
-};
+}
 export const useTrackForwardAddRecipientOnce = tmp2;
 export const useTrackForwardEditSearchOnce = tmp3;
 export const useTrackForwardEditContextMessageOnce = ReactCompilerGating.isReactCompilerEnabled()

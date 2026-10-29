@@ -15,10 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13895).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14128).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   rowContainer: {
     marginHorizontal: 16,
@@ -392,7 +392,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -413,7 +413,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(13909).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14142).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -424,7 +424,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6409).APIError(closure_128_0);
+                  const aPIError = new id(6433).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

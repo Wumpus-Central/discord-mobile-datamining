@@ -11,7 +11,7 @@ const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 
-export const transitionToChannel = function transitionToChannel(id, openTextInVoiceIfVoiceChannel) {
+export function transitionToChannel(id, openTextInVoiceIfVoiceChannel) {
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
@@ -33,29 +33,24 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
     }
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
   }
-};
-export const transitionToThread = function transitionToThread(channel, arg1) {
+}
+export function transitionToThread(channel, arg1) {
   _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
   const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
   const obj2 = router_utils;
   const obj3 = { openChannel: true };
   const merged = Object.assign(arg1);
   obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj3);
-};
-export const transitionToThreadMessage = function transitionToThreadMessage(channel, id, arg2) {
+}
+export function transitionToThreadMessage(channel, id, arg2) {
   _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
   const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
   const obj2 = router_utils;
   const obj3 = { openChannel: true };
   const merged = Object.assign(arg2);
   obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id), obj3);
-};
-export const tryTransitionToThreadMessage = function tryTransitionToThreadMessage(
-  parentChannelId,
-  threadId,
-  messageId,
-  arg3,
-) {
+}
+export function tryTransitionToThreadMessage(parentChannelId, threadId, messageId, arg3) {
   const channel = ChannelStore.getChannel(threadId);
   if (null != channel) {
     _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
@@ -88,8 +83,8 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
       const CHANNELResult1 = Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id);
     }
   }
-};
-export const transitionToMessage = function transitionToMessage(channelId, messageId, arg2) {
+}
+export function transitionToMessage(channelId, messageId, arg2) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
@@ -99,10 +94,10 @@ export const transitionToMessage = function transitionToMessage(channelId, messa
     obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj3);
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
   }
-};
-export const transitionToStaticChannelRoute = function transitionToStaticChannelRoute(arg0, arg1, arg2) {
+}
+export function transitionToStaticChannelRoute(arg0, arg1, arg2) {
   const obj = router_utils;
   const obj2 = { openChannel: true };
   const merged = Object.assign(arg2);
   obj.transitionTo(Routes.CHANNEL(arg0, arg1), obj2);
-};
+}

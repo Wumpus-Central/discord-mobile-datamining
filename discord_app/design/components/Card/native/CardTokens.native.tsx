@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
-export const createCardShadowToken = function createCardShadowToken(arg0) {
+export function createCardShadowToken(arg0) {
   _require = arg0;
   return require("createStyles").experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
@@ -26,4 +26,4 @@ export const createCardShadowToken = function createCardShadowToken(arg0) {
     }
     return {};
   });
-};
+}

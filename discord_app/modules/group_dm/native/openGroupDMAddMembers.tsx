@@ -63,13 +63,10 @@ export default function openGroupDMAddMembers(channelId, locationPage) {
   }
 }
 export { getGroupDMAddMembersAction };
-export const showGroupDMAddMembersRoadblock = function showGroupDMAddMembersRoadblock(
-  groupDMAddMembersAction,
-  CHANNEL_TEXT_AREA,
-) {
+export function showGroupDMAddMembersRoadblock(groupDMAddMembersAction, CHANNEL_TEXT_AREA) {
   if ("upsell" === groupDMAddMembersAction) {
     openGroupDMNitroCapLimitSheetDefault(CHANNEL_TEXT_AREA);
   } else {
     ToastUtils.showMaxGroupMembers();
   }
-};
+}

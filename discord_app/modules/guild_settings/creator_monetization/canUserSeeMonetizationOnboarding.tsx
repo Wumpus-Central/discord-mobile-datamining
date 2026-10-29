@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
   "modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx",
 );
 
-export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(guild) {
+export function canUserSeeMonetizationOnboarding(guild) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -30,4 +30,4 @@ export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationO
   obj2.shouldRestrictUpdatingRoleSubscriptionSettings =
     CreatorMonetizationRestrictionsUtils.shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
   return obj.canSeeGuildRoleSubscriptionSettings(obj2);
-};
+}

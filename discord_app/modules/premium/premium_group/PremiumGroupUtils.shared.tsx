@@ -7,7 +7,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
 
-export const getPriceString = function getPriceString(hasAnyPremiumGroup, arg1) {
+export function getPriceString(hasAnyPremiumGroup, arg1) {
   if (null != hasAnyPremiumGroup) {
     if (hasAnyPremiumGroup.hasAnyPremiumGroup) {
       const planIdFromItems = hasAnyPremiumGroup.planIdFromItems;
@@ -31,4 +31,4 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup, arg1) 
     }
   }
   return null;
-};
+}

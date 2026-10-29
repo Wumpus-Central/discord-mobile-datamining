@@ -6,11 +6,11 @@ import openFrameInAppChannelDefault from "../../frames/openFrameInAppChannel.tsx
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(6811).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6834).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
-export const tryLaunchAsFrame = function tryLaunchAsFrame(channelId) {
+export function tryLaunchAsFrame(channelId) {
   ({ applicationId, application } = channelId);
   if (application === undefined) {
     application = ApplicationStore.getApplication(applicationId);
@@ -34,4 +34,4 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(channelId) {
     flag = true;
   }
   return flag;
-};
+}

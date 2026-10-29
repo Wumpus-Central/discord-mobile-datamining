@@ -8,7 +8,6 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import TextField from "../../../../../design/components/TextField/native/TextField.native.tsx";
 import FriendsUtils from "../../../../../utils/FriendsUtils.tsx";
-import FriendRequestMessageExperimentDefault from "../../../../people/FriendRequestMessageExperiment.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +18,7 @@ const Constants = fn(1084);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -201,10 +200,10 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/scr
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? (ref) => {
-      const cResult = sourcePage(576).c(65);
+      const cResult = sourcePage(576).c(73);
       ({ style, onFocus, autoFocusInput, headerText, headerTextStyle, sourcePage } = ref);
       const tmp4 = closure_12();
-      importDefault = noop.useRef(0);
+      ref = noop.useRef(0);
       dependencyMap = noop.useRef("");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function u() {
@@ -235,33 +234,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first3 = tmp6Result2[0];
       closure_8 = tmp6Result2[1];
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj4 = { location: "AddFriendbyId" };
-        cResult[2] = obj4;
-        let tmp15 = obj4;
-      } else {
-        tmp15 = cResult[2];
-      }
-      let obj = sourcePage(576);
-      const enabled = FriendRequestMessageExperimentDefault.useConfig(tmp15).enabled;
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         function handleOnKeyPress(nativeEvent) {
           closure_2.current = nativeEvent.nativeEvent.key;
         }
-        cResult[3] = handleOnKeyPress;
-        let tmp16 = handleOnKeyPress;
+        cResult[2] = handleOnKeyPress;
+        let tmp15 = handleOnKeyPress;
       } else {
-        tmp16 = cResult[3];
+        tmp15 = cResult[2];
       }
-      if (cResult[4] === first2.field) {
-        if (cResult[5] === first2.status) {
-          let tmp17 = cResult[6];
+      if (cResult[3] === first2.field) {
+        if (cResult[4] === first2.status) {
+          let tmp16 = cResult[5];
         }
-        if (cResult[7] === first2.field) {
-          if (cResult[8] === first2.status) {
-            let tmp18 = cResult[9];
+        if (cResult[6] === first2.field) {
+          if (cResult[7] === first2.status) {
+            let tmp17 = cResult[8];
           }
           const _Symbol = Symbol;
-          class Q {
+          class Y {
             constructor(arg0) {
               tmp = closure_8(ref.replace(/\n/g, ""));
               tmp3 = closure_5.status === closure_13.ERROR;
@@ -279,14 +269,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          if (tmp19 === Symbol.for("react.memo_cache_sentinel")) {
+          if (tmp18 === Symbol.for("react.memo_cache_sentinel")) {
             function handleSelectionChange(nativeEvent) {
               const start = nativeEvent.nativeEvent.selection.start;
               if (start !== ref.current) {
                 ref.current = start;
               }
             }
-            class Q {
+            class Y {
               constructor(arg0) {
                 tmp = closure_8(ref.replace(/\n/g, ""));
                 tmp3 = closure_5.status === closure_13.ERROR;
@@ -304,23 +294,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            let tmp20 = handleSelectionChange;
+            let tmp19 = handleSelectionChange;
           } else {
-            tmp20 = cResult[10];
+            tmp19 = cResult[9];
           }
-          if (cResult[11] === first3) {
-            if (cResult[12] === first1.validatedText) {
-              let tmp21 = cResult[13];
+          if (cResult[10] === first3) {
+            if (cResult[11] === first1.validatedText) {
+              let tmp20 = cResult[12];
             }
-            if (cResult[14] !== sourcePage) {
-              function se() {
+            if (cResult[13] !== sourcePage) {
+              function ee() {
                 AnalyticsUtilsDefault.track(closure_2_8.FRIEND_ADD_VIEWED, {
                   friend_add_type: "Id",
                   source_page: sourcePage,
                 });
               }
               const items = [];
-              class Q {
+              class Y {
                 constructor(arg0) {
                   tmp = closure_8(ref.replace(/\n/g, ""));
                   tmp3 = closure_5.status === closure_13.ERROR;
@@ -338,11 +328,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[14] = sourcePage;
+              cResult[13] = sourcePage;
+              cResult[14] = ee;
               cResult[15] = items;
-              cResult[16] = se;
             }
-            class Q {
+            class Y {
               constructor(arg0) {
                 tmp = closure_8(ref.replace(/\n/g, ""));
                 tmp3 = closure_5.status === closure_13.ERROR;
@@ -360,10 +350,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            if (cResult[17] === first2.a11yMessage) {
-              if (cResult[20] !== first2) {
+            if (cResult[16] === first2.a11yMessage) {
+              if (cResult[19] !== first2) {
                 const items1 = [first2];
-                class Q {
+                class Y {
                   constructor(arg0) {
                     tmp = closure_8(ref.replace(/\n/g, ""));
                     tmp3 = closure_5.status === closure_13.ERROR;
@@ -381,10 +371,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                cResult[20] = first2;
-                cResult[21] = items1;
+                cResult[19] = first2;
+                cResult[20] = items1;
               }
-              class Q {
+              class Y {
                 constructor(arg0) {
                   tmp = closure_8(ref.replace(/\n/g, ""));
                   tmp3 = closure_5.status === closure_13.ERROR;
@@ -402,9 +392,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              if (cResult[22] !== first1.validatedText) {
+              if (cResult[21] !== first1.validatedText) {
                 let trimmed = first1.validatedText.trim();
-                class Q {
+                class Y {
                   constructor(arg0) {
                     tmp = closure_8(ref.replace(/\n/g, ""));
                     tmp3 = closure_5.status === closure_13.ERROR;
@@ -422,127 +412,149 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                cResult[22] = first1.validatedText;
-                cResult[23] = trimmed;
+                cResult[21] = first1.validatedText;
+                cResult[22] = trimmed;
               }
-              if (cResult[24] === style) {
-                if (cResult[25] === tmp4.container) {
-                  let tmp29 = cResult[26];
+              if (cResult[23] === style) {
+                if (cResult[24] === tmp4.container) {
+                  let tmp28 = cResult[25];
                 }
-                if (cResult[27] === autoFocusInput) {
-                  if (cResult[28] === tmp17) {
-                    if (cResult[29] === tmp21) {
-                      if (cResult[30] === headerText) {
-                        if (cResult[31] === headerTextStyle) {
-                          if (cResult[32] === onFocus) {
-                            if (cResult[33] === ref) {
-                              if (cResult[34] === first1) {
-                                if (cResult[35] === first2) {
-                                  let tmp30 = cResult[36];
+                if (cResult[26] === autoFocusInput) {
+                  if (cResult[27] === tmp16) {
+                    if (cResult[28] === tmp20) {
+                      if (cResult[29] === headerText) {
+                        if (cResult[30] === headerTextStyle) {
+                          if (cResult[31] === onFocus) {
+                            if (cResult[32] === ref) {
+                              if (cResult[33] === first1) {
+                                if (cResult[34] === first2) {
+                                  let tmp29 = cResult[35];
                                 }
-                                if (cResult[37] === first3) {
-                                  if (cResult[38] === enabled) {
-                                    if (cResult[39] === tmp18) {
-                                      if (cResult[40] === tmp21) {
-                                        if (cResult[41] === headerTextStyle) {
-                                          if (cResult[42] === tmp4.friendMessageContainer) {
-                                            if (cResult[43] === tmp4.inputHeaderText) {
-                                              if (cResult[44] === tmp4.messageFooterText) {
-                                                if (cResult[45] === tmp4.messageLabel) {
-                                                  if (cResult[46] === first2.field) {
-                                                    if (cResult[47] === first2.message) {
-                                                      if (cResult[48] === first2.status) {
-                                                        let tmp33 = cResult[49];
-                                                      }
-                                                      if (cResult[50] === tmp29) {
-                                                        if (cResult[51] === tmp30) {
-                                                          if (cResult[52] === tmp33) {
-                                                            let tmp45 = cResult[53];
-                                                          }
-                                                          if (cResult[54] !== tmp4.redesignGrow) {
-                                                            class Q {
-                                                              constructor(arg0) {
-                                                                tmp = closure_8(ref.replace(/\n/g, ""));
-                                                                tmp3 = closure_5.status === closure_13.ERROR;
-                                                                tmp2 = closure_13;
-                                                                if (tmp3) {
-                                                                  tmp4 = closure_14;
-                                                                  tmp3 = closure_5.field === closure_14.MESSAGE;
-                                                                }
-                                                                if (tmp3) {
-                                                                  tmp5 = closure_6;
-                                                                  obj = { status: null };
-                                                                  obj.status = tmp2.NONE;
-                                                                  tmp6 = closure_6(obj);
-                                                                }
-                                                                return;
-                                                              }
+                                if (cResult[36] === headerTextStyle) {
+                                  if (cResult[37] === tmp4.inputHeaderText) {
+                                    if (cResult[38] === tmp4.messageLabel) {
+                                      let tmp33 = cResult[39];
+                                    }
+                                    const _Symbol2 = Symbol;
+                                    class Y {
+                                      constructor(arg0) {
+                                        tmp = closure_8(ref.replace(/\n/g, ""));
+                                        tmp3 = closure_5.status === closure_13.ERROR;
+                                        tmp2 = closure_13;
+                                        if (tmp3) {
+                                          tmp4 = closure_14;
+                                          tmp3 = closure_5.field === closure_14.MESSAGE;
+                                        }
+                                        if (tmp3) {
+                                          tmp5 = closure_6;
+                                          obj = { status: null };
+                                          obj.status = tmp2.NONE;
+                                          tmp6 = closure_6(obj);
+                                        }
+                                        return;
+                                      }
+                                    }
+                                    if (tmp35 === Symbol.for("react.memo_cache_sentinel")) {
+                                      const string = sourcePage(1125).intl.string;
+                                      class Y {
+                                        constructor(arg0) {
+                                          tmp = closure_8(ref.replace(/\n/g, ""));
+                                          tmp3 = closure_5.status === closure_13.ERROR;
+                                          tmp2 = closure_13;
+                                          if (tmp3) {
+                                            tmp4 = closure_14;
+                                            tmp3 = closure_5.field === closure_14.MESSAGE;
+                                          }
+                                          if (tmp3) {
+                                            tmp5 = closure_6;
+                                            obj = { status: null };
+                                            obj.status = tmp2.NONE;
+                                            tmp6 = closure_6(obj);
+                                          }
+                                          return;
+                                        }
+                                      }
+                                      cResult[40] = tmp37;
+                                      let tmp36 = tmp37;
+                                    } else {
+                                      tmp36 = cResult[40];
+                                    }
+                                    if (cResult[41] !== tmp33) {
+                                      let obj4 = {
+                                        style: null,
+                                        variant: "text-sm/semibold",
+                                        color: "text-muted",
+                                        children: null,
+                                      };
+                                      class Y {
+                                        constructor(arg0) {
+                                          tmp = closure_8(ref.replace(/\n/g, ""));
+                                          tmp3 = closure_5.status === closure_13.ERROR;
+                                          tmp2 = closure_13;
+                                          if (tmp3) {
+                                            tmp4 = closure_14;
+                                            tmp3 = closure_5.field === closure_14.MESSAGE;
+                                          }
+                                          if (tmp3) {
+                                            tmp5 = closure_6;
+                                            obj = { status: null };
+                                            obj.status = tmp2.NONE;
+                                            tmp6 = closure_6(obj);
+                                          }
+                                          return;
+                                        }
+                                      }
+                                      obj4.children = tmp36;
+                                      const tmp40 = closure_9(sourcePage(5271).Text, obj4);
+                                      cResult[41] = tmp33;
+                                      cResult[42] = tmp40;
+                                      let tmp38 = tmp40;
+                                    } else {
+                                      tmp38 = cResult[42];
+                                    }
+                                    if (first2.field === constants2.MESSAGE) {
+                                      class Y {
+                                        constructor(arg0) {
+                                          tmp = closure_8(ref.replace(/\n/g, ""));
+                                          tmp3 = closure_5.status === closure_13.ERROR;
+                                          tmp2 = closure_13;
+                                          if (tmp3) {
+                                            tmp4 = closure_14;
+                                            tmp3 = closure_5.field === closure_14.MESSAGE;
+                                          }
+                                          if (tmp3) {
+                                            tmp5 = closure_6;
+                                            obj = { status: null };
+                                            obj.status = tmp2.NONE;
+                                            tmp6 = closure_6(obj);
+                                          }
+                                          return;
+                                        }
+                                      }
+                                    }
+                                    if (cResult[43] === first3) {
+                                      if (cResult[44] === tmp17) {
+                                        if (cResult[45] === tmp20) {
+                                          if (cResult[46] === tmp42) {
+                                            let tmp44 = cResult[47];
+                                          }
+                                          if (cResult[48] === tmp4.messageFooterText) {
+                                            if (cResult[49] === first2.field) {
+                                              if (cResult[50] === first2.message) {
+                                                if (cResult[51] === first2.status) {
+                                                  if (cResult[53] === tmp4.friendMessageContainer) {
+                                                    if (cResult[54] === tmp38) {
+                                                      if (cResult[55] === tmp44) {
+                                                        if (cResult[56] === tmp47) {
+                                                          let tmp53 = cResult[57];
+                                                        }
+                                                        if (cResult[58] === tmp28) {
+                                                          if (cResult[59] === tmp29) {
+                                                            if (cResult[60] === tmp53) {
+                                                              let tmp56 = cResult[61];
                                                             }
-                                                            tmp51[0] = tmp4.redesignGrow;
-                                                            const tmp52 = closure_9(first2, tmp51);
-                                                            cResult[54] = tmp4.redesignGrow;
-                                                            cResult[55] = tmp52;
-                                                            let tmp48 = tmp52;
-                                                          } else {
-                                                            tmp48 = cResult[55];
-                                                          }
-                                                          class Q {
-                                                            constructor(arg0) {
-                                                              tmp = closure_8(ref.replace(/\n/g, ""));
-                                                              tmp3 = closure_5.status === closure_13.ERROR;
-                                                              tmp2 = closure_13;
-                                                              if (tmp3) {
-                                                                tmp4 = closure_14;
-                                                                tmp3 = closure_5.field === closure_14.MESSAGE;
-                                                              }
-                                                              if (tmp3) {
-                                                                tmp5 = closure_6;
-                                                                obj = { status: null };
-                                                                obj.status = tmp2.NONE;
-                                                                tmp6 = closure_6(obj);
-                                                              }
-                                                              return;
-                                                            }
-                                                          }
-                                                          if (cResult[56] === Symbol.for("react.memo_cache_sentinel")) {
-                                                            const string = sourcePage(1125).intl.string;
-                                                            class Q {
-                                                              constructor(arg0) {
-                                                                tmp = closure_8(ref.replace(/\n/g, ""));
-                                                                tmp3 = closure_5.status === closure_13.ERROR;
-                                                                tmp2 = closure_13;
-                                                                if (tmp3) {
-                                                                  tmp4 = closure_14;
-                                                                  tmp3 = closure_5.field === closure_14.MESSAGE;
-                                                                }
-                                                                if (tmp3) {
-                                                                  tmp5 = closure_6;
-                                                                  obj = { status: null };
-                                                                  obj.status = tmp2.NONE;
-                                                                  tmp6 = closure_6(obj);
-                                                                }
-                                                                return;
-                                                              }
-                                                            }
-                                                            cResult[56] = tmp54;
-                                                            let tmp53 = tmp54;
-                                                          } else {
-                                                            tmp53 = cResult[56];
-                                                          }
-                                                          if (cResult[57] === tmp21) {
-                                                            if (cResult[58] === tmp55) {
-                                                              if (cResult[59] === tmp57) {
-                                                                let tmp58 = cResult[60];
-                                                              }
-                                                              if (cResult[61] === tmp45) {
-                                                                if (cResult[62] === tmp48) {
-                                                                  if (cResult[63] === tmp58) {
-                                                                    let tmp61 = cResult[64];
-                                                                  }
-                                                                  return tmp61;
-                                                                }
-                                                              }
-                                                              class Q {
+                                                            if (cResult[62] !== tmp4.redesignGrow) {
+                                                              class Y {
                                                                 constructor(arg0) {
                                                                   tmp = closure_8(ref.replace(/\n/g, ""));
                                                                   tmp3 = closure_5.status === closure_13.ERROR;
@@ -560,72 +572,255 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                   return;
                                                                 }
                                                               }
-                                                              let obj6 = { children: null };
-                                                              const items2 = [tmp45, tmp48, tmp58];
-                                                              obj6.children = items2;
-                                                              const tmp63 = closure_10(closure_11, obj6);
-                                                              cResult[61] = tmp45;
-                                                              cResult[62] = tmp48;
-                                                              cResult[63] = tmp58;
-                                                              cResult[64] = tmp63;
-                                                              tmp61 = tmp63;
+                                                              tmp62[0] = tmp4.redesignGrow;
+                                                              const tmp63 = closure_9(first2, tmp62);
+                                                              cResult[62] = tmp4.redesignGrow;
+                                                              cResult[63] = tmp63;
+                                                              let tmp59 = tmp63;
+                                                            } else {
+                                                              tmp59 = cResult[63];
                                                             }
+                                                            class Y {
+                                                              constructor(arg0) {
+                                                                tmp = closure_8(ref.replace(/\n/g, ""));
+                                                                tmp3 = closure_5.status === closure_13.ERROR;
+                                                                tmp2 = closure_13;
+                                                                if (tmp3) {
+                                                                  tmp4 = closure_14;
+                                                                  tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                                }
+                                                                if (tmp3) {
+                                                                  tmp5 = closure_6;
+                                                                  obj = { status: null };
+                                                                  obj.status = tmp2.NONE;
+                                                                  tmp6 = closure_6(obj);
+                                                                }
+                                                                return;
+                                                              }
+                                                            }
+                                                            if (
+                                                              cResult[64] === Symbol.for("react.memo_cache_sentinel")
+                                                            ) {
+                                                              const string2 = sourcePage(1125).intl.string;
+                                                              class Y {
+                                                                constructor(arg0) {
+                                                                  tmp = closure_8(ref.replace(/\n/g, ""));
+                                                                  tmp3 = closure_5.status === closure_13.ERROR;
+                                                                  tmp2 = closure_13;
+                                                                  if (tmp3) {
+                                                                    tmp4 = closure_14;
+                                                                    tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                                  }
+                                                                  if (tmp3) {
+                                                                    tmp5 = closure_6;
+                                                                    obj = { status: null };
+                                                                    obj.status = tmp2.NONE;
+                                                                    tmp6 = closure_6(obj);
+                                                                  }
+                                                                  return;
+                                                                }
+                                                              }
+                                                              cResult[64] = tmp65;
+                                                              let tmp64 = tmp65;
+                                                            } else {
+                                                              tmp64 = cResult[64];
+                                                            }
+                                                            if (cResult[65] === tmp20) {
+                                                              if (cResult[66] === tmp66) {
+                                                                if (cResult[67] === tmp68) {
+                                                                  let tmp69 = cResult[68];
+                                                                }
+                                                                if (cResult[69] === tmp56) {
+                                                                  if (cResult[70] === tmp59) {
+                                                                    if (cResult[71] === tmp69) {
+                                                                      let tmp72 = cResult[72];
+                                                                    }
+                                                                    return tmp72;
+                                                                  }
+                                                                }
+                                                                class Y {
+                                                                  constructor(arg0) {
+                                                                    tmp = closure_8(ref.replace(/\n/g, ""));
+                                                                    tmp3 = closure_5.status === closure_13.ERROR;
+                                                                    tmp2 = closure_13;
+                                                                    if (tmp3) {
+                                                                      tmp4 = closure_14;
+                                                                      tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                                    }
+                                                                    if (tmp3) {
+                                                                      tmp5 = closure_6;
+                                                                      obj = { status: null };
+                                                                      obj.status = tmp2.NONE;
+                                                                      tmp6 = closure_6(obj);
+                                                                    }
+                                                                    return;
+                                                                  }
+                                                                }
+                                                                let obj5 = { children: null };
+                                                                const items2 = [tmp56, tmp59, tmp69];
+                                                                obj5.children = items2;
+                                                                const tmp74 = closure_10(closure_11, obj5);
+                                                                cResult[69] = tmp56;
+                                                                cResult[70] = tmp59;
+                                                                cResult[71] = tmp69;
+                                                                cResult[72] = tmp74;
+                                                                tmp72 = tmp74;
+                                                              }
+                                                            }
+                                                            let obj6 = {
+                                                              size: "lg",
+                                                              text: tmp64,
+                                                              disabled: tmp27 <= 0,
+                                                              onPress: tmp20,
+                                                              loading: first2.status === constants.LOADING,
+                                                              grow: false,
+                                                            };
+                                                            const tmp71 = closure_9(sourcePage(5281).Button, obj6);
+                                                            cResult[65] = tmp20;
+                                                            cResult[66] = tmp27 <= 0;
+                                                            cResult[67] = first2.status === constants.LOADING;
+                                                            cResult[68] = tmp71;
+                                                            tmp69 = tmp71;
                                                           }
-                                                          const obj7 = {
-                                                            size: "lg",
-                                                            text: tmp53,
-                                                            disabled: tmp28 <= 0,
-                                                            onPress: tmp21,
-                                                            loading: first2.status === constants.LOADING,
-                                                            grow: false,
-                                                          };
-                                                          const tmp60 = closure_9(sourcePage(5280).Button, obj7);
-                                                          cResult[57] = tmp21;
-                                                          cResult[58] = tmp28 <= 0;
-                                                          cResult[59] = first2.status === constants.LOADING;
-                                                          cResult[60] = tmp60;
-                                                          tmp58 = tmp60;
                                                         }
-                                                      }
-                                                      class Q {
-                                                        constructor(arg0) {
-                                                          tmp = closure_8(ref.replace(/\n/g, ""));
-                                                          tmp3 = closure_5.status === closure_13.ERROR;
-                                                          tmp2 = closure_13;
-                                                          if (tmp3) {
-                                                            tmp4 = closure_14;
-                                                            tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                        class Y {
+                                                          constructor(arg0) {
+                                                            tmp = closure_8(ref.replace(/\n/g, ""));
+                                                            tmp3 = closure_5.status === closure_13.ERROR;
+                                                            tmp2 = closure_13;
+                                                            if (tmp3) {
+                                                              tmp4 = closure_14;
+                                                              tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                            }
+                                                            if (tmp3) {
+                                                              tmp5 = closure_6;
+                                                              obj = { status: null };
+                                                              obj.status = tmp2.NONE;
+                                                              tmp6 = closure_6(obj);
+                                                            }
+                                                            return;
                                                           }
-                                                          if (tmp3) {
-                                                            tmp5 = closure_6;
-                                                            obj = { status: null };
-                                                            obj.status = tmp2.NONE;
-                                                            tmp6 = closure_6(obj);
-                                                          }
-                                                          return;
                                                         }
+                                                        const obj7 = { style: tmp28, children: null };
+                                                        const items3 = [tmp29, tmp53];
+                                                        obj7.children = items3;
+                                                        const tmp58 = closure_10(first2, obj7);
+                                                        cResult[58] = tmp28;
+                                                        cResult[59] = tmp29;
+                                                        cResult[60] = tmp53;
+                                                        cResult[61] = tmp58;
+                                                        tmp56 = tmp58;
                                                       }
-                                                      const obj8 = { style: tmp29, children: null };
-                                                      const items3 = [tmp30, tmp33];
-                                                      obj8.children = items3;
-                                                      const tmp47 = closure_10(first2, obj8);
-                                                      cResult[50] = tmp29;
-                                                      cResult[51] = tmp30;
-                                                      cResult[52] = tmp33;
-                                                      cResult[53] = tmp47;
-                                                      tmp45 = tmp47;
                                                     }
                                                   }
+                                                  class Y {
+                                                    constructor(arg0) {
+                                                      tmp = closure_8(ref.replace(/\n/g, ""));
+                                                      tmp3 = closure_5.status === closure_13.ERROR;
+                                                      tmp2 = closure_13;
+                                                      if (tmp3) {
+                                                        tmp4 = closure_14;
+                                                        tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                      }
+                                                      if (tmp3) {
+                                                        tmp5 = closure_6;
+                                                        obj = { status: null };
+                                                        obj.status = tmp2.NONE;
+                                                        tmp6 = closure_6(obj);
+                                                      }
+                                                      return;
+                                                    }
+                                                  }
+                                                  const obj8 = { style: tmp32, children: null };
+                                                  const items4 = [tmp38, tmp44, cResult[52]];
+                                                  obj8.children = items4;
+                                                  const tmp55 = closure_10(first2, obj8);
+                                                  cResult[53] = tmp4.friendMessageContainer;
+                                                  cResult[54] = tmp38;
+                                                  cResult[55] = tmp44;
+                                                  cResult[56] = cResult[52];
+                                                  cResult[57] = tmp55;
+                                                  tmp53 = tmp55;
                                                 }
                                               }
                                             }
                                           }
+                                          class Y {
+                                            constructor(arg0) {
+                                              tmp = closure_8(ref.replace(/\n/g, ""));
+                                              tmp3 = closure_5.status === closure_13.ERROR;
+                                              tmp2 = closure_13;
+                                              if (tmp3) {
+                                                tmp4 = closure_14;
+                                                tmp3 = closure_5.field === closure_14.MESSAGE;
+                                              }
+                                              if (tmp3) {
+                                                tmp5 = closure_6;
+                                                obj = { status: null };
+                                                obj.status = tmp2.NONE;
+                                                tmp6 = closure_6(obj);
+                                              }
+                                              return;
+                                            }
+                                          }
+                                          if (first2.status !== constants.ERROR) {
+                                            const obj9 = {
+                                              style: null,
+                                              variant: "text-xs/medium",
+                                              color: "text-muted",
+                                              children: null,
+                                            };
+                                            class Y {
+                                              constructor(arg0) {
+                                                tmp = closure_8(ref.replace(/\n/g, ""));
+                                                tmp3 = closure_5.status === closure_13.ERROR;
+                                                tmp2 = closure_13;
+                                                if (tmp3) {
+                                                  tmp4 = closure_14;
+                                                  tmp3 = closure_5.field === closure_14.MESSAGE;
+                                                }
+                                                if (tmp3) {
+                                                  tmp5 = closure_6;
+                                                  obj = { status: null };
+                                                  obj.status = tmp2.NONE;
+                                                  tmp6 = closure_6(obj);
+                                                }
+                                                return;
+                                              }
+                                            }
+                                            let intl = sourcePage(1125).intl;
+                                            obj9.children = intl.string(sourcePage(1125).t.UtfQNw);
+                                            let tmp49 = closure_9(sourcePage(5271).Text, obj9);
+                                            cResult[48] = tmp4.messageFooterText;
+                                            cResult[49] = first2.field;
+                                            cResult[50] = first2.message;
+                                            cResult[51] = first2.status;
+                                            cResult[52] = tmp49;
+                                          }
+                                          const obj10 = { errorMessage: first2.message };
+                                          tmp49 = closure_9(closure_15, obj10);
                                         }
                                       }
                                     }
+                                    const obj11 = {
+                                      returnKeyType: "done",
+                                      submitBehavior: "submit",
+                                      value: first3,
+                                      maxLength: 120,
+                                      onSubmitEditing: tmp20,
+                                      onChange: tmp17,
+                                      status: undefined,
+                                    };
+                                    const tmp46 = closure_9(sourcePage(7240).TextArea, obj11);
+                                    cResult[43] = first3;
+                                    cResult[44] = tmp17;
+                                    cResult[45] = tmp20;
+                                    cResult[46] = undefined;
+                                    cResult[47] = tmp46;
+                                    tmp44 = tmp46;
                                   }
                                 }
-                                class Q {
+                                class Y {
                                   constructor(arg0) {
                                     tmp = closure_8(ref.replace(/\n/g, ""));
                                     tmp3 = closure_5.status === closure_13.ERROR;
@@ -643,139 +838,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     return;
                                   }
                                 }
-                                if (!enabled) {
-                                  cResult[37] = first3;
-                                  class Q {
-                                    constructor(arg0) {
-                                      tmp = closure_8(ref.replace(/\n/g, ""));
-                                      tmp3 = closure_5.status === closure_13.ERROR;
-                                      tmp2 = closure_13;
-                                      if (tmp3) {
-                                        tmp4 = closure_14;
-                                        tmp3 = closure_5.field === closure_14.MESSAGE;
-                                      }
-                                      if (tmp3) {
-                                        tmp5 = closure_6;
-                                        obj = { status: null };
-                                        obj.status = tmp2.NONE;
-                                        tmp6 = closure_6(obj);
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  cResult[38] = enabled;
-                                  cResult[39] = tmp18;
-                                  cResult[40] = tmp21;
-                                  cResult[41] = headerTextStyle;
-                                  cResult[42] = tmp4.friendMessageContainer;
-                                  cResult[43] = tmp4.inputHeaderText;
-                                  cResult[44] = tmp4.messageFooterText;
-                                  cResult[45] = tmp4.messageLabel;
-                                  cResult[46] = first2.field;
-                                  cResult[47] = first2.message;
-                                  cResult[48] = first2.status;
-                                  cResult[49] = enabled;
-                                  tmp33 = enabled;
-                                } else {
-                                  const obj9 = { style: tmp4.friendMessageContainer, children: null };
-                                  class Q {
-                                    constructor(arg0) {
-                                      tmp = closure_8(ref.replace(/\n/g, ""));
-                                      tmp3 = closure_5.status === closure_13.ERROR;
-                                      tmp2 = closure_13;
-                                      if (tmp3) {
-                                        tmp4 = closure_14;
-                                        tmp3 = closure_5.field === closure_14.MESSAGE;
-                                      }
-                                      if (tmp3) {
-                                        tmp5 = closure_6;
-                                        obj = { status: null };
-                                        obj.status = tmp2.NONE;
-                                        tmp6 = closure_6(obj);
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  const obj10 = {
-                                    style: null,
-                                    variant: "text-sm/semibold",
-                                    color: "text-muted",
-                                    children: null,
-                                  };
-                                  const items4 = [, ,];
-                                  ({ messageLabel: arr4[0], inputHeaderText: arr4[1] } = tmp4);
-                                  items4[2] = headerTextStyle;
-                                  obj10.style = items4;
-                                  let intl = sourcePage(1125).intl;
-                                  obj10.children = intl.string(sourcePage(1125).t.Yi6Mpu);
-                                  const items5 = [closure_9(sourcePage(5270).Text, obj10), ,];
-                                  const obj11 = {
-                                    returnKeyType: "done",
-                                    submitBehavior: "submit",
-                                    value: first3,
-                                    maxLength: 120,
-                                    onSubmitEditing: tmp21,
-                                    onChange: tmp18,
-                                    status: null,
-                                  };
-                                  if (first2.field === constants2.MESSAGE) {
-                                    class Q {
-                                      constructor(arg0) {
-                                        tmp = closure_8(ref.replace(/\n/g, ""));
-                                        tmp3 = closure_5.status === closure_13.ERROR;
-                                        tmp2 = closure_13;
-                                        if (tmp3) {
-                                          tmp4 = closure_14;
-                                          tmp3 = closure_5.field === closure_14.MESSAGE;
-                                        }
-                                        if (tmp3) {
-                                          tmp5 = closure_6;
-                                          obj = { status: null };
-                                          obj.status = tmp2.NONE;
-                                          tmp6 = closure_6(obj);
-                                        }
-                                        return;
-                                      }
-                                    }
-                                  }
-                                  obj11.status = undefined;
-                                  items5[1] = tmp36(sourcePage(7216).TextArea, obj11);
-                                  if (first2.status !== constants.ERROR) {
-                                    const obj12 = {
-                                      style: tmp4.messageFooterText,
-                                      variant: "text-xs/medium",
-                                      color: "text-muted",
-                                      children: null,
-                                    };
-                                    class Q {
-                                      constructor(arg0) {
-                                        tmp = closure_8(ref.replace(/\n/g, ""));
-                                        tmp3 = closure_5.status === closure_13.ERROR;
-                                        tmp2 = closure_13;
-                                        if (tmp3) {
-                                          tmp4 = closure_14;
-                                          tmp3 = closure_5.field === closure_14.MESSAGE;
-                                        }
-                                        if (tmp3) {
-                                          tmp5 = closure_6;
-                                          obj = { status: null };
-                                          obj.status = tmp2.NONE;
-                                          tmp6 = closure_6(obj);
-                                        }
-                                        return;
-                                      }
-                                    }
-                                    let intl2 = sourcePage(1125).intl;
-                                    obj12.children = intl2.string(sourcePage(1125).t.UtfQNw);
-                                    let tmp36Result = tmp36(tmp41, obj12);
-                                    items5[2] = tmp36Result;
-                                    obj9.children = items5;
-                                    closure_10(tmp35, obj9);
-                                  }
-                                  const obj13 = { errorMessage: first2.message };
-                                  tmp36Result = tmp36(closure_15, obj13);
-                                  tmp35 = first2;
-                                }
+                                ({ messageLabel: tmp34[0], inputHeaderText: tmp34[1] } = tmp4);
+                                tmp34[2] = headerTextStyle;
+                                cResult[36] = headerTextStyle;
+                                cResult[37] = tmp4.inputHeaderText;
+                                cResult[38] = tmp4.messageLabel;
+                                cResult[39] = tmp34;
+                                tmp33 = tmp34;
                               }
                             }
                           }
@@ -784,7 +853,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                class Q {
+                class Y {
                   constructor(arg0) {
                     tmp = closure_8(ref.replace(/\n/g, ""));
                     tmp3 = closure_5.status === closure_13.ERROR;
@@ -802,12 +871,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                const obj14 = {
+                const obj12 = {
                   textState: first1,
-                  onChangeText: tmp17,
-                  onSelectionChange: tmp20,
-                  onKeyPress: tmp16,
-                  onSubmitEditing: tmp21,
+                  onChangeText: tmp16,
+                  onSelectionChange: tmp19,
+                  onKeyPress: tmp15,
+                  onSubmitEditing: tmp20,
                   onFocus,
                   validationState: first2,
                   autoFocus: autoFocusInput,
@@ -815,26 +884,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   headerTextStyle,
                   ref,
                 };
-                const tmp32 = closure_9(AddFriendByIdInput, obj14);
-                cResult[27] = autoFocusInput;
-                cResult[28] = tmp17;
-                cResult[29] = tmp21;
-                cResult[30] = headerText;
-                cResult[31] = headerTextStyle;
-                cResult[32] = onFocus;
-                cResult[33] = ref;
-                cResult[34] = first1;
-                cResult[35] = first2;
-                cResult[36] = tmp32;
-                tmp30 = tmp32;
+                const tmp31 = closure_9(AddFriendByIdInput, obj12);
+                cResult[26] = autoFocusInput;
+                cResult[27] = tmp16;
+                cResult[28] = tmp20;
+                cResult[29] = headerText;
+                cResult[30] = headerTextStyle;
+                cResult[31] = onFocus;
+                cResult[32] = ref;
+                cResult[33] = first1;
+                cResult[34] = first2;
+                cResult[35] = tmp31;
+                tmp29 = tmp31;
               }
-              const items6 = [tmp4.container, style];
-              cResult[24] = style;
-              cResult[25] = tmp4.container;
-              cResult[26] = items6;
-              tmp29 = items6;
+              const items5 = [tmp4.container, style];
+              cResult[23] = style;
+              cResult[24] = tmp4.container;
+              cResult[25] = items5;
+              tmp28 = items5;
             }
-            function ne() {
+            function se() {
               let tmp2 = first2.status === constants.ERROR;
               if (tmp2) {
                 tmp2 = null != first2.a11yMessage;
@@ -844,9 +913,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 AccessibilityAnnouncer.announce(first2.a11yMessage);
               }
             }
-            cResult[17] = first2.a11yMessage;
-            cResult[18] = first2.status;
-            cResult[19] = ne;
+            cResult[16] = first2.a11yMessage;
+            cResult[17] = first2.status;
+            cResult[18] = se;
           }
           function handleSubmitEditing() {
             const trimmed = first1.validatedText.trim();
@@ -868,7 +937,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 substr = trimmed.substring(1);
                 tmp2 = substr;
               }
-              const validateDiscordTagResult = sourcePage(7456).validateDiscordTag(tmp2);
+              const validateDiscordTagResult = sourcePage(7479).validateDiscordTag(tmp2);
               if (null != validateDiscordTagResult) {
                 let obj3 = {
                   status: constants.ERROR,
@@ -882,7 +951,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj6 = {
                   discordTag: tmp2,
                   context: { location: "Search - Add Friend Search" },
-                  errorUxConfig: sourcePage(7451).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+                  errorUxConfig: sourcePage(7474).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
                   note: null,
                 };
                 let tmp9;
@@ -890,8 +959,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp9 = trimmed1;
                 }
                 obj6.note = tmp9;
-                const obj5 = ref(7451);
-                ref(7451)
+                const obj5 = ref(7474);
+                ref(7474)
                   .sendRequest(obj6)
                   .then(
                     () => {
@@ -960,17 +1029,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       closure_6(obj3);
                     },
                   );
-                const sendRequestResult = ref(7451).sendRequest(obj6);
+                const sendRequestResult = ref(7474).sendRequest(obj6);
               }
-              let obj = sourcePage(7456);
+              let obj = sourcePage(7479);
             }
           }
-          cResult[11] = first3;
-          cResult[12] = first1.validatedText;
-          cResult[13] = handleSubmitEditing;
-          tmp21 = handleSubmitEditing;
+          cResult[10] = first3;
+          cResult[11] = first1.validatedText;
+          cResult[12] = handleSubmitEditing;
+          tmp20 = handleSubmitEditing;
         }
-        class Q {
+        class Y {
           constructor(arg0) {
             tmp = closure_8(ref.replace(/\n/g, ""));
             tmp3 = closure_5.status === closure_13.ERROR;
@@ -988,12 +1057,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        cResult[7] = first2.field;
-        cResult[8] = first2.status;
-        cResult[9] = Q;
-        tmp18 = Q;
+        cResult[6] = first2.field;
+        cResult[7] = first2.status;
+        cResult[8] = Y;
+        tmp17 = Y;
       }
-      class Y {
+      class W {
         constructor(arg0) {
           tmp = closure_4;
           if (ref.length <= 0) {
@@ -1039,10 +1108,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return;
         }
       }
-      cResult[4] = first2.field;
-      cResult[5] = first2.status;
-      cResult[6] = Y;
-      tmp17 = Y;
+      cResult[3] = first2.field;
+      cResult[4] = first2.status;
+      cResult[5] = W;
+      tmp16 = W;
+      let obj = sourcePage(576);
     }
   : (arg0) => {
       ({ headerTextStyle, sourcePage } = arg0);
@@ -1068,7 +1138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             substr = trimmed.substring(1);
             tmp2 = substr;
           }
-          const validateDiscordTagResult = sourcePage(7456).validateDiscordTag(tmp2);
+          const validateDiscordTagResult = sourcePage(7479).validateDiscordTag(tmp2);
           if (null != validateDiscordTagResult) {
             let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
             closure_6(obj3);
@@ -1078,7 +1148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               discordTag: tmp2,
               context: { location: "Search - Add Friend Search" },
-              errorUxConfig: sourcePage(7451).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+              errorUxConfig: sourcePage(7474).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
               note: null,
             };
             let tmp9;
@@ -1086,8 +1156,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = trimmed1;
             }
             obj6.note = tmp9;
-            const obj5 = ref(7451);
-            ref(7451)
+            const obj5 = ref(7474);
+            ref(7474)
               .sendRequest(obj6)
               .then(
                 () => {
@@ -1151,14 +1221,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_6(obj3);
                 },
               );
-            const sendRequestResult = ref(7451).sendRequest(obj6);
+            const sendRequestResult = ref(7474).sendRequest(obj6);
           }
-          let obj = sourcePage(7456);
+          let obj = sourcePage(7479);
         }
       }
       ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
       const tmp = closure_12();
-      importDefault = noop.useRef(0);
+      ref = noop.useRef(0);
       dependencyMap = noop.useRef("");
       let tmp2 = textState(
         noop.useState(() => {
@@ -1177,7 +1247,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = textState(noop.useState(""), 2);
       const first2 = tmp7[0];
       closure_8 = tmp7[1];
-      const enabled = FriendRequestMessageExperimentDefault.useConfig({ location: "AddFriendbyId" }).enabled;
       const items = [first1];
       const items1 = [first1];
       const callback = noop.useCallback((validatedText) => {
@@ -1234,9 +1303,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           AccessibilityAnnouncer.announce(first1.a11yMessage);
         }
       }, items3);
-      let obj3 = { style: null, children: null };
+      let obj2 = { style: null, children: null };
       const items4 = [tmp.container, style];
-      obj3.style = items4;
+      obj2.style = items4;
       const items5 = [
         closure_9(AddFriendByIdInput, {
           textState,
@@ -1259,68 +1328,61 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ref,
         }),
       ];
-      if (!enabled) {
-        let obj5 = { children: null };
-        items5[1] = enabled;
-        obj3.children = items5;
-        const items6 = [closure_10(tmp16, obj3), ,];
-        let obj6 = { style: tmp.redesignGrow };
-        items6[1] = closure_9(tmp16, obj6);
-        const obj7 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-        const intl3 = sourcePage(1125).intl;
-        obj7.text = intl3.string(sourcePage(1125).t["PMsq/b"]);
-        obj7.disabled = str.trim().length <= 0;
-        obj7.onPress = handleSubmitEditing;
-        obj7.loading = first1.status === constants.LOADING;
-        items6[2] = closure_9(sourcePage(5280).Button, obj7);
-        obj5.children = items6;
-        return closure_10(closure_11, obj5);
-      } else {
-        const obj8 = { style: tmp.friendMessageContainer, children: null };
-        const obj9 = { style: null, variant: "text-sm/semibold", color: "text-muted", children: null };
-        const items7 = [, ,];
-        ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
-        items7[2] = headerTextStyle;
-        obj9.style = items7;
-        let intl = sourcePage(1125).intl;
-        obj9.children = intl.string(sourcePage(1125).t.Yi6Mpu);
-        const items8 = [closure_9(sourcePage(5270).Text, obj9), ,];
-        const obj10 = {
-          returnKeyType: "done",
-          submitBehavior: "submit",
-          value: first2,
-          maxLength: 120,
-          onSubmitEditing: handleSubmitEditing,
-          onChange: callback1,
-          status: null,
-        };
-        let str2;
-        if (first1.field === constants2.MESSAGE) {
-          if (first1.status === constants.ERROR) {
-            str2 = "error";
-          }
+      let obj4 = { style: tmp.friendMessageContainer, children: null };
+      let obj5 = { style: null, variant: "text-sm/semibold", color: "text-muted", children: null };
+      const items6 = [, ,];
+      ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
+      items6[2] = headerTextStyle;
+      obj5.style = items6;
+      let intl = sourcePage(1125).intl;
+      obj5.children = intl.string(sourcePage(1125).t.Yi6Mpu);
+      const items7 = [closure_9(sourcePage(5271).Text, obj5), ,];
+      let obj6 = {
+        returnKeyType: "done",
+        submitBehavior: "submit",
+        value: first2,
+        maxLength: 120,
+        onSubmitEditing: handleSubmitEditing,
+        onChange: callback1,
+        status: null,
+      };
+      let str2;
+      if (first1.field === constants2.MESSAGE) {
+        if (first1.status === constants.ERROR) {
+          str2 = "error";
         }
-        obj10.status = str2;
-        items8[1] = closure_9(sourcePage(7216).TextArea, obj10);
-        if (first1.status !== constants.ERROR) {
-          const obj11 = {
-            style: tmp.messageFooterText,
-            variant: "text-xs/medium",
-            color: "text-muted",
-            children: null,
-          };
-          let intl2 = sourcePage(1125).intl;
-          obj11.children = intl2.string(sourcePage(1125).t.UtfQNw);
-          let tmp17Result = closure_9(sourcePage(5270).Text, obj11);
-          items8[2] = tmp17Result;
-          obj8.children = items8;
-          closure_10(tmp16, obj8);
-        }
-        const obj12 = { errorMessage: first1.message };
-        tmp17Result = closure_9(closure_15, obj12);
       }
+      obj6.status = str2;
+      items7[1] = closure_9(sourcePage(7240).TextArea, obj6);
+      if (first1.status === constants.ERROR) {
+        if (first1.field === constants2.MESSAGE) {
+          const obj7 = { errorMessage: first1.message };
+          let tmp16Result = closure_9(closure_15, obj7);
+        }
+        const obj8 = { children: null };
+        items7[2] = tmp16Result;
+        obj4.children = items7;
+        items5[1] = closure_10(tmp15, obj4);
+        obj2.children = items5;
+        const items8 = [closure_10(tmp15, obj2), ,];
+        const obj9 = { style: tmp.redesignGrow };
+        items8[1] = closure_9(tmp15, obj9);
+        const obj10 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
+        const intl3 = sourcePage(1125).intl;
+        obj10.text = intl3.string(sourcePage(1125).t["PMsq/b"]);
+        obj10.disabled = str.trim().length <= 0;
+        obj10.onPress = handleSubmitEditing;
+        obj10.loading = first1.status === constants.LOADING;
+        items8[2] = closure_9(sourcePage(5281).Button, obj10);
+        obj8.children = items8;
+        return closure_10(closure_11, obj8);
+      }
+      const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
+      let intl2 = sourcePage(1125).intl;
+      obj11.children = intl2.string(sourcePage(1125).t.UtfQNw);
+      tmp16Result = closure_9(sourcePage(5271).Text, obj11);
       let obj = { status: constants.NONE };
-      let obj4 = {
+      let obj3 = {
         textState,
         onChangeText: callback,
         onSelectionChange: function handleSelectionChange(nativeEvent) {

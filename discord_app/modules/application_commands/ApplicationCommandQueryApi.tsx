@@ -53,7 +53,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9684);
+let ApplicationCommandIndexStore = fn(9716);
 ({
   useContextIndexState: metroRequire,
   useDiscoveryState: closure_7,
@@ -61,7 +61,7 @@ let ApplicationCommandIndexStore = fn(9684);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(6019).BuiltInSectionId;
+const BuiltInSectionId = fn(6023).BuiltInSectionId;
 const NOOP = fn(1084).NOOP;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -263,7 +263,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[33] = items3;
                   tmp37 = items3;
                 } else {
-                  const tmp53 = tmp(9692).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+                  const tmp53 = tmp(9724).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
                   const _Symbol2 = Symbol;
                   if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                     const items4 = [tmp53];
@@ -755,7 +755,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
     };
 let closure_14 = tmp6;
-let items = [fn(1997).ApplicationCommandType.CHAT];
+let items = [fn(1998).ApplicationCommandType.CHAT];
 ReactCompilerGating = fn(558);
 const obj6 = { id: "placeholder-section", type: null, name: "" };
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -908,14 +908,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = descriptors;
       }, items1);
     };
-obj6.type = fn(5670).ApplicationCommandSectionType.APPLICATION;
+obj6.type = fn(5672).ApplicationCommandSectionType.APPLICATION;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
-export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
+export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "Array", command: "ix", section: "withSpring" };
+    return { application: "duration", command: "toCharArray$esjava$1", section: "toCharArray$esjava$1" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -966,10 +966,10 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "Array", command: "ix", section: "withSpring" };
+    return { application: "duration", command: "toCharArray$esjava$1", section: "toCharArray$esjava$1" };
   }
-};
-export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
+}
+export function getCachedApplicationSection(type, CHAT, applicationId) {
   const userState = ApplicationCommandIndexStore.getUserState();
   const contextState = ApplicationCommandIndexStore.getContextState(type);
   const result = userState.result;
@@ -1008,8 +1008,8 @@ export const getCachedApplicationSection = function getCachedApplicationSection(
     descriptor = tmp4.descriptor;
   }
   return descriptor;
-};
-export const getCachedResults = function getCachedResults(dependencyMap, CHAT, query) {
+}
+export function getCachedResults(dependencyMap, CHAT, query) {
   const obj = { commandTypes: null, text: query };
   items = [CHAT];
   obj.commandTypes = items;
@@ -1018,8 +1018,8 @@ export const getCachedResults = function getCachedResults(dependencyMap, CHAT, q
     allowFetch: false,
   });
   return { commands: query.commands, sections: query.descriptors };
-};
-export const getChangeKeys = function getChangeKeys(type) {
+}
+export function getChangeKeys(type) {
   const userState = ApplicationCommandIndexStore.getUserState();
   const contextState = ApplicationCommandIndexStore.getContextState(type);
   let result;
@@ -1033,10 +1033,10 @@ export const getChangeKeys = function getChangeKeys(type) {
   }
   items[1] = result1;
   return items;
-};
+}
 export const useCachedResults = tmp3;
 export const useDiscovery = tmp4;
-export const executeQuery = function executeQuery(dependencyMap, commandTypes, placeholderCount) {
+export function executeQuery(dependencyMap, commandTypes, placeholderCount) {
   const query = ApplicationCommandIndexStore.query(dependencyMap, commandTypes, placeholderCount);
   ({ descriptors, commands, loading } = query);
   let num = 0;
@@ -1082,9 +1082,9 @@ export const executeQuery = function executeQuery(dependencyMap, commandTypes, p
   }
   obj2.sections = tmp14;
   return obj2;
-};
+}
 export const useQuery = tmp5;
-export const useCommand = function useCommand(cResult, commandId) {
+export function useCommand(cResult, commandId) {
   closure_0 = commandId;
   const tmp = React6(true, true);
   let result = tmp;
@@ -1120,9 +1120,9 @@ export const useCommand = function useCommand(cResult, commandId) {
         }
       }
     }
-    return { command: "useCallback", application: "PX_16" };
+    return { command: "Array", application: "Reflect" };
   }, items);
-};
+}
 export const useCommandsForApplication = tmp6;
 export const useAccessibleCommandsForApplication = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccessibleCommandsForApplication(channel, arg1, arg2) {

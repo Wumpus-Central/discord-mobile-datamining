@@ -8,10 +8,10 @@ const hasPermission = GuildRoleRecord.hasPermission;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/RolePermissionUtils.tsx");
 
-export const hasViewChannelPermission = function hasViewChannelPermission(item10077) {
+export function hasViewChannelPermission(item10077) {
   return hasPermission(item10077, Permissions.VIEW_CHANNEL);
-};
-export const isChannelAccessDeniedBy = function isChannelAccessDeniedBy(isGuildVocal, deny) {
+}
+export function isChannelAccessDeniedBy(isGuildVocal, deny) {
   let tmp = null != deny;
   if (tmp) {
     let hasItem = BigFlagUtilsAll.has(deny.deny, Permissions.VIEW_CHANNEL);
@@ -26,8 +26,8 @@ export const isChannelAccessDeniedBy = function isChannelAccessDeniedBy(isGuildV
     tmp = hasItem;
   }
   return tmp;
-};
-export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuildVocal, deny) {
+}
+export function isChannelAccessGrantedBy(isGuildVocal, deny) {
   let tmp = null != deny;
   if (tmp) {
     let tmp3 = null != deny;
@@ -60,4 +60,4 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
     tmp = tmp9;
   }
   return tmp;
-};
+}

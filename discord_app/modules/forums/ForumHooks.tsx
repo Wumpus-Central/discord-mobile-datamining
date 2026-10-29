@@ -25,11 +25,11 @@ import ForumPostMessagesStore from "ForumPostMessagesStore.tsx";
 import ForumPostUnreadCountStore from "ForumPostUnreadCountStore.tsx";
 import ForumSearchStore from "ForumSearchStore.tsx";
 
-const ThreadSortOrder = tmp(4865);
-const ForumUtils = tmp(7441);
-const ThreadUtils = tmp(8340);
+const ThreadSortOrder = tmp(4866);
+const ForumUtils = tmp(7464);
+const ThreadUtils = tmp(8362);
 require = fn;
-const ForumTimestampFormats = fn(7417).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7440).ForumTimestampFormats;
 const Constants = fn(1084);
 ({
   AnalyticsObjectTypes: closure_20,
@@ -37,7 +37,7 @@ const Constants = fn(1084);
   EMPTY_STRING_SNOWFLAKE_ID: closure_22,
   Permissions: closure_23,
 } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 let closure_25 = fn(1124).MAX_THREAD_UNREAD_MESSAGE_COUNT;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -1071,7 +1071,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = id(576);
       const stateFromStores = id(504).useStateFromStores(tmp7, tmp9);
       const tmpResult = id(504);
-      const nullableMessageAuthor = id(6401).useNullableMessageAuthor(author);
+      const nullableMessageAuthor = id(6425).useNullableMessageAuthor(author);
       if (cResult[5] === tmp5) {
         if (cResult[6] === id) {
           let tmp12 = cResult[7];
@@ -1137,7 +1137,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items1;
       tmp13 = items1;
       tmp12 = fn2;
-      const tmpResult2 = id(6401);
+      const tmpResult2 = id(6425);
     }
   : function useForumPostMessageAuthor(author, getGuildId) {
       let id;
@@ -1151,7 +1151,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
       const obj = id(504);
-      const nullableMessageAuthor = id(6401).useNullableMessageAuthor(author);
+      const nullableMessageAuthor = id(6425).useNullableMessageAuthor(author);
       const items1 = [guildId, id];
       const effect = noop.useEffect(() => {
         let tmp2 = null != id;
@@ -1997,9 +1997,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function b() {
         if (null == searchQuery) {
           if (null != ref.current) {
-            closure_1(9761).clearForumSearch(user.id);
+            closure_1(9793).clearForumSearch(user.id);
             tmp.current = null;
-            const obj2 = closure_1(9761);
+            const obj2 = closure_1(9793);
           }
         }
         if (null != searchQuery) {
@@ -2039,8 +2039,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                closure_1(9761).clearForumSearch(user.id);
-                const obj = closure_1(9761);
+                closure_1(9793).clearForumSearch(user.id);
+                const obj = closure_1(9793);
               }
             }
           }
@@ -2091,9 +2091,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = isSearchLoading.useEffect(() => {
         if (null == searchQuery) {
           if (null != ref.current) {
-            closure_1(9761).clearForumSearch(user.id);
+            closure_1(9793).clearForumSearch(user.id);
             tmp.current = null;
-            const obj2 = closure_1(9761);
+            const obj2 = closure_1(9793);
           }
         }
         if (null != searchQuery) {
@@ -2133,8 +2133,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                closure_1(9761).clearForumSearch(user.id);
-                const obj = closure_1(9761);
+                closure_1(9793).clearForumSearch(user.id);
+                const obj = closure_1(9793);
               }
             }
           }
@@ -2155,7 +2155,7 @@ export const useMaxPossibleForumPostReactions = tmp10;
 export const useMessageCount = tmp11;
 export const useForumPostMessageAuthor = tmp12;
 export const useForumPostAuthor = tmp13;
-export const getForumPostAuthor = function getForumPostAuthor(ownerId) {
+export function getForumPostAuthor(ownerId) {
   const user = UserStore.getUser(ownerId.ownerId);
   const message = ForumPostMessagesStore.getMessage(ownerId.id);
   let firstMessage;
@@ -2172,7 +2172,7 @@ export const getForumPostAuthor = function getForumPostAuthor(ownerId) {
   }
   obj.author = useMessageAuthor.getUserAuthor(author, ownerId);
   return obj;
-};
+}
 export const useForumPostFirstMessageMarkup = tmp14;
 export const useCanManageChannel = tmp15;
 export const useForumPostReadStates = tmp16;

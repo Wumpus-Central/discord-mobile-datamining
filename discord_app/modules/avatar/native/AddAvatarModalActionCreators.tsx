@@ -1,7 +1,7 @@
 // discord_app/modules/avatar/native/AddAvatarModalActionCreators.tsx
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import UserSettingsAccountActionCreators from "../../../actions/UserSettingsAccountActionCreators.tsx";
@@ -17,7 +17,7 @@ const ADD_AVATAR_MODAL_KEY = AddAvatarModalConstants.ADD_AVATAR_MODAL_KEY;
 const AnalyticEvents = Constants.AnalyticEvents;
 let result = size.fileFinishedImporting("modules/avatar/native/AddAvatarModalActionCreators.tsx");
 
-export const handlePressNext = function handlePressNext(pendingImage, default_avatar_selected, fn) {
+export function handlePressNext(pendingImage, default_avatar_selected, fn) {
   if (null != pendingImage) {
     const obj4 = { default_avatar_selected, is_guild_profile: false, location: { page: "Onboarding" } };
     AnalyticsUtilsDefault.track(AnalyticEvents.USER_AVATAR_UPDATED, obj4);
@@ -34,8 +34,8 @@ export const handlePressNext = function handlePressNext(pendingImage, default_av
     ModalActionCreatorsDefault.popWithKey(ADD_AVATAR_MODAL_KEY);
     NUFActionCreators.nextOnboardingStep({ skip: false });
   }
-};
-export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
+}
+export function showSkipAvatarModal(arg0) {
   _require = arg0;
   AnalyticsUtilsDefault.track(AnalyticEvents.NUO_TRANSITION, {
     flow_type: "Mobile NUX Post Reg",
@@ -63,7 +63,7 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
     }
   };
   AlertActionCreatorsDefault.show(obj3);
-};
-export const openAddAvatarModal = function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19185, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
-};
+}
+export function openAddAvatarModal() {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19420, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+}

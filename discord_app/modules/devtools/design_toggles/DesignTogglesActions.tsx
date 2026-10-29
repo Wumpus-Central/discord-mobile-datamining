@@ -5,15 +5,15 @@ import DesignTogglesStore from "DesignTogglesStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
 
-export const toggle = function toggle(toggle, flag) {
+export function toggle(toggle, flag) {
   let tmp = flag;
   if (typeof flag !== "boolean") {
     tmp = !DesignTogglesStore.get(toggle);
   }
   DispatcherDefault.dispatch({ type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp });
   const obj2 = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp };
-};
-export const clearAll = function clearAll() {
+}
+export function clearAll() {
   for (const key10005 in DesignTogglesStore.all()) {
     let flag = false;
     if (typeof false !== "boolean") {
@@ -24,4 +24,4 @@ export const clearAll = function clearAll() {
     let dispatchResult = obj.dispatch(obj2);
     continue;
   }
-};
+}

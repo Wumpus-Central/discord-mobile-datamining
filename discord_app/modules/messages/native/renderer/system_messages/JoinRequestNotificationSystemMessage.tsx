@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx",
 );
 
-export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
+export function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
   const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
@@ -87,4 +87,4 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     const merged = Object.assign(createCommonMessageDefault(message));
     return obj5;
   }
-};
+}

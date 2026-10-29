@@ -8,7 +8,7 @@ import ChangeNicknameActionCreatorsDefault from "../../actions/ChangeNicknameAct
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
-import t_mod from "../../../_runtime/metro/01948__.js";
+import t_mod from "../../../_runtime/metro/01949__.js";
 
 require = fn;
 const Constants = fn(1084);
@@ -142,7 +142,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/LegacyCommands.tsx");
 
 export { COMMANDS };
-export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
+export function handleLegacyCommands(text, arg1) {
   for (const key10005 in obj) {
     let str = obj[key10005];
     if (null == str.match) {
@@ -164,4 +164,4 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
     }
     continue;
   }
-};
+}

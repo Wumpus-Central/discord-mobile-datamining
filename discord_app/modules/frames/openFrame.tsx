@@ -5,7 +5,7 @@ import FramesActionCreatorsDefault from "FramesActionCreators.native.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const Routes = fn(1084).Routes;
 const size = fn(2);
@@ -30,6 +30,6 @@ export default function openFrame(arg0) {
     return obj8;
   }
 }
-export const shouldOpenAppChannel = function shouldOpenAppChannel(id) {
+export function shouldOpenAppChannel(id) {
   return null == FramesStore.getFrame(hasOwnProperty(id, surface));
-};
+}

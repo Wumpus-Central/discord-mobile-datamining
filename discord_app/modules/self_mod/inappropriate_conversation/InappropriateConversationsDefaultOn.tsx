@@ -17,11 +17,9 @@ const result = size.fileFinishedImporting(
 );
 
 export const InappropriateConversationsDefaultOn = tmp2;
-export const isEligibleForInappropriateConversationDefaultOn = function isEligibleForInappropriateConversationDefaultOn(
-  location,
-) {
+export function isEligibleForInappropriateConversationDefaultOn(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}
 export const useIsEligibleForInappropriateConversationDefaultOn = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsEligibleForInappropriateConversationDefaultOn(location) {
       const cResult = c.c(2);

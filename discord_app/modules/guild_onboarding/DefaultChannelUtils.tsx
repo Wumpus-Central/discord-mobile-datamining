@@ -73,7 +73,7 @@ export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled
         VIEW_CHANNEL = constants2.VIEW_CHANNEL;
       });
     };
-export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
+export function canChannelBeDefault(guild_id, id) {
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const GUILD_VOCAL = constants.GUILD_VOCAL;
@@ -87,4 +87,4 @@ export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
     return isChannelGatedResult;
   }
   VIEW_CHANNEL = constants2.VIEW_CHANNEL;
-};
+}

@@ -10,7 +10,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/onTapCheckpointCard.tsx");
 
-export const onTapCheckpointCard = function onTapCheckpointCard(arg0) {
+export function onTapCheckpointCard(arg0) {
   ({ message, authorId } = arg0);
   if (obj.getIsCheckpointEnabled("onTapCheckpointCard")) {
     const channel = ChannelStore.getChannel(message.channel_id);
@@ -29,4 +29,4 @@ export const onTapCheckpointCard = function onTapCheckpointCard(arg0) {
     const tmpResult4 = openCheckpoint;
   }
   obj = CheckpointExperiments;
-};
+}

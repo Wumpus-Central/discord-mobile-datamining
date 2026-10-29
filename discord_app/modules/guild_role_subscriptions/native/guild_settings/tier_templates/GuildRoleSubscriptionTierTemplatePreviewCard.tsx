@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
@@ -21,7 +21,7 @@ const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
     padding: 16,
@@ -612,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   function handleViewEntireTemplate() {
                                     ActionSheetActionCreatorsDefault.openLazy(
-                                      asyncRequireImpl(19638, dependencyMap.paths),
+                                      asyncRequireImpl(19872, dependencyMap.paths),
                                       "TierTemplateCard",
                                       { template, guildId, handleSelectTemplateInPreview },
                                     );
@@ -1095,7 +1095,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (closure_7) {
           const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(19642, dependencyMap.paths),
+            asyncRequireImpl(19876, dependencyMap.paths),
             "TierTemplatePriceReselectionCard",
             obj2,
           );
@@ -1117,7 +1117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.contentContainer,
         onPress: function handleViewEntireTemplate() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19638, dependencyMap.paths), "TierTemplateCard", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19872, dependencyMap.paths), "TierTemplateCard", {
             template,
             guildId,
             handleSelectTemplateInPreview: callback1,

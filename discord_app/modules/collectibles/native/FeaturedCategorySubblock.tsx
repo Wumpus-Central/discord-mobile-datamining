@@ -7,14 +7,14 @@ import VisibilitySensorDefault from "VisibilitySensor.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
-const FastImageDefault = tmp12(5705);
+const FastImageDefault = tmp12(5707);
 require = fn;
 let closure_4 = fn(1086).CollectiblesMobileShopScreen;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({
   container: { position: "relative" },
   bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
@@ -126,11 +126,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       subblock = subblock.subblock;
       let stateFromStores;
       const tmp = closure_9();
-      importDefault = subblock(1502).useNavigation();
-      let obj = subblock(1502);
-      dependencyMap = subblock(9391).useCollectiblesAnalyticsContext();
+      importDefault = subblock(1503).useNavigation();
+      let obj = subblock(1503);
+      dependencyMap = subblock(9423).useCollectiblesAnalyticsContext();
       const assetUrl = subblock.assetUrl;
-      let obj2 = subblock(9391);
+      let obj2 = subblock(9423);
       let items = [stateFromStores];
       stateFromStores = subblock(504).useStateFromStores(items, () =>
         CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -150,14 +150,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         date = new Date(unpublishedAt);
       }
       let obj5 = {
-        onChange: subblock(17481).useTrackProductCardImpression(
+        onChange: subblock(17720).useTrackProductCardImpression(
           subblock.categoryStoreListingId,
           "mobile_home",
           "featured_block",
         ).handleCardVisibilityChange,
         children: null,
       };
-      let obj4 = subblock(17481);
+      let obj4 = subblock(17720);
       const obj6 = {
         accessibilityRole: "button",
         accessibilityLabel: null,
@@ -232,13 +232,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [tmp11Result];
       const obj8 = { radius: nativeDefault.radii.lg };
-      let result = subblock(7697).shouldShowLimitedTimeBadge(date);
+      let result = subblock(7720).shouldShowLimitedTimeBadge(date);
       if (result) {
         const obj11 = { style: tmp.limitedTimeBadge };
-        result = closure_7(tmp2(9454).LimitedTimeBadge, obj11);
+        result = closure_7(tmp2(9485).LimitedTimeBadge, obj11);
       }
       items1[1] = result;
       obj6.children = items1;
-      obj5.children = closure_8(subblock(6944).PressableOpacity, obj6);
+      obj5.children = closure_8(subblock(6968).PressableOpacity, obj6);
       return closure_7(tmp13, obj5);
     };

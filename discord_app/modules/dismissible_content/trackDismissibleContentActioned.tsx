@@ -7,12 +7,12 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.tsx";
 
 require = fn;
-const getCurrentlyShownCounts = fn(4848).getCurrentlyShownCounts;
+const getCurrentlyShownCounts = fn(4849).getCurrentlyShownCounts;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/trackDismissibleContentActioned.tsx");
 
-export const trackDismissibleContentActioned = function trackDismissibleContentActioned(content) {
+export function trackDismissibleContentActioned(content) {
   let obj = dismissAction;
   if (dismissAction === undefined) {
     obj = {};
@@ -42,4 +42,4 @@ export const trackDismissibleContentActioned = function trackDismissibleContentA
     ({ version: obj5.version, snowflakeId: obj5.snowflake_id } = obj);
     obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_ACTIONED, obj7);
   }
-};
+}

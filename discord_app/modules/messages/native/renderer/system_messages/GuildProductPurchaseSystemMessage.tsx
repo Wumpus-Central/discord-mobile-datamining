@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx",
 );
 
-export const createGuildProductPurchaseSystemMessage = function createGuildProductPurchaseSystemMessage(message) {
+export function createGuildProductPurchaseSystemMessage(message) {
   const obj = {};
   const merged = Object.assign(message);
   obj.message = new MessageRecord(message.message);
@@ -65,4 +65,4 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     guildMemberAvatarSource = author.getAvatarSource(undefined);
   }
   const tmp2 = new MessageRecord(message.message);
-};
+}

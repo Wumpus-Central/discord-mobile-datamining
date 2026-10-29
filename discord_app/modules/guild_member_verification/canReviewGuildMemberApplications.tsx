@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/canReviewGuildMemberApplications.tsx");
 
-export const canReviewGuildMemberApplications = function canReviewGuildMemberApplications(arg0) {
+export function canReviewGuildMemberApplications(arg0) {
   guild = GuildStore.getGuild(arg0);
   let tmp2 = null != guild;
   if (tmp2) {
@@ -23,7 +23,7 @@ export const canReviewGuildMemberApplications = function canReviewGuildMemberApp
     tmp2 = hasItem;
   }
   return tmp2;
-};
+}
 export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCanReviewGuildMemberApplications(arg0) {
       _require = arg0;
@@ -57,8 +57,8 @@ export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCo
           hasItem = PermissionStore.can(constants2.KICK_MEMBERS, stateFromStores);
         }
         if (hasItem) {
-          hasItem = tmp(6930).guildHasVerificationGate(stateFromStores);
-          const tmpResult2 = tmp(6930);
+          hasItem = tmp(6954).guildHasVerificationGate(stateFromStores);
+          const tmpResult2 = tmp(6954);
         }
         cResult[3] = stateFromStores;
         cResult[4] = hasItem;

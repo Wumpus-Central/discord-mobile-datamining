@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestUtils.native.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import Link from "../../../../_runtime/01503_Link.js";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import Link from "../../../../_runtime/01504_Link.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -26,7 +26,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14375, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14609, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14375, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14609, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -64,7 +64,7 @@ let closure_15 = async function _handleRewardClaim(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -142,7 +142,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
           closure_129_9 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -271,7 +271,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
     }
   }
 };
-const QuestConstants = fn(6745);
+const QuestConstants = fn(6768);
 ({
   QuestsExperimentLocations: hasOwnProperty,
   QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: metroRequire,
@@ -284,13 +284,13 @@ const jsxProd = fn(21);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
-export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9603, dependencyMap.paths), React5, {
+export function openRewardDetailsBottomSheet(questId) {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9635, dependencyMap.paths), React5, {
     questId: questId.questId,
   });
-};
+}
 export { viewReward };
-export const handleRewardClaimThenView = function handleRewardClaimThenView() {
+export function handleRewardClaimThenView() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -299,8 +299,8 @@ export const handleRewardClaimThenView = function handleRewardClaimThenView() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const openQuestHome = function openQuestHome(scrollToQuestId) {
+}
+export function openQuestHome(scrollToQuestId) {
   scrollToQuestId = scrollToQuestId.scrollToQuestId;
   let flag = scrollToQuestId.mergeExistingRoutes;
   if (flag === undefined) {
@@ -347,8 +347,8 @@ export const openQuestHome = function openQuestHome(scrollToQuestId) {
     }, 1);
     const tmp3Result = scrollToQuestId(tmp4[20]);
   }
-};
-export const isHeroVideoSupported = function isHeroVideoSupported(mimetype) {
+}
+export function isHeroVideoSupported(mimetype) {
   if (obj.isIOS()) {
     let tmp2 = tmp;
   } else {
@@ -358,13 +358,13 @@ export const isHeroVideoSupported = function isHeroVideoSupported(mimetype) {
     }
   }
   return tmp2;
-};
-export const openDiscordQuestsFAQ = function openDiscordQuestsFAQ() {
+}
+export function openDiscordQuestsFAQ() {
   LinkingDefault.openURL(
     "https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ#h_01HVPBZR5FBM7QBFR9KDBASXP5",
   );
-};
-export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
+}
+export function getPrimaryCtaIcon(quest, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -389,8 +389,8 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
     }
   }
   obj = utils_QuestUtils;
-};
-export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
+}
+export function showQuestUnavailableAlert() {
   const obj2 = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.Lhpq2P);
@@ -409,8 +409,8 @@ export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
   obj3.children = items;
   obj2.actions = __initData(closure_1_11, obj3);
   useAlertStore.openAlert("quest-unavailable", v65535(AlertModal.AlertModal, obj2));
-};
-export const dismissOverlayScreens = function dismissOverlayScreens() {
+}
+export function dismissOverlayScreens() {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -433,4 +433,4 @@ export const dismissOverlayScreens = function dismissOverlayScreens() {
       const tmpResult = NavigationRouteUtils;
     }
   }
-};
+}

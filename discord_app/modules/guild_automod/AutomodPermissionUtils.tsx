@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 let items = [, ,];
 ({
   AUTOMOD_QUARANTINED_BIO: arr[0],
@@ -57,7 +57,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/AutomodPermissi
 
 export const AUTOMOD_QUARANTINED_PROFILE_FLAGS = items;
 export { getAutomodQuarantinedProfileFlags };
-export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuarantinedGuildMemberFlags(member) {
+export function getAutomodQuarantinedGuildMemberFlags(member) {
   if (null == member) {
     const _Set3 = Set;
     let set = new Set();
@@ -83,8 +83,8 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
     }
   }
   return set;
-};
-export const getAutomodReason = function getAutomodReason(automodQuarantinedGuildMemberFlags) {
+}
+export function getAutomodReason(automodQuarantinedGuildMemberFlags) {
   if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
     let prop = GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME;
   } else if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_BIO)) {
@@ -96,7 +96,7 @@ export const getAutomodReason = function getAutomodReason(automodQuarantinedGuil
     }
   }
   return prop;
-};
+}
 export { hasAutomodQuarantinedProfile };
 export const useCurrentUserAutomodQuaratinedProfile = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCurrentUserAutomodQuaratinedProfile(arg0) {

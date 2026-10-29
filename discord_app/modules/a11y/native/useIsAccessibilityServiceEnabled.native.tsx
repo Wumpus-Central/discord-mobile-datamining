@@ -19,13 +19,13 @@ const state = module_570.create((arg0) => {
 });
 let result = size.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
 
-export const getIsAccessibilityServiceEnabled = function getIsAccessibilityServiceEnabled() {
+export function getIsAccessibilityServiceEnabled() {
   let accessibilityServiceEnabled = useIsScreenReaderEnabled.getIsScreenReaderEnabled();
   if (!accessibilityServiceEnabled) {
     accessibilityServiceEnabled = state.getState().accessibilityServiceEnabled;
   }
   return accessibilityServiceEnabled;
-};
+}
 export const useIsAccessibilityServiceEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAccessibilityServiceEnabled() {
   let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {

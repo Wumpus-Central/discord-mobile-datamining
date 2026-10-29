@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
-export const supportsZstd = function supportsZstd() {
+export function supportsZstd() {
   constants = NativeCompressionModuleDefault.getConstants();
   let flag;
   if (constants != null) {
@@ -14,10 +14,10 @@ export const supportsZstd = function supportsZstd() {
     flag = false;
   }
   return flag;
-};
-export const createZstdContextWeb = function createZstdContextWeb() {
+}
+export function createZstdContextWeb() {
   const error = new Error(
     "Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.",
   );
   throw error;
-};
+}

@@ -14,7 +14,7 @@ const config = apex_ApexExperimentDefault(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/LowLatencyRateControlExperiment.tsx");
 
-export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRateControlExperimentConfig(disable) {
+export function getLowLatencyRateControlExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
@@ -26,4 +26,4 @@ export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRa
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;
-};
+}

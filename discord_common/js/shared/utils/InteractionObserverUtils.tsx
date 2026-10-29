@@ -23,7 +23,7 @@ let weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
 
-export const getIntersectionObserver = function getIntersectionObserver(current) {
+export function getIntersectionObserver(current) {
   value = weakMap.get(current);
   if (null == value) {
     const intersectionObserver = new globalThis.IntersectionObserver(__handleIntersections, current);
@@ -34,8 +34,8 @@ export const getIntersectionObserver = function getIntersectionObserver(current)
     value = intersectionObserver;
   }
   return value;
-};
-export const watch = function watch(current2, current, arg2) {
+}
+export function watch(current2, current, arg2) {
   weakMap = weakMap1.get(current2);
   if (weakMap == null) {
     const _WeakMap = WeakMap;
@@ -46,8 +46,8 @@ export const watch = function watch(current2, current, arg2) {
   }
   const result = weakMap.set(current, arg2);
   const result1 = weakMap1.set(current2, weakMap);
-};
-export const unwatch = function unwatch(current2, current) {
+}
+export function unwatch(current2, current) {
   weakMap = weakMap1.get(current2);
   if (weakMap == null) {
     const _WeakMap = WeakMap;
@@ -58,4 +58,4 @@ export const unwatch = function unwatch(current2, current) {
     current2.unobserve(current);
     const result = weakMap1.set(current2, weakMap);
   }
-};
+}

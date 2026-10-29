@@ -9,7 +9,7 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import EmbeddedActivitiesStore from "../../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -83,7 +83,7 @@ function isConnectedToActivityInText() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
-export const isActivityPanelFullscreen = function isActivityPanelFullscreen() {
+export function isActivityPanelFullscreen() {
   const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(
     EmbeddedActivitiesStore.getConnectedActivityLocation(),
   );
@@ -92,7 +92,7 @@ export const isActivityPanelFullscreen = function isActivityPanelFullscreen() {
     tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
   }
   return tmp3;
-};
+}
 export { isConnectedToActivityInText };
 export const useIsActivityPanelFullscreen = tmp2;
 export const useIsConnectedToActivityInText = ReactCompilerGating.isReactCompilerEnabled()

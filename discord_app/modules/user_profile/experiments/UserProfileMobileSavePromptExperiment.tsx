@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileMobileSavePromptExperiment.tsx");
 
-export const getIsUserProfileMobileSavePromptEnabled = function getIsUserProfileMobileSavePromptEnabled(location) {
+export function getIsUserProfileMobileSavePromptEnabled(location) {
   return config.getConfig({ location }).enabled;
-};
+}

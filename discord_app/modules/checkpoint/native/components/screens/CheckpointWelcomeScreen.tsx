@@ -5,8 +5,8 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3057 from "../../../Checkpoint.messages.js";
-import _modDef3089 from "../../../Checkpoint2026.messages.js";
+import _modDef3058 from "../../../Checkpoint.messages.js";
+import _modDef3090 from "../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import TextWritingAnimation from "../TextWritingAnimation.tsx";
 import CheckpointKnickKnacksDefault from "../CheckpointKnickKnacks.tsx";
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
-          const stringResult = intl.string(_modDef3057["CdU/PF"]);
+          const stringResult = intl.string(_modDef3058["CdU/PF"]);
           cResult[7] = stringResult;
           let tmp14 = stringResult;
         } else {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] !== name) {
             const intl2 = util.intl;
             const obj4 = { username: name };
-            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3089.xhZ23b, obj4);
+            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3090.xhZ23b, obj4);
             cResult[11] = name;
             cResult[12] = formatToPlainStringResult;
             let tmp20 = formatToPlainStringResult;
@@ -156,7 +156,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp22 = tmp26;
           const tmp5Result2 = TextWritingAnimationDefault;
         }
-        const obj10 = { style: tmp13, textStyle: tmp4.titleText, text: tmp14, delay, variant: "display-lg" };
+        const obj10 = {
+          isStepHeading: true,
+          style: tmp13,
+          textStyle: tmp4.titleText,
+          text: tmp14,
+          delay,
+          variant: "display-lg",
+        };
         const tmp19 = hasOwnProperty(TextWritingAnimationDefault, obj10);
         cResult[8] = tmp4.titleText;
         cResult[9] = tmp13;
@@ -179,7 +186,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { children: null };
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { style: tmp.content, children: null };
-      const obj6 = { style: null, textStyle: tmp.titleText, text: null, delay: null, variant: "display-lg" };
+      const obj6 = {
+        isStepHeading: true,
+        style: null,
+        textStyle: tmp.titleText,
+        text: null,
+        delay: null,
+        variant: "display-lg",
+      };
       const items1 = [tmp.title];
       const obj7 = { transform: null };
       const items2 = [{ scale: bound }];
@@ -188,12 +202,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.style = items1;
       const tmp5 = CheckpointScreenDefault;
       const intl = util.intl;
-      obj6.text = intl.string(_modDef3057["CdU/PF"]);
+      obj6.text = intl.string(_modDef3058["CdU/PF"]);
       obj6.delay = delay;
       const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), ,];
       const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
       const intl2 = util.intl;
-      obj8.text = intl2.formatToPlainString(_modDef3089.xhZ23b, { username: name });
+      obj8.text = intl2.formatToPlainString(_modDef3090.xhZ23b, { username: name });
       obj8.delay = delay + TextWritingAnimation.DURATION;
       items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
       items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

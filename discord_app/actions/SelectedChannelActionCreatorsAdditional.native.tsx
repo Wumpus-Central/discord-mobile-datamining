@@ -13,11 +13,11 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(6672).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(6696).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
-export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
+export function getChannelSelectionOrigin() {
   let guildId = SelectedGuildStore.getGuildId();
   if (guildId == null) {
     guildId = null;
@@ -29,8 +29,8 @@ export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
   }
   obj.fromChannelId = channelId;
   return obj;
-};
-export const selectVoiceChannelAdditional = function selectVoiceChannelAdditional(id, guildId) {
+}
+export function selectVoiceChannelAdditional(id, guildId) {
   _require = id;
   importDefault = guildId;
   if (flag === undefined) {
@@ -102,4 +102,4 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
       flag,
     );
   }
-};
+}

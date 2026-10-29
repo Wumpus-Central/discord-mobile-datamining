@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
 import isMessageMentioned from "isMessageMentioned.tsx";
@@ -206,11 +206,11 @@ function createMessageRecord(message, arg1) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp47Result = _modDef2046(date);
+      tmp47Result = _modDef2047(date);
     }
     let durationResult = null;
     if (null != tmp47Result) {
-      durationResult = _modDef2046.duration(tmp47Result.diff(tmp43));
+      durationResult = _modDef2047.duration(tmp47Result.diff(tmp43));
     }
     const obj11 = { participants: call.participants, endedTimestamp: tmp47Result, duration: durationResult };
     tmp44 = obj11;
@@ -323,7 +323,7 @@ function createMessageRecord(message, arg1) {
   });
   const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4947);
+let MessageRecord = fn(4948);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1084);
@@ -333,7 +333,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
 
 export { createMessageRecord };
-export const updateServerMessage = function updateServerMessage(message, message2) {
+export function updateServerMessage(message, message2) {
   if (null != message2.edited_timestamp) {
     const obj3 = {};
     const merged = Object.assign(message2);
@@ -345,8 +345,8 @@ export const updateServerMessage = function updateServerMessage(message, message
     const merged2 = Object.assign(message2);
   }
   return obj;
-};
-export const updateMessageRecord = function updateMessageRecord(message, message2) {
+}
+export function updateMessageRecord(message, message2) {
   if (null != message2.edited_timestamp) {
     ({ reactions: obj21.reactions, interactionData: obj21.interactionData } = message);
     return createMessageRecord(message2, { reactions: null, interactionData: null });
@@ -360,11 +360,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef2046(date);
+          tmp = _modDef2047(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef2046.duration(tmp.diff(tmp46));
+          durationResult = _modDef2047.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;
@@ -522,18 +522,18 @@ export const updateMessageRecord = function updateMessageRecord(message, message
       const result17 = result4.set("embeds", items3);
     }
   }
-};
-export const canEditMessageWithStickers = function canEditMessageWithStickers(content) {
+}
+export function canEditMessageWithStickers(content) {
   let tmp = 0 === StickersUtils.getMessageStickers(content).length;
   if (!tmp) {
     tmp = "" !== content.content;
   }
   return tmp;
-};
-export const hasEphemeralAppearance = function hasEphemeralAppearance(message) {
+}
+export function hasEphemeralAppearance(message) {
   let hasFlagResult = message.hasFlag(constants.EPHEMERAL);
   if (hasFlagResult) {
     hasFlagResult = message.type !== constants2.IN_GAME_MESSAGE_NUX;
   }
   return hasFlagResult;
-};
+}

@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitOptionDetails.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3089 from "../../../Checkpoint2026.messages.js";
+import _modDef3090 from "../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import RarityBadgeDefault from "RarityBadge.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   title: { textTransform: "capitalize" },
@@ -26,7 +26,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp4;
       let tmp5 = null;
       if (!asset.hidden) {
-        if (asset.status === tmp(6077).CheckpointTraitOptionStatus.NITRO_LOCKED) {
+        if (asset.status === tmp(6101).CheckpointTraitOptionStatus.NITRO_LOCKED) {
           if (cResult[0] !== tmp4) {
             const intl = tmp(1125).intl;
             const obj2 = {
@@ -39,9 +39,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                     style: subscribeLink.subscribeLink,
                     onPress() {
                       const obj = { analyticsLocations: null };
-                      const items = [closure_1_1(7314).CHECKPOINT];
+                      const items = [closure_1_1(7338).CHECKPOINT];
                       obj.analyticsLocations = items;
-                      return closure_1_1(9826)(obj);
+                      return closure_1_1(9858)(obj);
                     },
                     accessibilityRole: "link",
                     children,
@@ -50,17 +50,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                 );
               },
             };
-            const formatResult = intl.format(_modDef3089["3Wq/bk"], obj2);
+            const formatResult = intl.format(_modDef3090["3Wq/bk"], obj2);
             cResult[0] = tmp4;
             cResult[1] = formatResult;
           }
         } else {
           if (cResult[2] !== asset) {
-            const assetDescription = tmp(6398).getAssetDescription(asset);
+            const assetDescription = tmp(6422).getAssetDescription(asset);
             cResult[2] = asset;
             cResult[3] = assetDescription;
             let tmp6 = assetDescription;
-            const tmpResult = tmp(6398);
+            const tmpResult = tmp(6422);
           } else {
             tmp6 = cResult[3];
           }
@@ -112,9 +112,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   style: subscribeLink.subscribeLink,
                   onPress() {
                     const obj = { analyticsLocations: null };
-                    const items = [closure_1_1(7314).CHECKPOINT];
+                    const items = [closure_1_1(7338).CHECKPOINT];
                     obj.analyticsLocations = items;
-                    return closure_1_1(9826)(obj);
+                    return closure_1_1(9858)(obj);
                   },
                   accessibilityRole: "link",
                   children,
@@ -123,10 +123,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               );
             },
           };
-          let formatResult = format(_modDef3089["3Wq/bk"], obj);
+          let formatResult = format(_modDef3090["3Wq/bk"], obj);
         } else {
-          formatResult = format(6398).getAssetDescription(asset);
-          const formatResult1 = format(6398);
+          formatResult = format(6422).getAssetDescription(asset);
+          const formatResult1 = format(6422);
         }
       }
     };

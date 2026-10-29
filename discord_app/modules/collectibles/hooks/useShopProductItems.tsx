@@ -77,7 +77,7 @@ let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProdu
 
 export { ItemsSortingHat };
 export { getProductItems };
-export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecoration) {
+export function getPurchasedItem(arg0, firstAvatarDecoration) {
   let tmp;
   if (null != arg0) {
     if (typeof ItemsSortingHat === "function") {
@@ -103,7 +103,7 @@ export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecor
     }
   }
   return tmp;
-};
+}
 export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShopProductItems(arg0) {
       const cResult = c.c(2);

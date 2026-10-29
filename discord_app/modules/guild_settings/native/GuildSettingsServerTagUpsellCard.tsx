@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Powerups from "../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import LinearGradientDefault from "../../../../_runtime/05294_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05295_LinearGradient.js";
 import GuildPowerupsActionCreators from "../../premium/powerups/GuildPowerupsActionCreators.tsx";
 import useGetGuildPowerupBannerImageDefault from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsImageDefault from "../../premium/powerups/native/GuildPowerupsImage.tsx";
@@ -19,7 +19,7 @@ const end = { x: 1, y: 0.5 };
 const colors = ["rgba(88, 101, 242, 0.3)", "rgba(22, 26, 138, 0.3)"];
 const colors2 = ["rgba(151, 151, 159, 0.04)", "rgba(151, 151, 159, 0.04)"];
 let c13 = "#29292D";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   card: {
     borderRadius: nativeDefault.radii.xl,
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = { variant: "heading-xl/semibold", color: "text-strong", style: centerText, children: tmp35 };
-            const tmp38 = closure_7(tmp(5270).Text, obj5);
+            const tmp38 = closure_7(tmp(5271).Text, obj5);
             cResult[22] = tmp4.centerText;
             cResult[23] = tmp38;
           } else {
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp39, children: tmp40 };
-              const tmp43 = closure_7(tmp(5270).Text, obj6);
+              const tmp43 = closure_7(tmp(5271).Text, obj6);
               cResult[28] = tmp39;
               cResult[29] = tmp43;
             } else {
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { spacing: nativeDefault.space.PX_8, style: textBlock, children: null };
             const items5 = [tmp37, tmp42];
             obj7.children = items5;
-            const tmp46 = closure_8(tmp(6013).Stack, obj7);
+            const tmp46 = closure_8(tmp(6015).Stack, obj7);
             cResult[30] = tmp4.textBlock;
             cResult[31] = tmp37;
             cResult[32] = tmp42;
@@ -498,25 +498,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
       const intl = tmp2(1125).intl;
       obj11.children = intl.string(guildId(1125).t["2QmKZ2"]);
-      const items6 = [closure_7(guildId(5270).Text, obj11)];
+      const items6 = [closure_7(guildId(5271).Text, obj11)];
       const obj12 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
       const items7 = [,];
       ({ centerText: arr8[0], body: arr8[1] } = tmp);
       obj12.style = items7;
       const intl2 = tmp2(1125).intl;
       obj12.children = intl2.string(guildId(1125).t.Tg0fDm);
-      items6[1] = closure_7(guildId(5270).Text, obj12);
+      items6[1] = closure_7(guildId(5271).Text, obj12);
       obj10.children = items6;
-      items5[1] = closure_8(guildId(6013).Stack, obj10);
+      items5[1] = closure_8(guildId(6015).Stack, obj10);
       const obj13 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
       const intl3 = tmp2(1125).intl;
       obj13.text = intl3.string(guildId(1125).t.kMRDWs);
-      obj13.icon = closure_7(guildId(17926).BoostTier2Icon, { color: "white" });
+      obj13.icon = closure_7(guildId(18164).BoostTier2Icon, { color: "white" });
       obj13.onPress = guildId.onUnlockPress;
-      items5[2] = closure_7(guildId(5280).Button, obj13);
+      items5[2] = closure_7(guildId(5281).Button, obj13);
       obj7.children = items5;
-      items4[3] = closure_8(guildId(6013).Stack, obj7);
+      items4[3] = closure_8(guildId(6015).Stack, obj7);
       obj3.children = items4;
       obj2.children = closure_8(closure_4, obj3);
-      return closure_7(guildId(5070).ThemeContextProvider, obj2);
+      return closure_7(guildId(5071).ThemeContextProvider, obj2);
     };

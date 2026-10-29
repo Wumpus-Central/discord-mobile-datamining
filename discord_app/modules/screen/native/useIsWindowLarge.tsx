@@ -12,7 +12,7 @@ const result1 = size.fileFinishedImporting("modules/screen/native/useIsWindowLar
 export default function useIsWindowLarge() {
   return useWindowSizeClassifierDefault() >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
 }
-export const getIsWindowLarge = function getIsWindowLarge() {
+export function getIsWindowLarge() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
   return windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
-};
+}

@@ -8,8 +8,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4874).isGuildOwner;
-let closure_8 = fn(4940).MemberSafetyPagePermissions;
+const isGuildOwner = fn(4875).isGuildOwner;
+let closure_8 = fn(4941).MemberSafetyPagePermissions;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 let ReactCompilerGating = fn(558);
@@ -218,7 +218,7 @@ const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/
 export { getContextForPermission };
 export { canAccessMemberSafetyPage };
 export { hasBulkBanningPermissions };
-export const canPruneGuildMembers = function canPruneGuildMembers(guild, currentUser) {
+export function canPruneGuildMembers(guild, currentUser) {
   let obj = PermissionStore;
   if (PermissionStore === undefined) {
     obj = PermissionStore;
@@ -234,7 +234,7 @@ export const canPruneGuildMembers = function canPruneGuildMembers(guild, current
     canResult1 = obj.can(BigFlagUtilsAll.combine(constants2.MANAGE_GUILD, constants2.KICK_MEMBERS), guild);
   }
   return canResult1;
-};
+}
 export const useCanAccessMemberSafetyPage = tmp3;
 export const useCanAccessBulkBanningFeature = tmp4;
 export const useCanAccessInviteCodeFeature = tmp5;
@@ -306,7 +306,7 @@ export const useCanBulkBanUser = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-export const canBulkBanUser = function canBulkBanUser(arg0, arg1, user) {
+export function canBulkBanUser(arg0, arg1, user) {
   guild = GuildStore.getGuild(arg0);
   let tmp2 = null != guild;
   if (tmp2) {
@@ -317,4 +317,4 @@ export const canBulkBanUser = function canBulkBanUser(arg0, arg1, user) {
     tmp2 = canManageUserResult;
   }
   return tmp2;
-};
+}

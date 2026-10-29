@@ -171,11 +171,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
-        const isPremiumExactlyResult = tmp(1988).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+        const isPremiumExactlyResult = tmp(1989).isPremiumExactly(stateFromStores, closure_6.TIER_2);
         cResult[2] = stateFromStores;
         cResult[3] = isPremiumExactlyResult;
         let tmp8 = isPremiumExactlyResult;
-        const tmpResult3 = tmp(1988);
+        const tmpResult3 = tmp(1989);
       } else {
         tmp8 = cResult[3];
       }

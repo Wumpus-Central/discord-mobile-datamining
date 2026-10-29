@@ -1,5 +1,5 @@
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
-import _mod6519 from "module_6519" /* 6519 */;
+import _mod6543 from "module_6543" /* 6543 */;
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import Quest from "../types/v2/Quest.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -126,19 +126,19 @@ function _questsEntitlementFromServer(skuId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestServerUtils.tsx");
 
-export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
+export function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = _mod6519.match(config.config);
+    const match = _mod6543.match(config.config);
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
-};
-export const questConfigFromServer = function questConfigFromServer(body) {
-  const match = _mod6519.match(body);
+}
+export function questConfigFromServer(body) {
+  const match = _mod6543.match(body);
   return match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
-};
-export const questUserStatusFromServer = function questUserStatusFromServer(body) {
+}
+export function questUserStatusFromServer(body) {
   const obj = {
     userId: body.user_id,
     questId: body.quest_id,
@@ -169,8 +169,8 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
   } = body);
   obj.progress = progressFromServer(body.progress);
   return obj;
-};
-export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
+}
+export function questWithUserStatusFromServer(body) {
   const obj = {
     id: body.id,
     preview: body.preview,
@@ -179,7 +179,7 @@ export const questWithUserStatusFromServer = function questWithUserStatusFromSer
     targetedContent: null,
     trafficMetadataSealed: null,
   };
-  const match = _mod6519.match(body.config);
+  const match = _mod6543.match(body.config);
   obj.config = match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {
@@ -225,11 +225,11 @@ export const questWithUserStatusFromServer = function questWithUserStatusFromSer
   obj.userStatus = tmp;
   ({ targeted_content: obj.targetedContent, traffic_metadata_sealed: obj.trafficMetadataSealed } = body);
   return obj;
-};
-export const excludedQuestFromServer = function excludedQuestFromServer(id) {
+}
+export function excludedQuestFromServer(id) {
   return { id: id.id, replacementId: id.replacement_id };
-};
-export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestWithUserStatusFromServer(id) {
+}
+export function getClaimedQuestWithUserStatusFromServer(id) {
   const obj = { id: id.id, config: null, userStatus: null };
   const config = id.config;
   const obj2 = {
@@ -304,8 +304,8 @@ export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestW
   }
   obj.userStatus = tmp;
   return obj;
-};
-export const questsRewardCodeFromServer = function questsRewardCodeFromServer(body) {
+}
+export function questsRewardCodeFromServer(body) {
   const obj = {
     userId: body.user_id,
     questId: body.quest_id,
@@ -320,10 +320,10 @@ export const questsRewardCodeFromServer = function questsRewardCodeFromServer(bo
   }
   obj.tier = tier;
   return obj;
-};
-export const questsEntitlementsFromServer = function questsEntitlementsFromServer(body) {
+}
+export function questsEntitlementsFromServer(body) {
   const obj = { claimedAt: body.claimed_at, items: null, errors: body.errors };
   const entitlements = body.entitlements;
   obj.items = entitlements.map(_questsEntitlementFromServer);
   return obj;
-};
+}

@@ -39,7 +39,7 @@ let closure_5 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/connection/ConjureWorkerTickets.tsx");
 
-export const rememberCreatedProjectTicket = function rememberCreatedProjectTicket(id, ws_ticket) {
+export function rememberCreatedProjectTicket(id, ws_ticket) {
   const obj = { ticket: ws_ticket.ticket, baseUrl: null };
   let url = conjureLocalDev.getConjureTunnelWorkerOrigin();
   if (url == null) {
@@ -48,8 +48,8 @@ export const rememberCreatedProjectTicket = function rememberCreatedProjectTicke
   obj.baseUrl = url;
   const result = map.set(id, { ticket: Promise.resolve(obj), until: Date.now() + 30000 });
   const obj3 = { ticket: Promise.resolve(obj), until: Date.now() + 30000 };
-};
-export const prefetchWorkerTicket = function prefetchWorkerTicket(projectId) {
+}
+export function prefetchWorkerTicket(projectId) {
   closure_0 = projectId;
   const timestamp = Date.now();
   value = map.get(projectId);
@@ -82,14 +82,14 @@ export const prefetchWorkerTicket = function prefetchWorkerTicket(projectId) {
       });
     }
   }
-};
-export const forgetEarlyTicket = function forgetEarlyTicket(id) {
+}
+export function forgetEarlyTicket(id) {
   map.delete(id);
-};
-export const forgetEarlyTickets = function forgetEarlyTickets() {
+}
+export function forgetEarlyTickets() {
   map.clear();
-};
-export const mintWorkerTicket = function mintWorkerTicket(projectId) {
+}
+export function mintWorkerTicket(projectId) {
   value = map.get(projectId);
   if (null != value) {
     const _Date = Date;
@@ -100,7 +100,7 @@ export const mintWorkerTicket = function mintWorkerTicket(projectId) {
   }
   map.delete(projectId);
   ticket = mintTicket(Endpoints.CONJURE_PROJECT_WS_TICKET(projectId));
-};
-export const mintRemixTicket = function mintRemixTicket(id) {
+}
+export function mintRemixTicket(id) {
   return mintTicket(Endpoints.CONJURE_PROJECT_REMIX_TICKET(id));
-};
+}

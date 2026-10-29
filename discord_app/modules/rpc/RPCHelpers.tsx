@@ -60,7 +60,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4860).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6413);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4861).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6437);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1084);
 ({
@@ -320,13 +320,13 @@ export const VALIDATE_SOCKET_CALLS_PER_PERIOD_LOW = 2;
 export const VALIDATE_SOCKET_CALLS_PER_PERIOD_HIGH = 60;
 export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
 export { VALIDATE_SOCKET_THROTTLERS };
-export const containsSameValues = function containsSameValues(arg0, arg1) {
+export function containsSameValues(arg0, arg1) {
   const obj = _modDef12;
   return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
-};
+}
 export { validateOrigin };
 export { transformBigFlag };
-export const transformRole = function transformRole(id) {
+export function transformRole(id) {
   const obj = {
     id: id.id,
     name: id.name,
@@ -363,11 +363,11 @@ export const transformRole = function transformRole(id) {
     flags: obj.flags,
   } = id);
   return obj;
-};
-export const transformGuildMember = function transformGuildMember(userId) {
+}
+export function transformGuildMember(currentGuildMember) {
   const obj = {
-    user_id: userId.userId,
-    guild_id: userId.guildId,
+    user_id: currentGuildMember.userId,
+    guild_id: currentGuildMember.guildId,
     nick: null,
     avatar: null,
     avatar_decoration_data: null,
@@ -378,51 +378,53 @@ export const transformGuildMember = function transformGuildMember(userId) {
     communication_disabled_until: null,
     pending: null,
     flags: null,
+    color_string: null,
   };
-  let nick = userId.nick;
+  let nick = currentGuildMember.nick;
   if (nick == null) {
     nick = null;
   }
   obj.nick = nick;
-  let avatar = userId.avatar;
+  let avatar = currentGuildMember.avatar;
   if (avatar == null) {
     avatar = null;
   }
   obj.avatar = avatar;
-  obj.avatar_decoration_data = transformAvatarDecorationDefault(userId.avatarDecoration);
-  let banner = userId.banner;
+  obj.avatar_decoration_data = transformAvatarDecorationDefault(currentGuildMember.avatarDecoration);
+  let banner = currentGuildMember.banner;
   if (banner == null) {
     banner = null;
   }
   obj.banner = banner;
-  ({ roles: obj.roles, joinedAt } = userId);
+  ({ roles: obj.roles, joinedAt } = currentGuildMember);
   if (joinedAt == null) {
     joinedAt = null;
   }
   obj.joined_at = joinedAt;
-  let premiumSince = userId.premiumSince;
+  let premiumSince = currentGuildMember.premiumSince;
   if (premiumSince == null) {
     premiumSince = null;
   }
   obj.premium_since = premiumSince;
-  let prop = userId.communicationDisabledUntil;
+  let prop = currentGuildMember.communicationDisabledUntil;
   if (prop == null) {
     prop = null;
   }
   obj.communication_disabled_until = prop;
-  let flag = userId.isPending;
+  let flag = currentGuildMember.isPending;
   if (flag == null) {
     flag = false;
   }
   obj.pending = flag;
-  let num = userId.flags;
+  let num = currentGuildMember.flags;
   if (num == null) {
     num = 0;
   }
   obj.flags = num;
+  obj.color_string = currentGuildMember.colorString;
   return obj;
-};
-export const transformChannel = function transformChannel(channel, result) {
+}
+export function transformChannel(channel, result) {
   let nSFW = channel;
   closure_1 = result;
   const items = [];
@@ -479,7 +481,7 @@ export const transformChannel = function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6025).getName(dependencyMap, id.id, user),
+            nick: closure_1(6029).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -488,7 +490,7 @@ export const transformChannel = function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9294)(user);
+          obj.user = closure_1(9298)(user);
           return obj;
         }
       });
@@ -501,17 +503,17 @@ export const transformChannel = function transformChannel(channel, result) {
       }
     }
   });
-};
+}
 export { transformVoiceState };
-export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
+export function transformBaseRelationship(relationshipType, user) {
   const obj = {
     type: relationshipType,
     user: transformUserDefault(user),
     presence: { status: PresenceStore.getStatus(user.id, null), activity: null },
   };
   return obj;
-};
-export const transformApplicationRelationship = function transformApplicationRelationship(presence, id) {
+}
+export function transformApplicationRelationship(presence, id) {
   let tmp = presence;
   if (null != id) {
     const obj = {};
@@ -527,8 +529,8 @@ export const transformApplicationRelationship = function transformApplicationRel
     tmp = obj;
   }
   return tmp;
-};
-export const isMatchingOrigin = function isMatchingOrigin(str) {
+}
+export function isMatchingOrigin(str) {
   if (null == str) {
     return false;
   } else {
@@ -561,8 +563,8 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
       }
     }
   }
-};
-export const hasMessageReadPermission = function hasMessageReadPermission(channel, id, scopes) {
+}
+export function hasMessageReadPermission(channel, id, scopes) {
   guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
     let application_id = guild.application_id;
@@ -574,8 +576,8 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
     hasItem = scopes.has(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ);
   }
   return hasItem;
-};
-export const getVoiceConnectionState = function getVoiceConnectionState(state) {
+}
+export function getVoiceConnectionState(state) {
   if (constants5.RTC_CONNECTED !== state) {
     if (constants5.RTC_CONNECTING !== state) {
       if (constants5.RTC_DISCONNECTED !== state) {
@@ -584,8 +586,8 @@ export const getVoiceConnectionState = function getVoiceConnectionState(state) {
     }
   }
   return state.replace(/^RTC_/, "VOICE_");
-};
-export const validateActivityInvite = function validateActivityInvite(arg0, id, join) {
+}
+export function validateActivityInvite(arg0, id, join) {
   let tmp = arg0 === constants2.JOIN;
   if (tmp) {
     let tmp4 = null != id && null != id.id;
@@ -595,8 +597,8 @@ export const validateActivityInvite = function validateActivityInvite(arg0, id, 
     tmp = tmp4;
   }
   return tmp;
-};
-export const validateSocketApplication = function validateSocketApplication() {
+}
+export function validateSocketApplication() {
   const self = this;
   const apply = closure_27.apply;
   if (typeof apply === "unknown") {
@@ -605,8 +607,8 @@ export const validateSocketApplication = function validateSocketApplication() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const processSocketThrottlers = function processSocketThrottlers() {
+}
+export function processSocketThrottlers() {
   const self = this;
   const apply = closure_28.apply;
   if (typeof apply === "unknown") {
@@ -615,16 +617,16 @@ export const processSocketThrottlers = function processSocketThrottlers() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
+}
+export function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
     const _Set = Set;
     const items = [map1];
     const set = new Set(items);
     authorization.authorization.scopes = set;
   }
-};
-export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {
+}
+export function getDeprecatedVoiceSettingsWithShortcut(fn) {
   const settings = MediaEngineStore.getSettings();
   const obj = {
     input: null,
@@ -667,8 +669,8 @@ export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoic
     mute: obj.mute,
   } = settings);
   return obj;
-};
-export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, fn) {
+}
+export function getVoiceSettingsWithShortcut(arg0, fn) {
   const settings = MediaEngineStore.getSettings(arg0);
   const obj = {
     input_mode: { type: settings.mode, shortcut: fn(settings) },
@@ -679,16 +681,16 @@ export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcu
   };
   ({ localVolumes: obj.local_volumes, mute: obj.self_mute, deaf: obj.self_deaf } = settings);
   return obj;
-};
-export const validatePostMessageTransport = function validatePostMessageTransport(transport) {
+}
+export function validatePostMessageTransport(transport) {
   if (transport !== constants.POST_MESSAGE) {
     const obj = { errorCode: constants4.INVALID_COMMAND };
     const _HermesInternal = HermesInternal;
     const tmp32 = new RPCErrorDefault(obj, 'command not available from "' + transport + " transport");
     throw tmp32;
   }
-};
-export const validateApplication = function validateApplication(application) {
+}
+export function validateApplication(application) {
   if (null == application.id) {
     const obj = { errorCode: constants4.INVALID_COMMAND };
     const tmp7 = new RPCErrorDefault(obj, "Invalid application");
@@ -696,4 +698,4 @@ export const validateApplication = function validateApplication(application) {
   } else {
     return application.id;
   }
-};
+}

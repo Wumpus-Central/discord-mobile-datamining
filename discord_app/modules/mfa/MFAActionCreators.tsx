@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const SELECT_NAMES = MFAConstants.SELECT_NAMES;
 const result = size.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
 
-export const openMFAModal = function openMFAModal(methods, arg1, cancel) {
+export function openMFAModal(methods, arg1, cancel) {
   _require = arg1;
   methods = methods.methods;
   methods.methods = methods.filter((type) => Object.hasOwn(SELECT_NAMES, type.type));
@@ -19,4 +19,4 @@ export const openMFAModal = function openMFAModal(methods, arg1, cancel) {
     },
     cancel,
   );
-};
+}

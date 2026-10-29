@@ -111,10 +111,10 @@ const result = size.fileFinishedImporting("utils/UploadUtils.tsx");
 export const MAX_TOTAL_ATTACHMENT_SIZE = 524288000;
 export const MAX_TOTAL_ATTACHMENT_SIZE_1GB = 1073741824;
 export const MAX_TOTAL_ATTACHMENT_SIZE_MB = 500;
-export const getMaxTotalAttachmentSize = function getMaxTotalAttachmentSize(location) {
+export function getMaxTotalAttachmentSize(location) {
   return NitroFileUploadExperiments.getNitroFileUploadRolloutConfig({ location: location.location }).enabled ? c4 : c3;
-};
-export const getAttachmentPayload = function getAttachmentPayload(id) {
+}
+export function getAttachmentPayload(id) {
   let tmp = index;
   if (index === undefined) {
     tmp = null;
@@ -176,8 +176,8 @@ export const getAttachmentPayload = function getAttachmentPayload(id) {
     obj.original_content_type = id.mimeType;
   }
   return obj;
-};
-export const getFileData = function getFileData(arg0) {
+}
+export function getFileData(arg0) {
   closure_0 = arg0;
   let xMLHttpRequest = new XMLHttpRequest();
   return new Promise((arg0, arg1) => {
@@ -200,8 +200,8 @@ export const getFileData = function getFileData(arg0) {
     };
     xMLHttpRequest.send();
   });
-};
-export const getFileContentLength = function getFileContentLength(arg0) {
+}
+export function getFileContentLength(arg0) {
   closure_0 = arg0;
   return new Promise((arg0, onerror) => {
     closure_0 = arg0;
@@ -230,8 +230,8 @@ export const getFileContentLength = function getFileContentLength(arg0) {
     xMLHttpRequest.ontimeout = onerror;
     xMLHttpRequest.send();
   });
-};
-export const getFile = function getFile(overrideType) {
+}
+export function getFile(overrideType) {
   ({ uri, i, overrideFilename } = overrideType);
   let str = overrideType.overrideType;
   const parts = uri.split("/");
@@ -318,4 +318,4 @@ export const getFile = function getFile(overrideType) {
   }
   obj.isImage = -1 !== str.indexOf("image");
   return obj;
-};
+}

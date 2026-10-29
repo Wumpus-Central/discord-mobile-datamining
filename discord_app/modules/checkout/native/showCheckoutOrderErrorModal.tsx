@@ -30,7 +30,7 @@ function SyncedLoadingAlertModal(onConfirm) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -69,7 +69,7 @@ function SyncedLoadingAlertModal(onConfirm) {
               c3 = 0;
               closure_128_1(false);
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp22) {
             closure_2 = tmp22;
@@ -100,15 +100,15 @@ const jsxProd = fn(21);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
 
-export const showRetryConfirmModal = function showRetryConfirmModal(dismissable) {
+export function showRetryConfirmModal(dismissable) {
   ({ key, onCloseCallback } = dismissable);
   const merged = Object.assign(dismissable, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
   const merged1 = Object.assign(merged);
   useAlertStore.openAlert(key, hasOwnProperty(SyncedLoadingAlertModal, {}), onCloseCallback, {
     dismissable: dismissable.dismissable,
   });
-};
-export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(arg0, c6) {
+}
+export function showCheckoutOrderErrorModal(arg0, c6) {
   closure_0 = arg0;
   dependencyMap = c6;
   return new Promise((arg0) => {
@@ -139,7 +139,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -171,7 +171,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
             closure_128_0 = value;
             closure_129_0(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -198,8 +198,8 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
     const merged1 = Object.assign(merged);
-    closure_0(5946).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    closure_0(5948).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
       dismissable: obj.dismissable,
     });
   });
-};
+}

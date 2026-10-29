@@ -7,7 +7,7 @@ const obj2 = { 4000006: null };
 obj2[4000006] = { title: util.t.ifAVZr, body: util.t.meauFg };
 const result = size.fileFinishedImporting("modules/billing/native/apple/purchaseExceptionAlerts.tsx");
 
-export const getPurchaseExceptionAlert = function getPurchaseExceptionAlert(message) {
+export function getPurchaseExceptionAlert(message) {
   if (null != message) {
     if ("" !== message) {
       const match = re2.exec(message);
@@ -30,4 +30,4 @@ export const getPurchaseExceptionAlert = function getPurchaseExceptionAlert(mess
     }
   }
   return null;
-};
+}

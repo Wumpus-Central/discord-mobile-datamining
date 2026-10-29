@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import ForumChannelSearch from "../../../../forums/native/ForumChannelSearch.tsx";
 import useIsForumChannelSearchActive from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
+import ForumChannelSearch from "../../../../forums/native/ForumChannelSearch.tsx";
 import GuildChannelHeaderDefault from "GuildChannelHeader.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_5 = createStyles.createStyles({
   search: {
     flex: 1,
@@ -16,7 +16,7 @@ let closure_5 = createStyles.createStyles({
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(9734).MIN_HEADER_HEIGHT,
+    height: fn(9766).MIN_HEADER_HEIGHT,
   },
 });
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(9734).MIN_HEADER_HEIGHT,
+    height: fn(9766).MIN_HEADER_HEIGHT,
   },
 };
 const size = fn(2);

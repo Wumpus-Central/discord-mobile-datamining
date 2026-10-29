@@ -68,13 +68,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");
 
 export function reportDevtoolsEvent() {}
-export const logReadyPayloadReceived = function logReadyPayloadReceived(
-  socket,
-  data,
-  nowResult,
-  compressionAnalytics,
-  readyPayloadByteSizeAnalytics,
-) {
+export function logReadyPayloadReceived(socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics) {
   const tmp = (function getReadyPayloadTraceAnalytics(data) {
     const obj = {};
     try {
@@ -184,8 +178,8 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(
   const result = TTITrackerDefault.attachReadyPayloadProperties(obj4);
   const tmp6Result = TTITrackerDefault;
   AnalyticsUtilsDefault.track(constants.READY_PAYLOAD_RECEIVED, obj4, { logEventProperties: true });
-};
-export const getConnectionPath = function getConnectionPath(_trace) {
+}
+export function getConnectionPath(_trace) {
   try {
     _trace = _trace._trace;
     let first;
@@ -254,8 +248,8 @@ export const getConnectionPath = function getConnectionPath(_trace) {
       return str;
     }
   } catch (err) {}
-};
-export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSizeAnalytics(data) {
+}
+export function getReadyPayloadByteSizeAnalytics(data) {
   if (Math.random() <= 0.01) {
     const _Date2 = Date;
     ({ guilds, merged_presences, merged_members, user_settings, user_settings_proto, experiments, guild_experiments } =
@@ -402,8 +396,8 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
     obj.size_metrics_duration_ms = Date.now() - timestamp;
     return obj;
   }
-};
-export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
+}
+export function logGatewayConnected(gatewayUrl) {
   ({ socket, now } = gatewayUrl);
   AnalyticsUtilsDefault.track(
     constants.GATEWAY_CONNECTED,
@@ -417,8 +411,8 @@ export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
     },
     { logEventProperties: true },
   );
-};
-export const createResumeAnalytics = function createResumeAnalytics(arg0) {
+}
+export function createResumeAnalytics(arg0) {
   let num = arg0;
   if (arg0 == null) {
     num = 0;
@@ -433,8 +427,8 @@ export const createResumeAnalytics = function createResumeAnalytics(arg0) {
     startTime: performance.now(),
     lastUpdateTime: performance.now(),
   };
-};
-export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
+}
+export function logResumeAnalytics(resumeAnalytics) {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -469,4 +463,4 @@ export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
     obj.total_dispatch_time_ms = Math.floor(resumeAnalytics.dispatchTime);
     AnalyticsUtilsDefault.track(constants.CONNECTION_RESUMED, obj, { logEventProperties: true });
   }
-};
+}

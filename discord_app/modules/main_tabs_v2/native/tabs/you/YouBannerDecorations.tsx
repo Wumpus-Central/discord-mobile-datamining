@@ -15,12 +15,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2066).useIntlLoaderStore;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const useIntlLoaderStore = fn(2067).useIntlLoaderStore;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -168,18 +168,18 @@ export default noop.memo(
         if (stateFromStores != null) {
           id = stateFromStores.id;
         }
-        const tmp11Result = navigateToPremium(8712)(id);
+        const tmp11Result = navigateToPremium(8715)(id);
         if (cResult[3] === tmp11Result) {
           if (cResult[4] === stateFromStores) {
             let tmp14 = cResult[5];
           }
-          ({ theme, primaryColor, secondaryColor } = tmp10(8755)(tmp14));
+          ({ theme, primaryColor, secondaryColor } = tmp10(8758)(tmp14));
           if (cResult[6] === primaryColor) {
             if (cResult[7] === secondaryColor) {
               if (cResult[8] === theme) {
                 let tmp16 = cResult[9];
               }
-              const userProfileColors = tmp(8766).useUserProfileColors(tmp16);
+              const userProfileColors = tmp(8769).useUserProfileColors(tmp16);
               ({ containerBackground, containerBorderColor, gradientSecondaryBackground } = userProfileColors);
               if (cResult[10] === containerBackground) {
                 if (cResult[11] === primaryColor) {
@@ -192,27 +192,27 @@ export default noop.memo(
                         let tmp20 = cResult[17];
                       }
                       const tmp30 = closure_12(num, tmp20, gradientSecondaryBackground, containerBorderColor);
-                      const hasPremiumSubscriptionToDisplay = tmp(2050).useHasPremiumSubscriptionToDisplay();
+                      const hasPremiumSubscriptionToDisplay = tmp(2051).useHasPremiumSubscriptionToDisplay();
                       const tmp33 = closure_13();
                       dependencyMap = tmp33;
-                      const tmp34 = tmp10(9594)();
+                      const tmp34 = tmp10(9626)();
                       const showBadge = tmp34.showBadge;
                       const dismissBadge = tmp34.dismissBadge;
                       const _Symbol = Symbol;
                       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                        const isEligibleForQuests = tmp(9596).getIsEligibleForQuests();
+                        const isEligibleForQuests = tmp(9628).getIsEligibleForQuests();
                         cResult[18] = isEligibleForQuests;
                         let tmp35 = isEligibleForQuests;
-                        const tmpResult8 = tmp(9596);
+                        const tmpResult8 = tmp(9628);
                       } else {
                         tmp35 = cResult[18];
                       }
-                      const tmp37 = tmp10(9597)("YouBannerDecorations");
+                      const tmp37 = tmp10(9629)("YouBannerDecorations");
                       if (tmp37 != null) {
                         const placement = tmp37.placement;
                       }
-                      const tmpResult7 = tmp(2050);
-                      const tmp39 = null != tmp(7594).useTrialOffer(closure_9);
+                      const tmpResult7 = tmp(2051);
+                      const tmp39 = null != tmp(7617).useTrialOffer(closure_9);
                       closure_5 = tmp39;
                       if (cResult[19] === tmp39) {
                         if (cResult[20] === tmp33) {
@@ -237,7 +237,7 @@ export default noop.memo(
                             if (cResult[28] !== ("you_screen" === placement)) {
                               let tmp45 = null;
                               if (tmp43) {
-                                tmp45 = closure_10(tmp10(14391), {}, "conjure");
+                                tmp45 = closure_10(tmp10(14625), {}, "conjure");
                               }
                               cResult[28] = tmp43;
                               cResult[29] = tmp45;
@@ -403,12 +403,12 @@ export default noop.memo(
                                                     const obj7 = { style: tmp30.containerFloatingGradient };
                                                     const merged = Object.assign(tmp79);
                                                     obj7.pointerEvents = "none";
-                                                    const tmp86 = closure_10(tmp10(5294), obj7);
+                                                    const tmp86 = closure_10(tmp10(5295), obj7);
                                                     cResult[65] = tmp79;
                                                     cResult[66] = tmp30.containerFloatingGradient;
                                                     cResult[67] = tmp86;
                                                     tmp80 = tmp86;
-                                                    const tmp10Result = tmp10(5294);
+                                                    const tmp10Result = tmp10(5295);
                                                   }
                                                   const obj10 = { start: tmp73, end: tmp74, colors: null };
                                                   const items3 = [tmp75, tmp77];
@@ -431,7 +431,7 @@ export default noop.memo(
                                               }
                                               const obj12 = { children: tmp64 };
                                               const tmp68 = closure_10(
-                                                tmp(14401).YouScreenNavIconMeasurer,
+                                                tmp(14635).YouScreenNavIconMeasurer,
                                                 obj12,
                                                 tmp5,
                                               );
@@ -456,24 +456,24 @@ export default noop.memo(
                                   }
                                   const obj13 = {
                                     ref: settingsButtonRef,
-                                    IconComponent: tmp(7524).SettingsIcon,
+                                    IconComponent: tmp(7547).SettingsIcon,
                                     accessibilityLabel: tmp58,
                                     onPress: tmp40,
                                     showRedDot: tmp33,
                                     testID: "you_tab_settings_button",
                                   };
-                                  const tmp63 = closure_10(tmp10(14400), obj13, "settings");
+                                  const tmp63 = closure_10(tmp10(14634), obj13, "settings");
                                   cResult[40] = tmp33;
                                   cResult[41] = tmp40;
                                   cResult[42] = settingsButtonRef;
                                   cResult[43] = tmp63;
                                   tmp60 = tmp63;
-                                  const tmp10Result5 = tmp10(14400);
+                                  const tmp10Result5 = tmp10(14634);
                                 }
                                 let tmp55 = null;
                                 if (!hasPremiumSubscriptionToDisplay) {
                                   const obj14 = {
-                                    IconComponent: tmp(9456).NitroWheelIcon,
+                                    IconComponent: tmp(9487).NitroWheelIcon,
                                     accessibilityLabel: null,
                                     label: null,
                                     onPress: null,
@@ -483,8 +483,8 @@ export default noop.memo(
                                   const intl3 = tmp(1125).intl;
                                   obj14.label = intl3.string(tmp(1125).t.Ipxkog);
                                   obj14.onPress = tmp41;
-                                  tmp55 = closure_10(tmp10(14400), obj14, "nitro");
-                                  const tmp10Result6 = tmp10(14400);
+                                  tmp55 = closure_10(tmp10(14634), obj14, "nitro");
+                                  const tmp10Result6 = tmp10(14634);
                                 }
                                 cResult[36] = hasPremiumSubscriptionToDisplay;
                                 cResult[37] = tmp41;
@@ -492,7 +492,7 @@ export default noop.memo(
                                 tmp54 = tmp55;
                               }
                               const obj15 = { shopButtonRef, navigateToShop };
-                              const tmp53 = closure_10(tmp10(14410), obj15, "shop");
+                              const tmp53 = closure_10(tmp10(14644), obj15, "shop");
                               cResult[33] = navigateToShop;
                               cResult[34] = shopButtonRef;
                               cResult[35] = tmp53;
@@ -501,7 +501,7 @@ export default noop.memo(
                             let tmp48 = null;
                             if (tmp35) {
                               const obj16 = {
-                                IconComponent: tmp(14408).QuestsIcon,
+                                IconComponent: tmp(14642).QuestsIcon,
                                 accessibilityLabel: null,
                                 onPress: null,
                                 showRedDot: null,
@@ -510,8 +510,8 @@ export default noop.memo(
                               obj16.accessibilityLabel = intl.string(tmp(1125).t.JALI2K);
                               obj16.onPress = tmp42;
                               obj16.showRedDot = showBadge;
-                              tmp48 = closure_10(tmp10(14400), obj16, "quests");
-                              const tmp10Result7 = tmp10(14400);
+                              tmp48 = closure_10(tmp10(14634), obj16, "quests");
+                              const tmp10Result7 = tmp10(14634);
                             }
                             cResult[30] = tmp42;
                             cResult[31] = showBadge;
@@ -561,7 +561,7 @@ export default noop.memo(
                       cResult[21] = navigateToSettings;
                       cResult[22] = J;
                       tmp40 = J;
-                      const tmpResult9 = tmp(7594);
+                      const tmpResult9 = tmp(7617);
                     }
                     let hexResult3 = null;
                     if (null != tmp18) {
@@ -586,7 +586,7 @@ export default noop.memo(
                   }
                 }
               }
-              const tmpResult6 = tmp(8766);
+              const tmpResult6 = tmp(8769);
               if (!tmpResult10.isThemeLight(theme)) {
                 let tmp19 = containerBackground;
               } else {
@@ -601,7 +601,7 @@ export default noop.memo(
               cResult[13] = theme;
               cResult[14] = tmp19;
               tmp18 = tmp19;
-              tmpResult10 = tmp(5011);
+              tmpResult10 = tmp(5012);
             }
           }
           const obj17 = { theme, primaryColor, secondaryColor };
@@ -610,14 +610,14 @@ export default noop.memo(
           cResult[8] = theme;
           cResult[9] = obj17;
           tmp16 = obj17;
-          const tmp15 = tmp10(8755)(tmp14);
+          const tmp15 = tmp10(8758)(tmp14);
         }
         const obj18 = { user: stateFromStores, displayProfile: tmp11Result };
         cResult[3] = tmp11Result;
         cResult[4] = stateFromStores;
         cResult[5] = obj18;
         tmp14 = obj18;
-        const tmp11 = navigateToPremium(8712);
+        const tmp11 = navigateToPremium(8715);
       }
     : function YouBannerDecorations(navigateToSettings) {
         navigateToSettings = navigateToSettings.navigateToSettings;

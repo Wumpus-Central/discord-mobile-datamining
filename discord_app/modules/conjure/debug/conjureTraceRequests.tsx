@@ -10,22 +10,22 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/conjureTraceRequests.tsx");
 
-export const requestConjureTrace = function requestConjureTrace(projectId, traceId) {
+export function requestConjureTrace(projectId, traceId) {
   c4 = { projectId, traceId };
   const items = [...set];
   for (const item10012 of items) {
     let item10012Result = item10012(arg0);
     continue;
   }
-};
-export const hasConjureTraceRequest = function hasConjureTraceRequest(arg0) {
+}
+export function hasConjureTraceRequest(arg0) {
   let projectId;
   if (_null != null) {
     projectId = _null.projectId;
   }
   return projectId === arg0;
-};
-export const takeConjureTraceRequest = function takeConjureTraceRequest(projectId) {
+}
+export function takeConjureTraceRequest(projectId) {
   if (null != _null) {
     if (_null.projectId === projectId) {
       _null = null;
@@ -33,7 +33,7 @@ export const takeConjureTraceRequest = function takeConjureTraceRequest(projectI
     }
   }
   return null;
-};
+}
 export const useConjureTraceRequests = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureTraceRequests(arg0, current) {
       _require = arg0;

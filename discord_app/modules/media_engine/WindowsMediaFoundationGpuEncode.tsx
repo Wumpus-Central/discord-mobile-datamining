@@ -9,6 +9,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/WindowsMediaFoundationGpuEncode.tsx");
 
-export const getWmfGpuEncode = function getWmfGpuEncode(MediaEngineStore) {
+export function getWmfGpuEncode(MediaEngineStore) {
   return config.getConfig({ location: MediaEngineStore });
-};
+}

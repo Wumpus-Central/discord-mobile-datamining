@@ -4,7 +4,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
 const GuildFeatures = fn(1084).GuildFeatures;
-let ApexExperiment = fn(1452);
+let ApexExperiment = fn(1453);
 let obj2 = {
   kind: "user",
   name: "2026-03-conversation-highlighting-utility",
@@ -15,7 +15,7 @@ let obj3 = { 1: null, 2: { enabled: false } };
 obj3[2] = { enabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-ApexExperiment = fn(1452);
+ApexExperiment = fn(1453);
 const obj5 = {
   kind: "guild",
   name: "2026-06-topical-navigation-guild",
@@ -26,7 +26,7 @@ const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj5);
-ApexExperiment = fn(1452);
+ApexExperiment = fn(1453);
 const obj8 = {
   kind: "user",
   name: "2026-04-topical-navigation-staff-control",
@@ -161,7 +161,7 @@ export const ConversationHighlightingExperiment = apexExperiment;
 export const TopicalNavGuildExperiment = apexExperiment1;
 export const TopicalNavUserGateExperiment = apexExperiment2;
 export { isConversationDebugUXEnabled };
-export const isTopicalNavEnabled = function isTopicalNavEnabled(guildId, fetch_channel_conversations) {
+export function isTopicalNavEnabled(guildId, fetch_channel_conversations) {
   if (null == guildId) {
     return false;
   } else {
@@ -208,7 +208,7 @@ export const isTopicalNavEnabled = function isTopicalNavEnabled(guildId, fetch_c
       }
     }
   }
-};
+}
 export const useIsConversationDebugUXEnabled = tmp5;
 export const useIsTopicalNavEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsTopicalNavEnabled(arg0, location) {

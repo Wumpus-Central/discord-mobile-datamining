@@ -12,7 +12,7 @@ const RESTRICTED_HOURS_MODAL_KEY = "RESTRICTED_HOURS_MODAL_KEY";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/RestrictedHoursActionCreators.native.tsx");
 
-export const openRestrictedHoursModal = function openRestrictedHoursModal() {
+export function openRestrictedHoursModal() {
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       await require("asyncRequireImpl")(paths[2], paths.paths);
@@ -22,5 +22,5 @@ export const openRestrictedHoursModal = function openRestrictedHoursModal() {
     RESTRICTED_HOURS_MODAL_KEY,
     { animation: "none", presentation: "fullScreenModal" },
   );
-};
+}
 export { closeRestrictedHoursModal };

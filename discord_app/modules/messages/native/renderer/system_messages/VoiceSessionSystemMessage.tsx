@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx",
 );
 
-export const createVoiceSessionSystemMessage = function createVoiceSessionSystemMessage(message) {
+export function createVoiceSessionSystemMessage(message) {
   ({ message, roleStyle } = message);
   _require = ChannelStore.getChannel(message.channel_id);
   const tmp3 = getHumanizedCallDurationDefault(message);
@@ -75,4 +75,4 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };
-};
+}

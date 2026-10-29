@@ -3,7 +3,7 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4934).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
@@ -28,7 +28,7 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
     class S {
       constructor() {
         arr = closure_2.getChannels(c0)[GUILD_VOCAL_CHANNELS_KEY];
-        return arr.reduce(() => { ... }, []);
+        return arr.reduce(/* F148816 */ function() { ... }, []);
       }
     }
     const items1 = [id];
@@ -40,7 +40,7 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
     class S {
       constructor() {
         arr = closure_2.getChannels(c0)[GUILD_VOCAL_CHANNELS_KEY];
-        return arr.reduce(() => { ... }, []);
+        return arr.reduce(/* F148816 */ function() { ... }, []);
       }
     }
     tmp9 = cResult[3];

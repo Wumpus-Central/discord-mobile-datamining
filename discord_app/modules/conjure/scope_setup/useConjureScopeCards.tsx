@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/scope_setup/useConjureScopeCards.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import conjureScopeSetup from "conjureScopeSetup.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,18 +17,18 @@ function scopeClarification() {
   const obj = { id: "scope-setup", questions: null };
   const obj2 = { id, question: null, recommendation_reason: "", allow_custom: false, options: null };
   const intl = util.intl;
-  obj2.question = intl.string(_modDef3863.ickKBI);
+  obj2.question = intl.string(_modDef3864.ickKBI);
   const obj3 = { id: id2, label: null, detail: null };
   const intl2 = util.intl;
-  obj3.label = intl2.string(_modDef3863.qLYOpH);
+  obj3.label = intl2.string(_modDef3864.qLYOpH);
   const intl3 = util.intl;
-  obj3.detail = intl3.string(_modDef3863.QSKvUE);
+  obj3.detail = intl3.string(_modDef3864.QSKvUE);
   const items = [obj3];
   const obj4 = { id: id3, label: null, detail: null };
   const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef3863.QV5C7b);
+  obj4.label = intl4.string(_modDef3864.QV5C7b);
   const intl5 = util.intl;
-  obj4.detail = intl5.string(_modDef3863["ZzHR4/"]);
+  obj4.detail = intl5.string(_modDef3864["ZzHR4/"]);
   items[1] = obj4;
   obj2.options = items;
   const items1 = [obj2];
@@ -43,10 +43,10 @@ function serverClarification(conjureEligibleGuilds, guild_id) {
   const obj = { id: str, questions: null };
   const intl = util.intl;
   if (conjureEligibleGuilds.length > 0) {
-    let ZWXDeI = _modDef3863.ZWXDeI;
+    let ZWXDeI = _modDef3864.ZWXDeI;
     let tmp5 = importDefault;
   } else {
-    ZWXDeI = _modDef3863["u5+Qhu"];
+    ZWXDeI = _modDef3864["u5+Qhu"];
     tmp5 = importDefault;
   }
   const obj2 = {
@@ -61,7 +61,7 @@ function serverClarification(conjureEligibleGuilds, guild_id) {
   } else {
     const obj3 = { id: id2, label: null };
     const intl2 = util.intl;
-    obj3.label = intl2.string(tmp5(3863).qLYOpH);
+    obj3.label = intl2.string(tmp5(3864).qLYOpH);
     items = [obj3];
   }
   obj2.options = items;
@@ -70,7 +70,7 @@ function serverClarification(conjureEligibleGuilds, guild_id) {
   obj.questions = items1;
   return obj;
 }
-let isProjectOwner = fn(6808).isProjectOwner;
+let isProjectOwner = fn(6831).isProjectOwner;
 const ConjureScopeSetupCard = "ConjureScopeSetupCard";
 const ConjureScopeSwitchCard = "ConjureScopeSwitchCard";
 let c10 = "scope-setup:q0";
@@ -78,10 +78,10 @@ const id2 = "" + "scope-setup:q0" + ":0";
 const id3 = "" + "scope-setup:q0" + ":1";
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureScopeSetupCard(arg0) {
       _require = arg0;
-      const cResult = require("c").c(25);
+      const cResult = require("c").c(33);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
         cResult[0] = items;
@@ -107,198 +107,229 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
       const tmpResult = require("initialize");
       const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds(ConjureScopeSetupCard);
-      const tmpResult3 = require("useConjureProjects");
-      [tmp11, importDefault] = settle(noop.useState(null), 2);
-      const tmp10 = settle(noop.useState(null), 2);
-      [tmp13, dependencyMap] = settle(noop.useState(false), 2);
-      const tmp12 = settle(noop.useState(false), 2);
-      [tmp15, asyncGeneratorStep] = settle(noop.useState(null), 2);
+      const tmpResult4 = require("useConjureProjects");
+      [tmp10, importDefault] = noop.useState(null);
+      const tmp9 = _slicedToArray(noop.useState(null), 2);
+      [tmp12, dependencyMap] = noop.useState(false);
+      const tmp11 = _slicedToArray(noop.useState(false), 2);
+      [tmp14, asyncGeneratorStep] = noop.useState(null);
       if (stateFromStores != null) {
         const install_scope_setup = stateFromStores.install_scope_setup;
       }
-      let tmp16 = "server" === tmp11;
-      if (!tmp16) {
-        let tmp17 = null == tmp11;
-        if (tmp17) {
-          tmp17 = "choose_server" === install_scope_setup;
+      let tmp15 = "server" === tmp10;
+      if (!tmp15) {
+        let tmp16 = null == tmp10;
+        if (tmp16) {
+          tmp16 = "choose_server" === install_scope_setup;
         }
-        tmp16 = tmp17;
+        tmp15 = tmp16;
       }
       let guild_id;
       if (stateFromStores != null) {
         guild_id = stateFromStores.guild_id;
       }
-      if (cResult[4] === tmp16) {
+      if (cResult[4] === tmp15) {
         if (cResult[5] === conjureEligibleGuilds) {
           if (cResult[6] === guild_id) {
-            if (null == install_scope_setup) {
-              return null;
-            } else {
-              if (null != stateFromStores) {
-                if (isProjectOwner(stateFromStores)) {
-                  if (cResult[12] !== arg0) {
-                    _require = asyncGeneratorStep(async (arg0, arg1) => {
-                      closure_130_0 = closure_1;
-                      closure_2(true);
-                      tmp3(null);
-                      await closure_0(dependencyMap[6]).settleConjureInstallScope(closure_0, closure_0, closure_1);
-                      if (1 === tmp7) {
-                        c5 = 0;
-                        closure_130_1 = closure_4;
-                        closure_2(false);
-                        let str = "failed";
-                        if (null != closure_130_0) {
-                          str = "failed";
-                          if (403 === errorStatus(closure_130_1)) {
-                            str = "server";
+            if (cResult[7] === arg0) {
+              if (null == install_scope_setup) {
+                return null;
+              } else {
+                if (null != stateFromStores) {
+                  if (isProjectOwner(stateFromStores)) {
+                    if (cResult[13] !== arg0) {
+                      _require = asyncGeneratorStep(async (arg0, arg1) => {
+                        closure_130_0 = closure_1;
+                        closure_2(true);
+                        tmp3(null);
+                        await closure_0(dependencyMap[6]).settleConjureInstallScope(closure_0, closure_0, closure_1);
+                        if (1 === tmp7) {
+                          c5 = 0;
+                          closure_130_1 = closure_4;
+                          closure_2(false);
+                          let str = "failed";
+                          if (null != closure_130_0) {
+                            str = "failed";
+                            if (403 === errorStatus(closure_130_1)) {
+                              str = "server";
+                            }
                           }
+                          tmp3(str);
+                          c7 = 3;
+                        } else if (arg0 === 1) {
+                          c7 = 3;
+                          throw value;
+                        } else if (arg0 !== 2) {
+                          c5 = 0;
                         }
-                        tmp3(str);
-                        c7 = 3;
-                      } else if (arg0 === 1) {
-                        c7 = 3;
-                        throw value;
-                      } else if (arg0 !== 2) {
-                        c5 = 0;
-                      }
-                      return value;
-                    });
-                    settle = function settle() {
-                      const self = this;
-                      const apply = closure_0.apply;
-                      if (typeof apply === "unknown") {
-                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                      } else {
-                        applyArgumentsResult = apply(self, arguments);
-                      }
-                      return applyArgumentsResult;
-                    };
-                    function handleAnswered(arg0, arg1) {
-                      let first;
-                      if (arg1 != null) {
-                        first = arg1.answers[0];
-                      }
-                      if (null != first) {
-                        const entities = first.entities;
-                        if (entities != null) {
-                          const first1 = entities[0];
-                          if (first1 != null) {
-                            id = first1.id;
-                          }
-                        }
-                        const option_ids = first.option_ids;
-                        if (option_ids.includes(closure_12)) {
-                          importDefault("server");
-                        } else if (null != id) {
-                          settle("guild", id);
+                        return value;
+                      });
+                      function settle() {
+                        const self = this;
+                        const apply = closure_0.apply;
+                        if (typeof apply === "unknown") {
+                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                         } else {
-                          settle("user", null);
+                          applyArgumentsResult = apply(self, arguments);
                         }
+                        return applyArgumentsResult;
                       }
-                    }
-                    cResult[12] = arg0;
-                    cResult[13] = handleAnswered;
-                  }
-                  const _Symbol = Symbol;
-                  if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl = tmp(1125).intl;
-                    const stringResult = intl.string(tmp(1125).t["cY+Oob"]);
-                    cResult[14] = stringResult;
-                    let tmp26 = stringResult;
-                  } else {
-                    tmp26 = cResult[14];
-                  }
-                  if (cResult[15] === tmp16) {
-                    if (cResult[16] === tmp13) {
-                      let tmp28 = cResult[17];
-                    }
-                    if (cResult[18] !== tmp15) {
-                      if (null == tmp15) {
-                        cResult[18] = tmp15;
-                        cResult[19] = null;
-                        let tmp29 = null;
-                      } else {
-                        const intl2 = tmp(1125).intl;
-                        if ("server" === tmp15) {
-                          let jNVZ3e = _modDef3863["XXKd+7"];
-                        } else {
-                          jNVZ3e = _modDef3863.jNVZ3e;
-                        }
-                        intl2.string(jNVZ3e);
-                      }
+                      cResult[13] = arg0;
+                      cResult[14] = settle;
+                      let tmp23 = settle;
                     } else {
-                      tmp29 = cResult[19];
+                      tmp23 = cResult[14];
                     }
-                    if (cResult[20] === tmp19) {
-                      if (cResult[21] === tmp25) {
-                        if (cResult[22] === tmp28) {
-                          if (cResult[23] === tmp29) {
-                            let tmp34 = cResult[24];
+                    _slicedToArray = tmp23;
+                    if (cResult[15] !== tmp23) {
+                      function handleAnswered(arg0, arg1) {
+                        let first;
+                        if (arg1 != null) {
+                          first = arg1.answers[0];
+                        }
+                        if (null != first) {
+                          const option_ids = first.option_ids;
+                          if (option_ids.includes(closure_12)) {
+                            importDefault("server");
+                          } else {
+                            closure_4("user", null);
                           }
-                          return tmp34;
                         }
                       }
+                      cResult[15] = tmp23;
+                      cResult[16] = handleAnswered;
                     }
-                    const obj2 = {
-                      clarification: tmp19,
-                      readOnly: false,
-                      onSubmit: tmp25,
-                      submitText: tmp26,
-                      onBack: tmp28,
-                      hideSubmit: false,
-                      failure: tmp29,
-                    };
-                    cResult[20] = tmp19;
-                    cResult[21] = tmp25;
-                    cResult[22] = tmp28;
-                    cResult[23] = tmp29;
-                    cResult[24] = obj2;
-                    tmp34 = obj2;
-                  }
-                  let fn2;
-                  if (tmp16) {
-                    if (!tmp13) {
-                      fn2 = () => importDefault("scope");
+                    const _Symbol = Symbol;
+                    if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+                      const intl = tmp(1125).intl;
+                      const stringResult = intl.string(tmp(1125).t["cY+Oob"]);
+                      cResult[17] = stringResult;
+                      let tmp27 = stringResult;
+                    } else {
+                      tmp27 = cResult[17];
                     }
+                    if (cResult[18] === tmp15) {
+                      if (cResult[19] === tmp12) {
+                        let tmp29 = cResult[20];
+                      }
+                      if (tmp15) {
+                        tmp15 = conjureEligibleGuilds.length > 0;
+                      }
+                      if (cResult[21] === tmp12) {
+                        if (cResult[22] === tmp23) {
+                          let tmp30 = cResult[23];
+                        }
+                        if (cResult[24] !== tmp14) {
+                          if (null == tmp14) {
+                            cResult[24] = tmp14;
+                            cResult[25] = null;
+                            let tmp31 = null;
+                          } else {
+                            const intl2 = tmp(1125).intl;
+                            if ("server" === tmp14) {
+                              let jNVZ3e = _modDef3864["XXKd+7"];
+                            } else {
+                              jNVZ3e = _modDef3864.jNVZ3e;
+                            }
+                            intl2.string(jNVZ3e);
+                          }
+                        } else {
+                          tmp31 = cResult[25];
+                        }
+                        if (cResult[26] === tmp18) {
+                          if (cResult[27] === tmp30) {
+                            if (cResult[28] === tmp31) {
+                              if (cResult[29] === tmp26) {
+                                if (cResult[30] === tmp29) {
+                                  if (cResult[31] === tmp15) {
+                                    let tmp36 = cResult[32];
+                                  }
+                                  return tmp36;
+                                }
+                              }
+                            }
+                          }
+                        }
+                        const obj2 = {
+                          clarification: tmp18,
+                          readOnly: false,
+                          onSubmit: tmp26,
+                          submitText: tmp27,
+                          onBack: tmp29,
+                          hideSubmit: false,
+                          serverStep: tmp15,
+                          onPickServer: tmp30,
+                          failure: tmp31,
+                        };
+                        cResult[26] = tmp18;
+                        cResult[27] = tmp30;
+                        cResult[28] = tmp31;
+                        cResult[29] = tmp26;
+                        cResult[30] = tmp29;
+                        cResult[31] = tmp15;
+                        cResult[32] = obj2;
+                        tmp36 = obj2;
+                      }
+                      let fn3;
+                      if (!tmp12) {
+                        fn3 = (arg0) => closure_4("guild", arg0);
+                      }
+                      cResult[21] = tmp12;
+                      cResult[22] = tmp23;
+                      cResult[23] = fn3;
+                      tmp30 = fn3;
+                    }
+                    let fn2;
+                    if (tmp15) {
+                      if (!tmp12) {
+                        fn2 = () => importDefault("scope");
+                      }
+                    }
+                    cResult[18] = tmp15;
+                    cResult[19] = tmp12;
+                    cResult[20] = fn2;
+                    tmp29 = fn2;
                   }
-                  cResult[15] = tmp16;
-                  cResult[16] = tmp13;
-                  cResult[17] = fn2;
-                  tmp28 = fn2;
                 }
+                if (cResult[9] !== tmp18) {
+                  const result = tmp(12395).ownerOnlyClarification(tmp18);
+                  cResult[9] = tmp18;
+                  cResult[10] = result;
+                  let tmp37 = result;
+                  const tmpResult5 = tmp(12395);
+                } else {
+                  tmp37 = cResult[10];
+                }
+                if (cResult[11] !== tmp37) {
+                  const obj3 = { clarification: tmp37, readOnly: true, hideSubmit: true, failure: null };
+                  cResult[11] = tmp37;
+                  cResult[12] = obj3;
+                  let tmp39 = obj3;
+                } else {
+                  tmp39 = cResult[12];
+                }
+                return tmp39;
               }
-              if (cResult[8] !== tmp19) {
-                const result = tmp(12341).ownerOnlyClarification(tmp19);
-                cResult[8] = tmp19;
-                cResult[9] = result;
-                let tmp35 = result;
-                const tmpResult4 = tmp(12341);
-              } else {
-                tmp35 = cResult[9];
-              }
-              if (cResult[10] !== tmp35) {
-                const obj3 = { clarification: tmp35, readOnly: true, hideSubmit: true, failure: null };
-                cResult[10] = tmp35;
-                cResult[11] = obj3;
-                let tmp37 = obj3;
-              } else {
-                tmp37 = cResult[11];
-              }
-              return tmp37;
             }
           }
         }
       }
-      if (tmp16) {
-        let tmp21 = serverClarification(conjureEligibleGuilds, guild_id);
+      if (tmp15) {
+        let heldConjurePromptGuildId = guild_id;
+        if (guild_id == null) {
+          heldConjurePromptGuildId = tmp(12395).getHeldConjurePromptGuildId(arg0);
+          const tmpResult6 = tmp(12395);
+        }
+        let tmp21Result = serverClarification(conjureEligibleGuilds, heldConjurePromptGuildId);
       } else {
-        tmp21 = scopeClarification();
+        tmp21Result = scopeClarification();
       }
-      cResult[4] = tmp16;
+      cResult[4] = tmp15;
       cResult[5] = conjureEligibleGuilds;
       cResult[6] = guild_id;
-      cResult[7] = tmp21;
-      const tmp14 = settle(noop.useState(null), 2);
+      cResult[7] = arg0;
+      cResult[8] = tmp21Result;
+      const tmp13 = _slicedToArray(noop.useState(null), 2);
     }
   : function useConjureScopeSetupCard(arg0) {
       _require = arg0;
@@ -346,40 +377,44 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureProjectStore.getProject(closure_0),
         items1,
       );
-      const obj = require("initialize");
+      let obj = require("initialize");
       const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds(closure_8);
       const obj2 = require("useConjureProjects");
       const obj3 = noop;
-      [tmp6, dependencyMap] = noop.useState(null);
-      const tmp5 = _slicedToArray(noop.useState(null), 2);
-      [tmp8, asyncGeneratorStep] = noop.useState(false);
-      const tmp7 = _slicedToArray(noop.useState(false), 2);
-      [tmp10, _slicedToArray] = noop.useState(null);
+      [tmp5, dependencyMap] = noop.useState(null);
+      const tmp4 = _slicedToArray(noop.useState(null), 2);
+      [tmp7, asyncGeneratorStep] = noop.useState(false);
+      const tmp6 = _slicedToArray(noop.useState(false), 2);
+      [tmp9, _slicedToArray] = noop.useState(null);
       let install_scope_setup;
       if (stateFromStores != null) {
         install_scope_setup = stateFromStores.install_scope_setup;
       }
-      let tmp12 = "server" === tmp6;
-      if (!tmp12) {
-        let tmp13 = null == tmp6;
-        if (tmp13) {
-          tmp13 = "choose_server" === install_scope_setup;
+      let tmp11 = "server" === tmp5;
+      if (!tmp11) {
+        let tmp12 = null == tmp5;
+        if (tmp12) {
+          tmp12 = "choose_server" === install_scope_setup;
         }
-        tmp12 = tmp13;
+        tmp11 = tmp12;
       }
-      noop = tmp12;
+      noop = tmp11;
       guild_id = undefined;
       if (stateFromStores != null) {
         guild_id = stateFromStores.guild_id;
       }
-      const items2 = [tmp12, conjureEligibleGuilds, guild_id];
+      const items2 = [tmp11, conjureEligibleGuilds, guild_id, arg0];
       const memo = obj3.useMemo(() => {
         if (closure_5) {
-          let tmp2 = serverClarification(conjureEligibleGuilds, guild_id);
+          let heldConjurePromptGuildId = guild_id;
+          if (guild_id == null) {
+            heldConjurePromptGuildId = conjureScopeSetup.getHeldConjurePromptGuildId(closure_0);
+          }
+          let tmp3Result = serverClarification(conjureEligibleGuilds, heldConjurePromptGuildId);
         } else {
-          tmp2 = scopeClarification();
+          tmp3Result = scopeClarification();
         }
-        return tmp2;
+        return tmp3Result;
       }, items2);
       if (null == install_scope_setup) {
         return null;
@@ -393,28 +428,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               submitText: null,
               onBack: null,
               hideSubmit: false,
+              serverStep: null,
+              onPickServer: null,
               failure: null,
             };
             let handleAnswered;
-            if (!tmp8) {
+            if (!tmp7) {
               handleAnswered = function handleAnswered(arg0, arg1) {
                 let first;
                 if (arg1 != null) {
                   first = arg1.answers[0];
                 }
                 if (null != first) {
-                  const entities = first.entities;
-                  if (entities != null) {
-                    const first1 = entities[0];
-                    if (first1 != null) {
-                      id = first1.id;
-                    }
-                  }
                   const option_ids = first.option_ids;
                   if (option_ids.includes(closure_12)) {
                     dependencyMap("server");
-                  } else if (null != id) {
-                    settle("guild", id);
                   } else {
                     settle("user", null);
                   }
@@ -425,35 +453,44 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const intl = tmp(1125).intl;
             obj4.submitText = intl.string(tmp(1125).t["cY+Oob"]);
             let fn;
-            if (tmp12) {
-              if (!tmp8) {
+            if (tmp11) {
+              if (!tmp7) {
                 fn = () => dependencyMap("scope");
               }
             }
             obj4.onBack = fn;
-            if (null == tmp10) {
+            if (tmp11) {
+              tmp11 = conjureEligibleGuilds.length > 0;
+            }
+            obj4.serverStep = tmp11;
+            let fn2;
+            if (!tmp7) {
+              fn2 = (arg0) => settle("guild", arg0);
+            }
+            obj4.onPickServer = fn2;
+            if (null == tmp9) {
               obj4.failure = null;
               return obj4;
             } else {
               const intl2 = tmp(1125).intl;
-              if ("server" === tmp10) {
-                let jNVZ3e = conjureEligibleGuilds(3863)["XXKd+7"];
+              if ("server" === tmp9) {
+                let jNVZ3e = conjureEligibleGuilds(3864)["XXKd+7"];
               } else {
-                jNVZ3e = conjureEligibleGuilds(3863).jNVZ3e;
+                jNVZ3e = conjureEligibleGuilds(3864).jNVZ3e;
               }
               intl2.string(jNVZ3e);
             }
           }
         }
         const obj5 = {
-          clarification: tmp(12341).ownerOnlyClarification(memo),
+          clarification: tmp(12395).ownerOnlyClarification(memo),
           readOnly: true,
           hideSubmit: true,
           failure: null,
         };
         return obj5;
       }
-      const tmp9 = _slicedToArray(noop.useState(null), 2);
+      const tmp8 = _slicedToArray(noop.useState(null), 2);
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/scope_setup/useConjureScopeCards.tsx");
@@ -798,8 +835,8 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
         items1,
       );
       let obj = projectId(504);
-      const conjureEligibleGuilds = projectId(12355).useConjureEligibleGuilds(switchTo);
-      let obj2 = projectId(12355);
+      const conjureEligibleGuilds = projectId(12409).useConjureEligibleGuilds(switchTo);
+      let obj2 = projectId(12409);
       let obj3 = conjureEligibleGuilds;
       [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
       const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -812,7 +849,7 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
       const memo = obj3.useMemo(() => {
         const first = _slicedToArray(clarification.questions, 1)[0];
         const intl = util.intl;
-        const tmp7 = _modDef3863;
+        const tmp7 = _modDef3864;
         if ("guild" === scope) {
           let d7jxeT = tmp7["jh/iy+"];
           let tmp8 = importDefault;
@@ -834,7 +871,7 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
           const _HermesInternal = HermesInternal;
           obj4.id = "" + first.id + ":0";
           const intl2 = util.intl;
-          obj4.label = intl2.string(tmp8(3863).TVRkVh);
+          obj4.label = intl2.string(tmp8(3864).TVRkVh);
           const items = [obj4];
           obj3.options = items;
           tmp12 = obj3;
@@ -876,7 +913,7 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
           }
           obj4.onSubmit = handleAnswered;
           let intl = tmp(1125).intl;
-          const tmp13 = clarification(3863);
+          const tmp13 = clarification(3864);
           if ("guild" === scope) {
             let TVRkVh = tmp13.Ua7yKM;
             let tmp14 = tmp12;
@@ -899,7 +936,7 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
           }
           obj4.onBack = keep;
           let intl2 = tmp(1125).intl;
-          const tmp14Result = tmp14(3863);
+          const tmp14Result = tmp14(3864);
           obj4.backText = intl2.string("guild" === scope ? tmp14Result["4WnIqd"] : tmp14Result["am+p7p"]);
           obj4.hideSubmit = "user" === scope;
           if (null == tmp8) {
@@ -908,9 +945,9 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
           } else {
             const intl3 = tmp(1125).intl;
             if ("locked" === tmp8) {
-              let jNVZ3e = tmp14(3863).irUT0N;
+              let jNVZ3e = tmp14(3864).irUT0N;
             } else {
-              jNVZ3e = tmp14(3863).jNVZ3e;
+              jNVZ3e = tmp14(3864).jNVZ3e;
             }
             intl3.string(jNVZ3e);
           }
@@ -918,6 +955,6 @@ export const useConjureScopeSwitchCard = ReactCompilerGating.isReactCompilerEnab
       }
       const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
       let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-      obj5.clarification = projectId(12341).ownerOnlyClarification(memo);
+      obj5.clarification = projectId(12395).ownerOnlyClarification(memo);
       return obj5;
     };

@@ -6,32 +6,99 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
-let closure_13 = async function _navigateToGuild() {
-  const obj6 = {};
-  const merged = Object.assign(closure_129_5);
-  obj6.loadId = closure_129_0;
-  closure_129_6 = obj6;
-  await closure_130_2(closure_130_3[6]).startLurking(closure_129_1, closure_129_4, closure_129_6);
-  closure_130_1(closure_130_3[7]).track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, {
-    guild_id: closure_129_1,
-    load_id: closure_129_0,
-    card_index: closure_129_2,
-    category_id: closure_129_3,
-    location: closure_129_4,
-  });
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({
-    loadId: closure_129_0,
-    guildId: closure_129_1,
-    index: closure_129_2,
-    categoryId: closure_129_3,
-    analyticsLocation: closure_129_4,
-    options: closure_129_5,
-  } = closure_0);
-  return "Reflect";
+let closure_13 = async function _navigateToGuild(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({
+            loadId: closure_129_0,
+            guildId: closure_129_1,
+            index: closure_129_2,
+            categoryId: closure_129_3,
+            analyticsLocation: closure_129_4,
+            options: closure_129_5,
+          } = closure_0);
+          closure_129_6 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const obj6 = {};
+          const merged = Object.assign(closure_129_5);
+          obj6.loadId = closure_129_0;
+          closure_129_6 = obj6;
+          c3 = 2;
+          c4 = 1;
+          const obj7 = {
+            value: closure_130_2(closure_130_3[6]).startLurking(closure_129_1, closure_129_4, closure_129_6),
+            done: false,
+          };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        const obj9 = {
+          guild_id: closure_129_1,
+          load_id: closure_129_0,
+          card_index: closure_129_2,
+          category_id: closure_129_3,
+          location: closure_129_4,
+        };
+        closure_130_1(closure_130_3[7]).track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, obj9);
+        c4 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } catch (tmp28) {
+      c4 = tmp;
+      throw tmp28;
+    }
+  }
 };
-const GlobalDiscoveryServersConstants = fn(9041);
+const GlobalDiscoveryServersConstants = fn(9044);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -44,7 +111,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
-export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
+export function getGlobalDiscoveryServersTabTitle(arg0) {
   if (constants.FEATURED === arg0) {
     const intl7 = util.intl;
     return intl7.string(util.t["RU+DCe"]);
@@ -67,8 +134,8 @@ export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServ
     const intl = util.intl;
     return intl.string(util.t["q469/Z"]);
   }
-};
-export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryServersBannerTitle(arg0) {
+}
+export function getGlobalDiscoveryServersBannerTitle(arg0) {
   if (constants.FEATURED === arg0) {
     const intl7 = util.intl;
     return intl7.string(util.t.OlDfzP);
@@ -96,8 +163,8 @@ export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryS
     const error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
     throw error;
   }
-};
-export const getGlobalDiscoveryServersBannerDescription = function getGlobalDiscoveryServersBannerDescription(arg0) {
+}
+export function getGlobalDiscoveryServersBannerDescription(arg0) {
   if (constants.FEATURED === arg0) {
     const intl7 = util.intl;
     return intl7.string(util.t.SdMhrk);
@@ -125,8 +192,8 @@ export const getGlobalDiscoveryServersBannerDescription = function getGlobalDisc
     const error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
     throw error;
   }
-};
-export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscoveryServersTabSectionTitle(arg0) {
+}
+export function getGlobalDiscoveryServersTabSectionTitle(arg0) {
   if (constants.FEATURED === arg0) {
     const intl6 = util.intl;
     return intl6.string(util.t.crt84X);
@@ -148,8 +215,8 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
   } else {
     return null;
   }
-};
-export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(type) {
+}
+export function getCategoryIdFromServerTab(type) {
   if (constants.FEATURED === type) {
     return React6;
   } else if (constants.GAMING === type) {
@@ -167,16 +234,16 @@ export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(ty
   } else {
     GlobalUtils.assertNever(type);
   }
-};
-export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(arg0) {
+}
+export function isStaleFeaturedGuilds(arg0) {
   let tmp = null == arg0;
   if (!tmp) {
     const _Date = Date;
     tmp = Date.now() - arg0 > React5;
   }
   return tmp;
-};
-export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(id) {
+}
+export function fromDiscoverableGuildServer(id) {
   const obj = {
     id: id.id,
     name: id.name,
@@ -203,8 +270,8 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
     emoji_count: obj.emojiCount,
   } = id);
   return obj;
-};
-export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
+}
+export function fromDiscoverableGuildSearchResult(id) {
   const obj = {
     id: id.id,
     name: id.name,
@@ -216,9 +283,9 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: 66,
-    emojis: 1,
+    preferredLocale: "ix",
+    discoverySplash: "r",
+    emojis: "application",
   };
   ({
     approximate_presence_count: obj.presenceCount,
@@ -227,8 +294,8 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
   } = id);
   obj.emojis = [];
   return obj;
-};
-export const getLanguageCodeFallback = function getLanguageCodeFallback() {
+}
+export function getLanguageCodeFallback() {
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [LocaleStore];
@@ -242,8 +309,8 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
     found = arr2[0];
   }
   return found.code;
-};
-export const navigateToGuild = function navigateToGuild() {
+}
+export function navigateToGuild() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -252,7 +319,7 @@ export const navigateToGuild = function navigateToGuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const makeAnalyticsID = function makeAnalyticsID() {
+}
+export function makeAnalyticsID() {
   return v1.v4().replace(/-/g, "");
-};
+}

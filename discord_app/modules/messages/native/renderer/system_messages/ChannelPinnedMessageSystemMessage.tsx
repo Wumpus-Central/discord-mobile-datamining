@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx",
 );
 
-export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
+export function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = {
@@ -57,4 +57,4 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
   const merged1 = Object.assign(tmp9);
   obj13.accessibilityActions = items;
   return obj13;
-};
+}

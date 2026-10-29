@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx",
 );
 
-export const createPollResultSystemMessage = function createPollResultSystemMessage(message) {
+export function createPollResultSystemMessage(message) {
   const tmp3 = parsePollResultSystemMessageEmbedDefault(message.message.embeds[0]);
   if (null == tmp3) {
     return null;
@@ -103,4 +103,4 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     obj16.content = formatToPartsResult;
     return obj16;
   }
-};
+}

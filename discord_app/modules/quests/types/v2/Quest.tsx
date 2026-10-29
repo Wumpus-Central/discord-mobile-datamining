@@ -6,7 +6,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
-export const questFromServerV2 = function questFromServerV2(id) {
+export function questFromServerV2(id) {
   const obj = {
     id: id.id,
     configVersion: 2,
@@ -56,8 +56,8 @@ export const questFromServerV2 = function questFromServerV2(id) {
   obj.sharePolicy = id.share_policy;
   obj.ctaConfig = CTA.questCtaConfigFromServer(id.cta_config);
   return obj;
-};
-export const questCosponsorMetadataFromServer = function questCosponsorMetadataFromServer(cosponsor_metadata) {
+}
+export function questCosponsorMetadataFromServer(cosponsor_metadata) {
   if (null != cosponsor_metadata) {
     const obj = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
     ({
@@ -69,4 +69,4 @@ export const questCosponsorMetadataFromServer = function questCosponsorMetadataF
     } = cosponsor_metadata);
     return obj;
   }
-};
+}

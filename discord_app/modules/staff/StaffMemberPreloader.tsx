@@ -3,11 +3,11 @@ import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const PRELOAD_SERVER_ID = fn(19266).PRELOAD_SERVER_ID;
+const PRELOAD_SERVER_ID = fn(19499).PRELOAD_SERVER_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
 
-export const preloadStaffMembers = function preloadStaffMembers() {
+export function preloadStaffMembers() {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -20,4 +20,4 @@ export const preloadStaffMembers = function preloadStaffMembers() {
     const obj2 = GuildActionCreatorsDefault;
     const members = obj2.requestMembers(PRELOAD_SERVER_ID, "", 0, false);
   }
-};
+}

@@ -123,7 +123,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp7 = importDefault;
         if (image) {
-          tmp7 = tmp7(8828);
+          tmp7 = tmp7(8831);
           obj = {
             volume: 0,
             resizeMode: "cover",
@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.style = items;
           const obj6 = { uri: url };
           obj5.source = obj6;
-          tmp6Result = timestampProducer(tmp7(5705), obj5);
+          tmp6Result = timestampProducer(tmp7(5707), obj5);
         }
         cResult[5] = image;
         image = media.image;
@@ -192,7 +192,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = tmp3Result;
       return timestampProducer(React4, obj2);
     };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj5 = {
   content: { padding: nativeDefault.space.PX_16 },
   contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" },
@@ -246,18 +246,18 @@ let result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx",
 );
 
-export const handleSuccess = function handleSuccess(arg0) {
+export function handleSuccess(arg0) {
   ActionSheetActionCreatorsDefault.hideActionSheet(arg0);
   const obj3 = { text: null, icon: null, iconColor: "text-brand" };
   const intl = util.intl;
   obj3.text = intl.string(util.t.gFsTKu);
   obj3.icon = ShieldIcon.ShieldIcon;
   ToastActionCreatorsDefault.open("explicit_media_report_false_positive_success", obj3);
-};
-export const handleError = function handleError() {
+}
+export function handleError() {
   const intl = util.intl;
   ToastUtils.presentError(intl.string(util.t.R0RpRX));
-};
+}
 export const ExplicitMediaFalsePositiveActionSheet = ReactCompilerGating.isReactCompilerEnabled()
   ? function ExplicitMediaFalsePositiveActionSheet(channelId) {
       const cResult = channelId(onConfirmPress[4]).c(42);

@@ -27,7 +27,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7910).SettingMode;
+const SettingMode = fn(7933).SettingMode;
 const Constants = fn(1084);
 ({
   ChannelTypes: closure_18,
@@ -39,7 +39,7 @@ const Constants = fn(1084);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { marginTop: 16, flex: 1 },
@@ -92,7 +92,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== navigation) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "paths" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -104,7 +104,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "paths" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -114,7 +114,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "paths" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -122,7 +122,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "paths" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -130,7 +130,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "paths" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -138,7 +138,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "paths" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -172,7 +172,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -189,13 +189,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_1 = tmp5;
                 closure_128_0 = undefined;
                 accessPermissions = accessPermissions.accessPermissions;
-                const result = v2(9006).isPrivateGuildChannel(accessPermissions);
-                const obj9 = v2(9006);
+                const result = v2(9009).isPrivateGuildChannel(accessPermissions);
+                const obj9 = v2(9009);
                 const tmp21 = v2;
-                closure_128_0 = v2(9006).flipEveryonePermission(accessPermissions, accessPermissions, result);
+                closure_128_0 = v2(9009).flipEveryonePermission(accessPermissions, accessPermissions, result);
                 currentUser = currentUser.getCurrentUser();
                 let tmp7 = ChannelSettingsPermissionsStore;
-                const obj10 = v2(9006);
+                const obj10 = v2(9009);
                 if (!ChannelSettingsPermissionsStore) {
                   tmp7 = null == currentUser;
                 }
@@ -206,7 +206,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                   v2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp21(9006).grantUserChannelAccess(accessPermissions, accessPermissions),
+                    value: tmp21(9009).grantUserChannelAccess(accessPermissions, accessPermissions),
                     done: false,
                   };
                   return obj4;
@@ -231,12 +231,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else {
               dependencyMap = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             const items = [closure_128_0];
             v2 = 2;
             dependencyMap = 1;
-            const obj7 = { value: tmp2(9007).savePermissionUpdates(closure_129_0.id, items), done: false };
+            const obj7 = { value: tmp2(9010).savePermissionUpdates(closure_129_0.id, items), done: false };
             return obj7;
           } catch (tmp16) {
             dependencyMap = tmp;
@@ -255,7 +255,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                     c2 = 1;
                     dependencyMap = 1;
                     const obj6 = {
-                      value: tmp5(9008).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                      value: tmp5(9011).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                         guild_id,
                         constants.VIEW_CHANNEL,
                       ),
@@ -296,7 +296,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else if (!value) {
               dependencyMap = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             const intl = tmp5(1125).intl;
             const string = intl.string;
@@ -307,7 +307,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               stringResult = string(t["47gQYL"]);
             }
             closure_128_0 = stringResult;
-            closure_128_1 = tmp5(5640).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+            closure_128_1 = tmp5(5641).computeChannelName(closure_129_0, UserStore, RelationshipStore);
             let intl2 = tmp5(1125).intl;
             let onCancel = intl2.format;
             let show = tmp5(1125).t;
@@ -320,8 +320,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             }
             closure_128_2 = onCancelResult;
             closure_129_2(!closure_129_1);
-            const obj4 = tmp5(5640);
-            show = tmp2(5944).show;
+            const obj4 = tmp5(5641);
+            show = tmp2(5946).show;
             const obj9 = {
               title: closure_128_0,
               body: closure_128_2,
@@ -344,7 +344,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             obj9.onCancel = onCancel;
             show(obj9);
             dependencyMap = 3;
-            const tmp42 = tmp2(5944);
+            const tmp42 = tmp2(5946);
           } catch (tmp54) {
             dependencyMap = tmp;
             throw tmp54;
@@ -371,7 +371,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
       const items1 = [navigation];
       const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-        navigation.setOptions({ headerRight: "paths" });
+        navigation.setOptions({ headerRight: "r" });
       }, items1);
       const items2 = [guild, sortedGuildRoles, channel];
       const memo = togglePrivateChannel.useMemo(() => {

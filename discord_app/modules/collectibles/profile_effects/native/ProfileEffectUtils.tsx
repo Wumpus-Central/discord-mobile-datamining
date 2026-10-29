@@ -4,7 +4,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export const shouldAnimate = function shouldAnimate(entering, current) {
+export function shouldAnimate(entering, current) {
   if (current >= entering.start) {
     if (!entering.loop) {
       if (current > entering.duration + entering.start) {
@@ -28,7 +28,7 @@ export const shouldAnimate = function shouldAnimate(entering, current) {
   } else {
     return false;
   }
-};
-export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
+}
+export function calculateProfileEffectHeight(layerConfig, width) {
   return width / getAssetWHRatio.getAssetWHRatio(layerConfig);
-};
+}

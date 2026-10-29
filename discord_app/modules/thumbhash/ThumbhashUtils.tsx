@@ -1,5 +1,5 @@
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
-import thumbHashToRGBA2 from "../../../_runtime/16805_thumbHashToRGBA.js";
+import thumbHashToRGBA2 from "../../../_runtime/17043_thumbHashToRGBA.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function thumbHashToRGBA(arg0) {
@@ -309,11 +309,11 @@ function thumbHashToRGBA(arg0) {
 }
 let result = size.fileFinishedImporting("modules/thumbhash/ThumbhashUtils.tsx");
 
-export const createThumbhashImageFromPlaceholder = function createThumbhashImageFromPlaceholder(placeholder) {
+export function createThumbhashImageFromPlaceholder(placeholder) {
   const tmp = thumbHashToRGBA(
     Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)),
     { detail: 1, pop: 1.1 },
   );
   return thumbHashToRGBA2.rgbaToDataURL(tmp.w, tmp.h, tmp.rgba);
-};
+}
 export { thumbHashToRGBA };

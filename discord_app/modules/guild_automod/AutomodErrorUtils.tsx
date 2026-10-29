@@ -101,7 +101,7 @@ export const InvalidRegexPatternError = prototype;
 export const AUTOMOD_ERROR_CODES = set;
 export { getAutomodErrorMessageFromErrorResponse };
 export { getAutomodErrorMessageFromMessageData };
-export const getAutomodErrorMessage = function getAutomodErrorMessage(messageData, errorResponseBody) {
+export function getAutomodErrorMessage(messageData, errorResponseBody) {
   const tmp = getAutomodErrorMessageFromErrorResponse(errorResponseBody);
   if (null != tmp) {
     return tmp;
@@ -111,4 +111,4 @@ export const getAutomodErrorMessage = function getAutomodErrorMessage(messageDat
   } else {
     stringResult = getAutomodErrorMessageFromMessageData(messageData);
   }
-};
+}

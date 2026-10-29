@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/premium/experiments/ReferralTrialCtaExperiment.tsx");
 
-export const getReferralTrialCtaExperimentEnabled = function getReferralTrialCtaExperimentEnabled() {
+export function getReferralTrialCtaExperimentEnabled() {
   return config.getConfig({ location: "referral_trial_cta" });
-};
+}

@@ -5,7 +5,7 @@ import PopoutWindowStore from "../popout-window/PopoutWindowStore.native.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 const PopoutWindowKeys = fn(1084).PopoutWindowKeys;
 const ReactCompilerGating = fn(558);
 function getEmbeddedActivityPopoutWindowKey(arg0) {
@@ -25,20 +25,19 @@ const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivit
 
 export default getEmbeddedActivityPopoutWindowKey;
 export { getEmbeddedActivityPopoutWindowKeyForChannel };
-export const getEmbeddedActivityPopoutWindowKeyForApplication =
-  function getEmbeddedActivityPopoutWindowKeyForApplication(applicationId) {
-    applicationId = applicationId.applicationId;
-    const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-    if (null != currentEmbeddedActivity) {
-      if (currentEmbeddedActivity.applicationId === applicationId) {
-        if (null != ApplicationStore.getApplication(applicationId)) {
-          const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(
-            currentEmbeddedActivity.location,
-          );
-        }
+export function getEmbeddedActivityPopoutWindowKeyForApplication(applicationId) {
+  applicationId = applicationId.applicationId;
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+  if (null != currentEmbeddedActivity) {
+    if (currentEmbeddedActivity.applicationId === applicationId) {
+      if (null != ApplicationStore.getApplication(applicationId)) {
+        const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(
+          currentEmbeddedActivity.location,
+        );
       }
     }
-  };
+  }
+}
 export const usePopoutWindowForActivity = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePopoutWindowForActivity(channelId) {
       const cResult = channelId(576).c(3);

@@ -286,7 +286,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/UserGuildJoinRequestStore.tsx");
 
 export default userGuildJoinRequestStore;
-export const joinRequestFromServer = function joinRequestFromServer(request) {
+export function joinRequestFromServer(request) {
   return {
     joinRequestId: request.join_request_id,
     guildId: request.guild_id,
@@ -301,4 +301,4 @@ export const joinRequestFromServer = function joinRequestFromServer(request) {
     lastSeen: request.last_seen,
     interviewChannelId: request.interview_channel_id,
   };
-};
+}

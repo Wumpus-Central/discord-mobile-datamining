@@ -19,30 +19,30 @@ let c7 = 28;
 let c8 = 0.4;
 let c9 = 1.14;
 let items = [
-  fn(16990).EmojiAngryFaceWithHornsIcon,
-  fn(16992).EmojiColdFaceIcon,
-  fn(16994).EmojiCowboyHatFaceIcon,
-  fn(16996).EmojiCryingFaceIcon,
-  fn(16998).EmojiDisguisedFaceIcon,
-  fn(17000).EmojiFaceVomitingIcon,
-  fn(17002).EmojiFaceWithMonocleIcon,
-  fn(17004).EmojiFaceWithSpiralEyesIcon,
-  fn(17006).EmojiMeltingFaceIcon,
-  fn(17008).EmojiMoneyMouthFaceIcon,
-  fn(17010).EmojiNerdFaceIcon,
-  fn(17012).EmojiPartyingFaceIcon,
-  fn(17014).EmojiSalutingFaceIcon,
-  fn(17016).EmojiSkullIcon,
-  fn(17018).EmojiSmilingFaceWithHornsIcon,
-  fn(17020).EmojiSmilingFaceWithSunglassesIcon,
-  fn(17022).EmojiSquintingFaceWithTongueIcon,
-  fn(17024).EmojiUpsideDownFaceIcon,
-  fn(17026).EmojiWoozyFaceIcon,
-  fn(17028).EmojiZanyFaceIcon,
-  fn(17030).EmojiRollingOnTheFloorLaughingIcon,
-  fn(17032).EmojiSmilingFaceWithHeartsIcon,
+  fn(17229).EmojiAngryFaceWithHornsIcon,
+  fn(17231).EmojiColdFaceIcon,
+  fn(17233).EmojiCowboyHatFaceIcon,
+  fn(17235).EmojiCryingFaceIcon,
+  fn(17237).EmojiDisguisedFaceIcon,
+  fn(17239).EmojiFaceVomitingIcon,
+  fn(17241).EmojiFaceWithMonocleIcon,
+  fn(17243).EmojiFaceWithSpiralEyesIcon,
+  fn(17245).EmojiMeltingFaceIcon,
+  fn(17247).EmojiMoneyMouthFaceIcon,
+  fn(17249).EmojiNerdFaceIcon,
+  fn(17251).EmojiPartyingFaceIcon,
+  fn(17253).EmojiSalutingFaceIcon,
+  fn(17255).EmojiSkullIcon,
+  fn(17257).EmojiSmilingFaceWithHornsIcon,
+  fn(17259).EmojiSmilingFaceWithSunglassesIcon,
+  fn(17261).EmojiSquintingFaceWithTongueIcon,
+  fn(17263).EmojiUpsideDownFaceIcon,
+  fn(17265).EmojiWoozyFaceIcon,
+  fn(17267).EmojiZanyFaceIcon,
+  fn(17269).EmojiRollingOnTheFloorLaughingIcon,
+  fn(17271).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });
@@ -162,13 +162,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         return obj;
       };
-      let obj2 = pressed(5085);
+      let obj2 = pressed(5086);
       fn.__closure = {
         pressed,
-        withSpring: pressed(5283).withSpring,
-        interpolate: pressed(5085).interpolate,
+        withSpring: pressed(5284).withSpring,
+        interpolate: pressed(5086).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5285).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__workletHash = 16574219123934;
@@ -203,10 +203,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       let obj3 = {
         pressed,
-        withSpring: pressed(5283).withSpring,
-        interpolate: pressed(5085).interpolate,
+        withSpring: pressed(5284).withSpring,
+        interpolate: pressed(5086).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5285).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
     }
@@ -233,13 +233,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         return obj;
       };
-      let obj = pressed(5085);
+      let obj = pressed(5086);
       fn.__closure = {
         pressed,
-        withSpring: pressed(5283).withSpring,
-        interpolate: pressed(5085).interpolate,
+        withSpring: pressed(5284).withSpring,
+        interpolate: pressed(5086).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5285).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__workletHash = 4597331743997;
@@ -497,13 +497,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onChange = emojis.onChange;
       _slicedToArray = undefined;
       dependencyMap = _slicedToArray(
-        noop.useState(() => emojis(12).sampleSize(items, emojis(1410).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
+        noop.useState(() => emojis(12).sampleSize(items, emojis(1411).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
         1,
       )[0];
-      _slicedToArray = emojis(1410).getCustomTypingIndicatorEmojisKey(emojis);
+      _slicedToArray = emojis(1411).getCustomTypingIndicatorEmojisKey(emojis);
       const obj2 = { direction: "horizontal", spacing: 8, children: null };
-      let obj = emojis(1410);
-      obj2.children = Array.from({ length: emojis(1410).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
+      let obj = emojis(1411);
+      obj2.children = Array.from({ length: emojis(1411).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
         const obj = { index, emoji: null, emojisKey: null, placeholderIcon: null, onChange: null };
         let tmp3 = emojis[index];
         if (tmp3 == null) {
@@ -517,5 +517,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           <closure_16 key={index} index={index} emoji={null} emojisKey={null} placeholderIcon={null} onChange={null} />
         );
       });
-      return jsx(emojis(6013).Stack, { direction: "horizontal", spacing: 8, children: null });
+      return jsx(emojis(6015).Stack, { direction: "horizontal", spacing: 8, children: null });
     };

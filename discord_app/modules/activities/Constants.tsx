@@ -1,12 +1,12 @@
 // discord_app/modules/activities/Constants.tsx
-import Constants from "../../Constants.tsx";
+import Constants2 from "../../Constants.tsx";
 import Server from "../../flow/Server.tsx";
-import Constants2 from "../../../discord_common/js/shared/activities/Constants.tsx";
 import ActivityApplications from "../../../discord_common/js/shared/shared-constants/ActivityApplications.tsx";
+import Constants from "../../../discord_common/js/shared/activities/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const ChannelTypes = Constants.ChannelTypes;
-const OrientationLockState = Constants2.OrientationLockState;
+const ChannelTypes = Constants2.ChannelTypes;
+const OrientationLockState = Constants.OrientationLockState;
 const items = [
   "1037680572660727838",
   "235088799074484224",
@@ -22,6 +22,7 @@ const items = [
 ];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
+({ ActivityIntent, ActivityLayoutMode } = Constants);
 const obj = {
   label_type: Server.EmbeddedActivityLabelTypes.NONE,
   release_phase: "",
@@ -118,13 +119,14 @@ export const ActivityFeedbackReasons = {
   NOT_FUN: "NOT_FUN",
   OTHER: "OTHER",
 };
-export const ActivityIntent = { PLAY: 0, [0]: "PLAY", SPECTATE: 1, [1]: "SPECTATE" };
 export const ActivityTooltipName = {
   BETRAYAL_MARKETING_TOOLTIP: "BETRAYAL_MARKETING_TOOLTIP",
   FISHINGTON_MARKETING_TOOLTIP: "FISHINGTON_MARKETING_TOOLTIP",
   POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP",
   YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP",
 };
+export { ActivityIntent };
+export { ActivityLayoutMode };
 export { OrientationLockState };
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = {
@@ -135,7 +137,6 @@ export const ActivityScreenOrientation = {
   LANDSCAPE: 1,
   [1]: "LANDSCAPE",
 };
-export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };
 export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj2;
 export const SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES = items4;
 export const SUPPORTED_ACTIVITIES_CHANNEL_TYPES = items5;
@@ -152,7 +153,6 @@ export function getAppIntentScheme(arg0) {
 }
 export const PRIVATE_APPS_HELP_ARTICLE =
   "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-export const DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY = "disallowed_navigation_error_close_activity";
 export const ACTIVITY_LOCKED_ASPECT_RATIO = 0.5625;
 export const ActivityPopoutWindowLayouts = { NORMAL: "normal", FULL_SCREEN: "full-screen" };
 export const INVITE_EXPIRATION_MS = 21600000;

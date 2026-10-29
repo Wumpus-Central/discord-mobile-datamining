@@ -52,6 +52,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/PremiumWishlistItemRecord.tsx");
 
 export default prototype;
-export const isPremiumWishlistItemRecord = function isPremiumWishlistItemRecord(arg0) {
+export function isPremiumWishlistItemRecord(arg0) {
   return arg0 instanceof prototype;
-};
+}

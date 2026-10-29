@@ -3,6 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
+import getGuildOrPackEmojiByNameDefault from "../emojis/utils/getGuildOrPackEmojiByName.tsx";
 import SlateUtils from "slate/SlateUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
@@ -112,8 +113,7 @@ function resolvePlaintextInlineVoid(text, id, id2, arg3) {
     let tmp7 = null;
     if (null != match) {
       const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(id);
-      const customEmoji = disambiguatedEmojiContext.getCustomEmoji();
-      let obj4 = customEmoji.get(match[1]);
+      let obj4 = getGuildOrPackEmojiByNameDefault(disambiguatedEmojiContext, match[1]);
       let channel = null;
       if (null != id2) {
         channel = ChannelStore.getChannel(id2);
@@ -185,18 +185,18 @@ function matchesUser(arg0, arg1, username) {
   }
   return tmp;
 }
-let closure_8 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_8 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1084).Permissions;
 const EmojiIntention = fn(1392).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
-export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, id, id2, arg3) {
+export function resolveApplicationCommandOption(text, id, id2, arg3) {
   const tmp = resolvePlaintextInlineVoid(text, id, id2, arg3);
   let voidToOptionValueResult = null;
   if (null != tmp) {
     voidToOptionValueResult = SlateUtils.voidToOptionValue(tmp);
   }
   return voidToOptionValueResult;
-};
+}

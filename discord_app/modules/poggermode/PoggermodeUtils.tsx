@@ -23,7 +23,7 @@ let closure_6 = items.map((item) => {
 });
 let result = size.fileFinishedImporting("modules/poggermode/PoggermodeUtils.tsx");
 
-export const getComboShakeIntensity = function getComboShakeIntensity(userCombo) {
+export function getComboShakeIntensity(userCombo) {
   LEVEL_3 = LEVEL_4;
   if (LEVEL_4 === undefined) {
     LEVEL_3 = LEVEL_3.LEVEL_3;
@@ -57,8 +57,8 @@ export const getComboShakeIntensity = function getComboShakeIntensity(userCombo)
     );
   }
   return num;
-};
-export const getComboPercentage = function getComboPercentage(value) {
+}
+export function getComboPercentage(value) {
   const items = [closure_5, closure_6];
   [arr2] = items;
   const result = value.value * value.multiplier;
@@ -86,8 +86,8 @@ export const getComboPercentage = function getComboPercentage(value) {
     );
   }
   return num;
-};
-export const getComboStyles = function getComboStyles(arg0) {
+}
+export function getComboStyles(arg0) {
   if (1 === arg0) {
     const obj3 = { color: shims.unsafe_getRawColor("BRAND_500") };
     let obj = obj3;
@@ -112,11 +112,11 @@ export const getComboStyles = function getComboStyles(arg0) {
     obj = obj9;
   }
   return obj;
-};
-export const getComboScore = function getComboScore(multiplier) {
+}
+export function getComboScore(multiplier) {
   let num = multiplier.multiplier;
   if (num == null) {
     num = 1;
   }
   return multiplier.value * num;
-};
+}

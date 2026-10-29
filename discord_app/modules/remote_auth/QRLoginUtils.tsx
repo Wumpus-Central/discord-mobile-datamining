@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const re2 = /^\/ra\/([\w-]+)$/;
 const result = size.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
 
-export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host, pathname) {
+export function findRemoteAuthFingerprint(host, pathname) {
   if (null != host) {
     if (null != pathname) {
       if (obj.isDiscordHostname(host)) {
@@ -20,4 +20,4 @@ export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host
     }
   }
   return null;
-};
+}

@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/home/conjureHomeProjectOrder.tsx");
 
-export const sortConjureProjectsByActivity = function sortConjureProjectsByActivity(arr) {
+export function sortConjureProjectsByActivity(arr) {
   const mapped = arr.map((project) => {
     const obj = { project: project.project, time: null };
     ({ project, turnStartedAt, finishedAt } = project);
@@ -53,4 +53,4 @@ export const sortConjureProjectsByActivity = function sortConjureProjectsByActiv
     return num;
   });
   return sorted.map((project) => project.project);
-};
+}

@@ -9,7 +9,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 
-export const updateGuildSelfMember = function updateGuildSelfMember(guildId, memberOptions) {
+export function updateGuildSelfMember(guildId, memberOptions) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -30,4 +30,4 @@ export const updateGuildSelfMember = function updateGuildSelfMember(guildId, mem
     };
     return HTTP.patch(request);
   }
-};
+}

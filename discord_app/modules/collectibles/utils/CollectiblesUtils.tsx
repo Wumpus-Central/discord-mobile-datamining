@@ -1,37 +1,14 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
-import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import StreamSettingsConstants from "../../go_live/StreamSettingsConstants.tsx";
 import useFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 import ShopVariantsReturnStyle from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
-export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  const obj = {
-    qualityOptions: { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate },
-    context: BaseConnectionEvent.MediaEngineContextTypes.STREAM,
-  };
-  if (null != desktopSource) {
-    if (null != desktopSource.desktopSource) {
-      const obj3 = { sourceId: desktopSource.desktopSource.id, sound: true };
-      obj.desktopSettings = obj3;
-    }
-    if (null != desktopSource.cameraSource) {
-      const obj4 = {
-        videoDeviceGuid: desktopSource.cameraSource.videoDeviceGuid,
-        audioDeviceGuid: desktopSource.cameraSource.audioDeviceGuid,
-      };
-      obj.cameraSettings = obj4;
-    }
-  }
-  return obj;
-};
-export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectiblesOptionsQuery(noCache, tab) {
+export function buildFetchCollectiblesOptionsQuery(noCache, tab) {
   const obj = {};
   if (null != tab) {
     obj.tab = tab;
@@ -70,13 +47,13 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
     }
   }
   return obj;
-};
-export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfileEffectThumbnailUrl(arg0) {
+}
+export function getOptimizedProfileEffectThumbnailUrl(arg0) {
   if (null != arg0) {
     const _HermesInternal = HermesInternal;
     return "" + arg0 + "?width=100&height=195";
   }
-};
+}
 export const useFetchFractionalPremiumInfo = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFetchFractionalPremiumInfo() {
       const cResult = c.c(7);

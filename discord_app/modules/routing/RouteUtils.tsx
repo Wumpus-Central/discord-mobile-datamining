@@ -10,10 +10,10 @@ const re2 = /^\d+$/;
 const result = size.fileFinishedImporting("modules/routing/RouteUtils.tsx");
 
 export const RouteParam = RouteParam.RouteParam;
-export const isPseudoGuildId = function isPseudoGuildId(guildId) {
+export function isPseudoGuildId(guildId) {
   return PSEUDO_GUILD_IDS.includes(guildId);
-};
-export const isValidGuildId = function isValidGuildId(guildId) {
+}
+export function isValidGuildId(guildId) {
   let tmp = null != guildId;
   if (tmp) {
     let hasItem = PSEUDO_GUILD_IDS.includes(guildId);
@@ -23,8 +23,8 @@ export const isValidGuildId = function isValidGuildId(guildId) {
     tmp = hasItem;
   }
   return tmp;
-};
-export const isValidChannelId = function isValidChannelId(channelId) {
+}
+export function isValidChannelId(channelId) {
   let tmp = null == channelId;
   if (!tmp) {
     let isMatch = re2.test(channelId);
@@ -34,4 +34,4 @@ export const isValidChannelId = function isValidChannelId(channelId) {
     tmp = isMatch;
   }
   return tmp;
-};
+}

@@ -19,9 +19,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx",
 );
 
-export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSubscriptionPurchaseSystemMessage(
-  message,
-) {
+export function createRoleSubscriptionPurchaseSystemMessage(message) {
   message = message.message;
   const roleSubscriptionData = message.roleSubscriptionData;
   if (null == roleSubscriptionData) {
@@ -119,4 +117,4 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);
   }
-};
+}

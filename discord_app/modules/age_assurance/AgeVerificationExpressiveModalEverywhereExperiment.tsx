@@ -34,7 +34,6 @@ export const useIsAgeVerificationExpressiveModalEverywhereEnabled = ReactCompile
   : function useIsAgeVerificationExpressiveModalEverywhereEnabled(location) {
       return closure_2.useConfig({ location }).enabled;
     };
-export const isAgeVerificationExpressiveModalEverywhereEnabled =
-  function isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint) {
-    return closure_2.getConfig({ location: entryPoint }).enabled;
-  };
+export function isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint) {
+  return closure_2.getConfig({ location: entryPoint }).enabled;
+}

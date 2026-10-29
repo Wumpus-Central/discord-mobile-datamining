@@ -3,7 +3,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
 
-export const findActiveCaption = function findActiveCaption(captions, currentTime) {
+export function findActiveCaption(captions, currentTime) {
   let tmp3;
   let diff = captions.length - 1;
   let num = 0;
@@ -30,4 +30,4 @@ export const findActiveCaption = function findActiveCaption(captions, currentTim
     return tmp3;
   }
   return null;
-};
+}

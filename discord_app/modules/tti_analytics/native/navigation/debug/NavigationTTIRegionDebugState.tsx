@@ -8,11 +8,7 @@ let result = size.fileFinishedImporting(
   "modules/tti_analytics/native/navigation/debug/NavigationTTIRegionDebugState.tsx",
 );
 
-export const recordNavigationTTIRegionDebugMeasurement = function recordNavigationTTIRegionDebugMeasurement(
-  traceId,
-  spanComponent,
-  activeTraceElapsedMs,
-) {
+export function recordNavigationTTIRegionDebugMeasurement(traceId, spanComponent, activeTraceElapsedMs) {
   if (traceId !== global) {
     global = traceId;
     map.clear();
@@ -22,11 +18,8 @@ export const recordNavigationTTIRegionDebugMeasurement = function recordNavigati
     let item10015Result = item10015();
     continue;
   }
-};
-export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIRegionDebugMeasurement(
-  activeTraceId,
-  regionId,
-) {
+}
+export function getNavigationTTIRegionDebugMeasurement(activeTraceId, regionId) {
   let tmp = null;
   if (activeTraceId === global) {
     value = map.get(regionId);
@@ -36,10 +29,8 @@ export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIR
     tmp = value;
   }
   return tmp;
-};
-export const subscribeNavigationTTIRegionDebugMeasurements = function subscribeNavigationTTIRegionDebugMeasurements(
-  arg0,
-) {
+}
+export function subscribeNavigationTTIRegionDebugMeasurements(arg0) {
   arg0.add(arg0);
   return () => set.delete(closure_0);
-};
+}

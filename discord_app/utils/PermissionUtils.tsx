@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4874);
+const GuildRecord = fn(4875);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(4911).hasPermission;
+const hasPermission = fn(4912).hasPermission;
 const Constants = fn(1084);
 const Permissions = Constants.Permissions;
 ({
@@ -548,7 +548,7 @@ export { computePermissionsForRoles };
 export { computePermissions };
 export { applyThreadPermissions };
 export { getSyncedPermissionOverwrites };
-export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannelBotUserId) {
+export function areChannelsLocked(c18, c19, appChannelBotUserId) {
   if (set.has(Permissions.type)) {
     return true;
   } else {
@@ -563,7 +563,7 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(1997).PermissionOverwriteType.ROLE,
+              type: obj2(1998).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };
@@ -593,8 +593,8 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
     }
     return false;
   }
-};
-export const getGuildVisualOwnerId = function getGuildVisualOwnerId(guild) {
+}
+export function getGuildVisualOwnerId(guild) {
   let tmp;
   if (
     !obj.some(GuildRoleStore.getUnsafeMutableRoles(guild.id), (hoist) => {
@@ -609,8 +609,8 @@ export const getGuildVisualOwnerId = function getGuildVisualOwnerId(guild) {
     tmp = ownerId;
   }
   return tmp;
-};
-export const isRoleHigher = function isRoleHigher(guild, id, guildId, id) {
+}
+export function isRoleHigher(guild, id, guildId, id) {
   let tmp = null == id;
   if (!tmp) {
     tmp = !v65535(guild, id);
@@ -628,8 +628,8 @@ export const isRoleHigher = function isRoleHigher(guild, id, guildId, id) {
     tmp4 = tmp6;
   }
   return tmp4;
-};
-export const getHighestRole = function getHighestRole(id, id) {
+}
+export function getHighestRole(id, id) {
   const member = GuildMemberStore.getMember(id.id, id);
   if (null != member) {
     const sortedRoles = GuildRoleStore.getSortedRoles(id.id);
@@ -638,18 +638,18 @@ export const getHighestRole = function getHighestRole(id, id) {
       return roles.includes(id.id);
     });
   }
-};
-export const getHighestHoistedRole = function getHighestHoistedRole(id, hoistRoleId) {
+}
+export function getHighestHoistedRole(id, hoistRoleId) {
   let role = null;
   if (null != hoistRoleId.hoistRoleId) {
     role = GuildRoleStore.getRole(id.id, hoistRoleId.hoistRoleId);
   }
   return role;
-};
-export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guildId1) {
+}
+export function makeEveryoneOverwrite(guildId1) {
   return { id: guildId1, type: Server.PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
-};
-export const canManageACategory = function canManageACategory(currentUser, guild, categories) {
+}
+export function canManageACategory(currentUser, guild, categories) {
   user = currentUser;
   ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = {
     permission: Permissions.MANAGE_CHANNELS,
@@ -674,18 +674,18 @@ export const canManageACategory = function canManageACategory(currentUser, guild
     });
   }
   return someResult;
-};
-export const can = function can(arg0) {
+}
+export function can(arg0) {
   ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = arg0);
   return BigFlagUtils.has(
     computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }),
     permission,
   );
-};
+}
 export const ALLOW = "ALLOW";
 export const DENY = "DENY";
 export const PASSTHROUGH = "PASSTHROUGH";
-export const canEveryoneRole = function canEveryoneRole(VIEW_CHANNEL, channel) {
+export function canEveryoneRole(VIEW_CHANNEL, channel) {
   let tmp = channel;
   if (channel instanceof closure_1_8) {
     if (channel.type === constants2.PRIVATE_THREAD) {
@@ -718,8 +718,8 @@ export const canEveryoneRole = function canEveryoneRole(VIEW_CHANNEL, channel) {
     }
     return BigFlagUtils.has(addResult, VIEW_CHANNEL);
   }
-};
-export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
+}
+export function canEveryone(VIEW_CHANNEL, channel) {
   closure_0 = VIEW_CHANNEL;
   let tmp = channel;
   if (channel instanceof closure_8) {
@@ -750,4 +750,4 @@ export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
     }
     return tmp10;
   }
-};
+}

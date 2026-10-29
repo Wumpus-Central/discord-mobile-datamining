@@ -11,7 +11,7 @@ import size from "../../../_runtime/metro/00002__.js";
 ({ AbortCodes: c3, MAX_UPLOAD_COUNT: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
 
-export const handleUploadMessageAttachmentsErrors = function handleUploadMessageAttachmentsErrors(arg0) {
+export function handleUploadMessageAttachmentsErrors(arg0) {
   ({ guildId, code, reason } = arg0);
   if (undefined === code) {
     return false;
@@ -73,4 +73,4 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     }
     return flag;
   }
-};
+}

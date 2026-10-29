@@ -50,18 +50,17 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 
-export const getApplicationSubscriptionGroupListingsForApplication =
-  function getApplicationSubscriptionGroupListingsForApplication() {
-    const self = this;
-    const apply = closure_5.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-export const getEntitlementsForGuild = function getEntitlementsForGuild() {
+export function getApplicationSubscriptionGroupListingsForApplication() {
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function getEntitlementsForGuild() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -70,8 +69,8 @@ export const getEntitlementsForGuild = function getEntitlementsForGuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getSubscriptionGroupForSubscriptionPlan = function getSubscriptionGroupForSubscriptionPlan() {
+}
+export function getSubscriptionGroupForSubscriptionPlan() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -80,8 +79,8 @@ export const getSubscriptionGroupForSubscriptionPlan = function getSubscriptionG
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchApplication = function fetchApplication(applicationId, signal) {
+}
+export function fetchApplication(applicationId, signal) {
   _require = applicationId;
   DispatcherDefault.dispatch({ type: "APPLICATION_FETCH", applicationId });
   const HTTP = require("HTTPUtils").HTTP;
@@ -104,8 +103,8 @@ export const fetchApplication = function fetchApplication(applicationId, signal)
       const obj2 = { type: "APPLICATION_FETCH_FAIL", applicationId };
       return Promise.reject(new APIErrorDefault(error));
     });
-};
-export const fetchEligibleApplicationSubscriptionGuilds = function fetchEligibleApplicationSubscriptionGuilds() {
+}
+export function fetchEligibleApplicationSubscriptionGuilds() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -114,4 +113,4 @@ export const fetchEligibleApplicationSubscriptionGuilds = function fetchEligible
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

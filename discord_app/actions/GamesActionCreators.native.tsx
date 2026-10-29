@@ -40,8 +40,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(5696).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(5696);
+          applicationId(5698).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(5698);
           const obj2 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -66,8 +66,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(5696).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(5696);
+          applicationId(5698).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(5698);
           const obj8 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -130,7 +130,7 @@ const Constants = fn(1084);
   WebBrowserType: metroRequire,
   ActivityFlags: closure_7,
 } = Constants);
-const ActivityIntent = fn(2023).ActivityIntent;
+const ActivityIntent = fn(2024).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -167,7 +167,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

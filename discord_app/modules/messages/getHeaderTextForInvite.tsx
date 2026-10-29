@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
-export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
+export function getHeaderTextForInvite(arg0) {
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
   const intl = util.intl;
@@ -46,4 +46,4 @@ export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
     }
     return stringResult3;
   }
-};
+}

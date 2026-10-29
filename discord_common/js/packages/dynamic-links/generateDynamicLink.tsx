@@ -89,10 +89,10 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
   }
   return sum1;
 }
-export const generateAttemptId = function generateAttemptId() {
+export function generateAttemptId() {
   return v1.v4();
-};
-export const parseDynamicLink = function parseDynamicLink(str) {
+}
+export function parseDynamicLink(str) {
   if (str.startsWith(c6)) {
     try {
       const _URL = URL;
@@ -123,4 +123,4 @@ export const parseDynamicLink = function parseDynamicLink(str) {
   } else {
     return null;
   }
-};
+}

@@ -132,12 +132,12 @@ const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReport
 
 export const useIsReportToModEnabled = tmp2;
 export const useReportToModChannelId = tmp3;
-export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
+export function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
   return ReportToModUtils.isModeratorReportOrPostChannel(isModeratorReportChannel);
-};
-export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
+}
+export function useIsModeratorReportPostChannel(isModeratorReportChannel) {
   return ReportToModUtils.isModeratorReportPostChannel(isModeratorReportChannel);
-};
+}
 export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLoadReportedMessage(messageReference) {
       const cResult = messageReference(576).c(7);
@@ -217,7 +217,7 @@ export const useLoadReportedMessage = ReactCompilerGating.isReactCompilerEnabled
         }
       }, items1);
     };
-export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSnapshot(arg0) {
+export function loadOriginalAuthorFromSnapshot(arg0) {
   let reported_user_id;
   if (arg0 != null) {
     const first = arg0.messageSnapshots[0];
@@ -231,4 +231,4 @@ export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSna
   if (null != reported_user_id) {
     const user = UserActionCreators.getUser(reported_user_id);
   }
-};
+}

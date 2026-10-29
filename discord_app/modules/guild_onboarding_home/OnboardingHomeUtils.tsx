@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
@@ -175,7 +175,7 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
         items1,
       );
     };
-export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
+export function canSeeOnboardingHome(id) {
   guild = GuildStore.getGuild(id);
   if (null == guild) {
     return false;
@@ -230,4 +230,4 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
     }
     return false;
   }
-};
+}

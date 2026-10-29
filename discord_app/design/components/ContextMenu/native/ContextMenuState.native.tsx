@@ -46,9 +46,9 @@ const obj7 = {
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(5085).runOnJS,
-  triggerHapticFeedback: fn(5248).triggerHapticFeedback,
-  HapticFeedbackTypes: fn(5248).HapticFeedbackTypes,
+  runOnJS: fn(5086).runOnJS,
+  triggerHapticFeedback: fn(5249).triggerHapticFeedback,
+  HapticFeedbackTypes: fn(5249).HapticFeedbackTypes,
 };
 updateContextMenuState.__closure = obj7;
 updateContextMenuState.__workletHash = 10158111154044;
@@ -82,11 +82,11 @@ export const INDEX_BOUNDS_PAGE_Y_OFFSET = 1;
 export const INDEX_BOUNDS_WIDTH_OFFSET = 2;
 export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
 export const ContextMenuStore = obj3;
-export const showContextMenu = function showContextMenu(size) {
+export function showContextMenu(size) {
   _require = size;
   require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ menu }));
-};
-export const hideContextMenu = function hideContextMenu() {
+}
+export function hideContextMenu() {
   ReactBatchUpdates.batchUpdates(() => {
     state.setState((menu) => {
       let obj = menu;
@@ -96,7 +96,7 @@ export const hideContextMenu = function hideContextMenu() {
       return obj;
     });
   });
-};
+}
 export const useActiveContextMenu = tmp3;
 export { updateContextMenuState };
 export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled()
@@ -130,11 +130,11 @@ export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
     };
-export const resetContextMenuState = function resetContextMenuState(contextMenuState) {
+export function resetContextMenuState(contextMenuState) {
   ({ activeIndex, pan, itemMeasurements } = contextMenuState);
   const result = activeIndex.set(-1);
   const result1 = pan.set(-1);
   if (itemMeasurements.get().length > 0) {
     const result2 = itemMeasurements.set([]);
   }
-};
+}

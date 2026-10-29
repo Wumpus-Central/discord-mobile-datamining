@@ -27,7 +27,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11992);
+const RedesignChannelListConstants = fn(12046);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,
@@ -67,9 +67,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return isThemeDarkResult;
     };
 fn(558);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = {
     bannerWrapper: { width: "100%", maxHeight: arg0 * v65535, aspectRatio, overflow: "hidden" },
@@ -82,7 +82,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -91,7 +91,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = {
@@ -388,7 +388,7 @@ const __initData8 = {
 ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ReanimatedGuildBanner(guild) {
-      const cResult = guild(bannerHeight[8]).c(49);
+      const cResult = guild(bannerHeight[8]).c(51);
       guild = guild.guild;
       const scrollPosition = guild.scrollPosition;
       bannerHeight = guild.bannerHeight;
@@ -403,15 +403,15 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       closure_18(scrollPosition(bannerHeight[26])(first).height);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ActionSheetStore, AccessibilityStore];
-        class T {
+        class P {
           constructor() {
             obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
             return obj;
           }
         }
         cResult[1] = items;
-        cResult[2] = T;
-        let tmp8 = T;
+        cResult[2] = P;
+        let tmp8 = P;
         let tmp7 = items;
       } else {
         tmp7 = cResult[1];
@@ -436,7 +436,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[3] = sharedValue;
         cResult[4] = G;
-        class T {
+        class P {
           constructor() {
             obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
             return obj;
@@ -461,7 +461,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[5] = sharedValue;
         cResult[6] = O;
-        class T {
+        class P {
           constructor() {
             obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
             return obj;
@@ -524,7 +524,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { scrollPosition, interpolate: null, maxScrollPosition: null, bannerHeight: null };
-        class T {
+        class P {
           constructor() {
             obj = { actionSheetOpen: null != closure_1_8.getKey(), useReducedMotion: closure_1_7.useReducedMotion };
             return obj;
@@ -595,7 +595,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         useReducedMotion: sharedValue.useReducedMotion,
       }));
       ({ useReducedMotion, actionSheetOpen } = stateFromStoresObject);
-      let tmp17Result = scrollPosition(bannerHeight[15])(guild.id);
+      let tmp20Result = scrollPosition(bannerHeight[15])(guild.id);
       let obj = guild(bannerHeight[27]);
       const isFocused = guild(bannerHeight[28]).useIsFocused();
       const obj2 = guild(bannerHeight[28]);
@@ -684,24 +684,33 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { style: animatedStyle, children: null };
         const obj9 = {
           style: tmp3.bannerWrapper,
-          onPress: callback2,
-          onPressIn: callback,
-          onPressOut: callback1,
+          accessibilityRole: "button",
+          accessibilityLabel: guild.name,
+          accessibilityHint: null,
+          onPress: null,
+          onPressIn: null,
+          onPressOut: null,
           children: null,
         };
-        const obj10 = { style: tmp13, source: animatableSourceWithFallback };
-        const items5 = [closure_13(tmp(tmp2[33]), obj10), ,];
+        const intl = tmp4(tmp2[33]).intl;
+        obj9.accessibilityHint = intl.string(tmp4(tmp2[33]).t["Gpyp/e"]);
+        obj9.onPress = callback2;
+        obj9.onPressIn = callback;
+        obj9.onPressOut = callback1;
+        const obj10 = { style: tmp14, source: animatableSourceWithFallback };
+        const items5 = [closure_13(tmp(tmp2[34]), obj10)];
         const obj11 = { style: null };
         const items6 = [tmp3.bannerOverlay, animatedStyle1];
         obj11.style = items6;
         items5[1] = closure_13(tmp(tmp2[22]).View, obj11);
-        if (tmp17Result) {
-          tmp17Result = closure_13(tmp(tmp2[34]), {});
-        }
-        items5[2] = tmp17Result;
         obj9.children = items5;
-        obj8.children = closure_14(bannerHeight, obj9);
-        return closure_13(tmp(tmp2[22]).View, obj8);
+        const items7 = [closure_14(bannerHeight, obj9)];
+        if (tmp20Result) {
+          tmp20Result = closure_13(tmp(tmp2[35]), {});
+        }
+        items7[1] = tmp20Result;
+        obj8.children = items7;
+        return closure_14(tmp(tmp2[22]).View, obj8);
       }
       const obj7 = { interpolate: guild(bannerHeight[22]).interpolate, pressed: sharedValue };
     };

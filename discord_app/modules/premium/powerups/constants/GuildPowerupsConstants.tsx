@@ -13,74 +13,31 @@ import size from "../../../../../_runtime/metro/00002__.js";
 ({ BoostedGuildFeatures: c2, PerkIcons: c3 } = PremiumConstants);
 const BoostedGuildTiers = Constants.BoostedGuildTiers;
 const GuildFeatures = Constants.GuildFeatures;
-const items = [
-  Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID,
-  Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID,
-  Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID,
-  Powerups.GUILD_POWERUP_TAG_SKU_ID,
-  Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-];
-const items1 = [, , , , ,];
-({
-  GUILD_TAGS: arr2[0],
-  ENHANCED_ROLE_COLORS: arr2[1],
-  GUILD_TAGS_BADGE_PACK_PETS: arr2[2],
-  GUILD_TAGS_BADGE_PACK_FLEX: arr2[3],
-  GUILD_TAGS_BADGE_PACK_PLANT: arr2[4],
-  GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES: arr2[5],
-} = GuildFeatures);
+const items = [Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID, Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID, Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID, Powerups.GUILD_POWERUP_TAG_SKU_ID, Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
+const items1 = [, , , , , ];
+({ GUILD_TAGS: arr2[0], ENHANCED_ROLE_COLORS: arr2[1], GUILD_TAGS_BADGE_PACK_PETS: arr2[2], GUILD_TAGS_BADGE_PACK_FLEX: arr2[3], GUILD_TAGS_BADGE_PACK_PLANT: arr2[4], GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES: arr2[5] } = GuildFeatures);
 const set = new Set(items);
 const set1 = new Set(items1);
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
-let obj = {
-  [TIER_1]: Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID,
-  [TIER_2]: Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID,
-  [TIER_3]: Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID,
-  [BoostedGuildTiers.NONE]: undefined,
-};
-let obj2 = {
-  [Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID]: BoostedGuildTiers.TIER_1,
-  [Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID]: BoostedGuildTiers.TIER_2,
-  [Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID]: BoostedGuildTiers.TIER_3,
-};
+let obj = { [TIER_1]: Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID, [TIER_2]: Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID, [TIER_3]: Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID, [BoostedGuildTiers.NONE]: undefined };
+let obj2 = { [Powerups.GUILD_POWERUP_LEVEL_1_SKU_ID]: BoostedGuildTiers.TIER_1, [Powerups.GUILD_POWERUP_LEVEL_2_SKU_ID]: BoostedGuildTiers.TIER_2, [Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID]: BoostedGuildTiers.TIER_3 };
 ({ TIER_1: TIER_12, TIER_2: TIER_22, TIER_3: TIER_32 } = BoostedGuildTiers);
 const items2 = [Powerups.GUILD_POWERUP_TAG_SKU_ID];
-const items3 = [items2, , , , , ,];
+const items3 = [items2, , , , , , ];
 const items4 = [Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID];
 items3[1] = items4;
 const items5 = [Powerups.VANITY_URL_POWERUP_SKU_ID];
 items3[2] = items5;
 const items6 = [Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
 items3[3] = items6;
-const items7 = [
-  Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-];
+const items7 = [Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
 items3[4] = items7;
 const items8 = [Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
 items3[5] = items8;
 const items9 = [Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
 items3[6] = items9;
-const items10 = [
-  Powerups.GUILD_POWERUP_TAG_SKU_ID,
-  Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID,
-  Powerups.VANITY_URL_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-  Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID,
-];
-let obj3 = {
-  [TIER_12]: dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK,
-  [TIER_22]: dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK,
-  [TIER_32]: dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK,
-  [BoostedGuildTiers.NONE]: undefined,
-};
+const items10 = [Powerups.GUILD_POWERUP_TAG_SKU_ID, Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID, Powerups.VANITY_URL_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID, Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
+let obj3 = { [TIER_12]: dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, [TIER_22]: dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, [TIER_32]: dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, [BoostedGuildTiers.NONE]: undefined };
 const items11 = [Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID, Powerups.GUILD_POWERUP_TAG_SKU_ID];
 const set2 = new Set(items10);
 const obj4 = { boostPrice: 5, includedInLevel: BoostedGuildTiers.TIER_3 };
@@ -93,40 +50,19 @@ let obj5 = {
       const tmpResult = ServerThemeExperiment;
     }
     return serverThemeUserEnabled;
-  },
+  }
 };
 let obj6 = {
   boostPrice: 3,
   isEnabled(guildId) {
     return GameServerExperiment.getGameServerEnabled(guildId, "GuildPowerupsConstants");
-  },
+  }
 };
 const set3 = new Set(items11);
-const obj8 = {
-  VANITY_URL: 1,
-  [1]: "VANITY_URL",
-  GUILD_TAG_BADGE_PACKS_WAVE_ONE: 2,
-  [2]: "GUILD_TAG_BADGE_PACKS_WAVE_ONE",
-  GAME_SERVER_HOSTING: 3,
-  [3]: "GAME_SERVER_HOSTING",
-  GUILD_TAG_BADGE_PACKS_WAVE_TWO: 4,
-  [4]: "GUILD_TAG_BADGE_PACKS_WAVE_TWO",
-  FILE_UPLOAD_250_MB: 5,
-  [5]: "FILE_UPLOAD_250_MB",
-  GUILD_THEME: 6,
-  [6]: "GUILD_THEME",
-  GUILD_TAG: 7,
-  [7]: "GUILD_TAG",
-};
-const items12 = [
-  Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
-];
+const obj8 = { VANITY_URL: 1, [1]: "VANITY_URL", GUILD_TAG_BADGE_PACKS_WAVE_ONE: 2, [2]: "GUILD_TAG_BADGE_PACKS_WAVE_ONE", GAME_SERVER_HOSTING: 3, [3]: "GAME_SERVER_HOSTING", GUILD_TAG_BADGE_PACKS_WAVE_TWO: 4, [4]: "GUILD_TAG_BADGE_PACKS_WAVE_TWO", FILE_UPLOAD_250_MB: 5, [5]: "FILE_UPLOAD_250_MB", GUILD_THEME: 6, [6]: "GUILD_THEME", GUILD_TAG: 7, [7]: "GUILD_TAG" };
+const items12 = [Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
 const set4 = new Set(items12);
-const items13 = [
-  Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-];
+const items13 = [Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
 const set5 = new Set(items13);
 let obj9 = {};
 const items14 = [Powerups.VANITY_URL_POWERUP_SKU_ID];
@@ -157,14 +93,10 @@ export const LEVEL_SKU_ID_TO_BOOSTING_TIER = obj2;
 export const BOOSTING_TIER_TO_LEVEL_UNLOCKED_DC = obj3;
 export const GUILD_POWERUP_MODAL_KEY = "guild_powerup_modal";
 export const GUILD_POWERUP_NEW_PERK_GROUPS = items3;
-export const PERK_SKU_BADGES = {
-  [GameServerConstants.GAME_SERVER_POWERUP_SKU_ID]: "beta",
-  [Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID]: "beta",
-  [Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID]: "beta",
-};
+export const PERK_SKU_BADGES = { [GameServerConstants.GAME_SERVER_POWERUP_SKU_ID]: "beta", [Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID]: "beta", [Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID]: "beta" };
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP = set2;
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE = set3;
-export const GUILD_FEATURE_TO_PERK = () => {
+export () => {
   const obj = {};
   const obj2 = { perkIcon: constants.STREAM, description: null };
   const intl = util.intl;
@@ -172,9 +104,7 @@ export const GUILD_FEATURE_TO_PERK = () => {
   obj[GuildFeatures.VIDEO_QUALITY_1080_60FPS] = obj2;
   const obj3 = { perkIcon: constants.AUDIO, description: null };
   const intl2 = util.intl;
-  obj3.description = intl2.formatToPlainString(util.t.zoT1ZE, {
-    bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000,
-  });
+  obj3.description = intl2.formatToPlainString(util.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
   obj[GuildFeatures.AUDIO_BITRATE_128_KBPS] = obj3;
   const obj5 = { perkIcon: constants.CUSTOMIZATION, description: null };
   const intl3 = util.intl;
@@ -186,9 +116,7 @@ export const GUILD_FEATURE_TO_PERK = () => {
   obj[GuildFeatures.ANIMATED_ICON] = obj6;
   const obj7 = { perkIcon: constants.AUDIO, description: null };
   const intl5 = util.intl;
-  obj7.description = intl5.formatToPlainString(util.t.zoT1ZE, {
-    bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000,
-  });
+  obj7.description = intl5.formatToPlainString(util.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
   obj[GuildFeatures.AUDIO_BITRATE_256_KBPS] = obj7;
   const obj9 = { perkIcon: constants.CUSTOM_ROLE_ICON, description: null };
   const intl6 = util.intl;
@@ -211,9 +139,7 @@ export const GUILD_FEATURE_TO_PERK = () => {
   obj[GuildFeatures.ANIMATED_BANNER] = obj13;
   const obj14 = { perkIcon: constants.AUDIO, description: null };
   const intl11 = util.intl;
-  obj14.description = intl11.formatToPlainString(util.t.zoT1ZE, {
-    bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000,
-  });
+  obj14.description = intl11.formatToPlainString(util.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
   obj[GuildFeatures.AUDIO_BITRATE_384_KBPS] = obj14;
   const obj16 = { perkIcon: constants.VANITY, description: null };
   const intl12 = util.intl;
@@ -227,26 +153,12 @@ export const GUILD_FEATURE_TO_PERK = () => {
   obj17.description = intl13.formatToPlainString(util.t.aFRl53, obj18);
   obj[GuildFeatures.MAX_FILE_SIZE_100_MB] = obj17;
   return obj;
-};
+}
 export const GUILD_THEME_POWERUP_BOOST_PRICE = 3;
-export const PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO = {
-  [GuildFeatures.VANITY_URL]: obj4,
-  [GuildFeatures.GUILD_TAGS]: { boostPrice: 3 },
-  [GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
-  [GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
-  [GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
-  [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: { boostPrice: 3 },
-  [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: { boostPrice: 2 },
-  [GuildFeatures.GUILD_THEME]: obj5,
-};
+export const PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.VANITY_URL]: obj4, [GuildFeatures.GUILD_TAGS]: { boostPrice: 3 }, [GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: { boostPrice: 2 }, [GuildFeatures.GUILD_THEME]: obj5 };
 export const MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.GAME_SERVERS]: obj6 };
 export const POWERUPS_INCLUDED_IN_LEVEL = obj7;
-export const PowerupActiveStatusType = {
-  INACTIVE: "inactive",
-  POWERUP_ACTIVATED: "powerup_activated",
-  LEVEL_ACTIVATED: "level_activated",
-  TIER_OVERRIDE_ACTIVATED: "tier_override_activated",
-};
+export const PowerupActiveStatusType = { INACTIVE: "inactive", POWERUP_ACTIVATED: "powerup_activated", LEVEL_ACTIVATED: "level_activated", TIER_OVERRIDE_ACTIVATED: "tier_override_activated" };
 export const GuildPowerupNewPerkMarketingVersion = obj8;
 export const GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET = set4;
 export const GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET = set5;

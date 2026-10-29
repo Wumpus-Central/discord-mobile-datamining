@@ -6,7 +6,7 @@ const re1 = /^[-() \d]+$/;
 const result = size.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
 
 export { PhoneOrEmailSelectorForceMode };
-export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelector(forceMode, cResult) {
+export function shouldShowCountryCodeSelector(forceMode, cResult) {
   if (forceMode === obj.PHONE) {
     let tmp2 = !cResult.startsWith("+");
   } else {
@@ -20,8 +20,8 @@ export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelec
     }
   }
   return tmp2;
-};
-export const getPhoneOrEmail = function getPhoneOrEmail(arg0) {
+}
+export function getPhoneOrEmail(arg0) {
   const obj = /^\+\d/;
   return obj.test(arg0) ? obj.PHONE : obj.EMAIL;
-};
+}

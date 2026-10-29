@@ -17,7 +17,7 @@ let closure_7 = async function _fetchPremiumGroupMembership() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -233,7 +233,7 @@ let closure_10 = async function _removeUserFromSubscriptionGroup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -306,7 +306,7 @@ let closure_11 = async function _fetchSubscriptionGroupMembers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -393,7 +393,7 @@ let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -475,7 +475,7 @@ let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -623,7 +623,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
 
-export const fetchPremiumGroupMembership = function fetchPremiumGroupMembership() {
+export function fetchPremiumGroupMembership() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -632,8 +632,8 @@ export const fetchPremiumGroupMembership = function fetchPremiumGroupMembership(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchEligibleUsers = function fetchEligibleUsers() {
+}
+export function fetchEligibleUsers() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -642,8 +642,8 @@ export const fetchEligibleUsers = function fetchEligibleUsers() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const inviteUsersToSubscriptionGroup = function inviteUsersToSubscriptionGroup() {
+}
+export function inviteUsersToSubscriptionGroup() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -652,8 +652,8 @@ export const inviteUsersToSubscriptionGroup = function inviteUsersToSubscription
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeUserFromSubscriptionGroup = function removeUserFromSubscriptionGroup() {
+}
+export function removeUserFromSubscriptionGroup() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -662,8 +662,8 @@ export const removeUserFromSubscriptionGroup = function removeUserFromSubscripti
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchSubscriptionGroupMembers = function fetchSubscriptionGroupMembers() {
+}
+export function fetchSubscriptionGroupMembers() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -672,8 +672,8 @@ export const fetchSubscriptionGroupMembers = function fetchSubscriptionGroupMemb
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const acceptSubscriptionGroupInvite = function acceptSubscriptionGroupInvite() {
+}
+export function acceptSubscriptionGroupInvite() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -682,8 +682,8 @@ export const acceptSubscriptionGroupInvite = function acceptSubscriptionGroupInv
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeSubscriptionGroupInvite = function removeSubscriptionGroupInvite() {
+}
+export function removeSubscriptionGroupInvite() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -692,8 +692,8 @@ export const removeSubscriptionGroupInvite = function removeSubscriptionGroupInv
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchPremiumGroupInvites = function fetchPremiumGroupInvites() {
+}
+export function fetchPremiumGroupInvites() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -702,8 +702,8 @@ export const fetchPremiumGroupInvites = function fetchPremiumGroupInvites() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchPremiumGroupInvite = function fetchPremiumGroupInvite() {
+}
+export function fetchPremiumGroupInvite() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -712,4 +712,4 @@ export const fetchPremiumGroupInvite = function fetchPremiumGroupInvite() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

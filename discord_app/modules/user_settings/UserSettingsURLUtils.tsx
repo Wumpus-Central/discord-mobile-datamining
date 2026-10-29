@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettingsKeys from "UserSettingsKeys.tsx";
-import keysSorter from "../../../_runtime/06757_keysSorter.js";
+import keysSorter from "../../../_runtime/06780_keysSorter.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -12,11 +12,11 @@ const re7 = /[_\s]|%20/g;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsURLUtils.tsx");
 
-export const settingsPathToRoute = function settingsPathToRoute(ACCOUNT) {
+export function settingsPathToRoute(ACCOUNT) {
   const parts = ACCOUNT.split("/");
   return timestampProducer.SETTINGS(parts[0], parts[1]);
-};
-export const trackParseSettingsUrl = function trackParseSettingsUrl(path, user_settings_url_origin) {
+}
+export function trackParseSettingsUrl(path, user_settings_url_origin) {
   path = path.path;
   if (null != path.target) {
     const obj2 = { user_settings_url_path: path, user_settings_url_origin };
@@ -25,8 +25,8 @@ export const trackParseSettingsUrl = function trackParseSettingsUrl(path, user_s
     const obj4 = { user_settings_url_origin, user_settings_url_path: path };
     AnalyticsUtilsDefault.track(constants.USER_SETTINGS_URL_PARSING_FAILED, obj4);
   }
-};
-export const parseSettingsUrl = function parseSettingsUrl(arg0) {
+}
+export function parseSettingsUrl(arg0) {
   ({ path, search } = arg0);
   const tmp = _slicedToArray(path.split("?")[0].split("/"), 4);
   let str4 = "";
@@ -148,4 +148,4 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   }
   obj2.params = keysSorter.parse(search);
   return obj2;
-};
+}

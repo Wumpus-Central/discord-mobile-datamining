@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting(
 export default function getGameOrganizationInviteSendStateKey(applicationId) {
   return "game-organization-invite:" + applicationId.applicationId + ":" + applicationId.gameOrganizationId;
 }
-export const toLinkedGameOrganization = function toLinkedGameOrganization(organization) {
+export function toLinkedGameOrganization(organization) {
   return { applicationId: organization.applicationId, gameOrganizationId: organization.id };
-};
+}

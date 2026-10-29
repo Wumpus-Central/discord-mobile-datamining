@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import common_AlertDefault from "../../components_native/common/Alert.tsx";
@@ -13,7 +13,7 @@ const type = MessageRequestConstants.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
 
-export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRequestConfirmModal(arg0) {
+export function openAcceptMessageRequestConfirmModal(arg0) {
   ({ channelId, onConfirm, onCancel } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, channel_id: channelId });
   const obj2 = { type, channel_id: channelId };
@@ -39,12 +39,12 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
   obj4.onCancel = onCancel;
   obj4.confirmColor = common_AlertDefault.Colors.BRAND;
   actions_AlertActionCreatorsDefault.show(obj4);
-};
-export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
+}
+export function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13590, dependencyMap.paths), "SpamMessageHamActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13823, dependencyMap.paths), "SpamMessageHamActionSheet", {
     channel,
     onConfirm,
     onCancel,
   });
-};
+}

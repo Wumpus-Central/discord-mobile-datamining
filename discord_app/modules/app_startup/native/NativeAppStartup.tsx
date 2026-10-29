@@ -248,7 +248,7 @@ let closure_27 = async function _trackFirstLaunched() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -368,20 +368,104 @@ let closure_36 = async function _initializeIntl(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_0(closure_130_3[41]).preloadAllIntlMessageFiles();
-    await closure_130_0(closure_130_3[42]).waitForAllDefaultIntlMessagesLoaded();
-    if (log2) {
-      closure_130_1(closure_130_3[18]).markAndLog(closure_130_20, "\u{1F30E}", "i18n loaded");
-      closure_130_1(closure_130_3[18]);
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let log2;
+            log2 = log.log;
+            closure_129_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            c3 = 2;
+            c4 = 1;
+            const obj7 = { value: closure_130_0(closure_130_3[41]).preloadAllIntlMessageFiles(), done: false };
+            return obj7;
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            c3 = 3;
+            c4 = 1;
+            const obj10 = { value: closure_130_0(closure_130_3[42]).waitForAllDefaultIntlMessagesLoaded(), done: false };
+            return obj10;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          } else {
+            if (log2) {
+              closure_130_1(closure_130_3[18]).markAndLog(closure_130_20, "\u{1F30E}", "i18n loaded");
+              const obj2 = closure_130_1(closure_130_3[18]);
+            }
+            c3 = 4;
+            c4 = 1;
+            const obj12 = { value: closure_130_0(closure_130_3[44])(closure_130_3[43], closure_130_3.paths), done: false };
+            return obj12;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_129_1 = value.default;
+          closure_129_1();
+          closure_130_11(() => closure_1_1());
+          c4 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp29) {
+        c4 = tmp;
+        throw tmp29;
+      }
     }
-    await closure_130_0(closure_130_3[44])(closure_130_3[43], closure_130_3.paths);
-    closure_129_1 = value.default;
-    closure_129_1();
-    closure_130_11(() => closure_1_1());
-    await "IconComponent";
-    closure_1 = tmp2;
-    log2 = log.log;
-    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -397,7 +481,7 @@ let closure_38 = async function _init(_payload) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -473,7 +557,7 @@ let closure_39 = async function _initializeApp() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -606,7 +690,7 @@ let closure_39 = async function _initializeApp() {
           closure_129_0(closure_129_3[68]);
           const sessionHeartbeatScheduler = closure_129_0(closure_129_3[69]).initSessionHeartbeatScheduler();
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
         if (closure_128_0) {
           let resolved = Promise.resolve();
@@ -687,11 +771,11 @@ let closure_39 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[44])(paths[54], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[55]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15950).updateSaturation(closure_0(5005).default.saturation);
-            obj = closure_0(15950);
-            closure_0(18712).updateVisualRefresh(true);
-            const obj2 = closure_0(18712);
-            closure_0(18713).updateTheme(closure_0(1204).default.theme);
+            closure_0(16186).updateSaturation(closure_0(5006).default.saturation);
+            obj = closure_0(16186);
+            closure_0(18946).updateVisualRefresh(true);
+            const obj2 = closure_0(18946);
+            closure_0(18947).updateTheme(closure_0(1204).default.theme);
             closure_1_0();
           }));
         });
@@ -736,7 +820,7 @@ let closure_40 = async function _initHeadlessTask() {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -834,14 +918,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(constants), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19002 = fn(19002);
-const superagentPatch = fn(19004);
+const module_19235 = fn(19235);
+const superagentPatch = fn(19237);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(19027);
-let closure_11 = fn(2066).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7605);
-const ManagerRegistry = fn(19028);
+const logThirdPartyImportsDone = fn(19260);
+let closure_11 = fn(2067).subscribeToIntlLoadingSuccess;
+const AnalyticsTrackingStore = fn(7628);
+const ManagerRegistry = fn(19261);
 const Constants = fn(1084);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -864,7 +948,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(9687).Future();
+const future = new fn(9719).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {
@@ -876,7 +960,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_startup/native/NativeAppStartup.tsx");
 
 export const applicationReady = future;
-export const init = function init() {
+export function init() {
   const self = this;
   const apply = closure_38.apply;
   if (typeof apply === "unknown") {
@@ -885,8 +969,8 @@ export const init = function init() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const initHeadlessTask = function initHeadlessTask() {
+}
+export function initHeadlessTask() {
   const self = this;
   const apply = closure_40.apply;
   if (typeof apply === "unknown") {
@@ -895,4 +979,4 @@ export const initHeadlessTask = function initHeadlessTask() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

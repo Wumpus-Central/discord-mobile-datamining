@@ -83,7 +83,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17710);
+const JankScreenConstants = fn(17948);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
@@ -101,10 +101,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/jank_stats/native/getJankSurfaceName.tsx");
 
 export { composeJankSurfaceName };
-export const getJankSurfaceName = function getJankSurfaceName() {
+export function getJankSurfaceName() {
   return composeJankSurfaceName(getJankScreenName.getBaseScreenName);
-};
-export const recordJankChannelDetailsOpen = function recordJankChannelDetailsOpen(memo1, arg1) {
+}
+export function recordJankChannelDetailsOpen(memo1, arg1) {
   let flag = arg1 !== set1.has(memo1);
   if (flag) {
     if (arg1) {
@@ -116,8 +116,8 @@ export const recordJankChannelDetailsOpen = function recordJankChannelDetailsOpe
     }
   }
   return flag;
-};
-export const setJankChannelDetailsOpen = function setJankChannelDetailsOpen(constants, arg1) {
+}
+export function setJankChannelDetailsOpen(constants, arg1) {
   let flag = arg1 !== set1.has(constants);
   if (flag) {
     if (arg1) {
@@ -132,8 +132,8 @@ export const setJankChannelDetailsOpen = function setJankChannelDetailsOpen(cons
     const tmp6 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
     NativeJankSessionModuleDefault.setScreenContext(tmp6, timestampProducer);
   }
-};
-export const setJankPanelOpen = function setJankPanelOpen(activity, arg1) {
+}
+export function setJankPanelOpen(activity, arg1) {
   const lastIndexOfResult = closure_11.lastIndexOf(activity);
   if ((arg1 !== -1) !== lastIndexOfResult) {
     if (arg1) {
@@ -149,8 +149,8 @@ export const setJankPanelOpen = function setJankPanelOpen(activity, arg1) {
       obj.surfaceClosed(tmp8);
     }
   }
-};
-export const setJankVoicePanelTab = function setJankVoicePanelTab(channelId, arg1) {
+}
+export function setJankVoicePanelTab(channelId, arg1) {
   value = map.get(channelId);
   if (value == null) {
     value = null;
@@ -170,15 +170,15 @@ export const setJankVoicePanelTab = function setJankVoicePanelTab(channelId, arg
     }
     tmp4 = null == arg1;
   }
-};
-export const setJankVoicePanelFocus = function setJankVoicePanelFocus(arg0) {
+}
+export function setJankVoicePanelFocus(arg0) {
   if (arg0 !== global) {
     global = arg0;
     const tmp4 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
     NativeJankSessionModuleDefault.setScreenContext(tmp4, timestampProducer);
   }
-};
-export const attachJankActionSheetReporter = function attachJankActionSheetReporter() {
+}
+export function attachJankActionSheetReporter() {
   if (!c15) {
     c15 = true;
     ActionSheetStore.getStack().length;
@@ -199,4 +199,4 @@ export const attachJankActionSheetReporter = function attachJankActionSheetRepor
       atResult = stack.at(-1);
     });
   }
-};
+}

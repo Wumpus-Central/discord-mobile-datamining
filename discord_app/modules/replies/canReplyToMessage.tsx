@@ -174,7 +174,7 @@ export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     };
-export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
+export function canReplyToMessage(isPrivate, type) {
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
@@ -212,4 +212,4 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     hasItem = tmp11;
   }
   return hasItem;
-};
+}

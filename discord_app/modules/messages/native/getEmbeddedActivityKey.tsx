@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/messages/native/getEmbeddedAc
 export default function getEmbeddedActivityKey(location) {
   return "" + location.location.id + ":" + location.applicationId + ":" + location.launchId;
 }
-export const parseEmbeddedActivityKey = function parseEmbeddedActivityKey(str) {
+export function parseEmbeddedActivityKey(str) {
   const parts = str.split(":");
   let tmp = null;
   if (parts.length >= 3) {
@@ -15,4 +15,4 @@ export const parseEmbeddedActivityKey = function parseEmbeddedActivityKey(str) {
     tmp = obj;
   }
   return tmp;
-};
+}

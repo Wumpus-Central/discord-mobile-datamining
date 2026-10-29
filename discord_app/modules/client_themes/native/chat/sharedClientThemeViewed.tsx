@@ -5,11 +5,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 
-export const handleSharedClientThemeViewed = function handleSharedClientThemeViewed() {
+export function handleSharedClientThemeViewed() {
   const obj = useTrackImpression;
   obj.trackImpression({
     type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
     name: discord_common_AnalyticsUtils.ImpressionNames.CUSTOM_THEME_SHARE,
     properties: {},
   });
-};
+}

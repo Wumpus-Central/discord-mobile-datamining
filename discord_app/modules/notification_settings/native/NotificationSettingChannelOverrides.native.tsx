@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06863_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06886_fuzzysearch.js";
 import getFlattedChannelListDefault from "../../channel/getFlattedChannelList.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const isGuildReadableType = fn(4860).isGuildReadableType;
+const isGuildReadableType = fn(4861).isGuildReadableType;
 const Constants = fn(1084);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };

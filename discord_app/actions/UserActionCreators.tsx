@@ -23,7 +23,7 @@ let closure_9 = async function _fetchProfile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_9 = async function _fetchProfile(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -199,7 +199,7 @@ let closure_9 = async function _fetchProfile(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp91) {
       closure_5 = tmp91;
@@ -227,7 +227,7 @@ let closure_10 = async function _fetchMutualFriends() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -295,7 +295,7 @@ let closure_10 = async function _fetchMutualFriends() {
           closure_131_1(closure_131_2[7]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp32) {
         closure_4 = tmp32;
@@ -315,7 +315,7 @@ let closure_8 = new LoggerDefault("UserProfileModalActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActionCreators.tsx");
 
-export const fetchCurrentUser = function fetchCurrentUser() {
+export function fetchCurrentUser() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -340,8 +340,8 @@ export const fetchCurrentUser = function fetchCurrentUser() {
     DispatcherDefault.dispatch(obj2);
     return new UserRecord(body.body);
   });
-};
-export const acceptAgreements = function acceptAgreements() {
+}
+export function acceptAgreements() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -366,8 +366,8 @@ export const acceptAgreements = function acceptAgreements() {
     () => true,
     () => false,
   );
-};
-export const setFlag = function setFlag(HAS_UNREAD_URGENT_MESSAGES, arg1) {
+}
+export function setFlag(HAS_UNREAD_URGENT_MESSAGES, arg1) {
   const currentUser = UserStore.getCurrentUser();
   _modDef38(null != currentUser, "setFlag: user cannot be undefined");
   const flags = currentUser.flags;
@@ -384,8 +384,8 @@ export const setFlag = function setFlag(HAS_UNREAD_URGENT_MESSAGES, arg1) {
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.patch(request);
-};
-export const getUser = function getUser(userId) {
+}
+export function getUser(userId) {
   _require = userId;
   const user = UserStore.getUser(userId);
   if (null != user) {
@@ -405,12 +405,12 @@ export const getUser = function getUser(userId) {
     const obj2 = require("HTTPUtils");
   }
   return resolved;
-};
-export const insertStaticUser = function insertStaticUser(user) {
+}
+export function insertStaticUser(user) {
   DispatcherDefault.dispatch({ type: "USER_UPDATE", user });
   return UserStore.getUser(user.id);
-};
-export const fetchProfile = function fetchProfile() {
+}
+export function fetchProfile() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -419,8 +419,8 @@ export const fetchProfile = function fetchProfile() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchMutualFriends = function fetchMutualFriends() {
+}
+export function fetchMutualFriends() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -429,4 +429,4 @@ export const fetchMutualFriends = function fetchMutualFriends() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

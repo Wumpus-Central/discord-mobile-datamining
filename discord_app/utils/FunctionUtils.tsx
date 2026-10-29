@@ -3,7 +3,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/FunctionUtils.tsx");
 
-export const areArraysShallowlyEqual = function areArraysShallowlyEqual(found, found2) {
+export function areArraysShallowlyEqual(found, found2) {
   if (found === found2) {
     return true;
   } else {
@@ -23,7 +23,7 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(found, f
     }
     return false;
   }
-};
+}
 export function cachedFunction(_computeCategories) {
   closure_0 = _computeCategories;
   let items = null;
@@ -63,7 +63,7 @@ export function cachedFunction(_computeCategories) {
     return closure_2;
   };
 }
-export const clearObject = function clearObject(obj) {
+export function clearObject(obj) {
   for (const key10003 in arg0) {
     if (!arg0.hasOwnProperty(key10003)) {
       continue;
@@ -73,8 +73,8 @@ export const clearObject = function clearObject(obj) {
     }
     continue;
   }
-};
-export const isPlainObjectEmpty = function isPlainObjectEmpty(arg0) {
+}
+export function isPlainObjectEmpty(arg0) {
   const keys = Object.keys();
   if (keys !== undefined) {
     if (keys[tmp] !== undefined) {
@@ -82,4 +82,4 @@ export const isPlainObjectEmpty = function isPlainObjectEmpty(arg0) {
     }
   }
   return true;
-};
+}

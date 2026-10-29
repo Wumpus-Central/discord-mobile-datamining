@@ -1,9 +1,10 @@
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
 import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import useLocalSelfMuteDeaf from "../../../video_calls/useLocalSelfMuteDeaf.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
-const require = fn;
+require = fn;
 function isStableVoiceStateEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
@@ -42,7 +43,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       closure_1 = arg1;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [MediaEngineStore, VoiceStateStore];
+        const items = [VoiceStateStore, MediaEngineStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -59,12 +60,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function s() {
         if (null != closure_0) {
           const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
-          if (null != voiceState) {
-            const obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-            ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
-            obj.isLocalMute = MediaEngineStore.isLocalMute(voiceState.userId);
-            obj.selfMute = voiceState.selfMute;
-            return obj;
+          const obj = useLocalSelfMuteDeaf;
+          const result = obj.withLocalSelfMuteDeaf(voiceState, useLocalSelfMuteDeaf.getLocalSelfMuteDeaf());
+          if (null != result) {
+            const obj4 = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
+            ({ deaf: obj3.deaf, selfDeaf: obj3.selfDeaf, mute: obj3.mute } = result);
+            obj4.isLocalMute = MediaEngineStore.isLocalMute(result.userId);
+            obj4.selfMute = result.selfMute;
+            return obj4;
           }
         }
       };
@@ -81,19 +84,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : function useStableVoiceParticipant(arg0, arg1) {
       _require = arg0;
       closure_1 = arg1;
-      const items = [MediaEngineStore, VoiceStateStore];
+      const items = [VoiceStateStore, MediaEngineStore];
       const items1 = [arg0, arg1];
       return require("initialize").useStateFromStores(
         items,
         () => {
           if (null != closure_0) {
             const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
-            if (null != voiceState) {
-              const obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-              ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
-              obj.isLocalMute = MediaEngineStore.isLocalMute(voiceState.userId);
-              obj.selfMute = voiceState.selfMute;
-              return obj;
+            const obj = useLocalSelfMuteDeaf;
+            const result = obj.withLocalSelfMuteDeaf(voiceState, useLocalSelfMuteDeaf.getLocalSelfMuteDeaf());
+            if (null != result) {
+              const obj4 = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
+              ({ deaf: obj3.deaf, selfDeaf: obj3.selfDeaf, mute: obj3.mute } = result);
+              obj4.isLocalMute = MediaEngineStore.isLocalMute(result.userId);
+              obj4.selfMute = result.selfMute;
+              return obj4;
             }
           }
         },
@@ -227,7 +232,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
     };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
+let result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
 
 export { MuteDeafenIconState };
 export const VideoIconState = obj2;

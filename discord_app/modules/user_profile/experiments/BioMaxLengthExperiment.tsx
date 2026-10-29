@@ -32,6 +32,6 @@ export const useBioMaxLength = ReactCompilerGating.isReactCompilerEnabled()
   : function useBioMaxLength(location) {
       return closure_2.useConfig({ location: location.location }).maxLength;
     };
-export const getBioMaxLength = function getBioMaxLength(location) {
+export function getBioMaxLength(location) {
   return closure_2.getConfig({ location: location.location }).maxLength;
-};
+}

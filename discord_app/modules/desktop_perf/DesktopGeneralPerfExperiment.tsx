@@ -29,15 +29,13 @@ let closure_2 = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/desktop_perf/DesktopGeneralPerfExperiment.tsx");
 
-export const getDesktopGeneralPerfExperimentConfig = function getDesktopGeneralPerfExperimentConfig(
-  capture_processing_delay_estimator,
-) {
+export function getDesktopGeneralPerfExperimentConfig(capture_processing_delay_estimator) {
   return closure_2.getConfig({ location: capture_processing_delay_estimator });
-};
-export const getIsQuestRingVisibleStepsEnabled = function getIsQuestRingVisibleStepsEnabled() {
+}
+export function getIsQuestRingVisibleStepsEnabled() {
   let questRingVisibleSteps = PlatformUtils.isDesktop();
   if (questRingVisibleSteps) {
     questRingVisibleSteps = closure_2.getConfig({ location: "quest_bar_circular_progress" }).questRingVisibleSteps;
   }
   return questRingVisibleSteps;
-};
+}

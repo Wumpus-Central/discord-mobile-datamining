@@ -17,7 +17,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 
-export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(arg0) {
+export function getMediaPostEmbedCommonData(arg0) {
   ({ mediaPostEmbedData, guild, parentChannel, user, canAccess } = arg0);
   ({ postThread, selectedGuildId } = arg0);
   if (canAccess === undefined) {
@@ -142,8 +142,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     ({ flags: obj5.flags, content_scan_version: obj5.contentScanVersion } = mediaPostEmbedData);
     return obj6;
   }
-};
-export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(url) {
+}
+export function getMediaPostEmbedChannelId(url) {
   let tryParseChannelPathResult;
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
@@ -165,8 +165,8 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
       return channelId;
     }
   }
-};
-export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPath(url) {
+}
+export function getMediaPostEmbedChannelPath(url) {
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
@@ -177,8 +177,8 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
       const tmpResult = findCodedLinks;
     }
   }
-};
-export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {
+}
+export function canUseMediaPostEmbed(guildId, isMediaChannel) {
   guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
@@ -192,4 +192,4 @@ export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMed
     }
   }
   return false;
-};
+}

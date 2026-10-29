@@ -8,7 +8,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef10200 from "../../../../../_runtime/metro/10200__.js";
+import _modDef10233 from "../../../../../_runtime/metro/10233__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import NativeMenuActionCreatorsDefault from "../../../native_menu/native/NativeMenuActionCreators.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
@@ -20,12 +20,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10468);
+const DeviceConstants = fn(10501);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj = {
   container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
   image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
@@ -53,7 +53,7 @@ const rect = {
   left: 8,
   bottom: 8,
 };
-let ColorUtils = fn(5001);
+let ColorUtils = fn(5002);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -75,13 +75,13 @@ let size2 = {
   borderWidth: 1,
   borderColor: null,
 };
-ColorUtils = fn(5001);
+ColorUtils = fn(5002);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(5001);
+ColorUtils = fn(5002);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.icon) {
-          const obj2 = { source: _modDef10200, style: tmp4.icon };
+          const obj2 = { source: _modDef10233, style: tmp4.icon };
           const tmp9 = React6(native.Icon, obj2);
           cResult[3] = tmp4.icon;
           cResult[4] = tmp9;
@@ -275,7 +275,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.labelContainer, style];
       obj.style = items;
       const items1 = [
-        React6(native.Icon, { source: _modDef10200, style: tmp.icon }),
+        React6(native.Icon, { source: _modDef10233, style: tmp.icon }),
         React6(Text_Text.Text, {
           style: textStyle,
           color: "text-overlay-light",
@@ -1018,7 +1018,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = React6(React4, obj3);
       return React6(React4, obj2);
     };
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_17 = createStyles.createStyleProperties({
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
@@ -1490,25 +1490,25 @@ export default noop.memo(
 export const PARENT_PADDING = 24;
 export const CHILD_PADDING = 4;
 export const SEPARATOR_SIZE = 4;
-export const isMediaCameraNode = function isMediaCameraNode(type) {
+export function isMediaCameraNode(type) {
   let tmp = "type" in type;
   if (tmp) {
     tmp = "camera" === type.type;
   }
   return tmp;
-};
-export const isAttachFilesNode = function isAttachFilesNode(type) {
+}
+export function isAttachFilesNode(type) {
   let tmp = "type" in type;
   if (tmp) {
     tmp = "attach" === type.type;
   }
   return tmp;
-};
-export const isViewAllPhotosNode = function isViewAllPhotosNode(type) {
+}
+export function isViewAllPhotosNode(type) {
   let tmp = "type" in type;
   if (tmp) {
     tmp = "allphotos" === type.type;
   }
   return tmp;
-};
+}
 export { isSpecialMediaGridNode };

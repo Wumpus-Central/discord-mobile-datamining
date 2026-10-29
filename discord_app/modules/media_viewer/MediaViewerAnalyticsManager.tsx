@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "done",
+  guildId: "duration",
   channelId: "toCharArray$esjava$1",
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
   hasMediaOptions: "application",
-  source: "<string:285214031>",
-  incrementableActions: "<string:553217>",
+  source: "Boolean",
+  incrementableActions: "toCharArray$esjava$1",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

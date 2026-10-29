@@ -9,7 +9,7 @@ function bestEffort(arg0, fn) {
 }
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewOperationSurfaces.tsx");
 
-export const createPreviewOperationSurfaces = function createPreviewOperationSurfaces(arg0) {
+export function createPreviewOperationSurfaces(arg0) {
   closure_0 = arg0;
   let map = new Map();
   return {
@@ -75,4 +75,4 @@ export const createPreviewOperationSurfaces = function createPreviewOperationSur
       return drainResult;
     },
   };
-};
+}

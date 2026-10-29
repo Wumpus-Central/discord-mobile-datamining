@@ -1,14 +1,14 @@
 // discord_app/utils/BrowserUtils.tsx
-import _modDef5858 from "../../_runtime/metro/05858__.js";
+import _modDef5860 from "../../_runtime/metro/05860__.js";
 
-let str = _modDef5858.name;
+let str = _modDef5860.name;
 if (str == null) {
   str = "unknown";
 }
 const str2 = str.toLowerCase();
 let num = -1;
 if ("chrome" === str2.toLowerCase()) {
-  let str3 = _modDef5858.version;
+  let str3 = _modDef5860.version;
   if (str3 == null) {
     str3 = "";
   }
@@ -16,7 +16,7 @@ if ("chrome" === str2.toLowerCase()) {
 }
 let parsed = num;
 if ("electron" === str2.toLowerCase()) {
-  let str4 = _modDef5858.version;
+  let str4 = _modDef5860.version;
   if (str4 == null) {
     str4 = "";
   }
@@ -24,7 +24,7 @@ if ("electron" === str2.toLowerCase()) {
 }
 let parsed1 = num;
 if ("firefox" === str2.toLowerCase()) {
-  let str5 = _modDef5858.version;
+  let str5 = _modDef5860.version;
   if (str5 == null) {
     str5 = "";
   }
@@ -32,14 +32,14 @@ if ("firefox" === str2.toLowerCase()) {
 }
 let parsed2 = num;
 if ("edge" === str2.toLowerCase()) {
-  let str6 = _modDef5858.version;
+  let str6 = _modDef5860.version;
   if (str6 == null) {
     str6 = "";
   }
   parsed2 = parseInt(str6, 10);
 }
 if ("safari" === str2.toLowerCase()) {
-  let str7 = _modDef5858.version;
+  let str7 = _modDef5860.version;
   if (str7 == null) {
     str7 = "";
   }
@@ -84,7 +84,7 @@ export { getElectronVersion };
 export { getFirefoxVersion };
 export { getEdgeVersion };
 export { getSafariVersion };
-export const canUseWebp = function canUseWebp() {
+export function canUseWebp() {
   let tmp = -1 !== num2;
   if (!tmp) {
     tmp = -1 !== parsed;
@@ -99,9 +99,9 @@ export const canUseWebp = function canUseWebp() {
     tmp = num >= 14;
   }
   return tmp;
-};
+}
 export { isSafari };
-export const isFirefox = function isFirefox() {
+export function isFirefox() {
   let str = arg0;
   if (arg0 === undefined) {
     const _navigator = navigator;
@@ -109,8 +109,8 @@ export const isFirefox = function isFirefox() {
   }
   const formatted = str.toLowerCase();
   return -1 !== formatted.indexOf("firefox");
-};
-export const supportsHEVCAlpha = function supportsHEVCAlpha() {
+}
+export function supportsHEVCAlpha() {
   const _navigator = window.navigator;
   const mediaCapabilities = _navigator.mediaCapabilities;
   let decodingInfo;
@@ -134,4 +134,4 @@ export const supportsHEVCAlpha = function supportsHEVCAlpha() {
     tmp3 = tmp2;
   }
   return tmp3;
-};
+}

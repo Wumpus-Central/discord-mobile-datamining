@@ -725,7 +725,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMISessionStore.tsx");
 
 export default iCYMISessionStore;
-export const resetGlobalState = function resetGlobalState() {
+export function resetGlobalState() {
   if (null != _null) {
     const _clearTimeout = clearTimeout;
     clearTimeout(_null._timeout);
@@ -734,5 +734,5 @@ export const resetGlobalState = function resetGlobalState() {
   closure_9 = [];
   c10 = 0;
   map.clear();
-};
+}
 export { ICYMISession };

@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ConjureProjectStore from "../../conjure/projects/ConjureProjectStore.tsx";
 
 require = fn;
-const FrameLayoutModes = fn(6811).FrameLayoutModes;
+const FrameLayoutModes = fn(6834).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

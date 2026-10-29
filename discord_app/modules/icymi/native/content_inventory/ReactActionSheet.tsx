@@ -6,18 +6,18 @@ import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import ICYMIContext from "../ICYMIContext.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/13369__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/13602__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5302).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5303).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },
@@ -695,7 +695,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else {
                     try {
@@ -738,7 +738,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                       } else {
                         closure_1_6(false);
                         c3 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     } catch (tmp9) {
                       c3 = tmp;
@@ -776,7 +776,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -821,7 +821,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_1_6(false);
                 closure_1_8("");
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp11) {
               c2 = tmp;
@@ -896,7 +896,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -911,8 +911,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                     return obj3;
                   } else {
                     closure_5(true);
-                    v1(8878).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                    const obj5 = v1(8878);
+                    v1(8881).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                    const obj5 = v1(8881);
                     const obj4 = {
                       itemId: tmp4.id,
                       itemType: hotwheels_gaming_activity,
@@ -923,7 +923,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                         actionDestinationType: null,
                       },
                     };
-                    v1(8878).feedItemActioned(obj4);
+                    v1(8881).feedItemActioned(obj4);
                     v1 = 1;
                     dependencyMap = 1;
                     const obj7 = { value: sendMessage(first1), done: false };
@@ -940,7 +940,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_128_5(false);
                   closure_128_8("");
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp10) {
                 dependencyMap = tmp;
@@ -965,7 +965,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1008,7 +1008,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   closure_1_5(false);
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp9) {
                 c3 = tmp;
@@ -1243,7 +1243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return v65535(ICYMIContext.ICYMIContextProvider, obj);
       }
     };
-export const getStatusReplyContent = function getStatusReplyContent(reply) {
+export function getStatusReplyContent(reply) {
   ({ username, status, emojiStr, attachments, isForward } = reply);
   if (isForward === undefined) {
     isForward = false;
@@ -1276,4 +1276,4 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   }
   items.push(reply.reply);
   return items.join("\n");
-};
+}

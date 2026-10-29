@@ -8,10 +8,10 @@ const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i"
 const result = size.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
-export const isExperimentEmbedURL = function isExperimentEmbedURL(target) {
+export function isExperimentEmbedURL(target) {
   return regExp.test(target);
-};
-export const getExperimentFromEmbedURL = function getExperimentFromEmbedURL(code) {
+}
+export function getExperimentFromEmbedURL(code) {
   const match = code.match(regExp);
   let tmp = null;
   if (null != match) {
@@ -21,8 +21,8 @@ export const getExperimentFromEmbedURL = function getExperimentFromEmbedURL(code
     }
   }
   return tmp;
-};
-export const getExperimentTreatmentFromEmbedURL = function getExperimentTreatmentFromEmbedURL(code) {
+}
+export function getExperimentTreatmentFromEmbedURL(code) {
   const match = code.match(regExp);
   let parsed = null;
   if (null != match) {
@@ -33,8 +33,8 @@ export const getExperimentTreatmentFromEmbedURL = function getExperimentTreatmen
     }
   }
   return parsed;
-};
-export const getURLForExperiment = function getURLForExperiment(id, arg1) {
+}
+export function getURLForExperiment(id, arg1) {
   if (null != arg1) {
     const _HermesInternal2 = HermesInternal;
     let combined = "dev://experiment/" + id + "/" + arg1;
@@ -43,11 +43,8 @@ export const getURLForExperiment = function getURLForExperiment(id, arg1) {
     combined = "dev://experiment/" + id;
   }
   return combined;
-};
-export const getExperimentServerAssignmentLabel = function getExperimentServerAssignmentLabel(
-  system,
-  experimentServerAssignment,
-) {
+}
+export function getExperimentServerAssignmentLabel(system, experimentServerAssignment) {
   if (null != experimentServerAssignment) {
     if (null != system) {
       const system2 = system.system;
@@ -63,8 +60,8 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
     }
   }
   return null;
-};
-export const getExperimentBuckets = function getExperimentBuckets(experiment) {
+}
+export function getExperimentBuckets(experiment) {
   const experimentVariantsForDevTools = ExperimentDevToolsUtils.getExperimentVariantsForDevTools(experiment);
   return experimentVariantsForDevTools.map((id) => ({ id: id.id, label: id.label, value: id.id }));
-};
+}

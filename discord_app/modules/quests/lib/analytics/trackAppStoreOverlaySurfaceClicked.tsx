@@ -39,9 +39,7 @@ function captureAppStoreOverlaySurfaceClick(overlaySurface, arg1, arg2) {
 }
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/trackAppStoreOverlaySurfaceClicked.tsx");
 
-export const trackAppStoreOverlaySurfaceClickedForQuest = function trackAppStoreOverlaySurfaceClickedForQuest(
-  trackingCtx,
-) {
+export function trackAppStoreOverlaySurfaceClickedForQuest(trackingCtx) {
   trackingCtx = trackingCtx.trackingCtx;
   ({ questId, overlaySurface } = trackingCtx);
   const obj = {
@@ -54,10 +52,8 @@ export const trackAppStoreOverlaySurfaceClickedForQuest = function trackAppStore
     adCreativeType: AdCreativeType.AdCreativeType.QUEST,
     adCreativeId: questId,
   });
-};
-export const trackAppStoreOverlaySurfaceClickedForAdContent = function trackAppStoreOverlaySurfaceClickedForAdContent(
-  trackingCtx,
-) {
+}
+export function trackAppStoreOverlaySurfaceClickedForAdContent(trackingCtx) {
   trackingCtx = trackingCtx.trackingCtx;
   ({ adContentId, adCreativeType, overlaySurface } = trackingCtx);
   captureAppStoreOverlaySurfaceClick(
@@ -70,4 +66,4 @@ export const trackAppStoreOverlaySurfaceClickedForAdContent = function trackAppS
     },
     { adCreativeType, adCreativeId: adContentId },
   );
-};
+}

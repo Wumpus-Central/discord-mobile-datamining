@@ -13,7 +13,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ ActivityActionTypes: c3, ActivityFlags: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getCanJoin.tsx");
 
-export const getCanJoin = function getCanJoin(currentUserId) {
+export function getCanJoin(currentUserId) {
   ({ presenceActivity, message } = currentUserId);
   if (message.author.id === currentUserId.currentUserId) {
     return { canJoin: false, remoteJoinPlatform: null };
@@ -69,8 +69,8 @@ export const getCanJoin = function getCanJoin(currentUserId) {
   } else {
     return { canJoin: false, remoteJoinPlatform: null };
   }
-};
-export const getCanSync = function getCanSync(activity, tmp7Result, arg2, id) {
+}
+export function getCanSync(activity, tmp7Result, arg2, id) {
   let tmp = null != activity;
   if (tmp) {
     let tmp6 = isInviteActiveDefault(activity, arg2, id.id);
@@ -89,4 +89,4 @@ export const getCanSync = function getCanSync(activity, tmp7Result, arg2, id) {
     tmp = tmp6;
   }
   return tmp;
-};
+}

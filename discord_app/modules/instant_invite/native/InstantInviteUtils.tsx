@@ -181,27 +181,22 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj3);
   const tmpResult = InviteCodeUtils;
 }
-const ChannelRecordBase = fn(4860).ChannelRecordBase;
-const InviteTargetTypes = fn(7844).InviteTargetTypes;
-const IOS_COPY_TO_PASTEBOARD = fn(9089).IOS_COPY_TO_PASTEBOARD;
+const ChannelRecordBase = fn(4861).ChannelRecordBase;
+const InviteTargetTypes = fn(7867).InviteTargetTypes;
+const IOS_COPY_TO_PASTEBOARD = fn(9092).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_14, InviteOptionsType: closure_15, Permissions: closure_16 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/instant_invite/native/InstantInviteUtils.tsx");
 
-export const showInstantInviteActionSheetForChannel = function showInstantInviteActionSheetForChannel(channelId) {
+export function showInstantInviteActionSheetForChannel(channelId) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     showInstantInviteActionSheet(channel);
   }
-};
+}
 export { showInstantInviteActionSheet };
-export const showVanityUrlInviteActionSheet = function showVanityUrlInviteActionSheet(
-  guild,
-  channel,
-  STAGE_CHANNEL,
-  guildScheduledEventId,
-) {
+export function showVanityUrlInviteActionSheet(guild, channel, STAGE_CHANNEL, guildScheduledEventId) {
   AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, { type: "Vanity URL Invite", source: STAGE_CHANNEL });
   const obj2 = { type: "Vanity URL Invite", source: STAGE_CHANNEL };
   CreateInviteModalActionCreatorsDefault.init(guild.id, channel.id, { skipCreateInvite: true });
@@ -223,12 +218,12 @@ export const showVanityUrlInviteActionSheet = function showVanityUrlInviteAction
   }
   obj4.stackingBehavior = stackingBehavior;
   openInstantInviteActionSheetDefault(obj4);
-};
+}
 export { trackOptionClicked };
 export function getShareMessage(inviteSuggestionRows) {
   return inviteSuggestionRows;
 }
-export const handleOpenShareSheet = function handleOpenShareSheet(code, channel, shareMessage, source) {
+export function handleOpenShareSheet(code, channel, shareMessage, source) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = true;
@@ -309,8 +304,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
     showShareActionSheet.showShareActionSheet(obj2, source);
     const tmp21Result = showShareActionSheet;
   }
-};
-export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
+}
+export function handleCopy(code, channel, GROUP_DM, arg3) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
@@ -368,8 +363,8 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
     ToastUtils.presentLinkCopied();
     const tmp13Result = ToastUtils;
   }
-};
-export const handlePressSettings = function handlePressSettings(channel, callbackActionSheet, source) {
+}
+export function handlePressSettings(channel, callbackActionSheet, source) {
   closure_0 = channel;
   importDefault = callbackActionSheet;
   let str = source;
@@ -391,11 +386,11 @@ export const handlePressSettings = function handlePressSettings(channel, callbac
       showInstantInviteActionSheet(closure_0, obj);
     }
   });
-};
-export const isAppInstalled = function isAppInstalled(roblox) {
+}
+export function isAppInstalled(roblox) {
   return DCDSendUtils.canOpenUrlScheme(roblox);
-};
-export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(guild, id, channels, GUILD_HEADER) {
+}
+export function handleOpenInviteActionsheet(guild, id, channels, GUILD_HEADER) {
   let channel = ChannelStore.getChannel(id);
   if (channel == null) {
     channel = GuildChannelStore.getDefaultChannel(guild.id, true, constants3.CREATE_INSTANT_INVITE);
@@ -428,8 +423,8 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
     const obj5 = { source: GUILD_HEADER };
     showInstantInviteActionSheet(channel1, obj5);
   }
-};
-export const hasDeferredInvite = function hasDeferredInvite() {
+}
+export function hasDeferredInvite() {
   const displayedInviteCode = DisplayedInviteStore.getDisplayedInviteCode();
   const displayedGuildTemplateCode = GuildTemplateStore.getDisplayedGuildTemplateCode();
   let invite = null;
@@ -441,4 +436,4 @@ export const hasDeferredInvite = function hasDeferredInvite() {
     guildTemplate = GuildTemplateStore.getGuildTemplate(displayedGuildTemplateCode);
   }
   return null != invite || null != guildTemplate;
-};
+}

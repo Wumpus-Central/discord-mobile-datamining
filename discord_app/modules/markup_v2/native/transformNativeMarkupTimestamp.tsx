@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupTimestamp.tsx");
 
-export const transformNativeTimestamp = function transformNativeTimestamp(value) {
+export function transformNativeTimestamp(value) {
   const str1 = value.value.toString();
   const style = value.style;
   const parseTimestampResult = TimestampUtils.parseTimestamp(str1, style);
@@ -19,4 +19,4 @@ export const transformNativeTimestamp = function transformNativeTimestamp(value)
     obj3.type = MarkupTypes.AST_KEY.TIMESTAMP;
   }
   return obj3;
-};
+}

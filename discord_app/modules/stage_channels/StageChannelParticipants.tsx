@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(5753).getComparator;
+const getComparator = fn(5755).getComparator;
 const StageChannelParticipantNamedIndex = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",
@@ -319,9 +319,9 @@ prototype["getRequestToSpeakParticipants"] = function getRequestToSpeakParticipa
 export default StageChannelParticipants;
 export { StageChannelParticipantNamedIndex };
 export const StageChannelParticipantTypes = obj2;
-export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
+export function isRequestedToSpeakAll(rtsState) {
   return (
     rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK ||
     rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
   );
-};
+}

@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
 
-export const showCaptchaTestModal = function showCaptchaTestModal() {
+export function showCaptchaTestModal() {
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       closure_0 = tmp2;
@@ -19,4 +19,4 @@ export const showCaptchaTestModal = function showCaptchaTestModal() {
       return () => closure_2_4(closure_1_0, {});
     }),
   );
-};
+}

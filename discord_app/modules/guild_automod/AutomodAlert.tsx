@@ -13,7 +13,7 @@ export const AutomodAlertActionType = {
   SUBMIT_FEEDBACK: 4,
   [4]: "SUBMIT_FEEDBACK",
 };
-export const parseAlertActionsExecution = function parseAlertActionsExecution(rawValue1) {
+export function parseAlertActionsExecution(rawValue1) {
   if (null == rawValue1) {
     return null;
   } else {
@@ -44,4 +44,4 @@ export const parseAlertActionsExecution = function parseAlertActionsExecution(ra
     }
     return tmp2;
   }
-};
+}

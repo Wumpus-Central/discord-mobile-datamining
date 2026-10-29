@@ -11,3 +11,5 @@ export const OrientationLockState = {
   LANDSCAPE: 3,
   [3]: "LANDSCAPE",
 };
+export const ActivityIntent = { PLAY: 0, [0]: "PLAY", SPECTATE: 1, [1]: "SPECTATE" };
+export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };

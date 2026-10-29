@@ -24,7 +24,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
 
-export const sendConfirmationCode = function sendConfirmationCode() {
+export function sendConfirmationCode() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -36,8 +36,8 @@ export const sendConfirmationCode = function sendConfirmationCode() {
     properties: { is_resend: flag },
   };
   return obj.put(obj2);
-};
-export const confirmEmailChange = function confirmEmailChange() {
+}
+export function confirmEmailChange() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -46,4 +46,4 @@ export const confirmEmailChange = function confirmEmailChange() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

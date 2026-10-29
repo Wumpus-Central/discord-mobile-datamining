@@ -14,9 +14,9 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 const HTTPUtils = obj(1294);
-const AppAnalyticsUtils = obj(5747);
-const useStageSpeakingForCurrentUser = obj(6722);
-const StageChannelUtils = obj(7909);
+const AppAnalyticsUtils = obj(5749);
+const useStageSpeakingForCurrentUser = obj(6745);
+const StageChannelUtils = obj(7932);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -83,7 +83,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
               return obj6;
             } else {
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           }
         } else if (arg0 === 1) {
@@ -147,7 +147,7 @@ let closure_13 = async function _editStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -167,7 +167,7 @@ let closure_13 = async function _editStage(arg0) {
           return obj5;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -202,7 +202,7 @@ let closure_14 = async function _endStage(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ let closure_14 = async function _endStage(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp8) {
         c1 = tmp;
@@ -241,11 +241,11 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1084);
 ({ AbortCodes: closure_7, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(7453).SafetyToastType;
+const SafetyToastType = fn(7476).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 
-export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, arg1) {
+export function toggleRequestToSpeak(channel_id, arg1) {
   const guildId = channel_id.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   if (arg1) {
@@ -265,8 +265,8 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, ar
   request.body = { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id };
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   return HTTP.patch(request);
-};
-export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
+}
+export function inviteUserToStage(voiceChannel, id) {
   const guildId = voiceChannel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
@@ -281,9 +281,9 @@ export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
     }
     return error;
   });
-};
+}
 export { audienceAckRequestToSpeak };
-export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
+export function moveSelfToAudience(channel_id) {
   let guildId;
   if (channel_id != null) {
     guildId = channel_id.getGuildId();
@@ -296,8 +296,8 @@ export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.patch(request);
-};
-export const setUserSuppress = function setUserSuppress(channel, id, suppress) {
+}
+export function setUserSuppress(channel, id, suppress) {
   const guildId = channel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
@@ -313,8 +313,8 @@ export const setUserSuppress = function setUserSuppress(channel, id, suppress) {
     }
     return error;
   });
-};
-export const moveUserToAudience = function moveUserToAudience(user, voiceChannel) {
+}
+export function moveUserToAudience(user, voiceChannel) {
   if (null != voiceChannel) {
     if (null != user) {
       const guildId = voiceChannel.getGuildId();
@@ -341,8 +341,8 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
       return HTTP2.patch(request1);
     }
   }
-};
-export const removeUserFromChannel = function removeUserFromChannel(id, getGuildId) {
+}
+export function removeUserFromChannel(id, getGuildId) {
   let guildId;
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
@@ -351,12 +351,8 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
     GuildActionCreatorsDefault.setChannel(guildId, id.id, null);
   }
   tmp2 = null != guildId && null != id;
-};
-export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(
-  getGuildId,
-  REQUEST_TO_SPEAK,
-  arg2,
-) {
+}
+export function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
   _modDef38(null != guildId, "Channel cannot be guildless");
   const obj = {
@@ -378,8 +374,8 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
   }
   const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(getGuildId.id, obj);
   const tmp2Result = ChannelActionCreatorsDefault;
-};
-export const startStage = function startStage() {
+}
+export function startStage() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -388,8 +384,8 @@ export const startStage = function startStage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const editStage = function editStage() {
+}
+export function editStage() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -398,8 +394,8 @@ export const editStage = function editStage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const endStage = function endStage() {
+}
+export function endStage() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -408,4 +404,4 @@ export const endStage = function endStage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

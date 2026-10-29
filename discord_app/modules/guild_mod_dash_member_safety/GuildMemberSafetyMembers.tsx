@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
 import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import _modDef5840 from "../../../_runtime/metro/05840__.js";
+import _modDef5842 from "../../../_runtime/metro/05842__.js";
 import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes.tsx";
 import guild_mod_dash_member_safety_DateUtils from "DateUtils.tsx";
 import SortUtils from "SortUtils.tsx";
@@ -217,7 +217,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj2[tmp6];
-        if (_modDef5840(tmp15, obj[tmp6])) {
+        if (_modDef5842(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -255,7 +255,7 @@ Object.defineProperty(prototype, "version", {
 });
 
 export { MemberSafetySecondaryIndex };
-export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
+export function hasUnusualDmActivity(arg0) {
   let tmp = null != arg0;
   if (tmp) {
     const _Date = Date;
@@ -264,5 +264,5 @@ export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
     tmp = time >= closure_4 - MemberSafetyElasticSearchQueryTypes.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
-};
+}
 export { GuildMemberSafetyMembers };

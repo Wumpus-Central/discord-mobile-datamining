@@ -16,7 +16,7 @@ class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
 
 export const CaptchaError = { CANCEL: "cancel", ERROR: "error", EXPIRED: "expired" };
-export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromResponse(body) {
+export function extractCaptchaPropsFromResponse(body) {
   const obj = {
     captchaService: body.captcha_service,
     sitekey: body.captcha_sitekey,
@@ -32,12 +32,12 @@ export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromR
   obj2.userflow = body.user_flow;
   obj.options = obj2;
   return obj;
-};
-export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(userflow) {
+}
+export function emitCaptchaDistributionMetric(userflow) {
   if (React2()) {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => closure_1_1(), closure_3);
   }
   React(userflow);
-};
+}
 export const CaptchaCancelError = prototype;

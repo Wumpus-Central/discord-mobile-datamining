@@ -24,7 +24,7 @@ const DETECTABLE_GAME_TO_APPLICATION_ID_MAP = {
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/GameCommunityConfig.tsx");
 
 export { DETECTABLE_GAME_TO_APPLICATION_ID_MAP };
-export const getGameIdsForDetectedGames = function getGameIdsForDetectedGames(arg0) {
+export function getGameIdsForDetectedGames(arg0) {
   const entries = Object.entries(arg0);
   const found = entries.filter((item) => {
     [, tmp] = item;
@@ -35,4 +35,4 @@ export const getGameIdsForDetectedGames = function getGameIdsForDetectedGames(ar
     return DETECTABLE_GAME_TO_APPLICATION_ID_MAP[tmp];
   });
   return mapped.filter(GlobalUtils.isNotNullish);
-};
+}

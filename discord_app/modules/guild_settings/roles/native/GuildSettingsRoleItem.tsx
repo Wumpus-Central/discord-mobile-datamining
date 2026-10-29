@@ -13,7 +13,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1084).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   row: { flexDirection: "row", gap: 4, alignItems: "center" },
   everyone: {
@@ -29,7 +29,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(5270).TextStyleSheet["text-md/semibold"];
+let prop = fn(5271).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -1003,7 +1003,7 @@ export default noop.memo(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -1020,7 +1020,7 @@ export default noop.memo(
                       c1 = 1;
                       c2 = 1;
                       const obj6 = {
-                        value: tmp2(11309).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                        value: tmp2(11363).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                         done: false,
                       };
                       return obj6;
@@ -1033,9 +1033,9 @@ export default noop.memo(
                     const obj = { value, done: true };
                     return obj;
                   }
-                  onPress(6866).deleteRole(guildId, tmp2.id);
+                  onPress(6889).deleteRole(guildId, tmp2.id);
                   c2 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } catch (tmp16) {
                   c2 = tmp;
                   throw tmp16;
@@ -1165,7 +1165,7 @@ export default noop.memo(
                       const obj4 = { value, done: true };
                       return obj4;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else {
                     try {
@@ -1182,7 +1182,7 @@ export default noop.memo(
                           c1 = 1;
                           c2 = 1;
                           const obj6 = {
-                            value: tmp2(11309).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                            value: tmp2(11363).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                             done: false,
                           };
                           return obj6;
@@ -1197,7 +1197,7 @@ export default noop.memo(
                       }
                       GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                       c2 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     } catch (tmp16) {
                       c2 = tmp;
                       throw tmp16;
@@ -1329,7 +1329,7 @@ export default noop.memo(
           if (null != prop) {
             const obj23 = {
               size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16,
-              source: require("../../../../../_runtime/metro/09897__.js"),
+              source: require("../../../../../_runtime/metro/09929__.js"),
               "aria-label": null,
               style: null,
             };

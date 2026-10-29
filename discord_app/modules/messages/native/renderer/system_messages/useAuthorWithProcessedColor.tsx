@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx",
 );
 
-export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
+export function getMessageAuthorWithProcessedColor(message) {
   const messageAuthor = useMessageAuthor.getMessageAuthor(message);
   const colorString = messageAuthor.colorString;
   const obj2 = { nick: messageAuthor.nick, colorString: null, colorStrings: null, guildId: null };
@@ -22,8 +22,8 @@ export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithP
   obj2.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
   obj2.guildId = guildId;
   return obj2;
-};
-export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcessedColor(user, channel) {
+}
+export function getUserAuthorWithProcessedColor(user, channel) {
   const userAuthor = useMessageAuthor.getUserAuthor(user, channel);
   const colorString = userAuthor.colorString;
   const obj2 = { nick: userAuthor.nick, colorString: null, colorStrings: null, guildId: null };
@@ -36,4 +36,4 @@ export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcess
   obj2.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
   obj2.guildId = guildId;
   return obj2;
-};
+}

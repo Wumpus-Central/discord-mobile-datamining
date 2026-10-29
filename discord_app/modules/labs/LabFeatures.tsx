@@ -9,10 +9,10 @@ const obj = {
 const result = size.fileFinishedImporting("modules/labs/LabFeatures.tsx");
 
 export default obj;
-export const getLabFeatureDefaultValue = function getLabFeatureDefaultValue(key10008) {
+export function getLabFeatureDefaultValue(key10008) {
   let flag = obj[key10008].defaultValue;
   if (flag == null) {
     flag = false;
   }
   return flag;
-};
+}

@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/pinot/getPinotReadyAction.tsx");
 
-export const getPinotReadyAction = function getPinotReadyAction(pinotReadyAction) {
+export function getPinotReadyAction(pinotReadyAction) {
   let flag = pinotReadyAction.swp_message_promotion_locked;
   if (flag == null) {
     flag = true;
@@ -16,4 +16,4 @@ export const getPinotReadyAction = function getPinotReadyAction(pinotReadyAction
   }
   obj.defaultOptedOut = prop;
   return obj;
-};
+}

@@ -4,7 +4,7 @@ import guild_automod_PermissionUtils from "PermissionUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(12870);
+const Constants = fn(13091);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -196,14 +196,14 @@ export const AutomodTriggerConfigFlags = obj;
 export const triggerConfigs = obj2;
 export const AutomodTriggerCategory = obj11;
 export const AUTOMOD_RULE_CONFIGS_BY_CATEGORY = obj12;
-export const checkTriggerTypeForFlag = function checkTriggerTypeForFlag(arg0, arg1) {
+export function checkTriggerTypeForFlag(arg0, arg1) {
   const flags = obj2[arg0].flags;
   return flags.has(arg1);
-};
-export const getAvailableActionTypes = function getAvailableActionTypes(triggerType) {
+}
+export function getAvailableActionTypes(triggerType) {
   return Array.from(obj2[triggerType].availableActionTypes);
-};
-export const validateRuleByTriggerConfigOrThrow = function validateRuleByTriggerConfigOrThrow(actions, arr) {
+}
+export function validateRuleByTriggerConfigOrThrow(actions, arr) {
   ({ id: require, triggerType } = actions);
   actions = actions.actions;
   let availableActionTypes = tmp;
@@ -234,7 +234,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
     const error2 = new Error("You have provided an event type that is not available for this trigger type");
     throw error2;
   }
-};
+}
 export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAvailableTriggerTypes(arg0) {
       const cResult = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]).c(3);
@@ -331,10 +331,7 @@ export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabl
         );
       }, items);
     };
-export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(
-  triggerType,
-  guildId,
-) {
+export function getDefaultTriggerMetadataForTriggerType(triggerType, guildId) {
   if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === triggerType) {
     const obj3 = { allowList: [], presets: [] };
     return obj3;
@@ -357,4 +354,4 @@ export const getDefaultTriggerMetadataForTriggerType = function getDefaultTrigge
     const obj4 = { keywordFilter: [], regexPatterns: [], allowList: [] };
     return obj4;
   }
-};
+}

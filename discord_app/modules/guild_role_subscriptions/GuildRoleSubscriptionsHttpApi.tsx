@@ -20,7 +20,7 @@ let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, ar
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -95,7 +95,7 @@ let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -165,7 +165,7 @@ let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -208,7 +208,7 @@ let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0) {
       } else {
         c5 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp19) {
       closure_4 = tmp19;
@@ -239,7 +239,7 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -263,7 +263,7 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
             closure_131_3 = Object.assign(priceTier, Object.assign({ priceTier: 0 }));
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -343,7 +343,7 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -368,7 +368,7 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
             closure_132_4 = Object.assign(priceTier, Object.assign({ priceTier: 0 }));
             c8 = 1;
             c9 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -440,7 +440,7 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -466,7 +466,7 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -548,7 +548,7 @@ let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -622,7 +622,7 @@ let closure_13 = async function _getPriceTiers() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -691,7 +691,7 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -717,7 +717,7 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
           closure_131_2 = obj4;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -787,7 +787,7 @@ let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPla
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -855,7 +855,7 @@ let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -898,7 +898,7 @@ let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0) {
       } else {
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp19) {
       closure_5 = tmp19;
@@ -922,7 +922,7 @@ let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -990,7 +990,7 @@ let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1064,7 +1064,7 @@ let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1134,7 +1134,7 @@ let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0) 
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1202,7 +1202,7 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1227,7 +1227,7 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
           signal = obj4.signal;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -1291,7 +1291,7 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1361,7 +1361,7 @@ const PriceTierTypes = fn(1095).PriceTierTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx");
 
-export const updateGuildRoleSubscriptionGroupListing = function updateGuildRoleSubscriptionGroupListing() {
+export function updateGuildRoleSubscriptionGroupListing() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -1370,8 +1370,8 @@ export const updateGuildRoleSubscriptionGroupListing = function updateGuildRoleS
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createGuildRoleSubscriptionGroupListing = function createGuildRoleSubscriptionGroupListing() {
+}
+export function createGuildRoleSubscriptionGroupListing() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -1380,8 +1380,8 @@ export const createGuildRoleSubscriptionGroupListing = function createGuildRoleS
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteGuildRoleSubscriptionGroupListing = function deleteGuildRoleSubscriptionGroupListing() {
+}
+export function deleteGuildRoleSubscriptionGroupListing() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -1390,8 +1390,8 @@ export const deleteGuildRoleSubscriptionGroupListing = function deleteGuildRoleS
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createGuildRoleSubscriptionListing = function createGuildRoleSubscriptionListing() {
+}
+export function createGuildRoleSubscriptionListing() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -1400,8 +1400,8 @@ export const createGuildRoleSubscriptionListing = function createGuildRoleSubscr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateGuildRoleSubscriptionListing = function updateGuildRoleSubscriptionListing() {
+}
+export function updateGuildRoleSubscriptionListing() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -1410,8 +1410,8 @@ export const updateGuildRoleSubscriptionListing = function updateGuildRoleSubscr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildRoleSubscriptionGroupListingsForGuild = function getGuildRoleSubscriptionGroupListingsForGuild() {
+}
+export function getGuildRoleSubscriptionGroupListingsForGuild() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -1420,8 +1420,8 @@ export const getGuildRoleSubscriptionGroupListingsForGuild = function getGuildRo
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildRoleSubscriptionsSettings = function getGuildRoleSubscriptionsSettings() {
+}
+export function getGuildRoleSubscriptionsSettings() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -1430,8 +1430,8 @@ export const getGuildRoleSubscriptionsSettings = function getGuildRoleSubscripti
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateGuildRoleSubscriptionsSettings = function updateGuildRoleSubscriptionsSettings() {
+}
+export function updateGuildRoleSubscriptionsSettings() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -1440,8 +1440,8 @@ export const updateGuildRoleSubscriptionsSettings = function updateGuildRoleSubs
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getPriceTiers = function getPriceTiers() {
+}
+export function getPriceTiers() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -1450,8 +1450,8 @@ export const getPriceTiers = function getPriceTiers() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildRoleSubscriptionGroupListing = function getGuildRoleSubscriptionGroupListing() {
+}
+export function getGuildRoleSubscriptionGroupListing() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -1460,19 +1460,18 @@ export const getGuildRoleSubscriptionGroupListing = function getGuildRoleSubscri
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildRoleSubscriptionGroupForSubscriptionPlan =
-  function getGuildRoleSubscriptionGroupForSubscriptionPlan() {
-    const self = this;
-    const apply = closure_15.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-export const deleteGuildRoleSubscriptionListing = function deleteGuildRoleSubscriptionListing() {
+}
+export function getGuildRoleSubscriptionGroupForSubscriptionPlan() {
+  const self = this;
+  const apply = closure_15.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function deleteGuildRoleSubscriptionListing() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -1481,8 +1480,8 @@ export const deleteGuildRoleSubscriptionListing = function deleteGuildRoleSubscr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const archiveGuildRoleSubscriptionListing = function archiveGuildRoleSubscriptionListing() {
+}
+export function archiveGuildRoleSubscriptionListing() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -1491,8 +1490,8 @@ export const archiveGuildRoleSubscriptionListing = function archiveGuildRoleSubs
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildRoleSubscriptionTrials = function getGuildRoleSubscriptionTrials() {
+}
+export function getGuildRoleSubscriptionTrials() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -1501,8 +1500,8 @@ export const getGuildRoleSubscriptionTrials = function getGuildRoleSubscriptionT
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateGuildRoleSubscriptionsTrial = function updateGuildRoleSubscriptionsTrial() {
+}
+export function updateGuildRoleSubscriptionsTrial() {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -1511,8 +1510,8 @@ export const updateGuildRoleSubscriptionsTrial = function updateGuildRoleSubscri
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildRoleSubscriptionTrialEligibility = function getGuildRoleSubscriptionTrialEligibility() {
+}
+export function getGuildRoleSubscriptionTrialEligibility() {
   const self = this;
   const apply = closure_20.apply;
   if (typeof apply === "unknown") {
@@ -1521,8 +1520,8 @@ export const getGuildRoleSubscriptionTrialEligibility = function getGuildRoleSub
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGuildMonetizationRestrictions = function getGuildMonetizationRestrictions() {
+}
+export function getGuildMonetizationRestrictions() {
   const self = this;
   const apply = closure_21.apply;
   if (typeof apply === "unknown") {
@@ -1531,8 +1530,8 @@ export const getGuildMonetizationRestrictions = function getGuildMonetizationRes
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchHighlightedCreatorGuildDetails = function fetchHighlightedCreatorGuildDetails() {
+}
+export function fetchHighlightedCreatorGuildDetails() {
   const self = this;
   const apply = closure_22.apply;
   if (typeof apply === "unknown") {
@@ -1541,4 +1540,4 @@ export const fetchHighlightedCreatorGuildDetails = function fetchHighlightedCrea
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -100,7 +100,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   obj = SoundmojiRenderingExperiment;
 }
 export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
-export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
+export function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = SoundboardStore.getSoundById(soundId);
     const tmp9 = isSoundValidDefault(soundById, guildId, channelId);
@@ -131,4 +131,4 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
     }
   }
   obj = SoundmojiRenderingExperiment;
-};
+}

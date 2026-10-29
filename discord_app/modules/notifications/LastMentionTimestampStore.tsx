@@ -259,7 +259,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
 
 export default lastMentionTimestampStore;
-export const trackMessageNotificationTimestamps = function trackMessageNotificationTimestamps(mentions, guildId) {
+export function trackMessageNotificationTimestamps(mentions, guildId) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -300,4 +300,4 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   obj2.roleMentioned = someResult1;
   obj2.everyoneMentioned = true === mentions.mention_everyone && !result;
   DispatcherDefault.dispatch(obj2);
-};
+}

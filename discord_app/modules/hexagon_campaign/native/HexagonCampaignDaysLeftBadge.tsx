@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4280 from "../HexagonCampaign.messages.js";
+import _modDef4281 from "../HexagonCampaign.messages.js";
 import shared from "../../../design/shared.tsx";
 import HexagonCampaignUtils from "../HexagonCampaignUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
@@ -19,8 +19,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
-let closure_9 = Object.values(fn(5029).HexagonCampaignPerk);
-const createStyles = fn(5004);
+let closure_9 = Object.values(fn(5030).HexagonCampaignPerk);
+const createStyles = fn(5005);
 let obj2 = {
   badge: {
     flexDirection: "row",
@@ -85,7 +85,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (null != item) {
-        obj = obj(5031);
+        obj = obj(5032);
         let hexagonCampaignPerkCutoffMs = obj.getHexagonCampaignPerkCutoffMs(item, stateFromStores);
       } else {
         const _Math = Math;
@@ -129,7 +129,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return hexagonCampaignPerkCutoffMs;
       }, items1);
-      const tmp3 = stateFromStores(7589)(memo, closure_8);
+      const tmp3 = stateFromStores(7612)(memo, closure_8);
       let num = 0;
       if (tmp3.hours > 0) {
         num = 1;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== tmp4) {
         const intl = util.intl;
         const obj2 = { days: tmp4 };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef4280["noGK/D"], obj2);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef4281["noGK/D"], obj2);
         cResult[1] = tmp4;
         cResult[2] = formatToPlainStringResult;
         let tmp6 = formatToPlainStringResult;
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         text: null,
       };
       const intl = util.intl;
-      obj.text = intl.formatToPlainString(_modDef4280["noGK/D"], { days: closure_11(variant.perk) });
+      obj.text = intl.formatToPlainString(_modDef4281["noGK/D"], { days: closure_11(variant.perk) });
       return timestampProducer(closure_12, obj);
     };
 export const useHexagonCampaignDaysLeft = tmp3;

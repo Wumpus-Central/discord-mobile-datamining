@@ -7,10 +7,10 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/age_gate/shouldAgeVerifyForAgeGate.tsx");
 
-export const shouldAgeVerifyForAgeGate = function shouldAgeVerifyForAgeGate() {
+export function shouldAgeVerifyForAgeGate() {
   const result = AgeVerificationUtils.shouldShowTiggerPawtect();
   return RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
-};
+}
 export const useShouldAgeVerifyForAgeGate = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldAgeVerifyForAgeGate() {
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(

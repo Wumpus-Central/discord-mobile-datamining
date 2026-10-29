@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
-export const showInvite = function showInvite(code, username, arg2) {
+export function showInvite(code, username, arg2) {
   let obj = arg2;
   if (arg2 == null) {
     obj = {};
@@ -16,7 +16,7 @@ export const showInvite = function showInvite(code, username, arg2) {
   DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId });
   const obj3 = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
   const invite = InstantInviteActionCreatorsDefault.resolveInvite(code, _location);
-};
-export const clearDisplayedInvite = function clearDisplayedInvite() {
+}
+export function clearDisplayedInvite() {
   DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
-};
+}

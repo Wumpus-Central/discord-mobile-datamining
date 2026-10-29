@@ -5,7 +5,7 @@ import UserOfferStore from "../../../../stores/billing/UserOfferStore.tsx";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageUtils.tsx");
 
-export const canOpenPremiumPlanDirectlyForReferralTrial = function canOpenPremiumPlanDirectlyForReferralTrial() {
+export function canOpenPremiumPlanDirectlyForReferralTrial() {
   const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription(false);
   let result = SubscriptionStore.hasFetchedSubscriptions();
   if (result) {
@@ -15,4 +15,4 @@ export const canOpenPremiumPlanDirectlyForReferralTrial = function canOpenPremiu
     result = !isFetchingOfferResult;
   }
   return result;
-};
+}

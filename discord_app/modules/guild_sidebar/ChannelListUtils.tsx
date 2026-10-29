@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
-export const hasStream = function hasStream(voiceStates) {
+export function hasStream(voiceStates) {
   if (null == voiceStates) {
     return false;
   } else {
@@ -16,4 +16,4 @@ export const hasStream = function hasStream(voiceStates) {
     }
     return false;
   }
-};
+}

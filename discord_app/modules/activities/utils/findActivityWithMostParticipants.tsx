@@ -19,25 +19,24 @@ export default function findActivityWithMostParticipants(arr) {
     }, arr[0]);
   }
 }
-export const findActivityWithMostNonBlockedOrIgnoredParticipants =
-  function findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel) {
-    if (0 === embeddedActivitiesForChannel.length) {
-      return null;
-    } else if (1 === length) {
-      return embeddedActivitiesForChannel[0];
-    } else {
-      let items = [embeddedActivitiesForChannel[0]];
-      const items1 = [];
-      HermesBuiltin.arraySpread(embeddedActivitiesForChannel[0].userIds, 0);
-      items[1] = items1.map((item) => !embeddedActivitiesForChannel.isBlockedOrIgnored(item)).length;
-      [closure_0, length] = items;
-      const item = embeddedActivitiesForChannel.forEach((userIds) => {
-        const items = [...userIds.userIds];
-        length = items.filter((item) => !blockedOrIgnored.isBlockedOrIgnored(item)).length;
-        if (length > length) {
-          const blockedOrIgnored = userIds;
-        }
-      });
-      return embeddedActivitiesForChannel;
-    }
-  };
+export function findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel) {
+  if (0 === embeddedActivitiesForChannel.length) {
+    return null;
+  } else if (1 === length) {
+    return embeddedActivitiesForChannel[0];
+  } else {
+    let items = [embeddedActivitiesForChannel[0]];
+    const items1 = [];
+    HermesBuiltin.arraySpread(embeddedActivitiesForChannel[0].userIds, 0);
+    items[1] = items1.map((item) => !embeddedActivitiesForChannel.isBlockedOrIgnored(item)).length;
+    [closure_0, length] = items;
+    const item = embeddedActivitiesForChannel.forEach((userIds) => {
+      const items = [...userIds.userIds];
+      length = items.filter((item) => !blockedOrIgnored.isBlockedOrIgnored(item)).length;
+      if (length > length) {
+        const blockedOrIgnored = userIds;
+      }
+    });
+    return embeddedActivitiesForChannel;
+  }
+}

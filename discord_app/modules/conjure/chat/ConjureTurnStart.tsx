@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureTurnStart.tsx");
 
-export const conjureTurnStartedAt = function conjureTurnStartedAt(findOpenTurnResult) {
+export function conjureTurnStartedAt(findOpenTurnResult) {
   let turn_id = findOpenTurnResult.turn_id;
   if (turn_id == null) {
     const steps = findOpenTurnResult.steps;
@@ -23,4 +23,4 @@ export const conjureTurnStartedAt = function conjureTurnStartedAt(findOpenTurnRe
     return created_at;
   }
   created_at = findOpenTurnResult.created_at;
-};
+}

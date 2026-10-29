@@ -1,26 +1,26 @@
 // discord_app/actions/native/BoostingActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY = "PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY";
 const result = size.fileFinishedImporting("actions/native/BoostingActionCreators.tsx");
 
-export const openApplyBoostModal = function openApplyBoostModal(guildId) {
+export function openApplyBoostModal(guildId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(6733, dependencyMap.paths),
+    asyncRequireImpl(6756, dependencyMap.paths),
     { guildId },
     PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
   );
-};
-export const openTransferModal = function openTransferModal(arg0) {
+}
+export function openTransferModal(arg0) {
   ({ guildBoostSlots, guildId, intent, onResult } = arg0);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(6733, dependencyMap.paths),
+    asyncRequireImpl(6756, dependencyMap.paths),
     { guildId, guildBoostSlots, intent, onResult },
     PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
   );
-};
-export const closeApplyBoostModal = function closeApplyBoostModal() {
+}
+export function closeApplyBoostModal() {
   ModalActionCreatorsDefault.popWithKey(PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
-};
+}

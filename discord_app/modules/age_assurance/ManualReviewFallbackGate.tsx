@@ -8,7 +8,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/ManualReviewFallbackGate.tsx");
 
-export const shouldShowManualReviewFallback = function shouldShowManualReviewFallback(AUTOMATED_UNDERAGE_APPEALS) {
+export function shouldShowManualReviewFallback(AUTOMATED_UNDERAGE_APPEALS) {
   if (obj.isManualAgeAssuranceFallbackEnabled(AUTOMATED_UNDERAGE_APPEALS)) {
     if (null == cleanupPromise) {
       cleanupPromise = asyncGeneratorStep(async () => {
@@ -22,7 +22,7 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -134,7 +134,7 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -238,4 +238,4 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
     return Promise.resolve(false);
   }
   obj = ManualAgeAssuranceFallbackExperiment;
-};
+}

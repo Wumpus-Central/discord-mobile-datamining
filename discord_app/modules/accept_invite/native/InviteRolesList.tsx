@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({
   rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 },
 });
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const items = [];
             HermesBuiltin.arraySpread(roles, 0);
-            const sorted = items.sort(tmp(4914).sortInviteRoles);
+            const sorted = items.sort(tmp(4915).sortInviteRoles);
             const mapped = sorted.map(tmp5);
             cResult[1] = guild;
             cResult[2] = roles;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
             const intl = tmp(1125).intl;
             obj2.children = intl.string(tmp(1125).t.stcSfI);
-            const tmp14 = closure_5(tmp(5270).Text, obj2);
+            const tmp14 = closure_5(tmp(5271).Text, obj2);
             cResult[6] = tmp14;
             let tmp12 = tmp14;
           } else {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { spacing: 4, style, children: null };
                 const items2 = [tmp12, tmp20];
                 obj3.children = items2;
-                const tmp26 = closure_6(tmp(6013).Stack, obj3);
+                const tmp26 = closure_6(tmp(6015).Stack, obj3);
                 cResult[15] = style;
                 cResult[16] = tmp20;
                 cResult[17] = tmp26;
@@ -138,14 +138,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
           const intl = guild(1125).intl;
           obj2.children = intl.string(guild(1125).t.stcSfI);
-          const items1 = [closure_5(guild(5270).Text, obj2)];
+          const items1 = [closure_5(guild(5271).Text, obj2)];
           const obj3 = {
             style: tmp.rolesRow,
             children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)),
           };
           items1[1] = closure_5(View, obj3);
           obj.children = items1;
-          tmp2 = closure_6(guild(6013).Stack, obj);
+          tmp2 = closure_6(guild(6015).Stack, obj);
         }
       }
       return tmp2;

@@ -32,7 +32,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -66,7 +66,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -79,8 +79,8 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(9668).ApplicationDisclosureType;
-export const getDisclosures = function getDisclosures() {
+export const ApplicationDisclosure = fn(9700).ApplicationDisclosureType;
+export function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -89,8 +89,8 @@ export const getDisclosures = function getDisclosures() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const ackDisclosures = function ackDisclosures() {
+}
+export function ackDisclosures() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -99,8 +99,8 @@ export const ackDisclosures = function ackDisclosures() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getTextForDisclosure = function getTextForDisclosure(disclosure) {
+}
+export function getTextForDisclosure(disclosure) {
   if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
     const intl2 = util.intl;
     return intl2.string(util.t["6wPmjo"]);
@@ -110,4 +110,4 @@ export const getTextForDisclosure = function getTextForDisclosure(disclosure) {
   } else {
     return null;
   }
-};
+}

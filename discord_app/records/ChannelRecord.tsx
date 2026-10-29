@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import privDefault from "../../_runtime/01456_priv.js";
+import privDefault from "../../_runtime/01457_priv.js";
 import StageChannelPermissions from "../modules/stage_channels/StageChannelPermissions.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
@@ -60,7 +60,7 @@ const Constants = fn(1084);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -863,15 +863,15 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "format",
+    parentChannelThreadType: "formatToPlainString",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "zap",
-    safetyWarnings: "high_voltage",
+    rtcRegion: "third_place",
+    safetyWarnings: "third_place_medal",
     blockedUserWarningDismissed: false,
     template: false,
     themeColor: false,
@@ -883,9 +883,9 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     version: false,
     videoQualityMode: false,
     linkedLobby: false,
-    hdStreamingUntil: 917831681,
-    hdStreamingBuyerId: 674037761,
-    voiceHangout: 581238785,
+    hdStreamingUntil: false,
+    hdStreamingBuyerId: false,
+    voiceHangout: false,
   };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;
@@ -1042,7 +1042,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(4868).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(4869).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1199,7 +1199,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4868).dangerouslyCast(obj, tmp7);
+  return obj6(4869).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1331,7 +1331,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4868).dangerouslyCast(obj, tmp7);
+  return obj6(4869).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1506,7 +1506,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(4868).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(4869).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1865,29 +1865,29 @@ const dependencyMap = {
 const size = fn(2);
 let result = size.fileFinishedImporting("records/ChannelRecord.tsx");
 
-export const isGuildSelectableChannelType = function isGuildSelectableChannelType(arg0) {
+export function isGuildSelectableChannelType(arg0) {
   return set.has(arg0);
-};
+}
 export const ALL_CHANNEL_TYPES = set1;
-export const isGuildTextChannelType = function isGuildTextChannelType(type) {
+export function isGuildTextChannelType(type) {
   return set2.has(type);
-};
+}
 export const GUILD_WEBHOOK_CHANNEL_TYPES = set3;
 export const GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES = set4;
 export const GUILD_CHANNEL_TYPES = set5;
-export const isGuildChannelType = function isGuildChannelType(arg0) {
+export function isGuildChannelType(arg0) {
   return set5.has(arg0);
-};
+}
 export const GUILD_CAN_CONTAIN_THREADS_CHANNEL_TYPES = set6;
 export const GUILD_VOCAL_CHANNEL_TYPES = set7;
-export const isGuildVocalChannelType = function isGuildVocalChannelType(type) {
+export function isGuildVocalChannelType(type) {
   let hasItem = "SELECTABLE" !== type;
   if (hasItem) {
     hasItem = set7.has(type);
   }
   return hasItem;
-};
-export const isGuildVocalChannelOrVocalThreadType = function isGuildVocalChannelOrVocalThreadType(arg0) {
+}
+export function isGuildVocalChannelOrVocalThreadType(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
     hasItem = set7.has(arg0);
@@ -1896,36 +1896,36 @@ export const isGuildVocalChannelOrVocalThreadType = function isGuildVocalChannel
     hasItem = set15.has(arg0);
   }
   return hasItem;
-};
+}
 export const SILENT_JOIN_LEAVE_CHANNEL_TYPES = set8;
-export const isPrivate = function isPrivate(arg0) {
+export function isPrivate(arg0) {
   return set9.has(arg0);
-};
-export const isMultiUserDM = function isMultiUserDM(arg0) {
+}
+export function isMultiUserDM(arg0) {
   return set10.has(arg0);
-};
+}
 export const TEXT_CHANNEL_TYPES = set11;
-export const isTextChannel = function isTextChannel(type) {
+export function isTextChannel(type) {
   return set11.has(type);
-};
-export const isVoiceChannel = function isVoiceChannel(type) {
+}
+export function isVoiceChannel(type) {
   return set12.has(type);
-};
-export const isGuildReadableType = function isGuildReadableType(type) {
+}
+export function isGuildReadableType(type) {
   return set13.has(type);
-};
+}
 export const THREAD_CHANNEL_TYPES = set14;
 export const VOCAL_THREAD_CHANNEL_TYPES = set15;
 export const THREADED_CHANNEL_TYPES = set16;
-export const isThread = function isThread(arg0) {
+export function isThread(arg0) {
   return set14.has(arg0);
-};
-export const isVocalThreadType = function isVocalThreadType(arg0) {
+}
+export function isVocalThreadType(arg0) {
   return set15.has(arg0);
-};
-export const isReadableType = function isReadableType(type) {
+}
+export function isReadableType(type) {
   return set17.has(type);
-};
+}
 export const GUILD_NON_CATEGORY_CHANNEL_TYPES = set18;
 export const EDITABLE_CHANNEL_TYPES = set19;
 export const TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES = set20;
@@ -1937,18 +1937,18 @@ export const VOICE_THREAD_PARENT_CHANNEL_TYPES = set25;
 export const CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING = set26;
 export const GUILD_FAVORITES_CHANNEL_TYPES = set27;
 export const CHANNEL_CHAT_IN_SIDEBAR = set28;
-export const isChannelChatInSidebar = function isChannelChatInSidebar(type) {
+export function isChannelChatInSidebar(type) {
   return GlobalUtils.isInSet(type, set28);
-};
+}
 export const CHANNEL_THREADS_FORCE_OPENED_TO_FULL_VIEW = set29;
-export const isChannelThreadsForcedOpenedInFullView = function isChannelThreadsForcedOpenedInFullView(type) {
+export function isChannelThreadsForcedOpenedInFullView(type) {
   return GlobalUtils.isInSet(type, set29);
-};
+}
 export const CHANNEL_MAIN_AREA_NO_FILE_UPLOAD = set30;
-export const isChannelMainAreaUploadAllowed = function isChannelMainAreaUploadAllowed(arg0) {
+export function isChannelMainAreaUploadAllowed(arg0) {
   return !set30.has(arg0);
-};
-export const getAccessPermissions = function getAccessPermissions(arg0) {
+}
+export function getAccessPermissions(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
     hasItem = set7.has(arg0);
@@ -1959,8 +1959,8 @@ export const getAccessPermissions = function getAccessPermissions(arg0) {
     VIEW_CHANNEL = Permissions.VIEW_CHANNEL;
   }
   return VIEW_CHANNEL;
-};
-export const getBasicAccessPermissions = function getBasicAccessPermissions(arg0) {
+}
+export function getBasicAccessPermissions(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
     hasItem = set7.has(arg0);
@@ -1971,7 +1971,7 @@ export const getBasicAccessPermissions = function getBasicAccessPermissions(arg0
     VIEW_CHANNEL = BasicPermissions.VIEW_CHANNEL;
   }
   return VIEW_CHANNEL;
-};
+}
 export { ChannelRecordProperties };
 export { ChannelRecordBase };
 export { UnknownChannelRecord };
@@ -1991,7 +1991,7 @@ export { PrivateChannelRecord };
 export { DMChannelRecord };
 export { GroupDMChannelRecord };
 export const ThreadChannelRecord = prototype3;
-export const createChannelRecordFromServer = function createChannelRecordFromServer(type, arg1) {
+export function createChannelRecordFromServer(type, arg1) {
   let GUILD_TEXT = type.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -2001,11 +2001,11 @@ export const createChannelRecordFromServer = function createChannelRecordFromSer
     fromServer = UnknownChannelRecord.fromServer;
   }
   return fromServer(type, arg1);
-};
-export const createChannelRecordFromInvite = function createChannelRecordFromInvite(type) {
+}
+export function createChannelRecordFromInvite(type) {
   return createChannelRecord(type);
-};
-export const castChannelRecord = function castChannelRecord(type) {
+}
+export function castChannelRecord(type) {
   let GUILD_TEXT = type.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -2015,5 +2015,5 @@ export const castChannelRecord = function castChannelRecord(type) {
     tmp3 = UnknownChannelRecord;
   }
   return TypeUtils.dangerouslyCast(type, tmp3);
-};
+}
 export { createChannelRecord };

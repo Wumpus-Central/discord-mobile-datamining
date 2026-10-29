@@ -30,6 +30,6 @@ export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEn
   : function PlainTextExperimentProvider(enabled) {
       return <closure_4 value={enabled.enabled}>{enabled.children}</closure_4>;
     };
-export const usePlainTextExperimentEnabled = function usePlainTextExperimentEnabled() {
+export function usePlainTextExperimentEnabled() {
   return noop.useContext(closure_4);
-};
+}

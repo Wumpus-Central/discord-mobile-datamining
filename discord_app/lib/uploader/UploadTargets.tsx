@@ -50,7 +50,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/UploadTargets.tsx");
 
 export { UploadTargets };
-export const getUploadTarget = function getUploadTarget(target) {
+export function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
     const tmp13 = new GuildProductAttachmentUploadTargetDefault();
     return tmp13;
@@ -65,4 +65,4 @@ export const getUploadTarget = function getUploadTarget(target) {
       throw new TypeError("Trying to call a non-function");
     }
   }
-};
+}

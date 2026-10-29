@@ -18,7 +18,7 @@ function chainCallbacks() {
 const result = size.fileFinishedImporting("design/utils/native/mergeProps.native.tsx");
 
 export { chainCallbacks };
-export const mergeRefs = function mergeRefs() {
+export function mergeRefs() {
   const items = [...arguments];
   return 1 === items.length
     ? items[0]
@@ -35,8 +35,8 @@ export const mergeRefs = function mergeRefs() {
           continue;
         }
       };
-};
-export const mergeProps = function mergeProps() {
+}
+export function mergeProps() {
   const items = [...arguments];
   const obj = {};
   const merged = Object.assign(items[0]);
@@ -72,4 +72,4 @@ export const mergeProps = function mergeProps() {
     }
   }
   return obj;
-};
+}

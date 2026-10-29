@@ -157,7 +157,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/formatMessageForwards.tsx");
 
 export { MessageForward };
-export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForwardForMessage(message) {
+export function maybeCreateSingleForwardForMessage(message) {
   if (isForwardMessageDefault(message)) {
     const first = message.messageSnapshots[0];
     if (null != first) {
@@ -172,4 +172,4 @@ export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForw
       }
     }
   }
-};
+}

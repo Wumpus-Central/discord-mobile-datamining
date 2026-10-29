@@ -6,7 +6,7 @@ import util from "../../../../intl/index.native.tsx";
 import useBadgeTextVariant from "../../../../../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05294_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05295_LinearGradient.js";
 import BadgeShared from "../../../../../discord_common/js/packages/design/components/Badge/shared/BadgeShared.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../Styles/native/createStyles.tsx";

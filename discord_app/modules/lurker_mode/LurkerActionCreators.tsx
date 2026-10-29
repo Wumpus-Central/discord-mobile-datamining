@@ -29,7 +29,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;
@@ -132,44 +132,87 @@ let closure_8 = async function _stopLurkingAll() {
   })();
 };
 let closure_9 = async function _stopLurking() {
-  if (1 === tmp4) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      closure_129_1 = closure_130_5.lurkingGuildIds();
-      if (0 !== closure_129_1.length) {
-        const items = [closure_129_0, closure_130_4.getGuildId()];
-        closure_129_2 = items.filter(closure_130_0(closure_130_2[6]).isNotNullish);
-        c3 = 2;
-        c4 = 1;
-        return { value: closure_130_7(closure_129_2), done: false };
-      }
+      return { value: "IconComponent", done: "IconComponent" };
     }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp4;
+          c1 = 0;
+          closure_129_0 = undefined;
+          let tmp19 = closure_0;
+          if (closure_0 === undefined) {
+            tmp19 = null;
+          }
+          closure_129_0 = tmp19;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else {
+        if (1 === tmp4) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_129_1 = closure_130_5.lurkingGuildIds();
+            if (0 !== closure_129_1.length) {
+              const items = [closure_129_0, closure_130_4.getGuildId()];
+              closure_129_2 = items.filter(closure_130_0(closure_130_2[6]).isNotNullish);
+              c3 = 2;
+              c4 = 1;
+              const obj5 = { value: closure_130_7(closure_129_2), done: false };
+              return obj5;
+            }
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c4 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } catch (tmp20) {
+      c4 = tmp;
+      throw tmp20;
+    }
   }
-  await "IconComponent";
-  let tmp19 = closure_0;
-  if (closure_0 === undefined) {
-    tmp19 = null;
-  }
-  closure_129_0 = tmp19;
-  return "Reflect";
 };
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 
 export { stopLurkingAll };
-export const stopLurking = function stopLurking() {
+export function stopLurking() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -178,4 +221,4 @@ export const stopLurking = function stopLurking() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

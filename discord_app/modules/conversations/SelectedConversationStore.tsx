@@ -25,25 +25,17 @@ prototype["getSelectedConversationId"] = function getSelectedConversationId(arg0
   }
   return conversationId;
 };
-prototype["getConversation"] = function getConversation(channelId) {
-  channelId = undefined;
+prototype["getConversation"] = function getConversation(arg0) {
+  let channelId;
   if (_null != null) {
     channelId = _null.channelId;
   }
-  if (channelId !== channelId) {
+  if (channelId !== arg0) {
     return null;
   } else {
     ({ cacheType, conversationId } = _null);
     if ("channel" === cacheType) {
-      const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
-      let conversation;
-      if (conversationMetadata != null) {
-        conversation = conversationMetadata.conversation;
-      }
-      if (conversation == null) {
-        conversation = null;
-      }
-      return conversation;
+      return ChannelConversationsStore.getConversation(arg0, conversationId);
     } else if ("preview" === cacheType) {
       return ConversationPreviewStore.getConversation(conversationId);
     } else {

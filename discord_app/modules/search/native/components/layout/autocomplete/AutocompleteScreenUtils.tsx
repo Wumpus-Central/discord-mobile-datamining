@@ -20,17 +20,17 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(9748).SearchListItemTypes;
+const SearchListItemTypes = fn(9780).SearchListItemTypes;
 const RelationshipTypes = fn(1084).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx",
 );
 
-export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
+export function getSearchQueryChannelIds(items) {
   return new Set(SearchQueryStore.getChannelIds(items));
-};
-export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
+}
+export function getSearchQueryUserIds(items) {
   const prefixTag = SearchQueryStore.getPrefixTag(items);
   if (null == prefixTag) {
     const _Set2 = Set;
@@ -41,8 +41,8 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
     const set1 = new Set(SearchQueryStore.getUserIds(items, prefixTag.searchTokenType));
     return set1;
   }
-};
-export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
+}
+export function getSearchFilterHasIcon(text) {
   const intl = util.intl;
   if (intl.string(util.t.nrpA5E) === text) {
     return ForwardingIconDefault;
@@ -87,8 +87,8 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
       }
     }
   }
-};
-export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
+}
+export function getSearchFilterAuthorTypeIcon(text) {
   const intl = util.intl;
   if (intl.string(util.t.tPZo4p) === text) {
     return UserIcon.UserIcon;
@@ -103,8 +103,8 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
       }
     }
   }
-};
-export const toSearchListUserItem = function toSearchListUserItem(searchContext, user, callback2) {
+}
+export function toSearchListUserItem(searchContext, user, callback2) {
   const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
   if (null == user) {
     return null;
@@ -130,8 +130,8 @@ export const toSearchListUserItem = function toSearchListUserItem(searchContext,
     element.props = obj3;
     return element;
   }
-};
-export const toSearchListChannelItem = function toSearchListChannelItem(channel, callback3) {
+}
+export function toSearchListChannelItem(channel, callback3) {
   const id = channel;
   if (null == channel) {
     return null;
@@ -168,4 +168,4 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     }
     return tmp2;
   }
-};
+}

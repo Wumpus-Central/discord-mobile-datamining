@@ -236,7 +236,7 @@ export { GuildEventEmbedFetchQueueError };
 export const scheduleGuildEventFetch = schedule;
 export const onGuildEventFetchCapacity = onCapacity;
 export const scheduleGuildEventEmbedFetch = obj2.schedule;
-export const resetGuildEventEmbedFetchQueueForTest = function resetGuildEventEmbedFetchQueueForTest() {
+export function resetGuildEventEmbedFetchQueueForTest() {
   navigation.reset();
   obj2.reset();
-};
+}

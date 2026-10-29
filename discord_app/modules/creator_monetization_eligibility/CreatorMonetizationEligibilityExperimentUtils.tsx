@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsUserInCreatorMonetizationEligibleCountry = tmp3;
-export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreatorMonetizationEligibleCountry() {
+export function isUserInCreatorMonetizationEligibleCountry() {
   const currentUser = UserStore.getCurrentUser();
   let country;
   if (currentUser != null) {
@@ -107,7 +107,7 @@ export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreat
     hasItem = set.has(country);
   }
   return hasItem;
-};
+}
 export { useIsRavenOnboardingGuild };
 export { isRavenOnboardingGuild };
 export { useIsWhitegloveOnboardingGuild };
@@ -145,7 +145,7 @@ export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompiler
       }
       return tmp2;
     };
-export const isExpeditedMonetizationOnboardingGuild = function isExpeditedMonetizationOnboardingGuild(id) {
+export function isExpeditedMonetizationOnboardingGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -160,4 +160,4 @@ export const isExpeditedMonetizationOnboardingGuild = function isExpeditedMoneti
     tmp2 = hasItem;
   }
   return tmp2;
-};
+}

@@ -109,7 +109,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -180,9 +180,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7480).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7480);
-                  const result = closure_1_0(7490).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7503).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7503);
+                  const result = closure_1_0(7513).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -193,15 +193,15 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
         }
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp33) {
       c4 = tmp;
       throw tmp33;
     }
   }
 };
-let closure_5 = fn(4860).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
-const SoundboardConstants = fn(6044);
+let closure_5 = fn(4861).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
+const SoundboardConstants = fn(6048);
 ({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: c10 } = SoundboardConstants);
 const Constants = fn(1084);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
@@ -222,7 +222,7 @@ function hasSetAnyCustomJoinSound() {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 
-export const getAmplitudinalSoundboardVolume = function getAmplitudinalSoundboardVolume() {
+export function getAmplitudinalSoundboardVolume() {
   const SoundboardSettings = UserSettings.SoundboardSettings;
   const setting = SoundboardSettings.getSetting();
   let num;
@@ -233,22 +233,22 @@ export const getAmplitudinalSoundboardVolume = function getAmplitudinalSoundboar
     num = 100;
   }
   return num;
-};
+}
 export { hasPermissionToPlaySound };
 export { canUseSoundboardSound };
 export { canMakeSound };
-export const playSound = function playSound(soundId, id, items, arg3) {
+export function playSound(soundId, id, items, arg3) {
   SoundboardActionCreators.playSoundLocally(id, soundId);
   const result = VoiceChannelEffectsActionCreators.sendVoiceChannelSoundboardEffect(id, soundId, false, items, arg3);
   DispatcherDefault.dispatch({ type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId });
-};
-export const playEcho = function playEcho(soundId, id, arg2) {
+}
+export function playEcho(soundId, id, arg2) {
   SoundboardActionCreators.playSoundLocally(id, soundId);
   const result = VoiceChannelEffectsActionCreators.sendVoiceChannelSoundboardEcho(id, soundId, false, arg2);
   DispatcherDefault.dispatch({ type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId });
-};
+}
 export { hasSetAnyCustomJoinSound };
-export const maybePlayCustomJoinSound = function maybePlayCustomJoinSound() {
+export function maybePlayCustomJoinSound() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -257,7 +257,7 @@ export const maybePlayCustomJoinSound = function maybePlayCustomJoinSound() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useSoundBoardDismissContentTypes = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSoundBoardDismissContentTypes(isSoundboardButtonDisabled) {
       const cResult = c.c(5);
@@ -338,7 +338,7 @@ export const useSoundBoardDismissContentTypes = ReactCompilerGating.isReactCompi
       }
       return items1;
     };
-export const removeCustomJoinSound = function removeCustomJoinSound(guildId, _location) {
+export function removeCustomJoinSound(guildId, _location) {
   _require = guildId;
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(
     guildId,
@@ -372,8 +372,8 @@ export const removeCustomJoinSound = function removeCustomJoinSound(guildId, _lo
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
-};
-export const updateCustomJoinSound = function updateCustomJoinSound(guildId, guildId, location_stack) {
+}
+export function updateCustomJoinSound(guildId, guildId, location_stack) {
   _require = guildId;
   dependencyMap = location_stack;
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(
@@ -388,9 +388,9 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
         tmp6 = require;
       }
       if (null != joinSound.joinSound) {
-        let ADDED = tmp6(7481).AnalyticsChangeType.UPDATED;
+        let ADDED = tmp6(7504).AnalyticsChangeType.UPDATED;
       } else {
-        ADDED = tmp6(7481).AnalyticsChangeType.ADDED;
+        ADDED = tmp6(7504).AnalyticsChangeType.ADDED;
       }
       joinSound.joinSound = {
         soundId: guildId.soundId,
@@ -404,19 +404,19 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
       }
       obj2.guild_id = num;
       obj2.change_type = ADDED;
-      obj2.sound_type = tmp6(7481).AnalyticsSoundType.ENTRY;
+      obj2.sound_type = tmp6(7504).AnalyticsSoundType.ENTRY;
       obj2.sound_source = CUSTOM;
       AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj2);
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
-};
-export const trackCustomCallSoundExternallyDeleted = function trackCustomCallSoundExternallyDeleted(location_stack) {
+}
+export function trackCustomCallSoundExternallyDeleted(location_stack) {
   AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
     location_stack: location_stack.location,
   });
-};
-export const trackSoundFavorited = function trackSoundFavorited(location) {
+}
+export function trackSoundFavorited(location) {
   const sound = location.sound;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants2.EXPRESSION_FAVORITED, {
     location: location.location,
@@ -425,4 +425,4 @@ export const trackSoundFavorited = function trackSoundFavorited(location) {
     expression_name: sound.name,
     expression_guild_id: sound.guildId,
   });
-};
+}

@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 
-export const createPendingImage = function createPendingImage(assetOrigin) {
+export function createPendingImage(assetOrigin) {
   let NEW_ASSET = assetOrigin.assetOrigin;
   if (NEW_ASSET === undefined) {
     NEW_ASSET = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
@@ -24,4 +24,4 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     GlobalUtils.assertNever(NEW_ASSET);
     const tmp3Result = GlobalUtils;
   }
-};
+}

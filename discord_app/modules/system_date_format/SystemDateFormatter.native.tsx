@@ -15,6 +15,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/system_date_format/SystemDateFormatter.native.tsx");
 
 export const makeFormatter = prop;
-export const supportsSystemDateFormatter = function supportsSystemDateFormatter() {
+export function supportsSystemDateFormatter() {
   return PlatformUtils.isIOS();
-};
+}

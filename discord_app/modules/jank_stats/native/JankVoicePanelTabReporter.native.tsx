@@ -5,8 +5,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let VoicePanelModes = fn(10939).VoicePanelModes;
-const VoicePanelControlsModes = fn(10937).VoicePanelControlsModes;
+let VoicePanelModes = fn(10974).VoicePanelModes;
+const VoicePanelControlsModes = fn(10972).VoicePanelControlsModes;
 const map = new Map();
 function isDrawerShown(drawerMode, arg1) {
   let tmp = drawerMode.drawerMode && !drawerMode.hidden;
@@ -253,11 +253,7 @@ export default noop.memo(
         return null;
       },
 );
-export const reportJankVoicePanelTabRequest = function reportJankVoicePanelTabRequest(
-  disableControlsUpdate,
-  disableControlsUpdate,
-  arg2,
-) {
+export function reportJankVoicePanelTabRequest(disableControlsUpdate, disableControlsUpdate, arg2) {
   ({ tab, controlsProps } = disableControlsUpdate);
   value = map.get(disableControlsUpdate);
   let tmp2 = null != value;
@@ -297,4 +293,4 @@ export const reportJankVoicePanelTabRequest = function reportJankVoicePanelTabRe
       tmp10(disableControlsUpdate, `chat`);
     }
   }
-};
+}

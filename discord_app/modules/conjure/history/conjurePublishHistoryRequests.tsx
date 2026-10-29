@@ -46,7 +46,7 @@ let closure_4 = async function _fetchPublishHistoryNotes() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjurePublishHistoryRequests.tsx");
 
-export const fetchPublishHistory = function fetchPublishHistory() {
+export function fetchPublishHistory() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -55,8 +55,8 @@ export const fetchPublishHistory = function fetchPublishHistory() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchPublishHistoryNotes = function fetchPublishHistoryNotes() {
+}
+export function fetchPublishHistoryNotes() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -65,4 +65,4 @@ export const fetchPublishHistoryNotes = function fetchPublishHistoryNotes() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -4,11 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
-export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(
-  rating,
-  ratingCount,
-  isRecentRating,
-) {
+export function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {
   let num = 50;
   let num2 = 50;
   if (isRecentRating) {
@@ -57,4 +53,4 @@ export const calculateSteamReviewScoreDescription = function calculateSteamRevie
     }
   }
   NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS;
-};
+}

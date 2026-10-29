@@ -13,7 +13,7 @@ const ThemeConstants = fn(1207);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");
 
-export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(customUserThemeSettings) {
+export function enableSameAsDeviceTheme(customUserThemeSettings) {
   const result = UserSettingsActionCreatorsDefault.setShouldSyncAppearanceSettings(false);
   if (null == ThemeStore.getSyncedClientTheme(constants.LIGHT)) {
     if (null == ThemeStore.getSyncedClientTheme(constants.DARK)) {
@@ -51,8 +51,8 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(customUs
   }
   const result5 = ThemeActionCreators.setSameAsDeviceThemeEnabled(true);
   ThemeActionCreators.setUseSystemTheme(constants2.ON);
-};
-export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
+}
+export function disableSameAsDeviceTheme() {
   ThemeActionCreators.setUseSystemTheme(constants2.OFF);
   const result = ThemeActionCreators.setSameAsDeviceThemeEnabled(false);
-};
+}

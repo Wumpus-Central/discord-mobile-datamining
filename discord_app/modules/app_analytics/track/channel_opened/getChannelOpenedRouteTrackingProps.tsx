@@ -9,7 +9,7 @@ let result = size.fileFinishedImporting(
   "modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx",
 );
 
-export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
+export function getChannelOpenedRouteTrackingProps(selectedChannelId) {
   const result = ThreadAnalyticsUtils.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
@@ -32,4 +32,4 @@ export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRoute
   }
   const merged1 = Object.assign(obj5);
   return {};
-};
+}

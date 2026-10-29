@@ -31,7 +31,6 @@ export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompiler
   : function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
       return apexExperiment.useConfig({ location: location.location }).enabled;
     };
-export const getMobileNitroManageSubscriptionsSettingsExperiment =
-  function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
-    return apexExperiment.getConfig({ location: location.location }).enabled;
-  };
+export function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
+  return apexExperiment.getConfig({ location: location.location }).enabled;
+}

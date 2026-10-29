@@ -42,7 +42,7 @@ let closure_8 = [0.75, 1.5];
 let closure_9 = [1.45, 0.45];
 let result = size.fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
 
-export const transformColorForReducedContrast = function transformColorForReducedContrast(arg0, arg1, arg2) {
+export function transformColorForReducedContrast(arg0, arg1, arg2) {
   if ("background" !== arg1) {
     if ("border" !== arg1) {
       if ("text" === arg1) {
@@ -72,8 +72,8 @@ export const transformColorForReducedContrast = function transformColorForReduce
   const result1 = _modDef683(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
   const result2 = result1.set("hsl.s", tmp7.BACKGROUND_SATURATION);
   return result2.hex();
-};
-export const transformColorForIncreasedContrast = function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
+}
+export function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
   if ("border" === arg2) {
     const items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
     let items3 = items;
@@ -102,12 +102,8 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
     items3 = [arg0, arg1];
   }
   return items3;
-};
-export const transformColorForReducedSaturation = function transformColorForReducedSaturation(
-  result,
-  category,
-  saturation,
-) {
+}
+export function transformColorForReducedSaturation(result, category, saturation) {
   const obj = _modDef683(result);
   if ("background" === category) {
     [tmp2, tmp3] = [0, 1];
@@ -121,8 +117,8 @@ export const transformColorForReducedSaturation = function transformColorForRedu
     const result1 = obj.set("hsl.s", "*" + saturation);
     return result1.hex();
   }
-};
-export const transformColorContrast = function transformColorContrast(result, category, theme, contrast) {
+}
+export function transformColorContrast(result, category, theme, contrast) {
   if ("background" !== category) {
     if ("border" !== category) {
       if ("text" === category) {
@@ -142,4 +138,4 @@ export const transformColorContrast = function transformColorContrast(result, ca
     "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast),
   );
   return result1.hex();
-};
+}

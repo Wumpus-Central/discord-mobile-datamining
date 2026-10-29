@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/media_uploads/experiments/IosJpegliExperiment.tsx");
 
-export const getIosJpegliConfig = function getIosJpegliConfig(location) {
+export function getIosJpegliConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

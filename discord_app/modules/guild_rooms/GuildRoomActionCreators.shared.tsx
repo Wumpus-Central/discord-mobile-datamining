@@ -22,7 +22,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -164,7 +164,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
           }
           c11 = 0;
           c13 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         c11 = 1;
@@ -190,7 +190,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
           }
           c6 = 0;
           c8 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp81) {
         closure_5 = tmp81;
@@ -465,7 +465,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -519,7 +519,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
           }
           c7 = 0;
           c9 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp27) {
         closure_6 = tmp27;
@@ -544,7 +544,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -582,7 +582,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
           const obj = closure_132_0(closure_132_2[8]);
         }
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp15) {
       c6 = tmp;
@@ -622,7 +622,7 @@ let closure_7 = { x: 0, y: 0 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.shared.tsx");
 
-export const guildRoomConnect = function guildRoomConnect() {
+export function guildRoomConnect() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -631,8 +631,8 @@ export const guildRoomConnect = function guildRoomConnect() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const guildRoomDisconnect = function guildRoomDisconnect(guildId, channelId) {
+}
+export function guildRoomDisconnect(guildId, channelId) {
   const obj = DispatcherDefault;
   obj.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: AuthenticationStore.getId(), roomId: channelId });
   if (channelId !== guildId) {
@@ -640,11 +640,11 @@ export const guildRoomDisconnect = function guildRoomDisconnect(guildId, channel
     const result = GuildRoomAnalytics.trackGuildRoomUserDisconnected(obj4);
   }
   const obj2 = { type: "GUILD_ROOM_DISCONNECT", userId: AuthenticationStore.getId(), roomId: channelId };
-};
-export const guildRoomLocalDisconnect = function guildRoomLocalDisconnect(userId, oldChannelId) {
+}
+export function guildRoomLocalDisconnect(userId, oldChannelId) {
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId, roomId: oldChannelId });
-};
-export const guildRoomUpdate = function guildRoomUpdate() {
+}
+export function guildRoomUpdate() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -653,18 +653,18 @@ export const guildRoomUpdate = function guildRoomUpdate() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const clearGuildRoomPendingPosition = function clearGuildRoomPendingPosition() {
+}
+export function clearGuildRoomPendingPosition() {
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_CLEARED" });
-};
-export const selectGuildRoomLocalPosition = function selectGuildRoomLocalPosition(position, seat) {
+}
+export function selectGuildRoomLocalPosition(position, seat) {
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_REQUESTED", position, seat });
-};
-export const guildRoomToggleLayout = function guildRoomToggleLayout(roomId) {
+}
+export function guildRoomToggleLayout(roomId) {
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId });
-};
+}
 export { guildRoomObjectCreate };
-export const guildRoomObjectUpdate = function guildRoomObjectUpdate() {
+export function guildRoomObjectUpdate() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -673,16 +673,16 @@ export const guildRoomObjectUpdate = function guildRoomObjectUpdate() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { guildRoomObjectDelete };
-export const startPendingGuildRoomNote = function startPendingGuildRoomNote(roomId) {
+export function startPendingGuildRoomNote(roomId) {
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_START", roomId });
-};
-export const placePendingGuildRoomNote = function placePendingGuildRoomNote(roomId, position) {
+}
+export function placePendingGuildRoomNote(roomId, position) {
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId, position });
-};
+}
 export { deletePendingGuildRoomNote };
-export const createGuildRoomNote = function createGuildRoomNote() {
+export function createGuildRoomNote() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -691,8 +691,8 @@ export const createGuildRoomNote = function createGuildRoomNote() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteGuildRoomNote = function deleteGuildRoomNote() {
+}
+export function deleteGuildRoomNote() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -701,8 +701,8 @@ export const deleteGuildRoomNote = function deleteGuildRoomNote() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchGuildRoom = function fetchGuildRoom() {
+}
+export function fetchGuildRoom() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -711,8 +711,8 @@ export const fetchGuildRoom = function fetchGuildRoom() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setGuildRoomVideoOverlayVisibility = function setGuildRoomVideoOverlayVisibility(value, channelId) {
+}
+export function setGuildRoomVideoOverlayVisibility(value, channelId) {
   const videoOverlayVisibility = GuildRoomStore.getVideoOverlayVisibility();
   DispatcherDefault.dispatch({ type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value });
   if (value !== videoOverlayVisibility) {
@@ -724,8 +724,8 @@ export const setGuildRoomVideoOverlayVisibility = function setGuildRoomVideoOver
     const result = GuildRoomAnalytics.trackGuildRoomInteracted(obj4);
   }
   const obj2 = { type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value };
-};
-export const maybeSetGuildRoomVideoOverlay = function maybeSetGuildRoomVideoOverlay(value, guildId, channelId) {
+}
+export function maybeSetGuildRoomVideoOverlay(value, guildId, channelId) {
   if (obj.getGuildRoomsConfig(obj2, { autoTrackExposure: false }).enabled) {
     const videoOverlayVisibility = GuildRoomStore.getVideoOverlayVisibility();
     const obj4 = { type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value };
@@ -742,14 +742,12 @@ export const maybeSetGuildRoomVideoOverlay = function maybeSetGuildRoomVideoOver
   }
   obj = GuildRoomsExperiment;
   obj2 = { guildId, location: "maybeSetGuildRoomVideoOverlay" };
-};
-export const setGuildRoomRememberVideoOverlayVisibility = function setGuildRoomRememberVideoOverlayVisibility(
-  rememberVideoOverlayVisibility,
-) {
+}
+export function setGuildRoomRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
   DispatcherDefault.dispatch({
     type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY",
     rememberVideoOverlayVisibility,
   });
   const obj2 = { type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility };
   const result = GuildRoomAnalytics.trackGuildRoomSettingsUpdate({ rememberVideoOverlayVisibility });
-};
+}

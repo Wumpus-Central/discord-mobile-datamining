@@ -10,7 +10,7 @@ const prototype = function PreviewFrameCallTimeout(c0, timeoutMs) {
 class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewCall.tsx");
 
-export const previewCallTypes = function previewCallTypes(control) {
+export function previewCallTypes(control) {
   closure_0 = control;
   const mapped = closure_0.map((item) => "" + item + closure_0);
   return {
@@ -18,8 +18,8 @@ export const previewCallTypes = function previewCallTypes(control) {
     results: mapped.map((item) => "" + item + "-result"),
     acks: mapped.map((item) => "" + item + "-ack"),
   };
-};
-export const isResultEnvelope = function isResultEnvelope(parsed, acks, id) {
+}
+export function isResultEnvelope(parsed, acks, id) {
   if (typeof parsed === "object") {
     if (null != parsed) {
       const type = parsed.type;
@@ -34,9 +34,9 @@ export const isResultEnvelope = function isResultEnvelope(parsed, acks, id) {
     }
   }
   return false;
-};
+}
 export const PreviewFrameCallTimeout = prototype;
-export const controlAnswerTimeoutMs = function controlAnswerTimeoutMs(timeoutMs) {
+export function controlAnswerTimeoutMs(timeoutMs) {
   timeoutMs = timeoutMs.timeoutMs;
   let num = 20000;
   if (typeof timeoutMs === "number") {
@@ -52,7 +52,7 @@ export const controlAnswerTimeoutMs = function controlAnswerTimeoutMs(timeoutMs)
     }
   }
   return num + 4000;
-};
+}
 export const PREVIEW_FRAME_WAIT_MS = 6000;
 export const CONTROL_RETRY_MS = 400;
 export const CONTROL_END_TIMEOUT_MS = 2000;

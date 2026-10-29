@@ -7,7 +7,7 @@ const AnalyticEvents = Constants.AnalyticEvents;
 let timestamp = 0;
 let result = size.fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtils.tsx");
 
-export const trackNUFStep = function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIEND_LIST, arg2) {
+export function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIEND_LIST, arg2) {
   timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
   const obj2 = {};
@@ -17,4 +17,4 @@ export const trackNUFStep = function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIE
   obj2.to_step = STEP_FRIEND_LIST;
   obj2.seconds_on_from_step = result;
   AnalyticsUtilsDefault.track(AnalyticEvents.NUO_TRANSITION, obj2);
-};
+}

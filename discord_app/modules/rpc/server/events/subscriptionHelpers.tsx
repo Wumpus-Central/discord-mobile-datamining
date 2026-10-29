@@ -10,12 +10,12 @@ import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
 const RPCEvents = fn(1084).RPCEvents;
-const Constants = fn(2023);
+const Constants = fn(2024);
 ({ ActivityLayoutMode: metroRequire, ActivityScreenOrientation: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
-export const getInitialSubscriptionPayload = function getInitialSubscriptionPayload(application, arg1, quest_id) {
+export function getInitialSubscriptionPayload(application, arg1, quest_id) {
   if (RPCEvents.ACTIVITY_PIP_MODE_UPDATE === arg1) {
     const application3 = application.application;
     let id;
@@ -114,4 +114,4 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
   } else {
     return null;
   }
-};
+}

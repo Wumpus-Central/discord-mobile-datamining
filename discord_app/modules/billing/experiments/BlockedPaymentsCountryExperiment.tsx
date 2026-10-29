@@ -51,6 +51,6 @@ export const useIsPaymentsBlocked = ReactCompilerGating.isReactCompilerEnabled()
   : function useIsPaymentsBlocked() {
       return closure_3.useConfig({ location: "dc120b_3" }).enabled;
     };
-export const getIsPaymentsBlocked = function getIsPaymentsBlocked() {
+export function getIsPaymentsBlocked() {
   return closure_3.getConfig({ location: "1ee357_1" }).enabled;
-};
+}

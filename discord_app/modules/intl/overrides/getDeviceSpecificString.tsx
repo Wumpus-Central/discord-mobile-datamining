@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
-export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2Yp7dF) {
+export function getDeviceSpecificString(arg0, _2Yp7dF) {
   let str = null;
   if (obj.isMetaQuest()) {
     str = "quest";
@@ -18,4 +18,4 @@ export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2
   }
   const intl = util.intl;
   return intl.string(tmp3);
-};
+}

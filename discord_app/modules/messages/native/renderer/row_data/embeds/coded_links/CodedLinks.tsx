@@ -24,7 +24,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
 
-export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
+export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
   closure_1 = channel;
   const theme = forcedTheme;
   if (null != message.author) {
@@ -182,4 +182,4 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
     }
   }
   return [];
-};
+}

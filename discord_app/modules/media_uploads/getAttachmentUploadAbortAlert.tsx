@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");
 
-export const getAttachmentUploadAbortAlertContent = function getAttachmentUploadAbortAlertContent(code) {
+export function getAttachmentUploadAbortAlertContent(code) {
   const intl = util.intl;
   const stringResult = intl.string(util.t.B3vFdU);
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
@@ -29,4 +29,4 @@ export const getAttachmentUploadAbortAlertContent = function getAttachmentUpload
   } else {
     return null;
   }
-};
+}

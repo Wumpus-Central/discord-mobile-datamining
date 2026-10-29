@@ -4,11 +4,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx");
 
-export const isVirtualCurrencyEnabled = function isVirtualCurrencyEnabled() {
+export function isVirtualCurrencyEnabled() {
   const obj = { enabled: !MetaQuestUtils.isMetaQuest() };
   return obj;
-};
-export const useVirtualCurrencyMobileEnabled = function useVirtualCurrencyMobileEnabled() {
+}
+export function useVirtualCurrencyMobileEnabled() {
   const obj = { enabled: !MetaQuestUtils.isMetaQuest() };
   return obj;
-};
+}

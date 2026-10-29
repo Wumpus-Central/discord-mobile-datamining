@@ -24,8 +24,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const util = v1votF6(1125);
-const utils_QuestUtils = v1votF6(7831);
-const SponsoredQuestUtils = v1votF6(14378);
+const utils_QuestUtils = v1votF6(7854);
+const SponsoredQuestUtils = v1votF6(14612);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -423,7 +423,7 @@ function getSimplifiedQuestTaskType(quest) {
   PLAY = constants3.PLAY;
   obj = QuestTaskUtils;
 }
-const QuestConstants = fn(6745);
+const QuestConstants = fn(6768);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const PremiumTypes = fn(1391).PremiumTypes;
@@ -1625,7 +1625,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestCopyHooks.tsx");
 
 export const useQuestInstructionTitle = tmp3;
-export const getQuestsInstructionsToWinReward = function getQuestsInstructionsToWinReward(currentUser) {
+export function getQuestsInstructionsToWinReward(currentUser) {
   const obj = {};
   const merged = Object.assign(currentUser);
   currentUser = currentUser.currentUser;
@@ -1634,14 +1634,14 @@ export const getQuestsInstructionsToWinReward = function getQuestsInstructionsTo
   }
   obj.currentUser = currentUser;
   return _getQuestsInstructionsToWinReward(obj);
-};
+}
 export const useQuestsInstructionsToWinReward = tmp4;
 export const useQuestDescription = tmp5;
 export const useQuestBarSubtitle = tmp6;
 export const useQuestBarTitle = tmp7;
 export const usePrimaryCtaCopy = tmp8;
 export const usePremiumExtendableCopy = tmp9;
-export const getRewardCodeRedemptionInstructions = function getRewardCodeRedemptionInstructions(arg0) {
+export function getRewardCodeRedemptionInstructions(arg0) {
   ({ quest, rewardCode } = arg0);
   let platform;
   const result = QuestRewardUtils.isTieredRewardCodeQuest({ quest });
@@ -1686,7 +1686,7 @@ export const getRewardCodeRedemptionInstructions = function getRewardCodeRedempt
     tmp10 = prop[platform];
   }
   return tmp10;
-};
+}
 export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalCtaConfig(quest) {
   const cResult = require("c").c(15);
   quest = quest.quest;
@@ -1785,7 +1785,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1825,7 +1825,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = sourceQuestContent;
           tmp4(preCtaClick[27]).openGameLinkDirectly(tmp4, obj6);
           v3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp11) {
         v3 = tmp;
@@ -1865,7 +1865,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1896,16 +1896,16 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj = { value, done: true };
           return obj;
         } else {
-          const obj6 = { content: closure_128_1, ctaContent: tmp4(7836).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
+          const obj6 = { content: closure_128_1, ctaContent: tmp4(7859).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
           let tmp5;
           if (closure_128_3 != null) {
             tmp5 = closure_128_3();
           }
           obj6.impressionId = tmp5;
           obj6.sourceQuestContent = closure_128_4;
-          tmp4(9642).openGameLinkDirectly(closure_128_0, obj6);
+          tmp4(9674).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp11) {
         dependencyMap = tmp;
@@ -1947,7 +1947,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(9628).getExternalCtaLabel(quest);
+  obj.ctaText = quest(9660).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

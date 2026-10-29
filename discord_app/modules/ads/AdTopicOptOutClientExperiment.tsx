@@ -32,6 +32,6 @@ export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompil
   : function useIsAdTopicOptOutClientEnabled() {
       return apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
     };
-export const isAdTopicOptOutClientEnabled = function isAdTopicOptOutClientEnabled() {
+export function isAdTopicOptOutClientEnabled() {
   return apexExperiment.getConfig({ location: "isAdTopicOptOutClientEnabled" }).enabled;
-};
+}

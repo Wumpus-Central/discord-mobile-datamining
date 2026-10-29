@@ -15,7 +15,7 @@ let closure_4 = createStyles.createNativeStyleProperties({
 });
 const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/Separator.tsx");
 
-export const generateSeparatorRowData = function generateSeparatorRowData(text, theme) {
+export function generateSeparatorRowData(text, theme) {
   ({ rowType, changeType } = text);
   const tmp = closure_4(theme);
   if (constants2.DAY === rowType) {
@@ -60,4 +60,4 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
   } else {
     GlobalUtils.assertNever(rowType);
   }
-};
+}

@@ -56,7 +56,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
             tmp11 = checkGatewayConnection;
             tmp12 = checkGatewayConnection(true);
           }
-          return () => { ... };
+          return /* F156869 */ function() { ... };
         }
       }
     }
@@ -104,7 +104,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
             tmp11 = checkGatewayConnection;
             tmp12 = checkGatewayConnection(true);
           }
-          return () => { ... };
+          return /* F156869 */ function() { ... };
         }
       }
     }
@@ -133,8 +133,8 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       }
     }
     function checkNavigationState() {
-      const obj = first(5186);
-      const rootNavigationRef = first(5187).getRootNavigationRef();
+      const obj = first(5187);
+      const rootNavigationRef = first(5188).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -143,14 +143,14 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5187);
+      const obj2 = first(5188);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
       let ComponentDispatch = first(1120).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5187).getRootNavigationRef();
+      let rootNavigationRef = first(5188).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

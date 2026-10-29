@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/collectibles/utils/Collectibl
 export const parseSkuIdFromServerData = mappers.parseSkuIdFromServerData;
 export const CollectiblesItemAssetFormat = { ANIMATED: "animated", STATIC: "static", VIDEO: "video" };
 export const BASE_URL_BY_RELEASE_CHANNEL = str;
-export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(arg0) {
+export function getCollectiblesItemAssetUrl(arg0) {
   ({ skuId, assetFormat, assetId } = arg0);
   let combined = null;
   if (null != skuId) {
@@ -30,4 +30,4 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
     combined = "" + tmp2 + "/media/v1/collectibles-shop/" + skuId + "/" + str2 + assetFormat;
   }
   return combined;
-};
+}

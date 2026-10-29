@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
-export const maybeSortByProbability = function maybeSortByProbability(reduced, stateFromStores, location) {
+export function maybeSortByProbability(reduced, stateFromStores, location) {
   let sort = reduced;
   const voiceUserAffinitySortType = VoiceUserAffinityExperiment.getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
@@ -55,4 +55,4 @@ export const maybeSortByProbability = function maybeSortByProbability(reduced, s
       return num - num2;
     });
   }
-};
+}

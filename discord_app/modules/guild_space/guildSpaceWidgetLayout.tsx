@@ -8,14 +8,14 @@ const result = size.fileFinishedImporting("modules/guild_space/guildSpaceWidgetL
 
 export const LEFT_COLUMN = 0;
 export const RIGHT_COLUMN = 1;
-export const splitWidgetsByColumn = function splitWidgetsByColumn(arr) {
+export function splitWidgetsByColumn(arr) {
   const found = arr.filter((position) => 1 !== position.position.column);
   const items = [found.sort(byOrder)];
   const found1 = arr.filter((position) => 1 === position.position.column);
   items[1] = found1.sort(byOrder);
   return items;
-};
-export const renumberWidgets = function renumberWidgets(arr) {
+}
+export function renumberWidgets(arr) {
   const found = arr.filter((position) => 1 !== position.position.column);
   const items = [found.sort(byOrder)];
   const found1 = arr.filter((position) => 1 === position.position.column);
@@ -35,8 +35,8 @@ export const renumberWidgets = function renumberWidgets(arr) {
       return tmp2;
     });
   });
-};
-export const addWidget = function addWidget(arr, arg1, column) {
+}
+export function addWidget(arr, arg1, column) {
   const found = arr.filter((position) => 1 !== position.position.column);
   const items = [found.sort(byOrder)];
   const found1 = arr.filter((position) => 1 === position.position.column);
@@ -72,8 +72,8 @@ export const addWidget = function addWidget(arr, arg1, column) {
       return tmp2;
     });
   });
-};
-export const getFullColumnIndex = function getFullColumnIndex(arr, arr2, arg2, arg3) {
+}
+export function getFullColumnIndex(arr, arr2, arg2, arg3) {
   closure_0 = arg3;
   let found = arr;
   if (null != arg3) {
@@ -93,8 +93,8 @@ export const getFullColumnIndex = function getFullColumnIndex(arr, arr2, arg2, a
     }
     return length;
   }
-};
-export const moveWidget = function moveWidget(arr, arg1, arg2, arg3) {
+}
+export function moveWidget(arr, arg1, arg2, arg3) {
   closure_0 = arg1;
   const found = arr.find((id) => id.id === closure_0);
   if (null == found) {
@@ -129,4 +129,4 @@ export const moveWidget = function moveWidget(arr, arg1, arg2, arg3) {
       });
     });
   }
-};
+}

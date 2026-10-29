@@ -18,7 +18,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ let closure_9 = async function _completeCheckpoint() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -183,7 +183,7 @@ let closure_10 = async function _resetCheckpoint() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -269,7 +269,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -318,10 +318,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(7601);
+                  const obj = checkpointCardType(7624);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(7790).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(7812).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -352,7 +352,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             }
           }
           c10 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         c8 = 0;
@@ -367,16 +367,16 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");
 
-export const toggleMute = function toggleMute() {
+export function toggleMute() {
   return DispatcherDefault.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
-};
-export const selectCharacterTrait = function selectCharacterTrait(trait, optionId) {
+}
+export function selectCharacterTrait(trait, optionId) {
   return DispatcherDefault.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait, optionId });
-};
-export const resetEditedCharacter = function resetEditedCharacter() {
+}
+export function resetEditedCharacter() {
   return DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_EDITED_CHARACTER" });
-};
-export const fetchCheckpointData = function fetchCheckpointData() {
+}
+export function fetchCheckpointData() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -385,8 +385,8 @@ export const fetchCheckpointData = function fetchCheckpointData() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const completeCheckpoint = function completeCheckpoint() {
+}
+export function completeCheckpoint() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -395,8 +395,8 @@ export const completeCheckpoint = function completeCheckpoint() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetCheckpoint = function resetCheckpoint() {
+}
+export function resetCheckpoint() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -405,8 +405,8 @@ export const resetCheckpoint = function resetCheckpoint() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendSidekickMessage = function sendSidekickMessage() {
+}
+export function sendSidekickMessage() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -415,8 +415,8 @@ export const sendSidekickMessage = function sendSidekickMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendCheckpointCard = function sendCheckpointCard() {
+}
+export function sendCheckpointCard() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -425,4 +425,4 @@ export const sendCheckpointCard = function sendCheckpointCard() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

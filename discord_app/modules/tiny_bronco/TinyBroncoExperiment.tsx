@@ -28,6 +28,6 @@ export const useIsTinyBroncoEnabled = ReactCompilerGating.isReactCompilerEnabled
   : function useIsTinyBroncoEnabled(location) {
       return closure_2.useConfig({ location }).enabled;
     };
-export const isTinyBroncoEnabled = function isTinyBroncoEnabled(location) {
+export function isTinyBroncoEnabled(location) {
   return closure_2.getConfig({ location }).enabled;
-};
+}

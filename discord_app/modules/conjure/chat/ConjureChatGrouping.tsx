@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatGrouping.tsx");
 
-export const groupChatRows = function groupChatRows(arg0) {
+export function groupChatRows(arg0) {
   const items = [];
   actor = null;
   let flag = false;
@@ -46,4 +46,4 @@ export const groupChatRows = function groupChatRows(arg0) {
     continue;
   }
   return items;
-};
+}

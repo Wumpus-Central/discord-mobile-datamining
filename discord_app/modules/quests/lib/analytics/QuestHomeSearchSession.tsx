@@ -6,7 +6,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let c2 = null;
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/QuestHomeSearchSession.tsx");
 
-export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSearchSession() {
+export function getOrCreateQuestHomeSearchSession() {
   const timestamp = Date.now();
   if (null == searchSession) {
     const obj2 = { searchSession: null, isNew: true };
@@ -24,7 +24,7 @@ export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSe
     obj = { searchSession, isNew: false };
   }
   return obj;
-};
+}
 export function clearQuestHomeSearchSession() {
   c2 = null;
 }

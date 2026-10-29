@@ -64,7 +64,7 @@ function LaunchpadChannelIcon(channel) {
       }
       if (cResult[9] !== channel2) {
         const obj3 = { channel: channel2, size: "sm", wrapperSize: 32 };
-        const tmp36 = closure_8(tmp13(12135).ChannelIcon, obj3);
+        const tmp36 = closure_8(tmp13(12189).ChannelIcon, obj3);
         cResult[9] = channel2;
         cResult[10] = tmp36;
         let tmp34 = tmp36;
@@ -100,16 +100,16 @@ function LaunchpadChannelIcon(channel) {
     obj8.children = closure_8(GuildIconDefault, obj9);
     const items3 = [closure_8(View, obj8)];
     const obj10 = { channel, size: "sm", wrapperSize: 32 };
-    items3[1] = closure_8(channel(12135).ChannelIcon, obj10);
+    items3[1] = closure_8(channel(12189).ChannelIcon, obj10);
     obj7.children = items3;
     return closure_10(closure_9, obj7);
   }
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6740).UnreadSetting;
+const UnreadSetting = fn(6763).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { guildBadgeIcon: null };
   const rect = {
@@ -219,7 +219,7 @@ export default function renderChannelItem(unread) {
   children[3] = tmp11Result2;
   return tmp8(v65535(React6, { children }), { fontScale });
 }
-export const getChannelAccessibilityProps = function getChannelAccessibilityProps(channel) {
+export function getChannelAccessibilityProps(channel) {
   channel = channel.channel;
   const obj = {
     accessible: true,
@@ -240,4 +240,4 @@ export const getChannelAccessibilityProps = function getChannelAccessibilityProp
   }
   obj.accessibilityHint = stringResult;
   return obj;
-};
+}

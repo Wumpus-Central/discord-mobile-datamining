@@ -20,7 +20,7 @@ const semanticColor1 = internal2.resolveSemanticColor(
   nativeDefault.themes.LIGHT,
   nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
 );
-const DeviceUtils = fn(4961);
+const DeviceUtils = fn(4962);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});
@@ -37,7 +37,7 @@ export const TitleStyleType = {
   ANDROID_NO_BORDER: "no_border",
   NO_BORDER_OR_MARGIN: "no_border_or_margin",
 };
-export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
+export function getThemedRippleConfig(arg0) {
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);
   if (obj.isAndroid()) {
@@ -61,4 +61,4 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
     return closure_6;
   }
   obj = PlatformUtils2;
-};
+}

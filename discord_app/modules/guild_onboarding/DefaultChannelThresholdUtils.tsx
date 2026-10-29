@@ -17,7 +17,7 @@ let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -227,7 +227,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -339,13 +339,13 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(7232).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(7256).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelThresholdUtils.tsx");
 
-export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannelThresholdMetAfterDelete() {
+export function isDefaultChannelThresholdMetAfterDelete() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -354,15 +354,14 @@ export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannel
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const checkChattableChannelThresholdMetAfterChannelPermissionDeny =
-  function checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
-    const self = this;
-    const apply = closure_13.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
+}
+export function checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}

@@ -125,7 +125,7 @@ let c4 = "#36393e";
 const result = size.fileFinishedImporting("modules/emojis/utils/EmojiColorUtils.tsx");
 
 export { buildPlatformedThemedEmojiColorPalette };
-export const buildEmojiColorPalette = function buildEmojiColorPalette(colors, stateFromStores, stateFromStores1) {
+export function buildEmojiColorPalette(colors, stateFromStores, stateFromStores1) {
   if (null != colors) {
     if (colors.length >= 1) {
       const obj2 = { colors, saturationFactor: stateFromStores };
@@ -166,4 +166,4 @@ export const buildEmojiColorPalette = function buildEmojiColorPalette(colors, st
     }
   }
   return null;
-};
+}

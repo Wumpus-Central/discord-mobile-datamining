@@ -4,6 +4,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");
 
-export const updateVisualRefresh = function updateVisualRefresh(arg0) {
+export function updateVisualRefresh(arg0) {
   const result = NativeThemeModuleDefault.setVisualRefreshEnabled(arg0);
-};
+}

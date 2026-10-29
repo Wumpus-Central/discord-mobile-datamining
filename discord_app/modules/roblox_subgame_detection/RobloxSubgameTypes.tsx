@@ -20,22 +20,17 @@ export const NativeRobloxSubgameKeys = { UNIVERSE_ID: "universeid", PLACE_ID: "p
 export const ROBLOX_URL_SCHEME = "roblox";
 export { ROBLOX_PROTOCOL_URL };
 export { ROBLOX_WEB_URL };
-export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
+export (arg0) => {
   if (typeof ROBLOX_PROTOCOL_URL === "function") {
     const _HermesInternal = HermesInternal;
     if (typeof ROBLOX_WEB_URL === "function") {
       const _HermesInternal2 = HermesInternal;
       const _HermesInternal3 = HermesInternal;
-      return (
-        "https://ro.blox.com/Ebh5?af_dp=" +
-        tmp2 +
-        "&af_web_dp=" +
-        tmp3("https://www.roblox.com/games/start?placeId=" + arg0)
-      );
+      return "https://ro.blox.com/Ebh5?af_dp=" + tmp2 + "&af_web_dp=" + tmp3("https://www.roblox.com/games/start?placeId=" + arg0);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

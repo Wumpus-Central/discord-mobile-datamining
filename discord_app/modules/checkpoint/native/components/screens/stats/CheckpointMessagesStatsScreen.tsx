@@ -4,8 +4,8 @@ import initialize from "../../../../../../../discord_common/js/packages/flux/ind
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3057 from "../../../../Checkpoint.messages.js";
-import _modDef3089 from "../../../../Checkpoint2026.messages.js";
+import _modDef3058 from "../../../../Checkpoint.messages.js";
+import _modDef3090 from "../../../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../../../CheckpointConstants.tsx";
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
@@ -213,10 +213,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop1);
       const intl = util.intl;
       if (rounded <= 0 && null != stateFromStores1) {
-        let wWKySP = _modDef3089["2BuyVC"];
+        let wWKySP = _modDef3090["2BuyVC"];
         let tmp31 = importDefault;
       } else {
-        wWKySP = _modDef3057.wWKySP;
+        wWKySP = _modDef3058.wWKySP;
         tmp31 = importDefault;
       }
       const stringResult = intl.string(wWKySP);
@@ -230,18 +230,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return arg0;
             },
           };
-          const formatToPlainStringResult = intl2.formatToPlainString(tmp31(3089).TOMBAW, obj6);
+          const formatToPlainStringResult = intl2.formatToPlainString(tmp31(3090).TOMBAW, obj6);
         }
       }
-      const tmp31Result = tmp31(13206);
+      const tmp31Result = tmp31(13438);
       const container = tmp4.container;
       if (cResult[26] !== tmp4.image) {
-        const obj7 = { animatedUri: tmp31(13219), staticUri: tmp31(13220), style: tmp4.image };
-        const tmp38 = timestampProducer(tmp31(13209), obj7);
+        const obj7 = { animatedUri: tmp31(13453), staticUri: tmp31(13454), style: tmp4.image };
+        const tmp38 = timestampProducer(tmp31(13442), obj7);
         cResult[26] = tmp4.image;
         cResult[27] = tmp38;
         let tmp35 = tmp38;
-        const tmp31Result3 = tmp31(13209);
+        const tmp31Result3 = tmp31(13442);
       } else {
         tmp35 = cResult[27];
       }
@@ -270,21 +270,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (tmp27) {
               const obj9 = { value: stateFromStores1 };
-              let tmp52Result = timestampProducer(tmp31(13212), obj9);
+              let tmp52Result = timestampProducer(tmp31(13449), obj9);
             } else {
               const obj10 = { accessible: true, accessibilityLabel: null, style: null, children: null };
               const _HermesInternal = HermesInternal;
               obj10.accessibilityLabel = "" + rounded + " " + stringResult;
               obj10.style = tmp4.number;
               const obj11 = { end: rounded };
-              obj10.children = timestampProducer(tmp31(13214), obj11);
+              obj10.children = timestampProducer(tmp31(13450), obj11);
               tmp52Result = timestampProducer(View, obj10);
             }
-            const tmp31Result4 = tmp31(13204);
+            const tmp31Result4 = tmp31(13436);
             if (tmp27) {
               const intl5 = util.intl;
               const obj12 = { numWords: CheckpointStatsUtils.formatCheckpointCompactNumber(stateFromStores1) };
-              let formatToPlainStringResult1 = intl5.formatToPlainString(tmp31(3089).bAxEs2, obj12);
+              let formatToPlainStringResult1 = intl5.formatToPlainString(tmp31(3090).bAxEs2, obj12);
               const tmpResult6 = CheckpointStatsUtils;
             } else if (null != checkpointTopPercent) {
               const intl4 = util.intl;
@@ -295,11 +295,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
                 },
               };
-              formatToPlainStringResult1 = intl4.format(tmp31(3089).TOMBAW, obj13);
+              formatToPlainStringResult1 = intl4.format(tmp31(3090).TOMBAW, obj13);
             } else {
               const intl3 = util.intl;
               const obj14 = { numMessages: rounded };
-              formatToPlainStringResult1 = intl3.format(tmp31(3089).cYCqz8, obj14);
+              formatToPlainStringResult1 = intl3.format(tmp31(3090).cYCqz8, obj14);
             }
             let numMessagesSent1;
             if (stateFromStores != null) {
@@ -353,8 +353,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[37] = tmp51;
           tmp49 = tmp51;
         }
-        const obj16 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: toLocaleUpperCaseResult };
-        const tmp48 = timestampProducer(tmp31(13204), obj16);
+        const obj16 = {
+          isStepHeading: true,
+          variant: "heading-md/extrabold",
+          style: tmp4.titleText,
+          children: toLocaleUpperCaseResult,
+        };
+        const tmp48 = timestampProducer(tmp31(13436), obj16);
         cResult[32] = tmp4.titleText;
         cResult[33] = toLocaleUpperCaseResult;
         cResult[34] = tmp48;
@@ -406,10 +411,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
       const intl = util.intl;
       if (rounded <= 0 && null != stateFromStores1) {
-        let wWKySP = _modDef3089["2BuyVC"];
+        let wWKySP = _modDef3090["2BuyVC"];
         let tmp11 = importDefault;
       } else {
-        wWKySP = _modDef3057.wWKySP;
+        wWKySP = _modDef3058.wWKySP;
         tmp11 = importDefault;
       }
       const stringResult = intl.string(wWKySP);
@@ -424,48 +429,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return arg0;
             },
           };
-          formatToPlainStringResult = intl2.formatToPlainString(tmp11(3089).TOMBAW, obj3);
+          formatToPlainStringResult = intl2.formatToPlainString(tmp11(3090).TOMBAW, obj3);
         }
       }
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { style: tmp.imageContainer, children: null };
       const tmp2Result = CheckpointStatsUtils;
       const obj6 = { animatedUri: null, staticUri: null, style: null };
-      const tmp11Result = tmp11(13206);
-      obj6.animatedUri = tmp11(13219);
-      obj6.staticUri = tmp11(13220);
+      const tmp11Result = tmp11(13438);
+      obj6.animatedUri = tmp11(13453);
+      obj6.staticUri = tmp11(13454);
       obj6.style = tmp.image;
-      obj5.children = timestampProducer(tmp11(13209), obj6);
+      obj5.children = timestampProducer(tmp11(13442), obj6);
       const items2 = [timestampProducer(View, obj5)];
       const obj7 = { style: tmp.copy, children: null };
       const obj8 = { style: tmp.title, children: null };
       const items3 = [timestampProducer(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
-      const obj10 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+      const obj10 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp11Result4 = tmp11(13209);
+      const tmp11Result4 = tmp11(13442);
       obj10.children = stringResult.toLocaleUpperCase();
-      items3[1] = timestampProducer(tmp11(13204), obj10);
+      items3[1] = timestampProducer(tmp11(13436), obj10);
       obj8.children = items3;
       const items4 = [React5(View, obj8), ,];
       if (rounded <= 0 && null != stateFromStores1) {
         const obj11 = { value: stateFromStores1 };
-        let tmp13Result = timestampProducer(tmp11(13212), obj11);
+        let tmp13Result = timestampProducer(tmp11(13449), obj11);
       } else {
         const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
         const _HermesInternal = HermesInternal;
         obj12.accessibilityLabel = "" + rounded + " " + stringResult;
         obj12.style = tmp.number;
         const obj13 = { end: rounded };
-        obj12.children = timestampProducer(tmp11(13214), obj13);
+        obj12.children = timestampProducer(tmp11(13450), obj13);
         tmp13Result = timestampProducer(View, obj12);
       }
       items4[1] = tmp13Result;
       const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-      const tmp11Result5 = tmp11(13204);
+      const tmp11Result5 = tmp11(13436);
       if (rounded <= 0 && null != stateFromStores1) {
         const intl5 = util.intl;
         const obj15 = { numWords: CheckpointStatsUtils.formatCheckpointCompactNumber(stateFromStores1) };
-        let formatToPlainStringResult1 = intl5.formatToPlainString(tmp11(3089).bAxEs2, obj15);
+        let formatToPlainStringResult1 = intl5.formatToPlainString(tmp11(3090).bAxEs2, obj15);
         const tmp2Result2 = CheckpointStatsUtils;
       } else if (null != checkpointTopPercent) {
         const intl4 = util.intl;
@@ -476,15 +481,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
           },
         };
-        formatToPlainStringResult1 = intl4.format(tmp11(3089).TOMBAW, obj16);
+        formatToPlainStringResult1 = intl4.format(tmp11(3090).TOMBAW, obj16);
       } else {
         const intl3 = util.intl;
         const obj17 = { numMessages: rounded };
-        formatToPlainStringResult1 = intl3.format(tmp11(3089).cYCqz8, obj17);
+        formatToPlainStringResult1 = intl3.format(tmp11(3090).cYCqz8, obj17);
       }
       const obj18 = { children: null };
       obj14.children = formatToPlainStringResult1;
-      items4[2] = timestampProducer(tmp11(13204), obj14);
+      items4[2] = timestampProducer(tmp11(13436), obj14);
       obj7.children = items4;
       items2[1] = React5(View, obj7);
       obj4.children = items2;

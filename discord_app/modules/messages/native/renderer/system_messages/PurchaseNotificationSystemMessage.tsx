@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx",
 );
 
-export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {
+export function createPurchaseNotificationSystemMessage(message) {
   const purchaseNotification = message.message.purchaseNotification;
   let type;
   if (purchaseNotification != null) {
@@ -20,4 +20,4 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     const tmp2Result = GuildProductPurchaseSystemMessage;
   }
   return guildProductPurchaseSystemMessage;
-};
+}

@@ -16,7 +16,7 @@ export const SoundButtonOverlay = {
 export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default", ECHO: "echo" };
 export const AnalyticsChangeType = { ADDED: "added", UPDATED: "updated", REMOVED: "removed" };
 export const AnalyticsSoundSource = { DEFAULT: "default", CUSTOM: "custom" };
-export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, guild_id) {
+export function soundboardSoundFromAPI(body, guild_id) {
   let flag = body.available;
   ({ sound_id, emoji_id, emoji_name, user_id } = body);
   const obj = {};
@@ -33,8 +33,8 @@ export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, guil
   }
   obj.available = flag;
   return obj;
-};
-export const soundboardSoundToAPI = function soundboardSoundToAPI(item) {
+}
+export function soundboardSoundToAPI(item) {
   ({ soundId, guildId, emojiId, emojiName, userId } = item);
   const obj = {};
   const merged = Object.assign(
@@ -46,7 +46,7 @@ export const soundboardSoundToAPI = function soundboardSoundToAPI(item) {
   obj.emoji_name = emojiName;
   obj.user_id = userId;
   return obj;
-};
+}
 export const SoundboardSoundGridSectionType = {
   FAVORITES: 0,
   [0]: "FAVORITES",

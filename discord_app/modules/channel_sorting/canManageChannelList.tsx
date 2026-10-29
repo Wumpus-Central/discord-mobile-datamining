@@ -13,7 +13,7 @@ export default function canManageChannelList(containingCategory, guild) {
   }
   return PermissionStore.can(Permissions.MANAGE_CHANNELS, tmp);
 }
-export const getContainingCategory = function getContainingCategory(parent_id) {
+export function getContainingCategory(parent_id) {
   if (null == parent_id.parent_id) {
     return null;
   } else {
@@ -27,11 +27,11 @@ export const getContainingCategory = function getContainingCategory(parent_id) {
     }
     return tmp2;
   }
-};
-export const canViewChannelList = function canViewChannelList(channel) {
+}
+export function canViewChannelList(channel) {
   let canResult = null == channel;
   if (!canResult) {
     canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
   }
   return canResult;
-};
+}

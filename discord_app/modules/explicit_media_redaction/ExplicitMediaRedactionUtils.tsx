@@ -13,9 +13,9 @@ import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
-const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7431);
+const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7454);
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7429);
+const ExplicitMediaRedactionConstants = fn(7452);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
   EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
@@ -47,7 +47,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
-export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
+export function redactionSettingToRenderedString(prop) {
   if (preloaded_user_settings.ExplicitContentRedaction.SHOW === prop) {
     return () => {
       const intl = util.intl;
@@ -64,8 +64,8 @@ export const redactionSettingToRenderedString = function redactionSettingToRende
       return intl.string(util.t["D/157Y"]);
     };
   }
-};
-export const isPendingScanVersion = function isPendingScanVersion(contentScanVersion) {
+}
+export function isPendingScanVersion(contentScanVersion) {
   value = DevSettingsStore.get("explicit_media_redaction_ignore_pending_scan");
   let tmp2 = !value;
   if (!value) {
@@ -83,7 +83,7 @@ export const isPendingScanVersion = function isPendingScanVersion(contentScanVer
     tmp2 = tmp4;
   }
   return tmp2;
-};
+}
 export const TrackMediaRedactionActionType = {
   EXPLICIT_MEDIA_LEARN_MORE_VIEWED: "explicit_media_learn_more_viewed",
   EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS: "explicit_media_learn_more_click_settings",
@@ -104,7 +104,7 @@ export const TrackMediaRedactionContext = {
   EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED: "explicit_media_message_send_blocked",
   EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED: "explicit_media_add_media_to_forum_post_blocked",
 };
-export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0) {
+export function trackMediaRedactionAction(arg0) {
   ({ channelId, messageId } = arg0);
   if (null != channelId) {
     if (null != messageId) {
@@ -130,16 +130,16 @@ export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0
       obj2.track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj3);
     }
   }
-};
+}
 export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
-export const trackScanTiming = function trackScanTiming(setAt, UPDATE) {
+export function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
   const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
   const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
   obj2.tags = items;
   MonitoringAgentDefault.increment(obj2);
-};
-export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
+}
+export function trackScanningTimedOut(arg0) {
   ({ channelId, messageId, attachmentIds, embedIds } = arg0);
   if (null != channelId) {
     if (null != messageId) {
@@ -207,8 +207,8 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       }
     }
   }
-};
-export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicitMediaRedactableMessagedLoaded(arg0) {
+}
+export function trackExplicitMediaRedactableMessagedLoaded(arg0) {
   ({ channelId, numOfAttachmentsPendingScan, numOfEmbedsPendingScan } = arg0);
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
@@ -237,8 +237,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
       const tmp10Result = MonitoringAgentDefault;
     }
   }
-};
-export const trackRedactableMessageLoaded = function trackRedactableMessageLoaded(arg0) {
+}
+export function trackRedactableMessageLoaded(arg0) {
   ({
     messageId,
     channelId,
@@ -300,8 +300,8 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
   }
   tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
   tmp3 = numOfSelfHarmAttachments > 0 || numOfSelfHarmEmbeds > 0;
-};
-export const trackExplicitMediaScanComplete = function trackExplicitMediaScanComplete(channelId) {
+}
+export function trackExplicitMediaScanComplete(channelId) {
   channelId = channelId.channelId;
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
@@ -331,8 +331,8 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
     obj2.num_of_explicit_embeds = tmp5;
     AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj2);
   }
-};
-export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowConstraints(arg0, arg1) {
+}
+export function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
     let tmp3 = arg0 <= React5;
@@ -342,8 +342,8 @@ export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowCons
     tmp = tmp3;
   }
   return tmp;
-};
-export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplicitMedia() {
+}
+export function shouldAgeVerifyForExplicitMedia() {
   let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
     AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
   );
@@ -351,7 +351,7 @@ export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplic
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
-};
+}
 export const useShouldAgeVerifyForExplicitMedia = tmp3;
 export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldAgeVerifyForReason(arg0) {
@@ -385,7 +385,7 @@ export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEn
       }
       return hasItem;
     };
-export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(obscure) {
+export function trackToggleMediaObscurityV2(obscure) {
   if (obj.isVerifiedAdult()) {
     let str = "show";
     if (obscure.obscure) {
@@ -395,8 +395,8 @@ export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(
     AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj3);
   }
   obj = AgeVerificationUtils;
-};
-export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
+}
+export function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
   const message_snapshots = message.message_snapshots;
   let someResult;
   if (message_snapshots != null) {
@@ -426,4 +426,4 @@ export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSna
     });
   }
   return someResult;
-};
+}

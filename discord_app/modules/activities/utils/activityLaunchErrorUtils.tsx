@@ -22,7 +22,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -165,7 +165,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5661).DevShelfFetchState;
+const DevShelfFetchState = fn(5663).DevShelfFetchState;
 const AbortCodes = fn(1084).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = {
@@ -180,7 +180,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/activityLaunchErrorUtils.tsx");
 
 export { ActivityLaunchFailErrorType };
-export const getActivityLaunchErrorInfo = function getActivityLaunchErrorInfo() {
+export function getActivityLaunchErrorInfo() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -189,4 +189,4 @@ export const getActivityLaunchErrorInfo = function getActivityLaunchErrorInfo() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

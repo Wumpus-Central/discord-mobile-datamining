@@ -32,6 +32,6 @@ export const useIsGoogleWalletEnabled = ReactCompilerGating.isReactCompilerEnabl
   : function useIsGoogleWalletEnabled(location) {
       return closure_2.useConfig({ location }).enabled;
     };
-export const isGoogleWalletEnabled = function isGoogleWalletEnabled(age_verification_methods) {
+export function isGoogleWalletEnabled(age_verification_methods) {
   return closure_2.getConfig({ location: age_verification_methods }).enabled;
-};
+}

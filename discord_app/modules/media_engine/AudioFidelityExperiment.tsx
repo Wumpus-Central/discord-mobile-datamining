@@ -24,10 +24,10 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/AudioFidelityExperiment.tsx");
 
-export const getAudioFidelityExperimentConfig = function getAudioFidelityExperimentConfig(location) {
+export function getAudioFidelityExperimentConfig(location) {
   return closure_2.getConfig({ location: location.location });
-};
-export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, krispEnabled) {
+}
+export function getVoiceFidelityCaps(location, krispEnabled) {
   let echoCancellationEnabled = krispEnabled.krispEnabled;
   if (!echoCancellationEnabled) {
     echoCancellationEnabled = krispEnabled.noiseSuppressionEnabled;
@@ -74,4 +74,4 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
   } else {
     return { maxSampleRateHz: 0, maxChannelCount: 0 };
   }
-};
+}

@@ -28,7 +28,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjureHistoryRestore.tsx");
 
 export { runConjureDataRewind };
-export const rewindDataAfterVersionRestore = function rewindDataAfterVersionRestore(arg0, arg1) {
+export function rewindDataAfterVersionRestore(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   return runConjureDataRewind(arg0, () => conjureHistoryRequests.restoreDatabaseToPoint(closure_0, closure_1.id)).then(
@@ -48,4 +48,4 @@ export const rewindDataAfterVersionRestore = function rewindDataAfterVersionRest
       }
     },
   );
-};
+}

@@ -1,15 +1,15 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
 import util from "../../../intl/index.native.tsx";
 import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
-import _modDef9358 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
-import _modDef9359 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
-import _modDef9360 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
-import _modDef9361 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
+import _modDef9362 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
+import _modDef9363 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
+import _modDef9364 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
+import _modDef9365 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
-export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
+export function getOpenCriticTierText(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
     const intl4 = util.intl;
     return intl4.string(util.t.aZej2g);
@@ -23,19 +23,19 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
     const intl = util.intl;
     return intl.string(util.t.jtVgSh);
   }
-};
-export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
+}
+export function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return _modDef9358;
+    return _modDef9362;
   } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
-    return _modDef9359;
+    return _modDef9363;
   } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
-    return _modDef9360;
+    return _modDef9364;
   } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
-    return _modDef9361;
+    return _modDef9365;
   }
-};
-export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {
+}
+export function getOpenCriticCircleRatingColor(tier) {
   let foregroundColor = "#fc430a";
   if (OpenCriticTier.OpenCriticTier.MIGHTY !== tier) {
     foregroundColor = "#9e00b4";
@@ -50,4 +50,4 @@ export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRating
     }
   }
   return { foregroundColor, backgroundColor: "#2e2e2e" };
-};
+}

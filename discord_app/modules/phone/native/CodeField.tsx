@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const CodeType = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj3 = {
   viewWrapper: { flex: 1 },
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
@@ -555,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return tmp2Result;
     };
 export { CodeType };
-export const CodeBlocks = function CodeBlocks(onCodeEntered) {
+export function CodeBlocks(onCodeEntered) {
   let obj;
   onCodeEntered = onCodeEntered.onCodeEntered;
   const num2 = onCodeEntered;
@@ -660,4 +660,4 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
     let arr2 = items1.push(React5(hasOwnProperty, obj2, num2));
   }
   return React5(hasOwnProperty, { style: tmp3.codeContainer, children: items1 });
-};
+}

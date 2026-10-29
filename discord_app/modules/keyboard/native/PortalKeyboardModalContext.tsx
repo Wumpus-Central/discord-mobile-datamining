@@ -8,6 +8,6 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardModalContext.tsx");
 
 export const PortalKeyboardInModalContext = context;
-export const useIsPortalKeyboardInModal = function useIsPortalKeyboardInModal() {
+export function useIsPortalKeyboardInModal() {
   return noop.useContext(context);
-};
+}

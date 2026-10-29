@@ -34,6 +34,6 @@ export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompile
   : function useCustomTypingIndicatorConfig(location) {
       return apexExperiment.useConfig({ location });
     };
-export const getCustomTypingIndicatorConfig = function getCustomTypingIndicatorConfig(location) {
+export function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });
-};
+}

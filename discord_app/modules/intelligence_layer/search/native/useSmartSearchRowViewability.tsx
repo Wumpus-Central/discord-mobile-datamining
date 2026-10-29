@@ -53,7 +53,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(S, tmp14);
       }
       const obj4 = require("Link");
-      let tmp8 = null != tmp(5186).coerceChannelRoute({ name: currentNavigationRouteName });
+      let tmp8 = null != tmp(5187).coerceChannelRoute({ name: currentNavigationRouteName });
       if (!tmp8) {
         class S {
           constructor() {
@@ -79,7 +79,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = isChatLockedOpen;
       cResult[2] = tmp8;
       tmp7 = tmp8;
-      const tmpResult = tmp(5186);
+      const tmpResult = tmp(5187);
     }
   : function useSmartSearchRowNavigationState() {
       const currentNavigationRouteName = require("NavigationRouteUtils").useCurrentNavigationRouteName();
@@ -93,8 +93,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       if (!tmp6) {
         if (isChatLockedOpen) {
           const obj5 = { name: currentNavigationRouteName };
-          isChatLockedOpen = null != tmp(5186).coerceGuildsRoute(obj5);
-          const tmpResult = tmp(5186);
+          isChatLockedOpen = null != tmp(5187).coerceGuildsRoute(obj5);
+          const tmpResult = tmp(5187);
         }
         tmp6 = isChatLockedOpen;
       }
@@ -154,7 +154,7 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const fn3 = function f() {
           return () => {
-            closure_1_1(13480).setIsRowViewable(false, closure_1_1(13478));
+            closure_1_1(13713).setIsRowViewable(false, closure_1_1(13711));
           };
         };
         const items2 = [];
@@ -182,7 +182,7 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
       }, items1);
       const effect1 = noop.useEffect(
         () => () => {
-          closure_1_1(13480).setIsRowViewable(false, closure_1_1(13478));
+          closure_1_1(13713).setIsRowViewable(false, closure_1_1(13711));
         },
         [],
       );

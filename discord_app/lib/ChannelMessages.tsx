@@ -618,15 +618,15 @@ prototype2["forAll"] = function forAll(arg0, arg1) {
   const _after = this._after;
   const item2 = _after.forEach(arg0, arg1);
 };
-prototype2["findOldest"] = function findOldest(isTermsFormField) {
+prototype2["findOldest"] = function findOldest(arg0) {
   const self = this;
-  let found = _modDef12.find(this._before._messages, isTermsFormField);
+  let found = _modDef12.find(this._before._messages, arg0);
   if (found == null) {
-    found = _modDef12.find(self._array, isTermsFormField);
+    found = _modDef12.find(self._array, arg0);
     const tmpResult = _modDef12;
   }
   if (found == null) {
-    found = _modDef12.find(self._after._messages, isTermsFormField);
+    found = _modDef12.find(self._after._messages, arg0);
     const tmpResult2 = _modDef12;
   }
   return found;
@@ -1057,10 +1057,10 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(6047).createMessageRecord(item));
+    const mapped = items.map((item) => set(6051).createMessageRecord(item));
     const combined = found.concat(
       mapped,
-      items1.map((item) => set(6047).createMessageRecord(item)),
+      items1.map((item) => set(6051).createMessageRecord(item)),
     );
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
@@ -1246,7 +1246,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     if (id === id1) {
       if (null != nonce.nonce) {
         if (value.id === nonce.nonce) {
-          const messageRecord = messageRecord1(6047).createMessageRecord(nonce);
+          const messageRecord = messageRecord1(6051).createMessageRecord(nonce);
           if (null != value.interactionData) {
             messageRecord.interactionData = value.interactionData;
           }
@@ -1261,7 +1261,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     return self;
   } else {
-    messageRecord1 = messageRecord1(6047).createMessageRecord(nonce);
+    messageRecord1 = messageRecord1(6051).createMessageRecord(nonce);
     const lastResult = self.last();
     if (null != lastResult) {
       if (obj5.compare(nonce.id, lastResult.id) < 0) {
@@ -1301,7 +1301,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
-    let obj = messageRecord1(6047);
+    let obj = messageRecord1(6051);
   }
 };
 prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
@@ -1446,7 +1446,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(5237).JumpType.ANIMATED;
+        jumpType = id(5238).JumpType.ANIMATED;
       }
       let obj2 = {
         ready: true,
@@ -1637,7 +1637,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(6530).requireSortedDescending(messages);
+  const result = reversed(6554).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1652,7 +1652,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(6530);
+  const obj = reversed(6554);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {
@@ -1667,6 +1667,6 @@ ChannelMessages._channelMessages = {};
 let result = size.fileFinishedImporting("lib/ChannelMessages.tsx");
 
 export default ChannelMessages;
-export const flatMapChannelMessages = function flatMapChannelMessages(arr) {
+export function flatMapChannelMessages(arr) {
   return arr.flatMap((_array) => _array._array);
-};
+}

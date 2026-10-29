@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/usePopularOrbShopProducts.tsx");
 
 export const MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL = 3;
-export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enabled) {
+export function usePopularOrbShopProducts(enabled) {
   enabled = enabled.enabled;
   let first1;
   noop = undefined;
@@ -51,7 +51,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -73,7 +73,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(16629).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(16867).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
@@ -82,7 +82,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(16628).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(16866).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -125,7 +125,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 v0(true);
               }
               sort_type = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp34) {
             closure_3 = tmp34;
@@ -237,4 +237,4 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   }
   obj3.showPlaceholderCarousel = enabled;
   return obj3;
-};
+}

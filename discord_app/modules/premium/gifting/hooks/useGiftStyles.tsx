@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
 const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");
 
-export const useGiftStyles = function useGiftStyles() {
+export function useGiftStyles() {
   const items = [PremiumGiftStyles.STANDARD_BOX];
   return items;
-};
+}

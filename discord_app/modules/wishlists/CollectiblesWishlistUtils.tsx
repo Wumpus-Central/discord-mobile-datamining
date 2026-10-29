@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
-export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {
+export function getProductNameAndTypeFromSku(sku) {
   ({ name, tenantMetadata } = sku);
   let type;
   if (tenantMetadata != null) {
@@ -32,12 +32,12 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
     }
   }
   return formatToPlainStringResult;
-};
-export const isWishlistableCollectiblesProduct = function isWishlistableCollectiblesProduct(selectedProduct) {
+}
+export function isWishlistableCollectiblesProduct(selectedProduct) {
   const result = CollectiblesUtils.isPremiumCollectiblesProduct(selectedProduct);
   let tmp4 = !result;
   if (!result) {
     tmp4 = selectedProduct.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   return tmp4;
-};
+}

@@ -16,7 +16,7 @@ export default function getCannotSwapApplicationText(arg0) {
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
     const intl = tmp(1125).intl;
-    const obj = { permissions: listFormat.format(found.map(tmp(9674).getPermissionName)), count: found.length };
+    const obj = { permissions: listFormat.format(found.map(tmp(9706).getPermissionName)), count: found.length };
     return intl.formatToPlainString(tmp(1125).t.na1rJc, obj);
   }
 }

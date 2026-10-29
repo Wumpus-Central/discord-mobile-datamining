@@ -28,7 +28,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -75,7 +75,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           closure_129_11 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -194,7 +194,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -243,7 +243,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           closure_129_12 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -365,7 +365,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -401,7 +401,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           closure_129_8 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -485,82 +485,21 @@ function getSubscriptionInvoice() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _getSubscriptionInvoice(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          ({ subscriptionId: closure_129_0, preventFetch: closure_129_1 } = closure_0);
-          closure_129_2 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else if (closure_129_1) {
-          c4 = 3;
-          return { value: null, done: true };
-        } else {
-          const HTTP = closure_130_0(closure_130_2[7]).HTTP;
-          const obj5 = {
-            url: closure_130_12.BILLING_SUBSCRIPTION_INVOICE(closure_129_0),
-            oldFormErrors: true,
-            rejectWithError: false,
-          };
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: HTTP.get(obj5), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_2 = value;
-        c4 = 3;
-        const obj = { value: closure_130_11.createInvoiceFromServer(closure_129_2.body), done: true };
-        return obj;
-      }
-    } catch (tmp16) {
-      c4 = tmp;
-      throw tmp16;
-    }
+let closure_20 = async function _getSubscriptionInvoice() {
+  closure_1 = tmp2;
+  ({ subscriptionId: closure_129_0, preventFetch: closure_129_1 } = closure_0);
+  await "Reflect";
+  if (closure_129_1) {
+    return null;
   }
+  const HTTP = closure_130_0(closure_130_2[7]).HTTP;
+  await HTTP.get({
+    url: closure_130_12.BILLING_SUBSCRIPTION_INVOICE(closure_129_0),
+    oldFormErrors: true,
+    rejectWithError: false,
+  });
+  closure_129_2 = value;
+  return closure_130_11.createInvoiceFromServer(closure_129_2.body);
 };
 let closure_3 = ["subscriptionId"];
 const noop = fn(19);
@@ -935,7 +874,7 @@ export { createOneTimePurchaseInvoicePreview };
 export { getSubscriptionInvoice };
 export const useFetchGenericInvoicePreview = tmp3;
 export const useFetchSubscriptionGiftInvoicePreview = tmp4;
-export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionInvoicePreview(subscriptionId, arg1) {
+export function useFetchSubscriptionInvoicePreview(subscriptionId, arg1) {
   let current = subscriptionId;
   let tmp = subscriptionId;
   if ("subscriptionId" in subscriptionId) {
@@ -997,7 +936,7 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
     }, items),
     arg1,
   );
-};
+}
 export const useGetSubscriptionInvoice = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetSubscriptionInvoice(current, arg1) {
       _require = current;
@@ -1038,11 +977,11 @@ export const useGetSubscriptionInvoice = ReactCompilerGating.isReactCompilerEnab
         arg1,
       );
     };
-export const getItemUnitPriceWithDiscount = function getItemUnitPriceWithDiscount(arg0) {
+export function getItemUnitPriceWithDiscount(arg0) {
   const quantity = arg0;
   ({ subscriptionPlanPrice: closure_1, discounts } = arg0);
   const item = discounts.forEach((amount) => {
     closure_1 = closure_1 - amount.amount / quantity.quantity;
   });
   return closure_1;
-};
+}

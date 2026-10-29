@@ -41,6 +41,6 @@ export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactComp
   : function useSecureFramesDeeplinkExperiment(location) {
       return closure_2.useExperiment({ location: location.location }, { autoTrackExposure: true });
     };
-export const getSecureFramesDeeplinkExperiment = function getSecureFramesDeeplinkExperiment(location) {
+export function getSecureFramesDeeplinkExperiment(location) {
   return closure_2.getCurrentConfig({ location: location.location }, { autoTrackExposure: true });
-};
+}

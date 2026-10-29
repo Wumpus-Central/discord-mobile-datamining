@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx",
 );
 
-export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
+export function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let canResult = PermissionStore.can(constants4.MUTE_MEMBERS, ChannelStore.getChannel(message.channel_id));
@@ -84,4 +84,4 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   obj3.ephemeralIndication = tmp10;
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj3;
-};
+}

@@ -15,7 +15,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ let closure_4 = new LoggerDefault("FileManagerUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileManagerUtils.native.tsx");
 
-export const writeFile = function writeFile(cache, combined2, arg2, utf8) {
+export function writeFile(cache, combined2, arg2, utf8) {
   return NativeFileModuleDefault.writeFile(cache, combined2, arg2, utf8).then((result) => {
     let combined = result;
     if (obj.isAndroid()) {
@@ -130,17 +130,17 @@ export const writeFile = function writeFile(cache, combined2, arg2, utf8) {
     }
     return combined;
   });
-};
-export const moveFile = function moveFile(arg0, arg1, arg2) {
+}
+export function moveFile(arg0, arg1, arg2) {
   return NativeFileModuleDefault.moveFile(arg0, arg1, arg2);
-};
-export const removeFile = function removeFile(cache, filePathForGif) {
+}
+export function removeFile(cache, filePathForGif) {
   return NativeFileModuleDefault.removeFile(cache, filePathForGif);
-};
-export const clearFolder = function clearFolder(cache, combined1) {
+}
+export function clearFolder(cache, combined1) {
   return NativeFileModuleDefault.clearFolder(cache, combined1);
-};
-export const readFile = function readFile() {
+}
+export function readFile() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -149,4 +149,4 @@ export const readFile = function readFile() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

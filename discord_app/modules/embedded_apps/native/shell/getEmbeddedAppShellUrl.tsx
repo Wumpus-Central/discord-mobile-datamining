@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/shell/getEmbeddedAppShellUrl.tsx");
 
-export const getEmbeddedAppShellUrl = function getEmbeddedAppShellUrl(embeddedAppUrl) {
+export function getEmbeddedAppShellUrl(embeddedAppUrl) {
   const nativeShellOriginForEmbeddedApp =
     getNativeShellOriginForEmbeddedApp.getNativeShellOriginForEmbeddedApp(embeddedAppUrl);
   if (null != nativeShellOriginForEmbeddedApp) {
@@ -27,4 +27,4 @@ export const getEmbeddedAppShellUrl = function getEmbeddedAppShellUrl(embeddedAp
     }
     return str;
   }
-};
+}

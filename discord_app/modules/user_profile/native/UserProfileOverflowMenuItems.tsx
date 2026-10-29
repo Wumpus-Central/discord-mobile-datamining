@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
@@ -21,7 +21,7 @@ import size from "../../../../_runtime/metro/00002__.js";
   RestrictionConfirmationConstants);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenuItems.tsx");
 
-export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
+export function getIgnoreMenuItem(arg0, isBlocked) {
   ({
     user: require,
     channelId: importDefault,
@@ -49,7 +49,7 @@ export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11000, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11035, dependencyMap.paths);
         obj.openLazy(
           tmp,
           React5,
@@ -70,8 +70,8 @@ export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
       };
     }
   }
-};
-export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
+}
+export function getBlockMenuItem(arg0, isBlocked) {
   ({
     user: require,
     channelId: importDefault,
@@ -99,7 +99,7 @@ export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(10999, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11034, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -120,8 +120,8 @@ export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
     };
   }
   return obj;
-};
-export const getReportMenuItem = function getReportMenuItem(user, isInIarUserReportingExperiment) {
+}
+export function getReportMenuItem(user, isInIarUserReportingExperiment) {
   user = user.user;
   ({ channelId: importDefault, analyticsLocations: dependencyMap, trackUserProfileAction: closure_3 } = user);
   ({ guildId: closure_4, reportEntrypoint: closure_5 } = isInIarUserReportingExperiment);
@@ -134,7 +134,7 @@ export const getReportMenuItem = function getReportMenuItem(user, isInIarUserRep
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14519, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14753, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -160,8 +160,8 @@ export const getReportMenuItem = function getReportMenuItem(user, isInIarUserRep
     }
     return tmp3;
   }
-};
-export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
+}
+export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
   ({ user: require, analyticsLocations: importDefault, trackUserProfileAction: dependencyMap } = arg0);
   ({ avatarGuildId: closure_3, bannerUrl: closure_4 } = tidaWebformEnabled);
   let obj = { label: null, action: null };
@@ -179,8 +179,8 @@ export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, 
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5058).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5058);
+        obj2.copy(analyticsLocations(5059).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5059);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);
@@ -245,4 +245,4 @@ export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, 
     tmp = obj;
   }
   return tmp;
-};
+}

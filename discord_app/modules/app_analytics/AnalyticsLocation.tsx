@@ -81,6 +81,7 @@ export default {
   EXPRESSION_SUGGESTIONS: "expression suggestions",
   EMOJI_SUGGESTIONS: "emoji suggestions",
   EMOJI_PICKER: "emoji picker",
+  EMOJI_PACKS: "emoji packs",
   STICKER_PICKER: "sticker picker",
   STICKER_POPOUT: "sticker popout",
   PREMIUM_UPSELL: "premium upsell",

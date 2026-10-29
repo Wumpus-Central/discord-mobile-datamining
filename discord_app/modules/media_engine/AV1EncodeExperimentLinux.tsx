@@ -9,6 +9,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/AV1EncodeExperimentLinux.tsx");
 
-export const getAV1EncodeExperimentLinuxConfig = function getAV1EncodeExperimentLinuxConfig(MediaEngineStore) {
+export function getAV1EncodeExperimentLinuxConfig(MediaEngineStore) {
   return config.getConfig({ location: MediaEngineStore });
-};
+}

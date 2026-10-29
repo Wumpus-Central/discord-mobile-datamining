@@ -7,7 +7,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageEndSystemMessage.tsx");
 
-export const createStageEndSystemMessage = function createStageEndSystemMessage(roleStyle) {
+export function createStageEndSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { content: null };
@@ -23,4 +23,4 @@ export const createStageEndSystemMessage = function createStageEndSystemMessage(
   });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
-};
+}

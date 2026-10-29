@@ -6,7 +6,7 @@ const InstantInviteSources = fn(1084).InstantInviteSources;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");
 
-export const showInstantInviteModal = function showInstantInviteModal(arg0) {
+export function showInstantInviteModal(arg0) {
   closure_0 = arg0;
   let result = GuildChannelStore.addConditionalChangeListener(() => {
     defaultChannel = GuildChannelStore.getDefaultChannel(defaultChannel);
@@ -22,4 +22,4 @@ export const showInstantInviteModal = function showInstantInviteModal(arg0) {
     }
     return flag;
   });
-};
+}

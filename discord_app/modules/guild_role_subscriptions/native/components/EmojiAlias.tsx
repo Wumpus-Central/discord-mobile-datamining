@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_5 = createStyles.createStyles({
   emojiAlias: { alignItems: "center", flexDirection: "row" },
   emojiColon: { width: 4 },
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EmojiAlias(arg0) {
       const cResult = c.c(14);
-      ({ name, style } = arg0);
+      ({ children, style } = arg0);
       const tmp4 = closure_5();
       if (cResult[0] === style) {
         if (cResult[1] === tmp4.emojiAlias) {
@@ -40,10 +40,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp6 = cResult[4];
         }
-        if (cResult[5] !== name) {
-          const obj3 = { lineClamp: 1, variant: "text-md/bold", color: "interactive-text-active", children: name };
+        if (cResult[5] !== children) {
+          const obj3 = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", children };
           const tmp11 = React3(Text_Text.Text, obj3);
-          cResult[5] = name;
+          cResult[5] = children;
           cResult[6] = tmp11;
           let tmp9 = tmp11;
         } else {
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items1;
     }
   : function EmojiAlias(arg0) {
-      ({ name, style } = arg0);
+      ({ children, style } = arg0);
       const tmp = closure_5();
       const obj = { style: null, children: null };
       const items = [tmp.emojiAlias, style];
@@ -107,9 +107,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         React3(Text_Text.Text, {
           lineClamp: 1,
-          variant: "text-md/bold",
-          color: "interactive-text-active",
-          children: name,
+          variant: "text-md/medium",
+          color: "mobile-text-heading-primary",
+          children,
         }),
         React3(Text_Text.Text, {
           style: tmp.emojiColon,

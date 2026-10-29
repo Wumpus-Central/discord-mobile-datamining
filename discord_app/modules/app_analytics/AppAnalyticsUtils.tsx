@@ -238,7 +238,7 @@ export { collectGuildAnalyticsMetadata };
 export function collectStaticChannelRouteAnalyticsMetadata(arg0, channel_static_route) {
   return { channel_static_route, channel_hidden: false };
 }
-export const collectChannelAnalyticsMetadataFromId = function collectChannelAnalyticsMetadataFromId(channelId) {
+export function collectChannelAnalyticsMetadataFromId(channelId) {
   if (null == channelId) {
     return null;
   } else {
@@ -249,9 +249,9 @@ export const collectChannelAnalyticsMetadataFromId = function collectChannelAnal
     }
     return tmp3;
   }
-};
+}
 export { collectChannelAnalyticsMetadata };
-export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetadata(id) {
+export function collectVoiceAnalyticsMetadata(id) {
   if (null == id) {
     return null;
   } else {
@@ -280,13 +280,13 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(15342).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(15577).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }
-};
+}
 export { trackWithMetadata };
-export const getRecipientFriendCounts = function getRecipientFriendCounts(recipients) {
+export function getRecipientFriendCounts(recipients) {
   let num = 0;
   while (tmp !== undefined) {
     if (RelationshipStore.isFriend(tmp2)) {
@@ -295,9 +295,9 @@ export const getRecipientFriendCounts = function getRecipientFriendCounts(recipi
     continue;
   }
   return { friendCount: num, nonFriendCount: recipients.length - num };
-};
+}
 export { getVoiceStateMetadata };
-export const getCustomStatusMetadata = function getCustomStatusMetadata(arg0, arg1) {
+export function getCustomStatusMetadata(arg0, arg1) {
   closure_0 = arg1;
   const obj = { custom_status_count: 0 };
   let tmp = obj(12);
@@ -311,4 +311,4 @@ export const getCustomStatusMetadata = function getCustomStatusMetadata(arg0, ar
     }
   });
   return obj;
-};
+}

@@ -5,7 +5,7 @@ let closure_0 = { building: 0, done: 1, idle: 2 };
 const result = size.fileFinishedImporting("modules/conjure/projects/ConjureActivity.tsx");
 
 export const CONJURE_DONE_WINDOW_MS = 60000;
-export const conjureActivity = function conjureActivity(finishedAt) {
+export function conjureActivity(finishedAt) {
   finishedAt = finishedAt.finishedAt;
   let str = "building";
   if (!finishedAt.thinking) {
@@ -19,8 +19,8 @@ export const conjureActivity = function conjureActivity(finishedAt) {
     str = str3;
   }
   return str;
-};
-export const sortConjureProjects = function sortConjureProjects(items) {
+}
+export function sortConjureProjects(items) {
   items = [...items];
   return items.sort((sortTime, sortTime2) => {
     const diff = dependencyMap[sortTime.activity] - dependencyMap[sortTime2.activity];
@@ -38,8 +38,8 @@ export const sortConjureProjects = function sortConjureProjects(items) {
       return localeCompareResult;
     }
   });
-};
-export const compareConjureProjectsByUpdatedAt = function compareConjureProjectsByUpdatedAt(updated_at, updated_at2) {
+}
+export function compareConjureProjectsByUpdatedAt(updated_at, updated_at2) {
   let num = 1;
   if (null != updated_at.updated_at) {
     let num2 = -1;
@@ -50,8 +50,8 @@ export const compareConjureProjectsByUpdatedAt = function compareConjureProjects
     num = num2;
   }
   return num;
-};
-export const conjureProjectGuildId = function conjureProjectGuildId(project) {
+}
+export function conjureProjectGuildId(project) {
   let guild_id = project.guild_id;
   if (guild_id == null) {
     guild_id = project.preview_guild_id;
@@ -60,4 +60,4 @@ export const conjureProjectGuildId = function conjureProjectGuildId(project) {
     guild_id = null;
   }
   return guild_id;
-};
+}

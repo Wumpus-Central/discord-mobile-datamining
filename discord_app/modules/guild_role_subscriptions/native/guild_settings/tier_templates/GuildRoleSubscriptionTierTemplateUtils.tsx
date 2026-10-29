@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx",
 );
 
-export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {
+export function getPrivateChannelIconComponent(type) {
   if (ChannelTypes.ChannelTypes.GUILD_TEXT === type) {
     return TextLockIcon.TextLockIcon;
   } else if (ChannelTypes.ChannelTypes.GUILD_VOICE === type) {
@@ -28,4 +28,4 @@ export const getPrivateChannelIconComponent = function getPrivateChannelIconComp
   } else {
     return TextLockIcon.TextLockIcon;
   }
-};
+}

@@ -32,7 +32,7 @@ export const RegistrationSteps = {
   SMS_VERIFY: "sms_verify",
 };
 export { RegisterTransitionSteps };
-export const authStateToRegisterTransitionStep = function authStateToRegisterTransitionStep(arg0) {
+export function authStateToRegisterTransitionStep(arg0) {
   if (ConstantsIOS.AuthStates.REGISTER_IDENTITY === arg0) {
     return obj.ACCOUNT_IDENTITY;
   } else if (ConstantsIOS.AuthStates.REGISTER_DISPLAY_NAME === arg0) {
@@ -44,4 +44,4 @@ export const authStateToRegisterTransitionStep = function authStateToRegisterTra
   } else if (ConstantsIOS.AuthStates.VERIFY_PHONE === arg0) {
     return obj.PHONE_VERIFICATION;
   }
-};
+}

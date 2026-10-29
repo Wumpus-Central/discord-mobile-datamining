@@ -333,7 +333,7 @@ const obj = {
 const result = size.fileFinishedImporting("modules/oauth2/permissions.tsx");
 
 export const OrderedPermissions = items;
-export const containsDisallowedPermission = function containsDisallowedPermission(memo4) {
+export function containsDisallowedPermission(memo4) {
   closure_0 = memo4;
   const values = Object.values(Permissions);
   return values.some((item) => {
@@ -343,8 +343,8 @@ export const containsDisallowedPermission = function containsDisallowedPermissio
     }
     return hasItem;
   });
-};
-export const getPermissionName = function getPermissionName(item) {
+}
+export function getPermissionName(item) {
   const tmp = obj[item.toString(item)];
   if (null == tmp) {
     const _Error = Error;
@@ -354,4 +354,4 @@ export const getPermissionName = function getPermissionName(item) {
   } else {
     return tmp();
   }
-};
+}

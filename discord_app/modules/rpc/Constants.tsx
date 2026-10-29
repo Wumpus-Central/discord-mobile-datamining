@@ -45,7 +45,7 @@ export const RPC_AUTHENTICATED_SCOPE = "RPC_AUTHENTICATED_SCOPE";
 export const RPC_EMBEDDED_APP_SCOPE = "RPC_EMBEDDED_APP_SCOPE";
 export { RPCDeepLinks };
 export const DynamicLinkType = obj2;
-export const getDynamicLinkType = function getDynamicLinkType(arg0) {
+export function getDynamicLinkType(arg0) {
   if (obj.USER_SETTINGS === arg0) {
     return obj2.SETTINGS;
   } else if (obj.CHANGELOG === arg0) {
@@ -78,7 +78,7 @@ export const getDynamicLinkType = function getDynamicLinkType(arg0) {
     }
     return obj2.STORE;
   }
-};
+}
 export const DispatchErrorCodes = {
   APPLICATION_NOT_FOUND: 101,
   [101]: "APPLICATION_NOT_FOUND",

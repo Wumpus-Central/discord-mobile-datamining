@@ -14,9 +14,9 @@ export const browserSessionsFrameHandlers = {
     });
   },
 };
-export const refreshBrowserSessions = function refreshBrowserSessions(projectId) {
+export function refreshBrowserSessions(projectId) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   if (conjureSocket != null) {
     const result = conjureSocket.sendRefreshBrowserSessions();
   }
-};
+}

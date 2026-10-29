@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const set = new Set(["select", "checkbox", "channel", "role", "user"]);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsRequired.tsx");
 
-export const isConjureSettingRequired = function isConjureSettingRequired(required) {
+export function isConjureSettingRequired(required) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -19,8 +19,8 @@ export const isConjureSettingRequired = function isConjureSettingRequired(requir
     const tmp3 = "secret" !== required.type || !flag;
   }
   return tmp2;
-};
-export const conjureMissingRequiredSettings = function conjureMissingRequiredSettings(arr) {
+}
+export function conjureMissingRequiredSettings(arr) {
   const found = arr.filter((item) => {
     ({ def, value, secretStored } = item);
     const hasItem = set.has(def.type);
@@ -57,4 +57,4 @@ export const conjureMissingRequiredSettings = function conjureMissingRequiredSet
     return tmp2;
   });
   return found.map((def) => def.def.key);
-};
+}

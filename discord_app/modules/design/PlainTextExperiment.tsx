@@ -14,6 +14,6 @@ obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
 
-export const usePlainTextExperiment = function usePlainTextExperiment(RootThemeContextProvider) {
+export function usePlainTextExperiment(RootThemeContextProvider) {
   return closure_0.useConfig({ location: RootThemeContextProvider }).enabled;
-};
+}

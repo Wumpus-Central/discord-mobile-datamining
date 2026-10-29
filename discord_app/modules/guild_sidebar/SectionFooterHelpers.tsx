@@ -5,12 +5,12 @@ import CategoryCollapseStore from "../../stores/CategoryCollapseStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7701).ChannelListGuildActionRow;
 const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
 
-export const getSectionFooterConfig = function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
+export function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
   if (section === ChannelListState.SECTION_INDEX_GUILD_ACTIONS) {
     const guildActionSection = guildChannels.getGuildActionSection();
     const rows = guildActionSection.getRows();
@@ -67,8 +67,8 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
     ),
   };
   return obj;
-};
-export const getSectionFooterActiveVoiceChannels = function getSectionFooterActiveVoiceChannels(arg0) {
+}
+export function getSectionFooterActiveVoiceChannels(arg0) {
   ({
     category,
     voiceStates: require,
@@ -99,8 +99,8 @@ export const getSectionFooterActiveVoiceChannels = function getSectionFooterActi
     });
   }
   return items;
-};
-export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWithActiveVoiceChannels(arg0) {
+}
+export function isSectionFooterWithActiveVoiceChannels(arg0) {
   ({
     category,
     voiceStates: require,
@@ -131,4 +131,4 @@ export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWi
     });
   }
   return items.length > 0;
-};
+}

@@ -151,7 +151,7 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
                   if (supported_platforms == null) {
                     supported_platforms = [];
                   }
-                  const tmp = stateFromStores(5669);
+                  const tmp = stateFromStores(5671);
                   return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
                 });
                 found1 = found.filter((activity) => {
@@ -375,7 +375,7 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
           if (supported_platforms == null) {
             supported_platforms = [];
           }
-          const tmp = stateFromStores(5669);
+          const tmp = stateFromStores(5671);
           return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
         });
         const found1 = found.filter((activity) => {

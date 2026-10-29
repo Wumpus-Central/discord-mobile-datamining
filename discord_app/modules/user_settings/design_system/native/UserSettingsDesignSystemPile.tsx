@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },
@@ -31,11 +31,11 @@ let items = [
   fn(1199).AvatarSizes.XLARGE,
 ];
 let items1 = [
-  fn(6919).GuildIconSizes.XSMALL,
-  fn(6919).GuildIconSizes.SMALL_32,
-  fn(6919).GuildIconSizes.NORMAL,
-  fn(6919).GuildIconSizes.LARGE,
-  fn(6919).GuildIconSizes.XLARGE,
+  fn(6943).GuildIconSizes.XSMALL,
+  fn(6943).GuildIconSizes.SMALL_32,
+  fn(6943).GuildIconSizes.NORMAL,
+  fn(6943).GuildIconSizes.LARGE,
+  fn(6943).GuildIconSizes.XLARGE,
 ];
 let closure_11 = ["Clyde", "Phibi", "Cap"];
 let closure_12 = ["test", "cats", "Evil Marcus", "robot overlords", "not a bug", "O M G"];
@@ -125,13 +125,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: items.map((children) => {
             const size = children;
             const obj = { children: null };
-            items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
-            const obj3 = { size: children, names, totalCount: size(1417).DEFAULT_AVATARS.length, children: null };
-            const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+            items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+            const obj3 = { size: children, names, totalCount: size(1418).DEFAULT_AVATARS.length, children: null };
+            const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
             obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-            items[1] = closure_6(size(14572).AvatarPile, obj3);
+            items[1] = closure_6(size(14806).AvatarPile, obj3);
             obj.children = items;
-            return closure_7(size(6013).Stack, obj, children);
+            return closure_7(size(6015).Stack, obj, children);
           }),
         };
         const tmp9 = timestampProducer(closure_13, obj2);
@@ -146,13 +146,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: items.map((children) => {
             const size = children;
             const obj = { children: null };
-            items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+            items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
             const obj3 = { size: children, names, totalCount: 9500, children: null };
-            const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+            const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
             obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-            items[1] = closure_6(size(14572).AvatarPile, obj3);
+            items[1] = closure_6(size(14806).AvatarPile, obj3);
             obj.children = items;
-            return closure_7(size(6013).Stack, obj, children);
+            return closure_7(size(6015).Stack, obj, children);
           }),
         };
         const tmp14 = timestampProducer(closure_13, obj3);
@@ -167,14 +167,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: items.map((children) => {
             const size = children;
             const obj = { children: null };
-            items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+            items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
             const obj3 = { size: children, names: names.slice(0, 2), children: null };
-            const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+            const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
             const substr = DEFAULT_AVATARS.slice(0, 2);
             obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-            items[1] = closure_6(size(15556).AvatarDuoPile, obj3);
+            items[1] = closure_6(size(15792).AvatarDuoPile, obj3);
             obj.children = items;
-            return closure_7(size(6013).Stack, obj, children);
+            return closure_7(size(6015).Stack, obj, children);
           }),
         };
         const tmp19 = timestampProducer(closure_13, obj4);
@@ -220,21 +220,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: items1.map((size) => {
             const obj = { children: null };
             items = [
-              closure_6(size(5270).Text, {
+              closure_6(size(5271).Text, {
                 variant: "text-md/medium",
                 color: "text-subtle",
                 children: size.toLowerCase(),
               }),
             ];
             const obj2 = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
-            items[1] = closure_6(size(13777).GuildIconPile, {
+            items[1] = closure_6(size(14010).GuildIconPile, {
               size,
               names: names2,
               totalCount: 128,
               children: names2.map((value, index) => closure_2_6(GuildIconDefault, { value, size }, index)),
             });
             obj.children = items;
-            return closure_7(size(6013).Stack, obj, size);
+            return closure_7(size(6015).Stack, obj, size);
           }),
         };
         const tmp29 = timestampProducer(closure_13, obj6);
@@ -315,8 +315,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj3.depthX = tmp2;
           obj3.depthY = tmp3;
           obj3.children = names2.map((value, index) => {
-            const obj = { value, size: closure_1_0(6919).GuildIconSizes.LARGE };
-            return closure_1_6(closure_1_1(6919), obj, index);
+            const obj = { value, size: closure_1_0(6943).GuildIconSizes.LARGE };
+            return closure_1_6(closure_1_1(6943), obj, index);
           });
           items1[2] = closure_1_6(Pile.Pile, obj3);
           obj.children = items1;
@@ -353,13 +353,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items.map((children) => {
           const size = children;
           const obj = { children: null };
-          items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
-          const obj3 = { size: children, names, totalCount: size(1417).DEFAULT_AVATARS.length, children: null };
-          const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+          items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+          const obj3 = { size: children, names, totalCount: size(1418).DEFAULT_AVATARS.length, children: null };
+          const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
           obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14572).AvatarPile, obj3);
+          items[1] = closure_6(size(14806).AvatarPile, obj3);
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, children);
+          return closure_7(size(6015).Stack, obj, children);
         }),
       });
       let obj3 = {
@@ -367,13 +367,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items.map((children) => {
           const size = children;
           const obj = { children: null };
-          items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
-          const obj3 = { size: children, names, totalCount: size(1417).DEFAULT_AVATARS.length, children: null };
-          const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+          items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+          const obj3 = { size: children, names, totalCount: size(1418).DEFAULT_AVATARS.length, children: null };
+          const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
           obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14572).AvatarPile, obj3);
+          items[1] = closure_6(size(14806).AvatarPile, obj3);
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, children);
+          return closure_7(size(6015).Stack, obj, children);
         }),
       };
       items[1] = timestampProducer(closure_13, {
@@ -381,13 +381,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items.map((children) => {
           const size = children;
           const obj = { children: null };
-          items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+          items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
           const obj3 = { size: children, names, totalCount: 9500, children: null };
-          const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+          const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
           obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14572).AvatarPile, obj3);
+          items[1] = closure_6(size(14806).AvatarPile, obj3);
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, children);
+          return closure_7(size(6015).Stack, obj, children);
         }),
       });
       let obj4 = {
@@ -395,13 +395,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items.map((children) => {
           const size = children;
           const obj = { children: null };
-          items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+          items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
           const obj3 = { size: children, names, totalCount: 9500, children: null };
-          const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+          const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
           obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14572).AvatarPile, obj3);
+          items[1] = closure_6(size(14806).AvatarPile, obj3);
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, children);
+          return closure_7(size(6015).Stack, obj, children);
         }),
       };
       items[2] = timestampProducer(closure_13, {
@@ -409,14 +409,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items.map((children) => {
           const size = children;
           const obj = { children: null };
-          items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+          items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
           const obj3 = { size: children, names: names.slice(0, 2), children: null };
-          const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+          const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
           const substr = DEFAULT_AVATARS.slice(0, 2);
           obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(15556).AvatarDuoPile, obj3);
+          items[1] = closure_6(size(15792).AvatarDuoPile, obj3);
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, children);
+          return closure_7(size(6015).Stack, obj, children);
         }),
       });
       const obj5 = {
@@ -424,14 +424,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items.map((children) => {
           const size = children;
           const obj = { children: null };
-          items = [closure_6(size(5270).Text, { variant: "text-md/medium", color: "text-subtle", children })];
+          items = [closure_6(size(5271).Text, { variant: "text-md/medium", color: "text-subtle", children })];
           const obj3 = { size: children, names: names.slice(0, 2), children: null };
-          const DEFAULT_AVATARS = size(1417).DEFAULT_AVATARS;
+          const DEFAULT_AVATARS = size(1418).DEFAULT_AVATARS;
           const substr = DEFAULT_AVATARS.slice(0, 2);
           obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(15556).AvatarDuoPile, obj3);
+          items[1] = closure_6(size(15792).AvatarDuoPile, obj3);
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, children);
+          return closure_7(size(6015).Stack, obj, children);
         }),
       };
       items[3] = timestampProducer(closure_13, {
@@ -483,21 +483,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items1.map((size) => {
           const obj = { children: null };
           items = [
-            closure_6(size(5270).Text, {
+            closure_6(size(5271).Text, {
               variant: "text-md/medium",
               color: "text-subtle",
               children: size.toLowerCase(),
             }),
           ];
           const obj2 = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
-          items[1] = closure_6(size(13777).GuildIconPile, {
+          items[1] = closure_6(size(14010).GuildIconPile, {
             size,
             names: names2,
             totalCount: 128,
             children: names2.map((value, index) => closure_2_6(GuildIconDefault, { value, size }, index)),
           });
           obj.children = items;
-          return closure_7(size(6013).Stack, obj, size);
+          return closure_7(size(6015).Stack, obj, size);
         }),
       });
       const obj8 = { title: "Weird Piles", noScroll: true, children: null };
@@ -556,8 +556,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.depthX = tmp;
         obj3.depthY = tmp2;
         obj3.children = names2.map((value, index) => {
-          const obj = { value, size: closure_1_0(6919).GuildIconSizes.LARGE };
-          return closure_1_6(closure_1_1(6919), obj, index);
+          const obj = { value, size: closure_1_0(6943).GuildIconSizes.LARGE };
+          return closure_1_6(closure_1_1(6943), obj, index);
         });
         items1[2] = closure_1_6(Pile.Pile, obj3);
         obj.children = items1;

@@ -26,6 +26,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/qos/QosToken.tsx");
 
 export { buildQosTokenFromDerivedData };
-export const buildQosToken = function buildQosToken(userId, isUserActive) {
+export function buildQosToken(userId, isUserActive) {
   return buildQosTokenFromDerivedData(DerivedQosDataStore.getForUser(userId), isUserActive);
-};
+}

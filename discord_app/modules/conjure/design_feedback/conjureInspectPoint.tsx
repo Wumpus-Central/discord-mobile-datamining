@@ -58,14 +58,14 @@ const result = size.fileFinishedImporting("modules/conjure/design_feedback/conju
 
 export { targetFromPreviewElement };
 export const CONJURE_INSPECT_CLEAR_POINT = frozen;
-export const inspectPreviewPointRequest = function inspectPreviewPointRequest(arg0) {
+export function inspectPreviewPointRequest(arg0) {
   const obj = { steps: null, timeoutMs: conjurePreviewCall.INSPECT_TIMEOUT_MS, passive: true };
   const point = { action: "inspect", x: arg0.x, y: arg0.y };
   const items = [point];
   obj.steps = items;
   return obj;
-};
-export const inspectResultFromResponse = function inspectResultFromResponse(results) {
+}
+export function inspectResultFromResponse(results) {
   results = undefined;
   if (results != null) {
     results = results.results;
@@ -92,4 +92,4 @@ export const inspectResultFromResponse = function inspectResultFromResponse(resu
     }
     return obj;
   }
-};
+}

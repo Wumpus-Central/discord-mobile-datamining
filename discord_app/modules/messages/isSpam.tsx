@@ -8,14 +8,14 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isSpam.tsx");
 
-export const isSpamSupported = function isSpamSupported(type) {
+export function isSpamSupported(type) {
   let tmp = undefined !== type;
   if (tmp) {
     tmp = type.type !== constants2.DM;
   }
   return tmp;
-};
-export const isSpammer = function isSpammer(userId) {
+}
+export function isSpammer(userId) {
   const user = UserStore.getUser(userId);
   let flag;
   if (user != null) {
@@ -25,8 +25,8 @@ export const isSpammer = function isSpammer(userId) {
     flag = false;
   }
   return flag;
-};
-export const isSpam = function isSpam(author) {
+}
+export function isSpam(author) {
   const user = UserStore.getUser(author.author.id);
   let flag;
   if (user != null) {
@@ -39,4 +39,4 @@ export const isSpam = function isSpam(author) {
     flag = !AutomodMessageUtils.isAutomodMessageRecord(author);
   }
   return flag;
-};
+}

@@ -158,6 +158,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
     status: null,
     orbsReward: null,
     checkoutContext: null,
+    paymentLegs: null,
   };
   const invoice_items = body.invoice_items;
   let mapped;
@@ -176,7 +177,12 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const date = new Date(body.subscription_period_start);
   const tmp6 = new.target;
   obj.subscriptionPeriodEnd = new Date(body.subscription_period_end);
-  ({ status: obj.status, orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext } = body);
+  ({
+    status: obj.status,
+    orbs_reward: obj.orbsReward,
+    checkout_context: obj.checkoutContext,
+    payment_legs: obj.paymentLegs,
+  } = body);
   if (typeof InvoiceRecord === "function") {
     const tmp12 = new InvoiceRecord(obj, require, Date, Date, tmp6);
     ({ id: tmp12.id, invoiceItems } = obj);

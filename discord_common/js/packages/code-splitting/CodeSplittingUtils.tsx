@@ -27,7 +27,7 @@ for (const key10029 in require("importWithRetry")) {
 }
 
 export { loaderMaker };
-export const makeLazy = function makeLazy(memo) {
+export function makeLazy(memo) {
   ({ createPromise: require, webpackId: dependencyMap, renderLoader: _slicedToArray, name } = memo);
   let flag = memo.memo;
   if (flag === undefined) {
@@ -92,8 +92,8 @@ export const makeLazy = function makeLazy(memo) {
   }
   memoResult.displayName = "Suspense(" + name + ")";
   return memoResult;
-};
-export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
+}
+export function makeLazyWithPreload(arg0) {
   ({ createPromise: require, webpackId: dependencyMap, renderLoader: _slicedToArray, name, memo } = arg0);
   if (memo === undefined) {
     memo = false;
@@ -215,8 +215,8 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
     }
   };
   return memoResult;
-};
-export const LazyLibrary = function LazyLibrary(arg0) {
+}
+export function LazyLibrary(arg0) {
   ({ createPromise: require, webpackId: dependencyMap } = arg0);
   _slicedToArray = undefined;
   ({ render, renderFallback } = arg0);
@@ -227,4 +227,4 @@ export const LazyLibrary = function LazyLibrary(arg0) {
   }, []);
   const tmp = _slicedToArray(noop.useState(null), 2);
   return closure_4(closure_5, { children: null == tmp2 ? renderFallback() : render(tmp2) });
-};
+}

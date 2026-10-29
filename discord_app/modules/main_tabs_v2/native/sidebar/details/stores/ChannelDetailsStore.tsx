@@ -72,12 +72,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChann
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
 
 export { useChannelDetailsStore };
-export const deleteChannelStates = function deleteChannelStates() {
+export function deleteChannelStates() {
   ReactBatchUpdates.batchUpdates(() => {
     const obj = { states: new Map() };
     return state.setState(obj);
   });
-};
+}
 export const useIsChannelDetailsSearchActive = tmp3;
 export const useChannelDetailsSearchActiveSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelDetailsSearchActiveSource(arg0) {
   const cResult = c.c(1);
@@ -94,7 +94,7 @@ export const useChannelDetailsSearchActiveSource = ReactCompilerGating.isReactCo
 }) : (function useChannelDetailsSearchActiveSource(arg0) {
   return closure_4(arg0, (searchActiveSource) => searchActiveSource.searchActiveSource);
 });
-export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {
+export function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {
   let obj = { isSearchActive, searchActiveSource };
   const states = obj.getState().states;
   value = states.get(arg0);
@@ -113,8 +113,8 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   });
   const obj3 = {};
   const obj5 = map(1271);
-};
-export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
+}
+export function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
   value = states.get(arg0);
   if (value == null) {
@@ -123,8 +123,8 @@ export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearc
     value = obj;
   }
   return value.isSearchActive;
-};
-export const deleteChannelDetailsSearchState = function deleteChannelDetailsSearchState(arg0) {
+}
+export function deleteChannelDetailsSearchState(arg0) {
   const states = obj.getState().states;
   states.delete(arg0);
   const map = new Map(states);
@@ -133,4 +133,4 @@ export const deleteChannelDetailsSearchState = function deleteChannelDetailsSear
     const obj = { states: map };
     return obj.setState(obj);
   });
-};
+}

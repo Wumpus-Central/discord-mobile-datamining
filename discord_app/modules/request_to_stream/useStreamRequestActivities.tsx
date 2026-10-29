@@ -87,11 +87,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return noop.useMemo(() => stateFromStores.filter(isStreamRequestActivity), items1);
     };
 export { isStreamRequestActivity };
-export const getStreamRequestActivities = function getStreamRequestActivities(userId, guildId) {
+export function getStreamRequestActivities(userId, guildId) {
   if (AuthenticationStore.getId() === userId) {
     let activities = SelfPresenceStore.getActivities();
   } else {
     activities = PresenceStore.getActivities(userId, guildId);
   }
   return activities.filter(isStreamRequestActivity);
-};
+}

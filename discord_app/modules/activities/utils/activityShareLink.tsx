@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const items = [findCodedLinks.parseQuestsEmbedCode];
 const result = size.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
-export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(str, name, link) {
+export function resolveActivityShareMessageContent(str, name, link) {
   _require = false;
   const replaced = str.replaceAll(URLUtilsDefault.URL_REGEX, (arg0) => {
     closure_0 = arg0;
@@ -31,4 +31,4 @@ export const resolveActivityShareMessageContent = function resolveActivityShareM
     combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(require("util").t.dZJpdG, obj);
   }
   return combined;
-};
+}

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugScene.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
@@ -16,10 +16,10 @@ import ConjureDebugStore from "../ConjureDebugStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(10733).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(10807).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   tabs: null,
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.copy(ConjureDebugSnapshot.conjureDebugSnapshot(projectId));
         const obj4 = { text: null, icon: null };
         const intl = util.intl;
-        obj4.text = intl.string(_modDef3863.wI6fhl);
+        obj4.text = intl.string(_modDef3864.wI6fhl);
         obj4.icon = CopyIcon.CopyIcon;
         ToastActionCreatorsDefault.open("CONJURE_DEBUG_COPIED", obj4);
       }, items10);

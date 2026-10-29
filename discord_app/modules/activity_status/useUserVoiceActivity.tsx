@@ -73,7 +73,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1095).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "useCallback", voiceChannel: "PX_16" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
 const ReactCompilerGating = fn(558);
 function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 export { getUserVoiceState };
-export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
+export function canViewUserVoiceChannel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_6;
@@ -223,5 +223,5 @@ export const canViewUserVoiceChannel = function canViewUserVoiceChannel(arg0) {
       voiceStateForUser = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
     }
   }
-};
+}
 export { getVisibleUserVoiceActivity };

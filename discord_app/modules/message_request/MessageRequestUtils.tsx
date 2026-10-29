@@ -6,7 +6,7 @@ import SpamMessageRequestStore from "SpamMessageRequestStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
 
-export const filterOutMessageRequestsAndSpam = function filterOutMessageRequestsAndSpam(arg0) {
+export function filterOutMessageRequestsAndSpam(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     let items = [MessageRequestStore, SpamMessageRequestStore];
@@ -33,10 +33,8 @@ export const filterOutMessageRequestsAndSpam = function filterOutMessageRequests
     [r10007, tmp] = item;
     return Object.assign(acc, { [r10007]: tmp });
   }, {});
-};
-export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequestsAndSpamById(
-  unreadPrivateChannelIds,
-) {
+}
+export function filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds) {
   let tmp = items;
   if (items === undefined) {
     items = [MessageRequestStore, SpamMessageRequestStore];
@@ -51,8 +49,8 @@ export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequ
     }
     return tmp2;
   });
-};
-export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequest(channelId) {
+}
+export function isMessageRequestOrSpamRequest(channelId) {
   let tmp = items;
   if (items === undefined) {
     items = [MessageRequestStore, SpamMessageRequestStore];
@@ -60,8 +58,8 @@ export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequ
   }
   [obj, obj2] = tmp;
   return obj.isMessageRequest(channelId) || obj2.isSpam(channelId);
-};
-export const shouldShowMessageRequests = function shouldShowMessageRequests() {
+}
+export function shouldShowMessageRequests() {
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [MessageRequestStore, SpamMessageRequestStore];
@@ -70,4 +68,4 @@ export const shouldShowMessageRequests = function shouldShowMessageRequests() {
   [obj, obj2] = tmp;
   const spamChannelsCount = obj2.getSpamChannelsCount();
   return obj.getMessageRequestsCount() > 0 || spamChannelsCount > 0;
-};
+}

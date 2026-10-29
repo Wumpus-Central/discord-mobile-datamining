@@ -32,6 +32,6 @@ export const useIsAgeVerificationIncodeEnabled = ReactCompilerGating.isReactComp
   : function useIsAgeVerificationIncodeEnabled(location) {
       return closure_2.useConfig({ location }).enabled;
     };
-export const isAgeVerificationIncodeEnabled = function isAgeVerificationIncodeEnabled(entryPoint) {
+export function isAgeVerificationIncodeEnabled(entryPoint) {
   return closure_2.getConfig({ location: entryPoint }).enabled;
-};
+}

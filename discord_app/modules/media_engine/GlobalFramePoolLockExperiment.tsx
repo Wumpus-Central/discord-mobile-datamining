@@ -14,7 +14,7 @@ const config = apex_ApexExperimentDefault(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
 
-export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoolLockExperimentConfig(disable) {
+export function getGlobalFramePoolLockExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
@@ -26,4 +26,4 @@ export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoo
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;
-};
+}

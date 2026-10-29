@@ -4,14 +4,14 @@ import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import NotificationSettingsStore from "../../../stores/NotificationSettingsStore.tsx";
 
 require = fn;
-let closure_3 = fn(13996).isInAppMessageSoundsEnabled;
+let closure_3 = fn(14229).isInAppMessageSoundsEnabled;
 const InAppNotificationTypes = fn(1084).InAppNotificationTypes;
 const message1 = "message1";
 let timestamp = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/native/playInAppMessageSound.tsx");
 
-export const playInAppMessageSound = function playInAppMessageSound(notification) {
+export function playInAppMessageSound(notification) {
   if (notification.type === InAppNotificationTypes.MESSAGE) {
     if (obj2.isMetaQuest()) {
       if (closure_3()) {
@@ -27,4 +27,4 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
     }
     obj2 = MetaQuestUtils;
   }
-};
+}

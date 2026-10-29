@@ -210,12 +210,12 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
 const Constants = fn(1084);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4949).AccountNotificationFlags;
-const UnreadSetting = fn(6740).UnreadSetting;
+const AccountNotificationFlags = fn(4950).AccountNotificationFlags;
+const UnreadSetting = fn(6763).UnreadSetting;
 const UserSettingsConstants = fn(1094);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
@@ -1099,7 +1099,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("stores/UserGuildSettingsStore.tsx");
 
 export default userGuildSettingsStoreClass;
-export const getGuildDefaults = function getGuildDefaults(arg0) {
+export function getGuildDefaults(arg0) {
   guild = GuildStore.getGuild(arg0);
   if (null != guild) {
     let ALL_MESSAGES = guild.defaultMessageNotifications;
@@ -1107,8 +1107,8 @@ export const getGuildDefaults = function getGuildDefaults(arg0) {
     ALL_MESSAGES = UserNotificationSettings.ALL_MESSAGES;
   }
   return obj2[ALL_MESSAGES];
-};
-export const convertChannelOverridesToMap = function convertChannelOverridesToMap() {
+}
+export function convertChannelOverridesToMap() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -1118,4 +1118,4 @@ export const convertChannelOverridesToMap = function convertChannelOverridesToMa
     keyByResult = _modDef12.keyBy(obj, "channel_id");
   }
   return keyByResult;
-};
+}

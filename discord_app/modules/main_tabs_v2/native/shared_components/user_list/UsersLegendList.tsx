@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersLegendList.tsx
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../../../../_runtime/05305_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05306_BottomSheetModal.js";
 import FastestListItemTypeDefault from "../../../../fastest_list/FastestListItemType.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
 const __initData = {
   code: "function UsersLegendListTsx1(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}",

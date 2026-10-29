@@ -19,13 +19,10 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
 
 export default experiment;
-export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessagesEnabled(
-  id,
-  GuildSettingsModalOverview,
-) {
+export function isPastVcActivityMessagesEnabled(id, GuildSettingsModalOverview) {
   return experiment.getCurrentConfig({ guildId: id, location: GuildSettingsModalOverview }, { autoTrackExposure: true })
     .enabled;
-};
+}
 export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsPastVcActivityMessagesEnabled(guildId, location) {
       const cResult = c.c(4);

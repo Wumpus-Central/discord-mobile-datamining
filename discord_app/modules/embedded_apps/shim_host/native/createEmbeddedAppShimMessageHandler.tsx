@@ -6,11 +6,7 @@ let result = size.fileFinishedImporting(
   "modules/embedded_apps/shim_host/native/createEmbeddedAppShimMessageHandler.tsx",
 );
 
-export const createEmbeddedAppShimMessageHandler = function createEmbeddedAppShimMessageHandler(
-  id,
-  shellBridgeSecret,
-  arg2,
-) {
+export function createEmbeddedAppShimMessageHandler(id, shellBridgeSecret, arg2) {
   closure_2 = arg2;
   const map = new Map();
   return {
@@ -62,4 +58,4 @@ export const createEmbeddedAppShimMessageHandler = function createEmbeddedAppShi
       map.clear();
     },
   };
-};
+}

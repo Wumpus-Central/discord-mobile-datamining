@@ -41,7 +41,7 @@ function _thirdPartyTasksFromServer(tasks) {
 }
 const result = size.fileFinishedImporting("modules/quests/types/v2/Task.tsx");
 
-export const questTaskConfigFromServer = function questTaskConfigFromServer(type) {
+export function questTaskConfigFromServer(type) {
   type = type.type;
   if (QuestTaskConfigTypes.QuestTaskConfigTypes.FIRST_PARTY === type) {
     const obj2 = {
@@ -65,8 +65,8 @@ export const questTaskConfigFromServer = function questTaskConfigFromServer(type
     } = type);
     return obj;
   }
-};
-export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(task_config_v2) {
+}
+export function questTaskConfigV2FromServer(task_config_v2) {
   try {
     const _Object = Object;
     const entries = Object.entries(task_config_v2.tasks);
@@ -186,4 +186,4 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     let obj2 = { tasks: {}, joinOperator: QuestTaskJoinOperator.QuestTaskJoinOperator.OR };
     return obj2;
   }
-};
+}

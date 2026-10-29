@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp5;
       let obj = require("c");
       const stateFromStoresArray = require("initialize").useStateFromStoresArray(
-        tmp(18332).FLOATING_APP_STORES,
+        tmp(18566).FLOATING_APP_STORES,
         getFloatableFrameIds,
       );
       if (cResult[1] !== tmp5) {

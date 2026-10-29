@@ -7,7 +7,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 
-export const setSoundpack = function setSoundpack(CLASSIC, name) {
+export function setSoundpack(CLASSIC, name) {
   const obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.SOUNDPACK_UPDATED, {
     soundpack: CLASSIC,
@@ -15,4 +15,4 @@ export const setSoundpack = function setSoundpack(CLASSIC, name) {
   });
   const obj2 = { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() };
   DispatcherDefault.dispatch({ type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name });
-};
+}

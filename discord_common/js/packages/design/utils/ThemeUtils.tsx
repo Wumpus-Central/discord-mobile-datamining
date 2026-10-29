@@ -4,10 +4,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/utils/ThemeUtils.tsx");
 
-export const isThemeLight = function isThemeLight(arg0) {
+export function isThemeLight(arg0) {
   return arg0 === ThemeTypes.ThemeTypes.LIGHT;
-};
-export const isThemeDark = function isThemeDark(arg0) {
+}
+export function isThemeDark(arg0) {
   if (ThemeTypes.ThemeTypes.ASH !== arg0) {
     if (ThemeTypes.ThemeTypes.ONYX !== arg0) {
       if (ThemeTypes.ThemeTypes.DARK !== arg0) {
@@ -16,4 +16,4 @@ export const isThemeDark = function isThemeDark(arg0) {
     }
   }
   return true;
-};
+}

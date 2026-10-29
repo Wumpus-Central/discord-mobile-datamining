@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/dismissible_content/ShopMarketingFatigueExperiment.tsx");
 
-export const getShopMarketingEnforcesFatigue = function getShopMarketingEnforcesFatigue() {
+export function getShopMarketingEnforcesFatigue() {
   return config.getConfig({ location: "getShopMarketingEnforcesFatigue" }).enforceFatigue;
-};
+}

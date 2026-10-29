@@ -15,6 +15,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/clips/GameEventsOnPlayerExperiment.tsx");
 
 export default apexExperiment;
-export const isGameEventsOnPlayerEnabled = function isGameEventsOnPlayerEnabled(getClipEventsTimeline) {
+export function isGameEventsOnPlayerEnabled(getClipEventsTimeline) {
   return apexExperiment.getConfig({ location: getClipEventsTimeline }).enableGameEventsOnPlayer;
-};
+}

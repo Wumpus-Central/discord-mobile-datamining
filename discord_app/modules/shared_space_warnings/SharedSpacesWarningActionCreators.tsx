@@ -8,7 +8,7 @@ let closure_2 = SharedSpacesWarningStore.setDismissalTimeForChannel;
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
 
-export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
+export function dismissGdmBlockedUserWarning(channelId) {
   closure_2(channelId);
   const HTTP = HTTPUtils.HTTP;
   const obj = {
@@ -16,4 +16,4 @@ export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarnin
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.post(obj);
-};
+}

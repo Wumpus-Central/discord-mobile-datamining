@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/conjurePublishRatings.tsx
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -65,8 +65,8 @@ function submitConjurePublishRating(arg0) {
   }
 }
 const conjurePublishRatings = "conjurePublishRatings";
-let obj = { 1: null, 2: _modDef3863.GhbsGA, 3: _modDef3863.cm0nwU, 4: _modDef3863.kGvlh2, 5: _modDef3863.dVBSUg };
-obj[5] = _modDef3863.DKlgF7;
+let obj = { 1: null, 2: _modDef3864.GhbsGA, 3: _modDef3864.cm0nwU, 4: _modDef3864.kGvlh2, 5: _modDef3864.dVBSUg };
+obj[5] = _modDef3864.DKlgF7;
 const set = new Set();
 let closure_8 = 0;
 fn(558);
@@ -191,26 +191,26 @@ let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishR
 
 export const CONJURE_PUBLISH_RATINGS = [1, 2, 3, 4, 5];
 export { conjurePublishRatingLabel };
-export const conjurePublishRatingOptionLabel = function conjurePublishRatingOptionLabel(rating) {
+export function conjurePublishRatingOptionLabel(rating) {
   const intl = util.intl;
   obj = { rating, label: null };
   const intl2 = util.intl;
   obj.label = intl2.string(obj[rating]);
-  return intl.formatToPlainString(_modDef3863.NU7Dex, obj);
-};
-export const conjurePublishRatingThanks = function conjurePublishRatingThanks(rating) {
+  return intl.formatToPlainString(_modDef3864.NU7Dex, obj);
+}
+export function conjurePublishRatingThanks(rating) {
   if (rating <= 2) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3863["nIc9/M"]);
+    let stringResult = intl3.string(_modDef3864["nIc9/M"]);
   } else if (3 === rating) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef3863.ausj8U);
+    stringResult = intl2.string(_modDef3864.ausj8U);
   } else {
     const intl = util.intl;
-    stringResult = intl.string(_modDef3863.HilSjw);
+    stringResult = intl.string(_modDef3864.HilSjw);
   }
   return stringResult;
-};
+}
 export const CONJURE_RATING_FEEDBACK_MAX_LENGTH = 256;
 export { submitConjurePublishRating };
 export { submitConjurePublishRatingFeedback };

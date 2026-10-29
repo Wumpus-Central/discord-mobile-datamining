@@ -9,7 +9,7 @@ let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
 const withEqualityFn = identity.createWithEqualityFn(() => closure_2);
 const result = size.fileFinishedImporting("modules/app_analytics/ImpressionStore.tsx");
 
-export const setCurrentImpression = function setCurrentImpression(arg0) {
+export function setCurrentImpression(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
@@ -20,8 +20,8 @@ export const setCurrentImpression = function setCurrentImpression(arg0) {
       return obj;
     });
   });
-};
-export const cleanupImpression = function cleanupImpression(arg0) {
+}
+export function cleanupImpression(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
@@ -31,8 +31,8 @@ export const cleanupImpression = function cleanupImpression(arg0) {
       return obj;
     });
   });
-};
-export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
+}
+export function setDebugTrackedData(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
@@ -43,9 +43,9 @@ export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
       return obj;
     });
   });
-};
+}
 export const useImpressionStore = withEqualityFn;
-export const getLocation = function getLocation() {
+export function getLocation() {
   const obj = {};
   const impressions = withEqualityFn.getState().impressions;
   const item = impressions.forEach((type) => {
@@ -56,7 +56,7 @@ export const getLocation = function getLocation() {
     }
   });
   return obj;
-};
-export const getImpressionStack = function getImpressionStack() {
+}
+export function getImpressionStack() {
   return withEqualityFn.getState().impressions;
-};
+}

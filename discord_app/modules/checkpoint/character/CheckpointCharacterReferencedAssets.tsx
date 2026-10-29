@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx
-import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits.tsx";
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets.tsx";
 import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils.tsx";
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets.tsx";
+import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let set = new Set([1, 8]);
@@ -19,11 +19,7 @@ let closure_3 = keys.map((name) => {
 });
 const result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx");
 
-export const getCheckpointCharacterVisibleTextureNames = function getCheckpointCharacterVisibleTextureNames(
-  arg0,
-  chapterID,
-  MobileLandscape,
-) {
+export function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, MobileLandscape) {
   closure_0 = arg0;
   closure_1 = chapterID;
   closure_2 = MobileLandscape;
@@ -53,15 +49,15 @@ export const getCheckpointCharacterVisibleTextureNames = function getCheckpointC
     }
   });
   return set;
-};
-export const getCheckpointCharacterReferencedAssets = function getCheckpointCharacterReferencedAssets(
-  checkpointCharacterLoadedTextureNames,
-) {
+}
+export function getCheckpointCharacterReferencedAssets(checkpointCharacterLoadedTextureNames, arg1) {
+  closure_1 = arg1;
   let obj = {};
   const item = closure_3.forEach((name) => {
     name = name.name;
     if (set.has(name)) {
-      let url = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name].url;
+      let url = CheckpointCharacterTextureUtils.getCheckpointCharacterTextureUrl(name, closure_1);
+      const tmpResult = CheckpointCharacterTextureUtils;
     } else {
       url = CheckpointCharacterRiveTraits.CHECKPOINT_CHARACTER_BLANK_TEXTURE.url;
     }
@@ -69,4 +65,4 @@ export const getCheckpointCharacterReferencedAssets = function getCheckpointChar
     obj[name.swapKey] = obj;
   });
   return obj;
-};
+}

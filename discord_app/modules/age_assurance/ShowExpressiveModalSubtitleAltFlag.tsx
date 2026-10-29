@@ -5,7 +5,7 @@ import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let obj2 = {
   kind: "user",
   name: "2026-08-show-expressive-modal-subtitle-alt",
@@ -63,7 +63,7 @@ export const useShouldShowExpressiveModalSubtitleAlt = ReactCompilerGating.isRea
       }
       return enabled;
     };
-export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(location) {
+export function shouldShowExpressiveModalSubtitleAlt(location) {
   if (obj.isCurrentUserSuspended()) {
     let enabled = SafetyHubStore.getShowExpressiveModalSubtitleAlt();
   } else {
@@ -71,4 +71,4 @@ export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiv
     enabled = closure_3.getConfig(obj2).enabled;
   }
   return enabled;
-};
+}

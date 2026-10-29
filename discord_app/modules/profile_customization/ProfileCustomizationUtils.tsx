@@ -674,7 +674,7 @@ export const useProfileFrameSettings = ReactCompilerGating.isReactCompilerEnable
       }));
     };
 export { getProfilePreviewValue };
-export const resolveCollectiblesOverride = function resolveCollectiblesOverride(arg0) {
+export function resolveCollectiblesOverride(arg0) {
   ({ pendingValue, userValue, guildValue, guildId } = arg0);
   if (undefined !== pendingValue) {
     if ("" !== pendingValue) {
@@ -704,24 +704,24 @@ export const resolveCollectiblesOverride = function resolveCollectiblesOverride(
     }
     pendingValue = tmp3;
   }
-};
-export const showRemoveAvatar = function showRemoveAvatar(pendingAvatar, avatar) {
+}
+export function showRemoveAvatar(pendingAvatar, avatar) {
   if (undefined === pendingAvatar) {
     let tmp2 = null != avatar;
   } else {
     tmp2 = null != pendingAvatar;
   }
   return tmp2;
-};
-export const showRemoveBanner = function showRemoveBanner(pendingBanner, banner) {
+}
+export function showRemoveBanner(pendingBanner, banner) {
   if (undefined === pendingBanner) {
     let tmp2 = null != banner;
   } else {
     tmp2 = null != pendingBanner;
   }
   return tmp2;
-};
-export const announcePendingAvatarChange = function announcePendingAvatarChange(set) {
+}
+export function announcePendingAvatarChange(set) {
   if ("set" === set) {
     const AccessibilityAnnouncer3 = shared.AccessibilityAnnouncer;
     const intl3 = util.intl;
@@ -735,4 +735,4 @@ export const announcePendingAvatarChange = function announcePendingAvatarChange(
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.string(util.t["/b5nqj"]));
   }
-};
+}

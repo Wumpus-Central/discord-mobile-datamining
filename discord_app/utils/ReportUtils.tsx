@@ -8,7 +8,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ReportUtils.tsx");
 
-export const canReportUser = function canReportUser(user) {
+export function canReportUser(user) {
   if (null == user) {
     return false;
   } else {
@@ -23,8 +23,8 @@ export const canReportUser = function canReportUser(user) {
     }
     return tmp3;
   }
-};
-export const canReportMessage = function canReportMessage(message) {
+}
+export function canReportMessage(message) {
   let tmp = null != message;
   if (tmp) {
     const NON_REPORTABLE = constants3.NON_REPORTABLE;
@@ -48,8 +48,8 @@ export const canReportMessage = function canReportMessage(message) {
     tmp = flag;
   }
   return tmp;
-};
-export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(channelId) {
+}
+export function canReportAndDeleteInChannel(channelId) {
   const channel = ChannelStore.getChannel(channelId);
   let tmp2 = null != channel;
   if (tmp2) {
@@ -61,8 +61,8 @@ export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(
     tmp2 = result;
   }
   return tmp2;
-};
-export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type) {
+}
+export function canDeleteAndReportMessage(type) {
   let tmp = null != type;
   if (tmp) {
     let tmp2 = null != type;
@@ -104,4 +104,4 @@ export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type
     tmp = tmp11;
   }
   return tmp;
-};
+}

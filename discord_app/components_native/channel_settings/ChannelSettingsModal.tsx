@@ -21,9 +21,9 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1084);
 ({ ChannelSettingsSections: closure_4, SearchTypes: hasOwnProperty, WebhookTypes: metroRequire } = Constants);
-const SearchTabs = fn(9748).SearchTabs;
+const SearchTabs = fn(9780).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   pinsScreen: null,
@@ -35,11 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsModal.tsx");
 
 export const useChannelSettingsScreensStyles = styles;
-export const getChannelSettingsScreens = function getChannelSettingsScreens(
-  channelId,
-  guildId,
-  channelSettingsScreensStyles,
-) {
+export function getChannelSettingsScreens(channelId, guildId, channelSettingsScreensStyles) {
   _require = channelId;
   dependencyMap = channelSettingsScreensStyles;
   let obj = { [closure_4.OVERVIEW]: obj2 };
@@ -178,4 +174,4 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(
   };
   obj[constants.DEFAULT_FORUM_LAYOUT] = obj16;
   return obj;
-};
+}

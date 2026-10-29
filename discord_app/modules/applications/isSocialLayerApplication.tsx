@@ -21,7 +21,7 @@ export default function isSocialLayerApplication(application) {
   }
   return hasApplicationFlagResult;
 }
-export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorization(application, scopes) {
+export function isSocialLayerSDKAuthorization(application, scopes) {
   let hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(
     application,
     ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED,
@@ -37,4 +37,4 @@ export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorizat
     hasApplicationFlagResult = scopes.some((item) => scopes2.isSocialLayerUmbrellaScope(item));
   }
   return hasApplicationFlagResult;
-};
+}

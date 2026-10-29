@@ -6,12 +6,12 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13895).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14128).HubEmailConnectionSteps;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 },
   header: null,
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onClose = onClose.onClose;
       const invite = onClose.invite;
       const tmp = closure_8();
-      dependencyMap = onClose(1502).useNavigation();
+      dependencyMap = onClose(1503).useNavigation();
       const obj2 = { children: null };
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { style: tmp.header, children: null };
@@ -203,12 +203,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         subLabel: null,
         onPress: null,
       };
-      const obj = onClose(1502);
+      const obj = onClose(1503);
       const obj6 = { source: null };
-      const tmp2 = invite(7273);
-      obj6.source = invite(13906);
-      obj5.leading = closure_6(invite(5705), obj6);
-      obj5.trailing = invite(7273).Arrow;
+      const tmp2 = invite(7297);
+      obj6.source = invite(14139);
+      obj5.leading = closure_6(invite(5707), obj6);
+      obj5.trailing = invite(7297).Arrow;
       const intl2 = onClose(1125).intl;
       obj5.label = intl2.string(onClose(1125).t["a7a/D+"]);
       const intl3 = onClose(1125).intl;
@@ -219,17 +219,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       items[1] = closure_6(tmp2, obj5);
       const obj7 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
-      const tmp3 = invite(5705);
+      const tmp3 = invite(5707);
       const obj8 = { source: null };
-      const tmp4 = invite(7273);
-      obj8.source = invite(13907);
-      obj7.leading = closure_6(invite(5705), obj8);
-      obj7.trailing = invite(7273).Arrow;
+      const tmp4 = invite(7297);
+      obj8.source = invite(14140);
+      obj7.leading = closure_6(invite(5707), obj8);
+      obj7.trailing = invite(7297).Arrow;
       const intl4 = onClose(1125).intl;
       obj7.label = intl4.string(onClose(1125).t.GLG9n4);
       obj7.onPress = onClose;
       items[2] = closure_6(tmp4, obj7);
       obj3.children = items;
       obj2.children = closure_7(View, obj3);
-      return closure_6(onClose(13904).HubEmailConnectionScreen, obj2);
+      return closure_6(onClose(14137).HubEmailConnectionScreen, obj2);
     };

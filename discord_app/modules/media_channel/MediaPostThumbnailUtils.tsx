@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;
-export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
+export function getEmbedPreviewImageUrl(arg0) {
   if (null != arg0) {
     ({ thumbnail, image } = arg0);
     if (null != thumbnail) {
@@ -23,8 +23,8 @@ export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
     }
     return tmp;
   }
-};
-export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) {
+}
+export function getBackgroundImageUrl(coverImage) {
   if (obj.isAnimatedImageUrl(coverImage)) {
     const _HermesInternal = HermesInternal;
     let combined = "" + coverImage + "?format=webp";
@@ -33,8 +33,8 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     combined = coverImage;
   }
   return combined;
-};
-export const getThumbnailImage = function getThumbnailImage(thumbnail) {
+}
+export function getThumbnailImage(thumbnail) {
   if (null != thumbnail) {
     ({ url, proxy_url } = thumbnail);
     let tmp = url;
@@ -52,4 +52,4 @@ export const getThumbnailImage = function getThumbnailImage(thumbnail) {
     }
     return tmp;
   }
-};
+}

@@ -34,7 +34,7 @@ const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/withFallbacks.tsx");
 
-export const withFallbacks = function withFallbacks(global, arg1) {
+export function withFallbacks(global, arg1) {
   if (global.totalLength >= arg1) {
     return global;
   } else {
@@ -75,4 +75,4 @@ export const withFallbacks = function withFallbacks(global, arg1) {
     mergeInto(extendedMemoryLru, global);
     return extendedMemoryLru;
   }
-};
+}

@@ -12,6 +12,7 @@ require = fn;
 let closure_3 = ["onPress"];
 const ChannelTypes = fn(1084).ChannelTypes;
 const jsx = fn(21).jsx;
+fn(558);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ChannelOverflowMenuButton(items) {
@@ -95,6 +96,53 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       return <closure_7 items={useAppChannelOverflowMenuItemsDefault(channel.channel)} />;
     };
 ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useHasChannelOverflowMenu(type, arg1) {
+      const cResult = c.c(3);
+      if (cResult[0] === type) {
+        if (cResult[1] === arg1) {
+          let tmp4 = cResult[2];
+        }
+        let tmp8 = null;
+        if (tmp4) {
+          tmp8 = type;
+        }
+        if (tmp4) {
+          tmp4 = !tmpResult.useIsConjureChannelCandidate(tmp8, "ChannelOverflowMenu");
+        }
+        return tmp4;
+      }
+      let tmp5 = type.type === ChannelTypes.GUILD_APP;
+      if (tmp5) {
+        let tmp7 = null != type.application_id;
+        if (tmp7) {
+          tmp7 = "channel-secondary-view-chat" !== arg1;
+        }
+        tmp5 = tmp7;
+      }
+      cResult[0] = type;
+      cResult[1] = arg1;
+      cResult[2] = tmp5;
+      tmp4 = tmp5;
+    }
+  : function useHasChannelOverflowMenu(type, arg1) {
+      let tmp = type.type === ChannelTypes.GUILD_APP;
+      if (tmp) {
+        let tmp3 = null != type.application_id;
+        if (tmp3) {
+          tmp3 = "channel-secondary-view-chat" !== arg1;
+        }
+        tmp = tmp3;
+      }
+      let tmp5 = null;
+      if (tmp) {
+        tmp5 = type;
+      }
+      if (tmp) {
+        tmp = !obj.useIsConjureChannelCandidate(tmp5, "ChannelOverflowMenu");
+      }
+      return tmp;
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelOverflowMenu.tsx");
 
@@ -120,14 +168,4 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     };
-export const hasChannelOverflowMenu = function hasChannelOverflowMenu(channel, screenIndex) {
-  let tmp = channel.type === ChannelTypes.GUILD_APP;
-  if (tmp) {
-    let tmp3 = null != channel.application_id;
-    if (tmp3) {
-      tmp3 = "channel-secondary-view-chat" !== screenIndex;
-    }
-    tmp = tmp3;
-  }
-  return tmp;
-};
+export const useHasChannelOverflowMenu = tmp3;

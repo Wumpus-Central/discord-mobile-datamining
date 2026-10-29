@@ -13,7 +13,7 @@ let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1084);
 ({ AbortCodes: closure_9, Endpoints: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(5009).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
+let closure_12 = fn(5010).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
 const MessageDataType = {
   SEND: 0,
   [0]: "SEND",
@@ -207,8 +207,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand1(7604).getSignalStrength();
-  const obj2 = handleCommand1(7604);
+  const signalStrength = handleCommand1(7627).getSignalStrength();
+  const obj2 = handleCommand1(7627);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -251,8 +251,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand1(7604).getSignalStrength();
-  const obj2 = handleCommand1(7604);
+  const signalStrength = handleCommand1(7627).getSignalStrength();
+  const obj2 = handleCommand1(7627);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -386,16 +386,16 @@ let result = size.fileFinishedImporting("lib/MessageQueue.tsx");
 
 export default handleCommand1;
 export { MessageDataType };
-export const isMessageDataSend = function isMessageDataSend(type) {
+export function isMessageDataSend(type) {
   return type.type === obj.SEND || type.type === tmp.SEND_ANNOUNCEMENT;
-};
-export const isMessageDataEdit = function isMessageDataEdit(messageData) {
+}
+export function isMessageDataEdit(messageData) {
   return messageData.type === obj.EDIT;
-};
-export const isMessageDataCommand = function isMessageDataCommand(type) {
+}
+export function isMessageDataCommand(type) {
   return type.type === obj.COMMAND;
-};
-export const getFailedMessageId = function getFailedMessageId(messageData) {
+}
+export function getFailedMessageId(messageData) {
   if (tmp2) {
     let id = messageData.message.nonce;
   } else if (messageData.type === obj.EDIT) {
@@ -404,4 +404,4 @@ export const getFailedMessageId = function getFailedMessageId(messageData) {
     id = messageData.message.data.id;
   }
   return id;
-};
+}

@@ -7,7 +7,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx");
 
-export const trackMemberApplicationViewed = function trackMemberApplicationViewed(arg0) {
+export function trackMemberApplicationViewed(arg0) {
   ({ guildId, applicationUserId, applicationStatus } = arg0);
   const obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_VIEWED, {
@@ -16,8 +16,8 @@ export const trackMemberApplicationViewed = function trackMemberApplicationViewe
     application_user_id: applicationUserId,
     application_status: applicationStatus,
   });
-};
-export const trackMemberApplicationAction = function trackMemberApplicationAction(arg0) {
+}
+export function trackMemberApplicationAction(arg0) {
   ({ guildId, actionType, applicationUserId } = arg0);
   const obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_ACTION, {
@@ -26,8 +26,8 @@ export const trackMemberApplicationAction = function trackMemberApplicationActio
     application_user_id: applicationUserId,
     viewing_user_id: AuthenticationStore.getId(),
   });
-};
-export const trackMemberApplicationInterviewMessage = function trackMemberApplicationInterviewMessage(guildId) {
+}
+export function trackMemberApplicationInterviewMessage(guildId) {
   guildId = guildId.guildId;
   ({ messageId, channelId, joinRequestStatus, joinRequestUserId } = guildId);
   const id = AuthenticationStore.getId();
@@ -45,7 +45,7 @@ export const trackMemberApplicationInterviewMessage = function trackMemberApplic
     join_request_status: joinRequestStatus,
     join_request_user_id: joinRequestUserId,
   });
-};
-export const trackMemberVerificationApplicationViewed = function trackMemberVerificationApplicationViewed(guild_id) {
+}
+export function trackMemberVerificationApplicationViewed(guild_id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id });
-};
+}

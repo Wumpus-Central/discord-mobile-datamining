@@ -33,12 +33,7 @@ const Routes = Constants.Routes;
 const logger = new LoggerDefault("BillingStandaloneNativeUtils");
 let result = size.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
-export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(
-  premium_plan_selection_action_sheet,
-  arg1,
-  arg2,
-  arg3,
-) {
+export function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selection_action_sheet, arg1, arg2, arg3) {
   _require = premium_plan_selection_action_sheet;
   const loadId = arg1;
   dependencyMap = arg2;
@@ -69,13 +64,8 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
       closure_3(...items);
     },
   );
-};
-export const goToStandaloneNitroManagementFromMobileApp = function goToStandaloneNitroManagementFromMobileApp(
-  premium_external_management,
-  loadId,
-  arg2,
-  arg3,
-) {
+}
+export function goToStandaloneNitroManagementFromMobileApp(premium_external_management, loadId, arg2, arg3) {
   _require = premium_external_management;
   loadId = loadId.loadId;
   dependencyMap = arg2;
@@ -107,14 +97,8 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
       closure_3(...items);
     },
   );
-};
-export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStandaloneGuildBoostCheckoutFromMobileApp(
-  args,
-  guild_id,
-  newAnalyticsLoadId,
-  arg3,
-  arg4,
-) {
+}
+export function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, newAnalyticsLoadId, arg3, arg4) {
   _require = args;
   closure_1 = newAnalyticsLoadId;
   dependencyMap = arg3;
@@ -143,4 +127,4 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
       closure_3(...items);
     },
   );
-};
+}

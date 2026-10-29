@@ -12,6 +12,6 @@ const ALLOWED_TYPES = Array.from(items);
 const result = size.fileFinishedImporting("modules/share/ShareConstants.tsx");
 
 export { ALLOWED_TYPES };
-export const isAllowedType = function isAllowedType(type) {
+export function isAllowedType(type) {
   return arr.includes(type.type);
-};
+}

@@ -20,7 +20,7 @@ function stripCredentialsForDisplay(url) {
 }
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupLink.tsx");
 
-export const transformNativeLink = function transformNativeLink(value, channelId, transformNativeInline) {
+export function transformNativeLink(value, channelId, transformNativeInline) {
   ({ text, url, title } = value);
   if (null != text) {
     if (0 !== text.length) {
@@ -97,4 +97,4 @@ export const transformNativeLink = function transformNativeLink(value, channelId
     }
     return obj5;
   }
-};
+}

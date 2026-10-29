@@ -105,7 +105,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5769).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5771).getSystemAnalyticsInfo;
 let Constants = fn(1084);
 ({
   AnalyticEvents: closure_17,
@@ -114,10 +114,10 @@ let Constants = fn(1084);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5850);
+const StreamSettingsConstants = fn(5852);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5851).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5754);
+let closure_24 = fn(5853).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5756);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -1970,7 +1970,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -2008,7 +2008,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[52]);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -2645,19 +2645,37 @@ prototype["_handleSfuUpdate"] = function _handleSfuUpdate(arg0, primary) {
     logger.warn("Received sfu_update from stale socket.");
   }
 };
+prototype["_shouldDropMediaEventForUser"] = function _shouldDropMediaEventForUser(userId, SPEAKING) {
+  const self = this;
+  const _userIds = this._userIds;
+  const hasItem = _userIds.has(userId);
+  let flag = !hasItem;
+  if (!hasItem) {
+    flag = false === self._latchIsStageChannel();
+  }
+  if (flag) {
+    const logger = self.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn("Dropping " + SPEAKING + " for user " + userId + " before CLIENTS_CONNECT.");
+    flag = true;
+  }
+  return flag;
+};
 prototype["_handleSpeaking"] = function _handleSpeaking(arg0, userId, audioSSRC, arg3) {
   const self = this;
-  const _connection = this._connection;
-  if (tmp) {
-    if (arg3 !== constants9.NONE) {
-      const user = _connection.createUser(userId, audioSSRC);
+  if (!this._shouldDropMediaEventForUser(userId, "SPEAKING")) {
+    const _connection = self._connection;
+    if (tmp2) {
+      if (arg3 !== constants9.NONE) {
+        const user = _connection.createUser(userId, audioSSRC);
+      }
+      const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
+      if (_localMediaSinkWantsManager != null) {
+        _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
+      }
     }
-    const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
-    if (_localMediaSinkWantsManager != null) {
-      _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
-    }
+    tmp2 = null != _connection && self.userId !== userId;
   }
-  tmp = null != _connection && self.userId !== userId;
 };
 prototype["handleFlags"] = function handleFlags(arg0, arg1) {
   this.emit(RTCConnectionEvent.RTCConnectionEvent.Flags, arg0, arg1);
@@ -2813,76 +2831,78 @@ prototype["_handleVideo"] = function _handleVideo(arg0, userId, audioSSRC, ssrc,
   closure_1 = userId;
   closure_0 = ssrc;
   if (MediaEngineStore.supports(constants5.VIDEO)) {
-    if (null != self._connection) {
-      if (self.userId !== userId) {
-        if (null != self._localMediaSinkWantsManager) {
-          const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
-          _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
-          const mapped = arr.map((rid) => ({
-            type: constants8.VIDEO,
-            rid: rid.rid,
-            ssrc: rid.ssrc,
-            rtxSsrc: rid.rtxSsrc,
-            quality: rid.quality,
-            active: closure_0 > 0,
-          }));
-          if (0 === mapped.length) {
-            const obj2 = {
+    if (!self._shouldDropMediaEventForUser(userId, "VIDEO")) {
+      if (null != self._connection) {
+        if (self.userId !== userId) {
+          if (null != self._localMediaSinkWantsManager) {
+            const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
+            _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
+            const mapped = arr.map((rid) => ({
               type: constants8.VIDEO,
-              rid: "100",
-              ssrc,
-              rtxSsrc: ssrc + 1,
-              quality: 100,
-              active: ssrc > 0,
-            };
-            arr = mapped.push(obj2);
-          }
-          const _localMediaSinkWantsManager2 = self._localMediaSinkWantsManager;
-          _localMediaSinkWantsManager2.setVideoSSRCs(userId, mapped);
-        } else {
-          const items = [];
-          const iter = arr[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let tmp5 = nextResult;
-            let tmp6 = null != nextResult.ssrc;
-            if (tmp6) {
-              tmp6 = null != tmp5.quality;
+              rid: rid.rid,
+              ssrc: rid.ssrc,
+              rtxSsrc: rid.rtxSsrc,
+              quality: rid.quality,
+              active: closure_0 > 0,
+            }));
+            if (0 === mapped.length) {
+              const obj2 = {
+                type: constants8.VIDEO,
+                rid: "100",
+                ssrc,
+                rtxSsrc: ssrc + 1,
+                quality: 100,
+                active: ssrc > 0,
+              };
+              arr = mapped.push(obj2);
             }
-            if (tmp6) {
-              let obj = { ssrc: null, quality: null, active: null };
-              ({ ssrc: obj.ssrc, quality: obj.quality, active } = tmp5);
-              if (active == null) {
-                active = true;
+            const _localMediaSinkWantsManager2 = self._localMediaSinkWantsManager;
+            _localMediaSinkWantsManager2.setVideoSSRCs(userId, mapped);
+          } else {
+            const items = [];
+            const iter = arr[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let tmp5 = nextResult;
+              let tmp6 = null != nextResult.ssrc;
+              if (tmp6) {
+                tmp6 = null != tmp5.quality;
               }
-              obj.active = active;
-              let arr2 = items.push(obj);
+              if (tmp6) {
+                let obj = { ssrc: null, quality: null, active: null };
+                ({ ssrc: obj.ssrc, quality: obj.quality, active } = tmp5);
+                if (active == null) {
+                  active = true;
+                }
+                obj.active = active;
+                let arr2 = items.push(obj);
+              }
+              continue;
             }
-            continue;
-          }
-          const _goLiveQualityManager = self._goLiveQualityManager;
-          if (_goLiveQualityManager != null) {
-            _goLiveQualityManager.setUserID(userId);
-          }
-          const _goLiveQualityManager2 = self._goLiveQualityManager;
-          if (_goLiveQualityManager2 != null) {
-            const result = _goLiveQualityManager2.updateAudioAndVideoStreamInfo(audioSSRC, items);
-          }
-        }
-        if (arr != null) {
-          const item = arr.forEach((quality) => {
-            if (100 === quality.quality) {
-              self.emit(
-                RTCConnectionEvent.RTCConnectionEvent.VideoSourceQualityChanged,
-                self.guildId,
-                self.channelId,
-                closure_1,
-                quality.maxResolution,
-                quality.maxFrameRate,
-                self.context,
-              );
+            const _goLiveQualityManager = self._goLiveQualityManager;
+            if (_goLiveQualityManager != null) {
+              _goLiveQualityManager.setUserID(userId);
             }
-          });
+            const _goLiveQualityManager2 = self._goLiveQualityManager;
+            if (_goLiveQualityManager2 != null) {
+              const result = _goLiveQualityManager2.updateAudioAndVideoStreamInfo(audioSSRC, items);
+            }
+          }
+          if (arr != null) {
+            const item = arr.forEach((quality) => {
+              if (100 === quality.quality) {
+                self.emit(
+                  RTCConnectionEvent.RTCConnectionEvent.VideoSourceQualityChanged,
+                  self.guildId,
+                  self.channelId,
+                  closure_1,
+                  quality.maxResolution,
+                  quality.maxFrameRate,
+                  self.context,
+                );
+              }
+            });
+          }
         }
       }
     }
@@ -3781,7 +3801,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5758).now();
+  const commitReceivedTime = _connection(5760).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3821,7 +3841,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5758).now();
+  const welcomeReceivedTime = _connection(5760).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

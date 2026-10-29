@@ -1,12 +1,12 @@
 // discord_app/modules/conjure/preview/conjurePreviewTargets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePreviewMode from "ConjurePreviewMode.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
 
-export const previewTargets = function previewTargets(modes, frameSurfaceOptions) {
+export function previewTargets(modes, frameSurfaceOptions) {
   closure_0 = frameSurfaceOptions;
   let items = stateFromStores3;
   if (stateFromStores3 === undefined) {
@@ -31,8 +31,8 @@ export const previewTargets = function previewTargets(modes, frameSurfaceOptions
     }
     return flatMapResult;
   });
-};
-export const previewTargetKey = function previewTargetKey(target) {
+}
+export function previewTargetKey(target) {
   if ("frame" !== target.mode) {
     let mode = target.mode;
   } else if (null == target.appChannel) {
@@ -43,8 +43,8 @@ export const previewTargetKey = function previewTargetKey(target) {
     mode = "frame-" + target.surface + "-" + target.appChannel;
   }
   return mode;
-};
-export const activePreviewTarget = function activePreviewTarget(activeMode, frameSurface) {
+}
+export function activePreviewTarget(activeMode, frameSurface) {
   let tmp = appChannel;
   if (appChannel === undefined) {
     tmp = null;
@@ -58,8 +58,8 @@ export const activePreviewTarget = function activePreviewTarget(activeMode, fram
   } else {
     const obj = { mode: activeMode, surface: frameSurface, appChannel: tmp };
   }
-};
-export const getPreviewTargetLabel = function getPreviewTargetLabel(memo1) {
+}
+export function getPreviewTargetLabel(memo1) {
   const mode = memo1.mode;
   if ("frame" === mode) {
     if (null == memo1.appChannel) {
@@ -67,21 +67,21 @@ export const getPreviewTargetLabel = function getPreviewTargetLabel(memo1) {
     } else {
       const intl4 = util.intl;
       const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface), channel: memo1.appChannel };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3863["6xVl+N"], obj);
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3864["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3863.y5GiL1);
+    return intl3.string(_modDef3864.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3863["2940LX"]);
+    return intl2.string(_modDef3864["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef3863.tjpaGN);
+    return intl.string(_modDef3864.tjpaGN);
   }
-};
-export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2, fn3) {
+}
+export function selectPreviewTarget(mode, fn, fn2, fn3) {
   if ("frame" === mode.mode) {
     fn2(mode.surface);
     if (null != mode.appChannel) {
@@ -91,4 +91,4 @@ export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2, f
     }
   }
   fn(mode.mode);
-};
+}

@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return obj2;
     };
 export { getGameArtworkSource };
-export const hasGameArtwork = function hasGameArtwork(media) {
+export function hasGameArtwork(media) {
   media = media.media;
   let cover;
   if (media != null) {
@@ -257,4 +257,4 @@ export const hasGameArtwork = function hasGameArtwork(media) {
     tmpResult = getGameMediaRefURL;
   }
   return null != str;
-};
+}

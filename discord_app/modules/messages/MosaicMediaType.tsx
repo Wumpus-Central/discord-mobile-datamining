@@ -22,7 +22,7 @@ export function isVisualMedia(arg0) {
   }
   return tmp;
 }
-export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAttachment(proxy_url, arg1) {
+export function getMosaicMediaTypeForAttachment(proxy_url, arg1) {
   ({ filename, width, height } = proxy_url);
   if (arg1) {
     if (null != width) {
@@ -72,8 +72,8 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     obj = PlaintextFilePreviewHelpers;
   }
   str = str2;
-};
-export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTypeForUnfurledMediaItem(arg0) {
+}
+export function getMosaicMediaTypeForUnfurledMediaItem(arg0) {
   ({ contentType, width, height } = arg0);
   if (null != width) {
     if (width > 0) {
@@ -93,4 +93,4 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
     }
   }
   return "VISUAL_PLACEHOLDER";
-};
+}

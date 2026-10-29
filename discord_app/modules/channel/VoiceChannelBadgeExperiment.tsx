@@ -52,9 +52,9 @@ export const useVoiceChannelBadgeExperiment = ReactCompilerGating.isReactCompile
         { autoTrackExposure: true },
       );
     };
-export const getVoiceChannelBadgeExperiment = function getVoiceChannelBadgeExperiment(guildId) {
+export function getVoiceChannelBadgeExperiment(guildId) {
   return experiment.getCurrentConfig(
     { guildId: guildId.guildId, location: guildId.location },
     { autoTrackExposure: true },
   );
-};
+}

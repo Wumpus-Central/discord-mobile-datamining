@@ -9,13 +9,11 @@ const constants = NotificationConstants.NotificationSettingsUpdateType;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/notifications/server_trending/ServerTrendingNotificationUtils.tsx");
 
-export const onServerTrendingNotificationSettingsChanged = function onServerTrendingNotificationSettingsChanged(
-  server_trending_notifications,
-) {
+export function onServerTrendingNotificationSettingsChanged(server_trending_notifications) {
   const EnableServerTrendingNotifications = UserSettings.EnableServerTrendingNotifications;
   EnableServerTrendingNotifications.updateSetting(server_trending_notifications);
   AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
     update_type: constants.ACCOUNT,
     server_trending_notifications,
   });
-};
+}

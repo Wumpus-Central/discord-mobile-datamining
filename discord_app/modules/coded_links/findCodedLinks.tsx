@@ -5,7 +5,7 @@ import InviteCodeUtils from "../instant_invite/InviteCodeUtils.tsx";
 import CodedLink from "CodedLink.tsx";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
-import keysSorter from "../../../_runtime/06757_keysSorter.js";
+import keysSorter from "../../../_runtime/06780_keysSorter.js";
 import storefrontMessageEmbedCodedLink from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
 import InviteTypeUtils from "../instant_invite/InviteTypeUtils.tsx";
 import ExperimentEmbedUtils from "../experiments/ExperimentEmbedUtils.tsx";
@@ -881,7 +881,7 @@ let result = size.fileFinishedImporting("modules/coded_links/findCodedLinks.tsx"
 
 export default findCodedLinks;
 export const DEVLINK_REGEX = tmp3;
-export const remainingPathFromDiscordHostMatch = function remainingPathFromDiscordHostMatch(parseURLSafelyResult) {
+export function remainingPathFromDiscordHostMatch(parseURLSafelyResult) {
   let replaced;
   if (parseURLSafelyResult.host != null) {
     replaced = str.replace(/^www[.]/i, "");
@@ -1015,9 +1015,9 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
     tmp3 = tmp19;
   }
   return tmp3;
-};
+}
 export { getPathsFromURL };
-export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
+export function isSuspiciousCodedLink(arr) {
   if (arr.includes("\\")) {
     const url = parseURLSafely(arr);
     if (null == url) {
@@ -1054,9 +1054,9 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
     }
   }
   return false;
-};
+}
 export { parseQuestsEmbedCode };
-export const parseUserProfileEmbedCode = function parseUserProfileEmbedCode(target) {
+export function parseUserProfileEmbedCode(target) {
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
@@ -1070,8 +1070,8 @@ export const parseUserProfileEmbedCode = function parseUserProfileEmbedCode(targ
     tmp3 = null;
   }
   return tmp3;
-};
-export const parseGameServerShareCode = function parseGameServerShareCode(target) {
+}
+export function parseGameServerShareCode(target) {
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
@@ -1085,9 +1085,9 @@ export const parseGameServerShareCode = function parseGameServerShareCode(target
     tmp3 = null;
   }
   return tmp3;
-};
+}
 export { parseURLSafely };
-export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
+export function findCodedLink(sanitizeUrlResult) {
   if (null == sanitizeUrlResult) {
     let items = [];
   } else {
@@ -1602,8 +1602,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     obj = findCodedLinkUrlsDefault(str);
   }
   return items[0];
-};
-export const containsCodedLink = function containsCodedLink(sanitizeWhitespaceResult) {
+}
+export function containsCodedLink(sanitizeWhitespaceResult) {
   if (null == sanitizeWhitespaceResult) {
     return tmp;
   } else {
@@ -2125,4 +2125,4 @@ export const containsCodedLink = function containsCodedLink(sanitizeWhitespaceRe
       const obj2 = findCodedLinkUrlsDefault(str2);
     }
   }
-};
+}

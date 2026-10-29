@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import util from "../../intl/index.native.tsx";
-import _modDef2535 from "FamilyCenter.messages.js";
+import _modDef2536 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -38,19 +38,19 @@ let obj = {
 };
 let map = new Map();
 let obj2 = {
-  [Created]: _modDef2535["5V7eBH"],
-  [Enabled]: _modDef2535.iefrVg,
-  [Disabled]: _modDef2535["k+s9cM"],
-  [Updated]: _modDef2535.Nm6hZV,
-  [Multiple]: _modDef2535.Nm6hZV,
-  [Removed]: _modDef2535.jR6uOs,
+  [Created]: _modDef2536["5V7eBH"],
+  [Enabled]: _modDef2536.iefrVg,
+  [Disabled]: _modDef2536["k+s9cM"],
+  [Updated]: _modDef2536.Nm6hZV,
+  [Multiple]: _modDef2536.Nm6hZV,
+  [Removed]: _modDef2536.jR6uOs,
 };
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
 
 export const RestrictedScheduleNotificationKind = obj;
 export const EMPTY_SCHEDULE_SNAPSHOT = map;
-export const toScheduleSnapshot = function toScheduleSnapshot(restrictedSchedule) {
+export function toScheduleSnapshot(restrictedSchedule) {
   if (null != restrictedSchedule) {
     if (0 !== restrictedSchedule.rules.length) {
       const _Map = Map;
@@ -64,8 +64,8 @@ export const toScheduleSnapshot = function toScheduleSnapshot(restrictedSchedule
     }
     return map;
   }
-};
-export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult) {
+}
+export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult) {
   function record(Created, value) {
     if (0 === closure_4) {
       closure_0 = Created;
@@ -211,22 +211,22 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
     return obj10;
   }
   let set = new Set(items1);
-};
-export const getRestrictedScheduleNotificationTitle = function getRestrictedScheduleNotificationTitle(kind) {
+}
+export function getRestrictedScheduleNotificationTitle(kind) {
   const intl = util.intl;
   return intl.string(obj2[kind]);
-};
-export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
+}
+export function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
     result = FamilyCenterRestrictedHoursUtils.formatRestrictedScheduleInAppSubtitle(rule);
   }
   if (result == null) {
     const intl = util.intl;
-    result = intl.string(_modDef2535["8OlpoY"]);
+    result = intl.string(_modDef2536["8OlpoY"]);
   }
   return result;
-};
-export const restrictedScheduleNotificationKey = function restrictedScheduleNotificationKey(kind) {
+}
+export function restrictedScheduleNotificationKey(kind) {
   return "restricted-schedule-" + kind;
-};
+}

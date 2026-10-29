@@ -126,11 +126,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isVerifiedAdult = channelId(6689).useIsVerifiedAdult();
-      const obj2 = channelId(6689);
-      const obj3 = channelId(5680);
+      const isVerifiedAdult = channelId(6713).useIsVerifiedAdult();
+      const obj2 = channelId(6713);
+      const obj3 = channelId(5682);
       return (
-        channelId(5680).useIsFeatureAgeGated(channelId(6694).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5682).useIsFeatureAgeGated(channelId(6718).AgeGatedFeature.STAGE_SPEAKING) &&
         !isVerifiedAdult &&
         stateFromStores
       );
@@ -236,11 +236,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isAgeVerified = channelId(6689).useIsAgeVerified();
-      const obj2 = channelId(6689);
-      const obj3 = channelId(5680);
+      const isAgeVerified = channelId(6713).useIsAgeVerified();
+      const obj2 = channelId(6713);
+      const obj3 = channelId(5682);
       return (
-        channelId(5680).useIsFeatureAgeGated(channelId(6694).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5682).useIsFeatureAgeGated(channelId(6718).AgeGatedFeature.STAGE_SPEAKING) &&
         !isAgeVerified &&
         stateFromStores
       );
@@ -249,13 +249,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageSpeakingForCurrentUser.tsx");
 
 export const useIsStageSpeakingDisabledForCurrentUser = tmp2;
-export const isStageSpeakingDisabledForCurrentUser = function isStageSpeakingDisabledForCurrentUser() {
+export function isStageSpeakingDisabledForCurrentUser() {
   const isVerifiedTeenResult = AgeVerificationUtils.isVerifiedTeen();
   return (
     RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.STAGE_SPEAKING) && isVerifiedTeenResult
   );
-};
-export const shouldAgeVerifyToSpeakForCurrentUser = function shouldAgeVerifyToSpeakForCurrentUser(id) {
+}
+export function shouldAgeVerifyToSpeakForCurrentUser(id) {
   let channelId = id;
   if (null == id) {
     channelId = SelectedChannelStore.getChannelId();
@@ -275,7 +275,7 @@ export const shouldAgeVerifyToSpeakForCurrentUser = function shouldAgeVerifyToSp
     !isVerifiedAdultResult &&
     canResult
   );
-};
+}
 export const useShouldAgeVerifyToSpeakForCurrentUser = tmp3;
 export const useShouldShowAgeVerificationPopover = tmp4;
 export const useShouldShowAgeVerificationForEvent = ReactCompilerGating.isReactCompilerEnabled()

@@ -6,8 +6,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
 
-export const copyGuildChannelOrThreadLink = function copyGuildChannelOrThreadLink(guild_id, id) {
+export function copyGuildChannelOrThreadLink(guild_id, id) {
   const channelPermalink = ChannelUtils.getChannelPermalink(guild_id, id);
   ClipboardUtils.copy(channelPermalink);
   ToastUtils.presentLinkCopied();
-};
+}

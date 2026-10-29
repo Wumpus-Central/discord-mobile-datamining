@@ -11,7 +11,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/ChangeSpendingLimitFormState.tsx");
 
-export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFormState(teenId) {
+export function useChangeSpendingLimitFormState(teenId) {
   _require = teenId;
   let ParentalControlledSpendingLimit = require("ParentalControlledUserSettings").ParentalControlledSpendingLimit;
   controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(teenId);
@@ -118,7 +118,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -136,7 +136,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
                 closure_8(true);
                 c3 = 1;
                 if (closure_5) {
-                  const ParentalControlledSpendingLimit2 = tmp3(16376).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit2 = tmp3(16614).ParentalControlledSpendingLimit;
                   dependencyMap = 2;
                   c4 = 1;
                   const obj4 = {
@@ -145,7 +145,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
                   };
                   return obj4;
                 } else if (null != rounded) {
-                  const ParentalControlledSpendingLimit = tmp3(16376).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit = tmp3(16614).ParentalControlledSpendingLimit;
                   const obj5 = { amount: tmp16, currency: formatted };
                   dependencyMap = 3;
                   c4 = 1;
@@ -157,7 +157,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
                 }
               }
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -215,4 +215,4 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   obj4.monthlySpend = stateFromStores1;
   obj4.save = callback1;
   return obj4;
-};
+}

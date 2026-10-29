@@ -43,7 +43,7 @@ function getConsoleInfo(type) {
 }
 const PlatformTypes = fn(1084).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   consoleIconContainer: {
     borderRadius: nativeDefault.radii.round,

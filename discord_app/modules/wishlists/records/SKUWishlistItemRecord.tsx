@@ -49,6 +49,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
 
 export default prototype;
-export const isSKUWishlistItemRecord = function isSKUWishlistItemRecord(sku) {
+export function isSKUWishlistItemRecord(sku) {
   return sku instanceof prototype;
-};
+}

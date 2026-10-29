@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import chunkDefault from "../../../../../../_runtime/09989_chunk.js";
+import chunkDefault from "../../../../../../_runtime/10021_chunk.js";
 import LayoutUtils from "../LayoutUtils.tsx";
 import EmojiIconDefault from "../EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGal
     class I {
       constructor(arg0, arg1) {
         obj = { style: { flexDirection: "row" }, children: null };
-        obj1 = { gap: 16, children: maxPerRow.map(() => { ... }) };
+        obj1 = { gap: 16, children: maxPerRow.map(/* F155858 */ function() { ... }) };
         obj.children = jsx(closure_0(closure_2[6]).GappedList, obj1);
         return jsx(View, obj, arg1);
       }
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGal
     class I {
       constructor(arg0, arg1) {
         obj = { style: { flexDirection: "row" }, children: null };
-        obj1 = { gap: 16, children: maxPerRow.map(() => { ... }) };
+        obj1 = { gap: 16, children: maxPerRow.map(/* F155858 */ function() { ... }) };
         obj.children = jsx(closure_0(closure_2[6]).GappedList, obj1);
         return jsx(View, obj, arg1);
       }
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGal
   cResult[0] = emojiIds;
   cResult[1] = guildId;
   cResult[2] = num;
-  cResult[3] = guildId(9991).GappedList;
+  cResult[3] = guildId(10023).GappedList;
   cResult[4] = View;
   cResult[5] = 8;
   cResult[6] = mapped;

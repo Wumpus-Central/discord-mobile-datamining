@@ -3,7 +3,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
 
-export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
+export function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
   if (toByteArrayResult.byteLength < desiredLength) {
     const _Error4 = Error;
     const error = new Error("data.byteLength must be greater than or equal to desiredLength");
@@ -54,4 +54,4 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
     }
     return str3;
   }
-};
+}

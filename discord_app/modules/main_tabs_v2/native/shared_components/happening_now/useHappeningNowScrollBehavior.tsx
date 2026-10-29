@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       return items1;
     };
-export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapping(listRef) {
+export function useHappeningNowScrollSnapping(listRef) {
   const current = listRef.current;
   let num;
   if (current != null) {
@@ -93,4 +93,4 @@ export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapp
     } while (num2 < num);
   }
   return items;
-};
+}

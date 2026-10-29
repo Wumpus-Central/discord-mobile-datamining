@@ -19,7 +19,7 @@ const MuteUntilSeconds = fn(1094).MuteUntilSeconds;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx");
 
-export const getMuteSettingLabel = function getMuteSettingLabel(stateFromStores, stateFromStores1) {
+export function getMuteSettingLabel(stateFromStores, stateFromStores1) {
   if (null != stateFromStores) {
     if (stateFromStores.isPrivate()) {
       const intl5 = util.intl;
@@ -49,8 +49,8 @@ export const getMuteSettingLabel = function getMuteSettingLabel(stateFromStores,
     }
     return stringResult1;
   }
-};
-export const getMuteSettingSublabel = function getMuteSettingSublabel(stateFromStores, stateFromStores1) {
+}
+export function getMuteSettingSublabel(stateFromStores, stateFromStores1) {
   if (null != stateFromStores) {
     const obj = useChannelName;
     let name = obj.computeChannelName(stateFromStores, UserStore, RelationshipStore, true);
@@ -58,8 +58,8 @@ export const getMuteSettingSublabel = function getMuteSettingSublabel(stateFromS
     name = stateFromStores1.name;
   }
   return name;
-};
-export const handleUnmutePress = function handleUnmutePress(channelId, guildId) {
+}
+export function handleUnmutePress(channelId, guildId) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
@@ -76,8 +76,8 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
       const tmp5Result2 = NotificationSettingsModalActionCreatorsDefault;
     }
   }
-};
-export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
+}
+export function handleMuteSettingPress(arg0) {
   ({ guildId, onOptionPress } = arg0);
   ({ channelId, muteDurationSeconds } = arg0);
   const muteSettings = ChannelMuteUtilsAll.getMuteSettings(muteDurationSeconds);
@@ -106,8 +106,8 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
       NotificationSettingsUtils.NotificationLabels.Muted,
     );
   }
-};
-export const getMuteSettings = function getMuteSettings(channelId) {
+}
+export function getMuteSettings(channelId) {
   let id = ChannelStore.getChannel(channelId);
   if (null == id) {
     const obj = {
@@ -132,8 +132,8 @@ export const getMuteSettings = function getMuteSettings(channelId) {
     UserGuildSettingsStore.isMuted(guildId);
     const messageNotifications = UserGuildSettingsStore.getMessageNotifications(guildId);
   }
-};
-export const getMessageNotificationsText = function getMessageNotificationsText(messageNotifications) {
+}
+export function getMessageNotificationsText(messageNotifications) {
   if (constants2.ALL_MESSAGES === messageNotifications) {
     const intl3 = util.intl;
     return intl3.string(util.t.DZi15z);
@@ -146,8 +146,8 @@ export const getMessageNotificationsText = function getMessageNotificationsText(
   } else {
     return null;
   }
-};
-export const getMuteOptions = function getMuteOptions() {
+}
+export function getMuteOptions() {
   const obj = { label: null, duration: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["8ot6gv"]);
@@ -179,4 +179,4 @@ export const getMuteOptions = function getMuteOptions() {
   obj6.duration = MuteUntilSeconds.ALWAYS;
   items[5] = obj6;
   return items;
-};
+}

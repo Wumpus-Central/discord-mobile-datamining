@@ -16,9 +16,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
 
-export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(
-  serverDismissalTimestampMs,
-) {
+export function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs) {
   _require = serverDismissalTimestampMs;
   const id = AuthenticationStore.getId();
   const HTTP = require("HTTPUtils").HTTP;
@@ -49,11 +47,11 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
       closure_1(584).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     },
   );
-};
-export const logFriendsListGiftIntentsShown = function logFriendsListGiftIntentsShown() {
+}
+export function logFriendsListGiftIntentsShown() {
   DispatcherDefault.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
-};
-export const logMessageGiftIntentShown = function logMessageGiftIntentShown(recipientUserId) {
+}
+export function logMessageGiftIntentShown(recipientUserId) {
   let FRIEND_ANNIVERSARY = arg1;
   if (arg1 === undefined) {
     FRIEND_ANNIVERSARY = GiftIntentType.FRIEND_ANNIVERSARY;
@@ -78,8 +76,8 @@ export const logMessageGiftIntentShown = function logMessageGiftIntentShown(reci
     });
     const postResult = HTTP.post(request);
   }
-};
-export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismissed(channel_id, id) {
+}
+export function logGiftIntentMessageDismissed(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   let giftingPrompt;
   if (message != null) {
@@ -106,8 +104,8 @@ export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismis
       const postResult = HTTP.post(request);
     }
   }
-};
-export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchasedGift(recipientUserId) {
+}
+export function logGiftIntentFlowPurchasedGift(recipientUserId) {
   let FRIEND_ANNIVERSARY = arg1;
   if (arg1 === undefined) {
     FRIEND_ANNIVERSARY = GiftIntentType.FRIEND_ANNIVERSARY;
@@ -132,4 +130,4 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
     });
     const postResult = HTTP.post(request);
   }
-};
+}

@@ -66,7 +66,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoNoticeVisibility.tsx");
 
-export const shouldShowAgeNotice = function shouldShowAgeNotice() {
+export function shouldShowAgeNotice() {
   let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.NOTICE);
   if (isFeatureAgeGatedResult) {
     const currentUser = UserStore.getCurrentUser();
@@ -84,7 +84,7 @@ export const shouldShowAgeNotice = function shouldShowAgeNotice() {
       prop !== Server.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
   }
   return isFeatureAgeGatedResult;
-};
+}
 export const useShouldShowAgeNotice = tmp2;
 export const useShouldShowAgeNoticePromo = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldShowAgeNoticePromo() {

@@ -1,5 +1,5 @@
 // discord_app/modules/forwarding/native/ForwardModalUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ForwardingAnalyticsUtils from "../ForwardingAnalyticsUtils.tsx";
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardModalUtils.tsx");
 
 export const FORWARD_MODAL_KEY = "forward-modal";
-export const openForwardModal = function openForwardModal(arg0) {
+export function openForwardModal(arg0) {
   ({ message, source, initialSelectedDestinations } = arg0);
   if (initialSelectedDestinations === undefined) {
     initialSelectedDestinations = [];
@@ -23,19 +23,19 @@ export const openForwardModal = function openForwardModal(arg0) {
   ({ forwardOptions, customSendHandler } = arg0);
   ForwardingAnalyticsUtils.trackForwardStart(message.channel_id, message.id, source);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(12961, dependencyMap.paths),
+    asyncRequireImpl(13182, dependencyMap.paths),
     { message, initialSelectedDestinations, forwardOptions, source, customSendHandler },
     c5,
   );
-};
-export const closeForwardModal = function closeForwardModal() {
+}
+export function closeForwardModal() {
   ModalActionCreatorsDefault.popWithKey(c5);
-};
-export const showForwardFailedAlertModal = function showForwardFailedAlertModal(arg0) {
+}
+export function showForwardFailedAlertModal(arg0) {
   ({ message, failedDestinations, forwardOptions } = arg0);
   const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[7], paths.paths));
   useAlertStore.openAlert(
     "forward-failed-alert-modal",
     <lazyResult message={message} failedDestinations={failedDestinations} forwardOptions={forwardOptions} />,
   );
-};
+}

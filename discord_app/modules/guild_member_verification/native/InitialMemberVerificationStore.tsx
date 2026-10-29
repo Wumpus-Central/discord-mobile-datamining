@@ -29,6 +29,6 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
 
 export default initialMemberVerificationStore;
-export const setInitialVerification = function setInitialVerification(guildId, state) {
+export function setInitialVerification(guildId, state) {
   DispatcherDefault.dispatch({ type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state });
-};
+}

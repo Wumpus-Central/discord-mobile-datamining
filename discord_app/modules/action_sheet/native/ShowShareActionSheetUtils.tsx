@@ -11,7 +11,7 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const presentDelayMs = SharePreparingModalConstants.SHARE_SHEET_PRESENT_DELAY_MS;
 const result = size.fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");
 
-export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
+export function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
   if (app == null) {
     str = "";
@@ -20,8 +20,8 @@ export const trackAppClickInNativeShareSheet = function trackAppClickInNativeSha
     package_name: str,
     location: _location,
   });
-};
-export const getMediaShareParams = function getMediaShareParams(source) {
+}
+export function getMediaShareParams(source) {
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
@@ -70,7 +70,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
     mediaFallbackUrl = source.uri;
   }
   return { mediaFallbackUrl };
-};
-export const resolveShareFileExtension = function resolveShareFileExtension(uri, contentType) {
+}
+export function resolveShareFileExtension(uri, contentType) {
   return FileExtensionUtils.decideFileExtension(uri, contentType, true);
-};
+}

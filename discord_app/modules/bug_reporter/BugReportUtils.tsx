@@ -31,7 +31,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -196,7 +196,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
 
-export const fetchBugReportConfig = function fetchBugReportConfig() {
+export function fetchBugReportConfig() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -205,8 +205,8 @@ export const fetchBugReportConfig = function fetchBugReportConfig() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getFeatureId = function getFeatureId(feature) {
+}
+export function getFeatureId(feature) {
   let str;
   if (feature != null) {
     str = feature.name;
@@ -226,8 +226,8 @@ export const getFeatureId = function getFeatureId(feature) {
     str3 = `${str}::${str2}`;
   }
   return str3;
-};
-export const getPriorities = function getPriorities() {
+}
+export function getPriorities() {
   const obj = { title: null, description: null, emoji: "801497159479722084", value: 0 };
   const intl = util.intl;
   obj.title = intl.string(util.t.VwIij9);
@@ -253,8 +253,8 @@ export const getPriorities = function getPriorities() {
   obj4.description = intl8.format(util.t.D4rbgX, {});
   items[3] = obj4;
   return items;
-};
-export const submitReport = function submitReport() {
+}
+export function submitReport() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -263,4 +263,4 @@ export const submitReport = function submitReport() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

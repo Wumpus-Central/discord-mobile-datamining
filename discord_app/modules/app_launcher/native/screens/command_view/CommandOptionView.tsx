@@ -10,18 +10,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  fn(1997).ApplicationCommandOptionType.STRING,
-  fn(1997).ApplicationCommandOptionType.INTEGER,
-  fn(1997).ApplicationCommandOptionType.ATTACHMENT,
-  fn(1997).ApplicationCommandOptionType.BOOLEAN,
-  fn(1997).ApplicationCommandOptionType.MENTIONABLE,
-  fn(1997).ApplicationCommandOptionType.USER,
-  fn(1997).ApplicationCommandOptionType.ROLE,
-  fn(1997).ApplicationCommandOptionType.CHANNEL,
-  fn(1997).ApplicationCommandOptionType.NUMBER,
+  fn(1998).ApplicationCommandOptionType.STRING,
+  fn(1998).ApplicationCommandOptionType.INTEGER,
+  fn(1998).ApplicationCommandOptionType.ATTACHMENT,
+  fn(1998).ApplicationCommandOptionType.BOOLEAN,
+  fn(1998).ApplicationCommandOptionType.MENTIONABLE,
+  fn(1998).ApplicationCommandOptionType.USER,
+  fn(1998).ApplicationCommandOptionType.ROLE,
+  fn(1998).ApplicationCommandOptionType.CHANNEL,
+  fn(1998).ApplicationCommandOptionType.NUMBER,
 ];
 const set = new Set(items);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   optionDescription: { marginTop: 4 },
   optionErrorContainer: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4, marginTop: 4 },
@@ -29,9 +29,9 @@ let obj2 = {
 };
 let closure_8 = createStyles.createStyles(obj2);
 let items1 = [
-  fn(1997).ApplicationCommandOptionType.STRING,
-  fn(1997).ApplicationCommandOptionType.INTEGER,
-  fn(1997).ApplicationCommandOptionType.NUMBER,
+  fn(1998).ApplicationCommandOptionType.STRING,
+  fn(1998).ApplicationCommandOptionType.INTEGER,
+  fn(1998).ApplicationCommandOptionType.NUMBER,
 ];
 const ReactCompilerGating = fn(558);
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4, marginTop: 4 };
@@ -500,17 +500,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_8();
       const items = [AccessibilityStore];
       const stateFromStores = option(504).useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
-      const ReduceMotion = option(5085).ReduceMotion;
+      const ReduceMotion = option(5086).ReduceMotion;
       const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj = option(504);
-      const optionEnteringAnimation = option(12085).useOptionEnteringAnimation();
+      const optionEnteringAnimation = option(12139).useOptionEnteringAnimation();
       let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
       if (set.has(option.type)) {
         if (option.required || isPreSelectedOption) {
           fn = (fn) => fn();
         }
-        const FadeOut = tmp2(5085).FadeOut;
-        const FadeInUp = tmp2(5085).FadeInUp;
+        const FadeOut = tmp2(5086).FadeOut;
+        const FadeInUp = tmp2(5086).FadeInUp;
         const obj2 = { transform: null };
         items1 = [{ translateY: -10 }];
         obj2.transform = items1;
@@ -533,8 +533,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           collapsable: false,
           entering: optionEnteringAnimation.EnteringAnimation,
-          exiting: tmp2(12085).ExitingAnimation,
-          layout: tmp2(12085).LayoutAnimation,
+          exiting: tmp2(12139).ExitingAnimation,
+          layout: tmp2(12139).LayoutAnimation,
           onLayout(arg0) {
             importDefault(arg0, option);
           },
@@ -548,7 +548,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-subtle",
             children: option.displayName,
           };
-          hasItem1 = closure_5(tmp2(5270).Text, obj7);
+          hasItem1 = closure_5(tmp2(5271).Text, obj7);
         }
         const items2 = [hasItem1, , ,];
         const obj8 = {
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: option.displayDescription,
         };
-        items2[2] = closure_5(tmp2(5270).Text, obj9);
+        items2[2] = closure_5(tmp2(5271).Text, obj9);
         if (hasItem) {
           const obj10 = {
             collapsable: false,
@@ -588,13 +588,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: tmp.optionErrorContainer,
             children: null,
           };
-          const items3 = [closure_5(tmp2(7048).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" })];
+          const items3 = [closure_5(tmp2(7072).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" })];
           const obj11 = {
             variant: "text-xs/medium",
             color: "text-feedback-critical",
             children: optionValidationResults[option.name].error,
           };
-          items3[1] = closure_5(tmp2(5270).Text, obj11);
+          items3[1] = closure_5(tmp2(5271).Text, obj11);
           obj10.children = items3;
           hasItem = closure_6(ReanimatedRexportDefault.View, obj10);
         }
@@ -602,10 +602,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items2;
         obj5.children = closure_6(View, obj6);
         obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-        obj3.children = closure_5(tmp2(12093).AwaitAnimationContext, obj4);
-        return closure_5(tmp2(5085).LayoutAnimationConfig, obj3);
+        obj3.children = closure_5(tmp2(12147).AwaitAnimationContext, obj4);
+        return closure_5(tmp2(5086).LayoutAnimationConfig, obj3);
       } else {
         return null;
       }
-      const tmp2Result = option(12085);
+      const tmp2Result = option(12139);
     };

@@ -14,7 +14,7 @@ let closure_4 = async function _tryLoadAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -78,7 +78,7 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -154,15 +154,15 @@ const logger = new LoggerDefault("TryLoad");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
 
-export const tryLoad = function tryLoad(fn) {
+export function tryLoad(fn) {
   try {
     return fn();
   } catch (tmp2) {
     logger.log("database load failed.", tmp2);
     return null;
   }
-};
-export const tryLoadAsync = function tryLoadAsync() {
+}
+export function tryLoadAsync() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -171,8 +171,8 @@ export const tryLoadAsync = function tryLoadAsync() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(arg0, fn, ensureGuildLoaded) {
+}
+export function tryLoadOrResetCacheGateway(arg0, fn, ensureGuildLoaded) {
   try {
     return fn();
   } catch (tmp2) {
@@ -192,8 +192,8 @@ export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(ar
     DispatcherDefault.dispatch(obj3);
     return null;
   }
-};
-export const tryLoadOrResetCacheGatewayAsync = function tryLoadOrResetCacheGatewayAsync() {
+}
+export function tryLoadOrResetCacheGatewayAsync() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -202,4 +202,4 @@ export const tryLoadOrResetCacheGatewayAsync = function tryLoadOrResetCacheGatew
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

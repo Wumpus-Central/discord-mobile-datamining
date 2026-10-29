@@ -2,22 +2,22 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
-import _modDef2535 from "../FamilyCenter.messages.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import _modDef2536 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef14798 from "../../../../_runtime/metro/14798__.js";
+import _modDef15033 from "../../../../_runtime/metro/15033__.js";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import _modDef16483 from "../../../../_runtime/metro/16483__.js";
+import _modDef16721 from "../../../../_runtime/metro/16721__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FamilyCenterPendingLinkRow(otherUser) {
   const tmp = closure_9();
-  otherUser.otherUser(8157);
+  otherUser.otherUser(8180);
   if (undefined === otherUser.otherUser) {
     return null;
   } else {
@@ -35,14 +35,14 @@ function FamilyCenterPendingLinkRow(otherUser) {
         children: null,
       };
       const obj3 = { name: str1 };
-      obj2.accessibilityLabel = intl3.formatToPlainString(_modDef2535.oUpA6X, obj3);
+      obj2.accessibilityLabel = intl3.formatToPlainString(_modDef2536.oUpA6X, obj3);
       obj2.onPress = function handleCancel() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16487, dependencyMap.paths), { otherUser: str });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16725, dependencyMap.paths), { otherUser: str });
       };
       obj2.style = tmp.actionButton;
-      const obj4 = { size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true, source: _modDef16483 };
+      const obj4 = { size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true, source: _modDef16721 };
       obj2.children = closure_5(tmp5(1199).Icon, obj4);
-      let tmp8Result = closure_5(tmp5(6944).PressableOpacity, obj2);
+      let tmp8Result = closure_5(tmp5(6968).PressableOpacity, obj2);
       let tmp14 = closure_5;
     } else {
       let tmp12Result = null;
@@ -60,16 +60,16 @@ function FamilyCenterPendingLinkRow(otherUser) {
           children: null,
         };
         const obj5 = { name: str2 };
-        obj.accessibilityLabel = intl.formatToPlainString(_modDef2535.jc1Ip7, obj5);
+        obj.accessibilityLabel = intl.formatToPlainString(_modDef2536.jc1Ip7, obj5);
         obj.onPress = function handleAccept() {
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16485, dependencyMap.paths), { otherUser: str });
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16723, dependencyMap.paths), { otherUser: str });
         };
         const items = [,];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
         obj.style = items;
-        const obj6 = { size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true, source: _modDef14798 };
+        const obj6 = { size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true, source: _modDef15033 };
         obj.children = closure_5(tmp5(1199).Icon, obj6);
-        tmp12Result = closure_5(tmp5(6944).PressableOpacity, obj);
+        tmp12Result = closure_5(tmp5(6968).PressableOpacity, obj);
       }
       const items1 = [tmp12Result];
       tmp14 = closure_5;
@@ -87,14 +87,14 @@ function FamilyCenterPendingLinkRow(otherUser) {
         children: null,
       };
       const obj9 = { name: str3 };
-      obj8.accessibilityLabel = intl2.formatToPlainString(_modDef2535["4GtllP"], obj9);
+      obj8.accessibilityLabel = intl2.formatToPlainString(_modDef2536["4GtllP"], obj9);
       obj8.onPress = function handleDecline() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16486, dependencyMap.paths), { otherUser: str });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16724, dependencyMap.paths), { otherUser: str });
       };
       obj8.style = tmp.actionButton;
-      const obj10 = { size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true, source: _modDef16483 };
+      const obj10 = { size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true, source: _modDef16721 };
       obj8.children = tmp14(tmp5(1199).Icon, obj10);
-      items1[1] = tmp14(tmp5(6944).PressableOpacity, obj8);
+      items1[1] = tmp14(tmp5(6968).PressableOpacity, obj8);
       obj7.children = items1;
       tmp8Result = closure_6(closure_7, obj7);
     }
@@ -104,10 +104,10 @@ function FamilyCenterPendingLinkRow(otherUser) {
   tmp4 = useIsInAdultAgeGroupDefault();
 }
 const View = fn(17).View;
-const UserLinkStatus = fn(7681).UserLinkStatus;
+const UserLinkStatus = fn(7704).UserLinkStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj2 = {
   container: { marginTop: 24 },
   content: {
@@ -126,7 +126,7 @@ let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderRadius: nativeDefault.radii.md,
 };
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj6 = { actionButton: null, actionButtonFirst: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== usersForLinkStatus.length) {
         const intl = util.intl;
         const obj3 = { count: usersForLinkStatus.length };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2535.IkAgkG, obj3);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2536.IkAgkG, obj3);
         cResult[0] = usersForLinkStatus.length;
         cResult[1] = formatToPlainStringResult;
         let tmp5 = formatToPlainStringResult;
@@ -156,7 +156,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== usersForLinkStatus.length) {
         const intl2 = util.intl;
         const obj4 = { count: usersForLinkStatus.length };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2535.Q8XnAa, obj4);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2536.Q8XnAa, obj4);
         cResult[2] = usersForLinkStatus.length;
         cResult[3] = formatToPlainStringResult1;
         let tmp8 = formatToPlainStringResult1;
@@ -244,7 +244,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const usersForLinkStatus = useUserLinks.useUsersForLinkStatus(UserLinkStatus.PENDING);
       useAgeSpecificText;
       const intl = util.intl;
-      intl.formatToPlainString(_modDef2535.IkAgkG, { count: usersForLinkStatus.length });
+      intl.formatToPlainString(_modDef2536.IkAgkG, { count: usersForLinkStatus.length });
       const intl2 = util.intl;
       let tmp7 = null;
       if (0 !== usersForLinkStatus.length) {

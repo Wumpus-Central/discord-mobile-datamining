@@ -26,7 +26,7 @@ let closure_8 = async function _fetchSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ let closure_9 = async function _fetchPublicSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -192,7 +192,7 @@ let closure_10 = async function _fetchPublishedSKU(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -289,90 +289,30 @@ let closure_10 = async function _fetchPublishedSKU(arg0) {
     }
   })();
 };
-let closure_11 = async function _fetchTestSKUsForApplication(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = true;
-          }
-          closure_130_1 = flag;
-          let body;
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          if (!obj12.isTestModeForApplication(closure_130_0)) {
-            if (closure_130_1) {
-              const _Error = Error;
-              const error = new Error("this should only be used in test mode");
-              throw error;
-            }
-          }
-          obj12 = closure_131_0(closure_131_2[8]);
-          const obj6 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: null };
-          const obj5 = closure_131_0(closure_131_2[5]);
-          obj6.rejectWithError = closure_131_0(closure_131_2[6]).rejectWithMigratedError();
-          c4 = 2;
-          c5 = 1;
-          const obj8 = { value: obj5.httpGetWithCountryCodeQuery(obj6), done: false };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        body = value.body;
-        const obj10 = { type: "SKUS_FETCH_SUCCESS", skus: body };
-        closure_131_1(closure_131_2[4]).dispatch(obj10);
-        c5 = 3;
-        const obj11 = { value: body, done: true };
-        return obj11;
-      }
-    } catch (tmp28) {
-      c5 = tmp;
-      throw tmp28;
+let closure_11 = async function _fetchTestSKUsForApplication() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = true;
+  }
+  closure_130_1 = flag;
+  await "Reflect";
+  if (!obj12.isTestModeForApplication(closure_130_0)) {
+    if (closure_130_1) {
+      const _Error = Error;
+      const error = new Error("this should only be used in test mode");
+      throw error;
     }
   }
+  const obj6 = {
+    url: closure_131_7.APPLICATION_SKUS(closure_130_0),
+    rejectWithError: closure_131_0(closure_131_2[6]).rejectWithMigratedError(),
+  };
+  await closure_131_0(closure_131_2[5]).httpGetWithCountryCodeQuery(obj6);
+  const body = value.body;
+  closure_131_1(closure_131_2[4]).dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body });
+  return body;
 };
 let closure_12 = async function _previewPurchaseSku(arg0) {
   if (c6 === 2) {
@@ -385,7 +325,7 @@ let closure_12 = async function _previewPurchaseSku(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -422,7 +362,7 @@ let closure_12 = async function _previewPurchaseSku(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -522,7 +462,7 @@ let closure_13 = async function _grantChannelBranchEntitlement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -621,7 +561,7 @@ let closure_15 = async function _orderSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -743,7 +683,7 @@ let closure_16 = async function _purchaseSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1013,7 +953,7 @@ let closure_17 = async function _resendPaymentVerificationEmail() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1086,7 +1026,7 @@ let closure_14 = { isGift: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SKUActionCreators.tsx");
 
-export const fetchSKU = function fetchSKU() {
+export function fetchSKU() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -1095,8 +1035,8 @@ export const fetchSKU = function fetchSKU() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchPublicSKU = function fetchPublicSKU() {
+}
+export function fetchPublicSKU() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -1105,8 +1045,8 @@ export const fetchPublicSKU = function fetchPublicSKU() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchPublishedSKU = function fetchPublishedSKU() {
+}
+export function fetchPublishedSKU() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -1115,8 +1055,8 @@ export const fetchPublishedSKU = function fetchPublishedSKU() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchTestSKUsForApplication = function fetchTestSKUsForApplication() {
+}
+export function fetchTestSKUsForApplication() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -1125,8 +1065,8 @@ export const fetchTestSKUsForApplication = function fetchTestSKUsForApplication(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const previewPurchaseSku = function previewPurchaseSku() {
+}
+export function previewPurchaseSku() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -1135,8 +1075,8 @@ export const previewPurchaseSku = function previewPurchaseSku() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const grantChannelBranchEntitlement = function grantChannelBranchEntitlement() {
+}
+export function grantChannelBranchEntitlement() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -1145,8 +1085,8 @@ export const grantChannelBranchEntitlement = function grantChannelBranchEntitlem
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const orderSKU = function orderSKU() {
+}
+export function orderSKU() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -1155,8 +1095,8 @@ export const orderSKU = function orderSKU() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const purchaseSKU = function purchaseSKU() {
+}
+export function purchaseSKU() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -1165,8 +1105,8 @@ export const purchaseSKU = function purchaseSKU() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resendPaymentVerificationEmail = function resendPaymentVerificationEmail() {
+}
+export function resendPaymentVerificationEmail() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -1175,13 +1115,13 @@ export const resendPaymentVerificationEmail = function resendPaymentVerification
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const clearPurchaseError = function clearPurchaseError() {
+}
+export function clearPurchaseError() {
   DispatcherDefault.dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
-};
-export const showPurchaseConfirmationStep = function showPurchaseConfirmationStep() {
+}
+export function showPurchaseConfirmationStep() {
   DispatcherDefault.dispatch({ type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP" });
-};
-export const updateSKUPaymentIsGift = function updateSKUPaymentIsGift(isGift) {
+}
+export function updateSKUPaymentIsGift(isGift) {
   DispatcherDefault.dispatch({ type: "SKU_PURCHASE_UPDATE_IS_GIFT", isGift });
-};
+}

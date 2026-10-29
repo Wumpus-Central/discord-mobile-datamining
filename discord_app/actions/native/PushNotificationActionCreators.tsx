@@ -38,7 +38,7 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -114,8 +114,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1084);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(13548).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6706);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(13781).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6730);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -240,8 +240,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(13551).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(13551);
+          const result = v2(13784).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(13784);
         }
       }
       return value;
@@ -259,19 +259,15 @@ export default {
     return obj.delete(request);
   },
 };
-export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
+export function setPushPermissionState(PROMPT_SEEN) {
   DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState: PROMPT_SEEN });
-};
-export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
+}
+export function setPushPermissionReactivationSeen(promptType) {
   DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType });
-};
-export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(
-  CHANNEL_BANNER,
-) {
+}
+export function setPushNotificationPermissionEligibleForPrompt(CHANNEL_BANNER) {
   DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER });
-};
-export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(
-  authorizationStatus,
-) {
+}
+export function updateNotificationAuthorizationStatus(authorizationStatus) {
   DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus });
-};
+}

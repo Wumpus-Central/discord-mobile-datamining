@@ -30,7 +30,7 @@ export const FilterSettingsKey = {
   CAMERA_BACKGROUND_PREVIEW: "cameraBackgroundPreview",
   CAMERA_BACKGROUND_LIVE: "cameraBackgroundLive",
 };
-export const determineMediaEngine = function determineMediaEngine() {
+export function determineMediaEngine() {
   const items = [,];
   ({ NATIVE: arr[0], WEBRTC: arr[1] } = constants);
   let DUMMY = items.find((item) => {
@@ -48,8 +48,8 @@ export const determineMediaEngine = function determineMediaEngine() {
     DUMMY = constants.DUMMY;
   }
   return DUMMY;
-};
-export const initializeMediaEngine = function initializeMediaEngine(BaseConnectionEvent) {
+}
+export function initializeMediaEngine(BaseConnectionEvent) {
   if (constants.NATIVE === BaseConnectionEvent) {
     let _default = destroy.default;
   } else {
@@ -59,4 +59,4 @@ export const initializeMediaEngine = function initializeMediaEngine(BaseConnecti
     _default = MediaEngineDummy.default;
   }
   return new _default();
-};
+}

@@ -6,7 +6,7 @@ const NOOP = fn(1095).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
-export const getQuestLogger = function getQuestLogger(arg0) {
+export function getQuestLogger(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -36,4 +36,4 @@ export const getQuestLogger = function getQuestLogger(arg0) {
     verbose: isLoggingQuestEvents ? tmp42.verbose : NOOP,
     trace: isLoggingQuestEvents ? tmp42.trace : NOOP,
   };
-};
+}

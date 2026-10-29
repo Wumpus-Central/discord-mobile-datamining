@@ -6,12 +6,9 @@ import size from "../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/safety_common/SafetySettingsUtils.tsx");
 
-export const trackSafetySettingsNoticeAnalytics = function trackSafetySettingsNoticeAnalytics(
-  AGE_CONFIRMATION_NOTICE,
-  LEARN_MORE,
-) {
+export function trackSafetySettingsNoticeAnalytics(AGE_CONFIRMATION_NOTICE, LEARN_MORE) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_SETTINGS_NOTICE_ACTION, {
     notice_type: AGE_CONFIRMATION_NOTICE,
     action: LEARN_MORE,
   });
-};
+}

@@ -15,7 +15,7 @@ let closure_6 = async function _saveEmail(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -111,12 +111,12 @@ let closure_6 = async function _saveEmail(arg0) {
     }
   }
 };
-const ChangeEmailStore = fn(6959);
+const ChangeEmailStore = fn(6983);
 ({ setChangeEmailError: closure_4, ChangeEmailFields: hasOwnProperty } = ChangeEmailStore);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
 
-export const saveEmail = function saveEmail() {
+export function saveEmail() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -125,15 +125,15 @@ export const saveEmail = function saveEmail() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const finishChangeEmailFlow = function finishChangeEmailFlow(str, email) {
+}
+export function finishChangeEmailFlow(str, email) {
   const replaced = str.replace(ConstantsIOS.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email });
-};
-export const finishVerifyEmailFlow = function finishVerifyEmailFlow(getState, fn) {
+}
+export function finishVerifyEmailFlow(getState, fn) {
   const tmp3 = fn(ConstantsIOS.VerificationModalScenes.RESEND_EMAIL);
   if (-1 !== tmp3) {
     getState.pop(getState.getState().routes.length - tmp3);
   } else {
     const replaced = getState.replace(ConstantsIOS.VerificationModalScenes.RESEND_EMAIL);
   }
-};
+}

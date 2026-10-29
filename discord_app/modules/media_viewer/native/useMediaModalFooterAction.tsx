@@ -9,13 +9,13 @@ const useMediaModalFooterActionStore = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 
 export { useMediaModalFooterActionStore };
-export const setMediaModalFooterAction = function setMediaModalFooterAction(footerAction) {
+export function setMediaModalFooterAction(footerAction) {
   _require = footerAction;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { footerAction };
     return obj.setState(obj);
   });
-};
-export const clearMediaModalFooterAction = function clearMediaModalFooterAction() {
-  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "paths" }));
-};
+}
+export function clearMediaModalFooterAction() {
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "r" }));
+}

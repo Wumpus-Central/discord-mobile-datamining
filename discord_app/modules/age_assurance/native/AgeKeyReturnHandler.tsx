@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const set = new Set();
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeKeyReturnHandler.tsx");
 
-export const handleAgeKeyReturn = function handleAgeKeyReturn(arg0) {
+export function handleAgeKeyReturn(arg0) {
   ({ result, ageKeySaved, verificationId } = arg0);
   if (verificationId == null) {
     verificationId = "";
@@ -38,4 +38,4 @@ export const handleAgeKeyReturn = function handleAgeKeyReturn(arg0) {
     }
     tmp3Result4 = NavigationRouteUtils;
   }
-};
+}

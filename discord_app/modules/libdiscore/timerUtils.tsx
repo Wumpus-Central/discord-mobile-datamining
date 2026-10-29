@@ -39,6 +39,6 @@ let closure_6 = debounceDefault(function flushDelayLogs() {
 }, 5000);
 let result = size.fileFinishedImporting("modules/libdiscore/timerUtils.tsx");
 
-export const setupLibdiscoreTimersMonitor = function setupLibdiscoreTimersMonitor() {
+export function setupLibdiscoreTimersMonitor() {
   const result = timersAll.setTimersMonitorCallback(onTimersDelayCallback);
-};
+}

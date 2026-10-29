@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/chat/conjureFileMentions.tsx
-import _modDef1948 from "../../../../_runtime/metro/01948__.js";
+import _modDef1949 from "../../../../_runtime/metro/01949__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 let c2 = "<file:(\\d{16}-[a-z0-9]{6})>";
@@ -11,14 +11,14 @@ const result = size.fileFinishedImporting("modules/conjure/chat/conjureFileMenti
 
 export const CONJURE_FILE_MENTION = regExp;
 export const ConjureFileMentionProjectContext = context;
-export const hasConjureFileMentions = function hasConjureFileMentions(arg0) {
+export function hasConjureFileMentions(arg0) {
   return regExp1.test(arg0);
-};
-export const conjureFileMentionIds = function conjureFileMentionIds(str) {
+}
+export function conjureFileMentionIds(str) {
   const items = [...new Set(Array.from(str.matchAll(regExp), (arg0) => arg0[1]))];
   return items;
-};
-export const filterConjureFileCandidates = function filterConjureFileCandidates(arr, text) {
+}
+export function filterConjureFileCandidates(arr, text) {
   let formatted = text.toLowerCase();
   if ("" === formatted) {
     const items = [];
@@ -37,8 +37,8 @@ export const filterConjureFileCandidates = function filterConjureFileCandidates(
     });
   }
   return found;
-};
-export const withoutInlineFileMentions = function withoutInlineFileMentions(attachments, content) {
+}
+export function withoutInlineFileMentions(attachments, content) {
   if (null != attachments) {
     if (regExp1.test(content)) {
       const _Set = Set;
@@ -57,12 +57,12 @@ export const withoutInlineFileMentions = function withoutInlineFileMentions(atta
     }
   }
   return attachments;
-};
-export const createConjureFileMentionRule = function createConjureFileMentionRule(arg0) {
+}
+export function createConjureFileMentionRule(arg0) {
   closure_0 = arg0;
   regExp = new RegExp("^" + c2);
   return {
-    order: _modDef1948.defaultRules.autolink.order - 0.5,
+    order: _modDef1949.defaultRules.autolink.order - 0.5,
     requiredFirstCharacters: ["<"],
     match(arg0) {
       return regExp.exec(arg0);
@@ -74,4 +74,4 @@ export const createConjureFileMentionRule = function createConjureFileMentionRul
       return closure_0(attachmentId.attachmentId, key.key);
     },
   };
-};
+}

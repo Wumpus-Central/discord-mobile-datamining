@@ -12,8 +12,6 @@ const result = size.fileFinishedImporting(
   "modules/user_profile/experiments/UserProfilePerformanceAnalyticsExperiment.tsx",
 );
 
-export const isUserProfilePerformanceAnalyticsEnabled = function isUserProfilePerformanceAnalyticsEnabled(
-  UserProfileAnalyticsUtils,
-) {
+export function isUserProfilePerformanceAnalyticsEnabled(UserProfileAnalyticsUtils) {
   return config.getConfig({ location: UserProfileAnalyticsUtils }).performanceAnalyticsEnabled;
-};
+}

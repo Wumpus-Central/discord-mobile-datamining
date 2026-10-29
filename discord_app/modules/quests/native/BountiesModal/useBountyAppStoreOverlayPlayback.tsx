@@ -10,11 +10,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyAppStoreOverlayPlayback.tsx");
 
-export const getBountyVideoEndMode = function getBountyVideoEndMode(bounty) {
+export function getBountyVideoEndMode(bounty) {
   const result = useBountyVideoEndAppStoreOverlay.canUseBountyVideoEndAppStoreOverlay(bounty);
   const BountyVideoEndMode = useBountiesModalTiming.BountyVideoEndMode;
   return result ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
-};
+}
 export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompilerEnabled()
   ? function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
       const cResult = c.c(26);

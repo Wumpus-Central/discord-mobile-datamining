@@ -133,17 +133,17 @@ function canGuildUseConversationSummaries(guild, arg1) {
 }
 const result = size.fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
 
-export const channelEligibleForSummaries = function channelEligibleForSummaries(channel) {
+export function channelEligibleForSummaries(channel) {
   return canSeeChannelSummaries(channel, true, false);
-};
+}
 export { canSeeChannelSummaries };
 export { canGuildUseConversationSummaries };
-export const useChannelSummariesExperiment = function useChannelSummariesExperiment(channel) {
+export function useChannelSummariesExperiment(channel) {
   if (flag === undefined) {
     flag = false;
   }
   return canSeeChannelSummaries(channel, flag);
-};
+}
 export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildEligibleForSummaries(id, arg1) {
       _require = id;

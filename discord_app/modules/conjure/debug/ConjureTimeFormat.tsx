@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTimeFormat.tsx");
 
-export const formatClockTime = function formatClockTime(ts) {
+export function formatClockTime(ts) {
   let str = arg1;
   if (arg1 === undefined) {
     str = "seconds";
@@ -38,4 +38,4 @@ export const formatClockTime = function formatClockTime(ts) {
       return combined1;
     }
   }
-};
+}

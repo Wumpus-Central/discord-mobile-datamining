@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/image_upload/ForceSdrEmojisStickersExperiment.tsx");
 
-export const getForceSdrEmojisStickersConfig = function getForceSdrEmojisStickersConfig(location) {
+export function getForceSdrEmojisStickersConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

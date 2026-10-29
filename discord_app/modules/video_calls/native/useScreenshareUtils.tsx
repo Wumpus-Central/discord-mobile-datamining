@@ -47,8 +47,8 @@ function startStream() {
   obj = inject;
 }
 const ApplicationStreamStates = fn(1084).ApplicationStreamStates;
-const Features = fn(5754).Features;
-const DeviceUtils = fn(4961);
+const Features = fn(5756).Features;
+const DeviceUtils = fn(4962);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 const BroadcastUploadManager = fn(17).NativeModules.BroadcastUploadManager;
 const ReactCompilerGating = fn(558);
@@ -124,7 +124,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useScreenshareUtils(arg0) {
       const cResult = require("c").c(24);
-      const tmp5 = analyticsLocations(11629)(arg0);
+      const tmp5 = analyticsLocations(11683)(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         cResult[0] = closure_8 >= 12;
         let first = tmp8;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[3];
       }
       const tmpResult = require("initialize");
-      const showMobileGoLiveUpsell = analyticsLocations(11640).useConfig(tmp13).showMobileGoLiveUpsell;
+      const showMobileGoLiveUpsell = analyticsLocations(11694).useConfig(tmp13).showMobileGoLiveUpsell;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ApplicationStreamingStore];
         class E {
@@ -170,9 +170,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = cResult[4];
         tmp15 = cResult[5];
       }
-      const tmp4Result = analyticsLocations(11640);
+      const tmp4Result = analyticsLocations(11694);
       const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-      analyticsLocations = tmp4(7289)().analyticsLocations;
+      analyticsLocations = tmp4(7313)().analyticsLocations;
       let tmp18 = null != stateFromStores1;
       if (tmp18) {
         tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;
@@ -230,13 +230,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp29 = obj3;
                       }
                     }
-                    tmp(1627);
+                    tmp(1628);
                     class E {
                       constructor() {
                         return closure_1_4.getCurrentUserActiveStream();
                       }
                     }
-                    tmp4(tmp18 ? 11645 : 11646);
+                    tmp4(tmp18 ? 11699 : 11700);
                   }
                 }
               }
@@ -460,7 +460,7 @@ export { stopScreenshare };
 export { startStream };
 export { getOSRequirement };
 export { getStreamPressHandler };
-export const tryStartScreenShare = function tryStartScreenShare(channel) {
+export function tryStartScreenShare(channel) {
   let videoPermission = closure_8 >= 12;
   if (videoPermission) {
     videoPermission = useHasVideoPermission.getVideoPermission(channel);
@@ -482,4 +482,4 @@ export const tryStartScreenShare = function tryStartScreenShare(channel) {
     }
     obj2 = inject;
   }
-};
+}

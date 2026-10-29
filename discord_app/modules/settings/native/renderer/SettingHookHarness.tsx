@@ -5,7 +5,7 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
 const require = fn;
-const NodeType = fn(11249).NodeType;
+const NodeType = fn(11303).NodeType;
 let closure_7 = [];
 const map = new Map();
 const map1 = new Map();
@@ -72,13 +72,13 @@ export default noop.memo(function SettingHookHarness() {
   });
   return null;
 });
-export const getCachedSettingTitle = function getCachedSettingTitle(setting) {
+export function getCachedSettingTitle(setting) {
   return map.get(setting);
-};
-export const getCachedSettingSearchTerms = function getCachedSettingSearchTerms(arg0) {
+}
+export function getCachedSettingSearchTerms(arg0) {
   value = map1.get(arg0);
   if (value == null) {
     value = closure_7;
   }
   return value;
-};
+}

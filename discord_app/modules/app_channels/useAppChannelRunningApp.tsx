@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const ChannelTypes = fn(1084).ChannelTypes;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched: hasOwnProperty, getFrameSurfaceForChannel: metroRequire } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = stateFromStores(14098)(stateFromStores);
+      const tmp9 = stateFromStores(14331)(stateFromStores);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [FramesStore];
         cResult[4] = items2;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       let obj = require("initialize");
-      let tmp4 = stateFromStores(14098)(stateFromStores);
+      let tmp4 = stateFromStores(14331)(stateFromStores);
       const items2 = [FramesStore];
       const items3 = [stateFromStores];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(

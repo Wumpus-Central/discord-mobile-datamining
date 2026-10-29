@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
   "modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx",
 );
 
-export const useHorizontalAutocompleteResults = function useHorizontalAutocompleteResults(channel) {
+export function useHorizontalAutocompleteResults(channel) {
   channel = channel.channel;
   const selection = channel.selection;
   const text = channel.text;
@@ -143,4 +143,4 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     items6,
   );
   return obj2;
-};
+}

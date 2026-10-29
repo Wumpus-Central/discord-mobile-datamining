@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(5224);
+const createExperiment = fn(5225);
 let obj2 = {
   kind: "guild",
   id: "2026-06_guild_rooms",
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
 
 export const GUILD_ROOMS_EXPERIMENT_ID = "2026-06_guild_rooms";
-export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable) {
+export function getGuildRoomsConfig(guildId, disable) {
   const obj = { autoTrackExposure: true };
   const merged = Object.assign(disable);
   let flag;
@@ -66,7 +66,7 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
   }
   obj.disable = flag;
   return closure_3.getCurrentConfig(guildId, obj);
-};
+}
 export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildRoomsExperiment(guildId, disable) {
       _require = guildId;

@@ -44,8 +44,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
       if (cResult[4] !== stateFromStoresObject) {
-        const prop = tmp(10835).CONJURE_DEVICE_PERMISSION_NAMES;
-        const found = prop.filter(tmp(10835).isConjureDevicePermissionSupported);
+        const prop = tmp(10911).CONJURE_DEVICE_PERMISSION_NAMES;
+        const found = prop.filter(tmp(10911).isConjureDevicePermissionSupported);
         const mapped = found.map((permission) => {
           const obj = { permission, decision: null };
           let tmp = stateFromStoresObject[permission];

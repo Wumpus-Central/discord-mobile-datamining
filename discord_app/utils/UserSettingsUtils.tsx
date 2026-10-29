@@ -26,7 +26,7 @@ const NonSpamRetrainingOptInOptions = {
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
-export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
+export function getSanitizedRestrictedGuilds() {
   const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
@@ -34,8 +34,8 @@ export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuild
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedMessageRequestRestrictedGuilds() {
+}
+export function getSanitizedMessageRequestRestrictedGuilds() {
   const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
@@ -43,8 +43,8 @@ export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedM
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivityRestrictedGuilds() {
+}
+export function getSanitizedActivityRestrictedGuilds() {
   const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
@@ -52,8 +52,8 @@ export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivit
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitizedActivityJoiningRestrictedGuilds() {
+}
+export function getSanitizedActivityJoiningRestrictedGuilds() {
   const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
@@ -61,8 +61,8 @@ export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitized
     found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
-};
-export const computeFlags = function computeFlags(setting) {
+}
+export function computeFlags(setting) {
   if ((setting & React5) === React5) {
     let obj = { all: true, mutualFriends: true, mutualGuilds: true };
   } else {
@@ -73,8 +73,8 @@ export const computeFlags = function computeFlags(setting) {
     };
   }
   return obj;
-};
-export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
+}
+export function trackUserSettingsPaneViewed(arg0) {
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
   const obj2 = {
     settings_type: "user",
@@ -89,14 +89,14 @@ export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(
   const obj = AppAnalyticsUtilsDefault;
   obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
-};
+}
 export { NonSpamRetrainingOptInOptions };
 export const NonSpamRetrainingOptInOptionsToValue = {
   [NonSpamRetrainingOptInOptions.UNDECIDED]: undefined,
   [NonSpamRetrainingOptInOptions.OPTIN]: true,
   [NonSpamRetrainingOptInOptions.OPTOUT]: false,
 };
-export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
+export function generateNonSpamRetrainingOptInSettingOptions() {
   const obj = { name: null, desc: null, value: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["/yLMRQ"]);
@@ -119,8 +119,8 @@ export const generateNonSpamRetrainingOptInSettingOptions = function generateNon
   obj3.value = obj.UNDECIDED;
   items[2] = obj3;
   return items;
-};
-export const shakeUserSettings = function shakeUserSettings(arg0) {
+}
+export function shakeUserSettings(arg0) {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(constants3.SHAKE_SETTINGS_MODAL, arg0);
-};
+}

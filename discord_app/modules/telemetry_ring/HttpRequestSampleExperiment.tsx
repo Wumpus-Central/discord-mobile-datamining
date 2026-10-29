@@ -10,6 +10,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/telemetry_ring/HttpRequestSampleExperiment.tsx");
 
 export default apexExperiment;
-export const getHttpRequestSampleRate = function getHttpRequestSampleRate() {
+export function getHttpRequestSampleRate() {
   return apexExperiment.getConfig({ location: "track_http_request" }).sampleRate;
-};
+}

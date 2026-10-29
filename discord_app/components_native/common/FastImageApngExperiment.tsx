@@ -13,7 +13,7 @@ let closure_3 = ApexExperiment.createApexExperiment({
 });
 let result = size.fileFinishedImporting("components_native/common/FastImageApngExperiment.tsx");
 
-export const initializeFastImageApngExperiment = function initializeFastImageApngExperiment() {
+export function initializeFastImageApngExperiment() {
   if (obj.isAndroid()) {
     const initialized = initializeDefault.initialized;
     initialized.then(() => {
@@ -23,4 +23,4 @@ export const initializeFastImageApngExperiment = function initializeFastImageApn
     });
   }
   obj = PlatformUtils;
-};
+}

@@ -10,7 +10,7 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");
 
-export const useWishlistButtonState = function useWishlistButtonState(onRemoveSuccess) {
+export function useWishlistButtonState(onRemoveSuccess) {
   ({ userId: require, skuId } = onRemoveSuccess);
   ({ location: _location, onAddSuccess } = onRemoveSuccess);
   onRemoveSuccess = onRemoveSuccess.onRemoveSuccess;
@@ -76,7 +76,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -205,4 +205,4 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
       items3,
     ),
   };
-};
+}

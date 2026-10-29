@@ -15,6 +15,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/image_upload/AttachmentImageLadderExperiment.tsx");
 
 export default apexExperiment;
-export const getAttachmentImageLadderConfig = function getAttachmentImageLadderConfig(location) {
+export function getAttachmentImageLadderConfig(location) {
   return apexExperiment.getConfig({ location: location.location });
-};
+}

@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const StreamSettingsConstants = fn(5850);
+const StreamSettingsConstants = fn(5852);
 ({
   ApplicationStreamFPS: c10,
   ApplicationStreamResolutions: closure_11,
@@ -24,7 +24,7 @@ const StreamSettingsConstants = fn(5850);
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
 let closure_15 = fn(1391).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5754).ResolutionTypes;
+const ResolutionTypes = fn(5756).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;
@@ -62,7 +62,7 @@ function getMaxQuality(participant) {
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 
-export const isPremiumResolution = function isPremiumResolution(maxQuality) {
+export function isPremiumResolution(maxQuality) {
   if (null != maxQuality) {
     if (maxQuality.maxResolution.type === ResolutionTypes.SOURCE) {
       let height = constants.RESOLUTION_SOURCE;
@@ -88,8 +88,8 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
     }
     return tmp6;
   }
-};
-export const isPremiumFPS = function isPremiumFPS(maxQuality) {
+}
+export function isPremiumFPS(maxQuality) {
   if (null != maxQuality) {
     closure_0 = map1(maxQuality.maxFrameRate);
     return (
@@ -104,10 +104,10 @@ export const isPremiumFPS = function isPremiumFPS(maxQuality) {
       })
     );
   }
-};
+}
 export { isPremiumRequirement };
 export { getPremiumRequirement };
-export const getResolutionText = function getResolutionText(maxResolution) {
+export function getResolutionText(maxResolution) {
   if (maxResolution.type === ResolutionTypes.SOURCE) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.XjXqzh);
@@ -117,11 +117,11 @@ export const getResolutionText = function getResolutionText(maxResolution) {
     stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
-};
-export const getFPSText = function getFPSText(maxFrameRate) {
+}
+export function getFPSText(maxFrameRate) {
   const intl = util.intl;
   return intl.formatToPlainString(util.t.Qb44XH, { fps: maxFrameRate });
-};
+}
 export { getMaxQuality };
 export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled()
   ? function useMaxQuality(user) {
@@ -259,7 +259,7 @@ export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
     };
-export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) {
+export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) {
   closure_0 = preset;
   closure_1 = resolution;
   closure_2 = frameRate;
@@ -320,4 +320,4 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   obj2.stream_quality_frame_rate = frameRate;
   obj2.soundshare_enabled = sound;
   AnalyticsUtilsDefault.track(AnalyticEvents.STREAM_SETTINGS_UPDATE, obj2);
-};
+}

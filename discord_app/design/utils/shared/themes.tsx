@@ -5,10 +5,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ThemeTypes = Constants.ThemeTypes;
 const result = size.fileFinishedImporting("design/utils/shared/themes.tsx");
 
-export const isThemeLight = function isThemeLight(theme) {
+export function isThemeLight(theme) {
   return theme === ThemeTypes.LIGHT;
-};
-export const isThemeDark = function isThemeDark(theme) {
+}
+export function isThemeDark(theme) {
   if (ThemeTypes.ASH !== theme) {
     if (ThemeTypes.ONYX !== theme) {
       if (ThemeTypes.DARK !== theme) {
@@ -17,4 +17,4 @@ export const isThemeDark = function isThemeDark(theme) {
     }
   }
   return true;
-};
+}

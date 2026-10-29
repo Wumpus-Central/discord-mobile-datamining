@@ -29,7 +29,7 @@ export const modelSettingsFrameHandlers = {
     DispatcherDefault.dispatch(obj2);
   },
 };
-export const sendModelSettings = function sendModelSettings(projectId, arg1) {
+export function sendModelSettings(projectId, arg1) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   try {
     if (null == conjureSocket) {
@@ -40,4 +40,4 @@ export const sendModelSettings = function sendModelSettings(projectId, arg1) {
       conjureSocket.sendModelSettings(arg1);
     }
   } catch (err) {}
-};
+}

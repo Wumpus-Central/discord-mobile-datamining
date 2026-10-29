@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/AppStore
 
 export const MIN_AGE_GATE = 13;
 export const ADULT_AGE_GATE = 18;
-export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupported() {
+export function isAppStoreAgeSignalSupported() {
   if (obj.isMetaQuest()) {
     return false;
   } else {
@@ -44,4 +44,4 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
     tmpResult = DeviceUtils;
   }
   obj = MetaQuestUtils;
-};
+}

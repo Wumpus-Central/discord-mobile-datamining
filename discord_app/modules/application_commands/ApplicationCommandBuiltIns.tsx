@@ -22,7 +22,7 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(6019).BuiltInSectionId;
+const BuiltInSectionId = fn(6023).BuiltInSectionId;
 const Constants = fn(1084);
 ({
   Permissions: closure_7,
@@ -31,12 +31,12 @@ const Constants = fn(1084);
   DISPLAY_NAME_MAX_LENGTH,
   MAX_CHANNEL_NAME_LENGTH,
 } = Constants);
-const DiceRollConstants = fn(9693);
+const DiceRollConstants = fn(9725);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
-let closure_11 = fn(4918).getDisableCommunicationDurationOptions;
-const MessageSendLocation = fn(5009).MessageSendLocation;
+let closure_11 = fn(4919).getDisableCommunicationDurationOptions;
+const MessageSendLocation = fn(5010).MessageSendLocation;
 let obj = {};
-let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(5670).ApplicationCommandSectionType.BUILT_IN };
+let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(5672).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj2, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -45,7 +45,7 @@ Object.defineProperty(obj2, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.BUILT_IN] = obj2;
-let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(5670).ApplicationCommandSectionType.BUILT_IN };
+let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(5672).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj3, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -54,13 +54,13 @@ Object.defineProperty(obj3, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
-let items = [...fn(9694).default];
+let items = [...fn(9726).default];
 let obj4 = {
   id: "-1",
   untranslatedName: "shrug",
   displayName: "shrug",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN_TEXT,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj4, "untranslatedDescription", {
@@ -77,7 +77,7 @@ Object.defineProperty(obj4, "displayDescription", {
   },
   set: undefined,
 });
-let obj5 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+let obj5 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj5, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -113,8 +113,8 @@ let obj6 = {
   id: "-2",
   untranslatedName: "tableflip",
   displayName: "tableflip",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN_TEXT,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj6, "untranslatedDescription", {
@@ -131,7 +131,7 @@ Object.defineProperty(obj6, "displayDescription", {
   },
   set: undefined,
 });
-let obj7 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+let obj7 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj7, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -167,8 +167,8 @@ let obj8 = {
   id: "-3",
   untranslatedName: "unflip",
   displayName: "unflip",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN_TEXT,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj8, "untranslatedDescription", {
@@ -185,7 +185,7 @@ Object.defineProperty(obj8, "displayDescription", {
   },
   set: undefined,
 });
-let obj9 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+let obj9 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj9, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -221,8 +221,8 @@ let obj10 = {
   id: "-4",
   untranslatedName: "tts",
   displayName: "tts",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN_TEXT,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj10, "untranslatedDescription", {
@@ -239,7 +239,7 @@ Object.defineProperty(obj10, "displayDescription", {
   },
   set: undefined,
 });
-const obj11 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj11 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj11, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -287,8 +287,8 @@ const obj12 = {
   id: "-5",
   untranslatedName: "me",
   displayName: "me",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN_TEXT,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj12, "untranslatedDescription", {
@@ -305,7 +305,7 @@ Object.defineProperty(obj12, "displayDescription", {
   },
   set: undefined,
 });
-const obj13 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj13 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj13, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -341,8 +341,8 @@ const obj14 = {
   id: "-6",
   untranslatedName: "spoiler",
   displayName: "spoiler",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN_TEXT,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj14, "untranslatedDescription", {
@@ -359,7 +359,7 @@ Object.defineProperty(obj14, "displayDescription", {
   },
   set: undefined,
 });
-const obj15 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj15 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj15, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -396,8 +396,8 @@ const obj16 = {
   id: "-7",
   untranslatedName: "nick",
   displayName: "nick",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj16, "untranslatedDescription", {
@@ -414,7 +414,7 @@ Object.defineProperty(obj16, "displayDescription", {
   },
   set: undefined,
 });
-const obj17 = { name: "new_nick", displayName: "new_nick", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj17 = { name: "new_nick", displayName: "new_nick", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj17, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -474,8 +474,8 @@ const obj18 = {
   id: "-10",
   untranslatedName: "thread",
   displayName: "thread",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj18, "untranslatedDescription", {
@@ -492,7 +492,7 @@ Object.defineProperty(obj18, "displayDescription", {
   },
   set: undefined,
 });
-const obj19 = { name: "name", displayName: "name", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj19 = { name: "name", displayName: "name", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj19, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -510,7 +510,7 @@ Object.defineProperty(obj19, "displayDescription", {
 obj19.required = true;
 obj19.maxLength = MAX_CHANNEL_NAME_LENGTH;
 const items8 = [obj19];
-const obj20 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj20 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj20, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -546,39 +546,99 @@ let closure_14 = asyncGeneratorStep(async (arg0, arg1) => {
   c6 = 0;
   c7 = 0;
   const iter = (async (arg0, value) => {
-    const tmp49 = closure_133_13(closure_132_0, "name");
-    c2 = tmp49;
-    if (tmp49 == null) {
-      c2 = "";
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_5 = tmp5;
+            closure_4 = tmp2;
+            let channel2;
+            closure_132_0 = closure_0;
+            channel2 = channel.channel;
+            closure_132_2 = undefined;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            c6 = 1;
+            c7 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            const tmp49 = closure_133_13(closure_132_0, "name");
+            c2 = tmp49;
+            if (tmp49 == null) {
+              c2 = "";
+            }
+            closure_132_2 = c2;
+            const tmp11 = closure_133_13(closure_132_0, "message");
+            c3 = tmp11;
+            if (tmp11 == null) {
+              c3 = "";
+            }
+            closure_132_3 = c3;
+            const obj2 = closure_133_0(closure_133_2[17]);
+            c6 = 2;
+            c7 = 1;
+            const obj7 = {
+              value: obj2.createThread(
+                channel2,
+                closure_132_2,
+                closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD,
+                closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null),
+                "Slash Command",
+              ),
+              done: false,
+            };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_132_4 = value;
+          const obj8 = closure_133_1(closure_133_2[20]);
+          const id = closure_132_4.id;
+          const obj10 = { location: closure_133_12.THREAD_CREATION };
+          obj8.sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, obj10);
+          c7 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp27) {
+        c7 = tmp;
+        throw tmp27;
+      }
     }
-    closure_132_2 = c2;
-    const tmp11 = closure_133_13(closure_132_0, "message");
-    c3 = tmp11;
-    if (tmp11 == null) {
-      c3 = "";
-    }
-    closure_132_3 = c3;
-    await closure_133_0(closure_133_2[17]).createThread(
-      channel2,
-      closure_132_2,
-      closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD,
-      closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null),
-      "Slash Command",
-    );
-    closure_132_4 = value;
-    closure_133_0(closure_133_2[17]);
-    const id = closure_132_4.id;
-    closure_133_1(closure_133_2[20]).sendMessage(
-      id,
-      closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3),
-      true,
-      { location: closure_133_12.THREAD_CREATION },
-    );
-    await "IconComponent";
-    closure_4 = tmp2;
-    closure_132_0 = closure_0;
-    channel2 = channel.channel;
-    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -599,8 +659,8 @@ const obj21 = {
   id: "-11",
   untranslatedName: "kick",
   displayName: "kick",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj21, "untranslatedDescription", {
@@ -617,7 +677,7 @@ Object.defineProperty(obj21, "displayDescription", {
   },
   set: undefined,
 });
-const obj22 = { name: "user", displayName: "user", type: fn(1997).ApplicationCommandOptionType.USER };
+const obj22 = { name: "user", displayName: "user", type: fn(1998).ApplicationCommandOptionType.USER };
 Object.defineProperty(obj22, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -634,7 +694,7 @@ Object.defineProperty(obj22, "displayDescription", {
 });
 obj22.required = true;
 const items9 = [obj22];
-const obj23 = { name: "reason", displayName: "reason", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj23 = { name: "reason", displayName: "reason", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj23, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -671,7 +731,7 @@ obj21.execute = function execute(arr, guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -779,8 +839,8 @@ const obj24 = {
   id: "-12",
   untranslatedName: "ban",
   displayName: "ban",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj24, "untranslatedDescription", {
@@ -797,7 +857,7 @@ Object.defineProperty(obj24, "displayDescription", {
   },
   set: undefined,
 });
-const obj25 = { name: "user", displayName: "user", type: fn(1997).ApplicationCommandOptionType.USER };
+const obj25 = { name: "user", displayName: "user", type: fn(1998).ApplicationCommandOptionType.USER };
 Object.defineProperty(obj25, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -817,7 +877,7 @@ const items10 = [obj25, ,];
 const obj26 = {
   name: "delete_messages",
   displayName: "delete_messages",
-  type: fn(1997).ApplicationCommandOptionType.INTEGER,
+  type: fn(1998).ApplicationCommandOptionType.INTEGER,
 };
 Object.defineProperty(obj26, "description", {
   get: () => {
@@ -889,7 +949,7 @@ Object.defineProperty(obj26, "choices", {
   set: undefined,
 });
 items10[1] = obj26;
-const obj27 = { name: "reason", displayName: "reason", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj27 = { name: "reason", displayName: "reason", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj27, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -926,7 +986,7 @@ obj24.execute = function execute(arr, guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1043,8 +1103,8 @@ const obj28 = {
   id: "-13",
   untranslatedName: "timeout",
   displayName: "timeout",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj28, "untranslatedDescription", {
@@ -1061,7 +1121,7 @@ Object.defineProperty(obj28, "displayDescription", {
   },
   set: undefined,
 });
-const obj29 = { name: "user", displayName: "user", type: fn(1997).ApplicationCommandOptionType.USER };
+const obj29 = { name: "user", displayName: "user", type: fn(1998).ApplicationCommandOptionType.USER };
 Object.defineProperty(obj29, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1078,7 +1138,7 @@ Object.defineProperty(obj29, "displayDescription", {
 });
 obj29.required = true;
 const items11 = [obj29, ,];
-const obj30 = { name: "duration", displayName: "duration", type: fn(1997).ApplicationCommandOptionType.INTEGER };
+const obj30 = { name: "duration", displayName: "duration", type: fn(1998).ApplicationCommandOptionType.INTEGER };
 Object.defineProperty(obj30, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1105,7 +1165,7 @@ Object.defineProperty(obj30, "choices", {
   set: undefined,
 });
 items11[1] = obj30;
-const obj31 = { name: "reason", displayName: "reason", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj31 = { name: "reason", displayName: "reason", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj31, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1142,7 +1202,7 @@ obj28.execute = function execute(arr, guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1270,8 +1330,8 @@ const obj32 = {
   id: "-14",
   untranslatedName: "msg",
   displayName: "msg",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj32, "untranslatedDescription", {
@@ -1288,7 +1348,7 @@ Object.defineProperty(obj32, "displayDescription", {
   },
   set: undefined,
 });
-const obj33 = { name: "user", displayName: "user", type: fn(1997).ApplicationCommandOptionType.USER };
+const obj33 = { name: "user", displayName: "user", type: fn(1998).ApplicationCommandOptionType.USER };
 Object.defineProperty(obj33, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1305,7 +1365,7 @@ Object.defineProperty(obj33, "displayDescription", {
 });
 obj33.required = true;
 const items12 = [obj33];
-const obj34 = { name: "message", displayName: "message", type: fn(1997).ApplicationCommandOptionType.STRING };
+const obj34 = { name: "message", displayName: "message", type: fn(1998).ApplicationCommandOptionType.STRING };
 Object.defineProperty(obj34, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1343,7 +1403,7 @@ obj32.execute = function execute(arr, channel) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1363,7 +1423,7 @@ obj32.execute = function execute(arr, channel) {
             const obj5 = { recipientIds };
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp2(7448).openPrivateChannel(obj5), done: false };
+            const obj6 = { value: tmp2(7471).openPrivateChannel(obj5), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -1377,12 +1437,12 @@ obj32.execute = function execute(arr, channel) {
           closure_128_0 = value;
           channel2 = channel.getChannel(closure_128_0);
           tmp2(38)(null != channel2, "Newly created PrivateChannel is null");
-          const obj7 = tmp2(7601);
+          const obj7 = tmp2(7624);
           const id = channel2.id;
           const obj9 = { location: constants.PRIVATE_MESSAGE_COMMAND };
-          obj7.sendMessage(id, tmp2(7790).parse(channel2, closure_129_2), true, obj9);
+          obj7.sendMessage(id, tmp2(7812).parse(channel2, closure_129_2), true, obj9);
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp9) {
         c3 = tmp;
@@ -1437,8 +1497,8 @@ const obj35 = {
   id: "-18",
   untranslatedName: "roll-dice",
   displayName: "roll-dice",
-  type: fn(1997).ApplicationCommandType.CHAT,
-  inputType: fn(5670).ApplicationCommandInputType.BUILT_IN,
+  type: fn(1998).ApplicationCommandType.CHAT,
+  inputType: fn(5672).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj35, "untranslatedDescription", {
@@ -1455,7 +1515,7 @@ Object.defineProperty(obj35, "displayDescription", {
   },
   set: undefined,
 });
-const obj36 = { name: "count", displayName: "count", type: fn(1997).ApplicationCommandOptionType.INTEGER };
+const obj36 = { name: "count", displayName: "count", type: fn(1998).ApplicationCommandOptionType.INTEGER };
 Object.defineProperty(obj36, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1473,7 +1533,7 @@ Object.defineProperty(obj36, "displayDescription", {
 obj36.minValue = 1;
 obj36.maxValue = MAX_DICE_COUNT;
 const items13 = [obj36];
-const obj37 = { name: "size", displayName: "size", type: fn(1997).ApplicationCommandOptionType.INTEGER };
+const obj37 = { name: "size", displayName: "size", type: fn(1998).ApplicationCommandOptionType.INTEGER };
 Object.defineProperty(obj37, "description", {
   get: () => {
     const intl = require("util").intl;
@@ -1525,11 +1585,11 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(9694).default;
+export const PLATFORM_COMMANDS = fn(9726).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;
-export const getBuiltInCommands = function getBuiltInCommands(commandTypes, arg1, arg2) {
+export function getBuiltInCommands(commandTypes, arg1, arg2) {
   importDefault = arg2;
   enabled = require("DiceRollExperiment").getConfig({ location: "getBuiltInCommands" }).enabled;
   return arg1
@@ -1555,4 +1615,4 @@ export const getBuiltInCommands = function getBuiltInCommands(commandTypes, arg1
         }
         return hasItem;
       });
-};
+}

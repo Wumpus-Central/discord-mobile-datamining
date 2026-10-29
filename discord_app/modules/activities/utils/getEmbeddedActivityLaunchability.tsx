@@ -59,7 +59,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-let closure_6 = fn(2023).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+let closure_6 = fn(2024).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
 const Permissions = fn(1084).Permissions;
 const EmbeddedActivityLaunchability = {
   CAN_LAUNCH: 0,
@@ -87,9 +87,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedA
 
 export { EmbeddedActivityLaunchability };
 export { getEmbeddedActivityLaunchability };
-export const getEmbeddedActivityLaunchabilityForChannel = function getEmbeddedActivityLaunchabilityForChannel(
-  channelId,
-) {
+export function getEmbeddedActivityLaunchabilityForChannel(channelId) {
   const obj = {
     channelId,
     isContentGated: null,
@@ -105,7 +103,7 @@ export const getEmbeddedActivityLaunchabilityForChannel = function getEmbeddedAc
   obj.PermissionStore = PermissionStore;
   obj.VoiceStateStore = VoiceStateStore;
   return getEmbeddedActivityLaunchability(obj);
-};
+}
 export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompilerEnabled()
   ? function useEmbeddedActivityLaunchability(channelId) {
       _require = channelId;
@@ -209,7 +207,7 @@ export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompi
         items3,
       );
     };
-export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
+export function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t.qJvTKQ);
@@ -223,4 +221,4 @@ export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivit
     const intl = util.intl;
     return intl.string(util.t.j29zCr);
   }
-};
+}

@@ -62,7 +62,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 let result = size.fileFinishedImporting("design/tokens/native/useToken.tsx");
 
-export const useToken = function useToken(BACKGROUND_BASE_LOW, DARK) {
+export function useToken(BACKGROUND_BASE_LOW, DARK) {
   let theme = DARK;
   if (closure_6) {
     const cResult = c.c(8);
@@ -144,4 +144,4 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, DARK) {
     }
     const tmpResult4 = native;
   }
-};
+}

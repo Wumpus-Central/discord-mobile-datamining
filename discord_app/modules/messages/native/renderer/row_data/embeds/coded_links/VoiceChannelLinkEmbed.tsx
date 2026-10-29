@@ -14,15 +14,15 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(4874).getGuildAcronym;
+const getGuildAcronym = fn(4875).getGuildAcronym;
 const Permissions = fn(1084).Permissions;
-const InviteTypes = fn(7844).InviteTypes;
+const InviteTypes = fn(7867).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx",
 );
 
-export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(code, theme) {
+export function createVoiceChannelLinkEmbed(code, theme) {
   const tmp = _slicedToArray(code.split("/"), 2);
   const channel = ChannelStore.getChannel(tmp[1]);
   guild = GuildStore.getGuild(tmp[0]);
@@ -108,4 +108,4 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
     }
   }
   return null;
-};
+}

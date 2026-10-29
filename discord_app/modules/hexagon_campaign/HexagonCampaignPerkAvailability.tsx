@@ -71,27 +71,23 @@ export const useHexagonCampaignPerkAvailability = ReactCompilerGating.isReactCom
         isCampaignEnabled: isHexagonCampaignEnabled,
       });
     };
-export const getHexagonCampaignPerkAvailabilityForCurrentUser =
-  function getHexagonCampaignPerkAvailabilityForCurrentUser(CLIENT_THEME, MobileThemesUtils) {
-    const obj2 = { perk: CLIENT_THEME, premiumType: null, isCampaignEnabled: null };
-    const currentUser = UserStore.getCurrentUser();
-    let premiumType;
-    if (currentUser != null) {
-      premiumType = currentUser.premiumType;
-    }
-    obj2.premiumType = premiumType;
-    const obj = HexagonCampaignUtils;
-    obj2.isCampaignEnabled = HexagonCampaignExperiment.getIsHexagonCampaignEnabled(MobileThemesUtils);
-    return obj.getHexagonCampaignPerkAvailability(obj2);
-  };
-export const isHexagonCampaignPerkExpiredForCurrentUser = function isHexagonCampaignPerkExpiredForCurrentUser(
-  CLIENT_THEME,
-  arg1,
-) {
+export function getHexagonCampaignPerkAvailabilityForCurrentUser(CLIENT_THEME, MobileThemesUtils) {
+  const obj2 = { perk: CLIENT_THEME, premiumType: null, isCampaignEnabled: null };
+  const currentUser = UserStore.getCurrentUser();
+  let premiumType;
+  if (currentUser != null) {
+    premiumType = currentUser.premiumType;
+  }
+  obj2.premiumType = premiumType;
+  const obj = HexagonCampaignUtils;
+  obj2.isCampaignEnabled = HexagonCampaignExperiment.getIsHexagonCampaignEnabled(MobileThemesUtils);
+  return obj.getHexagonCampaignPerkAvailability(obj2);
+}
+export function isHexagonCampaignPerkExpiredForCurrentUser(CLIENT_THEME, arg1) {
   const currentUser = UserStore.getCurrentUser();
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
   return HexagonCampaignUtils.isHexagonCampaignPerkExpired(CLIENT_THEME, premiumType, arg1);
-};
+}

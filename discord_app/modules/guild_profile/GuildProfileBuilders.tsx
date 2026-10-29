@@ -140,7 +140,7 @@ let closure_5 = { label: "" };
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileBuilders.tsx");
 
 export { buildGuildProfileFromServer };
-export const buildGuildProfileUpdateForServer = function buildGuildProfileUpdateForServer(name) {
+export function buildGuildProfileUpdateForServer(name) {
   let obj = {};
   if (null != name.name) {
     obj.name = name.name;
@@ -213,8 +213,8 @@ export const buildGuildProfileUpdateForServer = function buildGuildProfileUpdate
     obj.badge_color_secondary = name.badgeColorSecondary;
   }
   return obj;
-};
-export const buildTopGamesFromServer = function buildTopGamesFromServer(top_games) {
+}
+export function buildTopGamesFromServer(top_games) {
   return top_games.reduce((acc, game_application_id) => {
     acc[game_application_id.game_application_id] = {
       level: game_application_id.activity_level,
@@ -222,8 +222,8 @@ export const buildTopGamesFromServer = function buildTopGamesFromServer(top_game
     };
     return acc;
   }, {});
-};
-export const buildGuildProfileFromInvite = function buildGuildProfileFromInvite(approximate_presence_count) {
+}
+export function buildGuildProfileFromInvite(approximate_presence_count) {
   ({ guild, profile } = approximate_presence_count);
   let tmp = null;
   if (null != profile) {
@@ -290,4 +290,4 @@ export const buildGuildProfileFromInvite = function buildGuildProfileFromInvite(
     tmp = tmp5;
   }
   return tmp;
-};
+}

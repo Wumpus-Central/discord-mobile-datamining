@@ -64,7 +64,7 @@ function hasConjureGuildWithoutExposure(conjure_resume) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-07-vibegrations-guild",
   kind: "guild",
@@ -202,7 +202,7 @@ export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled()
       const autoTrackExposure = tmp4.autoTrackExposure;
       dependencyMap = tmp5;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, tmp(1452).ApexExperimentStore];
+        const items = [GuildStore, tmp(1453).ApexExperimentStore];
         cResult[2] = items;
         let tmp6 = items;
       } else {

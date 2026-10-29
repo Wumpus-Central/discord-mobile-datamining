@@ -15,7 +15,7 @@ export const CONJURE_PRESENCE_ACTIVITY_LINES = [
   "Weaving a spell",
   "Summoning ideas",
 ];
-export const isConjurePresenceActivity = function isConjurePresenceActivity(activity) {
+export function isConjurePresenceActivity(activity) {
   let type;
   if (activity != null) {
     type = activity.type;
@@ -28,4 +28,4 @@ export const isConjurePresenceActivity = function isConjurePresenceActivity(acti
     tmp2 = null == activity.application_id;
   }
   return tmp2;
-};
+}

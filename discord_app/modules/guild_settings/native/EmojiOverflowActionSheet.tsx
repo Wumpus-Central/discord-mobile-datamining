@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({
   header: { paddingHorizontal: 8, flexDirection: "row", alignItems: "center", gap: 16 },
   emojiImage: { width: 30, height: 30, resizeMode: "contain" },
@@ -308,12 +308,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.emojiImage, source: null };
       const obj3 = { uri: null };
       const tmp6 = FastImageDefault;
-      obj3.uri = onSelectRolesForEmoji(1414).getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
+      obj3.uri = onSelectRolesForEmoji(1415).getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
       obj2.source = obj3;
       const items = [closure_6(tmp6, obj2)];
-      const obj4 = onSelectRolesForEmoji(1414);
+      const obj4 = onSelectRolesForEmoji(1415);
       const obj5 = { id: emoji.id, animated: emoji.animated, size: 48 };
-      items[1] = closure_6(emoji(5270).Text, {
+      items[1] = closure_6(emoji(5271).Text, {
         variant: "text-md/semibold",
         color: "mobile-text-heading-primary",
         children: ":" + emoji.name + ":",
@@ -321,36 +321,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items;
       const items1 = [closure_7(View, obj)];
       const obj7 = {
-        icon: closure_6(emoji(5725).TrashIcon, { color: "text-feedback-critical" }),
+        icon: closure_6(emoji(5727).TrashIcon, { color: "text-feedback-critical" }),
         label: null,
         onPress: null,
       };
       const obj8 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
       let intl = emoji(1125).intl;
       obj8.children = intl.string(emoji(1125).t.oyYWHE);
-      obj7.label = closure_6(emoji(5270).Text, obj8);
+      obj7.label = closure_6(emoji(5271).Text, obj8);
       obj7.onPress = function onPress() {
         EmojiActionCreators.deleteEmoji(importDefault, emoji.id);
         onClose();
       };
-      const items2 = [closure_6(emoji(6939).TableRow, obj7), , ,];
-      const obj9 = { icon: closure_6(emoji(10154).PencilIcon, {}), label: null, onPress: null };
+      const items2 = [closure_6(emoji(6963).TableRow, obj7), , ,];
+      const obj9 = { icon: closure_6(emoji(10187).PencilIcon, {}), label: null, onPress: null };
       const obj10 = { variant: "text-md/semibold", children: null };
       const intl2 = emoji(1125).intl;
       obj10.children = intl2.string(emoji(1125).t.bt75uw);
-      obj9.label = closure_6(emoji(5270).Text, obj10);
+      obj9.label = closure_6(emoji(5271).Text, obj10);
       obj9.onPress = function onPress() {
         dependencyMap();
         onClose();
       };
-      items2[1] = closure_6(emoji(6939).TableRow, obj9);
+      items2[1] = closure_6(emoji(6963).TableRow, obj9);
       let tmp5Result = null;
       if (null != onSelectRolesForEmoji) {
-        const obj11 = { icon: closure_6(tmp3(10154).PencilIcon, {}), label: null, onPress: null };
+        const obj11 = { icon: closure_6(tmp3(10187).PencilIcon, {}), label: null, onPress: null };
         const obj12 = { variant: "text-md/semibold", children: null };
         const intl3 = tmp3(1125).intl;
         obj12.children = intl3.string(tmp3(1125).t["+riKdA"]);
-        obj11.label = closure_6(tmp3(5270).Text, obj12);
+        obj11.label = closure_6(tmp3(5271).Text, obj12);
         obj11.onPress = onClose(function* () {
           closure_2 = tmp3;
           yield onSelectRolesForEmoji(emoji);
@@ -398,20 +398,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return value;
         });
-        tmp5Result = closure_6(tmp3(6939).TableRow, obj11);
+        tmp5Result = closure_6(tmp3(6963).TableRow, obj11);
       }
       const obj13 = { children: null };
       const obj14 = { hasIcons: true, children: null };
       items2[2] = tmp5Result;
-      const obj15 = { icon: closure_6(emoji(6967).XSmallIcon, {}), label: null, onPress: null };
+      const obj15 = { icon: closure_6(emoji(6991).XSmallIcon, {}), label: null, onPress: null };
       const obj16 = { variant: "text-md/semibold", children: null };
       const intl4 = tmp3(1125).intl;
       obj16.children = intl4.string(emoji(1125).t["ETE/oC"]);
-      obj15.label = closure_6(emoji(5270).Text, obj16);
+      obj15.label = closure_6(emoji(5271).Text, obj16);
       obj15.onPress = onClose;
-      items2[3] = closure_6(emoji(6939).TableRow, obj15);
+      items2[3] = closure_6(emoji(6963).TableRow, obj15);
       obj14.children = items2;
-      items1[1] = closure_7(emoji(7023).TableRowGroup, obj14);
+      items1[1] = closure_7(emoji(7047).TableRowGroup, obj14);
       obj13.children = items1;
-      return closure_7(emoji(7334).ActionSheet, obj13);
+      return closure_7(emoji(7358).ActionSheet, obj13);
     };

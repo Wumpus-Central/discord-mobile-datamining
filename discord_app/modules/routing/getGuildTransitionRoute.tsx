@@ -14,11 +14,11 @@ import PrivateChannelSortStore from "../../stores/views/PrivateChannelSortStore.
 
 require = fn;
 const ME = fn(1084).ME;
-const StaticChannelRoute = fn(4863).StaticChannelRoute;
+const StaticChannelRoute = fn(4864).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
-export const getGuildTransitionRoute = function getGuildTransitionRoute(id) {
+export function getGuildTransitionRoute(id) {
   const lastProjectId = ConjureBuilderRouteStore.getLastProjectId(id);
   if (null != lastProjectId) {
     guild = GuildStore.getGuild(id);
@@ -112,4 +112,4 @@ export const getGuildTransitionRoute = function getGuildTransitionRoute(id) {
       items6 = items7;
     }
   }
-};
+}

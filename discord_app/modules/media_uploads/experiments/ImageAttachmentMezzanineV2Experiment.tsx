@@ -14,6 +14,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/media_uploads/experiments/ImageAttachmentMezzanineV2Experiment.tsx");
 
-export const getImageAttachmentMezzanineV2Config = function getImageAttachmentMezzanineV2Config(location) {
+export function getImageAttachmentMezzanineV2Config(location) {
   return config.getConfig({ location: location.location });
-};
+}

@@ -29,15 +29,15 @@ export const getOS = getSuperProperties.getOS;
 export const getDevice = getSuperProperties.getDevice;
 export const getBrowser = getSuperProperties.getBrowser;
 export const getCampaignParams = getSuperProperties.getCampaignParams;
-export const isThrottled = function isThrottled(CHANNEL_OPENED) {
+export function isThrottled(CHANNEL_OPENED) {
   let tmp = null != dependencyMap[CHANNEL_OPENED];
   if (tmp) {
     const _Date = Date;
     tmp = dependencyMap[CHANNEL_OPENED] > Date.now();
   }
   return tmp;
-};
-export const trackMaker = (arg0) => {
+}
+export (arg0) => {
   ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
   ({ dispatcher, TRACK_ACTION_NAME } = arg0);
   closure_2 = AnalyticsTrackingActionCreators.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
@@ -107,4 +107,4 @@ export const trackMaker = (arg0) => {
     }
     return closure_2(arg0, arg1, obj);
   };
-};
+}

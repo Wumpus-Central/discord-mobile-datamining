@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx",
 );
 
-export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
+export function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const messageReference = message.messageReference;
@@ -49,4 +49,4 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   obj2.threadOnClick = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: intl.formatToParts(util.t.veX9jq, obj2) };
-};
+}

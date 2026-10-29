@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");
 
-export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remoteJoinPlatform) {
+export function getRemoteJoinFooterLabel(remoteJoinPlatform) {
   if (ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {
     const intl5 = util.intl;
     return intl5.string(util.t.aqN8U9);
@@ -23,4 +23,4 @@ export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remote
     const intl = util.intl;
     return intl.string(util.t["R/1GpG"]);
   }
-};
+}

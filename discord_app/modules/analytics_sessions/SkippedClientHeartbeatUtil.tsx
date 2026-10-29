@@ -6,7 +6,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
 
-export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeatSkipped() {
+export function shouldLogClientHeartbeatSkipped() {
   const currentUser = UserStore.getCurrentUser();
   let tmp = null != currentUser;
   if (tmp) {
@@ -17,4 +17,4 @@ export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeat
     tmp = isStaffResult;
   }
   return tmp;
-};
+}

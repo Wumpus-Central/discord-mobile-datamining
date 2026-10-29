@@ -8,13 +8,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
-export const isClipsEnabled = function isClipsEnabled() {
+export function isClipsEnabled() {
   let clipsEnabled = ClipsExperiment.areClipsAvailable();
   if (clipsEnabled) {
     clipsEnabled = ClipsStore.getState().clipsSettings.clipsEnabled;
   }
   return clipsEnabled;
-};
+}
 export const useIsClipsEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsClipsEnabled() {
       const cResult = c.c(2);

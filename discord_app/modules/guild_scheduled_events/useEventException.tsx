@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return found;
     };
-export const getEventException = function getEventException(recurrenceId, eventId) {
+export function getEventException(recurrenceId, eventId) {
   const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
   let prop;
   if (guildScheduledEvent != null) {
@@ -92,4 +92,4 @@ export const getEventException = function getEventException(recurrenceId, eventI
     found = prop.find((event_exception_id) => event_exception_id.event_exception_id === closure_0);
   }
   return found;
-};
+}

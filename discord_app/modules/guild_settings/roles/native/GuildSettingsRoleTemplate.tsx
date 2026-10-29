@@ -8,9 +8,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8806 from "../../../../../_runtime/metro/08806__.js";
-import PaginationDefault from "../../../../../_runtime/10550_Pagination.js";
-import _modDef11298 from "../../../../../_runtime/metro/11298__.js";
+import _modDef8809 from "../../../../../_runtime/metro/08809__.js";
+import PaginationDefault from "../../../../../_runtime/10583_Pagination.js";
+import _modDef11352 from "../../../../../_runtime/metro/11352__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19417);
+const GuildSettingsRoleConstants = fn(19650);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
 let c17 = 300;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_14(_modDef8806, {
+        children: closure_14(_modDef8809, {
           maximumValue: values.length - 1,
           minimumTrackTintColor: values[value].color,
           minimumValue: closure_9.COSMETIC,
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { style: closure_3.templateContent, children: null };
               const items = [
                 closure_3_14(native.Icon, {
-                  source: _modDef11298,
+                  source: _modDef11352,
                   size: native.IconSizes.MEDIUM,
                   color: nativeDefault.unsafe_rawColors.GREEN_360,
                 }),

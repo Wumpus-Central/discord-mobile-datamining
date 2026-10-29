@@ -1,10 +1,10 @@
 // discord_app/modules/saved_messages/native/ForLaterCardActionButtons.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9172 from "../../../../_runtime/metro/09172__.js";
+import _modDef9175 from "../../../../_runtime/metro/09175__.js";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -15,7 +15,7 @@ let closure_3 = ["menuItems"];
 let closure_4 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = util.intl;
           obj.accessibilityLabel = intl.string(util.t.e1heBD);
           obj.size = "sm";
-          obj.icon = _modDef9172;
+          obj.icon = _modDef9175;
           return jsx(IconButton.IconButton, { ref: ref.ref });
         };
         cResult[3] = fn;
@@ -101,13 +101,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = util.intl;
           obj.accessibilityLabel = intl.string(util.t.e1heBD);
           obj.size = "sm";
-          obj.icon = _modDef9172;
+          obj.icon = _modDef9175;
           return jsx(IconButton.IconButton, { ref: ref.ref });
         },
       });
       return <View style={closure_9().actionGroup} />;
     };
-export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedMessage) {
+export function useForLaterCardMenuItems(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const jumpToMessage = savedMessage.jumpToMessage;
   const items = [savedMessage];
@@ -116,18 +116,18 @@ export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedM
   const callback = noop.useCallback(
     () =>
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14052, dependencyMap.paths),
+        asyncRequireImpl(14285, dependencyMap.paths),
         "MessageReminderDurationActionSheet",
         {
           createReminder(dueAt) {
             const obj2 = {};
             const merged = Object.assign(closure_1_0.saveData);
             obj2.dueAt = dueAt;
-            obj2.source = savedMessage(14055).SavedMessageSources.FOR_LATER_LIST;
-            return savedMessage(14045).addOrUpdateSavedMessage(obj2);
+            obj2.source = savedMessage(14288).SavedMessageSources.FOR_LATER_LIST;
+            return savedMessage(14278).addOrUpdateSavedMessage(obj2);
           },
           removeReminder() {
-            return savedMessage(14045).removeSavedMessage({
+            return savedMessage(14278).removeSavedMessage({
               channelId: closure_1_0.saveData.channelId,
               messageId: closure_1_0.saveData.messageId,
               displayToast: true,
@@ -142,7 +142,7 @@ export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedM
   );
   const intl = savedMessage(1125).intl;
   obj.label = intl.string(savedMessage(1125).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(12561).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(12616).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
@@ -155,7 +155,7 @@ export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedM
   }
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6967).XSmallIcon,
+    IconComponent: savedMessage(6991).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
@@ -172,13 +172,13 @@ export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedM
       action: null,
     };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      tmp2Result = tmp2(14056);
+      tmp2Result = tmp2(14289);
       let PencilIcon = tmp2Result.BellZIcon;
     } else {
-      PencilIcon = tmp2(10154).PencilIcon;
+      PencilIcon = tmp2(10187).PencilIcon;
     }
     obj3.IconComponent = PencilIcon;
     obj3.action = callback;
     obj3 = items1.unshift(obj3);
   }
-};
+}

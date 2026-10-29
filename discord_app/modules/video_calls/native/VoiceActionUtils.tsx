@@ -16,7 +16,7 @@ const DominantMuteState = {
 const result = size.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
 export { DominantMuteState };
-export const createMuteHandler = function createMuteHandler(muteStates) {
+export function createMuteHandler(muteStates) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
@@ -40,12 +40,12 @@ export const createMuteHandler = function createMuteHandler(muteStates) {
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };
-};
-export const createDeafHandler = function createDeafHandler(deafStates) {
+}
+export function createDeafHandler(deafStates) {
   let onPress = CallsUtils.handleToggleSelfDeaf;
   if (deafStates.deaf) {
     onPress = CallsUtils.showServerDeafenAlert;
   }
   const deaf = deafStates.selfDeaf || deafStates.deaf;
   return { deaf, onPress };
-};
+}

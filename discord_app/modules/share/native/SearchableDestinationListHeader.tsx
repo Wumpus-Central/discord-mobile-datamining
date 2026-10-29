@@ -1,16 +1,16 @@
 // discord_app/modules/share/native/SearchableDestinationListHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01503_Link.js";
+import Link from "../../../../_runtime/01504_Link.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod6969 from "../../../../_runtime/metro/06969__.js";
+import _mod6993 from "../../../../_runtime/metro/06993__.js";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       subtitleColor = subtitleColor.subtitleColor;
       ({ headerRight, headerStatusBarHeight, onClose } = subtitleColor);
       const tmp4 = closure_5();
-      const context = noop.useContext(subtitle(1503).NavigationRouteContext);
+      const context = noop.useContext(subtitle(1504).NavigationRouteContext);
       const obj = subtitle(576);
       const tmp5 = subtitleColor;
       let isIOSResult = subtitle(1381).isIOS();
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] !== onClose) {
           let headerCloseButton;
           if (null != onClose) {
-            headerCloseButton = subtitle(6960).getHeaderCloseButton(onClose);
-            const tmpResult = subtitle(6960);
+            headerCloseButton = subtitle(6984).getHeaderCloseButton(onClose);
+            const tmpResult = subtitle(6984);
           }
           cResult[3] = onClose;
           cResult[4] = headerCloseButton;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (headerStatusBarHeight == null) {
           let num3 = 0;
           if (!isIOSResult) {
-            num3 = subtitleColor(1630)().top;
+            num3 = subtitleColor(1631)().top;
           }
           headerStatusBarHeight = num3 + tmp5(587).space.PX_8;
         }
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } =
           tmp4);
         obj3.headerStatusBarHeight = headerStatusBarHeight;
-        const tmp17 = jsx(subtitle(6969).Header, {
+        const tmp17 = jsx(subtitle(6993).Header, {
           headerStyle: tmp4.header,
           title,
           headerTitle: tmp10,
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerStatusBarHeight = num + nativeDefault.space.PX_8;
       }
       obj3.headerStatusBarHeight = headerStatusBarHeight;
-      return jsx(_mod6969.Header, {
+      return jsx(_mod6993.Header, {
         headerStyle: tmp.header,
         title,
         headerTitle(children) {

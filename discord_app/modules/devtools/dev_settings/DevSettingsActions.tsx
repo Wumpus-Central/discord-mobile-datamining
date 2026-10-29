@@ -5,15 +5,15 @@ import DevSettingsStore from "DevSettingsStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");
 
-export const toggle = function toggle(toggle, flag) {
+export function toggle(toggle, flag) {
   let tmp = flag;
   if (typeof flag !== "boolean") {
     tmp = !DevSettingsStore.get(toggle);
   }
   DispatcherDefault.dispatch({ type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp });
   const obj2 = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
-};
-export const clearAll = function clearAll() {
+}
+export function clearAll() {
   for (const key10005 in DevSettingsStore.enabled()) {
     let flag = false;
     if (typeof false !== "boolean") {
@@ -24,4 +24,4 @@ export const clearAll = function clearAll() {
     let dispatchResult = obj.dispatch(obj2);
     continue;
   }
-};
+}

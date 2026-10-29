@@ -10,7 +10,7 @@ let c5 = "nsfw-server-invite-warning";
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function NsfwServerInviteWarningAlert(onConfirm) {
-      const cResult = onConfirm(_confirm[3]).c(21);
+      const cResult = onConfirm(_confirm[3]).c(22);
       onConfirm = onConfirm.onConfirm;
       let obj = onConfirm(_confirm[3]);
       const dismissModalCallback = onConfirm(_confirm[4]).useDismissModalCallback();
@@ -75,22 +75,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[14] === tmp9) {
                 if (cResult[15] === tmp15) {
                   if (cResult[16] === goBackIsPrimary) {
-                    if (cResult[18] === description) {
-                      if (cResult[19] === tmp20) {
-                        let tmp23 = cResult[20];
-                      }
-                      return tmp23;
+                    const _Symbol3 = Symbol;
+                    if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+                      const obj5 = { impression: null };
+                      const obj6 = { impressionName: tmp(_confirm[10]).ImpressionNames.USER_AGE_GATE_VERIFY };
+                      obj5.impression = obj6;
+                      cResult[18] = obj5;
+                      let tmp23 = obj5;
+                    } else {
+                      tmp23 = cResult[18];
                     }
-                    const obj5 = { title: tmp18, content: description, actions: cResult[17] };
-                    const tmp25 = jsx(tmp(_confirm[8]).AlertModal, {
+                    if (cResult[19] === description) {
+                      if (cResult[20] === tmp20) {
+                        let tmp24 = cResult[21];
+                      }
+                      return tmp24;
+                    }
+                    const obj7 = { title: tmp18, content: description, actions: cResult[17], trackingProps: tmp23 };
+                    const tmp26 = jsx(tmp(_confirm[8]).AlertModal, {
                       title: tmp18,
                       content: description,
                       actions: cResult[17],
+                      trackingProps: tmp23,
                     });
-                    cResult[18] = description;
-                    cResult[19] = cResult[17];
-                    cResult[20] = tmp25;
-                    tmp23 = tmp25;
+                    cResult[19] = description;
+                    cResult[20] = cResult[17];
+                    cResult[21] = tmp26;
+                    tmp24 = tmp26;
                   }
                 }
               }
@@ -110,7 +121,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[17] = tmp21;
             }
           }
-          const obj6 = { variant: str2, text: _confirm.text, onPress: tmp8 };
+          const obj8 = { variant: str2, text: _confirm.text, onPress: tmp8 };
           const tmp11 = jsx(
             tmp(_confirm[8]).AlertActionButton,
             { variant: str2, text: _confirm.text, onPress: tmp8 },
@@ -123,7 +134,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = tmp11;
         }
       }
-      const fn = function v() {
+      const fn = function f() {
         if (_confirm.joins) {
           onConfirm();
         } else {
@@ -177,7 +188,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = tmp(tmp2[9]).intl;
       obj5.text = intl.string(onConfirm(_confirm[9]).t["/g10LC"]);
       const tmp6Result2 = jsx(onConfirm(_confirm[8]).AlertActionButton, { variant: str2, text: null }, "go-back");
-      const obj6 = { title: null, content: null, actions: null };
+      const obj6 = { title: null, content: null, actions: null, trackingProps: null };
       const intl2 = tmp(tmp2[9]).intl;
       obj6.title = intl2.string(onConfirm(_confirm[9]).t.xi46lg);
       obj6.content = nsfwServerInviteWarningVariant.description;
@@ -192,7 +203,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = items1;
       }
       obj6.actions = tmp9;
-      return jsx(onConfirm(_confirm[8]).AlertModal, { title: null, content: null, actions: null });
+      const obj7 = { impression: null };
+      const obj3 = onConfirm(_confirm[5]);
+      const obj4 = { variant: str, text: _confirm.text, onPress: callback };
+      obj7.impression = { impressionName: onConfirm(_confirm[10]).ImpressionNames.USER_AGE_GATE_VERIFY };
+      obj6.trackingProps = obj7;
+      return jsx(onConfirm(_confirm[8]).AlertModal, { title: null, content: null, actions: null, trackingProps: null });
     };
 let closure_6 = tmp2;
 const size = fn(2);
@@ -200,7 +216,7 @@ let result = size.fileFinishedImporting("modules/age_gate/native/components/Nsfw
 
 export default tmp2;
 export const NSFW_SERVER_INVITE_WARNING_ALERT_KEY = "nsfw-server-invite-warning";
-export const showNsfwServerInviteWarningAlert = function showNsfwServerInviteWarningAlert(arg0) {
+export function showNsfwServerInviteWarningAlert(arg0) {
   ({ onConfirm, onDismiss } = arg0);
   useAlertStore.openAlert(c5, <closure_6 onConfirm={onConfirm} />, onDismiss);
-};
+}

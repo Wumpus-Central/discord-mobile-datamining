@@ -460,6 +460,6 @@ export const OrbCheckoutModalContextProvider = ReactCompilerGating.isReactCompil
         </redux.Provider>
       );
     };
-export const useOrbCheckoutModalContext = function useOrbCheckoutModalContext() {
+export function useOrbCheckoutModalContext() {
   return React3(closure_9);
-};
+}

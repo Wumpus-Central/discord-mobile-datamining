@@ -4,9 +4,9 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 
-export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {
+export function setNewUser(ORGANIC_REGISTERED) {
   DispatcherDefault.dispatch({ type: "NUF_NEW_USER", newUserType: ORGANIC_REGISTERED });
-};
-export const setNewUserFlowCompleted = function setNewUserFlowCompleted() {
+}
+export function setNewUserFlowCompleted() {
   DispatcherDefault.dispatch({ type: "NUF_COMPLETE" });
-};
+}

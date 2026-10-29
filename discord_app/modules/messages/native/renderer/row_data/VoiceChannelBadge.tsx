@@ -14,7 +14,7 @@ const Image = _mod17.Image;
 const Permissions = Constants.Permissions;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
-export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId1) {
+export function createVoiceChannelBadge(id, guildId1) {
   const guildId = guildId1;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId1) {
@@ -60,4 +60,4 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
     }
   }
   obj = VoiceChannelBadgeExperiment;
-};
+}

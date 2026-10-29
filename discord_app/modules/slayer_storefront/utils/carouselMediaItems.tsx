@@ -10,20 +10,15 @@ export const WEB_HERO_HEIGHT_PX = 560;
 export const MOBILE_HERO_WIDTH_PX = 343;
 export const MOBILE_HERO_HEIGHT_PX = 257;
 export const CAROUSEL_THUMBNAIL_SIZE = 112;
-export const getThumbnailSrc = function getThumbnailSrc(thumbnailSrc) {
+export function getThumbnailSrc(thumbnailSrc) {
   if (null != thumbnailSrc.thumbnailSrc) {
     thumbnailSrc = thumbnailSrc.thumbnailSrc;
   } else {
     thumbnailSrc = "video" === thumbnailSrc.type ? thumbnailSrc.videoThumbnailSrc : thumbnailSrc.src;
   }
   return thumbnailSrc;
-};
-export const convertCarouselItemsToMediaItems = function convertCarouselItemsToMediaItems(
-  carouselItems,
-  applicationId,
-  stateFromStores2,
-  heroWidth,
-) {
+}
+export function convertCarouselItemsToMediaItems(carouselItems, applicationId, stateFromStores2, heroWidth) {
   heroWidth = heroWidth.heroWidth;
   const items = [];
   const items1 = [];
@@ -103,4 +98,4 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
   }
   const items3 = [items, items1];
   return items3;
-};
+}

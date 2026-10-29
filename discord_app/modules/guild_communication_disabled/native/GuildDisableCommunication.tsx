@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(4918);
+const GuildDisableCommunicationConstants = fn(4919);
 ({
   DisableCommunicationDuration,
   GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8,
@@ -71,7 +71,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -394,7 +394,7 @@ export default noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -439,7 +439,7 @@ export default noop.memo(
                   obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
                   v1();
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp18) {
                 c3 = tmp;
@@ -494,7 +494,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -508,7 +508,7 @@ export default noop.memo(
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  const obj4 = tmp4(12848);
+                  const obj4 = tmp4(13069);
                   dependencyMap = 1;
                   c3 = 1;
                   const obj5 = {
@@ -531,8 +531,8 @@ export default noop.memo(
                 return obj6;
               } else {
                 const intl = user(1125).intl;
-                const obj8 = tmp4(5699);
-                const name = tmp4(6025).getName(closure_129_1, null, closure_129_0);
+                const obj8 = tmp4(5701);
+                const name = tmp4(6029).getName(closure_129_1, null, closure_129_0);
                 user = name;
                 if (name == null) {
                   user = "";
@@ -543,7 +543,7 @@ export default noop.memo(
                 obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
                 closure_129_2();
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp18) {
               c3 = tmp;

@@ -16,7 +16,7 @@ const items = [
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
 
-export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
+export function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
     let hasItem = PrivateChannelCallUtils.isVoiceChannelModalKey(key);
@@ -26,4 +26,4 @@ export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaFo
     tmp = hasItem;
   }
   return tmp;
-};
+}

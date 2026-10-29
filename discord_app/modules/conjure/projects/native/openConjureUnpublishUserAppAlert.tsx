@@ -148,7 +148,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -186,7 +186,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 );
                 require("ToastActionCreators").open("CONJURE_USER_APP_UNPUBLISHED", obj7);
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else {
                 const intl = tmp5(stateFromStores[9]).intl;
                 closure_128_0 = intl.string(require("../../intl/ConjureUntranslated.messages.js")["rE/0SD"]);
@@ -255,7 +255,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -273,7 +273,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 importDefault(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(10823).unpublishUserApp(id.id), done: false };
+                const obj4 = { value: tmp2(10899).unpublishUserApp(id.id), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -287,13 +287,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { text: null, variant: "success" };
               const intl2 = tmp2(1125).intl;
               const obj8 = { app: closure_129_2 };
-              obj7.text = intl2.formatToPlainString(tmp5(3863).b8LN7N, obj8);
-              tmp5(5699).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
+              obj7.text = intl2.formatToPlainString(tmp5(3864).b8LN7N, obj8);
+              tmp5(5701).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               const intl = tmp2(1125).intl;
-              closure_128_0 = intl.string(tmp5(3863)["rE/0SD"]);
+              closure_128_0 = intl.string(tmp5(3864)["rE/0SD"]);
               closure_129_1(closure_128_0);
               const _Error = Error;
               const error = new Error(closure_128_0);

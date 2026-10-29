@@ -9,7 +9,7 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import ReferralTrialStore from "../ReferralTrialStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ function useIsReferralProgramEntrypointBadgeAcknowledged() {
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
-export const getReferralTrialOfferExpirationCopy = function getReferralTrialOfferExpirationCopy(time) {
+export function getReferralTrialOfferExpirationCopy(time) {
   const diff = time - Date.now();
   const result = diff / DurationsDefault.Millis.HOUR;
   if (result > 24) {
@@ -44,25 +44,24 @@ export const getReferralTrialOfferExpirationCopy = function getReferralTrialOffe
     formatToPlainStringResult = intl.formatToPlainString(util.t["/d0GmT"], obj);
   }
   return formatToPlainStringResult;
-};
+}
 export { useIsReferralProgramEntrypointBadgeAcknowledged };
-export const markReferralProgramEntrypointBadgeAcknowledged =
-  function markReferralProgramEntrypointBadgeAcknowledged() {
-    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
-      dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE,
-    );
-  };
-export const isReferralProgramBadgeAcknowledged = function isReferralProgramBadgeAcknowledged() {
+export function markReferralProgramEntrypointBadgeAcknowledged() {
+  const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+    dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE,
+  );
+}
+export function isReferralProgramBadgeAcknowledged() {
   return DismissibleContentUnsafeUtils.UNSAFE_isDismissibleContentDismissed(
     dismissible_content.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE,
   );
-};
-export const markReferralProgramBadgeAcknowledged = function markReferralProgramBadgeAcknowledged() {
+}
+export function markReferralProgramBadgeAcknowledged() {
   const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
     dismissible_content.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE,
   );
-};
-export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBadgeShowable(trialOffer) {
+}
+export function useIsReferralProgramBadgeShowable(trialOffer) {
   trialOffer = trialOffer.trialOffer;
   if (null == trialOffer) {
     return false;
@@ -80,8 +79,8 @@ export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBa
     }
     return isReferralTrial;
   }
-};
-export const markReferralProgramPopoverSeen = function markReferralProgramPopoverSeen(promotionId) {
+}
+export function markReferralProgramPopoverSeen(promotionId) {
   if (null != promotionId) {
     const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
     const result = DismissibleContentUtils.markSnowflakeBoundDismissibleContentAsDismissed(
@@ -90,17 +89,17 @@ export const markReferralProgramPopoverSeen = function markReferralProgramPopove
       obj2,
     );
   }
-};
-export const markReferralIncentivePopoverSeen = function markReferralIncentivePopoverSeen() {
+}
+export function markReferralIncentivePopoverSeen() {
   const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
     dismissible_content.DismissibleContent.REFERRAL_PROGRAM_INCENTIVE_POPOVER,
   );
-};
+}
 export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsReferralProgramPopoverShowable() {
       const cResult = stateFromStores1(576).c(7);
       let obj = stateFromStores1(576);
-      let isEligibleSenderForReferralProgram = stateFromStores1(8460).useIsEligibleSenderForReferralProgram(false);
+      let isEligibleSenderForReferralProgram = stateFromStores1(8482).useIsEligibleSenderForReferralProgram(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReferralTrialStore];
         const fn = function t() {
@@ -113,7 +112,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj2 = stateFromStores1(8460);
+      const obj2 = stateFromStores1(8482);
       const stateFromStores = stateFromStores1(504).useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ReferralTrialStore];
@@ -227,8 +226,8 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       return tmp17;
     }
   : function useIsReferralProgramPopoverShowable() {
-      let isEligibleSenderForReferralProgram = stateFromStores1(8460).useIsEligibleSenderForReferralProgram(false);
-      let obj = stateFromStores1(8460);
+      let isEligibleSenderForReferralProgram = stateFromStores1(8482).useIsEligibleSenderForReferralProgram(false);
+      let obj = stateFromStores1(8482);
       const items = [ReferralTrialStore];
       const stateFromStores = stateFromStores1(504).useStateFromStores(items, () =>
         ReferralTrialStore.getReferralsRemaining(),

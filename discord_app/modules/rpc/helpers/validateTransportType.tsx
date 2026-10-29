@@ -8,7 +8,7 @@ const TransportTypes = Constants2.TransportTypes;
 const RPCErrors = Constants.RPCErrors;
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
 
-export const validateTransportType = function validateTransportType(transport) {
+export function validateTransportType(transport) {
   if (TransportTypes.IPC !== transport) {
     if (TransportTypes.POST_MESSAGE !== transport) {
       const obj = { errorCode: RPCErrors.INVALID_COMMAND };
@@ -16,4 +16,4 @@ export const validateTransportType = function validateTransportType(transport) {
       throw tmp7;
     }
   }
-};
+}

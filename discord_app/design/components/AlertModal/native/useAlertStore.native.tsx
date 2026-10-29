@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
 
 export const useAlertStore = obj3;
-export const dismissAlerts = function dismissAlerts() {
+export function dismissAlerts() {
   const alerts = obj3.getState().alerts;
   const items = [[], []];
   const tmp = _slicedToArray(
@@ -38,12 +38,12 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(5947)();
+    arr4(5949)();
   }
   const obj = first(1271);
   tmp4 = 0 === tmp[1].length && first.length > 0;
-};
-export const dismissAlert = function dismissAlert(key) {
+}
+export function dismissAlert(key) {
   _require = key;
   let alerts = obj3.getState().alerts;
   const found = alerts.find((key) => key.key === closure_0);
@@ -70,12 +70,12 @@ export const dismissAlert = function dismissAlert(key) {
       }
     });
     if (tmp2) {
-      found(5947)();
+      found(5949)();
     }
     let obj = require("ReactBatchUpdates");
   }
-};
-export const openAlert = function openAlert(VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, arg1, onCloseCallback, arg3) {
+}
+export function openAlert(VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, arg1, onCloseCallback, arg3) {
   _require = VOICE_PANEL_VIDEO_GUARD_ERROR_KEY;
   importDefault = arg1;
   dependencyMap = onCloseCallback;
@@ -96,4 +96,4 @@ export const openAlert = function openAlert(VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, a
       return { alerts };
     });
   });
-};
+}

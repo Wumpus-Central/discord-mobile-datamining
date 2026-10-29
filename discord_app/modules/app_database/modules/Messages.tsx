@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/Messages.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
-import _mod4883 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod4884 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import requireSortedDescending from "messages/requireSortedDescending.tsx";
 import isReadableChannel from "messages/isReadableChannel.tsx";
 import KvMessage2 from "messages/KvMessage.tsx";
@@ -138,7 +138,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -285,7 +285,7 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
     guildId,
     channel_id,
     KvMessage.fromMessage(guildId, channel_id, item10009, result),
-    _mod4883.ConflictOptions.Skip,
+    _mod4884.ConflictOptions.Skip,
   );
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
@@ -296,7 +296,7 @@ prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, databa
     guildId,
     channelId,
     KvMessage.fromMessage(guildId, channelId, message, result),
-    _mod4883.ConflictOptions.Replace,
+    _mod4884.ConflictOptions.Replace,
   );
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
@@ -351,7 +351,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -450,6 +450,6 @@ let result = size.fileFinishedImporting("modules/app_database/modules/Messages.t
 
 export default obj2;
 export const ChannelHistory = prototype;
-export const isLikelyNotDelta = function isLikelyNotDelta(author) {
+export function isLikelyNotDelta(author) {
   return null != author.author && null != author.content && null != author.mentions && null != author.timestamp;
-};
+}

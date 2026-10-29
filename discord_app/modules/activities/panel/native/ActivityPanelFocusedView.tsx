@@ -18,25 +18,25 @@ import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
-const ActivityPanelConstants = fn(5645);
+const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
+const ActivityPanelConstants = fn(5646);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18650);
+const ActivityPanelNativeConstants = fn(18884);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1084).ThemeTypes;
-const IS_IOS = fn(10939).IS_IOS;
+const IS_IOS = fn(10974).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   wrapper: {
     position: "absolute",
@@ -96,7 +96,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useBaseActivityPanelFocusedView(context) {
       let isWindowLandscape;
-      const tmp = isWindowLandscape(1630)();
+      const tmp = isWindowLandscape(1631)();
       const right = tmp;
       const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
       const isLandscape = wrapperDimensions.isLandscape;

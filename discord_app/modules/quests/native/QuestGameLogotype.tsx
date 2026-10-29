@@ -10,9 +10,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let SPRING_CONFIG = {};
-const merged = Object.assign(fn(5284).springSlow);
+const merged = Object.assign(fn(5285).springSlow);
 SPRING_CONFIG.overshootClamping = true;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,\"animate-always\")};}" };
@@ -40,7 +40,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (cResult[6] !== assetUrl) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -80,15 +80,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj1;
       }
     }
-    const obj3 = { withSpring: SvgUri(5283).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
+    const obj3 = { withSpring: SvgUri(5284).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
     H.__closure = obj3;
     H.__workletHash = 13667917221894;
     H.__initData = __initData;
-    const animatedStyle = SvgUri(5085).useAnimatedStyle(H);
+    const animatedStyle = SvgUri(5086).useAnimatedStyle(H);
     if (cResult[9] !== assetUrl) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -109,7 +109,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -117,14 +117,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (cResult[11] === animatedStyle) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
       if (cResult[14] === assetUrl) {
         class R {
           constructor() {
-            size = Image.getSize(assetUrl, () => { ... });
+            size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
             return;
           }
         }
@@ -132,7 +132,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (tmp15) {
         class R {
           constructor() {
-            size = Image.getSize(assetUrl, () => { ... });
+            size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
             return;
           }
         }
@@ -150,14 +150,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         obj4.style = items1;
-        SvgUri = SvgUri(7994).SvgUri;
+        SvgUri = SvgUri(8017).SvgUri;
         let size = { height: "100%", width: "100%", uri: assetUrl, onError };
         obj4.children = <SvgUri height="100%" width="100%" uri={assetUrl} onError={onError} />;
         let tmp18Result = <closure_5 style={null}>{null}</closure_5>;
       } else {
         class R {
           constructor() {
-            size = Image.getSize(assetUrl, () => { ... });
+            size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
             return;
           }
         }
@@ -203,18 +203,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[11] = animatedStyle;
     cResult[12] = style;
     cResult[13] = items3;
-    const SvgUriResult = SvgUri(5085);
+    const SvgUriResult = SvgUri(5086);
   } else {
     class R {
       constructor() {
-        size = Image.getSize(assetUrl, () => { ... });
+        size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
         return;
       }
     }
     if (cResult[0] === tmp5) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -222,7 +222,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (null != height) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -231,7 +231,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }
@@ -241,7 +241,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (null != maxWidth) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { ... });
+          size = Image.getSize(assetUrl, /* F155723 */ function() { ... });
           return;
         }
       }

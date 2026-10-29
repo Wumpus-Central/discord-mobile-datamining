@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 ({ Endpoints: c2, FRIEND_SYNC_PLATFORM_TYPES: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/connections/postConnectionCallback.tsx");
 
-export const postConnectionCallback = function postConnectionCallback(provider, arg1) {
+export function postConnectionCallback(provider, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -25,4 +25,4 @@ export const postConnectionCallback = function postConnectionCallback(provider, 
   request.body = obj;
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   return HTTP.post(request);
-};
+}

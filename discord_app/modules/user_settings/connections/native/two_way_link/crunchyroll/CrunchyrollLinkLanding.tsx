@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef14332 from "../../../../../../../_runtime/metro/14332__.js";
+import _modDef14566 from "../../../../../../../_runtime/metro/14566__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14330).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14564).CrunchyrollLinkModalScenes;
 const Constants = fn(1084);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,12 +21,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(9);
       const tmp4 = closure_8();
       const obj = navigation(576);
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { label: null, icon: null };
         const intl = tmp(1125).intl;
         obj3.label = intl.string(tmp(1125).t["2TXHQd"]);
-        obj3.icon = tmp(8802).PlayIcon;
+        obj3.icon = tmp(8805).PlayIcon;
         const items = [obj3];
         cResult[0] = items;
         let first = items;
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      const obj2 = navigation(1502);
-      const tmp17 = jsx(navigation(9652).TwoWayLinkLanding, {
+      const obj2 = navigation(1503);
+      const tmp17 = jsx(navigation(9684).TwoWayLinkLanding, {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef14332,
+        img: _modDef14566,
         imgStyle: tmp4.image,
         headerConnect: tmp8,
         body: tmp9,
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = tmp17;
       const obj5 = {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef14332,
+        img: _modDef14566,
         imgStyle: tmp4.image,
         headerConnect: tmp8,
         body: tmp9,
@@ -94,13 +94,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CrunchyrollLinkLanding() {
       const tmp = closure_8();
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       let items = [navigation];
       const memo = noop.useMemo(() => {
         const obj = { label: null, icon: null };
         const intl = navigation(1125).intl;
         obj.label = intl.string(navigation(1125).t["2TXHQd"]);
-        obj.icon = navigation(8802).PlayIcon;
+        obj.icon = navigation(8805).PlayIcon;
         const items = [obj];
         return items;
       }, []);
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef14332,
+        img: _modDef14566,
         imgStyle: tmp.image,
         headerConnect: null,
         body: null,
@@ -121,13 +121,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.headerConnect = intl.string(navigation(1125).t["Da+3NJ"]);
       const intl2 = navigation(1125).intl;
       obj2.body = intl2.string(navigation(1125).t.MaPpPL);
-      let obj = navigation(1502);
+      let obj = navigation(1503);
       obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
       obj2.onNext = callback;
       obj2.valueProps = memo;
-      return jsx(navigation(9652).TwoWayLinkLanding, {
+      return jsx(navigation(9684).TwoWayLinkLanding, {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef14332,
+        img: _modDef14566,
         imgStyle: tmp.image,
         headerConnect: null,
         body: null,

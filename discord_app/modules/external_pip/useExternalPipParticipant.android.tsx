@@ -56,8 +56,8 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
     obj = closure_10;
   }
 }
-const ParticipantTypes = fn(5668).ParticipantTypes;
-const VoicePanelModes = fn(10939).VoicePanelModes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
+const VoicePanelModes = fn(10974).VoicePanelModes;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
@@ -117,10 +117,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_10 = {
   participantType: "Reflect",
-  selectedParticipantId: "metadata",
-  selectedParticipantSpeaking: null,
+  selectedParticipantId: "data",
+  selectedParticipantSpeaking: 0,
   selectedParticipantStreamId: null,
-  selectedParticipantUserId: null,
+  selectedParticipantUserId: 130.447265625,
 };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 ReactCompilerGating = fn(558);

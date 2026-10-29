@@ -3,13 +3,13 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const isProfileEffectRecord = fn(7691).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7714).isProfileEffectRecord;
 const Constants = fn(1084);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
 
-export const getProductOrbPrice = function getProductOrbPrice(arg0) {
+export function getProductOrbPrice(arg0) {
   const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.PREMIUM_TIER_2 : constants.DEFAULT];
   let prices;
   if (tmp2 != null) {
@@ -26,8 +26,8 @@ export const getProductOrbPrice = function getProductOrbPrice(arg0) {
     found = null;
   }
   return found;
-};
-export const getProductFiatPrice = function getProductFiatPrice(arg0) {
+}
+export function getProductFiatPrice(arg0) {
   const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.MOBILE_PREMIUM_TIER_2 : constants.MOBILE];
   let prices;
   if (tmp2 != null) {
@@ -44,8 +44,8 @@ export const getProductFiatPrice = function getProductFiatPrice(arg0) {
     found = null;
   }
   return found;
-};
-export const getHasOrbPrice = function getHasOrbPrice(arg0) {
+}
+export function getHasOrbPrice(arg0) {
   let prices;
   if (arg0.prices[constants.DEFAULT] != null) {
     const countryPrices = tmp.countryPrices;
@@ -61,8 +61,8 @@ export const getHasOrbPrice = function getHasOrbPrice(arg0) {
     found = null;
   }
   return null != found;
-};
-export const getHasNonOrbPrice = function getHasNonOrbPrice(arg0) {
+}
+export function getHasNonOrbPrice(arg0) {
   let prices;
   if (arg0.prices[constants.MOBILE] != null) {
     const countryPrices = tmp.countryPrices;
@@ -78,8 +78,8 @@ export const getHasNonOrbPrice = function getHasNonOrbPrice(arg0) {
     found = null;
   }
   return null != found;
-};
-export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
+}
+export function isOrbsExclusiveProduct(product) {
   if (null == product) {
     return false;
   } else {
@@ -117,8 +117,8 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
     }
     return tmp2;
   }
-};
-export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
+}
+export function isDynamicProduct(selectedProduct) {
   let tmp = null != selectedProduct;
   if (tmp) {
     let type1 = null;
@@ -161,8 +161,8 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
     tmp = someResult;
   }
   return tmp;
-};
-export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
+}
+export function getProductsWithOrbsPrice(arr) {
   return arr.filter((item) => {
     let prices;
     if (item.prices[constants.DEFAULT] != null) {
@@ -198,8 +198,8 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
     }
     return tmp4;
   });
-};
-export const getIsVariantProduct = function getIsVariantProduct(product) {
+}
+export function getIsVariantProduct(product) {
   let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
     tmp = null != product.variants;
@@ -208,8 +208,8 @@ export const getIsVariantProduct = function getIsVariantProduct(product) {
     tmp = 0 !== product.variants.length;
   }
   return tmp;
-};
-export const getProductSkuIds = function getProductSkuIds(product) {
+}
+export function getProductSkuIds(product) {
   let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
     tmp = null != product.variants;
@@ -224,8 +224,8 @@ export const getProductSkuIds = function getProductSkuIds(product) {
     mapped = [product.skuId];
   }
   return mapped;
-};
-export const getSelectedProduct = function getSelectedProduct(product, defaultVariantIndex) {
+}
+export function getSelectedProduct(product, defaultVariantIndex) {
   let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
     tmp = null != product.variants;
@@ -245,8 +245,8 @@ export const getSelectedProduct = function getSelectedProduct(product, defaultVa
     }
   }
   return tmp3;
-};
-export const getProductType = function getProductType(product) {
+}
+export function getProductType(product) {
   if (null == product) {
     return null;
   } else if (product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP) {
@@ -264,4 +264,4 @@ export const getProductType = function getProductType(product) {
   } else {
     return product.type;
   }
-};
+}

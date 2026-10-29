@@ -401,34 +401,34 @@ const size = fn(2);
 let result = size.fileFinishedImporting("utils/ColorUtils.tsx");
 
 export { hexWithOpacity };
-export const hexToRgb = function hexToRgb(PRIMARY_800) {
+export function hexToRgb(PRIMARY_800) {
   const tmp = _slicedToArray(_modDef683(PRIMARY_800).rgb(), 3);
   return { r: tmp[0], g: tmp[1], b: tmp[2] };
-};
-export const hexToRgbArray = function hexToRgbArray(arg0) {
+}
+export function hexToRgbArray(arg0) {
   obj = _modDef683(arg0);
   const items = [, , ];
   [arr[0], arr[1], arr[2]] = _modDef683(arg0).rgb();
   return items;
-};
+}
 export { hexToRgba };
 export { hexToRgbaString };
-export const hexOpacityToRgba = function hexOpacityToRgba(backgroundColor, dividerOpacity) {
+export function hexOpacityToRgba(backgroundColor, dividerOpacity) {
   const tmp = _slicedToArray(_modDef683(backgroundColor).rgb(), 3);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + dividerOpacity + ")";
-};
+}
 export { rgbToHslObject };
-export const hslToString = function hslToString(arg0, arg1, arg2) {
+export function hslToString(arg0, arg1, arg2) {
   return "hsl(" + arg0 + ", " + arg1 + "%, " + arg2 + "%)";
-};
-export const rgbToHsl = function rgbToHsl(items, items2, items3) {
+}
+export function rgbToHsl(items, items2, items3) {
   const tmp = rgbToHslObject(items, items2, items3);
   return "hsl(" + tmp.h + ", " + tmp.s + "%, " + tmp.l + "%)";
-};
-export const rgbToHex = function rgbToHex(hsvToRgbWorkletResult, hsvToRgbWorkletResult2, hsvToRgbWorkletResult3) {
+}
+export function rgbToHex(hsvToRgbWorkletResult, hsvToRgbWorkletResult2, hsvToRgbWorkletResult3) {
   return "#" + 16777216 + (hsvToRgbWorkletResult << 16) + (hsvToRgbWorkletResult2 << 8) + hsvToRgbWorkletResult3.toString(16).slice(1);
-};
-export const rgbaToHex = function rgbaToHex(arg0, arg1, arg2, arg3) {
+}
+export function rgbaToHex(arg0, arg1, arg2, arg3) {
   256 + arg0.toString(16);
   const text = `#${arr.slice(1)}`;
   256 + arg1.toString(16);
@@ -436,9 +436,9 @@ export const rgbaToHex = function rgbaToHex(arg0, arg1, arg2, arg3) {
   256 + arg2.toString(16);
   const text2 = `#${arr.slice(1)}${arr2.slice(1)}${arr3.slice(1)}`;
   return `#${arr.slice(1)}${arr2.slice(1)}${arr3.slice(1)}` + 256 + arg3.toString(16).slice(1);
-};
+}
 export { hslToHex };
-export const hexToColorName = function hexToColorName(tmp2Result4, arg1) {
+export function hexToColorName(tmp2Result4, arg1) {
   if (null == obj[tmp2Result4]) {
     if (arg1) {
       const intl = util.intl;
@@ -453,17 +453,17 @@ export const hexToColorName = function hexToColorName(tmp2Result4, arg1) {
   } else {
     return tmp();
   }
-};
-export const mixColors = function mixColors(alpha, red) {
+}
+export function mixColors(alpha, red) {
   alpha = alpha.alpha;
   const sum = (1 - alpha) * red.red + alpha * alpha.red;
   const sum1 = (1 - alpha) * red.green + alpha * alpha.green;
   const sum2 = (1 - alpha) * red.blue + alpha * alpha.blue;
   const sum3 = alpha.alpha + red.alpha * (1 - alpha.alpha);
   return new utils_ColorDefault(sum, sum1, sum2, sum3);
-};
+}
 export { hex2rgb2hsv };
-export const getComplimentaryPaletteForColor = function getComplimentaryPaletteForColor(items, arg1) {
+export function getComplimentaryPaletteForColor(items, arg1) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 3;
@@ -499,9 +499,9 @@ export const getComplimentaryPaletteForColor = function getComplimentaryPaletteF
     } while (items.length < num);
   }
   return items;
-};
+}
 export { rawRgbToHsl };
-export const getColorLightnessAdjusted = function getColorLightnessAdjusted(color, arg1, arg2) {
+export function getColorLightnessAdjusted(color, arg1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -522,8 +522,8 @@ export const getColorLightnessAdjusted = function getColorLightnessAdjusted(colo
   }
   tmp.lightness = num;
   return rawHslToRgb(tmp.hue, tmp.saturation, tmp.lightness);
-};
-export const getAccessibleForegroundColor = function getAccessibleForegroundColor(saturationFactor) {
+}
+export function getAccessibleForegroundColor(saturationFactor) {
   ({ foreground, background, ratio } = saturationFactor);
   if (ratio === undefined) {
     ratio = 5;
@@ -576,8 +576,8 @@ export const getAccessibleForegroundColor = function getAccessibleForegroundColo
     }
   }
   return obj4.alpha(1);
-};
-export const findColorByHsv = function findColorByHsv(colors) {
+}
+export function findColorByHsv(colors) {
   const substr = colors.slice(0, 3);
   const mapped = substr.map((hex) => {
     obj = { hex, hsv: null };
@@ -589,8 +589,8 @@ export const findColorByHsv = function findColorByHsv(colors) {
     return obj;
   });
   return mapped.sort(sortColors)[0].hex;
-};
-export const getSaturatedColorHex = function getSaturatedColorHex(arg0) {
+}
+export function getSaturatedColorHex(arg0) {
   ({ colorRGB, saturationFactor } = arg0);
   if (saturationFactor === undefined) {
     saturationFactor = 1;
@@ -603,8 +603,8 @@ export const getSaturatedColorHex = function getSaturatedColorHex(arg0) {
     const tmp4 = rawRgbToHsl(value, value2, colorRGB.get("rgb.b"));
     return rawHslToRgb(tmp4.hue, tmp4.saturation * saturationFactor, tmp4.lightness).toHexString();
   }
-};
-export const interpolateColor = function interpolateColor(str, str2, arg2) {
+}
+export function interpolateColor(str, str2, arg2) {
   const parsed = parseInt(str.substring(1, 3), 16);
   const parsed1 = parseInt(str.substring(3, 5), 16);
   const parsed2 = parseInt(str.substring(5, 7), 16);
@@ -619,4 +619,4 @@ export const interpolateColor = function interpolateColor(str, str2, arg2) {
   const padStartResult1 = str2.toString(16).padStart(2, "0");
   const str3 = Math.round(parsed2 + (parsed5 - parsed2) * arg2);
   return "#" + padStartResult + padStartResult1 + Math.round(parsed2 + (parsed5 - parsed2) * arg2).toString(16).padStart(2, "0");
-};
+}

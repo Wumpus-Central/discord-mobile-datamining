@@ -12,17 +12,17 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
-  activityBox: { marginLeft: -fn(12388).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(12442).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(12388).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12388).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12388).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(12442).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12442).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12442).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,
@@ -649,11 +649,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = flatMapResult;
       } else {
         if (cResult[3] !== node) {
-          const describeNodeResult = node(12346).describeNode(node);
+          const describeNodeResult = node(12400).describeNode(node);
           cResult[3] = node;
           cResult[4] = describeNodeResult;
           let tmp11 = describeNodeResult;
-          let tmpResult = node(12346);
+          let tmpResult = node(12400);
         } else {
           tmp11 = cResult[4];
         }
@@ -671,10 +671,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = {
               variant: "text-xs/normal",
               color: "text-subtle",
-              children: node(11807).describeDuration(node.durationMs),
+              children: node(11861).describeDuration(node.durationMs),
             };
-            tmp15 = closure_6(node(5270).Text, obj2);
-            const tmpResult2 = node(11807);
+            tmp15 = closure_6(node(5271).Text, obj2);
+            const tmpResult2 = node(11861);
           }
           cResult[5] = node.durationMs;
           cResult[6] = tmp15;
@@ -857,7 +857,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         trailing: null,
       };
       let tmp7 = ConjureNativeStatusLineDefault;
-      obj.line = node(12346).describeNode(node);
+      obj.line = node(12400).describeNode(node);
       obj.live = flag2;
       let tmp9 = !flag2;
       if (!flag2) {
@@ -878,10 +878,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: node(11807).describeDuration(node.durationMs),
+          children: node(11861).describeDuration(node.durationMs),
         };
-        tmp4Result = closure_6(node(5270).Text, obj3);
-        const tmp8Result = node(11807);
+        tmp4Result = closure_6(node(5271).Text, obj3);
+        const tmp8Result = node(11861);
       }
       obj.trailing = tmp4Result;
       const children = [closure_6(tmp7, obj), ,];
@@ -1046,7 +1046,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = items;
       return closure_7(View, obj2);
     };
-export const stretchOf = function stretchOf(memo, index, arg2) {
+export function stretchOf(memo, index, arg2) {
   closure_0 = index;
   const obj = { steps: null, tasks: null };
   const steps = memo.steps;
@@ -1062,4 +1062,4 @@ export const stretchOf = function stretchOf(memo, index, arg2) {
     return obj;
   }
   obj3 = {};
-};
+}

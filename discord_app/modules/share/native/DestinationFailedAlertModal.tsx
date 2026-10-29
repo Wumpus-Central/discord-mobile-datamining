@@ -20,7 +20,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1095).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
     borderWidth: 1,
@@ -215,10 +215,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           user,
           guildId: "Boolean",
           status: true,
-          isMobileOnline: "done",
-          isVROnline: true,
-          size: null,
-          avatarDecoration: "button",
+          isMobileOnline: false,
+          isVROnline: null,
+          size: true,
+          avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
           autoStatusCutout: null,
         };
         if (StatusTypes.OFFLINE !== status) {
@@ -261,7 +261,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           name = UserUtilsDefault.getName(user);
         }
         obj3.children = name;
-        items2[1] = closure_10(tmp(5270).Text, obj3);
+        items2[1] = closure_10(tmp(5271).Text, obj3);
         tmp16[1] = items2;
         tmp14Result = closure_11(View, tmp16);
       }
@@ -294,10 +294,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           user,
           guildId: "Boolean",
           status: true,
-          isMobileOnline: "done",
-          isVROnline: true,
-          size: null,
-          avatarDecoration: "button",
+          isMobileOnline: false,
+          isVROnline: null,
+          size: true,
+          avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
           autoStatusCutout: null,
         };
         let tmp13 = null;
@@ -321,7 +321,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           stateFromStores = UserUtilsDefault.getName(user);
         }
         obj5.children = stateFromStores;
-        items2[1] = closure_10(tmp2(5270).Text, obj5);
+        items2[1] = closure_10(tmp2(5271).Text, obj5);
         obj3.children = items2;
         tmp9Result = closure_11(View, obj3);
       }
@@ -398,18 +398,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           ellipsizeMode: "tail",
           children: tmp11,
         };
-        const tmp16 = closure_10(tmp(5270).Text, obj3);
+        const tmp16 = closure_10(tmp(5271).Text, obj3);
         cResult[6] = tmp11;
         cResult[7] = tmp4.label;
         cResult[8] = tmp16;
         tmp14 = tmp16;
       }
       const tmpResult = channel(504);
-      const tmp13 = closure_10(channel(13002).GuildIconWithChannelType, {
+      const tmp13 = closure_10(channel(13223).GuildIconWithChannelType, {
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(13002).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(13223).GuildIconWithChannelTypeSizes.SMALL_32,
       });
       cResult[3] = channel;
       cResult[4] = stateFromStores;
@@ -419,7 +419,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(13002).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(13223).GuildIconWithChannelTypeSizes.SMALL_32,
       };
     }
   : function FailedChannelRow(channel) {
@@ -437,13 +437,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(504);
       const tmp3 = useChannelNameDefault(channel);
       const items1 = [
-        closure_10(channel(13002).GuildIconWithChannelType, {
+        closure_10(channel(13223).GuildIconWithChannelType, {
           "aria-label": "",
           guild: stateFromStores,
           channel,
-          size: channel(13002).GuildIconWithChannelTypeSizes.SMALL_32,
+          size: channel(13223).GuildIconWithChannelTypeSizes.SMALL_32,
         }),
-        closure_10(channel(5270).Text, {
+        closure_10(channel(5271).Text, {
           style: tmp.label,
           variant: "text-md/medium",
           lineClamp: 1,

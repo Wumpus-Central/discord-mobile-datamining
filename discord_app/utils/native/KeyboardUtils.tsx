@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const Keyboard = _mod17.Keyboard;
 const result = size.fileFinishedImporting("utils/native/KeyboardUtils.tsx");
 
-export const dismissKeyboard = function dismissKeyboard() {
+export function dismissKeyboard() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -13,4 +13,4 @@ export const dismissKeyboard = function dismissKeyboard() {
   if (!flag) {
     Keyboard.dismiss();
   }
-};
+}

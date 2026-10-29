@@ -156,10 +156,10 @@ const result = size.fileFinishedImporting(
   "modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx",
 );
 
-export const openUserSettingsDebugLogsFiltersActionSheet = function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
+export function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
     Promise.resolve({ default: closure_5 }),
     "UserSettingsDebugLogsFiltersActionSheet",
     arg0,
   );
-};
+}

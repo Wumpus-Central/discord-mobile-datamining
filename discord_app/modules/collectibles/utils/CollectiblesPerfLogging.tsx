@@ -14,7 +14,7 @@ export const CollectiblesShopPerfCheckpoint = {
   SHOP_HOME_FETCH_COMPLETED: "shop_home_fetch_completed",
   SHOP_RENDERED: "shop_rendered",
 };
-export const trackShopPerf = function trackShopPerf(arg0) {
+export function trackShopPerf(arg0) {
   ({ sessionId, checkpoint, tab, unpublishedCategoriesShown, cacheDisabled } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_SHOP_PERF_TRACKED, {
     page_session_id: sessionId,
@@ -23,4 +23,4 @@ export const trackShopPerf = function trackShopPerf(arg0) {
     unpublished_categories_shown: unpublishedCategoriesShown,
     cache_disabled: cacheDisabled,
   });
-};
+}

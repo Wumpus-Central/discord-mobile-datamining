@@ -11,33 +11,33 @@ const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
 ({ Routes: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 const result = size.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
 
-export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE, channelId) {
+export function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE, channelId) {
   AnalyticsUtilsDefault.track(constants2.OPEN_MODAL, {
     type: "Enter Your Birthday",
     source: { section: JOIN_LARGE_GUILD_UNDERAGE },
   });
   const obj2 = { type: "Enter Your Birthday", source: { section: JOIN_LARGE_GUILD_UNDERAGE } };
   DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE, channelId });
-};
-export const closeAgeGateModal = function closeAgeGateModal(source) {
+}
+export function closeAgeGateModal(source) {
   DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE" });
   if (undefined !== source) {
     const obj2 = { source, action: AgeGateAnalyticAction.AGE_GATE_CLOSE };
     AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj2);
     const tmpResult = AnalyticsUtilsDefault;
   }
-};
-export const openSuccessAgeGateModal = function openSuccessAgeGateModal(source) {
+}
+export function openSuccessAgeGateModal(source) {
   DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN", source });
   const obj2 = { type: "AGE_GATE_SUCCESS_MODAL_OPEN", source };
   AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });
-};
-export const openFailureAgeGateModal = function openFailureAgeGateModal(source, underageMessage) {
+}
+export function openFailureAgeGateModal(source, underageMessage) {
   DispatcherDefault.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage });
   const obj2 = { type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage };
   AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE });
-};
-export const closeFailedAgeGate = function closeFailedAgeGate() {
+}
+export function closeFailedAgeGate() {
   AuthenticationActionCreatorsDefault.logoutInternal();
   router_utils.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
-};
+}

@@ -22,7 +22,7 @@ PlatformUtils = PlatformUtils.isIOS();
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
 
 export { VoicePanelModes };
-export const getAnalyticsNameForVoicePanelMode = function getAnalyticsNameForVoicePanelMode(arg0) {
+export function getAnalyticsNameForVoicePanelMode(arg0) {
   if (obj.DISMISSED === arg0) {
     return "dismissed";
   } else if (obj.PIP === arg0) {
@@ -30,7 +30,7 @@ export const getAnalyticsNameForVoicePanelMode = function getAnalyticsNameForVoi
   } else if (obj.PANEL === arg0) {
     return "grid";
   }
-};
+}
 export const VOICE_PANEL_CHUNK_DIVISOR = 3;
 export const DEFAULT_BORDER_RADIUS = 24;
 export const DEFAULT_BORDER_RADIUS_PIP = 24;

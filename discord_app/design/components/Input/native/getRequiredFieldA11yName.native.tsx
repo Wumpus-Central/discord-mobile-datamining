@@ -4,7 +4,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/components/Input/native/getRequiredFieldA11yName.native.tsx");
 
-export const getRequiredFieldA11yName = function getRequiredFieldA11yName(accessibilityLabel, required) {
+export function getRequiredFieldA11yName(accessibilityLabel, required) {
   let combined;
   if (null != accessibilityLabel) {
     if ("" !== accessibilityLabel) {
@@ -16,4 +16,4 @@ export const getRequiredFieldA11yName = function getRequiredFieldA11yName(access
     }
   }
   return combined;
-};
+}

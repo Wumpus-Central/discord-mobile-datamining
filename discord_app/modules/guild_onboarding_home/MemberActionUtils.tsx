@@ -7,7 +7,7 @@ import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

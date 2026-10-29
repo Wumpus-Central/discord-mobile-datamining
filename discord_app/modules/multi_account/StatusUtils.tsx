@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
-export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
+export function getStatusExpiryParts(arg0) {
   const date = new Date(Number(arg0));
   const date1 = new Date();
   const fullYear = date.getFullYear();
@@ -50,4 +50,4 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     obj3.timeString = formatTimeResult;
   }
   return obj3;
-};
+}

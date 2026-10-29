@@ -9,7 +9,7 @@ const ClipType = ClipsConstants.ClipType;
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
 const result = size.fileFinishedImporting("modules/clips/clipPOVOverlap.tsx");
 
-export const getClipPOVWindow = function getClipPOVWindow(type) {
+export function getClipPOVWindow(type) {
   if (type.type === ClipType.CLIP) {
     if (null != type.applicationId) {
       if (null != type.syncTimestamp) {
@@ -22,8 +22,8 @@ export const getClipPOVWindow = function getClipPOVWindow(type) {
       }
     }
   }
-};
-export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(nextResult) {
+}
+export function getClipAttachmentPOVWindow(nextResult) {
   let num = nextResult.flags;
   if (num == null) {
     num = 0;
@@ -47,8 +47,8 @@ export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(ne
     }
   }
   hasFlagResult = FlagUtils.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
-};
-export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseconds(applicationId, nextResult1) {
+}
+export function getClipPOVOverlapMilliseconds(applicationId, nextResult1) {
   if (applicationId.applicationId === nextResult1.applicationId) {
     const _Math = Math;
     const _Math2 = Math;
@@ -60,4 +60,4 @@ export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseco
     }
     return tmp4;
   }
-};
+}

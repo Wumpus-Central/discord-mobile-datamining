@@ -6,17 +6,17 @@ const SidebarVisibilityMethodStore = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
 
 export { SidebarVisibilityMethodStore };
-export const setGetVisibleGuildIds = function setGetVisibleGuildIds(getVisibleGuildIds) {
+export function setGetVisibleGuildIds(getVisibleGuildIds) {
   const obj = { getVisibleGuildIds };
   obj.setState(obj);
-};
-export const getVisibleGuildIdsMethod = function getVisibleGuildIdsMethod() {
+}
+export function getVisibleGuildIdsMethod() {
   return obj.getState().getVisibleGuildIds;
-};
-export const setGetVisibleChannelIds = function setGetVisibleChannelIds(getVisibleChannelIds) {
+}
+export function setGetVisibleChannelIds(getVisibleChannelIds) {
   const obj = { getVisibleChannelIds };
   obj.setState(obj);
-};
-export const getVisibleChannelIdsMethod = function getVisibleChannelIdsMethod() {
+}
+export function getVisibleChannelIdsMethod() {
   return obj.getState().getVisibleChannelIds;
-};
+}

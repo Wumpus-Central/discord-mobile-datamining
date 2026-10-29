@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileHexagonCampaignDisplayNameStyleEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2929 from "../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2930 from "../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import useDisplayNameStylesDefault from "../../display_name_styles/hooks/useDisplayNameStyles.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
@@ -24,7 +24,7 @@ const Constants = fn(1084);
   AnalyticsSections: c10,
   HorizontalGradient: closure_11,
 } = Constants);
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({
   HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: closure_12,
   HexagonCampaignPerk: map1,
@@ -34,7 +34,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   card: {
     flexGrow: 1,
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = tmp(1125).intl;
-        const stringResult = intl.string(_modDef2929["86GtGH"]);
+        const stringResult = intl.string(_modDef2930["86GtGH"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("useDisplayNameStylesPendingName");
       const trackHexagonCampaignContentViewed =
         require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(
-          tmp(6748).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
-          tmp(16121).HexagonCampaignContentSurface.NON_NITRO_CARD,
+          tmp(6771).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
+          tmp(16358).HexagonCampaignContentSurface.NON_NITRO_CARD,
           true,
         );
       const tmpResult5 = require("HexagonCampaignAnalytics");
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] !== tmp14) {
           let result = null != tmp14;
           if (result) {
-            result = tmp(5031).isHexagonCampaignDisplayNameStyle(tmp14);
-            const tmpResult7 = tmp(5031);
+            result = tmp(5032).isHexagonCampaignDisplayNameStyle(tmp14);
+            const tmpResult7 = tmp(5032);
           }
           cResult[4] = tmp14;
           cResult[5] = result;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const tmp18Result = _slicedToArray(obj7.useState(false), 2);
-          const unmountEffect = tmp(5299).useUnmountEffect(tmp31);
+          const unmountEffect = tmp(5300).useUnmountEffect(tmp31);
           if (!tmp4) {
             class W {
               constructor(arg0) {
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           v2 = 2;
                           ref = 1;
                           const obj10 = {
-                            value: closure_0(16120).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE),
+                            value: closure_0(16357).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE),
                             done: false,
                           };
                           return obj10;
@@ -273,11 +273,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           if (null == displayNameStyles) {
                             displayNameStyles = null;
                           } else {
-                            closure_0(5031);
+                            closure_0(5032);
                           }
                           const obj12 = { displayNameStyles };
-                          closure_0(8690).setPendingChanges(obj12);
-                          const obj8 = closure_0(8690);
+                          closure_0(8693).setPendingChanges(obj12);
+                          const obj8 = closure_0(8693);
                         }
                       }
                     }
@@ -304,17 +304,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj13 = { text: null };
                         const intl = closure_0(1125).intl;
                         obj13.text = intl.string(closure_0(1125).t.F8FvUy);
-                        tmp52(5699).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj13);
-                        const obj2 = tmp52(5699);
+                        tmp52(5701).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj13);
+                        const obj2 = tmp52(5701);
                       }
                     }
-                    const result = closure_0(16120).saveHexagonCampaignPreviousDisplayNameStyles();
-                    const obj4 = closure_0(16120);
+                    const result = closure_0(16357).saveHexagonCampaignPreviousDisplayNameStyles();
+                    const obj4 = closure_0(16357);
                     const obj14 = { displayNameStyles };
-                    closure_0(8690).setPendingChanges(obj14);
-                    const obj5 = closure_0(8690);
-                    const result1 = closure_0(16120).markHexagonCampaignPerkApplied(constants.DISPLAY_NAME_STYLE);
-                    const obj7 = closure_0(16120);
+                    closure_0(8693).setPendingChanges(obj14);
+                    const obj5 = closure_0(8693);
+                    const result1 = closure_0(16357).markHexagonCampaignPerkApplied(constants.DISPLAY_NAME_STYLE);
+                    const obj7 = closure_0(16357);
                   }
                   ref = 3;
                 } catch (tmp51) {
@@ -348,8 +348,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           t9 = tmp33;
-          const tmpResult8 = tmp(5299);
-          const analyticsLocations = tmp13(7289)(tmp13(7314).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
+          const tmpResult8 = tmp(5300);
+          const analyticsLocations = tmp13(7313)(tmp13(7338).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
           if (cResult[13] !== analyticsLocations) {
             class W {
               constructor(arg0) {
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[16] = tmp15;
           cResult[17] = tmp6;
           cResult[18] = ye;
-          const tmp13Result = tmp13(7289);
+          const tmp13Result = tmp13(7313);
         }
         let obj2 = {
           userId: user.id,
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         user,
       );
       let intl = require("util").intl;
-      const stringResult = intl.string(_modDef2929["86GtGH"]);
+      const stringResult = intl.string(_modDef2930["86GtGH"]);
       let obj = require("useDisplayNameStylesPendingName");
       const trackHexagonCampaignContentViewed =
         require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(
@@ -449,8 +449,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       let result = null != tmp9;
       if (result) {
-        result = tmp3(5031).isHexagonCampaignDisplayNameStyle(tmp9);
-        const tmp3Result = tmp3(5031);
+        result = tmp3(5032).isHexagonCampaignDisplayNameStyle(tmp9);
+        const tmp3Result = tmp3(5032);
       }
       importDefault = result;
       let obj4 = {
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -613,7 +613,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return applyArgumentsResult;
       }, []);
       const tmp3Result2 = require("useMountEffect");
-      analyticsLocations = useAnalyticsLocationsDefault(tmp6(7314).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
+      analyticsLocations = useAnalyticsLocationsDefault(tmp6(7338).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
       const items = [analyticsLocations];
       callback3 = obj6.useCallback(() => {
         const obj = {
@@ -640,7 +640,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (availability.availability !== constants5.LOCKED) {
         let obj8 = { style: tmp.labelBadge, children: null };
         const obj9 = { perk: constants4.DISPLAY_NAME_STYLE };
-        obj8.children = closure_15(tmp6(16144), obj9);
+        obj8.children = closure_15(tmp6(16381), obj9);
         tmp17Result = closure_15(closure_6, obj8);
       }
       obj7.labelTrailing = tmp17Result;
@@ -674,16 +674,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj14 = { maskElement: null, children: null };
           const obj15 = { style: tmp.nameMask, children: null };
           const obj16 = { colors, style: tmp.nameMaskOpaque };
-          const items2 = [closure_15(tmp6(5294), obj16)];
+          const items2 = [closure_15(tmp6(5295), obj16)];
           const obj17 = { colors: colors2, start: null, end: null, style: null };
           ({ START: obj23.start, END: obj23.end } = closure_11);
           obj17.style = tmp.nameMaskFade;
-          items2[1] = closure_15(tmp6(5294), obj17);
+          items2[1] = closure_15(tmp6(5295), obj17);
           obj15.children = items2;
           obj14.maskElement = closure_16(tmp31, obj15);
           obj14.children = tmp19;
-          tmp17Result3 = closure_15(tmp6(7002), obj14);
-          const tmp6Result2 = tmp6(7002);
+          tmp17Result3 = closure_15(tmp6(7026), obj14);
+          const tmp6Result2 = tmp6(7026);
         }
       }
       const items3 = [tmp17Result3];
@@ -711,10 +711,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj13.children = items3;
       const items4 = [closure_16(closure_6, obj13)];
       if (availability.availability === constants5.LOCKED) {
-        let tmp17Result4 = closure_15(tmp3(6948).TableRowArrow, {});
+        let tmp17Result4 = closure_15(tmp3(6972).TableRowArrow, {});
       } else {
         const obj21 = { "aria-hidden": true, value: result, onValueChange: callback2, disabled };
-        tmp17Result4 = closure_15(tmp3(7332).FormSwitch, obj21);
+        tmp17Result4 = closure_15(tmp3(7356).FormSwitch, obj21);
       }
       items4[1] = tmp17Result4;
       obj11.children = items4;

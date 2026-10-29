@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
 
-export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0) {
+export function getTransformedBadgeColors(arg0) {
   ({
     primaryTintColor,
     primaryTintLuminances,
@@ -61,4 +61,4 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
     }
     obj = _modDef683;
   }
-};
+}

@@ -670,7 +670,7 @@ export const WasmBrotliExperiment = libdiscoreCustomTreatmentsExperiment;
 export function isExperimentSyncDisabled() {
   return c7;
 }
-export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperimentCache() {
+export function clearLibdiscoreExperimentCache() {
   if (obj.isLibdiscoreInitialized()) {
     logger.info("Clearing libdiscore experiment cache and disabling sync");
     c7 = true;
@@ -679,4 +679,4 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
     const tmpResult = js_shim_shim;
   }
   obj = js_shim_shim;
-};
+}

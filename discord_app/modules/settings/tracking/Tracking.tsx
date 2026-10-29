@@ -7,10 +7,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/settings/tracking/Tracking.tsx");
 
-export const trackSettingSearchInputFocused = function trackSettingSearchInputFocused() {
+export function trackSettingSearchInputFocused() {
   AnalyticsUtilsDefault.track(AnalyticEvents.USER_SETTINGS_SEARCH_PRESS);
-};
-export const trackSettingSearchResultPress = function trackSettingSearchResultPress(setting) {
+}
+export function trackSettingSearchResultPress(setting) {
   const obj2 = {
     setting: setting.setting,
     title: setting.title,
@@ -22,4 +22,4 @@ export const trackSettingSearchResultPress = function trackSettingSearchResultPr
   const obj = AnalyticsUtilsDefault;
   obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
   obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_RESULT_PRESS, obj2);
-};
+}

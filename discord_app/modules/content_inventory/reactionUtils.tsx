@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 
-export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {
+export function sendMessageWithEmbed(channel) {
   channel = channel.channel;
   ({ content, entry, whenReady, doNotNotifyOnError, location: _location } = channel);
   const parsed = MessageParserDefault.parse(channel, content);
@@ -14,8 +14,8 @@ export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {
     doNotNotifyOnError,
     location: _location,
   });
-};
-export const sendMessageWithoutContentInventoryEntry = function sendMessageWithoutContentInventoryEntry(channel) {
+}
+export function sendMessageWithoutContentInventoryEntry(channel) {
   channel = channel.channel;
   ({ content, whenReady, doNotNotifyOnError, location: _location } = channel);
   const parsed = MessageParserDefault.parse(channel, content);
@@ -23,4 +23,4 @@ export const sendMessageWithoutContentInventoryEntry = function sendMessageWitho
     doNotNotifyOnError,
     location: _location,
   });
-};
+}

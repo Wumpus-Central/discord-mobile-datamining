@@ -1046,7 +1046,7 @@ function isValidVideoAttachment(filename) {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumPostMediaUtils.tsx");
 
-export const getEmbedColor = function getEmbedColor(firstResult, flag) {
+export function getEmbedColor(firstResult, flag) {
   if (null != firstResult) {
     if (null != firstResult.embeds[0]) {
       const color = firstResult.embeds[0].color;
@@ -1061,7 +1061,7 @@ export const getEmbedColor = function getEmbedColor(firstResult, flag) {
       return int2hslResult;
     }
   }
-};
+}
 export { isValidImageAttachment };
 export { isValidVideoAttachment };
 export { isMediaAttachment };
@@ -1082,7 +1082,7 @@ export const useFirstMediaIsEmbed = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_14(arg0, arg1);
       return null == tmp[0] && null == closure_15(arg0)[0] && null != closure_14(arg0, arg1)[0];
     };
-export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMediaToOriginalPostModal(uploads, id) {
+export function shouldShowAddMediaToOriginalPostModal(uploads, id) {
   const channel = ChannelStore.getChannel(id);
   if (null == channel) {
     return false;
@@ -1152,8 +1152,8 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
     }
     return tmp8;
   }
-};
-export const messageContainsGifOrVideo = function messageContainsGifOrVideo(media) {
+}
+export function messageContainsGifOrVideo(media) {
   return media.reduce(
     (containsVideo, isVideo) => {
       const obj = { containsVideo: containsVideo.containsVideo || isVideo.isVideo, containsGif: null };
@@ -1167,4 +1167,4 @@ export const messageContainsGifOrVideo = function messageContainsGifOrVideo(medi
     },
     { containsVideo: false, containsGif: false },
   );
-};
+}

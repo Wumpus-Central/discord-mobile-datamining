@@ -13,10 +13,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6745).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6768).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, bodyContainer: { flex: 1, minHeight: 0 }, footerInline: null, footer: null, footerButtonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.footerInline = { paddingTop: nativeDefault.space.PX_16 };
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
             items[HermesBuiltin.arraySpread(arr, 0)] = group;
             let found = items;
           } else {
-            found = arr.filter(() => { ... });
+            found = arr.filter(/* F164111 */ function() { ... });
           }
           return found;
         });
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
             items[HermesBuiltin.arraySpread(arr, 0)] = group;
             let found = items;
           } else {
-            found = arr.filter(() => { ... });
+            found = arr.filter(/* F164111 */ function() { ... });
           }
           return found;
         });
@@ -365,13 +365,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9628).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9660).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
         };
-        return ref(onSortMethodChange(6936).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(6960).TableCheckboxRow, obj, index);
       });
       return ref(TableRowGroup.TableRowGroup, obj, index);
     })

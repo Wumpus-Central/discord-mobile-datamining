@@ -84,17 +84,17 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(7666).DraftType;
+const DraftType = fn(7689).DraftType;
 const Permissions = fn(1084).Permissions;
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 const constants = fn(1124).ThreadSortOrderReadableForAnalytics;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
 
-export const getForumChannelSessionId = function getForumChannelSessionId(channelId) {
+export function getForumChannelSessionId(channelId) {
   return ForumSessionAnalyticsManagerDefault.getForumChannelSessionId(channelId);
-};
-export const convertSortOrderToReadableString = function convertSortOrderToReadableString(sortOrder) {
+}
+export function convertSortOrderToReadableString(sortOrder) {
   if (ThreadSortOrder.ThreadSortOrder.CREATION_DATE === sortOrder) {
     return constants.CREATION_DATE;
   } else if (ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY === sortOrder) {
@@ -105,11 +105,11 @@ export const convertSortOrderToReadableString = function convertSortOrderToReada
     const error = new Error("Unexpected sort order " + sortOrder);
     throw error;
   }
-};
-export const getForumPostDraftNumAttachments = function getForumPostDraftNumAttachments(channelId) {
+}
+export function getForumPostDraftNumAttachments(channelId) {
   return UploadAttachmentStore.getUploads(channelId, DraftType.FirstThreadMessage).length;
-};
-export const getForumPostDraftAppliedTagIds = function getForumPostDraftAppliedTagIds(channelId) {
+}
+export function getForumPostDraftAppliedTagIds(channelId) {
   const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
     return [];
@@ -137,11 +137,11 @@ export const getForumPostDraftAppliedTagIds = function getForumPostDraftAppliedT
     }
     return [];
   }
-};
-export const getNumActiveThreads = function getNumActiveThreads(guildId, channelId) {
+}
+export function getNumActiveThreads(guildId, channelId) {
   return Object.keys(ActiveThreadsStore.getThreadsForParent(guildId, channelId)).length;
-};
-export const getForumPostAttachmentMimetypes = function getForumPostAttachmentMimetypes(arg0) {
+}
+export function getForumPostAttachmentMimetypes(arg0) {
   const message = ForumPostMessagesStore.getMessage(arg0);
   let firstMessage = null;
   if (message.loaded) {
@@ -160,9 +160,9 @@ export const getForumPostAttachmentMimetypes = function getForumPostAttachmentMi
     });
   }
   return items;
-};
+}
 export { collectForumAnalyticsMetadata };
-export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyticsMetadata(channelId) {
+export function collectForumPostAnalyticsMetadata(channelId) {
   channelId = channelId.channelId;
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
@@ -293,4 +293,4 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
     }
   }
   return null;
-};
+}

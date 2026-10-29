@@ -35,7 +35,7 @@ let closure_10 = async function _savePersistentCodesEnabled() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -126,7 +126,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -199,7 +199,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -217,9 +217,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                          c1(6669).disconnect();
-                          const obj = c1(6669);
-                          const voiceChannel = c1(6669).selectVoiceChannel(dependencyMap);
+                          c1(6693).disconnect();
+                          const obj = c1(6693);
+                          const voiceChannel = c1(6693).selectVoiceChannel(dependencyMap);
                         }),
                         done: false,
                       };
@@ -234,7 +234,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp7) {
                   c0 = tmp;
@@ -265,7 +265,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
         throw value;
       } else if (arg0 !== 2) {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else {
         c1 = 3;
         let obj = { value, done: true };
@@ -277,12 +277,12 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9230).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9234).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");
 
-export const updatePersistentCodesEnabled = function updatePersistentCodesEnabled() {
+export function updatePersistentCodesEnabled() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -291,4 +291,4 @@ export const updatePersistentCodesEnabled = function updatePersistentCodesEnable
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

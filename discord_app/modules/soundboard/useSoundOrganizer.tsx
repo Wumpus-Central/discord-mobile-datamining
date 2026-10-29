@@ -34,7 +34,7 @@ function sortSoundsOldestToNewestCreationDate(value5) {
 const result = size.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
-export const sortSoundsOldestToNewestFavoriteDate = function sortSoundsOldestToNewestFavoriteDate(arg0) {
+export function sortSoundsOldestToNewestFavoriteDate(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -60,7 +60,7 @@ export const sortSoundsOldestToNewestFavoriteDate = function sortSoundsOldestToN
     });
   }
   return sorted;
-};
+}
 export function useSoundOrganizer() {
   return sortSoundsOldestToNewestCreationDate;
 }

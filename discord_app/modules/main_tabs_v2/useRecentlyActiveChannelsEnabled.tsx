@@ -7,9 +7,9 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");
 
-export const isRecentlyActiveChannelsEnabled = function isRecentlyActiveChannelsEnabled() {
+export function isRecentlyActiveChannelsEnabled() {
   return DesignTogglesStore.get("enable_recently_active");
-};
-export const useRecentlyActiveChannelsEnabled = function useRecentlyActiveChannelsEnabled() {
+}
+export function useRecentlyActiveChannelsEnabled() {
   return useDesignToggleDefault("enable_recently_active");
-};
+}

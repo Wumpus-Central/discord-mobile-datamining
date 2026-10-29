@@ -53,16 +53,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
-export const getWishlistSkuIds = function getWishlistSkuIds(first1) {
+export function getWishlistSkuIds(first1) {
   const items = first1.items;
   return items.map((skuId) => skuId.skuId);
-};
-export const wishlistHasSkuId = function wishlistHasSkuId(items, arg1) {
+}
+export function wishlistHasSkuId(items, arg1) {
   closure_0 = arg1;
   items = items.items;
   return items.some((skuId) => skuId.skuId === closure_0);
-};
-export const getWishlistProductLines = function getWishlistProductLines(items) {
+}
+export function getWishlistProductLines(items) {
   items = items.items;
   return new Set(items.map((skuProductLine) => skuProductLine.skuProductLine));
-};
+}

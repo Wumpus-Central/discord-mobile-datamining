@@ -11,15 +11,15 @@ const result1 = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx",
 );
 
-export const useIsSwipeToMemberListEnabled = function useIsSwipeToMemberListEnabled() {
+export function useIsSwipeToMemberListEnabled() {
   const swipeToReplySettingValue = ChatGestureSettings.useSwipeToReplySettingValue();
   return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
-};
-export const isSwipeToMemberListEnabled = function isSwipeToMemberListEnabled() {
+}
+export function isSwipeToMemberListEnabled() {
   const swipeToReplySettingValue = ChatGestureSettings.getSwipeToReplySettingValue();
   return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
-};
-export const isSwipeToMemberListEnabledForChannel = function isSwipeToMemberListEnabledForChannel(id) {
+}
+export function isSwipeToMemberListEnabledForChannel(id) {
   const swipeToReplySettingValue = ChatGestureSettings.getSwipeToReplySettingValue();
   let tmp3 =
     swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
@@ -27,4 +27,4 @@ export const isSwipeToMemberListEnabledForChannel = function isSwipeToMemberList
     tmp3 = !hasSecondaryViewChatDefault(id);
   }
   return tmp3;
-};
+}

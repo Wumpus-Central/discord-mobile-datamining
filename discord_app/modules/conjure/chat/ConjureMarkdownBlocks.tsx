@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMarkdownBlocks.tsx");
 
-export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
+export function splitMarkdownBlocks(source) {
   const parts = source.split("\n");
   const items = [];
   let items1 = [];
@@ -136,4 +136,4 @@ export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
     items.push(obj8);
   }
   return items;
-};
+}

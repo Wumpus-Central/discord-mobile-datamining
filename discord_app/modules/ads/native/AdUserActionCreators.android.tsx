@@ -16,7 +16,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -144,7 +144,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/native/AdUserActionCreators.android.tsx");
 
-export const fetchAdUser = function fetchAdUser() {
+export function fetchAdUser() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -153,4 +153,4 @@ export const fetchAdUser = function fetchAdUser() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

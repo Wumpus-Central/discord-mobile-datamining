@@ -12,7 +12,7 @@ export function createEmptyState() {
   obj.richValue = items1;
   return obj;
 }
-export const createState = function createState(textValue) {
+export function createState(textValue) {
   const obj = { textValue, richValue: null };
   const parts = textValue.split("\n");
   obj.richValue = parts.map((text) => {
@@ -22,8 +22,8 @@ export const createState = function createState(textValue) {
     return element;
   });
   return obj;
-};
-export const toRichValue = function toRichValue(content) {
+}
+export function toRichValue(content) {
   const parts = content.split("\n");
   return parts.map((text) => {
     const element = { type: "line", children: null };
@@ -31,8 +31,8 @@ export const toRichValue = function toRichValue(content) {
     element.children = items;
     return element;
   });
-};
-export const voidToOptionValue = function voidToOptionValue(type) {
+}
+export function voidToOptionValue(type) {
   type = type.type;
   if ("userMention" === type) {
     const obj2 = { type: "userMention", userId: type.userId };
@@ -67,4 +67,4 @@ export const voidToOptionValue = function voidToOptionValue(type) {
   } else {
     return null;
   }
-};
+}

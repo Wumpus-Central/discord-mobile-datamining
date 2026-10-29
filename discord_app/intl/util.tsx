@@ -15,7 +15,7 @@ function getLanguages() {
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
-export const getAvailableLocales = function getAvailableLocales() {
+export function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
   const found = require("../../_runtime/metro/01186__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
@@ -38,9 +38,9 @@ export const getAvailableLocales = function getAvailableLocales() {
     }
     return num;
   });
-};
+}
 export { getLanguages };
-export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
+export function getNormalizedLocale(Language, arg1) {
   const found = require("../../_runtime/metro/01186__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
@@ -73,15 +73,12 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
     }
   }
   const arr = require("../../_runtime/metro/01186__.js");
-};
-export const parseRuntimeIcuAsIntlMessage = function parseRuntimeIcuAsIntlMessage(
-  acknowledgedBadgeLabel,
-  currentLocale,
-) {
+}
+export function parseRuntimeIcuAsIntlMessage(acknowledgedBadgeLabel, currentLocale) {
   const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
   const internalIntlMessage = new _mod1164.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
-};
+}
 export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncMessages(arg0, arg1) {
       closure_0 = arg0;

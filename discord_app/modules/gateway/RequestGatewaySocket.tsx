@@ -46,7 +46,7 @@ let closure_10 = async function _withRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -108,13 +108,13 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
 
-export const isRequested = function isRequested() {
+export function isRequested() {
   return map.size > 0 || c6;
-};
+}
 export function recordStartHeadlessTask() {
   c6 = false;
 }
-export const describeConnectionReasons = function describeConnectionReasons() {
+export function describeConnectionReasons() {
   const items = [...(c6 ? closure_5 : []), ...map.keys()];
   const sorted = items.sort();
   let str = "NO_REASONS";
@@ -122,9 +122,9 @@ export const describeConnectionReasons = function describeConnectionReasons() {
     str = sorted.join(",");
   }
   return str;
-};
+}
 export { setRequestedBy };
-export const startBridgeTo = function startBridgeTo(arg0) {
+export function startBridgeTo(arg0) {
   const combined = "BRIDGE:" + arg0;
   closure_1 = performance.now();
   c6 = false;
@@ -133,7 +133,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(7617).requestSafeIdleCallback(
+  combined(7640).requestSafeIdleCallback(
     () => {
       if (map.has(combined)) {
         const obj3 = { bridge_token: combined, cleared_after: null };
@@ -155,10 +155,10 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     },
     { timeout: 5000 },
   );
-  let obj2 = combined(7617);
-};
+  let obj2 = combined(7640);
+}
 export { stopRequest };
-export const withRequest = function withRequest() {
+export function withRequest() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -167,4 +167,4 @@ export const withRequest = function withRequest() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/hooks/useTrackShopCardImpression.tsx
 import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import useTrackImpression from "../../../app_analytics/useTrackImpression.tsx";
 import CollectiblesProductUtils from "../../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../../CollectiblesUtils.tsx";
-import useTrackImpression from "../../../app_analytics/useTrackImpression.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;

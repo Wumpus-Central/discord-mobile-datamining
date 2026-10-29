@@ -3,63 +3,44 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import useRenderPollAnswerImageDefault from "useRenderPollAnswerImage.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Keyboard: closure_4, TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7666).DraftType;
-const PollsConstants = fn(8343);
-({ MAX_POLL_ANSWER_LENGTH: closure_9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = PollsConstants);
+({ Keyboard: hasOwnProperty, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const DraftType = fn(7689).DraftType;
+const PollsConstants = fn(8365);
+({ MAX_POLL_ANSWER_LENGTH: c10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5004);
+({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
+const createStyles = fn(5005);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
-  defaultImageAndTextContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
-    borderRadius: nativeDefault.radii.lg,
-    flex: 1,
-    overflow: "hidden",
-  },
-  cannotRemove: { marginRight: 30 },
+  inputContainer: { flex: 1 },
+  cannotRemove: { marginRight: 36 },
   defaultImageContainer: { width: 60, height: 48, justifyContent: "center", alignItems: "center" },
   pollAnswerTextInput: { flex: 1, paddingStart: 0 },
-  defaultRemoveButtonContainer: null,
-  uploadContainer: null,
-  errorInput: null,
+  defaultRemoveButtonContainer: {
+    paddingLeft: nativeDefault.space.PX_12,
+    height: 48,
+    justifyContent: "center",
+    color: nativeDefault.colors.TEXT_MUTED,
+  },
+  uploadContainer: { alignItems: "flex-start" },
 };
-let obj3 = {
-  flexDirection: "row",
-  alignItems: "center",
-  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
-  borderRadius: nativeDefault.radii.lg,
-  flex: 1,
-  overflow: "hidden",
-};
-obj2.defaultRemoveButtonContainer = {
-  paddingLeft: 6,
-  height: 48,
-  justifyContent: "center",
-  color: nativeDefault.colors.TEXT_MUTED,
-};
-obj2.uploadContainer = { alignItems: "flex-start" };
-let obj4 = { paddingLeft: 6, height: 48, justifyContent: "center", color: nativeDefault.colors.TEXT_MUTED };
-obj2.errorInput = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_16 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ImageInput(arg0) {
       const cResult = c.c(24);
       ({
@@ -78,7 +59,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== emojiSize) {
         num = emojiSize;
       }
-      const tmp4 = closure_15();
+      const tmp4 = closure_16();
       ({ renderImage, upload, setUploadSize } = useRenderPollAnswerImageDefault(
         channelId,
         localCreationAnswerId,
@@ -181,7 +162,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp20,
                 children: cResult[16],
               };
-              const tmp28 = __initData(Pressables.PressableOpacity, obj5);
+              const tmp28 = map1(Pressables.PressableOpacity, obj5);
               cResult[17] = openExpressionPicker;
               cResult[18] = openImageInputActionSheet;
               cResult[19] = tmp7;
@@ -195,10 +176,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (tmp15) {
           const obj6 = { children: renderImage };
-          let tmp22Result = __initData(timestampProducer, obj6);
+          let tmp22Result = map1(React5, obj6);
         } else {
           const obj7 = { source: iconSrc };
-          tmp22Result = __initData(native.Icon, obj7);
+          tmp22Result = map1(native.Icon, obj7);
         }
         cResult[13] = tmp15;
         cResult[14] = iconSrc;
@@ -221,12 +202,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       ({ imageSize, answerIndex } = openImageInputActionSheet);
       openImageInputActionSheet = openImageInputActionSheet.openImageInputActionSheet;
       let upload;
-      const tmp3 = answerIndex(upload[11])(channelId, localCreationAnswerId, image, imageSize, emojiSize);
+      const tmp3 = answerIndex(upload[12])(channelId, localCreationAnswerId, image, imageSize, emojiSize);
       upload = tmp3.upload;
       const setUploadSize = tmp3.setUploadSize;
       const items = [image, upload, answerIndex];
       const items1 = [setUploadSize];
-      const memo = setUploadSize.useMemo(() => {
+      const memo = noop.useMemo(() => {
         let emoji;
         if (image != null) {
           emoji = image.emoji;
@@ -250,7 +231,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       let tmp6 = null != upload;
-      const callback = setUploadSize.useCallback((nativeEvent) => {
+      const callback = noop.useCallback((nativeEvent) => {
         setUploadSize(nativeEvent.nativeEvent.layout.width);
       }, items1);
       if (!tmp6) {
@@ -281,17 +262,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = callback;
       }
       obj.onLayout = tmp11;
-      const items2 = [openImageInputActionSheet.containerStyle, null != upload && closure_15().uploadContainer];
+      const items2 = [openImageInputActionSheet.containerStyle, null != upload && closure_16().uploadContainer];
       obj.style = items2;
       if (tmp6) {
         let obj2 = { children: tmp3.renderImage };
-        let tmp9Result = closure_12(closure_6, obj2);
+        let tmp9Result = closure_13(closure_7, obj2);
       } else {
         const obj3 = { source: openImageInputActionSheet.iconSrc };
-        tmp9Result = closure_12(image(tmp2[14]).Icon, obj3);
+        tmp9Result = closure_13(image(tmp2[15]).Icon, obj3);
       }
       obj.children = tmp9Result;
-      return closure_12(image(upload[15]).PressableOpacity, obj);
+      return closure_13(image(upload[16]).PressableOpacity, obj);
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/native/PollAnswerInput.tsx");
@@ -301,8 +282,8 @@ export default function PollAnswerInput(answer) {
   const index = answer.index;
   const channelId = answer.channelId;
   ({
-    onAnswerTextChange: noop,
-    onAnswerEmojiSelect: closure_4,
+    onAnswerTextChange: _slicedToArray,
+    onAnswerEmojiSelect: noop,
     canRemoveAnswer,
     onRemoveAnswer: closure_5,
     onRemoveAnswerImage: closure_6,
@@ -311,7 +292,7 @@ export default function PollAnswerInput(answer) {
   function openExpressionPicker() {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
-      React4.dismiss();
+      hasOwnProperty.dismiss();
       const obj2 = {
         channel,
         onPressEmoji(arg0) {
@@ -328,11 +309,13 @@ export default function PollAnswerInput(answer) {
     });
   }
   ({ inputRef, onSubmitEditing } = answer);
-  const tmp = closure_15();
+  const tmp = closure_16();
   const localCreationAnswerId = answer.localCreationAnswerId;
-  let tmp6Result = null != error;
-  if (tmp6Result) {
-    tmp6Result = error.length > 0;
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  maxLength = tmp2[1];
+  let tmp7Result = null != error;
+  if (tmp7Result) {
+    tmp7Result = error.length > 0;
   }
   const items = [tmp.defaultContainer];
   let cannotRemove = !canRemoveAnswer;
@@ -341,21 +324,21 @@ export default function PollAnswerInput(answer) {
   }
   let obj = { style: items, children: null };
   items[1] = cannotRemove;
-  const items1 = [tmp.defaultImageAndTextContainer];
-  let errorInput = tmp6Result;
-  if (tmp6Result) {
-    errorInput = tmp.errorInput;
+  let obj2 = { style: tmp.inputContainer, children: null };
+  const obj3 = { isFocused: tmp2[0], status: null, children: null };
+  let str = "default";
+  if (tmp7Result) {
+    str = "error";
   }
-  let obj2 = { style: items1, children: null };
-  items1[1] = errorInput;
-  const items2 = [
-    closure_12(closure_16, {
+  obj3.status = str;
+  const items1 = [
+    closure_13(closure_17, {
       channelId,
       localCreationAnswerId,
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12178, dependencyMap.paths), v65535, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12232, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -364,13 +347,13 @@ export default function PollAnswerInput(answer) {
           openExpressionPicker,
         });
       },
-      iconSrc: index(channelId[21]),
+      iconSrc: index(channelId[23]),
       containerStyle: tmp.defaultImageContainer,
       imageSize: 48,
       answerIndex: index,
     }),
   ];
-  const obj4 = {
+  const obj5 = {
     ref: inputRef,
     textAlignVertical: "center",
     showTopContainer: false,
@@ -378,40 +361,50 @@ export default function PollAnswerInput(answer) {
     placeholder: null,
     onChange: null,
     onSubmitEditing: null,
+    onFocus: null,
+    onBlur: null,
     blurOnSubmit: false,
     style: null,
-    textContentType: "none",
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    maxLength: null,
-    returnKeyType: "next",
-    required: true,
-    autoCorrect: true,
-    "aria-invalid": null,
+    selectionColor: "ix",
+    textContentType: "a",
+    accessibilityLabel: "ix",
+    accessibilityHint: "next",
+    maxLength: "toCharArray$esjava$1",
+    returnKeyType: "c",
+    required: "Array",
+    autoCorrect: "application",
+    "aria-invalid": "parent",
   };
-  const intl = answer(channelId[12]).intl;
-  obj4.placeholder = intl.string(answer(channelId[12]).t.NNHVlv);
-  obj4.onChange = function onChange(text) {
-    return noop({ text, index, localCreationAnswerId });
+  const intl = tmp8(tmp9[13]).intl;
+  obj5.placeholder = intl.string(answer(channelId[13]).t.NNHVlv);
+  obj5.onChange = function onChange(text) {
+    return _slicedToArray({ text, index, localCreationAnswerId });
   };
-  obj4.onSubmitEditing = onSubmitEditing;
-  obj4.style = tmp.pollAnswerTextInput;
-  const intl2 = answer(channelId[12]).intl;
-  obj4.accessibilityLabel = intl2.formatToPlainString(answer(channelId[12]).t["3+V8G9"], { answerNumber: index + 1 });
+  obj5.onSubmitEditing = onSubmitEditing;
+  obj5.onFocus = function onFocus() {
+    return closure_10(true);
+  };
+  obj5.onBlur = function onBlur() {
+    return closure_10(false);
+  };
+  obj5.style = tmp.pollAnswerTextInput;
+  const intl2 = tmp8(tmp9[13]).intl;
+  obj5.accessibilityLabel = intl2.formatToPlainString(answer(channelId[13]).t["3+V8G9"], { answerNumber: index + 1 });
   let formatToPlainStringResult;
-  if (tmp6Result) {
-    const intl3 = tmp9(tmp8[12]).intl;
-    const obj6 = { errorMessage: error };
-    formatToPlainStringResult = intl3.formatToPlainString(tmp9(tmp8[12]).t.jnq5Ho, obj6);
+  if (tmp7Result) {
+    const intl3 = tmp8(tmp9[13]).intl;
+    const obj7 = { errorMessage: error };
+    formatToPlainStringResult = intl3.formatToPlainString(tmp8(tmp9[13]).t.jnq5Ho, obj7);
   }
-  obj4.accessibilityHint = formatToPlainStringResult;
-  obj4.maxLength = handleSaveAltText;
-  obj4["aria-invalid"] = error;
-  items2[1] = closure_12(answer(channelId[22]).FormInput, obj4);
-  obj2.children = items2;
-  const items3 = [closure_13(onRemoveAnswerImage, obj2)];
+  obj5.accessibilityHint = formatToPlainStringResult;
+  obj5.maxLength = maxLength;
+  obj5["aria-invalid"] = error;
+  items1[1] = closure_13(answer(channelId[24]).FormInput, obj5);
+  obj3.children = items1;
+  obj2.children = closure_14(answer(channelId[19]).InputFieldContainer, obj3);
+  const items2 = [closure_13(localCreationAnswerId, obj2)];
   if (canRemoveAnswer) {
-    const obj7 = {
+    const obj8 = {
       onPress() {
         return closure_1_5(index);
       },
@@ -420,24 +413,24 @@ export default function PollAnswerInput(answer) {
       accessibilityLabel: null,
       children: null,
     };
-    const intl4 = tmp9(tmp8[12]).intl;
-    const obj8 = { answerNumber: index + 1 };
-    obj7.accessibilityLabel = intl4.formatToPlainString(tmp9(tmp8[12]).t["22fjEc"], obj8);
-    const obj9 = {
-      size: tmp9(tmp8[14]).Icon.Sizes.MEDIUM,
-      source: tmp7(tmp8[23]),
+    const intl4 = tmp8(tmp9[13]).intl;
+    const obj9 = { answerNumber: index + 1 };
+    obj8.accessibilityLabel = intl4.formatToPlainString(tmp8(tmp9[13]).t["22fjEc"], obj9);
+    const obj10 = {
+      size: tmp8(tmp9[15]).Icon.Sizes.MEDIUM,
+      source: tmp10(tmp9[25]),
       color: tmp.defaultRemoveButtonContainer.color,
     };
-    obj7.children = closure_12(tmp9(tmp8[14]).Icon, obj9);
-    canRemoveAnswer = closure_12(closure_5, obj7);
+    obj8.children = closure_13(tmp8(tmp9[15]).Icon, obj10);
+    canRemoveAnswer = closure_13(onRemoveAnswerImage, obj8);
   }
-  items3[1] = canRemoveAnswer;
-  obj.children = items3;
-  const children = [closure_13(onRemoveAnswerImage, obj)];
-  if (tmp6Result) {
-    const obj10 = { message: error };
-    tmp6Result = closure_12(tmp7(tmp8[24]), obj10);
+  items2[1] = canRemoveAnswer;
+  obj.children = items2;
+  const children = [closure_14(localCreationAnswerId, obj)];
+  if (tmp7Result) {
+    const obj11 = { message: error };
+    tmp7Result = closure_13(tmp10(tmp9[26]), obj11);
   }
-  children[1] = tmp6Result;
-  return closure_13(closure_14, { children });
+  children[1] = tmp7Result;
+  return closure_14(closure_15, { children });
 }

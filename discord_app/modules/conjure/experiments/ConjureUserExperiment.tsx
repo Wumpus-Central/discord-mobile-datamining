@@ -29,7 +29,7 @@ export const useIsConjureUserEnabled = ReactCompilerGating.isReactCompilerEnable
   : function useIsConjureUserEnabled(location) {
       return closure_2.useConfig({ location: location.location }).enabled;
     };
-export const isConjureUserEnabled = function isConjureUserEnabled(location, arg1) {
+export function isConjureUserEnabled(location, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -39,4 +39,4 @@ export const isConjureUserEnabled = function isConjureUserEnabled(location, arg1
     autoTrackExposure = true;
   }
   return closure_2.getConfig({ location: location.location }, { autoTrackExposure }).enabled;
-};
+}

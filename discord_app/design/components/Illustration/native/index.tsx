@@ -8,7 +8,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const ThemeTypes = Constants.ThemeTypes;
 const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
-export const getIllustrationSource = function getIllustrationSource(theme, light) {
+export function getIllustrationSource(theme, light) {
   if (theme === ThemeTypes.LIGHT) {
     light = light.light;
   } else if (theme === ThemeTypes.DARK) {
@@ -30,7 +30,7 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
     lightResult = light.dark();
   }
   return lightResult;
-};
+}
 export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIllustrationSource(fn) {
       const cResult = c.c(3);

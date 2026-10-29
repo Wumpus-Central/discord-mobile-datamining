@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-fn(7571).useNativeCheckoutStoreOrNull;
+fn(7594).useNativeCheckoutStoreOrNull;
 const ReactCompilerGating = fn(558);
 const tmp2 = new LoggerDefault("useSyncGiftOptionsToOrder");
 const size = fn(2);
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncG
                     closure_1_10((arg0) => arg0 + 1);
                   } else if (ref4.current < 3) {
                     const _setTimeout = setTimeout;
-                    ref8.current = setTimeout(() => closure_1_10(() => { ... }), 500 * 2 ** (ref4.current - 1));
+                    ref8.current = setTimeout(() => closure_1_10(/* F165713 */ function() { ... }), 500 * 2 ** (ref4.current - 1));
                   } else {
                     resolveSyncs(false);
                   }

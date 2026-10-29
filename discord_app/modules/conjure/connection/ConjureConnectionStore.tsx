@@ -74,7 +74,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
-    held: "done",
+    held: "duration",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -304,7 +304,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -342,7 +342,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             closure_132_12(closure_131_0, "failed");
             const _Error = Error;
@@ -405,16 +405,16 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
               return closure_2_20(projectId, closure_1_1, arg0);
             };
             obj.onClose = function onClose() {
-              projectId(10832).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
-              obj = projectId(10832);
-              const result = projectId(10843).rejectPendingPublishSchedule(projectId);
-              obj2 = projectId(10843);
-              const result1 = projectId(10832).rejectPendingPatchNotesDraft(
+              projectId(10908).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
+              obj = projectId(10908);
+              const result = projectId(10919).rejectPendingPublishSchedule(projectId);
+              obj2 = projectId(10919);
+              const result1 = projectId(10908).rejectPendingPatchNotesDraft(
                 projectId,
                 "Connection closed before the draft arrived",
               );
-              const obj3 = projectId(10832);
-              const result2 = projectId(10822).clearConjurePreviewClaims(projectId);
+              const obj3 = projectId(10908);
+              const result2 = projectId(10898).clearConjurePreviewClaims(projectId);
               if (closure_1_1.disposed) {
                 const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
                 closure_1(584).dispatch(obj6);
@@ -436,7 +436,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
                 closure_1_1.pendingTemplatePrep = null;
                 const obj5 = closure_1(584);
               }
-              const obj4 = projectId(10822);
+              const obj4 = projectId(10898);
             };
             obj.onError = function onError() {};
             ws.open(obj);
@@ -445,7 +445,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -558,43 +558,43 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10734).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10742);
-const ConjureSmartContextStore = fn(10743);
-const ConjureDebugLogStore = fn(10744);
-const ConjureLiveReloadStore = fn(10746);
-const ConjureModelSettingsStore = fn(10747);
-const ConjureOverlayBackgroundStore = fn(10748);
-const ConjurePublishStatusStore = fn(10749);
-const ConjureRemixStore = fn(10750);
-const ConjureSettingsStore = fn(10751);
-const ConjureSpendLimitStore = fn(10752);
-const ConjureVoiceChannelPinStore = fn(10753);
+const getOlderHistoryCursor = fn(10808).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10817);
+const ConjureSmartContextStore = fn(10818);
+const ConjureDebugLogStore = fn(10819);
+const ConjureLiveReloadStore = fn(10821);
+const ConjureModelSettingsStore = fn(10822);
+const ConjureOverlayBackgroundStore = fn(10823);
+const ConjurePublishStatusStore = fn(10824);
+const ConjureRemixStore = fn(10825);
+const ConjureSettingsStore = fn(10826);
+const ConjureSpendLimitStore = fn(10827);
+const ConjureVoiceChannelPinStore = fn(10828);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(10769).browserSessionsFrameHandlers);
-let merged1 = Object.assign(fn(10754).chatFrameHandlers);
-const merged2 = Object.assign(fn(10770).debugFrameHandlers);
-const merged3 = Object.assign(fn(10772).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(10774).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(10775).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(10776).previewFrameHandlers);
-const merged7 = Object.assign(fn(10832).publishFrameHandlers);
-const merged8 = Object.assign(fn(10843).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(10845).remixFrameHandlers);
-const merged10 = Object.assign(fn(10846).settingsFrameHandlers);
-const merged11 = Object.assign(fn(10848).smartContextFrameHandlers);
+let merged = Object.assign(fn(10844).browserSessionsFrameHandlers);
+let merged1 = Object.assign(fn(10829).chatFrameHandlers);
+const merged2 = Object.assign(fn(10845).debugFrameHandlers);
+const merged3 = Object.assign(fn(10847).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(10849).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(10850).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(10851).previewFrameHandlers);
+const merged7 = Object.assign(fn(10908).publishFrameHandlers);
+const merged8 = Object.assign(fn(10919).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(10921).remixFrameHandlers);
+const merged10 = Object.assign(fn(10922).settingsFrameHandlers);
+const merged11 = Object.assign(fn(10924).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(10849).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(10754).chatStepHandlers);
-const merged14 = Object.assign(fn(10770).debugStepHandlers);
-const merged15 = Object.assign(fn(10776).previewStepHandlers);
-const merged16 = Object.assign(fn(10850).projectStepHandlers);
-const merged17 = Object.assign(fn(10832).publishStepHandlers);
-const merged18 = Object.assign(fn(10851).usageStepHandlers);
+const merged12 = Object.assign(fn(10925).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(10829).chatStepHandlers);
+const merged14 = Object.assign(fn(10845).debugStepHandlers);
+const merged15 = Object.assign(fn(10851).previewStepHandlers);
+const merged16 = Object.assign(fn(10926).projectStepHandlers);
+const merged17 = Object.assign(fn(10908).publishStepHandlers);
+const merged18 = Object.assign(fn(10927).usageStepHandlers);
 const set1 = new Set([
   "hello",
   "history",
@@ -673,10 +673,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/connection/ConjureConnectionStore.tsx");
 
 export default conjureConnectionStore;
-export const optimisticMessageId = function optimisticMessageId(arg0) {
+export function optimisticMessageId(arg0) {
   return "optimistic:" + arg0;
-};
-export const subscribeDebugBacklog = function subscribeDebugBacklog(projectId) {
+}
+export function subscribeDebugBacklog(projectId) {
   closure_0 = projectId;
   let num = map3.get(projectId);
   if (num == null) {
@@ -706,8 +706,8 @@ export const subscribeDebugBacklog = function subscribeDebugBacklog(projectId) {
       map3.delete(closure_0);
     }
   };
-};
-export const ensureConnection = function ensureConnection(arg0) {
+}
+export function ensureConnection(arg0) {
   obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -732,8 +732,8 @@ export const ensureConnection = function ensureConnection(arg0) {
     }
     connect(arg0, templateId);
   }
-};
-export const sendUserMessage = function sendUserMessage(projectId, trimmed, arg2) {
+}
+export function sendUserMessage(projectId, trimmed, arg2) {
   obj = arg3;
   if (arg3 === undefined) {
     obj = {};
@@ -817,8 +817,8 @@ export const sendUserMessage = function sendUserMessage(projectId, trimmed, arg2
     }
     return false;
   }
-};
-export const showUserMessage = function showUserMessage(projectId, str, arg2) {
+}
+export function showUserMessage(projectId, str, arg2) {
   obj = arg3;
   if (arg3 === undefined) {
     obj = {};
@@ -863,13 +863,13 @@ export const showUserMessage = function showUserMessage(projectId, str, arg2) {
   obj4.dispatch(obj5);
   const date = new Date();
   return { nonce, messageKey: "optimistic:" + nonce };
-};
-export const withdrawUserMessage = function withdrawUserMessage(projectId, arg1) {
+}
+export function withdrawUserMessage(projectId, arg1) {
   map2.delete(arg1);
   obj = DispatcherDefault;
   obj.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId, id: "optimistic:" + arg1, withdrawn: true });
-};
-export const interruptTurn = function interruptTurn(projectId) {
+}
+export function interruptTurn(projectId) {
   value = map.get(projectId);
   try {
     if (null == value) {
@@ -886,14 +886,14 @@ export const interruptTurn = function interruptTurn(projectId) {
       }
     }
   } catch (err) {}
-};
-export const stageModelSettings = function stageModelSettings(arg0, pendingModelSettings) {
+}
+export function stageModelSettings(arg0, pendingModelSettings) {
   value = map.get(arg0);
   if (null != value) {
     value.pendingModelSettings = pendingModelSettings;
   }
-};
-export const prepareTemplate = function prepareTemplate(arg0, pendingTemplatePrep) {
+}
+export function prepareTemplate(arg0, pendingTemplatePrep) {
   value = map.get(arg0);
   if (null != value) {
     if ("open" === map1.get(arg0)) {
@@ -902,8 +902,8 @@ export const prepareTemplate = function prepareTemplate(arg0, pendingTemplatePre
       value.pendingTemplatePrep = pendingTemplatePrep;
     }
   }
-};
-export const loadOlderHistory = function loadOlderHistory(arg0) {
+}
+export function loadOlderHistory(arg0) {
   const tmp = getOlderHistoryCursor(arg0);
   if (null == tmp) {
     return false;
@@ -923,11 +923,11 @@ export const loadOlderHistory = function loadOlderHistory(arg0) {
     }
     return flag;
   }
-};
-export const resetHistoryPaging = function resetHistoryPaging(arg0) {
+}
+export function resetHistoryPaging(arg0) {
   map4.delete(arg0);
-};
-export const closeConnection = function closeConnection(projectId) {
+}
+export function closeConnection(projectId) {
   teardown(projectId);
-};
+}
 export { closeAllConnections };

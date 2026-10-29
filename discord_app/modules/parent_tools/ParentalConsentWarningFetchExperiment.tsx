@@ -14,8 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningFetchExperiment.tsx");
 
-export const isParentalConsentWarningFetchEnabled = function isParentalConsentWarningFetchEnabled(
-  parental_consent_warning_manager,
-) {
+export function isParentalConsentWarningFetchEnabled(parental_consent_warning_manager) {
   return config.getConfig({ location: parental_consent_warning_manager }).enabled;
-};
+}

@@ -5,9 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/content_classification/utils.tsx");
 
-export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(
-  contentClassification,
-) {
+export function isAgeRestrictedContentClassification(contentClassification) {
   let tmp = null != contentClassification;
   if (tmp) {
     const obj2 = {
@@ -18,4 +16,4 @@ export const isAgeRestrictedContentClassification = function isAgeRestrictedCont
     tmp = result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT;
   }
   return tmp;
-};
+}

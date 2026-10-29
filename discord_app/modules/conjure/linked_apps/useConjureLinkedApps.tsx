@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/useConjureLinkedApps.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";

@@ -12,13 +12,13 @@ let closure_3 = debounce(
     const items = [arg0, arg1];
     const many = useGameAutocomplete.fetchMany(items);
   },
-  fn(9106).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
-  { leading: true, maxWait: fn(9106).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
+  fn(9109).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
+  { leading: true, maxWait: fn(9109).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
 );
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 
-export const queryGamesAutocomplete = function queryGamesAutocomplete(query, DEFAULT, CHAT_MENTION) {
+export function queryGamesAutocomplete(query, DEFAULT, CHAT_MENTION) {
   let gameSearchSession = null;
   if (null != CHAT_MENTION) {
     gameSearchSession = GameSearchSession.getGameSearchSession(CHAT_MENTION, DEFAULT);
@@ -47,4 +47,4 @@ export const queryGamesAutocomplete = function queryGamesAutocomplete(query, DEF
     }
     return found;
   }
-};
+}

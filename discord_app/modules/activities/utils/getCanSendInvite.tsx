@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ ActivityFlags: c3, ActivityActionTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");
 
-export const getCanSendInvite = function getCanSendInvite(findActivityResult, author, application1, id1) {
+export function getCanSendInvite(findActivityResult, author, application1, id1) {
   if (author.author.id === id1) {
     return false;
   } else if (isInviteActiveDefault(findActivityResult, author, application1.id)) {
@@ -36,4 +36,4 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
   } else {
     return false;
   }
-};
+}

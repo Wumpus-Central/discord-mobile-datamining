@@ -130,7 +130,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionStore.tsx");
 
 export default friendSuggestionStore;
-export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
+export function transformFriendSuggestions(arg0) {
   const mapped = _modDef12.chain(arg0).map((contact_names) => {
     if (null != contact_names.contact_names) {
       if (contact_names.contact_names.length >= 2) {
@@ -159,4 +159,4 @@ export const transformFriendSuggestions = function transformFriendSuggestions(ar
   });
   const chainResult = _modDef12.chain(arg0);
   return mapped.keyBy((key) => key.key).value();
-};
+}

@@ -1,15 +1,15 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2865 from "../../NotificationSettings.messages.js";
+import _modDef2866 from "../../NotificationSettings.messages.js";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
 
-export const buildOverviewCategoriesSection = function buildOverviewCategoriesSection() {
+export function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef2865["/UdAvP"]);
+  obj.label = intl.string(_modDef2866["/UdAvP"]);
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
@@ -18,8 +18,8 @@ export const buildOverviewCategoriesSection = function buildOverviewCategoriesSe
   ];
   obj.settings = items;
   return obj;
-};
-export const buildCategoryCallsMessagesSettingsSection = function buildCategoryCallsMessagesSettingsSection() {
+}
+export function buildCategoryCallsMessagesSettingsSection() {
   const obj = { settings: null };
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_REQUESTS,
@@ -29,19 +29,18 @@ export const buildCategoryCallsMessagesSettingsSection = function buildCategoryC
   ];
   obj.settings = items;
   return obj;
-};
-export const buildCategoryDiscoveryHighlightsSettingsSection =
-  function buildCategoryDiscoveryHighlightsSettingsSection() {
-    const obj = { settings: null };
-    const items = [
-      MobileNotifSettings.MobileNotifSettings.NOTIF_INVITES_RECONNECTING,
-      MobileNotifSettings.MobileNotifSettings.NOTIF_TRENDING_SUGGESTIONS,
-      MobileNotifSettings.MobileNotifSettings.NOTIF_UPDATES_OFFERS,
-    ];
-    obj.settings = items;
-    return obj;
-  };
-export const buildCategoryFriendsActivitySettingsSection = function buildCategoryFriendsActivitySettingsSection() {
+}
+export function buildCategoryDiscoveryHighlightsSettingsSection() {
+  const obj = { settings: null };
+  const items = [
+    MobileNotifSettings.MobileNotifSettings.NOTIF_INVITES_RECONNECTING,
+    MobileNotifSettings.MobileNotifSettings.NOTIF_TRENDING_SUGGESTIONS,
+    MobileNotifSettings.MobileNotifSettings.NOTIF_UPDATES_OFFERS,
+  ];
+  obj.settings = items;
+  return obj;
+}
+export function buildCategoryFriendsActivitySettingsSection() {
   const obj = { settings: null };
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
@@ -58,8 +57,8 @@ export const buildCategoryFriendsActivitySettingsSection = function buildCategor
   ];
   obj.settings = items;
   return obj;
-};
-export const buildFriendActivityTitleSettingsSection = function buildFriendActivityTitleSettingsSection() {
+}
+export function buildFriendActivityTitleSettingsSection() {
   const obj = { settings: null };
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_CUSTOM_STATUS_UPDATE,
@@ -71,8 +70,8 @@ export const buildFriendActivityTitleSettingsSection = function buildFriendActiv
   ];
   obj.settings = items;
   return obj;
-};
-export const buildCategoryServersSettingsSection = function buildCategoryServersSettingsSection() {
+}
+export function buildCategoryServersSettingsSection() {
   const obj = { settings: null };
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_GUILD_EVENT_NOTIFICATIONS,
@@ -83,4 +82,4 @@ export const buildCategoryServersSettingsSection = function buildCategoryServers
   ];
   obj.settings = items;
   return obj;
-};
+}

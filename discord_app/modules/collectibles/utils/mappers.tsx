@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
 
-export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId) {
+export function parseSkuIdFromServerData(skuId) {
   if (typeof skuId.skuId !== "string") {
     if (typeof skuId.skuId !== "number") {
       if (typeof skuId.sku_id === "string") {
@@ -16,8 +16,8 @@ export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId)
     return StringResult;
   }
   StringResult = String(skuId.skuId);
-};
-export const parseServerUserCollectibles = function parseServerUserCollectibles(collectibles) {
+}
+export function parseServerUserCollectibles(collectibles) {
   let tmp = null;
   if (typeof collectibles === "object") {
     tmp = null;
@@ -84,4 +84,4 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
     }
   }
   return tmp;
-};
+}

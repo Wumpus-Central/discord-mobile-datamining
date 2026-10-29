@@ -20,7 +20,7 @@ function getMemoizedParticipant(item10013, first1) {
   }
   return value;
 }
-const VoicePanelConstants = fn(10939);
+const VoicePanelConstants = fn(10974);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1084).RTCConnectionStates;
 let closure_14 = [];
@@ -407,7 +407,7 @@ export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled
   if (cResult[2] !== first1) {
     class T {
       constructor() {
-        return () => { ... };
+        return /* F159110 */ function() { ... };
       }
     }
     let items = [first1];
@@ -418,7 +418,7 @@ export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled
   } else {
     class T {
       constructor() {
-        return () => { ... };
+        return /* F159110 */ function() { ... };
       }
     }
     tmp11 = cResult[4];
@@ -427,7 +427,7 @@ export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class T {
       constructor() {
-        return () => { ... };
+        return /* F159110 */ function() { ... };
       }
     }
     let items1 = [VoiceStateStore, first1];
@@ -435,14 +435,14 @@ export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled
   } else {
     class T {
       constructor() {
-        return () => { ... };
+        return /* F159110 */ function() { ... };
       }
     }
   }
   if (cResult[6] === first1) {
     class T {
       constructor() {
-        return () => { ... };
+        return /* F159110 */ function() { ... };
       }
     }
   }
@@ -461,7 +461,7 @@ export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled
           _Set = Set;
           tmp2 = new.target;
           tmp3 = new.target;
-          set = new Set((() => { ... })());
+          set = new Set((/* F159111 */ function() { ... })());
           tmp5 = set;
           tmp6 = set;
           for (const item10013 of set) {

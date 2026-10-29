@@ -147,7 +147,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1084).ME;
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const ChannelScreenType = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items1 = [arg0, callback];
       const effect1 = noop.useEffect(() => {
         function handleStateChange(data) {
-          callback(resolveChannelScreens(data.data.state, handleStateChange(5189).getChatLayout()), data.data.state);
+          callback(resolveChannelScreens(data.data.state, handleStateChange(5190).getChatLayout()), data.data.state);
         }
         handleStateChange.addListener("state", handleStateChange);
         return () => {
@@ -398,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     };
 export { ChannelScreenType };
 export { getActiveTabsRoute };
-export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
+export function isActiveTabsGuilds(state) {
   const coerceTabsRouteResult = NavigationRouteUtils.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return false;
@@ -411,4 +411,4 @@ export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
     }
     return tmp6;
   }
-};
+}

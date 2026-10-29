@@ -132,7 +132,7 @@ const result = size.fileFinishedImporting(
 export { resolveGoreSettingWithDefaults };
 export { resolveGoreSettingWithDefaultsForTeen };
 export { getGoreContentSettingOrDefault };
-export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
+export function updateGoreContentSetting(arg0) {
   const GoreContentSettings = UserSettings.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
   let goreContentGuilds;
@@ -163,7 +163,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   const merged1 = Object.assign(arg0);
   GoreContentSettings2.updateSetting({});
   const obj2 = {};
-};
+}
 export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSensitiveContentFilterHelpArticle() {
       return HelpdeskArticles.EXPLICIT_MEDIA_REDACTION;

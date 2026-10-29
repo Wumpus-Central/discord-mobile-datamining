@@ -62,7 +62,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8383);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8405);
 ({
   getJoinButtonLabels: hasOwnProperty,
   getRenewButtonLabels: metroRequire,
@@ -75,7 +75,7 @@ const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx",
 );
 
-export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscriptionPurchaseSticker(id) {
+export function pickRoleSubscriptionPurchaseSticker(id) {
   const currentUser = UserStore.getCurrentUser();
   id = undefined;
   if (currentUser != null) {
@@ -87,8 +87,8 @@ export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscription
   }
   const obj2 = SnowflakeUtilsDefault;
   return length[(num + obj2.extractTimestamp(obj2, id)) % length.length];
-};
-export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptionPurchaseStickerCTA(id, arg1) {
+}
+export function getRoleSubscriptionPurchaseStickerCTA(id, arg1) {
   if (arg1) {
     let arr = timestampProducer();
   } else {
@@ -96,103 +96,99 @@ export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptio
   }
   const obj = SnowflakeUtilsDefault;
   return arr[obj.extractTimestamp(obj, id) % arr.length];
-};
-export const getRoleSubscriptionPurchaseSystemMessageFormattedContent =
-  function getRoleSubscriptionPurchaseSystemMessageFormattedContent(username) {
-    ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({
-      username: username.username,
-      usernameOnClickHandler: username.usernameOnClickHandler,
-      roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler,
-      guildId: username.guildId,
-      roleSubscriptionData: username.roleSubscriptionData,
-    }));
-    const intl = util.intl;
-    return intl.format(content, formatParams);
-  };
-export const getRoleSubscriptionPurchaseSystemMessageAstFormattedContent =
-  function getRoleSubscriptionPurchaseSystemMessageAstFormattedContent(username) {
-    ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({
-      username: username.username,
-      usernameOnClickHandler: username.usernameOnClickHandler,
-      roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler,
-      guildId: username.guildId,
-      roleSubscriptionData: username.roleSubscriptionData,
-    }));
-    const intl = util.intl;
-    return intl.formatToParts(content, formatParams);
-  };
-export const getRoleSubscriptionPurchaseSystemMessageContentMobile =
-  function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOnClickHandler) {
-    usernameOnClickHandler = usernameOnClickHandler.usernameOnClickHandler;
-    if (usernameOnClickHandler === undefined) {
-      usernameOnClickHandler = identityHook;
-    }
-    let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
-    if (roleSubscriptionOnClickHandler === undefined) {
-      roleSubscriptionOnClickHandler = React6;
-    }
-    const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-    guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
-    let num;
-    if (roleSubscriptionData != null) {
-      num = roleSubscriptionData.total_months_subscribed;
-    }
-    if (num == null) {
-      num = 0;
-    }
-    let flag;
-    if (roleSubscriptionData != null) {
-      flag = roleSubscriptionData.is_renewal;
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    const t = util.t;
-    if (tmp2) {
-      if (flag) {
-        let OQ0OUy = t.OQ0OUy;
-      } else {
-        OQ0OUy = t["+N9bxq"];
-      }
+}
+export function getRoleSubscriptionPurchaseSystemMessageFormattedContent(username) {
+  ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({
+    username: username.username,
+    usernameOnClickHandler: username.usernameOnClickHandler,
+    roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler,
+    guildId: username.guildId,
+    roleSubscriptionData: username.roleSubscriptionData,
+  }));
+  const intl = util.intl;
+  return intl.format(content, formatParams);
+}
+export function getRoleSubscriptionPurchaseSystemMessageAstFormattedContent(username) {
+  ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({
+    username: username.username,
+    usernameOnClickHandler: username.usernameOnClickHandler,
+    roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler,
+    guildId: username.guildId,
+    roleSubscriptionData: username.roleSubscriptionData,
+  }));
+  const intl = util.intl;
+  return intl.formatToParts(content, formatParams);
+}
+export function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOnClickHandler) {
+  usernameOnClickHandler = usernameOnClickHandler.usernameOnClickHandler;
+  if (usernameOnClickHandler === undefined) {
+    usernameOnClickHandler = identityHook;
+  }
+  let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
+  if (roleSubscriptionOnClickHandler === undefined) {
+    roleSubscriptionOnClickHandler = React6;
+  }
+  const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
+  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  let num;
+  if (roleSubscriptionData != null) {
+    num = roleSubscriptionData.total_months_subscribed;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  let flag;
+  if (roleSubscriptionData != null) {
+    flag = roleSubscriptionData.is_renewal;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  const t = util.t;
+  if (tmp2) {
+    if (flag) {
+      let OQ0OUy = t.OQ0OUy;
     } else {
-      if (flag) {
-        let OxP1NC = t.OxP1NC;
-        let tmp7 = require;
-      } else {
-        OxP1NC = t["6Z1E+7"];
-        tmp7 = require;
-      }
-      const intl = tmp7(1125).intl;
-      let name;
-      if (guild != null) {
-        name = guild.name;
-      }
-      const obj = {
-        guildName: name,
-        tierName: null,
-        username: null,
-        usernameOnClick: null,
-        roleSubscriptionOnClick: null,
-        months: null,
-      };
-      let tier_name;
-      if (roleSubscriptionData != null) {
-        tier_name = roleSubscriptionData.tier_name;
-      }
-      obj.tierName = tier_name;
-      obj.username = usernameOnClickHandler.username;
-      obj.usernameOnClick = usernameOnClickHandler;
-      obj.roleSubscriptionOnClick = roleSubscriptionOnClickHandler;
-      obj.months = num;
-      return intl.formatToParts(OxP1NC, obj);
+      OQ0OUy = t["+N9bxq"];
     }
-    tmp2 = num > 0;
-  };
-export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings =
-  function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
-    return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
-  };
-export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(
+  } else {
+    if (flag) {
+      let OxP1NC = t.OxP1NC;
+      let tmp7 = require;
+    } else {
+      OxP1NC = t["6Z1E+7"];
+      tmp7 = require;
+    }
+    const intl = tmp7(1125).intl;
+    let name;
+    if (guild != null) {
+      name = guild.name;
+    }
+    const obj = {
+      guildName: name,
+      tierName: null,
+      username: null,
+      usernameOnClick: null,
+      roleSubscriptionOnClick: null,
+      months: null,
+    };
+    let tier_name;
+    if (roleSubscriptionData != null) {
+      tier_name = roleSubscriptionData.tier_name;
+    }
+    obj.tierName = tier_name;
+    obj.username = usernameOnClickHandler.username;
+    obj.usernameOnClick = usernameOnClickHandler;
+    obj.roleSubscriptionOnClick = roleSubscriptionOnClickHandler;
+    obj.months = num;
+    return intl.formatToParts(OxP1NC, obj);
+  }
+  tmp2 = num > 0;
+}
+export function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
+  return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
+}
+export function trackRoleSubscriptionPurchaseMessageTierClick(
   guildId,
   channelId,
   messageId,
@@ -215,18 +211,17 @@ export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleS
   obj2.message_id = messageId;
   obj2.role_subscription_listing_id = roleSubscriptionListingId;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj2);
-};
-export const getRoleSubscriptionPurchaseSystemMessageEventProperties =
-  function getRoleSubscriptionPurchaseSystemMessageEventProperties(guild_id, author) {
-    const obj = { guild_id: guild_id.guild_id, sender: null, target_user: null, channel_id: null, message_id: null };
-    const currentUser = UserStore.getCurrentUser();
-    let id;
-    if (currentUser != null) {
-      id = currentUser.id;
-    }
-    obj.sender = id;
-    obj.target_user = author.author.id;
-    obj.channel_id = guild_id.id;
-    obj.message_id = author.id;
-    return obj;
-  };
+}
+export function getRoleSubscriptionPurchaseSystemMessageEventProperties(guild_id, author) {
+  const obj = { guild_id: guild_id.guild_id, sender: null, target_user: null, channel_id: null, message_id: null };
+  const currentUser = UserStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  obj.sender = id;
+  obj.target_user = author.author.id;
+  obj.channel_id = guild_id.id;
+  obj.message_id = author.id;
+  return obj;
+}

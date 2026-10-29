@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
-export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores1) {
+export function getUserProfileLiveActivities(stateFromStores1) {
   return _mod12.uniqWith(
     stateFromStores1.filter((type) => {
       type = type.type;
@@ -26,8 +26,8 @@ export const getUserProfileLiveActivities = function getUserProfileLiveActivitie
       return tmp;
     },
   );
-};
-export const getUserProfileStackedActivityCards = function getUserProfileStackedActivityCards(arg0) {
+}
+export function getUserProfileStackedActivityCards(arg0) {
   ({ stream, live } = arg0);
   if (live === undefined) {
     live = [];
@@ -60,4 +60,4 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
     items.push(obj3);
   }
   return items;
-};
+}

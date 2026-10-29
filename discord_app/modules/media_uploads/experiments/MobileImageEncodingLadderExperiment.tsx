@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/media_uploads/experiments/MobileImageEncodingLadderExperiment.tsx");
 
-export const getMobileImageEncodingLadderConfig = function getMobileImageEncodingLadderConfig(location) {
+export function getMobileImageEncodingLadderConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

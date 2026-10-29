@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 
 export { GamingLeaderboardStat };
 export const GuildSpaceLeaderboardEvent = obj2;
-export const getGuildSpaceLeaderboardUserIds = function getGuildSpaceLeaderboardUserIds(leaderboard) {
+export function getGuildSpaceLeaderboardUserIds(leaderboard) {
   if (null == leaderboard) {
     let items = [];
   } else {
@@ -34,8 +34,8 @@ export const getGuildSpaceLeaderboardUserIds = function getGuildSpaceLeaderboard
     items = items1.filter((item) => null != item);
   }
   return items;
-};
-export const parseGuildSpaceLeaderboardMessageData = function parseGuildSpaceLeaderboardMessageData(leaderboard) {
+}
+export function parseGuildSpaceLeaderboardMessageData(leaderboard) {
   let tmp = null;
   if (null != leaderboard) {
     tmp = null;
@@ -82,10 +82,8 @@ export const parseGuildSpaceLeaderboardMessageData = function parseGuildSpaceLea
     }
   }
   return tmp;
-};
-export const parseServerMemberGamingLeaderboardData = function parseServerMemberGamingLeaderboardData(
-  member_gaming_leaderboard_data,
-) {
+}
+export function parseServerMemberGamingLeaderboardData(member_gaming_leaderboard_data) {
   if (null == member_gaming_leaderboard_data) {
     return null;
   } else {
@@ -136,4 +134,4 @@ export const parseServerMemberGamingLeaderboardData = function parseServerMember
     obj.currentLeaderWeek = current_leader_week;
     tmp6 = obj;
   }
-};
+}

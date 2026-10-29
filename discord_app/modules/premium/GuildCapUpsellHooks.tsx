@@ -102,11 +102,11 @@ export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactComp
       }
       return stateFromStores;
     };
-export const hideInlineGuildCapUpsell = function hideInlineGuildCapUpsell() {
+export function hideInlineGuildCapUpsell() {
   HotspotStore2.hideHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
-};
+}
 export { hasIncreasedGuildCap };
-export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
+export function isAtGuildCapAndNonPremium() {
   let tmp = GuildStore.getGuildCount() >= MAX_USER_GUILDS;
   if (tmp) {
     const currentUser = UserStore.getCurrentUser();
@@ -121,4 +121,4 @@ export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
     tmp = !result;
   }
   return tmp;
-};
+}

@@ -19,7 +19,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -220,7 +220,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -234,7 +234,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandIndexActionCreators.tsx");
 
-export const fetchApplicationCommandIndex = function fetchApplicationCommandIndex() {
+export function fetchApplicationCommandIndex() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -243,7 +243,7 @@ export const fetchApplicationCommandIndex = function fetchApplicationCommandInde
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestApplicationCommandIndex = function requestApplicationCommandIndex(target) {
+}
+export function requestApplicationCommandIndex(target) {
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target });
-};
+}

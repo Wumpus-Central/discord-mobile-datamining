@@ -185,9 +185,9 @@ export const GuildTagPalettePresetColor = obj2;
 export const GUILD_TAG_BADGE_PALETTE_PRESETS = items;
 export const GUILD_TAG_BADGE_PRIMARY_DEFAULT = items[0].primary;
 export const GUILD_TAG_BADGE_SECONDARY_DEFAULT = items[0].secondary;
-export const getRandomGuildTagBadgePreset = function getRandomGuildTagBadgePreset() {
+export function getRandomGuildTagBadgePreset() {
   return items[Math.floor(Math, Math.random(Math) * items.length)];
-};
+}
 export const GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS = {
   [GuildTagBadgeKind.SWORD]: 2,
   [GuildTagBadgeKind.WATER_DROP]: 1,
@@ -231,11 +231,11 @@ export const GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS = {
   [GuildTagBadgeKind.CLOVER]: 1,
   [GuildTagBadgeKind.MAPLE]: 1,
 };
-export const getRandomGuildTagBadgeKind = function getRandomGuildTagBadgeKind() {
+export function getRandomGuildTagBadgeKind() {
   const keys = Object.keys(obj);
   const found = keys.filter((item) => isNaN(Number(item)));
   return obj[found[Math.floor(Math, Math.random(Math) * found.length)]];
-};
+}
 export const GuildTagBadgeSize = obj4;
 export const GuildTagBadgeMediaProxySizes = {
   [obj4.SIZE_12]: 16,

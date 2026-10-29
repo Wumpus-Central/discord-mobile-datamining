@@ -36,7 +36,7 @@ let set = new Set([
 const result = size.fileFinishedImporting("modules/conjure/external_connections/conjureExternalConnections.tsx");
 
 export { externalConnectionOffer };
-export const externalConnectionOffers = function externalConnectionOffers(stateFromStores) {
+export function externalConnectionOffers(stateFromStores) {
   const items = [];
   set = new Set();
   const iter = stateFromStores[Symbol.iterator]();
@@ -58,8 +58,8 @@ export const externalConnectionOffers = function externalConnectionOffers(stateF
     continue;
   }
   return items;
-};
-export const beginExternalAuthorization = function beginExternalAuthorization(current, type) {
+}
+export function beginExternalAuthorization(current, type) {
   if (current.has(type)) {
     return null;
   } else {
@@ -68,8 +68,8 @@ export const beginExternalAuthorization = function beginExternalAuthorization(cu
     set.add(type);
     return set;
   }
-};
-export const endExternalAuthorization = function endExternalAuthorization(current, arg1) {
+}
+export function endExternalAuthorization(current, arg1) {
   if (current.has(arg1)) {
     const _Set = Set;
     set = new Set(current);
@@ -78,8 +78,8 @@ export const endExternalAuthorization = function endExternalAuthorization(curren
   } else {
     return current;
   }
-};
-export const externalAuthErrorCode = function externalAuthErrorCode(error) {
+}
+export function externalAuthErrorCode(error) {
   let tmp = null;
   if (typeof error === "string") {
     tmp = null;
@@ -88,8 +88,8 @@ export const externalAuthErrorCode = function externalAuthErrorCode(error) {
     }
   }
   return tmp;
-};
-export const externalAuthErrorFor = function externalAuthErrorFor(status, arg1) {
+}
+export function externalAuthErrorFor(status, arg1) {
   if ("not_configured" === arg1) {
     return "not_configured";
   } else if ("not_deployed" === arg1) {
@@ -122,7 +122,7 @@ export const externalAuthErrorFor = function externalAuthErrorFor(status, arg1) 
     }
     return "not_declared";
   }
-};
+}
 export function externalAuthErrorCopy(error) {
   let str = "generic";
   if ("not_configured" === error) {

@@ -4,15 +4,15 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesActionCreators.tsx");
 
-export const markDisplayNameStyleFontSeen = function markDisplayNameStyleFontSeen(fontId) {
+export function markDisplayNameStyleFontSeen(fontId) {
   DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_FONT_SEEN", fontId });
-};
-export const markDisplayNameStyleEffectSeen = function markDisplayNameStyleEffectSeen(effectId) {
+}
+export function markDisplayNameStyleEffectSeen(effectId) {
   DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN", effectId });
-};
-export const markDisplayNameStyleNewFontsBadgeDismissed = function markDisplayNameStyleNewFontsBadgeDismissed() {
+}
+export function markDisplayNameStyleNewFontsBadgeDismissed() {
   DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_NEW_FONTS_BADGE_DISMISSED" });
-};
-export const markDisplayNameStyleNewEffectsBadgeDismissed = function markDisplayNameStyleNewEffectsBadgeDismissed() {
+}
+export function markDisplayNameStyleNewEffectsBadgeDismissed() {
   DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_NEW_EFFECTS_BADGE_DISMISSED" });
-};
+}

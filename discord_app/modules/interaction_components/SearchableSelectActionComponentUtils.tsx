@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
 
 export const MIN_REREQUEST_TIME = 1000;
-export const queryMentionables = function queryMentionables(type, query, channelId) {
+export function queryMentionables(type, query, channelId) {
   _require = channelId;
   const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
@@ -43,10 +43,10 @@ export const queryMentionables = function queryMentionables(type, query, channel
       checkRecentlyTalkedOnEmptyQuery: false,
       limit: 15,
     };
-    const obj = channel(6743);
-    ({ users, roles } = channel(6743).queryMentionResults(obj2));
+    const obj = channel(6766);
+    ({ users, roles } = channel(6766).queryMentionResults(obj2));
     const items = [];
-    const queryMentionResultsResult = channel(6743).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(6766).queryMentionResults(obj2);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(
@@ -67,8 +67,8 @@ export const queryMentionables = function queryMentionables(type, query, channel
     );
     return items;
   }
-};
-export const queryChannels = function queryChannels(query, channelId, channelTypes) {
+}
+export function queryChannels(query, channelId, channelTypes) {
   const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
     let items = [];
@@ -85,19 +85,15 @@ export const queryChannels = function queryChannels(query, channelId, channelTyp
     });
   }
   return items;
-};
-export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSelectOptions(
-  selectActionComponent,
-  containerId,
-  guildId,
-) {
+}
+export function getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId) {
   const interactionComponentState = LocalInteractionComponentStateStore.getInteractionComponentState(
     containerId,
     selectActionComponent.id,
   );
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(1997).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(1998).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
@@ -172,17 +168,17 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(1997).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(1998).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(1997).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(1998).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(1997).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(1998).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;
@@ -195,8 +191,8 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
     }
   }
   found = interactionComponentState.selectedOptions;
-};
-export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaultValues(defaultValues, guild_id) {
+}
+export function getSnowflakeSelectDefaultValues(defaultValues, guild_id) {
   let items = arg2;
   if (arg2 === undefined) {
     items = [];
@@ -266,4 +262,4 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
     });
     return mapped.filter(items(1385).isNotNullish);
   }
-};
+}

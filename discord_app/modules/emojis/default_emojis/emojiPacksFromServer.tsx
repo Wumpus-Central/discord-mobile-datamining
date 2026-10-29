@@ -26,7 +26,7 @@ function indexEmojiPacks(arg0) {
 const result = size.fileFinishedImporting("modules/emojis/default_emojis/emojiPacksFromServer.tsx");
 
 export { indexEmojiPacks };
-export const emojiPacksFromServer = function emojiPacksFromServer(packs) {
+export function emojiPacksFromServer(packs) {
   return indexEmojiPacks(
     packs.map((id) => {
       const obj = {
@@ -52,4 +52,4 @@ export const emojiPacksFromServer = function emojiPacksFromServer(packs) {
       return obj;
     }),
   );
-};
+}

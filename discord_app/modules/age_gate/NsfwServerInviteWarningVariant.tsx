@@ -10,7 +10,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/age_gate/NsfwServerInviteWarningVariant.tsx");
 
-export const getNsfwServerInviteWarningVariant = function getNsfwServerInviteWarningVariant(gatedAgeGroup) {
+export function getNsfwServerInviteWarningVariant(gatedAgeGroup) {
   const tmp3 = getTinyBroncoWarningDescriptions.getTinyBroncoServerDescriptions()[gatedAgeGroup];
   const obj2 = { text: null, joins: false };
   const intl = util.intl;
@@ -29,7 +29,7 @@ export const getNsfwServerInviteWarningVariant = function getNsfwServerInviteWar
     const obj6 = { description: tmp3, confirm: obj2, goBackIsPrimary: false };
     return obj6;
   }
-};
+}
 export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGatedAgeGroup() {
       const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
@@ -53,7 +53,7 @@ export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled()
       }
       return TEEN;
     };
-export const getNsfwServerInviteWarningAgeGroupForError = function getNsfwServerInviteWarningAgeGroupForError(arg0) {
+export function getNsfwServerInviteWarningAgeGroupForError(arg0) {
   if (AbortCodes.UNDER_MINIMUM_AGE === arg0) {
     let UNVERIFIED = useAgeGroupPresentation.AgeGroupState.TEEN;
   } else if (tmp.AGE_GROUP_UNVERIFIED === arg0) {
@@ -66,4 +66,4 @@ export const getNsfwServerInviteWarningAgeGroupForError = function getNsfwServer
     tmp7 = UNVERIFIED;
   }
   return tmp7;
-};
+}

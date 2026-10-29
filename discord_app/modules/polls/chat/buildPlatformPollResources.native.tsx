@@ -1,13 +1,13 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
-import _modDef6938 from "../../../../_runtime/metro/06938__.js";
-import _modDef7280 from "../../../../_runtime/metro/07280__.js";
+import _modDef6962 from "../../../../_runtime/metro/06962__.js";
+import _modDef7304 from "../../../../_runtime/metro/07304__.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-let closure_3 = apply.mapValues(fn(12159).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(12213).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
@@ -37,7 +37,7 @@ let closure_3 = apply.mapValues(fn(12159).pollStyleSets, (arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/chat/buildPlatformPollResources.native.tsx");
 
-export const buildPlatformPollResources = function buildPlatformPollResources(theme, layoutType) {
+export function buildPlatformPollResources(theme, layoutType) {
   closure_0 = theme;
   closure_1 = layoutType;
   const obj = {
@@ -45,10 +45,10 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
     selectedIcon: null,
     checkmarkIcon: null,
   };
-  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7280);
-  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6938);
+  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7304);
+  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6962);
   return obj;
-};
-export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {
+}
+export function getAvatarUrl(currentUser, guildId) {
   return utils_AvatarUtils.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
-};
+}

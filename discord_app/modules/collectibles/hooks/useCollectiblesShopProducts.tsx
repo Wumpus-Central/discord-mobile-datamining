@@ -632,7 +632,7 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
         }, items10),
       };
     };
-export const useCollectiblesShopProducts = function useCollectiblesShopProducts(skuIds) {
+export function useCollectiblesShopProducts(skuIds) {
   _require = skuIds;
   let obj = cResult;
   if (cResult === undefined) {
@@ -851,4 +851,4 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     }
     return obj;
   }, items13);
-};
+}

@@ -9,9 +9,9 @@ import EmojiPackStore from "../modules/emojis/default_emojis/EmojiPackStore.tsx"
 import PermissionStore from "../stores/PermissionStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
-const PremiumTypeUtils = isPremiumResult(1988);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(4928);
-const RoleSubscriptionEmojiUtils = isPremiumResult(4958);
+const PremiumTypeUtils = isPremiumResult(1989);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(4929);
+const RoleSubscriptionEmojiUtils = isPremiumResult(4959);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -178,7 +178,7 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
 const Permissions = fn(1084).Permissions;
 const EmojiConstants = fn(1392);
@@ -338,7 +338,7 @@ export default {
     return ImageUtils.dataUriFileSize(base64) > v65535;
   },
 };
-export const countEmoji = function countEmoji(arr, arg1) {
+export function countEmoji(arr, arg1) {
   closure_0 = arg1;
   importDefault = 0;
   dependencyMap = 0;
@@ -372,8 +372,8 @@ export const countEmoji = function countEmoji(arr, arg1) {
     }
   });
   return { unicode: importDefault, custom: dependencyMap, customExternal, managed, managedExternal, animated };
-};
-export const getEmojiColors = function getEmojiColors() {
+}
+export function getEmojiColors() {
   const self = this;
   const apply = closure_21.apply;
   if (typeof apply === "unknown") {
@@ -382,8 +382,8 @@ export const getEmojiColors = function getEmojiColors() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
+}
+export function getEmojiUrl(arg0, arg1) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 32;
@@ -400,8 +400,8 @@ export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
     emojiURL = EmojiUtilsPlatformedDefault.getURL(tmp);
   }
   return emojiURL;
-};
-export const getAllEmojiNamesString = function getAllEmojiNamesString(emojiByIdOrName) {
+}
+export function getAllEmojiNamesString(emojiByIdOrName) {
   if ("allNamesString" in emojiByIdOrName) {
     let allNamesString = emojiByIdOrName.allNamesString;
   } else {
@@ -409,4 +409,4 @@ export const getAllEmojiNamesString = function getAllEmojiNamesString(emojiByIdO
     allNamesString = ":" + emojiByIdOrName.name + ":";
   }
   return allNamesString;
-};
+}

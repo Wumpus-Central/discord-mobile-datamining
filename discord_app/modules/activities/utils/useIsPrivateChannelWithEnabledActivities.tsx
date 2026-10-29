@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return flag;
     };
-export const isPrivateChannelWithEnabledActivities = function isPrivateChannelWithEnabledActivities(arg0) {
+export function isPrivateChannelWithEnabledActivities(arg0) {
   if (null == arg0) {
     return false;
   } else {
@@ -76,4 +76,4 @@ export const isPrivateChannelWithEnabledActivities = function isPrivateChannelWi
     }
     return flag;
   }
-};
+}

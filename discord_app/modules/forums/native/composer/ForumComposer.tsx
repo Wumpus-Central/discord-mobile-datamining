@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -61,7 +61,7 @@ function ActionBar(channel) {
   const tmp6 = useKeyboardTypeDefault();
   closure_7 = tmp6;
   let isMediaChannelResult = channel.isMediaChannel();
-  const tmp8 = tmp6 === channel(1628).KeyboardTypes.MEDIA;
+  const tmp8 = tmp6 === channel(1629).KeyboardTypes.MEDIA;
   closure_8 = tmp8;
   if (!isMediaChannelResult) {
     let tmp9 = stateFromStores1;
@@ -106,7 +106,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9494).TagIcon;
+      obj6.IconComponent = tmp2(9525).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -117,8 +117,8 @@ function ActionBar(channel) {
               closure_1_5();
             }
             tmp5 =
-              closure_1_7 !== channel(1628).KeyboardTypes.SYSTEM &&
-              closure_1_7 !== channel(1628).KeyboardTypes.EXPRESSION;
+              closure_1_7 !== channel(1629).KeyboardTypes.SYSTEM &&
+              closure_1_7 !== channel(1629).KeyboardTypes.EXPRESSION;
           },
           title: null,
           tags: null,
@@ -133,15 +133,15 @@ function ActionBar(channel) {
             closure_1_5();
           }
           tmp4 =
-            closure_1_7 !== channel(1628).KeyboardTypes.SYSTEM &&
-            closure_1_7 !== channel(1628).KeyboardTypes.EXPRESSION;
+            closure_1_7 !== channel(1629).KeyboardTypes.SYSTEM &&
+            closure_1_7 !== channel(1629).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11044, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11098, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7521).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7544).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10143).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10176).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -153,9 +153,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1125).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1125).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9381).ReactionIcon;
+      obj7.IconComponent = tmp2(9413).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7521).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7544).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -173,13 +173,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(8579).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(8601).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5280).Button, obj9);
+    obj8.children = closure_29(tmp2(5281).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -193,9 +193,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(14210).KeyboardIcon;
+      let ImageIcon = tmp2(14444).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(8595).ImageIcon;
+      ImageIcon = tmp2(8617).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -207,7 +207,7 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7521).HeaderActionButton, obj11);
+    closure_29(tmp2(7544).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -219,12 +219,12 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(7666).DraftType;
-const SlowmodeType = fn(7795).SlowmodeType;
+const DraftType = fn(7689).DraftType;
+const SlowmodeType = fn(7818).SlowmodeType;
 let Constants = fn(1084);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ChannelFlags = fn(4864).ChannelFlags;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
 let closure_27 = fn(1124).OpenThreadAnalyticsLocations;
 Constants = fn(1095);
@@ -232,7 +232,7 @@ Constants = fn(1095);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -676,7 +676,7 @@ export default function ForumComposer(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -827,7 +827,7 @@ export default function ForumComposer(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -848,7 +848,7 @@ export default function ForumComposer(parentChannel) {
             let content;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else {
           if (1 === tmp8) {

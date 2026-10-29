@@ -24,9 +24,9 @@ const result = size.fileFinishedImporting("modules/gateway/PrivateChannelHidingE
 export const getCachedPrivateChannelObfuscation =
   PrivateChannelHidingExperimentCache.getCachedPrivateChannelObfuscation;
 export const PRIVATE_CHANNEL_OBFUSCATION_KEY = PrivateChannelHidingExperimentCache.PRIVATE_CHANNEL_OBFUSCATION_KEY;
-export const isChannelMetadataObfuscationEnabled = function isChannelMetadataObfuscationEnabled(dependencyMap) {
+export function isChannelMetadataObfuscationEnabled(dependencyMap) {
   return closure_2.getConfig({ location: dependencyMap }).enableObfuscation;
-};
+}
 export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsChannelMetadataObfuscationEnabled(location) {
       const cResult = c.c(2);
@@ -43,8 +43,6 @@ export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReac
   : function useIsChannelMetadataObfuscationEnabled(location) {
       return closure_2.useConfig({ location }).enableObfuscation;
     };
-export const isChannelMetadataIntegrityCheckEnabled = function isChannelMetadataIntegrityCheckEnabled(
-  scheduleIntegrityCheck,
-) {
+export function isChannelMetadataIntegrityCheckEnabled(scheduleIntegrityCheck) {
   return closure_2.getConfig({ location: scheduleIntegrityCheck }).enableIntegrityCheck;
-};
+}

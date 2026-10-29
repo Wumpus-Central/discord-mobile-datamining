@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore.tsx";
-import allSettled_mod from "../../../../_runtime/06419_allSettled.js";
+import allSettled_mod from "../../../../_runtime/06443_allSettled.js";
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -138,9 +138,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(16856).useEditStateStore;
+const useEditStateStore = fn(17094).useEditStateStore;
 const GuildFeatures = fn(1084).GuildFeatures;
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};
@@ -593,15 +593,15 @@ export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabl
       }
       return null;
     };
-export const announceCreateTemplateChannels = function announceCreateTemplateChannels(arg0) {
+export function announceCreateTemplateChannels(arg0) {
   const arr = getUsedTemplateChannelsForGuild(arg0);
   closure_12[arg0] = arr;
   const item = arr.forEach((set) => {
     const result = set.set("flags", constants.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     DispatcherDefault.dispatch({ type: "CHANNEL_CREATE", channel: result });
   });
-};
-export const announceDeleteTemplateChannels = function announceDeleteTemplateChannels(arg0) {
+}
+export function announceDeleteTemplateChannels(arg0) {
   let arr = closure_12[arg0];
   if (arr == null) {
     arr = getUsedTemplateChannelsForGuild(arg0);
@@ -609,8 +609,8 @@ export const announceDeleteTemplateChannels = function announceDeleteTemplateCha
   const item = arr.forEach((channel) => {
     DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel });
   });
-};
-export const createChannelsFromTemplateTierBenefits = function createChannelsFromTemplateTierBenefits() {
+}
+export function createChannelsFromTemplateTierBenefits() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -619,8 +619,8 @@ export const createChannelsFromTemplateTierBenefits = function createChannelsFro
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getTemplateTierCreationAnalyticsContext = function getTemplateTierCreationAnalyticsContext(arg0, arg1) {
+}
+export function getTemplateTierCreationAnalyticsContext(arg0, arg1) {
   const tmp = useEditStateStore.getState().listings[arg0];
   let usedTemplate;
   if (tmp != null) {
@@ -718,8 +718,8 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
       return obj5;
     }
   }
-};
-export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
+}
+export function isEligibleForNewBadge(features) {
   let result = GuildRoleSubscriptionSettingUtils.canManageGuildRoleSubscriptions(features);
   if (result) {
     features = features.features;
@@ -730,4 +730,4 @@ export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
     const tmpResult = GuildRoleSubscriptionsExperimentUtils;
   }
   return result;
-};
+}

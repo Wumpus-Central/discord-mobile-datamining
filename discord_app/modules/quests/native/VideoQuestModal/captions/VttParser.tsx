@@ -12,7 +12,7 @@ const re1 = /([0-9]+)?:?([0-9]{2}):([0-9]{2}\.[0-9]{2,3})/;
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VttParser.tsx");
 
 export const VttParserError = prototype;
-export const parseVtt = function parseVtt(text) {
+export function parseVtt(text) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -356,4 +356,4 @@ export const parseVtt = function parseVtt(text) {
     throw new TypeError("Trying to call a non-function");
   }
   const str3 = text.trim().replace(/\r\n/g, "\n").replace(/\r/g, "\n");
-};
+}

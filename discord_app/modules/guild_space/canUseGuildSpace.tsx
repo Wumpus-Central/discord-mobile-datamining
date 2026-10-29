@@ -60,13 +60,13 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
 
-export const isGuildSpaceAdmin = function isGuildSpaceAdmin(arg0) {
+export function isGuildSpaceAdmin(arg0) {
   let canResult = null != arg0;
   if (canResult) {
     canResult = PermissionStore.can(Permissions.MANAGE_GUILD, arg0);
   }
   return canResult;
-};
+}
 export const useIsGuildSpaceAdmin = tmp2;
 export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
   return false;

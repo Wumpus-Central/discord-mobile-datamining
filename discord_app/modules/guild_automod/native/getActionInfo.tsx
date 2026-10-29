@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AutomodActionType = Constants.AutomodActionType;
 const result = size.fileFinishedImporting("modules/guild_automod/native/getActionInfo.tsx");
 
-export const getActionInfo = function getActionInfo(actionType, action, triggerType) {
+export function getActionInfo(actionType, action, triggerType) {
   const baseActionInfo = BaseActionInfo.getBaseActionInfo(actionType, action, triggerType);
   let tmp4 = null;
   if (null != baseActionInfo) {
@@ -32,4 +32,4 @@ export const getActionInfo = function getActionInfo(actionType, action, triggerT
     tmp4 = obj2;
   }
   return tmp4;
-};
+}

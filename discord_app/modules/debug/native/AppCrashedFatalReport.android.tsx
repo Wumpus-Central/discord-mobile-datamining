@@ -5,6 +5,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 const CrashReportingManager = _mod17.NativeModules.CrashReportingManager;
 const result = size.fileFinishedImporting("modules/debug/native/AppCrashedFatalReport.android.tsx");
 
-export const init = function init() {
+export function init() {
   CrashReportingManager.initializeManager();
-};
+}

@@ -43,7 +43,7 @@ export const CreateOrAddGuildSlideTypes = {
 export { HubGuildTemplateId };
 export const DirectoryEntryCategories = obj2;
 export const HQ_CHANNEL_ID = "883060064561299456";
-export const getHubCategories = function getHubCategories(arg0) {
+export function getHubCategories(arg0) {
   if (arg0 === c7) {
     const obj = { id: "club", value: obj2.SCHOOL_CLUB, label: null };
     const intl = util.intl;
@@ -82,8 +82,8 @@ export const getHubCategories = function getHubCategories(arg0) {
     items1[3] = obj8;
   }
   return items1;
-};
-export const getHubGuildTemplatesMap = function getHubGuildTemplatesMap() {
+}
+export function getHubGuildTemplatesMap() {
   const obj = {};
   obj2 = { id: obj.CREATE, code: "2TffvPucqHkN", label: null, channels: null, system_channel_id: null };
   const intl = util.intl;
@@ -471,4 +471,4 @@ export const getHubGuildTemplatesMap = function getHubGuildTemplatesMap() {
   obj65.channels = items6;
   obj[obj.HUB_DORM] = obj65;
   return obj;
-};
+}

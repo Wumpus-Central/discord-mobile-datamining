@@ -99,13 +99,13 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 
 export { mergeApexExperiments };
 export { getApexExperimentOverridesInfo };
-export const getApexExperiments = function getApexExperiments() {
+export function getApexExperiments() {
   const obj = { experiments: null, overridesInfo: null };
   const experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
   obj.experiments = mergeApexExperiments(experimentsMetadata, ApexExperimentStore.getRegisteredExperiments());
   obj.overridesInfo = getApexExperimentOverridesInfo(ApexExperimentStore.getClientOverrides());
   return obj;
-};
+}
 export const useApexExperiments = ReactCompilerGating.isReactCompilerEnabled()
   ? function useApexExperiments() {
       const cResult = c.c(16);

@@ -80,14 +80,14 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(5769).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5771).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const Constants = fn(5754);
+const Constants = fn(5756);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
 
-export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(error, context) {
+export function sendAVErrorAnalyticsEvent(error, context) {
   _require = error;
   errorInfo = require("AVError").getErrorInfo(error);
   let channelId;
@@ -1032,4 +1032,4 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     AnalyticsUtilsDefault.track(AnalyticEvents.AV_ERROR_REPORTED, obj);
     const tmp115Result4 = AnalyticsUtilsDefault;
   });
-};
+}

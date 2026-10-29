@@ -97,6 +97,6 @@ export const EmojiInteractionPoint = {
   TrackOpenPopoutUsed: "TRACK_OPEN_POPOUT_USED",
   CustomEmojiTooltipShown: "CUSTOM_EMOJI_TOOLTIP_SHOWN",
 };
-export const isExternalEmojiAllowedForIntention = function isExternalEmojiAllowedForIntention(arg0) {
+export function isExternalEmojiAllowedForIntention(arg0) {
   return !set.has(arg0);
-};
+}

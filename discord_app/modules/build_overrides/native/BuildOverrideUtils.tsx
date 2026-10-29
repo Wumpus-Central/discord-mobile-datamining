@@ -30,7 +30,7 @@ let closure_8 = async function _setBuildOverride(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_10 = async function _clearBuildOverride() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -158,7 +158,7 @@ let closure_11 = async function _toggleOverride(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -200,7 +200,7 @@ let closure_11 = async function _toggleOverride(arg0) {
               if (null != id1) {
                 setBuildOverrideForBranch(id1);
                 c4 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             obj10 = BuildOverrideUtils;
@@ -248,7 +248,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -329,15 +329,15 @@ let result = size.fileFinishedImporting("modules/build_overrides/native/BuildOve
 
 export const DEVICE_FIELD = str;
 export { setBuildOverrideForBranch };
-export const setBuildOverrideForId = function setBuildOverrideForId(id) {
+export function setBuildOverrideForId(id) {
   setBuildOverride({ type: "id", id });
-};
+}
 export { setBuildOverride };
-export const refreshBuildOverride = function refreshBuildOverride() {
+export function refreshBuildOverride() {
   const result = BundleUpdaterDefault.checkForUpdateAndReload();
-};
+}
 export { clearBuildOverride };
-export const toggleOverride = function toggleOverride() {
+export function toggleOverride() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -346,8 +346,8 @@ export const toggleOverride = function toggleOverride() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setBuildOverrideFromLink = function setBuildOverrideFromLink() {
+}
+export function setBuildOverrideFromLink() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -356,4 +356,4 @@ export const setBuildOverrideFromLink = function setBuildOverrideFromLink() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

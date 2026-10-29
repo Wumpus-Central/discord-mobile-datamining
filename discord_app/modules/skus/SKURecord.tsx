@@ -1,12 +1,12 @@
 // discord_app/modules/skus/SKURecord.tsx
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformSKUTenantMetadataDefault from "utils/transformSKUTenantMetadata.tsx";
 import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 const require = fn;
-fn(2045).THE_GAME_AWARD_WINNER_SKUS;
+fn(2046).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1084);
 ({
   GIFTABLE_CURRENCIES: hasOwnProperty,
@@ -138,12 +138,12 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.name = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = _modDef2046(id.release_date);
+    tmp6 = _modDef2047(id.release_date);
   }
   obj.releaseDate = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = _modDef2046(id.preorder_release_at);
+    tmp9 = _modDef2047(id.preorder_release_at);
   }
   obj.preorderReleaseAt = tmp9;
   ({ preorder_approximate_release_date: obj.preorderApproximateReleaseDate, summary: obj.summary } = id);
@@ -239,6 +239,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   if (null != id.preview_asset_paths) {
     const obj5 = {
       fgStatic: id.preview_asset_paths.fg_static,
+      fgVideo: id.preview_asset_paths.fg_video,
       fgAnimated: id.preview_asset_paths.fg_animated,
       bgStatic: id.preview_asset_paths.bg_static,
       bgAnimated: id.preview_asset_paths.bg_animated,

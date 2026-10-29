@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoAgents.tsx");
 
 export const MAX_SHOWN_AGENTS = 3;
-export const runningTodoAgents = function runningTodoAgents(tasks) {
+export function runningTodoAgents(tasks) {
   const items = [];
   const iter = tasks[Symbol.iterator]();
   const nextResult = iter.next();
@@ -27,8 +27,8 @@ export const runningTodoAgents = function runningTodoAgents(tasks) {
     continue;
   }
   return items;
-};
-export const groupAgentsByTodo = function groupAgentsByTodo(cResult) {
+}
+export function groupAgentsByTodo(cResult) {
   const map = new Map();
   const iter = cResult[Symbol.iterator]();
   const nextResult = iter.next();
@@ -49,8 +49,8 @@ export const groupAgentsByTodo = function groupAgentsByTodo(cResult) {
     continue;
   }
   return map;
-};
-export const splitAgentOverflow = function splitAgentOverflow(agents) {
+}
+export function splitAgentOverflow(agents) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 3;
@@ -62,4 +62,4 @@ export const splitAgentOverflow = function splitAgentOverflow(agents) {
     obj = { shown: agents.slice(0, num), overflow: agents.length - num };
   }
   return obj;
-};
+}

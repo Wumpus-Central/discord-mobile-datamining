@@ -19,7 +19,7 @@ export const useIsConjureMobileEnabled = ReactCompilerGating.isReactCompilerEnab
       dependencyMap = _location;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [tmp(1452).ApexExperimentStore];
+        const items = [tmp(1453).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -66,6 +66,6 @@ export const useIsConjureMobileEnabled = ReactCompilerGating.isReactCompilerEnab
         items1,
       );
     };
-export const isConjureMobileEnabled = function isConjureMobileEnabled(openConjureHomeScreen) {
+export function isConjureMobileEnabled(openConjureHomeScreen) {
   return apexExperiment.getConfig({ location: openConjureHomeScreen }).enabled;
-};
+}

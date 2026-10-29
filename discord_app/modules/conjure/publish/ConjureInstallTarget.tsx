@@ -19,7 +19,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -54,7 +54,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0, arg1) {
           return obj;
         }
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp8) {
         c2 = tmp;
         throw tmp8;
@@ -65,7 +65,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0, arg1) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/ConjureInstallTarget.tsx");
 
-export const conjureInstallGuildId = function conjureInstallGuildId(project, integrationStatus, guildId) {
+export function conjureInstallGuildId(project, integrationStatus, guildId) {
   let prop;
   if (integrationStatus != null) {
     prop = integrationStatus.integration_installed;
@@ -82,8 +82,8 @@ export const conjureInstallGuildId = function conjureInstallGuildId(project, int
     }
   }
   return guild_id;
-};
-export const repairConjureGuildHints = function repairConjureGuildHints() {
+}
+export function repairConjureGuildHints() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -92,4 +92,4 @@ export const repairConjureGuildHints = function repairConjureGuildHints() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

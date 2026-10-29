@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
-export const ensureValidMode = function ensureValidMode(typescript) {
+export function ensureValidMode(typescript) {
   let str = "typescript";
   if ("typescript" === typescript) {
     str = typescript;
@@ -12,4 +12,4 @@ export const ensureValidMode = function ensureValidMode(typescript) {
     FluxApi;
   }
   return str;
-};
+}

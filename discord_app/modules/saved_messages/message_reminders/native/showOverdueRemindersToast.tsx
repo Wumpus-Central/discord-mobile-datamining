@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
   "modules/saved_messages/message_reminders/native/showOverdueRemindersToast.tsx",
 );
 
-export const showOverdueRemindersToast = function showOverdueRemindersToast() {
+export function showOverdueRemindersToast() {
   const overdueMessageReminderCount = SavedMessagesStore.getOverdueMessageReminderCount();
   if (0 !== overdueMessageReminderCount) {
     const mostRecentOverdueDueAt = SavedMessagesStore.getMostRecentOverdueDueAt();
@@ -27,4 +27,4 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
     }
     obj2 = MessageRemindersSeenStorage;
   }
-};
+}

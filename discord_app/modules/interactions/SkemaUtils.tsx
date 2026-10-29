@@ -33,6 +33,6 @@ const _errors = "_errors";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/SkemaUtils.tsx");
 
-export const getFirstSkemaError = function getFirstSkemaError(errors) {
+export function getFirstSkemaError(errors) {
   return getFirstSkemaFieldError(errors, undefined);
-};
+}

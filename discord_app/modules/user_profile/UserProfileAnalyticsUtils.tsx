@@ -280,8 +280,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7239).FetchState;
-const constants = fn(8709).TrackUserProfileProperties;
+const FetchState = fn(7263).FetchState;
+const constants = fn(8712).TrackUserProfileProperties;
 const Constants = fn(1084);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
 const StatusTypes = fn(1095).StatusTypes;
@@ -289,7 +289,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 
 export { getProfileProperties };
-export const getUserStatus = function getUserStatus(id) {
+export function getUserStatus(id) {
   const status = PresenceStore.getStatus(id);
   if (status === StatusTypes.ONLINE) {
     if (PresenceStore.isMobileOnline(id)) {
@@ -303,8 +303,8 @@ export const getUserStatus = function getUserStatus(id) {
     const _HermesInternal = HermesInternal;
     combined = "" + status + "-desktop";
   }
-};
-export const getActivityType = function getActivityType(arg0) {
+}
+export function getActivityType(arg0) {
   let tmp = arg0;
   if (null != arg0) {
     let str = "VOICE";
@@ -318,8 +318,8 @@ export const getActivityType = function getActivityType(arg0) {
     tmp = str;
   }
   return tmp;
-};
-export const getTrackUserRelationshipProperties = function getTrackUserRelationshipProperties(userId) {
+}
+export function getTrackUserRelationshipProperties(userId) {
   userId = userId.userId;
   if (null == userId) {
     return {};
@@ -352,9 +352,9 @@ export const getTrackUserRelationshipProperties = function getTrackUserRelations
     obj.communication_rank = communicationRank;
     return obj;
   }
-};
+}
 export { trackUserProfileAction };
-export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiViewed(userId) {
+export function maybeTrackUserProfileUiViewed(userId) {
   if (obj.isUserProfilePerformanceAnalyticsEnabled("UserProfileAnalyticsUtils")) {
     ({ timeToInteractiveMs, timeToLoadMs, timeToFetchMs } = userId);
     let num = timeToInteractiveMs;
@@ -428,8 +428,8 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
     }
   }
   obj = UserProfilePerformanceAnalyticsExperiment;
-};
-export const trackUserProfileActivityJoined = function trackUserProfileActivityJoined(userId) {
+}
+export function trackUserProfileActivityJoined(userId) {
   ({ activityType, voiceChannelId } = userId);
   ({ guildId, channelId, analyticsLocations, activityName, activityPlatform, activitySessionId, applicationId } =
     userId);
@@ -494,8 +494,8 @@ export const trackUserProfileActivityJoined = function trackUserProfileActivityJ
   obj2.application_id = applicationId;
   obj2.voice_channel_id = voiceChannelId;
   obj.track(constants3.USER_PROFILE_ACTIVITY_JOINED, obj2);
-};
-export const trackUserProfileActivityAction = function trackUserProfileActivityAction(userId) {
+}
+export function trackUserProfileActivityAction(userId) {
   ({ activity, entry, outbox } = userId);
   ({ guildId, channelId, analyticsLocations, action, display, stream, voiceChannelId } = userId);
   const obj2 = {};
@@ -600,8 +600,8 @@ export const trackUserProfileActivityAction = function trackUserProfileActivityA
   obj2.author_ids_v2 = mapped1;
   obj2.voice_channel_id = voiceChannelId;
   obj.track(constants3.USER_PROFILE_ACTIVITY_ACTION, obj2);
-};
-export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(userId) {
+}
+export function trackUserProfileBadgeAction(userId) {
   ({ badgeId, userId } = userId);
   let tmp;
   ({ guildId, channelId, analyticsLocations, badgeAction, position } = userId);
@@ -658,8 +658,8 @@ export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(
   obj2.badge_tier = tmp;
   obj2.position = position;
   obj.track(constants3.USER_PROFILE_BADGE_ACTION, obj2);
-};
-export const trackDmProfileToggled = function trackDmProfileToggled(displayProfile) {
+}
+export function trackDmProfileToggled(displayProfile) {
   displayProfile = displayProfile.displayProfile;
   let userId;
   if (displayProfile != null) {
@@ -716,8 +716,8 @@ export const trackDmProfileToggled = function trackDmProfileToggled(displayProfi
   }
   obj2.profile_has_theme_animation = null != prop;
   AnalyticsUtilsDefault.track(constants3.DM_PROFILE_TOGGLED, obj2);
-};
-export const trackUserProfileEditAction = function trackUserProfileEditAction(dependencyMap) {
+}
+export function trackUserProfileEditAction(dependencyMap) {
   ({ action, applicationId } = dependencyMap);
   const obj = {};
   ({ guildId, channelId, analyticsLocations, widgetEdited, gameId, numResults, numCharacters } = dependencyMap);
@@ -747,8 +747,8 @@ export const trackUserProfileEditAction = function trackUserProfileEditAction(de
   obj3.num_characters = numCharacters;
   obj3.application_id = applicationId;
   obj2.track(constants3.USER_PROFILE_EDIT_ACTION, obj3);
-};
-export const trackUserProfileEditSaved = function trackUserProfileEditSaved(dependencyMap) {
+}
+export function trackUserProfileEditSaved(dependencyMap) {
   const obj = {};
   ({ guildId, channelId, analyticsLocations, widgetEdited, gameIds, tags, numCharactersCommentary, isWidgetRemoved } =
     dependencyMap);
@@ -767,8 +767,8 @@ export const trackUserProfileEditSaved = function trackUserProfileEditSaved(depe
   obj3.num_characters_commentary = numCharactersCommentary;
   obj3.is_widget_removed = isWidgetRemoved;
   obj2.track(constants3.USER_PROFILE_EDIT_SAVED, obj3);
-};
-export const trackUserProfileWishlistAction = function trackUserProfileWishlistAction(dependencyMap) {
+}
+export function trackUserProfileWishlistAction(dependencyMap) {
   ({ action, productLines } = dependencyMap);
   const obj = {};
   ({ guildId, channelId, analyticsLocations, wishlistId, skuId } = dependencyMap);
@@ -792,4 +792,4 @@ export const trackUserProfileWishlistAction = function trackUserProfileWishlistA
   }
   obj3.product_lines = items;
   obj2.track(constants3.USER_PROFILE_WISHLIST_ACTION, obj3);
-};
+}

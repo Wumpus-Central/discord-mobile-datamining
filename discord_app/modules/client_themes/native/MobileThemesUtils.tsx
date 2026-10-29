@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2769 from "../intl/ClientThemes.messages.js";
+import _modDef2770 from "../intl/ClientThemes.messages.js";
 import HexagonCampaignUtils from "../../hexagon_campaign/HexagonCampaignUtils.tsx";
 import HexagonCampaignPerkAvailability from "../../hexagon_campaign/HexagonCampaignPerkAvailability.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2769.yl1iMm);
+  return intl.string(_modDef2770.yl1iMm);
 }
 const ClientThemesConstants = fn(1252);
 ({
@@ -25,7 +25,7 @@ const ClientThemesConstants = fn(1252);
   HEXAGON_GRADIENT_PRESET: closure_8,
   REFRESH_STANDARD_BACKGROUND_THEMES: closure_9,
 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
@@ -203,7 +203,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
 export { isHexagonCampaignMobileTheme };
-export const isNitroGatedMobileTheme = function isNitroGatedMobileTheme(themes) {
+export function isNitroGatedMobileTheme(themes) {
   let tmp3 = themes.type !== ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME;
   if (tmp3) {
     let result = themes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
@@ -223,11 +223,11 @@ export const isNitroGatedMobileTheme = function isNitroGatedMobileTheme(themes) 
     tmp3 = tmp5;
   }
   return tmp3;
-};
+}
 export { getCustomBackgroundGradient };
 export const useCustomBackgroundGradient = tmp4;
 export const usePerModeCustomBackgroundGradient = tmp5;
-export const getAllMobileThemes = function getAllMobileThemes() {
+export function getAllMobileThemes() {
   const customThemeDisplaySettings = CustomThemeMobileStore.getCustomThemeDisplaySettings();
   let tmp2 = null;
   if (undefined !== customThemeDisplaySettings) {
@@ -276,7 +276,7 @@ export const getAllMobileThemes = function getAllMobileThemes() {
     HermesBuiltin.arraySpread(tmp14, HermesBuiltin.arraySpread(React6, 0));
   }
   return items3;
-};
+}
 export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAllMobileThemes(arg0) {
       _require = arg0;
@@ -341,10 +341,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(closure_7, 1);
             tmp16 = items2;
           }
-          tmpResult6 = tmp(5032);
+          tmpResult6 = tmp(5033);
         }
         tmp16 = closure_7;
-        tmpResult5 = tmp(5031);
+        tmpResult5 = tmp(5032);
       }
       if (null != tmp4) {
         const items3 = [];
@@ -386,10 +386,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(closure_7, 1);
             tmp12 = items2;
           }
-          tmp2Result2 = tmp2(5032);
+          tmp2Result2 = tmp2(5033);
         }
         tmp12 = closure_7;
-        tmp2Result = tmp2(5031);
+        tmp2Result = tmp2(5032);
       }
       if (null != tmp) {
         const items3 = [];

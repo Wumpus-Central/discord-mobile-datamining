@@ -5,10 +5,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const PixelRatio = _mod17.PixelRatio;
 const result = size.fileFinishedImporting("design/components/mana-assets/native/assetHelpers.native.tsx");
 
-export const getAssetSource = function getAssetSource(arg0) {
+export function getAssetSource(arg0) {
   return arg0[Math.min(Math, Math.ceil(Math, PixelRatio.get(PixelRatio)), 3)];
-};
-export const getAssetSizeStyle = function getAssetSizeStyle(size) {
+}
+export function getAssetSizeStyle(size) {
   ({ width, height, scale } = size);
   if (scale === undefined) {
     scale = 1;
@@ -28,11 +28,11 @@ export const getAssetSizeStyle = function getAssetSizeStyle(size) {
     }
   }
   size2 = { width, height, aspectRatio: intrinsicWidth / intrinsicHeight };
-};
-export const getAssetResizeMode = function getAssetResizeMode(resizeMode) {
+}
+export function getAssetResizeMode(resizeMode) {
   let str = "contain";
   if (null != resizeMode) {
     str = resizeMode;
   }
   return str;
-};
+}

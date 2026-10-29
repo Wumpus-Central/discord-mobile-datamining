@@ -9,9 +9,7 @@ const GuildFeatures = fn(1084).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
-export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(
-  guild,
-) {
+export function inviteGuildHasPendingMemberDisabledVerification(guild) {
   const features = guild.features;
   let hasItem;
   if (features != null) {
@@ -26,10 +24,8 @@ export const inviteGuildHasPendingMemberDisabledVerification = function inviteGu
     hasItem = hasItem1;
   }
   return hasItem;
-};
-export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(
-  id,
-) {
+}
+export function openVerificationModalOrTransitionToApplication(id) {
   const request = UserGuildJoinRequestStore.getRequest(id);
   if (null != request) {
     if (request.applicationStatus !== MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED) {
@@ -38,4 +34,4 @@ export const openVerificationModalOrTransitionToApplication = function openVerif
     }
   }
   const result1 = MemberVerificationModalActionCreators.openMemberVerificationModal(id);
-};
+}

@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/media_engine/Avx512EntropyHistogramExperiment.tsx");
 
-export const getIsAvx512EntropyHistogramEnabled = function getIsAvx512EntropyHistogramEnabled(RTCConnection) {
+export function getIsAvx512EntropyHistogramEnabled(RTCConnection) {
   return config.getConfig({ location: RTCConnection }).enabled;
-};
+}

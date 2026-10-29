@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertBodyText: {
@@ -79,7 +79,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
 
-export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(arg0) {
+export function confirmActivityAgeGateAlert(arg0) {
   ({ application, onAgree, onDisagree } = arg0);
   const intl = util.intl;
   const formatToPlainStringResult = intl.formatToPlainString(util.t.OgmIqy, { applicationName: application.name });
@@ -105,4 +105,4 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
   obj3.onCancel = onDisagree;
   obj3.confirmColor = native.ButtonColors.RED;
   return Promise.resolve(AlertActionCreatorsDefault.show(obj3));
-};
+}

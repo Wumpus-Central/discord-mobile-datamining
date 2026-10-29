@@ -126,7 +126,7 @@ function _questRewardV2FromServer(type) {
 }
 const result = size.fileFinishedImporting("modules/quests/types/v2/Reward.tsx");
 
-export const questRewardsConfigV2FromServer = function questRewardsConfigV2FromServer(rewards_config) {
+export function questRewardsConfigV2FromServer(rewards_config) {
   const obj = {
     assignmentMethod: rewards_config.assignment_method,
     rewards: null,
@@ -136,4 +136,4 @@ export const questRewardsConfigV2FromServer = function questRewardsConfigV2FromS
   const rewards = rewards_config.rewards;
   obj.rewards = rewards.map(_questRewardV2FromServer);
   return obj;
-};
+}

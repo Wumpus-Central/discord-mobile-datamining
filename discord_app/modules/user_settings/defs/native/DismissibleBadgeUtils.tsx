@@ -10,7 +10,7 @@ require = fn;
 function useAlwaysShow() {
   return true;
 }
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 const size = fn(2);
@@ -43,7 +43,7 @@ export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) 
     }, items1);
   };
 }
-export const createDismissibleBadgeRouteProps = function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
+export function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
   _require = CUSTOM_APP_ICONS_NEW_BADGE;
   const obj = require("ReactCompilerGating");
   closure_129_0 = CUSTOM_APP_ICONS_NEW_BADGE;
@@ -85,4 +85,4 @@ export const createDismissibleBadgeRouteProps = function createDismissibleBadgeR
       }, items1);
     },
   };
-};
+}

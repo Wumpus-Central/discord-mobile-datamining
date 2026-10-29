@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx",
 );
 
-export const createChangeChannelNameSystemMessage = function createChangeChannelNameSystemMessage(message) {
+export function createChangeChannelNameSystemMessage(message) {
   message = message.message;
   ({ theme, roleStyle } = message);
   const tmp3 = resolveMessageContentColorsDefault(theme);
@@ -81,4 +81,4 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
   }
   const merged1 = Object.assign(tmp12);
   return { content: formatToPartsResult };
-};
+}

@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/NotificationUtils.tsx");
 
-export const getMuteTimeOptions = function getMuteTimeOptions() {
+export function getMuteTimeOptions() {
   const obj = { id: "15-minutes", label: null, value: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["8ot6gv"]);
@@ -48,8 +48,8 @@ export const getMuteTimeOptions = function getMuteTimeOptions() {
   obj6.value = timestampProducer.ALWAYS;
   items[5] = obj6;
   return items;
-};
-export const filterOverrides = function filterOverrides(channelOverrides, arg1) {
+}
+export function filterOverrides(channelOverrides, arg1) {
   dependencyMap = channelOverrides;
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -94,7 +94,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
     }
     return tmp7;
   });
-};
+}
 export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldUseNewNotificationSystem() {
       const cResult = c.c(2);
@@ -116,6 +116,6 @@ export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactComp
       const items = [UserGuildSettingsStore];
       return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
     };
-export const shouldShowUseNewNotificationSystem = function shouldShowUseNewNotificationSystem() {
+export function shouldShowUseNewNotificationSystem() {
   return UserGuildSettingsStore.useNewNotifications;
-};
+}

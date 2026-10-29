@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../../_runtime/01504_Link.js";
 import UniqueUsernamesTypes from "../../../../unique_usernames/UniqueUsernamesTypes.tsx";
 import RegistrationStepsUtils from "../../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -10,14 +10,14 @@ import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesSt
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(17636).useRegistrationUIStore;
-const RegistrationConstants = fn(17637);
+const useRegistrationUIStore = fn(17874).useRegistrationUIStore;
+const RegistrationConstants = fn(17875);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
 
-export const useUsernameRegistrationStep = function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
+export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
   _require = REGISTER_ACCOUNT_INFORMATION;
   const context = obj3.useContext(require("Auth").TrackRegistrationContext);
   navigation = require("useNavigation").useNavigation();
@@ -123,4 +123,4 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       message = intl.string(util.t.GPfy3L);
     }, items2),
   };
-};
+}

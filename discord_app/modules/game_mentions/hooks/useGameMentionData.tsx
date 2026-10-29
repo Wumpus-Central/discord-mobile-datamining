@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
 
-export const getGameMentionData = function getGameMentionData(gameId) {
+export function getGameMentionData(gameId) {
   const currentUser = UserStore.getCurrentUser();
   const game = GameStore.getGame(gameId);
   const gameById = GameAutocompleteStore.getGameById(gameId);
@@ -38,7 +38,7 @@ export const getGameMentionData = function getGameMentionData(gameId) {
     tmp4 = obj;
   }
   return tmp4;
-};
+}
 export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGameMentionData(gameId) {
       _require = gameId;

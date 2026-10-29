@@ -11,7 +11,7 @@ const items = [
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/GamePlatformAvailabilityUtils.tsx");
 
 export const GAME_PLATFORM_AVAILABILITY_ORDER = items;
-export const getOrderedGamePlatforms = function getOrderedGamePlatforms(items) {
+export function getOrderedGamePlatforms(items) {
   if (null != items) {
     if (0 !== items.length) {
       const _Set = Set;
@@ -19,4 +19,4 @@ export const getOrderedGamePlatforms = function getOrderedGamePlatforms(items) {
     }
   }
   return [];
-};
+}

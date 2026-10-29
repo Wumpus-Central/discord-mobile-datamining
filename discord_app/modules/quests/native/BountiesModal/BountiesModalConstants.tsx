@@ -20,10 +20,10 @@ getBountyVideoEndPeekClipHeight.__initData = {
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalConstants.tsx");
 
 export const BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS = 10000;
-export const getBountyVideoEndAppStoreSheetHeight = function getBountyVideoEndAppStoreSheetHeight(arg0) {
+export function getBountyVideoEndAppStoreSheetHeight(arg0) {
   return 0.6 * arg0;
-};
-export const getBountyVideoEndPeekTargetScale = function getBountyVideoEndPeekTargetScale(windowHeight) {
+}
+export function getBountyVideoEndPeekTargetScale(windowHeight) {
   windowHeight = windowHeight.windowHeight;
   const bound = Math.min(windowHeight.videoWidth, windowHeight.videoHeight);
   if (bound <= 0) {
@@ -33,6 +33,6 @@ export const getBountyVideoEndPeekTargetScale = function getBountyVideoEndPeekTa
     const _Math2 = Math;
     return Math.min(1, Math.max(0.1, (windowHeight - 0.6 * windowHeight - windowHeight.videoTop - 8) / bound));
   }
-};
+}
 export { getBountyVideoEndPeekScale };
 export { getBountyVideoEndPeekClipHeight };

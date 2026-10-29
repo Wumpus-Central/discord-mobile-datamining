@@ -34,12 +34,11 @@ export const useMobileStickerPickerUpsellRestyleEnabled = ReactCompilerGating.is
       return apexExperiment.useConfig({ location });
     };
 export { getMobileStickerPickerUpsellRestyleEnabled };
-export const getMobileStickerPickerUpsellRestyleEnabledForFeature =
-  function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, location) {
-    let config = featureName === EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
-    if (config) {
-      const obj = { location };
-      config = apexExperiment.getConfig(obj);
-    }
-    return config;
-  };
+export function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, location) {
+  let config = featureName === EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
+  if (config) {
+    const obj = { location };
+    config = apexExperiment.getConfig(obj);
+  }
+  return config;
+}

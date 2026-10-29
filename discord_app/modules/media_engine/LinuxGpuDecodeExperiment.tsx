@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/media_engine/LinuxGpuDecodeExperiment.tsx");
 
-export const getLinuxGpuDecodeExperimentConfig = function getLinuxGpuDecodeExperimentConfig(_chooseExperiments) {
+export function getLinuxGpuDecodeExperimentConfig(_chooseExperiments) {
   return config.getConfig({ location: _chooseExperiments });
-};
+}

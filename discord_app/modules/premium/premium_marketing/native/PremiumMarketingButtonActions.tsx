@@ -20,7 +20,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx");
 
-export const getButtonActionHandler = function getButtonActionHandler(arg0) {
+export function getButtonActionHandler(arg0) {
   ({
     buttonAction,
     applicationId: require,
@@ -112,4 +112,4 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
       analyticsLocations(page[5])(obj);
     };
   }
-};
+}

@@ -13,22 +13,22 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HexagonCampaignConstants.HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT;
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
-let closure_13 = fn(5302).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
-const isHexagonCampaignAppIcon = fn(9899).isHexagonCampaignAppIcon;
+let closure_13 = fn(5303).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const isHexagonCampaignAppIcon = fn(9931).isHexagonCampaignAppIcon;
 const HEXAGON_GRADIENT_PRESET = fn(1252).HEXAGON_GRADIENT_PRESET;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 const HexagonCampaignSheet = "HexagonCampaignSheet";
 let c20 = 143.48;
 let obj = { fontId: fn(1409).DisplayNameFont.DEFAULT, effectId: fn(1408).DisplayNameEffect.SOLID, colors: [] };
-let PRIMARY_SEMIBOLD = fn(9254).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
+let PRIMARY_SEMIBOLD = fn(9258).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
 if (PRIMARY_SEMIBOLD == null) {
   PRIMARY_SEMIBOLD = fn(1095).Fonts.PRIMARY_SEMIBOLD;
 }
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj3 = {
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
   card: null,
@@ -191,7 +191,7 @@ let result1 = size.fileFinishedImporting("modules/hexagon_campaign/native/Hexago
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function HexagonCampaignSheet() {
-      const cResult = stateFromStores(analyticsLocations[19]).c(117);
+      const cResult = stateFromStores(analyticsLocations[19]).c(118);
       closure_22();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                     c3 = 2;
                     c4 = 1;
-                    const obj9 = { value: stateFromStores(16646).applyHexagonCampaignPerks(obj7), done: false };
+                    const obj9 = { value: stateFromStores(16884).applyHexagonCampaignPerks(obj7), done: false };
                     return obj9;
                   }
                 }
@@ -313,30 +313,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj11 = { text: null };
                 const intl = stateFromStores(1125).intl;
                 obj11.text = intl.string(stateFromStores(1125).t.F8FvUy);
-                tmp3(5699).open("HEXAGON_CAMPAIGN_APPLY_ERROR", obj11);
-                const obj2 = tmp3(5699);
+                tmp3(5701).open("HEXAGON_CAMPAIGN_APPLY_ERROR", obj11);
+                const obj2 = tmp3(5701);
               }
             }
             const obj12 = { perks: null, content: null, sourceQuestContent: null };
             const _Object = Object;
             const values = Object.values(result1);
             obj12.perks = values.filter((item) => closure_1_5[item]);
-            obj12.content = stateFromStores(6748).QuestContent.AD_PERK_MODAL;
-            obj12.sourceQuestContent = stateFromStores(6748).QuestContent.QUEST_HOME_MOBILE;
-            const result = stateFromStores(16121).trackHexagonCampaignPerkAction(obj12);
-            obj4 = stateFromStores(16121);
-            tmp3(5246).hideActionSheet(stateFromStores(16644).HEXAGON_CAMPAIGN_SHEET_KEY);
+            obj12.content = stateFromStores(6771).QuestContent.AD_PERK_MODAL;
+            obj12.sourceQuestContent = stateFromStores(6771).QuestContent.QUEST_HOME_MOBILE;
+            const result = stateFromStores(16358).trackHexagonCampaignPerkAction(obj12);
+            obj4 = stateFromStores(16358);
+            tmp3(5247).hideActionSheet(stateFromStores(16882).HEXAGON_CAMPAIGN_SHEET_KEY);
             const _Object2 = Object;
             const values2 = Object.values(closure_129_5);
             const _Boolean = Boolean;
             if (values2.some(Boolean)) {
               const obj13 = { text: null, variant: "success" };
               const intl2 = stateFromStores(1125).intl;
-              obj13.text = intl2.string(tmp3(4280).fX2UkH);
-              tmp3(5699).open("HEXAGON_CAMPAIGN_THEME_EQUIPPED", obj13);
-              const obj8 = tmp3(5699);
+              obj13.text = intl2.string(tmp3(4281).fX2UkH);
+              tmp3(5701).open("HEXAGON_CAMPAIGN_THEME_EQUIPPED", obj13);
+              const obj8 = tmp3(5701);
             }
-            const obj6 = tmp3(5246);
+            const obj6 = tmp3(5247);
           } catch (tmp57) {
             if (tmp4 === dependencyMap) {
               c4 = tmp2;
@@ -468,16 +468,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             } else {
               let obj7 = { perk: tmp8.CLIENT_THEME, label: null, icon: null };
-              let intl = tmp2(tmp3[33]).intl;
-              obj7.label = intl.string(tmp5(tmp3[36]).TTUKuI);
+              let intl2 = tmp2(tmp3[33]).intl;
+              obj7.label = intl2.string(tmp5(tmp3[36]).TTUKuI);
               let obj8 = { style: tmp.rowIcon, children: null };
               let obj9 = { gradient: HEXAGON_GRADIENT_PRESET, absolute: true };
               obj8.children = closure_16(tmp2(tmp3[37]).Gradient, obj9);
               obj7.icon = closure_16(disabled, obj8);
               const items5 = [obj7, ,];
               const obj10 = { perk: tmp8.DISPLAY_NAME_STYLE, label: null, icon: null };
-              let intl2 = tmp2(tmp3[33]).intl;
-              obj10.label = intl2.string(tmp5(tmp3[36]).fobter);
+              const intl3 = tmp2(tmp3[33]).intl;
+              obj10.label = intl3.string(tmp5(tmp3[36]).fobter);
               let obj12 = { style: null, children: null };
               const items6 = [,];
               ({ rowIcon: arr11[0], fontRowIcon: arr11[1] } = tmp);
@@ -492,16 +492,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj10.icon = closure_16(disabled, obj12);
               items5[1] = obj10;
               const obj14 = { perk: tmp8.APP_ICON, label: null, icon: null };
-              const intl3 = tmp2(tmp3[33]).intl;
-              obj14.label = intl3.string(tmp5(tmp3[36]).DTv8Yq);
+              const intl4 = tmp2(tmp3[33]).intl;
+              obj14.label = intl4.string(tmp5(tmp3[36]).DTv8Yq);
               const obj15 = { id: tmp2(tmp3[28]).LimitedTimeAppIconIds.HEXAGON, size: 32, style: tmp.rowIcon };
               obj14.icon = closure_16(tmp5(tmp3[39]), obj15);
               items5[2] = obj14;
               const obj16 = { header: null, footer: null, startExpanded: true, children: null };
               const obj17 = { children: null };
               const obj18 = { title: null };
-              const intl4 = tmp2(tmp3[33]).intl;
-              obj18.title = intl4.string(tmp5(tmp3[36]).rZmLDm);
+              const intl5 = tmp2(tmp3[33]).intl;
+              obj18.title = intl5.string(tmp5(tmp3[36]).rZmLDm);
               const items7 = [closure_16(tmp2(tmp3[40]).BottomSheetTitleHeader, obj18)];
               const obj19 = { style: tmp.badgeRow, children: closure_16(tmp5(tmp3[41]), {}) };
               items7[1] = closure_16(disabled, obj19);
@@ -513,12 +513,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items8[1] = obj21;
               obj20.style = items8;
               obj20.onLayout = tmp49;
-              const intl5 = tmp2(tmp3[33]).intl;
+              const intl6 = tmp2(tmp3[33]).intl;
               const t = tmp2(tmp3[33]).t;
               const obj22 = {
                 size: "lg",
                 grow: true,
-                text: intl5.string(_slicedToArray(obj5.useState(stateFromStores1), 1)[0] ? t["R3BPH+"] : t["1Qm822"]),
+                text: intl6.string(_slicedToArray(obj5.useState(stateFromStores1), 1)[0] ? t["R3BPH+"] : t["1Qm822"]),
                 onPress: function handleSave() {
                   const self = this;
                   const apply = closure_13.apply;
@@ -566,6 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 hidePronouns: true,
                 hideGuildTag: true,
                 tilted: true,
+                chatMessage: null,
               };
               let username = stateFromStores.globalName;
               const tmp5Result3 = tmp5(tmp3[39]);
@@ -580,6 +581,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 colors: obj25.selectedColors,
               } = tmp44);
               obj32.appIconId = HEXAGON;
+              let intl = tmp2(tmp3[33]).intl;
+              obj32.chatMessage = intl.string(tmp5(tmp3[36])["U/irIt"]);
               obj33.children = closure_16(tmp5(tmp3[43]), obj32);
               obj31.children = closure_16(closure_23, obj33);
               items10[1] = closure_16(disabled, obj31);

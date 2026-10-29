@@ -80,6 +80,6 @@ export const useHasEnoughVirtualCurrency = ReactCompilerGating.isReactCompilerEn
         return tmp2;
       });
     };
-export const getVirtualCurrencyBalance = function getVirtualCurrencyBalance() {
+export function getVirtualCurrencyBalance() {
   return VirtualCurrencyStore.getCurrentBalance();
-};
+}

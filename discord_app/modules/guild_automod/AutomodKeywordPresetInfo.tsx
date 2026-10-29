@@ -9,7 +9,7 @@ const items = [, ,];
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodKeywordPresetInfo.tsx");
 
 export const KEYWORD_PRESETS = items;
-export const getKeywordPresetInfo = function getKeywordPresetInfo(item) {
+export function getKeywordPresetInfo(item) {
   if (KeywordPreset.PROFANITY === item) {
     const obj2 = { headerText: null, subtitleText: null };
     const intl5 = util.intl;
@@ -34,4 +34,4 @@ export const getKeywordPresetInfo = function getKeywordPresetInfo(item) {
   } else {
     return { headerText: "Error", subtitleText: "Unrecognized list" };
   }
-};
+}

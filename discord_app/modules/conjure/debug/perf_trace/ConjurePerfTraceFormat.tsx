@@ -86,7 +86,7 @@ export const PERF_CATEGORY_LABELS = {
   other: "Other",
 };
 export const PERF_STATUS_LABELS = { running: "Running", ok: "Done", error: "Failed" };
-export const formatDuration = function formatDuration(arg0) {
+export function formatDuration(arg0) {
   if (arg0 < 1000) {
     const _HermesInternal2 = HermesInternal;
     let combined = "" + arg0 + "ms";
@@ -96,8 +96,8 @@ export const formatDuration = function formatDuration(arg0) {
     combined = "" + result.toFixed(1) + "s";
   }
   return combined;
-};
-export const formatTokens = function formatTokens(arg0) {
+}
+export function formatTokens(arg0) {
   if (arg0 < 1000) {
     const _String = String;
     return String(arg0);
@@ -116,9 +116,9 @@ export const formatTokens = function formatTokens(arg0) {
     const _HermesInternal = HermesInternal;
     return "" + toFixedResult + "k";
   }
-};
+}
 export { formatPerfMs };
-export const formatSpanCount = function formatSpanCount(dropped) {
+export function formatSpanCount(dropped) {
   let str = arg1;
   if (arg1 === undefined) {
     str = "span";
@@ -128,17 +128,17 @@ export const formatSpanCount = function formatSpanCount(dropped) {
     str2 = "";
   }
   return "" + dropped + " " + str + str2;
-};
+}
 export { perfNodeDuration };
-export const perfSmallerLabel = function perfSmallerLabel(row) {
+export function perfSmallerLabel(row) {
   const count = row.count;
   let str = "s";
   if (1 === count) {
     str = "";
   }
   return "" + count + " " + "smaller span" + str;
-};
-export const perfTickLabel = function perfTickLabel(arg0) {
+}
+export function perfTickLabel(arg0) {
   if (0 === arg0) {
     return "0";
   } else {
@@ -154,8 +154,8 @@ export const perfTickLabel = function perfTickLabel(arg0) {
       combined = "" + result.toFixed(1) + "s";
     }
   }
-};
-export const perfNodeSections = function perfNodeSections(node) {
+}
+export function perfNodeSections(node) {
   let items = [detail("Start", "+" + formatPerfMs(node.start)), detail("Duration", perfNodeDuration(node))];
   if (node.count > 1) {
     const _String = String;
@@ -240,8 +240,8 @@ export const perfNodeSections = function perfNodeSections(node) {
     }),
   ];
   return items3;
-};
-export const perfCategoryTotal = function perfCategoryTotal(stats, item) {
+}
+export function perfCategoryTotal(stats, item) {
   closure_0 = item;
   const categories = stats.categories;
   const found = categories.find((category) => category.category === closure_0);
@@ -273,8 +273,8 @@ export const perfCategoryTotal = function perfCategoryTotal(stats, item) {
     }
   }
   return tmp2;
-};
-export const perfModelSummary = function perfModelSummary(stats) {
+}
+export function perfModelSummary(stats) {
   const model = stats.model;
   let joined = null;
   if (0 !== model.calls) {
@@ -379,8 +379,8 @@ export const perfModelSummary = function perfModelSummary(stats) {
     joined = items.join(" \u00B7 ");
   }
   return joined;
-};
-export const perfTraceDuration = function perfTraceDuration(trace) {
+}
+export function perfTraceDuration(trace) {
   const perfTraceRootResult = ConjurePerfTraceLayout.perfTraceRoot(trace);
   let end;
   if (perfTraceRootResult != null) {
@@ -398,8 +398,8 @@ export const perfTraceDuration = function perfTraceDuration(trace) {
     tmpResult = ConjurePerfTraceLayout;
   }
   return str;
-};
-export const perfTraceSummary = function perfTraceSummary(trace) {
+}
+export function perfTraceSummary(trace) {
   const obj = ConjureTimeFormat;
   let str = obj.formatClockTime(new Date(trace.started_at).toISOString());
   if (str == null) {
@@ -421,4 +421,4 @@ export const perfTraceSummary = function perfTraceSummary(trace) {
   items[2] = tmpResult.formatSpanAttrs(attrs);
   const found = items.filter((item) => "" !== item);
   return found.join(" \u00B7 ");
-};
+}

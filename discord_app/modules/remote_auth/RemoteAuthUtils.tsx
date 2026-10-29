@@ -33,7 +33,7 @@ let closure_5 = async function _decodeEncodedUserRecord() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
 
-export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
+export function decodeEncodedUserRecord() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -42,4 +42,4 @@ export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -41,14 +41,14 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-let GuildChannelStore = fn(4934);
+let GuildChannelStore = fn(4935);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 
-export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId) {
+export function hasNotSetUpChannelOptIn(guildId) {
   const result = isOptInEnabled.isOptInEnabledForGuild(guildId);
   const selfMember = GuildMemberStore.getSelfMember(guildId);
   let num;
@@ -68,8 +68,8 @@ export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId)
     tmp7 = !tmp6;
   }
   return tmp7;
-};
-export const toggleShowAllChannels = function toggleShowAllChannels(id) {
+}
+export function toggleShowAllChannels(id) {
   const result = isOptInEnabled.isOptInEnabledForGuild(id);
   const selfMember = GuildMemberStore.getSelfMember(id);
   let num;
@@ -97,9 +97,9 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
     const tmpResult4 = OptInChannelsActionCreators;
   }
   tmp6 = UserGuildSettingsStore.getOptedInChannels(id).size > 0;
-};
+}
 export { optIntoAllChannelsForExistingMember };
-export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardingNotice(arg0) {
+export function hasClearedGuildOnboardingNotice(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = UserSettingsProtoStore;
@@ -119,4 +119,4 @@ export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardin
     hasFlagResult = FlagUtils.hasFlag(num, preloaded_user_settings.GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
   }
   return hasFlagResult;
-};
+}

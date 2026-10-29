@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/animations/native/DeprecatedL
 
 export const CONFIG_GUILD_FOLDER_OPACITY = obj;
 export const CONFIG_GUILD_FOLDER_SCALEXY = LayoutAnimation.create(150, "easeInEaseOut", "scaleXY");
-export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
+export function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
     useReducedMotion = PlatformUtils.isAndroid();
@@ -22,8 +22,8 @@ export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(dura
       LayoutAnimation.easeInEaseOut();
     }
   }
-};
-export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimationKeyboard(keyboardDuration) {
+}
+export function DeprecatedLayoutAnimationKeyboard(keyboardDuration) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -47,4 +47,4 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     LayoutAnimation.configureNext(obj3);
   }
   const obj4 = { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard };
-};
+}

@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/utils/shared/colors.tsx");
 
-export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(arg0, context) {
+export function flattenColorOverOpaqueBackground(arg0, context) {
   const obj = _modDef683(arg0);
   const rgbaResult = obj.rgba();
   const rgbaResult1 = _modDef683(context).rgba();
@@ -24,4 +24,4 @@ export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueB
     return _modDef683.rgb(rounded, rounded1, rounded2).hex();
   }
   const obj2 = _modDef683(context);
-};
+}

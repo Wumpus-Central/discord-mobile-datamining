@@ -100,24 +100,24 @@ let closure_10 = _extends.listen((arg0, arg1) => {
 });
 const result = size.fileFinishedImporting("modules/routing/router_utils.tsx");
 
-export const shouldNavigate = function shouldNavigate() {
+export function shouldNavigate() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
-};
+}
 export { transitionTo };
-export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent2) {
+export function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent2) {
   logger.log("transitionToGuild - Transitioning to " + JSON.stringify({ guildId, channelId, messageId }));
   transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), guildScheduledEvent2);
-};
-export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
+}
+export function currentRouteHasBackNavigation() {
   let hasItem = null != c3;
   if (hasItem) {
     const ChannelBackNavigationSources = RoutingSources.ChannelBackNavigationSources;
     hasItem = ChannelBackNavigationSources.has(c3);
   }
   return hasItem;
-};
-export const replaceWith = function replaceWith(ME, state, arg2) {
+}
+export function replaceWith(ME, state, arg2) {
   let tmp = typeof ME !== "string";
   if (typeof ME === "string") {
     tmp = !items.some((item) => ME.startsWith(item));
@@ -145,7 +145,7 @@ export const replaceWith = function replaceWith(ME, state, arg2) {
     }
     c3 = arg2;
   }
-};
+}
 export function getHistory() {
   return _extends;
 }
@@ -155,10 +155,10 @@ export function getLastRouteChangeSource() {
 export function getLastRouteChangeSourceLocationStack() {
   return sourceLocationStack;
 }
-export const isValidFingerprintRoute = function isValidFingerprintRoute(arg0) {
+export function isValidFingerprintRoute(arg0) {
   return true;
-};
-export const getFingerprintLocation = function getFingerprintLocation(arg0) {
+}
+export function getFingerprintLocation(arg0) {
   let ACCOUNT_REVERT = arg0;
   if (null == arg0) {
     let str = _extends.location.pathname;
@@ -197,23 +197,23 @@ export const getFingerprintLocation = function getFingerprintLocation(arg0) {
     ACCOUNT_REVERT = constants.ACCOUNT_REVERT;
   }
   return ACCOUNT_REVERT;
-};
+}
 export function hasNavigated() {
   return false;
 }
-export const back = function back() {
+export function back() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   if (!hasSubscribersResult) {
     c3 = null;
     _extends.goBack();
   }
   hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
-};
-export const forward = function forward() {
+}
+export function forward() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   if (!hasSubscribersResult) {
     c3 = null;
     _extends.goForward();
   }
   hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
-};
+}

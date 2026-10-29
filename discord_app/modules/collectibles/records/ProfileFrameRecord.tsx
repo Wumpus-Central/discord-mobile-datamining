@@ -48,6 +48,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/ProfileFrameRecord.tsx");
 
 export default prototype;
-export const isProfileFrameRecord = function isProfileFrameRecord(first1) {
+export function isProfileFrameRecord(first1) {
   return first1 instanceof prototype;
-};
+}

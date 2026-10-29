@@ -64,7 +64,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsLegacyRequiredActionsExperiment.tsx");
 
 export default apexExperiment;
-export const shouldUseSafetyFlowsForRequiredAction = function shouldUseSafetyFlowsForRequiredAction(arg0) {
+export function shouldUseSafetyFlowsForRequiredAction(arg0) {
   ({ location: _location, requiredAction } = arg0);
   let tmp = null == requiredAction;
   if (!tmp) {
@@ -78,4 +78,4 @@ export const shouldUseSafetyFlowsForRequiredAction = function shouldUseSafetyFlo
     hasItem = requiredActions.has(requiredAction);
   }
   return hasItem;
-};
+}

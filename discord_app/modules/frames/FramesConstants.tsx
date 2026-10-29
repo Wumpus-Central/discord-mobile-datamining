@@ -13,7 +13,7 @@ export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP"
 export const MAIN_SURFACE = obj;
 export const OVERLAY_SURFACE = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY };
 export const FrameIntent = obj3;
-export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
+export function getFrameIntentForSurface(type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     return obj3.MAIN;
@@ -29,8 +29,8 @@ export const getFrameIntentForSurface = function getFrameIntentForSurface(type) 
     }
     return obj3.INLINE;
   }
-};
-export const makeFrameId = function makeFrameId(arg0, type) {
+}
+export function makeFrameId(arg0, type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     const _HermesInternal4 = HermesInternal;
@@ -47,8 +47,8 @@ export const makeFrameId = function makeFrameId(arg0, type) {
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL === type) {
     _modDef38(false, "A Frame cannot be launched at an INTERACTION_MODAL surface");
   }
-};
-export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
+}
+export function getFrameSurfaceForChannel(type) {
   type = type.type;
   if (ChannelTypes.GUILD_APP === type) {
     obj3 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
@@ -61,15 +61,15 @@ export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type
   } else {
     return null;
   }
-};
-export const isLaunched = function isLaunched(conjureBuilderPreviewFrame) {
+}
+export function isLaunched(conjureBuilderPreviewFrame) {
   let state;
   if (conjureBuilderPreviewFrame != null) {
     state = conjureBuilderPreviewFrame.state;
   }
   return "launched" === state;
-};
-export const getFrameHostWindowKey = function getFrameHostWindowKey(state) {
+}
+export function getFrameHostWindowKey(state) {
   state = undefined;
   if (state != null) {
     state = state.state;
@@ -80,8 +80,20 @@ export const getFrameHostWindowKey = function getFrameHostWindowKey(state) {
     hostWindowKey = state.hostWindowKey;
   }
   return hostWindowKey;
-};
-export const getFrameLaunchChannelId = function getFrameLaunchChannelId(surface) {
+}
+export function getFrameLaunchParams(state) {
+  state = undefined;
+  if (state != null) {
+    state = state.state;
+  }
+  if ("launched" === state) {
+    let launch = state.data.launch;
+  } else {
+    launch = state.launch;
+  }
+  return launch;
+}
+export function getFrameLaunchChannelId(surface) {
   let type;
   if (surface != null) {
     type = surface.surface.type;
@@ -91,8 +103,8 @@ export const getFrameLaunchChannelId = function getFrameLaunchChannelId(surface)
     channelId = surface.surface.channelId;
   }
   return channelId;
-};
-export const asLaunched = function asLaunched(frame) {
+}
+export function asLaunched(frame) {
   let state;
   if (frame != null) {
     state = frame.state;
@@ -102,8 +114,8 @@ export const asLaunched = function asLaunched(frame) {
     tmp2 = frame;
   }
   return tmp2;
-};
-export const getPipOrientationLockStateForFrame = function getPipOrientationLockStateForFrame(data) {
+}
+export function getPipOrientationLockStateForFrame(data) {
   data = undefined;
   if (data != null) {
     data = data.data;
@@ -120,4 +132,4 @@ export const getPipOrientationLockStateForFrame = function getPipOrientationLock
     pipOrientationLock = orientationLock;
   }
   return pipOrientationLock;
-};
+}

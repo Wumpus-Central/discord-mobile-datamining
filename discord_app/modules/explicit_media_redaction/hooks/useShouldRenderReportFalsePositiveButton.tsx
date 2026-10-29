@@ -10,9 +10,9 @@ const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx",
 );
 
-export const shouldRenderReportFalsePositiveButton = function shouldRenderReportFalsePositiveButton(id) {
+export function shouldRenderReportFalsePositiveButton(id) {
   return null != ExplicitMediaStore.getFpMessageInfo(id);
-};
+}
 export const useShouldRenderReportFalsePositiveButton = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldRenderReportFalsePositiveButton(arg0) {
       _require = arg0;

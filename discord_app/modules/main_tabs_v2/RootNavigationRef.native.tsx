@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/RootNavigationRef.native.tsx
-import Link from "../../../_runtime/01503_Link.js";
+import Link from "../../../_runtime/01504_Link.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let ready = Link.createNavigationContainerRef();
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/RootNavigationRe
 export function getRootNavigationRef() {
   return closure_0;
 }
-export const runWhenRootNavigationReady = function runWhenRootNavigationReady(fn) {
+export function runWhenRootNavigationReady(fn) {
   ready = fn;
   if (ready.isReady()) {
     fn();
@@ -18,4 +18,4 @@ export const runWhenRootNavigationReady = function runWhenRootNavigationReady(fn
       closure_0();
     });
   }
-};
+}

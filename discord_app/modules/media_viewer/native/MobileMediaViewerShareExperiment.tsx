@@ -17,11 +17,9 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_viewer/native/MobileMediaViewerShareExperiment.tsx");
 
 export const MobileMediaViewerShareExperiment = apexExperiment;
-export const getMobileMediaViewerShareExperimentEnabled = function getMobileMediaViewerShareExperimentEnabled(
-  shareMediaSource,
-) {
+export function getMobileMediaViewerShareExperimentEnabled(shareMediaSource) {
   return apexExperiment.getConfig({ location: shareMediaSource }).enabled;
-};
+}
 export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useMobileMediaViewerShareExperimentEnabled(location) {
       const cResult = c.c(2);

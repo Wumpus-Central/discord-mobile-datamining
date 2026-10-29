@@ -6,13 +6,13 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/type-ut
 export function exact(arg0) {
   return arg0;
 }
-export const hasOwnProperty = function hasOwnProperty(key10009, Shape) {
+export function hasOwnProperty(key10009, Shape) {
   return key10009.hasOwnProperty(Shape);
-};
-export const dangerouslyCast = function dangerouslyCast(type, UnknownChannelRecord) {
+}
+export function dangerouslyCast(type, UnknownChannelRecord) {
   return Object.setPrototypeOf(type, UnknownChannelRecord.prototype);
-};
-export const assertUnreachable = function assertUnreachable(id, arg1) {
+}
+export function assertUnreachable(id, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -26,7 +26,7 @@ export const assertUnreachable = function assertUnreachable(id, arg1) {
     const error = new Error();
     throw error;
   }
-};
-export const arrayIsNotEmpty = function arrayIsNotEmpty(arg0) {
+}
+export function arrayIsNotEmpty(arg0) {
   return arg0.length > 0;
-};
+}

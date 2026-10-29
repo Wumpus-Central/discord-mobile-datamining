@@ -77,9 +77,9 @@ export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isRe
                       tmp8 = globalThis;
                       _setTimeout = setTimeout;
                       num2 = 1000;
-                      closure_4.current = setTimeout(() => { ... }, 1000);
+                      closure_4.current = setTimeout(/* F153248 */ function() { ... }, 1000);
                     }
-                    return () => { ... };
+                    return /* F153249 */ function() { ... };
                   }
                 }
               }
@@ -115,9 +115,9 @@ export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isRe
                 tmp8 = globalThis;
                 _setTimeout = setTimeout;
                 num2 = 1000;
-                closure_4.current = setTimeout(() => { ... }, 1000);
+                closure_4.current = setTimeout(/* F153248 */ function() { ... }, 1000);
               }
-              return () => { ... };
+              return /* F153249 */ function() { ... };
             }
           }
         }

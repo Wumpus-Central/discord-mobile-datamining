@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/showReportModalForUserWidget.tsx");
 
 export const USER_PROFILE_WIDGET_REPORT_ENTRYPOINT = "user_profile_widget";
-export const showReportModalForUserWidget = function showReportModalForUserWidget(userId, widget) {
+export function showReportModalForUserWidget(userId, widget) {
   _require = userId;
   importDefault = widget;
   if (widget instanceof require("UserProfileApplicationWidgetTypes").ApplicationWidget) {
@@ -65,4 +65,4 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
     const result2 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
     const tmpResult4 = tmp(tmp2[2]);
   }
-};
+}

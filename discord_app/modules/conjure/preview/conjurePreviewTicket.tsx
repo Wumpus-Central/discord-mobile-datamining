@@ -6,11 +6,11 @@ import ConjureLastIntegrationStatusStore from "../projects/ConjureLastIntegratio
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const isLaunched = fn(6811).isLaunched;
+const isLaunched = fn(6834).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTicket.tsx");
 
-export const prefetchConjurePreviewTicket = function prefetchConjurePreviewTicket(projectId, arg1) {
+export function prefetchConjurePreviewTicket(projectId, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -50,4 +50,4 @@ export const prefetchConjurePreviewTicket = function prefetchConjurePreviewTicke
     }
     obj6 = conjurePreviewSurface2;
   }
-};
+}

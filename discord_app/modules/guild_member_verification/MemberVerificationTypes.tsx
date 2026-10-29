@@ -21,14 +21,14 @@ export const GuildJoinRequestApplicationStatuses = {
   REJECTED: "REJECTED",
   APPROVED: "APPROVED",
 };
-export const isTermsFormField = function isTermsFormField(field_type) {
+export function isTermsFormField(field_type) {
   let tmp = null != field_type;
   if (tmp) {
     tmp = field_type.field_type === obj.TERMS;
   }
   return tmp;
-};
-export const hasNonTermsFormField = function hasNonTermsFormField(formFields) {
+}
+export function hasNonTermsFormField(formFields) {
   return (
     null != formFields &&
     formFields.some((field_type) => {
@@ -39,4 +39,4 @@ export const hasNonTermsFormField = function hasNonTermsFormField(formFields) {
       return !tmp;
     })
   );
-};
+}

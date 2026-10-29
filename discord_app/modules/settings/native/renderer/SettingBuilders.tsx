@@ -5,43 +5,43 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const NodeType = SettingRendererConstants.NodeType;
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
 
-export const createToggle = function createToggle(arg0) {
+export function createToggle(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.TOGGLE };
-};
-export const createStatic = function createStatic(arg0) {
+}
+export function createStatic(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.STATIC };
-};
-export const createRoute = function createRoute(arg0) {
+}
+export function createRoute(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.ROUTE };
-};
-export const createPressable = function createPressable(arg0) {
+}
+export function createPressable(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.PRESSABLE };
-};
-export const createVolumeSlider = function createVolumeSlider(arg0) {
+}
+export function createVolumeSlider(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.VOLUME_SLIDER };
-};
-export const createSlider = function createSlider(arg0) {
+}
+export function createSlider(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.SLIDER };
-};
-export const createGuildSelector = function createGuildSelector(arg0) {
+}
+export function createGuildSelector(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.GUILD_SELECTOR };
-};
-export const createRadio = function createRadio(arg0) {
+}
+export function createRadio(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.RADIO };
-};
-export const createList = function createList(list) {
+}
+export function createList(list) {
   const merged = Object.assign(list);
   return { type: NodeType.LIST };
-};
-export const createSegmentedControl = function createSegmentedControl(arg0) {
+}
+export function createSegmentedControl(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.SEGMENTED_CONTROL };
-};
+}

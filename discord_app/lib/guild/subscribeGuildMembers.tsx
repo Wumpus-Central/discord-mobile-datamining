@@ -34,8 +34,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
         reason(1254).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1254);
       }
-      closure_0(7414).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7414);
+      closure_0(7437).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7437);
     });
     return () => {
       const item = reason(12).forEach(closure_1_0, (userIds, guildId) => closure_1_0(closure_1_2[7]).unsubscribeMembers(guildId, userIds));
@@ -67,8 +67,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
         reason(1254).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1254);
       }
-      closure_0(7414).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7414);
+      closure_0(7437).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7437);
     });
     return () => {
       const item = reason(12).forEach(closure_1_0, (userIds, guildId) => closure_1_0(closure_1_2[7]).unsubscribeMembers(guildId, userIds));
@@ -112,14 +112,14 @@ export const useEnsureHydratedGuildUsers = ReactCompilerGating.isReactCompilerEn
       closure_7(first, "useEnsureHydratedGuildUsers");
       class M {
         constructor() {
-          item = closure_1.forEach(() => { ... });
+          item = closure_1.forEach(/* F147701 */ function() { ... });
           return;
         }
       }
     }
     class M {
       constructor() {
-        item = closure_1.forEach(() => { ... });
+        item = closure_1.forEach(/* F147701 */ function() { ... });
         return;
       }
     }

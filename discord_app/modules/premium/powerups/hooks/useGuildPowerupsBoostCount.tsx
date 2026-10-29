@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return { available: 0, spent: 0, total: num, isLoading: true };
       }, items3);
     };
-export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id) {
+export function getGuildPowerupsBoostCount(id) {
   guild = GuildStore.getGuild(id);
   let total;
   if (guild != null) {
@@ -194,4 +194,4 @@ export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id
     return obj2;
   }
   return { available: 0, spent: 0, total };
-};
+}

@@ -63,7 +63,7 @@ export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEna
         ).shouldHideGuildPurchaseEntryPoints;
       return false;
     };
-export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, unsafeMutableRoles) {
+export function isGuildShopVisibleInGuild(id, unsafeMutableRoles) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -75,4 +75,4 @@ export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, 
   }
   const result1 = useRoleSubscriptionsVisibleInGuild.areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles);
   return false;
-};
+}

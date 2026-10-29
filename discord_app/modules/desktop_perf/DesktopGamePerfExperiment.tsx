@@ -35,12 +35,10 @@ let closure_2 = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/desktop_perf/DesktopGamePerfExperiment.tsx");
 
-export const getDesktopGamePerfExperimentConfig = function getDesktopGamePerfExperimentConfig(location) {
+export function getDesktopGamePerfExperimentConfig(location) {
   return closure_2.getConfig({ location });
-};
-export const getIsFullscreenPopupOcclusionEnabled = function getIsFullscreenPopupOcclusionEnabled(
-  window_visibility_video_manager,
-) {
+}
+export function getIsFullscreenPopupOcclusionEnabled(window_visibility_video_manager) {
   let fullscreenPopupOcclusion = PlatformUtils.isDesktop();
   if (fullscreenPopupOcclusion) {
     fullscreenPopupOcclusion = PlatformUtils.isWindows();
@@ -51,8 +49,8 @@ export const getIsFullscreenPopupOcclusionEnabled = function getIsFullscreenPopu
     fullscreenPopupOcclusion = closure_2.getConfig(obj2).fullscreenPopupOcclusion;
   }
   return fullscreenPopupOcclusion;
-};
-export const getIsNativeSystemCpuTimesEnabled = function getIsNativeSystemCpuTimesEnabled() {
+}
+export function getIsNativeSystemCpuTimesEnabled() {
   let nativeSystemCpuTimes = PlatformUtils.isDesktop();
   if (nativeSystemCpuTimes) {
     nativeSystemCpuTimes = PlatformUtils.isWindows();
@@ -62,8 +60,8 @@ export const getIsNativeSystemCpuTimesEnabled = function getIsNativeSystemCpuTim
     nativeSystemCpuTimes = closure_2.getConfig({ location: "system_metrics_sample" }).nativeSystemCpuTimes;
   }
   return nativeSystemCpuTimes;
-};
-export const getIsOverlayOnlyAnimatesItselfEnabled = function getIsOverlayOnlyAnimatesItselfEnabled() {
+}
+export function getIsOverlayOnlyAnimatesItselfEnabled() {
   let overlayOnlyAnimatesItself = PlatformUtils.isDesktop();
   if (overlayOnlyAnimatesItself) {
     overlayOnlyAnimatesItself = PlatformUtils.isWindows();
@@ -73,15 +71,15 @@ export const getIsOverlayOnlyAnimatesItselfEnabled = function getIsOverlayOnlyAn
     overlayOnlyAnimatesItself = closure_2.getConfig({ location: "avatar_speaking_styles" }).overlayOnlyAnimatesItself;
   }
   return overlayOnlyAnimatesItself;
-};
-export const getIsOverlayHiddenWavePausedEnabled = function getIsOverlayHiddenWavePausedEnabled() {
+}
+export function getIsOverlayHiddenWavePausedEnabled() {
   let overlayHiddenWavePaused = PlatformUtils.isDesktop();
   if (overlayHiddenWavePaused) {
     overlayHiddenWavePaused = closure_2.getConfig({ location: "overlay_voice_user" }).overlayHiddenWavePaused;
   }
   return overlayHiddenWavePaused;
-};
-export const getIsRenderOverlayWhileMinimizedEnabled = function getIsRenderOverlayWhileMinimizedEnabled(location) {
+}
+export function getIsRenderOverlayWhileMinimizedEnabled(location) {
   let renderOverlayWhileMinimized = PlatformUtils.isDesktop();
   if (renderOverlayWhileMinimized) {
     renderOverlayWhileMinimized = PlatformUtils.isWindows();
@@ -92,11 +90,11 @@ export const getIsRenderOverlayWhileMinimizedEnabled = function getIsRenderOverl
     renderOverlayWhileMinimized = closure_2.getConfig(obj2).renderOverlayWhileMinimized;
   }
   return renderOverlayWhileMinimized;
-};
-export const getIsNotificationIconCpuCanvasEnabled = function getIsNotificationIconCpuCanvasEnabled() {
+}
+export function getIsNotificationIconCpuCanvasEnabled() {
   let notificationIconCpuCanvas = PlatformUtils.isDesktop();
   if (notificationIconCpuCanvas) {
     notificationIconCpuCanvas = closure_2.getConfig({ location: "icon_cropping_utils" }).notificationIconCpuCanvas;
   }
   return notificationIconCpuCanvas;
-};
+}

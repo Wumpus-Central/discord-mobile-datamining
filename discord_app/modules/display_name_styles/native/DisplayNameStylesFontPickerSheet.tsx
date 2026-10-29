@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 let HEXAGON_CAMPAIGN_FONTS = fn(1407).HEXAGON_CAMPAIGN_FONTS;
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HexagonCampaignConstants.HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT;
 ({
   HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_9,
@@ -23,7 +23,7 @@ const Fonts = fn(1095).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let result = 3 * nativeDefault.space.PX_8;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" },
@@ -115,7 +115,7 @@ obj2.campaignLogoFrame = { width: 48, height: 48, alignItems: "center", justifyC
 obj2.campaignLogo = { width: 32, height: 24 };
 obj2.campaignName = {
   flex: 1,
-  fontFamily: fn(9254).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
+  fontFamily: fn(9258).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
 };
 obj2.campaignLegal = { paddingHorizontal: 2 };
 const size1 = {

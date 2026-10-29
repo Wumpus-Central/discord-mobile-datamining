@@ -5,10 +5,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
         const intl = tmp(1125).intl;
         obj2.children = intl.string(tmp(1125).t.Y0PTc0);
-        const tmp10 = closure_5(tmp(5270).Text, obj2);
+        const tmp10 = closure_5(tmp(5271).Text, obj2);
         const tmp11 = closure_5(tmp(1199).Spacer, { size: 12 });
         cResult[4] = tmp10;
         cResult[5] = tmp11;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
         const intl2 = tmp(1125).intl;
         obj3.children = intl2.string(tmp(1125).t["YSI/1/"]);
-        const tmp14 = closure_5(tmp(5270).Text, obj3);
+        const tmp14 = closure_5(tmp(5271).Text, obj3);
         const tmp15 = closure_5(tmp(1199).Spacer, { size: 48 });
         cResult[6] = tmp14;
         cResult[7] = tmp15;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
           grow: true,
         };
-        const tmp19 = closure_5(tmp(5280).Button, obj5);
+        const tmp19 = closure_5(tmp(5281).Button, obj5);
         cResult[9] = markAsDismissed;
         cResult[10] = tmp19;
       } else {
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp26;
           }
           const obj6 = { backdropOpacity: 0.8, onDismiss: S, children: tmp22 };
-          const tmp28 = closure_5(tmp(5301).BottomSheet, obj6);
+          const tmp28 = closure_5(tmp(5302).BottomSheet, obj6);
           cResult[17] = S;
           cResult[18] = tmp22;
           cResult[19] = tmp28;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { contentContainerStyle: tmp7, children: null };
       const items = [tmp8, tmp9, tmp12, tmp13, tmp18];
       obj8.children = items;
-      const tmp21 = closure_6(markAsDismissed(5305).BottomSheetScrollView, obj8);
+      const tmp21 = closure_6(markAsDismissed(5306).BottomSheetScrollView, obj8);
       cResult[11] = tmp7;
       cResult[12] = tmp18;
       cResult[13] = tmp21;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = markAsDismissed(1125).intl;
       obj4.children = intl.string(markAsDismissed(1125).t.Y0PTc0);
       const items = [
-        closure_5(markAsDismissed(5270).Text, obj4),
+        closure_5(markAsDismissed(5271).Text, obj4),
         closure_5(markAsDismissed(1199).Spacer, { size: 12 }),
         ,
         ,
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { variant: "text-sm/normal", color: "text-default", children: null };
       const intl2 = markAsDismissed(1125).intl;
       obj5.children = intl2.string(markAsDismissed(1125).t["YSI/1/"]);
-      items[2] = closure_5(markAsDismissed(5270).Text, obj5);
+      items[2] = closure_5(markAsDismissed(5271).Text, obj5);
       items[3] = closure_5(markAsDismissed(1199).Spacer, { size: 48 });
       const obj6 = { text: null, onPress: null, grow: true };
       const intl3 = markAsDismissed(1125).intl;
@@ -213,9 +213,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.onPress = function onPress() {
         return markAsDismissed(ContentDismissActionType.UNKNOWN);
       };
-      items[4] = closure_5(markAsDismissed(5280).Button, obj6);
+      items[4] = closure_5(markAsDismissed(5281).Button, obj6);
       obj3.children = items;
-      obj2.children = closure_6(markAsDismissed(5305).BottomSheetScrollView, obj3);
+      obj2.children = closure_6(markAsDismissed(5306).BottomSheetScrollView, obj3);
       obj.children = closure_5(View, obj2);
-      return closure_5(markAsDismissed(5301).BottomSheet, obj);
+      return closure_5(markAsDismissed(5302).BottomSheet, obj);
     };

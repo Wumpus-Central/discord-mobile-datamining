@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/user_profile/utils/trackUserAvatarUpdated.tsx");
 
-export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildProfile) {
+export function trackUserAvatarUpdated(isGuildProfile) {
   let flag = isGuildProfile.isGuildProfile;
   ({ avatarHash, avatarId } = isGuildProfile);
   if (flag === undefined) {
@@ -30,4 +30,4 @@ export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildPro
   obj2.recent_avatar_id = NumberResult;
   obj2.is_edited_recent_avatar = NEW_ASSET === ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET;
   obj.track(AnalyticEvents.USER_AVATAR_UPDATED, obj2);
-};
+}

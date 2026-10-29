@@ -11,7 +11,7 @@ const require = globalThis.__r;
 ({ canRemixProject: c3, isProjectOwner: closure_4 } = ConjureProjectStore);
 const result = size.fileFinishedImporting("modules/conjure/builder/native/conjureChatMoreSections.tsx");
 
-export const conjureChatMoreSections = function conjureChatMoreSections(project) {
+export function conjureChatMoreSections(project) {
   project = project.project;
   ({ guildId: importDefault, removeTarget } = project);
   ({ annotate, onRefresh, onDebug, onConnectTool, preview } = project);
@@ -218,4 +218,4 @@ export const conjureChatMoreSections = function conjureChatMoreSections(project)
   }
   const items4 = [items, mapped, items2, items3];
   return items4.filter((item) => item.length > 0);
-};
+}

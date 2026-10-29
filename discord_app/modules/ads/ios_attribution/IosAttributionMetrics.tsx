@@ -21,11 +21,7 @@ export const IosAttributionClickResult = {
   NO_IMPRESSION: "no_impression",
   NOT_READY: "not_ready",
 };
-export const trackIosAttributionImpression = function trackIosAttributionImpression(
-  NO_FRAMEWORK,
-  activeIosAttributionFramework,
-  id,
-) {
+export function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttributionFramework, id) {
   let str = activeIosAttributionFramework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
   const items = ["result:" + NO_FRAMEWORK];
@@ -44,8 +40,8 @@ export const trackIosAttributionImpression = function trackIosAttributionImpress
   obj3.attribution_result = NO_FRAMEWORK;
   AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED, obj3);
   const tmpResult = AnalyticsUtilsDefault;
-};
-export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
+}
+export function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
   let str = framework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
   const items = ["result:" + ATTRIBUTED];
@@ -64,4 +60,4 @@ export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIB
   obj3.attribution_result = ATTRIBUTED;
   AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED, obj3);
   const tmpResult = AnalyticsUtilsDefault;
-};
+}

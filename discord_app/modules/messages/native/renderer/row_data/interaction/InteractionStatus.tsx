@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx",
 );
 
-export const createInteractionStatus = function createInteractionStatus(message, interaction) {
+export function createInteractionStatus(message, interaction) {
   const interactionStatusViewState = InteractionUtils.getInteractionStatusViewState(message, interaction);
   if (InteractionUtils.InteractionStatusViewState.SENDING === interactionStatusViewState) {
     const obj2 = { text: null, state: null };
@@ -48,4 +48,4 @@ export const createInteractionStatus = function createInteractionStatus(message,
     const obj7 = { text: "", state: constants.EPHEMERAL_SUCCESS };
     return obj7;
   }
-};
+}

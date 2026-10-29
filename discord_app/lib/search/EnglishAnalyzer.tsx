@@ -135,17 +135,17 @@ let set = new Set([
 ]);
 const result = size.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
-export const analyze = function analyze(str) {
+export function analyze(str) {
   const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
   const tmpResult = _modDef12(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
   return mapped1.reject(isStopWord).map(snowballStemmer.snowballStem).value();
-};
+}
 export { shouldHighlight };
 export { highlightAST };
-export const createASTHighlighter = function createASTHighlighter(str) {
+export function createASTHighlighter(str) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -172,4 +172,4 @@ export const createASTHighlighter = function createASTHighlighter(str) {
     highlightAST(content, set, tmp3);
     return content;
   };
-};
+}

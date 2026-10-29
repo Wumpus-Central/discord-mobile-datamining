@@ -113,7 +113,7 @@ export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEna
         return tmp;
       }, discord_common_shallowEqualDefault);
     };
-export const clearChannelPollState = function clearChannelPollState(arg0) {
+export function clearChannelPollState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     state.setState((arg0) => {
@@ -134,8 +134,8 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
       return { pollsByChannelId: {}, pollsByMessageId: obj2 };
     });
   });
-};
-export const clearPollState = function clearPollState(arg0, arg1) {
+}
+export function clearPollState(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
@@ -158,16 +158,16 @@ export const clearPollState = function clearPollState(arg0, arg1) {
       return obj4;
     });
   });
-};
-export const updatePollState = function updatePollState(arg0, arg1, arg2) {
+}
+export function updatePollState(arg0, arg1, arg2) {
   const state = closure_4.getState();
   state.updatePollState(arg0, arg1, arg2);
-};
-export const getPollState = function getPollState(channelId, id) {
+}
+export function getPollState(channelId, id) {
   const tmp = closure_4.getState().pollsByChannelId[channelId];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[id];
   }
   return tmp2;
-};
+}

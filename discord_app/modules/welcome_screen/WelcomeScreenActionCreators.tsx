@@ -57,14 +57,14 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 
-export const welcomeScreenViewed = function welcomeScreenViewed(guildId) {
+export function welcomeScreenViewed(guildId) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId, isLurking: flag });
-};
-export const fetchWelcomeScreen = function fetchWelcomeScreen() {
+}
+export function fetchWelcomeScreen() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -73,17 +73,17 @@ export const fetchWelcomeScreen = function fetchWelcomeScreen() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetWelcomeScreen = function resetWelcomeScreen() {
+}
+export function resetWelcomeScreen() {
   DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
-};
-export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() {
+}
+export function clearWelcomeScreenSettings() {
   DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
-};
-export const updateSettings = function updateSettings(settings) {
+}
+export function updateSettings(settings) {
   DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings });
-};
-export const saveWelcomeScreen = function saveWelcomeScreen() {
+}
+export function saveWelcomeScreen() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -92,4 +92,4 @@ export const saveWelcomeScreen = function saveWelcomeScreen() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

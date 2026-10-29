@@ -115,7 +115,7 @@ const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");
 
 export const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set;
-export const bypassesFatigue = function bypassesFatigue(content) {
+export function bypassesFatigue(content) {
   let hasItem = set.has(content);
   if (hasItem) {
     let tmp4 = content !== dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
@@ -126,12 +126,12 @@ export const bypassesFatigue = function bypassesFatigue(content) {
     hasItem = tmp4;
   }
   return hasItem;
-};
-export const isServerArbitrated = function isServerArbitrated(item) {
+}
+export function isServerArbitrated(item) {
   const tmp = DismissibleContentSettings.DISMISSIBLE_CONTENT_SETTINGS[item];
   let is_server_arbitrated;
   if (tmp != null) {
     is_server_arbitrated = tmp.is_server_arbitrated;
   }
   return true === is_server_arbitrated;
-};
+}

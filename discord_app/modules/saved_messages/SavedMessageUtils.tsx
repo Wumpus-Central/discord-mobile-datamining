@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -78,11 +78,11 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
@@ -114,7 +114,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
           { openChannel: true },
         );
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp30) {
         closure_4 = tmp30;
         if (tmp4 === c5) {
@@ -127,7 +127,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(4860).UnknownChannelRecord;
+const UnknownChannelRecord = fn(4861).UnknownChannelRecord;
 const Constants = fn(1084);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
@@ -136,7 +136,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
 
 export { DueInStringTypes };
-export const useDueInString = function useDueInString(arg0) {
+export function useDueInString(arg0) {
   ({ dueAt, now, type } = arg0);
   if (null == dueAt) {
     return { string: "", isOverdue: false };
@@ -161,12 +161,12 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef2046.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef2047.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;
   }
-};
+}
 export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSavedMessageChannel(arg0) {
       let channelId = arg0;
@@ -235,7 +235,7 @@ export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled
         return tmp;
       }, items1);
     };
-export const savedMessageJumpToMessage = function savedMessageJumpToMessage() {
+export function savedMessageJumpToMessage() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -244,4 +244,4 @@ export const savedMessageJumpToMessage = function savedMessageJumpToMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

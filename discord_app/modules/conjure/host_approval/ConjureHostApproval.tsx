@@ -34,7 +34,7 @@ const hostAccessStore = new HostAccessStore(DispatcherDefault, {
     if (value == null) {
       value = closure_4;
     }
-    const f108915 = (id) => id.id;
+    const f110199 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {
@@ -81,7 +81,7 @@ let obj = {
     if (value == null) {
       value = closure_4;
     }
-    const f108915 = (id) => id.id;
+    const f110199 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {
@@ -230,7 +230,7 @@ let result = size.fileFinishedImporting("modules/conjure/host_approval/ConjureHo
 
 export const ConjureHostAccessStore = hostAccessStore;
 export const hostAccessFrameHandlers = obj2;
-export const answerHostApproval = function answerHostApproval(projectId, c1, always) {
+export function answerHostApproval(projectId, c1, always) {
   const id = c1;
   const answer = always;
   if (
@@ -244,12 +244,12 @@ export const answerHostApproval = function answerHostApproval(projectId, c1, alw
     DispatcherDefault.dispatch(obj3);
   }
   obj = conjureProjectSockets;
-};
-export const removeAllowedHost = function removeAllowedHost(projectId, remove_host) {
+}
+export function removeAllowedHost(projectId, remove_host) {
   return conjureProjectSockets.sendOnConjureSocket(projectId, "allowed hosts", (sendHostAccess) =>
     sendHostAccess.sendHostAccess({ type: "set_host_access", remove_host }),
   );
-};
+}
 export const useConjureHostApprovals = tmp5;
 export const useConjureAllowedHosts = tmp6;
 export const useConjureRequireHostApprovalSetting = ReactCompilerGating.isReactCompilerEnabled()

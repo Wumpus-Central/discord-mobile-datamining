@@ -132,7 +132,7 @@ let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx",
 );
 
-export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
+export function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);
   if (null == subtitle) {
     return null;
@@ -164,4 +164,4 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     }
     return tmp9;
   }
-};
+}

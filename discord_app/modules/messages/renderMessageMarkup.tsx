@@ -105,7 +105,7 @@ export default function renderMessageMarkup(arg0) {
   const tmp2 = MarkupUtilsDefault;
   return render(obj.formatInline ? tmp2.parseInlineReply : tmp2.parse, arg0, obj);
 }
-export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, renderOptions) {
+export function getInitialParserStateFromMessage(message, renderOptions) {
   const obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
   const author = message.author;
   let id;
@@ -129,20 +129,16 @@ export const getInitialParserStateFromMessage = function getInitialParserStateFr
   }
   obj3.soundboardSounds = soundboardSounds;
   return obj3;
-};
+}
 export { getInitialParserState };
-export const renderMessageMarkupWithParser = function renderMessageMarkupWithParser(
-  NativeSearchResultLinkPreviewParser,
-  arg1,
-  arg2,
-) {
+export function renderMessageMarkupWithParser(NativeSearchResultLinkPreviewParser, arg1, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   return render(NativeSearchResultLinkPreviewParser, arg1, obj);
-};
-export const renderMessageMarkupToAST = function renderMessageMarkupToAST(message, arg1) {
+}
+export function renderMessageMarkupToAST(message, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -152,8 +148,8 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   const merged = Object.assign(obj);
   obj2.toAST = true;
   return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj2);
-};
-export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, message, arg2) {
+}
+export function renderMessageMarkupToASTWithParser(arg0, message, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -162,12 +158,8 @@ export const renderMessageMarkupToASTWithParser = function renderMessageMarkupTo
   const merged = Object.assign(obj);
   obj2.toAST = true;
   return render(arg0, message, obj2);
-};
-export const renderMessageContentMarkup = function renderMessageContentMarkup(
-  notifCenterV2MessagePreviewParser,
-  guildId,
-  arg2,
-) {
+}
+export function renderMessageContentMarkup(notifCenterV2MessagePreviewParser, guildId, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -210,8 +202,8 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(
       return tmp;
     },
   );
-};
-export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
+}
+export function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
   return MarkupUtilsDefault.parseAutoModerationSystemMessage(
     arg0,
     true,
@@ -241,12 +233,8 @@ export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(ar
       return tmp;
     },
   );
-};
-export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMarkupToAST(
-  arg0,
-  highlightWord,
-  channelId,
-) {
+}
+export function renderAutomodMessageMarkupToAST(arg0, highlightWord, channelId) {
   return MarkupUtilsDefault.parseAutoModerationSystemMessageToAST(
     arg0,
     true,
@@ -276,4 +264,4 @@ export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMark
       return tmp;
     },
   );
-};
+}

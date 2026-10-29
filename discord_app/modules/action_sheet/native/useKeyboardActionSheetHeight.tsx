@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return { minimum, maximum };
     };
-export const getKeyboardActionSheetHeight = function getKeyboardActionSheetHeight() {
+export function getKeyboardActionSheetHeight() {
   const safeAreaInsets = useSafeAreaInsets.getSafeAreaInsets();
   const windowDimensions = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
   const customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
@@ -72,4 +72,4 @@ export const getKeyboardActionSheetHeight = function getKeyboardActionSheetHeigh
     minimum = Math.max(0, maximum - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE);
   }
   return { minimum, maximum };
-};
+}

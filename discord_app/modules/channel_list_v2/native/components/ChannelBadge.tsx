@@ -11,7 +11,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelBadge.tsx");
 
-export const renderChannelBadge = function renderChannelBadge(newChannel) {
+export function renderChannelBadge(newChannel) {
   let flag = newChannel.newChannel;
   if (flag === undefined) {
     flag = false;
@@ -55,4 +55,4 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
       }
     }
   }
-};
+}

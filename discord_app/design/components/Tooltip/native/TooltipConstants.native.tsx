@@ -16,7 +16,7 @@ const __initData = {
 };
 const result = size.fileFinishedImporting("design/components/Tooltip/native/TooltipConstants.native.tsx");
 
-export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(position) {
+export function tooltipEnterExitAnimation(position) {
   let tmp2 = tmp;
   if ("left" !== position) {
     tmp2 = "right" === position;
@@ -45,4 +45,4 @@ export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(posi
   fn.__workletHash = 12524569976242;
   fn.__initData = __initData;
   return fn;
-};
+}

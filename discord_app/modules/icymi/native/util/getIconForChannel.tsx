@@ -11,7 +11,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
 
-export const getIconForChannel = function getIconForChannel(stateFromStores) {
+export function getIconForChannel(stateFromStores) {
   const type = stateFromStores.type;
   if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
     return AnnouncementsIcon.AnnouncementsIcon;
@@ -28,4 +28,4 @@ export const getIconForChannel = function getIconForChannel(stateFromStores) {
   } else {
     return TextIcon.TextIcon;
   }
-};
+}

@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { flexShrink: 0 },
   content: {
@@ -97,7 +97,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
 export const TableRowGroupTitle = tmp3;
-export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
+export function TableRowGroup(accessibilityLabel) {
   ({ title, description, helperText, hasIcons: require, hasTrailingText } = accessibilityLabel);
   if (hasTrailingText === undefined) {
     hasTrailingText = false;
@@ -159,4 +159,4 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     value: true,
     children: closure_7(View, obj2),
   });
-};
+}

@@ -8,11 +8,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(13519).GamePlatformAvailability.DESKTOP] = fn(9514).ScreenIcon;
-obj[fn(13519).GamePlatformAvailability.MOBILE] = fn(7089).MobilePhoneIcon;
-obj[fn(13519).GamePlatformAvailability.CONSOLE] = fn(9650).GameControllerIcon;
-obj[fn(13519).GamePlatformAvailability.ROBLOX] = fn(9314).RobloxNeutralIcon;
-const createStyles = fn(5004);
+obj[fn(13752).GamePlatformAvailability.DESKTOP] = fn(9546).ScreenIcon;
+obj[fn(13752).GamePlatformAvailability.MOBILE] = fn(7113).MobilePhoneIcon;
+obj[fn(13752).GamePlatformAvailability.CONSOLE] = fn(9682).GameControllerIcon;
+obj[fn(13752).GamePlatformAvailability.ROBLOX] = fn(9318).RobloxNeutralIcon;
+const createStyles = fn(5005);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -92,7 +92,7 @@ export default noop.memo(
         const items = [platforms];
         const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
         const tmp = closure_6();
-        return jsx(platforms(6013).Stack, {
+        return jsx(platforms(6015).Stack, {
           direction: "horizontal",
           align: "center",
           spacing: nativeDefault.space.PX_4,

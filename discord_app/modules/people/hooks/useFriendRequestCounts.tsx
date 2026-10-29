@@ -47,7 +47,7 @@ const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequest
 
 export { getIncomingFriendRequestCount };
 export const useIncomingFriendRequestCount = tmp2;
-export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCount() {
+export function getOutgoingFriendRequestCount() {
   let tmp = items1;
   if (items1 === undefined) {
     const items = [closure_5];
@@ -57,4 +57,4 @@ export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCo
   [obj, obj2] = tmp;
   const outgoingCount = obj.getOutgoingCount();
   return outgoingCount + obj2.getPendingOutgoingCount();
-};
+}

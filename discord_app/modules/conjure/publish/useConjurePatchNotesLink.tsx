@@ -8,7 +8,7 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6808).canPublishProject;
+const canPublishProject = fn(6831).canPublishProject;
 const Routes = fn(1084).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -219,11 +219,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp8;
     };
-export const openConjureSentPatchNotes = function openConjureSentPatchNotes(sent) {
+export function openConjureSentPatchNotes(sent) {
   ({ guildId, channelId, messageId } = sent);
   router_utils.transitionTo(Routes.CHANNEL(guildId, channelId, messageId));
-};
-export const conjurePatchNotesEditorProps = function conjurePatchNotesEditorProps(projectId, arg1) {
+}
+export function conjurePatchNotesEditorProps(projectId, arg1) {
   ({ publishedRevision, fallbackGuildId } = arg1);
   const project = ConjureProjectStore.getProject(projectId);
   let publishGuildIdResult = null;
@@ -247,4 +247,4 @@ export const conjurePatchNotesEditorProps = function conjurePatchNotesEditorProp
     }
   }
   return tmp5;
-};
+}

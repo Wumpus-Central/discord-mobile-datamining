@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import Link from "../../../../_runtime/01503_Link.js";
+import Link from "../../../../_runtime/01504_Link.js";
 import LoginDefault from "components/Login.tsx";
 import WelcomeDefault from "components/Welcome.tsx";
 import RegistrationUtils from "RegistrationUtils.tsx";
@@ -42,7 +42,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         return obj;
       }
       c3 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp12) {
       c3 = tmp;
       throw tmp12;
@@ -133,7 +133,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
       closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -146,10 +146,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6704).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(17636);
+const usePromoEmailConsentStore = fn(6728).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(17874);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17637);
+const RegistrationConstants = fn(17875);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1084).AuthStates;
 const jsx = fn(21).jsx;
@@ -161,7 +161,7 @@ let result = size.fileFinishedImporting("modules/auth/native/RegistrationStepsUt
 export function getRegistrationSteps() {
   return items;
 }
-export const getAllAuthScreens = function getAllAuthScreens() {
+export function getAllAuthScreens() {
   let obj = {};
   obj[AuthStates.WELCOME] = {
     ignoreKeyboard: true,
@@ -303,7 +303,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7179), {
+      return closure_15(closure_1(7203), {
         onClose() {
           return closure_0.pop();
         },
@@ -401,17 +401,17 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     }
   };
   return obj;
-};
+}
 export { getNextAuthState };
-export const getPreviousAuthState = function getPreviousAuthState(arg0) {
+export function getPreviousAuthState(arg0) {
   const index = items.indexOf(arg0);
   if (-1 !== index) {
     if (0 !== index) {
       return items[index - 1];
     }
   }
-};
-export const getPreviousRegistrationTransitionStep = function getPreviousRegistrationTransitionStep(AGE_GATE) {
+}
+export function getPreviousRegistrationTransitionStep(AGE_GATE) {
   const index = items.indexOf(AGE_GATE);
   let tmp3;
   if (-1 !== index) {
@@ -422,8 +422,8 @@ export const getPreviousRegistrationTransitionStep = function getPreviousRegistr
   if (null != tmp3) {
     return v65535(tmp3);
   }
-};
-export const getNextRegistrationTransitionStep = function getNextRegistrationTransitionStep(arg0) {
+}
+export function getNextRegistrationTransitionStep(arg0) {
   const index = items.indexOf(arg0);
   let tmp2;
   if (-1 !== index) {
@@ -434,8 +434,8 @@ export const getNextRegistrationTransitionStep = function getNextRegistrationTra
   if (null != tmp2) {
     return v65535(tmp2);
   }
-};
-export const handleNextOrSubmitRegistration = function handleNextOrSubmitRegistration() {
+}
+export function handleNextOrSubmitRegistration() {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -444,5 +444,5 @@ export const handleNextOrSubmitRegistration = function handleNextOrSubmitRegistr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { handleRegistrationSubmit };

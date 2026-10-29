@@ -13,11 +13,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1084);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx");
 
-export const getChannelOpenedMetadata = function getChannelOpenedMetadata(selectedChannelId) {
+export function getChannelOpenedMetadata(selectedChannelId) {
   if (isStaticChannelRoute(selectedChannelId)) {
     const obj = { channel_static_route: selectedChannelId };
     return obj;
@@ -114,4 +114,4 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
       }
     }
   }
-};
+}

@@ -2,12 +2,12 @@
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
-const ConversationConstants = fn(5643);
+const ConversationConstants = fn(5644);
 ({ FETCH_BACKOFF_MAX_MS: c3, FETCH_BACKOFF_MIN_MS: closure_4 } = ConversationConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/useConversationBackoffRef.tsx");
 
-export const useConversationBackoffRef = function useConversationBackoffRef() {
+export function useConversationBackoffRef() {
   if (items === undefined) {
     items = [];
   }
@@ -19,4 +19,4 @@ export const useConversationBackoffRef = function useConversationBackoffRef() {
     };
   }, items);
   return ref;
-};
+}

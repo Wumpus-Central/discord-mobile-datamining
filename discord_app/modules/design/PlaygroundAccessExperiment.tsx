@@ -4,7 +4,7 @@ import c from "../../../_runtime/00576_c.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let obj2 = {
   name: "2026-02-mana-playground-access",
   kind: "user",
@@ -103,7 +103,7 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp2;
     };
-export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitcher_action) {
+export function getHasPlaygroundAccess(quickswitcher_action) {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -122,4 +122,4 @@ export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitc
     enabled = apexExperiment.getConfig(obj).enabled;
   }
   return enabled;
-};
+}

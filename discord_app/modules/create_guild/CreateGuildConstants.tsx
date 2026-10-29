@@ -19,7 +19,7 @@ const GuildTemplateId = {
 const result = size.fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
 
 export { GuildTemplateId };
-export const getGuildTemplatesMap = function getGuildTemplatesMap() {
+export function getGuildTemplatesMap() {
   const obj = {};
   const obj2 = { id: obj.CREATE, code: "2TffvPucqHkN", label: null, channels: null, system_channel_id: null };
   const intl = util.intl;
@@ -432,4 +432,4 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   obj65.roles = items7;
   obj[obj.SCHOOL_CLUB] = obj65;
   return obj;
-};
+}

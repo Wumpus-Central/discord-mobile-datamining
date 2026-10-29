@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/premium/experiments/MobileRoadblockOfferCtaExperiment.tsx");
 
-export const getMobileRoadblockOfferCtaEnabled = function getMobileRoadblockOfferCtaEnabled() {
+export function getMobileRoadblockOfferCtaEnabled() {
   return config.getConfig({ location: "native.PremiumUpsellActionSheet" });
-};
+}

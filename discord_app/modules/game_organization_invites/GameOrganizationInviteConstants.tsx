@@ -8,6 +8,14 @@ export const GAME_ORGANIZATION_INVITE_PICKER_ACTION_SHEET_KEY = "GameOrganizatio
 export const GAME_ORGANIZATION_INVITE_EXPIRY_DAYS = 7;
 export const GameOrganizationInviteStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", ERROR: "ERROR" };
 export const GameOrganizationDisplayNouns = { GUILD: "GUILD" };
+export const GameOrganizationCharacterMode = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  SINGLE: 1,
+  [1]: "SINGLE",
+  MULTI: 2,
+  [2]: "MULTI",
+};
 export const GameOrganizationInviteAcceptStatus = { JOINED: 1, [1]: "JOINED", FAILED: 2, [2]: "FAILED" };
 export const GameOrganizationInviteAcceptFailureReason = {
   ALREADY_JOINED: 1,

@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(13625);
+const GuildProgressConstants = fn(13858);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1084);
 ({
@@ -33,7 +33,7 @@ const Constants = fn(1084);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -280,14 +280,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj3;
               } else {
                 let base64;
-                tmp5(9039).init(View);
-                const obj6 = tmp5(9039);
-                tmp2(13630).hideActionSheet(id.id);
-                const obj7 = tmp2(13630);
+                tmp5(9042).init(View);
+                const obj6 = tmp5(9042);
+                tmp2(13863).hideActionSheet(id.id);
+                const obj7 = tmp2(13863);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: tmp5(8186).openImagePicker(obj4), done: false };
+                const obj5 = { value: tmp5(8209).openImagePicker(obj4), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -300,11 +300,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               base64 = value.base64;
               if (null != base64) {
-                tmp5(9039).updateIcon(closure_129_5, base64);
-                const obj = tmp5(9039);
+                tmp5(9042).updateIcon(closure_129_5, base64);
+                const obj = tmp5(9042);
               }
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp16) {
             c3 = tmp;

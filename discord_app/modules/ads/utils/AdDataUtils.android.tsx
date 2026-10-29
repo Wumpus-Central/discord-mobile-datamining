@@ -7,12 +7,12 @@ import AdUserStore from "../native/AdUserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7839).DEFAULT_TIMEOUT_MS;
+const DEFAULT_TIMEOUT_MS = fn(7862).DEFAULT_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
 
-export const getAdUser = function getAdUser(questContentName) {
+export function getAdUser(questContentName) {
   const adUser = AdUserStore.adUser;
   if (null == adUser) {
     if (!AdUserStore.hasFetchFailed) {
@@ -49,7 +49,7 @@ export const getAdUser = function getAdUser(questContentName) {
     return resolved;
   }
   resolved = Promise.resolve(adUser);
-};
+}
 export const useAdUser = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAdUser(arg0) {
       _require = arg0;

@@ -11,6 +11,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/premium/experiments/TenureBadgeWithheldStateExperiment.tsx");
 
 export default apexExperiment;
-export const shouldShowWithheldTenureBadge = function shouldShowWithheldTenureBadge(useTieredTenureBadgeData) {
+export function shouldShowWithheldTenureBadge(useTieredTenureBadgeData) {
   return apexExperiment.getConfig({ location: useTieredTenureBadgeData }).showWithheldBadge;
-};
+}

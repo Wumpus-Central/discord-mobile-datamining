@@ -84,7 +84,7 @@ const HasAccessResult = {
 const result = size.fileFinishedImporting("modules/application_commands/CommandPermissionUtils.tsx");
 
 export { HasAccessResult };
-export const hasAccess = function hasAccess(type, permissionContext, applicationAllowedForChannel) {
+export function hasAccess(type, permissionContext, applicationAllowedForChannel) {
   ({ context, commandTypes, computedPermissions, userId, roleIds, isImpersonating } = permissionContext);
   applicationAllowedForChannel = applicationAllowedForChannel.applicationAllowedForChannel;
   ({ allowNsfw, hasBaseAccessPermissions, hasSendMessagesPermission } = permissionContext);
@@ -237,8 +237,8 @@ export const hasAccess = function hasAccess(type, permissionContext, application
   } else {
     return obj.WRONG_COMMAND_TYPE;
   }
-};
-export const computeAllowedForChannel = function computeAllowedForChannel(permissions, context, guild_id) {
+}
+export function computeAllowedForChannel(permissions, context, guild_id) {
   if (null == permissions) {
     return null;
   } else {
@@ -273,5 +273,5 @@ export const computeAllowedForChannel = function computeAllowedForChannel(permis
       return permission;
     }
   }
-};
+}
 export { computeAllowedForUser };

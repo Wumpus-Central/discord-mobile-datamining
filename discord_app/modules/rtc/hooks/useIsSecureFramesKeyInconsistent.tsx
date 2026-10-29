@@ -82,11 +82,11 @@ export const useAlertIfSecureFramesKeyInconsistent = ReactCompilerGating.isReact
           tmp5 = globalThis;
           _setTimeout = setTimeout;
           num = 1000;
-          tmp.current = setTimeout(() => { ... }, 1000);
+          tmp.current = setTimeout(/* F149067 */ function() { ... }, 1000);
           tmp3 = tmp;
         }
         current = tmp3.current;
-        return () => { ... };
+        return /* F149068 */ function() { ... };
       }
       tmp3 = closure_5;
       clearTimeoutResult = clearTimeout(closure_5.current);

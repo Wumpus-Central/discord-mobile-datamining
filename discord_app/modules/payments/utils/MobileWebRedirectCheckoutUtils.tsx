@@ -2,9 +2,9 @@
 import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
-import _mod5041 from "../../../../_runtime/metro/05041__.js";
+import _mod5042 from "../../../../_runtime/metro/05042__.js";
 import PaymentConstants from "../PaymentConstants.tsx";
-import keysSorter from "../../../../_runtime/06757_keysSorter.js";
+import keysSorter from "../../../../_runtime/06780_keysSorter.js";
 import Constants from "../../../Constants.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -15,29 +15,25 @@ const mobile_web_redirect_checkout = "mobile_web_redirect_checkout";
 const result = size.fileFinishedImporting("modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx");
 
 export const MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG = "mobile_web_redirect_checkout";
-export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(
-  error,
-  source,
-  tags,
-) {
+export function captureMobileWebRedirectCheckoutSentryError(error, source, tags) {
   const obj2 = { tags: null, extra: null };
   const merged = Object.assign(tags.tags);
   obj2.tags = { app_context: mobile_web_redirect_checkout, source };
   obj2.extra = tags.extra;
   SentryUtilsDefault.captureException(error, obj2);
-};
-export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCheckoutEnabled() {
+}
+export function isMobileWebRedirectCheckoutEnabled() {
   return MetaQuestUtils.isMetaQuest();
-};
-export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowForAnalytics() {
+}
+export function getCustomCheckoutFlowForAnalytics() {
   return MetaQuestUtils.isMetaQuest()
     ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT
     : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
-};
+}
 export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetCustomCheckoutFlow() {
       const cResult = c.c(3);
-      const _location = _mod5041.useLocation();
+      const _location = _mod5042.useLocation();
       ({ search, pathname } = _location);
       if (cResult[0] === search) {
         if (cResult[1] === pathname) {
@@ -59,7 +55,7 @@ export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabl
       const tmpResult = keysSorter;
     }
   : function useGetCustomCheckoutFlow() {
-      const _location = _mod5041.useLocation();
+      const _location = _mod5042.useLocation();
       ({ pathname, search } = _location);
       const parsed = keysSorter.parse(search);
       ({ deep_link_type, flow_type } = parsed);
@@ -71,7 +67,7 @@ export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabl
         }
       }
     };
-export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
+export function getCustomCheckoutFlow() {
   const parsed = keysSorter.parse(window.location.search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
@@ -81,4 +77,4 @@ export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
       META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
     }
   }
-};
+}

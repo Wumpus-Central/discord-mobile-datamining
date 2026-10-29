@@ -1,7 +1,7 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
 import util from "../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import ObscuredMediaUtils from "../ObscuredMediaUtils.tsx";
@@ -11,14 +11,14 @@ import ExplicitMediaRedactionUtils from "../ExplicitMediaRedactionUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7429).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(9748).SearchMediaTypes;
+let closure_4 = fn(7452).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(9780).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx",
 );
 
-export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilterPress(arg0) {
+export function handleSensitiveMediaFilterPress(arg0) {
   ({ handlePress: require, excluded } = arg0);
   ({ title, subtitle, currentValue } = arg0);
   const currentUser = UserStore.getCurrentUser();
@@ -75,14 +75,14 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16385, dependencyMap.paths), closure_4, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16623, dependencyMap.paths), closure_4, {
     title,
     subtitle,
     options: items,
     currentValue,
   });
-};
-export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
+}
+export function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {
     return false;
   } else {
@@ -119,4 +119,4 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
       return tmp2;
     }
   }
-};
+}

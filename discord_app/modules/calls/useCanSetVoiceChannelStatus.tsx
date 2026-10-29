@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 export { _canSetVoiceChannelStatus };
-export const canSetVoiceChannelStatus = function canSetVoiceChannelStatus(arg0) {
+export function canSetVoiceChannelStatus(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -128,4 +128,4 @@ export const canSetVoiceChannelStatus = function canSetVoiceChannelStatus(arg0) 
         }
         return canResult;
       });
-};
+}

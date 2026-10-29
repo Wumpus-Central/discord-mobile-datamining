@@ -226,7 +226,7 @@ export { colorToHex };
 export { getPresetOverlayOpacity };
 export { getClientThemesGradientColorByPercentage };
 export { getClientThemesGradientHexColors };
-export const getGradientThemeMetadata = function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
+export function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
   if (null != gradientThemeFromFlags) {
     if (null != gradient) {
       const tmp14 = calculateGradientValueWithOpacity(gradient, obj3.START, gradient.theme);
@@ -314,7 +314,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
     }
   }
   return null;
-};
+}
 export { getGradientValue };
 export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGradientValue(END, dark) {
@@ -435,14 +435,14 @@ export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-export const isCustomThemeActive = function isCustomThemeActive() {
+export function isCustomThemeActive() {
   let tmp = null != MobileThemesUtils.getCustomBackgroundGradient();
   if (!tmp) {
     tmp = null != ClientThemesBackgroundStore.gradientPreset;
   }
   return tmp;
-};
-export const getEmbedScrollGradientBackground = function getEmbedScrollGradientBackground() {
+}
+export function getEmbedScrollGradientBackground() {
   let customBackgroundGradient = MobileThemesUtils.getCustomBackgroundGradient();
   if (customBackgroundGradient == null) {
     customBackgroundGradient = ClientThemesBackgroundStore.gradientPreset;
@@ -455,8 +455,8 @@ export const getEmbedScrollGradientBackground = function getEmbedScrollGradientB
     tmp3 = calculateGradientValueWithOpacity(customBackgroundGradient, undefined, customBackgroundGradient.theme);
   }
   return tmp3;
-};
-export const getEmbedBackground = function getEmbedBackground() {
+}
+export function getEmbedBackground() {
   if (null == ClientThemesBackgroundStore.gradientPreset) {
     if (!CustomThemeMobileStore.hasCustomTheme()) {
       return null;
@@ -465,4 +465,4 @@ export const getEmbedBackground = function getEmbedBackground() {
   const obj = shared;
   const tmp4 = obj.isThemeDark(ThemeStore.theme) ? obj2.DARK : obj2.LIGHT;
   return ColorUtils.hexWithOpacity(tmp4, obj.LEVEL_1);
-};
+}

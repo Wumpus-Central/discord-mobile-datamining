@@ -6,12 +6,12 @@ import ThreadMessageStore from "../threads/ThreadMessageStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const THREAD_CHANNEL_TYPES = fn(4860).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4861).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
 
-export const collectThreadMetadata = function collectThreadMetadata(channel, arg1) {
+export function collectThreadMetadata(channel, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -66,4 +66,4 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
     }
   }
   return tmp;
-};
+}

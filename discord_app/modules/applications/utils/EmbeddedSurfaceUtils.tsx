@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/applications/utils/EmbeddedSurfaceUtils.tsx");
 
-export const isEmbeddedApplication = function isEmbeddedApplication(application) {
+export function isEmbeddedApplication(application) {
   if (null == application) {
     let items = [];
   } else if ("embeddedSurfaces" in application) {
@@ -22,8 +22,8 @@ export const isEmbeddedApplication = function isEmbeddedApplication(application)
     items = [];
   }
   return items.length > 0;
-};
-export const supportsEmbeddedSurface = function supportsEmbeddedSurface(embeddedSurfaces, MAIN) {
+}
+export function supportsEmbeddedSurface(embeddedSurfaces, MAIN) {
   if (null == embeddedSurfaces) {
     let items = [];
   } else if ("embeddedSurfaces" in embeddedSurfaces) {
@@ -42,4 +42,4 @@ export const supportsEmbeddedSurface = function supportsEmbeddedSurface(embedded
     items = [];
   }
   return items.includes(MAIN);
-};
+}

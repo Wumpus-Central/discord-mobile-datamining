@@ -13,7 +13,7 @@ import FavoriteStore from "FavoriteStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4869).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(4870).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1391).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -231,7 +231,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 
-export const getFavoritesLimits = function getFavoritesLimits() {
+export function getFavoritesLimits() {
   const isPremiumExactlyResult = PremiumTypeUtilsDefault.isPremiumExactly(
     UserStore.getCurrentUser(),
     PremiumTypes.TIER_2,
@@ -242,12 +242,12 @@ export const getFavoritesLimits = function getFavoritesLimits() {
     FREE_FAVORITE_LIMIT = FavoritesLimits.FREE_FAVORITE_LIMIT;
   }
   return { favoriteLimit: FREE_FAVORITE_LIMIT, canUpsellFavoriteLimit: !isPremiumExactlyResult };
-};
+}
 export const useFavoritesLimitUpsell = tmp2;
 export const useFavorites = tmp3;
 export const useFavorite = tmp4;
 export const useFavoritedChannelIds = tmp5;
-export const getFavoritesCategories = function getFavoritesCategories() {
+export function getFavoritesCategories() {
   if (favoriteChannels === undefined) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
@@ -286,7 +286,7 @@ export const getFavoritesCategories = function getFavoritesCategories() {
     return num - num2;
   });
   return items;
-};
+}
 export const useIsFavoritesGuildSelected = tmp6;
 export const useFavoritesAwareChannel = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesAwareChannel(arg0) {

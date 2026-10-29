@@ -10,8 +10,8 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
 
-export const getInvitableChannelForGuild = function getInvitableChannelForGuild(guildId) {
+export function getInvitableChannelForGuild(guildId) {
   const channels = GuildChannelStore.getChannels(guildId);
   const items = [...channels[closure_1_1]];
   return items.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
-};
+}

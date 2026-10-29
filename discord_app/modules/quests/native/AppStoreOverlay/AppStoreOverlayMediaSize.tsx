@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/A
 
 export const MEDIA_FALLBACK_WIDTH = 1080;
 export const MEDIA_FALLBACK_HEIGHT = 1920;
-export const getMediaTileSize = function getMediaTileSize(value) {
+export function getMediaTileSize(value) {
   if (null != value) {
     if (value.width > value.height) {
       let tmp = closure_6;
@@ -23,15 +23,15 @@ export const getMediaTileSize = function getMediaTileSize(value) {
     return tmp;
   }
   tmp = closure_5;
-};
-export const getAppStoreOverlayCarouselImageUrl = function getAppStoreOverlayCarouselImageUrl(url) {
+}
+export function getAppStoreOverlayCarouselImageUrl(url) {
   let format = null;
   if (AvatarUtils.SUPPORTS_WEBP) {
     format = "webp";
   }
   return ImageProxyUtils.getSizedImageAssetURL(url, { size: 289, keepAspectRatio: true, format });
-};
-export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nativeEvent) {
+}
+export function getMediaSizeFromLoadEvent(nativeEvent) {
   nativeEvent = nativeEvent.nativeEvent;
   let source = nativeEvent;
   if ("source" in nativeEvent) {
@@ -53,7 +53,7 @@ export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nati
     }
   }
   return tmp;
-};
+}
 export const useAppStoreOverlayMediaSizes = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAppStoreOverlayMediaSizes(arg0) {
       const cResult = first(576).c(6);

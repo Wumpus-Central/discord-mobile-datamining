@@ -7,11 +7,11 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: metroRequire } = noop);
-const OrderStatus = fn(5734).OrderStatus;
+const OrderStatus = fn(5736).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
-export const useOrderSigning = function useOrderSigning(order) {
+export function useOrderSigning(order) {
   order = order.order;
   let errorSource = order.errorSource;
   const onSignFailure = order.onSignFailure;
@@ -69,7 +69,7 @@ export const useOrderSigning = function useOrderSigning(order) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -103,7 +103,7 @@ export const useOrderSigning = function useOrderSigning(order) {
               let orderSigningError;
               c5 = 1;
               c6 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -240,4 +240,4 @@ export const useOrderSigning = function useOrderSigning(order) {
     items2,
   );
   return obj;
-};
+}

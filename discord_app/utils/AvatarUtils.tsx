@@ -5,12 +5,12 @@ import Url from "../../_runtime/01386_Url.js";
 import AvatarDecorationConstants from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
 import utils_AvatarUtils from "native/AvatarUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
-import _modDef1490 from "../../_runtime/metro/01490__.js";
+import _modDef1491 from "../../_runtime/metro/01491__.js";
 import ForceSdrEmojisStickersExperiment from "../modules/image_upload/ForceSdrEmojisStickersExperiment.tsx";
 import NumberUtils from "../../discord_common/js/shared/utils/NumberUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import CollectiblesAssetUtils from "../modules/collectibles/utils/CollectiblesAssetUtils.tsx";
-import _modDef1987 from "../../_runtime/metro/01987__.js";
+import _modDef1988 from "../../_runtime/metro/01988__.js";
 import Constants from "../Constants.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -109,7 +109,7 @@ function getAvatarURL(canAnimate) {
           obj4.animated = true;
         }
         const _HermesInternal2 = HermesInternal;
-        return combined + "?" + _modDef1490.stringify(obj4);
+        return combined + "?" + _modDef1491.stringify(obj4);
       }
     }
   }
@@ -252,7 +252,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  return combined + "?" + _modDef1490.stringify(obj);
+  return combined + "?" + _modDef1491.stringify(obj);
 }
 function getGuildBannerURL(guild) {
   ({ id, banner } = guild);
@@ -309,7 +309,7 @@ function getGuildBannerURL(guild) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1490.stringify(obj);
+    return combined + "?" + _modDef1491.stringify(obj);
   }
 }
 function getApplicationIconURL(guildMember) {
@@ -373,7 +373,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp6;
     if (fallbackAvatar) {
-      tmp6 = _modDef1987;
+      tmp6 = _modDef1988;
     }
     return tmp6;
   }
@@ -608,7 +608,7 @@ function getUserBannerURL(arg0) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1490.stringify(obj);
+    return combined + "?" + _modDef1491.stringify(obj);
   }
 }
 function getAvatarDecorationURL(canAnimate) {
@@ -717,7 +717,7 @@ function getGuildMemberBannerURL(arg0) {
         obj.animated = true;
       }
       const _HermesInternal2 = HermesInternal;
-      return combined + "?" + _modDef1490.stringify(obj);
+      return combined + "?" + _modDef1491.stringify(obj);
     }
   }
 }
@@ -1245,7 +1245,7 @@ export { getVideoFilterAssetURL };
 export { hasAnimatedGuildIcon };
 export { isAnimatedIconHash };
 export { isVideoAssetHash };
-export const isAnimatedImageURL = function isAnimatedImageURL(bannerURL) {
+export function isAnimatedImageURL(bannerURL) {
   let tmp = null != bannerURL;
   if (tmp) {
     const obj = _getAssetHash(bannerURL);
@@ -1256,8 +1256,8 @@ export const isAnimatedImageURL = function isAnimatedImageURL(bannerURL) {
     tmp = startsWithResult;
   }
   return tmp;
-};
-export const isVideoURL = function isVideoURL(bannerURL) {
+}
+export function isVideoURL(bannerURL) {
   let tmp = null != bannerURL;
   if (tmp) {
     const obj = _getAssetHash(bannerURL);
@@ -1268,6 +1268,6 @@ export const isVideoURL = function isVideoURL(bannerURL) {
     tmp = startsWithResult;
   }
   return tmp;
-};
+}
 export { makeSource };
 export { isDataUri };

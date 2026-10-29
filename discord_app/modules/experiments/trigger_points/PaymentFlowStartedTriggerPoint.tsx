@@ -14,13 +14,11 @@ const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfigurat
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
 
 export const PaymentFlowStartedTriggerPoint = commonTriggerPointConfiguration;
-export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowStartedAnalyticsAndCTP(
-  basePurchaseAnalytics,
-) {
+export function trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
   commonTriggerPointConfiguration.trigger();
-};
+}

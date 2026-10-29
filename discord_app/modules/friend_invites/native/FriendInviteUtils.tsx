@@ -12,15 +12,15 @@ let result = size.fileFinishedImporting("modules/friend_invites/native/FriendInv
 
 export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
-export const revokeAllFriendInvites = function revokeAllFriendInvites() {
+export function revokeAllFriendInvites() {
   InstantInviteActionCreatorsDefault.revokeFriendInvites().then(() => {
     const obj2 = { text: null, variant: "success" };
     const intl = util.intl;
     obj2.text = intl.string(util.t.jSHEOQ);
     ToastActionCreatorsDefault.open("TOAST_FRIEND_INVITES_REVOKED", obj2);
   });
-};
-export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
+}
+export function acceptFriendInvite(invite, context) {
   if (tmp) {
     let dMFromUserId = null;
     if (RelationshipStore.isFriend(invite.inviter.id)) {
@@ -54,4 +54,4 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
     }
   }
   tmp = null == invite.channel && null == invite.guild && null != invite.inviter;
-};
+}

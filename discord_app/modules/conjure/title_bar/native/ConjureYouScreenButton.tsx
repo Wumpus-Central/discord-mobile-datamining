@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import Link from "../../../../../_runtime/01504_Link.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import useConjureWandStatusDefault from "useConjureWandStatus.tsx";
 import ConjureWorkingWandDefault from "ConjureWorkingWand.tsx";
@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { dot: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ export default noop.memo(
           const _Symbol = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
-            const stringResult = intl.string(_modDef3863.uk6jhJ);
+            const stringResult = intl.string(_modDef3864.uk6jhJ);
             cResult[3] = stringResult;
             let tmp13 = stringResult;
           } else {
@@ -114,7 +114,7 @@ export default noop.memo(
         obj2.icon = tmp7Result;
         obj2.accessibilityLabel = accessibilityLabel;
         const intl = util.intl;
-        obj2.label = intl.string(_modDef3863.uk6jhJ);
+        obj2.label = intl.string(_modDef3864.uk6jhJ);
         obj2.onPress = openConjureProjectsSheetDefault;
         obj2.showRedDot = hasBadge;
         obj2.dotStyle = tmp.dot;

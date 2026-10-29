@@ -13,14 +13,10 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
-export const useTrackOpenPopout = (cResult) => {
+export (cResult) => {
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = cResult);
   let current;
-  let merged = Object.assign(
-    AppAnalyticsUtils.collectChannelAnalyticsMetadata(
-      ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId)),
-    ),
-  );
+  let merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId))));
   current = current.useRef({ guild_id: currentGuildId, emoji_id: cResult.emojiId }).current;
   useMountEffectDefault(() => {
     const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
@@ -38,4 +34,4 @@ export const useTrackOpenPopout = (cResult) => {
     }
   });
   return current;
-};
+}

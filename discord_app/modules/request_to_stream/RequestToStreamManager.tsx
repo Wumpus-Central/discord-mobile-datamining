@@ -9,7 +9,7 @@ import RequestToStreamStore from "RequestToStreamStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-let closure_7 = fn(14566).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
+let closure_7 = fn(14800).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
 const ActivityActionTypes = fn(1084).ActivityActionTypes;
 class RequestToStreamManager extends tmp2 {
   constructor() {

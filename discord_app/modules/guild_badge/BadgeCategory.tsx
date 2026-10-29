@@ -21,7 +21,7 @@ const BadgeCategory = {
 const result = size.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
 export { BadgeCategory };
-export const getBadgeCategory = function getBadgeCategory(guildTraits) {
+export function getBadgeCategory(guildTraits) {
   if (guildTraits.staff) {
     let DISCOVERABLE = obj.STAFF;
   } else {
@@ -44,4 +44,4 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
     }
   }
   return DISCOVERABLE;
-};
+}

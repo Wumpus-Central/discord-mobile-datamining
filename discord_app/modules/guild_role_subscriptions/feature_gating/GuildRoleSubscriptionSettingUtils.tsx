@@ -261,11 +261,11 @@ const result1 = size.fileFinishedImporting(
 export { GuildRoleSubscriptionSettingsVisibility };
 export { canSeeGuildRoleSubscriptionSettingsContent };
 export { computeGuildRoleSubscriptionSettingsVisibility };
-export const canSeeGuildRoleSubscriptionSettings = function canSeeGuildRoleSubscriptionSettings(guild) {
+export function canSeeGuildRoleSubscriptionSettings(guild) {
   return computeGuildRoleSubscriptionSettingsVisibility(guild) !== obj.NONE;
-};
+}
 export const useGuildRoleSubscriptionSettingsVisibility = tmp3;
-export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleSubscriptionSettingsVisibility(guild) {
+export function getGuildRoleSubscriptionSettingsVisibility(guild) {
   if (null == guild) {
     return obj.NONE;
   } else {
@@ -287,7 +287,7 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
     obj2.shouldRestrictUpdatingRoleSubscriptionSettings = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
     return computeGuildRoleSubscriptionSettingsVisibility(obj2);
   }
-};
+}
 export { useCanSeeGuildRoleSubscriptionSettings };
 export const useCanManageGuildRoleSubscriptions = tmp5;
 export { canManageGuildRoleSubscriptions };

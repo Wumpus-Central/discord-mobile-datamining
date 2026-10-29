@@ -37,7 +37,7 @@ function onConfirmBackups(onSuccess) {
 const Constants = fn(1084);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOnViewBackups() {
       const cResult = c.c(1);
@@ -66,7 +66,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const intl3 = closure_0(1125).intl;
           obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
           obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-          closure_1(16328)(obj);
+          closure_1(16566)(obj);
           return false;
         };
         cResult[0] = fn;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = closure_0(1125).intl;
         obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
         obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-        closure_1(16328)(obj);
+        closure_1(16566)(obj);
         return false;
       }, []);
     };
@@ -110,8 +110,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(8365).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(16239).useIs2FAEnabled,
+  parent: fn(8387).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(16477).useIs2FAEnabled,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
     ? function useOnViewBackups() {
         const cResult = c.c(1);
@@ -140,7 +140,7 @@ const route = SettingBuilders.createRoute({
             const intl3 = closure_0(1125).intl;
             obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
             obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-            closure_1(16328)(obj);
+            closure_1(16566)(obj);
             return false;
           };
           cResult[0] = fn;
@@ -175,7 +175,7 @@ const route = SettingBuilders.createRoute({
           const intl3 = closure_0(1125).intl;
           obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
           obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-          closure_1(16328)(obj);
+          closure_1(16566)(obj);
           return false;
         }, []);
       },

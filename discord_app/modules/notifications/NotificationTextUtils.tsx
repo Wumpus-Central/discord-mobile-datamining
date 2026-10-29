@@ -162,7 +162,7 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1084);
 ({
@@ -174,14 +174,14 @@ const Constants = fn(1084);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 const ThreadMemberFlags = fn(1124).ThreadMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
 
 export { shouldNotifyBase };
-export const shouldNotify = function shouldNotify(message, channel_id) {
+export function shouldNotify(message, channel_id) {
   let flag = result;
   if (result === undefined) {
     flag = true;
@@ -314,8 +314,8 @@ export const shouldNotify = function shouldNotify(message, channel_id) {
     }
   }
   return false;
-};
-export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedChannel(type, arg1) {
+}
+export function shouldNotifyForSelectedChannel(type, arg1) {
   if (SelectedChannelStore.getChannelId(SelectedGuildStore.getGuildId()) !== arg1) {
     return false;
   } else {
@@ -370,8 +370,8 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
     }
     return tmp7;
   }
-};
-export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumThreadCreation(channel, channel1, arg2) {
+}
+export function shouldNotifyForForumThreadCreation(channel, channel1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -405,8 +405,8 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
     tmp3 = tmp9;
   }
   return tmp3;
-};
-export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
+}
+export function shouldNotifyForReaction(arg0) {
   ({ channel, reactor, includeSelectedChannel, message } = arg0);
   const currentUser = UserStore.getCurrentUser();
   const author = message.author;
@@ -435,8 +435,8 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
     tmp5 = tmp10;
   }
   return tmp5;
-};
-export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChannel() {
+}
+export function shouldIncludeSelectedChannel() {
   const state = VoicePanelStore.getState();
   let flag = true;
   if (!state.isVoicePanelFullscreen()) {
@@ -453,9 +453,9 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
     }
   }
   return flag;
-};
+}
 export { renderTitle };
-export const makeTextChatNotification = function makeTextChatNotification(getGuildId, content, bot) {
+export function makeTextChatNotification(getGuildId, content, bot) {
   const name = NicknameUtilsDefault.getName(getGuildId.getGuildId(), getGuildId.id, bot);
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
@@ -697,8 +697,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
   } else {
     tmp5 = renderTitle(name, getGuildId, channel);
   }
-};
-export const allowInAppNotifications = function allowInAppNotifications() {
+}
+export function allowInAppNotifications() {
   if (UserRequiredActionStore.hasAction()) {
     return false;
   } else {
@@ -709,7 +709,7 @@ export const allowInAppNotifications = function allowInAppNotifications() {
     }
     return setting;
   }
-};
+}
 export const useAllowInAppNotifications = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAllowInAppNotifications() {
       const cResult = c.c(2);

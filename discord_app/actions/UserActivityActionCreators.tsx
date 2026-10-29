@@ -51,23 +51,23 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
-export const sync = function sync(activity, userId) {
+export function sync(activity, userId) {
   DispatcherDefault.dispatch({ type: "ACTIVITY_SYNC", activity, userId });
-};
-export const play = function play(activity, userId) {
+}
+export function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequireImpl")(11383, dependencyMap.paths);
-  const nextPromise = require("asyncRequireImpl")(11383, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
+  const promise = require("asyncRequireImpl")(11437, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(11437, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
     getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
   );
-  require("asyncRequireImpl")(11383, dependencyMap.paths)
+  require("asyncRequireImpl")(11437, dependencyMap.paths)
     .then((getSpotifyMetadataFromActivity) =>
       getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
     )
     .then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata }))
     .catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
-};
-export const getMetadata = function getMetadata() {
+}
+export function getMetadata() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -76,4 +76,4 @@ export const getMetadata = function getMetadata() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

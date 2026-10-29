@@ -10,6 +10,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_gate/ServerNSFWLevelExperiment.tsx");
 
 export const ServerNSFWLevelExperiment = apexExperiment;
-export const isServerNSFWLevelEnabled = function isServerNSFWLevelEnabled(guild_record) {
+export function isServerNSFWLevelEnabled(guild_record) {
   return apexExperiment.getConfig({ location: guild_record }).enabled;
-};
+}

@@ -15,10 +15,10 @@ const map = new Map(items1);
 const set = new Set(Object.values(LegacyBadgeIdMap.LEGACY_BADGE_ID_MAP));
 const result = size.fileFinishedImporting("modules/badges/BadgeIdResolution.tsx");
 
-export const legacyBadgeIdToBadgeId = function legacyBadgeIdToBadgeId(arg0) {
+export function legacyBadgeIdToBadgeId(arg0) {
   return LegacyBadgeIdMap.LEGACY_BADGE_ID_MAP[arg0];
-};
-export const resolveProfileBadgeId = function resolveProfileBadgeId(id) {
+}
+export function resolveProfileBadgeId(id) {
   const tmp3 = LegacyBadgeIdMap.LEGACY_BADGE_ID_MAP[id];
   if (null != tmp3) {
     return tmp3;
@@ -30,14 +30,14 @@ export const resolveProfileBadgeId = function resolveProfileBadgeId(id) {
     }
     return tmp5;
   }
-};
-export const toProfileBadgeLegacyId = function toProfileBadgeLegacyId(badge_id) {
+}
+export function toProfileBadgeLegacyId(badge_id) {
   value = map.get(badge_id);
   if (value == null) {
     value = getBadgeName(badge_id);
   }
   return value;
-};
-export const isLegacyBadgeId = function isLegacyBadgeId(badge_id) {
+}
+export function isLegacyBadgeId(badge_id) {
   return set.has(badge_id);
-};
+}

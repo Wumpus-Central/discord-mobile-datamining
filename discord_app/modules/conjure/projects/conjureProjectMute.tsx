@@ -74,7 +74,7 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
         items1,
       );
     };
-export const setConjureProjectMuted = function setConjureProjectMuted(id, arg1) {
+export function setConjureProjectMuted(id, arg1) {
   _require = id;
   dependencyMap = arg1;
   const PreloadedUserSettingsActionCreators =
@@ -95,4 +95,4 @@ export const setConjureProjectMuted = function setConjureProjectMuted(id, arg1) 
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
-};
+}

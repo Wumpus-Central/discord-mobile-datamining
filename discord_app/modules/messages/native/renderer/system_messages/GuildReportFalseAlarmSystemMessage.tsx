@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx",
 );
 
-export const createGuildReportFalseAlarmSystemMessage = function createGuildReportFalseAlarmSystemMessage(roleStyle) {
+export function createGuildReportFalseAlarmSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   const channel = ChannelStore.getChannel(message.channel_id);
   const tmp2 = resolveMessageContentColorsDefault(theme);
@@ -46,4 +46,4 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
   obj4.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp7);
   return obj4;
-};
+}

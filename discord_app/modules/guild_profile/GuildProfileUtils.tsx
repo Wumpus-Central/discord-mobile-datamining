@@ -8,7 +8,7 @@ let closure_2 = ChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
-export const getEstablishedDate = function getEstablishedDate(tmpResult4, stateFromStores) {
+export function getEstablishedDate(tmpResult4, stateFromStores) {
   if (null != tmpResult4) {
     if ("" !== tmpResult4) {
       const _Date = Date;
@@ -26,8 +26,8 @@ export const getEstablishedDate = function getEstablishedDate(tmpResult4, stateF
     }
   }
   return null;
-};
-export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(guild) {
+}
+export function guildInviteCanEmbedProfile(guild) {
   if (null == guild.guild) {
     return false;
   } else {
@@ -50,4 +50,4 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       return !isGuildVoiceOrThreadResult;
     }
   }
-};
+}

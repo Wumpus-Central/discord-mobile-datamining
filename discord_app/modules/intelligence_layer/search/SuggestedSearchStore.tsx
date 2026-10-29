@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/SuggestedSearchStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01456_priv.js";
+import privDefault from "../../../../_runtime/01457_priv.js";
 import SmartSearchUtils from "SmartSearchUtils.tsx";
 import SmartSearchConstants from "SmartSearchConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

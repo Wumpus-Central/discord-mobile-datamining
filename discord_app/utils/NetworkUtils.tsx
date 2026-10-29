@@ -20,11 +20,11 @@ obj.awaitOnline = function awaitOnline() {
       closure_2.push(fn);
       if (!c3) {
         c3 = true;
-        tmp(1481).default.addOnlineCallback(whenOnline);
-        const _default2 = tmp(1481).default;
+        tmp(1482).default.addOnlineCallback(whenOnline);
+        const _default2 = tmp(1482).default;
       }
     }
-    _default = whenOnline(1481).default;
+    _default = whenOnline(1482).default;
     tmp = whenOnline;
   });
 };

@@ -35,23 +35,23 @@ export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = {
   minute: "2-digit",
 };
 export { MembersTableDateFormats };
-export const getMembersTableTimestampFormatter = function getMembersTableTimestampFormatter(arg0) {
+export function getMembersTableTimestampFormatter(arg0) {
   if (arg0 === obj.JOINED_AT) {
     let tmp2 = getJoinedAtDateFormatter;
   } else if (arg0 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
   return tmp2;
-};
-export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1) {
+}
+export function formatDateRelativeTime(arg0, arg1) {
   if (arg1 === obj.JOINED_AT) {
     let tmp2 = getJoinedAtDateFormatter;
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
   return threads_getTimestampStringDefault(arg0, tmp2, false);
-};
-export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
+}
+export function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {
     const _Date2 = Date;
     let date = new Date(joinedAt);
@@ -60,4 +60,4 @@ export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
     date = new Date();
   }
   return date.getTime();
-};
+}

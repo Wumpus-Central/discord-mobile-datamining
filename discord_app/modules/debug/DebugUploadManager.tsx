@@ -16,7 +16,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       } else {
         c5 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp35) {
       closure_4 = tmp35;
@@ -129,7 +129,7 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -349,7 +349,7 @@ const CrashReportingManager = fn(17).NativeModules.CrashReportingManager;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/debug/DebugUploadManager.tsx");
 
-export const uploadDebugLogFiles = function uploadDebugLogFiles() {
+export function uploadDebugLogFiles() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -358,5 +358,5 @@ export const uploadDebugLogFiles = function uploadDebugLogFiles() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { uploadAppLogFiles };

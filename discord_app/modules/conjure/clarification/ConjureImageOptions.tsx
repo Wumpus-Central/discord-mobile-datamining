@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/ConjureImageOptions.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import MaskedLinkStoreMethodsAdditional from "../../../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
@@ -9,18 +9,18 @@ let closure_4 = [];
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/clarification/ConjureImageOptions.tsx");
 
-export const isImageQuestion = function isImageQuestion(options) {
+export function isImageQuestion(options) {
   options = options.options;
   return options.some((image) => null != image.image);
-};
-export const imageOptionsLayout = function imageOptionsLayout(options) {
+}
+export function imageOptionsLayout(options) {
   let str = "row";
   if (options.length > 4) {
     str = "gallery";
   }
   return str;
-};
-export const viewableImageOptions = function viewableImageOptions(items) {
+}
+export function viewableImageOptions(items) {
   return items.flatMap((image) => {
     if (null != image.image) {
       const obj = {};
@@ -33,8 +33,8 @@ export const viewableImageOptions = function viewableImageOptions(items) {
     }
     return items1;
   });
-};
-export const answeredOptionIds = function answeredOptionIds(first1) {
+}
+export function answeredOptionIds(first1) {
   let kind;
   if (first1 != null) {
     kind = first1.kind;
@@ -46,20 +46,20 @@ export const answeredOptionIds = function answeredOptionIds(first1) {
     tmp2 = closure_4;
   }
   return tmp2;
-};
-export const imageOptionViewerSize = function imageOptionViewerSize(value) {
+}
+export function imageOptionViewerSize(value) {
   const bound = Math.max(1, 480 / Math.max(value.width, value.height));
   const size = { width: Math.round(value.width * bound), height: Math.round(value.height * bound) };
   return size;
-};
-export const ownImageOption = function ownImageOption(image) {
+}
+export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3863.SUdqCQ);
+  obj.label = intl.string(_modDef3864.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
-};
-export const registrableDomain = function registrableDomain(str) {
+}
+export function registrableDomain(str) {
   str = str.toLowerCase();
   const parts = str.split(".");
   if (parts.length >= 2) {
@@ -84,8 +84,8 @@ export const registrableDomain = function registrableDomain(str) {
     obj2 = /^\d+$/;
   }
   return str;
-};
-export const imageOptionCaption = function imageOptionCaption(option) {
+}
+export function imageOptionCaption(option) {
   const image = option.image;
   let page_url;
   if (image != null) {
@@ -135,10 +135,10 @@ export const imageOptionCaption = function imageOptionCaption(option) {
     label = option.label;
   }
   return label;
-};
-export const ownImageUploadText = function ownImageUploadText(question) {
+}
+export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef3863;
+  const tmp2 = _modDef3864;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
-};
+}

@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../FramesStore.tsx";
 
 require = fn;
-const isLaunched = fn(6811).isLaunched;
+const isLaunched = fn(6834).isLaunched;
 const ComponentActions = fn(1084).ComponentActions;
-let closure_8 = fn(10782).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_8 = fn(10862).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
@@ -46,7 +46,7 @@ export default function useInlineFrameOAuthNavigation(applicationId) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {

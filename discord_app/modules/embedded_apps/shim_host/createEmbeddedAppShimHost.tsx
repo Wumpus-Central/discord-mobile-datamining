@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx");
 
-export const createEmbeddedAppShimHost = function createEmbeddedAppShimHost(arg0) {
+export function createEmbeddedAppShimHost(arg0) {
   ({ onConnect: require, onMessage } = arg0);
   const map = new Map();
   closure_3 = require("connection").createChildConnector(onMessage, () => {
@@ -31,4 +31,4 @@ export const createEmbeddedAppShimHost = function createEmbeddedAppShimHost(arg0
     },
   };
   return obj2;
-};
+}

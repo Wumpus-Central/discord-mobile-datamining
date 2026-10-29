@@ -6,11 +6,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [
-  fn(8867).PlatformType.DESKTOP,
+  fn(8870).PlatformType.DESKTOP,
   "mobile",
-  fn(8867).PlatformType.XBOX,
-  fn(8867).PlatformType.PLAYSTATION,
-  fn(8867).PlatformType.NINTENDO,
+  fn(8870).PlatformType.XBOX,
+  fn(8870).PlatformType.PLAYSTATION,
+  fn(8870).PlatformType.NINTENDO,
+  fn(8870).PlatformType.ROBLOX,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -82,21 +83,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
       }, items);
     };
-export const getGameProfilePlatformText = function getGameProfilePlatformText(item) {
+export function getGameProfilePlatformText(item) {
   if (PlatformType.PlatformType.DESKTOP === item) {
-    const intl5 = util.intl;
-    return intl5.string(util.t.KT6uCJ);
+    const intl6 = util.intl;
+    return intl6.string(util.t.KT6uCJ);
   } else if ("mobile" === item) {
-    const intl4 = util.intl;
-    return intl4.string(util.t["0DvssQ"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["0DvssQ"]);
   } else if (PlatformType.PlatformType.XBOX === item) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.DDWUJp);
+    const intl4 = util.intl;
+    return intl4.string(util.t.DDWUJp);
   } else if (PlatformType.PlatformType.PLAYSTATION === item) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.fzMz2s);
+    const intl3 = util.intl;
+    return intl3.string(util.t.fzMz2s);
   } else if (PlatformType.PlatformType.NINTENDO === item) {
+    const intl2 = util.intl;
+    return intl2.string(util.t.AMW8je);
+  } else if (PlatformType.PlatformType.ROBLOX === item) {
     const intl = util.intl;
-    return intl.string(util.t.AMW8je);
+    return intl.string(util.t.MPURhG);
   }
-};
+}

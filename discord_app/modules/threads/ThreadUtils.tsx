@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
 import threads_getTimestampStringDefault from "getTimestampString.tsx";
@@ -30,26 +30,23 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadUtils.tsx");
 
 export const getTimestampString = threads_getTimestampStringDefault;
-export const getTimestampAccessibilityLabel = function getTimestampAccessibilityLabel(extractTimestampResult) {
+export function getTimestampAccessibilityLabel(extractTimestampResult) {
   return threads_getTimestampStringDefault(extractTimestampResult, getAccessibilityLabelFormatter);
-};
-export const trackThreadBrowserTab = function trackThreadBrowserTab() {
+}
+export function trackThreadBrowserTab() {
   AppAnalyticsUtils.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
-};
-export const trackThreadBrowserOpened = function trackThreadBrowserOpened() {
+}
+export function trackThreadBrowserOpened() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "Modal";
   }
   AppAnalyticsUtils.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
-};
-export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutOpened() {
+}
+export function trackActiveThreadsPopoutOpened() {
   AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
-};
-export const trackThreadNotificationSettingsUpdated = function trackThreadNotificationSettingsUpdated(
-  getGuildId,
-  flags,
-) {
+}
+export function trackThreadNotificationSettingsUpdated(getGuildId, flags) {
   const result = ThreadAnalyticsUtils.collectThreadMetadata(getGuildId);
   if (null != result) {
     const guildId = getGuildId.getGuildId();
@@ -113,7 +110,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     const tmpResult3 = NotificationSettingsUtils;
     AnalyticsUtilsDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj2);
   }
-};
+}
 export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLastMessageTimestamp(id) {
       _require = id;
@@ -156,8 +153,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       if (cResult[5] !== createTimestamp) {
         let valueOfResult = null;
         if (null != createTimestamp) {
-          valueOfResult = _modDef2046(createTimestamp).valueOf();
-          const obj4 = _modDef2046(createTimestamp);
+          valueOfResult = _modDef2047(createTimestamp).valueOf();
+          const obj4 = _modDef2047(createTimestamp);
         }
         cResult[5] = createTimestamp;
         cResult[6] = valueOfResult;
@@ -204,8 +201,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       }
       let valueOfResult = null;
       if (null != createTimestamp) {
-        valueOfResult = _modDef2046(createTimestamp).valueOf();
-        const obj3 = _modDef2046(createTimestamp);
+        valueOfResult = _modDef2047(createTimestamp).valueOf();
+        const obj3 = _modDef2047(createTimestamp);
       }
       if (extractTimestampResult == null) {
         extractTimestampResult = valueOfResult;

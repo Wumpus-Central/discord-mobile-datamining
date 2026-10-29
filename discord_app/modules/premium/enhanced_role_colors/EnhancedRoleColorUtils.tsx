@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;
 const result = size.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
 
-export const extractColorStringsFromServerColors = function extractColorStringsFromServerColors(colors) {
+export function extractColorStringsFromServerColors(colors) {
   if (0 === colors.primary_color) {
     let int2hexResult = DEFAULT_ROLE_COLOR_HEX;
   } else {
@@ -24,8 +24,8 @@ export const extractColorStringsFromServerColors = function extractColorStringsF
   }
   obj2.tertiaryColor = int2hexResult2;
   return obj2;
-};
-export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorStrings) {
+}
+export function getAuthorHasGradientRole(colorStrings) {
   let tmp = null != colorStrings;
   if (tmp) {
     tmp =
@@ -38,8 +38,8 @@ export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorS
       null != colorStrings.colorStrings.secondaryColor;
   }
   return tmp;
-};
-export const getIsDefaultErc = function getIsDefaultErc(role) {
+}
+export function getIsDefaultErc(role) {
   let tmp = null != role.colors;
   if (tmp) {
     tmp = 0 === role.colors.primary_color;
@@ -51,4 +51,4 @@ export const getIsDefaultErc = function getIsDefaultErc(role) {
     tmp = null == role.colors.tertiary_color;
   }
   return 0 === role.color || tmp;
-};
+}

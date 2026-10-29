@@ -5,7 +5,7 @@ import embeddedActivityLocationUtils from "../../../activities/utils/embeddedAct
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05334_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
@@ -27,15 +27,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10939);
+const VoicePanelConstants = fn(10974);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10937).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18731).VoicePanelPIPModes;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
-const isLaunched = fn(6811).isLaunched;
+const VoicePanelControlsModes = fn(10972).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18965).VoicePanelPIPModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
+const isLaunched = fn(6834).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

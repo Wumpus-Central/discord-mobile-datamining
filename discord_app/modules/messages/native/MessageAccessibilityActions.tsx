@@ -18,7 +18,7 @@ const MessageAccessibilityAction = {
 let result = size.fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
 
 export { MessageAccessibilityAction };
-export const getMessageAccessibilityActionFromLabel = function getMessageAccessibilityActionFromLabel(action) {
+export function getMessageAccessibilityActionFromLabel(action) {
   const obj = {};
   const intl = util.intl;
   obj[intl.string(util.t.iXAna6)] = obj.VIEW_PROFILE;
@@ -58,8 +58,8 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
     obj[formatToPlainStringResult] = obj.ADD_QUICK_REACTION;
   }
   return obj[action];
-};
-export const createMessageAccessibilityActions = function createMessageAccessibilityActions(message, channel) {
+}
+export function createMessageAccessibilityActions(message, channel) {
   if (null == channel) {
     return [];
   } else {
@@ -113,4 +113,4 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
     items.push(obj6);
     return items;
   }
-};
+}

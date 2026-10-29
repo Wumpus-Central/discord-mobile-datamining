@@ -348,7 +348,7 @@ export const DiscountIdToProductOfferId = {
   },
 };
 export const BOGO_OFFER_ID = "premium-tier-2-monthly-bogo";
-export const getProductIdForGift = function getProductIdForGift(planIdForPremiumType) {
+export function getProductIdForGift(planIdForPremiumType) {
   if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_0;
   } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === planIdForPremiumType) {
@@ -366,8 +366,8 @@ export const getProductIdForGift = function getProductIdForGift(planIdForPremium
     const error = new Error("Tried to get Product for Plan not configured for IAP!");
     throw error;
   }
-};
-export const getPlanIdForGift = function getPlanIdForGift(arg0) {
+}
+export function getPlanIdForGift(arg0) {
   if (frozen.PREMIUM_GIFT_MONTH_TIER_0 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_0;
   } else if (frozen.PREMIUM_GIFT_YEAR_TIER_0 === arg0) {
@@ -385,4 +385,4 @@ export const getPlanIdForGift = function getPlanIdForGift(arg0) {
     const error = new Error("Tried to get Plan for Product not configured for IAP!");
     throw error;
   }
-};
+}

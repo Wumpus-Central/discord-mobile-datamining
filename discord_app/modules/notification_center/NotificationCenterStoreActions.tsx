@@ -4,12 +4,12 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterStoreActions.tsx");
 
-export const setTab = function setTab(dependencyMap) {
+export function setTab(dependencyMap) {
   DispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_SET_TAB", tab: dependencyMap });
-};
-export const clearNotificationGuildMentions = function clearNotificationGuildMentions() {
+}
+export function clearNotificationGuildMentions() {
   DispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS" });
-};
-export const refreshNotifications = function refreshNotifications() {
+}
+export function refreshNotifications() {
   DispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_REFRESH" });
-};
+}

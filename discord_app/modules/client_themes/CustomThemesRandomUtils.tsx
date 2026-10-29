@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/client_themes/CustomThemesRan
 export const COLOR_PALETTE = items;
 export { ColorType };
 export const GradientType = obj2;
-export const generateRandomColorOptions = function generateRandomColorOptions() {
+export function generateRandomColorOptions() {
   const tmp = length2[Math.floor(Math, Math.random(Math) * length2.length)];
   const tmp2 = length[Math.floor(Math, Math.random(Math) * length.length)];
   let str = "path2";
@@ -155,4 +155,4 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
     };
     return obj2;
   }
-};
+}

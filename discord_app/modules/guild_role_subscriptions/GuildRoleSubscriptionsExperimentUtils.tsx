@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
 
-export const hasEnabledMonetization = function hasEnabledMonetization(arg0) {
+export function hasEnabledMonetization(arg0) {
   let features = arg0;
   let someResult = null != arg0;
   if (someResult) {
@@ -25,8 +25,8 @@ export const hasEnabledMonetization = function hasEnabledMonetization(arg0) {
     });
   }
   return someResult;
-};
-export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTemplates(id) {
+}
+export function isGuildEligibleForTierTemplates(id) {
   guild = GuildStore.getGuild(id);
   let flag;
   if (guild != null) {
@@ -37,7 +37,7 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
     flag = false;
   }
   return flag;
-};
+}
 export const useGuildEligibleForTierTemplates = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildEligibleForTierTemplates(arg0) {
       _require = arg0;

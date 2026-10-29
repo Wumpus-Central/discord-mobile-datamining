@@ -44,7 +44,7 @@ export const useConjureStaffAccessTarget = ReactCompilerGating.isReactCompilerEn
               tmp7 = closure_1_2;
               tmp8 = item10017;
               selectableChannels = closure_1_2.getSelectableChannels(tmp5.id);
-              found = selectableChannels.find(() => { ... });
+              found = selectableChannels.find(/* F152335 */ function() { ... });
               tmp10 = found;
               if (null != found) {
                 obj1 = { isStaff: null, guildId: null, channelId: null };
@@ -115,7 +115,7 @@ export const useConjureStaffAccessTarget = ReactCompilerGating.isReactCompilerEn
               tmp7 = closure_1_2;
               tmp8 = item10017;
               selectableChannels = closure_1_2.getSelectableChannels(tmp5.id);
-              found = selectableChannels.find(() => { ... });
+              found = selectableChannels.find(/* F152335 */ function() { ... });
               tmp10 = found;
               if (null != found) {
                 obj1 = { isStaff: null, guildId: null, channelId: null };

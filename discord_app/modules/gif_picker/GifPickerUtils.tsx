@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
 
-export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favorites, first2) {
+export function filterFavoriteGIFsByQuery(favorites, first2) {
   if ("" === first2) {
     return favorites;
   } else {
@@ -13,4 +13,4 @@ export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favo
       return replaced.includes(closure_0);
     });
   }
-};
+}

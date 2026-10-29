@@ -10,6 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/video-qoe/experiments/VideoQoEMetricsExperiment.tsx");
 
-export const getVideoQoEMetricsConfig = function getVideoQoEMetricsConfig(location) {
+export function getVideoQoEMetricsConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

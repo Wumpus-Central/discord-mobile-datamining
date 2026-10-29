@@ -3,7 +3,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
-export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
+export function installWebsocketTelemetryHook(arg0) {
   closure_0 = arg0;
   function handleMessage(arg0, str) {
     const obj = {};
@@ -140,4 +140,4 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       _globalThis.__discordWebsocketTelemetryPatched = true;
     }
   }
-};
+}

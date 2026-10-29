@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/conjureAgentReaction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const re3 = /^\d{17,20}$/;
 const re4 = /^\w{2,32}$/;
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureAgentReaction.tsx");
 
-export const agentReactionFromStep = function agentReactionFromStep(setting) {
+export function agentReactionFromStep(setting) {
   let animated = setting;
   ({ emoji, emoji_id } = setting);
   let tmp = null;
@@ -32,16 +32,16 @@ export const agentReactionFromStep = function agentReactionFromStep(setting) {
     }
   }
   return tmp;
-};
-export const sameAgentReaction = function sameAgentReaction(agentReaction, reaction) {
+}
+export function sameAgentReaction(agentReaction, reaction) {
   return (
     null != agentReaction &&
     agentReaction.emoji === reaction.emoji &&
     agentReaction.emojiId === reaction.emojiId &&
     agentReaction.animated === reaction.animated
   );
-};
-export const getConjureAgentReactionLabel = function getConjureAgentReactionLabel(reaction) {
+}
+export function getConjureAgentReactionLabel(reaction) {
   if (null != reaction.emojiId) {
     const _HermesInternal = HermesInternal;
     let emojiName = ":" + reaction.emoji + ":";
@@ -49,5 +49,5 @@ export const getConjureAgentReactionLabel = function getConjureAgentReactionLabe
     emojiName = UnicodeEmojisDefault.convertSurrogateToName(reaction.emoji, false);
   }
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3863.lxXLho, { emojiName });
-};
+  return intl.formatToPlainString(_modDef3864.lxXLho, { emojiName });
+}

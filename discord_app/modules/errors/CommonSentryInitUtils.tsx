@@ -18,7 +18,7 @@ export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = [
   "http_request",
   "websocket_message_received",
 ];
-export const filterThrottle = function filterThrottle(arg0) {
+export function filterThrottle(arg0) {
   ({ maxBudgetMinute: closure_0, maxBudgetHour: closure_1 } = arg0);
   let minute = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };
   return () => {
@@ -46,4 +46,4 @@ export const filterThrottle = function filterThrottle(arg0) {
     }
     return flag;
   };
-};
+}

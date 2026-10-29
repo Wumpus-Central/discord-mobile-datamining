@@ -22,13 +22,13 @@ function VerificationListItem(verification) {
         let tmp9 = cResult[2];
       }
       if (cResult[3] !== verification2.timestamp) {
-        const secureFramesUserVerifiedTimestamp = TableRow(9229).getSecureFramesUserVerifiedTimestamp(
+        const secureFramesUserVerifiedTimestamp = TableRow(9233).getSecureFramesUserVerifiedTimestamp(
           verification2.timestamp,
         );
         cResult[3] = verification2.timestamp;
         cResult[4] = secureFramesUserVerifiedTimestamp;
         let tmp10 = secureFramesUserVerifiedTimestamp;
-        const TableRowResult = TableRow(9229);
+        const TableRowResult = TableRow(9233);
       } else {
         tmp10 = cResult[4];
       }
@@ -44,7 +44,7 @@ function VerificationListItem(verification) {
       }
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp17 = jsx(TableRow(6967).XSmallIcon, {});
+        const tmp17 = jsx(TableRow(6991).XSmallIcon, {});
         cResult[7] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -52,7 +52,7 @@ function VerificationListItem(verification) {
       }
       if (cResult[8] !== tmp9) {
         const obj3 = { onPress: tmp9, children: tmp15 };
-        const tmp20 = jsx(TableRow(6944).PressableHighlight, { onPress: tmp9, children: tmp15 });
+        const tmp20 = jsx(TableRow(6968).PressableHighlight, { onPress: tmp9, children: tmp15 });
         cResult[8] = tmp9;
         cResult[9] = tmp20;
         let tmp18 = tmp20;
@@ -67,7 +67,7 @@ function VerificationListItem(verification) {
           }
         }
       }
-      TableRow = TableRow(6939).TableRow;
+      TableRow = TableRow(6963).TableRow;
       const obj5 = { label: tmp12, subLabel: tmp10, start: start2, end: end2, trailing: tmp18 };
       tmp7 = <TableRow label={tmp12} subLabel={tmp10} start={start2} end={end2} trailing={tmp18} />;
       cResult[10] = end2;
@@ -105,12 +105,12 @@ function VerificationListItem(verification) {
     obj.subLabel = memo;
     obj.start = start;
     obj.end = end;
-    const obj7 = { onPress: callback, children: jsx(userId(6967).XSmallIcon, {}) };
-    obj.trailing = jsx(userId(6944).PressableHighlight, {
+    const obj7 = { onPress: callback, children: jsx(userId(6991).XSmallIcon, {}) };
+    obj.trailing = jsx(userId(6968).PressableHighlight, {
       onPress: callback,
-      children: jsx(userId(6967).XSmallIcon, {}),
+      children: jsx(userId(6991).XSmallIcon, {}),
     });
-    return jsx(userId(6939).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
+    return jsx(userId(6963).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
   }
 }
 function SectionListItem(title) {
@@ -122,7 +122,7 @@ function SectionListItem(title) {
     let section = closure_7();
     if (cResult[0] === section.section) {
     }
-    Text = Text(5270).Text;
+    Text = Text(5271).Text;
     const obj3 = { style: section.section, variant: "text-sm/semibold", color: "text-default", children: title };
     tmp6 = (
       <Text style={section.section} variant="text-sm/semibold" color="text-default">
@@ -174,7 +174,7 @@ function keyExtractor(type) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({
   list: { flexGrow: 1 },
   listContent: { paddingVertical: 32, paddingHorizontal: 16 },
@@ -205,7 +205,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
         const intl = tmp(1125).intl;
         obj2.children = intl.string(tmp(1125).t["2xL5lu"]);
-        const tmp7 = jsx(tmp(5270).Text, {
+        const tmp7 = jsx(tmp(5271).Text, {
           variant: "text-md/semibold",
           color: "text-feedback-critical",
           children: null,
@@ -219,7 +219,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
         const intl2 = tmp(1125).intl;
         obj3.children = intl2.string(tmp(1125).t.kgAfXN);
-        const tmp10 = jsx(tmp(5270).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
+        const tmp10 = jsx(tmp(5271).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
         cResult[3] = tmp10;
         let tmp8 = tmp10;
       } else {
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4) {
         const obj4 = { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true };
-        const tmp13 = jsx(tmp(6939).TableRow, { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true });
+        const tmp13 = jsx(tmp(6963).TableRow, { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true });
         cResult[4] = tmp4;
         cResult[5] = tmp13;
         let tmp11 = tmp13;
@@ -246,7 +246,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
       const intl = userId(1125).intl;
       obj2.children = intl.string(userId(1125).t["2xL5lu"]);
-      obj.label = jsx(userId(5270).Text, {
+      obj.label = jsx(userId(5271).Text, {
         variant: "text-md/semibold",
         color: "text-feedback-critical",
         children: null,
@@ -254,9 +254,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl2 = userId(1125).intl;
       obj3.children = intl2.string(userId(1125).t.kgAfXN);
-      obj.subLabel = jsx(userId(5270).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
+      obj.subLabel = jsx(userId(5271).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
       obj.onPress = callback;
-      return jsx(userId(6939).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
+      return jsx(userId(6963).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -269,9 +269,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = userId(576).c(29);
       const tmp4 = closure_7();
       let obj = userId(576);
-      userId = userId(7126).useSettingNavigationRoute().params.userId;
-      const obj2 = userId(7126);
-      const navigation = userId(1502).useNavigation();
+      userId = userId(7150).useSettingNavigationRoute().params.userId;
+      const obj2 = userId(7150);
+      const navigation = userId(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
@@ -289,14 +289,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj3 = userId(1502);
+      const obj3 = userId(1503);
       const stateFromStores = userId(504).useStateFromStores(first, tmp8);
       if (cResult[3] !== stateFromStores) {
-        const formattedName = navigation(5058).getFormattedName(stateFromStores, false);
+        const formattedName = navigation(5059).getFormattedName(stateFromStores, false);
         cResult[3] = stateFromStores;
         cResult[4] = formattedName;
         let tmp10 = formattedName;
-        const obj5 = navigation(5058);
+        const obj5 = navigation(5059);
       } else {
         tmp10 = cResult[4];
       }
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp13 = cResult[7];
         }
         const layoutEffect = items1.useLayoutEffect(tmp13);
-        const secureFramesUserVerifiedKeys = tmp(17523).useSecureFramesUserVerifiedKeys(userId);
+        const secureFramesUserVerifiedKeys = tmp(17762).useSecureFramesUserVerifiedKeys(userId);
         if (cResult[8] === userId) {
           if (cResult[9] === secureFramesUserVerifiedKeys) {
             items1 = cResult[10];
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   contentContainerStyle: tmp4.listContent,
                   ListFooterComponent: tmp24,
                 };
-                const tmp32 = jsx(tmp(7256).FlashList, {
+                const tmp32 = jsx(tmp(7280).FlashList, {
                   keyExtractor,
                   getItemType,
                   renderItem,
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         obj6 = items1;
-        const tmpResult2 = tmp(17523);
+        const tmpResult2 = tmp(17762);
       }
       class T {
         constructor() {
@@ -494,14 +494,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function SettingsSecureFramesVerificationsScreen() {
       const tmp = closure_7();
-      userId = userId(7126).useSettingNavigationRoute().params.userId;
-      let obj = userId(7126);
-      const navigation = userId(1502).useNavigation();
-      const obj2 = userId(1502);
+      userId = userId(7150).useSettingNavigationRoute().params.userId;
+      let obj = userId(7150);
+      const navigation = userId(1503).useNavigation();
+      const obj2 = userId(1503);
       let items = [UserStore];
       const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
       const obj3 = userId(504);
-      dependencyMap = navigation(5058).getFormattedName(stateFromStores, false);
+      dependencyMap = navigation(5059).getFormattedName(stateFromStores, false);
       const layoutEffect = secureFramesUserVerifiedKeys.useLayoutEffect(() => {
         let obj = { title: null, headerTitle: null };
         let intl = util.intl;
@@ -515,8 +515,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         navigation.setOptions(obj);
       });
-      const obj4 = navigation(5058);
-      secureFramesUserVerifiedKeys = userId(17523).useSecureFramesUserVerifiedKeys(userId);
+      const obj4 = navigation(5059);
+      secureFramesUserVerifiedKeys = userId(17762).useSecureFramesUserVerifiedKeys(userId);
       const items1 = [userId, secureFramesUserVerifiedKeys];
       const items2 = [navigation, secureFramesUserVerifiedKeys];
       const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -551,13 +551,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         contentContainerStyle: tmp.listContent,
         ListFooterComponent: null,
       };
-      const obj5 = userId(17523);
+      const obj5 = userId(17762);
       obj7.ListFooterComponent = (
         <View style={tmp.listFooter}>
           <closure_16 userId={userId} />
         </View>
       );
-      obj6.children = jsx(userId(7256).FlashList, {
+      obj6.children = jsx(userId(7280).FlashList, {
         keyExtractor,
         getItemType,
         renderItem,

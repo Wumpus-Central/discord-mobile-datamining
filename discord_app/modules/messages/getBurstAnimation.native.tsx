@@ -4,11 +4,6 @@ import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorSte
 const items = [
   {
     load() {
-      return closure_0(4964);
-    },
-  },
-  {
-    load() {
       return closure_0(4965);
     },
   },
@@ -92,13 +87,13 @@ const items = [
       return closure_0(4981);
     },
   },
-];
-const items1 = [
   {
     load() {
       return closure_0(4982);
     },
   },
+];
+const items1 = [
   {
     load() {
       return closure_0(4983);
@@ -184,6 +179,11 @@ const items1 = [
       return closure_0(4999);
     },
   },
+  {
+    load() {
+      return closure_0(5000);
+    },
+  },
 ];
 let closure_0 = asyncGeneratorStepDefault(function* (arg0, arg1, arg2) {
   if (c7 === 2) {
@@ -196,7 +196,7 @@ let closure_0 = asyncGeneratorStepDefault(function* (arg0, arg1, arg2) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let closure_0 = asyncGeneratorStepDefault(function* (arg0, arg1, arg2) {
           let burstAnimationHash;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -256,7 +256,7 @@ let closure_0 = asyncGeneratorStepDefault(function* (arg0, arg1, arg2) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
-export const getBurstAnimation = function getBurstAnimation() {
+export function getBurstAnimation() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -265,4 +265,4 @@ export const getBurstAnimation = function getBurstAnimation() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

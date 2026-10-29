@@ -21,7 +21,7 @@ require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { marginHorizontal: 16 },
   voiceBadgesContainer: { flexDirection: "row" },
@@ -141,7 +141,7 @@ let obj3 = {
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/FormComponents.tsx");
 
-export const VoicePanelFormSection = function VoicePanelFormSection(style) {
+export function VoicePanelFormSection(style) {
   if (closure_10) {
     let tmp14 = dependencyMap;
     const cResult = c.c(11);
@@ -196,7 +196,7 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
     obj5.children = React5(TableRowGroup.TableRowGroup, obj6);
     return React5(NativeViewDefault, obj5);
   }
-};
+}
 export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled()
   ? function MemberRowItem(user) {
       const cResult = user(nick[7]).c(48);

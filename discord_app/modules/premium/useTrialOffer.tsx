@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/useTrialOffer.tsx");
 
-export const hasUserTrialOfferExpired = function hasUserTrialOfferExpired(hasExpired) {
+export function hasUserTrialOfferExpired(hasExpired) {
   let flag;
   if (hasExpired != null) {
     flag = hasExpired.hasExpired;
@@ -20,7 +20,7 @@ export const hasUserTrialOfferExpired = function hasUserTrialOfferExpired(hasExp
     flag = false;
   }
   return flag;
-};
+}
 export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrialOffer(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
@@ -124,7 +124,7 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? (fun
                   num = time - Date.now();
                 }
                 if (closure_1_0 != null) {
-                  closure_1_0.start(num, () => { ... });
+                  closure_1_0.start(num, /* F161963 */ function() { ... });
                 }
               }
             });
@@ -223,7 +223,7 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? (fun
                             num = time - Date.now();
                           }
                           if (closure_1_0 != null) {
-                            closure_1_0.start(num, () => { ... });
+                            closure_1_0.start(num, /* F161964 */ function() { ... });
                           }
                         }
                       });

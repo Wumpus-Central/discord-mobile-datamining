@@ -559,7 +559,7 @@ const dependencyMap2 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "ix" };
+      let obj = { message_identity: "unknown", socket_kind: "application" };
     } else {
       const url = data.url;
       let tmp61 = null;
@@ -813,7 +813,7 @@ const dependencyMap2 = {
 };
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
 
-export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(key) {
+export function buildZoomedInAnalyticsEvent(key) {
   if (key.key.key in dependencyMap) {
     const tmp6 = dependencyMap[key](key);
     let tmp7 = null;
@@ -833,4 +833,4 @@ export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(
   } else {
     return null;
   }
-};
+}

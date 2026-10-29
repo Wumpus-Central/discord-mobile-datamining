@@ -15,7 +15,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1199).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RelationshipTypes.FRIEND,
       );
       const effect = stateFromStoresArray1.useEffect(() => {
-        const userAffinitiesV2 = closure_0(9116).fetchUserAffinitiesV2();
+        const userAffinitiesV2 = closure_0(9119).fetchUserAffinitiesV2();
       }, []);
       const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
       const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -216,12 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = {
-                  user,
-                  guildId: "r",
-                  size: closure_0(1199).AvatarSizes.XSMALL,
-                  cutout: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000558969690008211,
-                };
+                const obj4 = { user, guildId: "r", size: closure_0(1199).AvatarSizes.XSMALL, cutout: null };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -231,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1199).AvatarSizes.XSMALL,
-                  cutout: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000558969690008211,
+                  cutout: null,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>
@@ -251,12 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = {
-                  user,
-                  guildId: "r",
-                  size: closure_0(1199).AvatarSizes.XSMALL,
-                  cutout: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000558969690008211,
-                };
+                const obj4 = { user, guildId: "r", size: closure_0(1199).AvatarSizes.XSMALL, cutout: null };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -266,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1199).AvatarSizes.XSMALL,
-                  cutout: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000558969690008211,
+                  cutout: null,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>

@@ -4,7 +4,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05334_LegacyBaseButton.js";
 import useMuteStates from "../../../../video_calls/useMuteStates.tsx";
 import MicrophoneDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
@@ -31,7 +31,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_17 = createStyles.createStyles({
   text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 },
 });
@@ -254,7 +254,7 @@ const tmp3 = new LoggerDefault("VoicePanelMicButton");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx");
 
-export const PTTButton = function PTTButton(arg0) {
+export function PTTButton(arg0) {
   _require = undefined;
   let onPress2;
   let sharedValue;
@@ -381,7 +381,7 @@ export const PTTButton = function PTTButton(arg0) {
   items6[1] = closure_13(require("Text/Text").Text, obj6);
   obj5.children = items6;
   return closure_15(closure_14, obj5);
-};
+}
 export const MicButton = ReactCompilerGating.isReactCompilerEnabled()
   ? function MicButton(props) {
       const cResult = c.c(13);

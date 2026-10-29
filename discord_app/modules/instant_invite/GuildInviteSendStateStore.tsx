@@ -7,7 +7,7 @@ const require = globalThis.__r;
 const useGuildInviteSendStates = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
 
-export const setSendState = function setSendState(arg0, arg1, arg2) {
+export function setSendState(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
@@ -22,5 +22,5 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
       return obj;
     });
   });
-};
+}
 export { useGuildInviteSendStates };

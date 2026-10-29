@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishApprovalPrompt.native.tsx");
 
-export const promptPublishApproval = function promptPublishApproval(approval_url) {
+export function promptPublishApproval(approval_url) {
   _require = approval_url;
   let str = "publish";
   if (approval_url.includes("/enroll/")) {
@@ -15,7 +15,7 @@ export const promptPublishApproval = function promptPublishApproval(approval_url
   }
   if (obj.validPublishApproval(approval_url, str)) {
     ConjurePublishBlockedSheetDefault(
-      tmp(10840).ConjurePublishBlockedReason.PUBLISH_APPROVAL_REQUIRED,
+      tmp(10916).ConjurePublishBlockedReason.PUBLISH_APPROVAL_REQUIRED,
       undefined,
       () => {
         LinkingDefault.openURL(closure_0);
@@ -24,4 +24,4 @@ export const promptPublishApproval = function promptPublishApproval(approval_url
   }
   obj = require("conjurePublishApproval");
   tmp = _require;
-};
+}

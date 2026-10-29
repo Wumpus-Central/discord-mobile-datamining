@@ -233,8 +233,8 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
 prototype["getCustomStatusActivity"] = function getCustomStatusActivity() {
   return this.findActivity((type) => type.type === constants.CUSTOM_STATUS);
 };
-prototype["findActivity"] = function findActivity(cResult) {
-  return closure_20.find(cResult);
+prototype["findActivity"] = function findActivity(arg0) {
+  return closure_20.find(arg0);
 };
 prototype["getApplicationActivities"] = function getApplicationActivities() {
   return closure_21;

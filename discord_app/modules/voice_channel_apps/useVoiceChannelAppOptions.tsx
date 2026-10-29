@@ -156,7 +156,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                   flag = true;
                   applications = obj.fetchApplications(found, true);
                   catchPromise = applications.catch(() => closure_1_4(true));
-                  cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                 }
                 return;
               }
@@ -189,7 +189,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                   flag = true;
                   applications = obj.fetchApplications(found, true);
                   catchPromise = applications.catch(() => closure_1_4(true));
-                  cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                 }
                 return;
               }
@@ -220,7 +220,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                   flag = true;
                   applications = obj.fetchApplications(found, true);
                   catchPromise = applications.catch(() => closure_1_4(true));
-                  cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                 }
                 return;
               }
@@ -249,7 +249,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                     flag = true;
                     applications = obj.fetchApplications(found, true);
                     catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                   }
                   return;
                 }
@@ -280,7 +280,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                     flag = true;
                     applications = obj.fetchApplications(found, true);
                     catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                   }
                   return;
                 }
@@ -309,7 +309,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                     flag = true;
                     applications = obj.fetchApplications(found, true);
                     catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                   }
                   return;
                 }
@@ -342,7 +342,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                     flag = true;
                     applications = obj.fetchApplications(found, true);
                     catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                   }
                   return;
                 }
@@ -374,7 +374,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                     flag = true;
                     applications = obj.fetchApplications(found, true);
                     catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                   }
                   return;
                 }
@@ -402,7 +402,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                       flag = true;
                       applications = obj.fetchApplications(found, true);
                       catchPromise = applications.catch(() => closure_1_4(true));
-                      cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                      cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                     }
                     return;
                   }
@@ -430,7 +430,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                       flag = true;
                       applications = obj.fetchApplications(found, true);
                       catchPromise = applications.catch(() => closure_1_4(true));
-                      cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                      cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                     }
                     return;
                   }
@@ -461,7 +461,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
                     flag = true;
                     applications = obj.fetchApplications(found, true);
                     catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
                   }
                   return;
                 }
@@ -469,12 +469,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
             }
             const tmpResult5 = tmp(504);
             let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(18553).voiceChannelAppListState(obj3);
+            const result = tmp(18787).voiceChannelAppListState(obj3);
             cResult[31] = str;
             cResult[32] = "error" === stateFromStores || tmp35;
             cResult[33] = arr8.length > 0;
             cResult[34] = result;
-            const tmpResult6 = tmp(18553);
+            const tmpResult6 = tmp(18787);
           }
           closure_130_0 = tmp21;
           let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));

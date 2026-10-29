@@ -251,12 +251,7 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
       let obj = require("initialize");
       return { analytics, notice: getNotice(errorCode, tmp) };
     };
-export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(
-  communicators,
-  communicatorsChange,
-  stateFromStores,
-  arg3,
-) {
+export function getGuildAnalyticsCardProps(communicators, communicatorsChange, stateFromStores, arg3) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -303,4 +298,4 @@ export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(
     const intl2 = util.intl;
     formatToPlainStringResult = intl2.string(util.t.xO2msf);
   }
-};
+}

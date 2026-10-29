@@ -200,7 +200,7 @@ const re12 = /^<([a-zA-Z0-9-]+)>/;
 let result = size.fileFinishedImporting("modules/conjure/design_feedback/ConjureDesignFeedback.tsx");
 
 export const CONJURE_DESIGN_ANCHOR_CENTER = frozen;
-export const conjureDesignAnchorFor = function conjureDesignAnchorFor(rect, arg1, arg2) {
+export function conjureDesignAnchorFor(rect, arg1, arg2) {
   ({ width, height } = rect.rect);
   if (width >= 1) {
     if (height >= 1) {
@@ -215,12 +215,12 @@ export const conjureDesignAnchorFor = function conjureDesignAnchorFor(rect, arg1
     return point;
   }
   point = frozen;
-};
+}
 export const CONJURE_DESIGN_COMMENT_MAX = 1000;
-export const isConjureDesignCommentUsable = function isConjureDesignCommentUsable(str) {
+export function isConjureDesignCommentUsable(str) {
   return "" !== str.trim();
-};
-export const hitTestConjureDesignTargets = function hitTestConjureDesignTargets(arg0, arg1, arg2) {
+}
+export function hitTestConjureDesignTargets(arg0, arg1, arg2) {
   let tmp = null;
   let num = Infinity;
   const iter = arg0[Symbol.iterator]();
@@ -249,23 +249,23 @@ export const hitTestConjureDesignTargets = function hitTestConjureDesignTargets(
     continue;
   }
   return tmp;
-};
+}
 export { labelConjureDesignTarget };
-export const describeConjureDesignTarget = function describeConjureDesignTarget(target) {
+export function describeConjureDesignTarget(target) {
   const items = [,];
   ({ kind: arr[0], name: arr[1] } = labelConjureDesignTarget(target));
   const found = items.filter((item) => "" !== item);
   return found.join(" ");
-};
-export const formatConjureDesignRemark = function formatConjureDesignRemark(target, str) {
+}
+export function formatConjureDesignRemark(target, str) {
   const items = [,];
   ({ kind: arr[0], name: arr[1] } = labelConjureDesignTarget(target));
   const found = items.filter((item) => "" !== item);
   const joined = found.join(": ");
   const tmp = labelConjureDesignTarget(target);
   return "" + c4 + joined + " \u2014 " + targetLine(target) + "\n" + str.trim();
-};
-export const parseConjureDesignRemark = function parseConjureDesignRemark(content) {
+}
+export function parseConjureDesignRemark(content) {
   if (content.startsWith(c4)) {
     const index = content.indexOf("\n");
     let substr = content;
@@ -292,8 +292,8 @@ export const parseConjureDesignRemark = function parseConjureDesignRemark(conten
   } else {
     return null;
   }
-};
-export const formatConjureDesignFeedback = function formatConjureDesignFeedback(arg0) {
+}
+export function formatConjureDesignFeedback(arg0) {
   ({ annotations, metaComment, context } = arg0);
   const found = annotations.filter((comment) => "" !== comment.comment.trim());
   const items = [];
@@ -339,8 +339,8 @@ export const formatConjureDesignFeedback = function formatConjureDesignFeedback(
       "Element coordinates below are viewport coordinates in that frame. The refs come from one snapshot taken when this feedback was collected, so re-snapshot before acting on them.",
     );
   }
-};
-export const parseConjureDesignFeedback = function parseConjureDesignFeedback(raw) {
+}
+export function parseConjureDesignFeedback(raw) {
   const parts = raw.split("\n");
   let str = parts[0];
   if (str == null) {
@@ -454,4 +454,4 @@ export const parseConjureDesignFeedback = function parseConjureDesignFeedback(ra
     }
     return tmp32;
   }
-};
+}

@@ -3,10 +3,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");
 
-export const useGiftingPromotionDefaultSelectionV2 = function useGiftingPromotionDefaultSelectionV2(
-  claimableRewards,
-  selectedGiftingPromotionReward,
-) {
+export function useGiftingPromotionDefaultSelectionV2(claimableRewards, selectedGiftingPromotionReward) {
   if (null != claimableRewards) {
     if (0 !== claimableRewards.length) {
       let first = selectedGiftingPromotionReward;
@@ -16,4 +13,4 @@ export const useGiftingPromotionDefaultSelectionV2 = function useGiftingPromotio
       return first;
     }
   }
-};
+}

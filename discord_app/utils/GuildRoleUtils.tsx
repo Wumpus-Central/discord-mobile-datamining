@@ -27,12 +27,12 @@ function compareGuildRoles(guildId, id) {
 }
 let result = size.fileFinishedImporting("utils/GuildRoleUtils.tsx");
 
-export const sortGuildRoleRecords = function sortGuildRoleRecords(arr) {
+export function sortGuildRoleRecords(arr) {
   const sorted = arr.sort(compareGuildRoles);
   return arr;
-};
+}
 export { compareGuildRoles };
-export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
+export function doesRoleSortHigher(guildId, id) {
   guildId = guildId.guildId;
   if (guildId.id === guildId) {
     let num2 = 1;
@@ -51,16 +51,16 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
     }
   }
   return num < 0;
-};
-export const sortInviteRoles = function sortInviteRoles(position, position2) {
+}
+export function sortInviteRoles(position, position2) {
   if (position.position !== position2.position) {
     let diff = position2.position - position.position;
   } else {
     diff = SnowflakeUtilsDefault.compare(position.id, position2.id);
   }
   return diff;
-};
-export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) {
+}
+export function inviteRoleToDisplayData(id, id) {
   const obj = {
     id: id.id,
     name: id.name,
@@ -91,8 +91,8 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   }
   obj.unicodeEmoji = unicode_emoji;
   return obj;
-};
-export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRoles) {
+}
+export function filterRoleDeletes(id, unsafeMutableRoles) {
   let items = roles;
   if (roles === undefined) {
     items = [];
@@ -119,4 +119,4 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
     }
     return obj2;
   }
-};
+}

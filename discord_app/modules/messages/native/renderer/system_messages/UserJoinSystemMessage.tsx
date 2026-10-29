@@ -15,7 +15,7 @@ const SystemChannelFlags = fn(1084).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
 
-export const createUserJoinSystemMessage = function createUserJoinSystemMessage(message) {
+export function createUserJoinSystemMessage(message) {
   message = message.message;
   if (message.author.bot) {
     ({ message: message2, roleStyle } = message);
@@ -82,4 +82,4 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
     const merged3 = Object.assign(createCommonMessageDefault(message));
     return obj9;
   }
-};
+}

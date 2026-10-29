@@ -14,7 +14,7 @@ let closure_5 = async function _getDeviceState() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -38,7 +38,7 @@ let closure_5 = async function _getDeviceState() {
           fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -94,7 +94,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/device/native/DeviceState.tsx");
 
 export const logger = tmp2;
-export const getDeviceState = function getDeviceState() {
+export function getDeviceState() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -103,4 +103,4 @@ export const getDeviceState = function getDeviceState() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

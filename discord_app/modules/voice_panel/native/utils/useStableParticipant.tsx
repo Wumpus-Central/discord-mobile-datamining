@@ -22,7 +22,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5668).ParticipantTypes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;
@@ -95,8 +95,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 userAvatarDecoration: null,
                 streamId: "Set",
                 ringing: null,
-                hasVideo: "2025-12-shadow-node-spike",
-                isSelf: "user",
+                hasVideo: "LottieFiles AE 3.0.2",
+                isSelf: "",
               };
               id = AuthenticationStore.getId();
               obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -212,8 +212,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   userAvatarDecoration: null,
                   streamId: "Set",
                   ringing: null,
-                  hasVideo: "2025-12-shadow-node-spike",
-                  isSelf: "user",
+                  hasVideo: "LottieFiles AE 3.0.2",
+                  isSelf: "",
                 };
                 id = AuthenticationStore.getId();
                 obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
 export { isStableStreamParticipant };
 export { isStableUserParticipant };
 export { isStableActivityParticipant };
-export const isStableParticipantWithUser = function isStableParticipantWithUser(participant) {
+export function isStableParticipantWithUser(participant) {
   let type;
   if (participant != null) {
     type = participant.type;
@@ -323,8 +323,8 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     BooleanResult = Boolean(type2 === ParticipantTypes.USER);
   }
   return BooleanResult;
-};
-export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0) {
+}
+export function stableParticipantHasVideo(arg0) {
   let streamId = arg0;
   let type;
   if (arg0 != null) {
@@ -353,4 +353,4 @@ export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0
       selfVideo = streamId.selfVideo;
     }
   }
-};
+}

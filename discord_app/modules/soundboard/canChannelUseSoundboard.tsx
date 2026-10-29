@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
 
 export default canChannelUseSoundboard;
-export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceChannelUseSoundboard() {
+export function canSelectedVoiceChannelUseSoundboard() {
   const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
   let flag = false;
   if (null != channel) {
@@ -41,7 +41,7 @@ export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceCha
     }
   }
   return flag;
-};
+}
 export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCanChannelUseSoundboard(arg0) {
       _require = arg0;

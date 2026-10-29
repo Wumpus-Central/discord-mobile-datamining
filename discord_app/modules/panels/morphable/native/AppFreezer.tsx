@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(lockKeys(5975).Freeze, { freeze: tmp6, placeholder, children });
+      const tmp8 = jsx(lockKeys(5977).Freeze, { freeze: tmp6, placeholder, children });
       cResult[2] = children;
       cResult[3] = placeholder;
       cResult[4] = tmp6;
@@ -73,5 +73,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!freeze) {
         freeze = flag;
       }
-      return jsx(lockKeys(5975).Freeze, { freeze, placeholder, children: children.children });
+      return jsx(lockKeys(5977).Freeze, { freeze, placeholder, children: children.children });
     };

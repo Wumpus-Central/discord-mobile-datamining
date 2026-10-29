@@ -4,57 +4,57 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
-import _modDef7494 from "../../../_runtime/metro/07494__.js";
-import _modDef7495 from "../../../_runtime/metro/07495__.js";
-import _modDef7496 from "../../../_runtime/metro/07496__.js";
-import _modDef7497 from "../../../_runtime/metro/07497__.js";
-import _modDef7498 from "../../../_runtime/metro/07498__.js";
-import _modDef7499 from "../../../_runtime/metro/07499__.js";
-import _modDef7500 from "../../../_runtime/metro/07500__.js";
-import _modDef7501 from "../../../_runtime/metro/07501__.js";
-import _modDef7502 from "../../../_runtime/metro/07502__.js";
-import _modDef7503 from "../../../_runtime/metro/07503__.js";
-import _modDef7504 from "../../../_runtime/metro/07504__.js";
-import _modDef7505 from "../../../_runtime/metro/07505__.js";
-import _modDef7506 from "../../../_runtime/metro/07506__.js";
-import _modDef7507 from "../../../_runtime/metro/07507__.js";
-import _modDef7508 from "../../../_runtime/metro/07508__.js";
-import _modDef7509 from "../../../_runtime/metro/07509__.js";
-import _modDef7510 from "../../../_runtime/metro/07510__.js";
-import _modDef7511 from "../../../_runtime/metro/07511__.js";
-import _modDef7512 from "../../../_runtime/metro/07512__.js";
-import _modDef7513 from "../../../_runtime/metro/07513__.js";
-import _modDef7514 from "../../../_runtime/metro/07514__.js";
-import _modDef7515 from "../../../_runtime/metro/07515__.js";
+import _modDef7517 from "../../../_runtime/metro/07517__.js";
+import _modDef7518 from "../../../_runtime/metro/07518__.js";
+import _modDef7519 from "../../../_runtime/metro/07519__.js";
+import _modDef7520 from "../../../_runtime/metro/07520__.js";
+import _modDef7521 from "../../../_runtime/metro/07521__.js";
+import _modDef7522 from "../../../_runtime/metro/07522__.js";
+import _modDef7523 from "../../../_runtime/metro/07523__.js";
+import _modDef7524 from "../../../_runtime/metro/07524__.js";
+import _modDef7525 from "../../../_runtime/metro/07525__.js";
+import _modDef7526 from "../../../_runtime/metro/07526__.js";
+import _modDef7527 from "../../../_runtime/metro/07527__.js";
+import _modDef7528 from "../../../_runtime/metro/07528__.js";
+import _modDef7529 from "../../../_runtime/metro/07529__.js";
+import _modDef7530 from "../../../_runtime/metro/07530__.js";
+import _modDef7531 from "../../../_runtime/metro/07531__.js";
+import _modDef7532 from "../../../_runtime/metro/07532__.js";
+import _modDef7533 from "../../../_runtime/metro/07533__.js";
+import _modDef7534 from "../../../_runtime/metro/07534__.js";
+import _modDef7535 from "../../../_runtime/metro/07535__.js";
+import _modDef7536 from "../../../_runtime/metro/07536__.js";
+import _modDef7537 from "../../../_runtime/metro/07537__.js";
+import _modDef7538 from "../../../_runtime/metro/07538__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(7492);
+const VoiceChannelEffectsConstants = fn(7515);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7494];
+const items = [_modDef7517];
 const items1 = [
-  _modDef7495,
-  _modDef7496,
-  _modDef7497,
-  _modDef7498,
-  _modDef7499,
-  _modDef7500,
-  _modDef7501,
-  _modDef7502,
-  _modDef7503,
-  _modDef7504,
-  _modDef7505,
-  _modDef7506,
-  _modDef7507,
-  _modDef7508,
-  _modDef7509,
-  _modDef7510,
-  _modDef7511,
-  _modDef7512,
-  _modDef7513,
-  _modDef7514,
-  _modDef7515,
+  _modDef7518,
+  _modDef7519,
+  _modDef7520,
+  _modDef7521,
+  _modDef7522,
+  _modDef7523,
+  _modDef7524,
+  _modDef7525,
+  _modDef7526,
+  _modDef7527,
+  _modDef7528,
+  _modDef7529,
+  _modDef7530,
+  _modDef7531,
+  _modDef7532,
+  _modDef7533,
+  _modDef7534,
+  _modDef7535,
+  _modDef7536,
+  _modDef7537,
+  _modDef7538,
 ];
 const AnimationTypeToAnimations = {
   [VoiceChannelEffectAnimationType.BASIC]: items,
@@ -90,7 +90,7 @@ export const getResizedEmojiData = apply.memoize(
       };
     }),
 );
-export const sampleAnimationId = function sampleAnimationId(BASIC, CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
+export function sampleAnimationId(BASIC, CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
   if (null != CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
     if (BASIC === VoiceChannelEffectAnimationType.PREMIUM) {
       const sum = CUSTOM_CALL_SOUND_ANIMATION_RANGE.end + 1;
@@ -100,8 +100,8 @@ export const sampleAnimationId = function sampleAnimationId(BASIC, CUSTOM_CALL_S
     }
   }
   return Math.floor(Math.random() * obj[BASIC].length);
-};
-export const getEffectUrl = function getEffectUrl(emoji) {
+}
+export function getEffectUrl(emoji) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = React4;
@@ -125,8 +125,8 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     }
     return str;
   }
-};
-export const getEffectAnnouncement = function getEffectAnnouncement(items) {
+}
+export function getEffectAnnouncement(items) {
   if (items.length < 1) {
     return "";
   } else {
@@ -214,4 +214,4 @@ export const getEffectAnnouncement = function getEffectAnnouncement(items) {
     }
     const iter2 = found1.uniq();
   }
-};
+}

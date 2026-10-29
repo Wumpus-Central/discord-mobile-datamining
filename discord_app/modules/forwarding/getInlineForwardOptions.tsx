@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const MessageReferenceTypes = Constants.MessageReferenceTypes;
 const result = size.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
-export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
+export function getInlineForwardOptions(message, nativeSyntheticEventData) {
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
   if ("media" === targetKind) {
     const messageReference = message.messageReference;
@@ -53,4 +53,4 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
       obj = {};
     }
   }
-};
+}

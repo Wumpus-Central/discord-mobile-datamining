@@ -7,8 +7,8 @@ import useConjureProjectEventLineDefault from "../useConjureProjectEventLine.tsx
 import useConjureRemixSettingsRequestDefault from "../../remix/useConjureRemixSettingsRequest.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjureVoiceChannelPinCardDefault = tmp4(12411);
-const ConjureSettingsRequestCardDefault = tmp4(12413);
+const ConjureVoiceChannelPinCardDefault = tmp4(12465);
+const ConjureSettingsRequestCardDefault = tmp4(12467);
 require = fn;
 function renderMention(arg0, arg1, arg2) {
   closure_0 = arg0;

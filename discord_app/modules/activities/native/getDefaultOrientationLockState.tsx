@@ -6,12 +6,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
 
-export const getIsTabletActivitySurface = function getIsTabletActivitySurface() {
+export function getIsTabletActivitySurface() {
   const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
   const bound = Math.min(size.width, size.height);
   return bound > useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE;
-};
-export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig, arg1) {
+}
+export function setOrientationLockState(embeddedActivityConfig, arg1) {
   if (arg1 == null) {
     if (null != embeddedActivityConfig) {
       const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
@@ -40,8 +40,8 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     };
     DispatcherDefault.dispatch(obj3);
   }
-};
-export const getDefaultOrientationLockState = function getDefaultOrientationLockState(application) {
+}
+export function getDefaultOrientationLockState(application) {
   if (null != application) {
     const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
     const _Math = Math;
@@ -61,4 +61,4 @@ export const getDefaultOrientationLockState = function getDefaultOrientationLock
     }
     return default_orientation_lock_state;
   }
-};
+}

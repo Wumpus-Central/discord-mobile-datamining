@@ -79,10 +79,10 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(18638).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(18872).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -94,11 +94,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(18638).RESTRICTED_CONTENT_INSET,
-  height: fn(18638).RESTRICTED_AVATAR_SIZE,
+  width: fn(18872).RESTRICTED_CONTENT_INSET,
+  height: fn(18872).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(18638).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(18872).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",
@@ -150,7 +150,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === tmp4.mediaPlaceholderCard) {
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp11 = closure_6(tmp(5722).CircleInformationIcon, { size: "sm", color: "text-muted" });
+            const tmp11 = closure_6(tmp(5724).CircleInformationIcon, { size: "sm", color: "text-muted" });
             cResult[5] = tmp11;
             let tmp9 = tmp11;
           } else {
@@ -161,7 +161,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
             let intl = tmp(1125).intl;
             obj2.children = intl.string(tmp(1125).t["VGf+K3"]);
-            const tmp14 = closure_6(tmp(5270).Text, obj2);
+            const tmp14 = closure_6(tmp(5271).Text, obj2);
             cResult[6] = tmp14;
             let tmp12 = tmp14;
           } else {

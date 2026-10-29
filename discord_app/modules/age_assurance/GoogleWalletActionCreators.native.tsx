@@ -17,7 +17,7 @@ let closure_6 = async function _requestGoogleWalletVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
             return obj;
           }
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -170,7 +170,7 @@ let closure_8 = async function _checkGoogleWalletAvailable() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -236,7 +236,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/GoogleWalletActionCreators.native.tsx");
 
-export const requestGoogleWalletVerification = function requestGoogleWalletVerification() {
+export function requestGoogleWalletVerification() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -245,8 +245,8 @@ export const requestGoogleWalletVerification = function requestGoogleWalletVerif
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const verifyGoogleWalletCredential = function verifyGoogleWalletCredential() {
+}
+export function verifyGoogleWalletCredential() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -255,8 +255,8 @@ export const verifyGoogleWalletCredential = function verifyGoogleWalletCredentia
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const checkGoogleWalletAvailable = function checkGoogleWalletAvailable() {
+}
+export function checkGoogleWalletAvailable() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -265,8 +265,8 @@ export const checkGoogleWalletAvailable = function checkGoogleWalletAvailable() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getGoogleWalletCredential = function getGoogleWalletCredential() {
+}
+export function getGoogleWalletCredential() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -275,4 +275,4 @@ export const getGoogleWalletCredential = function getGoogleWalletCredential() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

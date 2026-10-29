@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureAwaitingUser.tsx");
 
-export const activeAwaitingUser = function activeAwaitingUser(message, isNewest) {
+export function activeAwaitingUser(message, isNewest) {
   let awaitingUser = null;
   if (isNewest) {
     let role;
@@ -27,4 +27,4 @@ export const activeAwaitingUser = function activeAwaitingUser(message, isNewest)
     }
   }
   return awaitingUser;
-};
+}

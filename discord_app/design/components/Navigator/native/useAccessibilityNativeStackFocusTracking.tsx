@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting(
   "design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx",
 );
 
-export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
+export function useAccessibilityNativeStackFocusTracking() {
   return noop.useMemo(() => {
     c0 = false;
     return {
@@ -25,4 +25,4 @@ export const useAccessibilityNativeStackFocusTracking = function useAccessibilit
       },
     };
   }, []);
-};
+}

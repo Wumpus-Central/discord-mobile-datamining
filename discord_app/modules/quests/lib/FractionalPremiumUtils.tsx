@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
-export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
+export function getDurationStringOfFractionalPremium(arr) {
   const fractionalPremiumUnitsHoursFromSkuIds = PremiumUtils.getFractionalPremiumUnitsHoursFromSkuIds(
     arr.map((skuId) => skuId.skuId),
   );
@@ -22,12 +22,12 @@ export const getDurationStringOfFractionalPremium = function getDurationStringOf
     formatToPlainStringResult = intl.formatToPlainString(util.t.J9Lu4h, obj3);
   }
   return formatToPlainStringResult;
-};
-export const getFractionalPremiumQuestRewards = function getFractionalPremiumQuestRewards(rewardsConfig) {
+}
+export function getFractionalPremiumQuestRewards(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   return rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
-};
-export const getFractionalPremiumQuestRewardName = function getFractionalPremiumQuestRewardName(rewardsConfig) {
+}
+export function getFractionalPremiumQuestRewardName(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   const found = rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
   const flatMapResult = found.flatMap((quantity) => Array(quantity.quantity).fill(quantity.skuId));
@@ -44,4 +44,4 @@ export const getFractionalPremiumQuestRewardName = function getFractionalPremium
   );
   obj.time = DateUtils.unitsAsStrings(diffAsUnitsResult, time);
   return intl.formatToPlainString(util.t["4SqnVD"], obj);
-};
+}

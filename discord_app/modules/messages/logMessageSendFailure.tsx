@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
 
-export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
+export function logMessageSendFailure(fileItems) {
   if (null != fileItems.fileItems) {
     fileItems = fileItems.fileItems;
     let mapped = fileItems.map((mimeType) => {
@@ -26,8 +26,8 @@ export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
     error_message: errorMessage,
     attachment_mimetypes: mapped,
   });
-};
-export const getAttachmentMimeTypes = function getAttachmentMimeTypes(items) {
+}
+export function getAttachmentMimeTypes(items) {
   return items.map((mimeType) => {
     let str = mimeType.mimeType;
     if (str == null) {
@@ -35,4 +35,4 @@ export const getAttachmentMimeTypes = function getAttachmentMimeTypes(items) {
     }
     return str;
   });
-};
+}

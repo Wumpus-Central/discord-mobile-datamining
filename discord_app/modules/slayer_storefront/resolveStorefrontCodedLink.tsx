@@ -9,9 +9,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStorefrontCodedLink.tsx");
 
 export default function resolveStorefrontCodedLink(arg0, code) {
-  const result = obj3(11270).parseStorefrontCodedLink(code);
+  const result = obj3(11324).parseStorefrontCodedLink(code);
   if (null != result) {
-    if (arg0 === tmp(5739).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (arg0 === tmp(5741).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
       obj3 = obj2;
     } else {
@@ -24,7 +24,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         skuId(584).dispatch(obj5);
         let obj4 = skuId(584);
         const items = [skuId];
-        const storefrontCodedLink = tmp(11270).makeStorefrontCodedLink(items, result.scopeId);
+        const storefrontCodedLink = tmp(11324).makeStorefrontCodedLink(items, result.scopeId);
         closure_129_0 = storefrontCodedLink;
         closure_129_1 = asyncGeneratorStep(async () => {
           if (v3 === 2) {
@@ -37,7 +37,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -94,7 +94,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   return obj;
                 }
                 v3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp9) {
               v3 = tmp;
@@ -104,7 +104,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result1 = tmp(19161).queueMessageLinkFetch(
+          const result1 = tmp(19396).queueMessageLinkFetch(
             asyncGeneratorStep(async () => {
               if (c4 === 2) {
                 c4 = 3;
@@ -116,7 +116,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -154,7 +154,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                     c3 = 0;
                     set.delete(closure_128_0);
                     c4 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp23) {
                   closure_2 = tmp23;
@@ -168,12 +168,12 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }),
           );
-          const tmpResult2 = tmp(19161);
+          const tmpResult2 = tmp(19396);
         }
-        const tmpResult = tmp(11270);
+        const tmpResult = tmp(11324);
       }
       tmp4 = null != SKUStore.get(skuId) || SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId);
     }
   }
-  let obj = obj3(11270);
+  let obj = obj3(11324);
 }

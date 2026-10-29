@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx",
 );
 
-export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(roleStyle) {
+export function createGuildStreamSystemMessage(roleStyle) {
   const message = roleStyle.message;
   let messageReference = message.messageReference;
   if (messageReference == null) {
@@ -51,4 +51,4 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   obj5.content = formatToPartsResult;
   const merged2 = Object.assign(createCommonMessageDefault(roleStyle));
   return obj5;
-};
+}

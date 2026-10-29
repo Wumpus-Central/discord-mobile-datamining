@@ -9,7 +9,7 @@ const getTimestampStringDefault = getTimestampString;
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
-export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult) {
+export function getRelativeTimestamp(extractTimestampResult) {
   if (flag === undefined) {
     flag = true;
   }
@@ -17,8 +17,8 @@ export const getRelativeTimestamp = function getRelativeTimestamp(extractTimesta
   const tmp2 = getTimestampString;
   obj.getFormatter = flag ? tmp2.getAbbreviatedFormatter : tmp2.getFullFormatter;
   return getTimestampStringDefault(obj);
-};
-export const isRemoteAcked = function isRemoteAcked(addResult, setting) {
+}
+export function isRemoteAcked(addResult, setting) {
   let acked = addResult.acked;
   if (!acked) {
     let tmp4 = setting !== UserSettings.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
@@ -28,12 +28,8 @@ export const isRemoteAcked = function isRemoteAcked(addResult, setting) {
     acked = tmp4;
   }
   return acked;
-};
-export const incomingFriendRequestLocalItem = function incomingFriendRequestLocalItem(
-  user,
-  since,
-  origin_application_id,
-) {
+}
+export function incomingFriendRequestLocalItem(user, since, origin_application_id) {
   const obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
   const date = new Date(since);
@@ -48,12 +44,8 @@ export const incomingFriendRequestLocalItem = function incomingFriendRequestLoca
     id: fromTimestampResult,
     applicationId: origin_application_id,
   };
-};
-export const incomingGameFriendRequestLocalItem = function incomingGameFriendRequestLocalItem(
-  user,
-  since,
-  applicationId,
-) {
+}
+export function incomingGameFriendRequestLocalItem(user, since, applicationId) {
   const obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
   const date = new Date(since);
@@ -68,8 +60,8 @@ export const incomingGameFriendRequestLocalItem = function incomingGameFriendReq
     id: fromTimestampResult,
     applicationId,
   };
-};
-export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateAvailableLocalItem(newBuild) {
+}
+export function mobileNativeUpdateAvailableLocalItem(newBuild) {
   const obj = {
     acked: false,
     enableBadge: true,
@@ -85,11 +77,11 @@ export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateA
   obj.type = NotificationCenterItemsTypes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
   obj.deeplink = newBuild.urls.install.toString();
   return obj;
-};
-export const isMentionItem = function isMentionItem(addResult) {
+}
+export function isMentionItem(addResult) {
   let tmp3 = addResult.type === NotificationCenterItemsTypes.NotificationCenterItems.RECENT_MENTION;
   if (!tmp3) {
     tmp3 = addResult.type === NotificationCenterItemsTypes.NotificationCenterItems.REPLY_MENTION;
   }
   return tmp3;
-};
+}

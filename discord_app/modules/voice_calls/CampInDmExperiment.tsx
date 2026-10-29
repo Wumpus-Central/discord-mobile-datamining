@@ -15,6 +15,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/CampInDmExperiment.tsx");
 
 export const CampInDmExperiment = apexExperiment;
-export const shouldDisableCallIdleDisconnect = function shouldDisableCallIdleDisconnect() {
+export function shouldDisableCallIdleDisconnect() {
   return apexExperiment.getConfig({ location: "CallIdleManager" }).disableIdleDisconnect;
-};
+}

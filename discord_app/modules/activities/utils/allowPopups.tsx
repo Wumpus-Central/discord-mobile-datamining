@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 Constants.APPLICATIONS_WITH_ALLOWED_POPUPS;
 const result = size.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
 
-export const allowPopups = function allowPopups(application) {
+export function allowPopups(application) {
   let prop = application;
   let flag = null;
   let tmp2 = null != application;
@@ -34,4 +34,4 @@ export const allowPopups = function allowPopups(application) {
     }
   }
   return tmp2;
-};
+}

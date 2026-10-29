@@ -13,7 +13,7 @@ let closure_5 = async function _fetchActiveChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_5 = async function _fetchActiveChannels(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -113,7 +113,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
 
-export const fetchActiveChannels = function fetchActiveChannels() {
+export function fetchActiveChannels() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -122,4 +122,4 @@ export const fetchActiveChannels = function fetchActiveChannels() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

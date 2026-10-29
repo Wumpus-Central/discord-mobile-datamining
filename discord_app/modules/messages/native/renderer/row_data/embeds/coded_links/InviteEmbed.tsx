@@ -14,13 +14,13 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1084);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(7844).InviteTypes;
+const InviteTypes = fn(7867).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx",
 );
 
-export const createInviteEmbed = function createInviteEmbed(author, code, theme) {
+export function createInviteEmbed(author, code, theme) {
   const invite = InviteStore.getInvite(code);
   if (null == invite) {
     return null;
@@ -92,4 +92,4 @@ export const createInviteEmbed = function createInviteEmbed(author, code, theme)
       return invite_GuildInvite.createExpiredGuildInvite(author, id === tmp4, theme);
     }
   }
-};
+}

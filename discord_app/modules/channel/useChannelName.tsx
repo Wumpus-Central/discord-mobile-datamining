@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
 export { computeDefaultGroupDmNameFromUserIds };
 export { computeDefaultGroupDmName };
 export const useComputedGroupDmName = tmp3;
-export const computeGroupDmName = function computeGroupDmName(stateFromStores) {
+export function computeGroupDmName(stateFromStores) {
   if (!stateFromStores.isObfuscated()) {
     if (stateFromStores.isMultiUserDM()) {
       const name = stateFromStores.name;
@@ -339,10 +339,10 @@ export const computeGroupDmName = function computeGroupDmName(stateFromStores) {
       return tmp;
     }
   }
-};
+}
 export { computeChannelName };
 export { escapeChannelName };
-export const unescapeChannelName = function unescapeChannelName(str) {
+export function unescapeChannelName(str) {
   str = str.replace(/\\"/g, '"');
   return str.replace(/\\\\/g, "\\");
-};
+}

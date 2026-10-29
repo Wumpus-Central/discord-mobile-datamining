@@ -22,14 +22,14 @@ const set1 = new Set(items1);
 let result = size.fileFinishedImporting("modules/coded_links/ApplicationCodedLink.tsx");
 
 export const APP_LINK_CODED_TYPES = set;
-export const isApplicationCodedLink = function isApplicationCodedLink(type) {
+export function isApplicationCodedLink(type) {
   return GlobalUtils.isInSet(type, set);
-};
+}
 export const APP_LINK_CODED_TYPES_MOBILE_SUPPORT = set1;
-export const isApplicationCodedLinkMobileSupported = function isApplicationCodedLinkMobileSupported(type) {
+export function isApplicationCodedLinkMobileSupported(type) {
   return GlobalUtils.isInSet(type, set1);
-};
-export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
+}
+export function getApplicationCodedLinkData(type, code, url) {
   if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
     if (CodedLink.CodedLinkType.APP_OAUTH2_LINK !== type) {
       if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
@@ -50,4 +50,4 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
     }
   }
   return { type, applicationId: code };
-};
+}

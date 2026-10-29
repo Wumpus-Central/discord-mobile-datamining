@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
-import _modDef5840 from "../../../_runtime/metro/05840__.js";
+import _modDef5842 from "../../../_runtime/metro/05842__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -24,8 +24,8 @@ let obj = {
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "application",
-  selectedSourceInviteCode: "Set",
-  selectedSort: "ix",
+  selectedSourceInviteCode: "end",
+  selectedSort: "View",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -44,8 +44,8 @@ class GuildMemberSafetySearch {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "application",
-      selectedSourceInviteCode: "Set",
-      selectedSort: "ix",
+      selectedSourceInviteCode: "end",
+      selectedSort: "View",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -74,8 +74,8 @@ prototype["reset"] = function reset() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "application",
-    selectedSourceInviteCode: "Set",
-    selectedSort: "ix",
+    selectedSourceInviteCode: "end",
+    selectedSort: "View",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -84,7 +84,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = _modDef5840(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef5842(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -102,8 +102,8 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "application",
-      selectedSourceInviteCode: "Set",
-      selectedSort: "ix",
+      selectedSourceInviteCode: "end",
+      selectedSort: "View",
     };
     const _Set = Set;
     const set = new Set();
@@ -289,7 +289,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
   return tmp2;
 };
 
-export const getDefaultSearchState = function getDefaultSearchState() {
+export function getDefaultSearchState() {
   const obj = {
     query: "",
     requireUnusualDmActivity: false,
@@ -300,9 +300,9 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "application",
-    selectedSourceInviteCode: "Set",
-    selectedSort: "ix",
+    selectedSourceInviteCode: "end",
+    selectedSort: "View",
   };
   return obj;
-};
+}
 export { GuildMemberSafetySearch };

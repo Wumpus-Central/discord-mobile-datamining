@@ -4,12 +4,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
 
-export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {
+export function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  ActionSheetActionCreatorsDefault.openLazy(combined(1999)(10727, dependencyMap.paths), combined, {
+  ActionSheetActionCreatorsDefault.openLazy(combined(2000)(10760, dependencyMap.paths), combined, {
     channelId: id,
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     },
   });
-};
+}

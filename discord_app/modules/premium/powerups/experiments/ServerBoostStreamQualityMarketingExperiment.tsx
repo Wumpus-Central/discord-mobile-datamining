@@ -19,8 +19,6 @@ const result = size.fileFinishedImporting(
 
 export default tmp2;
 export const CONTROL_RESOLUTION = "1080p";
-export const getServerBoostStreamQualityMarketingResolution = function getServerBoostStreamQualityMarketingResolution(
-  GuildBoostingMarketingTierCards,
-) {
+export function getServerBoostStreamQualityMarketingResolution(GuildBoostingMarketingTierCards) {
   return config.getConfig({ location: GuildBoostingMarketingTierCards }).streamQualityMarketingResolution;
-};
+}

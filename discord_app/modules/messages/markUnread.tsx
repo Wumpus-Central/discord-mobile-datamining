@@ -20,7 +20,7 @@ let closure_11 = async function _markUnread(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_11 = async function _markUnread(arg0) {
             const toArrayResult = messages.toArray();
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -126,7 +126,7 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(6806).shouldBadgeMessage;
+const shouldBadgeMessage = fn(6829).shouldBadgeMessage;
 const Endpoints = fn(1084).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);

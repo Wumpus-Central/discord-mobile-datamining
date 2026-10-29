@@ -106,7 +106,7 @@ export const CHANNEL_ACTION_BANNER_HEIGHT = 46;
 export const NewMemberActionTypes = { VIEW: 0, [0]: "VIEW", CHAT: 1, [1]: "CHAT" };
 export { newMemberActionFromServer };
 export { resourceChannelFromServer };
-export const settingsFromServer = function settingsFromServer(body) {
+export function settingsFromServer(body) {
   if (null == body) {
     return null;
   } else {
@@ -125,8 +125,8 @@ export const settingsFromServer = function settingsFromServer(body) {
     obj.enabled = body.enabled;
     return obj;
   }
-};
-export const settingsToServer = function settingsToServer(guild_id, enabled) {
+}
+export function settingsToServer(guild_id, enabled) {
   if (null == enabled) {
     return null;
   } else {
@@ -227,8 +227,8 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
     obj2.enabled = enabled.enabled;
     return obj2;
   }
-};
-export const actionsFromServer = function actionsFromServer(body) {
+}
+export function actionsFromServer(body) {
   if (null == body) {
     return null;
   } else {
@@ -239,8 +239,8 @@ export const actionsFromServer = function actionsFromServer(body) {
     }
     return obj;
   }
-};
-export const isWelcomeMessageEmpty = function isWelcomeMessageEmpty(message) {
+}
+export function isWelcomeMessageEmpty(message) {
   let tmp = null == message;
   if (!tmp) {
     let tmp2 = null != message.message;
@@ -258,9 +258,9 @@ export const isWelcomeMessageEmpty = function isWelcomeMessageEmpty(message) {
     tmp = tmp3;
   }
   return tmp;
-};
+}
 export { isSettingsEmpty };
-export const isSettingsValid = function isSettingsValid(welcomeMessage) {
+export function isSettingsValid(welcomeMessage) {
   if (null == welcomeMessage) {
     return false;
   } else if (isSettingsEmpty(welcomeMessage)) {
@@ -302,8 +302,8 @@ export const isSettingsValid = function isSettingsValid(welcomeMessage) {
     }
     return false;
   }
-};
-export const isChannelValidForResourceChannel = function isChannelValidForResourceChannel(type) {
+}
+export function isChannelValidForResourceChannel(type) {
   let canEveryoneRoleResult = type.type === constants.GUILD_TEXT;
   if (canEveryoneRoleResult) {
     canEveryoneRoleResult = !PermissionUtilsAll.canEveryoneRole(constants2.SEND_MESSAGES, type);
@@ -312,8 +312,8 @@ export const isChannelValidForResourceChannel = function isChannelValidForResour
     canEveryoneRoleResult = PermissionUtilsAll.canEveryoneRole(constants2.VIEW_CHANNEL, type);
   }
   return canEveryoneRoleResult;
-};
-export const isChannelValidForNewMemberAction = function isChannelValidForNewMemberAction(type) {
+}
+export function isChannelValidForNewMemberAction(type) {
   type = type.type;
   if (constants.GUILD_TEXT !== type) {
     if (constants.GUILD_ANNOUNCEMENT !== type) {
@@ -325,7 +325,7 @@ export const isChannelValidForNewMemberAction = function isChannelValidForNewMem
     }
   }
   return PermissionUtilsAll.canEveryoneRole(constants2.VIEW_CHANNEL, type);
-};
+}
 export const ChannelEditBlockTypes = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -333,8 +333,6 @@ export const ChannelEditBlockTypes = {
   [1]: "TODO",
   RESOURCE: 2,
   [2]: "RESOURCE",
-  RULES: 3,
-  [3]: "RULES",
-  UPDATES: 4,
-  [4]: "UPDATES",
+  UPDATES: 3,
+  [3]: "UPDATES",
 };

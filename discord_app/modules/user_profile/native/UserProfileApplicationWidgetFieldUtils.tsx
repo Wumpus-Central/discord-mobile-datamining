@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   fieldIcon: { width: 16, height: 16 },
@@ -23,7 +23,7 @@ let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
-export const formatDurationNarrow = function formatDurationNarrow(value) {
+export function formatDurationNarrow(value) {
   let num = 0;
   if (Number.isFinite(value)) {
     const _Math = Math;
@@ -54,7 +54,7 @@ export const formatDurationNarrow = function formatDurationNarrow(value) {
     items.push(intl3.formatToPlainString(util.t.pyvjRp, obj3));
   }
   return items.join(" ");
-};
+}
 export const FieldText = ReactCompilerGating.isReactCompilerEnabled()
   ? function FieldText(arg0) {
       const cResult = c.c(17);

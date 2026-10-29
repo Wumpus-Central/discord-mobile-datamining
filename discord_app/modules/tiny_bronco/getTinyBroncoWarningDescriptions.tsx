@@ -1,6 +1,6 @@
 // discord_app/modules/tiny_bronco/getTinyBroncoWarningDescriptions.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef3123 from "TinyBronco.messages.js";
+import _modDef3124 from "TinyBronco.messages.js";
 import TinyBroncoExperiment from "TinyBroncoExperiment.tsx";
 import TinyBroncoConstants from "TinyBroncoConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 ({ TINY_BRONCO_CHANNEL_LOCATION: c3, TINY_BRONCO_SERVER_LOCATION: closure_4 } = TinyBroncoConstants);
 const result = size.fileFinishedImporting("modules/tiny_bronco/getTinyBroncoWarningDescriptions.tsx");
 
-export const getTinyBroncoServerDescriptions = function getTinyBroncoServerDescriptions() {
+export function getTinyBroncoServerDescriptions() {
   const obj = { adult: null, teen: null, unverified: null };
   const intl = util.intl;
   obj.adult = intl.string(util.t.fp3xf5);
@@ -17,11 +17,8 @@ export const getTinyBroncoServerDescriptions = function getTinyBroncoServerDescr
   const intl3 = util.intl;
   obj.unverified = intl3.string(util.t.qiLic6);
   return obj;
-};
-export const getTinyBroncoWarningDescriptions = function getTinyBroncoWarningDescriptions(
-  tinyBroncoWarningDescriptions1,
-  guildName,
-) {
+}
+export function getTinyBroncoWarningDescriptions(tinyBroncoWarningDescriptions1, guildName) {
   let stringResult = dependencyMap;
   if (!obj.isTinyBroncoEnabled(tmp)) {
     return null;
@@ -37,15 +34,15 @@ export const getTinyBroncoWarningDescriptions = function getTinyBroncoWarningDes
       obj2.unverified = stringResult;
     } else {
       const obj3 = { guildName };
-      obj2.adult = intl.formatToPlainString(_modDef3123.iK0n30, obj3);
+      obj2.adult = intl.formatToPlainString(_modDef3124.iK0n30, obj3);
       const intl2 = util.intl;
       const obj4 = { guildName };
-      obj2.teen = intl2.formatToPlainString(_modDef3123.ezJA0R, obj4);
+      obj2.teen = intl2.formatToPlainString(_modDef3124.ezJA0R, obj4);
       const intl3 = util.intl;
       const obj5 = { guildName };
-      obj2.unverified = intl3.formatToPlainString(_modDef3123.h4HbnI, obj5);
+      obj2.unverified = intl3.formatToPlainString(_modDef3124.h4HbnI, obj5);
     }
   }
   obj = TinyBroncoExperiment;
   tmp = tinyBroncoWarningDescriptions1 ? React4 : React3;
-};
+}

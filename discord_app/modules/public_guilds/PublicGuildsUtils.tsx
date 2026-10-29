@@ -16,7 +16,7 @@ const require = globalThis.__r;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/public_guilds/PublicGuildsUtils.tsx");
 
-export const isPublicSystemMessage = function isPublicSystemMessage(message) {
+export function isPublicSystemMessage(message) {
   let tmp = isCrosspostDefault(message);
   if (tmp) {
     tmp = message.messageReference.guild_id === React3;
@@ -29,13 +29,13 @@ export const isPublicSystemMessage = function isPublicSystemMessage(message) {
     tmp = tmp4;
   }
   return tmp;
-};
-export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return require("../../../_runtime/metro/08441__.js");
-};
-export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
+}
+export function getPublicSystemMessageAvatar() {
+  return require("../../../_runtime/metro/08463__.js");
+}
+export function trackEnableCommunityFlow(fromStep) {
   const obj = AnalyticsUtilsDefault;
   const obj2 = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(fromStep.guildId));
   obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj2);
-};
+}

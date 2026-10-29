@@ -16,7 +16,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const PerkIcons = PremiumConstants.PerkIcons;
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
-export const getIconForPerk = function getIconForPerk(perkIcon) {
+export function getIconForPerk(perkIcon) {
   if (PerkIcons.EMOJI === perkIcon) {
     return ReactionIcon.ReactionIcon;
   } else if (PerkIcons.SOUNDBOARD === perkIcon) {
@@ -42,4 +42,4 @@ export const getIconForPerk = function getIconForPerk(perkIcon) {
   } else {
     return ReactionIcon.ReactionIcon;
   }
-};
+}

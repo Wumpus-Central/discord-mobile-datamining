@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
-export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {
+export function getNewestBadgeableVersion(arg0) {
   ({ storeState, surface } = arg0);
   const timestamp = Date.now();
   const dateRangesForSurfaces = storeState.dateRangesForSurfaces;
@@ -29,4 +29,4 @@ export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0
     }
   }
   return num;
-};
+}

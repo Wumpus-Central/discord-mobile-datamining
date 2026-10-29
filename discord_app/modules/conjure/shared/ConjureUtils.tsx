@@ -25,7 +25,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4934);
+let GuildChannelStore = fn(4935);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1084);
@@ -76,7 +76,7 @@ function eligibleConjureGuilds(arr, arg1) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureUtils.tsx");
 
-export const conjureSettingsGuildId = function conjureSettingsGuildId(project, arg1) {
+export function conjureSettingsGuildId(project, arg1) {
   let tmp = null;
   if (null != project) {
     tmp = null;
@@ -95,8 +95,8 @@ export const conjureSettingsGuildId = function conjureSettingsGuildId(project, a
     }
   }
   return tmp;
-};
-export const conjureSettingChannels = function conjureSettingChannels(channels, channel_filter) {
+}
+export function conjureSettingChannels(channels, channel_filter) {
   if ("voice" === channel_filter) {
     let items = [];
   } else {
@@ -111,15 +111,15 @@ export const conjureSettingChannels = function conjureSettingChannels(channels, 
   HermesBuiltin.arraySpread(items2, tmp2);
   const mapped = items1.map((channel) => channel.channel);
   return mapped.filter((type) => !set.has(type.type));
-};
-export const getConjureProjectAccessSettings = function getConjureProjectAccessSettings(flags) {
+}
+export function getConjureProjectAccessSettings(flags) {
   return {
     isPublic: flags & ConjureProjectTypes.ConjureProjectFlags.PUBLIC,
     isGuildCollaboration: flags & ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION,
   };
-};
+}
 export { conjureChannelAppId };
-export const isConjureProjectInGuild = function isConjureProjectInGuild(item10020, guildId) {
+export function isConjureProjectInGuild(item10020, guildId) {
   let tmp = null != item10020;
   if (tmp) {
     let tmp3 = item10020.guild_id === guildId || item10020.preview_guild_id === guildId;
@@ -130,8 +130,8 @@ export const isConjureProjectInGuild = function isConjureProjectInGuild(item1002
     tmp = tmp3;
   }
   return tmp;
-};
-export const findConjureChannelId = function findConjureChannelId(guild_id, application_id) {
+}
+export function findConjureChannelId(guild_id, application_id) {
   for (const item10012 of tmp) {
     let channel = item10012.channel;
     if (conjureChannelAppId(channel) === arg1) {
@@ -140,16 +140,16 @@ export const findConjureChannelId = function findConjureChannelId(guild_id, appl
     }
   }
   return null;
-};
+}
 export { isConjureGuildEligible };
 export { eligibleConjureGuilds };
-export const hasEligibleConjureGuild = function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplication) {
+export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplication) {
   const _location = useIsOwnedConjureApplication;
   return guildsArray.some((guildId) =>
     ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: _location }),
   );
-};
-export const resolveConjureWorkspaceGuildId = function resolveConjureWorkspaceGuildId(ConjureChatStore) {
+}
+export function resolveConjureWorkspaceGuildId(ConjureChatStore) {
   const guildId = SelectedGuildStore.getGuildId();
   guild = null;
   if (null != guildId) {
@@ -185,20 +185,20 @@ export const resolveConjureWorkspaceGuildId = function resolveConjureWorkspaceGu
   if (id == null) {
     id = null;
   }
-};
-export const canAccessConjure = function canAccessConjure(guild, getChannelIdForGuildTransition) {
+}
+export function canAccessConjure(guild, getChannelIdForGuildTransition) {
   return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guild.id, location: getChannelIdForGuildTransition });
-};
-export const canStartConjureProject = function canStartConjureProject(id, location) {
+}
+export function canStartConjureProject(id, location) {
   let result = PermissionStore.can(constants.MANAGE_CHANNELS, id) && PermissionStore.can(constants.MANAGE_GUILD, id);
   if (result) {
     const obj3 = { guildId: id.id, location };
     result = ConjureGuildExperiment.isConjureGuildEnabled(obj3);
   }
   return result;
-};
+}
 export const useCanAccessConjure = tmp5;
-export const isConjureChannelCandidate = function isConjureChannelCandidate(channel, ActivitySounds) {
+export function isConjureChannelCandidate(channel, ActivitySounds) {
   let type;
   if (channel != null) {
     type = channel.type;
@@ -239,7 +239,7 @@ export const isConjureChannelCandidate = function isConjureChannelCandidate(chan
     result = ConjureGuildExperiment.isConjureGuildEnabled(obj3);
   }
   return result;
-};
+}
 export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsConjureChannelCandidate(guild_id, location) {
       const cResult = c.c(7);

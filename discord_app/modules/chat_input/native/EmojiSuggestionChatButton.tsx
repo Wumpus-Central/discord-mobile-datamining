@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../_runtime/05333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05334_LegacyBaseButton.js";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,11 +12,11 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = {
     swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical },
@@ -67,7 +67,7 @@ let closure_16 = {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionChatButton.tsx");
 
-export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0) {
+export function EmojiSuggestionChatButton(arg0) {
   ({ active, onPress } = arg0);
   ({ style, showKeyboardIcon, ref } = arg0);
   const merged = Object.assign(arg0, Object.assign({ style: 0, active: 0, showKeyboardIcon: 0, onPress: 0, ref: 0 }));
@@ -293,4 +293,4 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
     tmp26(tmp4Result, obj13);
     const tmp4Result4 = tmp4(tmp4Result2Result[25]);
   }
-};
+}

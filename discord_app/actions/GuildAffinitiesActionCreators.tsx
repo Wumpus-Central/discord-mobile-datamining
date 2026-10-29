@@ -7,7 +7,7 @@ import size from "../../_runtime/metro/00002__.js";
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
 
-export const fetchGuildAffinities = function fetchGuildAffinities() {
+export function fetchGuildAffinities() {
   const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.GUILD_AFFINITIES,
@@ -26,4 +26,4 @@ export const fetchGuildAffinities = function fetchGuildAffinities() {
       DispatcherDefault.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
     },
   );
-};
+}

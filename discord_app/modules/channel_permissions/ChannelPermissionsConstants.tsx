@@ -51,7 +51,7 @@ export const TrackExposureLocations = {
   CREATE_CHANNEL: "create-channel",
 };
 export const SettingMode = { BASIC: "basic", ADVANCED: "advanced" };
-export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
+export function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
   type = type.type;
   if (type === constants.GUILD_CATEGORY) {
     const intl2 = util.intl;
@@ -791,4 +791,4 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   obj58.flag = constants4.SET_VOICE_CHANNEL_STATUS;
   obj2[constants4.SET_VOICE_CHANNEL_STATUS.toString()] = obj58;
   return obj2;
-};
+}

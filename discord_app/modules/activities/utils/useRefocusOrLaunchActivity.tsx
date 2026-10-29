@@ -7,7 +7,7 @@ import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FrameLayoutModes = fn(6811).FrameLayoutModes;
+const FrameLayoutModes = fn(6834).FrameLayoutModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {

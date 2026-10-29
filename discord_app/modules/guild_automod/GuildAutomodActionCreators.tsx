@@ -171,7 +171,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -237,7 +237,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -274,7 +274,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;
@@ -287,7 +287,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodActionCreators.tsx");
 
-export const validateAutomodRule = function validateAutomodRule() {
+export function validateAutomodRule() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -296,8 +296,8 @@ export const validateAutomodRule = function validateAutomodRule() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createAutomodRule = function createAutomodRule() {
+}
+export function createAutomodRule() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -306,8 +306,8 @@ export const createAutomodRule = function createAutomodRule() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateAutomodRule = function updateAutomodRule() {
+}
+export function updateAutomodRule() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -316,8 +316,8 @@ export const updateAutomodRule = function updateAutomodRule() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const deleteAutomodRule = function deleteAutomodRule() {
+}
+export function deleteAutomodRule() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -326,8 +326,8 @@ export const deleteAutomodRule = function deleteAutomodRule() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchAutomodRules = function fetchAutomodRules() {
+}
+export function fetchAutomodRules() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -336,8 +336,8 @@ export const fetchAutomodRules = function fetchAutomodRules() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const executeAlertAction = function executeAlertAction() {
+}
+export function executeAlertAction() {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -346,12 +346,8 @@ export const executeAlertAction = function executeAlertAction() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeMentionRaidRestrictionWithFeedback = function removeMentionRaidRestrictionWithFeedback(
-  arg0,
-  decision_id,
-  arg2,
-) {
+}
+export function removeMentionRaidRestrictionWithFeedback(arg0, decision_id, arg2) {
   _require = arg0;
   dependencyMap = arg2;
   guild = GuildStore.getGuild(arg0);
@@ -373,7 +369,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
     });
     let obj = require("GuildAutomodActionActionCreators");
   }
-};
-export const clearMentionRaidDetected = function clearMentionRaidDetected(guildId) {
+}
+export function clearMentionRaidDetected(guildId) {
   DispatcherDefault.dispatch({ type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId });
-};
+}

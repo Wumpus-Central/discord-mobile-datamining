@@ -4,12 +4,12 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");
 
-export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
+export function dismissGlobalKeyboard() {
   const result = NativeKeyboardModuleDefault.dismissGlobalKeyboard();
-};
-export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAndDismissKeyboard() {
+}
+export function clearCurrentFocusAndDismissKeyboard() {
   const result = NativeKeyboardModuleDefault.clearCurrentFocusAndDismissKeyboard();
-};
-export const onKeyboardChanged = function onKeyboardChanged(arg0) {
+}
+export function onKeyboardChanged(arg0) {
   NativeKeyboardModuleDefault.onKeyboardChanged(arg0);
-};
+}

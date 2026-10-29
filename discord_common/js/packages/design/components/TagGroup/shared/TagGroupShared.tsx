@@ -16,9 +16,9 @@ export function getDefaultTagGroupSize(layout) {
   }
   return str;
 }
-export const getTagTextVariant = function getTagTextVariant(size) {
+export function getTagTextVariant(size) {
   return closure_0[size];
-};
-export const getTagIconSize = function getTagIconSize(size) {
+}
+export function getTagIconSize(size) {
   return closure_1[size];
-};
+}

@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/06863_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06886_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -23,10 +23,10 @@ function setIndex(arg0, index) {
 }
 const Constants = fn(1084);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(4863);
+const ChannelConstants = fn(4864);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7701).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -201,12 +201,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
-export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(
-  guildId,
-  stateFromStores1,
-  stateFromStores2,
-  str,
-) {
+export function useFilterCategoriesByQuery(guildId, stateFromStores1, stateFromStores2, str) {
   _require = stateFromStores1;
   let formatted = str.toLowerCase();
   const canSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome(guildId);
@@ -265,8 +260,8 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(
     const item1 = stateFromStores2(formatted[13])(obj._categories, obj).forEach(setIndex);
     return obj;
   }, items1);
-};
-export const getFirstRouteFor = function getFirstRouteFor(getSections) {
+}
+export function getFirstRouteFor(getSections) {
   let channel;
   const sections = getSections.getSections(false);
   if (sections[ChannelListState.SECTION_INDEX_GUILD_ACTIONS] > 0) {
@@ -298,8 +293,8 @@ export const getFirstRouteFor = function getFirstRouteFor(getSections) {
     return channel.id;
   }
   return null;
-};
-export const clearRecentChannels = function clearRecentChannels(arg0, arr) {
+}
+export function clearRecentChannels(arg0, arr) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -316,7 +311,7 @@ export const clearRecentChannels = function clearRecentChannels(arg0, arr) {
     router_utils.transitionTo(React6.CHANNEL(arg0, tmp));
     const tmp2Result = router_utils;
   }
-};
+}
 export const useChannelBrowserSections = tmp4;
 export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompilerEnabled()
   ? function useChannelBrowserChannelCount(arg0) {
@@ -392,9 +387,9 @@ export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompiler
         }
       }
     };
-export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
+export function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef2046;
+  const tmp = _modDef2047;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;
@@ -402,4 +397,4 @@ export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const obj2 = { timeAgo: null };
   obj2.timeAgo = tmp(SnowflakeUtilsDefault.extractTimestamp(lastMessageIdResult)).fromNow();
   return intl.formatToPlainString(util.t["8N0BHR"], obj2);
-};
+}

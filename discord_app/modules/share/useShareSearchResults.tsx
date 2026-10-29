@@ -8,11 +8,11 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import FrecencyStore from "../../stores/FrecencyStore.tsx";
 
 require = fn;
-const ALLOWED_TYPES = fn(12964).ALLOWED_TYPES;
+const ALLOWED_TYPES = fn(13185).ALLOWED_TYPES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
-export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
+export function makeAutocompleterSearchParams(arg0) {
   const query = QuickSwitcherActionCreators.getQuickSwitcherOptions(arg0);
   const queryMode = query.queryMode;
   let resultTypes = ALLOWED_TYPES;
@@ -27,8 +27,8 @@ export const makeAutocompleterSearchParams = function makeAutocompleterSearchPar
     resultTypes = items;
   }
   return { query: query.query, queryMode: queryMode2, resultTypes };
-};
-export const useShareSearchResults = function useShareSearchResults(targetDestination) {
+}
+export function useShareSearchResults(targetDestination) {
   targetDestination = targetDestination.targetDestination;
   const selectedDestinations = targetDestination.selectedDestinations;
   const originDestination = targetDestination.originDestination;
@@ -166,4 +166,4 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
     items8,
   );
   return obj5;
-};
+}

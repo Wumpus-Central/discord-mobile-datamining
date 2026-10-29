@@ -1,83 +1,83 @@
 // discord_app/modules/emoji_terms/EmojiTermsImporter.js
-import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {
   bg() {
-    return asyncRequireImpl(6769, dependencyMap.paths);
-  },
-  cs() {
-    return asyncRequireImpl(6770, dependencyMap.paths);
-  },
-  da() {
-    return asyncRequireImpl(6771, dependencyMap.paths);
-  },
-  de() {
-    return asyncRequireImpl(6772, dependencyMap.paths);
-  },
-  el() {
-    return asyncRequireImpl(6773, dependencyMap.paths);
-  },
-  () => asyncRequireImpl(6774, dependencyMap.paths),
-  () => asyncRequireImpl(6775, dependencyMap.paths),
-  () => asyncRequireImpl(6776, dependencyMap.paths),
-  fi() {
-    return asyncRequireImpl(6777, dependencyMap.paths);
-  },
-  fr() {
-    return asyncRequireImpl(6778, dependencyMap.paths);
-  },
-  hr() {
-    return asyncRequireImpl(6779, dependencyMap.paths);
-  },
-  hu() {
-    return asyncRequireImpl(6780, dependencyMap.paths);
-  },
-  it() {
-    return asyncRequireImpl(6781, dependencyMap.paths);
-  },
-  ja() {
-    return asyncRequireImpl(6782, dependencyMap.paths);
-  },
-  ko() {
-    return asyncRequireImpl(6783, dependencyMap.paths);
-  },
-  lt() {
-    return asyncRequireImpl(6784, dependencyMap.paths);
-  },
-  nl() {
-    return asyncRequireImpl(6785, dependencyMap.paths);
-  },
-  no() {
-    return asyncRequireImpl(6786, dependencyMap.paths);
-  },
-  pl() {
-    return asyncRequireImpl(6787, dependencyMap.paths);
-  },
-  () => asyncRequireImpl(6788, dependencyMap.paths),
-  ro() {
-    return asyncRequireImpl(6789, dependencyMap.paths);
-  },
-  ru() {
-    return asyncRequireImpl(6790, dependencyMap.paths);
-  },
-  () => asyncRequireImpl(6791, dependencyMap.paths),
-  th() {
     return asyncRequireImpl(6792, dependencyMap.paths);
   },
-  tr() {
+  cs() {
     return asyncRequireImpl(6793, dependencyMap.paths);
   },
-  uk() {
+  da() {
     return asyncRequireImpl(6794, dependencyMap.paths);
   },
-  vi() {
+  de() {
     return asyncRequireImpl(6795, dependencyMap.paths);
   },
-  () => asyncRequireImpl(6796, dependencyMap.paths),
+  el() {
+    return asyncRequireImpl(6796, dependencyMap.paths);
+  },
+  () => asyncRequireImpl(6797, dependencyMap.paths),
+  () => asyncRequireImpl(6798, dependencyMap.paths),
+  () => asyncRequireImpl(6799, dependencyMap.paths),
+  fi() {
+    return asyncRequireImpl(6800, dependencyMap.paths);
+  },
+  fr() {
+    return asyncRequireImpl(6801, dependencyMap.paths);
+  },
+  hr() {
+    return asyncRequireImpl(6802, dependencyMap.paths);
+  },
+  hu() {
+    return asyncRequireImpl(6803, dependencyMap.paths);
+  },
+  it() {
+    return asyncRequireImpl(6804, dependencyMap.paths);
+  },
+  ja() {
+    return asyncRequireImpl(6805, dependencyMap.paths);
+  },
+  ko() {
+    return asyncRequireImpl(6806, dependencyMap.paths);
+  },
+  lt() {
+    return asyncRequireImpl(6807, dependencyMap.paths);
+  },
+  nl() {
+    return asyncRequireImpl(6808, dependencyMap.paths);
+  },
+  no() {
+    return asyncRequireImpl(6809, dependencyMap.paths);
+  },
+  pl() {
+    return asyncRequireImpl(6810, dependencyMap.paths);
+  },
+  () => asyncRequireImpl(6811, dependencyMap.paths),
+  ro() {
+    return asyncRequireImpl(6812, dependencyMap.paths);
+  },
+  ru() {
+    return asyncRequireImpl(6813, dependencyMap.paths);
+  },
+  () => asyncRequireImpl(6814, dependencyMap.paths),
+  th() {
+    return asyncRequireImpl(6815, dependencyMap.paths);
+  },
+  tr() {
+    return asyncRequireImpl(6816, dependencyMap.paths);
+  },
+  uk() {
+    return asyncRequireImpl(6817, dependencyMap.paths);
+  },
+  vi() {
+    return asyncRequireImpl(6818, dependencyMap.paths);
+  },
+  () => asyncRequireImpl(6819, dependencyMap.paths),
   hi() {
-    return asyncRequireImpl(6797, dependencyMap.paths);
+    return asyncRequireImpl(6820, dependencyMap.paths);
   }
 };

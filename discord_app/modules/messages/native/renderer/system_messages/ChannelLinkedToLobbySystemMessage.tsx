@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx",
 );
 
-export const createChannelLinkedToLobbySystemMessage = function createChannelLinkedToLobbySystemMessage(message) {
+export function createChannelLinkedToLobbySystemMessage(message) {
   message = message.message;
   ({ roleStyle, theme } = message);
   const tmp3 = resolveMessageContentColorsDefault(theme);
@@ -49,4 +49,4 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const merged = Object.assign(createCommonMessageDefault(message));
     return obj6;
   }
-};
+}

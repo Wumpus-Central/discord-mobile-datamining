@@ -70,6 +70,7 @@ const obj = {
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
   DeclarativeSystemNotifPermissionManager: null,
+  DeviceSilentModeManager: null,
   DiceRollLifecycleManager: null,
   DmSettingsUpsellManager: null,
   TopEmojisDataManager: null,
@@ -311,6 +312,13 @@ obj.DeclarativeSystemNotifPermissionManager = {
   inlineRequire() {
     return require("DeclarativeSystemNotifPermissionManager").default;
   },
+};
+obj.DeviceSilentModeManager = {
+  actions: ["FRAME_LAUNCH"],
+  inlineRequire() {
+    return require("DeviceSilentModeManager").default;
+  },
+  hasStoreChangeListeners: true,
 };
 obj.DiceRollLifecycleManager = {
   actions: ["CHANNEL_SELECT", "DICE_ROLL_START"],
@@ -1114,6 +1122,7 @@ obj.OrbsArcadeFetchManager = {
 obj.QuestFetchManager = {
   actions: [
     "QUESTS_FETCH_CURRENT_QUESTS_BEGIN",
+    "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN",
     "POST_CONNECTION_OPEN",
     "RUNNING_GAMES_CHANGE",
     "RUNNING_NON_GAMES_CHANGE",

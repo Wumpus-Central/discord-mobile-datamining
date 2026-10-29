@@ -15,15 +15,15 @@ let closure_6 = PremiumConstants.PREMIUM_SUBSCRIPTION_APPLICATION;
 SocialLayerStorefrontConstants.BLOONS_TD6_SPLIT_TENDER_COUPON_SKU_IDS;
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyUtils.tsx");
 
-export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSKU(skuId) {
+export function get1PShopApplicationIdForSKU(skuId) {
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM) {
     let tmp3 = closure_6;
   } else {
     tmp3 = closure_2;
   }
   return tmp3;
-};
-export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExperience() {
+}
+export function dismissOrbsOnboardingExperience() {
   if (
     !obj.UNSAFE_isDismissibleContentDismissed(
       dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
@@ -49,4 +49,4 @@ export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExp
     const tmpResult4 = DismissibleContentUnsafeUtils;
   }
   obj = DismissibleContentUnsafeUtils;
-};
+}

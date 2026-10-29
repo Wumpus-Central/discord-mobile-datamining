@@ -30,7 +30,7 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -92,8 +92,8 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(9230).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-let Features = fn(5754).Features;
+let closure_9 = fn(9234).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let Features = fn(5756).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -221,7 +221,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -330,7 +330,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
             num2 = 0;
             closure_9.current = setTimeout(() => {
               asyncGeneratorStep(true);
-              t8().then(() => { ... });
+              t8().then(/* F162412 */ function() { ... });
             }, 0);
           } else {
             tmp4 = closure_10;
@@ -386,7 +386,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

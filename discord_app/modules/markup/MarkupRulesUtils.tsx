@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
-export const smartOutput = function smartOutput(node, output, state) {
+export function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {
     if (undefined !== node.content) {
       let content = output(node.content, state);
@@ -11,7 +11,7 @@ export const smartOutput = function smartOutput(node, output, state) {
     return content;
   }
   content = node.content;
-};
+}
 export function isStaticRouteIconType(channelId) {
   let tmp = "home" === channelId;
   if (!tmp) {

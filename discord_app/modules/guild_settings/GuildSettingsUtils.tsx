@@ -9,10 +9,10 @@ const hasPermission = GuildRoleRecord.hasPermission;
 ({ ElevatedPermissions: closure_4, ElevatedPermissionsList: hasOwnProperty } = Constants);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsUtils.tsx");
 
-export const isRolePowerful = function isRolePowerful(role) {
+export function isRolePowerful(role) {
   return BigFlagUtilsAll.hasAny(role.permissions, React4);
-};
-export const getPowerfulPermissionTitles = function getPowerfulPermissionTitles(arg0, arg1) {
+}
+export function getPowerfulPermissionTitles(arg0, arg1) {
   const items = [];
   PermissionSpecUtilsDefault;
   for (const item10015 of closure_1_5) {
@@ -22,4 +22,4 @@ export const getPowerfulPermissionTitles = function getPowerfulPermissionTitles(
     continue;
   }
   return items;
-};
+}

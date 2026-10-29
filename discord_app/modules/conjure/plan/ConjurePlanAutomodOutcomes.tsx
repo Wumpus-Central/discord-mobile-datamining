@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/ConjurePlanAutomodOutcomes.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import GuildDisableCommunicationConstants from "../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -15,28 +15,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.Vi4cjL);
+      return intl.string(_modDef3864.Vi4cjL);
     },
     blockedStyle: false,
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.YdnZ8q);
+      return intl.string(_modDef3864.YdnZ8q);
     },
     blockedStyle: true,
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.QGrx9O);
+      return intl.string(_modDef3864.QGrx9O);
     },
     blockedStyle: true,
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.RGzFNK);
+      return intl.string(_modDef3864.RGzFNK);
     },
     blockedStyle: false,
   },
@@ -45,33 +45,33 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.YdnZ8q);
+      return intl.string(_modDef3864.YdnZ8q);
     },
     tone: "red",
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863["8ockl9"]);
+      return intl.string(_modDef3864["8ockl9"]);
     },
     tone: "blurple",
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3863.RGzFNK);
+      return intl.string(_modDef3864.RGzFNK);
     },
     tone: "green",
   },
 };
-export const groupPlanAutomodExamples = function groupPlanAutomodExamples(examples) {
+export function groupPlanAutomodExamples(examples) {
   const mapped = closure_4.map((section) => {
     examples = section;
     return { section, examples: examples.filter((item) => closure_2_5[item.outcome] === closure_0) };
   });
   return mapped.filter((examples) => examples.examples.length > 0);
-};
-export const planAutomodReasonText = function planAutomodReasonText(example) {
+}
+export function planAutomodReasonText(example) {
   let formatToPlainStringResult = null;
   if ("timeout" === example.outcome) {
     formatToPlainStringResult = null;
@@ -122,7 +122,7 @@ export const planAutomodReasonText = function planAutomodReasonText(example) {
     tmp7 = joined;
   }
   return tmp7;
-};
-export const renderPlanAutomodExampleContent = function renderPlanAutomodExampleContent(content) {
+}
+export function renderPlanAutomodExampleContent(content) {
   return MarkupUtilsDefault.parseEmbedTitleWithoutLinks(content, true);
-};
+}

@@ -13,7 +13,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserProfileLegacyUsernameSwitch(arg0) {
       const cResult = setting(576).c(11);
       ({ legacyUsername, pendingLegacyUsernameDisabled } = arg0);
-      const LegacyUsernameDisabled = setting(4832).LegacyUsernameDisabled;
+      const LegacyUsernameDisabled = setting(4833).LegacyUsernameDisabled;
       setting = LegacyUsernameDisabled.useSetting();
       let tmp5 = setting;
       if (undefined !== pendingLegacyUsernameDisabled) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: tmp11,
             onValueChange: tmp13,
           };
-          const tmp16 = jsx(tmp(16136).UserProfileEditFormSwitch, {
+          const tmp16 = jsx(tmp(16373).UserProfileEditFormSwitch, {
             value: tmp6,
             label: first,
             subLabel: cResult[3],
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDisabled) {
       pendingLegacyUsernameDisabled = pendingLegacyUsernameDisabled.pendingLegacyUsernameDisabled;
       let setting;
-      const LegacyUsernameDisabled = setting(4832).LegacyUsernameDisabled;
+      const LegacyUsernameDisabled = setting(4833).LegacyUsernameDisabled;
       setting = LegacyUsernameDisabled.useSetting();
       let tmp4 = setting;
       if (undefined !== pendingLegacyUsernameDisabled) {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           UserProfileSettingsActionCreators.setPendingChanges(obj2);
         }
       };
-      return jsx(setting(16136).UserProfileEditFormSwitch, {
+      return jsx(setting(16373).UserProfileEditFormSwitch, {
         value: !tmp4,
         label: null,
         subLabel: null,

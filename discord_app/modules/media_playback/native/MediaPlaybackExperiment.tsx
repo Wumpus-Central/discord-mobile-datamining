@@ -11,14 +11,14 @@ const config = ApexExperiment.createApexExperiment({
 });
 let result = size.fileFinishedImporting("modules/media_playback/native/MediaPlaybackExperiment.tsx");
 
-export const initializeMediaPlaybackExperiment = function initializeMediaPlaybackExperiment() {
+export function initializeMediaPlaybackExperiment() {
   const result = NativeMediaPlaybackModuleDefault.setEnabledForNextLaunch(
     config.getConfig({ location: "loaded" }).enabled,
   );
-};
-export const isNativeMediaPlaybackEnabled = function isNativeMediaPlaybackEnabled() {
+}
+export function isNativeMediaPlaybackEnabled() {
   if (closure_2 == null) {
     closure_2 = NativeMediaPlaybackModuleDefault.isEnabled();
   }
   return closure_2;
-};
+}

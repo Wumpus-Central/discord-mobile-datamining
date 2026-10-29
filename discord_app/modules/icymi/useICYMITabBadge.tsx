@@ -43,6 +43,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);
       return obj;
     };
-export const icymiTabBadgeShown = function icymiTabBadgeShown() {
+export function icymiTabBadgeShown() {
   return ICYMIStore.hasNewContent();
-};
+}

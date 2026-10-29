@@ -19,7 +19,7 @@ let closure_8 = async function _hydrateNextPage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_8 = async function _hydrateNextPage() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -76,7 +76,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -212,7 +212,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       } else {
         const recommendedGuilds = closure_130_1(closure_130_2[12]).getRecommendedGuilds();
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp36) {
       c4 = tmp;
@@ -325,7 +325,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIStoreUtils.tsx");
 
-export const getViewableFeedItemsArray = function getViewableFeedItemsArray(viewableItems) {
+export function getViewableFeedItemsArray(viewableItems) {
   let tmp3;
   const items = [...ICYMIStore.getUnreadDisplayItems(), ...ICYMIStore.getReadDisplayItems()];
   let id = null;
@@ -357,8 +357,8 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
     }
     return items1;
   }
-};
-export const hydrateNextPage = function hydrateNextPage() {
+}
+export function hydrateNextPage() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -367,8 +367,8 @@ export const hydrateNextPage = function hydrateNextPage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates() {
+}
+export function regenerateFeedAndClearReadStates() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -377,7 +377,7 @@ export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearR
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useGravityMessage = tmp2;
 export const useGravityMessageItem = tmp3;
 export const useICYMIMessage = ReactCompilerGating.isReactCompilerEnabled()

@@ -7,6 +7,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/premium/hooks/usePremiumTrialOffer.android.tsx");
 
-export const usePremiumTrialOffer = function usePremiumTrialOffer(arg0) {
+export function usePremiumTrialOffer(arg0) {
   return useAndroidAndLegacyIOSPremiumTrialOfferCandidates.useAndroidAndLegacyIOSPremiumTrialOfferCandidates(arg0);
-};
+}

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/settings/native/useConjureAppSettingsForm.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import conjureSettingValues from "../conjureSettingValues.tsx";
 import useConjureSettingPickerOptions from "../useConjureSettingPickerOptions.tsx";
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
 const ConjureSettingsPickerSheet = "ConjureSettingsPickerSheet";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { linkedField: { gap: nativeDefault.space.PX_4 }, section: null, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_4 };
 obj2.section = { gap: nativeDefault.space.PX_16 };
@@ -410,8 +410,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(12241).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(12241);
+  const conjureSettingsGuildId = def(12295).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(12295);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -423,7 +423,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }, items1);
   if (null != conjureSettingsGuildId) {
     if (null != stateFromStores) {
-      const result = tmp(7382).conjureSettingChannels(stateFromStores, def.channel_filter);
+      const result = tmp(7405).conjureSettingChannels(stateFromStores, def.channel_filter);
       c4 = result;
       found = result.find((id) => id.id === importDefault);
       if (found == null) {
@@ -432,22 +432,22 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       let obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp6Result;
       if (null != hint) {
-        let obj4 = { variant: "text-xs/medium", color: "text-subtle", children: tmp(12230).conjureLinkedNodes(hint, "text-xs/medium") };
-        tmp6Result = closure_12(tmp(5270).Text, obj4);
-        const tmpResult3 = tmp(12230);
+        let obj4 = { variant: "text-xs/medium", color: "text-subtle", children: tmp(12284).conjureLinkedNodes(hint, "text-xs/medium") };
+        tmp6Result = closure_12(tmp(5271).Text, obj4);
+        const tmpResult3 = tmp(12284);
       }
       obj3.subLabel = tmp6Result;
       obj3.disabled = disabled;
       if (null != found) {
-        const tmpResult4 = tmp(5640);
+        const tmpResult4 = tmp(5641);
         let channelName = tmpResult4.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
         let intl = tmp(1125).intl;
-        channelName = intl.string(_modDef3863.iZIF9m);
+        channelName = intl.string(_modDef3864.iZIF9m);
       }
       const obj5 = { hasIcons: false, children: null };
       const obj6 = { text: channelName };
-      obj3.trailing = closure_12(tmp(6950).TableRowTrailingText, obj6);
+      obj3.trailing = closure_12(tmp(6974).TableRowTrailingText, obj6);
       obj3.onPress = function onPress() {
         const obj2 = { content: null, key: null, stackingBehavior: "stack" };
         const obj3 = { header: { title: def.label }, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
@@ -457,7 +457,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
+        obj3.noChannelOptionLabel = intl.string(_modDef3864["jtBVV+"]);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -472,8 +472,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj2.key = ConjureSettingsChannelSheet;
         obj.showActionSheet(obj2);
       };
-      obj5.children = closure_12(tmp(6939).TableRow, obj3);
-      return closure_12(tmp(7023).TableRowGroup, obj5);
+      obj5.children = closure_12(tmp(6963).TableRow, obj3);
+      return closure_12(tmp(7047).TableRowGroup, obj5);
     }
   }
   return fallback;
@@ -573,7 +573,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                 obj1.maxPicks = num;
                                 obj1.selected = closure_4.filter((id) => arr.includes(id.id));
                                 obj1.onSubmit = function onSubmit(arr) {
-                                  const mapped = arr.map(() => { ... });
+                                  const mapped = arr.map(/* F163302 */ function() { ... });
                                   let tmp3 = mapped;
                                   if (!closure_1_3) {
                                     let str = mapped[0];
@@ -623,7 +623,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                   obj1.maxPicks = num;
                   obj1.selected = closure_4.filter((id) => arr.includes(id.id));
                   obj1.onSubmit = function onSubmit(arr) {
-                    const mapped = arr.map(() => { ... });
+                    const mapped = arr.map(/* F163302 */ function() { ... });
                     let tmp3 = mapped;
                     if (!closure_1_3) {
                       let str = mapped[0];
@@ -889,7 +889,7 @@ export default function useConjureAppSettingsForm(projectId) {
                   items[HermesBuiltin.arraySpread(arr, 0)] = value.value;
                   found = items;
                 } else {
-                  found = arr.filter(() => { ... });
+                  found = arr.filter(/* F166532 */ function() { ... });
                 }
                 obj[value.key] = found;
                 return obj;
@@ -1373,7 +1373,7 @@ export default function useConjureAppSettingsForm(projectId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

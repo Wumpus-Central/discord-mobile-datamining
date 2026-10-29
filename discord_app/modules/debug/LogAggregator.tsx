@@ -5,7 +5,7 @@ let closure_0 = new DequeDefault(5000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/debug/LogAggregator.tsx");
 
-export const report = function report(category) {
+export function report(category) {
   let length;
   const tmp = (function stringifyMessage(arg0) {
     let str = "";
@@ -55,11 +55,11 @@ export const report = function report(category) {
       length = closure_0.length;
     } while (length > 5000);
   }
-};
-export const clear = function clear() {
+}
+export function clear() {
   closure_0.clear();
-};
-export const stringify = function stringify(arg0) {
+}
+export function stringify(arg0) {
   closure_0 = arg0;
   const found = closure_0.toArray().filter((category) => {
     let hasItem = null == closure_0;
@@ -78,8 +78,8 @@ export const stringify = function stringify(arg0) {
     return items.join(" -> ");
   });
   return mapped.join("\n");
-};
-export const getAllForDebugPanel = function getAllForDebugPanel(arg0) {
+}
+export function getAllForDebugPanel(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -91,4 +91,4 @@ export const getAllForDebugPanel = function getAllForDebugPanel(arg0) {
     reversed = toArrayResult;
   }
   return reversed;
-};
+}

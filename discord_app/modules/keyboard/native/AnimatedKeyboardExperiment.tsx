@@ -17,6 +17,6 @@ const enabled = apexExperiment.getConfig({ location: "isAnimatedKeyboardEnabled"
 const result = size.fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardExperiment.tsx");
 
 export const AnimatedKeyboardExperiment = apexExperiment;
-export const isAnimatedAndroidKeyboard = function isAnimatedAndroidKeyboard() {
+export function isAnimatedAndroidKeyboard() {
   return PlatformUtils.isAndroid() && enabled;
-};
+}

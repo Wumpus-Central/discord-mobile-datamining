@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/voice/ConjureVoiceAcoustics.tsx");
 
-export const toSpatialAudioOverrides = function toSpatialAudioOverrides(acoustics) {
+export function toSpatialAudioOverrides(acoustics) {
   ({ binaural, distance_attenuation, air_absorption, reflections } = acoustics);
   if (reflections != null) {
     const room = reflections.room;
@@ -72,8 +72,8 @@ export const toSpatialAudioOverrides = function toSpatialAudioOverrides(acoustic
   }
   obj2.reflections = tmp4;
   return obj2;
-};
-export const getRoomError = function getRoomError(reflections) {
+}
+export function getRoomError(reflections) {
   reflections = reflections.reflections;
   let min_corner;
   if (reflections != null) {
@@ -108,4 +108,4 @@ export const getRoomError = function getRoomError(reflections) {
     tmp2 = null;
   }
   return tmp2;
-};
+}

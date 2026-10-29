@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/native/FavoritesGuildHeaderActions.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3445 from "../intl/FavoritesGuild.messages.js";
+import _modDef3446 from "../intl/FavoritesGuild.messages.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef11191 from "../../../../_runtime/metro/11191__.js";
+import _modDef11245 from "../../../../_runtime/metro/11245__.js";
 import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,17 +20,17 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
         const obj2 = {
           variant: "secondary",
           size: "sm",
-          icon: _modDef11191,
+          icon: _modDef11245,
           onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1,
         };
         const intl = util.intl;
-        obj2.accessibilityLabel = intl.string(_modDef3445.G9fGlP);
+        obj2.accessibilityLabel = intl.string(_modDef3446.G9fGlP);
         const tmp7 = jsx(IconButton.IconButton, {
           variant: "secondary",
           size: "sm",
-          icon: _modDef11191,
+          icon: _modDef11245,
           onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1,
@@ -46,17 +46,17 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: _modDef11191,
+        icon: _modDef11245,
         onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3445.G9fGlP);
+      obj.accessibilityLabel = intl.string(_modDef3446.G9fGlP);
       return jsx(IconButton.IconButton, {
         variant: "secondary",
         size: "sm",
-        icon: _modDef11191,
+        icon: _modDef11245,
         onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,

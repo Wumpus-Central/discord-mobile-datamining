@@ -63,7 +63,7 @@ function isUserSettingsOpen() {
                             let someResult = null != routes1;
                             if (someResult) {
                               const routes = state.routes;
-                              someResult = routes.some(() => { ... });
+                              someResult = routes.some(/* F125910 */ function() { ... });
                             }
                             tmp = someResult;
                           }
@@ -134,7 +134,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                         let someResult = null != routes1;
                         if (someResult) {
                           const routes = state.routes;
-                          someResult = routes.some(() => { ... });
+                          someResult = routes.some(/* F125910 */ function() { ... });
                         }
                         tmp = someResult;
                       }
@@ -201,7 +201,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                     let someResult = null != routes1;
                     if (someResult) {
                       const routes = state.routes;
-                      someResult = routes.some(() => { ... });
+                      someResult = routes.some(/* F125910 */ function() { ... });
                     }
                     tmp = someResult;
                   }

@@ -36,7 +36,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/design_feedback/conjureDesignFeedbackStore.tsx");
 
 export { getConjureDesignFeedback };
-export const enterConjureDesignFeedback = function enterConjureDesignFeedback(arg0) {
+export function enterConjureDesignFeedback(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_3;
@@ -61,8 +61,8 @@ export const enterConjureDesignFeedback = function enterConjureDesignFeedback(ar
     }
     const result = map.set(arg0, obj2);
   }
-};
-export const pauseConjureDesignFeedback = function pauseConjureDesignFeedback(arg0) {
+}
+export function pauseConjureDesignFeedback(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_3;
@@ -87,8 +87,8 @@ export const pauseConjureDesignFeedback = function pauseConjureDesignFeedback(ar
     }
     const result = map.set(arg0, obj2);
   }
-};
-export const exitConjureDesignFeedback = function exitConjureDesignFeedback(arg0) {
+}
+export function exitConjureDesignFeedback(arg0) {
   if (map.has(arg0)) {
     if (!active.active) {
       if (0 === active.annotations.length) {
@@ -106,8 +106,8 @@ export const exitConjureDesignFeedback = function exitConjureDesignFeedback(arg0
     }
     const result = map.set(arg0, active);
   }
-};
-export const setConjureDesignFeedbackContext = function setConjureDesignFeedbackContext(arg0, context) {
+}
+export function setConjureDesignFeedbackContext(arg0, context) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_3;
@@ -132,8 +132,8 @@ export const setConjureDesignFeedbackContext = function setConjureDesignFeedback
     }
     const result = map.set(arg0, obj2);
   }
-};
-export const addConjureDesignAnnotation = function addConjureDesignAnnotation(arg0, authorId, target, comment) {
+}
+export function addConjureDesignAnnotation(arg0, authorId, target, comment) {
   let CONJURE_DESIGN_ANCHOR_CENTER = arg4;
   if (arg4 === undefined) {
     CONJURE_DESIGN_ANCHOR_CENTER = ConjureDesignFeedback.CONJURE_DESIGN_ANCHOR_CENTER;
@@ -172,8 +172,8 @@ export const addConjureDesignAnnotation = function addConjureDesignAnnotation(ar
     return text;
   }
   const result = map.set(arg0, obj2);
-};
-export const relocateConjureDesignAnnotations = function relocateConjureDesignAnnotations(arg0, size) {
+}
+export function relocateConjureDesignAnnotations(arg0, size) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_3;
@@ -213,9 +213,9 @@ export const relocateConjureDesignAnnotations = function relocateConjureDesignAn
     }
     const result = map.set(arg0, obj2);
   }
-};
+}
 export { canEditConjureDesignAnnotation };
-export const updateConjureDesignAnnotation = function updateConjureDesignAnnotation(arg0, arg1, arg2, comment) {
+export function updateConjureDesignAnnotation(arg0, arg1, arg2, comment) {
   closure_0 = arg2;
   value = map.get(arg0);
   if (value == null) {
@@ -258,8 +258,8 @@ export const updateConjureDesignAnnotation = function updateConjureDesignAnnotat
     }
     const result = map.set(arg0, obj2);
   }
-};
-export const removeConjureDesignAnnotation = function removeConjureDesignAnnotation(arg0, arg1, arg2) {
+}
+export function removeConjureDesignAnnotation(arg0, arg1, arg2) {
   closure_0 = arg2;
   value = map.get(arg0);
   if (value == null) {
@@ -293,7 +293,7 @@ export const removeConjureDesignAnnotation = function removeConjureDesignAnnotat
     }
     const result = map.set(arg0, obj2);
   }
-};
+}
 export { subscribeConjureDesignFeedback };
 export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureDesignFeedback(arg0) {

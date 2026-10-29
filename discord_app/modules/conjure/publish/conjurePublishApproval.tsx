@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishApproval.tsx");
 
-export const validPublishApproval = function validPublishApproval(approval_url, approval_kind) {
+export function validPublishApproval(approval_url, approval_kind) {
   let isMatch = "enroll" === approval_kind;
   if (!isMatch) {
     isMatch = "publish" === approval_kind;
@@ -22,4 +22,4 @@ export const validPublishApproval = function validPublishApproval(approval_url, 
     isMatch = regExp.test(approval_url);
   }
   return isMatch;
-};
+}

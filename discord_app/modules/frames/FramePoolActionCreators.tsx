@@ -4,6 +4,6 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/frames/FramePoolActionCreators.tsx");
 
-export const updateFramePoolVisibility = function updateFramePoolVisibility(frameId, hidden) {
+export function updateFramePoolVisibility(frameId, hidden) {
   DispatcherDefault.dispatch({ type: "FRAME_POOL_VISIBILITY_UPDATE", frameId, poolVisibility: hidden });
-};
+}

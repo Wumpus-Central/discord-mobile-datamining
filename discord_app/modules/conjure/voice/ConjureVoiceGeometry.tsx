@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/voice/ConjureVoiceGeometry.tsx");
 
-export const toListenerRelativePosition = function toListenerRelativePosition(forward, position) {
+export function toListenerRelativePosition(forward, position) {
   forward = forward.forward;
   ({ x, y, z } = forward);
   const sqrtResult = Math.sqrt(x * x + y * y + z * z);
@@ -53,4 +53,4 @@ export const toListenerRelativePosition = function toListenerRelativePosition(fo
     };
   }
   return point7;
-};
+}

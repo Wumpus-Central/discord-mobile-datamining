@@ -5,10 +5,10 @@ const set = new Set();
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/engagedViewMilestone.tsx");
 
 export const ENGAGED_VIEW_THRESHOLD_SEC = 5;
-export const resetEngagedViewMilestoneStateForTests = function resetEngagedViewMilestoneStateForTests() {
+export function resetEngagedViewMilestoneStateForTests() {
   set.clear();
-};
-export const createEngagedViewEmitter = function createEngagedViewEmitter(thresholdSeconds) {
+}
+export function createEngagedViewEmitter(thresholdSeconds) {
   ({ getImpressionId: set, onEmit: closure_1, initialWatchedSeconds } = thresholdSeconds);
   if (initialWatchedSeconds === undefined) {
     initialWatchedSeconds = 0;
@@ -122,4 +122,4 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
       return tmp2;
     },
   };
-};
+}

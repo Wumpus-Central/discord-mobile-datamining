@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
@@ -175,7 +175,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           tmp7 = closure_0;
           tmp8 = closure_2;
           obj2 = closure_0(closure_2[17]);
-          obj.headerLeft = obj2.getHeaderBackButton(() => { ... });
+          obj.headerLeft = obj2.getHeaderBackButton(/* F149344 */ function() { ... });
           obj.headerRight = function headerRight() { ... };
           setOptionsResult1 = closure_2.setOptions(obj);
         } else {
@@ -190,7 +190,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           tmp21 = closure_0;
           tmp22 = closure_2;
           obj5 = closure_0(closure_2[17]);
-          obj6.headerLeft = obj5.getHeaderBackButton(() => { ... });
+          obj6.headerLeft = obj5.getHeaderBackButton(/* F149346 */ function() { ... });
           obj6.headerRight = function headerRight() { ... };
           setOptionsResult2 = closure_2.setOptions(obj6);
         }
@@ -318,7 +318,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           }, 100);
         },
       hasIcons: null,
-      children: false
+      children: true
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[14]).intl;

@@ -302,7 +302,7 @@ let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterModels
 export const JS_DAY_TO_DAY_OF_WEEK = frozen;
 export { ScheduleRuleRecord };
 export { RestrictedScheduleRecord };
-export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleRecord(restrictedSchedule) {
+export function ensureRestrictedScheduleRecord(restrictedSchedule) {
   let tmp2 = null;
   if (null != restrictedSchedule) {
     let tmp3 = restrictedSchedule;
@@ -336,4 +336,4 @@ export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleR
     }
   }
   return tmp2;
-};
+}

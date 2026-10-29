@@ -45,6 +45,6 @@ const obj = {
 } = Constants.PlatformTypes);
 const result = size.fileFinishedImporting("modules/connections/native/ConnectionPlatformUtils.native.tsx");
 
-export const getConnectionBackgroundColor = function getConnectionBackgroundColor(type) {
+export function getConnectionBackgroundColor(type) {
   return obj[type];
-};
+}

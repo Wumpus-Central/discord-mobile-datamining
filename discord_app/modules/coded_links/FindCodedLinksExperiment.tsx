@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/coded_links/FindCodedLinksExperiment.tsx");
 
-export const isFindCodedLinksRegexEnabled = function isFindCodedLinksRegexEnabled() {
+export function isFindCodedLinksRegexEnabled() {
   return config.getConfig({ location: "findCodedLinks" }).enabled;
-};
+}

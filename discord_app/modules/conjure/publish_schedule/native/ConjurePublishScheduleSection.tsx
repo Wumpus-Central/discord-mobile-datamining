@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_schedule/native/ConjurePublishScheduleSection.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import useConjurePublishScheduleDefault from "../useConjurePublishSchedule.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -37,8 +37,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { variant: "heading-md/semibold", children: null };
             let intl = tmp(1125).intl;
-            obj2.children = intl.string(tmp4(3863).ptzKKH);
-            const tmp12 = closure_3(tmp(5270).Heading, obj2);
+            obj2.children = intl.string(tmp4(3864).ptzKKH);
+            const tmp12 = closure_3(tmp(5271).Heading, obj2);
             cResult[3] = tmp12;
             let tmp10 = tmp12;
           } else {
@@ -49,8 +49,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (tmp5.loading) {
               const obj3 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: null };
               let intl2 = tmp(1125).intl;
-              obj3.children = intl2.string(tmp4(3863)["71yzD9"]);
-              tmp14 = closure_3(tmp(5270).Text, obj3);
+              obj3.children = intl2.string(tmp4(3864)["71yzD9"]);
+              tmp14 = closure_3(tmp(5271).Text, obj3);
             }
             cResult[4] = tmp5.loading;
             cResult[5] = tmp14;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       accessibilityLiveRegion: "assertive",
                       children: tmp5.error,
                     };
-                    tmp23 = closure_3(tmp(5270).Text, obj4);
+                    tmp23 = closure_3(tmp(5271).Text, obj4);
                   }
                   cResult[11] = tmp5.error;
                   cResult[12] = tmp23;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       accessibilityLiveRegion: "polite",
                       children: tmp5.status,
                     };
-                    tmp26 = closure_3(tmp(5270).Text, obj5);
+                    tmp26 = closure_3(tmp(5271).Text, obj5);
                   }
                   cResult[13] = tmp5.status;
                   cResult[14] = tmp26;
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = { spacing: tmp4(587).space.PX_16, children: null };
                     const items = [tmp10, tmp13, tmp16, tmp22, tmp25, tmp28];
                     obj6.children = items;
-                    const tmp34 = closure_4(tmp(6013).Stack, obj6);
+                    const tmp34 = closure_4(tmp(6015).Stack, obj6);
                     cResult[19] = tmp13;
                     cResult[20] = tmp16;
                     cResult[21] = tmp22;
@@ -134,9 +134,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (null != tmp5.error) {
                     const obj7 = { variant: "secondary", text: null, onPress: null };
                     const intl5 = tmp(1125).intl;
-                    obj7.text = intl5.string(tmp4(3863).iLTcFU);
+                    obj7.text = intl5.string(tmp4(3864).iLTcFU);
                     obj7.onPress = tmp5.retry;
-                    tmp30 = closure_3(tmp(5280).Button, obj7);
+                    tmp30 = closure_3(tmp(5281).Button, obj7);
                   }
                 }
                 cResult[15] = tmp5.error;
@@ -154,10 +154,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj8 = { children: null };
               const obj9 = { variant: "text-sm/normal", color: "text-subtle", children: null };
               let intl3 = tmp(1125).intl;
-              obj9.children = intl3.string(tmp4(3863).ubcNP7);
-              const items1 = [closure_3(tmp(5270).Text, obj9)];
+              obj9.children = intl3.string(tmp4(3864).ubcNP7);
+              const items1 = [closure_3(tmp(5271).Text, obj9)];
               const obj10 = { spacing: tmp4(587).space.PX_8, children: null };
-              const result = tmp(12252).publishScheduleDetails(tmp5.saved);
+              const result = tmp(12306).publishScheduleDetails(tmp5.saved);
               const items2 = [
                 result.map((children, index) =>
                   closure_1_3(projectId(dependencyMap[8]).Text, { variant: "text-sm/normal", children }, index),
@@ -165,15 +165,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ];
               const obj11 = { variant: "secondary", text: null, disabled: null, onPress: null };
               const intl4 = tmp(1125).intl;
-              obj11.text = intl4.string(tmp4(3863).J7ZMMf);
+              obj11.text = intl4.string(tmp4(3864).J7ZMMf);
               obj11.disabled = tmp5.deleting;
               obj11.onPress = tmp8;
-              items2[1] = closure_3(tmp(5280).Button, obj11);
+              items2[1] = closure_3(tmp(5281).Button, obj11);
               obj10.children = items2;
-              items1[1] = closure_4(tmp(6013).Stack, obj10);
+              items1[1] = closure_4(tmp(6015).Stack, obj10);
               obj8.children = items1;
               tmp18 = closure_4(closure_5, obj8);
-              const tmpResult = tmp(12252);
+              const tmpResult = tmp(12306);
             }
           }
           cResult[6] = tmp8;
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onConfirm: null,
           };
           const intl = util.intl;
-          obj2.title = intl.string(_modDef3863["Tw/KaB"]);
+          obj2.title = intl.string(_modDef3864["Tw/KaB"]);
           const intl2 = util.intl;
-          obj2.content = intl2.string(_modDef3863.qr1iIe);
+          obj2.content = intl2.string(_modDef3864.qr1iIe);
           const intl3 = util.intl;
-          obj2.confirmText = intl3.string(_modDef3863.J7ZMMf);
+          obj2.confirmText = intl3.string(_modDef3864.J7ZMMf);
           obj2.onConfirm = remove.remove;
           AlertModal.showConfirmModal(obj2);
         }
@@ -228,14 +228,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { spacing: tmp(587).space.PX_16, children: null };
         let obj2 = { variant: "heading-md/semibold", children: null };
         let intl = projectId(1125).intl;
-        obj2.children = intl.string(tmp(3863).ptzKKH);
-        const items = [closure_3(projectId(5270).Heading, obj2), , , , ,];
+        obj2.children = intl.string(tmp(3864).ptzKKH);
+        const items = [closure_3(projectId(5271).Heading, obj2), , , , ,];
         let tmp8Result = null;
         if (tmp3.loading) {
           const obj3 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: null };
           let intl2 = tmp7(1125).intl;
-          obj3.children = intl2.string(tmp(3863)["71yzD9"]);
-          tmp8Result = closure_3(tmp7(5270).Text, obj3);
+          obj3.children = intl2.string(tmp(3864)["71yzD9"]);
+          tmp8Result = closure_3(tmp7(5271).Text, obj3);
         }
         items[1] = tmp8Result;
         let tmp6Result = null;
@@ -245,10 +245,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { children: null };
             const obj5 = { variant: "text-sm/normal", color: "text-subtle", children: null };
             let intl3 = tmp7(1125).intl;
-            obj5.children = intl3.string(tmp(3863).ubcNP7);
-            const items1 = [closure_3(tmp7(5270).Text, obj5)];
+            obj5.children = intl3.string(tmp(3864).ubcNP7);
+            const items1 = [closure_3(tmp7(5271).Text, obj5)];
             const obj6 = { spacing: tmp(587).space.PX_8, children: null };
-            const result = tmp7(12252).publishScheduleDetails(tmp3.saved);
+            const result = tmp7(12306).publishScheduleDetails(tmp3.saved);
             const items2 = [
               result.map((children, index) =>
                 closure_1_3(projectId(dependencyMap[8]).Text, { variant: "text-sm/normal", children }, index),
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             ];
             const obj7 = { variant: "secondary", text: null, disabled: null, onPress: null };
             const intl4 = tmp7(1125).intl;
-            obj7.text = intl4.string(tmp(3863).J7ZMMf);
+            obj7.text = intl4.string(tmp(3864).J7ZMMf);
             obj7.disabled = tmp3.deleting;
             obj7.onPress = function confirmDelete() {
               const obj2 = {
@@ -268,20 +268,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onConfirm: null,
               };
               const intl = util.intl;
-              obj2.title = intl.string(_modDef3863["Tw/KaB"]);
+              obj2.title = intl.string(_modDef3864["Tw/KaB"]);
               const intl2 = util.intl;
-              obj2.content = intl2.string(_modDef3863.qr1iIe);
+              obj2.content = intl2.string(_modDef3864.qr1iIe);
               const intl3 = util.intl;
-              obj2.confirmText = intl3.string(_modDef3863.J7ZMMf);
+              obj2.confirmText = intl3.string(_modDef3864.J7ZMMf);
               obj2.onConfirm = remove.remove;
               AlertModal.showConfirmModal(obj2);
             };
-            items2[1] = closure_3(tmp7(5280).Button, obj7);
+            items2[1] = closure_3(tmp7(5281).Button, obj7);
             obj6.children = items2;
-            items1[1] = closure_4(tmp7(6013).Stack, obj6);
+            items1[1] = closure_4(tmp7(6015).Stack, obj6);
             obj4.children = items1;
             tmp6Result = closure_4(closure_5, obj4);
-            const tmp7Result = tmp7(12252);
+            const tmp7Result = tmp7(12306);
           }
         }
         items[2] = tmp6Result;
@@ -294,13 +294,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLiveRegion: "assertive",
             children: tmp3.error,
           };
-          tmp8Result4 = closure_3(tmp7(5270).Text, obj8);
+          tmp8Result4 = closure_3(tmp7(5271).Text, obj8);
         }
         items[3] = tmp8Result4;
         let tmp8Result5 = null;
         if (null != tmp3.status) {
           const obj9 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: tmp3.status };
-          tmp8Result5 = closure_3(tmp7(5270).Text, obj9);
+          tmp8Result5 = closure_3(tmp7(5271).Text, obj9);
         }
         items[4] = tmp8Result5;
         let tmp8Result6 = null;
@@ -309,14 +309,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null != tmp3.error) {
             const obj10 = { variant: "secondary", text: null, onPress: null };
             const intl5 = tmp7(1125).intl;
-            obj10.text = intl5.string(tmp(3863).iLTcFU);
+            obj10.text = intl5.string(tmp(3864).iLTcFU);
             obj10.onPress = tmp3.retry;
-            tmp8Result6 = closure_3(tmp7(5280).Button, obj10);
+            tmp8Result6 = closure_3(tmp7(5281).Button, obj10);
           }
         }
         items[5] = tmp8Result6;
         obj.children = items;
-        tmp6Result2 = closure_4(projectId(6013).Stack, obj);
+        tmp6Result2 = closure_4(projectId(6015).Stack, obj);
       }
       return tmp4;
     };

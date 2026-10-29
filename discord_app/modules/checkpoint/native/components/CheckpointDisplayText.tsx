@@ -2,6 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import CheckpointTextDefault from "CheckpointText.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = ["style"];

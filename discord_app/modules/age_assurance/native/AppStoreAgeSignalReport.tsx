@@ -31,7 +31,7 @@ let closure_15 = async function _collectAgeSignal() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -203,7 +203,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
         return obj;
       }
       c0 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -249,7 +249,7 @@ let c13 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalReport.tsx");
 
-export const queueAppStoreAgeSignalSubmit = function queueAppStoreAgeSignalSubmit(arg0) {
+export function queueAppStoreAgeSignalSubmit(arg0) {
   closure_0 = arg0;
   closure_3 = async function _settle() {
     if (c2 === 2) {
@@ -262,7 +262,7 @@ export const queueAppStoreAgeSignalSubmit = function queueAppStoreAgeSignalSubmi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -295,7 +295,7 @@ export const queueAppStoreAgeSignalSubmit = function queueAppStoreAgeSignalSubmi
             c12 = null;
           }
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp11) {
         c2 = tmp;
@@ -315,7 +315,7 @@ export const queueAppStoreAgeSignalSubmit = function queueAppStoreAgeSignalSubmi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -382,8 +382,8 @@ export const queueAppStoreAgeSignalSubmit = function queueAppStoreAgeSignalSubmi
   asyncGeneratorStep = tmp2;
   closure_12 = tmp2;
   return tmp;
-};
-export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalReport() {
+}
+export function beginAppStoreAgeSignalReport() {
   c9 = true;
   const sum = c13 + 1;
   c13 = sum;
@@ -392,8 +392,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5680).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5680);
+      result = tmp4(5682).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5682);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");
@@ -420,7 +420,7 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -468,7 +468,7 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
                   c12 = null;
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else if (mustWaitForForeground()) {
                 const obj6 = { isColdLaunch: closure_129_0, connection: closure_129_1 };
                 c3 = 0;
@@ -496,7 +496,7 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
                 c12 = null;
               }
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             c4 = 3;
             c5 = 1;
@@ -542,8 +542,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
     }
     const obj3 = require("PlatformUtils");
   }
-};
-export const resumeAppStoreAgeSignalReport = function resumeAppStoreAgeSignalReport() {
+}
+export function resumeAppStoreAgeSignalReport() {
   if (null != c11) {
     c11 = null;
     let tmp5 = null != UserStore.getCurrentUser();
@@ -568,7 +568,7 @@ export const resumeAppStoreAgeSignalReport = function resumeAppStoreAgeSignalRep
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -616,7 +616,7 @@ export const resumeAppStoreAgeSignalReport = function resumeAppStoreAgeSignalRep
                   c12 = null;
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else if (mustWaitForForeground()) {
                 const obj6 = { isColdLaunch: closure_129_0, connection: closure_129_1 };
                 c3 = 0;
@@ -644,7 +644,7 @@ export const resumeAppStoreAgeSignalReport = function resumeAppStoreAgeSignalRep
                 c12 = null;
               }
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             c4 = 3;
             c5 = 1;
@@ -690,8 +690,8 @@ export const resumeAppStoreAgeSignalReport = function resumeAppStoreAgeSignalRep
     }
   }
   tmp = c11;
-};
-export const settleAppStoreAgeSignalReport = function settleAppStoreAgeSignalReport() {
+}
+export function settleAppStoreAgeSignalReport() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -700,4 +700,4 @@ export const settleAppStoreAgeSignalReport = function settleAppStoreAgeSignalRep
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

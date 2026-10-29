@@ -90,9 +90,9 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "ix",
-      hoistRoleId: "Array",
-      iconRoleId: "prototype",
+      colorRoleId: "application",
+      hoistRoleId: "guild",
+      iconRoleId: "jsxs",
       highestRoleId: "Array",
     };
   } else {
@@ -2089,7 +2089,7 @@ const guildMemberStore = new GuildMemberStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/GuildMemberStore.tsx");
 
 export default guildMemberStore;
-export const getUserCommunicationDisabledVersion = function getUserCommunicationDisabledVersion(arg0, arg1) {
+export function getUserCommunicationDisabledVersion(arg0, arg1) {
   const items = [];
   items[constants.GUILD] = arg0;
   items[constants.USER] = arg1;
@@ -2099,16 +2099,16 @@ export const getUserCommunicationDisabledVersion = function getUserCommunication
     num = closure_19[joined];
   }
   return num;
-};
-export const getCommunicationDisabledUserKey = function getCommunicationDisabledUserKey(arg0, arg1) {
+}
+export function getCommunicationDisabledUserKey(arg0, arg1) {
   const items = [];
   items[constants.GUILD] = arg0;
   items[constants.USER] = arg1;
   return items.join("-");
-};
-export const getUserIdFromCommunicationDisabledUserKey = function getUserIdFromCommunicationDisabledUserKey(arg0) {
+}
+export function getUserIdFromCommunicationDisabledUserKey(arg0) {
   return arg0.split("-")[constants.USER];
-};
-export const getGuildIdFromCommunicationDisabledUserKey = function getGuildIdFromCommunicationDisabledUserKey(arg0) {
+}
+export function getGuildIdFromCommunicationDisabledUserKey(arg0) {
   return arg0.split("-")[constants.GUILD];
-};
+}

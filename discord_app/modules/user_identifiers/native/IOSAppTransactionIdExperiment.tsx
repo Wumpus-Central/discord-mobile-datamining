@@ -14,8 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_identifiers/native/IOSAppTransactionIdExperiment.tsx");
 
-export const isIOSAppTransactionIdTrackingEnabled = function isIOSAppTransactionIdTrackingEnabled(
-  IOSUserIdentifiersManager,
-) {
+export function isIOSAppTransactionIdTrackingEnabled(IOSUserIdentifiersManager) {
   return config.getConfig({ location: IOSUserIdentifiersManager }).enabled;
-};
+}

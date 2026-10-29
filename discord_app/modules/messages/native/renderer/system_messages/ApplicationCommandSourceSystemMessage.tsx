@@ -14,9 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx",
 );
 
-export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(
-  message,
-) {
+export function createApplicationCommandSourceSystemMessage(message) {
   message = message.message;
   const applicationCommand = ApplicationCommands.getApplicationCommand(message.content);
   const application = message.application;
@@ -50,4 +48,4 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
     }
   }
   return null;
-};
+}

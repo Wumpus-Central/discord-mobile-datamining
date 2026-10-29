@@ -8,15 +8,15 @@ const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
 
-export const canUseMobileServerTagSettings = function canUseMobileServerTagSettings(guildId) {
+export function canUseMobileServerTagSettings(guildId) {
   guild = GuildStore.getGuild(guildId);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
   }
   return canResult;
-};
-export const canViewMobileServerTag = function canViewMobileServerTag(id) {
+}
+export function canViewMobileServerTag(id) {
   guild = GuildStore.getGuild(id);
   let guildSupportsTagsResult = null != guild;
   if (guildSupportsTagsResult) {
@@ -26,8 +26,8 @@ export const canViewMobileServerTag = function canViewMobileServerTag(id) {
     guildSupportsTagsResult = GuildTagUtils.guildHasTag(guild);
   }
   return guildSupportsTagsResult;
-};
-export const isServerTagDraftDirty = function isServerTagDraftDirty(profile, profile2) {
+}
+export function isServerTagDraftDirty(profile, profile2) {
   let tmp = null != profile && null != profile2;
   if (tmp) {
     tmp =
@@ -42,4 +42,4 @@ export const isServerTagDraftDirty = function isServerTagDraftDirty(profile, pro
       profile.badgeColorSecondary !== profile2.badgeColorSecondary;
   }
   return tmp;
-};
+}

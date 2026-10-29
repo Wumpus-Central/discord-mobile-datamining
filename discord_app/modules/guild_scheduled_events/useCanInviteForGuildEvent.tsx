@@ -70,8 +70,8 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(6819).isGuildEventEnded;
-const constants = fn(4862).GuildScheduledEventEntityTypes;
+const isGuildEventEnded = fn(6842).isGuildEventEnded;
+const constants = fn(4863).GuildScheduledEventEntityTypes;
 const Permissions = fn(1084).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

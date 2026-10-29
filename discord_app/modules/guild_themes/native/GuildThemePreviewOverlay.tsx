@@ -1,6 +1,6 @@
 // discord_app/modules/guild_themes/native/GuildThemePreviewOverlay.tsx
 import c from "../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../_runtime/07994_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08017_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

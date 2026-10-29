@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigation.native.tsx
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -15,10 +15,10 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result3 = size.fileFinishedImporting("design/components/Navigator/native/useNavigation.native.tsx");
 
 export { useNavigation };
-export const useNativeStackNavigation = function useNativeStackNavigation() {
+export function useNativeStackNavigation() {
   return Link.useNavigation();
-};
+}
 export const useStackNavigation = useNavigation;
-export const useTabNavigation = function useTabNavigation() {
+export function useTabNavigation() {
   return Link.useNavigation();
-};
+}

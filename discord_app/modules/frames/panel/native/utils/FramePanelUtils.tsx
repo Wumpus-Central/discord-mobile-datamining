@@ -4,20 +4,20 @@ import c from "../../../../../../_runtime/00576_c.js";
 import FramesStore from "../../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(6811).asLaunched;
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const asLaunched = fn(6834).asLaunched;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
 
-export const isFramePanelFullscreen = function isFramePanelFullscreen() {
+export function isFramePanelFullscreen() {
   const tmp = asLaunched(FramesStore.getMainFrame());
   let tmp2 = null != tmp;
   if (tmp2) {
     tmp2 = tmp.data.activityPanelMode === ActivityPanelModes.PANEL;
   }
   return tmp2;
-};
+}
 export const useIsActivityPanelFullscreen = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsActivityPanelFullscreen() {
       const cResult = c.c(2);

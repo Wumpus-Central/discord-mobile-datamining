@@ -31,7 +31,7 @@ function fetchCustomAppStoreOverlayContent(cta) {
 }
 const result = size.fileFinishedImporting("modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx");
 
-export const canOpenCustomAppStoreOverlayFromCta = function canOpenCustomAppStoreOverlayFromCta(cta) {
+export function canOpenCustomAppStoreOverlayFromCta(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
@@ -39,9 +39,9 @@ export const canOpenCustomAppStoreOverlayFromCta = function canOpenCustomAppStor
     const tmpResult = QuestPlatformUtils;
   }
   return enabled;
-};
+}
 export { fetchCustomAppStoreOverlayContent };
-export const prefetchCustomAppStoreOverlayContent = function prefetchCustomAppStoreOverlayContent(cta) {
+export function prefetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
@@ -52,4 +52,4 @@ export const prefetchCustomAppStoreOverlayContent = function prefetchCustomAppSt
     fetchCustomAppStoreOverlayContent(cta).catch(() => {});
     const promise = fetchCustomAppStoreOverlayContent(cta);
   }
-};
+}

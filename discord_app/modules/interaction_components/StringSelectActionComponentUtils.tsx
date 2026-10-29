@@ -6,10 +6,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
 
-export const getInitialStringSelectOptions = function getInitialStringSelectOptions(
-  selectionActionComponent,
-  containerId,
-) {
+export function getInitialStringSelectOptions(selectionActionComponent, containerId) {
   const interactionComponentState = LocalInteractionComponentStateStore.getInteractionComponentState(
     containerId,
     selectionActionComponent.id,
@@ -26,4 +23,4 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
     mapped = found.map((value) => value.value);
   }
   return mapped;
-};
+}

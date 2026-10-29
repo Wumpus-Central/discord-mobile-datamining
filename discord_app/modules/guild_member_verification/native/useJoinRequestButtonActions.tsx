@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/native/useJoinRequestButtonActions.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -11,11 +11,7 @@ const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/useJoinRequestButtonActions.tsx");
 
-export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
-  joinRequest,
-  interviewChannelId,
-  cResult,
-) {
+export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cResult) {
   const onDismiss = cResult;
   let obj = joinRequest;
   if (joinRequest == null) {
@@ -47,7 +43,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -190,7 +186,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -290,11 +286,11 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(13793, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(13793, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(14026, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(14026, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;
   obj2.handleOpenInterview = callback1;
   return obj2;
-};
+}

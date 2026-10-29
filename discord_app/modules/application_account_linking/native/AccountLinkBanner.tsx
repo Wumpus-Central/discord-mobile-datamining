@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -16,12 +16,12 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7297).GameIconSizes.NORMAL;
-let closure_14 = fn(7297).GameIconImageSize[NORMAL];
+const NORMAL = fn(7321).GameIconSizes.NORMAL;
+let closure_14 = fn(7321).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   card: { padding: PX_12 },
   closeButton: null,
@@ -244,7 +244,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         items3[2] = closure_6(View, obj9);
         obj6.children = items3;
         items2[1] = closure_7(View, obj6);
-        const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
+        const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
         items2[2] = closure_6(require("native").Avatar, obj10);
         obj4.children = items2;
         items1[1] = closure_7(View, obj4);
@@ -308,9 +308,9 @@ export default noop.memo(
 );
 export const ACCOUNT_LINK_BANNER_MARGIN_TOP = PX_8;
 export const ACCOUNT_LINK_BANNER_MARGIN_BOTTOM = PX_82;
-export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBannerHeight(fontScale) {
+export function getScaledAccountLinkBannerHeight(fontScale) {
   const sum = PX_8 + PX_12 + closure_14 + PX_16;
   const sum1 = sum + useScaledTextLineHeight.scaleTextLineHeight(c15, fontScale) + PX_4;
   const sum2 = sum1 + 2 * useScaledTextLineHeight.scaleTextLineHeight(c16, fontScale) + PX_162;
   return sum2 + ButtonConstants.MEDIUM_BUTTON_HEIGHT + PX_12 + PX_82;
-};
+}

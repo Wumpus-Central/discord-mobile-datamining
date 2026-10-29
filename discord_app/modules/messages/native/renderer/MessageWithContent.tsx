@@ -5,11 +5,11 @@ import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import GuildAutomodMessageStore from "../../../guild_automod/GuildAutomodMessageStore.tsx";
 
 require = fn;
-const RowType = fn(8166).RowType;
+const RowType = fn(8189).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
-export const generateMessageRowData = function generateMessageRowData(canShowImages, options, theme) {
+export function generateMessageRowData(canShowImages, options, theme) {
   ({ message, isEditing, isSystemDM } = canShowImages);
   let tmp = undefined !== isSystemDM;
   ({ changeType, roleStyle, isFirst, separatorBefore, canAddNewReactions, reactionsTheme } = canShowImages);
@@ -93,4 +93,4 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   const forcedTheme = options.forcedTheme;
   obj.forcedTheme = forcedTheme;
   return obj;
-};
+}

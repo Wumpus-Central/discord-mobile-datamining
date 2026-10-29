@@ -16,7 +16,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       } else if (1 === tmp8) {
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (2 === tmp8) {
         if (arg0 === 1) {
           c8 = 3;
@@ -65,7 +65,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_3) {
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             filePathForGif = closure_132_0(closure_132_2[3]).getFilePathForGif(fileNameFromGifUrl);
             const obj9 = closure_132_0(closure_132_2[4]);
@@ -89,7 +89,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_5) {
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             c7 = 4;
             c8 = 1;
@@ -179,12 +179,12 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   }
   return value;
 };
-const DraftType = fn(7666).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(8343).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(7689).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(8365).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 
-export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd() {
+export function handlePollGifAttachmentAdd() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -193,9 +193,9 @@ export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export function handlePollMediaAttachmentAdd() {}
-export const removePollUploadAttachment = function removePollUploadAttachment() {
+export function removePollUploadAttachment() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -204,8 +204,8 @@ export const removePollUploadAttachment = function removePollUploadAttachment() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeAllPollUploadAttachments = function removeAllPollUploadAttachments() {
+}
+export function removeAllPollUploadAttachments() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -214,4 +214,4 @@ export const removeAllPollUploadAttachments = function removeAllPollUploadAttach
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -29,7 +29,7 @@ let closure_6 = async function _refetchWidgetData() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -175,7 +175,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
         closure_129_0 = value;
         if (closure_129_0.ok) {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -494,7 +494,7 @@ export const previewStepHandlers = {
     const tmpResult2 = ConjurePublishActionCreators;
   },
 };
-export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(projectId, arg1) {
+export function sendOverlayBackgroundBlur(projectId, arg1) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   if (null == conjureSocket) {
     return false;
@@ -506,8 +506,8 @@ export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(proj
       return false;
     }
   }
-};
-export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
+}
+export function getPreviewScreenshotUrl() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -516,8 +516,8 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const uploadOverlayBackground = function uploadOverlayBackground() {
+}
+export function uploadOverlayBackground() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -526,8 +526,8 @@ export const uploadOverlayBackground = function uploadOverlayBackground() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetOverlayBackground = function resetOverlayBackground() {
+}
+export function resetOverlayBackground() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -536,8 +536,8 @@ export const resetOverlayBackground = function resetOverlayBackground() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getOverlayBackgroundUrl = function getOverlayBackgroundUrl() {
+}
+export function getOverlayBackgroundUrl() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -546,4 +546,4 @@ export const getOverlayBackgroundUrl = function getOverlayBackgroundUrl() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

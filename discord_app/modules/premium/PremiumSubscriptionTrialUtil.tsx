@@ -53,15 +53,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export const useHasActiveTrial = tmp3;
-export const hasActiveTrial = function hasActiveTrial() {
+export function hasActiveTrial() {
   const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
   let trialId;
   if (premiumTypeSubscription != null) {
     trialId = premiumTypeSubscription.trialId;
   }
   return null != trialId;
-};
-export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
+}
+export function isEligibleTrialSub(trialId) {
   trialId = undefined;
   if (trialId != null) {
     trialId = trialId.trialId;
@@ -81,7 +81,7 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
     tmp2 = tmp4;
   }
   return tmp2;
-};
+}
 export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCurrentPremiumTrialTier() {
       const cResult = c.c(4);
@@ -150,8 +150,8 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       }
       return tmp4;
     };
-export const getPremiumTrialOffer = function getPremiumTrialOffer() {
+export function getPremiumTrialOffer() {
   const mapped = React6.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
-};
+}

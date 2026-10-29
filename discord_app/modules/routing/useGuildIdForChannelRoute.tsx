@@ -43,11 +43,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores;
     };
-export const getGuildIdForGenericRedirect = function getGuildIdForGenericRedirect(channel) {
+export function getGuildIdForGenericRedirect(channel) {
   if (!obj.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
     let guildId = channel.getGuildId();
   } else if (FavoriteStore.isFavorite(channel.id)) {
     guildId = FAVORITES;
   }
   return guildId;
-};
+}

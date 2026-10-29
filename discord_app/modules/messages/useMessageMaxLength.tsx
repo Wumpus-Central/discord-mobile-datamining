@@ -36,6 +36,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         PremiumUtilsDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_1_4 : closure_1_5,
       );
     };
-export const getMaxMessageLength = function getMaxMessageLength() {
+export function getMaxMessageLength() {
   return PremiumUtilsDefault.canUseIncreasedMessageLength(UserStore.getCurrentUser()) ? React4 : hasOwnProperty;
-};
+}

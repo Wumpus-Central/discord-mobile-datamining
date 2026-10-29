@@ -150,7 +150,7 @@ let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewC
 
 export { acquireConjureControlLease };
 export const CONTROL_OPERATION_IDLE_MS = 20000;
-export const beginConjureControlOperation = function beginConjureControlOperation(TableRowGroup) {
+export function beginConjureControlOperation(TableRowGroup) {
   closure_0 = TableRowGroup;
   value = map1.get(TableRowGroup);
   const timerId = setTimeout(() => {
@@ -292,9 +292,9 @@ export const beginConjureControlOperation = function beginConjureControlOperatio
     obj6.timer = timerId;
     const result3 = map1.set(TableRowGroup, obj6);
   }
-};
+}
 export { endConjureControlOperation };
-export const releaseConjureControlLeases = function releaseConjureControlLeases(projectId) {
+export function releaseConjureControlLeases(projectId) {
   set2.delete(projectId);
   value = map1.get(projectId);
   if (null != value) {
@@ -315,8 +315,8 @@ export const releaseConjureControlLeases = function releaseConjureControlLeases(
     emit();
     emitReleased(projectId);
   }
-};
-export const setConjureControlTuning = function setConjureControlTuning(projectId, arg1) {
+}
+export function setConjureControlTuning(projectId, arg1) {
   if (set2.has(projectId) !== arg1) {
     if (arg1) {
       set2.add(projectId);
@@ -325,21 +325,21 @@ export const setConjureControlTuning = function setConjureControlTuning(projectI
     }
     emit();
   }
-};
+}
 export const useConjureControlTuning = tmp7;
 export { isConjureControlActive };
-export const getConjureControlActiveProjectIds = function getConjureControlActiveProjectIds() {
+export function getConjureControlActiveProjectIds() {
   const items = [...map.keys()];
   return items;
-};
+}
 export { subscribeConjureControl };
-export const subscribeConjureControlReleased = function subscribeConjureControlReleased(arg0) {
+export function subscribeConjureControlReleased(arg0) {
   closure_0 = arg0;
   set1.add(arg0);
   return () => {
     set1.delete(closure_0);
   };
-};
+}
 export const useConjureControlActive = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureControlActive(arg0) {
       _require = arg0;

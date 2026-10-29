@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
 
-export const isActivityTemporaryCustomStatus = function isActivityTemporaryCustomStatus(type) {
+export function isActivityTemporaryCustomStatus(type) {
   let tmp = type.type === ActivityTypes.CUSTOM_STATUS;
   if (tmp) {
     const timestamps = type.timestamps;
@@ -24,4 +24,4 @@ export const isActivityTemporaryCustomStatus = function isActivityTemporaryCusto
     tmp = end1 > 0;
   }
   return tmp;
-};
+}

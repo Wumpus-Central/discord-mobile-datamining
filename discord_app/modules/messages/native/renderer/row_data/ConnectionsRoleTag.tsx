@@ -9,7 +9,7 @@ const processColor = _mod17.processColor;
 const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
 
-export const createConnectionsRoleTag = function createConnectionsRoleTag(visibleConnectionsRole) {
+export function createConnectionsRoleTag(visibleConnectionsRole) {
   let colorString = visibleConnectionsRole.colorString;
   if (colorString == null) {
     colorString = DEFAULT_ROLE_COLOR_HEX;
@@ -26,4 +26,4 @@ export const createConnectionsRoleTag = function createConnectionsRoleTag(visibl
     backgroundColor: processColor(colorString),
     iconColor: processColor(PRIMARY_630),
   };
-};
+}

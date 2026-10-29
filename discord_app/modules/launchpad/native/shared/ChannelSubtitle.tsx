@@ -7,7 +7,7 @@ import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SUBTITLE_OPACITY_NORMAL = fn(11992).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(12046).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -135,7 +135,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");
 
-export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
+export function renderChannelSubtitle(arg0) {
   ({ subtitle, muted } = arg0);
   if (null == subtitle) {
     return null;
@@ -166,4 +166,4 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     }
     return tmp9;
   }
-};
+}

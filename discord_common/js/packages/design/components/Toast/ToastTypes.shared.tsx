@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx",
 );
 
-export const isToastEntity = function isToastEntity(icon) {
+export function isToastEntity(icon) {
   let tmp = typeof icon === "object";
   if (typeof icon === "object") {
     tmp = null != icon;
@@ -17,4 +17,4 @@ export const isToastEntity = function isToastEntity(icon) {
     tmp = typeof icon.type === "string";
   }
   return tmp;
-};
+}

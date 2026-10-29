@@ -5,7 +5,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(13815).ContactPermissions;
+const ContactPermissions = fn(14048).ContactPermissions;
 const PlatformTypes = fn(1084).PlatformTypes;
 const ContactSyncModes = {
   NORMAL: 0,
@@ -38,7 +38,7 @@ const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSy
 
 export { ContactSyncModes };
 export const useContactSyncModalStore = obj5;
-export const initialize = function initialize(arg0) {
+export function initialize(arg0) {
   _require = arg0;
   const localAccount = phone.getLocalAccount(PlatformTypes.CONTACTS);
   let name;
@@ -72,8 +72,8 @@ export const initialize = function initialize(arg0) {
       return obj;
     }),
   );
-};
-export const setAllowSync = function setAllowSync(arg0) {
+}
+export function setAllowSync(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -84,8 +84,8 @@ export const setAllowSync = function setAllowSync(arg0) {
       return obj;
     });
   });
-};
-export const setAllowPhone = function setAllowPhone(arg0) {
+}
+export function setAllowPhone(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -95,8 +95,8 @@ export const setAllowPhone = function setAllowPhone(arg0) {
       return obj;
     });
   });
-};
-export const setAllowEmail = function setAllowEmail(arg0) {
+}
+export function setAllowEmail(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -106,8 +106,8 @@ export const setAllowEmail = function setAllowEmail(arg0) {
       return obj;
     });
   });
-};
-export const setSuggestions = function setSuggestions(arg0, arg1) {
+}
+export function setSuggestions(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
@@ -119,8 +119,8 @@ export const setSuggestions = function setSuggestions(arg0, arg1) {
       return obj;
     });
   });
-};
-export const setPhone = function setPhone(arg0) {
+}
+export function setPhone(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -130,8 +130,8 @@ export const setPhone = function setPhone(arg0) {
       return obj;
     });
   });
-};
-export const setPhoneToken = function setPhoneToken(arg0) {
+}
+export function setPhoneToken(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -141,8 +141,8 @@ export const setPhoneToken = function setPhoneToken(arg0) {
       return obj;
     });
   });
-};
-export const setName = function setName(arg0) {
+}
+export function setName(arg0) {
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -157,8 +157,8 @@ export const setName = function setName(arg0) {
       return obj;
     });
   });
-};
-export const setPermissionState = function setPermissionState(arg0) {
+}
+export function setPermissionState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -168,8 +168,8 @@ export const setPermissionState = function setPermissionState(arg0) {
       return obj;
     });
   });
-};
-export const setError = function setError(arg0) {
+}
+export function setError(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj5.setState((arg0) => {
@@ -179,7 +179,7 @@ export const setError = function setError(arg0) {
       return obj;
     });
   });
-};
+}
 export const useIsOnboarding = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsOnboarding() {
       const mode = obj5().mode;
@@ -189,7 +189,7 @@ export const useIsOnboarding = ReactCompilerGating.isReactCompilerEnabled()
       const mode = obj5().mode;
       return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
     };
-export const getIsOnboarding = function getIsOnboarding() {
+export function getIsOnboarding() {
   const mode = obj5.getState().mode;
   return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
-};
+}

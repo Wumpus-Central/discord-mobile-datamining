@@ -13,13 +13,7 @@ const result = size.fileFinishedImporting(
   "modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx",
 );
 
-export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(
-  guild_id2,
-  message,
-  notificationType,
-  MESSAGE_EMBED,
-  arg4,
-) {
+export function openGuildHighlightNotificationForPush(guild_id2, message, notificationType, MESSAGE_EMBED, arg4) {
   _require = guild_id2;
   importDefault = message;
   dependencyMap = notificationType;
@@ -80,5 +74,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     AnalyticsUtilsDefault.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj3);
   };
   obj2.feedbackSettings = obj3;
-  obj.openLazy(require("asyncRequireImpl")(10078, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-};
+  obj.openLazy(require("asyncRequireImpl")(10110, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+}

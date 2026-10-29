@@ -262,7 +262,7 @@ export default function getChannelA11yLabel(mentionCount) {
     }
   }
 }
-export const getStatusLabel = function getStatusLabel(value) {
+export function getStatusLabel(value) {
   if (constants2.ONLINE === value) {
     return UserUtils.humanizeStatus(constants2.ONLINE);
   } else if (constants2.IDLE === value) {
@@ -274,8 +274,8 @@ export const getStatusLabel = function getStatusLabel(value) {
   } else {
     return "";
   }
-};
-export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
+}
+export function getChannelA11yHint(userStatus) {
   userStatus = userStatus.userStatus;
   const items = [];
   ({ channel, muted } = userStatus);
@@ -314,4 +314,4 @@ export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
     }
     return joined;
   }
-};
+}

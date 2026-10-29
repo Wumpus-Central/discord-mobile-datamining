@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/external_pip/ExternalPipAutoEnterExperiment.tsx");
 
-export const isExternalPipAutoEnterEnabled = function isExternalPipAutoEnterEnabled() {
+export function isExternalPipAutoEnterEnabled() {
   return config.getConfig({ location: "ExternalPipView" }).autoEnterEnabled;
-};
+}

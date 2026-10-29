@@ -11,7 +11,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const renderOptions = fn(8631).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const renderOptions = fn(8653).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channelId(576).c(21);
       ({ type, id, content } = arg0);
       const obj = channelId(576);
-      const componentContainerId = channelId(8632).useComponentContainerId();
+      const componentContainerId = channelId(8654).useComponentContainerId();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         channelId = SelectedChannelStore.getChannelId();
         cResult[0] = channelId;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult = tmp(504);
           [tmp17, tmp18] = tmp(504).useStateFromStoresArray(tmp12, tmp13);
-          const AnimateEmoji = tmp(4832).AnimateEmoji;
+          const AnimateEmoji = tmp(4833).AnimateEmoji;
           const setting = AnimateEmoji.useSetting();
           const _Symbol2 = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp16 = _slicedToArray(tmp(504).useStateFromStoresArray(tmp12, tmp13), 2);
           const stateFromStores = tmp(504).useStateFromStores(tmp20, tmp21);
           const tmpResult4 = tmp(504);
-          const tmp24 = !tmp(8800).useShouldDisplaySpoilerObscurity(stateFromStores);
+          const tmp24 = !tmp(8803).useShouldDisplaySpoilerObscurity(stateFromStores);
           if (cResult[9] === tmp18) {
             if (cResult[10] === setting) {
               if (cResult[11] === componentContainerId) {
@@ -113,26 +113,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       model: tmp10,
                       markdownTextRenderOptions: tmp27,
                       onTapLink: tmp29,
-                      onLongPressLink: tmp(11320).contentHandlers.onLongPressLink,
-                      onTapAttachmentLink: tmp(11320).contentHandlers.onTapAttachmentLink,
-                      onLongPressAttachmentLink: tmp(11320).contentHandlers.onLongPressAttachmentLink,
-                      onTapMention: tmp(11320).contentHandlers.onTapMention,
-                      onTapTimestamp: tmp(11320).contentHandlers.onTapTimestamp,
-                      onTapInlineCode: tmp(11320).contentHandlers.onTapInlineCode,
-                      onTapEmoji: tmp(11320).contentHandlers.onTapEmoji,
+                      onLongPressLink: tmp(11374).contentHandlers.onLongPressLink,
+                      onTapAttachmentLink: tmp(11374).contentHandlers.onTapAttachmentLink,
+                      onLongPressAttachmentLink: tmp(11374).contentHandlers.onLongPressAttachmentLink,
+                      onTapMention: tmp(11374).contentHandlers.onTapMention,
+                      onTapTimestamp: tmp(11374).contentHandlers.onTapTimestamp,
+                      onTapInlineCode: tmp(11374).contentHandlers.onTapInlineCode,
+                      onTapEmoji: tmp(11374).contentHandlers.onTapEmoji,
                       style: tmp30,
                     };
                     const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, {
                       model: tmp10,
                       markdownTextRenderOptions: tmp27,
                       onTapLink: tmp29,
-                      onLongPressLink: tmp(11320).contentHandlers.onLongPressLink,
-                      onTapAttachmentLink: tmp(11320).contentHandlers.onTapAttachmentLink,
-                      onLongPressAttachmentLink: tmp(11320).contentHandlers.onLongPressAttachmentLink,
-                      onTapMention: tmp(11320).contentHandlers.onTapMention,
-                      onTapTimestamp: tmp(11320).contentHandlers.onTapTimestamp,
-                      onTapInlineCode: tmp(11320).contentHandlers.onTapInlineCode,
-                      onTapEmoji: tmp(11320).contentHandlers.onTapEmoji,
+                      onLongPressLink: tmp(11374).contentHandlers.onLongPressLink,
+                      onTapAttachmentLink: tmp(11374).contentHandlers.onTapAttachmentLink,
+                      onLongPressAttachmentLink: tmp(11374).contentHandlers.onLongPressAttachmentLink,
+                      onTapMention: tmp(11374).contentHandlers.onTapMention,
+                      onTapTimestamp: tmp(11374).contentHandlers.onTapTimestamp,
+                      onTapInlineCode: tmp(11374).contentHandlers.onTapInlineCode,
+                      onTapEmoji: tmp(11374).contentHandlers.onTapEmoji,
                       style: tmp30,
                     });
                     cResult[18] = tmp10;
@@ -161,16 +161,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = "username" === tmp17;
           cResult[15] = obj5;
           tmp27 = obj5;
-          const tmpResult5 = tmp(8800);
+          const tmpResult5 = tmp(8803);
         }
       }
       const obj6 = { type, id, content: null };
-      const obj2 = channelId(8632);
+      const obj2 = channelId(8654);
       const tmp8Result2 = MarkupUtilsDefault;
       obj6.content = tmp8Result2.parseToAST(
         content,
         true,
-        channelId(8518).getInitialParserState({ channelId, renderOptions }),
+        channelId(8540).getInitialParserState({ channelId, renderOptions }),
       );
       const json = JSON.stringify(obj6);
       cResult[1] = content;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = json;
       tmp10 = json;
       const obj7 = { channelId, renderOptions };
-      const tmpResult6 = channelId(8518);
+      const tmpResult6 = channelId(8540);
     }
   : function TextDisplayComponent(type) {
       type = type.type;

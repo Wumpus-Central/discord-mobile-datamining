@@ -6,7 +6,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");
 
 export { CustomLinkType };
-export const decodeCustomActivityLink = function decodeCustomActivityLink(link_id) {
+export function decodeCustomActivityLink(link_id) {
   if (null == link_id) {
     return null;
   } else {
@@ -27,4 +27,4 @@ export const decodeCustomActivityLink = function decodeCustomActivityLink(link_i
     }
     return tmp7;
   }
-};
+}

@@ -64,7 +64,7 @@ export const useFormatStringWithCommonPremiumParams = ReactCompilerGating.isReac
       }
       return arr.replace(/\{price\}/g, str);
     };
-export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArticle, helpArticleId) {
+export function getHelpArticleLinkProps(helpArticle, helpArticleId) {
   let id1;
   if (helpArticle != null) {
     id1 = helpArticle.id;
@@ -93,4 +93,4 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
     const intl = util.intl;
     linkText = intl.string(util.t["sBp+u0"]);
   }
-};
+}

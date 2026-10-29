@@ -15,6 +15,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/PremiumOfferReminderExperiment.tsx");
 
 export const PremiumOfferReminderExperiment = apexExperiment;
-export const isPremiumOfferReminderExperimentEnabled = function isPremiumOfferReminderExperimentEnabled(location) {
+export function isPremiumOfferReminderExperimentEnabled(location) {
   return apexExperiment.getConfig({ location: location.location }).enabled;
-};
+}

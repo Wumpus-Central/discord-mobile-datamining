@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/ChannelCallUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
@@ -8,10 +8,10 @@ import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertAct
 import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef11682 from "../../../../_runtime/metro/11682__.js";
-import _modDef14859 from "../../../../_runtime/metro/14859__.js";
-import _modDef18943 from "../../../../_runtime/metro/18943__.js";
-import _modDef18944 from "../../../../_runtime/metro/18944__.js";
+import _modDef11736 from "../../../../_runtime/metro/11736__.js";
+import _modDef15094 from "../../../../_runtime/metro/15094__.js";
+import _modDef19176 from "../../../../_runtime/metro/19176__.js";
+import _modDef19177 from "../../../../_runtime/metro/19177__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -29,11 +29,11 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallUtils.tsx");
 
-export const voiceSettings = function voiceSettings() {
+export function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.dsXapM);
-  obj.icon = _modDef18943;
+  obj.icon = _modDef19176;
   obj.onPress = function onPress() {
     require("openUserSettings").openUserSettings({ screen: constants.VOICE });
     const obj = require("openUserSettings");
@@ -41,8 +41,8 @@ export const voiceSettings = function voiceSettings() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
   return obj;
-};
-export const videoParticipantsHidden = function videoParticipantsHidden(arg0, arg1) {
+}
+export function videoParticipantsHidden(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const obj = { label: null, switchValue: null, onPress: null };
@@ -53,13 +53,13 @@ export const videoParticipantsHidden = function videoParticipantsHidden(arg0, ar
     const result = ChannelRTCActionCreatorsDefault.toggleVoiceParticipantsHidden(id.id, !closure_1);
   };
   return obj;
-};
-export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
+}
+export function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(18940, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(19173, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -72,8 +72,8 @@ export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStre
     },
     isDismissable: false,
   });
-};
-export const selfVideoHidden = function selfVideoHidden(arg0, arg1) {
+}
+export function selfVideoHidden(arg0, arg1) {
   closure_0 = arg1;
   const obj = { label: null, switchValue: null, onPress: null };
   const intl = util.intl;
@@ -83,13 +83,13 @@ export const selfVideoHidden = function selfVideoHidden(arg0, arg1) {
     closure_0();
   };
   return obj;
-};
-export const reportStreamIssue = function reportStreamIssue(stream) {
+}
+export function reportStreamIssue(stream) {
   _require = stream;
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef18944;
+  obj.icon = _modDef19177;
   obj.onPress = function onPress() {
     const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
     let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
@@ -104,15 +104,15 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
       max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult),
     };
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(18945, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
+    obj5.openLazy(asyncRequireImpl(19178, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
       stream,
       analyticsData: obj3,
     });
-    const tmp6 = asyncRequireImpl(18945, dependencyMap.paths);
+    const tmp6 = asyncRequireImpl(19178, dependencyMap.paths);
   };
   return obj;
-};
-export const invite = function invite(dependencyMap, stream, targetApplicationId) {
+}
+export function invite(dependencyMap, stream, targetApplicationId) {
   _require = dependencyMap;
   importDefault = stream;
   dependencyMap = targetApplicationId;
@@ -146,27 +146,27 @@ export const invite = function invite(dependencyMap, stream, targetApplicationId
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.VINpSK);
-  obj.icon = _modDef11682;
+  obj.icon = _modDef11736;
   obj.onPress = onPress;
   return obj;
-};
-export const rtcDebugPanel = function rtcDebugPanel(arg0) {
+}
+export function rtcDebugPanel(arg0) {
   _require = arg0;
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef14859;
+  obj.icon = _modDef15094;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
   return obj;
-};
-export const shareActivityLogs = function shareActivityLogs() {
+}
+export function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef14859;
+  obj.icon = _modDef15094;
   obj.onPress = function onPress() {
     const items = [closure_1_7];
     const json = require("LogAggregator").stringify(items);
@@ -183,4 +183,4 @@ export const shareActivityLogs = function shareActivityLogs() {
     const obj = require("LogAggregator");
   };
   return obj;
-};
+}

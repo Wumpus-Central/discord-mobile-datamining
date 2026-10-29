@@ -167,7 +167,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStageBlocke
 
 export const useStageBlockedUsersCount = tmp2;
 export const useStageIgnoredUsersCount = tmp3;
-export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) {
+export function getStageBlockedUsersCount(id) {
   let num = StageChannelParticipantStore.getParticipantCount(
     id,
     StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED,
@@ -176,8 +176,8 @@ export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) 
     num = 0;
   }
   return num;
-};
-export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) {
+}
+export function getStageIgnoredUsersCount(id) {
   let num = StageChannelParticipantStore.getParticipantCount(
     id,
     StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED,
@@ -186,7 +186,7 @@ export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) 
     num = 0;
   }
   return num;
-};
+}
 export const useStageBlockedUsers = tmp4;
 export const useStageIgnoredUsers = ReactCompilerGating.isReactCompilerEnabled()
   ? function useStageIgnoredUsers(arg0) {

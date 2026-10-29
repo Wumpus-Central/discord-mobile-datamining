@@ -90,6 +90,6 @@ RTCBandwidthMonitor.prototype["getTotalBytes"] = function getTotalBytes() {
 const result = size.fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
 
 export default RTCBandwidthMonitor;
-export const getRTCTotalBytes = function getRTCTotalBytes() {
+export function getRTCTotalBytes() {
   return _modDef12.sum(closure_2.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
-};
+}

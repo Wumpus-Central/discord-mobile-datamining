@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3091 from "AgeAssurance.messages.js";
+import _modDef3092 from "AgeAssurance.messages.js";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
@@ -55,7 +55,7 @@ let closure_18 = async function _maybePerformReactiveCheck() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -97,13 +97,13 @@ let closure_18 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6691).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6715).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1109);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: c10 } = AgeGateConstants);
 let items = [
-  fn(6692).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(6692).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(6692).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(6716).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(6716).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(6716).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];
@@ -562,10 +562,10 @@ function useShouldShowTiggerPawtect() {
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/age_assurance/AgeVerificationUtils.tsx");
 
-export const ageGateSourceHasLightboxBackdrop = function ageGateSourceHasLightboxBackdrop(arg0) {
+export function ageGateSourceHasLightboxBackdrop(arg0) {
   return set1.has(arg0);
-};
-export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
+}
+export function shouldShowTiggerPawtect() {
   const currentUser = UserStore.getCurrentUser();
   let prop;
   if (currentUser != null) {
@@ -575,9 +575,9 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
     prop === Server.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT ||
     prop === Server.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT
   );
-};
+}
 export { useShouldShowTiggerPawtect };
-export const isVerifiedTeen = function isVerifiedTeen() {
+export function isVerifiedTeen() {
   const currentUser = UserStore.getCurrentUser();
   let prop;
   if (currentUser != null) {
@@ -587,11 +587,11 @@ export const isVerifiedTeen = function isVerifiedTeen() {
     prop === Server.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN ||
     prop === Server.AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN
   );
-};
+}
 export const useIsVerifiedTeen = tmp6;
 export { isVerifiedAdult };
 export const useIsVerifiedAdult = tmp7;
-export const isAssignedByDiscord = function isAssignedByDiscord() {
+export function isAssignedByDiscord() {
   const currentUser = UserStore.getCurrentUser();
   let prop;
   if (currentUser != null) {
@@ -601,20 +601,20 @@ export const isAssignedByDiscord = function isAssignedByDiscord() {
     prop === Server.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT ||
     prop === Server.AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN
   );
-};
+}
 export const useIsAssignedByDiscord = tmp8;
 export const useShowAssignedAgeGroupSettings = tmp9;
 export { isAgeVerified };
 export const useIsAgeVerified = tmp10;
 export const useWatchAgeVerificationStatusChange = tmp11;
-export const isFullscreenAgeVerificationEntryPoint = function isFullscreenAgeVerificationEntryPoint(arg0) {
+export function isFullscreenAgeVerificationEntryPoint(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
     hasItem = set.has(arg0);
   }
   return hasItem;
-};
-export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetStartedTitle(entryPoint, arg1) {
+}
+export function getAgeVerificationGetStartedTitle(entryPoint, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -625,16 +625,13 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   if (hasItem) {
     let stringResult = string(util.t.lSWVTM);
   } else if (flag) {
-    stringResult = string(_modDef3091["/kgWIg"]);
+    stringResult = string(_modDef3092["/kgWIg"]);
   } else {
     stringResult = string(util.t.xYXsr6);
   }
   return stringResult;
-};
-export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationGetStartedSubtitle(
-  entryPoint,
-  handleOnHelpUrlHook,
-) {
+}
+export function getAgeVerificationGetStartedSubtitle(entryPoint, handleOnHelpUrlHook) {
   let flag = isSuspendedUser;
   if (isSuspendedUser === undefined) {
     flag = false;
@@ -648,14 +645,14 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     let stringResult = intl6.string(util.t["S/xS/w"]);
   } else if (flag) {
     const intl5 = util.intl;
-    stringResult = intl5.string(_modDef3091.h7qzoa);
+    stringResult = intl5.string(_modDef3092.h7qzoa);
   } else {
     if (flag2) {
       if (null != handleOnHelpUrlHook) {
         if (null != fn) {
           const intl4 = util.intl;
           const obj2 = { handleOnHelpUrlHook, handleOnTrustedProvidersHook: fn };
-          stringResult = intl4.format(_modDef3091["+Ft5ch"], obj2);
+          stringResult = intl4.format(_modDef3092["+Ft5ch"], obj2);
         }
       }
     }
@@ -663,20 +660,20 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
       if (null != handleOnHelpUrlHook) {
         const intl3 = util.intl;
         const obj3 = { handleOnHelpUrlHook };
-        stringResult = intl3.format(_modDef3091["22HSSI"], obj3);
+        stringResult = intl3.format(_modDef3092["22HSSI"], obj3);
       }
     }
     if (null != handleOnHelpUrlHook) {
       const intl2 = util.intl;
       const obj = { handleOnHelpUrlHook };
-      stringResult = intl2.format(_modDef3091.RpMIT0, obj);
+      stringResult = intl2.format(_modDef3092.RpMIT0, obj);
     } else {
       const intl = util.intl;
       stringResult = intl.string(util.t.HxS3oQ);
     }
   }
   return stringResult;
-};
+}
 export const useShouldCallReactiveCheck = tmp12;
 export const useMaybePerformReactiveCheckForSource = ReactCompilerGating.isReactCompilerEnabled()
   ? function useMaybePerformReactiveCheckForSource(arg0) {
@@ -725,7 +722,7 @@ export const useMaybePerformReactiveCheckForSource = ReactCompilerGating.isReact
       }, items);
     };
 export { shouldCallReactiveCheck };
-export const maybePerformReactiveCheck = function maybePerformReactiveCheck() {
+export function maybePerformReactiveCheck() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -734,4 +731,4 @@ export const maybePerformReactiveCheck = function maybePerformReactiveCheck() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

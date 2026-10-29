@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
 
-export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
+export function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
   const obj = GameProfileActionCreatorsDefault;
   obj.openGameProfileModal({
@@ -13,4 +13,4 @@ export const handleMessagesTapGameMention = function handleMessagesTapGameMentio
     gameProfileModalChecks: { shouldOpenGameProfile: true, gameId },
     source: GameProfileAnalyticUtils.GameProfileSources.GameMention,
   });
-};
+}

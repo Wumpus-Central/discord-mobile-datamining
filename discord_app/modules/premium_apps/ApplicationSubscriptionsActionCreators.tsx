@@ -165,7 +165,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -291,7 +291,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           return obj;
         }
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp33) {
       closure_5 = tmp33;
@@ -309,18 +309,17 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsActionCreators.tsx");
 
-export const fetchAllSubscriptionListingsDataForApplication =
-  function fetchAllSubscriptionListingsDataForApplication() {
-    const self = this;
-    const apply = closure_9.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
+export function fetchAllSubscriptionListingsDataForApplication() {
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function fetchEntitlementsForGuild() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -329,10 +328,8 @@ export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(
-  guildId,
-) {
+}
+export function dismissApplicationSubscriptionExpirationNotice(guildId) {
   DispatcherDefault.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId });
-};
+}
 export { fetchSubscriptionListingForPlan };

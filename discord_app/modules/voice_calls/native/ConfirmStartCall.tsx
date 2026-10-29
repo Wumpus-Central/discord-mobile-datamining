@@ -90,6 +90,6 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
 
-export const confirmStartCall = function confirmStartCall(fn) {
+export function confirmStartCall(fn) {
   useAlertStore.openAlert("start-voice-call", React2(closure_4, { onConfirm: fn }));
-};
+}

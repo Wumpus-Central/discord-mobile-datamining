@@ -2,7 +2,7 @@
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -12,13 +12,13 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx");
 
-export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequestConfirmModal(arg0) {
+export function openAcceptFriendRequestConfirmModal(arg0) {
   ({ onConfirm: require, onCancel: importDefault } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type });
   const obj2 = { type };
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(10668, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(10701, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};
@@ -36,4 +36,4 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
     },
     isDismissable: false,
   });
-};
+}

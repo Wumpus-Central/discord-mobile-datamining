@@ -298,6 +298,6 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/badges/useBadgeDirectoryNuxPopoverVariant.tsx");
 
 export const useBadgeDirectoryNuxPopoverState = tmp2;
-export const useBadgeDirectoryNuxPopoverVariant = function useBadgeDirectoryNuxPopoverVariant(arg0) {
+export function useBadgeDirectoryNuxPopoverVariant(arg0) {
   return closure_6(arg0).variantProps;
-};
+}

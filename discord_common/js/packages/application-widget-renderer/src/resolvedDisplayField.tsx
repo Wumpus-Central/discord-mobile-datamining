@@ -7,12 +7,7 @@ let result = size.fileFinishedImporting(
   "../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx",
 );
 
-export const resolveTextComponentValues = function resolveTextComponentValues(
-  subtitle_1,
-  resolveFieldValue,
-  numberFormat,
-  arg3,
-) {
+export function resolveTextComponentValues(subtitle_1, resolveFieldValue, numberFormat, arg3) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -77,14 +72,8 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
     obj.icon = media;
     return obj;
   }
-};
-export const resolveStatComponentValues = function resolveStatComponentValues(
-  fields,
-  resolveFieldValue,
-  numberFormat,
-  formatDurationNarrow,
-  arg4,
-) {
+}
+export function resolveStatComponentValues(fields, resolveFieldValue, numberFormat, formatDurationNarrow, arg4) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -136,12 +125,8 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
     obj3.label = obj4;
     return obj3;
   }
-};
-export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkeleton(
-  componentConfig,
-  description,
-  resolveFieldValue,
-) {
+}
+export function resolveSingleStringOrSkeleton(componentConfig, description, resolveFieldValue) {
   let tmp;
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];
@@ -154,8 +139,8 @@ export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkele
     obj = { status: "value", text: iter.value };
   }
   return obj;
-};
-export const decimalToClampedPercentage = function decimalToClampedPercentage(value) {
+}
+export function decimalToClampedPercentage(value) {
   let num = 0;
   if (!isNaN(value)) {
     const _Math = Math;
@@ -164,8 +149,8 @@ export const decimalToClampedPercentage = function decimalToClampedPercentage(va
     num = Math.min(Math.max(Math.round(100 * value), 0), 100);
   }
   return num;
-};
-export const resolveProgressPercentage = function resolveProgressPercentage(iter, iter2) {
+}
+export function resolveProgressPercentage(iter, iter2) {
   let num = iter;
   if (null == iter) {
     return 0;
@@ -189,4 +174,4 @@ export const resolveProgressPercentage = function resolveProgressPercentage(iter
       const num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
     }
   }
-};
+}

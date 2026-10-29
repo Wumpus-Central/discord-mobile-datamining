@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/ads/PlayableTypes.tsx");
 
-export const playableCtaFromServer = function playableCtaFromServer(url) {
+export function playableCtaFromServer(url) {
   const obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
@@ -19,8 +19,8 @@ export const playableCtaFromServer = function playableCtaFromServer(url) {
   }
   obj.ios = tmp2;
   return obj;
-};
-export const playableFromServer = function playableFromServer(creative_content) {
+}
+export function playableFromServer(creative_content) {
   const obj = {
     id: creative_content.id,
     applicationId: creative_content.application_id,
@@ -51,4 +51,4 @@ export const playableFromServer = function playableFromServer(creative_content) 
   obj.cta = obj5;
   obj.rewardTimerSeconds = creative_content.reward_timer_seconds;
   return obj;
-};
+}

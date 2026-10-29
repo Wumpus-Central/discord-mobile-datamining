@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
-export const computeActivityFlags = function computeActivityFlags(secrets) {
+export function computeActivityFlags(secrets) {
   let flag = hasFlagResult;
   if (hasFlagResult === undefined) {
     flag = false;
@@ -89,8 +89,8 @@ export const computeActivityFlags = function computeActivityFlags(secrets) {
       }
     }
   }
-};
-export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActivity(remoteApplicationActivity) {
+}
+export function isContextlessEmbeddedActivity(remoteApplicationActivity) {
   let num;
   if (remoteApplicationActivity != null) {
     num = remoteApplicationActivity.flags;
@@ -103,4 +103,4 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
     hasFlagResult = isEmbeddedActivityDefault(remoteApplicationActivity);
   }
   return hasFlagResult;
-};
+}

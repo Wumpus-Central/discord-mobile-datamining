@@ -18,17 +18,13 @@ export const ServerHubVisitSource = {
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
   MUSIC_SYSTEM_MESSAGE: "music_system_message",
 };
-export const trackServerHubToggleSetting = function trackServerHubToggleSetting(id, settingType, value) {
+export function trackServerHubToggleSetting(id, settingType, value) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, { guild_id: id, type: settingType, value });
-};
-export const trackServerHubVisit = function trackServerHubVisit(guild_id, source) {
+}
+export function trackServerHubVisit(guild_id, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_VISIT, { guild_id, source });
-};
-export const trackServerHubWidgetEditClicked = function trackServerHubWidgetEditClicked(
-  guild_id,
-  widget_type,
-  widget_id,
-) {
+}
+export function trackServerHubWidgetEditClicked(guild_id, widget_type, widget_id) {
   const obj = AnalyticsUtilsDefault;
   const obj2 = { guild_id, widget_type };
   if (obj3.isDraftWidgetId(widget_id)) {
@@ -38,4 +34,4 @@ export const trackServerHubWidgetEditClicked = function trackServerHubWidgetEdit
   }
   const merged = Object.assign(obj4);
   obj.track(AnalyticEvents.SERVER_HUB_WIDGET_EDIT_CLICKED, obj2);
-};
+}

@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityPermanentCustomStatus.tsx");
 
-export const isActivityPermanentCustomStatus = function isActivityPermanentCustomStatus(type) {
+export function isActivityPermanentCustomStatus(type) {
   let tmp = type.type === ActivityTypes.CUSTOM_STATUS;
   if (tmp) {
     const timestamps = type.timestamps;
@@ -16,4 +16,4 @@ export const isActivityPermanentCustomStatus = function isActivityPermanentCusto
     tmp = null == end;
   }
   return tmp;
-};
+}

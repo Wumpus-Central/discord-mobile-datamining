@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanPurchasedStore.tsx");
 
 export const usePremiumPlanPurchasedStore = obj3;
-export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFromNewFlow(productId) {
+export function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
   productId(1271).batchUpdates(() => {
@@ -29,8 +29,8 @@ export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFrom
   if (onPaymentStart != null) {
     onPaymentStart(productId);
   }
-};
-export const setPaymentSuccess = function setPaymentSuccess() {
+}
+export function setPaymentSuccess() {
   if (obj3.getState().initiatedPurchaseFromNewFlow) {
     const state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
@@ -39,14 +39,12 @@ export const setPaymentSuccess = function setPaymentSuccess() {
       onPaymentSuccess(state.productId);
     }
   }
-};
-export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(
-  mobileWebRedirectCheckoutStatus,
-) {
+}
+export function setMobileWebRedirectCheckoutStatus(mobileWebRedirectCheckoutStatus) {
   _require = mobileWebRedirectCheckoutStatus;
   require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ mobileWebRedirectCheckoutStatus }));
-};
-export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(mobileWebRedirectCheckoutStatus) {
+}
+export function handleMobileWebCheckoutStatus(mobileWebRedirectCheckoutStatus) {
   _require = mobileWebRedirectCheckoutStatus;
   if ("succeeded" === mobileWebRedirectCheckoutStatus) {
     const state = obj3.getState();
@@ -68,15 +66,15 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
       const obj2 = require("ReactBatchUpdates");
     }
   }
-};
-export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(fn) {
+}
+export function showOldPaymentFlowSuccess(fn) {
   if (obj3.getState().initiatedPurchaseFromNewFlow) {
     ReactBatchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
   } else {
     fn();
   }
-};
-export const reset = function reset() {
+}
+export function reset() {
   const state = obj3.getState();
   ({ onPaymentDismiss, mobileWebRedirectCheckoutStatus: require } = state);
   if (onPaymentDismiss != null) {
@@ -96,8 +94,8 @@ export const reset = function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "application",
-      onPaymentDismiss: "bm",
+      onPaymentSuccess: "ix",
+      onPaymentDismiss: "then",
     });
   });
-};
+}

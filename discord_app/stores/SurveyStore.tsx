@@ -4,7 +4,7 @@ import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import _modDef2046 from "../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../_runtime/metro/02047__.js";
 import surveyFetch from "../actions/surveyFetch.tsx";
 import GuildMemberCountStore from "GuildMemberCountStore.tsx";
 import GuildStore from "GuildStore.tsx";
@@ -174,8 +174,8 @@ function setSurvey(survey) {
   value = Storage.get(closure_1_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    tmp9 = _modDef2046().diff(value, "day") < 7;
-    obj = _modDef2046();
+    tmp9 = _modDef2047().diff(value, "day") < 7;
+    obj = _modDef2047();
   }
   let tmp11 = null;
   if (tmp4) {

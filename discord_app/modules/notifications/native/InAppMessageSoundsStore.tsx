@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import c from "../../../../_runtime/00576_c.js";
-import _mod4919 from "../../../../_runtime/metro/04919__.js";
+import _mod4920 from "../../../../_runtime/metro/04920__.js";
 import identity from "../../../../_runtime/metro/01266__.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -17,14 +17,14 @@ let closure_3 = identity.createWithEqualityFn(() => {
 });
 let result = size.fileFinishedImporting("modules/notifications/native/InAppMessageSoundsStore.tsx");
 
-export const isInAppMessageSoundsEnabled = function isInAppMessageSoundsEnabled() {
+export function isInAppMessageSoundsEnabled() {
   return closure_3.getState().isEnabled;
-};
-export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnabled(isEnabled) {
+}
+export function setInAppMessageSoundsEnabled(isEnabled) {
   const Storage = Storage2.Storage;
   const result = Storage.set(InAppMessageSoundsEnabled, isEnabled);
   closure_3.setState({ isEnabled });
-};
+}
 export const useInAppMessageSoundsEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useInAppMessageSoundsEnabled() {
       const cResult = c.c(1);
@@ -37,8 +37,8 @@ export const useInAppMessageSoundsEnabled = ReactCompilerGating.isReactCompilerE
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4919.shallow);
+      return closure_3(first, _mod4920.shallow);
     }
   : function useInAppMessageSoundsEnabled() {
-      return closure_3((isEnabled) => isEnabled.isEnabled, _mod4919.shallow);
+      return closure_3((isEnabled) => isEnabled.isEnabled, _mod4920.shallow);
     };

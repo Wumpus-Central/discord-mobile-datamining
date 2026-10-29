@@ -126,7 +126,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9816).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8166);
+let closure_5 = fn(9848).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8189);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1084);
 ({
@@ -231,13 +231,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesUtils.tsx");
 
-export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
-  message,
-  mediaIndex,
-  mediaType,
-  tmpResult3,
-  componentMediaIndex,
-) {
+export function getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpResult3, componentMediaIndex) {
   let obj = message;
   if (message.type === constants5.THREAD_STARTER_MESSAGE) {
     obj = message;
@@ -388,8 +382,8 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
   } else {
     return null;
   }
-};
-export const toObscuredMedia = function toObscuredMedia(sourceType) {
+}
+export function toObscuredMedia(sourceType) {
   if ("attachment" === sourceType.sourceType) {
     const obj2 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: sourceType.source };
     let tmp = obj2;
@@ -401,8 +395,8 @@ export const toObscuredMedia = function toObscuredMedia(sourceType) {
     }
   }
   return tmp;
-};
-export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(messageId, channel, reaction) {
+}
+export function handleAddOrRemoveReaction(messageId, channel, reaction) {
   let flag = isBurst;
   if (isBurst === undefined) {
     flag = false;
@@ -490,8 +484,8 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     const obj6 = { burst: flag };
     const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj6);
   }
-};
-export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, stateFromStores1) {
+}
+export function handleToggleFollowForumPost(channel, stateFromStores1) {
   const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   const obj2 = ThreadActionCreatorsDefault;
   if (stateFromStores1) {
@@ -499,8 +493,8 @@ export const handleToggleFollowForumPost = function handleToggleFollowForumPost(
   } else {
     obj2.joinThread(channel, "iOS Forum Toolbar");
   }
-};
-export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId, id, location) {
+}
+export function handleCopyLinkForumPost(guildId, id, location) {
   const channel = ChannelStore.getChannel(id);
   let parent_id;
   if (channel != null) {
@@ -539,14 +533,14 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   const tmp4Result7 = HapticUtils;
   ToastUtils.presentLinkCopied();
   const tmp4Result12 = ToastUtils;
-};
-export const findMessageIndex = function findMessageIndex(previousRows, startMessageId) {
+}
+export function findMessageIndex(previousRows, startMessageId) {
   if (null != startMessageId) {
     return computeScrollData.findMessageRowIndex(previousRows, startMessageId);
   }
-};
+}
 export { getVisibleMessages };
-export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(first1, id, arg2, arg3) {
+export function shouldJumpToOriginalPost(first1, id, arg2, arg3) {
   let isForumPostResult = first1.isForumPost();
   if (isForumPostResult) {
     isForumPostResult = SnowflakeUtilsDefault.castChannelIdAsMessageId(id) === arg2.jumpTargetId;
@@ -555,10 +549,8 @@ export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(first1
     isForumPostResult = !arg3;
   }
   return isForumPostResult;
-};
-export const startOrCancelChannelLatestMessagesLoad = function startOrCancelChannelLatestMessagesLoad(
-  hasJumpedToOriginalPost,
-) {
+}
+export function startOrCancelChannelLatestMessagesLoad(hasJumpedToOriginalPost) {
   if (null == hasJumpedToOriginalPost.jumpTargetId) {
     if (null == hasJumpedToOriginalPost.oldestUnreadMessageId) {
       if (!hasJumpedToOriginalPost.shouldJumpToOriginalPost) {
@@ -570,8 +562,8 @@ export const startOrCancelChannelLatestMessagesLoad = function startOrCancelChan
   }
   const tracker2 = hasJumpedToOriginalPost.tracker;
   tracker2.cancel();
-};
-export const recordTimings = function recordTimings(channelId, hasFetched) {
+}
+export function recordTimings(channelId, hasFetched) {
   const mapped = hasFetched.map((id) => id.id);
   hasFetched = hasFetched.hasFetched;
   if (!hasFetched) {
@@ -579,14 +571,14 @@ export const recordTimings = function recordTimings(channelId, hasFetched) {
     const tmp2 = hasFetched.ready && !hasFetched.cached;
   }
   TTITrackerDefault.recordMessageRender(channelId, mapped, hasFetched, hasFetched.hasMoreAfter);
-};
-export const findMessageIndexInRows = function findMessageIndexInRows(startMessageId, previousRows) {
+}
+export function findMessageIndexInRows(startMessageId, previousRows) {
   if (null != startMessageId) {
     return computeScrollData.findMessageRowIndex(previousRows, startMessageId);
   }
-};
+}
 export { getMessage };
-export const isLoadingAtTop = function isLoadingAtTop(arg0, arg1) {
+export function isLoadingAtTop(arg0, arg1) {
   if (arg1) {
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
@@ -601,8 +593,8 @@ export const isLoadingAtTop = function isLoadingAtTop(arg0, arg1) {
   } else {
     return false;
   }
-};
-export const handleTapTableView = function handleTapTableView(current, arg1) {
+}
+export function handleTapTableView(current, arg1) {
   let isIOSResult = PlatformUtils.isIOS();
   if (isIOSResult) {
     isIOSResult = arg1 !== KeyboardTypes.KeyboardTypes.SYSTEM;
@@ -613,8 +605,8 @@ export const handleTapTableView = function handleTapTableView(current, arg1) {
       current.closeCustomKeyboard();
     }
   }
-};
-export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(mediaSource) {
+}
+export function handleMediaPlayFinishedAnalytics(mediaSource) {
   const reportedMediaFacts = MediaPlaybackFacts.resolveReportedMediaFacts(
     mediaSource.mediaSource,
     mediaSource.fileDurationSec,
@@ -665,8 +657,8 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
   obj3.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
   obj3.service_provider = NetworkStore.getServiceProvider();
   AnalyticsUtilsDefault.track(constants3.MEDIA_PLAY_FINISHED, obj3);
-};
-export const scrollToBottom = function scrollToBottom(current, arg1, fn) {
+}
+export function scrollToBottom(current, arg1, fn) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
@@ -677,8 +669,8 @@ export const scrollToBottom = function scrollToBottom(current, arg1, fn) {
     flag = !arg1;
   }
   NativeChatUtilsDefault.scrollToBottom(current.current, flag);
-};
-export const scrollToTop = function scrollToTop(current, arg1) {
+}
+export function scrollToTop(current, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -687,8 +679,8 @@ export const scrollToTop = function scrollToTop(current, arg1) {
     flag = !arg1;
   }
   NativeChatUtilsDefault.scrollToTop(current.current, flag);
-};
-export const scrollToRelativeOffset = function scrollToRelativeOffset(current, arg1, arg2) {
+}
+export function scrollToRelativeOffset(current, arg1, arg2) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
@@ -697,14 +689,14 @@ export const scrollToRelativeOffset = function scrollToRelativeOffset(current, a
     flag = !arg1;
   }
   const result = NativeChatUtilsDefault.scrollToRelativeOffset(current.current, arg2, flag);
-};
-export const scrollToTopMessage = function scrollToTopMessage(current, getPreviousRows) {
+}
+export function scrollToTopMessage(current, getPreviousRows) {
   const previousRows = getPreviousRows.getPreviousRows();
   if (previousRows.length > 0) {
     NativeChatUtilsDefault.scrollTo(current.current, previousRows.length - 1);
   }
-};
-export const canAddNewReactions = function canAddNewReactions(isPrivate, arg1) {
+}
+export function canAddNewReactions(isPrivate, arg1) {
   let canResult = arg1;
   if (arg1) {
     canResult = PermissionStore.can(constants6.ADD_REACTIONS, isPrivate);
@@ -713,8 +705,8 @@ export const canAddNewReactions = function canAddNewReactions(isPrivate, arg1) {
     canResult = isPrivate.isPrivate();
   }
   return canResult;
-};
-export const loadMoreBefore = function loadMoreBefore(channelId, hasMoreBefore, fn) {
+}
+export function loadMoreBefore(channelId, hasMoreBefore, fn) {
   fn(true);
   if (tmp2) {
     const obj2 = { channelId, before: null, limit: null };
@@ -728,8 +720,8 @@ export const loadMoreBefore = function loadMoreBefore(channelId, hasMoreBefore, 
     const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
   }
   tmp2 = hasMoreBefore.hasMoreBefore && !hasMoreBefore.loadingMore;
-};
-export const loadMoreAfter = function loadMoreAfter(channelId, hasMoreAfter, fn) {
+}
+export function loadMoreAfter(channelId, hasMoreAfter, fn) {
   fn(true);
   if (tmp2) {
     const obj2 = { channelId, after: null, limit: null };
@@ -743,8 +735,8 @@ export const loadMoreAfter = function loadMoreAfter(channelId, hasMoreAfter, fn)
     const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
   }
   tmp2 = hasMoreAfter.hasMoreAfter && !hasMoreAfter.loadingMore;
-};
-export const clearRows = function clearRows(current, clear, arg2, arg3, fn) {
+}
+export function clearRows(current, clear, arg2, arg3, fn) {
   fn({
     animated: false,
     hasHandledScroll: false,
@@ -761,8 +753,8 @@ export const clearRows = function clearRows(current, clear, arg2, arg3, fn) {
   clear.clear();
   closure_5(arg2, arg3, false);
   NativeChatUtilsDefault.clearRows(current.current);
-};
-export const handleFirstLayout = function handleFirstLayout(
+}
+export function handleFirstLayout(
   fn,
   firstVisibleMessageRowIndex,
   lastVisibleMessageRowIndex,
@@ -776,8 +768,8 @@ export const handleFirstLayout = function handleFirstLayout(
     lastVisibleMessagePercentVisible,
     source: QuestTypes.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT,
   });
-};
-export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(
+}
+export function handleMessageVisibilityChanged(
   fn,
   firstVisibleMessageRowIndex,
   lastVisibleMessageRowIndex,
@@ -791,8 +783,8 @@ export const handleMessageVisibilityChanged = function handleMessageVisibilityCh
     lastVisibleMessagePercentVisible,
     source: QuestTypes.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED,
   });
-};
-export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, fn) {
+}
+export function handleLongPressSticker(arg0, arg1, fn) {
   const items = [arg0];
   const set = new Set(items);
   if (null != arg1) {
@@ -804,8 +796,8 @@ export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1
   }
   fn({ forceRender: true, updateMessageIds: set });
   return tmp2;
-};
-export const handleTapNavBar = function handleTapNavBar() {
+}
+export function handleTapNavBar() {
   const self = this;
   const apply = closure_24.apply;
   if (typeof apply === "unknown") {
@@ -814,8 +806,8 @@ export const handleTapNavBar = function handleTapNavBar() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id, fn) {
+}
+export function jumpToPresent(jumpReturnTargetId, id, fn) {
   if (null == jumpReturnTargetId.jumpReturnTargetId) {
     if (!jumpReturnTargetId.loadingMore) {
       if (jumpReturnTargetId.hasMoreAfter) {
@@ -829,8 +821,8 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id, fn) 
     const obj4 = { channelId: id.id, messageId: jumpReturnTargetId, flash: true };
     MessageActionCreatorsDefault.jumpToMessage(obj4);
   }
-};
-export const scrollToNewMessages = function scrollToNewMessages(channel) {
+}
+export function scrollToNewMessages(channel) {
   channel = channel.channel;
   let id = ReadStateStore.ackMessageId(channel.id);
   const obj2 = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
@@ -839,8 +831,8 @@ export const scrollToNewMessages = function scrollToNewMessages(channel) {
   }
   obj2.messageId = id;
   MessageActionCreatorsDefault.jumpToMessage(obj2);
-};
-export const syncMessageDisplay = function syncMessageDisplay(messages) {
+}
+export function syncMessageDisplay(messages) {
   messages = messages.messages;
   const oldestUnreadMessageId = messages.oldestUnreadMessageId;
   ({ channelId, updateRows, scrollToMessageId } = messages);
@@ -884,11 +876,11 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
     hasFetched,
     messages.hasMoreAfter,
   );
-};
+}
 export function getChatRef(arg0) {
   return arg0;
 }
-export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, jumpType) {
+export function maybeRescrollToMessageId(arg0, jumpType) {
   _require = arg0;
   ({
     chatRef: importDefault,
@@ -928,8 +920,8 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
       }
     }, 50);
   }
-};
-export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescroll(scrollToMessageId) {
+}
+export function scrollToMessageIdWithRescroll(scrollToMessageId) {
   scrollToMessageId = scrollToMessageId.scrollToMessageId;
   let jumpTargetId = scrollToMessageId.jumpTargetId;
   let tmp = null;
@@ -1012,8 +1004,8 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
       let obj2 = jumpTargetId(tmp12[45]);
     }
   }
-};
-export const handleVisibleMessagesChange = function handleVisibleMessagesChange(arg0) {
+}
+export function handleVisibleMessagesChange(arg0) {
   ({
     firstVisibleMessageRowIndex,
     firstVisibleMessagePercentVisible,
@@ -1075,10 +1067,8 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
       }
     }
   }
-};
-export const getVoiceStateChannelSummaryFromVoiceStates = function getVoiceStateChannelSummaryFromVoiceStates(
-  voiceStates,
-) {
+}
+export function getVoiceStateChannelSummaryFromVoiceStates(voiceStates) {
   const entries = Object.entries(voiceStates);
   const found = entries.filter((item) => {
     [, tmp] = item;
@@ -1094,8 +1084,8 @@ export const getVoiceStateChannelSummaryFromVoiceStates = function getVoiceState
   });
   const sorted = mapped.sort();
   return sorted.join("|");
-};
-export const getVoiceChannelIdChangedAuthorIds = function getVoiceChannelIdChangedAuthorIds(prop, prop1) {
+}
+export function getVoiceChannelIdChangedAuthorIds(prop, prop1) {
   const obj = parseVoiceStateChannelIdSummary(prop);
   const obj2 = parseVoiceStateChannelIdSummary(prop1);
   const set = new Set();
@@ -1108,8 +1098,8 @@ export const getVoiceChannelIdChangedAuthorIds = function getVoiceChannelIdChang
     continue;
   }
   return set;
-};
-export const getMessageAuthorMemberUserIds = function getMessageAuthorMemberUserIds(author) {
+}
+export function getMessageAuthorMemberUserIds(author) {
   const initialInteractionMetadata = ApplicationCommandUtils.getInitialInteractionMetadata(author);
   let type;
   if (initialInteractionMetadata != null) {
@@ -1162,4 +1152,4 @@ export const getMessageAuthorMemberUserIds = function getMessageAuthorMemberUser
   }
   items[arraySpreadResult] = userId;
   return items.filter((item) => null != item);
-};
+}

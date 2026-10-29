@@ -27,7 +27,7 @@ let closure_8 = async function _fetchVirtualCurrencyBalance() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -233,7 +233,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           closure_129_13 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -296,7 +296,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           tmp69(closure_129_13);
         }
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -350,7 +350,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");
 
 export { fetchVirtualCurrencyBalance };
-export const fetchVirtualCurrencyTotalRedeemed = function fetchVirtualCurrencyTotalRedeemed() {
+export function fetchVirtualCurrencyTotalRedeemed() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -359,8 +359,8 @@ export const fetchVirtualCurrencyTotalRedeemed = function fetchVirtualCurrencyTo
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU() {
+}
+export function redeemVirtualCurrencyForSKU() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -369,7 +369,7 @@ export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setBalancePillOverlay = function setBalancePillOverlay(balancePillOverlay) {
+}
+export function setBalancePillOverlay(balancePillOverlay) {
   return DispatcherDefault.dispatch({ type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay });
-};
+}

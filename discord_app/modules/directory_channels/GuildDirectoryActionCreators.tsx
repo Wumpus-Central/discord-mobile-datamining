@@ -8,62 +8,185 @@ import debounce_mod from "../../../_runtime/00551_debounce.js";
 
 const require = globalThis.__r;
 
-let closure_7 = async function _addDirectoryGuildEntry() {
-  const request = {
-    url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
-    body: { description: closure_132_2, primary_category_id: closure_132_3 },
-    trackedActionData: {
-      event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
-      properties: { directory_channel_id: closure_132_0, guild_id: closure_132_1, primary_category_id: closure_132_3 },
-    },
-    rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError(),
-  };
-  await closure_133_1(closure_133_2[7]).post(request);
-  closure_132_4 = value;
-  closure_133_1(closure_133_2[5]).dispatch({
-    type: "GUILD_DIRECTORY_ENTRY_CREATE",
-    channelId: closure_132_0,
-    entry: closure_132_4.body,
-  });
-  await "IconComponent";
-  closure_5 = tmp3;
-  closure_4 = tmp2;
-  closure_132_0 = closure_0;
-  closure_132_1 = closure_1;
-  closure_132_2 = closure_2;
-  let UNCATEGORIZED = closure_3;
-  if (closure_3 === undefined) {
-    UNCATEGORIZED = constants.UNCATEGORIZED;
+let closure_7 = async function _addDirectoryGuildEntry(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp2;
+          closure_132_3 = undefined;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          closure_132_2 = closure_2;
+          let UNCATEGORIZED = closure_3;
+          if (closure_3 === undefined) {
+            UNCATEGORIZED = constants.UNCATEGORIZED;
+          }
+          closure_132_3 = UNCATEGORIZED;
+          closure_132_4 = undefined;
+          c6 = 1;
+          c7 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const request = {
+            url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
+            body: null,
+            trackedActionData: null,
+            rejectWithError: null,
+          };
+          const obj5 = { description: closure_132_2, primary_category_id: closure_132_3 };
+          request.body = obj5;
+          const obj6 = {
+            event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
+            properties: null,
+          };
+          const obj7 = {
+            directory_channel_id: closure_132_0,
+            guild_id: closure_132_1,
+            primary_category_id: closure_132_3,
+          };
+          obj6.properties = obj7;
+          request.trackedActionData = obj6;
+          const obj8 = closure_133_1(closure_133_2[7]);
+          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
+          c6 = 2;
+          c7 = 1;
+          const obj9 = { value: obj8.post(request), done: false };
+          return obj9;
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 3;
+        const obj10 = { value, done: true };
+        return obj10;
+      } else {
+        closure_132_4 = value;
+        const obj11 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body };
+        closure_133_1(closure_133_2[5]).dispatch(obj11);
+        c7 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } catch (tmp18) {
+      c7 = tmp;
+      throw tmp18;
+    }
   }
-  closure_132_3 = UNCATEGORIZED;
-  return "Reflect";
 };
-let closure_8 = async function _updateDirectoryEntry() {
-  const HTTP = closure_133_0(closure_133_2[6]).HTTP;
-  const request = {
-    url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
-    body: { description: closure_132_2, primary_category_id: closure_132_3 },
-    rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError(),
-  };
-  await HTTP.patch(request);
-  closure_132_4 = value;
-  closure_133_1(closure_133_2[5]).dispatch({
-    type: "GUILD_DIRECTORY_ENTRY_UPDATE",
-    channelId: closure_132_0,
-    entry: closure_132_4.body,
-  });
-  await "IconComponent";
-  closure_5 = tmp3;
-  closure_4 = tmp2;
-  closure_132_0 = closure_0;
-  closure_132_1 = closure_1;
-  closure_132_2 = closure_2;
-  let UNCATEGORIZED = closure_3;
-  if (closure_3 === undefined) {
-    UNCATEGORIZED = constants.UNCATEGORIZED;
+let closure_8 = async function _updateDirectoryEntry(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp2;
+          closure_132_3 = undefined;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          closure_132_2 = closure_2;
+          let UNCATEGORIZED = closure_3;
+          if (closure_3 === undefined) {
+            UNCATEGORIZED = constants.UNCATEGORIZED;
+          }
+          closure_132_3 = UNCATEGORIZED;
+          closure_132_4 = undefined;
+          c6 = 1;
+          c7 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const HTTP = closure_133_0(closure_133_2[6]).HTTP;
+          const request = {
+            url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
+            body: null,
+            rejectWithError: null,
+          };
+          const obj5 = { description: closure_132_2, primary_category_id: closure_132_3 };
+          request.body = obj5;
+          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
+          c6 = 2;
+          c7 = 1;
+          const obj6 = { value: HTTP.patch(request), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_132_4 = value;
+        const obj8 = { type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: closure_132_0, entry: closure_132_4.body };
+        closure_133_1(closure_133_2[5]).dispatch(obj8);
+        c7 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } catch (tmp18) {
+      c7 = tmp;
+      throw tmp18;
+    }
   }
-  closure_132_3 = UNCATEGORIZED;
-  return "Reflect";
 };
 let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
   closure_0 = arg0;
@@ -99,7 +222,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(13423).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(13656).DirectoryEntryCategories;
 let Endpoints = fn(1084).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
@@ -183,7 +306,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -272,7 +395,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/GuildDirec
 
 export const fetchDirectoryEntries = importDefaultResult1Result;
 export const fetchDirectoryCounts = importDefaultResult2Result;
-export const addDirectoryGuildEntry = function addDirectoryGuildEntry() {
+export function addDirectoryGuildEntry() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -281,8 +404,8 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
+}
+export function removeDirectoryGuildEntry(channelId, guildId) {
   const obj2 = {
     url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId),
     trackedActionData: null,
@@ -299,7 +422,7 @@ export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(chan
     properties: { directory_channel_id: channelId, guild_id: guildId },
   };
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
-};
+}
 export const searchDirectoryEntries = debounce(function () {
   const self = this;
   const apply = closure_0.apply;
@@ -310,10 +433,10 @@ export const searchDirectoryEntries = debounce(function () {
   }
   return applyArgumentsResult;
 }, 200);
-export const clearDirectorySearch = function clearDirectorySearch(id) {
+export function clearDirectorySearch(id) {
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id });
-};
-export const updateDirectoryEntry = function updateDirectoryEntry() {
+}
+export function updateDirectoryEntry() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -322,11 +445,11 @@ export const updateDirectoryEntry = function updateDirectoryEntry() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const selectDirectoryCategory = function selectDirectoryCategory(id, value) {
+}
+export function selectDirectoryCategory(id, value) {
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value });
-};
-export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds() {
+}
+export function fetchGuildEntriesForIds() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -335,4 +458,4 @@ export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

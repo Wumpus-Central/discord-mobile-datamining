@@ -15,7 +15,7 @@ import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4934).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1084);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 let ReactCompilerGating = fn(558);
@@ -326,7 +326,7 @@ export const useConjureVoiceChannelPinForm = ReactCompilerGating.isReactCompiler
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -454,7 +454,7 @@ export const useConjureVoiceChannelPinForm = ReactCompilerGating.isReactCompiler
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {

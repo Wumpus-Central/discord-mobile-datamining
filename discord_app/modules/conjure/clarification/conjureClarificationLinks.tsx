@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/clarification/conjureClarificationLinks.tsx");
 
-export const sendAfterLinkingApps = function sendAfterLinkingApps(projectId, questions, arg2, first1, fn) {
+export function sendAfterLinkingApps(projectId, questions, arg2, first1, fn) {
   closure_0 = projectId;
   closure_1 = arg2;
   closure_2 = first1;
@@ -38,4 +38,4 @@ export const sendAfterLinkingApps = function sendAfterLinkingApps(projectId, que
   } else {
     fn();
   }
-};
+}

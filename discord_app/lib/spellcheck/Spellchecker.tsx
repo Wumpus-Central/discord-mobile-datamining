@@ -2,7 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import DOMUtils from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
 import fallbackLocalesDefault from "fallbackLocales.tsx";
-import _mod6899 from "../../../_runtime/metro/06899__.js";
+import _mod6923 from "../../../_runtime/metro/06923__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
@@ -57,7 +57,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod6899;
+      obj = _mod6923;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -220,7 +220,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod6899.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod6923.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -317,7 +317,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("lib/spellcheck/Spellchecker.tsx");
 
 export { Spellchecker };
-export const install = function install() {
+export function install() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -326,4 +326,4 @@ export const install = function install() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

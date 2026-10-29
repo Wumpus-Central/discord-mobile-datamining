@@ -7,7 +7,7 @@ import NativeMarkdownExperiment from "../../../markup_v2/NativeMarkdownExperimen
 import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import renderMessageMarkup from "../../renderMessageMarkup.tsx";
 import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
-import priv from "../../../../../_runtime/01456_priv.js";
+import priv from "../../../../../_runtime/01457_priv.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageTypes = Constants.MessageTypes;
@@ -23,7 +23,7 @@ const tmp3 = new priv(obj);
 let closure_7 = new priv(obj);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
-export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, channelId) {
+export function parseEmbedTitleMarkup(rawName, channelId) {
   const combined = "" + rawName + "-" + channelId;
   value = closure_4.get(combined);
   if (null == value) {
@@ -33,8 +33,8 @@ export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, cha
     value = parseEmbedTitleToASTResult;
   }
   return value;
-};
-export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
+}
+export function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
   const combined = "" + arg0 + "-" + channelId + "-nolinks";
   value = closure_5.get(combined);
   if (null == value) {
@@ -44,8 +44,8 @@ export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupW
     value = result;
   }
   return value;
-};
-export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(arg0) {
+}
+export function parseEmbedDescriptionMarkup(arg0) {
   ({ description, channelId, isField, replaceMap, showListsAndHeaders } = arg0);
   ({ ignoreCache, showMaskedLinks } = arg0);
   const combined = "" + description + "-" + channelId;
@@ -84,8 +84,8 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   const parseToASTResult = MarkupUtilsDefault.parseToAST(tmp4, true, obj);
   const result = importDefaultResult1.set(combined, parseToASTResult);
   return parseToASTResult;
-};
-export const parseMessageMarkup = function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent) {
+}
+export function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent) {
   let flag = isInlineReplyPreview;
   if (isInlineReplyPreview === undefined) {
     flag = false;
@@ -191,4 +191,4 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   obj7.nativeMarkdownEnabled = result;
   result2 = closure_7.set(message, obj7);
   return obj7;
-};
+}

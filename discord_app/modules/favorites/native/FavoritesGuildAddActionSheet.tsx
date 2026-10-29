@@ -159,7 +159,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddActionSheet.tsx");
 
-export const openFavoritesGuildAddActionSheet = function openFavoritesGuildAddActionSheet() {
+export function openFavoritesGuildAddActionSheet() {
   const obj = ActionSheetActionCreators;
   obj.showActionSheet({ content: React4(closure_8, {}), key: FavoritesGuildAddActionSheet });
-};
+}

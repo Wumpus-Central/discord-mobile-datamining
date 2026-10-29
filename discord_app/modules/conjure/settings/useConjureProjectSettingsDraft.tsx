@@ -1,7 +1,4 @@
 // discord_app/modules/conjure/settings/useConjureProjectSettingsDraft.tsx
-import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
-import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,7 +6,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 const require = globalThis.__r;
 
-require = fn;
+const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/settings/useConjureProjectSettingsDraft.tsx");
 
@@ -49,7 +46,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   if (str == null) {
     str = "";
   }
-  const obj4 = require("ConjureHostApproval");
+  let obj4 = require("ConjureHostApproval");
   [tmp10, closure_9] = changes(commit.useState(str), 2);
   const tmp9 = changes(commit.useState(str), 2);
   [tmp12, closure_10] = changes(commit.useState(null), 2);
@@ -65,53 +62,57 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   const tmp8Result = changes(commit.useState(num), 2);
   let flags = tmp8Result[0];
   closure_13 = tmp8Result[1];
-  const tmp8Result7 = changes(
+  const tmp8Result8 = changes(
     commit.useState(() => {
       const items = [...prop];
       return items;
     }),
     2,
   );
-  const first1 = tmp8Result7[0];
-  closure_15 = tmp8Result7[1];
-  const tmp8Result8 = changes(commit.useState(false), 2);
-  const first2 = tmp8Result8[0];
-  closure_17 = tmp8Result8[1];
+  const first1 = tmp8Result8[0];
+  closure_15 = tmp8Result8[1];
+  const tmp8Result9 = changes(commit.useState(false), 2);
+  const first2 = tmp8Result9[0];
+  closure_17 = tmp8Result9[1];
   const tmp13 = changes(commit.useState(tmp10), 2);
   [tmp21, closure_18] = changes(commit.useState(null), 2);
-  const tmp8Result9 = changes(commit.useState(null), 2);
-  [tmp23, closure_19] = changes(commit.useState(null), 2);
   const tmp8Result10 = changes(commit.useState(null), 2);
-  [tmp25, closure_20] = changes(commit.useState(null), 2);
+  [tmp23, closure_19] = changes(commit.useState(null), 2);
   const tmp8Result11 = changes(commit.useState(null), 2);
+  [tmp25, closure_20] = changes(commit.useState(null), 2);
+  const tmp8Result12 = changes(commit.useState(null), 2);
   [tmp27, closure_21] = changes(commit.useState(null), 2);
+  const tmp8Result13 = changes(commit.useState(null), 2);
+  [tmp29, closure_22] = changes(commit.useState(false), 2);
+  closure_23 = obj5.useRef(null);
+  closure_24 = obj5.useRef(false);
   const trimmed = str2.trim();
   let result = null != stateFromStores;
   if (result) {
     result = tmp(tmp2[9]).projectSupportsVisibility(stateFromStores);
     const tmpResult = tmp(tmp2[9]);
   }
-  let tmp30 = null != stateFromStores;
-  if (tmp30) {
-    tmp30 = "user" !== stateFromStores.install_scope;
+  let tmp32 = null != stateFromStores;
+  if (tmp32) {
+    tmp32 = "user" !== stateFromStores.install_scope;
   }
-  let result1 = tmp30;
-  if (tmp30) {
+  let result1 = tmp32;
+  if (tmp32) {
     result1 = null != arg1;
   }
   if (result1) {
     result1 = tmp(tmp2[9]).projectSupportsCollaboratorRoles(stateFromStores);
     const tmpResult4 = tmp(tmp2[9]);
   }
-  const tmp8Result12 = changes(commit.useState(null), 2);
+  const tmp8Result14 = changes(commit.useState(false), 2);
   const conjureProjectAccessSettings = require("ConjureUtils").getConjureProjectAccessSettings(flags);
   const isGuildCollaboration = conjureProjectAccessSettings.isGuildCollaboration;
-  let tmp33 = null != stateFromStores;
-  if (tmp33) {
-    tmp33 = trimmed !== tmp10;
+  let tmp35 = null != stateFromStores;
+  if (tmp35) {
+    tmp35 = trimmed !== tmp10;
   }
-  closure_24 = tmp33;
-  let tmp34 = result;
+  closure_27 = tmp35;
+  let tmp36 = result;
   if (result) {
     let num2;
     if (tmp12 != null) {
@@ -127,10 +128,10 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     if (num2 == null) {
       num2 = 0;
     }
-    tmp34 = flags !== num2;
+    tmp36 = flags !== num2;
   }
-  closure_25 = tmp34;
-  let tmp36 = result1;
+  closure_28 = tmp36;
+  let tmp38 = result1;
   if (result1) {
     let roleIds;
     if (tmp12 != null) {
@@ -139,16 +140,16 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     if (roleIds == null) {
       roleIds = prop;
     }
-    tmp36 = !tmp(tmp2[11]).haveSameRoleIds(first1, roleIds);
+    tmp38 = !tmp(tmp2[11]).haveSameRoleIds(first1, roleIds);
     const tmpResult6 = tmp(tmp2[11]);
   }
-  closure_26 = tmp36;
-  let changed = tmp33;
-  if (!tmp33) {
-    changed = tmp34;
+  closure_29 = tmp38;
+  let changed = tmp35;
+  if (!tmp35) {
+    changed = tmp36;
   }
   if (!changed) {
-    changed = tmp36;
+    changed = tmp38;
   }
   if (!changed) {
     changed = tmp5.changed;
@@ -202,40 +203,270 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     setChecked(arg0);
     closure_1_20(null);
   }, items4);
-  const items5 = [setChecked2];
-  const callback5 = obj5.useCallback((arg0) => {
-    if (arg0.length > ConjureProjectTypes.MAX_PROJECT_COLLABORATOR_ROLES) {
-      const intl = util.intl;
-      const obj = { max: ConjureProjectTypes.MAX_PROJECT_COLLABORATOR_ROLES };
-      closure_1_19(intl.formatToPlainString(_modDef3863["dH7+/Z"], obj));
+  const items5 = [arg1, stateFromStores];
+  const callback5 = obj5.useCallback(
+    save(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              closure_1 = tmp3;
+              closure_0 = tmp7;
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              if (null != stateFromStores) {
+                if (null != closure_1) {
+                  if (null != stateFromStores.preview_application_id) {
+                    if (null == stateFromStores.install_scope_setup) {
+                      if (!obj13.isPreviewlessProject(stateFromStores)) {
+                        if (ref.current !== closure_1) {
+                          if (ref2.current) {
+                            c5 = 3;
+                            return { value: false, done: true };
+                          } else {
+                            ref2.current = true;
+                            closure_2_22(true);
+                            c3 = 1;
+                            c4 = 2;
+                            c5 = 1;
+                            const obj5 = {
+                              value: closure_0(tmp65[12]).fetchConjureAppInGuild(stateFromStores, closure_1),
+                              done: false,
+                            };
+                            return obj5;
+                          }
+                        }
+                      }
+                      obj13 = closure_0(tmp65[9]);
+                    }
+                  }
+                }
+              }
+              c5 = 3;
+              return { value: true, done: true };
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            closure_129_24.current = false;
+            closure_129_22(false);
+            throw tmp65;
+          } else if (2 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              closure_129_24.current = false;
+              closure_129_22(false);
+              c5 = 3;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else {
+              closure_128_0 = value;
+              if (false !== closure_128_0) {
+                if (true === closure_128_0) {
+                  closure_129_23.current = closure_129_1;
+                }
+                c3 = 0;
+                closure_129_24.current = false;
+                closure_129_22(false);
+                c5 = 3;
+                return { value: true, done: true };
+              } else {
+                c4 = 3;
+                c5 = 1;
+                const obj8 = {
+                  value: closure_0(tmp65[13]).requestConjureInstallConsent(closure_129_2.id, closure_129_1),
+                  done: false,
+                };
+                return obj8;
+              }
+            }
+          } else if (3 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              closure_129_24.current = false;
+              closure_129_22(false);
+              c5 = 3;
+              const obj10 = { value, done: true };
+              return obj10;
+            } else {
+              c4 = 4;
+              c5 = 1;
+              const obj11 = {
+                value: closure_0(tmp65[12]).fetchConjureAppInGuild(closure_129_2, closure_129_1),
+                done: false,
+              };
+              return obj11;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            closure_129_24.current = false;
+            closure_129_22(false);
+            c5 = 3;
+            const obj12 = { value, done: true };
+            return obj12;
+          } else {
+            closure_128_1 = tmp73;
+            if (closure_128_1) {
+              closure_129_23.current = closure_129_1;
+            }
+            c3 = 0;
+            closure_129_24.current = false;
+            closure_129_22(false);
+            c5 = 3;
+            const obj = { value: closure_128_1, done: true };
+            return obj;
+          }
+        } catch (tmp65) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp65;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    }),
+    items5,
+  );
+  _require = save(function* (arg0) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
     } else {
-      closure_15(arg0);
-      closure_1_19(null);
-      closure_1_20(null);
+      try {
+        c4 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_129_0 = closure_0;
+            closure_129_1 = undefined;
+            if (closure_0.length > closure_0(stateFromStores[9]).MAX_PROJECT_COLLABORATOR_ROLES) {
+              const intl = closure_0(stateFromStores[14]).intl;
+              const obj4 = { max: closure_0(stateFromStores[9]).MAX_PROJECT_COLLABORATOR_ROLES };
+              closure_1_19(intl.formatToPlainString(tmp16(stateFromStores[15])["dH7+/Z"], obj4));
+            } else {
+              function apply() {
+                closure_2_15(closure_1_0);
+                closure_2_19(null);
+                closure_2_20(null);
+              }
+              closure_129_1 = apply;
+              if (closure_0.some((item) => !closure_1_14.includes(item))) {
+                c3 = 1;
+                c2 = 2;
+                c4 = 1;
+                const obj5 = { value: callback5(), done: false };
+                return obj5;
+              } else {
+                apply();
+              }
+            }
+          }
+        } else {
+          if (1 === tmp6) {
+            c3 = 0;
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            if (value) {
+              closure_129_1();
+            }
+            c3 = 0;
+          }
+          c3 = 0;
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c4 = 3;
+      } catch (tmp15) {
+        if (tmp3 === c3) {
+          c4 = tmp2;
+          throw tmp15;
+        } else {
+          c2 = tmp;
+        }
+      }
     }
-  }, []);
-  const items6 = [setChecked3];
-  const callback6 = obj5.useCallback((arg0) => {
+  });
+  const items6 = [callback5, first1];
+  const items7 = [setChecked2];
+  const callback6 = obj5.useCallback(function () {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  }, items6);
+  const items8 = [setChecked3];
+  const callback7 = obj5.useCallback((arg0) => {
     setChecked2(arg0);
     closure_1_21(null);
-  }, items5);
-  const callback7 = obj5.useCallback((arg0) => {
+  }, items7);
+  const callback8 = obj5.useCallback((arg0) => {
     setChecked3(arg0);
     closure_1_21(null);
-  }, items6);
-  const items7 = [
+  }, items8);
+  const items9 = [
     commit,
     flags,
-    tmp34,
+    tmp36,
     arg1,
     changed2,
     changes,
     isGuildCollaboration,
-    tmp33,
+    tmp35,
     stateFromStores,
     arg0,
     changed,
-    tmp36,
+    tmp38,
     save3,
     save,
     save2,
@@ -251,13 +482,14 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     hostApproval: conjureRequireHostApprovalSetting,
     name: str2,
     nameError: tmp21,
-    nameChanged: tmp33,
+    nameChanged: tmp35,
     isPublic: conjureProjectAccessSettings.isPublic,
     isGuildCollaboration,
     selectedRoleIds: first1,
     supportsVisibility: result,
-    supportsCollaboration: tmp30,
+    supportsCollaboration: tmp32,
     supportsCollaboratorRoles: result1,
+    checkingAppInGuild: tmp29,
     saving: first2,
     selectionError: tmp23,
     saveError: tmp25,
@@ -269,11 +501,12 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     handleFlagChange: null,
     handleLiveReloadChange: null,
     handleRoleSelectionChange: null,
+    ensureAppInGuild: null,
     handleSmartContextChange: null,
     handleRequireHostApprovalChange: null,
     submit: null,
   };
-  const callback8 = obj5.useCallback(
+  const callback9 = obj5.useCallback(
     save(function* () {
       if (c4 === 2) {
         c4 = 3;
@@ -285,7 +518,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -303,9 +536,9 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                 if (changed2) {
                   if (!first2) {
                     let result = null;
-                    if (closure_24) {
-                      result = tmp4(tmp91[14]).conjureProjectNameError(trimmed);
-                      const obj3 = tmp4(tmp91[14]);
+                    if (closure_27) {
+                      result = tmp4(tmp91[16]).conjureProjectNameError(trimmed);
+                      const obj3 = tmp4(tmp91[16]);
                     }
                     if (null != result) {
                       collapsedCategories(result);
@@ -314,15 +547,15 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                     } else {
                       const obj6 = {};
                       const merged = Object.assign(changes);
-                      if (closure_24) {
+                      if (closure_27) {
                         obj6.name = trimmed;
                       }
-                      let tmp46 = closure_25;
-                      if (closure_25) {
+                      let tmp46 = closure_28;
+                      if (closure_28) {
                         obj6.flags = flags;
                       }
-                      let tmp48 = closure_26;
-                      if (closure_26) {
+                      let tmp48 = closure_29;
+                      if (closure_29) {
                         const items = [];
                         HermesBuiltin.arraySpread(first1, 0);
                         obj6.collaborator_role_ids = items.sort();
@@ -350,7 +583,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                       if (changed) {
                         guild_id = 3;
                         c4 = 1;
-                        const obj7 = { value: tmp4(tmp91[15]).updateProjectSettings(tmp4, obj6), done: false };
+                        const obj7 = { value: tmp4(tmp91[17]).updateProjectSettings(tmp4, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -366,8 +599,8 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
             throw tmp91;
           } else if (2 === tmp8) {
             c3 = 1;
-            const intl = tmp4(tmp91[12]).intl;
-            closure_128_20(intl.string(guild_id(tmp91[13])["9JPr8h"]));
+            const intl = tmp4(tmp91[14]).intl;
+            closure_128_20(intl.string(guild_id(tmp91[15])["9JPr8h"]));
             c3 = 0;
             closure_128_17(false);
             c4 = 3;
@@ -382,7 +615,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            closure_128_9(closure_128_22);
+            closure_128_9(closure_128_25);
             const obj = { flags: closure_128_12, roleIds: null };
             const items1 = [];
             HermesBuiltin.arraySpread(closure_128_14, 0);
@@ -392,13 +625,13 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
           }
           if (closure_128_3()) {
             if (!closure_128_6()) {
-              const intl3 = tmp4(tmp91[12]).intl;
-              closure_128_21(intl3.string(guild_id(tmp91[13])["9JPr8h"]));
+              const intl3 = tmp4(tmp91[14]).intl;
+              closure_128_21(intl3.string(guild_id(tmp91[15])["9JPr8h"]));
               const tmp74 = "experimental";
             }
           } else {
-            const intl2 = tmp4(tmp91[12]).intl;
-            closure_128_20(intl2.string(guild_id(tmp91[13]).XzkNBw));
+            const intl2 = tmp4(tmp91[14]).intl;
+            closure_128_20(intl2.string(guild_id(tmp91[15]).XzkNBw));
           }
           c3 = 0;
           closure_128_17(false);
@@ -415,7 +648,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         }
       }
     }),
-    items7,
+    items9,
   );
   if (changed2) {
     changed2 = "" !== trimmed;
@@ -426,9 +659,10 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   obj6.handleDescriptionChange = callback1;
   obj6.handleFlagChange = callback3;
   obj6.handleLiveReloadChange = callback4;
-  obj6.handleRoleSelectionChange = callback5;
-  obj6.handleSmartContextChange = callback6;
-  obj6.handleRequireHostApprovalChange = callback7;
-  obj6.submit = callback8;
+  obj6.handleRoleSelectionChange = callback6;
+  obj6.ensureAppInGuild = callback5;
+  obj6.handleSmartContextChange = callback7;
+  obj6.handleRequireHostApprovalChange = callback8;
+  obj6.submit = callback9;
   return obj6;
 }

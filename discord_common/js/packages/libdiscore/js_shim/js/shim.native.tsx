@@ -5,26 +5,26 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
-export const isBlockedDomain = function isBlockedDomain(arg0) {
+export function isBlockedDomain(arg0) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   return BlockedDomainsStore.isBlockedDomain(arg0);
-};
-export const startFetchingBlockedDomains = function startFetchingBlockedDomains(combined) {
+}
+export function startFetchingBlockedDomains(combined) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   const result = BlockedDomainsStore.startFetchingBlockedDomains(combined);
-};
-export const consumeLogs = function consumeLogs() {
+}
+export function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
-};
+}
 export function isUnsupportedBrowser() {
   return false;
 }
-export const getExperimentCacher = function getExperimentCacher() {
+export function getExperimentCacher() {
   return LIBDISCORE_JSI.ExperimentCacher;
-};
-export const getHttpClientAPI = function getHttpClientAPI() {
+}
+export function getHttpClientAPI() {
   return LIBDISCORE_JSI.getHttpClientAPI();
-};
+}
 export const rustMultiply = LIBDISCORE_JSI.rustMultiply;
 export const crash = LIBDISCORE_JSI.crash;
 export const generateLaunchSignature = LIBDISCORE_JSI.generateLaunchSignature;

@@ -45,7 +45,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj2 = {
   rewardShelf: {
     flexDirection: "row",
@@ -256,9 +256,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { children: null };
       const obj = rewards(504);
       const items2 = [
-        closure_9(rewards(13003).Pile, {
+        closure_9(rewards(13224).Pile, {
           "aria-label": memo,
-          shape: rewards(9437).CutoutShape.Circle,
+          shape: rewards(9468).CutoutShape.Circle,
           size: v50,
           gap: 2,
           depthX: 0.3,
@@ -270,8 +270,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = rewards(1125).intl;
       obj5.children = intl.string(rewards(1125).t.DCCcdz);
       const items3 = [
-        closure_9(rewards(5270).Text, obj5),
-        closure_9(rewards(5270).Text, {
+        closure_9(rewards(5271).Text, obj5),
+        closure_9(rewards(5271).Text, {
           variant: "heading-sm/semibold",
           color: "text-subtle",
           lineClamp: 2,
@@ -404,7 +404,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = items;
       return v65535(closure_1_11, obj2);
     };
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_17 = createStyles.createStyles((width) => ({
   nitroCoin: { width, height: width, alignItems: "center", justifyContent: "center" },
 }));

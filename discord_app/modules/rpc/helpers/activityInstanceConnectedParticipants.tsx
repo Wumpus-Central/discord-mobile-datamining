@@ -6,42 +6,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(6413);
-let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
-items = [Constants.RPC_AUTHENTICATED_SCOPE];
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
-
-export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
-  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-  if (null == currentEmbeddedActivity) {
-    const obj = { participants: [] };
-    return obj;
-  } else {
-    _require = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationGuildId(
-      currentEmbeddedActivity.location,
-    );
-    const obj2 = require("embeddedActivityLocationUtils");
-    const embeddedActivityLocationChannelId =
-      require("embeddedActivityLocationUtils").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
-    const obj4 = { participants: null };
-    const _Array = Array;
-    const obj3 = require("embeddedActivityLocationUtils");
-    obj4.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-      user = user.getUser(arg0);
-      if (null != user) {
-        const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
-        const obj2 = {};
-        const merged = Object.assign(transformUserDefault(user));
-        obj2.nickname = nickname;
-        return obj2;
-      }
-    }).filter(require("GlobalUtils").isNotNullish);
-    return obj4;
-  }
-};
-export const activityInstanceConnectedParticipantsScope = obj;
-export const activityInstanceConnectedParticipantsUpdateEvent = {
+const Constants = fn(6437);
+({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
+let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
+items = [RPC_AUTHENTICATED_SCOPE];
+const CONTEXT_MENU_ICON_NAMES = fn(16215);
+const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1084).RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {
   scope: obj,
   handler() {
     return (arg0) => {
@@ -53,16 +23,16 @@ export const activityInstanceConnectedParticipantsUpdateEvent = {
         const obj = { participants: [] };
         let obj2 = obj;
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4925).getEmbeddedActivityLocationGuildId(
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4926).getEmbeddedActivityLocationGuildId(
           currentEmbeddedActivity.location,
         );
-        const obj4 = embeddedActivityLocationGuildId(4925);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4925).getEmbeddedActivityLocationChannelId(
+        const obj4 = embeddedActivityLocationGuildId(4926);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4926).getEmbeddedActivityLocationChannelId(
           currentEmbeddedActivity.location,
         );
         obj2 = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4925);
+        const obj5 = embeddedActivityLocationGuildId(4926);
         obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {
@@ -90,4 +60,37 @@ export const activityInstanceConnectedParticipantsUpdateEvent = {
       return obj2;
     };
   },
-};
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
+
+export function activityInstanceConnectedParticipants() {
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+  if (null == currentEmbeddedActivity) {
+    const obj = { participants: [] };
+    return obj;
+  } else {
+    _require = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationGuildId(
+      currentEmbeddedActivity.location,
+    );
+    const obj2 = require("embeddedActivityLocationUtils");
+    const embeddedActivityLocationChannelId =
+      require("embeddedActivityLocationUtils").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    const obj4 = { participants: null };
+    const _Array = Array;
+    const obj3 = require("embeddedActivityLocationUtils");
+    obj4.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+      user = user.getUser(arg0);
+      if (null != user) {
+        const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+        const obj2 = {};
+        const merged = Object.assign(transformUserDefault(user));
+        obj2.nickname = nickname;
+        return obj2;
+      }
+    }).filter(require("GlobalUtils").isNotNullish);
+    return obj4;
+  }
+}
+export const activityInstanceConnectedParticipantsScope = obj;
+export const activityInstanceConnectedParticipantsUpdateEvent = rPCEvent;

@@ -6,7 +6,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup_v2/ChannelLinkUrls.tsx");
 
-export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
+export function parseChannelLinkUrl(url) {
   const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
   const match = MEDIA_POST_URL_RE.exec(url);
   if (null != match) {
@@ -16,7 +16,7 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
       channelId: tmp6[3],
       messageId: tmp6[4],
       parentChannelId: tmp6[2],
-      conversationId: "format",
+      conversationId: "formatToPlainString",
     };
     return obj3;
   } else {
@@ -49,4 +49,4 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
       return tmp4;
     }
   }
-};
+}

@@ -12,7 +12,7 @@ let closure_6 = "" + location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
 let closure_7 = PlatformUtils.isAndroid();
 const result = size.fileFinishedImporting("modules/guild_boosting/RoleIconUtils.tsx");
 
-export const getRoleIconData = function getRoleIconData(role, size) {
+export function getRoleIconData(role, size) {
   if (null == role) {
     return null;
   } else {
@@ -60,15 +60,15 @@ export const getRoleIconData = function getRoleIconData(role, size) {
     }
     return tmp23;
   }
-};
-export const replaceRoleIconSourceSize = function replaceRoleIconSourceSize(str, arg1) {
+}
+export function replaceRoleIconSourceSize(str, arg1) {
   const obj = ImageLoaderUtils;
   return str.replace(
     /size=[0-9]+/g,
     "size=" + obj.getBestMediaProxySize(arg1 * ImageLoaderUtils.getDevicePixelRatio()),
   );
-};
-export const isRoleIconAssetUrl = function isRoleIconAssetUrl(str) {
+}
+export function isRoleIconAssetUrl(str) {
   let startsWithResult = str.startsWith(closure_5);
   if (!startsWithResult) {
     const _HermesInternal = HermesInternal;
@@ -79,8 +79,8 @@ export const isRoleIconAssetUrl = function isRoleIconAssetUrl(str) {
     startsWithResult = startsWithResult1;
   }
   return startsWithResult;
-};
-export const canGuildUseRoleIcons = function canGuildUseRoleIcons(guild, role) {
+}
+export function canGuildUseRoleIcons(guild, role) {
   let prop;
   if (role != null) {
     const tags = role.tags;
@@ -94,4 +94,4 @@ export const canGuildUseRoleIcons = function canGuildUseRoleIcons(guild, role) {
     hasItem = features.has(constants.ROLE_ICONS);
   }
   return hasItem;
-};
+}

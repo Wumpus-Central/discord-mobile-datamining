@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_10 = createStyles.createStyles({ margin: { margin: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
@@ -31,7 +31,7 @@ export default function WebAuthnNameStep() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ export default function WebAuthnNameStep() {
           v3(tmp32[10]).open("WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", obj8);
           const replaced = closure_128_2.replace(constants.WEBAUTHN_SUCCESS);
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp32) {
         if (tmp5 === c3) {

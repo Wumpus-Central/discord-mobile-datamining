@@ -9,7 +9,7 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
-export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creative) {
+export function getDeliveredAdCreativeId(creative) {
   if (null == creative) {
     return null;
   } else {
@@ -24,8 +24,8 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creati
       return creative.questHomeHero.id;
     }
   }
-};
-export const getDeliveredQuestId = function getDeliveredQuestId(creative) {
+}
+export function getDeliveredQuestId(creative) {
   let type;
   if (creative != null) {
     type = creative.type;
@@ -35,8 +35,8 @@ export const getDeliveredQuestId = function getDeliveredQuestId(creative) {
     questId = creative.questId;
   }
   return questId;
-};
-export const getDeliveredBounty = function getDeliveredBounty(creative) {
+}
+export function getDeliveredBounty(creative) {
   let type;
   if (creative != null) {
     type = creative.type;
@@ -46,8 +46,8 @@ export const getDeliveredBounty = function getDeliveredBounty(creative) {
     bounty = creative.bounty;
   }
   return bounty;
-};
-export const getDeliveredPlayable = function getDeliveredPlayable(creative) {
+}
+export function getDeliveredPlayable(creative) {
   let type;
   if (creative != null) {
     type = creative.type;
@@ -57,8 +57,8 @@ export const getDeliveredPlayable = function getDeliveredPlayable(creative) {
     playable = creative.playable;
   }
   return playable;
-};
-export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds) {
+}
+export function resolveResponseTtl(responseTtlSeconds) {
   if (null == responseTtlSeconds) {
     return result;
   } else {
@@ -72,8 +72,8 @@ export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds
     }
     return tmp3;
   }
-};
-export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecision(response_ttl_seconds, creative) {
+}
+export function questAdDecisionFromAdDecision(response_ttl_seconds, creative) {
   const obj = {
     creative: creative.creative,
     fetchedAt: creative.fetchedAt,
@@ -153,4 +153,4 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
     provenance_metadata_sealed: obj.provenanceMetadataSealed,
   } = response_ttl_seconds);
   return obj;
-};
+}

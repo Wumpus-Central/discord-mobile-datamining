@@ -11,12 +11,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AppLauncherLastUsedCommandStore from "../AppLauncherLastUsedCommandStore.tsx";
 
 require = fn;
-const FetchState = fn(7239).FetchState;
-const WATCH_YOUTUBE_PROD_APP_ID = fn(2023).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(6019);
+const FetchState = fn(7263).FetchState;
+const WATCH_YOUTUBE_PROD_APP_ID = fn(2024).WATCH_YOUTUBE_PROD_APP_ID;
+const ApplicationCommandConstants = fn(6023);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
-let items = [fn(1997).ApplicationCommandType.CHAT, fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1998).ApplicationCommandType.CHAT, fn(1998).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 filters.commandTypes = items;
 const options = { placeholderCount: 0, limit: ApplicationCommandConstants.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
 fn(558);
@@ -119,7 +119,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
           if (closure_1) {
             tmp = closure_5;
             newestTokens = closure_5.getNewestTokens();
-            found = newestTokens.filter(() => { ... });
+            found = newestTokens.filter(/* F151441 */ function() { ... });
           } else {
             found = [];
           }
@@ -139,7 +139,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
           if (closure_1) {
             tmp = closure_5;
             newestTokens = closure_5.getNewestTokens();
-            found = newestTokens.filter(() => { ... });
+            found = newestTokens.filter(/* F151441 */ function() { ... });
           } else {
             found = [];
           }
@@ -154,7 +154,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
           if (closure_1) {
             tmp = closure_5;
             newestTokens = closure_5.getNewestTokens();
-            found = newestTokens.filter(() => { ... });
+            found = newestTokens.filter(/* F151441 */ function() { ... });
           } else {
             found = [];
           }
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(12042).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(12096).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -230,7 +230,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(12042);
+      const tmpResult5 = context(12096);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
         class T {

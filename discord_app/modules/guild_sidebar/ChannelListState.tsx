@@ -232,17 +232,17 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({
   ChannelRecordBase: closure_14,
   isGuildReadableType: closure_15,
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7701).ChannelListGuildActionRow;
 const Constants = fn(1084);
 ({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = Constants);
-const ChannelFlags = fn(4863).ChannelFlags;
+const ChannelFlags = fn(4864).ChannelFlags;
 const Permissions = fn(1095).Permissions;
 let c34 = "placeholder-channel-id";
 const __initData7 = {
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "asc",
+      version: "mindre end \u00E9t sekund",
     });
     merged.id = global;
     obj = closure_25;

@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getPartySize.tsx");
 
-export const getPartySize = function getPartySize(activity) {
+export function getPartySize(activity) {
   if (null != activity) {
     if (null != activity.party) {
       if (null != activity.party.size) {
@@ -17,4 +17,4 @@ export const getPartySize = function getPartySize(activity) {
     }
   }
   return { partySize: -1, maxPartySize: -1 };
-};
+}

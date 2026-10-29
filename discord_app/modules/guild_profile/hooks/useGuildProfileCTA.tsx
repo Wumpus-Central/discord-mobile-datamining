@@ -608,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     };
 export { CTATypes };
 export const GuildProfileCTAContext = obj2;
-export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfileFromInvite, code) {
+export function getGuildProfileCTAType(guildProfileFromInvite, code) {
   ({ id, features } = guildProfileFromInvite);
   const id1 = AuthenticationStore.getId();
   const user = UserStore.getUser(id1);
@@ -710,4 +710,4 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     return APPLY_TO_JOIN;
   }
   tmp7 = null != joinedAt;
-};
+}

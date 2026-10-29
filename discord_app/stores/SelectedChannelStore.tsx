@@ -334,11 +334,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1084);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(4863).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4864).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -1232,7 +1232,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 
 export default selectedChannelStore;
-export const findFirstVoiceChannelId = function findFirstVoiceChannelId(id) {
+export function findFirstVoiceChannelId(id) {
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(id);
   const found = _modDef12.find(mutableBasicGuildChannelsForGuild, (type) => type.type === constants.GUILD_VOICE);
   id = undefined;
@@ -1240,5 +1240,5 @@ export const findFirstVoiceChannelId = function findFirstVoiceChannelId(id) {
     id = found.id;
   }
   return id;
-};
+}
 export { handleConnectionOpen };

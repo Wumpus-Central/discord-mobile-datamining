@@ -11,9 +11,9 @@ import HomeDrawerStore from "HomeDrawerStore.tsx";
 import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 
 require = fn;
-const computeMaxX = fn(17720).computeMaxX;
+const computeMaxX = fn(17958).computeMaxX;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const LaunchPadTypes = fn(11244).LaunchPadTypes;
+const LaunchPadTypes = fn(11298).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;
@@ -153,17 +153,17 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(5333).Gesture;
+let Gesture = fn(5334).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7205);
+let ReanimatedHelperTypes = fn(7229);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7205);
+ReanimatedHelperTypes = fn(7229);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7205);
+ReanimatedHelperTypes = fn(7229);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7205);
+ReanimatedHelperTypes = fn(7229);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 let ReactCompilerGating = fn(558);
@@ -1530,12 +1530,12 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled()
       };
     };
 export const HomeDrawerStateContext = context;
-export const useHomeDrawerState = function useHomeDrawerState() {
+export function useHomeDrawerState() {
   return noop.useContext(context).homeDrawerState;
-};
-export const useIsHomeDrawerEnabled = function useIsHomeDrawerEnabled() {
+}
+export function useIsHomeDrawerEnabled() {
   return noop.useContext(context).enableHome;
-};
-export const useDoesLandOnHomeDrawer = function useDoesLandOnHomeDrawer() {
+}
+export function useDoesLandOnHomeDrawer() {
   return noop.useContext(context).landOnHome;
-};
+}

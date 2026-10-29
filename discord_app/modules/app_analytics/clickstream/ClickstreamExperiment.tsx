@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamExperiment.tsx");
 
-export const clickstreamExperimentEnabled = function clickstreamExperimentEnabled() {
+export function clickstreamExperimentEnabled() {
   return config.getConfig({ location: "clickstream" }).enabled;
-};
+}

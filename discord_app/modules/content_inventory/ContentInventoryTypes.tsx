@@ -5,21 +5,21 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
 
-export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {
+export function isPlayedGameEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
-};
-export const isTopGameEntry = function isTopGameEntry(badgeCell) {
+}
+export function isTopGameEntry(badgeCell) {
   let content_type;
   if (badgeCell != null) {
     content_type = badgeCell.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
-};
-export const isGamingLikeEntry = function isGamingLikeEntry(entry) {
+}
+export function isGamingLikeEntry(entry) {
   let content_type;
   if (entry != null) {
     content_type = entry.content_type;
@@ -33,8 +33,8 @@ export const isGamingLikeEntry = function isGamingLikeEntry(entry) {
     tmp4 = content_type1 === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
   }
   return tmp4;
-};
-export const isApplicationEntry = function isApplicationEntry(extra) {
+}
+export function isApplicationEntry(extra) {
   extra = undefined;
   if (extra != null) {
     extra = extra.extra;
@@ -48,22 +48,22 @@ export const isApplicationEntry = function isApplicationEntry(extra) {
     tmp2 = "application_id" in extra1;
   }
   return tmp2;
-};
-export const isListenedSessionEntry = function isListenedSessionEntry(length) {
+}
+export function isListenedSessionEntry(length) {
   let content_type;
   if (length != null) {
     content_type = length.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION;
-};
-export const isTopArtistEntry = function isTopArtistEntry(content_type) {
+}
+export function isTopArtistEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_ARTIST;
-};
-export const isListeningLikeEntry = function isListeningLikeEntry(content_type) {
+}
+export function isListeningLikeEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
@@ -77,15 +77,15 @@ export const isListeningLikeEntry = function isListeningLikeEntry(content_type) 
     tmp4 = content_type1 === ContentInventoryEntryType.ContentInventoryEntryType.TOP_ARTIST;
   }
   return tmp4;
-};
-export const isWatchedMediaEntry = function isWatchedMediaEntry(entry) {
+}
+export function isWatchedMediaEntry(entry) {
   let content_type;
   if (entry != null) {
     content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.WATCHED_MEDIA;
-};
-export const isXboxEntry = function isXboxEntry(content_type) {
+}
+export function isXboxEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
@@ -103,8 +103,8 @@ export const isXboxEntry = function isXboxEntry(content_type) {
     tmp6 = content_type.extra.platform === PlatformType.PlatformType.XBOX;
   }
   return tmp6;
-};
-export const isPlaystationEntry = function isPlaystationEntry(content_type) {
+}
+export function isPlaystationEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
@@ -122,8 +122,8 @@ export const isPlaystationEntry = function isPlaystationEntry(content_type) {
     tmp6 = content_type.extra.platform === PlatformType.PlatformType.PLAYSTATION;
   }
   return tmp6;
-};
-export const isConsoleEntry = function isConsoleEntry(content_type) {
+}
+export function isConsoleEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
@@ -160,15 +160,15 @@ export const isConsoleEntry = function isConsoleEntry(content_type) {
     tmp6 = tmp10;
   }
   return tmp6;
-};
-export const isLaunchedActivityEntry = function isLaunchedActivityEntry(content_type) {
+}
+export function isLaunchedActivityEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LAUNCHED_ACTIVITY;
-};
-export const isRecentActivityEntry = function isRecentActivityEntry(length) {
+}
+export function isRecentActivityEntry(length) {
   let content_type;
   if (length != null) {
     content_type = length.content_type;
@@ -211,4 +211,4 @@ export const isRecentActivityEntry = function isRecentActivityEntry(length) {
     tmp4 = tmp9;
   }
   return tmp4;
-};
+}

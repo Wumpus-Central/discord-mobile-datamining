@@ -1,12 +1,12 @@
 // discord_app/modules/conjure/builder/native/ConjureChatMoreSheet.tsx
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 let closure_3 = ["canAnnotate"];
-const conjureDesignFeedbackStore = fn(11811);
+const conjureDesignFeedbackStore = fn(11865);
 ({
   enterConjureDesignFeedback: hasOwnProperty,
   exitConjureDesignFeedback: metroRequire,
@@ -21,7 +21,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if ("switch" === row.row.kind) {
         if (cResult[0] !== iter.IconComponent) {
           const obj2 = { IconComponent: iter.IconComponent };
-          const tmp13 = jsx(tmp(6947).TableRowIcon, { IconComponent: iter.IconComponent });
+          const tmp13 = jsx(tmp(6971).TableRowIcon, { IconComponent: iter.IconComponent });
           cResult[0] = iter.IconComponent;
           cResult[1] = tmp13;
           let tmp11 = tmp13;
@@ -64,7 +64,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.icon = tmp11;
         ({ value: obj5.value, disabled: obj5.disabled } = iter);
         obj3.onValueChange = tmp14;
-        const tmp17 = jsx(tmp(7331).TableSwitchRow, {
+        const tmp17 = jsx(tmp(7355).TableSwitchRow, {
           label: null,
           subLabel: null,
           icon: null,
@@ -121,7 +121,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { label: iter.label, variant: str, icon: tmp4, onPress: C };
-          const tmp10 = jsx(tmp(6939).TableRow, { label: iter.label, variant: str, icon: tmp4, onPress: C });
+          const tmp10 = jsx(tmp(6963).TableRow, { label: iter.label, variant: str, icon: tmp4, onPress: C });
           cResult[16] = iter.label;
           cResult[17] = tmp4;
           cResult[18] = C;
@@ -129,7 +129,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[20] = tmp10;
         }
         const obj9 = { IconComponent: iter.IconComponent, variant: str };
-        const tmp6 = jsx(tmp(6947).TableRowIcon, { IconComponent: iter.IconComponent, variant: str });
+        const tmp6 = jsx(tmp(6971).TableRowIcon, { IconComponent: iter.IconComponent, variant: str });
         cResult[11] = iter.IconComponent;
         cResult[12] = str;
         cResult[13] = tmp6;
@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
         ({ label: obj3.label, subLabel: obj3.subLabel } = row);
         const obj4 = { IconComponent: row.IconComponent };
-        obj2.icon = jsx(row(6947).TableRowIcon, { IconComponent: row.IconComponent });
+        obj2.icon = jsx(row(6971).TableRowIcon, { IconComponent: row.IconComponent });
         ({ value: obj3.value, disabled: obj3.disabled } = row);
         obj2.onValueChange = function onValueChange(arg0) {
           let tmp = arg0;
@@ -155,7 +155,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           row.onValueChange(arg0);
         };
-        return jsx(row(7331).TableSwitchRow, {
+        return jsx(row(7355).TableSwitchRow, {
           label: null,
           subLabel: null,
           icon: null,
@@ -170,12 +170,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let obj = { label: row.label, variant: str, icon: null, onPress: null };
         const obj7 = { IconComponent: row.IconComponent, variant: str };
-        obj.icon = jsx(row(6947).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+        obj.icon = jsx(row(6971).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
         obj.onPress = function onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
           row.onPress();
         };
-        return jsx(row(6939).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+        return jsx(row(6963).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
       }
     };
 ReactCompilerGating = fn(558);
@@ -188,10 +188,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = _objectWithoutProperties(canAnnotate, closure_3);
       id = tmp4.project.id;
       const obj = id(576);
-      const isConjureProjectMuted = id(10760).useIsConjureProjectMuted(id);
-      const obj2 = id(10760);
-      const conjureControlActive = id(10799).useConjureControlActive(id);
-      const obj3 = id(10799);
+      const isConjureProjectMuted = id(10835).useIsConjureProjectMuted(id);
+      const obj2 = id(10835);
+      const conjureControlActive = id(10875).useConjureControlActive(id);
+      const obj3 = id(10875);
       const obj5 = {};
       const merged = Object.assign(tmp4);
       obj5.muted = isConjureProjectMuted;
@@ -212,11 +212,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = obj6;
       }
       obj5.annotate = tmp8;
-      const result = id(12299).conjureChatMoreSections(obj5);
-      const ActionSheet = tmp(7334).ActionSheet;
+      const result = id(12353).conjureChatMoreSections(obj5);
+      const ActionSheet = tmp(7358).ActionSheet;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1125).intl;
-        const stringResult = intl.string(_modDef3863.OsD9T0);
+        const stringResult = intl.string(_modDef3864.OsD9T0);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -250,16 +250,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = mapped;
       cResult[5] = tmp15;
       tmp14 = tmp15;
-      const obj4 = id(12299);
+      const obj4 = id(12353);
     }
   : function ConjureChatMoreSheet(canAnnotate) {
       let tmp = null;
       const merged = Object.assign(canAnnotate, Object.assign({ canAnnotate: 0 }));
       const id = merged.project.id;
-      const isConjureProjectMuted = id(10760).useIsConjureProjectMuted(id);
-      const obj = id(10760);
-      const conjureControlActive = id(10799).useConjureControlActive(id);
-      const obj2 = id(10799);
+      const isConjureProjectMuted = id(10835).useIsConjureProjectMuted(id);
+      const obj = id(10835);
+      const conjureControlActive = id(10875).useConjureControlActive(id);
+      const obj2 = id(10875);
       const obj4 = {};
       const merged1 = Object.assign(merged);
       obj4.muted = isConjureProjectMuted;
@@ -279,10 +279,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp = obj5;
       }
       obj4.annotate = tmp;
-      const result = id(12299).conjureChatMoreSections(obj4);
+      const result = id(12353).conjureChatMoreSections(obj4);
       const obj6 = { dismissAccessibilityLabel: null, children: null };
       const intl = tmp3(1125).intl;
-      obj6.dismissAccessibilityLabel = intl.string(_modDef3863.OsD9T0);
+      obj6.dismissAccessibilityLabel = intl.string(_modDef3864.OsD9T0);
       obj6.children = result.map((arr) =>
         jsx(
           id(dependencyMap[16]).TableRowGroup,
@@ -290,6 +290,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           arr[0].key,
         ),
       );
-      return jsx(id(7334).ActionSheet, { dismissAccessibilityLabel: null, children: null });
+      return jsx(id(7358).ActionSheet, { dismissAccessibilityLabel: null, children: null });
     };
 export const CONJURE_CHAT_MORE_SHEET_KEY = "ConjureChatMoreSheet";

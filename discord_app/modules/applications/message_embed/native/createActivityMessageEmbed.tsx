@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
-export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
+export function createActivityMessageEmbed(app) {
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
   const appMessageEmbed = createAppMessageEmbed.createAppMessageEmbed({ theme, embedUrl, message, app });
@@ -35,4 +35,4 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
-};
+}

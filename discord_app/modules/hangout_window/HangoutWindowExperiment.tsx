@@ -49,9 +49,9 @@ export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEna
         { autoTrackExposure: true },
       );
     };
-export const getHangoutWindowExperiment = function getHangoutWindowExperiment(guildId) {
+export function getHangoutWindowExperiment(guildId) {
   return experiment.getCurrentConfig(
     { guildId: guildId.guildId, location: guildId.location },
     { autoTrackExposure: true },
   );
-};
+}

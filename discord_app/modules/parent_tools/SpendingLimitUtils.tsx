@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
 
-export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
+export function spendingLimitEqual(amount, amount2) {
   let tmp = null == amount && null == amount2;
   if (!tmp) {
     let tmp2 = null != amount && null != amount2;
@@ -14,14 +14,14 @@ export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
     tmp = tmp2;
   }
   return tmp;
-};
-export const getNextRenewalDateLabel = function getNextRenewalDateLabel() {
+}
+export function getNextRenewalDateLabel() {
   const date = new Date();
   const uTCFullYear = date.getUTCFullYear();
   const dateTimeFormat = new Intl.DateTimeFormat(undefined, { dateStyle: "short", timeZone: "UTC" });
   return dateTimeFormat.format(new Date(Date.UTC(uTCFullYear, date.getUTCMonth() + 1, 1)));
-};
-export const getCurrencySymbol = function getCurrencySymbol(formatted) {
+}
+export function getCurrencySymbol(formatted) {
   try {
     const _Intl = Intl;
     const obj = { style: "currency", currency: formatted.toUpperCase() };
@@ -38,8 +38,8 @@ export const getCurrencySymbol = function getCurrencySymbol(formatted) {
   } catch (err) {
     return str.toUpperCase();
   }
-};
-export const sanitizeAmountInput = function sanitizeAmountInput(str, arg1) {
+}
+export function sanitizeAmountInput(str, arg1) {
   if (0 === arg1) {
     return str.replace(/[^0-9]/g, "");
   } else {
@@ -53,4 +53,4 @@ export const sanitizeAmountInput = function sanitizeAmountInput(str, arg1) {
     }
     return str2;
   }
-};
+}

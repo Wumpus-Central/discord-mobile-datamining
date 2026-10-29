@@ -709,7 +709,7 @@ export const MAX_TRACKED_GUILD_EVENT_FETCHES = 1024;
 export const GUILD_EVENT_FOREGROUND_THROTTLE_MS = 2000;
 export const GUILD_EVENT_MIN_TIMESTAMP = UTCResult;
 export const GUILD_EVENT_FUTURE_SKEW_MS = result;
-export const isPlausibleGuildEventTarget = function isPlausibleGuildEventTarget(arg0, arg1) {
+export function isPlausibleGuildEventTarget(arg0, arg1) {
   let timestamp = arg2;
   if (arg2 === undefined) {
     const _Date = Date;
@@ -727,9 +727,9 @@ export const isPlausibleGuildEventTarget = function isPlausibleGuildEventTarget(
     tmp3Result = map5(set2[1]);
   }
   return false;
-};
+}
 export const GuildEventUnavailableError = prototype;
-export const isGuildEventUnavailableError = function isGuildEventUnavailableError(status) {
+export function isGuildEventUnavailableError(status) {
   if (status instanceof prototype) {
     return true;
   } else {
@@ -747,8 +747,8 @@ export const isGuildEventUnavailableError = function isGuildEventUnavailableErro
     }
     return hasItem;
   }
-};
-export const guardGuildEventFetch = function guardGuildEventFetch(arg0, arg1, arg2, arg3) {
+}
+export function guardGuildEventFetch(arg0, arg1, arg2, arg3) {
   obj = arg3;
   if (arg3 === undefined) {
     obj = {};
@@ -780,16 +780,16 @@ export const guardGuildEventFetch = function guardGuildEventFetch(arg0, arg1, ar
     return rejectResult;
   }
   rejectResult = navigation.guard(arg0, arg1, arg2, obj);
-};
+}
 export const guardGuildEventUserCountFetch = obj.guard;
-export const onGuildEventFetchRetryable = function onGuildEventFetchRetryable(arg0, arg1, arg2) {
+export function onGuildEventFetchRetryable(arg0, arg1, arg2) {
   return navigation.onRetryable("" + arg0 + "/" + arg1, arg2);
-};
-export const forgetTransientGuildEventFetchFailures = function forgetTransientGuildEventFetchFailures() {
+}
+export function forgetTransientGuildEventFetchFailures() {
   const result = navigation.forgetTransientFailures();
   const result1 = obj.forgetTransientFailures();
-};
-export const resetGuildEventFetchGuardForTest = function resetGuildEventFetchGuardForTest() {
+}
+export function resetGuildEventFetchGuardForTest() {
   navigation.reset();
   obj.reset();
-};
+}

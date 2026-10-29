@@ -14,6 +14,7 @@ function isSingleUseDismissibleContent(item10020) {
 }
 const items = [
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING,
+  dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING_COACHMARK,
   dismissible_content.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE,
   dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE,
@@ -112,16 +113,16 @@ export const snowflakeBoundDismissibleContents = items2;
 export const snowflakeBoundGuildDismissibleContents = items3;
 export const singleUseGuildDismissibleContents = items4;
 export const timeRecurringGuildDismissibleContents = items5;
-export const isTimeRecurringDismissibleContent = function isTimeRecurringDismissibleContent(id) {
+export function isTimeRecurringDismissibleContent(id) {
   return items1.includes(id);
-};
-export const isVersionedDismissibleContent = function isVersionedDismissibleContent(id) {
+}
+export function isVersionedDismissibleContent(id) {
   return items.includes(id);
-};
-export const isSnowflakeBoundDismissibleContent = function isSnowflakeBoundDismissibleContent(id) {
+}
+export function isSnowflakeBoundDismissibleContent(id) {
   return items2.includes(id);
-};
-export const isRecurringDismissibleContent = function isRecurringDismissibleContent(arg0) {
+}
+export function isRecurringDismissibleContent(arg0) {
   let hasItem = items1.includes(arg0);
   if (!hasItem) {
     hasItem = items.includes(arg0);
@@ -130,22 +131,18 @@ export const isRecurringDismissibleContent = function isRecurringDismissibleCont
     hasItem = items2.includes(arg0);
   }
   return hasItem;
-};
+}
 export { isSingleUseDismissibleContent };
-export const isSingleUseGuildDismissibleContent = function isSingleUseGuildDismissibleContent(GDM_INVITE_REMINDER) {
+export function isSingleUseGuildDismissibleContent(GDM_INVITE_REMINDER) {
   return items4.includes(GDM_INVITE_REMINDER);
-};
-export const isTimeRecurringGuildDismissibleContent = function isTimeRecurringGuildDismissibleContent(
-  GDM_INVITE_REMINDER,
-) {
+}
+export function isTimeRecurringGuildDismissibleContent(GDM_INVITE_REMINDER) {
   return items5.includes(GDM_INVITE_REMINDER);
-};
-export const isSnowflakeBoundGuildDismissibleContent = function isSnowflakeBoundGuildDismissibleContent(
-  GDM_INVITE_REMINDER,
-) {
+}
+export function isSnowflakeBoundGuildDismissibleContent(GDM_INVITE_REMINDER) {
   return items3.includes(GDM_INVITE_REMINDER);
-};
-export const isGuildDismissibleContent = function isGuildDismissibleContent(dismissibleContent) {
+}
+export function isGuildDismissibleContent(dismissibleContent) {
   let hasItem = items4.includes(dismissibleContent);
   if (!hasItem) {
     hasItem = items5.includes(dismissibleContent);
@@ -154,6 +151,6 @@ export const isGuildDismissibleContent = function isGuildDismissibleContent(dism
     hasItem = items3.includes(dismissibleContent);
   }
   return hasItem;
-};
+}
 export const ALL_DISMISSIBLE_CONTENT = found;
 export const ALL_SINGLE_USE_DISMISSIBLE_CONTENT = found1;

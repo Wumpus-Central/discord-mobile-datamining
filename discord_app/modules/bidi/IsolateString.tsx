@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";
 export const PDI = "\u2069";
-export const isolate = function isolate(channelName) {
+export function isolate(channelName) {
   let text = channelName;
   if (null != channelName) {
     text = channelName;
@@ -14,4 +14,4 @@ export const isolate = function isolate(channelName) {
     }
   }
   return text;
-};
+}

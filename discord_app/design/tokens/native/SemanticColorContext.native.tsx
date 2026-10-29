@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
-export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(primaryColor) {
+export function getSemanticColorContextFromThemeContext(primaryColor) {
   primaryColor = primaryColor.primaryColor;
   const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(primaryColor);
   ({ contrast, saturation, enabledExperiments } = primaryColor);
@@ -64,4 +64,4 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
   obj6.isProfileTheme = null != primaryColor;
   obj6.enabledExperiments = enabledExperiments;
   return obj6;
-};
+}

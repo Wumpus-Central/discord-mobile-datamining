@@ -58,6 +58,6 @@ const result1 = size.fileFinishedImporting("modules/user_profile/native/UserProf
 export default function useSharedStyles() {
   return closure_9();
 }
-export const useUserProfileCardRadius = function useUserProfileCardRadius() {
+export function useUserProfileCardRadius() {
   return nativeDefault.radii.md;
-};
+}

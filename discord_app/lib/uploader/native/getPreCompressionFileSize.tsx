@@ -14,7 +14,7 @@ let closure_3 = async function _getPreCompressionFileSize(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -60,7 +60,7 @@ let closure_3 = async function _getPreCompressionFileSize(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/native/getPreCompressionFileSize.tsx");
 
-export const getPreCompressionFileSize = function getPreCompressionFileSize() {
+export function getPreCompressionFileSize() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -69,4 +69,4 @@ export const getPreCompressionFileSize = function getPreCompressionFileSize() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef2046 from "../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../_runtime/metro/02047__.js";
 import InteractionComponentUtils from "../modules/interaction_components/InteractionComponentUtils.tsx";
 import EmbedConstants from "../modules/messages/EmbedConstants.tsx";
 import Constants from "../Constants.tsx";
@@ -46,7 +46,7 @@ const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/
 const re18 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
 let result = size.fileFinishedImporting("utils/EmbedUtils.tsx");
 
-export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
+export function sanitizeEmbed(channel_id, id, footer) {
   const obj = {
     id: _modDef12.uniqueId("embed_"),
     url: null,
@@ -90,8 +90,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef2046(date);
-    const tmpResult = _modDef2046;
+    obj.timestamp = _modDef2047(date);
+    const tmpResult = _modDef2047;
   }
   if (null != footer.color) {
     obj.color = footer.color;
@@ -339,8 +339,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.components = tmp40;
   }
   return obj;
-};
-export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
+}
+export function mergeEmbedsOnURL(mapped) {
   const map = new Map();
   const items = [];
   const item = mapped.forEach((url) => {
@@ -365,9 +365,9 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
     }
   });
   return items;
-};
+}
 export { getEffectiveVideoProvider };
-export const isEmbedInline = function isEmbedInline(type) {
+export function isEmbedInline(type) {
   type = type.type;
   let tmp = null != type.image;
   ({ author, rawTitle } = type);
@@ -383,8 +383,8 @@ export const isEmbedInline = function isEmbedInline(type) {
     tmp = tmp2;
   }
   return tmp;
-};
-export const isServerShopArticleEmbed = function isServerShopArticleEmbed(type) {
+}
+export function isServerShopArticleEmbed(type) {
   let tmp = type.type === constants2.ARTICLE;
   if (tmp) {
     tmp = null != type.url;
@@ -397,8 +397,8 @@ export const isServerShopArticleEmbed = function isServerShopArticleEmbed(type) 
     tmp = isMatch;
   }
   return tmp;
-};
-export const isCollectiblesShopArticleEmbed = function isCollectiblesShopArticleEmbed(type) {
+}
+export function isCollectiblesShopArticleEmbed(type) {
   let isMatch = type.type === constants2.ARTICLE;
   if (isMatch) {
     isMatch = null != type.url;
@@ -407,8 +407,8 @@ export const isCollectiblesShopArticleEmbed = function isCollectiblesShopArticle
     isMatch = regExp.test(type.url);
   }
   return isMatch;
-};
-export const isGameProfileArticleEmbed = function isGameProfileArticleEmbed(type) {
+}
+export function isGameProfileArticleEmbed(type) {
   let isMatch = type.type === constants2.ARTICLE;
   if (isMatch) {
     isMatch = null != type.url;
@@ -417,8 +417,8 @@ export const isGameProfileArticleEmbed = function isGameProfileArticleEmbed(type
     isMatch = re17.test(type.url);
   }
   return isMatch;
-};
-export const isUserProfileArticleEmbed = function isUserProfileArticleEmbed(type) {
+}
+export function isUserProfileArticleEmbed(type) {
   let isMatch = type.type === constants2.ARTICLE;
   if (isMatch) {
     isMatch = null != type.url;
@@ -427,8 +427,8 @@ export const isUserProfileArticleEmbed = function isUserProfileArticleEmbed(type
     isMatch = re18.test(type.url);
   }
   return isMatch;
-};
-export const isSocialLayerStorefrontArticleEmbed = function isSocialLayerStorefrontArticleEmbed(type) {
+}
+export function isSocialLayerStorefrontArticleEmbed(type) {
   let tmp = type.type === constants2.ARTICLE;
   if (tmp) {
     tmp = null != type.url;
@@ -447,8 +447,8 @@ export const isSocialLayerStorefrontArticleEmbed = function isSocialLayerStorefr
     tmp = isMatch;
   }
   return tmp;
-};
-export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider, maxMediaWidth, maxMediaHeight) {
+}
+export function getMaxEmbedMediaSize(provider, maxMediaWidth, maxMediaHeight) {
   if (null != maxMediaWidth) {
     if (null != maxMediaHeight) {
       const obj2 = { maxMediaWidth, maxMediaHeight };
@@ -475,16 +475,16 @@ export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider, maxM
     }
     obj = { maxMediaWidth: 400, maxMediaHeight: 300 };
   }
-};
-export const canEmbedLinks = function canEmbedLinks(isPrivate, PermissionStore) {
+}
+export function canEmbedLinks(isPrivate, PermissionStore) {
   if (isPrivate.isPrivate()) {
     let canResult = !isPrivate.isManaged();
   } else {
     canResult = PermissionStore.can(constants3.EMBED_LINKS, isPrivate);
   }
   return canResult;
-};
-export const shouldStripEmbeds = function shouldStripEmbeds(message) {
+}
+export function shouldStripEmbeds(message) {
   let someResult = "" !== message.content;
   if (!someResult) {
     const messageSnapshots = message.messageSnapshots;
@@ -497,4 +497,4 @@ export const shouldStripEmbeds = function shouldStripEmbeds(message) {
     });
   }
   return someResult;
-};
+}

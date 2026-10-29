@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
 
-export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachmentsEmbedsComponentsOrSnapshots(message) {
+export function hasAttachmentsEmbedsComponentsOrSnapshots(message) {
   if (null == message) {
     return false;
   } else {
@@ -60,4 +60,4 @@ export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachments
     }
     return tmp;
   }
-};
+}

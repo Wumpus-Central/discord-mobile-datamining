@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/RoleIconUploadUtils.tsx");
 
 export const ROLE_ICON_MAX_FILE_SIZE = 256000;
-export const fetchCustomEmojiAsPngDataUri = function fetchCustomEmojiAsPngDataUri() {
+export function fetchCustomEmojiAsPngDataUri() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -35,4 +35,4 @@ export const fetchCustomEmojiAsPngDataUri = function fetchCustomEmojiAsPngDataUr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(5261).ReactionTypes.VOTE,
+    channel(5262).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -104,7 +104,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8343);
+const PollsConstants = fn(8365);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1084);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -130,15 +130,15 @@ function createPollExpiryTimestamp(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
-export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
+export function generateEmptyPollAnswer() {
   const obj = { text: "Array", image: "Reflect", localCreationAnswerId: v1.v4() };
   return obj;
-};
+}
 export { generateLocalCreationAnswerId };
-export const filterOutUUID = function filterOutUUID(str) {
+export function filterOutUUID(str) {
   return str.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "");
-};
-export const hasNonVoteReactions = function hasNonVoteReactions(message) {
+}
+export function hasNonVoteReactions(message) {
   const iter = message.reactions[Symbol.iterator]();
   while (iter !== undefined) {
     if (null == iter.next().me_vote) {
@@ -148,7 +148,7 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
     }
   }
   return false;
-};
+}
 export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCanPostPollsInChannel(arg0) {
       _require = arg0;
@@ -222,7 +222,7 @@ export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabl
         return tmp;
       });
     };
-export const isPollCreationEmpty = function isPollCreationEmpty(c4, answers) {
+export function isPollCreationEmpty(c4, answers) {
   let tmp = 0 === MessageReactionsStore.length;
   if (tmp) {
     tmp =
@@ -240,9 +240,9 @@ export const isPollCreationEmpty = function isPollCreationEmpty(c4, answers) {
       });
   }
   return tmp;
-};
+}
 export { isAnswerFilled };
-export const isIncompleteAnswer = function isIncompleteAnswer(text) {
+export function isIncompleteAnswer(text) {
   if (text.text != null) {
     const trimmed = str.trim();
   }
@@ -255,9 +255,9 @@ export const isIncompleteAnswer = function isIncompleteAnswer(text) {
     tmp = tmp2;
   }
   return tmp;
-};
+}
 export { createPollExpiryTimestamp };
-export const createPollServerDataFromCreateRequest = function createPollServerDataFromCreateRequest(poll) {
+export function createPollServerDataFromCreateRequest(poll) {
   if (null != poll) {
     let mapped;
     if (poll != null) {
@@ -308,8 +308,8 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
     obj.answers = mapped;
     return obj;
   }
-};
-export const getPollReplyPreview = function getPollReplyPreview(message) {
+}
+export function getPollReplyPreview(message) {
   const poll = message.poll;
   let str;
   if (poll != null) {
@@ -322,8 +322,8 @@ export const getPollReplyPreview = function getPollReplyPreview(message) {
     str = "";
   }
   return str;
-};
-export const getPollResultsReplyPreview = function getPollResultsReplyPreview(message) {
+}
+export function getPollResultsReplyPreview(message) {
   const first = message.embeds[0];
   let str;
   const messageAuthor = useMessageAuthor.getMessageAuthor(message);
@@ -346,8 +346,8 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   const intl = util.intl;
   return intl.format(util.t.Vn97Ka, { username: messageAuthor.nick, title: truncateTextResult });
-};
-export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPreviewMobile(message5) {
+}
+export function getPollResultsReplyPreviewMobile(message5) {
   if ("author" in message5) {
     const first = message5.embeds[0];
     let str;
@@ -375,8 +375,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
   } else {
     return null;
   }
-};
-export const getTotalVotes = function getTotalVotes(reactions) {
+}
+export function getTotalVotes(reactions) {
   return reactions.reduce((acc, count_details) => {
     count_details = count_details.count_details;
     let num;
@@ -388,10 +388,10 @@ export const getTotalVotes = function getTotalVotes(reactions) {
     }
     return acc + num;
   }, 0);
-};
+}
 export { getSampleOfVoterUsernamesForAnswer };
 export { formatVoterTooltipText };
-export const getPollAnswerVotesTooltipText = function getPollAnswerVotesTooltipText(arg0, arg1, id) {
+export function getPollAnswerVotesTooltipText(arg0, arg1, id) {
   const message = MessageStore.getMessage(arg1, arg0);
   if (null == message) {
     return "";
@@ -415,8 +415,8 @@ export const getPollAnswerVotesTooltipText = function getPollAnswerVotesTooltipT
     }
     return str;
   }
-};
-export const formatPollResultNotificationCenterText = function formatPollResultNotificationCenterText(totalVotes) {
+}
+export function formatPollResultNotificationCenterText(totalVotes) {
   ({ questionText, totalVotes } = totalVotes);
   let num = 0;
   ({ victorAnswerText, victorAnswerId } = totalVotes);
@@ -442,4 +442,4 @@ export const formatPollResultNotificationCenterText = function formatPollResultN
     formatToPlainStringResult = intl.formatToPlainString(util.t.XVk6Zv, obj);
   }
   return formatToPlainStringResult;
-};
+}

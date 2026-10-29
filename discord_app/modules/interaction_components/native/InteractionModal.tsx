@@ -22,11 +22,11 @@ function onClose() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const InteractionModalState = fn(15908).InteractionModalState;
+const InteractionModalState = fn(16144).InteractionModalState;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const interaction_modal = "interaction_modal";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   scroll: { flex: 1 },
@@ -469,6 +469,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/InteractionModal.tsx");
 
 export default tmp5;
-export const openInteractionModal = function openInteractionModal(arg0) {
+export function openInteractionModal(arg0) {
   ModalActionCreatorsDefault.push(closure_11, arg0, interaction_modal);
-};
+}

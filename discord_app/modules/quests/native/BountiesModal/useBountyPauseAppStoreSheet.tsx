@@ -9,7 +9,7 @@ import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOver
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(6745).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6768).QuestsExperimentLocations;
 const ComponentActions = fn(1084).ComponentActions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -133,7 +133,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
           constructor() {
-            return () => { ... };
+            return /* F155451 */ function() { ... };
           }
         }
         const items = [tmp15];
@@ -161,7 +161,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       } else {
         class T {
           constructor() {
-            return () => { ... };
+            return /* F155451 */ function() { ... };
           }
         }
         tmp18 = cResult[11];
@@ -170,7 +170,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       if (cResult[12] === bounty.cta) {
         class T {
           constructor() {
-            return () => { ... };
+            return /* F155451 */ function() { ... };
           }
         }
       }
@@ -195,7 +195,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
           obj1.trackOverlaySurfaceClick = function trackOverlaySurfaceClick() { ... };
           obj1.appStoreOverlayCarouselScrollContext = { adContentId: tmp3.id };
           openAppStoreOrUrlResult = obj3.openAppStoreOrUrl(obj1);
-          return openAppStoreOrUrlResult.then(() => { ... });
+          return openAppStoreOrUrlResult.then(/* F155454 */ function() { ... });
         }
       }
       cResult[12] = bounty.cta;

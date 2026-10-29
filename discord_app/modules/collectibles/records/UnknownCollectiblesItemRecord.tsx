@@ -26,6 +26,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");
 
 export default prototype;
-export const isUnknownCollectiblesItemRecord = function isUnknownCollectiblesItemRecord(arg0) {
+export function isUnknownCollectiblesItemRecord(arg0) {
   return arg0 instanceof prototype;
-};
+}

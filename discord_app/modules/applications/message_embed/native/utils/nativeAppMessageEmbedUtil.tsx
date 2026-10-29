@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
   "modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx",
 );
 
-export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
+export function getAppGradientColors(appIconSrc) {
   if (null == appIconSrc) {
     return tmp;
   } else {
@@ -37,11 +37,11 @@ export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
     }
     obj5 = useAvatarColor;
   }
-};
-export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {
+}
+export function getAppIconSrc(id, icon, bot) {
   let applicationIconURL = AvatarUtilsDefault.getApplicationIconURL({ id, icon, bot, fallbackAvatar: false });
   if (applicationIconURL == null) {
     applicationIconURL = null;
   }
   return applicationIconURL;
-};
+}

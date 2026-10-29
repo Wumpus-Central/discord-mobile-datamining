@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
-export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, field) {
+export function getProtoFieldClass(PreloadedUserSettings, field) {
   closure_0 = field;
   const fields = PreloadedUserSettings.fields;
   const found = fields.find((localName) => localName.localName === closure_0);
@@ -16,14 +16,8 @@ export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSetti
   } else {
     return found.T();
   }
-};
-export const createModifiedProto = function createModifiedProto(
-  favoriteGifs,
-  fn,
-  protoFieldClass,
-  PreloadedUserSettings,
-  arg4,
-) {
+}
+export function createModifiedProto(favoriteGifs, fn, protoFieldClass, PreloadedUserSettings, arg4) {
   if (null != favoriteGifs) {
     let fromBinaryResult = protoFieldClass.fromBinary(
       protoFieldClass.toBinary(favoriteGifs),
@@ -40,4 +34,4 @@ export const createModifiedProto = function createModifiedProto(
     obj[arg4] = fromBinaryResult;
     return obj;
   }
-};
+}

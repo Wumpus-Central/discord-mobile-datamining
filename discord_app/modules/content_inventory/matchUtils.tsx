@@ -46,7 +46,7 @@ const CRUNCHYROLL_CLIENT_ID = CrunchyrollConnectionConstants.CRUNCHYROLL_CLIENT_
 const isSpotifyParty = SpotifyConstants.isSpotifyParty;
 const result = size.fileFinishedImporting("modules/content_inventory/matchUtils.tsx");
 
-export const isSpotifyEntry = function isSpotifyEntry(extra) {
+export function isSpotifyEntry(extra) {
   if (obj.isListenedSessionEntry(extra)) {
     const first = extra.extra.entries[0];
     let provider;
@@ -68,15 +68,15 @@ export const isSpotifyEntry = function isSpotifyEntry(extra) {
     const tmpResult = ContentInventoryTypes;
   }
   return isTopArtistEntryResult;
-};
-export const isCrunchyrollEntry = function isCrunchyrollEntry(extra) {
+}
+export function isCrunchyrollEntry(extra) {
   let isWatchedMediaEntryResult = ContentInventoryTypes.isWatchedMediaEntry(extra);
   if (isWatchedMediaEntryResult) {
     isWatchedMediaEntryResult = extra.extra.application_id === CRUNCHYROLL_CLIENT_ID;
   }
   return isWatchedMediaEntryResult;
-};
-export const isMatchingApplicationActivity = function isMatchingApplicationActivity(extra, type) {
+}
+export function isMatchingApplicationActivity(extra, type) {
   let game_name = extra.extra;
   let tmp = null != game_name;
   if (tmp) {
@@ -92,9 +92,9 @@ export const isMatchingApplicationActivity = function isMatchingApplicationActiv
     }
   }
   return tmp;
-};
+}
 export { isMatchingListeningActivity };
-export const isMatchingWatchActivity = function isMatchingWatchActivity(extra, details) {
+export function isMatchingWatchActivity(extra, details) {
   const tmp2 = isCrunchyrollActivityDefault(details);
   let tmp3 = !tmp2;
   if (tmp2) {
@@ -109,12 +109,12 @@ export const isMatchingWatchActivity = function isMatchingWatchActivity(extra, d
     tmp7 = extra.extra.media_title === details.details;
   }
   return tmp7;
-};
-export const findMatchingEntry = function findMatchingEntry(entries, activity) {
+}
+export function findMatchingEntry(entries, activity) {
   _require = activity;
   const found = entries.filter(require("utils").isEntryActive);
   if (activity.type === ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(8866).isGamingLikeEntry);
+    const found1 = found.filter(tmp(8869).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -133,10 +133,10 @@ export const findMatchingEntry = function findMatchingEntry(entries, activity) {
       return tmp;
     });
   } else if (activity.type === ActivityTypes.LISTENING) {
-    const found3 = found.filter(tmp(8866).isListenedSessionEntry);
+    const found3 = found.filter(tmp(8869).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
   } else if (activity.type === ActivityTypes.WATCHING) {
-    const found4 = entries.filter(tmp(8866).isWatchedMediaEntry);
+    const found4 = entries.filter(tmp(8869).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);
       let tmp4 = !tmp3;
@@ -155,4 +155,4 @@ export const findMatchingEntry = function findMatchingEntry(entries, activity) {
     });
   }
   return found2;
-};
+}

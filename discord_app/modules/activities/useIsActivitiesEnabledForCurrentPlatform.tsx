@@ -4,9 +4,9 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
 
-export const useIsActivitiesEnabledForCurrentPlatform = function useIsActivitiesEnabledForCurrentPlatform() {
+export function useIsActivitiesEnabledForCurrentPlatform() {
   return !shared_PlatformUtils.isTablet;
-};
-export const getIsActivitiesEnabledForCurrentPlatform = function getIsActivitiesEnabledForCurrentPlatform() {
+}
+export function getIsActivitiesEnabledForCurrentPlatform() {
   return !shared_PlatformUtils.isTablet;
-};
+}

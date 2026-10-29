@@ -9,13 +9,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjureAgentNeedsPreview.tsx");
 
-export const conjureAgentNeedsPreview = function conjureAgentNeedsPreview(id) {
+export function conjureAgentNeedsPreview(id) {
   let isThinkingResult = ConjureChatStore.isThinking(id);
   if (!isThinkingResult) {
     isThinkingResult = conjurePreviewControlLease.isConjureControlActive(id);
   }
   return isThinkingResult;
-};
+}
 export const useConjureAgentNeedsPreview = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureAgentNeedsPreview(arg0) {
       _require = arg0;

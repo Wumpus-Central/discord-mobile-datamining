@@ -14,7 +14,7 @@ const RPCErrors = fn(1084).RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
-export const validateOpenInviteDialog = function validateOpenInviteDialog(socket) {
+export function validateOpenInviteDialog(socket) {
   if (isPostMessageSocketDefault(socket)) {
     ({ source, surface } = socket.context);
     const tmp11 = getChannelIdForEmbeddedSurfaceDefault(surface);
@@ -72,4 +72,4 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
     const tmpResult21 = new RPCErrorDefault(obj, 'command not available from "' + socket.source.type + '" transport');
     throw tmpResult21;
   }
-};
+}

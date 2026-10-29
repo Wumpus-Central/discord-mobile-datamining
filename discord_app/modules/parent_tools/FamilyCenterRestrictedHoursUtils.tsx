@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx
 import util from "../../intl/index.native.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef2535 from "FamilyCenter.messages.js";
+import _modDef2536 from "FamilyCenter.messages.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function setsEqual(set, set2) {
@@ -25,13 +25,13 @@ function formatDays(days) {
   set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2535.bPjqd1);
+    return intl3.string(_modDef2536.bPjqd1);
   } else if (setsEqual(set, set)) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2535["4dr9L9"]);
+    return intl2.string(_modDef2536["4dr9L9"]);
   } else if (setsEqual(set, set1)) {
     const intl = util.intl;
-    return intl.string(_modDef2535["6lTTJ+"]);
+    return intl.string(_modDef2536["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { weekday: "short" });
@@ -86,23 +86,23 @@ const set2 = new Set(items);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx");
 
 export const DAYS_ORDERED = items;
-export const getShortDayLabels = function getShortDayLabels(narrow) {
+export function getShortDayLabels(narrow) {
   const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { weekday: narrow });
   return items.map((item, index) => dateTimeFormat.format(new Date(2025, 0, 5 + index)));
-};
-export const formatTime = function formatTime(hours) {
+}
+export function formatTime(hours) {
   const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
   return dateTimeFormat.format(new Date(2025, 0, 1, hours.hours, hours.minutes));
-};
+}
 export { formatDays };
-export const timeToMinutes = function timeToMinutes(first1) {
+export function timeToMinutes(first1) {
   return 60 * first1.hours + first1.minutes;
-};
-export const formatDuration = function formatDuration(arg0) {
+}
+export function formatDuration(arg0) {
   const result = arg0 / 60;
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const tmp3 = _modDef2535;
+  const tmp3 = _modDef2536;
   if (isIntegerResult) {
     const obj2 = { hours: result };
     let formatToPlainStringResult = formatToPlainString(tmp3.hFDcmZ, obj2);
@@ -113,9 +113,9 @@ export const formatDuration = function formatDuration(arg0) {
     formatToPlainStringResult = formatToPlainString(tmp3.wcrXLM, obj);
   }
   return formatToPlainStringResult;
-};
+}
 export { getScheduleRuleDateRange };
-export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedScheduleInAppSubtitle(startTime) {
+export function formatRestrictedScheduleInAppSubtitle(startTime) {
   if (null != startTime.startTime) {
     if (null != startTime.endTime) {
       startTime = startTime.startTime;
@@ -133,9 +133,9 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const endTime2 = startTime.endTime;
       const formatResult = dateTimeFormat.format(date);
       if (60 * startTime2.hours + startTime2.minutes > 60 * endTime2.hours + endTime2.minutes) {
-        let OxveI8 = _modDef2535.OxveI8;
+        let OxveI8 = _modDef2536.OxveI8;
       } else {
-        OxveI8 = _modDef2535["ERTn+E"];
+        OxveI8 = _modDef2536["ERTn+E"];
       }
       const intl = util.intl;
       const obj = { days: tmp5, startTime: formatResult, endTime: dateTimeFormat1.format(date1) };
@@ -143,8 +143,8 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
     }
   }
   return null;
-};
-export const sortRulesByStartTime = function sortRulesByStartTime(rules) {
+}
+export function sortRulesByStartTime(rules) {
   const substr = rules.slice();
   return substr.sort((startTime, startTime2) => {
     startTime = startTime.startTime;
@@ -184,12 +184,12 @@ export const sortRulesByStartTime = function sortRulesByStartTime(rules) {
     }
     return sum - (result1 + num4);
   });
-};
-export const toTimeProto = function toTimeProto(hours) {
+}
+export function toTimeProto(hours) {
   const time = { hours: hours.hours, minutes: hours.minutes, seconds: 0, nanos: 0 };
   return time;
-};
-export const computeOverlappingInfo = function computeOverlappingInfo(first3, memo1, memo) {
+}
+export function computeOverlappingInfo(first3, memo1, memo) {
   const conflictingEntries = [];
   const item = conflictingEntries.forEach((item, index) => {
     if (set.has(item)) {
@@ -205,4 +205,4 @@ export const computeOverlappingInfo = function computeOverlappingInfo(first3, me
     set = item;
   });
   return { conflictingEntries };
-};
+}

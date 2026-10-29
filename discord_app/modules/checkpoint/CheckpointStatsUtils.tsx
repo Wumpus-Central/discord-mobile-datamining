@@ -11,7 +11,7 @@ const re6 = /\s/g;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointStatsUtils.tsx");
 
-export const getCheckpointTopPercent = function getCheckpointTopPercent(prop) {
+export function getCheckpointTopPercent(prop) {
   let bound = null;
   if (null != prop) {
     bound = null;
@@ -22,12 +22,12 @@ export const getCheckpointTopPercent = function getCheckpointTopPercent(prop) {
     }
   }
   return bound;
-};
-export const formatCheckpointCompactNumber = function formatCheckpointCompactNumber(stateFromStores1) {
+}
+export function formatCheckpointCompactNumber(stateFromStores1) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "long" });
   return numberFormat.format(stateFromStores1);
-};
-export const formatCheckpointPeakHour = function formatCheckpointPeakHour(stateFromStores1) {
+}
+export function formatCheckpointPeakHour(stateFromStores1) {
   if (null == stateFromStores1) {
     return null;
   } else {
@@ -57,15 +57,15 @@ export const formatCheckpointPeakHour = function formatCheckpointPeakHour(stateF
     const obj2 = { value: str2.replace(re6, ""), label: str2 };
     return obj2;
   }
-};
-export const hasCheckpointSidekick = function hasCheckpointSidekick(sidekick) {
+}
+export function hasCheckpointSidekick(sidekick) {
   sidekick = undefined;
   if (sidekick != null) {
     sidekick = sidekick.sidekick;
   }
   return null != sidekick;
-};
-export const hasCheckpointSquad = function hasCheckpointSquad(sidekick) {
+}
+export function hasCheckpointSquad(sidekick) {
   sidekick = undefined;
   if (sidekick != null) {
     sidekick = sidekick.sidekick;
@@ -85,8 +85,8 @@ export const hasCheckpointSquad = function hasCheckpointSquad(sidekick) {
     tmp2 = num > 0;
   }
   return tmp2;
-};
-export const hasCheckpointVoiceMinutes = function hasCheckpointVoiceMinutes(voice) {
+}
+export function hasCheckpointVoiceMinutes(voice) {
   let num;
   if (voice != null) {
     voice = voice.voice;
@@ -98,8 +98,8 @@ export const hasCheckpointVoiceMinutes = function hasCheckpointVoiceMinutes(voic
     num = 0;
   }
   return Math.round(num) > 0;
-};
-export const hasCheckpointMessages = function hasCheckpointMessages(messages) {
+}
+export function hasCheckpointMessages(messages) {
   let num;
   if (messages != null) {
     messages = messages.messages;
@@ -111,8 +111,8 @@ export const hasCheckpointMessages = function hasCheckpointMessages(messages) {
     num = 0;
   }
   return Math.round(num) > 0;
-};
-export const hasCheckpointGuilds = function hasCheckpointGuilds(guilds) {
+}
+export function hasCheckpointGuilds(guilds) {
   let num;
   if (guilds != null) {
     guilds = guilds.guilds;
@@ -124,8 +124,8 @@ export const hasCheckpointGuilds = function hasCheckpointGuilds(guilds) {
     num = 0;
   }
   return num > 0;
-};
-export const hasCheckpointEmojis = function hasCheckpointEmojis(stats) {
+}
+export function hasCheckpointEmojis(stats) {
   let num;
   if (stats != null) {
     const emojis = stats.emojis;
@@ -151,8 +151,8 @@ export const hasCheckpointEmojis = function hasCheckpointEmojis(stats) {
     tmp = num2 > 0;
   }
   return tmp;
-};
-export const hasCheckpointGames = function hasCheckpointGames(stats) {
+}
+export function hasCheckpointGames(stats) {
   let num;
   if (stats != null) {
     const games = stats.games;
@@ -178,8 +178,8 @@ export const hasCheckpointGames = function hasCheckpointGames(stats) {
     tmp = num2 > 0;
   }
   return tmp;
-};
-export const hasCheckpointGameDays = function hasCheckpointGameDays(games) {
+}
+export function hasCheckpointGameDays(games) {
   let num;
   if (games != null) {
     games = games.games;
@@ -191,8 +191,8 @@ export const hasCheckpointGameDays = function hasCheckpointGameDays(games) {
     num = 0;
   }
   return Math.round(num) > 0;
-};
-export const statsFromServer = function statsFromServer(stats) {
+}
+export function statsFromServer(stats) {
   ({ voice, messages, emojis, games, sidekick, users, power } = stats);
   let obj = {
     voice: {
@@ -271,8 +271,8 @@ export const statsFromServer = function statsFromServer(stats) {
   obj.users = users.map((user) => new UserRecord(user.user));
   obj.power = { powerLevel: power.power_level, powerLevelPercentile: power.power_level_percentile };
   return obj;
-};
-export const globalStatsFromServer = function globalStatsFromServer(global_stats) {
+}
+export function globalStatsFromServer(global_stats) {
   ({ emojis, games } = global_stats);
   let obj = {
     voice: { peakHourUtc: global_stats.voice.peak_hour_utc },
@@ -384,4 +384,4 @@ export const globalStatsFromServer = function globalStatsFromServer(global_stats
   });
   obj.games = obj4;
   return obj;
-};
+}

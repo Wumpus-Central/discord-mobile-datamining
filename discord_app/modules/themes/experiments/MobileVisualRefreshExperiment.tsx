@@ -68,9 +68,9 @@ export const useMobileVisualRefreshConfig = ReactCompilerGating.isReactCompilerE
   : function useMobileVisualRefreshConfig(location) {
       return closure_2.useConfig({ location: location.location });
     };
-export const isMobileVisualRefreshEnabled = function isMobileVisualRefreshEnabled(location) {
+export function isMobileVisualRefreshEnabled(location) {
   return closure_2.getConfig({ location }).enabled;
-};
-export const resolveRefreshToken = function resolveRefreshToken(MESSAGES_HEADER_PADDING_BOTTOM) {
+}
+export function resolveRefreshToken(MESSAGES_HEADER_PADDING_BOTTOM) {
   return MESSAGES_HEADER_PADDING_BOTTOM.resolve({ enabledExperiments: ["mobile-visual-refresh"] });
-};
+}

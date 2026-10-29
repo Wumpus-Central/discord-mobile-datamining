@@ -15,7 +15,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
 
 export default apexExperiment;
-export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {
+export function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {
   let num = 9;
   if (supportsSfuUpdate.supportsSfuUpdate) {
     const obj = { location: tmp };
@@ -25,4 +25,4 @@ export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVe
     }
   }
   return num;
-};
+}

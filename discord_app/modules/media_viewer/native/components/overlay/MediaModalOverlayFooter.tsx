@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05334_LegacyBaseButton.js";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,11 +12,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "application" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "__packager_asset" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
-  drawerHeader: { backgroundColor: "paths" },
+  drawerHeader: { backgroundColor: "r" },
   messagePreviewContainer: { marginLeft: 6 },
   thumbnailsContainer: { paddingTop: 8 },
 };
@@ -78,7 +78,7 @@ let closure_25 = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx");
 
-export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelId) {
+export function MediaModalOverlayFooter(channelId) {
   let tmp = first1();
   const onFullViewToggled = channelId.onFullViewToggled;
   const overlayEnabled = channelId.overlayEnabled;
@@ -617,4 +617,4 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   obj14.children = items12;
   obj13.children = setFull(tmp43, obj14);
   return full(onFullViewToggled(num[11]).GestureDetector, obj13);
-};
+}

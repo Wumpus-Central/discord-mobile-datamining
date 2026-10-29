@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/native/ConjureLinkedAppsTab.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { spacing: nativeDefault.space.PX_8, children: null };
       let obj2 = { description: null, hasIcons: false, children: null };
       let intl = require("util").intl;
-      obj2.description = intl.string(_modDef3863["6c2rjv"]);
+      obj2.description = intl.string(_modDef3864["6c2rjv"]);
       obj2.children = callers.map((build) => {
         _undefined = build;
         const obj = { label: _undefined[build.project_id], trailing: null, arrow: true, onPress: null };
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const project_id = build.project_id;
           const name = tmp;
           let obj2 = {
-            content: closure_1_3(closure_1_1(12254), {
+            content: closure_1_3(closure_1_1(12308), {
               sheetKey,
               title: build[project_id],
               value: build.build,
@@ -202,21 +202,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   onConfirm: null,
                 };
                 const intl = project_id(1125).intl;
-                obj2.title = intl.formatToPlainString(name(3863).zSfIvv, { name });
+                obj2.title = intl.formatToPlainString(name(3864).zSfIvv, { name });
                 const intl2 = project_id(1125).intl;
-                obj2.content = intl2.formatToPlainString(name(3863)["7TX+mR"], { name });
+                obj2.content = intl2.formatToPlainString(name(3864)["7TX+mR"], { name });
                 const intl3 = project_id(1125).intl;
-                obj2.confirmText = intl3.string(name(3863).vDZEGQ);
+                obj2.confirmText = intl3.string(name(3864).vDZEGQ);
                 obj2.onConfirm = function onConfirm() {
                   return dependencyMap(closure_0);
                 };
-                project_id(5950).showConfirmModal(obj2);
+                project_id(5952).showConfirmModal(obj2);
               },
             }),
             key: sheetKey,
             stackingBehavior: "stack",
           };
-          build(5246).showActionSheet(obj2);
+          build(5247).showActionSheet(obj2);
         };
         return closure_1_3(_undefined(_undefined2[9]).TableRow, obj, build.project_id);
       });
@@ -231,8 +231,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         let intl2 = tmp2(1125).intl;
-        obj3.children = intl2.string(_modDef3863.dIEOrl);
-        tmp5Result = closure_3(tmp2(5270).Text, obj3);
+        obj3.children = intl2.string(_modDef3864.dIEOrl);
+        tmp5Result = closure_3(tmp2(5271).Text, obj3);
       }
       items[1] = tmp5Result;
       obj.children = items;

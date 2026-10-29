@@ -4,6 +4,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
-export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {
+export function createSearchResultLinkPreviewReactRules() {
   return MarkupMessagePreviewReactRules.createMessagePreviewReactRules({ customEmojiSize: 16 });
-};
+}

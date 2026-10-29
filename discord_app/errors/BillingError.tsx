@@ -309,9 +309,7 @@ const result = size.fileFinishedImporting("errors/BillingError.tsx");
 
 export default BillingError;
 export { ErrorCodes };
-export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8BillingAddressSkemaErrorToBillingError(
-  body,
-) {
+export function parseV8BillingAddressSkemaErrorToBillingError(body) {
   if (typeof body !== "string") {
     let code;
     if (body != null) {
@@ -361,4 +359,4 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
     }
   }
   return new BillingError(body);
-};
+}

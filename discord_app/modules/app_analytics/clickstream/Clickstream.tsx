@@ -46,7 +46,7 @@ let c7 = -1;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
-export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
+export function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
@@ -68,5 +68,5 @@ export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGE
       value.push(obj4);
     }
   }
-};
+}
 export { drainClickstream };

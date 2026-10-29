@@ -7,7 +7,12 @@ function isUploadedWidgetClip(status) {
   return "uploading" !== status.status;
 }
 function convertClip(gameId) {
-  const obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };
+  const obj = {
+    game_id: gameId.gameId,
+    title: gameId.title,
+    tags: gameId.tags,
+    clip_events_timeline: gameId.clipEventsTimeline,
+  };
   if ("saved" === gameId.status) {
     const obj5 = {};
     const merged = Object.assign(obj);

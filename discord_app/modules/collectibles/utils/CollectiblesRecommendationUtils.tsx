@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesRecommendationUtils.tsx");
 
-export const reorderCollectiblesByRecommendation = function reorderCollectiblesByRecommendation(items, arr) {
+export function reorderCollectiblesByRecommendation(items, arr) {
   if (items.length > 1) {
     if (0 !== arr.length) {
       const _Map = Map;
@@ -36,4 +36,4 @@ export const reorderCollectiblesByRecommendation = function reorderCollectiblesB
     }
   }
   return items;
-};
+}

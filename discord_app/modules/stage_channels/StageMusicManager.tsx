@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(11566);
+const SoundUtils = fn(11620);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 const ReactCompilerGating = fn(558);
 class StageMusicManager extends tmp3 {
@@ -167,7 +167,7 @@ export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEn
       const tmpResult = require("initialize");
       const stageParticipants = require("StageChannelParticipantStoreHooks").useStageParticipants(
         arg0,
-        tmp(6723).StageChannelParticipantNamedIndex.SPEAKER,
+        tmp(6746).StageChannelParticipantNamedIndex.SPEAKER,
       );
       if (cResult[3] !== stageParticipants) {
         const _Symbol = Symbol;
@@ -282,7 +282,7 @@ export const useShowStageMusicMuteButton = ReactCompilerGating.isReactCompilerEn
       }
       return stateFromStores;
     };
-export const shouldShowStageMusicMuteButton = function shouldShowStageMusicMuteButton(id) {
+export function shouldShowStageMusicMuteButton(id) {
   let tmp = SelectedChannelStore.getVoiceChannelId() === id;
   const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
     id,
@@ -295,4 +295,4 @@ export const shouldShowStageMusicMuteButton = function shouldShowStageMusicMuteB
     tmp = !tmp2;
   }
   return tmp;
-};
+}

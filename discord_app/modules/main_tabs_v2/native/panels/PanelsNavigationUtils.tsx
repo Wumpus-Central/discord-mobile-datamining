@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
 import v1 from "../../../../../_runtime/01278_v1.js";
-import CommonActions2 from "../../../../../_runtime/01507_CommonActions.js";
+import CommonActions2 from "../../../../../_runtime/01508_CommonActions.js";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
-export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {
+export function convertPortraitToLandscapeScreens() {
   const store = RootNavigationRef.getRootNavigationRef();
   if (null != store) {
     const state1 = store.getState();
@@ -63,8 +63,8 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
       const tmpResult = NavigationRouteUtils;
     }
   }
-};
-export const convertLandscapeToPortraitScreens = function convertLandscapeToPortraitScreens() {
+}
+export function convertLandscapeToPortraitScreens() {
   const store = RootNavigationRef.getRootNavigationRef();
   if (null != store) {
     const state1 = store.getState();
@@ -146,4 +146,4 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
       const tmpResult = NavigationRouteUtils;
     }
   }
-};
+}

@@ -8,7 +8,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
-export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
+export function maybeFetchTopEmojisByGuild(guildId) {
   if (null != guildId) {
     if (null != UserStore.getCurrentUser()) {
       const topEmojisMetadata = EmojiStore.getTopEmojisMetadata(guildId);
@@ -23,4 +23,4 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
       }
     }
   }
-};
+}

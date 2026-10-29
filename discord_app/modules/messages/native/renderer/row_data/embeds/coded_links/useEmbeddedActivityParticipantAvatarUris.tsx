@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return found.map((getAvatarURL) => "" + getAvatarURL.getAvatarURL(guildId, 64));
       }, items3);
     };
-export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActivityParticipantAvatarUris(arg0) {
+export function getEmbeddedActivityParticipantAvatarUris(arg0) {
   ({ guildId: require, applicationId: dependencyMap, activity } = arg0);
   if (null == activity) {
     const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
@@ -135,4 +135,4 @@ export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActi
     return "" + avatarURL;
   });
   return mapped.filter(GlobalUtils.isNotNullish);
-};
+}

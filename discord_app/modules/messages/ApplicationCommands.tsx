@@ -5,7 +5,7 @@ const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
 
-export const getApplicationCommand = function getApplicationCommand(content) {
+export function getApplicationCommand(content) {
   const match = re1.exec(content);
   if (null == match) {
     return null;
@@ -31,4 +31,4 @@ export const getApplicationCommand = function getApplicationCommand(content) {
     }
     return tmp2;
   }
-};
+}

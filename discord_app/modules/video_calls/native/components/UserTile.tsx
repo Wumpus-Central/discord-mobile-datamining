@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef11487 from "../../../../../_runtime/metro/11487__.js";
-import _modDef11488 from "../../../../../_runtime/metro/11488__.js";
-import _modDef11489 from "../../../../../_runtime/metro/11489__.js";
-import _modDef11490 from "../../../../../_runtime/metro/11490__.js";
-import _modDef11491 from "../../../../../_runtime/metro/11491__.js";
+import _modDef11541 from "../../../../../_runtime/metro/11541__.js";
+import _modDef11542 from "../../../../../_runtime/metro/11542__.js";
+import _modDef11543 from "../../../../../_runtime/metro/11543__.js";
+import _modDef11544 from "../../../../../_runtime/metro/11544__.js";
+import _modDef11545 from "../../../../../_runtime/metro/11545__.js";
 import mediaEngineContextFromParticipantTypeDefault from "../../../calls/mediaEngineContextFromParticipantType.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,13 +19,13 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(11486).clearVoiceChannelEffectForUser;
+let closure_8 = fn(11540).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1084).VideoToggleState;
-const ParticipantTypes = fn(5668).ParticipantTypes;
-const MediaEngineContextTypes = fn(5754).MediaEngineContextTypes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
+const MediaEngineContextTypes = fn(5756).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   container: {
     flex: 1,
@@ -43,7 +43,7 @@ let obj = {
   labelText: null,
 };
 let obj4 = { backgroundColor: null, alignItems: "center", height: 24 };
-let ColorUtils = fn(5001);
+let ColorUtils = fn(5002);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj.autoDisabledVideo = obj4;
 let obj3 = {
@@ -73,7 +73,7 @@ let size = {
   justifyContent: "center",
   alignItems: "center",
 };
-ColorUtils = fn(5001);
+ColorUtils = fn(5002);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 size.borderRadius = nativeDefault.radii.md;
 obj.statusWrapper = size;
@@ -198,7 +198,7 @@ let closure_19 = noop.memo(
               const items = [,];
               ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
               obj2.style = items;
-              const obj3 = { source: _modDef11487, size: native.Icon.Sizes.SMALL, disableColor: true };
+              const obj3 = { source: _modDef11541, size: native.Icon.Sizes.SMALL, disableColor: true };
               const items1 = [value2(native.Icon, obj3)];
               const obj4 = {
                 variant: "text-sm/normal",
@@ -330,7 +330,7 @@ let closure_19 = noop.memo(
             const items = [,];
             ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
             obj2.style = items;
-            const obj3 = { source: _modDef11487, size: native.Icon.Sizes.SMALL, disableColor: true };
+            const obj3 = { source: _modDef11541, size: native.Icon.Sizes.SMALL, disableColor: true };
             const items1 = [value2(native.Icon, obj3)];
             const obj4 = {
               variant: "text-sm/normal",
@@ -392,11 +392,11 @@ let closure_20 = noop.memo(
         const tmp9 = _slicedToArray(userId(504).useStateFromStoresArray(first, tmp7, tmp8), 3);
         let tmp10 = tmp9[1];
         if (tmp9[0]) {
-          let tmp11 = _modDef11488;
+          let tmp11 = _modDef11542;
         } else if (deafened) {
-          tmp11 = _modDef11489;
+          tmp11 = _modDef11543;
         } else if (muted) {
-          tmp11 = _modDef11490;
+          tmp11 = _modDef11544;
         }
         if (tmp10) {
           tmp10 = !tmp9[2];
@@ -443,7 +443,7 @@ let closure_20 = noop.memo(
                 source: tmp11,
                 size: tmp(1199).Icon.Sizes.SMALL,
                 color: nativeDefault.unsafe_rawColors.WHITE,
-                disableColor: tmp11 === _modDef11488,
+                disableColor: tmp11 === _modDef11542,
               };
               obj4.children = closure_15(tmp(1199).Icon, obj5);
               tmp24Result = closure_15(View, obj4);
@@ -461,7 +461,7 @@ let closure_20 = noop.memo(
           const obj6 = { style: null, children: null };
           const items4 = [tmp4.statusWrapper, style];
           obj6.style = items4;
-          const obj7 = { source: _modDef11491, size: tmp(1199).Icon.Sizes.SMALL, disableColor: true };
+          const obj7 = { source: _modDef11545, size: tmp(1199).Icon.Sizes.SMALL, disableColor: true };
           obj6.children = closure_15(tmp(1199).Icon, obj7);
           tmp17 = closure_15(View, obj6);
         }
@@ -496,11 +496,11 @@ let closure_20 = noop.memo(
         );
         let tmp5 = tmp4[1];
         if (tmp4[0]) {
-          let tmp6 = _modDef11488;
+          let tmp6 = _modDef11542;
         } else if (deafened) {
-          tmp6 = _modDef11489;
+          tmp6 = _modDef11543;
         } else if (muted) {
-          tmp6 = _modDef11490;
+          tmp6 = _modDef11544;
         }
         if (tmp5) {
           tmp5 = !tmp4[2];
@@ -511,7 +511,7 @@ let closure_20 = noop.memo(
             const obj2 = { style: null, children: null };
             const items2 = [tmp.statusWrapper, style];
             obj2.style = items2;
-            const obj3 = { source: _modDef11491, size: tmp2(1199).Icon.Sizes.SMALL, disableColor: true };
+            const obj3 = { source: _modDef11545, size: tmp2(1199).Icon.Sizes.SMALL, disableColor: true };
             obj2.children = closure_15(tmp2(1199).Icon, obj3);
             tmp14 = closure_15(View, obj2);
           }
@@ -530,7 +530,7 @@ let closure_20 = noop.memo(
               source: tmp6,
               size: tmp2(1199).Icon.Sizes.SMALL,
               color: nativeDefault.unsafe_rawColors.WHITE,
-              disableColor: tmp6 === _modDef11488,
+              disableColor: tmp6 === _modDef11542,
             };
             obj5.children = closure_15(tmp2(1199).Icon, obj6);
             tmp19Result = closure_15(View, obj5);
@@ -562,7 +562,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/U
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserTile(participant) {
-      const cResult = participant(onDoubleTap[16]).c(69);
+      const cResult = participant(onDoubleTap[16]).c(65);
       participant = participant.participant;
       const onSingleTap = participant.onSingleTap;
       onDoubleTap = participant.onDoubleTap;
@@ -596,7 +596,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const user = participant.user;
-            ({ voiceState, id } = participant);
+            let tmpResult = tmp(tmp2[29]);
+            const result = tmpResult.withLocalSelfMuteDeaf(
+              participant.voiceState,
+              tmp(tmp2[29]).useLocalSelfMuteDeaf(),
+            );
+            const id = participant.id;
             if (cResult[9] !== id) {
               const obj2 = { userId: id };
               class UserTileTsx1 {
@@ -611,11 +616,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               cResult[9] = id;
               cResult[10] = obj2;
-              let tmp9 = obj2;
+              let tmp10 = obj2;
             } else {
-              tmp9 = cResult[10];
+              tmp10 = cResult[10];
             }
-            onSingleTap(tmp2[29])(tmp9);
+            onSingleTap(tmp2[30])(tmp10);
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               const items = [];
@@ -630,9 +635,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[11] = items;
-              let tmp13 = items;
+              let tmp14 = items;
             } else {
-              tmp13 = cResult[11];
+              tmp14 = cResult[11];
             }
             if (cResult[12] !== participant.id) {
               class J {
@@ -658,15 +663,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const stateFromStores = tmp(tmp2[17]).useStateFromStores(tmp13, J);
-            if (voiceState != null) {
+            const tmp11 = onSingleTap;
+            const tmpResult6 = tmp(tmp2[29]);
+            const stateFromStores = tmp(tmp2[17]).useStateFromStores(tmp14, J);
+            if (result != null) {
               class J {
                 constructor() {
                   return closure_6.isUserPlayingSounds(participant.id);
                 }
               }
             }
-            const channel = ChannelStore.getChannel(tmp19);
+            const channel = ChannelStore.getChannel(tmp20);
             if (channel != null) {
               class J {
                 constructor() {
@@ -697,7 +704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmpResult;
                 }
               }
-              cResult[15] = tmp23;
+              cResult[15] = tmp24;
             } else {
               class J {
                 constructor() {
@@ -705,64 +712,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            if (cResult[16] !== voiceState) {
-              class J {
-                constructor() {
-                  return closure_6.isUserPlayingSounds(participant.id);
-                }
-              }
-              if (voiceState != null) {
-                class J {
-                  constructor() {
-                    return closure_6.isUserPlayingSounds(participant.id);
-                  }
-                }
-              }
-              class UserTileTsx1 {
-                constructor() {
-                  tmpResult = undefined;
-                  if (onLongPress != null) {
-                    tmp3 = participant;
-                    tmpResult = tmp(participant);
-                  }
-                  return tmpResult;
-                }
-              }
-              cResult[16] = voiceState;
-              cResult[17] = tmp25;
-            } else {
+            if (result != null) {
               class J {
                 constructor() {
                   return closure_6.isUserPlayingSounds(participant.id);
                 }
               }
             }
-            if (cResult[18] !== voiceState) {
+            if (undefined == null) {
               class J {
                 constructor() {
                   return closure_6.isUserPlayingSounds(participant.id);
                 }
               }
-              if (voiceState != null) {
-                class J {
-                  constructor() {
-                    return closure_6.isUserPlayingSounds(participant.id);
-                  }
-                }
-              }
-              class UserTileTsx1 {
+            }
+            if (result != null) {
+              class J {
                 constructor() {
-                  tmpResult = undefined;
-                  if (onLongPress != null) {
-                    tmp3 = participant;
-                    tmpResult = tmp(participant);
-                  }
-                  return tmpResult;
+                  return closure_6.isUserPlayingSounds(participant.id);
                 }
               }
-              cResult[18] = voiceState;
-              cResult[19] = tmp27;
-            } else {
+            }
+            if (undefined == null) {
               class J {
                 constructor() {
                   return closure_6.isUserPlayingSounds(participant.id);
@@ -770,7 +741,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const _Symbol2 = Symbol;
-            if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+            if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
               class J {
                 constructor() {
                   return closure_6.isUserPlayingSounds(participant.id);
@@ -787,7 +758,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmpResult;
                 }
               }
-              cResult[20] = items1;
+              cResult[16] = items1;
             } else {
               class J {
                 constructor() {
@@ -795,7 +766,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            if (cResult[21] === participant.type) {
+            if (cResult[17] === participant.type) {
               class J {
                 constructor() {
                   return closure_6.isUserPlayingSounds(participant.id);
@@ -812,7 +783,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmpResult;
                 }
               }
-              const voiceChatNavigationContext = tmp(tmp2[32]).useVoiceChatNavigationContext();
+              const voiceChatNavigationContext = tmp(tmp2[33]).useVoiceChatNavigationContext();
               if (voiceChatNavigationContext != null) {
                 class J {
                   constructor() {
@@ -827,9 +798,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              c5 = tmp34;
+              c5 = tmp33;
               const _Symbol3 = Symbol;
-              if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
+              if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                 class J {
                   constructor() {
                     return closure_6.isUserPlayingSounds(participant.id);
@@ -846,8 +817,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return tmpResult;
                   }
                 }
-                cResult[25] = items2;
-                const tmp35 = items2;
+                cResult[21] = items2;
+                const tmp34 = items2;
               } else {
                 class J {
                   constructor() {
@@ -855,7 +826,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              if (cResult[26] !== undefined) {
+              if (cResult[22] !== undefined) {
                 class J {
                   constructor() {
                     return closure_6.isUserPlayingSounds(participant.id);
@@ -871,7 +842,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return tmpResult;
                   }
                 }
-                cResult[27] = tmp37;
+                cResult[23] = tmp36;
               } else {
                 class J {
                   constructor() {
@@ -879,17 +850,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const tmpResult5 = tmp(tmp2[32]);
-              const stateFromStores1 = tmp(tmp2[17]).useStateFromStores(tmp35, tmp37);
+              const tmpResult9 = tmp(tmp2[33]);
+              const stateFromStores1 = tmp(tmp2[17]).useStateFromStores(tmp34, tmp36);
               const type = participant.type;
               const USER = ParticipantTypes.USER;
-              if (cResult[28] === tmp6) {
+              if (cResult[24] === tmp6) {
                 class J {
                   constructor() {
                     return closure_6.isUserPlayingSounds(participant.id);
                   }
                 }
-                const tmp42 = tmp10(tmp2[33])(tmp41);
+                const tmp41 = tmp11(tmp2[34])(tmp40);
                 class UserTileTsx1 {
                   constructor() {
                     tmpResult = undefined;
@@ -900,39 +871,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return tmpResult;
                   }
                 }
-                const Gesture = tmp(tmp2[34]).Gesture;
+                const Gesture = tmp(tmp2[35]).Gesture;
                 const LongPressResult = Gesture.LongPress();
                 const runOnJSResult = Gesture.LongPress().runOnJS(true);
                 const onStartResult = Gesture.LongPress().runOnJS(true).onStart(tmp7);
                 const minDurationResult = Gesture.LongPress().runOnJS(true).onStart(tmp7).minDuration(800);
-                if (null != tmp33) {
+                if (null != tmp32) {
                   class J {
                     constructor() {
                       return closure_6.isUserPlayingSounds(participant.id);
                     }
                   }
                 }
-                const GestureDetector = tmp(tmp2[34]).GestureDetector;
-                const Gesture2 = tmp(tmp2[34]).Gesture;
+                const GestureDetector = tmp(tmp2[35]).GestureDetector;
+                const Gesture2 = tmp(tmp2[35]).Gesture;
                 const SimultaneousResult = Gesture2.Simultaneous(
                   Gesture.LongPress().runOnJS(true).onStart(tmp7).minDuration(800),
-                  tmp42,
+                  tmp41,
                 );
-                cResult[31] = tmp7;
-                cResult[32] = tmp33;
-                cResult[33] = tmp42;
-                cResult[34] = GestureDetector;
-                cResult[35] = SimultaneousResult;
-                const tmp46 = Gesture.LongPress().runOnJS(true).onStart(tmp7).minDuration(800);
+                cResult[27] = tmp7;
+                cResult[28] = tmp32;
+                cResult[29] = tmp41;
+                cResult[30] = GestureDetector;
+                cResult[31] = SimultaneousResult;
+                const tmp45 = Gesture.LongPress().runOnJS(true).onStart(tmp7).minDuration(800);
               }
               const obj3 = { onDoubleTapStart: tmp6, onSingleTapStart: tmp5 };
-              cResult[28] = tmp6;
-              cResult[29] = tmp5;
-              cResult[30] = obj3;
-              tmp41 = obj3;
-              const tmpResult6 = tmp(tmp2[17]);
+              cResult[24] = tmp6;
+              cResult[25] = tmp5;
+              cResult[26] = obj3;
+              tmp40 = obj3;
+              const tmpResult10 = tmp(tmp2[17]);
             }
-            function ie() {
+            const fn2 = function $() {
               let isLocalVideoDisabledResult = null != user.id;
               if (isLocalVideoDisabledResult) {
                 isLocalVideoDisabledResult = MediaEngineStore.isLocalVideoDisabled(
@@ -941,14 +912,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 );
               }
               return isLocalVideoDisabledResult;
-            }
+            };
             const items3 = [user.id, participant.type];
-            cResult[21] = participant.type;
-            cResult[22] = user.id;
-            cResult[23] = ie;
-            cResult[24] = items3;
-            tmp10 = onSingleTap;
-            let tmpResult = tmp(tmp2[17]);
+            cResult[17] = participant.type;
+            cResult[18] = user.id;
+            cResult[19] = fn2;
+            cResult[20] = items3;
+            const tmpResult7 = tmp(tmp2[17]);
           }
           class UserTileTsx1 {
             constructor() {
@@ -1027,7 +997,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmpResult;
       }, items1);
       user = participant.user;
-      const voiceState = participant.voiceState;
       const callback2 = user.useCallback(() => {
         let tmpResult;
         if (onLongPress != null) {
@@ -1036,38 +1005,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmpResult;
       }, items2);
       ({ streamId, ringing } = participant);
-      const obj = { userId: participant.id };
       const tmp3 = closure_18();
-      const tmp9 = onSingleTap(onDoubleTap[29])({ userId: participant.id });
+      const obj = participant(onDoubleTap[29]);
+      const result = obj.withLocalSelfMuteDeaf(
+        participant.voiceState,
+        participant(onDoubleTap[29]).useLocalSelfMuteDeaf(),
+      );
+      const obj2 = participant(onDoubleTap[29]);
+      const obj3 = { userId: participant.id };
+      const tmp10 = onSingleTap(onDoubleTap[30])({ userId: participant.id });
       const items3 = [SoundboardStore];
       let channelId;
       const stateFromStores = participant(onDoubleTap[17]).useStateFromStores(items3, () =>
         SoundboardStore.isUserPlayingSounds(participant.id),
       );
-      if (voiceState != null) {
-        channelId = voiceState.channelId;
+      if (result != null) {
+        channelId = result.channelId;
       }
       const channel = ChannelStore.getChannel(channelId);
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      let tmp16 = tmp7(tmp8[30])(participant);
+      let tmp16 = tmp9(tmp8[31])(participant);
       let flag;
-      if (voiceState != null) {
-        flag = voiceState.isVoiceMuted();
+      if (result != null) {
+        flag = result.isVoiceMuted();
       }
       if (flag == null) {
         flag = false;
       }
       let flag2;
-      if (voiceState != null) {
-        flag2 = voiceState.isVoiceDeafened();
+      if (result != null) {
+        flag2 = result.isVoiceDeafened();
       }
       if (flag2 == null) {
         flag2 = false;
       }
-      const obj2 = participant(onDoubleTap[17]);
+      const obj5 = participant(onDoubleTap[17]);
       const items4 = [MediaEngineStore];
       const items5 = [user.id, participant.type];
       const stateFromStores1 = participant(onDoubleTap[17]).useStateFromStores(
@@ -1084,8 +1059,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         items5,
       );
-      const tmp10Result = participant(onDoubleTap[17]);
-      const voiceChatNavigationContext = participant(onDoubleTap[32]).useVoiceChatNavigationContext();
+      const tmp7Result = participant(onDoubleTap[17]);
+      const voiceChatNavigationContext = participant(onDoubleTap[33]).useVoiceChatNavigationContext();
       let swipeDismissRef;
       if (voiceChatNavigationContext != null) {
         swipeDismissRef = voiceChatNavigationContext.swipeDismissRef;
@@ -1095,7 +1070,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (user2 != null) {
         id = user2.id;
       }
-      const tmp10Result3 = participant(onDoubleTap[32]);
+      const tmp7Result3 = participant(onDoubleTap[33]);
       const items6 = [VoiceChannelEffectsStore];
       const stateFromStores2 = participant(onDoubleTap[17]).useStateFromStores(items6, () => {
         let effectForUserId = null;
@@ -1107,23 +1082,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (participant.type !== ParticipantTypes.USER) {
         const type = participant.type;
       }
-      const tmp10Result4 = participant(onDoubleTap[17]);
-      const Gesture = tmp10(tmp8[34]).Gesture;
-      const tmp22 = onSingleTap(onDoubleTap[33])({ onDoubleTapStart: callback1, onSingleTapStart: callback });
+      const tmp7Result4 = participant(onDoubleTap[17]);
+      const Gesture = tmp7(tmp8[35]).Gesture;
+      const tmp22 = onSingleTap(onDoubleTap[34])({ onDoubleTapStart: callback1, onSingleTapStart: callback });
       const LongPressResult = Gesture.LongPress();
       const runOnJSResult = Gesture.LongPress().runOnJS(true);
       const minDurationResult = Gesture.LongPress().runOnJS(true).onStart(callback2).minDuration(800);
-      let result = minDurationResult;
+      let result1 = minDurationResult;
       if (null != swipeDismissRef) {
-        result = minDurationResult.requireExternalGestureToFail(swipeDismissRef);
+        result1 = minDurationResult.requireExternalGestureToFail(swipeDismissRef);
       }
-      const obj3 = { gesture: null, children: null };
-      const Gesture2 = tmp10(tmp8[34]).Gesture;
-      obj3.gesture = Gesture2.Simultaneous(result, tmp22);
-      const obj4 = { style: null, children: null };
+      const obj4 = { gesture: null, children: null };
+      const Gesture2 = tmp7(tmp8[35]).Gesture;
+      obj4.gesture = Gesture2.Simultaneous(result1, tmp22);
+      const obj6 = { style: null, children: null };
       const items7 = [tmp3.container, style];
-      obj4.style = items7;
-      const obj5 = {
+      obj6.style = items7;
+      const obj7 = {
         guildId: guild_id,
         hasVideo: null,
         streamId: null,
@@ -1138,21 +1113,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp16) {
         tmp16 = !stateFromStores1;
       }
-      obj5.hasVideo = tmp16;
-      obj5.streamId = streamId;
-      obj5.user = user;
-      obj5.resizeMode = COVER;
-      obj5.ringing = ringing;
-      obj5.speaking = tmp9;
-      obj5.playingSoundboard = stateFromStores;
-      obj5.avatarSize = participant.avatarSize;
-      obj5.gestureEnabled = gestureEnabled;
-      const items8 = [closure_15(closure_19, obj5), ,];
+      obj7.hasVideo = tmp16;
+      obj7.streamId = streamId;
+      obj7.user = user;
+      obj7.resizeMode = COVER;
+      obj7.ringing = ringing;
+      obj7.speaking = tmp10;
+      obj7.playingSoundboard = stateFromStores;
+      obj7.avatarSize = participant.avatarSize;
+      obj7.gestureEnabled = gestureEnabled;
+      const items8 = [closure_15(closure_19, obj7), ,];
       let tmp24Result = null;
       if (null != id) {
         tmp24Result = null;
         if (null != stateFromStores2) {
-          const obj6 = {
+          const obj8 = {
             voiceChannelEffect: stateFromStores2,
             onComplete() {
               return closure_8(id);
@@ -1160,12 +1135,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             userId: id,
             hasNotch,
           };
-          tmp24Result = closure_15(tmp7(tmp8[35]), obj6);
+          tmp24Result = closure_15(tmp9(tmp8[36]), obj8);
         }
       }
       items8[1] = tmp24Result;
       items8[2] = closure_15(closure_20, { muted: flag, deafened: flag2, userId: user.id, style: statusStyle });
-      obj4.children = items8;
-      obj3.children = closure_16(id, obj4);
-      return closure_15(participant(onDoubleTap[34]).GestureDetector, obj3);
+      obj6.children = items8;
+      obj4.children = closure_16(id, obj6);
+      return closure_15(participant(onDoubleTap[35]).GestureDetector, obj4);
     };

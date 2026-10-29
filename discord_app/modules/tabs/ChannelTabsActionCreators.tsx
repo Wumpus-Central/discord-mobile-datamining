@@ -125,12 +125,12 @@ function navigateActiveTabHistory(arg0) {
   }
 }
 const Routes = fn(1084).Routes;
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");
 
-export const openChannelTab = function openChannelTab(channelId, guildId) {
+export function openChannelTab(channelId, guildId) {
   const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
   if (0 === ChannelTabsStore.getTabs().length) {
     const channel = ChannelStore.getChannel(channelId);
@@ -146,9 +146,9 @@ export const openChannelTab = function openChannelTab(channelId, guildId) {
   }
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "channel", channelId, guildId });
   const obj = { type: "CHANNEL_TABS_OPEN", kind: "channel", channelId, guildId };
-};
+}
 export { openChannelTabActive };
-export const openDuplicateTab = function openDuplicateTab() {
+export function openDuplicateTab() {
   const activeTab = ChannelTabsStore.getActiveTab();
   if (null != activeTab) {
     if ("route" === activeTab.kind) {
@@ -185,21 +185,21 @@ export const openDuplicateTab = function openDuplicateTab() {
     }
     openChannelTabActive(channelId, guildId);
   }
-};
-export const navigateToRoute = function navigateToRoute(routePath, routeLabel) {
+}
+export function navigateToRoute(routePath, routeLabel) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel });
-};
+}
 export { TabHistoryNavResult };
-export const goBackInActiveTab = function goBackInActiveTab() {
+export function goBackInActiveTab() {
   return navigateActiveTabHistory(-1);
-};
-export const goForwardInActiveTab = function goForwardInActiveTab() {
+}
+export function goForwardInActiveTab() {
   return navigateActiveTabHistory(1);
-};
-export const setChannelTabsEnabled = function setChannelTabsEnabled(enabled) {
+}
+export function setChannelTabsEnabled(enabled) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled });
-};
-export const selectChannelTab = function selectChannelTab(tabId) {
+}
+export function selectChannelTab(tabId) {
   closure_0 = tabId;
   const tabs = ChannelTabsStore.getTabs();
   const found = tabs.find((id) => id.id === id);
@@ -209,8 +209,8 @@ export const selectChannelTab = function selectChannelTab(tabId) {
     navigateToTabLocation(found);
   }
   tmp2 = null != found && ChannelTabsStore.getActiveTabId() !== tabId;
-};
-export const cycleChannelTab = function cycleChannelTab(arg0) {
+}
+export function cycleChannelTab(arg0) {
   const tabs = ChannelTabsStore.getTabs();
   if (tabs.length > 1) {
     const findIndexResult = tabs.findIndex((id) => id.id === activeTabId.getActiveTabId());
@@ -226,14 +226,14 @@ export const cycleChannelTab = function cycleChannelTab(arg0) {
       tmp = null != found && ChannelTabsStore.getActiveTabId() !== id;
     }
   }
-};
-export const moveChannelTab = function moveChannelTab(tabId, toIndex) {
+}
+export function moveChannelTab(tabId, toIndex) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_MOVE", tabId, toIndex });
-};
-export const setChannelTabPinned = function setChannelTabPinned(tabId, pinned) {
+}
+export function setChannelTabPinned(tabId, pinned) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned });
-};
-export const closeChannelTab = function closeChannelTab(tabId) {
+}
+export function closeChannelTab(tabId) {
   closure_0 = tabId;
   const tabs = ChannelTabsStore.getTabs();
   if (-1 !== tabs.findIndex((id) => id.id === closure_0)) {
@@ -247,4 +247,4 @@ export const closeChannelTab = function closeChannelTab(tabId) {
       }
     }
   }
-};
+}

@@ -142,7 +142,7 @@ prototype["getResolution"] = function getResolution(arg0) {
 };
 
 export { SdkCanonicalGameResolutionType };
-export const withProcessIdentity = function withProcessIdentity(processGame) {
+export function withProcessIdentity(processGame) {
   processGame = processGame.processGame;
   let tmp = processGame;
   if (null != processGame) {
@@ -153,5 +153,5 @@ export const withProcessIdentity = function withProcessIdentity(processGame) {
     tmp = obj;
   }
   return tmp;
-};
+}
 export { SocialSdkGameResolver };

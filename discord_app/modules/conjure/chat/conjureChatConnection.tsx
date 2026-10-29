@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/chat/conjureChatConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import conjureAgentReaction from "conjureAgentReaction.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
@@ -133,7 +133,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3863["913RMa"]);
+      const stringResult = intl.string(_modDef3864["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -226,7 +226,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3863["0+RUWx"]);
+      const stringResult = intl.string(_modDef3864["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -408,7 +408,7 @@ let result = size.fileFinishedImporting("modules/conjure/chat/conjureChatConnect
 
 export const chatFrameHandlers = obj;
 export const chatStepHandlers = obj2;
-export const sendFailedStep = function sendFailedStep(projectId, message) {
+export function sendFailedStep(projectId, message) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = obj3;
@@ -423,11 +423,11 @@ export const sendFailedStep = function sendFailedStep(projectId, message) {
   const merged = Object.assign(tmp);
   obj4.message = message;
   obj3.trackConjureErrored(projectId, obj4);
-};
-export const appendTurnStep = function appendTurnStep(projectId, turnId) {
+}
+export function appendTurnStep(projectId, turnId) {
   DispatcherDefault.dispatch({ type: "CONJURE_CHAT_STEP_APPEND", projectId, turnId: turnId.turn_id, step: turnId });
-};
-export const sendQueuedMessageAction = function sendQueuedMessageAction(projectId, id, arg2) {
+}
+export function sendQueuedMessageAction(projectId, id, arg2) {
   try {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
     if (null == conjureSocket) {
@@ -439,4 +439,4 @@ export const sendQueuedMessageAction = function sendQueuedMessageAction(projectI
     }
     obj2 = conjureSocket;
   } catch (err) {}
-};
+}

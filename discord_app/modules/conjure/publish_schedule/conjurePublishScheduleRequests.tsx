@@ -36,7 +36,7 @@ export const publishScheduleFrameHandlers = {
   },
 };
 export { rejectPendingPublishSchedule };
-export const fetchPublishSchedule = function fetchPublishSchedule(iter) {
+export function fetchPublishSchedule(iter) {
   closure_0 = iter;
   closure_1 = { type: "get_publish_schedule" };
   return new Promise((resolve, reject) => {
@@ -77,8 +77,8 @@ export const fetchPublishSchedule = function fetchPublishSchedule(iter) {
       }
     }
   });
-};
-export const deletePublishSchedule = function deletePublishSchedule(arg0) {
+}
+export function deletePublishSchedule(arg0) {
   closure_0 = arg0;
   closure_1 = { type: "delete_publish_schedule", supports_errors: true };
   return new Promise((resolve, reject) => {
@@ -119,8 +119,8 @@ export const deletePublishSchedule = function deletePublishSchedule(arg0) {
       }
     }
   });
-};
-export const setPublishSchedule = function setPublishSchedule(arg0, trigger) {
+}
+export function setPublishSchedule(arg0, trigger) {
   const obj = { type: "set_publish_schedule", trigger, supports_errors: true };
   closure_0 = arg0;
   return new Promise((resolve, reject) => {
@@ -161,4 +161,4 @@ export const setPublishSchedule = function setPublishSchedule(arg0, trigger) {
       }
     }
   });
-};
+}

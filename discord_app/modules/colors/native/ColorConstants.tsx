@@ -45,7 +45,7 @@ Gradients.PREMIUM_TIER_2_OFFER_COLOR = items5;
 const result = size.fileFinishedImporting("modules/colors/native/ColorConstants.tsx");
 
 export { Gradients };
-export const getPremiumGradientColor = function getPremiumGradientColor(premiumType) {
+export function getPremiumGradientColor(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     return obj.PREMIUM_TIER_0;
   } else if (PremiumTypes.TIER_1 === premiumType) {
@@ -53,4 +53,4 @@ export const getPremiumGradientColor = function getPremiumGradientColor(premiumT
   } else if (PremiumTypes.TIER_2 === premiumType) {
     return obj.PREMIUM_TIER_2;
   }
-};
+}

@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores1;
     };
-export const getIsSpeaking = function getIsSpeaking(checkIsMuted) {
+export function getIsSpeaking(checkIsMuted) {
   ({ userId, checkSoundSharing } = checkIsMuted);
   if (checkSoundSharing === undefined) {
     checkSoundSharing = false;
@@ -223,4 +223,4 @@ export const getIsSpeaking = function getIsSpeaking(checkIsMuted) {
     tmp10 = tmp11;
   }
   return tmp10;
-};
+}

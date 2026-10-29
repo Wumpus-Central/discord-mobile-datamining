@@ -16,13 +16,13 @@ import PresenceStore from "../../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(10038).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(10070).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx",
 );
 
-export const createActivityInstanceEmbed = function createActivityInstanceEmbed(message) {
+export function createActivityInstanceEmbed(message) {
   ({ application, activityInstance } = message);
   const channel = ChannelStore.getChannel(message.channel_id);
   if (null != application) {
@@ -238,4 +238,4 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
       }
     }
   }
-};
+}

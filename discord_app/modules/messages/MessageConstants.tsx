@@ -56,9 +56,9 @@ export const MessageTagTypes = {
   POLL_TYPE: "g",
 };
 export const DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE = 209715200;
-export const isChannelStreamMessage = function isChannelStreamMessage(type) {
+export function isChannelStreamMessage(type) {
   return type.type === ChannelStreamTypes.MESSAGE;
-};
+}
 export const MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS = obj;
 export const MessageSendLocation = {
   PUSH_NOTIFICATION: "push_notification",

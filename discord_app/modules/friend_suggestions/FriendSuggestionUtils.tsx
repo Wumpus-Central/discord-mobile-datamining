@@ -3,10 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
-export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(
-  friendSuggestionName,
-  suggestedFriend,
-) {
+export function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
   let contactNames;
   if (suggestedFriend != null) {
     contactNames = suggestedFriend.contactNames;
@@ -42,4 +39,4 @@ export const getSuggestedContactNameForSuggestion = function getSuggestedContact
       }
     }
   }
-};
+}

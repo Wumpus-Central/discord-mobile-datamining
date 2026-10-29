@@ -12,9 +12,9 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeUserExperiment.tsx");
 
 export const ServerThemeUserExperiment = apexExperiment;
-export const getServerThemeUserEnabled = function getServerThemeUserEnabled(GuildPowerupsConstants) {
+export function getServerThemeUserEnabled(GuildPowerupsConstants) {
   return apexExperiment.getConfig({ location: GuildPowerupsConstants }).enabled;
-};
+}
 export const useServerThemeUserEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useServerThemeUserEnabled(location) {
       const cResult = c.c(2);

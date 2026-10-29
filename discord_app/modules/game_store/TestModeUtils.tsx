@@ -9,20 +9,20 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
 
-export const isTestModeForApplication = function isTestModeForApplication(applicationId) {
+export function isTestModeForApplication(applicationId) {
   let result = TestModeStore.inTestModeForApplication(applicationId);
   if (!result) {
     result = DeveloperActivityShelfStore.inDevModeForApplication(applicationId);
   }
   return result;
-};
-export const isAnyApplicationInTestMode = function isAnyApplicationInTestMode() {
+}
+export function isAnyApplicationInTestMode() {
   let isEnabled = null != TestModeStore.getTestModeApplicationId();
   if (!isEnabled) {
     isEnabled = DeveloperActivityShelfStore.getIsEnabled();
   }
   return isEnabled;
-};
+}
 export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsTestModeForApplication(arg0) {
       _require = arg0;

@@ -20,4 +20,6 @@ export const PlatformType = {
   [6]: "LINUX",
   MACOS: 7,
   [7]: "MACOS",
+  ROBLOX: 8,
+  [8]: "ROBLOX",
 };

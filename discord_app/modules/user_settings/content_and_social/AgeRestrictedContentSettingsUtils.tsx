@@ -164,7 +164,7 @@ export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEna
       }
       return tmp4;
     };
-export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefault() {
+export function getViewNsfwCommandsOrDefault() {
   const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
   let flag = ViewNsfwCommands.getSetting();
   const currentUser = UserStore.getCurrentUser();
@@ -190,8 +190,8 @@ export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefaul
     tmp4 = tmp5;
   }
   return tmp4;
-};
-export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() {
+}
+export function getViewNsfwGuildsOrDefault() {
   const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.getSetting();
   const currentUser = UserStore.getCurrentUser();
@@ -217,4 +217,4 @@ export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() 
     tmp4 = tmp5;
   }
   return tmp4;
-};
+}

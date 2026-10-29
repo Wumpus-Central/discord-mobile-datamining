@@ -13,13 +13,13 @@ const require = globalThis.__r;
 const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
-export const guildPowerupsAckNotification = function guildPowerupsAckNotification(guildId) {
+export function guildPowerupsAckNotification(guildId) {
   DispatcherDefault.dispatch({ type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId });
-};
-export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
+}
+export function guildPowerupsResetNotifications() {
   DispatcherDefault.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
-};
-export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(guildId, arg1) {
+}
+export function fetchPowerupCatalogForGuild(guildId, arg1) {
   _require = guildId;
   if (true === arg1) {
     const MOCK_LEVELS = require("GuildPowerupMocks").MOCK_LEVELS;
@@ -87,8 +87,8 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
       return body.body;
     });
   }
-};
-export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(guildId, arg1) {
+}
+export function fetchGuildBoostEntitlements(guildId, arg1) {
   _require = guildId;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -153,12 +153,12 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
       unlockedGameServers: obj2,
     });
   });
-};
-export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
+}
+export function enablePowerupForGuild(arg0, arg1) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
-};
-export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
+}
+export function disablePowerupForGuild(arg0, arg1) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
-};
+}

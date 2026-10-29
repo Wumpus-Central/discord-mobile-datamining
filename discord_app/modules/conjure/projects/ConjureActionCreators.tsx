@@ -48,7 +48,7 @@ let closure_18 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -174,7 +174,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -216,7 +216,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -307,7 +307,7 @@ let closure_31 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -392,7 +392,7 @@ let closure_32 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -469,7 +469,7 @@ let closure_34 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -557,7 +557,7 @@ let closure_36 = async function _fetchProjectLimit() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -747,7 +747,7 @@ let closure_43 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -868,7 +868,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -905,7 +905,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
           const obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -924,7 +924,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -959,7 +959,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
@@ -1004,7 +1004,7 @@ let closure_50 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1080,7 +1080,7 @@ let closure_52 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1146,7 +1146,7 @@ let closure_52 = async function _deleteProject() {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1084).Endpoints;
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;
@@ -1163,7 +1163,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/ConjureActionCreators.tsx");
 
-export const applyPublishedPreview = function applyPublishedPreview(projectId, arg1) {
+export function applyPublishedPreview(projectId, arg1) {
   ({ project, hasActivity, integrationInstalled, botPermissionsChanged } = arg1);
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project });
   let integrationStatus = ConjureProjectStore.getIntegrationStatus(projectId);
@@ -1196,16 +1196,16 @@ export const applyPublishedPreview = function applyPublishedPreview(projectId, a
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE", projectId, integrationStatus: obj2 });
   const obj5 = { type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE", projectId, integrationStatus: obj2 };
   const tmpResult = DispatcherDefault;
-};
+}
 export { listProjects };
-export const isConjureProjectUnavailable = function isConjureProjectUnavailable(projectId) {
+export function isConjureProjectUnavailable(projectId) {
   let hasItem = set1.has(projectId);
   if (hasItem) {
     hasItem = null == ConjureProjectStore.getProject(projectId);
   }
   return hasItem;
-};
-export const loadMissingConjureProjects = function loadMissingConjureProjects(items) {
+}
+export function loadMissingConjureProjects(items) {
   resetMissingProjectsOnUserChange();
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -1236,8 +1236,8 @@ export const loadMissingConjureProjects = function loadMissingConjureProjects(it
   if (!pending) {
     drainMissingProjects();
   }
-};
-export const fetchMissingConjureProjectNow = function fetchMissingConjureProjectNow() {
+}
+export function fetchMissingConjureProjectNow() {
   const self = this;
   const apply = closure_32.apply;
   if (typeof apply === "unknown") {
@@ -1246,8 +1246,8 @@ export const fetchMissingConjureProjectNow = function fetchMissingConjureProject
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchProjectLimit = function fetchProjectLimit() {
+}
+export function fetchProjectLimit() {
   const self = this;
   const apply = closure_36.apply;
   if (typeof apply === "unknown") {
@@ -1256,8 +1256,8 @@ export const fetchProjectLimit = function fetchProjectLimit() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const prefetchProject = function prefetchProject(projectId) {
+}
+export function prefetchProject(projectId) {
   if (null == obj.getConjureSocket(projectId)) {
     ConjureWorkerTickets.prefetchWorkerTicket(projectId);
     const tmpResult = ConjureWorkerTickets;
@@ -1277,8 +1277,8 @@ export const prefetchProject = function prefetchProject(projectId) {
   const obj2 = { read: promise, at: Date.now(), userId: id };
   const result1 = conjurePreviewTicket.prefetchConjurePreviewTicket(projectId);
   const tmpResult2 = conjurePreviewTicket;
-};
-export const takePrefetchedRead = function takePrefetchedRead(arg0) {
+}
+export function takePrefetchedRead(arg0) {
   value = map.get(arg0);
   map.delete(arg0);
   let tmp3 = null;
@@ -1302,9 +1302,9 @@ export const takePrefetchedRead = function takePrefetchedRead(arg0) {
     }
   }
   return tmp3;
-};
+}
 export { getProject };
-export const createProject = function createProject() {
+export function createProject() {
   const self = this;
   const apply = closure_40.apply;
   if (typeof apply === "unknown") {
@@ -1313,8 +1313,8 @@ export const createProject = function createProject() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createRemix = function createRemix() {
+}
+export function createRemix() {
   const self = this;
   const apply = closure_41.apply;
   if (typeof apply === "unknown") {
@@ -1323,8 +1323,8 @@ export const createRemix = function createRemix() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const applyRemixPreview = function applyRemixPreview(id, remix_preview) {
+}
+export function applyRemixPreview(id, remix_preview) {
   DispatcherDefault.dispatch({
     type: "APPLICATION_FETCH_SUCCESS",
     application: remix_preview.application,
@@ -1371,9 +1371,9 @@ export const applyRemixPreview = function applyRemixPreview(id, remix_preview) {
   obj6.previewAppChannels = remix_preview.preview_app_channels;
   DispatcherDefault.dispatch(obj6);
   const tmpResult2 = DispatcherDefault;
-};
+}
 export { fetchConjureApplication };
-export const refreshPreviewApplication = function refreshPreviewApplication() {
+export function refreshPreviewApplication() {
   const self = this;
   const apply = closure_48.apply;
   if (typeof apply === "unknown") {
@@ -1382,8 +1382,8 @@ export const refreshPreviewApplication = function refreshPreviewApplication() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateProjectSettings = function updateProjectSettings() {
+}
+export function updateProjectSettings() {
   const self = this;
   const apply = closure_49.apply;
   if (typeof apply === "unknown") {
@@ -1392,11 +1392,11 @@ export const updateProjectSettings = function updateProjectSettings() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setGuildHints = function setGuildHints(first2, arg1) {
+}
+export function setGuildHints(first2, arg1) {
   return patchProject(first2, arg1);
-};
-export const fetchApplicationChannels = function fetchApplicationChannels() {
+}
+export function fetchApplicationChannels() {
   const self = this;
   const apply = closure_50.apply;
   if (typeof apply === "unknown") {
@@ -1405,12 +1405,12 @@ export const fetchApplicationChannels = function fetchApplicationChannels() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { deleteProject };
-export const deleteProjectInBackground = function deleteProjectInBackground(id, arg1) {
+export function deleteProjectInBackground(id, arg1) {
   deleteProject(id).then(() => {}, arg1);
-};
-export const refreshConjureInstallState = function refreshConjureInstallState(projectId) {
+}
+export function refreshConjureInstallState(projectId) {
   const project = ConjureProjectStore.getProject(projectId);
   if (null != project) {
     getProject(projectId).catch(() => {});
@@ -1421,13 +1421,13 @@ export const refreshConjureInstallState = function refreshConjureInstallState(pr
     });
     profile.catch(() => {});
   }
-};
-export const setSelectedProjectForGuild = function setSelectedProjectForGuild(guildId, projectId) {
+}
+export function setSelectedProjectForGuild(guildId, projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId, projectId });
-};
-export const selectGlobalChatProject = function selectGlobalChatProject(projectId) {
+}
+export function selectGlobalChatProject(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_GLOBAL_SELECT", projectId });
-};
-export const clearGlobalChatProject = function clearGlobalChatProject(projectId) {
+}
+export function clearGlobalChatProject(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_GLOBAL_CLEAR", projectId });
-};
+}

@@ -8,10 +8,10 @@ let timestamp = 0;
 const snowflakeSequence = new SnowflakeUtils.SnowflakeSequence();
 const result = size.fileFinishedImporting("modules/messages/createNonce.tsx");
 
-export const createNonce = function createNonce() {
+export function createNonce() {
   timestamp = Date.now();
   if (timestamp !== timestamp) {
     snowflakeSequence.reset();
   }
   return SnowflakeUtilsDefault.fromTimestampWithSequence(timestamp, snowflakeSequence);
-};
+}

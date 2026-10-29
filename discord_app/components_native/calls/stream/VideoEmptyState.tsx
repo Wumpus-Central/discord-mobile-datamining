@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const VideoEmptyTypes = { NONE: "NONE", STREAM_ENDED: "STREAM_ENDED", STREAM_FAILED: "STREAM_FAILED" };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj3 = {
   container: {
     alignItems: "center",
@@ -139,13 +139,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (null != tmp4) {
-              let errorCode = tmp(5933).getErrorInfo(tmp4).errorCode;
-              const tmpResult = tmp(5933);
+              let errorCode = tmp(5935).getErrorInfo(tmp4).errorCode;
+              const tmpResult = tmp(5935);
             } else {
               errorCode = null;
               if (tmp10 === tmp17.STREAM_FAILED) {
-                errorCode = tmp(5933).getErrorInfo(tmp(5933).AVError.STREAM_FAILED_TO_START).errorCode;
-                const tmpResult3 = tmp(5933);
+                errorCode = tmp(5935).getErrorInfo(tmp(5935).AVError.STREAM_FAILED_TO_START).errorCode;
+                const tmpResult3 = tmp(5935);
               }
             }
             const _Symbol = Symbol;
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let intl = tmp(1125).intl;
                   let obj3 = { errorCode };
                   obj2.children = intl.formatToPlainString(tmp(1125).t.ejOT95, obj3);
-                  tmp37 = closure_7(tmp(5270).Text, obj2);
+                  tmp37 = closure_7(tmp(5271).Text, obj2);
                 }
                 if (cResult[28] === tmp6) {
                   class N {
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj = StreamActionCreators;
                     obj.stopStream(StreamKeyUtils.encodeStreamKey(closure_1));
                   };
-                  obj4.children = closure_7(tmp(5280).Button, obj5);
+                  obj4.children = closure_7(tmp(5281).Button, obj5);
                   tmp39 = closure_7(View, obj4);
                 }
                 cResult[28] = tmp6;
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!removeSplashImage) {
           let obj2 = {
             style: tmp2.placeholderImage,
-            children: closure_7(stream(11468).CouchSpotIllustration, {
+            children: closure_7(stream(11522).CouchSpotIllustration, {
               accessible: false,
               width: "100%",
               height: "100%",
@@ -369,13 +369,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8Result = null;
       }
       if (null != avError) {
-        let errorCode = stream(5933).getErrorInfo(avError).errorCode;
-        const obj6 = stream(5933);
+        let errorCode = stream(5935).getErrorInfo(avError).errorCode;
+        const obj6 = stream(5935);
       } else {
         errorCode = null;
         if (type === tmp3.STREAM_FAILED) {
-          errorCode = stream(5933).getErrorInfo(stream(5933).AVError.STREAM_FAILED_TO_START).errorCode;
-          const obj5 = stream(5933);
+          errorCode = stream(5935).getErrorInfo(stream(5935).AVError.STREAM_FAILED_TO_START).errorCode;
+          const obj5 = stream(5935);
         }
       }
       const items1 = [ChannelStore];
@@ -402,7 +402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = stream(1125).intl;
         const obj10 = { errorCode };
         obj9.children = intl3.formatToPlainString(stream(1125).t.ejOT95, obj10);
-        tmp29 = closure_7(stream(5270).Text, obj9);
+        tmp29 = closure_7(stream(5271).Text, obj9);
       }
       items4[1] = tmp29;
       let tmp31 = !removeCloseButton;
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = StreamActionCreators;
           obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
         };
-        obj11.children = closure_7(stream(5280).Button, obj12);
+        obj11.children = closure_7(stream(5281).Button, obj12);
         tmp31 = closure_7(View, obj11);
       }
       items4[2] = tmp31;

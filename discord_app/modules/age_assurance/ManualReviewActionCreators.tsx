@@ -34,7 +34,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1084).Endpoints;
-const SafetyToastType = fn(7453).SafetyToastType;
+const SafetyToastType = fn(7476).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;
@@ -173,11 +173,11 @@ export { ManualReviewStatus };
 export function invalidateManualReviewCache() {
   c12 = null;
 }
-export const invalidateAgeVerificationCaches = function invalidateAgeVerificationCaches() {
+export function invalidateAgeVerificationCaches() {
   c12 = null;
   DispatcherDefault.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" });
-};
-export const handleManualReviewCta = function handleManualReviewCta() {
+}
+export function handleManualReviewCta() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -186,4 +186,4 @@ export const handleManualReviewCta = function handleManualReviewCta() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

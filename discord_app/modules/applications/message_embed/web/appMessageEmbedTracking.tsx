@@ -37,7 +37,7 @@ export const ClickArea = {
   STREAM: "stream",
   CONNECT_ACCOUNT: "connect_account",
 };
-export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
+export function trackAppEmbedClick(arg0) {
   ({ applicationId, linkType, area, referrerId, customId, isDeadEnd, messageId, analyticsLocations } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_CLICKED, {
     application_id: applicationId,
@@ -49,17 +49,17 @@ export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
     message_id: messageId,
     location_stack: analyticsLocations,
   });
-};
+}
 export { trackAppEmbedViewed };
 export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTrackAppEmbedViewed(id) {
       const cResult = require("c").c(4);
       if (cResult[0] !== id) {
-        const result = tmp(7803).trackingConfigWithDefaults(id);
+        const result = tmp(7826).trackingConfigWithDefaults(id);
         cResult[0] = id;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(7803);
+        const tmpResult = tmp(7826);
       } else {
         tmp4 = cResult[1];
       }
@@ -132,11 +132,11 @@ export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled
         }
       }, undefined);
     };
-export const trackAppEmbedLinkSent = function trackAppEmbedLinkSent(applicationId, ACTIVITY_INVITE, id, customId) {
+export function trackAppEmbedLinkSent(applicationId, ACTIVITY_INVITE, id, customId) {
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_LINK_SENT, {
     application_id: applicationId,
     link_type: ACTIVITY_INVITE,
     referrer_id: id,
     custom_id: customId,
   });
-};
+}

@@ -14,8 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/IOSAudioInterruptExperiment.tsx");
 
-export const getIOSAudioInterruptExperimentConfig = function getIOSAudioInterruptExperimentConfig(
-  handleConnectionOpen,
-) {
+export function getIOSAudioInterruptExperimentConfig(handleConnectionOpen) {
   return config.getConfig({ location: handleConnectionOpen });
-};
+}

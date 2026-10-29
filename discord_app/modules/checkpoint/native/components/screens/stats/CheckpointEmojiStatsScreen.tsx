@@ -9,12 +9,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6050);
+const CheckpointConstants = fn(6054);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 },
   emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" },
@@ -277,6 +277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         const obj8 = { style: tmp41, children: null };
                                         const items5 = [tmp42];
                                         const obj9 = {
+                                          isStepHeading: true,
                                           variant: "heading-md/extrabold",
                                           style: tmp4.titleText,
                                           children: null,
@@ -549,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: items5, children: null };
       items5[1] = titleSpacing;
       const items6 = [closure_9(EmojiSlightlySmilingFaceIcon, { size: "xs", color })];
-      const obj10 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+      const obj10 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const obj9 = { size: "xs", color };
       const tmp12Result = require("CheckpointScreen");
       obj10.children = stringResult.toLocaleUpperCase();

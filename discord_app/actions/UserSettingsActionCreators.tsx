@@ -70,7 +70,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -85,7 +85,7 @@ export default {
               return obj4;
             } else if (tmp3) {
               dependencyMap = 1;
-              const PreloadedUserSettingsActionCreators = tmp3(4837).PreloadedUserSettingsActionCreators;
+              const PreloadedUserSettingsActionCreators = tmp3(4838).PreloadedUserSettingsActionCreators;
               v2 = 2;
               c3 = 1;
               const obj5 = {
@@ -115,7 +115,7 @@ export default {
                     if (gradientPreset != null) {
                       id = gradientPreset.id;
                     }
-                    const ClientThemeSettings = tmp4(4832).ClientThemeSettings;
+                    const ClientThemeSettings = tmp4(4833).ClientThemeSettings;
                     const setting = ClientThemeSettings.getSetting();
                     let prop;
                     if (setting != null) {
@@ -142,7 +142,7 @@ export default {
                     obj6.customUserThemeSettings = tmp17;
                     arg0.clientThemeSettings = obj6;
                   },
-                  tmp3(4837).UserSettingsDelay.INFREQUENT_USER_ACTION,
+                  tmp3(4838).UserSettingsDelay.INFREQUENT_USER_ACTION,
                 ),
                 done: false,
               };
@@ -151,7 +151,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -174,10 +174,10 @@ export default {
               id = gradientPreset.id;
             }
             const obj8 = { backgroundGradientPresetId: id, customUserThemeSettings: null };
-            let ClientThemeSettings = tmp3(4832).ClientThemeSettings;
+            let ClientThemeSettings = tmp3(4833).ClientThemeSettings;
             obj8.customUserThemeSettings = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj7.clientThemeSettings = obj8;
-            const DeveloperMode = tmp3(4832).DeveloperMode;
+            const DeveloperMode = tmp3(4833).DeveloperMode;
             obj7.developerMode = DeveloperMode.getSetting();
           }
           const obj9 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -250,7 +250,7 @@ export default {
     const obj4 = { settings: { theme } };
   },
 };
-export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders) {
+export function saveGuildFolders(compatibleGuildFolders) {
   _require = compatibleGuildFolders;
   const PreloadedUserSettingsActionCreators =
     require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
@@ -290,8 +290,8 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.FREQUENT_USER_ACTION,
   );
-};
-export const saveClientTheme = function saveClientTheme(backgroundGradientPresetId) {
+}
+export function saveClientTheme(backgroundGradientPresetId) {
   backgroundGradientPresetId = backgroundGradientPresetId.backgroundGradientPresetId;
   const customUserThemeSettings = backgroundGradientPresetId.customUserThemeSettings;
   const theme = backgroundGradientPresetId.theme;
@@ -369,4 +369,4 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
   }
   const obj5 = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: tmp9 } };
   const tmp3Result = customUserThemeSettings(theme[9]);
-};
+}

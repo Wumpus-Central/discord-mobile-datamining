@@ -11,7 +11,7 @@ const getObtainedAtFromBadge = BadgeDirectoryStore.getObtainedAtFromBadge;
 const PremiumTypes = PremiumConstants.PremiumTypes;
 const result = size.fileFinishedImporting("modules/badges/BadgeDetailsUtils.tsx");
 
-export const getBadgeArtUrls = function getBadgeArtUrls(badge, displayTier, stateFromStores) {
+export function getBadgeArtUrls(badge, displayTier, stateFromStores) {
   let prop2;
   if (!stateFromStores) {
     let prop;
@@ -46,8 +46,8 @@ export const getBadgeArtUrls = function getBadgeArtUrls(badge, displayTier, stat
   }
   obj.imageUrl = prop2;
   return obj;
-};
-export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
+}
+export function getBadgeTitle(badge, displayTier) {
   const tmp3 = badge.badge_id === BadgeId.BadgeId.PREMIUM_TENURE;
   if (tmp3) {
     let name1;
@@ -72,7 +72,12 @@ export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
     name2 = badge.name;
   }
   if (tmp3) {
-    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: "$ZodDate" };
+    const obj2 = {
+      isNitro: tmp3,
+      eyebrow: "Array",
+      displayName:
+        -22199102278340690000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    };
     let combined = name2;
     if (null != name) {
       const _HermesInternal = HermesInternal;
@@ -90,15 +95,15 @@ export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
     obj = { isNitro: tmp3, eyebrow: "Array", displayName: name2 };
   }
   return obj;
-};
-export const isLegacyDisplayBadge = function isLegacyDisplayBadge(badge) {
+}
+export function isLegacyDisplayBadge(badge) {
   let tmp3 = BadgeIdResolution.isLegacyBadgeId(badge.badge_id) && !badge.is_earnable;
   if (tmp3) {
     tmp3 = badge.badge_id !== BadgeId.BadgeId.STAFF;
   }
   return tmp3;
-};
-export const getBadgeStatusText = function getBadgeStatusText(badge, arg1) {
+}
+export function getBadgeStatusText(badge, arg1) {
   const tmp = getObtainedAtFromBadge(badge);
   if (badge.owned) {
     let v5LcHT0 = dependencyMap;
@@ -130,16 +135,16 @@ export const getBadgeStatusText = function getBadgeStatusText(badge, arg1) {
     const intl = util.intl;
     return intl.string(util.t.uHtDcT);
   }
-};
-export const isUpgradeableNitroViewer = function isUpgradeableNitroViewer(badge, stateFromStores1) {
+}
+export function isUpgradeableNitroViewer(badge, stateFromStores1) {
   let tmp = badge.badge_id === BadgeId.BadgeId.PREMIUM_TENURE;
   if (tmp) {
     tmp = stateFromStores1 === PremiumTypes.TIER_0 || stateFromStores1 === PremiumTypes.TIER_1;
     const tmp3 = stateFromStores1 === PremiumTypes.TIER_0 || stateFromStores1 === PremiumTypes.TIER_1;
   }
   return tmp;
-};
-export const getBadgeDescriptionText = function getBadgeDescriptionText(arg0) {
+}
+export function getBadgeDescriptionText(arg0) {
   ({ viewerBadge, isViewerOnUpgradeableNitro, badge } = arg0);
   if (!isViewerOnUpgradeableNitro) {
     let owned;
@@ -175,8 +180,8 @@ export const getBadgeDescriptionText = function getBadgeDescriptionText(arg0) {
       stringResult = badge.description;
     }
   }
-};
-export const getBadgeCtaVariant = function getBadgeCtaVariant(isViewerOnUpgradeableNitro) {
+}
+export function getBadgeCtaVariant(isViewerOnUpgradeableNitro) {
   let str = "expressive";
   if (!isViewerOnUpgradeableNitro.isViewerOnUpgradeableNitro) {
     let str2 = "secondary";
@@ -190,8 +195,8 @@ export const getBadgeCtaVariant = function getBadgeCtaVariant(isViewerOnUpgradea
     str = str2;
   }
   return str;
-};
-export const shouldShowLegacyUnavailableNotice = function shouldShowLegacyUnavailableNotice(arg0) {
+}
+export function shouldShowLegacyUnavailableNotice(arg0) {
   ({ badge, isViewingOtherUser, viewerOwnsBadge } = arg0);
   if (isViewingOtherUser) {
     isViewingOtherUser = !badge.is_earnable;
@@ -203,8 +208,8 @@ export const shouldShowLegacyUnavailableNotice = function shouldShowLegacyUnavai
     isViewingOtherUser = badge.badge_id !== BadgeId.BadgeId.STAFF;
   }
   return isViewingOtherUser;
-};
-export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, viewerBadge) {
+}
+export function getBadgeProgressDisplay(badge, viewerBadge) {
   let tmp = viewerBadge;
   if (viewerBadge == null) {
     tmp = badge;
@@ -273,4 +278,4 @@ export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, v
   }
   obj3.helperText = tmp15;
   return obj3;
-};
+}

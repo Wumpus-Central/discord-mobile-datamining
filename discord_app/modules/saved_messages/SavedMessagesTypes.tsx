@@ -11,7 +11,7 @@ export const BookmarksFetchState = {
   LOADED_FINISHED: "LOADED_FINISHED",
   FAILED: "FAILED",
 };
-export const savedMessageDataToClient = function savedMessageDataToClient(channelId) {
+export function savedMessageDataToClient(channelId) {
   const obj = {
     channelId: channelId.channel_id,
     messageId: channelId.message_id,
@@ -47,8 +47,8 @@ export const savedMessageDataToClient = function savedMessageDataToClient(channe
   }
   obj.dueAt = date1;
   return obj;
-};
-export const savedMessageCreateObjectToClient = function savedMessageCreateObjectToClient(body) {
+}
+export function savedMessageCreateObjectToClient(body) {
   let messageRecord = null;
   if (null != body.message) {
     messageRecord = MessageRecordUtils.createMessageRecord(body.message);
@@ -91,7 +91,7 @@ export const savedMessageCreateObjectToClient = function savedMessageCreateObjec
   obj5.dueAt = date1;
   obj2.saveData = obj5;
   return obj2;
-};
-export const savedMessageDeleteObjectToClient = function savedMessageDeleteObjectToClient(channelId) {
+}
+export function savedMessageDeleteObjectToClient(channelId) {
   return { channelId: channelId.channel_id, messageId: channelId.message_id };
-};
+}

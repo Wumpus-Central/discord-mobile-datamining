@@ -42,7 +42,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -181,14 +181,14 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
-export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
+export function registerFetchedSupplementals(guildId, memberIds) {
   closure_0 = guildId;
   const item = memberIds.forEach((item) => {
     closure_5[closure_0 + item] = constants.SUCCEEDED;
   });
-};
+}
 export { JoinSourceType };
-export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
+export function getJoinSourceTypeLabel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
@@ -233,9 +233,9 @@ export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
     const intl = util.intl;
     return intl.string(util.t.DvMBkS);
   }
-};
+}
 export const IntegrationType = obj2;
-export const getIntegrationLabel = function getIntegrationLabel(arg0) {
+export function getIntegrationLabel(arg0) {
   if (obj2.TWITCH === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.AVGAkw);
@@ -246,7 +246,7 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
     const intl = util.intl;
     return intl.string(util.t.gmCUFw);
   }
-};
+}
 export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetIntegrationIconString(arg0) {
       let str2 = c.c(4);
@@ -299,7 +299,7 @@ export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEn
       }
       return tmp5;
     };
-export const fetchMemberSupplemental = function fetchMemberSupplemental() {
+export function fetchMemberSupplemental() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -308,4 +308,4 @@ export const fetchMemberSupplemental = function fetchMemberSupplemental() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

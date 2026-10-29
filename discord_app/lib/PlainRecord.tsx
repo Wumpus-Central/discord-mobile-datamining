@@ -64,13 +64,13 @@ function isPlainRecordDataEqual(arg0, arg1) {
     return true;
   }
 }
-const TypeTag = fn(4872).TypeTag;
+const TypeTag = fn(4873).TypeTag;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/PlainRecord.tsx");
 
 export default PlainRecord;
 export { TypeTag };
-export const set = function set(arg0, arg1, getTime2) {
+export function set(arg0, arg1, getTime2) {
   let tmp = arg0;
   if (!isValueEqual(arg0[arg1], getTime2)) {
     const obj = {};
@@ -79,8 +79,8 @@ export const set = function set(arg0, arg1, getTime2) {
     tmp = obj;
   }
   return tmp;
-};
-export const merge = function merge(arg0, arg1) {
+}
+export function merge(arg0, arg1) {
   let tmp2 = arg0;
   let tmp3 = null;
   let tmp4 = null;
@@ -116,8 +116,8 @@ export const merge = function merge(arg0, arg1) {
     tmp2 = tmp4;
   }
   return tmp2;
-};
-export const tryReuseExistingInPlacePlainRecord = function tryReuseExistingInPlacePlainRecord(arg0, arg1, arg2) {
+}
+export function tryReuseExistingInPlacePlainRecord(arg0, arg1, arg2) {
   let tmp = arg1;
   let tmp3 = null == arg1;
   if (!tmp3) {
@@ -129,8 +129,8 @@ export const tryReuseExistingInPlacePlainRecord = function tryReuseExistingInPla
     tmp = arg2;
   }
   return tmp;
-};
-export const objectIsPlainRecordOfType = function objectIsPlainRecordOfType(arg0, obj) {
+}
+export function objectIsPlainRecordOfType(arg0, obj) {
   let tmp = typeof obj === "object";
   if (typeof obj === "object") {
     tmp = null != obj;
@@ -140,16 +140,16 @@ export const objectIsPlainRecordOfType = function objectIsPlainRecordOfType(arg0
     const tmp2 = TypeTag in obj && obj[TypeTag];
   }
   return tmp;
-};
-export const constructInPlace = function constructInPlace(GuildRoleRecordTypeTag, arg1) {
+}
+export function constructInPlace(GuildRoleRecordTypeTag, arg1) {
   arg1[TypeTag] = GuildRoleRecordTypeTag;
   return arg1;
-};
-export const copyConstruct = function copyConstruct(arg0, arg1) {
+}
+export function copyConstruct(arg0, arg1) {
   const obj = {};
   const merged = Object.assign(arg1);
   obj[TypeTag] = arg0;
   return obj;
-};
+}
 export { isValueEqual };
 export { isPlainRecordDataEqual };

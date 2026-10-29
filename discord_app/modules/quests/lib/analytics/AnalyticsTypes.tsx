@@ -5,15 +5,15 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let closure_2 = Object.keys(QuestTypes.QuestContent);
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 
-export const getQuestContentName = function getQuestContentName(questContent) {
+export function getQuestContentName(questContent) {
   closure_0 = questContent;
   let str = closure_2.find((item) => QuestTypes.QuestContent[item] === closure_0);
   if (str == null) {
     str = "";
   }
   return str;
-};
-export const getQuestStatus = function getQuestStatus(quest) {
+}
+export function getQuestStatus(quest) {
   const userStatus = quest.userStatus;
   let claimedAt;
   if (userStatus != null) {
@@ -42,12 +42,8 @@ export const getQuestStatus = function getQuestStatus(quest) {
     str = str2;
   }
   return str;
-};
-export const getContentProperties = function getContentProperties(
-  questContent,
-  questContentPosition,
-  questContentRowIndex,
-) {
+}
+export function getContentProperties(questContent, questContentPosition, questContentRowIndex) {
   const obj = { content_id: questContent, content_name: null, content_position: null, row_index: null };
   closure_0 = questContent;
   let str = closure_2.find((item) => QuestTypes.QuestContent[item] === closure_0);
@@ -58,7 +54,7 @@ export const getContentProperties = function getContentProperties(
   obj.content_position = questContentPosition;
   obj.row_index = questContentRowIndex;
   return obj;
-};
+}
 export const BountyScrollingType = { MANUAL: "MANUAL" };
 export const HorizontalScrollingDirection = { LEFT: "LEFT", RIGHT: "RIGHT" };
 export const VerticalScrollingDirection = { UP: "UP", DOWN: "DOWN" };

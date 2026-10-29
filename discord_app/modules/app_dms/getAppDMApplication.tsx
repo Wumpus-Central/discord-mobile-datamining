@@ -6,7 +6,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
-export const getAppDMApplication = function getAppDMApplication(channel) {
+export function getAppDMApplication(channel) {
   let recipientId;
   if (channel.isPrivate()) {
     recipientId = channel.getRecipientId();
@@ -36,4 +36,4 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
     appIdForBotUserId = tmp6;
   }
   return ApplicationStore.getApplication(appIdForBotUserId);
-};
+}

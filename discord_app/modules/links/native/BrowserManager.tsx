@@ -22,7 +22,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -53,7 +53,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
         return obj;
       }
       c0 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -162,18 +162,18 @@ export const useIsInAppBrowserOpen = ReactCompilerGating.isReactCompilerEnabled(
   : function useIsInAppBrowserOpen() {
       return closure_6((isInAppBrowserOpen) => isInAppBrowserOpen.isInAppBrowserOpen);
     };
-export const getIsInAppBrowserOpen = function getIsInAppBrowserOpen() {
+export function getIsInAppBrowserOpen() {
   return closure_6.getState().isInAppBrowserOpen;
-};
-export const subscribeToIsInAppBrowserOpen = function subscribeToIsInAppBrowserOpen(arg0) {
+}
+export function subscribeToIsInAppBrowserOpen(arg0) {
   closure_0 = arg0;
   return closure_6.subscribe((isInAppBrowserOpen, isInAppBrowserOpen2) => {
     if (isInAppBrowserOpen.isInAppBrowserOpen !== isInAppBrowserOpen2.isInAppBrowserOpen) {
       closure_0(isInAppBrowserOpen.isInAppBrowserOpen, isInAppBrowserOpen2.isInAppBrowserOpen);
     }
   });
-};
-export const browserManagerOpenUrl = function browserManagerOpenUrl(href) {
+}
+export function browserManagerOpenUrl(href) {
   let selectedBrowser = CHROME;
   if (CHROME === undefined) {
     selectedBrowser = state.getState().selectedBrowser;
@@ -238,8 +238,8 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(href) {
   }
   LinkingDefault.performURLNavigation(href);
   return Promise.resolve();
-};
-export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
+}
+export function browserManagerSelectBrowser(selectedBrowser) {
   if (obj.isAndroid()) {
     const obj3 = {};
     obj3[ConstantsIOS.WebBrowserType.SAFARI] = NativeBrowserManagerModule.BrowserType.SAFARI;
@@ -254,15 +254,15 @@ export const browserManagerSelectBrowser = function browserManagerSelectBrowser(
   closure_6.setState({ selectedBrowser });
   obj = PlatformUtils2;
   const obj5 = { selectedBrowser };
-};
-export const browserManagerCloseBrowser = function browserManagerCloseBrowser() {
+}
+export function browserManagerCloseBrowser() {
   closure_6.setState({ isInAppBrowserOpen: false });
   if (obj.isIOS()) {
     NativeBrowserManagerModuleIOSDefault.closeBrowser();
   }
   obj = PlatformUtils2;
-};
-export const browserManagerClearWebsiteData = function browserManagerClearWebsiteData() {
+}
+export function browserManagerClearWebsiteData() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -271,8 +271,8 @@ export const browserManagerClearWebsiteData = function browserManagerClearWebsit
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(url, appId, arg2, impressionToken) {
+}
+export function openPlayStoreInlineInstall(url, appId, arg2, impressionToken) {
   closure_0 = arg2;
   closure_1 = Date.now();
   if (obj.isAndroid()) {
@@ -303,4 +303,4 @@ export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(ur
     openPlayStoreInlineResult = NativeBrowserManagerModuleIOSDefault.openAppStoreInline(url, appId, impressionToken);
   }
   return openPlayStoreInlineResult;
-};
+}

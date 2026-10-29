@@ -7,7 +7,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/leaveFrame.tsx");
 
-export const leaveFrame = function leaveFrame(id) {
+export function leaveFrame(id) {
   if (obj.isNotNullish(id)) {
     const obj3 = {
       type: "FRAME_SET_ORIENTATION_LOCK_STATE",
@@ -24,4 +24,4 @@ export const leaveFrame = function leaveFrame(id) {
     const obj7 = { type: "FRAME_STOP", applicationId: null, frameId: null };
   }
   obj = GlobalUtils;
-};
+}

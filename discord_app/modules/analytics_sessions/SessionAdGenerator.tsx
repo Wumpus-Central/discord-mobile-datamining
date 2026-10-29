@@ -11,7 +11,7 @@ let c4 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
 
-export const getOrRefreshAdSession = function getOrRefreshAdSession() {
+export function getOrRefreshAdSession() {
   let flag = shouldExtendSession;
   if (shouldExtendSession === undefined) {
     flag = false;
@@ -48,14 +48,14 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession() {
   _null = obj3;
   DispatcherDefault.dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = _null;
-};
+}
 export function clearAdSession() {
   c4 = null;
 }
 export function getCurrentAdSession() {
   return c4;
 }
-export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
+export function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
     const obj2 = { category: "ad", message: null };
@@ -73,4 +73,4 @@ export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp
       diff > SessionUtils.SESSION_IDLE_TIMEOUT_MILLIS || timestamp - createdAtTimestamp.createdAtTimestamp > closure_3
     );
   }
-};
+}

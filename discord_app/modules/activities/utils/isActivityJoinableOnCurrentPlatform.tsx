@@ -61,7 +61,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
     return false;
   }
 }
-export const getCurrentActivityGamePlatform = function getCurrentActivityGamePlatform() {
+export function getCurrentActivityGamePlatform() {
   if (obj.isIOS()) {
     let META_QUEST = constants2.IOS;
   } else {
@@ -74,8 +74,8 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
     tmpResult = MetaQuestUtils;
   }
   return META_QUEST;
-};
-export const isActivityJoinable = function isActivityJoinable(type) {
+}
+export function isActivityJoinable(type) {
   let tmp = null == type;
   if (!tmp) {
     tmp = !hasFlagDefault(type, constants.JOIN);
@@ -84,4 +84,4 @@ export const isActivityJoinable = function isActivityJoinable(type) {
     tmp = type.type !== constants3.PLAYING;
   }
   return !tmp;
-};
+}

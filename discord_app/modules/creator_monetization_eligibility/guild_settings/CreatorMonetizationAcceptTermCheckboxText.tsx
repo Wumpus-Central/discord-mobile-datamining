@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx",
 );
 
-export const getCreatorMonetizationAcceptTermsCheckboxText = function getCreatorMonetizationAcceptTermsCheckboxText() {
+export function getCreatorMonetizationAcceptTermsCheckboxText() {
   const intl = util.intl;
   const obj = {
     fullTermsUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CREATOR_TERMS),
@@ -17,4 +17,4 @@ export const getCreatorMonetizationAcceptTermsCheckboxText = function getCreator
   };
   obj.creatorRevenuePolicyUrl = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CREATOR_POLICY);
   return intl.format(util.t["+ALa7+"], obj);
-};
+}

@@ -12,7 +12,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
 let result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapReminderToast.tsx");
 
-export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapReminderToast(name) {
+export function maybeShowDoubleTapReminderToast(name) {
   if (!obj.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER)) {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
@@ -53,4 +53,4 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     const tmpResult = DoubleTapToReactUtils;
   }
   obj = DismissibleContentUnsafeUtils;
-};
+}

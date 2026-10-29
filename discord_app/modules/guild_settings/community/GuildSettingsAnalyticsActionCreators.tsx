@@ -10,7 +10,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/community/GuildSettingsAnalyticsActionCreators.tsx");
 
-export const fetchEngagementOverview = function fetchEngagementOverview(guildId) {
+export function fetchEngagementOverview(guildId) {
   _require = guildId;
   const date = new Date();
   const time = date.getTime();
@@ -44,8 +44,8 @@ export const fetchEngagementOverview = function fetchEngagementOverview(guildId)
       DispatcherDefault.dispatch({ type: "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE", error: body.body });
     },
   );
-};
-export const fetchGrowthActivationOverview = function fetchGrowthActivationOverview(guildId) {
+}
+export function fetchGrowthActivationOverview(guildId) {
   _require = guildId;
   const date = new Date();
   const time = date.getTime();
@@ -86,8 +86,8 @@ export const fetchGrowthActivationOverview = function fetchGrowthActivationOverv
       });
     },
   );
-};
-export const fetchGrowthActivationRetention = function fetchGrowthActivationRetention(guildId) {
+}
+export function fetchGrowthActivationRetention(guildId) {
   _require = guildId;
   const date = new Date();
   const time = date.getTime();
@@ -134,4 +134,4 @@ export const fetchGrowthActivationRetention = function fetchGrowthActivationRete
       });
     },
   );
-};
+}

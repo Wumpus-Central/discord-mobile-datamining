@@ -59,7 +59,7 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
 };
 let result = size.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
-export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
+export function createDispatcherWorkScheduler() {
   if (typeof DispatcherWorkScheduler === "function") {
     const tmp7 = new DispatcherWorkScheduler(tmp2, tmp, tmp3, new.target, undefined);
     importDefault = tmp7;
@@ -70,4 +70,4 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

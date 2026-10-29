@@ -8,7 +8,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const UserSettingsSections = Constants.UserSettingsSections;
 const result = size.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen, fn, arg2) => {
+export (screen, fn, arg2) => {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -35,4 +35,4 @@ export const openUserSettings = (screen, fn, arg2) => {
     }
   }
   tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
-};
+}

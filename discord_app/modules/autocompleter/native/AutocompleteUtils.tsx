@@ -11,12 +11,12 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(4860).isGuildSelectableChannelType;
+let closure_3 = fn(4861).isGuildSelectableChannelType;
 const Constants = fn(1084);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10147);
+const ApplicationCommandsConstants = fn(10180);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6020);
+const ChannelAutocompleteConstants = fn(6024);
 ({
   CHANNEL_SENTINEL: closure_11,
   EMOJI_SENTINEL: closure_12,
@@ -25,7 +25,7 @@ const ChannelAutocompleteConstants = fn(6020);
 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -82,7 +82,7 @@ function findWordStart(arg0, arg1) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");
 
-export const getItemLayout = function getItemLayout(arg0, index) {
+export function getItemLayout(arg0, index) {
   let type;
   if (arg0 != null) {
     if (arg0[index] != null) {
@@ -94,8 +94,8 @@ export const getItemLayout = function getItemLayout(arg0, index) {
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);
   return obj;
-};
-export const getAutocompleteResultText = function getAutocompleteResultText(type, channel, set) {
+}
+export function getAutocompleteResultText(type, channel, set) {
   if (null != set) {
     if (!set.has(type.type)) {
       return "";
@@ -169,32 +169,32 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     }
     return "";
   }
-};
+}
 export { getMentionTextWithUser };
-export const getItemSeparator = function getItemSeparator() {
+export function getItemSeparator() {
   return <closure_18 />;
-};
-export const getPrefix = function getPrefix(substr1) {
+}
+export function getPrefix(substr1) {
   return substr1[0];
-};
-export const getQuery = function getQuery(arr) {
+}
+export function getQuery(arr) {
   return arr.slice(1).toLowerCase();
-};
-export const isWhitespaceSeparatingBoundary = function isWhitespaceSeparatingBoundary(text, lastIndexOfResult) {
+}
+export function isWhitespaceSeparatingBoundary(text, lastIndexOfResult) {
   let isMatch = 0 === lastIndexOfResult;
   if (!isMatch) {
     isMatch = regex.test(text[lastIndexOfResult - 1]);
   }
   return isMatch;
-};
-export const isUnbrokenRun = function isUnbrokenRun(arr, sum, selectionEnd) {
+}
+export function isUnbrokenRun(arr, sum, selectionEnd) {
   return !regex.test(arr.slice(sum, selectionEnd));
-};
-export const isSingleLineRun = function isSingleLineRun(arr, sum, selectionEnd) {
+}
+export function isSingleLineRun(arr, sum, selectionEnd) {
   return !re19.test(arr.slice(sum, selectionEnd));
-};
+}
 export { findWordStart };
-export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, selectionEnd, c22, selectionEnd2) {
+export function isSpaceJustTypedAtCaret(text, selectionEnd, c22, selectionEnd2) {
   let sum = selectionEnd2;
   if (selectionEnd2 === selectionEnd + 1) {
     if (c22.length === text.length + 1) {
@@ -217,9 +217,9 @@ export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, se
     }
   }
   return false;
-};
-export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c22, selectionEnd, constants) {
-  if (selectionEnd >= constants.length + 2) {
+}
+export function findAutoInsertOnSpaceToken(c22, selectionEnd, collapsedCategories) {
+  if (selectionEnd >= collapsedCategories.length + 2) {
     if (" " === c22[selectionEnd - 1]) {
       const diff = selectionEnd - 1;
       let tmp3 = diff;
@@ -238,11 +238,11 @@ export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c2
           }
         }
       }
-      if (c22.startsWith(constants, tmp3)) {
-        if (c22.lastIndexOf(constants, diff - constants.length) !== tmp3) {
+      if (c22.startsWith(collapsedCategories, tmp3)) {
+        if (c22.lastIndexOf(collapsedCategories, diff - collapsedCategories.length) !== tmp3) {
           return null;
         } else {
-          const obj = { tokenStart: tmp3, trigger: c22.slice(tmp3 + constants.length, diff) };
+          const obj = { tokenStart: tmp3, trigger: c22.slice(tmp3 + collapsedCategories.length, diff) };
           return obj;
         }
       } else {
@@ -251,4 +251,4 @@ export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c2
     }
   }
   return null;
-};
+}

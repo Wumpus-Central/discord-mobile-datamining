@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting("modules/build_overrides/BuildOverride
 
 export const APP_VERSION = Version;
 export { getAPIEndpoint };
-export const getBuildOverride = function getBuildOverride() {
+export function getBuildOverride() {
   const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(
     "" + location.protocol + "//" + location.host + "/__development/build_overrides",
   );
@@ -85,8 +85,8 @@ export const getBuildOverride = function getBuildOverride() {
     );
   }
   return resolved;
-};
-export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
+}
+export function getBuildOverrideMeta(url) {
   let isMatch = null != url;
   if (isMatch) {
     isMatch = regExp1.test(url);
@@ -130,11 +130,11 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
     }
     return resolved;
   }
-};
-export const probablyHasBuildOverride = function probablyHasBuildOverride() {
+}
+export function probablyHasBuildOverride() {
   return -1 !== cookie.indexOf("" + closure_4 + "=");
-};
-export const getBuildOverrideExperiments = function getBuildOverrideExperiments() {
+}
+export function getBuildOverrideExperiments() {
   try {
     const _window = window;
     const tmp5 = _modDef1388.parse(window.document.cookie)[closure_4];
@@ -152,17 +152,17 @@ export const getBuildOverrideExperiments = function getBuildOverrideExperiments(
   } catch (err) {
     return {};
   }
-};
-export const isBuildOverrideLink = function isBuildOverrideLink(target) {
+}
+export function isBuildOverrideLink(target) {
   let isMatch = null != target;
   if (isMatch) {
     isMatch = regExp.test(target);
   }
   return isMatch;
-};
+}
 export { isManualBuildOverrideLink };
 export { manualOverrideLinkMeta };
-export const validateURL = function validateURL(url) {
+export function validateURL(url) {
   let isMatch = null != url;
   if (isMatch) {
     isMatch = regExp1.test(url);
@@ -196,4 +196,4 @@ export const validateURL = function validateURL(url) {
       return null;
     }
   }
-};
+}

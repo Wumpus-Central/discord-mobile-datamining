@@ -70,7 +70,7 @@ export { setTimeout };
 export { setInterval };
 export { clearTimeout };
 export const clearInterval = clearTimeout;
-export const registerTimerPolyfills = function registerTimerPolyfills() {
+export function registerTimerPolyfills() {
   if (null == clearTimeout) {
     const _globalThis = globalThis;
     clearTimeout = clearTimeout;
@@ -79,7 +79,7 @@ export const registerTimerPolyfills = function registerTimerPolyfills() {
   window.setInterval = setInterval;
   window.clearTimeout = clearTimeout;
   window.clearInterval = clearTimeout;
-};
-export const keepAliveWorkaround = function keepAliveWorkaround() {
+}
+export function keepAliveWorkaround() {
   LIBDISCORE_JSI.runtimeExecutorDemo(5000);
-};
+}

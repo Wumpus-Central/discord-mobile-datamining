@@ -34,7 +34,7 @@ function goToStandalonePremiumCheckout(planId, arg1, arg2) {
 ({ Endpoints: c3, Routes: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/payments/utils/BillingStandaloneUtils.tsx");
 
-export const goToBillingStandalonePageWithHandoff = function goToBillingStandalonePageWithHandoff(Routes, arg1, arg2) {
+export function goToBillingStandalonePageWithHandoff(Routes, arg1, arg2) {
   closure_0 = Routes;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -50,9 +50,9 @@ export const goToBillingStandalonePageWithHandoff = function goToBillingStandalo
     (result) => closure_1(result, uRL),
     (arg0) => closure_2(arg0, result),
   );
-};
+}
 export { goToStandalonePremiumCheckout };
-export const goToStandalonePremiumCheckoutWeb = function goToStandalonePremiumCheckoutWeb(planId, arg1) {
+export function goToStandalonePremiumCheckoutWeb(planId, arg1) {
   return goToStandalonePremiumCheckout(
     planId,
     (body, searchParams) => {
@@ -62,4 +62,4 @@ export const goToStandalonePremiumCheckoutWeb = function goToStandalonePremiumCh
     },
     arg1,
   );
-};
+}

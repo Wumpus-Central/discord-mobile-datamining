@@ -27,6 +27,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/AvatarDecorationRecord.tsx");
 
 export default prototype;
-export const isAvatarDecorationRecord = function isAvatarDecorationRecord(first1) {
+export function isAvatarDecorationRecord(first1) {
   return first1 instanceof prototype;
-};
+}

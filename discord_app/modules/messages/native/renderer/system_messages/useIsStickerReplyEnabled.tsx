@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx",
 );
 
-export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
+export function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
   const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
@@ -37,4 +37,4 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     canResult = arg3;
   }
   return canResult;
-};
+}

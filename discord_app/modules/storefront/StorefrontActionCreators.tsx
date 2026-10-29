@@ -37,7 +37,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -96,7 +96,7 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_15 = async function _claimStorefrontPromotion() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -276,11 +276,69 @@ let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_18({ type: "application", applicationId: applicationId2 });
-    await "IconComponent";
-    closure_1 = tmp2;
-    applicationId2 = applicationId.applicationId;
-    return "Reflect";
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let applicationId2;
+            applicationId2 = applicationId.applicationId;
+            c3 = 1;
+            c4 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const obj5 = { type: "application", applicationId: applicationId2 };
+            c3 = 2;
+            c4 = 1;
+            const obj6 = { value: closure_130_18(obj5), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c4 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp11) {
+        c4 = tmp;
+        throw tmp11;
+      }
+    }
   })();
   iter.next();
   return iter;
@@ -290,11 +348,69 @@ let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_18({ type: "skus", skuIds: skuIds2 });
-    await "IconComponent";
-    closure_1 = tmp2;
-    skuIds2 = skuIds.skuIds;
-    return "Reflect";
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp5;
+            closure_1 = tmp2;
+            let skuIds2;
+            skuIds2 = skuIds.skuIds;
+            c3 = 1;
+            c4 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const obj5 = { type: "skus", skuIds: skuIds2 };
+            c3 = 2;
+            c4 = 1;
+            const obj6 = { value: closure_130_18(obj5), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c4 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp11) {
+        c4 = tmp;
+        throw tmp11;
+      }
+    }
   })();
   iter.next();
   return iter;
@@ -320,7 +436,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -379,7 +495,7 @@ const MINUTE = DurationsDefault.Millis.MINUTE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontActionCreators.tsx");
 
-export const maybeFetchStorefrontPromotions = function maybeFetchStorefrontPromotions() {
+export function maybeFetchStorefrontPromotions() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -388,9 +504,9 @@ export const maybeFetchStorefrontPromotions = function maybeFetchStorefrontPromo
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { fetchStorefrontPromotions };
-export const claimStorefrontPromotion = function claimStorefrontPromotion() {
+export function claimStorefrontPromotion() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -399,8 +515,8 @@ export const claimStorefrontPromotion = function claimStorefrontPromotion() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchStorefrontPricesForApplicationId = function fetchStorefrontPricesForApplicationId() {
+}
+export function fetchStorefrontPricesForApplicationId() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -409,8 +525,8 @@ export const fetchStorefrontPricesForApplicationId = function fetchStorefrontPri
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForSkuIds() {
+}
+export function fetchStorefrontPricesForSkuIds() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -419,7 +535,7 @@ export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForS
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setStorefrontPromotionIdOverride = function setStorefrontPromotionIdOverride(promotionIdOverride) {
+}
+export function setStorefrontPromotionIdOverride(promotionIdOverride) {
   DispatcherDefault.dispatch({ type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride });
-};
+}

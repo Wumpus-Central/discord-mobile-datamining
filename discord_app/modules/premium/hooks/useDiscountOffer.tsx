@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDisco
                 num = time - Date.now();
               }
               if (closure_1_0 != null) {
-                closure_1_0.start(num, () => { ... });
+                closure_1_0.start(num, /* F162149 */ function() { ... });
               }
             }
           });
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDisco
                           num = time - Date.now();
                         }
                         if (closure_1_0 != null) {
-                          closure_1_0.start(num, () => { ... });
+                          closure_1_0.start(num, /* F162150 */ function() { ... });
                         }
                       }
                     });

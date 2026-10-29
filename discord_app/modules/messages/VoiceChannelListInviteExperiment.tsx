@@ -16,9 +16,9 @@ obj.treatments = items;
 let closure_2 = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/messages/VoiceChannelListInviteExperiment.tsx");
 
-export const getVoiceChannelListInviteExperiment = function getVoiceChannelListInviteExperiment(guildId) {
+export function getVoiceChannelListInviteExperiment(guildId) {
   return closure_2.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location });
-};
+}
 export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVoiceChannelListInviteExperiment(arg0) {
       const cResult = c.c(3);

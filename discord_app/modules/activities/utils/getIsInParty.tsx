@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
 
-export const getIsInParty = function getIsInParty(tmp7Result, activity) {
+export function getIsInParty(tmp7Result, activity) {
   let id;
   if (activity != null) {
     const party = activity.party;
@@ -24,4 +24,4 @@ export const getIsInParty = function getIsInParty(tmp7Result, activity) {
     const tmp5 = null != id1 && tmp7Result.party.id === activity.party.id;
   }
   return tmp2;
-};
+}

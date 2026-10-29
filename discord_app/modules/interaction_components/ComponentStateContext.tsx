@@ -593,11 +593,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      const obj5 = channel(8367);
-      const isThreadModerator = channel(7406).useIsThreadModerator(channel);
-      const tmpResult = channel(7406);
+      const obj5 = channel(8389);
+      const isThreadModerator = channel(7429).useIsThreadModerator(channel);
+      const tmpResult = channel(7429);
       let tmp9 = !stateFromStores;
-      const canUnarchiveThread = channel(7406).useCanUnarchiveThread(channel);
+      const canUnarchiveThread = channel(7429).useCanUnarchiveThread(channel);
       if (stateFromStores) {
         tmp9 = stateFromStores1;
       }
@@ -1038,7 +1038,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                   state: first1,
                   executeStateUpdate: tmp12,
                   isDisabled: false,
-                  visualState: tmp(6057).ActionComponentState.NORMAL,
+                  visualState: tmp(6061).ActionComponentState.NORMAL,
                   error,
                 };
                 class S {
@@ -1187,7 +1187,7 @@ const result2 = size.fileFinishedImporting("modules/interaction_components/Compo
 
 export { getActionComponentState };
 export const useShouldDisableInteractiveComponents = tmp2;
-export const ComponentStateContextProvider = function ComponentStateContextProvider(children) {
+export function ComponentStateContextProvider(children) {
   const message = children.message;
   const modal = children.modal;
   const applicationWidget = children.applicationWidget;
@@ -1276,11 +1276,11 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
       {children.children}
     </redux.Provider>
   );
-};
-export const useComponentState = function useComponentState(type, arg1) {
+}
+export function useComponentState(type, arg1) {
   const context = noop.useContext(closure_19);
   return context.useComponentState(type, arg1);
-};
+}
 export { useComponentStateContext };
 export { useComponentContainerId };
 export const useComponentError = ReactCompilerGating.isReactCompilerEnabled()

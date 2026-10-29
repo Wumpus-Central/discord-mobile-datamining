@@ -30,7 +30,7 @@ let obj = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
 
-export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
+export function b64ToProtoWithType(type, proto) {
   let tmp = null;
   if (null != proto) {
     let tmp4 = null;
@@ -40,19 +40,19 @@ export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
     tmp = tmp4;
   }
   return tmp;
-};
+}
 export { b64ToProto };
-export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
+export function b64ToPreloadedUserSettingsProto(settings) {
   return b64ToProto(preloaded_user_settings.PreloadedUserSettings, settings);
-};
-export const protoToB64WithType = function protoToB64WithType(arg0, partialSettings) {
+}
+export function protoToB64WithType(arg0, partialSettings) {
   obj = ProtoUtils;
   return obj.protoToB64(obj[arg0], partialSettings);
-};
-export const protoToB64 = function protoToB64(DeclarativeSettings, partialSettings) {
+}
+export function protoToB64(DeclarativeSettings, partialSettings) {
   return ProtoUtils.protoToB64(DeclarativeSettings, partialSettings);
-};
-export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
+}
+export function mergeTopLevelFields(ProtoClass, proto, proto2) {
   obj = {};
   const merged = Object.assign(proto);
   for (const key10007 in arg2) {
@@ -61,8 +61,8 @@ export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, prot
   }
   ProtoClass.mergePartial(obj, proto2);
   return obj;
-};
-export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds, arg1, fn) {
+}
+export function mutateUserGuildSettings(guilds, arg1, fn) {
   if (null == guilds.guilds) {
     const AllGuildSettings = preloaded_user_settings.AllGuildSettings;
     guilds.guilds = AllGuildSettings.create();
@@ -81,8 +81,8 @@ export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds, 
     guilds.guilds[tmp3] = GuildSettings.create();
   }
   return fn(guilds.guilds[tmp3]);
-};
-export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, arg1, fn) {
+}
+export function mutateUserGuildSettingsInternal(guilds, arg1, fn) {
   let tmp = arg1;
   let tmp2 = null != arg1;
   if (tmp2) {
@@ -96,8 +96,8 @@ export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsI
     guilds.guilds[tmp] = GuildSettings.create();
   }
   return fn(guilds.guilds[tmp]);
-};
-export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, fn) {
+}
+export function mutateUserChannelSettings(guilds, arg1, id, fn) {
   if (null == guilds.guilds) {
     const AllGuildSettings = preloaded_user_settings.AllGuildSettings;
     guilds.guilds = AllGuildSettings.create();
@@ -120,15 +120,15 @@ export const mutateUserChannelSettings = function mutateUserChannelSettings(guil
     tmp7.channels[id] = ChannelSettings.create();
   }
   return fn(guilds.guilds[tmp3].channels[id]);
-};
-export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, arg1, fn) {
+}
+export function mutateUserChannelSettingsInternal(channels, arg1, fn) {
   if (!(arg1 in channels.channels)) {
     const ChannelSettings = preloaded_user_settings.ChannelSettings;
     channels.channels[arg1] = ChannelSettings.create();
   }
   return fn(channels.channels[arg1]);
-};
-export const runMigrations = function runMigrations(proto, arg1) {
+}
+export function runMigrations(proto, arg1) {
   if (null == proto.versions) {
     const Versions = user_settings_shared.Versions;
     proto.versions = Versions.create();
@@ -177,8 +177,8 @@ export const runMigrations = function runMigrations(proto, arg1) {
     continue;
   }
   return { proto, isDirty: flag, cleanupFuncs: items };
-};
-export const serializeUsageHistory = function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
+}
+export function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
   let length;
   const entries = Object.entries(usageHistory);
   if (entries.length > FREQUENCY_ITEM_LIMIT) {
@@ -222,4 +222,4 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
     continue;
   }
   return obj2;
-};
+}

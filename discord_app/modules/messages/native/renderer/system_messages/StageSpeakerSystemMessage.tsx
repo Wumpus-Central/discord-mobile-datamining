@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/StageSpeakerSystemMessage.tsx",
 );
 
-export const createStageSpeakerSystemMessage = function createStageSpeakerSystemMessage(roleStyle) {
+export function createStageSpeakerSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { content: null };
@@ -24,4 +24,4 @@ export const createStageSpeakerSystemMessage = function createStageSpeakerSystem
   });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
-};
+}

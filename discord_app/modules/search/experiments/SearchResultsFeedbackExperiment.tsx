@@ -33,8 +33,6 @@ export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.i
   : function useIsSearchResultsFeedbackExperimentEnabled(location) {
       return closure_2.useConfig({ location: location.location }).enabled;
     };
-export const getIsSearchResultsFeedbackExperimentEnabled = function getIsSearchResultsFeedbackExperimentEnabled(
-  location,
-) {
+export function getIsSearchResultsFeedbackExperimentEnabled(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}

@@ -168,8 +168,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let hasDetectedActivityResult = null != stateFromStores1;
       if (hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp(8418).hasDetectedActivity(stateFromStores1);
-        const tmpResult = tmp(8418);
+        hasDetectedActivityResult = tmp(8440).hasDetectedActivity(stateFromStores1);
+        const tmpResult = tmp(8440);
       }
       let tmp6 = !hasDetectedActivityResult;
       if (!hasDetectedActivityResult) {

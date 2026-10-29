@@ -35,7 +35,7 @@ export const liveReloadFrameHandlers = {
     DispatcherDefault.dispatch(obj2);
   },
 };
-export const sendLiveReload = function sendLiveReload(projectId, flag) {
+export function sendLiveReload(projectId, flag) {
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
   try {
     if (null == conjureSocket) {
@@ -49,4 +49,4 @@ export const sendLiveReload = function sendLiveReload(projectId, flag) {
   } catch (err) {
     return false;
   }
-};
+}

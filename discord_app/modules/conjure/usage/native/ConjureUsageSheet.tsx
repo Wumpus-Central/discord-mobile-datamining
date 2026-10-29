@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/usage/native/ConjureUsageSheet.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureUsageTypes from "../ConjureUsageTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "baseline", justifyContent: "space-between", gap: nativeDefault.space.PX_8 },
   label: { flexShrink: 1 },
@@ -252,40 +252,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const objResult8 = obj(10741);
-        const objResult9 = obj(10741);
-        const sumTokenUsageResult = obj(10741).sumTokenUsage(str2.orchestrator, str2.codegen);
-        const objResult10 = obj(10741);
-        const ActionSheet = obj(7334).ActionSheet;
+        const objResult8 = obj(10816);
+        const objResult9 = obj(10816);
+        const sumTokenUsageResult = obj(10816).sumTokenUsage(str2.orchestrator, str2.codegen);
+        const objResult10 = obj(10816);
+        const ActionSheet = obj(7358).ActionSheet;
         const _Symbol = Symbol;
         if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
           const obj8 = { title: null };
           const intl = obj(1125).intl;
-          obj8.title = intl.string(_modDef3863.p5EGzq);
-          const tmp26 = closure_5(obj(7284).BottomSheetTitleHeader, obj8);
+          obj8.title = intl.string(_modDef3864.p5EGzq);
+          const tmp26 = closure_5(obj(7308).BottomSheetTitleHeader, obj8);
           cResult[27] = tmp26;
           let tmp23 = tmp26;
         } else {
           tmp23 = cResult[27];
         }
-        const Stack = obj(6013).Stack;
+        const Stack = obj(6015).Stack;
         const PX_12 = nativeDefault.space.PX_12;
         if (cResult[28] !== str2.cost_usd) {
           const intl2 = obj(1125).intl;
           const obj9 = { runes: null };
-          const objResult11 = obj(10741);
-          obj9.runes = obj(10741).runesFromUsd(str2.cost_usd).toLocaleString();
-          const formatToPlainStringResult = intl2.formatToPlainString(_modDef3863.gMuw5d, obj9);
+          const objResult11 = obj(10816);
+          obj9.runes = obj(10816).runesFromUsd(str2.cost_usd).toLocaleString();
+          const formatToPlainStringResult = intl2.formatToPlainString(_modDef3864.gMuw5d, obj9);
           cResult[28] = str2.cost_usd;
           cResult[29] = formatToPlainStringResult;
           let tmp29 = formatToPlainStringResult;
-          const runesFromUsdResult = obj(10741).runesFromUsd(str2.cost_usd);
+          const runesFromUsdResult = obj(10816).runesFromUsd(str2.cost_usd);
         } else {
           tmp29 = cResult[29];
         }
         if (cResult[30] !== tmp29) {
           const obj10 = { variant: "text-md/semibold", color: "text-default", children: tmp29 };
-          const tmp33 = closure_5(obj(5270).Text, obj10);
+          const tmp33 = closure_5(obj(5271).Text, obj10);
           cResult[30] = tmp29;
           cResult[31] = tmp33;
           let tmp31 = tmp33;
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = obj(1125).intl;
-          const stringResult = intl3.string(_modDef3863.xtxP0e);
+          const stringResult = intl3.string(_modDef3864.xtxP0e);
           cResult[32] = stringResult;
           let tmp34 = stringResult;
         } else {
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[35] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = obj(1125).intl;
-          const stringResult1 = intl4.string(_modDef3863["9Sj3SX"]);
+          const stringResult1 = intl4.string(_modDef3864["9Sj3SX"]);
           cResult[35] = stringResult1;
           let tmp40 = stringResult1;
         } else {
@@ -331,18 +331,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol4 = Symbol;
         if (cResult[38] === Symbol.for("react.memo_cache_sentinel")) {
           const intl5 = obj(1125).intl;
-          const stringResult2 = intl5.string(_modDef3863.ANCEo3);
+          const stringResult2 = intl5.string(_modDef3864.ANCEo3);
           cResult[38] = stringResult2;
           let tmp46 = stringResult2;
         } else {
           tmp46 = cResult[38];
         }
         if (cResult[39] !== str2.compaction) {
-          const usageOrEmptyResult = obj(10741).usageOrEmpty(str2.compaction);
+          const usageOrEmptyResult = obj(10816).usageOrEmpty(str2.compaction);
           cResult[39] = str2.compaction;
           cResult[40] = usageOrEmptyResult;
           let tmp48 = usageOrEmptyResult;
-          const objResult12 = obj(10741);
+          const objResult12 = obj(10816);
         } else {
           tmp48 = cResult[40];
         }
@@ -358,18 +358,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol5 = Symbol;
         if (cResult[43] === Symbol.for("react.memo_cache_sentinel")) {
           const intl6 = obj(1125).intl;
-          const stringResult3 = intl6.string(_modDef3863.ugL6D4);
+          const stringResult3 = intl6.string(_modDef3864.ugL6D4);
           cResult[43] = stringResult3;
           let tmp54 = stringResult3;
         } else {
           tmp54 = cResult[43];
         }
         if (cResult[44] !== str2.classifier) {
-          const usageOrEmptyResult1 = obj(10741).usageOrEmpty(str2.classifier);
+          const usageOrEmptyResult1 = obj(10816).usageOrEmpty(str2.classifier);
           cResult[44] = str2.classifier;
           cResult[45] = usageOrEmptyResult1;
           let tmp56 = usageOrEmptyResult1;
-          const objResult13 = obj(10741);
+          const objResult13 = obj(10816);
         } else {
           tmp56 = cResult[45];
         }
@@ -385,18 +385,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol6 = Symbol;
         if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
           const intl7 = obj(1125).intl;
-          const stringResult4 = intl7.string(_modDef3863.DHr5On);
+          const stringResult4 = intl7.string(_modDef3864.DHr5On);
           cResult[48] = stringResult4;
           let tmp62 = stringResult4;
         } else {
           tmp62 = cResult[48];
         }
         if (cResult[49] !== str2.image) {
-          const usageOrEmptyResult2 = obj(10741).usageOrEmpty(str2.image);
+          const usageOrEmptyResult2 = obj(10816).usageOrEmpty(str2.image);
           cResult[49] = str2.image;
           cResult[50] = usageOrEmptyResult2;
           let tmp64 = usageOrEmptyResult2;
-          const objResult14 = obj(10741);
+          const objResult14 = obj(10816);
         } else {
           tmp64 = cResult[50];
         }
@@ -421,8 +421,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[59] === Symbol.for("react.memo_cache_sentinel")) {
                   const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
                   const intl8 = obj(1125).intl;
-                  obj16.children = intl8.string(_modDef3863["8OUg09"]);
-                  const tmp74 = closure_5(obj(5270).Text, obj16);
+                  obj16.children = intl8.string(_modDef3864["8OUg09"]);
+                  const tmp74 = closure_5(obj(5271).Text, obj16);
                   cResult[59] = tmp74;
                   let str3 = tmp74;
                 } else {
@@ -437,9 +437,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   tmp75 = cResult[61];
                 }
-                const Text = obj(5270).Text;
+                const Text = obj(5271).Text;
                 const _Math = Math;
-                obj = obj(10741);
+                obj = obj(10816);
                 cacheHitRateResult = obj.cacheHitRate(sumTokenUsageResult1);
                 const rounded = Math.round(100 * cacheHitRateResult);
                 cResult[4] = str.label;
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj18 = { direction: "vertical", spacing: nativeDefault.space.PX_4, children: null };
         const items4 = [tmp36, tmp42, tmp50, tmp58, tmp66];
         obj18.children = items4;
-        const tmp72 = closure_6(obj(6013).Stack, obj18);
+        const tmp72 = closure_6(obj(6015).Stack, obj18);
         cResult[53] = tmp36;
         cResult[54] = tmp42;
         cResult[55] = tmp50;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[57] = tmp66;
         cResult[58] = tmp72;
         tmp70 = tmp72;
-        sumTokenUsageResult1 = objResult8.sumTokenUsage(sumTokenUsageResult, obj(10741).usageOrEmpty(str2.compaction));
+        sumTokenUsageResult1 = objResult8.sumTokenUsage(sumTokenUsageResult, obj(10816).usageOrEmpty(str2.compaction));
       }
       const objResult = obj(504);
     }
@@ -500,15 +500,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null == stateFromStores) {
         return null;
       } else {
-        const tmp2Result = tmp2(10741);
-        const tmp2Result8 = tmp2(10741);
-        const sumTokenUsageResult = tmp2(10741).sumTokenUsage(stateFromStores.orchestrator, stateFromStores.codegen);
-        const tmp2Result9 = tmp2(10741);
+        const tmp2Result = tmp2(10816);
+        const tmp2Result8 = tmp2(10816);
+        const sumTokenUsageResult = tmp2(10816).sumTokenUsage(stateFromStores.orchestrator, stateFromStores.codegen);
+        const tmp2Result9 = tmp2(10816);
         const obj2 = { header: null, children: null };
         const obj3 = { title: null };
         const intl = tmp2(1125).intl;
-        obj3.title = intl.string(_modDef3863.p5EGzq);
-        obj2.header = closure_5(tmp2(7284).BottomSheetTitleHeader, obj3);
+        obj3.title = intl.string(_modDef3864.p5EGzq);
+        obj2.header = closure_5(tmp2(7308).BottomSheetTitleHeader, obj3);
         const obj4 = { children: null };
         const obj5 = { direction: "vertical", spacing: nativeDefault.space.PX_12, children: null };
         const obj6 = { variant: "text-md/semibold", color: "text-default", children: null };
@@ -516,62 +516,62 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { runes: null };
         const sumTokenUsageResult1 = tmp2Result.sumTokenUsage(
           sumTokenUsageResult,
-          tmp2(10741).usageOrEmpty(stateFromStores.compaction),
+          tmp2(10816).usageOrEmpty(stateFromStores.compaction),
         );
-        const tmp2Result10 = tmp2(10741);
-        obj7.runes = tmp2(10741).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
-        obj6.children = intl2.formatToPlainString(_modDef3863.gMuw5d, obj7);
-        const items2 = [closure_5(tmp2(5270).Text, obj6), ,];
+        const tmp2Result10 = tmp2(10816);
+        obj7.runes = tmp2(10816).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
+        obj6.children = intl2.formatToPlainString(_modDef3864.gMuw5d, obj7);
+        const items2 = [closure_5(tmp2(5271).Text, obj6), ,];
         const obj8 = { direction: "vertical", spacing: nativeDefault.space.PX_4, children: null };
         const obj9 = { label: null, usage: null };
         const intl3 = tmp2(1125).intl;
-        obj9.label = intl3.string(_modDef3863.xtxP0e);
+        obj9.label = intl3.string(_modDef3864.xtxP0e);
         obj9.usage = stateFromStores.orchestrator;
         const items3 = [closure_5(closure_8, obj9), , , ,];
         const obj10 = { label: null, usage: null };
         const intl4 = tmp2(1125).intl;
-        obj10.label = intl4.string(_modDef3863["9Sj3SX"]);
+        obj10.label = intl4.string(_modDef3864["9Sj3SX"]);
         obj10.usage = stateFromStores.codegen;
         items3[1] = closure_5(closure_8, obj10);
         const obj11 = { label: null, usage: null };
         const intl5 = tmp2(1125).intl;
-        obj11.label = intl5.string(_modDef3863.ANCEo3);
-        const runesFromUsdResult = tmp2(10741).runesFromUsd(stateFromStores.cost_usd);
-        obj11.usage = tmp2(10741).usageOrEmpty(stateFromStores.compaction);
+        obj11.label = intl5.string(_modDef3864.ANCEo3);
+        const runesFromUsdResult = tmp2(10816).runesFromUsd(stateFromStores.cost_usd);
+        obj11.usage = tmp2(10816).usageOrEmpty(stateFromStores.compaction);
         items3[2] = closure_5(closure_8, obj11);
         const obj12 = { label: null, usage: null };
         const intl6 = tmp2(1125).intl;
-        obj12.label = intl6.string(_modDef3863.ugL6D4);
-        const tmp2Result11 = tmp2(10741);
-        obj12.usage = tmp2(10741).usageOrEmpty(stateFromStores.classifier);
+        obj12.label = intl6.string(_modDef3864.ugL6D4);
+        const tmp2Result11 = tmp2(10816);
+        obj12.usage = tmp2(10816).usageOrEmpty(stateFromStores.classifier);
         items3[3] = closure_5(closure_8, obj12);
         const obj13 = { label: null, usage: null };
         const intl7 = tmp2(1125).intl;
-        obj13.label = intl7.string(_modDef3863.DHr5On);
-        const tmp2Result12 = tmp2(10741);
-        obj13.usage = tmp2(10741).usageOrEmpty(stateFromStores.image);
+        obj13.label = intl7.string(_modDef3864.DHr5On);
+        const tmp2Result12 = tmp2(10816);
+        obj13.usage = tmp2(10816).usageOrEmpty(stateFromStores.image);
         items3[4] = closure_5(closure_8, obj13);
         obj8.children = items3;
-        items2[1] = closure_6(tmp2(6013).Stack, obj8);
+        items2[1] = closure_6(tmp2(6015).Stack, obj8);
         const obj14 = { style: tmp.row, children: null };
         const obj15 = { style: tmp.label, children: null };
         const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl8 = tmp2(1125).intl;
-        obj16.children = intl8.string(_modDef3863["8OUg09"]);
-        obj15.children = closure_5(tmp2(5270).Text, obj16);
+        obj16.children = intl8.string(_modDef3864["8OUg09"]);
+        obj15.children = closure_5(tmp2(5271).Text, obj16);
         const items4 = [closure_5(View, obj15)];
         const obj17 = { variant: "text-sm/medium", color: "text-default", children: null };
         const _Math = Math;
-        const tmp2Result13 = tmp2(10741);
+        const tmp2Result13 = tmp2(10816);
         const _HermesInternal = HermesInternal;
-        obj17.children = "" + Math.round(100 * tmp2(10741).cacheHitRate(sumTokenUsageResult1)) + "%";
-        items4[1] = closure_5(tmp2(5270).Text, obj17);
+        obj17.children = "" + Math.round(100 * tmp2(10816).cacheHitRate(sumTokenUsageResult1)) + "%";
+        items4[1] = closure_5(tmp2(5271).Text, obj17);
         obj14.children = items4;
         items2[2] = closure_6(View, obj14);
         obj5.children = items2;
-        obj4.children = closure_6(tmp2(6013).Stack, obj5);
+        obj4.children = closure_6(tmp2(6015).Stack, obj5);
         obj2.children = closure_5(View, obj4);
-        return closure_5(tmp2(7334).ActionSheet, obj2);
+        return closure_5(tmp2(7358).ActionSheet, obj2);
       }
       const obj = projectId(504);
     };

@@ -38,10 +38,10 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1084);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(8865);
+const SpotifyConstants = fn(8868);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { icon: { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT } };
 let closure_20 = createStyles.createStyles(obj2);
 fn(558);
@@ -642,7 +642,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_20();
       const sync_id = activity.sync_id;
       let tmp5 = null;
-      if (sync_id(10686)(activity)) {
+      if (sync_id(10719)(activity)) {
         tmp5 = null;
         if (null != sync_id) {
           if (cResult[0] !== activity.name) {
@@ -658,13 +658,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] !== tmp3.icon) {
             const obj3 = {
               size: Button(1199).Icon.Sizes.SMALL,
-              source: sync_id(8660),
+              source: sync_id(8682),
               disableColor: true,
               style: tmp3.icon,
             };
             const tmp10 = jsx(Button(1199).Icon, {
               size: Button(1199).Icon.Sizes.SMALL,
-              source: sync_id(8660),
+              source: sync_id(8682),
               disableColor: true,
               style: tmp3.icon,
             });
@@ -682,7 +682,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[8] === tmp8) {
               }
             }
-            Button = Button(5280).Button;
+            Button = Button(5281).Button;
             let obj4 = { text: tmp6, icon: tmp8, variant: "secondary", onPress: tmp11 };
             tmp = <Button text={tmp6} icon={tmp8} variant="secondary" onPress={tmp11} />;
             cResult[7] = tmp6;
@@ -701,7 +701,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -722,13 +722,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                     c3 = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj5 = { value: closure_0(11382).canOpenSpotifyUrl(), done: false };
+                    const obj5 = { value: closure_0(11436).canOpenSpotifyUrl(), done: false };
                     return obj5;
                   }
                 } else if (1 === tmp7) {
                   c3 = 0;
                   c5 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;
@@ -739,13 +739,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj6;
                 } else {
                   closure_128_0 = value;
-                  const obj7 = closure_0(11382);
+                  const obj7 = closure_0(11436);
                   if (closure_128_0) {
                     obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
                   } else {
                     obj7.attributeInstall();
-                    sync_id(5696).openURL(constants.APP_STORE);
-                    const obj = sync_id(5696);
+                    sync_id(5698).openURL(constants.APP_STORE);
+                    const obj = sync_id(5698);
                   }
                   c3 = 0;
                   c5 = 3;
@@ -783,17 +783,17 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ activity, onAction: require } = arg0);
       const sync_id = activity.sync_id;
       let tmp4 = null;
-      if (sync_id(10686)(activity)) {
+      if (sync_id(10719)(activity)) {
         tmp4 = null;
         if (null != sync_id) {
           let obj = { text: null, icon: null, variant: "secondary", onPress: null };
           const intl = util.intl;
           let obj2 = { platform: activity.name };
           obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-          const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8660), disableColor: true, style: tmp.icon };
+          const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8682), disableColor: true, style: tmp.icon };
           obj.icon = jsx(native.Icon, {
             size: native.Icon.Sizes.SMALL,
-            source: sync_id(8660),
+            source: sync_id(8682),
             disableColor: true,
             style: tmp.icon,
           });
@@ -808,7 +808,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -834,7 +834,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 } else if (1 === tmp7) {
                   c3 = 0;
                   c5 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;
@@ -902,7 +902,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[3] === onAction) {
           }
-          Button = Button(5280).Button;
+          Button = Button(5281).Button;
           const obj2 = {
             text: tmp8,
             variant: "secondary",
@@ -1368,7 +1368,7 @@ export const ConnectPlatformButton = ReactCompilerGating.isReactCompilerEnabled(
       }
       obj = type(newestAnalyticsLocation[23]);
     };
-export const CustomActivityButton = function CustomActivityButton(index) {
+export function CustomActivityButton(index) {
   ({ user: require, activity } = index);
   index = index.index;
   const onAction = index.onAction;
@@ -1397,7 +1397,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -1440,13 +1440,13 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   if (closure_128_0.button_urls.length <= closure_129_2) {
                     c3 = 0;
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     closure_128_1 = closure_128_0.button_urls[closure_129_2];
                     if (typeof closure_128_1 !== "string") {
                       c3 = 0;
                       c5 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     } else {
                       closure_128_2 = tmp3(tmp20[49]).safeParseWithQuery(closure_128_1);
                       let protocol;
@@ -1479,7 +1479,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                 }
                 c3 = 0;
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp20) {
               if (tmp4 === c3) {
@@ -1506,7 +1506,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -1549,13 +1549,13 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   if (closure_128_0.button_urls.length <= closure_129_2) {
                     c3 = 0;
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     closure_128_1 = closure_128_0.button_urls[closure_129_2];
                     if (typeof closure_128_1 !== "string") {
                       c3 = 0;
                       c5 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     } else {
                       closure_128_2 = tmp3(tmp20[49]).safeParseWithQuery(closure_128_1);
                       let protocol;
@@ -1588,7 +1588,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                 }
                 c3 = 0;
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp20) {
               if (tmp4 === c3) {
@@ -1604,4 +1604,4 @@ export const CustomActivityButton = function CustomActivityButton(index) {
     }
   }
   return tmp;
-};
+}

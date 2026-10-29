@@ -61,13 +61,13 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5668);
+const CallConstants = fn(5670);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
 let Constants = fn(1084);
 ({ ActivityTypes: closure_17, ChannelTypes: closure_18 } = Constants);
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-Constants = fn(5754);
+Constants = fn(5756);
 ({ MediaEngineContextTypes: closure_19, Features: closure_20 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -256,11 +256,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f97634) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f98649) {
   const self = this;
-  const userId = f97634;
+  const userId = f98649;
   let flag;
-  if (this.participants[f97634] != null) {
+  if (this.participants[f98649] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -302,10 +302,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f976
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f97640, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f98655, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f97640] != null) {
+  if (this.participants[f98655] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -516,7 +516,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
 };
 
 export default ChannelRTCParticipants;
-export const getEmbeddedActivityParticipantId = function getEmbeddedActivityParticipantId(arg0) {
+export function getEmbeddedActivityParticipantId(arg0) {
   ({ applicationId, instanceId } = arg0);
   if (null != instanceId) {
     const _HermesInternal2 = HermesInternal;
@@ -526,8 +526,8 @@ export const getEmbeddedActivityParticipantId = function getEmbeddedActivityPart
     combined = "activity-" + applicationId;
   }
   return combined;
-};
-export const getFrameParticipantId = function getFrameParticipantId(arg0) {
+}
+export function getFrameParticipantId(arg0) {
   ({ applicationId, id } = arg0);
   if (null != id) {
     const _HermesInternal2 = HermesInternal;
@@ -537,18 +537,18 @@ export const getFrameParticipantId = function getFrameParticipantId(arg0) {
     combined = "activity-" + applicationId;
   }
   return combined;
-};
-export const activityParticipantIdToApplicationId = function activityParticipantIdToApplicationId(id) {
+}
+export function activityParticipantIdToApplicationId(id) {
   let tmp = id;
   if (null != id) {
     tmp = id.split("-")[1];
   }
   return tmp;
-};
+}
 export { sortKey };
-export const areParticipantsEqual = function areParticipantsEqual(arg0, arg1) {
+export function areParticipantsEqual(arg0, arg1) {
   [, tmp] = arg0;
   [, tmp2] = arg1;
   return tmp === tmp2;
-};
+}
 export { ChannelRTCParticipantsIndexes };

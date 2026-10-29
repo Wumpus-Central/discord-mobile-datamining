@@ -7,10 +7,10 @@ const Image = _mod17.Image;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
 
-export const getAssetUriForEmbed = function getAssetUriForEmbed(Image) {
+export function getAssetUriForEmbed(Image) {
   return Image.resolveAssetSource(Image).uri;
-};
-export const isWebviewVideo = function isWebviewVideo(video) {
+}
+export function isWebviewVideo(video) {
   video = video.video;
   let tmp = null != video;
   if (tmp) {
@@ -20,4 +20,4 @@ export const isWebviewVideo = function isWebviewVideo(video) {
     tmp = video.type !== MessageEmbedTypes.GIFV;
   }
   return tmp;
-};
+}

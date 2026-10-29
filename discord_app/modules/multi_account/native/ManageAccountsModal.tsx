@@ -20,21 +20,21 @@ const require = globalThis.__r;
 require = fn;
 let closure_4 = ["children"];
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13547).MultiAccountTokenStatus;
-let Constants = fn(13548);
+const MultiAccountTokenStatus = fn(13780).MultiAccountTokenStatus;
+let Constants = fn(13781);
 ({
   MANAGE_EDIT_TRANSITION_DURATION: closure_14,
   MAX_ACCOUNTS: closure_15,
   MultiAccountSwitchLocation: closure_16,
 } = Constants);
-const ManageAccountsScreens = fn(18101).ManageAccountsScreens;
+const ManageAccountsScreens = fn(18335).ManageAccountsScreens;
 Constants = fn(1084);
 ({ AnalyticEvents: closure_18, AuthStates: closure_19 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const NativeStackNavigator = fn(9777);
+const NativeStackNavigator = fn(9809);
 let closure_22 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 },
   sortableListView: null,
@@ -120,7 +120,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                 let obj2 = { color: username(587).colors.ICON_FEEDBACK_CRITICAL };
-                const tmp24 = closure_20(tmp(16942).CircleMinusIcon, obj2);
+                const tmp24 = closure_20(tmp(17181).CircleMinusIcon, obj2);
                 cResult[13] = tmp24;
                 let tmp21 = tmp24;
               } else {
@@ -128,7 +128,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[14] !== tmp17) {
                 let obj3 = { accessibilityRole: "button", accessibilityLabel: tmp19, onPress: tmp17, children: tmp21 };
-                const tmp27 = closure_20(tmp(6944).PressableOpacity, obj3);
+                const tmp27 = closure_20(tmp(6968).PressableOpacity, obj3);
                 cResult[14] = tmp17;
                 cResult[15] = tmp27;
                 let tmp25 = tmp27;
@@ -148,7 +148,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -182,7 +182,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                       obj4.cancelText = intl4.string(tmp2(1125).t["ETE/oC"]);
                       username = 1;
                       c2 = 1;
-                      const obj7 = { value: username(5945).confirm(obj4), done: false };
+                      const obj7 = { value: username(5947).confirm(obj4), done: false };
                       return obj7;
                     }
                   } else if (arg0 === 1) {
@@ -197,7 +197,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                       MultiAccountActionCreatorsAll.removeAccount(tmp2.id);
                     }
                     c2 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp11) {
                   c2 = tmp;
@@ -254,7 +254,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -288,7 +288,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 obj4.cancelText = intl4.string(tmp2(1125).t["ETE/oC"]);
                 v1 = 1;
                 v3 = 1;
-                const obj7 = { value: v1(5945).confirm(obj4), done: false };
+                const obj7 = { value: v1(5947).confirm(obj4), done: false };
                 return obj7;
               }
             } else if (arg0 === 1) {
@@ -300,11 +300,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               return obj8;
             } else {
               if (value) {
-                v3(13551).removeAccount(closure_128_0.id);
-                const obj = v3(13551);
+                v3(13784).removeAccount(closure_128_0.id);
+                const obj = v3(13784);
               }
               v3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp11) {
             v3 = tmp;
@@ -347,8 +347,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           return applyArgumentsResult;
         };
         let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-        obj3.children = closure_20(tmp(16942).CircleMinusIcon, obj4);
-        return closure_20(tmp(6944).PressableOpacity, obj3);
+        obj3.children = closure_20(tmp(17181).CircleMinusIcon, obj4);
+        return closure_20(tmp(6968).PressableOpacity, obj3);
       }
       let obj2 = user(504);
     };
@@ -777,7 +777,7 @@ export default noop.memo(
           MANAGE_ACCOUNTS = ManageAccountsScreens.MANAGE_ACCOUNTS;
         }
         let obj = accessibilityNativeStackOptions(576);
-        accessibilityNativeStackOptions = accessibilityNativeStackOptions(7131).useAccessibilityNativeStackOptions();
+        accessibilityNativeStackOptions = accessibilityNativeStackOptions(7155).useAccessibilityNativeStackOptions();
         [isEditing, closure_2] = noop.useState(false);
         if (cResult[0] === accessibilityNativeStackOptions) {
           if (cResult[1] === isEditing) {
@@ -824,12 +824,12 @@ export default noop.memo(
                 return obj;
               },
               children() {
-                return closure_1_20(first(17667), {
+                return closure_1_20(first(17905), {
                   handleLogin(login, password, undelete) {
-                    isEditing(6703).login({ login, password, undelete });
+                    isEditing(6727).login({ login, password, undelete });
                   },
                   onReset() {
-                    isEditing(6703).loginReset(true);
+                    isEditing(6727).loginReset(true);
                   },
                 });
               },
@@ -848,7 +848,7 @@ export default noop.memo(
                 return { headerShown: false };
               },
               children() {
-                return closure_1_20(first(7070), { isMultiAccount: true });
+                return closure_1_20(first(7094), { isMultiAccount: true });
               },
             };
             const tmp24 = closure_20(closure_22.Screen, obj4);
@@ -865,7 +865,7 @@ export default noop.memo(
                 return { headerShown: false };
               },
               children() {
-                return closure_1_20(first(17666), { isMultiAccount: true });
+                return closure_1_20(first(17904), { isMultiAccount: true });
               },
             };
             const tmp29 = closure_20(closure_22.Screen, obj5);
@@ -916,7 +916,7 @@ export default noop.memo(
         cResult[1] = isEditing;
         cResult[2] = fn;
         tmp8 = fn;
-        const tmpResult = accessibilityNativeStackOptions(7131);
+        const tmpResult = accessibilityNativeStackOptions(7155);
       }
     : function ManageAccountsModal(initialRouteName) {
         let MANAGE_ACCOUNTS = initialRouteName.initialRouteName;
@@ -984,12 +984,12 @@ export default noop.memo(
               return obj;
             },
             children() {
-              return closure_1_20(isEditing(17667), {
+              return closure_1_20(isEditing(17905), {
                 handleLogin(login, password, undelete) {
-                  isEditing(6703).login({ login, password, undelete });
+                  isEditing(6727).login({ login, password, undelete });
                 },
                 onReset() {
-                  isEditing(6703).loginReset(true);
+                  isEditing(6727).loginReset(true);
                 },
               });
             },
@@ -1000,7 +1000,7 @@ export default noop.memo(
               return { headerShown: false };
             },
             children() {
-              return closure_1_20(isEditing(7070), { isMultiAccount: true });
+              return closure_1_20(isEditing(7094), { isMultiAccount: true });
             },
           }),
           closure_20(closure_22.Screen, {
@@ -1009,7 +1009,7 @@ export default noop.memo(
               return { headerShown: false };
             },
             children() {
-              return closure_1_20(isEditing(17666), { isMultiAccount: true });
+              return closure_1_20(isEditing(17904), { isMultiAccount: true });
             },
           }),
         ];

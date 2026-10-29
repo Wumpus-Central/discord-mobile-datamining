@@ -4,15 +4,15 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
-export const getLinkChannelId = function getLinkChannelId(toURLSafeResult) {
+export function getLinkChannelId(toURLSafeResult) {
   value = undefined;
   if (toURLSafeResult != null) {
     const searchParams = toURLSafeResult.searchParams;
     value = searchParams.get("channel_id");
   }
   return value;
-};
-export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
+}
+export function extractActivityBookmarkParams(url) {
   const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
   value = undefined;
   if (toURLSafeResult != null) {
@@ -39,4 +39,4 @@ export const extractActivityBookmarkParams = function extractActivityBookmarkPar
   }
   obj2.channelId = value6;
   return obj2;
-};
+}

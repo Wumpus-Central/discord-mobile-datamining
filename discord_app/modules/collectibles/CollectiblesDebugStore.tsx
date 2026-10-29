@@ -25,8 +25,8 @@ const useCollectiblesDebugStore = module_570.create((arg0) => {
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
 
 export { useCollectiblesDebugStore };
-export const addDebugLog = function addDebugLog(arg0) {
+export function addDebugLog(arg0) {
   const date = new Date();
   const state = obj.getState();
   state.addLog("[" + new Date().toLocaleTimeString("en-US", { hour12: false }) + "] " + arg0);
-};
+}

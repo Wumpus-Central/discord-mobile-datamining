@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/game_store/GameStoreAsset.tsx");
 
-export const transformStoreAssetFromServer = function transformStoreAssetFromServer(box_art) {
+export function transformStoreAssetFromServer(box_art) {
   const size = {
     id: box_art.id,
     filename: box_art.filename,
@@ -13,4 +13,4 @@ export const transformStoreAssetFromServer = function transformStoreAssetFromSer
     mimeType: box_art.mime_type,
   };
   return size;
-};
+}

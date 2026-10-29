@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const Easing = fn(5085).Easing;
+const Easing = fn(5086).Easing;
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
 fn(558);
 const __initData = {
@@ -24,10 +24,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useKeyboardOpenPaddingStyle() {
       const cResult = token(576).c(8);
       let obj = token(576);
-      token = token(5288).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+      token = token(5289).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          const KeyboardController = token(1644).KeyboardController;
+          const KeyboardController = token(1645).KeyboardController;
           const stateResult = KeyboardController.state();
           let num;
           if (stateResult != null) {
@@ -43,17 +43,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      let obj2 = token(5288);
+      let obj2 = token(5289);
       [tmp8, importDefault] = sharedValue(noop.useState(first), 2);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function b() {
-          const KeyboardEvents = token(1644).KeyboardEvents;
+          const KeyboardEvents = token(1645).KeyboardEvents;
           closure_0 = KeyboardEvents.addListener("keyboardWillShow", (height) => closure_1(height.height > 0));
-          const KeyboardEvents2 = token(1644).KeyboardEvents;
+          const KeyboardEvents2 = token(1645).KeyboardEvents;
           closure_1 = KeyboardEvents2.addListener("keyboardDidShow", (height) => closure_1(height.height > 0));
-          const KeyboardEvents3 = token(1644).KeyboardEvents;
+          const KeyboardEvents3 = token(1645).KeyboardEvents;
           dependencyMap = KeyboardEvents3.addListener("keyboardWillHide", () => closure_1(false));
-          const KeyboardEvents4 = token(1644).KeyboardEvents;
+          const KeyboardEvents4 = token(1645).KeyboardEvents;
           closure_3 = KeyboardEvents4.addListener("keyboardDidHide", () => closure_1(false));
           return () => {
             closure_0.remove();
@@ -73,12 +73,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp9, tmp10);
       const tmp7 = sharedValue(noop.useState(first), 2);
-      const tmpResult = token(5197);
+      const tmpResult = token(5198);
       if (!tmp8) {
-        tmp8 = true === tmpResult.useKeyboardContextForType(tmp(1628).KeyboardTypes.SYSTEM).keyboardWillOpen;
+        tmp8 = true === tmpResult.useKeyboardContextForType(tmp(1629).KeyboardTypes.SYSTEM).keyboardWillOpen;
       }
       if (!tmp8) {
-        tmp8 = tmp12 !== tmp(1628).KeyboardTypes.SYSTEM;
+        tmp8 = tmp12 !== tmp(1629).KeyboardTypes.SYSTEM;
       }
       dependencyMap = tmp8;
       tmp12 = useKeyboardTypeDefault();
@@ -86,7 +86,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp8) {
         num3 = token;
       }
-      sharedValue = token(5085).useSharedValue(num3);
+      sharedValue = token(5086).useSharedValue(num3);
       if (cResult[3] === tmp8) {
         if (cResult[4] === sharedValue) {
           if (cResult[5] === token) {
@@ -104,7 +104,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           E.__closure = obj4;
           E.__workletHash = 5673482424037;
           E.__initData = __initData;
-          return tmp(5085).useAnimatedStyle(E);
+          return tmp(5086).useAnimatedStyle(E);
         }
       }
       const fn3 = function v() {
@@ -124,14 +124,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items1;
       tmp15 = items1;
       tmp14 = fn3;
-      const tmpResult3 = token(5085);
+      const tmpResult3 = token(5086);
     }
   : function useKeyboardOpenPaddingStyle() {
-      token = token(5288).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
-      let obj = token(5288);
+      token = token(5289).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+      let obj = token(5289);
       [tmp5, importDefault] = sharedValue(
         noop.useState(() => {
-          const KeyboardController = token(1644).KeyboardController;
+          const KeyboardController = token(1645).KeyboardController;
           const stateResult = KeyboardController.state();
           let num;
           if (stateResult != null) {
@@ -145,13 +145,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         2,
       );
       const effect = noop.useEffect(() => {
-        const KeyboardEvents = token(1644).KeyboardEvents;
+        const KeyboardEvents = token(1645).KeyboardEvents;
         closure_0 = KeyboardEvents.addListener("keyboardWillShow", (height) => closure_1(height.height > 0));
-        const KeyboardEvents2 = token(1644).KeyboardEvents;
+        const KeyboardEvents2 = token(1645).KeyboardEvents;
         closure_1 = KeyboardEvents2.addListener("keyboardDidShow", (height) => closure_1(height.height > 0));
-        const KeyboardEvents3 = token(1644).KeyboardEvents;
+        const KeyboardEvents3 = token(1645).KeyboardEvents;
         dependencyMap = KeyboardEvents3.addListener("keyboardWillHide", () => closure_1(false));
-        const KeyboardEvents4 = token(1644).KeyboardEvents;
+        const KeyboardEvents4 = token(1645).KeyboardEvents;
         closure_3 = KeyboardEvents4.addListener("keyboardDidHide", () => closure_1(false));
         return () => {
           closure_0.remove();
@@ -162,7 +162,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const tmp4 = sharedValue(
         noop.useState(() => {
-          const KeyboardController = token(1644).KeyboardController;
+          const KeyboardController = token(1645).KeyboardController;
           const stateResult = KeyboardController.state();
           let num;
           if (stateResult != null) {
@@ -175,12 +175,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         2,
       );
-      const obj3 = token(5197);
+      const obj3 = token(5198);
       if (!tmp5) {
-        tmp5 = true === obj3.useKeyboardContextForType(token(1628).KeyboardTypes.SYSTEM).keyboardWillOpen;
+        tmp5 = true === obj3.useKeyboardContextForType(token(1629).KeyboardTypes.SYSTEM).keyboardWillOpen;
       }
       if (!tmp5) {
-        tmp5 = tmp7 !== token(1628).KeyboardTypes.SYSTEM;
+        tmp5 = tmp7 !== token(1629).KeyboardTypes.SYSTEM;
       }
       dependencyMap = tmp5;
       tmp7 = useKeyboardTypeDefault();
@@ -188,7 +188,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp5) {
         num = token;
       }
-      sharedValue = token(5085).useSharedValue(num);
+      sharedValue = token(5086).useSharedValue(num);
       const items = [tmp5, token, sharedValue];
       const effect1 = noop.useEffect(() => {
         let num = 0;
@@ -199,14 +199,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const result = sharedValue.set(obj.withTiming(num, { duration: timingPresets.timingStandardDuration, easing }));
         const obj2 = { duration: timingPresets.timingStandardDuration, easing };
       }, items);
-      const tmpResult = token(5085);
+      const tmpResult = token(5086);
       const fn = function h() {
         return { paddingBottom: sharedValue.get() };
       };
       fn.__closure = { paddingSV: sharedValue };
       fn.__workletHash = 12921006654950;
       fn.__initData = __initData2;
-      return token(5085).useAnimatedStyle(fn);
+      return token(5086).useAnimatedStyle(fn);
     };
 let closure_9 = tmp3;
 const size = fn(2);

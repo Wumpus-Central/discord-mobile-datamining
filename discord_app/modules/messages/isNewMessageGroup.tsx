@@ -136,7 +136,7 @@ let closure_6 = 7 * DurationsDefault.Millis.MINUTE;
 const result = size.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
 
 export default isNewMessageGroup;
-export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag) {
+export function isNewGroupItem(isForumPost, type, hasFlag) {
   let tmp = null == type;
   if (!tmp) {
     let tmp3 = type.type === constants2.MESSAGE && type.content.id === type.content.channel_id;
@@ -150,4 +150,4 @@ export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag
     tmp = tmp3;
   }
   return tmp;
-};
+}

@@ -41,12 +41,12 @@ const result = size.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
 
 export default { isPremiumAtLeast, isPremium, isPremiumExactly };
 export { isPremiumAtLeast };
-export const isPremiumAtMost = function isPremiumAtMost(premiumType, TIER_1) {
+export function isPremiumAtMost(premiumType, TIER_1) {
   let tmp = null == premiumType;
   if (!tmp) {
     tmp = PremiumTypeOrder[premiumType] <= PremiumTypeOrder[TIER_1];
   }
   return tmp;
-};
+}
 export { isPremium };
 export { isPremiumExactly };

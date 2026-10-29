@@ -37,7 +37,7 @@ export const MOBILE_STORES = obj;
 export const MOBILE_STORE_WEBSITE_CATEGORIES = new Set(
   values.flatMap((websiteCategories) => websiteCategories.websiteCategories),
 );
-export const getMobileStoreLink = function getMobileStoreLink(thirdPartySkus, buildUrl) {
+export function getMobileStoreLink(thirdPartySkus, buildUrl) {
   let tmp = (function getMobileStoreWebsite(thirdPartySkus, buildUrl) {
     closure_1 = buildUrl;
     function _loop(iter) {
@@ -95,4 +95,4 @@ export const getMobileStoreLink = function getMobileStoreLink(thirdPartySkus, bu
     tmp = tmp4;
   }
   return tmp;
-};
+}

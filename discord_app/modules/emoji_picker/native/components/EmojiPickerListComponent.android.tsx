@@ -11,20 +11,20 @@ const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const EmojiCategoryTypes = fn(6763).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9862).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6786).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9894).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1240).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 } });
 const EmojiPickerNativeComponent = ReanimatedRexport.createAnimatedComponent(EmojiPickerNativeComponentDefault);
-const BottomSheetModal = fn(5305);
+const BottomSheetModal = fn(5306);
 let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(5305).SCROLLABLE_TYPE.SCROLLVIEW,
+  fn(5306).SCROLLABLE_TYPE.SCROLLVIEW,
   EmojiPickerNativeComponent,
 );
-const MetaQuestUtils = fn(1627);
+const MetaQuestUtils = fn(1628);
 const IS_META_QUEST = MetaQuestUtils.isMetaQuest();
 const __initData = {
   code: "function EmojiPickerListComponentAndroidTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}",

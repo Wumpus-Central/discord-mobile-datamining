@@ -8,8 +8,8 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const PremiumTypes = fn(1391).PremiumTypes;
-const Features = fn(5754).Features;
-const ApexExperiment = fn(1452);
+const Features = fn(5756).Features;
+const ApexExperiment = fn(1453);
 let obj2 = {
   kind: "user",
   name: "2026-03-clips-experiment",
@@ -49,7 +49,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
 export const ClipsExperiment = apexExperiment;
-export const areClipsAvailable = function areClipsAvailable() {
+export function areClipsAvailable() {
   let ignorePlatformRestriction = apexExperiment.getConfig({
     location: "isClipsClientCapable",
   }).ignorePlatformRestriction;
@@ -77,7 +77,7 @@ export const areClipsAvailable = function areClipsAvailable() {
   } else {
     return false;
   }
-};
+}
 export const useIsClipsAvailable = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsClipsAvailable() {
       const cResult = c.c(4);

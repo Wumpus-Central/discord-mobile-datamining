@@ -24,7 +24,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             c9 = 1;
           } else {
             c9 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
       } else if (1 === tmp7) {
@@ -158,7 +158,7 @@ const PremiumConstants = fn(1391);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
 
-export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUserProfileChangesInModal() {
+export function notifyUnsavedUserProfileChangesInModal() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(constants.SHAKE_PROFILE_MODAL);
   const ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
@@ -167,8 +167,8 @@ export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUser
   const intl = util.intl;
   const intl2 = util.intl;
   AccessibilityAnnouncer.announce("" + intl.string(util.t.GP7JLE) + " " + intl2.string(util.t.gKoO1D));
-};
-export const saveProfileChanges = function saveProfileChanges() {
+}
+export function saveProfileChanges() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -177,8 +177,8 @@ export const saveProfileChanges = function saveProfileChanges() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClient(items, ttlInSeconds) {
+}
+export function pinUserProfileBadgesOnClient(items, ttlInSeconds) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -188,33 +188,33 @@ export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClien
     const obj2 = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: items, ttlInSeconds, userId: id };
     DispatcherDefault.dispatch(obj2);
   }
-};
-export const resetPendingProfileChanges = function resetPendingProfileChanges() {
+}
+export function resetPendingProfileChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
-};
-export const resetAllPendingChanges = function resetAllPendingChanges() {
+}
+export function resetAllPendingChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
-};
-export const resetAllTryItOutChanges = function resetAllTryItOutChanges() {
+}
+export function resetAllTryItOutChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
-};
-export const setTryItOutAvatar = function setTryItOutAvatar(avatar) {
+}
+export function setTryItOutAvatar(avatar) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar });
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar };
   AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: constants4.ANIMATED_AVATAR,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(avatarDecoration) {
+}
+export function setTryItOutAvatarDecoration(avatarDecoration) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration });
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
   AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: constants4.AVATAR_DECORATION,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutProfileEffect = function setTryItOutProfileEffect(purchasedItem) {
+}
+export function setTryItOutProfileEffect(purchasedItem) {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT",
     profileEffect: purchasedItem,
@@ -224,34 +224,32 @@ export const setTryItOutProfileEffect = function setTryItOutProfileEffect(purcha
     feature_name: constants4.PROFILE_EFFECT,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutBanner = function setTryItOutBanner(banner) {
+}
+export function setTryItOutBanner(banner) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner });
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner };
   AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: constants4.PROFILE_BANNER,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutThemeColors = function setTryItOutThemeColors(themeColors) {
+}
+export function setTryItOutThemeColors(themeColors) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors });
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
   AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: constants4.PROFILE_THEME_COLOR,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyles(displayNameStyles) {
+}
+export function setTryItOutDisplayNameStyles(displayNameStyles) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles });
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
   AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: constants4.DISPLAY_NAME_STYLES,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomTypingIndicatorStyle(
-  customTypingIndicatorStyle,
-) {
+}
+export function setTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE",
     customTypingIndicatorStyle,
@@ -264,8 +262,8 @@ export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomT
     feature_name: constants4.TYPING_INDICATOR,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
-export const setTryItOutPreset = function setTryItOutPreset(arg0) {
+}
+export function setTryItOutPreset(arg0) {
   const merged = Object.assign(arg0);
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" });
   const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
@@ -273,4 +271,4 @@ export const setTryItOutPreset = function setTryItOutPreset(arg0) {
     feature_name: constants4.PRESET,
     feature_tier: constants3.PREMIUM_STANDARD,
   });
-};
+}

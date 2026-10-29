@@ -6,9 +6,9 @@ const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttrib
 export function getActiveIosAttributionFramework() {
   return null;
 }
-export const startImpression = function startImpression() {
+export function startImpression() {
   return Promise.resolve(null);
-};
-export const endImpression = function endImpression() {
+}
+export function endImpression() {
   return Promise.resolve();
-};
+}

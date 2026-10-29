@@ -135,11 +135,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
 
 export default SubscriptionPlanRecord;
-export const getPriceFromServer = function getPriceFromServer(amount, taxInclusive) {
+export function getPriceFromServer(amount, taxInclusive) {
   return { amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive };
-};
-export const isNoneSubscription = function isNoneSubscription(planId) {
+}
+export function isNoneSubscription(planId) {
   const items = [, , ,];
   ({ NONE_MONTH: arr[0], NONE_3_MONTH: arr[1], NONE_6_MONTH: arr[2], NONE_YEAR: arr[3] } = React2);
   return items.includes(planId);
-};
+}

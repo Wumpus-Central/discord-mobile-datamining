@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2535 from "../FamilyCenter.messages.js";
+import _modDef2536 from "../FamilyCenter.messages.js";
 import FamilyCenterConstants from "../FamilyCenterConstants.tsx";
 import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let closure_3 = FamilyCenterConstants.FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const result = size.fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");
 
-export const shareGuardianConnectLink = function shareGuardianConnectLink(stateFromStores, linkCode) {
+export function shareGuardianConnectLink(stateFromStores, linkCode) {
   let username = stateFromStores.globalName;
   if (username == null) {
     username = stateFromStores.username;
@@ -16,6 +16,6 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(stateF
   const tmp = closure_3(stateFromStores.id, linkCode);
   const obj2 = { message: null };
   const intl = util.intl;
-  obj2.message = intl.formatToPlainString(_modDef2535.lVD5Nd, { username, url: tmp });
+  obj2.message = intl.formatToPlainString(_modDef2536.lVD5Nd, { username, url: tmp });
   showShareActionSheet.showShareActionSheet(obj2, "Family Center Connect Guardian");
-};
+}

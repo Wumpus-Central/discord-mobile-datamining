@@ -107,7 +107,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -146,7 +146,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_14 = undefined;
               c20 = 1;
               c21 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
             break;
           case 1:
@@ -213,7 +213,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             ComponentDispatch.dispatch(closure_144_4.EMPHASIZE_NOTICE);
             if (!closure_145_5.throwErr) {
               c21 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               throw closure_145_15;
             }
@@ -667,37 +667,37 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");
 
-export const updateRoleSort = function updateRoleSort(roles) {
+export function updateRoleSort(roles) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_SORT_UPDATE", roles });
-};
-export const init = function init() {
+}
+export function init() {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_INIT" });
-};
-export const discardSectionChanges = function discardSectionChanges(id, effectiveSection) {
+}
+export function discardSectionChanges(id, effectiveSection) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_DISCARD_SECTION_CHANGES", id, section: effectiveSection });
-};
-export const discardConnectionsChanges = function discardConnectionsChanges(id) {
+}
+export function discardConnectionsChanges(id) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES", id });
-};
-export const commitSectionChanges = function commitSectionChanges(id, effectiveSection) {
+}
+export function commitSectionChanges(id, effectiveSection) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_COMMIT_SECTION_CHANGES", id, section: effectiveSection });
-};
-export const updateRolePermissions = function updateRolePermissions(id, flag, allow) {
+}
+export function updateRolePermissions(id, flag, allow) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS", id, flag, allow });
-};
-export const updateRolePermissionSet = function updateRolePermissionSet(id, permissions) {
+}
+export function updateRolePermissionSet(id, permissions) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET", id, permissions });
-};
-export const clearRolePermissions = function clearRolePermissions(id) {
+}
+export function clearRolePermissions(id) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS", id });
-};
-export const updateRoleName = function updateRoleName(id, name) {
+}
+export function updateRoleName(id, name) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_NAME", id, name });
-};
-export const updateRoleDescription = function updateRoleDescription(id, description) {
+}
+export function updateRoleDescription(id, description) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION", id, description });
-};
-export const updateRoleColor = function updateRoleColor(color, arg1) {
+}
+export function updateRoleColor(color, arg1) {
   let tmp = color.color === arg1;
   if (!tmp) {
     let tmp3 = arg1 === hasOwnProperty;
@@ -715,30 +715,27 @@ export const updateRoleColor = function updateRoleColor(color, arg1) {
     obj2.color = num2;
     DispatcherDefault.dispatch(obj2);
   }
-};
-export const updateRoleColors = function updateRoleColors(id, colors, GRADIENT) {
+}
+export function updateRoleColors(id, colors, GRADIENT) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_COLORS", id, colors, currentStyle: GRADIENT });
-};
-export const updateRoleStyles = function updateRoleStyles(id, currentStyle) {
+}
+export function updateRoleStyles(id, currentStyle) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE", id, currentStyle });
-};
-export const toggleRoleSettings = function toggleRoleSettings(id, hoist, mentionable) {
+}
+export function toggleRoleSettings(id, hoist, mentionable) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS", id, hoist, mentionable });
-};
-export const updateRoleIcon = function updateRoleIcon(roleId, icon, unicodeEmoji) {
+}
+export function updateRoleIcon(roleId, icon, unicodeEmoji) {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id: roleId, icon, unicodeEmoji });
-};
-export const updateRoleConnectionConfigurations = function updateRoleConnectionConfigurations(
-  id,
-  roleConnectionConfigurations,
-) {
+}
+export function updateRoleConnectionConfigurations(id, roleConnectionConfigurations) {
   DispatcherDefault.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
     roleId: id,
     roleConnectionConfigurations,
   });
-};
-export const saveRoleSettings = function saveRoleSettings() {
+}
+export function saveRoleSettings() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -747,4 +744,4 @@ export const saveRoleSettings = function saveRoleSettings() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

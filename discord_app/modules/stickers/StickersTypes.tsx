@@ -9,12 +9,12 @@ const result = size.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 export const StickerFormat = shared.StickerFormat;
 export const MetaStickerType = shared.MetaStickerType;
 export const StickerExtensions = { PNG: "png", APNG: "png", LOTTIE: "json", WEBP: "webp", GIF: "gif" };
-export const isAnimatedSticker = function isAnimatedSticker(arg0) {
+export function isAnimatedSticker(arg0) {
   return arg0 !== shared.StickerFormat.PNG;
-};
-export const isCustomSticker = function isCustomSticker(arg0) {
+}
+export function isCustomSticker(arg0) {
   return arg0 !== shared.MetaStickerType.STANDARD;
-};
+}
 export const StickerGridItemTypes = { STICKER: 0, [0]: "STICKER", CREATE_STICKER: 1, [1]: "CREATE_STICKER" };
 export const StickerCategoryTypes = {
   PACK: "PACK",

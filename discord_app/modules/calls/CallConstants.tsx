@@ -35,7 +35,7 @@ export const CallMenuEntrypoint = {
   CARET: "Caret",
   OTHER_BUTTON: "Other Button",
 };
-export const isStreamParticipant = function isStreamParticipant(stateFromStores) {
+export function isStreamParticipant(stateFromStores) {
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
@@ -49,21 +49,21 @@ export const isStreamParticipant = function isStreamParticipant(stateFromStores)
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }
   return tmp3;
-};
-export const isUserParticipant = function isUserParticipant(type) {
+}
+export function isUserParticipant(type) {
   type = undefined;
   if (type != null) {
     type = type.type;
   }
   return type === obj.USER;
-};
-export const isActivityParticipant = function isActivityParticipant(participant) {
+}
+export function isActivityParticipant(participant) {
   let type;
   if (participant != null) {
     type = participant.type;
   }
   return type === obj.ACTIVITY;
-};
+}
 export const PictureInPictureTypes = obj2;
 export const DEFAULT_PIP_WIDTH = { [obj2.VIDEO]: 320, [obj2.CAMERA_PREVIEW]: 160 };
 export const MAX_PIP_WIDTH = { [obj2.VIDEO]: 960, [obj2.CAMERA_PREVIEW]: 480 };

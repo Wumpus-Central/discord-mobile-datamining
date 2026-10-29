@@ -16,11 +16,11 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(10939).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(10942).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(10974).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(10977).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1095).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,
@@ -528,10 +528,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
 
 export default tmp2;
-export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight() {
+export function getFloatingCTATotalViewHeight() {
   return MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
-};
-export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(key, arg1, state, cleanUp) {
+}
+export function renderVoicePanelFloatingCTA(key, arg1, state, cleanUp) {
   const obj = { theme: ThemeTypes.DARK, children: null };
   const obj2 = {};
   const merged = Object.assign(arg1);
@@ -539,4 +539,4 @@ export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(
   obj2.cleanUp = cleanUp;
   obj.children = <closure_16 />;
   return jsx(native.ThemeContextProvider, { theme: ThemeTypes.DARK, children: null }, key);
-};
+}

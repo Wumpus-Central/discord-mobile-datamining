@@ -19,11 +19,11 @@ const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16833).GuildRoleSubscriptionsTierScenes;
+const constants = fn(17071).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1084).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   memberPreviews: { paddingHorizontal: 16, paddingTop: 26 },
   member: {
@@ -252,7 +252,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[10] !== tmp8) {
         class M {
           constructor(arg0) {
-            obj = { icon: arg0.uri, unicodeEmoji: "Array" };
+            obj = { icon: arg0.uri, unicodeEmoji: "a" };
             return closure_0(obj);
           }
         }
@@ -261,7 +261,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class M {
           constructor(arg0) {
-            obj = { icon: arg0.uri, unicodeEmoji: "Array" };
+            obj = { icon: arg0.uri, unicodeEmoji: "a" };
             return closure_0(obj);
           }
         }
@@ -269,7 +269,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[12] === tmp12) {
         class M {
           constructor(arg0) {
-            obj = { icon: arg0.uri, unicodeEmoji: "Array" };
+            obj = { icon: arg0.uri, unicodeEmoji: "a" };
             return closure_0(obj);
           }
         }
@@ -295,7 +295,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp29 = React6(FormImagePickerDefault, obj9);
     }
   : function Content() {
-      const tmp3 = role(15406)();
+      const tmp3 = role(15640)();
       const editStateContext = require("EditStateContextProvider").useEditStateContext();
       ({ editStateId, guildId } = editStateContext);
       const obj = require("EditStateContextProvider");
@@ -324,7 +324,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
       const intl = tmp4(1125).intl;
       obj7.children = intl.string(require("util").t.sEr1zr);
-      items1[1] = closure_9(role(9077), obj7);
+      items1[1] = closure_9(role(9080), obj7);
       const obj8 = {
         description: null,
         image: null,
@@ -334,23 +334,23 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         setImage: null,
         disabled: null,
       };
-      const tmpResult = role(9077);
+      const tmpResult = role(9080);
       const intl2 = tmp4(1125).intl;
       obj8.description = intl2.string(require("util").t.Glqj9m);
       obj8.image = tmp10;
       obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
       obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
       obj8.setImage = function setImage(icon) {
-        return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+        return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
       };
       obj8.disabled = roleSubscriptionSettingsDisabled;
-      items1[2] = closure_9(role(19590), obj8);
+      items1[2] = closure_9(role(19823), obj8);
       const obj9 = { style: tmp3.header, children: null };
-      const tmpResult3 = role(19590);
+      const tmpResult3 = role(19823);
       const intl3 = tmp4(1125).intl;
       obj9.children = intl3.string(require("util").t["W7hH+z"]);
-      items1[3] = closure_9(role(9077), obj9);
-      items1[4] = closure_9(role(19624), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+      items1[3] = closure_9(role(9080), obj9);
+      items1[4] = closure_9(role(19858), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
       obj6.children = items1;
       return closure_10(closure_11, obj6);
     };

@@ -6,7 +6,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 
-export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
+export function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
   const obj2 = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
@@ -19,14 +19,14 @@ export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_MODAL_V
   obj2.warning_type = warningType;
   obj2.other_user_id = senderId;
   AnalyticsUtilsDefault.track(SAFETY_WARNING_MODAL_VIEWED, obj2);
-};
+}
 export const ViewNameTypes = {
   SAFETY_WARNING_BANNER: "safety_warning_banner",
   SAFETY_TAKEOVER_MODAL: "safety_takeover_modal",
   SAFETY_TOOLS_NUDGE_TOOLTIP: "safety_tools_nudge_tooltip",
   SAFETY_TOOLS_BUTTON: "safety_tools_button",
 };
-export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
+export function trackNamedViewEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, viewName, isNudgeWarning } = warningId);
   const obj2 = {
@@ -48,7 +48,7 @@ export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
   obj2.view_name = viewName;
   obj2.is_nudge_warning = isNudgeWarning;
   AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_WARNING_VIEWED, obj2);
-};
+}
 export const CtaEventTypes = {
   OPEN_MORE_TIPS: "open_more_tips",
   USER_BANNER_DISMISS: "user_banner_dismiss",
@@ -97,7 +97,7 @@ export const CtaEventTypes = {
   FEEDBACK_UPVOTE: "feedback_upvote",
   FEEDBACK_DOWNVOTE: "feedback_downvote",
 };
-export const trackCtaEvent = function trackCtaEvent(warningId) {
+export function trackCtaEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, cta, isNudgeWarning } = warningId);
   const obj2 = {
@@ -119,12 +119,12 @@ export const trackCtaEvent = function trackCtaEvent(warningId) {
   obj2.cta = cta;
   obj2.is_nudge_warning = isNudgeWarning;
   AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, obj2);
-};
-export const getUserIsTeen = function getUserIsTeen() {
+}
+export function getUserIsTeen() {
   const currentUser = UserStore.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
     nsfwAllowed = currentUser.nsfwAllowed;
   }
   return false === nsfwAllowed;
-};
+}

@@ -14,7 +14,7 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -74,7 +74,7 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c2 = tmp;
@@ -126,7 +126,7 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -159,7 +159,7 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -208,7 +208,7 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -242,7 +242,7 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -276,7 +276,7 @@ const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx",
 );
 
-export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest() {
+export function createCreatorMonetizationEnableRequest() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -285,8 +285,8 @@ export const createCreatorMonetizationEnableRequest = function createCreatorMone
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getCreatorMonetizationEligibility = function getCreatorMonetizationEligibility() {
+}
+export function getCreatorMonetizationEligibility() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -295,8 +295,8 @@ export const getCreatorMonetizationEligibility = function getCreatorMonetization
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms() {
+}
+export function acceptCreatorMonetizationTerms() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -305,8 +305,8 @@ export const acceptCreatorMonetizationTerms = function acceptCreatorMonetization
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2() {
+}
+export function acceptCreatorMonetizationTermsV2() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -315,8 +315,8 @@ export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizati
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getCreatorMonetizationOnboardingMarketing = function getCreatorMonetizationOnboardingMarketing() {
+}
+export function getCreatorMonetizationOnboardingMarketing() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -325,8 +325,8 @@ export const getCreatorMonetizationOnboardingMarketing = function getCreatorMone
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const ownershipTransferOnboard = function ownershipTransferOnboard() {
+}
+export function ownershipTransferOnboard() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -335,24 +335,24 @@ export const ownershipTransferOnboard = function ownershipTransferOnboard() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const acceptNewTerms = function acceptNewTerms(arg0) {
+}
+export function acceptNewTerms(arg0) {
   const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0),
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.post(obj);
-};
-export const acceptNewTermsDemonetized = function acceptNewTermsDemonetized(arg0) {
+}
+export function acceptNewTermsDemonetized(arg0) {
   const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0),
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.post(obj);
-};
-export const removeMonetization = function removeMonetization() {
+}
+export function removeMonetization() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -361,4 +361,4 @@ export const removeMonetization = function removeMonetization() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

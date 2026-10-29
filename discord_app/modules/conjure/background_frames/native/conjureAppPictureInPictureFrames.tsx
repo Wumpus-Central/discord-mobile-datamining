@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureFrames.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import closeFrameDefault from "../../../frames/closeFrame.tsx";
@@ -83,12 +83,12 @@ function closeToMakeRoom(frameId) {
     const obj = { text: null };
     const intl = util.intl;
     const obj2 = { appName: tmp3 };
-    obj.text = intl.formatToPlainString(_modDef3863.jmMirO, obj2);
+    obj.text = intl.formatToPlainString(_modDef3864.jmMirO, obj2);
     ToastActionCreatorsDefault.open("CONJURE_APP_PIP_CLOSED_TO_MAKE_ROOM", obj);
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const items = [FramesStore, UnsyncedUserSettingsStore, ConjureProjectStore];
 let ReactCompilerGating = fn(558);
@@ -99,11 +99,11 @@ const result1 = size.fileFinishedImporting(
 );
 
 export const FLOATING_APP_STORES = items;
-export const getFloatableFrames = function getFloatableFrames() {
+export function getFloatableFrames() {
   const allFrames = FramesStore.getAllFrames();
   return allFrames.filter(canFloat);
-};
-export const getStrandedFloatingFrames = function getStrandedFloatingFrames() {
+}
+export function getStrandedFloatingFrames() {
   const allFrames = FramesStore.getAllFrames();
   return allFrames.filter((id) => {
     let tmp3 = isConjureAppChannelFrameDefault(id);
@@ -135,13 +135,13 @@ export const getStrandedFloatingFrames = function getStrandedFloatingFrames() {
     }
     return tmp3;
   });
-};
+}
 export { isConjureAppPictureInPictureFrame };
 export { getConjureAppPictureInPictureFrameIds };
-export const useConjureAppPictureInPictureFrameIds = function useConjureAppPictureInPictureFrameIds() {
+export function useConjureAppPictureInPictureFrameIds() {
   return initialize.useStateFromStoresArray(items, getConjureAppPictureInPictureFrameIds);
-};
-export const enterConjureAppPictureInPicture = function enterConjureAppPictureInPicture(id) {
+}
+export function enterConjureAppPictureInPicture(id) {
   const frame = FramesStore.getFrame(id);
   if (null != frame) {
     let tmp3 = isConjureAppChannelFrameDefault(frame);
@@ -196,8 +196,8 @@ export const enterConjureAppPictureInPicture = function enterConjureAppPictureIn
       }
     }
   }
-};
-export const exitConjureAppPictureInPicture = function exitConjureAppPictureInPicture(id) {
+}
+export function exitConjureAppPictureInPicture(id) {
   const tmp = timestampProducer(FramesStore.getFrame(id));
   let layoutMode;
   if (tmp != null) {
@@ -207,4 +207,4 @@ export const exitConjureAppPictureInPicture = function exitConjureAppPictureInPi
     const obj2 = { frameId: id, layoutMode: tmp3.FOCUSED };
     const result = FramesActionCreatorsDefault.updateFrameLayoutMode(obj2);
   }
-};
+}

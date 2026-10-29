@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/clarification/native/ConjureClarificationEntityPicker.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -9,8 +9,8 @@ import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
 import ConjureGuildPickerSheetDefault from "../../guild_pickers/native/ConjureGuildPickerSheet.tsx";
 import useConjureProjectPickerOptionsDefault from "../useConjureProjectPickerOptions.tsx";
-import ConjureClarification from "../ConjureClarification.tsx";
 import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet.tsx";
+import ConjureClarification from "../ConjureClarification.tsx";
 import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../../stores/GuildChannelStore.tsx";
@@ -575,7 +575,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                           let obj = { content: null, key: null, stackingBehavior: "stack" };
                                           obj4.selectedChannel = found;
                                           const intl = util.intl;
-                                          obj4.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
+                                          obj4.noChannelOptionLabel = intl.string(_modDef3864["jtBVV+"]);
                                           obj4.onSelect = function onSelect(id) {
                                             if (null == id) {
                                               let items = [];
@@ -808,7 +808,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 let obj = { content: null, key: null, stackingBehavior: "stack" };
                                 obj4.selectedChannel = found;
                                 const intl = util.intl;
-                                obj4.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
+                                obj4.noChannelOptionLabel = intl.string(_modDef3864["jtBVV+"]);
                                 obj4.onSelect = function onSelect(id) {
                                   if (null == id) {
                                     let items = [];

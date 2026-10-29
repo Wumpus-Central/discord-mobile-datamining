@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   screen: {
     flex: 1,
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       numActions = numActions.numActions;
       const tmp4 = closure_7();
       let obj = sharedValue(576);
-      sharedValue = sharedValue(5085).useSharedValue(numActions.initialPercent);
+      sharedValue = sharedValue(5086).useSharedValue(numActions.initialPercent);
       if (cResult[0] !== sharedValue) {
         const fn = function h() {
           const result = sharedValue.set(1);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = noop.useEffect(tmp6, tmp7);
-      let obj2 = sharedValue(5085);
+      let obj2 = sharedValue(5086);
       class T {
         constructor() {
           obj = { width: null };
@@ -86,10 +86,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      const tmpResult = sharedValue(5085);
+      const tmpResult = sharedValue(5086);
       T.__closure = {
-        withDelay: sharedValue(5085).withDelay,
-        withTiming: sharedValue(5242).withTiming,
+        withDelay: sharedValue(5086).withDelay,
+        withTiming: sharedValue(5243).withTiming,
         barWidth: sharedValue,
       };
       T.__workletHash = 7643178959760;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class E {
             constructor() {
               timerId = setTimeout(
-                () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+                () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
                 2500,
               );
               return;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class E {
               constructor() {
                 timerId = setTimeout(
-                  () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+                  () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
                   2500,
                 );
                 return;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class E {
                 constructor() {
                   timerId = setTimeout(
-                    () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+                    () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
                     2500,
                   );
                   return;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = tmp4.progressForeground;
         cResult[12] = tmp20;
       }
-      const tmp16 = closure_5(sharedValue(5270).Text, {
+      const tmp16 = closure_5(sharedValue(5271).Text, {
         style: text,
         variant: "heading-xl/semibold",
         color: "text-overlay-light",
@@ -230,8 +230,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp13;
       cResult[9] = tmp16;
       const obj4 = {
-        withDelay: sharedValue(5085).withDelay,
-        withTiming: sharedValue(5242).withTiming,
+        withDelay: sharedValue(5086).withDelay,
+        withTiming: sharedValue(5243).withTiming,
         barWidth: sharedValue,
       };
     }
@@ -239,22 +239,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       ({ initialPercent, numActions } = arg0);
       const tmp = closure_7();
-      sharedValue = sharedValue(5085).useSharedValue(initialPercent);
+      sharedValue = sharedValue(5086).useSharedValue(initialPercent);
       const items = [sharedValue];
       const effect = noop.useEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj = sharedValue(5085);
+      let obj = sharedValue(5086);
       const fn = function y() {
         const obj = { width: null };
         const obj2 = ReanimatedRexport;
         obj.width = obj2.withDelay(500, timing.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
         return obj;
       };
-      let obj2 = sharedValue(5085);
+      let obj2 = sharedValue(5086);
       fn.__closure = {
-        withDelay: sharedValue(5085).withDelay,
-        withTiming: sharedValue(5242).withTiming,
+        withDelay: sharedValue(5086).withDelay,
+        withTiming: sharedValue(5243).withTiming,
         barWidth: sharedValue,
       };
       fn.__workletHash = 8771000018451;
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const effect1 = noop.useEffect(() => {
         const timerId = setTimeout(
-          () => closure_1_1(6707).popWithKey(sharedValue(13403).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+          () => closure_1_1(6731).popWithKey(sharedValue(13636).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
           2500,
         );
       }, []);
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
       const intl = sharedValue(1125).intl;
       obj5.children = intl.format(sharedValue(1125).t.pGj5u2, { count: numActions });
-      const items1 = [closure_5(sharedValue(5270).Text, obj5)];
+      const items1 = [closure_5(sharedValue(5271).Text, obj5)];
       const obj6 = { style: tmp.progressBackground, children: null };
       const obj7 = { style: null };
       const items2 = [tmp.progressForeground, animatedStyle];

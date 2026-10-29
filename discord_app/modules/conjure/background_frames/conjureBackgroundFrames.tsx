@@ -96,7 +96,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
     };
 export { closeBackgroundedConjureAppFrames };
-export const returnToConjureFrameSurface = function returnToConjureFrameSurface(frame) {
+export function returnToConjureFrameSurface(frame) {
   if (frame.intent === constants.INLINE) {
     if (!obj3.isConjurePreviewSurface(frame.surface)) {
       if (tmp6Result.isConjureApplication(frame.applicationId)) {
@@ -235,4 +235,4 @@ export const returnToConjureFrameSurface = function returnToConjureFrameSurface(
     obj3 = conjurePreviewSurface;
   }
   return false;
-};
+}

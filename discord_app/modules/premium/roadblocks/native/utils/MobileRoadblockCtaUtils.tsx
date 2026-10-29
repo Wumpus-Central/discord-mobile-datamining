@@ -9,7 +9,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 const PremiumSubscriptionSKUs = PremiumConstants.PremiumSubscriptionSKUs;
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/MobileRoadblockCtaUtils.tsx");
 
-export const formatMobileRoadblockOfferText = function formatMobileRoadblockOfferText(arg0) {
+export function formatMobileRoadblockOfferText(arg0) {
   ({ subscriptionTier, trialOffer, discountOffer } = arg0);
   if (subscriptionTier !== PremiumSubscriptionSKUs.TIER_2) {
     return null;
@@ -38,8 +38,8 @@ export const formatMobileRoadblockOfferText = function formatMobileRoadblockOffe
     }
     return result;
   }
-};
-export const getMobileRoadblockButtonText = function getMobileRoadblockButtonText(arg0) {
+}
+export function getMobileRoadblockButtonText(arg0) {
   ({ subscriptionTier, trialOffer, discountOffer } = arg0);
   let isReferralTrial;
   if (trialOffer != null) {
@@ -87,4 +87,4 @@ export const getMobileRoadblockButtonText = function getMobileRoadblockButtonTex
     }
     return tmp8;
   }
-};
+}

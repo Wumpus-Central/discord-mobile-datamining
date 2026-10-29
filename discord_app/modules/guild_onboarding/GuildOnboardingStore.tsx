@@ -87,7 +87,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboard
 
 export default guildOnboardingStore;
 export { GuildOnboardingStatus };
-export const isOnboarding = function isOnboarding(arg0) {
+export function isOnboarding(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
     const items = [,];
@@ -95,4 +95,4 @@ export const isOnboarding = function isOnboarding(arg0) {
     hasItem = items.includes(arg0);
   }
   return hasItem;
-};
+}

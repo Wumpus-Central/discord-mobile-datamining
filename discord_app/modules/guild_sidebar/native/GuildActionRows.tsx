@@ -1,6 +1,6 @@
 // discord_app/modules/guild_sidebar/native/GuildActionRows.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ChannelListState from "../ChannelListState.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,13 +9,13 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(7228).CHANNELS_AND_ROLES_MODAL_KEY;
-const ReadStateTypes = fn(6740).ReadStateTypes;
+let closure_7 = fn(7252).CHANNELS_AND_ROLES_MODAL_KEY;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
-    marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -25,17 +25,17 @@ let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildActionRows.tsx");
 
-export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild) {
+export function GuildRolesAndChannelsRow(guild) {
   guild = guild.guild;
   const selected = guild.selected;
   let id;
   const tmp = closure_10();
-  const tmp4 = id(7477)(guild);
+  const tmp4 = id(7500)(guild);
   id = guild.id;
-  const result = guild(5034).useIsDismissibleContentDismissed_UNSAFE(
-    guild(4840).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
+  const result = guild(5035).useIsDismissibleContentDismissed_UNSAFE(
+    guild(4841).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
   );
-  const obj = guild(5034);
+  const obj = guild(5035);
   const tmp2 = id;
   const items = [ReadStateStore];
   const stateFromStores = guild(573).useStateFromStores(items, () =>
@@ -49,11 +49,11 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
     () => NewChannelsStore.getNewChannelIds(guild.id).size > ChannelListState.MAX_NEW_CHANNELS_TO_SHOW,
   );
   const callback = noop.useCallback(() => {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11283, dependencyMap.paths), { guildId: id }, closure_7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11337, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(13507).ChannelModes.DEFAULT;
+  let SELECTED = guild(13740).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(13507).ChannelModes.SELECTED;
+    SELECTED = tmp5(13740).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13409).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13409).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13642).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13642).NewBadge, {})}</View>;
   }
   const obj5 = {
     onPress: callback,
@@ -98,11 +98,11 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(13507).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(13507);
-  obj5.icon = jsx(guild(13507).BaseChannelIcon, {
+  obj5.name = jsx(guild(13740).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(13740);
+  obj5.icon = jsx(guild(13740).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(15345).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(15580).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (
@@ -118,4 +118,4 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
       channelInfo={null}
     />
   );
-};
+}

@@ -15,7 +15,7 @@ let closure_7 = async function _setEnabled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_7 = async function _setEnabled(arg0) {
           closure_129_1.enabled = closure_129_0;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -69,7 +69,7 @@ let closure_8 = async function _setLearnedWords(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -104,7 +104,7 @@ let closure_8 = async function _setLearnedWords(arg0) {
           closure_129_1.setLearnedWords(closure_129_0);
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp14) {
       c3 = tmp;
@@ -112,81 +112,22 @@ let closure_8 = async function _setLearnedWords(arg0) {
     }
   }
 };
-let closure_9 = async function _isMisspelled(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
-          }
-          closure_130_1 = flag;
-          closure_130_2 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 2;
-          c5 = 1;
-          const obj5 = { value: closure_131_5, done: false };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        closure_130_2 = value;
-        let isMisspelledResult = null != closure_130_2;
-        if (isMisspelledResult) {
-          isMisspelledResult = closure_130_2.isMisspelled(closure_130_0, closure_130_1);
-        }
-        c5 = 3;
-        const obj = { value: isMisspelledResult, done: true };
-        return obj;
-      }
-    } catch (tmp16) {
-      c5 = tmp;
-      throw tmp16;
-    }
+let closure_9 = async function _isMisspelled() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = false;
   }
+  closure_130_1 = flag;
+  await "Reflect";
+  await closure_131_5;
+  closure_130_2 = value;
+  let isMisspelledResult = null != closure_130_2;
+  if (isMisspelledResult) {
+    isMisspelledResult = closure_130_2.isMisspelled(closure_130_0, closure_130_1);
+  }
+  return isMisspelledResult;
 };
 let closure_10 = async function _getCorrections(arg0) {
   if (c6 === 2) {
@@ -199,7 +140,7 @@ let closure_10 = async function _getCorrections(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -231,7 +172,7 @@ let closure_10 = async function _getCorrections(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -271,87 +212,23 @@ let closure_10 = async function _getCorrections(arg0) {
   }
 };
 let closure_11 = async function _getCachedMisspelling() {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          let num11 = closure_0;
-          if (closure_0 === undefined) {
-            num11 = 5;
-          }
-          closure_129_0 = num11;
-          closure_129_1 = undefined;
-          let cachedMisspelling;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c3 = 2;
-          c4 = 1;
-          const obj5 = { value: closure_130_5, done: false };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        closure_129_1 = value;
-        if (null == closure_129_1) {
-          const obj7 = { misspelledWord: "", corrections: [] };
-          c4 = 3;
-          const obj8 = { value: obj7, done: true };
-          return obj8;
-        } else {
-          cachedMisspelling = closure_129_1.getCachedMisspelling();
-          const obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
-          const corrections = cachedMisspelling.corrections;
-          obj.corrections = corrections.slice(0, closure_129_0);
-          c4 = 3;
-          const obj9 = { value: obj, done: true };
-          return obj9;
-        }
-      }
-    } catch (tmp12) {
-      c4 = tmp;
-      throw tmp12;
-    }
+  closure_1 = tmp2;
+  let num11 = closure_0;
+  if (closure_0 === undefined) {
+    num11 = 5;
   }
+  closure_129_0 = num11;
+  await "Reflect";
+  await closure_130_5;
+  closure_129_1 = value;
+  if (null == closure_129_1) {
+    return { misspelledWord: "", corrections: [] };
+  }
+  const cachedMisspelling = closure_129_1.getCachedMisspelling();
+  const obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
+  const corrections = cachedMisspelling.corrections;
+  obj.corrections = corrections.slice(0, closure_129_0);
+  return obj;
 };
 let closure_12 = async function _replaceWithCorrection(arg0) {
   if (c3 === 2) {
@@ -364,7 +241,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -399,7 +276,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
           closure_129_1.replaceMisspelling(closure_129_0);
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp14) {
       c3 = tmp;
@@ -407,7 +284,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(6895).addPostConnectionCallback;
+fn(6919).addPostConnectionCallback;
 let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
@@ -448,7 +325,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/SpellcheckUtils.tsx");
 
 export { isSupported };
-export const setEnabled = function setEnabled() {
+export function setEnabled() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -457,8 +334,8 @@ export const setEnabled = function setEnabled() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setLearnedWords = function setLearnedWords() {
+}
+export function setLearnedWords() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -467,8 +344,8 @@ export const setLearnedWords = function setLearnedWords() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const isMisspelled = function isMisspelled() {
+}
+export function isMisspelled() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -477,8 +354,8 @@ export const isMisspelled = function isMisspelled() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getCorrections = function getCorrections() {
+}
+export function getCorrections() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -487,8 +364,8 @@ export const getCorrections = function getCorrections() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getCachedMisspelling = function getCachedMisspelling() {
+}
+export function getCachedMisspelling() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -497,8 +374,8 @@ export const getCachedMisspelling = function getCachedMisspelling() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const replaceWithCorrection = function replaceWithCorrection() {
+}
+export function replaceWithCorrection() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -507,13 +384,13 @@ export const replaceWithCorrection = function replaceWithCorrection() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setAppLocale = function setAppLocale(arg0) {
+}
+export function setAppLocale(arg0) {
   if (null != global) {
     global.setAppLocale(arg0);
   }
-};
-export const addResultListener = function addResultListener(arg0) {
+}
+export function addResultListener(arg0) {
   const tmp3 = DiscordNativeDefault;
   let spellCheck1;
   if (tmp3 != null) {
@@ -530,4 +407,4 @@ export const addResultListener = function addResultListener(arg0) {
     fn = () => {};
   }
   return fn;
-};
+}

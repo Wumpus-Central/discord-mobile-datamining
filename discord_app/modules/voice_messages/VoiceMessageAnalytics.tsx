@@ -13,12 +13,7 @@ export const VoiceMessageRecordingResult = {
   CANCELLED_GESTURE_CONFLICT: "cancelled_gesture_conflict",
   CANCELLED_ON_BACKGROUND: "cancelled_on_background",
 };
-export const logVoiceMessagePlaybackStarted = function logVoiceMessagePlaybackStarted(
-  messageId,
-  totalDurationSecs,
-  startDurationSecs,
-  id,
-) {
+export function logVoiceMessagePlaybackStarted(messageId, totalDurationSecs, startDurationSecs, id) {
   let tmp = totalDurationSecs;
   const obj2 = {
     message_id: messageId,
@@ -32,14 +27,8 @@ export const logVoiceMessagePlaybackStarted = function logVoiceMessagePlaybackSt
   obj2.start_duration_secs = Math.min(tmp, startDurationSecs);
   obj2.sender_user_id = id;
   AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, obj2);
-};
-export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnded(
-  messageId,
-  totalDurationSecs,
-  endDurationSecs,
-  id,
-  durationListeningSecs,
-) {
+}
+export function logVoiceMessagePlaybackEnded(messageId, totalDurationSecs, endDurationSecs, id, durationListeningSecs) {
   let tmp = totalDurationSecs;
   const obj2 = {
     message_id: messageId,
@@ -55,10 +44,10 @@ export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnde
   obj2.sender_user_id = id;
   obj2.duration_listening_secs = durationListeningSecs;
   AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, obj2);
-};
-export const logVoiceMessagePlaybackFailed = function logVoiceMessagePlaybackFailed(messageId, errorMessage) {
+}
+export function logVoiceMessagePlaybackFailed(messageId, errorMessage) {
   AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
     message_id: messageId,
     error_message: errorMessage,
   });
-};
+}

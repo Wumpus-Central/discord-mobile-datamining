@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/games/GamePlatformBadges.tsx"
 
 export const GAME_PLATFORM_AVAILABILITY_ORDER = GamePlatformAvailabilityUtils.GAME_PLATFORM_AVAILABILITY_ORDER;
 export const sortGamePlatformAvailability = GamePlatformAvailabilityUtils.getOrderedGamePlatforms;
-export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabilityLabel(item) {
+export function getGamePlatformAvailabilityLabel(item) {
   if (GamePlatformAvailability.GamePlatformAvailability.DESKTOP === item) {
     const intl4 = util.intl;
     return intl4.string(util.t.KT6uCJ);
@@ -22,4 +22,4 @@ export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabi
     const intl = util.intl;
     return intl.string(util.t.MPURhG);
   }
-};
+}

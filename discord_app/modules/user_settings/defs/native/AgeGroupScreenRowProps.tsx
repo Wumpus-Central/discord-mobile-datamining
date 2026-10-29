@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3091 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3092 from "../../../age_assurance/AgeAssurance.messages.js";
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
@@ -35,11 +35,11 @@ const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/Ag
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3091.SH6Tcv);
+    return intl.string(_modDef3092.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3091.rJiO86);
+    return intl.string(_modDef3092.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;
@@ -49,9 +49,9 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   },
   withArrow: true,
 };
-export const useShowAssignedAdultAgeGroupRow = function useShowAssignedAdultAgeGroupRow() {
+export function useShowAssignedAdultAgeGroupRow() {
   return closure_3(false);
-};
-export const useShowAccountStatusAgeGroupRow = function useShowAccountStatusAgeGroupRow() {
+}
+export function useShowAccountStatusAgeGroupRow() {
   return closure_3(true);
-};
+}

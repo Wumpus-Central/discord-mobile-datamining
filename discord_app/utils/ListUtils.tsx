@@ -4,7 +4,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/ListUtils.tsx");
 
-export const getListSummaryLabel = function getListSummaryLabel(names, length) {
+export function getListSummaryLabel(names, length) {
   let first = names;
   if (length == null) {
     length = first.length;
@@ -34,4 +34,4 @@ export const getListSummaryLabel = function getListSummaryLabel(names, length) {
     obj.count = length - 3;
     formatToPlainStringResult = intl.formatToPlainString(util.t.xpU76u, obj);
   }
-};
+}

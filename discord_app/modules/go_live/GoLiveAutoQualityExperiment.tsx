@@ -6,7 +6,7 @@ import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreaming
 import ApexExperiment from "../experiments/apex/ApexExperiment.tsx";
 
 require = fn;
-const ApplicationStreamPresets = fn(5850).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5852).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -60,7 +60,7 @@ export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactC
       const items = [ApexExperimentStore];
       return location(504).useStateFromStores(items, () => config.getConfig({ location }));
     };
-export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
+export function maybeMigrateToAutoQuality() {
   const Storage = Storage3.Storage;
   let num = Storage.get(GoLiveAutoQualityMigrationVersion);
   if (num == null) {
@@ -85,4 +85,4 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
       }
     }
   }
-};
+}

@@ -45,10 +45,10 @@ export default function getGameMediaRefURL(id, value, size) {
     return null;
   }
 }
-export const hasGameMediaRef = function hasGameMediaRef(cover) {
+export function hasGameMediaRef(cover) {
   let tmp = null != cover;
   if (tmp) {
     tmp = !StringUtils.isNullOrEmpty(cover.value);
   }
   return tmp;
-};
+}

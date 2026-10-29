@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const Image = _mod17.Image;
 const result = size.fileFinishedImporting("modules/image/ImagePreload.native.tsx");
 
-export const preloadImage = function preloadImage(avatarURL, arg1) {
+export function preloadImage(avatarURL, arg1) {
   closure_0 = avatarURL;
   closure_1 = arg1;
   const prefetchResult = Image.prefetch(avatarURL);
@@ -18,4 +18,4 @@ export const preloadImage = function preloadImage(avatarURL, arg1) {
       return tmpResult;
     })
     .catch(() => {});
-};
+}

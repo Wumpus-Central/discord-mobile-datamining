@@ -622,6 +622,6 @@ export const ModeratorReport = function ModeratorReport(arg0) {
   return Object.create(new.target.prototype);
 }.prototype;
 export const MessageSnapshotRecord = prototype2;
-export const isMessageComponentsV2 = function isMessageComponentsV2(contentMessage) {
+export function isMessageComponentsV2(contentMessage) {
   return FlagUtils.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
-};
+}

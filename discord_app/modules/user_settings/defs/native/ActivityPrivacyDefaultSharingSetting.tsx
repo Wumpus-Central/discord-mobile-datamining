@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
@@ -12,7 +12,7 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOptions() {
       const cResult = c.c(3);
@@ -99,7 +99,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8365).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8387).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
     ? function useOptions() {
         const cResult = c.c(3);
@@ -199,7 +199,7 @@ const radio = SettingBuilders.createRadio({
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17586, dependencyMap.paths),
+        asyncRequireImpl(17824, dependencyMap.paths),
         "ActivityPrivacyUpsellActionSheet",
         obj2,
       );

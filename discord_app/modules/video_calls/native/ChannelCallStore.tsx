@@ -12,11 +12,11 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10922);
+const ChannelCallConstants = fn(10957);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const OrientationLockState = fn(2023).OrientationLockState;
-const ParticipantTypes = fn(5668).ParticipantTypes;
-const timeout = new fn(4851).Timeout();
+const OrientationLockState = fn(2024).OrientationLockState;
+const ParticipantTypes = fn(5670).ParticipantTypes;
+const timeout = new fn(4852).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -30,7 +30,7 @@ let size = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8857).OrientationType.PORTRAIT,
+  screenOrientation: fn(8860).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -41,7 +41,7 @@ const size1 = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8857).OrientationType.PORTRAIT,
+  screenOrientation: fn(8860).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -81,16 +81,16 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallStore.tsx");
 
 export const focusTimeout = timeout;
-export const setFocus = function setFocus(focus) {
+export function setFocus(focus) {
   _require = focus;
   require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ focus }));
-};
-export const toggleFocus = function toggleFocus() {
+}
+export function toggleFocus() {
   const focus = obj3.getState().focus;
   focus(1271).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
-};
+}
 export { resetFocusTimer };
-export const resetFocus = function resetFocus() {
+export function resetFocus() {
   if (obj3.getState().focus) {
     timeout.stop();
     timeout.start(5000, () => {
@@ -99,11 +99,11 @@ export const resetFocus = function resetFocus() {
   } else {
     ReactBatchUpdates.batchUpdates(() => state.setState({ focus: true }));
   }
-};
-export const clearFocusTimer = function clearFocusTimer() {
+}
+export function clearFocusTimer() {
   timeout.stop();
-};
-export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSED) {
+}
+export function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSED) {
   _require = CLOSED;
   if (!tmp2) {
     ChannelRTCActionCreatorsDefault.updateChatOpen(
@@ -114,7 +114,7 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
   require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ voiceChatDrawerState }));
   const obj2 = require("ReactBatchUpdates");
   tmp2 = CLOSED !== VoiceChatDrawerState.OPEN && CLOSED !== VoiceChatDrawerState.CLOSED;
-};
+}
 export const togglePipFocus = throttleResult;
 export const useIsVoiceChatFocused = tmp6;
 export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactCompilerEnabled()
@@ -174,7 +174,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(10925);
+        tmpResult = tmp(10960);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -362,8 +362,8 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
         const result1 = DeviceOrientation.lockOrientationForiOS("PORTRAIT");
       }, items2);
     };
-export const resetChannelCallStore = function resetChannelCallStore() {
+export function resetChannelCallStore() {
   timeout.stop();
   ReactBatchUpdates.batchUpdates(() => state.setState(closure_1_9));
-};
+}
 export const useChannelCallStore = obj3;

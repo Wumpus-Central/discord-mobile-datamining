@@ -10,7 +10,7 @@ import size from "../../_runtime/metro/00002__.js";
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/surveyFetch.tsx");
 
-export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_seen) {
+export function surveyFetch(surveyOverride, disable_auto_seen) {
   const obj = {};
   if (null != surveyOverride) {
     obj.survey_override = surveyOverride;
@@ -79,4 +79,4 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       DispatcherDefault.dispatch({ type: "SURVEY_FETCHED", survey: null });
     },
   );
-};
+}

@@ -13,19 +13,19 @@ export function isDiscordBackendDevelopment() {
 export function getDevTunnelHostname() {
   return null;
 }
-export const assertNever = function assertNever(type) {
+export function assertNever(type) {
   const error = new Error("Unhandled value: " + type);
   throw error;
-};
-export const isNotNullish = function isNotNullish(channel) {
+}
+export function isNotNullish(channel) {
   return null != channel;
-};
-export const isIn = function isIn(arg0, arr) {
+}
+export function isIn(arg0, arr) {
   return arr.includes(arg0);
-};
-export const isInSet = function isInSet(type, set) {
+}
+export function isInSet(type, set) {
   return set.has(type);
-};
-export const isObjectEntryNotNullish = function isObjectEntryNotNullish(arg0) {
+}
+export function isObjectEntryNotNullish(arg0) {
   return null != arg0[1];
-};
+}

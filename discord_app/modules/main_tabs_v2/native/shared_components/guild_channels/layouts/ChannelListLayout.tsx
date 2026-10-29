@@ -40,13 +40,13 @@ export function makeSizeStyle(size) {
   return size;
 }
 export { isLayoutCompact };
-export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
+export function isLayoutCozy(messagesTabLayout) {
   return (
     messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY ||
     messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER ||
     messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL
   );
-};
+}
 export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled()
   ? function useMessagesTabLayout(arg0) {
       const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
@@ -74,7 +74,7 @@ export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled()
       }
       return COZY;
     };
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale, layout) {
+export function getScaledChannelRowHeight(fontScale, layout) {
   let flag = isThreadResult;
   if (isThreadResult === undefined) {
     flag = false;
@@ -104,4 +104,4 @@ export const getScaledChannelRowHeight = function getScaledChannelRowHeight(font
     num = 4;
   }
   return sum + result + num;
-};
+}

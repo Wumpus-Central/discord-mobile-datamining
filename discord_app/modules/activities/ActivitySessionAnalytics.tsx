@@ -108,7 +108,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let result = size.fileFinishedImporting("modules/activities/ActivitySessionAnaly
 
 export { activeSessionIds };
 export const awaitingAnalyticsContext = obj2;
-export const getShelfItemTrackingProperties = function getShelfItemTrackingProperties(activity) {
+export function getShelfItemTrackingProperties(activity) {
   let releasePhase;
   if (activity != null) {
     activity = activity.activity;
@@ -234,8 +234,8 @@ export const getShelfItemTrackingProperties = function getShelfItemTrackingPrope
     }
   }
   return { releasePhase };
-};
-export const trackFrameSessionStart = function trackFrameSessionStart(applicationId, analyticsContext) {
+}
+export function trackFrameSessionStart(applicationId, analyticsContext) {
   closure_0 = applicationId;
   let result = analyticsContext;
   const obj = pendingFrameLaunch;
@@ -496,11 +496,11 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       const tmp26Result8 = AnalyticsUtilsDefault;
     }
   }
-};
-export const getActiveAnalyticsSessionIDs = function getActiveAnalyticsSessionIDs(id) {
+}
+export function getActiveAnalyticsSessionIDs(id) {
   return obj[id];
-};
-export const trackFrameSessionStartFailed = function trackFrameSessionStartFailed() {
+}
+export function trackFrameSessionStartFailed() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -509,8 +509,8 @@ export const trackFrameSessionStartFailed = function trackFrameSessionStartFaile
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId) {
+}
+export function trackFrameSessionEnd(applicationId) {
   const currentUser = UserStore.getCurrentUser();
   if (null != obj[applicationId]) {
     if (null != currentUser) {
@@ -605,4 +605,4 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       const tmp11Result6 = AnalyticsUtilsDefault;
     }
   }
-};
+}

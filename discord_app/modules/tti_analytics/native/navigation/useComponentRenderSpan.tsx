@@ -14,7 +14,7 @@ let current2 = ReactCompilerGating.isReactCompilerEnabled();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/useComponentRenderSpan.tsx");
 
-export const useNavigationTTIRegionMeasurement = function useNavigationTTIRegionMeasurement(exclude, regionId) {
+export function useNavigationTTIRegionMeasurement(exclude, regionId) {
   if (current2) {
     closure_129_0 = exclude;
     closure_129_1 = regionId;
@@ -1134,4 +1134,4 @@ export const useNavigationTTIRegionMeasurement = function useNavigationTTIRegion
     obj2 = { onLayout: callback1 };
     let obj = require("NavTTISurfaceContext");
   }
-};
+}

@@ -20,7 +20,7 @@ const items = [,];
 const set = new Set(items);
 let result = size.fileFinishedImporting("modules/age_gate/native/handleNSFWGuildInvite.tsx");
 
-export const isNSFWInvite = function isNSFWInvite(guild) {
+export function isNSFWInvite(guild) {
   let nsfw_level;
   if (guild != null) {
     guild = guild.guild;
@@ -32,8 +32,8 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
     nsfw_level = GuildNSFWContentLevel.DEFAULT;
   }
   return set.has(nsfw_level);
-};
-export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1) {
+}
+export function handleNSFWGuildInvite(invite, arg1) {
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
@@ -104,4 +104,4 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
   } else {
     return false;
   }
-};
+}

@@ -15,10 +15,10 @@ const widgetGameTagMetadata = UserProfileGameWidgetTagMetadata.buildWidgetGameTa
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
 
 export const WIDGET_GAME_TAG_METADATA = widgetGameTagMetadata;
-export const getWidgetGameTagMetadata = function getWidgetGameTagMetadata(tag) {
+export function getWidgetGameTagMetadata(tag) {
   let tmp2 = null;
   if (null != widgetGameTagMetadata[tag]) {
     tmp2 = tmp;
   }
   return tmp2;
-};
+}

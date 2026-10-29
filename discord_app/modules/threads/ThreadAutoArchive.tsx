@@ -3,7 +3,7 @@ import memoizeDefault from "../../../_runtime/00606_memoize.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getAutoArchiveOptions() {
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/threads/ThreadAutoArchive.tsx
 export const AUTO_ARCHIVE_OPTION_VALUES = items;
 export { getAutoArchiveOptions };
 export const getAutoArchiveDurations = memoizeDefault(() => getAutoArchiveOptions().map((value) => value.value));
-export const getAutoArchiveDurationText = function getAutoArchiveDurationText(arg0) {
+export function getAutoArchiveDurationText(arg0) {
   closure_0 = arg0;
   const found = getAutoArchiveOptions().find((value) => value.value === closure_0);
   let label;
@@ -49,12 +49,12 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    label = _modDef2046.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef2046.duration(arg0, "minutes");
+    label = _modDef2047.duration(arg0, "minutes").humanize();
+    const durationResult = _modDef2047.duration(arg0, "minutes");
   }
   return label;
-};
-export const getAutoArchiveDuration = function getAutoArchiveDuration(channel, arg1) {
+}
+export function getAutoArchiveDuration(channel, arg1) {
   let tmp = arg1;
   if (arg1 == null) {
     let prop;
@@ -67,4 +67,4 @@ export const getAutoArchiveDuration = function getAutoArchiveDuration(channel, a
     tmp = closure_3;
   }
   return tmp;
-};
+}

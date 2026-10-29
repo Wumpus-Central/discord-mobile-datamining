@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const VoicePanelPIPScale = "VoicePanelPIPScale";
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPScaleCache.tsx");
 
-export const getVoicePanelPIPScaleCached = function getVoicePanelPIPScaleCached() {
+export function getVoicePanelPIPScaleCached() {
   const Storage = Storage2.Storage;
   let num = Storage.get(VoicePanelPIPScale);
   if (num == null) {
@@ -19,8 +19,8 @@ export const getVoicePanelPIPScaleCached = function getVoicePanelPIPScaleCached(
     }
   }
   return num2;
-};
-export const setVoicePanelPIPScaleCached = function setVoicePanelPIPScaleCached(arg0) {
+}
+export function setVoicePanelPIPScaleCached(arg0) {
   const Storage = Storage2.Storage;
   const result = Storage.set(VoicePanelPIPScale, arg0);
-};
+}

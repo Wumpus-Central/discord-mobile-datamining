@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const ARM64_ = "ARM64_";
 const result = size.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 
-export const isIOSWithWebM = function isIOSWithWebM() {
+export function isIOSWithWebM() {
   if (obj.isIOS()) {
     const str = DeviceUtils.getSocName();
     let tmp4 = null == str;
@@ -39,4 +39,4 @@ export const isIOSWithWebM = function isIOSWithWebM() {
     return false;
   }
   obj = PlatformUtils;
-};
+}

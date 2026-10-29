@@ -1,14 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx
+import Constants from "../../../discord_common/js/shared/Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
+import PriceUtils from "../../utils/PriceUtils.tsx";
 import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const constants = GuildRoleSubscriptionsConstants.GuildRoleSubscriptionBenefitTypes;
 const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
+const CurrencyCodes = Constants.CurrencyCodes;
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
 
-export const getBenefitKey = function getBenefitKey(id) {
+export function getBenefitKey(id) {
   if ("roles" in id) {
     const _HermesInternal2 = HermesInternal;
     let combined = "emoji-" + id.id;
@@ -17,9 +20,9 @@ export const getBenefitKey = function getBenefitKey(id) {
     combined = "" + id.ref_type + "-" + id.emoji_id + "-" + id.name + "-" + id.ref_id;
   }
   return combined;
-};
-export const formatPlanInterval = function formatPlanInterval(merged) {
-  const interval = merged.interval;
+}
+export function formatPlanInterval(first2) {
+  const interval = first2.interval;
   const intl = util.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
     let cuSp8Q = util.t["3rUmPQ"];
@@ -28,9 +31,24 @@ export const formatPlanInterval = function formatPlanInterval(merged) {
   } else if (SubscriptionIntervalTypes.YEAR === interval) {
     cuSp8Q = util.t.cuSp8Q;
   }
-  return intl.format(cuSp8Q, { count: merged.interval_count });
-};
-export const formatPlanIntervalDuration = function formatPlanIntervalDuration(interval) {
+  return intl.format(cuSp8Q, { count: first2.interval_count });
+}
+export function formatMonthlyPriceLabel(price_tier) {
+  const intl = util.intl;
+  const obj = { price: PriceUtils.formatPrice(price_tier, CurrencyCodes.USD), interval: null };
+  const MONTH = SubscriptionIntervalTypes.MONTH;
+  const intl2 = util.intl;
+  if (SubscriptionIntervalTypes.DAY === MONTH) {
+    let cuSp8Q = util.t["3rUmPQ"];
+  } else if (SubscriptionIntervalTypes.MONTH === MONTH) {
+    cuSp8Q = util.t.zuN545;
+  } else if (SubscriptionIntervalTypes.YEAR === MONTH) {
+    cuSp8Q = util.t.cuSp8Q;
+  }
+  obj.interval = intl2.format(cuSp8Q, { count: 1 });
+  return intl.formatToPlainString(util.t.CgmBaG, obj);
+}
+export function formatPlanIntervalDuration(interval) {
   ({ interval, interval_count } = interval);
   if (SubscriptionIntervalTypes.DAY === interval) {
     if (interval_count > 0) {
@@ -53,10 +71,10 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
     const obj = { years: interval_count };
     return intl.formatToPlainString(util.t.IfYQVC, obj);
   }
-};
-export const isChannelBenefit = function isChannelBenefit(ref_type) {
+}
+export function isChannelBenefit(ref_type) {
   return ref_type.ref_type === constants.CHANNEL;
-};
-export const isIntangibleBenefit = function isIntangibleBenefit(ref_type) {
+}
+export function isIntangibleBenefit(ref_type) {
   return ref_type.ref_type === constants.INTANGIBLE;
-};
+}

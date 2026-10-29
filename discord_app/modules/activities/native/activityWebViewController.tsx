@@ -12,7 +12,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/activityWebViewController.tsx");
 
-export const getOrCreateActivityWebViewController = function getOrCreateActivityWebViewController(applicationId) {
+export function getOrCreateActivityWebViewController(applicationId) {
   if (null != _undefined) {
     const obj = { iframeId: _undefined.iframeId, shellBridgeSecret: _undefined.shellBridgeSecret };
     return obj;
@@ -69,8 +69,8 @@ export const getOrCreateActivityWebViewController = function getOrCreateActivity
     obj2.shellBridgeSecret = _undefined.shellBridgeSecret;
     return obj2;
   }
-};
-export const releaseActivityWebView = function releaseActivityWebView() {
+}
+export function releaseActivityWebView() {
   let iframeId;
   if (_undefined != null) {
     iframeId = _undefined.iframeId;
@@ -80,4 +80,4 @@ export const releaseActivityWebView = function releaseActivityWebView() {
   }
   _undefined = undefined;
   return iframeId;
-};
+}

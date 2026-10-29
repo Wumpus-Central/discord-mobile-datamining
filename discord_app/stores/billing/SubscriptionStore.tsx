@@ -15,8 +15,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(2048).isNoneSubscription;
-const SubscriptionRecord = fn(2056).SubscriptionRecord;
+const isNoneSubscription = fn(2049).isNoneSubscription;
+const SubscriptionRecord = fn(2057).SubscriptionRecord;
 const Constants = fn(1084);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;
@@ -363,7 +363,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
 
 export default subscriptionStore;
-export const getSubscriptionOfType = function getSubscriptionOfType(arg0, fn) {
+export function getSubscriptionOfType(arg0, fn) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -392,4 +392,4 @@ export const getSubscriptionOfType = function getSubscriptionOfType(arg0, fn) {
     }
     return null;
   }
-};
+}

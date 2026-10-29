@@ -41,7 +41,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureStepTimeline.tsx");
 
 export const TERMINAL_STEP_KINDS = set;
-export const recordStep = function recordStep(steps, step) {
+export function recordStep(steps, step) {
   const tmp = (function indexTimeline(arr) {
     value = weakMap1.get(arr);
     if (null != value) {
@@ -97,8 +97,8 @@ export const recordStep = function recordStep(steps, step) {
   }
   const result2 = weakMap.set(substr, hasItem);
   return substr;
-};
-export const replayTimeline = function replayTimeline(steps) {
+}
+export function replayTimeline(steps) {
   const items = [];
   const obj = { seenSeq: new Set(), todosAt: -1 };
   set = new Set();
@@ -108,8 +108,8 @@ export const replayTimeline = function replayTimeline(steps) {
   }
   const result = weakMap1.set(items, obj);
   return items;
-};
-export const hasTerminalStep = function hasTerminalStep(steps) {
+}
+export function hasTerminalStep(steps) {
   value = weakMap.get(steps);
   if (null == value) {
     const someResult = steps.some((kind) => set.has(kind.kind));
@@ -117,4 +117,4 @@ export const hasTerminalStep = function hasTerminalStep(steps) {
     value = someResult;
   }
   return value;
-};
+}

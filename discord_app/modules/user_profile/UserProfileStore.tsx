@@ -58,6 +58,7 @@ function createUserWidgetFromServer(data) {
                     title: null,
                     tags: null,
                     localClipId: null,
+                    clipEventsTimeline: null,
                     videoURL: null,
                     thumbnailURL: null,
                     spritesheetImageURL: null,
@@ -68,6 +69,7 @@ function createUserWidgetFromServer(data) {
                   ({ tags: obj.tags, local_clip_id } = id);
                   obj.localClipId = local_clip_id;
                   ({
+                    clip_events_timeline: obj.clipEventsTimeline,
                     video_url: obj.videoURL,
                     thumbnail_url: obj.thumbnailURL,
                     spritesheet_image_url: obj.spritesheetImageURL,

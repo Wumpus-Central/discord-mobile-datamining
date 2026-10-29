@@ -15,7 +15,7 @@ let closure_7 = async function _createProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -152,7 +152,7 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/createProxyTicket.tsx");
 
-export const createProxyTicket = function createProxyTicket() {
+export function createProxyTicket() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -161,8 +161,8 @@ export const createProxyTicket = function createProxyTicket() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const prefetchProxyTicket = function prefetchProxyTicket(application_id, arg1, type) {
+}
+export function prefetchProxyTicket(application_id, arg1, type) {
   const items = [AuthenticationStore.getId(), application_id, ,];
   let str = arg1;
   if (arg1 == null) {
@@ -190,13 +190,8 @@ export const prefetchProxyTicket = function prefetchProxyTicket(application_id, 
   } else {
     const _Date = Date;
   }
-};
-export const rememberProxyTicket = function rememberProxyTicket(
-  proxy_ticket,
-  id,
-  CONJURE_UNKNOWN_CHANNEL,
-  APP_CHANNEL,
-) {
+}
+export function rememberProxyTicket(proxy_ticket, id, CONJURE_UNKNOWN_CHANNEL, APP_CHANNEL) {
   let str = CONJURE_UNKNOWN_CHANNEL;
   const items = [AuthenticationStore.getId(), id, ,];
   if (CONJURE_UNKNOWN_CHANNEL == null) {
@@ -213,4 +208,4 @@ export const rememberProxyTicket = function rememberProxyTicket(
   obj.ticket = Promise.resolve(proxy_ticket);
   obj.expiresAt = Date.now() + 60000;
   const result = map.set(joined, obj);
-};
+}

@@ -24,11 +24,11 @@ function isInvitableUserRow(type) {
   return tmp3;
 }
 const View = fn(17).View;
-let closure_6 = fn(9164).useInstantInviteSendStates;
+let closure_6 = fn(9167).useInstantInviteSendStates;
 const NOOP_NULL = fn(1095).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== stateFromStores) {
         let tmp8 = null;
         if (null != stateFromStores) {
-          tmp8 = stateFromStores(11357)(stateFromStores);
+          tmp8 = stateFromStores(11411)(stateFromStores);
         }
         cResult[3] = stateFromStores;
         cResult[4] = tmp8;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl = formatToPlainString(1125).intl;
       let centeredText = stateFromStores;
-      const stringResult = intl.string(stateFromStores(2403).nVMqjA);
+      const stringResult = intl.string(stateFromStores(2404).nVMqjA);
       if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
         class X {
           constructor(arg0) {
@@ -375,35 +375,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl2 = formatToPlainString(1125).intl;
-      obj3.children = intl2.formatToPlainString(centeredText(2403).EnTIIr, { noun: stringResult });
-      const items3 = [closure_10(formatToPlainString(5270).Heading, obj3)];
+      obj3.children = intl2.formatToPlainString(centeredText(2404).EnTIIr, { noun: stringResult });
+      const items3 = [closure_10(formatToPlainString(5271).Heading, obj3)];
       const obj6 = { variant: "text-sm/medium", color: "text-muted", style: str.centeredText, children: null };
       const intl3 = formatToPlainString(1125).intl;
-      obj6.children = intl3.formatToPlainString(centeredText(2403).BBk7Qw, { noun: stringResult });
-      items3[1] = closure_10(formatToPlainString(5270).Text, obj6);
+      obj6.children = intl3.formatToPlainString(centeredText(2404).BBk7Qw, { noun: stringResult });
+      items3[1] = closure_10(formatToPlainString(5271).Text, obj6);
       obj2.children = items3;
       const tmp16 = _slicedToArray(noop.useState(true), 2);
       const intl4 = formatToPlainString(1125).intl;
       formatToPlainString = intl4.formatToPlainString;
-      const tmp26 = closure_11(formatToPlainString(6013).Stack, obj2);
+      const tmp26 = closure_11(formatToPlainString(6015).Stack, obj2);
       centeredText = str.centeredText;
       cResult[16] = centeredText;
       cResult[17] = str.header;
-      cResult[18] = formatToPlainString(7181).SearchBar;
-      cResult[19] = formatToPlainString(6013).Stack;
-      cResult[20] = formatToPlainString(7334).ActionSheet;
+      cResult[18] = formatToPlainString(7205).SearchBar;
+      cResult[19] = formatToPlainString(6015).Stack;
+      cResult[20] = formatToPlainString(7358).ActionSheet;
       str = "md";
       cResult[21] = "md";
       cResult[22] = true;
       cResult[23] = tmp17;
-      cResult[24] = formatToPlainString(centeredText(2403).cRK6SQ, { noun: stringResult });
+      cResult[24] = formatToPlainString(centeredText(2404).cRK6SQ, { noun: stringResult });
       cResult[25] = centeredText(587).space.PX_16;
       cResult[26] = str.header;
       cResult[27] = tmp26;
       cResult[28] = true;
       cResult[29] = true;
       cResult[30] = tmp24;
-      const formatToPlainStringResult2 = formatToPlainString(centeredText(2403).cRK6SQ, { noun: stringResult });
+      const formatToPlainStringResult2 = formatToPlainString(centeredText(2404).cRK6SQ, { noun: stringResult });
     }
   : function GameOrganizationInviteActionSheet(guildId) {
       guildId = guildId.guildId;
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       let tmp5 = null;
       if (null != stateFromStores) {
-        tmp5 = stateFromStores(11357)(stateFromStores);
+        tmp5 = stateFromStores(11411)(stateFromStores);
       }
       dependencyMap = tmp5;
       const tmp7 = closure_6((arg0) => {
@@ -497,7 +497,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
       const intl = tmp2(1125).intl;
-      const stringResult = intl.string(stateFromStores(2403).nVMqjA);
+      const stringResult = intl.string(stateFromStores(2404).nVMqjA);
       let obj2 = {
         scrollable: true,
         startExpanded: true,
@@ -516,26 +516,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl3 = tmp2(1125).intl;
-      obj5.children = intl3.formatToPlainString(stateFromStores(2403).EnTIIr, { noun: stringResult });
-      const items4 = [closure_10(guildId(5270).Heading, obj5)];
+      obj5.children = intl3.formatToPlainString(stateFromStores(2404).EnTIIr, { noun: stringResult });
+      const items4 = [closure_10(guildId(5271).Heading, obj5)];
       const obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
       const intl4 = tmp2(1125).intl;
-      obj6.children = intl4.formatToPlainString(stateFromStores(2403).BBk7Qw, { noun: stringResult });
-      items4[1] = closure_10(guildId(5270).Text, obj6);
+      obj6.children = intl4.formatToPlainString(stateFromStores(2404).BBk7Qw, { noun: stringResult });
+      items4[1] = closure_10(guildId(5271).Text, obj6);
       obj4.children = items4;
-      const items5 = [closure_11(guildId(6013).Stack, obj4)];
+      const items5 = [closure_11(guildId(6015).Stack, obj4)];
       const obj7 = { size: "md", round: true, onChange: callback, placeholder: null };
       const intl5 = tmp2(1125).intl;
-      obj7.placeholder = intl5.formatToPlainString(stateFromStores(2403).cRK6SQ, { noun: stringResult });
-      items5[1] = closure_10(guildId(7181).SearchBar, obj7);
+      obj7.placeholder = intl5.formatToPlainString(stateFromStores(2404).cRK6SQ, { noun: stringResult });
+      items5[1] = closure_10(guildId(7205).SearchBar, obj7);
       obj3.children = items5;
-      obj2.header = closure_11(guildId(6013).Stack, obj3);
+      obj2.header = closure_11(guildId(6015).Stack, obj3);
       if (tmp9[0]) {
         let tmp16Result = closure_10(closure_14, {});
       } else {
         const obj8 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-        tmp16Result = closure_10(stateFromStores(15473), obj8);
+        tmp16Result = closure_10(stateFromStores(15707), obj8);
       }
       obj2.children = tmp16Result;
-      return closure_10(guildId(7334).ActionSheet, obj2);
+      return closure_10(guildId(7358).ActionSheet, obj2);
     };

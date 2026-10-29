@@ -107,7 +107,7 @@ export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompiler
       }
       obj = initialize;
     };
-export const withManaTextMigrationHighlight = function withManaTextMigrationHighlight(fromEntriesResult) {
+export function withManaTextMigrationHighlight(fromEntriesResult) {
   let proxy = fromEntriesResult;
   if (closure_6) {
     const _Proxy = Proxy;
@@ -129,4 +129,4 @@ export const withManaTextMigrationHighlight = function withManaTextMigrationHigh
     proxy = new Proxy(fromEntriesResult, obj);
   }
   return proxy;
-};
+}

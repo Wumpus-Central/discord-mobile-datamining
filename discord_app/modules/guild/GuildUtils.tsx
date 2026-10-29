@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
-export const handleJoinGuild = function handleJoinGuild(guildId) {
+export function handleJoinGuild(guildId) {
   _require = guildId;
   if (null != guildId) {
     const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
@@ -19,4 +19,4 @@ export const handleJoinGuild = function handleJoinGuild(guildId) {
       const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
   }
-};
+}

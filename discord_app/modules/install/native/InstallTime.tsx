@@ -47,7 +47,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/install/native/InstallTime.tsx");
 
 export { getFirstInstallTimeMillis };
-export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(unit) {
+export function getFirstInstallTimeElapsed(unit) {
   unit = unit.unit;
   const tmp = getFirstInstallTimeMillis(Object.assign(unit, Object.assign({ unit: 0 })));
   if (0 === tmp) {
@@ -61,4 +61,4 @@ export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(un
     }
     return result;
   }
-};
+}

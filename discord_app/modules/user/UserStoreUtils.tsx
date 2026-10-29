@@ -9,7 +9,7 @@ const Environments = UserStoreConstants.Environments;
 ({ PREMIUM_TYPE_NONE: closure_4, UserFlags: hasOwnProperty } = Constants);
 const result = size.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
 
-export const validatePremiumType = function validatePremiumType(arg0, premiumType, premiumType2) {
+export function validatePremiumType(arg0, premiumType, premiumType2) {
   let tmp = arg0;
   if (!arg0) {
     tmp = undefined === premiumType;
@@ -17,8 +17,8 @@ export const validatePremiumType = function validatePremiumType(arg0, premiumTyp
   if (!tmp) {
     _modDef38(premiumType2 === premiumType, "Premium type should not change for non-staff users");
   }
-};
-export const getEnv = function getEnv(arg0) {
+}
+export function getEnv(arg0) {
   let str = "production";
   if ("production" === Environments.TEST) {
     str = "production";
@@ -27,8 +27,8 @@ export const getEnv = function getEnv(arg0) {
     }
   }
   return str;
-};
-export const isStaffEnv = function isStaffEnv(currentUser) {
+}
+export function isStaffEnv(currentUser) {
   let str = "production";
   if ("production" === Environments.TEST) {
     str = "production";
@@ -50,8 +50,8 @@ export const isStaffEnv = function isStaffEnv(currentUser) {
     tmp4 = tmp8;
   }
   return tmp4;
-};
-export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
+}
+export function isStaffEnvRawData(flags) {
   let str = "production";
   if ("production" === Environments.TEST) {
     str = "production";
@@ -81,7 +81,7 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
     tmp6 = tmp9;
   }
   return tmp6;
-};
+}
 export function getPremiumTypeFromRawValue(premium_type) {
   if (undefined === premium_type) {
     let tmp2 = premium_type;

@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const COMMAND_SENTINEL = ChannelAutocompleteConstants.COMMAND_SENTINEL;
 const result = size.fileFinishedImporting("modules/application_commands/DraftCommandUtils.tsx");
 
-export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
+export function toDraftCommand(activeCommand, result1) {
   if (null == activeCommand) {
     return null;
   } else {
@@ -35,8 +35,8 @@ export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
     }
     return tmp3;
   }
-};
-export const resolveDraftCommand = function resolveDraftCommand(channel, text, draftCommand) {
+}
+export function resolveDraftCommand(channel, text, draftCommand) {
   if (null != draftCommand) {
     if (obj4.isDraftCommandValidForText(draftCommand, text)) {
       const obj2 = { channel, type: "channel" };
@@ -60,4 +60,4 @@ export const resolveDraftCommand = function resolveDraftCommand(channel, text, d
     obj4 = DraftCommand;
   }
   return null;
-};
+}

@@ -36,7 +36,7 @@ let closure_15 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ const Constants = fn(1084);
 } = Constants);
 const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(18021), {
+        const tmp22 = jsx(tmp17(18255), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,9 +265,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: "(",
-          expandedChildren: "INVITE_RESOLVE_SUCCESS",
-          children: null,
+          label: "RTC_DEBUG_MODAL_CLOSE",
+          expandedChildren: "RTC_DEBUG_MODAL_OPEN_REPLAY",
+          children: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE",
         };
         const intl = util.intl;
         obj4.label = intl.string(util.t.l5WIbf);
@@ -284,9 +284,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: "(",
-          expandedChildren: "INVITE_RESOLVE_SUCCESS",
-          children: null,
+          label: "RTC_DEBUG_MODAL_CLOSE",
+          expandedChildren: "RTC_DEBUG_MODAL_OPEN_REPLAY",
+          children: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE",
         });
         return <View style={tmp.stretch}>{null}</View>;
       },

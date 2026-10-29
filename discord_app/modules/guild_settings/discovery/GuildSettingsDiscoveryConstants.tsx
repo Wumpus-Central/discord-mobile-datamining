@@ -662,7 +662,7 @@ export const SUGGESTED_TAGS_FOR_CATEGORIES = {
   [obj.EMOJI]: items14,
   [obj.BOTS]: items15,
 };
-export const calculateLocaleOptions = function calculateLocaleOptions() {
+export function calculateLocaleOptions() {
   const availableLocales = util.getAvailableLocales();
   const mapped = availableLocales.map((value) => {
     value = value.value;
@@ -677,4 +677,4 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
     return obj;
   });
   return mapped.filter((value) => !closure_1_2.includes(value.value));
-};
+}

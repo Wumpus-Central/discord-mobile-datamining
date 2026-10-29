@@ -21,17 +21,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8522).getExperimentBucketName(item);
-        const obj3 = closure_1(8522);
+        experimentBucketName = closure_1(8544).getExperimentBucketName(item);
+        const obj3 = closure_1(8544);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8522).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8544).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8524).Variation_Type.CONTROL;
+        let TREATMENT = obj(8546).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8524).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8546).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8524).Variation_Type.TREATMENT;
+        TREATMENT = obj(8546).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;
@@ -63,7 +63,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(5227);
+const ExperimentConstants = fn(5228);
 ({ ExperimentBuckets: metroRequire, ExperimentTypes: closure_7 } = ExperimentConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -71,14 +71,14 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 
 export { parseRegisteredExperiments };
 export { getLegacyOverridesInfo };
-export const getLegacyExperiments = function getLegacyExperiments() {
+export function getLegacyExperiments() {
   const registeredExperiments = ExperimentStore.getRegisteredExperiments();
   const obj = { experiments: null, overridesInfo: null };
   const allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
   obj.experiments = parseRegisteredExperiments(registeredExperiments);
   obj.overridesInfo = getLegacyOverridesInfo(allExperimentOverrideDescriptors);
   return obj;
-};
+}
 export const useLegacyExperiments = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLegacyExperiments() {
       const cResult = c.c(11);

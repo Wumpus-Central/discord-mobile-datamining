@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx
-import asyncRequireImpl from "../../../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import YouConstants from "../YouConstants.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -7,7 +7,7 @@ import size from "../../../../../../../_runtime/metro/00002__.js";
 let closure_3 = YouConstants.YOU_ACCOUNT_ACTION_SHEET_KEY;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx");
 
-export const showYouAccountActionSheet = function showYouAccountActionSheet() {
+export function showYouAccountActionSheet() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -16,8 +16,8 @@ export const showYouAccountActionSheet = function showYouAccountActionSheet() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18096, dependencyMap.paths), closure_3, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18330, dependencyMap.paths), closure_3, {
     statusOnly: flag,
     disableHapticOnOpen: flag2,
   });
-};
+}

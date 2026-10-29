@@ -230,10 +230,10 @@ export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactC
         items1,
       );
     };
-export const shouldShowSpoilerGateForChannelId = function shouldShowSpoilerGateForChannelId(channelId) {
+export function shouldShowSpoilerGateForChannelId(channelId) {
   let tmp = null != channelId;
   if (tmp) {
     tmp = isChannelSpoilerGated(ChannelStore.getChannel(channelId));
   }
   return tmp;
-};
+}

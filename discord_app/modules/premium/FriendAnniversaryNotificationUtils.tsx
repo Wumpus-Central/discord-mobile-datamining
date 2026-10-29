@@ -9,13 +9,11 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const constants = NotificationConstants.NotificationSettingsUpdateType;
 const result = size.fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
 
-export const onFriendAnniversaryNotificationSettingsChanged = function onFriendAnniversaryNotificationSettingsChanged(
-  friend_anniversary_notifications,
-) {
+export function onFriendAnniversaryNotificationSettingsChanged(friend_anniversary_notifications) {
   const EnableFriendAnniversaryNotifications = UserSettings.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
   AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
     update_type: constants.ACCOUNT,
     friend_anniversary_notifications,
   });
-};
+}

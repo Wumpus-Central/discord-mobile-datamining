@@ -11,7 +11,7 @@ require = fn;
 const ANDROID_FOREGROUND_RIPPLE = fn(1203).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" },
   text: { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" },

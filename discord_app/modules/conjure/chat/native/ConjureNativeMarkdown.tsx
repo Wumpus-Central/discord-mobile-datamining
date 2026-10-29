@@ -16,7 +16,7 @@ let obj2 = {};
 const merged = Object.assign(CONJURE_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };
@@ -33,11 +33,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = closure_9();
       _require = tmp4;
       if (cResult[0] !== source) {
-        const splitMarkdownBlocksResult = tmp(12288).splitMarkdownBlocks(source);
+        const splitMarkdownBlocksResult = tmp(12342).splitMarkdownBlocks(source);
         cResult[0] = source;
         cResult[1] = splitMarkdownBlocksResult;
         marker = splitMarkdownBlocksResult;
-        const tmpResult = tmp(12288);
+        const tmpResult = tmp(12342);
       } else {
         marker = cResult[1];
       }
@@ -96,7 +96,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             obj.style = items;
             const obj3 = {
               style: list.marker,
-              children: closure_2_4(closure_0(5270).Text, {
+              children: closure_2_4(closure_0(5271).Text, {
                 variant: "text-md/normal",
                 color: "text-default",
                 children: children.marker,
@@ -107,9 +107,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               variant: "text-md/normal",
               color: "text-default",
-              children: closure_0(12231).parseConjureMarkup(children.text, true, obj2),
+              children: closure_0(12285).parseConjureMarkup(children.text, true, obj2),
             };
-            obj5.children = closure_2_4(closure_0(5270).Text, obj6);
+            obj5.children = closure_2_4(closure_0(5271).Text, obj6);
             items1[1] = closure_2_4(View, obj5);
             obj.children = items1;
             return closure_2_5(View, obj, index);

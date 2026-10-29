@@ -28,7 +28,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     }
   }
 };
-const SpotifyConstants = fn(8865);
+const SpotifyConstants = fn(8868);
 ({
   SPOTIFY_APP_PROTOCOL: closure_7,
   SpotifyResourceTypes: closure_8,
@@ -118,14 +118,14 @@ let closure_11 = 30 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
 
-export const isSpotifyPlayable = function isSpotifyPlayable(getActiveSocketAndDevice) {
+export function isSpotifyPlayable(getActiveSocketAndDevice) {
   let isProtocolRegisteredResult = null != getActiveSocketAndDevice.getActiveSocketAndDevice();
   if (!isProtocolRegisteredResult) {
     isProtocolRegisteredResult = SpotifyProtocolStore.isProtocolRegistered();
   }
   return isProtocolRegisteredResult;
-};
-export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
+}
+export function ensureSpotifyPlayable() {
   const activeSocketAndDevice = SpotifyStore.getActiveSocketAndDevice();
   if (null != activeSocketAndDevice) {
     return Promise.resolve(activeSocketAndDevice);
@@ -134,7 +134,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11385).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11439).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }
@@ -177,16 +177,16 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     let error = new Error("protocol is not registered");
     return Promise.reject(error);
   }
-};
-export const isSpotifyPremium = function isSpotifyPremium() {
+}
+export function isSpotifyPremium() {
   const activeSocketAndDevice = SpotifyStore.getActiveSocketAndDevice();
   let isPremium = null;
   if (null != activeSocketAndDevice) {
     isPremium = activeSocketAndDevice.socket.isPremium;
   }
   return isPremium;
-};
-export const ensureSpotifyPremium = function ensureSpotifyPremium() {
+}
+export function ensureSpotifyPremium() {
   const activeSocketAndDevice = SpotifyStore.getActiveSocketAndDevice();
   if (null == activeSocketAndDevice) {
     let _Error = Error;
@@ -208,8 +208,8 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
     }
     return resolved;
   }
-};
-export const getSpotifyMetadataFromActivity = function getSpotifyMetadataFromActivity() {
+}
+export function getSpotifyMetadataFromActivity() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -218,4 +218,4 @@ export const getSpotifyMetadataFromActivity = function getSpotifyMetadataFromAct
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

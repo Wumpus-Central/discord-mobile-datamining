@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ),
       );
     };
-export const getAllLiveStageChannels = function getAllLiveStageChannels() {
+export function getAllLiveStageChannels() {
   const allStageInstances = StageInstanceStore.getAllStageInstances();
   return allStageInstances.reduce((arr, channel_id) => {
     channel = channel.getChannel(channel_id.channel_id);
@@ -177,5 +177,5 @@ export const getAllLiveStageChannels = function getAllLiveStageChannels() {
     }
     return arr;
   }, []);
-};
+}
 export const useAllLiveStageChannels = tmp2;

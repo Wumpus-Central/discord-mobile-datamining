@@ -14,7 +14,7 @@ const require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = {
   position: "absolute",
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[30] = tmp36;
                   tmp29 = tmp36;
                 }
-                OWNED = tmp(9397).WishlistItemCardOverlay.OWNED;
+                OWNED = tmp(9428).WishlistItemCardOverlay.OWNED;
               }
             }
           }

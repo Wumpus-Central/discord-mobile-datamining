@@ -1,22 +1,22 @@
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx
 import native from "../../../../design/void/native.tsx";
 import AvatarDecorationConstants from "../AvatarDecorationConstants.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
 
-export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
+export function getDecorationSizeForAvatarSize(NORMAL) {
   if (typeof NORMAL !== "number") {
     let result = native.AVATAR_SIZE_MAP[NORMAL] * closure_3;
   } else {
     result = NORMAL * closure_3;
   }
   return result;
-};
-export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutForAvatarCutout(cutout, arg1) {
+}
+export function getDecorationCutoutForAvatarCutout(cutout, arg1) {
   closure_0 = arg1;
   let tmp = cutout;
   if (null != cutout) {
@@ -42,15 +42,15 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
     tmp = obj;
   }
   return tmp;
-};
-export const openAvatarDecorationActionSheet = function openAvatarDecorationActionSheet(arg0) {
+}
+export function openAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8684, dependencyMap.paths), "Edit Avatar Decoration", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8687, dependencyMap.paths), "Edit Avatar Decoration", {
     user,
     guildId,
     currentAvatarDecoration,
     isTryItOut,
     analyticsLocations,
   });
-};
+}

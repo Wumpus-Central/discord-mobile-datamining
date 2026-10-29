@@ -189,15 +189,15 @@ prototype["addRule"] = function addRule(type) {
     _rules.push(obj);
   }
 };
-prototype["tokenize"] = function tokenize(errorcode) {
+prototype["tokenize"] = function tokenize(arg0) {
   const self = this;
-  let str = errorcode;
+  let str = arg0;
   const items = [];
   let num = 0;
   let str2 = "";
   let num2 = 0;
   let str3 = "";
-  if (errorcode.length > 0) {
+  if (arg0.length > 0) {
     while (true) {
       let _getMatchResult = self._getMatch(str, tmp, num + ``.length);
       let tmp5 = tmp;
@@ -346,7 +346,7 @@ prototype["clearCache"] = function clearCache() {
     continue;
   }
 };
-prototype["_getMatch"] = function _getMatch(errorcode, type, arg2) {
+prototype["_getMatch"] = function _getMatch(arg0, type, arg2) {
   type = null;
   if (null != type) {
     type = type.type;
@@ -359,10 +359,10 @@ prototype["_getMatch"] = function _getMatch(errorcode, type, arg2) {
   let tmp3;
   if (end === arg2) {
     const _String = String;
-    tmp3 = getMatch(errorcode, self._followers[String(undefined, type)], arg2);
+    tmp3 = getMatch(arg0, self._followers[String(undefined, type)], arg2);
   }
   if (null == tmp3) {
-    tmp3 = getMatch(errorcode, self._rules, arg2);
+    tmp3 = getMatch(arg0, self._rules, arg2);
   }
   return tmp3;
 };

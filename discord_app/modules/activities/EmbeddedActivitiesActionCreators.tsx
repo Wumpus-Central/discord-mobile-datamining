@@ -32,7 +32,7 @@ let closure_25 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_25 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           closure_140_25 = undefined;
           c16 = 1;
           c17 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -287,9 +287,9 @@ let closure_25 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2028).supportsEmbeddedSurface(application, closure_1_0(5662).EmbeddedSurfaceType.MAIN);
-                const obj = closure_1_0(2028);
-                const result1 = closure_1_0(8916).isActivityInTextSupportedForChannel(type);
+                const result = closure_1_0(2029).supportsEmbeddedSurface(application, closure_1_0(5664).EmbeddedSurfaceType.MAIN);
+                const obj = closure_1_0(2029);
+                const result1 = closure_1_0(8919).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -421,7 +421,7 @@ let closure_27 = async function _maybeSendPrimaryAppCommand(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -458,7 +458,7 @@ let closure_27 = async function _maybeSendPrimaryAppCommand(arg0) {
           let currentUser;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -589,26 +589,26 @@ let closure_27 = async function _maybeSendPrimaryAppCommand(arg0) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(6410)(obj3);
+                              const tmp21 = new nonce(6434)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(6053).ReasonCodes) {
-                            const tmp14 = new nonce(6053)(error_reason_code);
+                          if (error_reason_code in nonce(6057).ReasonCodes) {
+                            const tmp14 = new nonce(6057)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
                         const obj = nonce(1264);
-                        const tmp3Result = nonce(6053);
-                        closure_1_1(new nonce(6053)(nonce(6053).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(6053)(nonce(6053).ReasonCodes.UNKNOWN);
+                        const tmp3Result = nonce(6057);
+                        closure_1_1(new nonce(6057)(nonce(6057).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(6057)(nonce(6057).ReasonCodes.UNKNOWN);
                       }
                     };
                   }
                 };
-                nonce(10232)(obj);
+                nonce(10265)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -708,7 +708,7 @@ let closure_29 = async function _joinEmbeddedActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -743,7 +743,7 @@ let closure_29 = async function _joinEmbeddedActivity(arg0) {
           closure_130_15 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1007,7 +1007,7 @@ let closure_31 = async function _uploadImageAttachment(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1078,38 +1078,184 @@ let closure_31 = async function _uploadImageAttachment(arg0) {
     }
   })();
 };
-let closure_32 = async function _sendEmbeddedActivityInvite() {
-  await closure_130_1(closure_130_2[55]).createInvite(closure_129_0, { target_type: closure_130_24.EMBEDDED_APPLICATION, target_application_id: closure_129_2 }, closure_129_3);
-  closure_129_5 = value;
-  if (null != closure_130_10.getChannel(closure_129_1)) {
-    closure_130_1(closure_130_2[56]).sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
-    closure_130_1(closure_130_2[56]);
+let closure_32 = async function _sendEmbeddedActivityInvite(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
+          closure_129_5 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          const obj6 = { target_type: closure_130_24.EMBEDDED_APPLICATION, target_application_id: closure_129_2 };
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: closure_130_1(closure_130_2[55]).createInvite(closure_129_0, obj6, closure_129_3), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_129_5 = value;
+        if (null != closure_130_10.getChannel(closure_129_1)) {
+          const obj = closure_130_1(closure_130_2[56]);
+          obj.sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
+        }
+        c4 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } catch (tmp30) {
+      c4 = tmp;
+      throw tmp30;
+    }
   }
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
-  return "Reflect";
 };
-let closure_33 = async function _sendEmbeddedActivityInviteUser() {
-  await closure_130_1(closure_130_2[55]).createInvite(closure_129_0, { target_type: closure_130_24.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
-  closure_129_6 = value;
-  await closure_130_1(closure_130_2[57]).ensurePrivateChannel(closure_129_2);
-  closure_129_7 = value;
-  const channel = closure_130_10.getChannel(closure_129_7);
-  if (null == channel) {
-    const _Error = Error;
-    const error = new Error("Private channel not found");
-    throw error;
+let closure_33 = async function _sendEmbeddedActivityInviteUser(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          let channel;
+          let content;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          const obj8 = { target_type: closure_130_24.EMBEDDED_APPLICATION, target_application_id: closure_129_1 };
+          c3 = 2;
+          c4 = 1;
+          const obj9 = { value: closure_130_1(closure_130_2[55]).createInvite(closure_129_0, obj8, closure_129_3), done: false };
+          return obj9;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          closure_129_6 = value;
+          c3 = 3;
+          c4 = 1;
+          const obj11 = { value: closure_130_1(closure_130_2[57]).ensurePrivateChannel(closure_129_2), done: false };
+          return obj11;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        closure_129_7 = value;
+        channel = closure_130_10.getChannel(closure_129_7);
+        if (null == channel) {
+          const _Error = Error;
+          const error = new Error("Private channel not found");
+          throw error;
+        } else {
+          content = undefined;
+          if (null != closure_129_5) {
+            content = closure_130_1(closure_130_2[58]).parse(channel, closure_129_5).content;
+            const obj = closure_130_1(closure_130_2[58]);
+          }
+          const obj2 = closure_130_1(closure_130_2[56]);
+          obj2.sendInvite(closure_129_7, closure_129_6.code, closure_129_3, closure_129_4, content);
+          c4 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      }
+    } catch (tmp41) {
+      c4 = tmp;
+      throw tmp41;
+    }
   }
-  if (null != closure_129_5) {
-    const content = closure_130_1(closure_130_2[58]).parse(channel, closure_129_5).content;
-    closure_130_1(closure_130_2[58]);
-  }
-  closure_130_1(closure_130_2[56]).sendInvite(closure_129_7, closure_129_6.code, closure_129_3, closure_129_4, content);
-  await "IconComponent";
-  closure_1 = tmp2;
-  ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
-  return "Reflect";
 };
 let closure_34 = async function _validateTestMode(arg0) {
   if (c1 === 2) {
@@ -1122,7 +1268,7 @@ let closure_34 = async function _validateTestMode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1188,7 +1334,7 @@ let closure_35 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1304,27 +1450,27 @@ let closure_35 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(9684).getOrFetchApplicationCommandIndexForTarget;
-let closure_16 = fn(2023).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+let closure_5 = fn(9716).getOrFetchApplicationCommandIndexForTarget;
+let closure_16 = fn(2024).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1372).INSTALL_LESS_APP_IDS;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
-const InviteTargetTypes = fn(7844).InviteTargetTypes;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
+const InviteTargetTypes = fn(7867).InviteTargetTypes;
 let closure_26 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_28 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER", CHANNEL_CONTENT_GATED: 10, [10]: "CHANNEL_CONTENT_GATED" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/EmbeddedActivitiesActionCreators.tsx");
 
-export const maybeDisconnectFromCurrentActivity = function maybeDisconnectFromCurrentActivity(location) {
+export function maybeDisconnectFromCurrentActivity(location) {
   const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(location);
   if (null != selfEmbeddedActivityForLocation) {
     const obj = { location: null, applicationId: null, showFeedback: false };
     ({ location: obj.location, applicationId: obj.applicationId } = selfEmbeddedActivityForLocation);
     stopEmbeddedActivity(obj);
   }
-};
-export const runPrimaryAppCommandOrJoinEmbeddedActivity = function runPrimaryAppCommandOrJoinEmbeddedActivity() {
+}
+export function runPrimaryAppCommandOrJoinEmbeddedActivity() {
   const self = this;
   const apply = closure_25.apply;
   if (typeof apply === "unknown") {
@@ -1333,18 +1479,18 @@ export const runPrimaryAppCommandOrJoinEmbeddedActivity = function runPrimaryApp
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { stopEmbeddedActivity };
-export const requestRespondToSeriousThermalState = function requestRespondToSeriousThermalState() {
+export function requestRespondToSeriousThermalState() {
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE" });
-};
-export const consumeRequestToReactToSeriousThermalState = function consumeRequestToReactToSeriousThermalState() {
+}
+export function consumeRequestToReactToSeriousThermalState() {
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST" });
-};
-export const disregardSeriousThermalState = function disregardSeriousThermalState() {
+}
+export function disregardSeriousThermalState() {
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE" });
-};
-export const uploadImageAttachment = function uploadImageAttachment() {
+}
+export function uploadImageAttachment() {
   const self = this;
   const apply = closure_31.apply;
   if (typeof apply === "unknown") {
@@ -1353,8 +1499,8 @@ export const uploadImageAttachment = function uploadImageAttachment() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendEmbeddedActivityInvite = function sendEmbeddedActivityInvite() {
+}
+export function sendEmbeddedActivityInvite() {
   const self = this;
   const apply = closure_32.apply;
   if (typeof apply === "unknown") {
@@ -1363,8 +1509,8 @@ export const sendEmbeddedActivityInvite = function sendEmbeddedActivityInvite() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendEmbeddedActivityInviteUser = function sendEmbeddedActivityInviteUser() {
+}
+export function sendEmbeddedActivityInviteUser() {
   const self = this;
   const apply = closure_33.apply;
   if (typeof apply === "unknown") {
@@ -1373,8 +1519,8 @@ export const sendEmbeddedActivityInviteUser = function sendEmbeddedActivityInvit
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const dismissNewActivityIndicator = function dismissNewActivityIndicator() {
+}
+export function dismissNewActivityIndicator() {
   let INDIRECT_ACTION = arg0;
   if (arg0 === undefined) {
     INDIRECT_ACTION = ContentDismissActionType.INDIRECT_ACTION;
@@ -1382,8 +1528,8 @@ export const dismissNewActivityIndicator = function dismissNewActivityIndicator(
   const obj = DismissibleContentUtils;
   const result = obj.markVersionedDismissibleContentAsDismissed(dismissible_content.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: INDIRECT_ACTION });
   const date = new Date();
-};
-export const validateTestMode = function validateTestMode() {
+}
+export function validateTestMode() {
   const self = this;
   const apply = closure_34.apply;
   if (typeof apply === "unknown") {
@@ -1392,17 +1538,17 @@ export const validateTestMode = function validateTestMode() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateActivityPanelMode = function updateActivityPanelMode(PANEL) {
+}
+export function updateActivityPanelMode(PANEL) {
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: PANEL });
-};
-export const updateFocusedActivityLayout = function updateFocusedActivityLayout(focusedActivityLayout) {
+}
+export function updateFocusedActivityLayout(focusedActivityLayout) {
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout });
-};
-export const updateActivityPopoutWindowLayout = function updateActivityPopoutWindowLayout(layout) {
+}
+export function updateActivityPopoutWindowLayout(layout) {
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT", layout });
-};
-export const refreshProxyTicket = function refreshProxyTicket() {
+}
+export function refreshProxyTicket() {
   const self = this;
   const apply = closure_35.apply;
   if (typeof apply === "unknown") {
@@ -1411,4 +1557,4 @@ export const refreshProxyTicket = function refreshProxyTicket() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

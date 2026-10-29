@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
                 tmp3 = closure_1;
                 obj = applicationId(closure_1[4]);
                 assets = obj.getAssets(tmp);
-                nextPromise = assets.then(() => { ... });
+                nextPromise = assets.then(/* F150995 */ function() { ... });
               }
               return;
             }
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
                 tmp3 = closure_1;
                 obj = applicationId(closure_1[4]);
                 assets = obj.getAssets(tmp);
-                nextPromise = assets.then(() => { ... });
+                nextPromise = assets.then(/* F150995 */ function() { ... });
               }
               return;
             }
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
                 tmp3 = closure_1;
                 obj = applicationId(closure_1[4]);
                 assets = obj.getAssets(tmp);
-                nextPromise = assets.then(() => { ... });
+                nextPromise = assets.then(/* F150995 */ function() { ... });
               }
               return;
             }

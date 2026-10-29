@@ -10,13 +10,13 @@ import useIsSpeakingDefault from "../../../../hooks/useIsSpeaking.tsx";
 import CallActionCreatorsDefault from "../../../../actions/CallActionCreators.tsx";
 import StreamerApplicationSelectors from "../../../go_live/utils/StreamerApplicationSelectors.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
-import _modDef11487 from "../../../../../_runtime/metro/11487__.js";
-import _modDef14882 from "../../../../../_runtime/metro/14882__.js";
-import _modDef14883 from "../../../../../_runtime/metro/14883__.js";
-import _modDef14884 from "../../../../../_runtime/metro/14884__.js";
-import _modDef14885 from "../../../../../_runtime/metro/14885__.js";
-import _modDef14886 from "../../../../../_runtime/metro/14886__.js";
-import _modDef14887 from "../../../../../_runtime/metro/14887__.js";
+import _modDef11541 from "../../../../../_runtime/metro/11541__.js";
+import _modDef15117 from "../../../../../_runtime/metro/15117__.js";
+import _modDef15118 from "../../../../../_runtime/metro/15118__.js";
+import _modDef15119 from "../../../../../_runtime/metro/15119__.js";
+import _modDef15120 from "../../../../../_runtime/metro/15120__.js";
+import _modDef15121 from "../../../../../_runtime/metro/15121__.js";
+import _modDef15122 from "../../../../../_runtime/metro/15122__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SoundboardStore from "../../../soundboard/SoundboardStore.tsx";
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1084).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj = {
   row: { flexDirection: "row" },
   voiceStatusIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 },
@@ -71,7 +71,7 @@ obj.ringingButtonLabel = {
 obj.autoDisabledVideo = { flexDirection: "row", alignItems: "center" };
 obj.autoDisabledVideoLabel = { marginLeft: 4 };
 let closure_17 = createStyles.createStyles(obj);
-createStyles = fn(5004);
+createStyles = fn(5005);
 let obj6 = { labelCallScreen: null, voiceStatusIcon: null, ringingButton: null, ringingButtonLabel: null };
 let obj5 = {
   fontFamily: Fonts.PRIMARY_SEMIBOLD,
@@ -83,7 +83,7 @@ let obj5 = {
 obj6.labelCallScreen = { fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let obj8 = { fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj6.voiceStatusIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
-let obj9 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
+const obj9 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
 obj6.ringingButton = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   borderRadius: nativeDefault.radii.xs,
@@ -110,7 +110,7 @@ let ReactCompilerGating = fn(558);
 let closure_19 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoiceMemberUserRow(user) {
-        const cResult = require("c").c(101);
+        const cResult = require("c").c(87);
         if (cResult[0] !== user) {
           user = user.user;
           ({ name, channel } = user);
@@ -127,297 +127,736 @@ let closure_19 = noop.memo(
           cResult[4] = name;
           cResult[5] = onPress;
           cResult[6] = tmp15;
-          cResult[7] = withStream;
-          cResult[8] = user;
-          cResult[9] = voiceState;
-          let tmp12 = voiceState;
+          cResult[7] = voiceState;
+          cResult[8] = withStream;
+          cResult[9] = user;
+          let tmp10 = voiceState;
+          let tmp5 = isActionSheet;
         } else {
           _require = cResult[1];
+          tmp5 = cResult[2];
           importDefault = cResult[3];
           dependencyMap = cResult[5];
-          user = cResult[8];
-          tmp12 = cResult[9];
+          tmp10 = cResult[7];
+          user = cResult[9];
         }
         let obj = require("c");
-        _objectWithoutProperties = closure_17();
-        closure_18();
+        const tmpResult = require("useLocalSelfMuteDeaf");
+        const result = tmpResult.withLocalSelfMuteDeaf(tmp10, require("useLocalSelfMuteDeaf").useLocalSelfMuteDeaf());
+        const tmp18 = closure_17();
+        _objectWithoutProperties = tmp18;
+        const tmpResult6 = require("useLocalSelfMuteDeaf");
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const id = localVideoDisabled.getId();
           cResult[10] = id;
-          let tmp19 = id;
+          let tmp20 = id;
         } else {
-          tmp19 = cResult[10];
+          tmp20 = cResult[10];
         }
-        closure_5 = tmp19;
-        if (cResult[11] !== tmp11.id) {
-          let obj2 = { userId: tmp11.id };
-          cResult[11] = tmp11.id;
+        closure_5 = tmp20;
+        if (cResult[11] !== tmp12.id) {
+          let obj2 = { userId: tmp12.id };
+          cResult[11] = tmp12.id;
           cResult[12] = obj2;
-          let tmp22 = obj2;
+          let tmp23 = obj2;
         } else {
-          tmp22 = cResult[12];
+          tmp23 = cResult[12];
         }
-        useIsSpeakingDefault(tmp22);
+        useIsSpeakingDefault(tmp23);
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [stateFromStores1];
           cResult[13] = items;
-          let tmp24 = items;
+          let tmp25 = items;
         } else {
-          tmp24 = cResult[13];
+          tmp25 = cResult[13];
         }
-        if (cResult[14] !== tmp11.id) {
-          class H {
+        if (cResult[14] !== tmp12.id) {
+          class U {
             constructor() {
               return closure_6.isUserPlayingSounds(closure_3.id);
             }
           }
-          cResult[14] = tmp11.id;
-          cResult[15] = H;
+          cResult[14] = tmp12.id;
+          cResult[15] = U;
         } else {
-          class H {
+          class U {
             constructor() {
               return closure_6.isUserPlayingSounds(closure_3.id);
             }
           }
         }
-        const tmp17 = closure_17();
-        const stateFromStores = require("initialize").useStateFromStores(tmp24, H);
+        const tmp19 = closure_18();
+        const stateFromStores = require("initialize").useStateFromStores(tmp25, U);
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
+          class U {
             constructor() {
               return closure_6.isUserPlayingSounds(closure_3.id);
             }
           }
           const items1 = [localMute];
-          class N {
-            constructor() {
-              return localMute.theme;
-            }
-          }
+          const fn = function k() {
+            return localMute.theme;
+          };
           cResult[16] = items1;
-          cResult[17] = N;
-          let tmp29 = N;
-          const tmp28 = items1;
+          cResult[17] = fn;
+          let tmp30 = fn;
+          const tmp29 = items1;
         } else {
-          class H {
+          class U {
             constructor() {
               return closure_6.isUserPlayingSounds(closure_3.id);
             }
           }
-          tmp29 = cResult[17];
+          tmp30 = cResult[17];
         }
-        const tmpResult = require("initialize");
-        stateFromStores1 = require("initialize").useStateFromStores(tmp28, tmp29);
+        const tmpResult7 = require("initialize");
+        stateFromStores1 = require("initialize").useStateFromStores(tmp29, tmp30);
         if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
+          class U {
             constructor() {
               return closure_6.isUserPlayingSounds(closure_3.id);
             }
           }
           const items2 = [localMute];
-          class N {
-            constructor() {
-              return localMute.theme;
-            }
-          }
           cResult[18] = items2;
-          const tmp31 = items2;
+          const tmp32 = items2;
         } else {
-          class H {
+          class U {
             constructor() {
               return closure_6.isUserPlayingSounds(closure_3.id);
             }
           }
         }
-        if (cResult[19] !== tmp11.id) {
-          class H {
+        if (cResult[19] !== tmp12.id) {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
-          cResult[19] = tmp11.id;
-          class N {
-            constructor() {
-              return localMute.theme;
-            }
-          }
-          cResult[20] = tmp33;
+          cResult[19] = tmp12.id;
+          cResult[20] = G;
         } else {
-          class H {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
         }
-        const tmpResult4 = require("initialize");
-        const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp31, tmp33);
+        const tmpResult8 = require("initialize");
+        const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp32, G);
         localMute = stateFromStoresObject.localMute;
-        ({ localDeaf, localVideo, isSelfMute, localVideoDisabled } = stateFromStoresObject);
+        ({ localDeaf, localVideo, localVideoDisabled } = stateFromStoresObject);
         const localVideoAutoDisabled = stateFromStoresObject.localVideoAutoDisabled;
         if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
-          const items3 = [GuildMemberStore];
-          class N {
-            constructor() {
-              return localMute.theme;
-            }
-          }
+          const items3 = [closure_11];
           cResult[21] = items3;
           const tmp35 = items3;
         } else {
-          class H {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
         }
         if (channel != null) {
-          class H {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
         }
         if (cResult[22] === undefined) {
-          class H {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
-          const stateFromStores2 = tmp(504).useStateFromStores(tmp35, K);
-          class N {
-            constructor() {
-              return localMute.theme;
-            }
-          }
-          c15 = false;
-          closure_13 = false;
+          const stateFromStores2 = tmp(504).useStateFromStores(tmp35, fn2);
+          c10 = false;
+          closure_11 = false;
           if (!localMute) {
-            class H {
+            class G {
               constructor() {
-                return closure_6.isUserPlayingSounds(closure_3.id);
+                tmp = closure_3;
+                isVideoEnabledResult = closure_5 === closure_3.id;
+                isSelfMuteResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp4 = closure_12;
+                  isSelfMuteResult = closure_12.isSelfMute();
+                }
+                obj = {
+                  isSelfMute: isSelfMuteResult,
+                  localMute: closure_12.isLocalMute(tmp.id),
+                  localDeaf: null,
+                  localVideo: null,
+                  localVideoDisabled: null,
+                  localVideoAutoDisabled: null,
+                };
+                isSelfDeafResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp6 = closure_12;
+                  isSelfDeafResult = closure_12.isSelfDeaf();
+                }
+                obj.localDeaf = isSelfDeafResult;
+                if (isVideoEnabledResult) {
+                  tmp7 = closure_12;
+                  isVideoEnabledResult = closure_12.isVideoEnabled();
+                }
+                obj.localVideo = isVideoEnabledResult;
+                obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                return obj;
               }
             }
           }
-          localMute = tmp43;
+          localMute = tmp37;
           if (!localVideo) {
-            class H {
+            class G {
               constructor() {
-                return closure_6.isUserPlayingSounds(closure_3.id);
+                tmp = closure_3;
+                isVideoEnabledResult = closure_5 === closure_3.id;
+                isSelfMuteResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp4 = closure_12;
+                  isSelfMuteResult = closure_12.isSelfMute();
+                }
+                obj = {
+                  isSelfMute: isSelfMuteResult,
+                  localMute: closure_12.isLocalMute(tmp.id),
+                  localDeaf: null,
+                  localVideo: null,
+                  localVideoDisabled: null,
+                  localVideoAutoDisabled: null,
+                };
+                isSelfDeafResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp6 = closure_12;
+                  isSelfDeafResult = closure_12.isSelfDeaf();
+                }
+                obj.localDeaf = isSelfDeafResult;
+                if (isVideoEnabledResult) {
+                  tmp7 = closure_12;
+                  isVideoEnabledResult = closure_12.isVideoEnabled();
+                }
+                obj.localVideo = isVideoEnabledResult;
+                obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                return obj;
               }
             }
           }
-          localVideo = tmp44;
-          GuildMemberStore = false;
-          let flag2 = false;
-          let tmp45 = tmp44;
-          let flag3 = false;
-          let tmp46 = tmp43;
-          let flag4 = false;
-          let tmp47 = localDeaf;
-          if (null != tmp12) {
-            class H {
+          closure_15 = false;
+          let tmp40 = tmp37;
+          if (null != result) {
+            class G {
               constructor() {
-                return closure_6.isUserPlayingSounds(closure_3.id);
+                tmp = closure_3;
+                isVideoEnabledResult = closure_5 === closure_3.id;
+                isSelfMuteResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp4 = closure_12;
+                  isSelfMuteResult = closure_12.isSelfMute();
+                }
+                obj = {
+                  isSelfMute: isSelfMuteResult,
+                  localMute: closure_12.isLocalMute(tmp.id),
+                  localDeaf: null,
+                  localVideo: null,
+                  localVideoDisabled: null,
+                  localVideoAutoDisabled: null,
+                };
+                isSelfDeafResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp6 = closure_12;
+                  isSelfDeafResult = closure_12.isSelfDeaf();
+                }
+                obj.localDeaf = isSelfDeafResult;
+                if (isVideoEnabledResult) {
+                  tmp7 = closure_12;
+                  isVideoEnabledResult = closure_12.isVideoEnabled();
+                }
+                obj.localVideo = isVideoEnabledResult;
+                obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                return obj;
               }
             }
-            c15 = true;
-            class N {
-              constructor() {
-                return localMute.theme;
-              }
-            }
-            closure_13 = tmp48;
-            if (!tmp43) {
-              class H {
+            c10 = true;
+            if (tmp16) {
+              class G {
                 constructor() {
-                  return closure_6.isUserPlayingSounds(closure_3.id);
+                  tmp = closure_3;
+                  isVideoEnabledResult = closure_5 === closure_3.id;
+                  isSelfMuteResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp4 = closure_12;
+                    isSelfMuteResult = closure_12.isSelfMute();
+                  }
+                  obj = {
+                    isSelfMute: isSelfMuteResult,
+                    localMute: closure_12.isLocalMute(tmp.id),
+                    localDeaf: null,
+                    localVideo: null,
+                    localVideoDisabled: null,
+                    localVideoAutoDisabled: null,
+                  };
+                  isSelfDeafResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp6 = closure_12;
+                    isSelfDeafResult = closure_12.isSelfDeaf();
+                  }
+                  obj.localDeaf = isSelfDeafResult;
+                  if (isVideoEnabledResult) {
+                    tmp7 = closure_12;
+                    isVideoEnabledResult = closure_12.isVideoEnabled();
+                  }
+                  obj.localVideo = isVideoEnabledResult;
+                  obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                  obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                  return obj;
                 }
               }
             }
-            localMute = tmp49;
+            closure_11 = tmp16;
+            if (!tmp37) {
+              class G {
+                constructor() {
+                  tmp = closure_3;
+                  isVideoEnabledResult = closure_5 === closure_3.id;
+                  isSelfMuteResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp4 = closure_12;
+                    isSelfMuteResult = closure_12.isSelfMute();
+                  }
+                  obj = {
+                    isSelfMute: isSelfMuteResult,
+                    localMute: closure_12.isLocalMute(tmp.id),
+                    localDeaf: null,
+                    localVideo: null,
+                    localVideoDisabled: null,
+                    localVideoAutoDisabled: null,
+                  };
+                  isSelfDeafResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp6 = closure_12;
+                    isSelfDeafResult = closure_12.isSelfDeaf();
+                  }
+                  obj.localDeaf = isSelfDeafResult;
+                  if (isVideoEnabledResult) {
+                    tmp7 = closure_12;
+                    isVideoEnabledResult = closure_12.isVideoEnabled();
+                  }
+                  obj.localVideo = isVideoEnabledResult;
+                  obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                  obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                  return obj;
+                }
+              }
+            }
+            localMute = tmp41;
             if (!localDeaf) {
-              class H {
+              class G {
                 constructor() {
-                  return closure_6.isUserPlayingSounds(closure_3.id);
+                  tmp = closure_3;
+                  isVideoEnabledResult = closure_5 === closure_3.id;
+                  isSelfMuteResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp4 = closure_12;
+                    isSelfMuteResult = closure_12.isSelfMute();
+                  }
+                  obj = {
+                    isSelfMute: isSelfMuteResult,
+                    localMute: closure_12.isLocalMute(tmp.id),
+                    localDeaf: null,
+                    localVideo: null,
+                    localVideoDisabled: null,
+                    localVideoAutoDisabled: null,
+                  };
+                  isSelfDeafResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp6 = closure_12;
+                    isSelfDeafResult = closure_12.isSelfDeaf();
+                  }
+                  obj.localDeaf = isSelfDeafResult;
+                  if (isVideoEnabledResult) {
+                    tmp7 = closure_12;
+                    isVideoEnabledResult = closure_12.isVideoEnabled();
+                  }
+                  obj.localVideo = isVideoEnabledResult;
+                  obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                  obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                  return obj;
                 }
               }
             }
-            localDeaf = tmp50;
-            if (!tmp44) {
-              class H {
+            localDeaf = tmp42;
+            if (!localVideo) {
+              class G {
                 constructor() {
-                  return closure_6.isUserPlayingSounds(closure_3.id);
+                  tmp = closure_3;
+                  isVideoEnabledResult = closure_5 === closure_3.id;
+                  isSelfMuteResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp4 = closure_12;
+                    isSelfMuteResult = closure_12.isSelfMute();
+                  }
+                  obj = {
+                    isSelfMute: isSelfMuteResult,
+                    localMute: closure_12.isLocalMute(tmp.id),
+                    localDeaf: null,
+                    localVideo: null,
+                    localVideoDisabled: null,
+                    localVideoAutoDisabled: null,
+                  };
+                  isSelfDeafResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp6 = closure_12;
+                    isSelfDeafResult = closure_12.isSelfDeaf();
+                  }
+                  obj.localDeaf = isSelfDeafResult;
+                  if (isVideoEnabledResult) {
+                    tmp7 = closure_12;
+                    isVideoEnabledResult = closure_12.isVideoEnabled();
+                  }
+                  obj.localVideo = isVideoEnabledResult;
+                  obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                  obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                  return obj;
                 }
               }
             }
-            localVideo = tmp51;
-            const sessionId = tmp12.sessionId;
-            let tmp52 = null != sessionId && tmp19 === tmp11.id;
-            if (tmp52) {
-              class H {
+            localVideo = tmp43;
+            const sessionId = result.sessionId;
+            let tmp44 = null != sessionId && tmp20 === tmp12.id;
+            if (tmp44) {
+              class G {
                 constructor() {
-                  return closure_6.isUserPlayingSounds(closure_3.id);
+                  tmp = closure_3;
+                  isVideoEnabledResult = closure_5 === closure_3.id;
+                  isSelfMuteResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp4 = closure_12;
+                    isSelfMuteResult = closure_12.isSelfMute();
+                  }
+                  obj = {
+                    isSelfMute: isSelfMuteResult,
+                    localMute: closure_12.isLocalMute(tmp.id),
+                    localDeaf: null,
+                    localVideo: null,
+                    localVideoDisabled: null,
+                    localVideoAutoDisabled: null,
+                  };
+                  isSelfDeafResult = isVideoEnabledResult;
+                  if (isVideoEnabledResult) {
+                    tmp6 = closure_12;
+                    isSelfDeafResult = closure_12.isSelfDeaf();
+                  }
+                  obj.localDeaf = isSelfDeafResult;
+                  if (isVideoEnabledResult) {
+                    tmp7 = closure_12;
+                    isVideoEnabledResult = closure_12.isVideoEnabled();
+                  }
+                  obj.localVideo = isVideoEnabledResult;
+                  obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                  obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                  return obj;
                 }
               }
-              tmp52 = sessionId !== localVideoDisabled.getSessionId();
+              tmp44 = sessionId !== localVideoDisabled.getSessionId();
             }
-            GuildMemberStore = tmp52;
-            flag4 = tmp52;
-            flag2 = true;
-            tmp45 = tmp51;
-            flag3 = tmp48;
-            tmp46 = tmp49;
-            tmp47 = tmp50;
+            closure_15 = tmp44;
+            tmp40 = tmp41;
           }
-          cResult[25] = isSelfMute;
-          cResult[26] = localDeaf;
-          cResult[27] = localMute;
-          cResult[28] = localVideo;
-          cResult[29] = localVideoDisabled;
-          cResult[30] = tmp11.id;
-          cResult[31] = tmp12;
-          cResult[32] = tmp16;
-          cResult[33] = tmp47;
-          cResult[34] = flag4;
-          cResult[35] = tmp46;
-          cResult[36] = flag3;
-          cResult[37] = tmp45;
-          cResult[38] = flag2;
-          const tmpResult6 = tmp(504);
+          const tmp45 = tmp5 ? tmp19.voiceStatusIcon : tmp18.voiceStatusIcon;
+          const style = tmp45;
+          if (cResult[25] === localMute) {
+            class G {
+              constructor() {
+                tmp = closure_3;
+                isVideoEnabledResult = closure_5 === closure_3.id;
+                isSelfMuteResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp4 = closure_12;
+                  isSelfMuteResult = closure_12.isSelfMute();
+                }
+                obj = {
+                  isSelfMute: isSelfMuteResult,
+                  localMute: closure_12.isLocalMute(tmp.id),
+                  localDeaf: null,
+                  localVideo: null,
+                  localVideoDisabled: null,
+                  localVideoAutoDisabled: null,
+                };
+                isSelfDeafResult = isVideoEnabledResult;
+                if (isVideoEnabledResult) {
+                  tmp6 = closure_12;
+                  isSelfDeafResult = closure_12.isSelfDeaf();
+                }
+                obj.localDeaf = isSelfDeafResult;
+                if (isVideoEnabledResult) {
+                  tmp7 = closure_12;
+                  isVideoEnabledResult = closure_12.isVideoEnabled();
+                }
+                obj.localVideo = isVideoEnabledResult;
+                obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+                obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+                return obj;
+              }
+            }
+          }
+          function renderMicIcon() {
+            if (localMute) {
+              if (obj.isThemeDark(stateFromStores1)) {
+                let tmp5Result = _modDef15117;
+              } else {
+                tmp5Result = _modDef15118;
+              }
+              const obj2 = {
+                size: native.Icon.Sizes.REFRESH_SMALL_16,
+                source: tmp5Result,
+                style: closure_4.voiceStatusIconMargin,
+                color: style.tintColor,
+                disableColor: localMute,
+              };
+              return closure_2_14(native.Icon, obj2);
+            } else {
+              return null;
+            }
+          }
+          cResult[25] = localMute;
+          cResult[26] = tmp40;
+          cResult[27] = tmp18;
+          cResult[28] = stateFromStores1;
+          cResult[29] = tmp45;
+          cResult[30] = renderMicIcon;
+          const tmpResult10 = tmp(504);
         }
         if (channel != null) {
-          class H {
+          class G {
             constructor() {
-              return closure_6.isUserPlayingSounds(closure_3.id);
+              tmp = closure_3;
+              isVideoEnabledResult = closure_5 === closure_3.id;
+              isSelfMuteResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp4 = closure_12;
+                isSelfMuteResult = closure_12.isSelfMute();
+              }
+              obj = {
+                isSelfMute: isSelfMuteResult,
+                localMute: closure_12.isLocalMute(tmp.id),
+                localDeaf: null,
+                localVideo: null,
+                localVideoDisabled: null,
+                localVideoAutoDisabled: null,
+              };
+              isSelfDeafResult = isVideoEnabledResult;
+              if (isVideoEnabledResult) {
+                tmp6 = closure_12;
+                isSelfDeafResult = closure_12.isSelfDeaf();
+              }
+              obj.localDeaf = isSelfDeafResult;
+              if (isVideoEnabledResult) {
+                tmp7 = closure_12;
+                isVideoEnabledResult = closure_12.isVideoEnabled();
+              }
+              obj.localVideo = isVideoEnabledResult;
+              obj.localVideoDisabled = closure_12.isLocalVideoDisabled(tmp.id);
+              obj.localVideoAutoDisabled = closure_12.isLocalVideoAutoDisabled(tmp.id);
+              return obj;
             }
           }
         }
-        class K {
-          constructor() {
-            guild_id = undefined;
-            tmp = closure_11;
-            if (closure_0 != null) {
-              guild_id = closure_0.guild_id;
-            }
-            return closure_11.isGuestOrLurker(guild_id, closure_3.id);
+        fn2 = function q() {
+          guild_id = undefined;
+          if (guild_id != null) {
+            guild_id = guild_id.guild_id;
           }
-        }
+          return GuildMemberStore.isGuestOrLurker(guild_id, user.id);
+        };
         cResult[22] = undefined;
-        cResult[23] = tmp11.id;
-        cResult[24] = K;
-        const tmpResult5 = require("initialize");
+        cResult[23] = tmp12.id;
+        cResult[24] = fn2;
+        const tmpResult9 = require("initialize");
       }
     : function VoiceMemberUserRow(user) {
         user = user.user;
         ({ name, channel } = user);
-        ({ voiceState, withStream } = user);
-        if (withStream === undefined) {
-          withStream = true;
+        let flag = user.withStream;
+        if (flag === undefined) {
+          flag = true;
         }
         ({ isActionSheet, onPress: dependencyMap } = user);
         const merged = Object.assign(
@@ -433,17 +872,20 @@ let closure_19 = noop.memo(
             onPress: 0,
           }),
         );
-        const tmp2 = closure_17();
-        const tmp3 = closure_18();
+        let obj = user(9203);
+        const result = obj.withLocalSelfMuteDeaf(user.voiceState, user(9203).useLocalSelfMuteDeaf());
+        const tmp4 = closure_17();
+        const tmp5 = closure_18();
         const id = AuthenticationStore.getId();
-        const obj2 = { userId: user.id };
-        const tmp7 = channel(6816)({ userId: user.id });
+        const obj2 = user(9203);
+        const obj3 = { userId: user.id };
+        const tmp8 = channel(6839)({ userId: user.id });
         const items = [SoundboardStore];
         const stateFromStores = user(504).useStateFromStores(items, () => SoundboardStore.isUserPlayingSounds(user.id));
-        const obj3 = user(504);
+        const obj6 = user(504);
         const items1 = [ThemeStore];
         const stateFromStores1 = user(504).useStateFromStores(items1, () => theme.theme);
-        const obj4 = user(504);
+        const obj7 = user(504);
         const items2 = [MediaEngineStore];
         const stateFromStoresObject = user(504).useStateFromStoresObject(items2, () => {
           let isVideoEnabledResult = id === user.id;
@@ -474,11 +916,11 @@ let closure_19 = noop.memo(
         });
         ({ localMute, localDeaf, localVideo, localVideoDisabled, isSelfMute, localVideoAutoDisabled } =
           stateFromStoresObject);
-        const obj5 = user(504);
+        const obj8 = user(504);
         const items3 = [GuildMemberStore];
         let tmp13 = localMute;
         const stateFromStores2 = user(504).useStateFromStores(items3, () => {
-          guild_id = undefined;
+          let guild_id;
           if (channel != null) {
             guild_id = channel.guild_id;
           }
@@ -490,41 +932,41 @@ let closure_19 = noop.memo(
         if (!localVideo) {
           localVideo = localVideoDisabled;
         }
-        let flag = false;
+        let flag2 = false;
         let tmp14 = localVideo;
         let tmp15 = localDeaf;
         let tmp16 = tmp13;
-        let flag2 = false;
         let flag3 = false;
         let flag4 = false;
-        if (null != voiceState) {
-          if (withStream) {
-            withStream = voiceState.selfStream;
+        let flag5 = false;
+        if (null != result) {
+          if (flag) {
+            flag = result.selfStream;
           }
           let isVoiceMutedResult = tmp13;
           if (!tmp13) {
-            isVoiceMutedResult = voiceState.isVoiceMuted();
+            isVoiceMutedResult = result.isVoiceMuted();
           }
           let isVoiceDeafenedResult = localDeaf;
           if (!localDeaf) {
-            isVoiceDeafenedResult = voiceState.isVoiceDeafened();
+            isVoiceDeafenedResult = result.isVoiceDeafened();
           }
           let selfVideo = localVideo;
           if (!localVideo) {
-            selfVideo = voiceState.selfVideo;
+            selfVideo = result.selfVideo;
           }
-          const sessionId = voiceState.sessionId;
+          const sessionId = result.sessionId;
           const tmp19 = null != sessionId && id === user.id && sessionId !== AuthenticationStore.getSessionId();
-          flag3 = true;
-          flag = tmp19;
+          flag4 = true;
+          flag2 = tmp19;
           tmp14 = selfVideo;
           tmp15 = isVoiceDeafenedResult;
           tmp16 = isVoiceMutedResult;
-          flag2 = withStream;
-          flag4 = tmp19;
+          flag3 = flag;
+          flag5 = tmp19;
         }
-        const tmp20 = isActionSheet ? tmp3.voiceStatusIcon : tmp2.voiceStatusIcon;
-        const obj7 = {
+        const tmp20 = isActionSheet ? tmp5.voiceStatusIcon : tmp4.voiceStatusIcon;
+        const obj5 = {
           onPress() {
             return dependencyMap(user);
           },
@@ -532,124 +974,124 @@ let closure_19 = noop.memo(
           leading: null,
           trailing: null,
         };
-        const obj8 = { user, guildId: null, size: null, speaking: null, playingSoundboard: null };
-        guild_id = undefined;
+        const obj10 = { user, guildId: null, size: null, speaking: null, playingSoundboard: null };
+        let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
         }
-        obj8.guildId = guild_id;
-        obj8.size = user(1199).AvatarSizes.REFRESH_MEDIUM_32;
-        obj8.speaking = tmp7;
-        obj8.playingSoundboard = stateFromStores;
-        obj7.leading = closure_14(user(1199).Avatar, obj8);
+        obj10.guildId = guild_id;
+        obj10.size = user(1199).AvatarSizes.REFRESH_MEDIUM_32;
+        obj10.speaking = tmp8;
+        obj10.playingSoundboard = stateFromStores;
+        obj5.leading = closure_14(user(1199).Avatar, obj10);
         let tmp24Result = null;
-        if (flag3) {
+        if (flag4) {
           tmp24Result = null;
-          if (!flag) {
-            const obj9 = { style: tmp2.row, children: null };
+          if (!flag2) {
+            const obj11 = { style: tmp4.row, children: null };
             let tmp21Result = null;
             if (user.isSpectating) {
-              const obj10 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14887), style: tmp20 };
-              tmp21Result = closure_14(tmp8(1199).Icon, obj10);
+              const obj12 = { size: tmp2(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(15122), style: tmp20 };
+              tmp21Result = closure_14(tmp2(1199).Icon, obj12);
             }
             const items4 = [tmp21Result, , , ,];
             if (!tmp16) {
               items4[1] = null;
               let tmp21Result5 = null;
               if (tmp15) {
-                const obj11 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14884), style: tmp20 };
-                tmp21Result5 = closure_14(tmp8(1199).Icon, obj11);
+                const obj13 = { size: tmp2(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(15119), style: tmp20 };
+                tmp21Result5 = closure_14(tmp2(1199).Icon, obj13);
               }
               items4[2] = tmp21Result5;
               if (!tmp14) {
                 items4[3] = null;
                 let tmp21Result6 = null;
-                if (flag2) {
-                  const obj12 = { style: tmp20 };
-                  tmp21Result6 = closure_14(tmp8(1199).LiveTag, obj12);
+                if (flag3) {
+                  const obj14 = { style: tmp20 };
+                  tmp21Result6 = closure_14(tmp2(1199).LiveTag, obj14);
                 }
                 items4[4] = tmp21Result6;
-                obj9.children = items4;
-                tmp24Result = closure_15(closure_5, obj9);
+                obj11.children = items4;
+                tmp24Result = closure_15(closure_5, obj11);
               } else {
                 if (localVideoDisabled) {
-                  const obj13 = {
-                    size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16,
-                    source: channel(14885),
-                    style: tmp2.voiceStatusIconMargin,
+                  const obj15 = {
+                    size: tmp2(1199).Icon.Sizes.REFRESH_SMALL_16,
+                    source: channel(15120),
+                    style: tmp4.voiceStatusIconMargin,
                     disableColor: true,
                   };
-                  let obj14 = obj13;
+                  let obj16 = obj15;
                 } else {
-                  obj14 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14886), style: tmp20 };
+                  obj16 = { size: tmp2(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(15121), style: tmp20 };
                 }
-                closure_14(tmp8(1199).Icon, obj14);
+                closure_14(tmp2(1199).Icon, obj16);
               }
             } else {
-              if (tmp8Result.isThemeDark(stateFromStores1)) {
-                let tmp5Result = channel(14882);
+              if (tmp2Result.isThemeDark(stateFromStores1)) {
+                let tmp7Result = channel(15117);
               } else {
-                tmp5Result = channel(14883);
+                tmp7Result = channel(15118);
               }
-              const obj15 = {
-                size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16,
-                source: tmp5Result,
-                style: tmp2.voiceStatusIconMargin,
+              const obj17 = {
+                size: tmp2(1199).Icon.Sizes.REFRESH_SMALL_16,
+                source: tmp7Result,
+                style: tmp4.voiceStatusIconMargin,
                 color: tmp20.tintColor,
                 disableColor: localMute,
               };
-              closure_14(tmp8(1199).Icon, obj15);
-              tmp8Result = tmp8(5011);
+              closure_14(tmp2(1199).Icon, obj17);
+              tmp2Result = tmp2(5012);
             }
           }
         }
-        obj7.trailing = tmp24Result;
-        const obj16 = { disabled: flag4 };
+        obj5.trailing = tmp24Result;
+        const obj18 = { disabled: flag5 };
         const merged1 = Object.assign(merged);
-        const merged2 = Object.assign(obj7);
+        const merged2 = Object.assign(obj5);
         let tmp36 = name;
         if (stateFromStores2) {
-          const obj17 = { children: null };
+          const obj19 = { children: null };
           const items5 = [name];
-          const obj18 = { variant: "text-md/semibold", lineClamp: 1, color: "status-positive", children: null };
-          const intl = tmp8(1125).intl;
-          const items6 = ["\u00A0", intl.string(tmp8(1125).t["pFO/Ph"])];
-          obj18.children = items6;
-          items5[1] = closure_15(tmp8(5270).Text, obj18);
-          obj17.children = items5;
-          tmp36 = closure_15(closure_16, obj17);
+          const obj20 = { variant: "text-md/semibold", lineClamp: 1, color: "status-positive", children: null };
+          const intl = tmp2(1125).intl;
+          const items6 = ["\u00A0", intl.string(tmp2(1125).t["pFO/Ph"])];
+          obj20.children = items6;
+          items5[1] = closure_15(tmp2(5271).Text, obj20);
+          obj19.children = items5;
+          tmp36 = closure_15(closure_16, obj19);
         }
-        const obj19 = { text: tmp36, style: null };
+        const obj21 = { text: tmp36, style: null };
         let labelCallScreen = null;
         if (isActionSheet) {
-          labelCallScreen = tmp3.labelCallScreen;
+          labelCallScreen = tmp5.labelCallScreen;
         }
-        obj19.style = labelCallScreen;
-        obj16.label = closure_14(user(8985).FormRow.Label, obj19);
+        obj21.style = labelCallScreen;
+        obj18.label = closure_14(user(8988).FormRow.Label, obj21);
         if (localVideoAutoDisabled) {
-          const obj20 = { style: tmp2.autoDisabledVideo, children: null };
-          const obj21 = { source: channel(11487), size: tmp8(1199).Icon.Sizes.EXTRA_SMALL, disableColor: true };
-          const items7 = [closure_14(tmp8(1199).Icon, obj21)];
-          const obj22 = {
+          const obj22 = { style: tmp4.autoDisabledVideo, children: null };
+          const obj23 = { source: channel(11541), size: tmp2(1199).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+          const items7 = [closure_14(tmp2(1199).Icon, obj23)];
+          const obj24 = {
             variant: "text-xs/medium",
             color: "text-default",
-            style: tmp2.autoDisabledVideoLabel,
+            style: tmp4.autoDisabledVideoLabel,
             children: null,
           };
-          const intl3 = tmp8(1125).intl;
-          obj22.children = intl3.string(tmp8(1125).t.m2Hyj0);
-          items7[1] = closure_14(tmp8(5270).Text, obj22);
-          obj20.children = items7;
-          let stringResult = closure_15(closure_5, obj20);
+          const intl3 = tmp2(1125).intl;
+          obj24.children = intl3.string(tmp2(1125).t.m2Hyj0);
+          items7[1] = closure_14(tmp2(5271).Text, obj24);
+          obj22.children = items7;
+          let stringResult = closure_15(closure_5, obj22);
         } else {
           stringResult = null;
-          if (flag) {
-            const intl2 = tmp8(1125).intl;
-            stringResult = intl2.string(tmp8(1125).t.IyYqqY);
+          if (flag2) {
+            const intl2 = tmp2(1125).intl;
+            stringResult = intl2.string(tmp2(1125).t.IyYqqY);
           }
         }
-        obj16.subLabel = stringResult;
-        return closure_14(user(8985).FormRow, obj16);
+        obj18.subLabel = stringResult;
+        return closure_14(user(8988).FormRow, obj18);
       },
 );
 ReactCompilerGating = fn(558);
@@ -749,9 +1191,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 },
               };
-              obj4.children = closure_14(channel(11752), obj5);
+              obj4.children = closure_14(channel(11806), obj5);
               tmp31Result = closure_14(closure_5, obj4);
-              const tmp34 = channel(11752);
+              const tmp34 = channel(11806);
             }
             cResult[11] = channel;
             cResult[12] = tmp4;
@@ -769,7 +1211,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = tmp27;
         }
         const obj7 = { text: cResult[4], style: labelCallScreen };
-        const tmp20 = closure_14(tmp(8985).FormSubLabel, obj7);
+        const tmp20 = closure_14(tmp(8988).FormSubLabel, obj7);
         cResult[5] = cResult[4];
         cResult[6] = labelCallScreen;
         cResult[7] = tmp20;
@@ -804,7 +1246,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           labelCallScreen = tmp2.labelCallScreen;
         }
         obj3.style = labelCallScreen;
-        obj2.subLabel = closure_14(tmp3(8985).FormSubLabel, obj3);
+        obj2.subLabel = closure_14(tmp3(8988).FormSubLabel, obj3);
         const items1 = [closure_14(closure_19, obj2)];
         let tmp10Result = user.id !== AuthenticationStore.getId();
         if (tmp10Result) {
@@ -829,9 +1271,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          obj4.children = closure_14(channel(11752), obj5);
+          obj4.children = closure_14(channel(11806), obj5);
           tmp10Result = closure_14(closure_5, obj4);
-          const tmp20 = channel(11752);
+          const tmp20 = channel(11806);
         }
         const obj6 = { children: null };
         items1[1] = tmp10Result;
@@ -884,7 +1326,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onPress: tmp6, accessibilityRole: "button", style: tmp7, children: tmp12 };
-            const tmp17 = closure_14(tmp(6944).PressableOpacity, obj3);
+            const tmp17 = closure_14(tmp(6968).PressableOpacity, obj3);
             cResult[6] = tmp6;
             cResult[7] = tmp7;
             cResult[8] = tmp12;
@@ -931,7 +1373,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = stringResult;
           tmp4Result = closure_14(tmp5(1199).LegacyText, obj2);
           obj.children = tmp4Result;
-          closure_14(channelId(6944).PressableOpacity, obj);
+          closure_14(channelId(6968).PressableOpacity, obj);
         }
       }
       return tmp3;
@@ -980,7 +1422,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onPress: tmp6, accessibilityRole: "button", style: tmp7, children: tmp12 };
-            const tmp17 = closure_14(tmp(6944).PressableOpacity, obj3);
+            const tmp17 = closure_14(tmp(6968).PressableOpacity, obj3);
             cResult[6] = tmp6;
             cResult[7] = tmp7;
             cResult[8] = tmp12;
@@ -1027,7 +1469,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = stringResult;
           tmp4Result = closure_14(tmp5(1199).LegacyText, obj2);
           obj.children = tmp4Result;
-          closure_14(channelId(6944).PressableOpacity, obj);
+          closure_14(channelId(6968).PressableOpacity, obj);
         }
       }
       return tmp3;
@@ -1062,13 +1504,13 @@ const memoResult = noop.memo(
             let tmp7 = cResult[3];
             let tmp8 = cResult[4];
           }
-          const stateFromStores = tmp(tmp2[18]).useStateFromStores(first, tmp7, tmp8);
+          const stateFromStores = tmp(tmp2[19]).useStateFromStores(first, tmp7, tmp8);
           if (cResult[5] === channel.guild_id) {
             if (cResult[6] === channel.id) {
               if (cResult[7] === user) {
                 let tmp10 = cResult[8];
               }
-              const canRing = tmp(tmp2[39]).useCanRing(user);
+              const canRing = tmp(tmp2[40]).useCanRing(user);
               if (cResult[9] === canRing) {
                 if (cResult[10] === channel.id) {
                   if (cResult[11] === isActionSheet) {
@@ -1113,7 +1555,7 @@ const memoResult = noop.memo(
                             const obj2 = { onPress: tmp15, label: tmp17, leading: tmp20, trailing: tmp22 };
                             const obj4 = {};
                             const merged = Object.assign(obj2);
-                            const tmp29 = closure_14(tmp(tmp2[30]).FormRow, obj4);
+                            const tmp29 = closure_14(tmp(tmp2[31]).FormRow, obj4);
                             cResult[26] = tmp22;
                             cResult[27] = tmp15;
                             cResult[28] = tmp17;
@@ -1128,16 +1570,16 @@ const memoResult = noop.memo(
                           const obj5 = {
                             user,
                             guildId: channel.guild_id,
-                            size: tmp(tmp2[22]).AvatarSizes.REFRESH_MEDIUM_32,
+                            size: tmp(tmp2[23]).AvatarSizes.REFRESH_MEDIUM_32,
                           };
-                          const tmp21 = closure_14(tmp(tmp2[22]).Avatar, obj5);
+                          const tmp21 = closure_14(tmp(tmp2[23]).Avatar, obj5);
                           cResult[21] = channel.guild_id;
                           cResult[22] = user;
                           cResult[23] = tmp21;
                           tmp20 = tmp21;
                         }
                         const obj6 = { text: tmp10, style: null };
-                        const tmp19 = closure_14(tmp(tmp2[30]).FormRow.Label, obj6);
+                        const tmp19 = closure_14(tmp(tmp2[31]).FormRow.Label, obj6);
                         cResult[18] = tmp10;
                         cResult[19] = null;
                         cResult[20] = tmp19;
@@ -1171,17 +1613,17 @@ const memoResult = noop.memo(
               cResult[13] = user.id;
               cResult[14] = renderVoiceState;
               tmp14 = renderVoiceState;
-              const tmpResult2 = tmp(tmp2[39]);
+              const tmpResult2 = tmp(tmp2[40]);
             }
           }
-          const tmpResult = tmp(tmp2[18]);
-          const name = channel(tmp2[38]).getName(channel.guild_id, channel.id, user);
+          const tmpResult = tmp(tmp2[19]);
+          const name = channel(tmp2[39]).getName(channel.guild_id, channel.id, user);
           cResult[5] = channel.guild_id;
           cResult[6] = channel.id;
           cResult[7] = user;
           cResult[8] = name;
           tmp10 = name;
-          const obj3 = channel(tmp2[38]);
+          const obj3 = channel(tmp2[39]);
         }
         const fn = function l() {
           const call = CallStore.getCall(channel.id);
@@ -1222,8 +1664,8 @@ const memoResult = noop.memo(
           items1,
         );
         const obj = id(504);
-        const name = id2(6025).getName(id2.guild_id, id2.id, id);
-        const obj2 = id2(6025);
+        const name = id2(6029).getName(id2.guild_id, id2.id, id);
+        const obj2 = id2(6029);
         const obj4 = {
           onPress() {
             return dependencyMap(id);
@@ -1232,15 +1674,15 @@ const memoResult = noop.memo(
           leading: null,
           trailing: null,
         };
-        const canRing = id(7460).useCanRing(id);
+        const canRing = id(7483).useCanRing(id);
         const obj5 = { text: name, style: null };
         let labelCallScreen = null;
         if (isActionSheet) {
           labelCallScreen = tmp.labelCallScreen;
         }
         obj5.style = labelCallScreen;
-        obj4.label = closure_14(id(8985).FormRow.Label, obj5);
-        const obj3 = id(7460);
+        obj4.label = closure_14(id(8988).FormRow.Label, obj5);
+        const obj3 = id(7483);
         obj4.leading = closure_14(id(1199).Avatar, {
           user: id,
           guildId: id2.guild_id,
@@ -1250,7 +1692,7 @@ const memoResult = noop.memo(
           obj4.trailing = null;
           const obj7 = {};
           const merged = Object.assign(obj4);
-          return closure_14(tmp2(8985).FormRow, obj7);
+          return closure_14(tmp2(8988).FormRow, obj7);
         } else {
           const obj8 = { channelId: null, userId: null, isActionSheet: null };
           id2 = id2.id;
@@ -1264,7 +1706,7 @@ const memoResult = noop.memo(
       },
 );
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberUser.tsx");
+let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberUser.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()

@@ -13,7 +13,7 @@ let closure_5 = async function _handleDocumentSelection() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_5 = async function _handleDocumentSelection() {
           closure_129_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -120,7 +120,7 @@ let closure_5 = async function _handleDocumentSelection() {
         if (obj4.isErrorWithCode(closure_129_5)) {
           if (closure_129_5.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
         obj4 = closure_130_0(closure_130_2[2]);
@@ -136,7 +136,7 @@ let closure_5 = async function _handleDocumentSelection() {
         obj13.body = intl4.string(closure_130_0(closure_130_2[5]).t.fZRH9P);
         closure_130_1(closure_130_2[4]).show(obj13);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -174,7 +174,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/FilePickerUtils.tsx");
 
-export const handleDocumentSelection = function handleDocumentSelection() {
+export function handleDocumentSelection() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -183,4 +183,4 @@ export const handleDocumentSelection = function handleDocumentSelection() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

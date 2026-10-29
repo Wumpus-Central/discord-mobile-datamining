@@ -16,6 +16,6 @@ const config = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/media_engine/GoLiveHdrExperiment.tsx");
 
 export const HdrCaptureMode = obj;
-export const getGoLiveHdrConfig = function getGoLiveHdrConfig(location) {
+export function getGoLiveHdrConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

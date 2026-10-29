@@ -16,7 +16,7 @@ const FormSubmitErrorType = {
 const result = size.fileFinishedImporting("modules/forums/FormError.tsx");
 
 export { FormSubmitErrorType };
-export const makeEmptyTitleError = function makeEmptyTitleError() {
+export function makeEmptyTitleError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t["71wuR0"]);
   obj = { type: obj.EmptyContent, message: null };
@@ -25,8 +25,8 @@ export const makeEmptyTitleError = function makeEmptyTitleError() {
   }
   obj.message = stringResult;
   return obj;
-};
-export const makeEmptyMessageError = function makeEmptyMessageError() {
+}
+export function makeEmptyMessageError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t["w/BT3G"]);
   obj = { type: obj.EmptyContent, message: null };
@@ -35,8 +35,8 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   }
   obj.message = stringResult;
   return obj;
-};
-export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
+}
+export function makeAutomodViolationError(errorResponseBody, id) {
   const obj = AutomodErrorUtils;
   id = undefined;
   if (id != null) {
@@ -49,8 +49,8 @@ export const makeAutomodViolationError = function makeAutomodViolationError(erro
   }
   obj2.message = automodErrorMessageFromErrorResponse;
   return obj2;
-};
-export const makeApiNameValidationError = function makeApiNameValidationError() {
+}
+export function makeApiNameValidationError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t["71wuR0"]);
   obj = { type: obj.ApiValidation, message: null };
@@ -59,8 +59,8 @@ export const makeApiNameValidationError = function makeApiNameValidationError() 
   }
   obj.message = stringResult;
   return obj;
-};
-export const makeEmptyTagsError = function makeEmptyTagsError() {
+}
+export function makeEmptyTagsError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t.xPfNQi);
   obj = { type: obj.EmptyTags, message: null };
@@ -69,8 +69,8 @@ export const makeEmptyTagsError = function makeEmptyTagsError() {
   }
   obj.message = stringResult;
   return obj;
-};
-export const renderError = function renderError(type, content) {
+}
+export function renderError(type, content) {
   let tmp = null;
   if (null != type) {
     if (type.type === obj.EmptyContent) {
@@ -90,4 +90,4 @@ export const renderError = function renderError(type, content) {
     tmp = message;
   }
   return tmp;
-};
+}

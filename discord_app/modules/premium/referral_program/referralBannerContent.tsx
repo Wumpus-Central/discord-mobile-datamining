@@ -12,10 +12,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 const HelpdeskArticles = Constants2.HelpdeskArticles;
 const result = size.fileFinishedImporting("modules/premium/referral_program/referralBannerContent.tsx");
 
-export const getAllReferralsSent = function getAllReferralsSent(size) {
+export function getAllReferralsSent(size) {
   return size.size === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
-};
-export const getShouldShowSpendOrbsCta = function getShouldShowSpendOrbsCta(numSent, referralRewardType) {
+}
+export function getShouldShowSpendOrbsCta(numSent, referralRewardType) {
   let tmp3 = referralRewardType === PremiumReferralIncentivesExperiment.ReferralRewardType.ORBS;
   if (tmp3) {
     tmp3 = numSent.numSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
@@ -24,8 +24,8 @@ export const getShouldShowSpendOrbsCta = function getShouldShowSpendOrbsCta(numS
     tmp3 = numSent.numConverted >= 1;
   }
   return tmp3;
-};
-export const getReferralStatus = function getReferralStatus(numSent) {
+}
+export function getReferralStatus(numSent) {
   _require = 0;
   importDefault = 0;
   dependencyMap = 0;
@@ -42,8 +42,8 @@ export const getReferralStatus = function getReferralStatus(numSent) {
     }
   });
   return { numRewardGranted: _require, numConverted: importDefault, numRedeemed: dependencyMap, numSent: numSent.size };
-};
-export const getReferralBannerHeadingText = function getReferralBannerHeadingText(arg0) {
+}
+export function getReferralBannerHeadingText(arg0) {
   if (arg0 === PremiumReferralIncentivesExperiment.ReferralRewardType.ORBS) {
     const intl3 = util.intl;
     let stringResult = intl3.string(util.t.tAlkl4);
@@ -56,15 +56,15 @@ export const getReferralBannerHeadingText = function getReferralBannerHeadingTex
     stringResult = intl.string(util.t.USo4s7);
   }
   return stringResult;
-};
-export const getReferralBannerBodyText = function getReferralBannerBodyText(arg0, numSent, arg2) {
+}
+export function getReferralBannerBodyText(arg0, numSent, arg2) {
   let obj = dependencyMap;
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
   if (arg0) {
     if (null == arg2) {
       let v1aEjsH = require;
       if (numSent.numSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT) {
-        if (numSent.numRedeemed === v1aEjsH(15004).MAX_REFERRALS_SENT) {
+        if (numSent.numRedeemed === v1aEjsH(15239).MAX_REFERRALS_SENT) {
           const intl4 = v1aEjsH(1125).intl;
           v1aEjsH = v1aEjsH(1125).t["1aEjsH"];
           const obj3 = { helpdeskArticle: articleURL };
@@ -82,8 +82,8 @@ export const getReferralBannerBodyText = function getReferralBannerBodyText(arg0
     }
     let OluhLp = require;
     if (numSent.numRewardGranted !== useReferralProgramBannerDetails.MAX_REFERRALS_SENT) {
-      if (numSent.numSent === OluhLp(15004).MAX_REFERRALS_SENT) {
-        if (arg2 === OluhLp(15005).ReferralRewardType.ORBS) {
+      if (numSent.numSent === OluhLp(15239).MAX_REFERRALS_SENT) {
+        if (arg2 === OluhLp(15240).ReferralRewardType.ORBS) {
           const intl9 = OluhLp(1125).intl;
           const obj6 = { helpdeskArticle: articleURL };
           let formatResult2 = intl9.format(OluhLp(1125).t["1aV1j9"], obj6);
@@ -93,7 +93,7 @@ export const getReferralBannerBodyText = function getReferralBannerBodyText(arg0
           formatResult2 = intl8.format(OluhLp(1125).t.QNrPuS, obj7);
         }
       } else if (arg0) {
-        if (arg2 === OluhLp(15005).ReferralRewardType.ORBS) {
+        if (arg2 === OluhLp(15240).ReferralRewardType.ORBS) {
           const intl7 = OluhLp(1125).intl;
           const obj8 = { numOrbs, helpdeskArticle: articleURL };
           let formatResult3 = intl7.format(OluhLp(1125).t.cfE0uG, obj8);
@@ -108,7 +108,7 @@ export const getReferralBannerBodyText = function getReferralBannerBodyText(arg0
         intl5.format(OluhLp(1125).t["a0+Jwv"], obj10);
       }
     }
-    if (arg2 === OluhLp(15005).ReferralRewardType.ORBS) {
+    if (arg2 === OluhLp(15240).ReferralRewardType.ORBS) {
       const intl11 = OluhLp(1125).intl;
       OluhLp = OluhLp(1125).t.OluhLp;
       obj = { helpdeskArticle: articleURL };
@@ -123,4 +123,4 @@ export const getReferralBannerBodyText = function getReferralBannerBodyText(arg0
     const obj12 = { helpdeskArticle: articleURL };
     return intl.format(util.t["zWhX/Q"], obj12);
   }
-};
+}

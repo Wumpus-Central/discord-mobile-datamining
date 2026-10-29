@@ -334,7 +334,7 @@ export const STATE_GLYPH = 2;
 export const STATE_SHIFTED_TO = 3;
 export const STATE_SETTLED = 4;
 export { easeTail };
-export const waveArrivalTime = function waveArrivalTime(arg0, arg1) {
+export function waveArrivalTime(arg0, arg1) {
   let num = 0;
   let num2 = 1;
   let num3 = 0;
@@ -371,8 +371,8 @@ export const waveArrivalTime = function waveArrivalTime(arg0, arg1) {
     }
     throw new TypeError("Trying to call a non-function");
   }
-};
-export const bandArrivalTime = function bandArrivalTime(arg0) {
+}
+export function bandArrivalTime(arg0) {
   let num = 0;
   let num2 = 1;
   let num3 = 0;
@@ -409,8 +409,8 @@ export const bandArrivalTime = function bandArrivalTime(arg0) {
     throw new TypeError("Trying to call a non-function");
   }
   return num4;
-};
-export const bandDepartureTime = function bandDepartureTime(arg0) {
+}
+export function bandDepartureTime(arg0) {
   let num = 0;
   let num2 = 1;
   let num3 = 0;
@@ -447,7 +447,7 @@ export const bandDepartureTime = function bandDepartureTime(arg0) {
     throw new TypeError("Trying to call a non-function");
   }
   return num4;
-};
+}
 export const CHAR_SHIFT = 6;
 export const SHIFTED_OPACITY = 0.55;
 export const GLYPH_RAMP = "123456";
@@ -458,7 +458,7 @@ export const REDUCED_MOTION_FADE_MS = 220;
 export const REDUCED_MOTION_PASS_MS = 440;
 export { shiftChar };
 export { waveFrontAt };
-export const cellStateAt = function cellStateAt(arg0, arg1, arg2) {
+export function cellStateAt(arg0, arg1, arg2) {
   let num = 0;
   let num2 = 0;
   let num3 = 0;
@@ -486,11 +486,11 @@ export const cellStateAt = function cellStateAt(arg0, arg1, arg2) {
     throw new TypeError("Trying to call a non-function");
   }
   return num3;
-};
-export const isResolvedState = function isResolvedState(arg0) {
+}
+export function isResolvedState(arg0) {
   return arg0 >= 3;
-};
-export const charForState = function charForState(arg0, arg1, arg2, arg3) {
+}
+export function charForState(arg0, arg1, arg2, arg3) {
   if (0 === arg3) {
     let str4 = arg0[arg2];
     if (str4 == null) {
@@ -563,8 +563,8 @@ export const charForState = function charForState(arg0, arg1, arg2, arg3) {
       }
     }
   }
-};
-export const dirtyRangeAt = function dirtyRangeAt(arg0, arg1) {
+}
+export function dirtyRangeAt(arg0, arg1) {
   let num = 1;
   if (typeof waveFrontAt === "function") {
     const ease = tmp9.ease;
@@ -597,11 +597,11 @@ export const dirtyRangeAt = function dirtyRangeAt(arg0, arg1) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 export { glyphLayerOpacityAt };
 export { bandEndAt };
 export { bandStartAt };
-export const glyphRampIndexAt = function glyphRampIndexAt(arg0, arg1, arg2) {
+export function glyphRampIndexAt(arg0, arg1, arg2) {
   if (typeof bandEndAt === "function") {
     if (typeof waveFrontAt === "function") {
       const ease = tmp4.ease;
@@ -651,18 +651,18 @@ export const glyphRampIndexAt = function glyphRampIndexAt(arg0, arg1, arg2) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 export { bandEdgesAt };
-export const shiftedLineFor = function shiftedLineFor(slotA) {
+export function shiftedLineFor(slotA) {
   let str = "";
   while (tmp !== undefined) {
     str = `${shiftChar(tmp2, 6)}`;
     continue;
   }
   return str;
-};
+}
 export { bandGlyphsAt };
-export const slotCountFor = function slotCountFor(arg0, arg1, arg2) {
+export function slotCountFor(arg0, arg1, arg2) {
   let num = arg3;
   if (arg3 === undefined) {
     num = 0;
@@ -676,11 +676,11 @@ export const slotCountFor = function slotCountFor(arg0, arg1, arg2) {
     return bound;
   }
   bound = Math.max(1, arg2);
-};
-export const pickSlotFaces = function pickSlotFaces(arg0, fn) {
+}
+export function pickSlotFaces(arg0, fn) {
   const array = new Array(arg0);
   for (let num = 0; num < arg0; num = num + 1) {
     array[num] = v789ABC.charAt((6 * fn()) | 0);
   }
   return array;
-};
+}

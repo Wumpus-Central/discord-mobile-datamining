@@ -8,7 +8,7 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
-export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
+export function shouldShowVoiceChannelChangeConfirmation(id) {
   if (UnsyncedUserSettingsStore.disableVoiceChannelChangeAlert) {
     return false;
   } else {
@@ -30,4 +30,4 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
       return false;
     }
   }
-};
+}

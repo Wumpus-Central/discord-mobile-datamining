@@ -392,7 +392,7 @@ const set = new Set([
 const result = size.fileFinishedImporting("modules/messages/PlaintextFilePreviewHelpers.tsx");
 
 export const PLAINTEXT_FILE_EXTENSIONS = set;
-export const isPlaintextPreviewableFile = function isPlaintextPreviewableFile(filename) {
+export function isPlaintextPreviewableFile(filename) {
   const parts = filename.split(".");
   return set.has(parts.slice(-1)[0]);
-};
+}

@@ -45,11 +45,11 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1084);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
-export const startImpersonating = function startImpersonating(guildId, data) {
+export function startImpersonating(guildId, data) {
   const obj2 = { num_roles: Object.keys(data.roles).length };
   const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
@@ -67,18 +67,18 @@ export const startImpersonating = function startImpersonating(guildId, data) {
     }
   }
   const obj5 = { type: "IMPERSONATE_UPDATE", guildId, data };
-};
+}
 export { updateImpersonating };
-export const stopImpersonating = function stopImpersonating(guildId) {
+export function stopImpersonating(guildId) {
   DispatcherDefault.dispatch({ type: "IMPERSONATE_STOP", guildId });
-};
-export const updateImpersonatedChannels = function updateImpersonatedChannels(guildId, items1, items2) {
+}
+export function updateImpersonatedChannels(guildId, items1, items2) {
   const set = new Set(UserGuildSettingsStore.getOptedInChannels(guildId));
   const item = items1.forEach((item) => set.add(item));
   const item1 = items2.forEach((item) => set.delete(item));
   updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, optInChannels: set });
-};
-export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId, selectedRoleIds) {
+}
+export function updateImpersonatedRoles(guildId, selectedRoleIds) {
   (function optIntoPrivateChannelsForGrantedRolesForPreview(guildId, selectedRoleIds) {
     let items = [...closure_4.getSelectableChannelIds(guildId), ...closure_4.getVocalChannelIds(guildId)];
     closure_2 = Array.from(selectedRoleIds);
@@ -121,8 +121,8 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
     continue;
   }
   updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, roles: obj });
-};
-export const updateImpersonatedData = function updateImpersonatedData(guildId, arg1) {
+}
+export function updateImpersonatedData(guildId, arg1) {
   const merged = Object.assign(arg1);
   updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER });
-};
+}

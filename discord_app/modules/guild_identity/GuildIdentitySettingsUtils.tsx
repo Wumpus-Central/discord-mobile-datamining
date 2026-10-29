@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
 
-export const canResetThemeColors = function canResetThemeColors(pendingThemeColors, themeColors) {
+export function canResetThemeColors(pendingThemeColors, themeColors) {
   if (undefined === pendingThemeColors) {
     let tmp3 = null != themeColors;
   } else {
@@ -21,4 +21,4 @@ export const canResetThemeColors = function canResetThemeColors(pendingThemeColo
     }
   }
   return tmp3;
-};
+}

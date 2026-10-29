@@ -481,10 +481,10 @@ const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMe
 
 export const CONJURE_MESSAGE_SHEET_KEY = "conjure-message-actions";
 export { openMessageAuthorProfile };
-export const showConjureMessageActions = function showConjureMessageActions(arg0) {
+export function showConjureMessageActions(arg0) {
   const obj2 = { content: null, key: null };
   const merged = Object.assign(arg0);
   obj2.content = React4(closure_8, {});
   obj2.key = key;
   ActionSheetActionCreators.showActionSheet(obj2);
-};
+}

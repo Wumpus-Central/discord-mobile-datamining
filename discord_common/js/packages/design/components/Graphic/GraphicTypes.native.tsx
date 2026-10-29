@@ -5,9 +5,9 @@ const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx",
 );
 
-export const isImage = function isImage(type) {
+export function isImage(type) {
   return "image" === type.type;
-};
-export const isRive = function isRive(cResult) {
+}
+export function isRive(cResult) {
   return "rive" === cResult.type;
-};
+}

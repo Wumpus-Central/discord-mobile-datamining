@@ -38,6 +38,6 @@ export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled(
   : function useDcfNewUserCooldown() {
       return closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;
     };
-export const getDcfNewUserCooldown = function getDcfNewUserCooldown() {
+export function getDcfNewUserCooldown() {
   return closure_2.getConfig({ location: "getDcfNewUserCooldown" }).newUserCooldownMs;
-};
+}

@@ -12,7 +12,7 @@ let closure_3 = createStyles.createNativeStyleProperties({
 });
 const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/Loading.tsx");
 
-export const generateLoadingRowData = function generateLoadingRowData(rowType, theme) {
+export function generateLoadingRowData(rowType, theme) {
   ({ rowType, isLoading } = rowType);
   ({ changeType, text } = rowType);
   const tmp = closure_3(theme);
@@ -35,4 +35,4 @@ export const generateLoadingRowData = function generateLoadingRowData(rowType, t
     isLoading,
   };
   return obj;
-};
+}

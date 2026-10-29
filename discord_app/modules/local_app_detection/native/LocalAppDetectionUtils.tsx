@@ -57,7 +57,7 @@ let closure_8 = async function _detectLocalApps(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -105,7 +105,7 @@ let closure_8 = async function _detectLocalApps(arg0) {
             obj7.result = closure_131_0;
             let dispatchResult = obj6.dispatch(obj7);
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp5) {
           c6 = 0;
@@ -139,7 +139,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionUtils.tsx");
 
-export const detectLocalApps = function detectLocalApps() {
+export function detectLocalApps() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -148,4 +148,4 @@ export const detectLocalApps = function detectLocalApps() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

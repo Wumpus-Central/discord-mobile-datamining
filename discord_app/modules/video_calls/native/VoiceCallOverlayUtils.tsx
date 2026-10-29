@@ -91,21 +91,16 @@ doesTargetPositionIntersectOtherOverlaysWorklet.__initData = {
 const result = size.fileFinishedImporting("modules/video_calls/native/VoiceCallOverlayUtils.tsx");
 
 export { doesTargetPositionIntersectOtherOverlaysWorklet };
-export const updateVoiceCallOverlayLayoutState = function updateVoiceCallOverlayLayoutState(
-  voiceCallOverlayType,
-  voiceCallOverlayLayoutState,
-) {
+export function updateVoiceCallOverlayLayoutState(voiceCallOverlayType, voiceCallOverlayLayoutState) {
   DispatcherDefault.dispatch({
     type: "VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE",
     voiceCallOverlayType,
     voiceCallOverlayLayoutState,
   });
-};
-export const setPipEnabledWhileFocusedOnActivityOrStream = function setPipEnabledWhileFocusedOnActivityOrStream(
-  pipEnabledWhileFocusedOnActivityOrStream,
-) {
+}
+export function setPipEnabledWhileFocusedOnActivityOrStream(pipEnabledWhileFocusedOnActivityOrStream) {
   DispatcherDefault.dispatch({
     type: "VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM",
     pipEnabledWhileFocusedOnActivityOrStream,
   });
-};
+}

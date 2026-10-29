@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
 import Constants from "../../../Constants.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import UserSettingsUtils from "../../../utils/UserSettingsUtils.tsx";
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
 import PremiumModal from "../../../components_native/premium/PremiumModal.tsx";
@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const UserSettingsSections = Constants.UserSettingsSections;
 let result = size.fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
 
-export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostPurchaseFlow) {
+export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
   ({ predicate: require, navigation, showCurrentPlan } = isBoostPurchaseFlow);
   if (showCurrentPlan === undefined) {
     showCurrentPlan = true;
@@ -69,9 +69,9 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    const obj3 = flag2(6707);
-    obj3.pushLazy(asyncRequireImpl(7557, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(7557, dependencyMap.paths);
+    const obj3 = flag2(6731);
+    obj3.pushLazy(asyncRequireImpl(7580, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(7580, dependencyMap.paths);
   }
   let result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
-};
+}

@@ -78,11 +78,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7232).OnboardingConnectionType;
+let closure_7 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7256).OnboardingConnectionType;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -374,7 +374,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboard
 
 export const ONBOARDING_EPOCH = date;
 export const useGuildOnboardingSettingsAvailable = tmp4;
-export const isGuildOnboardingSettingsAvailable = function isGuildOnboardingSettingsAvailable(id) {
+export function isGuildOnboardingSettingsAvailable(id) {
   guild = GuildStore.getGuild(id);
   let hasItem;
   if (guild != null) {
@@ -390,8 +390,8 @@ export const isGuildOnboardingSettingsAvailable = function isGuildOnboardingSett
     tmp4 = canResult1;
   }
   return tmp4;
-};
-export const isBlockedByOnboarding = function isBlockedByOnboarding(guild, selfMember) {
+}
+export function isBlockedByOnboarding(guild, selfMember) {
   if (null != guild) {
     const features = guild.features;
     if (features.has(constants.GUILD_ONBOARDING)) {
@@ -419,8 +419,8 @@ export const isBlockedByOnboarding = function isBlockedByOnboarding(guild, selfM
     }
   }
   return false;
-};
-export const showRulesInOnboarding = function showRulesInOnboarding(stateFromStores2, stateFromStores) {
+}
+export function showRulesInOnboarding(stateFromStores2, stateFromStores) {
   let hasItem = null != stateFromStores2;
   if (hasItem) {
     const features = stateFromStores2.features;
@@ -435,12 +435,8 @@ export const showRulesInOnboarding = function showRulesInOnboarding(stateFromSto
     tmp4 = null != stateFromStores;
   }
   return tmp4;
-};
-export const getChannelCoverageForOnboarding = function getChannelCoverageForOnboarding(
-  guildId,
-  arr,
-  defaultChannelIds,
-) {
+}
+export function getChannelCoverageForOnboarding(guildId, arr, defaultChannelIds) {
   arr = GuildChannelStore.getChannels(guildId)[closure_7];
   const mapped = arr.map((channel) => channel.channel);
   const set = new Set();
@@ -488,9 +484,9 @@ export const getChannelCoverageForOnboarding = function getChannelCoverageForOnb
     }),
   ];
   return items;
-};
+}
 export const useChannelCoverageForOnboarding = tmp5;
-export const isChattableChannelId = function isChattableChannelId(arg0) {
+export function isChattableChannelId(arg0) {
   const channel = ChannelStore.getChannel(arg0);
   let tmp = null != channel;
   if (tmp) {
@@ -510,10 +506,10 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
     }
   }
   return tmp;
-};
+}
 export { isChattableChannel };
 export const useIsChattableChannel = tmp6;
-export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultChannelIds(arg0, arr, arr, arg3) {
+export function getMinimumSetOfDefaultChannelIds(arg0, arr, arr, arg3) {
   closure_0 = arg0;
   let fn = arg3;
   if (arg3 === undefined) {
@@ -569,8 +565,8 @@ export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultC
     }
   });
   return tmp;
-};
-export const getChattableDefaultChannels = function getChattableDefaultChannels(arg0, arr) {
+}
+export function getChattableDefaultChannels(arg0, arr) {
   arr = getFlattenedDefaultChannels(arg0, arr);
   let obj = {};
   for (const item10015 of tmp) {
@@ -615,7 +611,7 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
     arr,
   ];
   return items;
-};
+}
 export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEnabled()
   ? function useChattableDefaultChannels(arg0, arg1) {
       _require = arg0;
@@ -741,17 +737,17 @@ export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEn
         areStatesEqual,
       );
     };
-export const getSelectedRoleIds = function getSelectedRoleIds(found) {
+export function getSelectedRoleIds(found) {
   const mapped = found.map((roleIds) => roleIds.roleIds);
   const flatResult = mapped.flat();
   return new Set(mapped.flat().filter(GlobalUtils.isNotNullish));
-};
-export const getSelectedChannelIds = function getSelectedChannelIds(found) {
+}
+export function getSelectedChannelIds(found) {
   const mapped = found.map((channelIds) => channelIds.channelIds);
   const flatResult = mapped.flat();
   return new Set(mapped.flat().filter(GlobalUtils.isNotNullish));
-};
-export const getProviderConnectionState = function getProviderConnectionState(stateFromStores) {
+}
+export function getProviderConnectionState(stateFromStores) {
   const found = stateFromStores.filter((connection_type) => {
     let BooleanResult = connection_type.connection_type === constants.PROVIDER_CONNECTED_ACCOUNT;
     if (BooleanResult) {
@@ -776,8 +772,8 @@ export const getProviderConnectionState = function getProviderConnectionState(st
     obj = StringUtils;
   });
   return { connected, notConnected };
-};
-export const getApplicationConnectionState = function getApplicationConnectionState(stateFromStores) {
+}
+export function getApplicationConnectionState(stateFromStores) {
   const found = stateFromStores.filter((connection_type) => {
     let BooleanResult = connection_type.connection_type === constants.APPLICATION;
     if (BooleanResult) {
@@ -804,4 +800,4 @@ export const getApplicationConnectionState = function getApplicationConnectionSt
     obj = StringUtils;
   });
   return { connected, notConnected };
-};
+}

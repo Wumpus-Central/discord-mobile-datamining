@@ -1136,6 +1136,8 @@ export const WebAnalyticsEvents = {
   DEEP_LINK_CLICKED: "deep_link_clicked",
   SEO_PAGE_VIEWED: "seo_server_landing_page_viewed",
   SEO_PAGE_CTA_CLICKED: "seo_server_landing_page_cta_clicked",
+  SEO_CONVERSATION_SUMMARIES_VIEWED: "seo_conversation_summaries_viewed",
+  SEO_CONVERSATION_SUMMARIES_CTA_CLICKED: "seo_conversation_summaries_cta_clicked",
   SEO_TRENDING_GAMES_CTA_CLICKED: "seo_trending_games_cta_clicked",
   SEO_AGGREGATOR_PAGE_VIEWED: "seo_aggregator_page_viewed",
   SEO_AGGREGATOR_CTA_CLICKED: "seo_aggregator_page_cta_clicked",

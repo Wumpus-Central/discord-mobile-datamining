@@ -8,7 +8,7 @@ const DAY = DurationsDefault.Millis.DAY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
-export const participantMemberInfo = function participantMemberInfo(participant) {
+export function participantMemberInfo(participant) {
   if (obj.isNewUser(participant.user)) {
     const intl5 = util.intl;
     return intl5.string(util.t.VaCdhQ);
@@ -51,4 +51,4 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     return stringResult;
   }
   obj = UserUtils;
-};
+}

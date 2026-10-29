@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const isLaunched = fn(6811).isLaunched;
+const isLaunched = fn(6834).isLaunched;
 const ReactCompilerGating = fn(558);
 let closure_7 = [];
 function resolvePreviewAppChannel(arg0, arg1, arr) {

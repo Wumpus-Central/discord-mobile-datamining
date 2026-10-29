@@ -3,13 +3,13 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
 import FirstPartyQuestTaskTypes2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import _modDef9619 from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
-import _modDef9620 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
-import _modDef9621 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
-import _modDef9622 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
+import _modDef9651 from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
+import _modDef9652 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
+import _modDef9653 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
+import _modDef9654 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
-import _modDef9630 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
-import _modDef9631 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
+import _modDef9662 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import _modDef9663 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
 import QuestConstants from "../QuestConstants.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -155,11 +155,11 @@ function getAssetUrlWithMediaProxyQueryParams(assetUrl) {
     return str1;
   }
 }
-function convertVideoToFirstFrameImageWithMediaProxy(assetUrl, size) {
-  if (assetUrl.startsWith("blob:")) {
-    return assetUrl;
+function convertVideoToFirstFrameImageWithMediaProxy(url, size) {
+  if (url.startsWith("blob:")) {
+    return url;
   } else {
-    const str = URLUtilsDefault.toURLSafe(assetUrl);
+    const str = URLUtilsDefault.toURLSafe(url);
     let str1 = null;
     if (null != str) {
       const searchParams = str.searchParams;
@@ -216,7 +216,7 @@ let closure_11 = {
   [QuestAssetType.VIDEO_PLAYER_CAPTION]: { variant: obj2.VIDEO, property: obj3.CAPTION },
   [QuestAssetType.VIDEO_PLAYER_TRANSCRIPT]: { variant: obj2.VIDEO, property: obj3.TRANSCRIPT },
 };
-const obj11 = { [TIER_1]: _modDef9619, [TIER_2]: _modDef9620, [TIER_3]: _modDef9621, [TIER_4]: _modDef9622 };
+const obj11 = { [TIER_1]: _modDef9651, [TIER_2]: _modDef9652, [TIER_3]: _modDef9653, [TIER_4]: _modDef9654 };
 ({ TIER_1, TIER_2, TIER_3, TIER_4 } = obj4);
 let result = size.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
 
@@ -225,7 +225,7 @@ export const ANIMATED_MIMETYPES = items;
 export { QuestAssetType };
 export { resolveAsset };
 export const OrbsValueTier = obj4;
-export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_THUMBNAIL, DARK, arg3, arg4) {
+export function getQuestAsset(quest, VIDEO_PLAYER_THUMBNAIL, DARK, arg3, arg4) {
   if (obj.HERO === VIDEO_PLAYER_THUMBNAIL) {
     const heroVideo2 = quest.config.assets.heroVideo;
     asset = quest.config.assets.hero;
@@ -271,10 +271,10 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_THUMBNAI
         const obj3 = { url: tmp29, mimetype: "video/webm", isAnimated: true };
         let obj5 = obj3;
       } else if (arg3) {
-        const obj4 = { url: _modDef9630, mimetype: "video/mp4", isAnimated: true };
+        const obj4 = { url: _modDef9662, mimetype: "video/mp4", isAnimated: true };
         obj5 = obj4;
       } else {
-        obj5 = { url: _modDef9631, mimetype: "video/webm", isAnimated: true };
+        obj5 = { url: _modDef9663, mimetype: "video/webm", isAnimated: true };
       }
       return obj5;
     } else {
@@ -427,8 +427,8 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_THUMBNAI
     tmp41 = null;
   }
   return tmp41;
-};
-export const buildUrl = function buildUrl(arg0, str, theme) {
+}
+export function buildUrl(arg0, str, theme) {
   if (str.startsWith("blob:")) {
     const parts = str.split("?", 1);
     let atResult = parts.at(0);
@@ -455,8 +455,8 @@ export const buildUrl = function buildUrl(arg0, str, theme) {
     }
     return combined;
   }
-};
-export const resolveOptionalAdCreativeCdnUrl = function resolveOptionalAdCreativeCdnUrl(image_preview) {
+}
+export function resolveOptionalAdCreativeCdnUrl(image_preview) {
   if (null != image_preview) {
     let combined = image_preview;
     if (!image_preview.startsWith("http://")) {
@@ -471,8 +471,8 @@ export const resolveOptionalAdCreativeCdnUrl = function resolveOptionalAdCreativ
     }
     return combined;
   }
-};
-export const resolveAdCreativeCdnUrl = function resolveAdCreativeCdnUrl(hero_image) {
+}
+export function resolveAdCreativeCdnUrl(hero_image) {
   let combined = hero_image;
   if (!hero_image.startsWith("http://")) {
     combined = hero_image;
@@ -485,9 +485,9 @@ export const resolveAdCreativeCdnUrl = function resolveAdCreativeCdnUrl(hero_ima
     }
   }
   return combined;
-};
+}
 export { getMimetype };
-export const getDevicePixelScaledDimensions = function getDevicePixelScaledDimensions(width, height) {
+export function getDevicePixelScaledDimensions(width, height) {
   const tmp = getDevicePixelRatioDefault();
   if (tmp < 3) {
     const size = { width, height };
@@ -496,18 +496,18 @@ export const getDevicePixelScaledDimensions = function getDevicePixelScaledDimen
     size1 = { width: width * tmp, height: height * tmp };
   }
   return size1;
-};
+}
 export { getAssetUrlWithMediaProxyQueryParams };
-export const getScaledImageUrl = function getScaledImageUrl(size) {
+export function getScaledImageUrl(size) {
   ({ assetUrl, width, height } = size);
   const tmp = getDevicePixelRatioDefault();
   size = { width: width * tmp, height: height * tmp, format: "webp" };
   return getAssetUrlWithMediaProxyQueryParams(assetUrl, size);
-};
+}
 export { convertVideoToFirstFrameImageWithMediaProxy };
-export const getScaledFirstFrameImageUrl = function getScaledFirstFrameImageUrl(size) {
+export function getScaledFirstFrameImageUrl(size) {
   ({ assetUrl, width, height } = size);
   const tmp = getDevicePixelRatioDefault();
   size = { width: width * tmp, height: height * tmp };
   return convertVideoToFirstFrameImageWithMediaProxy(assetUrl, size);
-};
+}

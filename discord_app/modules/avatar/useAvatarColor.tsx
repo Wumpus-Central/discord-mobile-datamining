@@ -1,6 +1,6 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
 import c from "../../../_runtime/00576_c.js";
-import tinycolorDefault from "../../../_runtime/07695_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07718_tinycolor.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ let closure_9 = async function _maybeFetchColors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_9 = async function _maybeFetchColors(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -77,7 +77,7 @@ let closure_11 = async function _fetchColors(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -407,11 +407,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (dependencyMap != null) {
           mapped = dependencyMap.map((item) => {
             [tmp, tmp2, tmp3] = item;
-            const obj = flag(7695)({ r: tmp, g: tmp2, b: tmp3 });
-            ({ h, s, l } = flag(7695)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+            const obj = flag(7718)({ r: tmp, g: tmp2, b: tmp3 });
+            ({ h, s, l } = flag(7718)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
             const obj2 = { h, s: s * stateFromStores, l };
-            const toHslResult = flag(7695)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-            return flag(7695)({ h, s: s * stateFromStores, l }).toHexString();
+            const toHslResult = flag(7718)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+            return flag(7718)({ h, s: s * stateFromStores, l }).toHexString();
           });
         }
         return mapped;
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     };
 export const useColorStore = obj6;
 export { hasFetchedColors };
-export const maybeFetchColors = function maybeFetchColors() {
+export function maybeFetchColors() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -452,6 +452,6 @@ export const maybeFetchColors = function maybeFetchColors() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const useHasFetchedColors = tmp3;
 export const useAvatarColors = tmp5;

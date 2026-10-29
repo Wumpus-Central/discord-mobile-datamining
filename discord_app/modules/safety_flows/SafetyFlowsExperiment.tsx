@@ -15,9 +15,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
 
 export default tmp2;
-export const isEligibleForSafetyFlowsExperiment = function isEligibleForSafetyFlowsExperiment(location) {
+export function isEligibleForSafetyFlowsExperiment(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
-};
+}
 export const useIsEligibleForSafetyFlowsExperiment = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsEligibleForSafetyFlowsExperiment(location) {
       const cResult = c.c(2);

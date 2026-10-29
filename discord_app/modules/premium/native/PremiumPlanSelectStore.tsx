@@ -8,7 +8,7 @@ const usePremiumPlanSelectStore = module_570.create(() => ({ isPurchasing: false
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
 
 export { usePremiumPlanSelectStore };
-export const setIsPurchasing = function setIsPurchasing(isPurchasing) {
+export function setIsPurchasing(isPurchasing) {
   _require = isPurchasing;
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -19,4 +19,4 @@ export const setIsPurchasing = function setIsPurchasing(isPurchasing) {
     const obj = { isPurchasing, purchasingProductId };
     return obj.setState(obj);
   });
-};
+}

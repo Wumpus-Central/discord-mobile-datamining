@@ -213,7 +213,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: null,
+                  tags: 24.359,
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

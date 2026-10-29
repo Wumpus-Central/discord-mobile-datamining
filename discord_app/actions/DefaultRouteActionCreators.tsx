@@ -9,7 +9,7 @@ const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
-export const saveLastRoute = function saveLastRoute(pathname) {
+export function saveLastRoute(pathname) {
   const obj2 = { path: null };
   const RouteParam = RouteUtils.RouteParam;
   obj2.path = Routes.CHANNEL(RouteParam.guildId());
@@ -29,8 +29,8 @@ export const saveLastRoute = function saveLastRoute(pathname) {
     const obj4 = { type: "SAVE_LAST_ROUTE", path: pathname };
     DispatcherDefault.dispatch(obj4);
   }
-};
-export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
+}
+export function saveLastNonVoiceRoute(Routes) {
   const obj2 = { path: null };
   const RouteParam = RouteUtils.RouteParam;
   obj2.path = Routes.CHANNEL(RouteParam.guildId());
@@ -50,4 +50,4 @@ export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
     const obj4 = { type: "SAVE_LAST_NON_VOICE_ROUTE", path: Routes };
     DispatcherDefault.dispatch(obj4);
   }
-};
+}

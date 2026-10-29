@@ -385,7 +385,7 @@ export const invert = tmp2
       return obj.not();
     };
 export const equals = tmp10;
-export const combine = function combine() {
+export function combine() {
   let length;
   const items = [...arguments];
   let first = items[0];
@@ -400,27 +400,27 @@ export const combine = function combine() {
     } while (num < length);
   }
   return tmp2;
-};
-export const has = function has(permissions, VIEW_CHANNEL) {
+}
+export function has(permissions, VIEW_CHANNEL) {
   return closure_9(closure_6(permissions, VIEW_CHANNEL), VIEW_CHANNEL);
-};
-export const hasAny = function hasAny(permissions, RESTRICTED_TO_ADULT) {
+}
+export function hasAny(permissions, RESTRICTED_TO_ADULT) {
   return !closure_9(closure_6(permissions, RESTRICTED_TO_ADULT), closure_5);
-};
-export const add = function add(NONE, VIEW_CHANNEL) {
+}
+export function add(NONE, VIEW_CHANNEL) {
   let tmp = NONE;
   if (VIEW_CHANNEL !== closure_5) {
     tmp = closure_7(NONE, VIEW_CHANNEL);
   }
   return tmp;
-};
-export const remove = function remove(deny, MODERATE_STAGE_CHANNEL_PERMISSIONS) {
+}
+export function remove(deny, MODERATE_STAGE_CHANNEL_PERMISSIONS) {
   let tmp = deny;
   if (MODERATE_STAGE_CHANNEL_PERMISSIONS !== closure_5) {
     tmp = closure_8(deny, closure_6(deny, MODERATE_STAGE_CHANNEL_PERMISSIONS));
   }
   return tmp;
-};
+}
 export const getFlag = tmp11;
 export const asUintN = tmp2
   ? function asUintNBigInt(arg0, flags) {
@@ -429,10 +429,10 @@ export const asUintN = tmp2
   : function asUintNHighLow(arg0, flags) {
       return HighLow.asUintN(arg0, flags);
     };
-export const getBrandedFlag = function getBrandedFlag(arg0) {
+export function getBrandedFlag(arg0) {
   return closure_10(arg0);
-};
-export const flagNameOf = function flagNameOf(arg0, arg1) {
+}
+export function flagNameOf(arg0, arg1) {
   const entries = Object.entries(arg1);
   const obj = entries[Symbol.iterator]();
   while (obj !== undefined) {
@@ -442,4 +442,4 @@ export const flagNameOf = function flagNameOf(arg0, arg1) {
       return tmp4[0];
     }
   }
-};
+}

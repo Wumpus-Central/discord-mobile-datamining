@@ -5,7 +5,7 @@ import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
@@ -30,7 +30,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
           const effect = noop.useEffect(tmp7, tmp8);
           class T {
             constructor() {
-              return () => { ... };
+              return /* F147759 */ function() { ... };
             }
           }
         }
@@ -38,7 +38,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
     }
     class T {
       constructor() {
-        return () => { ... };
+        return /* F147759 */ function() { ... };
       }
     }
     const items = [tmp5, arg1, arg0, arg3];
@@ -86,7 +86,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
       }
       let tmp6 = content !== closure_1_0;
       if (!tmp6) {
-        let result = closure_0(4847).isGuildDismissibleContent(tmp5);
+        let result = closure_0(4848).isGuildDismissibleContent(tmp5);
         if (result) {
           const lastDismissed2 = tmp2.lastDismissed;
           let guildId;
@@ -96,7 +96,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
           result = guildId !== closure_1_2;
         }
         tmp6 = result;
-        const obj = closure_0(4847);
+        const obj = closure_0(4848);
       }
       tmp = tmp6;
       tmp2 = lastDismissed;

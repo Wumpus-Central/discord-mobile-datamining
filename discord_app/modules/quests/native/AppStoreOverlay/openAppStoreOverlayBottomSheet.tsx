@@ -10,12 +10,7 @@ const require = globalThis.__r;
 ({ AnalyticEvents: c3, ComponentActions: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
 
-export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(
-  appId,
-  arg1,
-  onOverlaySurfaceClick,
-  trackOverlayCarouselScroll,
-) {
+export function openAppStoreOverlayBottomSheet(appId, arg1, onOverlaySurfaceClick, trackOverlayCarouselScroll) {
   _require = arg1;
   importDefault = onOverlaySurfaceClick;
   appId = appId.appId;
@@ -58,4 +53,4 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       },
     },
   );
-};
+}

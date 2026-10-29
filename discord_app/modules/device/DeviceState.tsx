@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/device/DeviceState.tsx");
 export const DeviceState = constants_DeviceState.DeviceState;
 export const ThermalState = constants_DeviceState.ThermalState;
 export const getDeviceState = device_DeviceState.getDeviceState;
-export const logDeviceState = function logDeviceState(thermalState) {
+export function logDeviceState(thermalState) {
   if (null !== thermalState) {
     const logger2 = device_DeviceState.logger;
     logger2.info("Device State Information:");
@@ -28,4 +28,4 @@ export const logDeviceState = function logDeviceState(thermalState) {
     const logger = device_DeviceState.logger;
     logger.info("Device state not available");
   }
-};
+}

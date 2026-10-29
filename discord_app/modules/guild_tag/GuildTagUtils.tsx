@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(8306);
+const GuildTagConstants = fn(8328);
 ({
   GuildTagBadgeMediaProxySizes,
   GuildTagBadgeMediaProxySizesMobile: hasOwnProperty,
@@ -119,7 +119,7 @@ function getUserPrimaryGuild(primaryGuild) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
 
-export const guildHasTag = function guildHasTag(guild) {
+export function guildHasTag(guild) {
   let tag;
   if (guild != null) {
     const profile = guild.profile;
@@ -128,12 +128,12 @@ export const guildHasTag = function guildHasTag(guild) {
     }
   }
   return null != tag;
-};
-export const guildSupportsTags = function guildSupportsTags(guild) {
+}
+export function guildSupportsTags(guild) {
   const features = guild.features;
   return features.has(GuildFeatures.GUILD_TAGS);
-};
-export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge) {
+}
+export function getGuildTagBadgeUrl(guildId, badge) {
   if (SIZE_12 === undefined) {
     SIZE_12 = SIZE_12.SIZE_12;
   }
@@ -144,7 +144,7 @@ export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge) 
       return "https://" + CDN_HOST + "/clan-badges/" + guildId + "/" + badge + ".png?size=" + hasOwnProperty[SIZE_12];
     }
   }
-};
+}
 export { getUserPrimaryGuild };
 export const useUserPrimaryGuild = tmp3;
 export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabled()
@@ -296,7 +296,7 @@ export const useShouldDisplayGuildTag = ReactCompilerGating.isReactCompilerEnabl
       }
       obj6 = {};
     };
-export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId1, arg2) {
+export function shouldDisplayGuildTag(id, guildId1, arg2) {
   let tmp = arg2;
   const user = UserStore.getUser(id);
   if (undefined === arg2) {
@@ -323,4 +323,4 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId1
     return tmp5;
   }
   obj = {};
-};
+}

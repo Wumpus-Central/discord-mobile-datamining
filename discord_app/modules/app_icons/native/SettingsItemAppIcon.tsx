@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AppIconDefault from "AppIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const AppIconTypes = ClydeIcon(9900);
-const ClydeIcon2 = ClydeIcon(10606);
-const AppIconUtils = ClydeIcon(15026);
+const AppIconTypes = ClydeIcon(9932);
+const ClydeIcon2 = ClydeIcon(10639);
+const AppIconUtils = ClydeIcon(15261);
 require = fn;
-const getIconById = fn(9899).getIconById;
+const getIconById = fn(9931).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -25,7 +25,7 @@ const memoizeResult = apply.memoize(
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
 
-export const getProfileTheme = function getProfileTheme(first1) {
+export function getProfileTheme(first1) {
   if (null == first1) {
     return null;
   } else {
@@ -36,8 +36,8 @@ export const getProfileTheme = function getProfileTheme(first1) {
     }
     obj = utils_ColorUtils;
   }
-};
-export const getValueInColorGradientByPercentage = function getValueInColorGradientByPercentage(items, items1, arg2) {
+}
+export function getValueInColorGradientByPercentage(items, items1, arg2) {
   const result = arg2 / 100;
   const diff = 1 - result;
   items = [, ,];
@@ -45,8 +45,8 @@ export const getValueInColorGradientByPercentage = function getValueInColorGradi
   items[1] = Math.round(items[1] * diff + items1[1] * result);
   items[2] = Math.round(items[2] * diff + items1[2] * result);
   return items;
-};
-export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {
+}
+export function calculateOverlayedColor(secondaryColor, overlay) {
   if (null == overlay) {
     return 0;
   } else {
@@ -69,7 +69,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
     }
   }
   int2rgbArrayResult = utils_ColorUtils.int2rgbArray(secondaryColor);
-};
+}
 export const calculateButtonColor = memoizeResult;
 export const calculateModalV2BackgroundColor = apply.memoize(
   (hex2intResult, arg1, arg2) => {
@@ -100,7 +100,7 @@ export const calculateModalV2BackgroundColor = apply.memoize(
   },
   (arg0, arg1, arg2) => "" + arg0 + "-" + arg1 + "-" + arg2,
 );
-export const getGradientPercentageColorInRgb = function getGradientPercentageColorInRgb(arg0, arg1, arg2) {
+export function getGradientPercentageColorInRgb(arg0, arg1, arg2) {
   const result = arg2 / 100;
   const diff = 1 - result;
   const items = [
@@ -109,14 +109,8 @@ export const getGradientPercentageColorInRgb = function getGradientPercentageCol
     Math.round(arg0[2] * diff + arg1[2] * result),
   ];
   return "rgba(" + items[0] + ", " + items[1] + ", " + items[2] + ", 1)";
-};
-export const calculateGradientSplitColors = function calculateGradientSplitColors(
-  modalV2BackgroundColor,
-  modalV2BackgroundColor,
-  arg2,
-  arg3,
-  arg4,
-) {
+}
+export function calculateGradientSplitColors(modalV2BackgroundColor, modalV2BackgroundColor, arg2, arg3, arg4) {
   if (0 === arg2) {
     return [];
   } else {
@@ -144,12 +138,8 @@ export const calculateGradientSplitColors = function calculateGradientSplitColor
     items1[1] = "rgba(" + items2[0] + ", " + items2[1] + ", " + items2[2] + ", 1)";
     return items1;
   }
-};
-export const getUserProfileGradientContainerColors = function getUserProfileGradientContainerColors(
-  result,
-  result1,
-  str,
-) {
+}
+export function getUserProfileGradientContainerColors(result, result1, str) {
   let int2rgbaResult1 = str;
   if (typeof str === "string") {
     let int2rgbaResult = int2rgbaResult1;
@@ -177,4 +167,4 @@ export const getUserProfileGradientContainerColors = function getUserProfileGrad
     items1[1] = int2rgbaResult3;
   }
   return items1;
-};
+}

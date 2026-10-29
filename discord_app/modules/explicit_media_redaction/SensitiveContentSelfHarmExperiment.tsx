@@ -33,6 +33,6 @@ export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactC
   : function useIsSensitiveContentSelfHarmEnabled(location) {
       return apexExperiment.useConfig({ location }).enabled;
     };
-export const isSensitiveContentSelfHarmEnabled = function isSensitiveContentSelfHarmEnabled(location) {
+export function isSensitiveContentSelfHarmEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
-};
+}

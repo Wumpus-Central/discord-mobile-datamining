@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2631 from "../../gifting/GiftingBadge.messages.js";
+import _modDef2632 from "../../gifting/GiftingBadge.messages.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
@@ -24,14 +24,14 @@ const PremiumGiftScreens = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 let obj2 = {
-  [PLAN_SELECT]: fn(10482).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(10482).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(10482).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(10482).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(10482).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(10515).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(10515).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(10515).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(10515).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(10515).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 let ReactCompilerGating = fn(558);
@@ -158,12 +158,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl = tmp(1125).intl;
         tmp16[0] = intl.string(tmp(1125).t["JCFN/y"]);
-        tmp16[1] = tmp(6960).getHeaderCloseButton(pop);
+        tmp16[1] = tmp(6984).getHeaderCloseButton(pop);
         tmp16[2] = tmp4.header;
         tmp16[3] = function render() {
-          return jsx(isLoadingWishlist(10483), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+          return jsx(isLoadingWishlist(10516), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
         };
-        const tmpResult6 = tmp(6960);
+        const tmpResult6 = tmp(6984);
       } else {
         class S {
           constructor() {
@@ -217,7 +217,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { title: null, headerLeft: null, headerStyle: null, render: null };
         const intl = tmp2(1125).intl;
         obj4.title = intl.string(tmp2(1125).t["JCFN/y"]);
-        obj4.headerLeft = tmp2(6960).getHeaderCloseButton(pop);
+        obj4.headerLeft = tmp2(6984).getHeaderCloseButton(pop);
         obj4.headerStyle = tmp.header;
         obj4.render = function render() {
           return jsx(PremiumGiftPlanSelectDefault, {
@@ -226,7 +226,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           });
         };
         let obj5 = obj4;
-        const tmp2Result = tmp2(6960);
+        const tmp2Result = tmp2(6984);
       } else {
         obj5 = {
           title: "",
@@ -264,11 +264,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         render: null,
       };
       if (arg0 === obj.REWARD_SELECT) {
-        let headerCloseButton = tmp2(6960).getHeaderCloseButton(pop);
-        const tmp2Result7 = tmp2(6960);
+        let headerCloseButton = tmp2(6984).getHeaderCloseButton(pop);
+        const tmp2Result7 = tmp2(6984);
       } else {
-        headerCloseButton = tmp2(6960).getHeaderBackButton();
-        const tmp2Result8 = tmp2(6960);
+        headerCloseButton = tmp2(6984).getHeaderBackButton();
+        const tmp2Result8 = tmp2(6984);
       }
       obj7.headerLeft = headerCloseButton;
       obj7.headerStyle = tmp.header;
@@ -278,11 +278,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj6[obj.REWARD_SELECT] = obj7;
       if (arg0 === obj.CUSTOMIZATION) {
-        let headerCloseButton1 = tmp2(6960).getHeaderCloseButton(pop);
-        const tmp2Result9 = tmp2(6960);
+        let headerCloseButton1 = tmp2(6984).getHeaderCloseButton(pop);
+        const tmp2Result9 = tmp2(6984);
       } else {
-        headerCloseButton1 = tmp2(6960).getHeaderBackButton();
-        const tmp2Result10 = tmp2(6960);
+        headerCloseButton1 = tmp2(6984).getHeaderBackButton();
+        const tmp2Result10 = tmp2(6984);
       }
       obj6[obj.CUSTOMIZATION] = {
         title: "",
@@ -302,7 +302,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj6[obj.SUCCESS] = obj8;
       const obj9 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
       const intl2 = tmp2(1125).intl;
-      obj9.title = intl2.string(_modDef2631.roVAey);
+      obj9.title = intl2.string(_modDef2632.roVAey);
       const tmp2Result11 = require("NavigatorHeader");
       obj9.headerLeft = require("NavigatorHeader").getHeaderCloseButton(pop);
       obj9.headerStyle = { backgroundColor: "transparent", shadowColor: "transparent" };
@@ -311,9 +311,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           currentProgress: currentProgress.currentProgress,
           onSendGift() {
             obj2 = { analyticsLocations: null };
-            const items = [closure_1_1(7314).GIFTING_BADGE_POST_PURCHASE];
+            const items = [closure_1_1(7338).GIFTING_BADGE_POST_PURCHASE];
             obj2.analyticsLocations = items;
-            closure_1_0(10480).openGiftModal(obj2);
+            closure_1_0(10513).openGiftModal(obj2);
           },
         });
       };
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     initialOrder: order,
                     children: tmp29,
                   };
-                  const tmp34 = jsx(onDismiss(10484).NativeGiftContextProvider, {
+                  const tmp34 = jsx(onDismiss(10517).NativeGiftContextProvider, {
                     basePurchaseAnalytics: tmp7,
                     recipientUserId,
                     onClose: A,
@@ -483,13 +483,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[22] = tmp34;
                 }
                 const obj3 = { currentStep: tmp19, children: tmp26 };
-                const tmp31 = jsx(tmp4(14201), { currentStep: tmp19, children: tmp26 });
+                const tmp31 = jsx(tmp4(14434), { currentStep: tmp19, children: tmp26 });
                 cResult[12] = tmp19;
                 cResult[13] = tmp26;
                 cResult[14] = tmp31;
               }
               const obj4 = { initialRouteName: initialRoute, screens: tmp14, onStateChange: tmp25 };
-              const tmp28 = jsx(onDismiss(7131).Navigator, {
+              const tmp28 = jsx(onDismiss(7155).Navigator, {
                 initialRouteName: initialRoute,
                 screens: tmp14,
                 onStateChange: tmp25,
@@ -522,10 +522,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { title: null };
                 const intl = onDismiss(1125).intl;
                 obj5.title = intl.string(onDismiss(1125).t["JCFN/y"]);
-                const tmp23 = jsx(tmp4(10613), { title: null });
+                const tmp23 = jsx(tmp4(10646), { title: null });
                 cResult[7] = tmp23;
                 const tmp21 = tmp23;
-                const tmp4Result = tmp4(10613);
+                const tmp4Result = tmp4(10646);
               } else {
                 class A {
                   constructor() {
@@ -540,7 +540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp21;
             }
-            tmpResult = onDismiss(2062);
+            tmpResult = onDismiss(2063);
           } else {
             class A {
               constructor() {
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = onDismiss(576);
-      const basePurchaseFlowAnalyticsFields = onDismiss(10482).getBasePurchaseFlowAnalyticsFields({
+      const basePurchaseFlowAnalyticsFields = onDismiss(10515).getBasePurchaseFlowAnalyticsFields({
         isGift: true,
         analyticsLoadId: tmp6,
         analyticsLocation,
@@ -567,7 +567,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = analyticsLocations;
       cResult[4] = basePurchaseFlowAnalyticsFields;
       tmp7 = basePurchaseFlowAnalyticsFields;
-      const tmpResult2 = onDismiss(10482);
+      const tmpResult2 = onDismiss(10515);
     }
   : function PremiumGiftModal(analyticsLocations) {
       ({ recipientUserId, premiumType, analyticsLocation } = analyticsLocations);

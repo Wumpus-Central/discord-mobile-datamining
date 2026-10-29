@@ -12,6 +12,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/GroupDMNitroCapExperiment.tsx");
 
 export default tmp2;
-export const getGroupDMNitroCapConfig = function getGroupDMNitroCapConfig(getGroupDMRecipientLimit) {
+export function getGroupDMNitroCapConfig(getGroupDMRecipientLimit) {
   return config.getConfig({ location: getGroupDMRecipientLimit });
-};
+}

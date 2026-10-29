@@ -30,8 +30,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 let PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(9343).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(5004);
+let closure_14 = 2 * (fn(9347).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(5005);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
   list: { overflow: "visible" },
@@ -48,8 +48,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(9343).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(9343).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(9347).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(9347).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -641,8 +641,8 @@ let closure_21 = noop.memo(function TrailerItem(sources) {
 });
 ReactCompilerGating = fn(558);
 let obj4 = {
-  maxWidth: fn(9343).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(9343).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(9347).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(9347).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };

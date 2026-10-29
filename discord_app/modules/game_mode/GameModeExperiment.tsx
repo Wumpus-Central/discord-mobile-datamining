@@ -11,9 +11,9 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_mode/GameModeExperiment.tsx");
 
-export const getGameModeExperimentConfig = function getGameModeExperimentConfig(location) {
+export function getGameModeExperimentConfig(location) {
   return closure_2.getConfig({ location: location.location });
-};
+}
 export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGameModeExperimentConfig(location) {
       const cResult = c.c(2);

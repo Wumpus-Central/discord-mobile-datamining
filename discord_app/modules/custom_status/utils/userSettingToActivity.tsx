@@ -61,7 +61,7 @@ const useMemo = _mod19.useMemo;
 const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/custom_status/utils/userSettingToActivity.tsx");
 
-export const getActivityFromCustomStatus = function getActivityFromCustomStatus(setting) {
+export function getActivityFromCustomStatus(setting) {
   const emojiId = setting.emojiId;
   let usableCustomEmojiById = null;
   if (null != emojiId) {
@@ -71,11 +71,11 @@ export const getActivityFromCustomStatus = function getActivityFromCustomStatus(
     }
   }
   return _activityFromSetting(setting, usableCustomEmojiById);
-};
+}
 export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCustomStatusActivity() {
       const cResult = emojiId(576).c(7);
-      const CustomStatusSetting = emojiId(4832).CustomStatusSetting;
+      const CustomStatusSetting = emojiId(4833).CustomStatusSetting;
       const setting = CustomStatusSetting.useSetting();
       emojiId = undefined;
       if (setting != null) {

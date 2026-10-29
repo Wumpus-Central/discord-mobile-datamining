@@ -3,7 +3,7 @@ import Constants from "../../../discord_common/js/shared/Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import ClientThemesTypes from "ClientThemesTypes.tsx";
-import _modDef4280 from "../hexagon_campaign/HexagonCampaign.messages.js";
+import _modDef4281 from "../hexagon_campaign/HexagonCampaign.messages.js";
 import apply from "../../../_runtime/metro/00012__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -453,7 +453,7 @@ const obj24 = {
   angle: 135,
   getName() {
     const intl = util.intl;
-    return intl.string(_modDef4280["+xs8ZP"]);
+    return intl.string(_modDef4281["+xs8ZP"]);
   },
   midpointPercentage: 35,
   unsupported_overlayOpacityMultiplier: 0.8,
@@ -626,9 +626,9 @@ const obj33 = {
 const result = size.fileFinishedImporting("modules/client_themes/ClientThemesConstants.tsx");
 
 export const BASIC_DARK_THEMES = items;
-export const isSelectableGradientPreset = function isSelectableGradientPreset(id) {
+export function isSelectableGradientPreset(id) {
   return id.id !== preloaded_user_settings.BackgroundGradientPresetId.EASTER_EGG;
-};
+}
 export const LIGHT_BACKGROUND_GRADIENT_PRESETS = items2;
 export const DARK_BACKGROUND_GRADIENT_PRESETS = items11;
 export const HEXAGON_GRADIENT_PRESET = obj24;

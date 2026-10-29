@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const MarketingURLs = Constants.MarketingURLs;
 let result = size.fileFinishedImporting("modules/oauth2/Utils.tsx");
 
-export const getApplicationDetailsText = function getApplicationDetailsText(application) {
+export function getApplicationDetailsText(application) {
   const isSocialLayerParentApplication =
     useIsSocialLayerParentApplication.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
@@ -50,11 +50,8 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
     const obj11 = { application: application.name, discordPrivacyPolicyURL: MarketingURLs.PRIVACY };
     return intl.format(isSocialLayerParentApplication ? t["8LemYv"] : t["3Ywek3"], obj11);
   }
-};
-export const isContentClassificationRestricted = function isContentClassificationRestricted(
-  content_classification,
-  nsfwAllowed,
-) {
+}
+export function isContentClassificationRestricted(content_classification, nsfwAllowed) {
   let result = null != content_classification;
   if (result) {
     result = utils.isAgeRestrictedContentClassification(content_classification);
@@ -63,4 +60,4 @@ export const isContentClassificationRestricted = function isContentClassificatio
     result = false === nsfwAllowed;
   }
   return result;
-};
+}

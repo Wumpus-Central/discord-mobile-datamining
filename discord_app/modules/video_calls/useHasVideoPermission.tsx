@@ -68,11 +68,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-export const getVideoPermission = function getVideoPermission(channel) {
+export function getVideoPermission(channel) {
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     const obj = StreamPermissionUtils;
     isPrivateResult = obj.canStreamInChannel(channel, GuildStore, PermissionStore, false);
   }
   return isPrivateResult;
-};
+}

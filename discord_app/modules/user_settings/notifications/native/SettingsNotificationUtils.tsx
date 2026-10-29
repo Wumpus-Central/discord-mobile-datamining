@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
 
-export const hasAndroidNotificationChannels = function hasAndroidNotificationChannels() {
+export function hasAndroidNotificationChannels() {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     const _parseInt = parseInt;
@@ -13,4 +13,4 @@ export const hasAndroidNotificationChannels = function hasAndroidNotificationCha
     const tmpResult = DeviceUtils;
   }
   return isAndroidResult;
-};
+}

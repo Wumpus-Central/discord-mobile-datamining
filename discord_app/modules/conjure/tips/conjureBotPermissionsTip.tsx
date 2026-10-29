@@ -18,13 +18,13 @@ function resolveBotPermissionsTip(publish) {
 }
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureBotPermissionsTip.tsx");
 
-export const isBotPermissionsReviewPending = function isBotPermissionsReviewPending(publishing) {
+export function isBotPermissionsReviewPending(publishing) {
   let tmp = null != publishing && !publishing.publishing;
   if (tmp) {
     tmp = "review_permissions" === publishing.action;
   }
   return tmp;
-};
+}
 export { resolveBotPermissionsTip };
 export const CONJURE_BOT_PERMISSIONS_TIP_BASE = {
   id: "bot_permissions",

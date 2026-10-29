@@ -3,9 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
-export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivityLocationChannelId(
-  connectedActivityLocation,
-) {
+export function getEmbeddedActivityLocationChannelId(connectedActivityLocation) {
   if (null != connectedActivityLocation) {
     let channel_id;
     if ("channel_id" in connectedActivityLocation) {
@@ -13,8 +11,8 @@ export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivity
     }
     return channel_id;
   }
-};
-export const getEmbeddedActivityLocationGuildId = function getEmbeddedActivityLocationGuildId(location) {
+}
+export function getEmbeddedActivityLocationGuildId(location) {
   if (null != location) {
     let guild_id;
     if ("guild_id" in location) {
@@ -22,4 +20,4 @@ export const getEmbeddedActivityLocationGuildId = function getEmbeddedActivityLo
     }
     return guild_id;
   }
-};
+}

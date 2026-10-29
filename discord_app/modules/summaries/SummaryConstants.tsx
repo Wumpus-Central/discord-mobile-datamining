@@ -24,7 +24,7 @@ export const SummariesTopicClickedSource = {
   PILL_PREVIOUS_ARROW: "pill previous arrow",
 };
 export { SummaryFeedbackReasons };
-export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
+export function getSummaryFeedbackReasons() {
   obj = { value: obj.DUPLICATED, label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.wwXl5h);
@@ -50,4 +50,4 @@ export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
   obj6.label = intl6.string(util.t.BufsKk);
   items[5] = obj6;
   return items;
-};
+}

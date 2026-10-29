@@ -9,13 +9,11 @@ const constants = NotificationConstants.NotificationSettingsUpdateType;
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/notifications/profile_updates/ProfileUpdatesNotificationUtils.tsx");
 
-export const onProfileUpdatesNotificationSettingsChanged = function onProfileUpdatesNotificationSettingsChanged(
-  profile_updates_notifications,
-) {
+export function onProfileUpdatesNotificationSettingsChanged(profile_updates_notifications) {
   const EnableProfileUpdatesNotifications = UserSettings.EnableProfileUpdatesNotifications;
   EnableProfileUpdatesNotifications.updateSetting(profile_updates_notifications);
   AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
     update_type: constants.ACCOUNT,
     profile_updates_notifications,
   });
-};
+}

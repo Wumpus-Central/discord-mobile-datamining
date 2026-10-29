@@ -6,6 +6,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 const UserSettingsSections = Constants.UserSettingsSections;
 const result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesActionCreators.tsx");
 
-export const navigateToNitroManagement = function navigateToNitroManagement() {
+export function navigateToNitroManagement() {
   openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM });
-};
+}

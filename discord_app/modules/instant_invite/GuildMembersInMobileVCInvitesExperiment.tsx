@@ -15,8 +15,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/instant_invite/GuildMembersInMobileVCInvitesExperiment.tsx");
 
 export default apexExperiment;
-export const getGuildMembersInMobileVCInvitesExperiment = function getGuildMembersInMobileVCInvitesExperiment(
-  location,
-) {
+export function getGuildMembersInMobileVCInvitesExperiment(location) {
   return apexExperiment.getConfig({ location: location.location, guildId: location.guildId }).enabled;
-};
+}

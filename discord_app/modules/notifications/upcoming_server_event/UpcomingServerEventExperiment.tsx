@@ -35,8 +35,6 @@ export const useUpcomingServerEventExperiment = ReactCompilerGating.isReactCompi
   : function useUpcomingServerEventExperiment(location) {
       return apexExperiment.useConfig({ location });
     };
-export const isEligibleForUpcomingServerEventNotifications = function isEligibleForUpcomingServerEventNotifications(
-  location,
-) {
+export function isEligibleForUpcomingServerEventNotifications(location) {
   return apexExperiment.getConfig({ location }).showSettingsToggle;
-};
+}

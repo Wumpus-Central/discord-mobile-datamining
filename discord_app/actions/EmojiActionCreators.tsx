@@ -28,7 +28,7 @@ let closure_11 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -51,7 +51,7 @@ let closure_11 = async function _updateEmoji(arg0) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -113,7 +113,7 @@ const UserSettingsConstants = fn(1094);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/EmojiActionCreators.tsx");
 
-export const setDiversityColor = function setDiversityColor(value) {
+export function setDiversityColor(value) {
   _require = value;
   const PreloadedUserSettingsActionCreators =
     require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
@@ -126,8 +126,8 @@ export const setDiversityColor = function setDiversityColor(value) {
     },
     constants.FREQUENT_USER_ACTION,
   );
-};
-export const fetchEmoji = function fetchEmoji(guildId) {
+}
+export function fetchEmoji(guildId) {
   _require = guildId;
   DispatcherDefault.dispatch({ type: "EMOJI_FETCH", guildId });
   const HTTP = require("HTTPUtils").HTTP;
@@ -137,8 +137,8 @@ export const fetchEmoji = function fetchEmoji(guildId) {
     (body) => DispatcherDefault.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId, emojis: body.body }),
     () => DispatcherDefault.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId }),
   );
-};
-export const uploadEmoji = function uploadEmoji(guildId) {
+}
+export function uploadEmoji(guildId) {
   guildId = guildId.guildId;
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
@@ -171,8 +171,8 @@ export const uploadEmoji = function uploadEmoji(guildId) {
       return Promise.reject(arg0);
     },
   );
-};
-export const deleteEmoji = function deleteEmoji(guildId, id, replaced_by) {
+}
+export function deleteEmoji(guildId, id, replaced_by) {
   DispatcherDefault.dispatch({ type: "EMOJI_DELETE", guildId, emojiId: id });
   const HTTP = HTTPUtils.HTTP;
   const request = { url: Endpoints.GUILD_EMOJI(guildId, id), body: null, oldFormErrors: true, rejectWithError: null };
@@ -190,8 +190,8 @@ export const deleteEmoji = function deleteEmoji(guildId, id, replaced_by) {
     const intl = require("util").intl;
     AccessibilityAnnouncer.announce(intl.string(require("util").t.L3UUha));
   });
-};
-export const updateEmoji = function updateEmoji() {
+}
+export function updateEmoji() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -200,8 +200,8 @@ export const updateEmoji = function updateEmoji() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
+}
+export function favoriteEmoji(stateFromStores1) {
   let tmp = null;
   if (null != stateFromStores1) {
     let name = stateFromStores1.id;
@@ -220,7 +220,7 @@ export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4837).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4838).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -272,8 +272,8 @@ export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
       constants.INFREQUENT_USER_ACTION,
     );
   }
-};
-export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
+}
+export function unfavoriteEmoji(stateFromStores1) {
   let tmp = null;
   if (null != stateFromStores1) {
     let name = stateFromStores1.id;
@@ -292,7 +292,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4837).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4838).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -331,4 +331,4 @@ export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
       constants.INFREQUENT_USER_ACTION,
     );
   }
-};
+}

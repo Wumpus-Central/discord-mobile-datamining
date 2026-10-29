@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name,
             label: stringResult,
             action() {
-              closure_0(5186).setHomeDrawerState(!dependencyMap);
+              closure_0(5187).setHomeDrawerState(!dependencyMap);
               const intl = closure_0(1125).intl;
               const string = intl.string;
               const t = closure_0(1125).t;
@@ -87,9 +87,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 stringResult = string(t.hfxfVb);
               }
-              const AccessibilityAnnouncer = closure_0(5013).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = closure_0(5014).AccessibilityAnnouncer;
               AccessibilityAnnouncer.announce(stringResult);
-              const obj = closure_0(5186);
+              const obj = closure_0(5187);
             },
           };
           return obj;

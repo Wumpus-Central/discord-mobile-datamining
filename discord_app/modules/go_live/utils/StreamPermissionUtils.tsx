@@ -104,8 +104,8 @@ function canWatchStream(basicChannel1, VoiceStateStore, GuildStore, PermissionSt
     return items1;
   }
 }
-const ChannelRecordBase = fn(4860).ChannelRecordBase;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4934).GUILD_VOCAL_CHANNELS_KEY;
+const ChannelRecordBase = fn(4861).ChannelRecordBase;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1084).Permissions;
 const StreamUnavailableReasons = {
   REMOTE_MODE: 0,
@@ -155,7 +155,7 @@ export const useCanWatchStream = ReactCompilerGating.isReactCompilerEnabled()
         canWatchStream(closure_0, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore),
       );
     };
-export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, GuildStore, PermissionStore) {
+export function getStreamEligibleChannels(arg0, GuildStore, PermissionStore) {
   const items = [];
   for (const item10011 of tmp) {
     let channel = item10011.channel;
@@ -166,4 +166,4 @@ export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0
     continue;
   }
   return items;
-};
+}

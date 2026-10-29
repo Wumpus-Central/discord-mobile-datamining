@@ -11,7 +11,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesActionCreators.tsx");
 
-export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
+export function fetchUserAffinitiesV2() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -103,8 +103,8 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
     return nextPromise;
   }
   nextPromise = Promise.resolve();
-};
-export const setDevToolsUserAffinityOverride = function setDevToolsUserAffinityOverride(userId) {
+}
+export function setDevToolsUserAffinityOverride(userId) {
   let tmp2 = null;
   if (null != userId) {
     const obj3 = {
@@ -129,4 +129,4 @@ export const setDevToolsUserAffinityOverride = function setDevToolsUserAffinityO
     tmp2 = obj3;
   }
   DispatcherDefault.dispatch({ type: "DEV_TOOLS_SET_USER_AFFINITY_OVERRIDE", override: tmp2 });
-};
+}

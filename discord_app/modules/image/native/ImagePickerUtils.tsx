@@ -4,9 +4,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
 
-export const isActionPickSupported = function isActionPickSupported() {
+export function isActionPickSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
-export const isImageCaptureIntentSupported = function isImageCaptureIntentSupported() {
+}
+export function isImageCaptureIntentSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
+}

@@ -14,7 +14,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -55,7 +55,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -218,7 +218,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentityActionCreators.tsx");
 
-export const saveGuildIdentityChanges = function saveGuildIdentityChanges() {
+export function saveGuildIdentityChanges() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -227,22 +227,22 @@ export const saveGuildIdentityChanges = function saveGuildIdentityChanges() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setCurrentGuild = function setCurrentGuild(id) {
+}
+export function setCurrentGuild(id) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: id });
-};
-export const initGuildIdentitySettings = function initGuildIdentitySettings(id) {
+}
+export function initGuildIdentitySettings(id) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_INIT", guildId: id });
-};
-export const resetPendingMemberChanges = function resetPendingMemberChanges() {
+}
+export function resetPendingMemberChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
-};
-export const resetPendingProfileChanges = function resetPendingProfileChanges() {
+}
+export function resetPendingProfileChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
-};
-export const resetAllPending = function resetAllPending() {
+}
+export function resetAllPending() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
-};
-export const clearErrors = function clearErrors() {
+}
+export function clearErrors() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
-};
+}

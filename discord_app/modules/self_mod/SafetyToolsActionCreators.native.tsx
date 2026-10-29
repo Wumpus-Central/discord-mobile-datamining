@@ -8,15 +8,10 @@ const require = globalThis.__r;
 let closure_3 = Constants.getSafetyToolsActionSheetKey;
 const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
 
-export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
-  channelId,
-  recipientId,
-  warningId,
-  warningType,
-) {
+export function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
   const tmp = closure_3(channelId);
   _require = tmp;
-  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11008, dependencyMap.paths), tmp, {
+  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11043, dependencyMap.paths), tmp, {
     channelId,
     warningId,
     warningType,
@@ -25,4 +20,4 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
       ActionSheetActionCreatorsDefault.hideActionSheet(closure_0);
     },
   });
-};
+}

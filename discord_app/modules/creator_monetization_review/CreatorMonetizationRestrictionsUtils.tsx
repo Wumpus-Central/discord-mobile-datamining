@@ -2,24 +2,22 @@
 import GuildRoleSubscriptionsStore from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
-const FetchState = fn(4929).FetchState;
-const constants = fn(4930).CreatorMonetizationRestrictions;
+const FetchState = fn(4930).FetchState;
+const constants = fn(4931).CreatorMonetizationRestrictions;
 const GuildFeatures = fn(1084).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx",
 );
 
-export const isRestrictedFromShowingGuildPurchaseEntryPoints = function isRestrictedFromShowingGuildPurchaseEntryPoints(
-  restrictions,
-) {
+export function isRestrictedFromShowingGuildPurchaseEntryPoints(restrictions) {
   let hasItem = null != restrictions;
   if (hasItem) {
     hasItem = restrictions.includes(constants.NEW_PURCHASES_DISABLED);
   }
   return hasItem;
-};
-export const shouldHideGuildPurchaseEntryPoints = function shouldHideGuildPurchaseEntryPoints(guildId) {
+}
+export function shouldHideGuildPurchaseEntryPoints(guildId) {
   if (null == guildId) {
     return false;
   } else {
@@ -45,48 +43,44 @@ export const shouldHideGuildPurchaseEntryPoints = function shouldHideGuildPurcha
     }
     return flag;
   }
-};
-export const isRestrictedFromUpdatingCreatorMonetizationSettings =
-  function isRestrictedFromUpdatingCreatorMonetizationSettings(restrictions) {
-    let hasItem = null != restrictions;
-    if (hasItem) {
-      hasItem = restrictions.includes(constants.SETTINGS_READ_ONLY);
-    }
-    return hasItem;
-  };
-export const shouldRestrictUpdatingCreatorMonetizationSettings =
-  function shouldRestrictUpdatingCreatorMonetizationSettings(id) {
-    if (null == id) {
-      return false;
-    } else {
-      const monetizationRestrictionsFetchState = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id);
-      const monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(id);
-      guild = GuildStore.getGuild(id);
-      if (monetizationRestrictionsFetchState === FetchState.FETCHED) {
-        let hasItem = null != monetizationRestrictions;
-        if (hasItem) {
-          hasItem = monetizationRestrictions.includes(constants.SETTINGS_READ_ONLY);
-        }
-        let flag = hasItem;
-      } else {
-        flag = undefined;
-        if (guild != null) {
-          const features = guild.features;
-          flag = features.has(GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED);
-        }
-        if (flag == null) {
-          flag = true;
-        }
+}
+export function isRestrictedFromUpdatingCreatorMonetizationSettings(restrictions) {
+  let hasItem = null != restrictions;
+  if (hasItem) {
+    hasItem = restrictions.includes(constants.SETTINGS_READ_ONLY);
+  }
+  return hasItem;
+}
+export function shouldRestrictUpdatingCreatorMonetizationSettings(id) {
+  if (null == id) {
+    return false;
+  } else {
+    const monetizationRestrictionsFetchState = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id);
+    const monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(id);
+    guild = GuildStore.getGuild(id);
+    if (monetizationRestrictionsFetchState === FetchState.FETCHED) {
+      let hasItem = null != monetizationRestrictions;
+      if (hasItem) {
+        hasItem = monetizationRestrictions.includes(constants.SETTINGS_READ_ONLY);
       }
-      return flag;
+      let flag = hasItem;
+    } else {
+      flag = undefined;
+      if (guild != null) {
+        const features = guild.features;
+        flag = features.has(GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED);
+      }
+      if (flag == null) {
+        flag = true;
+      }
     }
-  };
-export const isRestrictedFromMonetizationReapplication = function isRestrictedFromMonetizationReapplication(
-  restrictions,
-) {
+    return flag;
+  }
+}
+export function isRestrictedFromMonetizationReapplication(restrictions) {
   let hasItem = null != restrictions;
   if (hasItem) {
     hasItem = restrictions.includes(constants.REAPPLICATION_DISABLED);
   }
   return hasItem;
-};
+}

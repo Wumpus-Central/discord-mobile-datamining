@@ -41,7 +41,7 @@ let closure_4 = { N: 16384, r: 8, p: 2, dkLen: 64 };
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
 
-export const generatePairwiseFingerprint = function generatePairwiseFingerprint() {
+export function generatePairwiseFingerprint() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -50,4 +50,4 @@ export const generatePairwiseFingerprint = function generatePairwiseFingerprint(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

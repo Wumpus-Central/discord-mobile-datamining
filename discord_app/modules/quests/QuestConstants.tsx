@@ -231,7 +231,7 @@ export const QuestHomeSortMethods = {
 };
 export { TaskFilterTypes };
 export const RewardFilterTypes = obj2;
-export const getQuestHomeFilterOptionItem = function getQuestHomeFilterOptionItem(filter) {
+export function getQuestHomeFilterOptionItem(filter) {
   const values = Object.values(obj);
   if (values.includes(filter)) {
     obj = { group: "task", filter };
@@ -246,5 +246,5 @@ export const getQuestHomeFilterOptionItem = function getQuestHomeFilterOptionIte
     }
   }
   return tmp2;
-};
+}
 export const SORTED_QUEST_HOME_FILTER_GROUPS = sorted;

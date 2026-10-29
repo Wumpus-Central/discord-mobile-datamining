@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
-export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
+export function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);
   ({
     userIndividualFileSizeLimit,
@@ -39,4 +39,4 @@ export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEven
   obj3.attachment_mimetypes = attachmentMimeTypes;
   obj3.error_type = errorType;
   return obj3;
-};
+}

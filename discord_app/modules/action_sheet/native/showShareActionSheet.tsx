@@ -17,7 +17,7 @@ if (PlatformUtils.isAndroid()) {
 }
 let result = size.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
 
-export const showShareActionSheet = function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) {
+export function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) {
   _require = source;
   let tmp = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
   importDefault = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
@@ -25,7 +25,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "useCallback", mediaStagingOptions: "PX_16" };
+    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "Reflect" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {
@@ -111,4 +111,4 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     .finally(() => {
       fn();
     });
-};
+}

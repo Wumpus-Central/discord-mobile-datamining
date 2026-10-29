@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 
-export const handleMessagesLongPressChannel = function handleMessagesLongPressChannel(data) {
+export function handleMessagesLongPressChannel(data) {
   ({ guildId, channelId, messageId, originalLink } = data.data);
   if (null != channelId) {
     if (originalLink == null) {
@@ -16,4 +16,4 @@ export const handleMessagesLongPressChannel = function handleMessagesLongPressCh
       showLongPressURLActionSheetDefault(obj2);
     }
   }
-};
+}

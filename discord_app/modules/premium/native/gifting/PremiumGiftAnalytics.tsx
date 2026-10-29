@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         if (cResult[7] !== basePurchaseAnalytics) {
           class E {
             constructor() {
-              return () => { ... };
+              return /* F153863 */ function() { ... };
             }
           }
           const items = [basePurchaseAnalytics, ref];
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         } else {
           class E {
             constructor() {
-              return () => { ... };
+              return /* F153863 */ function() { ... };
             }
           }
           tmp10 = cResult[9];

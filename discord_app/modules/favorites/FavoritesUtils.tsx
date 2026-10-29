@@ -8,7 +8,7 @@ const FAVORITES_RAW_GUILD_ID = FavoritesConstants.FAVORITES_RAW_GUILD_ID;
 const FAVORITES = Constants.FAVORITES;
 const result = size.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
 
-export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(guild) {
+export function getFavoritesAwareGuildName(guild) {
   if (null != guild) {
     const id = guild.id;
     let tmp2 = id === FAVORITES_RAW_GUILD_ID;
@@ -23,7 +23,7 @@ export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(gu
     }
     return name;
   }
-};
+}
 export function isFavoritesGuildId(guildId) {
   let tmp = guildId === FAVORITES_RAW_GUILD_ID;
   if (!tmp) {
@@ -31,9 +31,9 @@ export function isFavoritesGuildId(guildId) {
   }
   return tmp;
 }
-export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(str) {
+export function isFavoritesGuildCategoryNameValid(str) {
   return "" !== str.trim();
-};
-export const isFavoritableChannel = function isFavoritableChannel(record) {
+}
+export function isFavoritableChannel(record) {
   return !record.isCategory();
-};
+}

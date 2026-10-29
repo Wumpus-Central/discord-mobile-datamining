@@ -57,7 +57,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4860).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(4861).THREADED_CHANNEL_TYPES;
 const Constants = fn(1084);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = {
@@ -1335,7 +1335,7 @@ const result = size.fileFinishedImporting("modules/threads/ThreadHooks.tsx");
 
 export const VoiceInThreadsExperiment = importDefaultResultResult;
 export const useCanStartPublicThread = tmp5;
-export const computeCanStartPublicThread = function computeCanStartPublicThread(channel, message) {
+export function computeCanStartPublicThread(channel, message) {
   if (channel.isForumLikeChannel()) {
     let SEND_MESSAGES = constants.SEND_MESSAGES;
   } else {
@@ -1358,9 +1358,9 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
     }
   }
   return flag;
-};
+}
 export const useCanStartPrivateThread = tmp6;
-export const computeCanStartPrivateThread = function computeCanStartPrivateThread(type, hasFlag) {
+export function computeCanStartPrivateThread(type, hasFlag) {
   let tmp3 = type.type === constants3.GUILD_TEXT;
   if (!tmp3) {
     tmp3 = type.type === tmp2.GUILD_APP;
@@ -1385,7 +1385,7 @@ export const computeCanStartPrivateThread = function computeCanStartPrivateThrea
     tmp3 = flag;
   }
   return tmp3;
-};
+}
 export const useCanStartThread = tmp7;
 export const useCanViewThreadForMessage = tmp8;
 export const useHasActiveThreads = tmp9;
@@ -1393,7 +1393,7 @@ export const useCanManageThread = tmp10;
 export const useCanUnarchiveThread = tmp11;
 export { canUnarchiveThread };
 export const useIsActiveChannelOrUnarchivableThread = tmp12;
-export const getIsActiveChannelOrUnarchivableThread = function getIsActiveChannelOrUnarchivableThread(channel) {
+export function getIsActiveChannelOrUnarchivableThread(channel) {
   let tmp = null != channel;
   if (tmp) {
     const isThreadResult = channel.isThread();
@@ -1419,15 +1419,15 @@ export const getIsActiveChannelOrUnarchivableThread = function getIsActiveChanne
     tmp = isActiveThreadResult;
   }
   return tmp;
-};
-export const computeIsReadOnlyThread = function computeIsReadOnlyThread(channel) {
+}
+export function computeIsReadOnlyThread(channel) {
   if (channel.isMediaThread()) {
     return true;
   } else {
     const canResult = PermissionStore.can(constants.MANAGE_THREADS, channel);
     return channel.isArchivedLockedThread() && !PermissionStore.can(constants.MANAGE_THREADS, channel);
   }
-};
+}
 export const useIsThreadModerator = tmp13;
 export { isThreadModerator };
 export const useCanRemoveThreadMember = tmp14;
@@ -1454,7 +1454,7 @@ export const useIsNonModInLockedThread = ReactCompilerGating.isReactCompilerEnab
       const tmp = closure_21(isLockedThread);
       return isLockedThread.isLockedThread() && !closure_21(isLockedThread);
     };
-export const isNonModInLockedThread = function isNonModInLockedThread(isLockedThread) {
+export function isNonModInLockedThread(isLockedThread) {
   const items = [PermissionStore];
   const first = _slicedToArray(items, 1)[0];
   let canResult = null != isLockedThread;
@@ -1462,4 +1462,4 @@ export const isNonModInLockedThread = function isNonModInLockedThread(isLockedTh
     canResult = first.can(constants.MANAGE_THREADS, isLockedThread);
   }
   return isLockedThread.isLockedThread() && !canResult;
-};
+}

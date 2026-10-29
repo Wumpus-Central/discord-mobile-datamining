@@ -20,18 +20,18 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9684);
+const ApplicationCommandIndexStore = fn(9716);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-let closure_12 = fn(6019).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(6023).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
-  headerSpacer: { height: fn(12052).EXPANDED_HEADER_HEIGHT - fn(12052).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12106).EXPANDED_HEADER_HEIGHT - fn(12106).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,7 +49,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(12052).EXPANDED_HEADER_HEIGHT - fn(12052).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12106).EXPANDED_HEADER_HEIGHT - fn(12106).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -405,7 +405,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -455,7 +455,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         closure_129_0();
                       }
                       c3 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp13) {
                     c3 = tmp;
@@ -541,7 +541,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -591,7 +591,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_0();
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -634,7 +634,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = require("CommandRowButton");
-      return closure_13(tmp(6939).TableRow, {
+      return closure_13(tmp(6963).TableRow, {
         start: isFirstRow,
         end: isLastRow,
         label: command.displayName,

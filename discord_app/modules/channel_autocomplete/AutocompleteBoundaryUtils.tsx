@@ -48,8 +48,8 @@ export const AUTOCOMPLETE_BOUNDARY_CHARACTERS = items1;
 export const AUTOCOMPLETE_BOUNDARY_CHARACTERS_SET = set;
 export { isAutocompleteSeparatingBoundary };
 export { getAutocompleteToken };
-export const boundAutocompleteWord = function boundAutocompleteWord(c22, arr) {
+export function boundAutocompleteWord(c22, arr) {
   arr = getAutocompleteToken(c22);
   const diff = c22.length - arr.length;
   return { word: arr, fullWord: arr.slice(diff), didTrimPrefix: diff > 0 };
-};
+}

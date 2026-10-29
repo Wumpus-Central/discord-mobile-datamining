@@ -148,7 +148,7 @@ export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled(
         });
       }, items);
     };
-export const getAvailableMethodsV2 = function getAvailableMethodsV2() {
+export function getAvailableMethodsV2() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -157,4 +157,4 @@ export const getAvailableMethodsV2 = function getAvailableMethodsV2() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

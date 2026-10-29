@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const processColor = _mod17.processColor;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");
 
-export const processColorOrThrow = function processColorOrThrow(RED_400) {
+export function processColorOrThrow(RED_400) {
   const tmp = processColor(RED_400);
   if (null == tmp) {
     const _Error = Error;
@@ -15,4 +15,4 @@ export const processColorOrThrow = function processColorOrThrow(RED_400) {
   } else {
     return tmp;
   }
-};
+}

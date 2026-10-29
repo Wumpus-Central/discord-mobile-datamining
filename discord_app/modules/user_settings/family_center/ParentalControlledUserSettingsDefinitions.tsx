@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
   "modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx",
 );
 
-export const defineParentalControlledSetting = function defineParentalControlledSetting(
+export function defineParentalControlledSetting(
   privacy,
   defaultGuildsRestricted,
   explicitContentFromProto,
@@ -133,46 +133,45 @@ export const defineParentalControlledSetting = function defineParentalControlled
           );
         },
   };
-};
-export const wrapParentalControlledSettingWithExperimentDefaults =
-  function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
-    ({
-      baseSetting: require,
-      isEligible: importDefault,
-      useIsEligible: dependencyMap,
-      eligibleDefault: FamilyCenterControlledSettingsStore,
-      ineligibleDefault: closure_4,
-      onUseDefault: closure_5,
-    } = arg0);
-    return {
-      getControlledSetting(arg0) {
-        const controlledSetting = _require.getControlledSetting(arg0);
-        if (null != controlledSetting) {
-          return controlledSetting;
-        } else {
-          if (closure_1_5 != null) {
-            tmp2();
-          }
-          if (importDefault()) {
-            const tmp5 = FamilyCenterControlledSettingsStore();
-          }
+}
+export function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
+  ({
+    baseSetting: require,
+    isEligible: importDefault,
+    useIsEligible: dependencyMap,
+    eligibleDefault: FamilyCenterControlledSettingsStore,
+    ineligibleDefault: closure_4,
+    onUseDefault: closure_5,
+  } = arg0);
+  return {
+    getControlledSetting(arg0) {
+      const controlledSetting = _require.getControlledSetting(arg0);
+      if (null != controlledSetting) {
+        return controlledSetting;
+      } else {
+        if (closure_1_5 != null) {
+          tmp2();
         }
-      },
-      useControlledSetting(selectedTeenId) {
-        const controlledSetting = _require.useControlledSetting(selectedTeenId);
-        if (null != controlledSetting) {
-          return controlledSetting;
-        } else {
-          if (closure_1_5 != null) {
-            closure_1_5();
-          }
-          if (tmp2) {
-            const tmp4 = FamilyCenterControlledSettingsStore();
-          }
+        if (importDefault()) {
+          const tmp5 = FamilyCenterControlledSettingsStore();
         }
-      },
-      updateControlledSetting(selectedTeenId, addFlagResult) {
-        return _require.updateControlledSetting(selectedTeenId, addFlagResult);
-      },
-    };
+      }
+    },
+    useControlledSetting(selectedTeenId) {
+      const controlledSetting = _require.useControlledSetting(selectedTeenId);
+      if (null != controlledSetting) {
+        return controlledSetting;
+      } else {
+        if (closure_1_5 != null) {
+          closure_1_5();
+        }
+        if (tmp2) {
+          const tmp4 = FamilyCenterControlledSettingsStore();
+        }
+      }
+    },
+    updateControlledSetting(selectedTeenId, addFlagResult) {
+      return _require.updateControlledSetting(selectedTeenId, addFlagResult);
+    },
   };
+}

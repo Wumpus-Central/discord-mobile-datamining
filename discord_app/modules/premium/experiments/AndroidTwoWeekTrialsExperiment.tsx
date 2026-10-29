@@ -15,9 +15,9 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
 
 export const AndroidTwoWeekTrialsExperiment = apexExperiment;
-export const isAndroidTwoWeekTrialsExperimentEnabled = function isAndroidTwoWeekTrialsExperimentEnabled(location) {
+export function isAndroidTwoWeekTrialsExperimentEnabled(location) {
   return apexExperiment.getConfig({ location: location.location }).enabled;
-};
-export const isAndroidTwoWeekTrialsTrialCTAEnabled = function isAndroidTwoWeekTrialsTrialCTAEnabled(location) {
+}
+export function isAndroidTwoWeekTrialsTrialCTAEnabled(location) {
   return apexExperiment.getConfig({ location: location.location }).trialCTAEnabled;
-};
+}

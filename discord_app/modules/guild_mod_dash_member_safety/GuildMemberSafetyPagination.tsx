@@ -208,7 +208,7 @@ export const PAGINATION_PAGE_SIZE_OPTIONS = items;
 export const MAX_VISIBLE_PAGES = 7;
 export const MAX_FORWARD_PAGE_SKIP = 5;
 export const DEFAULT_SEARCH_CHUNK_LIMIT = 250;
-export const createDefaultMemberSafetyPaginationState = function createDefaultMemberSafetyPaginationState() {
+export function createDefaultMemberSafetyPaginationState() {
   return {
     pageSize: items[0],
     currentPage: 1,
@@ -216,8 +216,8 @@ export const createDefaultMemberSafetyPaginationState = function createDefaultMe
     sort: MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_UNSPECIFIED,
     elasticSearchCursor: null,
   };
-};
-export const getSearchChunkLimit = function getSearchChunkLimit(paginationState) {
+}
+export function getSearchChunkLimit(paginationState) {
   return Math.max(5 * paginationState.pageSize, 250);
-};
+}
 export { GuildMemberSafetyPagination };

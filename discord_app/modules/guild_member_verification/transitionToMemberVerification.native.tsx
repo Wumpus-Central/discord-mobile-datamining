@@ -10,7 +10,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/transitionToMemberVerification.native.tsx");
 
-export const transitionToMemberVerification = function transitionToMemberVerification(guildId) {
+export function transitionToMemberVerification(guildId) {
   if (null == GuildStore.getGuild(guildId)) {
     const request = UserGuildJoinRequestStore.getRequest(guildId);
     let applicationStatus;
@@ -34,4 +34,4 @@ export const transitionToMemberVerification = function transitionToMemberVerific
   } else {
     router_utils.transitionToGuild(guildId);
   }
-};
+}

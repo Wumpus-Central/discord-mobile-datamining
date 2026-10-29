@@ -8,7 +8,7 @@ import ColorUtils from "../../../../../../utils/ColorUtils.tsx";
 import useA11yRolesNative from "../../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import useToken from "../../../../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../../../_runtime/05294_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../../_runtime/05295_LinearGradient.js";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import useCurrentUser from "../../../../../collectibles/hooks/useCurrentUser.tsx";
@@ -16,7 +16,7 @@ import CheckmarkLargeBoldIcon from "../../../../../../design/components/Icon/nat
 import ProfileEffectDefault from "../../../../../collectibles/profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "../../../../../collectibles/native/AvatarDecorationSampleV2.tsx";
 import ProfileFrameSamplePreviewDefault from "../../../../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9447 from "../../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef9478 from "../../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import NameplateCardPreviewDefault from "../../../../../collectibles/nameplates/native/NameplateCardPreview.tsx";
 import useFetchCollectiblesProduct from "../../../../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -24,10 +24,10 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7690).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1990).isNameplateRecord;
-const isProfileEffectRecord = fn(7691).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7692).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7713).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1991).isNameplateRecord;
+const isProfileEffectRecord = fn(7714).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7715).isProfileFrameRecord;
 const VerticalGradient = fn(1084).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -38,7 +38,7 @@ const previewWidth = 150 - nativeDefault.space.PX_32;
 let sum = 100 + nativeDefault.space.PX_40;
 const PX_122 = nativeDefault.space.PX_12;
 let closure_18 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(5004);
+let createStyles = fn(5005);
 let obj = {
   card: {
     width: 150,
@@ -104,7 +104,7 @@ const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9422).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9453).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = {
   position: "absolute",
@@ -162,7 +162,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (isProfileEffectRecord(item)) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj5 = { uri: _modDef9447 };
+            const obj5 = { uri: _modDef9478 };
             cResult[10] = obj5;
             let tmp26 = obj5;
           } else {
@@ -243,7 +243,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   : function GiftingSKUCardItemPreview(arg0) {
       ({ item, isSelected } = arg0);
       const tmp = closure_19();
-      const currentUser = isSelected(8704).useCurrentUser();
+      const currentUser = isSelected(8707).useCurrentUser();
       const items = [isSelected, currentUser];
       const memo = noop.useMemo(() => {
         let avatarSource;
@@ -254,22 +254,22 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       if (isNameplateRecord(item)) {
         const obj2 = { item, animate: isSelected };
-        let tmp8 = closure_10(currentUser(9448), obj2);
+        let tmp8 = closure_10(currentUser(9479), obj2);
       } else if (isAvatarDecorationRecord(item)) {
         const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-        tmp8 = closure_10(currentUser(9434), obj3);
+        tmp8 = closure_10(currentUser(9465), obj3);
       } else if (isProfileEffectRecord(item)) {
         const obj4 = { style: tmp.profileEffect, children: null };
         const obj5 = { source: null, style: null, resizeMode: "cover" };
-        const obj6 = { uri: currentUser(9447) };
+        const obj6 = { uri: currentUser(9478) };
         obj5.source = obj6;
         obj5.style = tmp.sampleProfile;
-        const items1 = [closure_10(currentUser(5705), obj5)];
+        const items1 = [closure_10(currentUser(5707), obj5)];
         const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-        items1[1] = closure_10(currentUser(9425), obj7);
+        items1[1] = closure_10(currentUser(9456), obj7);
         obj4.children = items1;
         tmp8 = closure_11(closure_4, obj4);
-        const tmp19 = currentUser(5705);
+        const tmp19 = currentUser(5707);
       } else {
         tmp8 = null;
         if (isProfileFrameRecord(item)) {
@@ -280,9 +280,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             previewHeight,
             profileBackgroundColor: currentUser(587).colors.BACKGROUND_BASE_LOW,
           };
-          obj8.children = closure_10(currentUser(9446), obj9);
+          obj8.children = closure_10(currentUser(9477), obj9);
           tmp8 = closure_10(closure_4, obj8);
-          const tmp12 = currentUser(9446);
+          const tmp12 = currentUser(9477);
         }
       }
       return tmp8;
@@ -778,7 +778,7 @@ let closure_23 = noop.memo(
         }
       },
 );
-createStyles = fn(5004);
+createStyles = fn(5005);
 let closure_24 = createStyles.createStyles({
   grid: { flexDirection: "column", alignSelf: "center", gap: PX_122 },
   row: { flexDirection: "row", gap: PX_122 },

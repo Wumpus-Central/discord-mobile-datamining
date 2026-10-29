@@ -5,7 +5,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ isLaunched: hasOwnProperty, makeFrameId: metroRequire } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -50,28 +50,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor() {
-              return closure_0(() => { ... });
+              return closure_0(/* F157354 */ function() { ... });
             }
           }
           cResult[6] = I;
         } else {
           class I {
             constructor() {
-              return closure_0(() => { ... });
+              return closure_0(/* F157354 */ function() { ... });
             }
           }
         }
         if (tmp11 != null) {
           class I {
             constructor() {
-              return closure_0(() => { ... });
+              return closure_0(/* F157354 */ function() { ... });
             }
           }
         }
         if (cResult[7] !== (undefined === tmp3 && tmp11.isClosed)) {
           class I {
             constructor() {
-              return closure_0(() => { ... });
+              return closure_0(/* F157354 */ function() { ... });
             }
           }
           tmp30[0] = tmp28;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
         } else {
           class I {
             constructor() {
-              return closure_0(() => { ... });
+              return closure_0(/* F157354 */ function() { ... });
             }
           }
         }
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
       if (tmp19) {
         class I {
           constructor() {
-            return closure_0(() => { ... });
+            return closure_0(/* F157354 */ function() { ... });
           }
         }
         tmp20[0] = tmp3;

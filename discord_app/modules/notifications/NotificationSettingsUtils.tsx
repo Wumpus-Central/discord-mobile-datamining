@@ -45,11 +45,12 @@ function getExperimentAndConfigBySettingId(arg0) {
   }
   return {};
 }
-const NotificationSettingsConstants = fn(15955);
+const NotificationSettingsConstants = fn(16191);
 ({
   NOTIF_CATEGORIES: closure_4,
   NOTIF_SETTING_MAPPING: hasOwnProperty,
-  NOTIF_SETTINGS: metroRequire,
+  NOTIF_SETTING_REDESIGN_MAPPING: metroRequire,
+  NOTIF_SETTINGS: closure_7,
 } = NotificationSettingsConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -74,13 +75,11 @@ function useNotifCategoryVisibility(CATEGORY_CALLS_MESSAGES) {
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
-export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSettingsAndMappings() {
-  const settings = [];
-  const mappings = [];
+export function getAssignedNotifSettingsAndMappings() {
+  const items = [];
   const result = DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled(
     "getAssignedNotifSettingsAndMappings",
   );
-  const set = new Set();
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -92,49 +91,24 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
         let variations = tmp4.variations;
         continue;
       }
-      let arr = settings.push(tmp4);
+      let arr = items.push(tmp4);
       let addResult = set.add(tmp4.id);
     }
     continue;
   }
-  const entries = Object.entries(hasOwnProperty);
-  while (tmp14 !== undefined) {
-    let tmp17 = _slicedToArray(tmp15, 2);
-    let tmp18 = tmp17[1];
-    let _parseInt = parseInt;
-    let parsed = parseInt(tmp17[0]);
-    for (const item10072 of tmp18) {
-      if (set.has(item10072)) {
-        let obj2 = { notifType: null, notifSetting: null };
-        obj2.notifType = parsed;
-        obj2.notifSetting = item10072;
-        let arr2 = mappings.push(obj2);
-        obj4.return();
-        break;
-      }
-      continue;
-    }
-    continue;
+  let tmp13 = hasOwnProperty;
+  if (result) {
+    const obj2 = {};
+    const merged = Object.assign(tmp13);
+    const merged1 = Object.assign(timestampProducer);
+    let tmp14 = obj2;
+  } else {
+    tmp14 = tmp13;
   }
-  const categories = [];
-  for (const item10090 of closure_1_4) {
-    let tmp28 = null != item10090.redesignState;
-    if (tmp28) {
-      tmp28 = item10090.redesignState !== result;
-    }
-    if (tmp28) {
-      continue;
-    } else {
-      let obj5 = { stringId: item10090.string_id, title: null };
-      if (!result) {
-        obj5.title = item10090.title;
-        obj5 = tmp30(obj5);
-      }
-      let redesignTitle = item10090.redesignTitle;
-    }
-  }
-  return { categories, settings, mappings };
-};
+  const entries = Object.entries(tmp14);
+  tmp13 = entries[Symbol.iterator]();
+  set = new Set();
+}
 export { useIsDeclarativeSettingsUIAvailable };
 export { useNotifCategoryVisibility };
 export const useNotifSettingVisibility = ReactCompilerGating.isReactCompilerEnabled()

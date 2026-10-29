@@ -16,7 +16,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
         const obj7 = { type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: closure_129_0 };
         closure_130_1(closure_130_2[4]).dispatch(obj7);
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp12) {
       c4 = tmp;
@@ -66,7 +66,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
 
-export const acceptMessageRequest = function acceptMessageRequest() {
+export function acceptMessageRequest() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -75,8 +75,8 @@ export const acceptMessageRequest = function acceptMessageRequest() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const clearMessageRequestState = function clearMessageRequestState(id) {
+}
+export function clearMessageRequestState(id) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: Endpoints.CHANNEL_RECIPIENT_ME(id),
@@ -86,8 +86,8 @@ export const clearMessageRequestState = function clearMessageRequestState(id) {
   const obj = { consent_status: MessageRequestTypes.MessageRequestConsentStatusTypes.UNSPECIFIED };
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   return HTTP.put(request);
-};
-export const markAsMessageRequest = function markAsMessageRequest(id) {
+}
+export function markAsMessageRequest(id) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: Endpoints.CHANNEL_RECIPIENT_ME(id),
@@ -97,13 +97,13 @@ export const markAsMessageRequest = function markAsMessageRequest(id) {
   const obj = { consent_status: MessageRequestTypes.MessageRequestConsentStatusTypes.PENDING };
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   return HTTP.put(request);
-};
-export const rejectMessageRequest = function rejectMessageRequest(id) {
+}
+export function rejectMessageRequest(id) {
   const HTTP = HTTPUtils.HTTP;
   const obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.del(obj);
-};
-export const rejectMessageRequestBatch = function rejectMessageRequestBatch(channel_ids) {
+}
+export function rejectMessageRequestBatch(channel_ids) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
@@ -111,7 +111,7 @@ export const rejectMessageRequestBatch = function rejectMessageRequestBatch(chan
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.put(request);
-};
-export const fetchUserCountryCode = function fetchUserCountryCode() {
+}
+export function fetchUserCountryCode() {
   const locationMetadata = AuthenticationActionCreatorsDefault.getLocationMetadata();
-};
+}

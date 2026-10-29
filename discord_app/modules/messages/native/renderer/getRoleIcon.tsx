@@ -5,7 +5,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/getRoleIcon.tsx");
 
-export const getRoleIcon = function getRoleIcon(size) {
+export function getRoleIcon(size) {
   size = size.size;
   ({ guildId, roleId } = size);
   const obj = useRoleIconProps;
@@ -25,4 +25,4 @@ export const getRoleIcon = function getRoleIcon(size) {
     obj4.alt = intl.formatToPlainString(util.t["9+YWrE"], obj6);
     return obj4;
   }
-};
+}

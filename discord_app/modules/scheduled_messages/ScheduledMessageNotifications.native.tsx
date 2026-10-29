@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageNotifications.native.tsx");
 
-export const showScheduleMessageSuccessToast = function showScheduleMessageSuccessToast(arg0) {
+export function showScheduleMessageSuccessToast(arg0) {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   const obj3 = { timestamp: null };
@@ -23,14 +23,14 @@ export const showScheduleMessageSuccessToast = function showScheduleMessageSucce
   obj2.text = intl.formatToPlainString(util.t["CvHu/j"], obj3);
   obj2.icon = ClockIcon.ClockIcon;
   obj.open("SCHEDULED_MESSAGE_CREATE_SUCCESS", obj2);
-};
-export const showScheduleMessageFailureToast = function showScheduleMessageFailureToast(error) {
+}
+export function showScheduleMessageFailureToast(error) {
   const obj2 = { text: null, variant: "critical" };
   const intl = util.intl;
   obj2.text = intl.formatToPlainString(util.t.PsJmUe, { error });
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_CREATE_FAILURE", obj2);
-};
-export const handleScheduleMessageError = function handleScheduleMessageError(body) {
+}
+export function handleScheduleMessageError(body) {
   body = body.body;
   let code;
   if (body != null) {
@@ -86,43 +86,43 @@ export const handleScheduleMessageError = function handleScheduleMessageError(bo
     obj5.text = intl.formatToPlainString(util.t.PsJmUe, obj6);
     ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_CREATE_FAILURE", obj5);
   }
-};
-export const showScheduledMessageEditSuccessToast = function showScheduledMessageEditSuccessToast() {
+}
+export function showScheduledMessageEditSuccessToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj2.text = intl.string(util.t.MXsMRk);
   obj2.icon = ClockIcon.ClockIcon;
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_UPDATE_SUCCESS", obj2);
-};
-export const showScheduledMessageEditFailureToast = function showScheduledMessageEditFailureToast(message) {
+}
+export function showScheduledMessageEditFailureToast(message) {
   const obj2 = { text: null, variant: "critical" };
   const intl = util.intl;
   obj2.text = intl.formatToPlainString(util.t.slM6In, { error: message });
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_UPDATE_FAILURE", obj2);
-};
-export const showScheduleMessageDeleteSuccessToast = function showScheduleMessageDeleteSuccessToast() {
+}
+export function showScheduleMessageDeleteSuccessToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj2.text = intl.string(util.t["JF/LWn"]);
   obj2.icon = ClockIcon.ClockIcon;
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_DELETE_SUCCESS", obj2);
-};
-export const showScheduleMessageDeleteFailureToast = function showScheduleMessageDeleteFailureToast(message) {
+}
+export function showScheduleMessageDeleteFailureToast(message) {
   const obj2 = { text: null, variant: "critical" };
   const intl = util.intl;
   obj2.text = intl.formatToPlainString(util.t.sUvyW3, { error: message });
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_DELETE_FAILURE", obj2);
-};
-export const showScheduleMessageSentNowSuccessToast = function showScheduleMessageSentNowSuccessToast() {
+}
+export function showScheduleMessageSentNowSuccessToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj2.text = intl.string(util.t["BHCm/d"]);
   obj2.icon = ClockIcon.ClockIcon;
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_SEND_NOW_SUCCESS", obj2);
-};
-export const showScheduleMessageSentNowFailureToast = function showScheduleMessageSentNowFailureToast(message) {
+}
+export function showScheduleMessageSentNowFailureToast(message) {
   const obj2 = { text: null, variant: "critical" };
   const intl = util.intl;
   obj2.text = intl.formatToPlainString(util.t["uy++C+"], { error: message });
   ToastActionCreatorsDefault.open("SCHEDULED_MESSAGE_SEND_NOW_FAILURE", obj2);
-};
+}

@@ -68,8 +68,8 @@ export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEn
         return stateFromStoresArray.filter((item) => null == closure_0.get(item));
       }, items2);
     };
-export const getGuildIdsToFetchSoundsFor = function getGuildIdsToFetchSoundsFor() {
+export function getGuildIdsToFetchSoundsFor() {
   const guildIds = GuildStore.getGuildIds();
   const sounds = SoundboardStore.getSounds();
   return guildIds.filter((item) => null == closure_0.get(item));
-};
+}

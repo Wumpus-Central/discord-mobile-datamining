@@ -4,6 +4,6 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/changelog/getClientVersionForChangelog.native.tsx");
 
-export const getClientVersionForChangelog = function getClientVersionForChangelog() {
+export function getClientVersionForChangelog() {
   return AppInfoUtils.getAppMajorVersion();
-};
+}

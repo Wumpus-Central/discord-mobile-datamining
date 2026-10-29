@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
 
-export const getIsChannelNameSettingEditable = function getIsChannelNameSettingEditable(arg0) {
+export function getIsChannelNameSettingEditable(arg0) {
   ({ canManageThread, canSendMessages, isForumPost, isChannelOwner } = arg0);
   if (!isForumPost) {
     canSendMessages = canManageThread;
@@ -19,4 +19,4 @@ export const getIsChannelNameSettingEditable = function getIsChannelNameSettingE
     }
   }
   return canSendMessages;
-};
+}

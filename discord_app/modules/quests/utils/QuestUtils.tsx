@@ -27,25 +27,25 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6745);
+const QuestConstants = fn(6768);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
-export const isPlayAnyActivityQuest = function isPlayAnyActivityQuest(quest) {
+export function isPlayAnyActivityQuest(quest) {
   return QuestTaskUtils.getPlayActivityApplicationId(quest) === closure_1_8;
-};
+}
 export { hasVariant };
-export const canLaunchActivity = function canLaunchActivity(quest) {
+export function canLaunchActivity(quest) {
   let hasPlayActivityTaskResult = QuestTaskUtils.hasPlayActivityTask(quest);
   if (!hasPlayActivityTaskResult) {
     hasPlayActivityTaskResult = QuestTaskUtils.hasAchievementActivityTask(quest);
     const tmpResult = QuestTaskUtils;
   }
   return hasPlayActivityTaskResult;
-};
-export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, has) {
+}
+export function filterQuestsForSocialEntrypoints(stateFromStores, has) {
   const map = new Map();
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
@@ -67,24 +67,24 @@ export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEn
     continue;
   }
   return map;
-};
-export const isShareableQuest = function isShareableQuest(config) {
+}
+export function isShareableQuest(config) {
   return config.sharePolicy !== QuestSharePolicy.QuestSharePolicy.NOT_SHAREABLE;
-};
-export const isStreamingAndCanWatch = function isStreamingAndCanWatch(channelId, stateFromStores) {
+}
+export function isStreamingAndCanWatch(channelId, stateFromStores) {
   let first = null != channelId && null != stateFromStores;
   if (first) {
     const obj = StreamPermissionUtils;
     first = obj.canWatchStream(stateFromStores, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore)[0];
   }
   return first;
-};
-export const getQuestType = function getQuestType(config) {
+}
+export function getQuestType(config) {
   const obj2 = { config };
   const QuestType = QuestType2.QuestType;
   return QuestTaskUtils.hasWatchVideoTasks({ config }) ? QuestType.VIDEO : QuestType.GAMEPLAY;
-};
-export const isQuestFeaturedByHero = function isQuestFeaturedByHero(questHomeHero, id) {
+}
+export function isQuestFeaturedByHero(questHomeHero, id) {
   const questIds = questHomeHero.questIds;
   let flag;
   if (questIds != null) {
@@ -94,8 +94,8 @@ export const isQuestFeaturedByHero = function isQuestFeaturedByHero(questHomeHer
     flag = false;
   }
   return flag;
-};
-export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFilters(filters) {
+}
+export function shouldShowBountiesGivenFilters(filters) {
   const someResult = filters.some((group) => "task" === group.group);
   let tmp2 = !someResult;
   if (!someResult) {
@@ -119,8 +119,8 @@ export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFi
       });
   }
   return tmp2;
-};
-export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
+}
+export function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
   const state = QuestUtmStore.getState();
   const obj = {
@@ -130,4 +130,4 @@ export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
     utmContentCurrent: AnalyticsTypes.getQuestContentName(fromContent),
   };
   state.setUtmCurrentContext(obj);
-};
+}

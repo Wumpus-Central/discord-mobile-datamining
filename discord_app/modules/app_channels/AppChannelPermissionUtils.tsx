@@ -29,7 +29,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/AppChannelPermissionUtils.tsx");
 
 export { getAppChannelBotUserIdFromApplication };
-export const getAppChannelBotUserId = function getAppChannelBotUserId(c18) {
+export function getAppChannelBotUserId(c18) {
   const application = ApplicationStore.getApplication(c18.application_id);
   let tmp2;
   if (c18.type === ChannelTypes.GUILD_APP) {
@@ -48,7 +48,7 @@ export const getAppChannelBotUserId = function getAppChannelBotUserId(c18) {
     }
   }
   return tmp2;
-};
+}
 export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAppChannelBotUserId(type) {
       const cResult = c.c(3);
@@ -108,10 +108,10 @@ export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled
       }
       return tmp2;
     };
-export const isAppChannelFloorPermission = function isAppChannelFloorPermission(appChannelBotUserId, id, VIEW_CHANNEL) {
+export function isAppChannelFloorPermission(appChannelBotUserId, id, VIEW_CHANNEL) {
   let hasItem = appChannelBotUserId === id;
   if (hasItem) {
     hasItem = BigFlagUtilsAll.has(AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS, VIEW_CHANNEL);
   }
   return hasItem;
-};
+}

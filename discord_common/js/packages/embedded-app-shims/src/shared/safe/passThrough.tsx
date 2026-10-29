@@ -14,12 +14,12 @@ export function protectPrototype() {
 export function protectWindow() {
   return passThrough;
 }
-export const protectStatics = function protectStatics(Math) {
+export function protectStatics(Math) {
   return globalThis[Math];
-};
-export const protectConstructors = function protectConstructors() {
+}
+export function protectConstructors() {
   return globalThis;
-};
+}
 export function asIterable(items) {
   return items;
 }

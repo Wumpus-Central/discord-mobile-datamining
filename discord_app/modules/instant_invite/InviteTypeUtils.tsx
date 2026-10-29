@@ -18,7 +18,7 @@ const GuildInviteExtendedType = {
 const result = size.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
 
 export const InviteTypes = Constants.InviteTypes;
-export const isGroupDMInvite = function isGroupDMInvite(invite) {
+export function isGroupDMInvite(invite) {
   let tmp = invite.type === constants2.GROUP_DM;
   if (!tmp) {
     let tmp3 = null != invite.channel;
@@ -28,44 +28,44 @@ export const isGroupDMInvite = function isGroupDMInvite(invite) {
     tmp = tmp3;
   }
   return tmp;
-};
-export const isGuildScheduledEventInviteEmbed = function isGuildScheduledEventInviteEmbed(invite) {
+}
+export function isGuildScheduledEventInviteEmbed(invite) {
   const guild_scheduled_event = invite.guild_scheduled_event;
   let tmp = null != guild_scheduled_event;
   if (tmp) {
     tmp = isEventUpcoming(guild_scheduled_event);
   }
   return tmp;
-};
-export const isRoleSubscriptionInvite = function isRoleSubscriptionInvite(target_type) {
+}
+export function isRoleSubscriptionInvite(target_type) {
   return target_type.target_type === constants.ROLE_SUBSCRIPTIONS_PURCHASE;
-};
-export const isStreamInvite = function isStreamInvite(invite) {
+}
+export function isStreamInvite(invite) {
   let tmp = invite.target_type === constants.STREAM;
   if (tmp) {
     tmp = null != invite.target_user;
   }
   return tmp;
-};
-export const isFriendInvite = function isFriendInvite(invite) {
+}
+export function isFriendInvite(invite) {
   let tmp = invite.type === constants2.FRIEND;
   if (!tmp) {
     tmp = null == invite.guild && null != invite.inviter;
     const tmp3 = null == invite.guild && null != invite.inviter;
   }
   return tmp;
-};
-export const isEmbeddedApplicationInvite = function isEmbeddedApplicationInvite(invite) {
+}
+export function isEmbeddedApplicationInvite(invite) {
   return invite.target_type === constants.EMBEDDED_APPLICATION;
-};
-export const isVoiceChannelInvite = function isVoiceChannelInvite(channel) {
+}
+export function isVoiceChannelInvite(channel) {
   let tmp = null != channel.channel;
   if (tmp) {
     tmp = React3(channel.channel.type);
   }
   return tmp;
-};
-export const getInviteType = function getInviteType(body) {
+}
+export function getInviteType(body) {
   if (typeof body.type === "number") {
     let GROUP_DM = body.type;
   } else {
@@ -89,9 +89,9 @@ export const getInviteType = function getInviteType(body) {
     }
   }
   return GROUP_DM;
-};
+}
 export { GuildInviteExtendedType };
-export const getGuildInviteExtendedType = function getGuildInviteExtendedType(invite) {
+export function getGuildInviteExtendedType(invite) {
   const guild_scheduled_event = invite.guild_scheduled_event;
   let tmp = null != guild_scheduled_event;
   if (tmp) {
@@ -114,4 +114,4 @@ export const getGuildInviteExtendedType = function getGuildInviteExtendedType(in
     }
   }
   return PROFILE;
-};
+}

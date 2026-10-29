@@ -9,7 +9,7 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(5643);
+const ConversationConstants = fn(5644);
 ({
   CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty,
   MOBILE_FETCH_LIMIT: metroRequire,
@@ -18,7 +18,7 @@ const ConversationConstants = fn(5643);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
 
-export const useConversationsHeaderButton = function useConversationsHeaderButton(channel) {
+export function useConversationsHeaderButton(channel) {
   _require = channel;
   let isTopicalNavEnabled = require("ConversationExperiments").useIsTopicalNavEnabled(
     channel.guild_id,
@@ -52,7 +52,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -224,4 +224,4 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
     }
     return tmp;
   }, items9);
-};
+}

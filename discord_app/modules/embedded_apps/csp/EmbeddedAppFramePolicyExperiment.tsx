@@ -33,8 +33,6 @@ export const useIsEmbeddedAppFramePolicyEnabled = ReactCompilerGating.isReactCom
   : function useIsEmbeddedAppFramePolicyEnabled(location) {
       return closure_2.useConfig({ location }).enabled;
     };
-export const getIsEmbeddedAppFramePolicyEnabled = function getIsEmbeddedAppFramePolicyEnabled(
-  loadEmbeddedAppCSPForLaunch,
-) {
+export function getIsEmbeddedAppFramePolicyEnabled(loadEmbeddedAppCSPForLaunch) {
   return closure_2.getConfig({ location: loadEmbeddedAppCSPForLaunch }).enabled;
-};
+}

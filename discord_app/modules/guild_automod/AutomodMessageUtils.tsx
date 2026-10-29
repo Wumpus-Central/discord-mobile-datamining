@@ -18,8 +18,8 @@ import UserStore from "../../stores/UserStore.tsx";
 
 const require = globalThis.__r;
 
-const AutomodInteractionCallbackTypeEmbedKeys = prop(7657);
-const AutomodDecisionOutcomeEmbedKeys = prop(7658);
+const AutomodInteractionCallbackTypeEmbedKeys = prop(7680);
+const AutomodDecisionOutcomeEmbedKeys = prop(7681);
 require = fn;
 function getDecisionOutcomeFromMessage(embeds) {
   const DECISION_OUTCOME = AutomodMessageEmbedKeys.AutomodMessageEmbedKeys.DECISION_OUTCOME;
@@ -655,18 +655,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.embedChannel = stateFromStores;
       return obj2;
     };
-export const isAutomodMessageRecord = function isAutomodMessageRecord(message) {
+export function isAutomodMessageRecord(message) {
   return message.type === constants2.AUTO_MODERATION_ACTION;
-};
-export const isAutomodNotification = function isAutomodNotification(message) {
+}
+export function isAutomodNotification(message) {
   const embeds = message.embeds;
   let someResult;
   if (embeds != null) {
     someResult = embeds.some((type) => type.type === constants.AUTO_MODERATION_NOTIFICATION);
   }
   return someResult;
-};
-export const getActionHeaderTextMobile = function getActionHeaderTextMobile(message, author, interactionUserId) {
+}
+export function getActionHeaderTextMobile(message, author, interactionUserId) {
   const tmp = getProfileUpdateTypeFromMessage(message);
   const tmp2 = getQuarantineActionFromMessage(message);
   if (null != getQuarantineTypeFromMessage(message)) {
@@ -769,8 +769,8 @@ export const getActionHeaderTextMobile = function getActionHeaderTextMobile(mess
     return stringResult;
   }
   tmp3 = getQuarantineEventFromMessage(message);
-};
-export const getActionHeaderText = function getActionHeaderText(embeds, channel, arg2) {
+}
+export function getActionHeaderText(embeds, channel, arg2) {
   let intl = arg2;
   if (arg2 === undefined) {
     intl = v65535;
@@ -793,7 +793,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
   const tmp10 = getQuarantineActionFromMessage(embeds);
   const tmp11 = getQuarantineEventFromMessage(embeds);
   const tmp13 = getDecisionOutcomeFromMessage(embeds);
-  let GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7653).AutomodMessageEmbedKeys.INTERACTION_CALLBACK_TYPE;
+  let GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7676).AutomodMessageEmbedKeys.INTERACTION_CALLBACK_TYPE;
   embeds = embeds.embeds;
   if (embeds == null) {
     embeds = [];
@@ -815,7 +815,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
     }
     const tmp16 = tmp18;
   }
-  GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7653).AutomodMessageEmbedKeys.APPLICATION_NAME;
+  GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7676).AutomodMessageEmbedKeys.APPLICATION_NAME;
   let embeds1 = embeds.embeds;
   if (embeds1 == null) {
     embeds1 = [];
@@ -849,7 +849,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
       fn = v65535;
     }
   }
-  GUILD_ROOM_NOTE_OUTCOME = format(7653).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;
+  GUILD_ROOM_NOTE_OUTCOME = format(7676).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;
   let embeds2 = embeds.embeds;
   if (embeds2 == null) {
     embeds2 = [];
@@ -876,7 +876,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
     if (null != null) {
       return null;
     } else {
-      GUILD_ROOM_NOTE_OUTCOME = format(7653).AutomodMessageEmbedKeys.GUILD_ROOM_NOTE_OUTCOME;
+      GUILD_ROOM_NOTE_OUTCOME = format(7676).AutomodMessageEmbedKeys.GUILD_ROOM_NOTE_OUTCOME;
       let embeds3 = embeds.embeds;
       if (embeds3 == null) {
         embeds3 = [];
@@ -904,7 +904,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
           return null;
         } else {
           if (null == tmp22) {
-            if (tmp13 !== v4xL9Sk(7658).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+            if (tmp13 !== v4xL9Sk(7681).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               intl = v4xL9Sk(1125).intl;
               const obj2 = { channelName, channelHook: fn };
               let formatResult = intl.format(v4xL9Sk(1125).t.IZg0VQ, obj2);
@@ -914,8 +914,8 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
               formatResult = intl5.format(v4xL9Sk(1125).t.lOIOSK, obj4);
             }
           }
-          if (tmp16 !== v4xL9Sk(7657).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
-            if (tmp13 !== v4xL9Sk(7658).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+          if (tmp16 !== v4xL9Sk(7680).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
+            if (tmp13 !== v4xL9Sk(7681).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               const intl7 = v4xL9Sk(1125).intl;
               const obj5 = { applicationName: tmp22, channelName, channelHook: fn, integrationOwnerHook };
               let formatResult1 = intl7.format(v4xL9Sk(1125).t.AXQufN, obj5);
@@ -927,7 +927,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
           } else {
             intl = arg4;
           }
-          if (tmp13 !== v4xL9Sk(7658).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+          if (tmp13 !== v4xL9Sk(7681).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
             const intl9 = v4xL9Sk(1125).intl;
             v4xL9Sk = v4xL9Sk(1125).t["4xL9Sk"];
             obj7 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };
@@ -961,8 +961,8 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
     intl3.format(bma6cs, obj9);
   }
   tmp12 = getQuarantineTypeFromMessage(embeds);
-};
-export const getQuarantineReasonString = function getQuarantineReasonString(quarantineType) {
+}
+export function getQuarantineReasonString(quarantineType) {
   if (AutomodQuarantineUserMessageEmbedKeys.AutomodQuarantineUserMessageEmbedKeys.NICKNAME === quarantineType) {
     const intl5 = util.intl;
     return intl5.string(util.t["fkBQa/"]);
@@ -981,8 +981,8 @@ export const getQuarantineReasonString = function getQuarantineReasonString(quar
     const intl = util.intl;
     return intl.string(util.t.pJQVnr);
   }
-};
-export const extractAutomodNotificationFields = function extractAutomodNotificationFields(message) {
+}
+export function extractAutomodNotificationFields(message) {
   let NOTIFICATION_TYPE = AutomodNotificationEmbedKeys.AutomodNotificationEmbedKeys.NOTIFICATION_TYPE;
   let embeds = message.embeds;
   if (embeds == null) {
@@ -1221,9 +1221,9 @@ export const extractAutomodNotificationFields = function extractAutomodNotificat
   }
   obj.suspiciousMentionActivityUntil = date1;
   return obj;
-};
+}
 export { extractAutomodMessageFields };
-export const useAutomodAlertActions = function useAutomodAlertActions(message) {
+export function useAutomodAlertActions(message) {
   let tmp = null;
   if (null != message) {
     let prop = extractAutomodMessageFields(message).alertActionsExecution;
@@ -1233,8 +1233,8 @@ export const useAutomodAlertActions = function useAutomodAlertActions(message) {
     tmp = prop;
   }
   return tmp;
-};
-export const getRaidAlertResolveCTAText = function getRaidAlertResolveCTAText(resolvedReason) {
+}
+export function getRaidAlertResolveCTAText(resolvedReason) {
   if (null == resolvedReason) {
     const intl5 = util.intl;
     return intl5.string(util.t.Gh3A0O);
@@ -1251,8 +1251,8 @@ export const getRaidAlertResolveCTAText = function getRaidAlertResolveCTAText(re
     const intl = util.intl;
     return intl.string(util.t.GPg6JM);
   }
-};
-export const getUserIdOfAutomodAction = function getUserIdOfAutomodAction(message) {
+}
+export function getUserIdOfAutomodAction(message) {
   const ACTION_BY_USER_ID = AutomodNotificationEmbedKeys.AutomodNotificationEmbedKeys.ACTION_BY_USER_ID;
   let embeds = message.embeds;
   if (embeds == null) {
@@ -1277,4 +1277,4 @@ export const getUserIdOfAutomodAction = function getUserIdOfAutomodAction(messag
     tmp2 = tmp4;
   }
   return tmp2;
-};
+}

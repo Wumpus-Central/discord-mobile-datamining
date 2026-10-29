@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
 
-export const useGuildEligibleForMediaChannels = function useGuildEligibleForMediaChannels(stateFromStores) {
+export function useGuildEligibleForMediaChannels(stateFromStores) {
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -21,4 +21,4 @@ export const useGuildEligibleForMediaChannels = function useGuildEligibleForMedi
       features.has(GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
   }
-};
+}

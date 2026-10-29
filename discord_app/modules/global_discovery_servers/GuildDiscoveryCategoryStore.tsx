@@ -104,7 +104,7 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
 
 export default guildDiscoveryCategoryStore;
-export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(arr, arr2) {
+export function areDiscoveryCategoriesEqual(arr, arr2) {
   const mapped = arr.map((item) => {
     const items = [,];
     ({ categoryId: arr[0], name: arr[1] } = item);
@@ -118,4 +118,4 @@ export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(
       return items;
     }),
   );
-};
+}

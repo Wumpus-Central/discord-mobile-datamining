@@ -91,7 +91,7 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -111,9 +111,9 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
             value: fetchBountiesAndDispatch(
               tmp5,
               asyncGeneratorStep(async () => {
-                await tmp2(7606).getSession();
+                await tmp2(7629).getSession();
                 closure_128_0 = value;
-                const orRefreshAdSession = tmp2(7830).getOrRefreshAdSession();
+                const orRefreshAdSession = tmp2(7853).getOrRefreshAdSession();
                 const HTTP = tmp2(1294).HTTP;
                 const request = {
                   url: constants.QUESTS_GET_DECISIONS,
@@ -150,7 +150,7 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;
@@ -168,7 +168,7 @@ let closure_14 = async function _fetchBountyPreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let closure_14 = async function _fetchBountyPreview(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
@@ -247,7 +247,7 @@ let closure_15 = async function _fetchQuestBarCreativePreview(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -507,7 +507,7 @@ let closure_16 = async function _claimBountyReward() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -639,7 +639,7 @@ let closure_17 = async function _dismissAdContent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -759,7 +759,7 @@ let closure_18 = async function _resetCreativePreviewDeliveryState(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -804,7 +804,7 @@ let closure_18 = async function _resetCreativePreviewDeliveryState(arg0) {
           const obj7 = { type: "ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET", adCreativeId: closure_130_0 };
           closure_131_1(closure_131_2[8]).dispatch(obj7);
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -827,7 +827,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -865,7 +865,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
         } else {
           closure_129_1(closure_129_2[8]).dispatch({ type: "ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET" });
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -874,13 +874,13 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
     }
   })();
 };
-const QuestsExperimentLocations = fn(6745).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6768).QuestsExperimentLocations;
 const Endpoints = fn(1084).Endpoints;
 let closure_10 = new LoggerDefault("BountyActionCreators");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/BountyActionCreators.tsx");
 
-export const fetchQuestHomeBounties = function fetchQuestHomeBounties() {
+export function fetchQuestHomeBounties() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -889,8 +889,8 @@ export const fetchQuestHomeBounties = function fetchQuestHomeBounties() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchBountyPreview = function fetchBountyPreview() {
+}
+export function fetchBountyPreview() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -899,8 +899,8 @@ export const fetchBountyPreview = function fetchBountyPreview() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchQuestBarCreativePreview = function fetchQuestBarCreativePreview() {
+}
+export function fetchQuestBarCreativePreview() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -909,8 +909,8 @@ export const fetchQuestBarCreativePreview = function fetchQuestBarCreativePrevie
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, arg1) {
+}
+export function setBountyVideoProgress(bountyId, arg1) {
   if (null != obj.getCurrentAdSession()) {
     const orRefreshAdSession = SessionAdGenerator.getOrRefreshAdSession(true);
     const tmpResult = SessionAdGenerator;
@@ -925,8 +925,8 @@ export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, 
     DispatcherDefault.dispatch(obj2);
   }
   obj = SessionAdGenerator;
-};
-export const claimBountyReward = function claimBountyReward() {
+}
+export function claimBountyReward() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -935,8 +935,8 @@ export const claimBountyReward = function claimBountyReward() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const dismissAdContent = function dismissAdContent() {
+}
+export function dismissAdContent() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -945,8 +945,8 @@ export const dismissAdContent = function dismissAdContent() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetCreativePreviewDeliveryState = function resetCreativePreviewDeliveryState() {
+}
+export function resetCreativePreviewDeliveryState() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -955,8 +955,8 @@ export const resetCreativePreviewDeliveryState = function resetCreativePreviewDe
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetPreviewDeliveryStateLookback = function resetPreviewDeliveryStateLookback() {
+}
+export function resetPreviewDeliveryStateLookback() {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -965,4 +965,4 @@ export const resetPreviewDeliveryStateLookback = function resetPreviewDeliverySt
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

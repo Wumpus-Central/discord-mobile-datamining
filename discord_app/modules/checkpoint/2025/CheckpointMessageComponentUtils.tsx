@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/checkpoint/2025/CheckpointMessageComponentUtils.tsx");
 
-export const transformCheckpoint2025CardComponent = function transformCheckpoint2025CardComponent(checkpoint_data) {
+export function transformCheckpoint2025CardComponent(checkpoint_data) {
   const obj = {
     version: checkpoint_data.version,
     cardId: checkpoint_data.card_id,
@@ -59,52 +59,48 @@ export const transformCheckpoint2025CardComponent = function transformCheckpoint
   }
   obj.topGame = tmp7;
   return obj;
-};
-export const transformCheckpoint2025CardToRowGeneratedComponent =
-  function transformCheckpoint2025CardToRowGeneratedComponent(checkpointData, message) {
-    const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, {
-      notation: "compact",
-      compactDisplay: "short",
-    });
-    const obj = {};
-    const merged = Object.assign(checkpointData);
-    obj.cardId = checkpointData.cardId.toString();
-    obj.cardAssetUrl = CheckpointUtils.getCardAssetUrl(checkpointData.cardId);
-    obj.authorId = message.author.id;
-    let num = checkpointData.powerLevel;
-    if (num == null) {
-      num = 0;
+}
+export function transformCheckpoint2025CardToRowGeneratedComponent(checkpointData, message) {
+  const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "short" });
+  const obj = {};
+  const merged = Object.assign(checkpointData);
+  obj.cardId = checkpointData.cardId.toString();
+  obj.cardAssetUrl = CheckpointUtils.getCardAssetUrl(checkpointData.cardId);
+  obj.authorId = message.author.id;
+  let num = checkpointData.powerLevel;
+  if (num == null) {
+    num = 0;
+  }
+  obj.powerLevel = numberFormat.format(num);
+  let num2 = checkpointData.powerLevelPercentile;
+  if (num2 == null) {
+    num2 = 0;
+  }
+  const checkpointPowerBarUnits = CheckpointUtils.getCheckpointPowerBarUnits(num2);
+  const tmpResult = CheckpointUtils;
+  let num3 = 10;
+  if (tmpResult3.isIOS()) {
+    num3 = 9;
+  }
+  obj.powerLevelUnits = Math.min(checkpointPowerBarUnits, num3);
+  tmpResult3 = utils_PlatformUtils;
+  obj.voiceString = CheckpointUtils.getVoiceDurationString(checkpointData.totalVoiceMinutes);
+  const numEmojisSent = checkpointData.numEmojisSent;
+  obj.reactionString = numEmojisSent.toLocaleString(util.intl.currentLocale);
+  const numMessagesSent = checkpointData.numMessagesSent;
+  obj.messagesString = numMessagesSent.toLocaleString(util.intl.currentLocale);
+  let tmp5;
+  if (null != checkpointData.topEmoji) {
+    const obj2 = {};
+    const merged1 = Object.assign(checkpointData.topEmoji);
+    let result;
+    if (null == checkpointData.topEmoji.emojiId) {
+      result = UnicodeEmojisDefault.convertSurrogateToName(checkpointData.topEmoji.emojiName);
     }
-    obj.powerLevel = numberFormat.format(num);
-    let num2 = checkpointData.powerLevelPercentile;
-    if (num2 == null) {
-      num2 = 0;
-    }
-    const checkpointPowerBarUnits = CheckpointUtils.getCheckpointPowerBarUnits(num2);
-    const tmpResult = CheckpointUtils;
-    let num3 = 10;
-    if (tmpResult3.isIOS()) {
-      num3 = 9;
-    }
-    obj.powerLevelUnits = Math.min(checkpointPowerBarUnits, num3);
-    tmpResult3 = utils_PlatformUtils;
-    obj.voiceString = CheckpointUtils.getVoiceDurationString(checkpointData.totalVoiceMinutes);
-    const numEmojisSent = checkpointData.numEmojisSent;
-    obj.reactionString = numEmojisSent.toLocaleString(util.intl.currentLocale);
-    const numMessagesSent = checkpointData.numMessagesSent;
-    obj.messagesString = numMessagesSent.toLocaleString(util.intl.currentLocale);
-    let tmp5;
-    if (null != checkpointData.topEmoji) {
-      const obj2 = {};
-      const merged1 = Object.assign(checkpointData.topEmoji);
-      let result;
-      if (null == checkpointData.topEmoji.emojiId) {
-        result = UnicodeEmojisDefault.convertSurrogateToName(checkpointData.topEmoji.emojiName);
-      }
-      obj2.emojiSurrogateName = result;
-      tmp5 = obj2;
-    }
-    obj.topEmoji = tmp5;
-    obj.clickable = undefined;
-    return obj;
-  };
+    obj2.emojiSurrogateName = result;
+    tmp5 = obj2;
+  }
+  obj.topEmoji = tmp5;
+  obj.clickable = undefined;
+  return obj;
+}

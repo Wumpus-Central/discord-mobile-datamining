@@ -22,7 +22,7 @@ const Constants = fn(1084);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -377,12 +377,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != channel) {
         tmp9 = null;
         if (null != GuildStore.getGuild(channel.guild_id)) {
-          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6919).GuildIconSizes.LARGE };
+          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6943).GuildIconSizes.LARGE };
           tmp9 = React6(GuildIconDefault, obj2);
         }
       }
-      closure_13(tmp5(5698).presentFriendRequestAcceptedToast);
-      const obj3 = { header: React6(tmp5(7284).BottomSheetTitleHeader, { title: stringResult }), children: null };
+      closure_13(tmp5(5700).presentFriendRequestAcceptedToast);
+      const obj3 = { header: React6(tmp5(7308).BottomSheetTitleHeader, { title: stringResult }), children: null };
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
       let plainText;
@@ -403,10 +403,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp14Result2 = null != tmp8;
       if (tmp14Result2) {
         const obj8 = { variant: "text-md/normal", children: tmp8.visible };
-        tmp14Result2 = React6(tmp5(5270).Text, obj8);
+        tmp14Result2 = React6(tmp5(5271).Text, obj8);
       }
       items1[1] = tmp14Result2;
       obj4.children = items1;
       obj3.children = v65535(View, obj4);
-      return React6(tmp5(7334).ActionSheet, obj3);
+      return React6(tmp5(7358).ActionSheet, obj3);
     };

@@ -11,7 +11,7 @@ import getTagPropertiesDefault from "../getTagProperties.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   automodUsernameColor: nativeDefault.colors.TEXT_BRAND,
 });
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const resolveAlertModeColors = nativeStyleProperties;
-export const createGuildAlertModeEnabledSystemMessage = function createGuildAlertModeEnabledSystemMessage(roleStyle) {
+export function createGuildAlertModeEnabledSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   const channel = ChannelStore.getChannel(message.channel_id);
   const tmp3 = resolveMessageContentColorsDefault(theme);
@@ -59,8 +59,8 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj3.avatarURL = tmp5Result.ensureAvatarSource(tmp5Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp12);
   return obj3;
-};
-export const createGuildAlertModeDisabledSystemMessage = function createGuildAlertModeDisabledSystemMessage(roleStyle) {
+}
+export function createGuildAlertModeDisabledSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   let automodUsernameColor = nativeStyleProperties(theme).automodUsernameColor;
   const tmp2 = resolveMessageContentColorsDefault(theme);
@@ -90,4 +90,4 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   obj4.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp6);
   return obj4;
-};
+}

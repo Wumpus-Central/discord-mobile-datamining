@@ -18,18 +18,18 @@ import NotificationCenterStore from "../NotificationCenterStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const MainTabsConstants = fn(11222);
+const MainTabsConstants = fn(11276);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
-const ReadStateTypes = fn(6740).ReadStateTypes;
+const ReadStateTypes = fn(6763).ReadStateTypes;
 const jsx = fn(21).jsx;
-let items = [, , , ,];
+let items = [, , , , ];
 ({ YOU: arr[0], SETTINGS: arr[1] } = RootNavigatorScreen);
 ({ GUILDS: arr[2], ICYMI: arr[3], NOTIFICATIONS: arr[4] } = YouBarNavigatorScreens);
 let set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterForYou.tsx");
 
-export const NotificationCenterForYou = (panelVariant) => {
+export (panelVariant) => {
   let flag = panelVariant.panelVariant;
   if (flag === undefined) {
     flag = false;
@@ -71,12 +71,7 @@ export const NotificationCenterForYou = (panelVariant) => {
     return Math.min(50, Math.max(8, Math.ceil(height / num)));
   }, items2);
   let obj2 = isFocused(setting[14]);
-  const notificationCenterItemsLoader = isFocused(setting[18]).useNotificationCenterItemsLoader({
-    isFocused,
-    navigatedAway: memo,
-    withMentions: true,
-    initialPageSize: memo1,
-  });
+  const notificationCenterItemsLoader = isFocused(setting[18]).useNotificationCenterItemsLoader({ isFocused, navigatedAway: memo, withMentions: true, initialPageSize: memo1 });
   const initialized = notificationCenterItemsLoader.initialized;
   const hasMore = notificationCenterItemsLoader.hasMore;
   let items = notificationCenterItemsLoader.items;
@@ -88,15 +83,9 @@ export const NotificationCenterForYou = (panelVariant) => {
   const stateFromStores = isFocused(setting[19]).useStateFromStores(items3, () => errored.hasNewMentions());
   let obj4 = isFocused(setting[19]);
   let items4 = [setReadNotifItemToAcked];
-  const stateFromStores1 = isFocused(setting[19]).useStateFromStores(
-    items4,
-    () => setReadNotifItemToAcked.localItems,
-    [],
-  );
+  const stateFromStores1 = isFocused(setting[19]).useStateFromStores(items4, () => setReadNotifItemToAcked.localItems, []);
   let obj5 = isFocused(setting[19]);
-  const getOrFetchNotificationCenterItemsApplications = isFocused(
-    setting[20],
-  ).useGetOrFetchNotificationCenterItemsApplications(stateFromStores1);
+  const getOrFetchNotificationCenterItemsApplications = isFocused(setting[20]).useGetOrFetchNotificationCenterItemsApplications(stateFromStores1);
   let obj6 = isFocused(setting[20]);
   let items5 = [items, hasMore];
   const stateFromStores2 = isFocused(setting[19]).useStateFromStores(items5, () => {
@@ -109,9 +98,7 @@ export const NotificationCenterForYou = (panelVariant) => {
   });
   const obj7 = isFocused(setting[19]);
   let items6 = [initialized];
-  const stateFromStores3 = isFocused(setting[19]).useStateFromStores(items6, () =>
-    initialized.getTotalNotificationsMentionCount(true),
-  );
+  const stateFromStores3 = isFocused(setting[19]).useStateFromStores(items6, () => initialized.getTotalNotificationsMentionCount(true));
   const tmp17 = memo(height.useState(stateFromStores2), 2);
   const first = tmp17[0];
   closure_16 = tmp19;
@@ -167,21 +154,7 @@ export const NotificationCenterForYou = (panelVariant) => {
   }, items10);
   const set2 = new Set();
   const shouldAgeVerifyForAgeGate = isFocused(setting[22]).useShouldAgeVerifyForAgeGate();
-  const items11 = [
-    items,
-    hasMore,
-    stateFromStores1,
-    friendSuggestions,
-    initialized,
-    stateFromStores,
-    errored,
-    setting,
-    first,
-    setReadNotifItemToAcked,
-    callback3,
-    stateFromStores3,
-    shouldAgeVerifyForAgeGate,
-  ];
+  const items11 = [items, hasMore, stateFromStores1, friendSuggestions, initialized, stateFromStores, errored, setting, first, setReadNotifItemToAcked, callback3, stateFromStores3, shouldAgeVerifyForAgeGate];
   const memo2 = height.useMemo(() => {
     let id;
     if (items.length > 0) {
@@ -246,12 +219,8 @@ export const NotificationCenterForYou = (panelVariant) => {
             const isRemoteAckedResult = NotificationCenterUtils.isRemoteAcked(addResult, setting);
             if ("go_live_push" === addResult.type) {
               if (null != addResult.deeplink) {
-                let tmp16 =
-                  parseURLDefault(addResult.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL &&
-                  !isRemoteAckedResult;
-                const tmp21 =
-                  parseURLDefault(addResult.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL &&
-                  !isRemoteAckedResult;
+                let tmp16 = parseURLDefault(addResult.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL && !isRemoteAckedResult;
+                const tmp21 = parseURLDefault(addResult.deeplink).payload.type === ConstantsIOS.LinkingTypes.VOICE_CHANNEL && !isRemoteAckedResult;
               }
               flag = tmp16;
             }
@@ -266,9 +235,7 @@ export const NotificationCenterForYou = (panelVariant) => {
             addResult.acked = false;
             const current3 = ref.current;
             addResult = current3.add(addResult.id);
-          } else if (
-            addResult.type !== NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS
-          ) {
+          } else if (addResult.type !== NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
             if (!flag) {
               items3.push(addResult);
             }
@@ -282,25 +249,10 @@ export const NotificationCenterForYou = (panelVariant) => {
       const sorted1 = items2.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
       const sorted2 = items3.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
       let obj = currentNavigationRouteName(setting[28]);
-      [arr7, arr8] = memo(
-        currentNavigationRouteName(setting[28]).partition(
-          items1,
-          (type) => type.type === id(items2[12]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && type.acked,
-        ),
-        2,
-      );
+      [arr7, arr8] = memo(currentNavigationRouteName(setting[28]).partition(items1, (type) => type.type === id(items2[12]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && type.acked), 2);
       let arr9 = items1;
       if (arr7.length > 3) {
-        let obj2 = {
-          kind: "notification-center-item",
-          type: isFocused(setting[12]).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED,
-          id: arr7[0].id,
-          local_id: "friend_requests_grouped",
-          acked: false,
-          other_user: arr7[0].other_user,
-          other_users: arr7.map((other_user) => other_user.other_user),
-          forceUnacked: true,
-        };
+        let obj2 = { kind: "notification-center-item", type: isFocused(setting[12]).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED, id: arr7[0].id, local_id: "friend_requests_grouped", acked: false, other_user: arr7[0].other_user, other_users: arr7.map((other_user) => other_user.other_user), forceUnacked: true };
         arr8.push(obj2);
         arr9 = arr8;
       }
@@ -323,11 +275,7 @@ export const NotificationCenterForYou = (panelVariant) => {
           items4.push({ kind: "suggested-friends-row", id: id.user.id, suggestedFriend: id });
         });
         if (friendSuggestions.length > 3) {
-          let obj4 = {
-            kind: "suggested-friends-show-all-row",
-            id: "suggested-friends-show-all-row",
-            suggestedFriends: friendSuggestions,
-          };
+          let obj4 = { kind: "suggested-friends-show-all-row", id: "suggested-friends-show-all-row", suggestedFriends: friendSuggestions };
           items4.push(obj4);
         }
       }
@@ -445,9 +393,7 @@ export const NotificationCenterForYou = (panelVariant) => {
         });
         const mapped = found1.map((local_id) => local_id.local_id);
         const result = NotificationCenterItemsActions.markNotificationCenterLocalItemsAcked(mapped);
-        const result1 = NotificationCenterItemsActions.bulkMarkNotificationCenterItemsAcked(
-          found.filter((item) => !isFocused(setting[24]).isRemoteAcked(item, closure_1_2)),
-        );
+        const result1 = NotificationCenterItemsActions.bulkMarkNotificationCenterItemsAcked(found.filter((item) => !isFocused(setting[24]).isRemoteAcked(item, closure_1_2)));
         const result2 = NotificationCenterStoreActions.clearNotificationGuildMentions();
       }
     }
@@ -474,30 +420,15 @@ export const NotificationCenterForYou = (panelVariant) => {
   const items16 = [initialized];
   currentNavigationRouteName(setting[32])(obj10, { disableTrack: !initialized }, items16);
   if (initialized) {
-    const obj13 = {
-      items: memo2,
-      loadingMore,
-      loadMore,
-      nestedInLaunchPad: merged.nestedInLaunchPad,
-      shouldScrollToTop: tmp20[0],
-      isSoftAcked: callback,
-      onSoftAckItem: callback1,
-      forceHoistItem: callback2,
-      isForceHoisted: callback3,
-      suggestedFriendAdded: callback4,
-      onAddSuggestionAnimationFinish: callback5,
-      panelVariant: flag,
-    };
+    const obj13 = { items: memo2, loadingMore, loadMore, nestedInLaunchPad: merged.nestedInLaunchPad, shouldScrollToTop: tmp20[0], isSoftAcked: callback, onSoftAckItem: callback1, forceHoistItem: callback2, isForceHoisted: callback3, suggestedFriendAdded: callback4, onAddSuggestionAnimationFinish: callback5, panelVariant: flag };
     let tmp43Result = tmp43(tmp2(tmp3[35]).ForYouItems, obj13);
   } else {
     const obj14 = { children: null };
     const _Array = Array;
     const _Array2 = Array;
-    obj14.children = Array.from(Array(10)).map((item, index) =>
-      stateFromStores3(isFocused(setting[34]).ForYouMentionPlaceholder, {}, index),
-    );
+    obj14.children = Array.from(Array(10)).map((item, index) => stateFromStores3(isFocused(setting[34]).ForYouMentionPlaceholder, {}, index));
     tmp43Result = tmp43(closure_5, obj14);
     const arr = Array.from(Array(10));
   }
   return tmp43Result;
-};
+}

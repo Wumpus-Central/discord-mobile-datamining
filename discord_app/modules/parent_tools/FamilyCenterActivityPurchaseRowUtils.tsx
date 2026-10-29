@@ -2,7 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import _modDef2535 from "FamilyCenter.messages.js";
+import _modDef2536 from "FamilyCenter.messages.js";
 import AvatarDecorationRecord from "../collectibles/records/AvatarDecorationRecord.tsx";
 import ProfileEffectRecord from "../collectibles/records/ProfileEffectRecord.tsx";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
@@ -11,19 +11,19 @@ import size from "../../../_runtime/metro/00002__.js";
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = util.intl;
-    return intl5.string(_modDef2535.obi47v);
+    return intl5.string(_modDef2536.obi47v);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = util.intl;
-    return intl4.string(_modDef2535.RX8BMR);
+    return intl4.string(_modDef2536.RX8BMR);
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2535.nNGEHk);
+    return intl3.string(_modDef2536.nNGEHk);
   } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2535.VS1fKo);
+    return intl2.string(_modDef2536.VS1fKo);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = util.intl;
-    return intl.string(_modDef2535.JiIY1l);
+    return intl.string(_modDef2536.JiIY1l);
   } else {
     return "";
   }
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActi
 export const PREVIEW_SIZE = 40;
 export const NAMEPLATE_ASPECT_RATIO = 5.333333333333333;
 export { getCollectibleTypeName };
-export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreviewUrl(product) {
+export function getAvatarDecorationPreviewUrl(product) {
   if (0 === product.items.length) {
     return null;
   } else {
@@ -50,8 +50,8 @@ export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreview
     }
     return avatarDecorationURL;
   }
-};
-export const getProfileEffectPreviewUrl = function getProfileEffectPreviewUrl(product) {
+}
+export function getProfileEffectPreviewUrl(product) {
   if (0 === product.items.length) {
     return null;
   } else {
@@ -62,8 +62,8 @@ export const getProfileEffectPreviewUrl = function getProfileEffectPreviewUrl(pr
     }
     return thumbnailPreviewSrc;
   }
-};
-export const isGuildBoostSubscription = function isGuildBoostSubscription(subscriptionPlanId) {
+}
+export function isGuildBoostSubscription(subscriptionPlanId) {
   if (null == subscriptionPlanId) {
     return false;
   } else {
@@ -73,8 +73,8 @@ export const isGuildBoostSubscription = function isGuildBoostSubscription(subscr
     }
     return skuId === constants.GUILD;
   }
-};
-export const getPurchaseDisplayInfo = function getPurchaseDisplayInfo(name, subscriptionPlanId) {
+}
+export function getPurchaseDisplayInfo(name, subscriptionPlanId) {
   const isSubscription = null != subscriptionPlanId;
   if (null != name) {
     let displayName = name.name;
@@ -89,4 +89,4 @@ export const getPurchaseDisplayInfo = function getPurchaseDisplayInfo(name, subs
     }
   }
   return { displayName, typeName, isSubscription };
-};
+}

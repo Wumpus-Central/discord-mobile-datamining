@@ -28,15 +28,10 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
 
-export const queueInteractionComponentState = function queueInteractionComponentState(
-  messageId,
-  nonce,
-  state,
-  componentId,
-) {
+export function queueInteractionComponentState(messageId, nonce, state, componentId) {
   DispatcherDefault.dispatch({ type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId, nonce, state, componentId });
-};
-export const addQueued = function addQueued(nonce, arg1) {
+}
+export function addQueued(nonce, arg1) {
   ({ data, messageId, preflight, onCreate, onSuccess, onFailure } = arg1);
   DispatcherDefault.dispatch({
     type: "INTERACTION_QUEUE",
@@ -48,11 +43,11 @@ export const addQueued = function addQueued(nonce, arg1) {
     onSuccess,
     onFailure,
   });
-};
-export const setFailed = function setFailed(nonce, code, message, status) {
+}
+export function setFailed(nonce, code, message, status) {
   DispatcherDefault.dispatch({ type: "INTERACTION_FAILURE", nonce, errorMessage: message, errorCode: code, status });
-};
-export const fetchMessageInteractionData = function fetchMessageInteractionData() {
+}
+export function fetchMessageInteractionData() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -61,4 +56,4 @@ export const fetchMessageInteractionData = function fetchMessageInteractionData(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

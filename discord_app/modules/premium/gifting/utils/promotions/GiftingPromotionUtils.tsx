@@ -169,11 +169,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = tmp2;
-export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
+export function getRewardAssetIdMap(arr) {
   const map = new Map();
   const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
   return map;
-};
+}
 export const useShouldShowSelectFreeSkuStep = tmp3;
 export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
@@ -225,7 +225,7 @@ export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isR
       return tmp3;
     };
 export { useIsPlanEligibleForGiftingPromotion };
-export const createGradientStyle = function createGradientStyle(gradient, arg1) {
+export function createGradientStyle(gradient, arg1) {
   if (null != gradient) {
     let obj = arg1;
     if (arg1 == null) {
@@ -265,8 +265,8 @@ export const createGradientStyle = function createGradientStyle(gradient, arg1) 
     obj2.background = "linear-gradient(" + result + "deg, " + joined + ")";
     return obj2;
   }
-};
-export const createBackgroundStyle = function createBackgroundStyle(arg0) {
+}
+export function createBackgroundStyle(arg0) {
   if (null != arg0) {
     const obj = {
       backgroundImage: null,
@@ -278,8 +278,8 @@ export const createBackgroundStyle = function createBackgroundStyle(arg0) {
     obj.backgroundImage = "url(" + arg0 + ")";
     return obj;
   }
-};
-export const combinePromotionStyles = function combinePromotionStyles(backgroundImage, background) {
+}
+export function combinePromotionStyles(backgroundImage, background) {
   if (null != backgroundImage) {
     if (null != background) {
       const _HermesInternal = HermesInternal;
@@ -304,8 +304,8 @@ export const combinePromotionStyles = function combinePromotionStyles(background
     tmp = obj;
   }
   return tmp;
-};
-export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
+}
+export function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (
@@ -340,4 +340,4 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
   } else {
     return false;
   }
-};
+}

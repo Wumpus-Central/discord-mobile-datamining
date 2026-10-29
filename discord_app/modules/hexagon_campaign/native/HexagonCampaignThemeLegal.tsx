@@ -1,18 +1,18 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignThemeLegal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4280 from "../HexagonCampaign.messages.js";
+import _modDef4281 from "../HexagonCampaign.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HexagonCampaignConstants = fn(5029);
+const HexagonCampaignConstants = fn(5030);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_4, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: hasOwnProperty } =
   HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   legal: { textAlign: "center" },
   legalWithLogo: { flexDirection: "row", gap: nativeDefault.space.PX_8 },
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[7] !== tmp7) {
               const intl = tmp(1125).intl;
               const obj2 = { nonPremiumEndDate, premiumEndDate, learnMoreHook: tmp7 };
-              const formatResult = intl.format(legalWithLogo(4280).y2YmJv, obj2);
+              const formatResult = intl.format(legalWithLogo(4281).y2YmJv, obj2);
               cResult[7] = tmp7;
               cResult[8] = formatResult;
               let tmp12 = formatResult;
@@ -72,16 +72,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     if (cResult[14] !== legalWithLogo.logo) {
                       const obj3 = {
-                        source: legalWithLogo(16654),
+                        source: legalWithLogo(16892),
                         style: legalWithLogo.logo,
                         resizeMode: "contain",
                         accessible: false,
                       };
-                      const tmp25 = closure_6(legalWithLogo(5705), obj3);
+                      const tmp25 = closure_6(legalWithLogo(5707), obj3);
                       cResult[14] = legalWithLogo.logo;
                       cResult[15] = tmp25;
                       let tmp21 = tmp25;
-                      const tmp24 = legalWithLogo(5705);
+                      const tmp24 = legalWithLogo(5707);
                     } else {
                       tmp21 = cResult[15];
                     }
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = { animated: tmp5, variant: "text-xs/medium", color: str, style: tmp11, children: tmp12 };
-            const tmp19 = closure_6(tmp(5270).Text, obj5);
+            const tmp19 = closure_6(tmp(5271).Text, obj5);
             cResult[9] = tmp5;
             cResult[10] = str;
             cResult[11] = tmp11;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items = [headerSecondary, flag ? tmp.legalText : tmp.legal];
       obj.style = items;
       const intl = animatedStyles(1125).intl;
-      obj.children = intl.format(_modDef4280.y2YmJv, {
+      obj.children = intl.format(_modDef4281.y2YmJv, {
         nonPremiumEndDate,
         premiumEndDate,
         learnMoreHook(children, arg1) {
@@ -204,15 +204,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return timestampProducer(Text_Text.Text, obj, arg1);
         },
       });
-      const tmp3Result = closure_6(animatedStyles(5270).Text, obj);
+      const tmp3Result = closure_6(animatedStyles(5271).Text, obj);
       let tmp9 = tmp3Result;
       if (flag) {
         const obj3 = { style: tmp.legalWithLogo, children: null };
-        const obj4 = { source: tmp7(16654), style: tmp.logo, resizeMode: "contain", accessible: false };
-        const items1 = [closure_6(tmp7(5705), obj4), tmp3Result];
+        const obj4 = { source: tmp7(16892), style: tmp.logo, resizeMode: "contain", accessible: false };
+        const items1 = [closure_6(tmp7(5707), obj4), tmp3Result];
         obj3.children = items1;
         tmp9 = closure_7(View, obj3);
-        const tmp7Result = tmp7(5705);
+        const tmp7Result = tmp7(5707);
       }
       return tmp9;
     };

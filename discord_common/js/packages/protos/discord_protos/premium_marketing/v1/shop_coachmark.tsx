@@ -28,7 +28,7 @@ class ShopCoachmark$Type extends MessageType {
         return require("theme_aware_asset").ThemeAwareAsset;
       },
     };
-    items = [, , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -90,6 +90,7 @@ class ShopCoachmark$Type extends MessageType {
     items[11] = { no: 12, name: "body", kind: "scalar", T: 9 };
     items[12] = { no: 13, name: "button_label", kind: "scalar", T: 9 };
     items[13] = { no: 14, name: "badge_text", kind: "scalar", T: 9 };
+    items[14] = { no: 15, name: "version", kind: "scalar", T: 13 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.ShopCoachmark", items, T);
     return tmp1;
   }
@@ -105,6 +106,7 @@ prototype["create"] = function create(partialSettings) {
     body: "",
     buttonLabel: "",
     badgeText: "",
+    version: 0,
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -243,6 +245,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writ
     tag.tag(14, _mod1209.WireType.LengthDelimited).string(asset.badgeText);
     const tagResult13 = tag.tag(14, _mod1209.WireType.LengthDelimited);
   }
+  if (0 !== asset.version) {
+    tag.tag(15, _mod1209.WireType.Varint).uint32(asset.version);
+    const tagResult14 = tag.tag(15, _mod1209.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -253,99 +259,11 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writ
   }
   return tag;
 };
-let items = [
-  {
-    no: 1,
-    name: "asset",
-    kind: "message",
-    T() {
-      return require("theme_aware_asset").ThemeAwareAsset;
-    },
-  },
-  {
-    no: 2,
-    name: "header_localized",
-    kind: "message",
-    T() {
-      return require("localized_string").LocalizedString;
-    },
-  },
-  {
-    no: 3,
-    name: "body_localized",
-    kind: "message",
-    T() {
-      return require("localized_string").LocalizedString;
-    },
-  },
-  {
-    no: 4,
-    name: "button_label_localized",
-    kind: "message",
-    T() {
-      return require("localized_string").LocalizedString;
-    },
-  },
-  {
-    no: 5,
-    name: "display_type",
-    kind: "enum",
-    T() {
-      const items = [
-        "discord_protos.premium_marketing.v1.ShopCoachmarkDisplayType",
-        ShopCoachmarkDisplayType,
-        "SHOP_COACHMARK_DISPLAY_TYPE_",
-      ];
-      return items;
-    },
-  },
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-];
-const obj3 = { no: 6, name: "badge_text_localized", kind: "message", T: null };
-class T {
-  constructor() {
-    return closure_1_0(closure_1_1[3]).LocalizedString;
-  }
-}
-obj3.T = T;
-items[5] = obj3;
-items[6] = { no: 7, name: "badge_icon", kind: "scalar", T: 9 };
-items[7] = { no: 8, name: "badge_countdown_ends_at", kind: "scalar", T: 9 };
-items[8] = { no: 9, name: "show_hover_gradient", kind: "scalar", T: 8 };
-items[9] = {
-  no: 10,
-  name: "hover_background",
-  kind: "message",
-  T() {
-    return require("theme_aware_asset").ThemeAwareAsset;
-  },
-};
-items[10] = { no: 11, name: "header", kind: "scalar", T: 9 };
-items[11] = { no: 12, name: "body", kind: "scalar", T: 9 };
-items[12] = { no: 13, name: "button_label", kind: "scalar", T: 9 };
-items[13] = { no: 14, name: "badge_text", kind: "scalar", T: 9 };
-const prototype1 = new prototype(
-  "discord_protos.premium_marketing.v1.ShopCoachmark",
-  items,
-  tmp,
-  T,
-  ShopCoachmark$Type,
-  prototype,
-  items,
-  fn,
-  dependencyMap,
-);
+const shopCoachmarkType = new ShopCoachmark$Type();
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/shop_coachmark.tsx",
 );
 
 export { ShopCoachmarkDisplayType };
-export const ShopCoachmark = prototype1;
+export const ShopCoachmark = shopCoachmarkType;

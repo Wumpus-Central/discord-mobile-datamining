@@ -178,10 +178,10 @@ export default noop.memo(
         const memo = noop.useMemo(
           () => ({
             onPress() {
-              closure_1_1(18036)(closure_1_5);
+              closure_1_1(18270)(closure_1_5);
             },
             onLongPress() {
-              closure_1_1(17839)();
+              closure_1_1(18077)();
             },
           }),
           [],
@@ -211,10 +211,10 @@ export default noop.memo(
           config: memo,
           accessibilityActions,
           onAccessibilityAction,
-          label: 0,
-          externalChildren: null,
-          expandedChildren: null,
-          children: null,
+          label: null,
+          externalChildren: false,
+          expandedChildren: "UserProfileContent",
+          children: "enable",
         };
         const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
         let intl = util.intl;
@@ -235,10 +235,10 @@ export default noop.memo(
           config: memo,
           accessibilityActions,
           onAccessibilityAction,
-          label: 0,
-          externalChildren: null,
-          expandedChildren: null,
-          children: null,
+          label: null,
+          externalChildren: false,
+          expandedChildren: "UserProfileContent",
+          children: "enable",
         });
       },
 );

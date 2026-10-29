@@ -4,11 +4,11 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const useCommandDiscoveryManager = module_570.create(() => ({ initialSectionId: "paths" }));
+const useCommandDiscoveryManager = module_570.create(() => ({ initialSectionId: "r" }));
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export { useCommandDiscoveryManager };
-export const updateInitialSectionId = function updateInitialSectionId(arg0) {
+export function updateInitialSectionId(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj.setState(() => ({ initialSectionId })));
-};
+}

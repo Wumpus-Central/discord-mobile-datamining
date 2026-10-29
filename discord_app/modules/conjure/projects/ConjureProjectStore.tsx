@@ -322,7 +322,7 @@ let result = size.fileFinishedImporting("modules/conjure/projects/ConjureProject
 
 export default conjureProjectStore;
 export { isProjectOwner };
-export const canPublishProject = function canPublishProject(project) {
+export function canPublishProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -334,8 +334,8 @@ export const canPublishProject = function canPublishProject(project) {
     const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
   }
   return tmp3;
-};
-export const canRemixProject = function canRemixProject(project) {
+}
+export function canRemixProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -350,4 +350,4 @@ export const canRemixProject = function canRemixProject(project) {
     isProjectPublicResult = ConjureProjectTypes.isProjectPublic(project);
   }
   return isProjectPublicResult;
-};
+}

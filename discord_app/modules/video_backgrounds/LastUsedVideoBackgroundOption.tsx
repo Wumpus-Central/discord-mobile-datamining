@@ -7,13 +7,13 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import UserStore from "../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const VideoBackgroundUtils = obj(5903);
+const VideoBackgroundUtils = obj(5905);
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
 
-export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgroundOption(currentUser) {
+export function getLastUsedVideoBackgroundOption(currentUser) {
   const videoBackground = UnsyncedUserSettingsStore.videoBackground;
   if (!obj.isCustomBackgroundOption(videoBackground)) {
     if (typeof videoBackground !== "number") {
@@ -28,7 +28,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
     tmp5 = null;
   }
   return tmp5;
-};
+}
 export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLastUsedVideoBackgroundOption() {
       let obj = require;

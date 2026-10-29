@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
       stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
-      const RestrictedGuildIds = tmp(4832).RestrictedGuildIds;
+      const RestrictedGuildIds = tmp(4833).RestrictedGuildIds;
       setting = RestrictedGuildIds.useSetting();
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp;
       });
     };
-export const canDm = function canDm(userId, guildId) {
+export function canDm(userId, guildId) {
   let isLurkingResult = null != guildId;
   const id = AuthenticationStore.getId();
   if (isLurkingResult) {
@@ -200,4 +200,4 @@ export const canDm = function canDm(userId, guildId) {
     tmp8 = setting;
   }
   return tmp8;
-};
+}

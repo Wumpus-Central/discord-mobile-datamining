@@ -1,6 +1,6 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeGameContextMenu.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef9172 from "../../../../_runtime/metro/09172__.js";
+import _modDef9175 from "../../../../_runtime/metro/09175__.js";
 import RefreshIcon from "../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
 import OrbsArcadeActionCreators from "../OrbsArcadeActionCreators.tsx";
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== game.id) {
         const obj2 = {
           label: tmp8,
-          IconComponent: tmp(14198).CircleQuestionIcon,
+          IconComponent: tmp(14431).CircleQuestionIcon,
           action() {
             return openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id);
           },
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== game.id) {
         const obj3 = {
           label: tmp11,
-          IconComponent: tmp(12302).RefreshIcon,
+          IconComponent: tmp(12356).RefreshIcon,
           variant: "destructive",
           action() {
             return handleResetGame(game.id);
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj4 = { items: tmp14, triggerOnTap: true, children: S };
-              const tmp19 = jsx(tmp(9795).ContextMenu, { items: tmp14, triggerOnTap: true, children: S });
+              const tmp19 = jsx(tmp(9827).ContextMenu, { items: tmp14, triggerOnTap: true, children: S });
               cResult[13] = tmp14;
               cResult[14] = tmp19;
               const tmp18 = tmp19;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.label = intl.string(util.t["3AT3DL"]);
         obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
         obj.action = function action() {
-          return game(16679).openOrbsArcadeInfoSheet(id.id);
+          return game(16917).openOrbsArcadeInfoSheet(id.id);
         };
         const items = [obj];
         return items;
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         items4 = [memo];
       }
-      return jsx(game(9795).ContextMenu, {
+      return jsx(game(9827).ContextMenu, {
         items: items4,
         triggerOnTap: true,
         children(ref) {
@@ -287,12 +287,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { ref: ref.ref };
           const merged1 = Object.assign(merged);
           obj.variant = "secondary-overlay";
-          obj.icon = _modDef9172;
+          obj.icon = _modDef9175;
           const intl = game(1125).intl;
           obj.accessibilityLabel = intl.string(game(1125).t.reWgFH);
           const intl2 = game(1125).intl;
           obj.accessibilityHint = intl2.string(game(1125).t.hd0b7t);
-          return jsx(game(7991).IconButton, { ref: ref.ref });
+          return jsx(game(8014).IconButton, { ref: ref.ref });
         },
       });
     };

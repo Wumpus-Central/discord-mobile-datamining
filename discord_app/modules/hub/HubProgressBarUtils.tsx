@@ -21,7 +21,7 @@ function convertHubProgressFlagSetToSet(stateFromStores) {
   }
   return set;
 }
-const HUB_PROGRESS_STEP_ORDER = fn(9096).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9099).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1084).PlatformTypes;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -120,7 +120,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
 
-export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
+export function getHubProgressTitleForStep(nextHubProgressStep) {
   if (preloaded_user_settings.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
     const intl3 = util.intl;
     return intl3.string(util.t.iNR25n);
@@ -136,7 +136,7 @@ export const getHubProgressTitleForStep = function getHubProgressTitleForStep(ne
     GlobalUtils.assertNever(nextHubProgressStep);
     const tmpResult = GlobalUtils;
   }
-};
+}
 export const useHubProgressBarCompletedSteps = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHubProgressBarCompletedSteps(id) {
       const cResult = c.c(2);
@@ -176,7 +176,7 @@ export const useHubProgressBarCompletedSteps = ReactCompilerGating.isReactCompil
         }
       }, items);
     };
-export const getNextHubProgressStep = function getNextHubProgressStep(hubProgressBarCompletedSteps) {
+export function getNextHubProgressStep(hubProgressBarCompletedSteps) {
   for (const item10007 of HUB_PROGRESS_STEP_ORDER) {
     if (arg0.has(item10007)) {
       continue;
@@ -186,4 +186,4 @@ export const getNextHubProgressStep = function getNextHubProgressStep(hubProgres
     }
   }
   return null;
-};
+}

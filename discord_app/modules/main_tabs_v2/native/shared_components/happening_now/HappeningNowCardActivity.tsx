@@ -5,7 +5,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ApplicationAssetUtils from "../../../../../utils/ApplicationAssetUtils.tsx";
@@ -15,14 +15,14 @@ import StreamPreviewDefault from "../../../../../components_native/StreamPreview
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef17777 from "../../../../../../_runtime/metro/17777__.js";
-import _modDef17778 from "../../../../../../_runtime/metro/17778__.js";
+import _modDef18015 from "../../../../../../_runtime/metro/18015__.js";
+import _modDef18016 from "../../../../../../_runtime/metro/18016__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const _modDef17787 = tmp4(17787);
+const _modDef18025 = tmp4(18025);
 require = fn;
 function getActivityA11yLabel(activity) {
   if (isListeningOnSpotifyDefault(activity)) {
@@ -54,7 +54,7 @@ function getActivityA11yLabel(activity) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16924);
+const HappeningNowConstants = fn(17163);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -66,9 +66,9 @@ const Constants = fn(1084);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef17777, _modDef17778];
+let items = [_modDef18015, _modDef18016];
 let c16 = 0.32;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   avatarStackContainer: {
@@ -571,7 +571,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             const substr = userId.slice(-1);
             let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
           } else {
-            tmp4Result = _modDef17787;
+            tmp4Result = _modDef18025;
           }
           tmp6 = activity == tmp6;
           let type2;
@@ -678,7 +678,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           userId = substr.charCodeAt(0);
           let tmpResult = items[userId % items.length];
         } else {
-          tmpResult = _modDef17787;
+          tmpResult = _modDef18025;
         }
       }
     };
@@ -771,13 +771,13 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12766, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12766, dependencyMap.paths);
+      asyncRequireImpl(12983, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(12983, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8705, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8708, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8705, dependencyMap.paths);
+      const promise = asyncRequireImpl(8708, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

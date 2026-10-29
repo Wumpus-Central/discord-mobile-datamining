@@ -122,7 +122,7 @@ export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGatin
       }
       const obj3 = require("GuildRoleSubscriptionSettingUtils");
     };
-export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
+export function canSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
   guild = GuildStore.getGuild(arg0);
   if (null == guild) {
     return false;
@@ -146,4 +146,4 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
       return tmp5;
     }
   }
-};
+}

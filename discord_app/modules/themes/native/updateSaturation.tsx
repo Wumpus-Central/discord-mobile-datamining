@@ -4,6 +4,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/themes/native/updateSaturation.tsx");
 
-export const updateSaturation = function updateSaturation(saturation) {
+export function updateSaturation(saturation) {
   NativeThemeModuleDefault.updateSaturation(saturation);
-};
+}

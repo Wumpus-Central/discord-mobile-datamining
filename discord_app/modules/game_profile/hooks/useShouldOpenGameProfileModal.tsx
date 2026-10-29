@@ -342,7 +342,7 @@ export { RejectionReason };
 export { trackEntryPoint };
 export { isGameDisabled };
 export { gameIsAcceptable };
-export const gameIdIsAcceptable = function gameIdIsAcceptable(arg0) {
+export function gameIdIsAcceptable(arg0) {
   const game = GameStore.getGame(arg0);
   if (null == game) {
     const items = [obj.NoMatch];
@@ -361,4 +361,4 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(arg0) {
     tmp9Result = utils;
   }
   return 0 === arr.length;
-};
+}

@@ -13,7 +13,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StoreListingActionCreators.tsx");
 
-export const fetchStoreListingsForApplications = function fetchStoreListingsForApplications(arr) {
+export function fetchStoreListingsForApplications(arr) {
   const found = arr.filter((item) => {
     application = application.getApplication(item);
     if (null == application) {
@@ -46,8 +46,8 @@ export const fetchStoreListingsForApplications = function fetchStoreListingsForA
     });
   }
   return resolved;
-};
-export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(application_id) {
+}
+export function fetchAllStoreListingsForApplication(application_id) {
   const request = {
     url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
     query: { application_id },
@@ -70,8 +70,8 @@ export const fetchAllStoreListingsForApplication = function fetchAllStoreListing
     DispatcherDefault.dispatch(obj2);
     return body.body;
   });
-};
-export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
+}
+export function fetchStoreListingForSku(skuId) {
   _require = skuId;
   value = SKUStore.get(skuId);
   let result = null != value;
@@ -107,4 +107,4 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
     .catch(() => {
       DispatcherDefault.dispatch({ type: "SKU_FETCH_FAIL", skuId });
     });
-};
+}

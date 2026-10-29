@@ -51,7 +51,7 @@ UnescapedPathParam.prototype["toString"] = function toString() {
 };
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PathUtils.tsx");
 
-export const getLoginPath = function getLoginPath(arg0) {
+export function getLoginPath(arg0) {
   if (flag === undefined) {
     flag = true;
   }
@@ -60,10 +60,10 @@ export const getLoginPath = function getLoginPath(arg0) {
     str = "";
   }
   return getAuthenticationPath("login", arg0, flag, str);
-};
+}
 export { getAuthenticationPath };
 export { UnescapedPathParam };
-export const wrapPaths = function wrapPaths(frozen, arg1) {
+export function wrapPaths(frozen, arg1) {
   closure_0 = frozen;
   closure_1 = arg1;
   const obj = {};
@@ -113,4 +113,4 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
     continue;
   }
   return obj;
-};
+}

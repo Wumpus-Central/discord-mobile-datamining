@@ -19,13 +19,13 @@ const openGroupDMAddMembersDefault = openGroupDMAddMembers;
 
 require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10658).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10691).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1084);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "useCallback", listActionHeight: "PX_16" };
-const createStyles = fn(5004);
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "Reflect" };
+const createStyles = fn(5005);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

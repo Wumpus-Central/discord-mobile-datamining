@@ -12,12 +12,12 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { dot: null, spinner: null };
 let size = {
-  width: fn(12330).CONJURE_HEADER_BADGE_SIZE,
-  height: fn(12330).CONJURE_HEADER_BADGE_SIZE,
-  borderRadius: fn(12330).CONJURE_HEADER_BADGE_SIZE / 2,
+  width: fn(12384).CONJURE_HEADER_BADGE_SIZE,
+  height: fn(12384).CONJURE_HEADER_BADGE_SIZE,
+  borderRadius: fn(12384).CONJURE_HEADER_BADGE_SIZE / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
 obj2.dot = size;
@@ -36,9 +36,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       let obj = sharedValue(576);
       const tmp = sharedValue;
-      const token = sharedValue(5288).useToken(nativeDefault.colors.BACKGROUND_BRAND);
-      let obj2 = sharedValue(5288);
-      sharedValue = sharedValue(5085).useSharedValue(0);
+      const token = sharedValue(5289).useToken(nativeDefault.colors.BACKGROUND_BRAND);
+      let obj2 = sharedValue(5289);
+      sharedValue = sharedValue(5086).useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function n() {
           const obj = ReanimatedRexport;
@@ -59,7 +59,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       const effect = noop.useEffect(tmp8, tmp9);
-      const obj3 = sharedValue(5085);
+      const obj3 = sharedValue(5086);
       const fn2 = function p() {
         const obj = { transform: null };
         const items = [{ rotate: "" + sharedValue.get() + "deg" }];
@@ -69,7 +69,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { rotation: sharedValue };
       fn2.__workletHash = 16804123436708;
       fn2.__initData = __initData;
-      const animatedStyle = tmp(5085).useAnimatedStyle(fn2);
+      const animatedStyle = tmp(5086).useAnimatedStyle(fn2);
       if (cResult[3] === animatedStyle) {
         if (cResult[4] === tmp4.spinner) {
           let tmp12 = cResult[5];
@@ -109,13 +109,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4.spinner;
       cResult[5] = items1;
       tmp12 = items1;
-      const tmpResult = tmp(5085);
+      const tmpResult = tmp(5086);
     }
   : function ConjurePublishSpinner() {
       const tmp = closure_6();
-      const token = sharedValue(5288).useToken(nativeDefault.colors.BACKGROUND_BRAND);
-      let obj = sharedValue(5288);
-      sharedValue = sharedValue(5085).useSharedValue(0);
+      const token = sharedValue(5289).useToken(nativeDefault.colors.BACKGROUND_BRAND);
+      let obj = sharedValue(5289);
+      sharedValue = sharedValue(5086).useSharedValue(0);
       let items = [sharedValue];
       const effect = noop.useEffect(() => {
         const obj = ReanimatedRexport;
@@ -125,7 +125,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         );
         return () => sharedValue(dependencyMap[9]).cancelAnimation(closure_1_0);
       }, items);
-      let obj2 = sharedValue(5085);
+      let obj2 = sharedValue(5086);
       const fn = function _() {
         const obj = { transform: null };
         const items = [{ rotate: "" + sharedValue.get() + "deg" }];
@@ -135,7 +135,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { rotation: sharedValue };
       fn.__workletHash = 12889163918279;
       fn.__initData = __initData2;
-      const animatedStyle = sharedValue(5085).useAnimatedStyle(fn);
+      const animatedStyle = sharedValue(5086).useAnimatedStyle(fn);
       const obj4 = {
         style: null,
         children: jsx(ProgressCircleDefault, {
@@ -192,10 +192,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     };
-export const conjurePublishBadgeSize = function conjurePublishBadgeSize(indicator) {
+export function conjurePublishBadgeSize(indicator) {
   let num = 12;
   if ("publishing" !== indicator) {
     num = ConjureHeaderIconButton.CONJURE_HEADER_BADGE_SIZE;
   }
   return num;
-};
+}

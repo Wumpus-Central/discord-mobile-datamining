@@ -14,7 +14,7 @@ const config = apex_ApexExperimentDefault(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/NvencReconstructedFrameExperiment.tsx");
 
-export const getNvencReconstructedFrameExperimentConfig = function getNvencReconstructedFrameExperimentConfig(disable) {
+export function getNvencReconstructedFrameExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
@@ -26,4 +26,4 @@ export const getNvencReconstructedFrameExperimentConfig = function getNvencRecon
     defaultConfig = config.getConfig(obj2);
   }
   return defaultConfig;
-};
+}

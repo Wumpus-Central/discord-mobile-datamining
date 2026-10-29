@@ -56,7 +56,7 @@ let result = size.fileFinishedImporting("utils/FileSizeUtils.tsx");
 export const BYTE_IN_KB = 1024;
 export const KB_IN_MB = 1024;
 export { formatSize };
-export const formatKbSize = function formatKbSize(bytes, arg1) {
+export function formatKbSize(bytes, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_3;
@@ -89,4 +89,4 @@ export const formatKbSize = function formatKbSize(bytes, arg1) {
     }
   }
   return formatToPlainStringResult;
-};
+}

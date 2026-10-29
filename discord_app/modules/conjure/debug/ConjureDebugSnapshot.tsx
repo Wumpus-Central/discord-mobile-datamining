@@ -5,7 +5,7 @@ import ConjureDebugStore from "ConjureDebugStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugSnapshot.tsx");
 
-export const conjureDebugSnapshot = function conjureDebugSnapshot(projectId) {
+export function conjureDebugSnapshot(projectId) {
   const obj = {
     captured_at: new Date().toISOString(),
     project_id: projectId,
@@ -17,4 +17,4 @@ export const conjureDebugSnapshot = function conjureDebugSnapshot(projectId) {
     logs: ConjureDebugLogStore.getLogs(projectId),
   };
   return JSON.stringify(obj, null, 2);
-};
+}

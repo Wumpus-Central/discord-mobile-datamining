@@ -76,7 +76,7 @@ function foldRecord(map, nextResult) {
 }
 let result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/ConjurePerfTraceBatches.tsx");
 
-export const applyTimingTraceBatch = function applyTimingTraceBatch(found, batch, live) {
+export function applyTimingTraceBatch(found, batch, live) {
   let spans;
   if (found != null) {
     spans = found.spans;
@@ -136,4 +136,4 @@ export const applyTimingTraceBatch = function applyTimingTraceBatch(found, batch
   }
   obj.live = live;
   return obj;
-};
+}

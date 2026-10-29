@@ -30,7 +30,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1084).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 const PlatformUtils = fn(1381);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
@@ -41,7 +41,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(11992).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(12046).MUTED_OPACITY_CONTENT };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 fn(558);
@@ -208,7 +208,7 @@ Spoiler.prototype["render"] = function render() {
                 if (Array.isArray(style)) {
                   flattenResult = closure_2_8.flatten(style);
                 }
-                const obj = { children: null, style: null, onPress: "r" };
+                const obj = { children: null, style: null, onPress: "Array" };
                 ({ Children, cloneElement } = validElement);
                 obj.children = Children.map(props.props.children, (props) => {
                   if (validElement.isValidElement(props)) {
@@ -218,7 +218,7 @@ Spoiler.prototype["render"] = function render() {
                     if (Array.isArray(style)) {
                       flattenResult = closure_2_8.flatten(style);
                     }
-                    const obj = { children: null, style: null, onPress: "r" };
+                    const obj = { children: null, style: null, onPress: "Array" };
                     ({ Children, cloneElement } = validElement);
                     obj.children = Children.map(props.props.children, (props) => {
                       if (validElement.isValidElement(props)) {
@@ -228,9 +228,9 @@ Spoiler.prototype["render"] = function render() {
                         if (Array.isArray(style)) {
                           flattenResult = closure_2_8.flatten(style);
                         }
-                        const obj = { children: null, style: null, onPress: "r" };
+                        const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, () => { ... });
+                        obj.children = Children.map(props.props.children, /* F114699 */ function() { ... });
                         const items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);
@@ -273,7 +273,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(5070).ThemeContext;
+Spoiler.contextType = fn(5071).ThemeContext;
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SpoilerRevealProvider(children) {
   const cResult = c.c(3);

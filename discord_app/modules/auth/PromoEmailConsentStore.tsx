@@ -7,15 +7,15 @@ const require = globalThis.__r;
 const usePromoEmailConsentStore = module_570.create(() => ({ required: false, checked: false, preChecked: false }));
 const result = size.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
 
-export const setPromoEmailConsentState = function setPromoEmailConsentState(arg0) {
+export function setPromoEmailConsentState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj.setState(closure_0));
-};
-export const setPromoEmailConsentChecked = function setPromoEmailConsentChecked(checked) {
+}
+export function setPromoEmailConsentChecked(checked) {
   _require = checked;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { checked };
     return obj.setState(obj);
   });
-};
+}
 export { usePromoEmailConsentStore };

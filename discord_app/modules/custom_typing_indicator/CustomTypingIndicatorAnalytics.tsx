@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorAnalytics.tsx");
 
-export const getTypingIndicatorStyleAnalytics = function getTypingIndicatorStyleAnalytics(config) {
+export function getTypingIndicatorStyleAnalytics(config) {
   const obj = {
     emoji_names: null,
     animation_name: user.TypingIndicatorAnimation[config.animation],
@@ -16,4 +16,4 @@ export const getTypingIndicatorStyleAnalytics = function getTypingIndicatorStyle
   const emojis1 = config.emojis;
   obj.custom_emoji_count = emojis1.filter((id) => null != id.id).length;
   return obj;
-};
+}

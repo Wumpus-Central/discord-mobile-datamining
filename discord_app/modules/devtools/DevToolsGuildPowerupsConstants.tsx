@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/devtools/DevToolsGuildPowerup
 export const USER_DCS = items;
 export const GUILD_DCS = items1;
 export const SERVER_TAG_GUILD_DCS = items2;
-export const getGuildDCString = function getGuildDCString(arg0) {
+export function getGuildDCString(arg0) {
   if (dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK === arg0) {
     return "GUILD_POWERUP_LEVEL_1_COACHMARK";
   } else if (dismissible_content.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK === arg0) {
@@ -39,12 +39,12 @@ export const getGuildDCString = function getGuildDCString(arg0) {
     const _String = String;
     return String(arg0);
   }
-};
-export const getUserDCString = function getUserDCString(arg0) {
+}
+export function getUserDCString(arg0) {
   let StringResult = dismissible_content.DismissibleContent[arg0];
   if (StringResult == null) {
     const _String = String;
     StringResult = String(arg0);
   }
   return StringResult;
-};
+}

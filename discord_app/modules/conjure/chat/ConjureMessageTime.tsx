@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMessageTime.tsx");
 
-export const describeMessageTime = function describeMessageTime(at) {
+export function describeMessageTime(at) {
   let isFiniteResult = null != at;
   if (isFiniteResult) {
     const _Number = Number;
@@ -20,4 +20,4 @@ export const describeMessageTime = function describeMessageTime(at) {
     calendarFormatResult = DateUtils.calendarFormat(date, true);
   }
   return calendarFormatResult;
-};
+}

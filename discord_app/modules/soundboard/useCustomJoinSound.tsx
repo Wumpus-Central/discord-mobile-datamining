@@ -4,7 +4,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(6044).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(6048).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -98,7 +98,7 @@ export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
     };
-export const getCustomJoinSound = function getCustomJoinSound(arg0) {
+export function getCustomJoinSound(arg0) {
   const guilds = UserSettingsProtoStore.settings.guilds;
   let guilds1;
   if (guilds != null) {
@@ -128,4 +128,4 @@ export const getCustomJoinSound = function getCustomJoinSound(arg0) {
     }
     obj.type = GLOBAL;
   }
-};
+}

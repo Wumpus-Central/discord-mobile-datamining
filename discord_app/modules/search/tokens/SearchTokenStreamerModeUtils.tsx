@@ -38,7 +38,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");
 
-export const isFromUserFilterSupported = function isFromUserFilterSupported() {
+export function isFromUserFilterSupported() {
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [StreamerModeStore];
@@ -46,8 +46,8 @@ export const isFromUserFilterSupported = function isFromUserFilterSupported() {
   }
   [tmp3] = tmp;
   return !tmp3.hidePersonalInformation;
-};
-export const isMentionsUserFilterSupported = function isMentionsUserFilterSupported() {
+}
+export function isMentionsUserFilterSupported() {
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [StreamerModeStore];
@@ -55,8 +55,8 @@ export const isMentionsUserFilterSupported = function isMentionsUserFilterSuppor
   }
   [tmp3] = tmp;
   return !tmp3.hidePersonalInformation;
-};
-export const isInChannelFilterSupported = function isInChannelFilterSupported(selectedSearchContext) {
+}
+export function isInChannelFilterSupported(selectedSearchContext) {
   let tmp = arg1;
   if (arg1 === undefined) {
     const items = [StreamerModeStore];
@@ -69,8 +69,8 @@ export const isInChannelFilterSupported = function isInChannelFilterSupported(se
     const tmp6 = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
   }
   return result;
-};
+}
 export { getValidOrderedFilterTokens };
-export const getValidFilterTokens = function getValidFilterTokens(type, items) {
+export function getValidFilterTokens(type, items) {
   return new Set(getValidOrderedFilterTokens(type, items));
-};
+}

@@ -27,15 +27,15 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8658).FetchState;
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(10038).CodedLinkExtendedType;
+const FetchState = fn(8680).FetchState;
+const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
+const CodedLinkExtendedType = fn(10070).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
 
-export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
+export function getAppLinkGateResult(arg0) {
   ({ appId, message } = arg0);
   ({ channel, theme } = arg0);
   const application = ApplicationStore.getApplication(appId);
@@ -96,8 +96,8 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
       return obj5;
     }
   }
-};
-export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
+}
+export function createAppMessageEmbed(arg0) {
   ({ message, app } = arg0);
   ({ theme, embedUrl } = arg0);
   const baseColors = getEmbedThemeColorsDefault(theme).baseColors;
@@ -216,8 +216,8 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
   }
   const intl = util.intl;
   formatToPlainStringResult = intl.string(util.t.RjceQU);
-};
-export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId) {
+}
+export function handleTapAppMessageEmbed(appId) {
   const application = ApplicationStore.getApplication(appId.appId);
   const toURLSafeResult = URLUtilsDefault.toURLSafe(appId.embedUrl);
   let id;
@@ -320,4 +320,4 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     GamesActionCreatorsDefault.launch(obj8);
     const tmp2Result2 = GamesActionCreatorsDefault;
   }
-};
+}

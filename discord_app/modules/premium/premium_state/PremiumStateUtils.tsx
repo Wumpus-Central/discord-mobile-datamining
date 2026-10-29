@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
 
-export const parseServerPremiumState = function parseServerPremiumState(premium_state) {
+export function parseServerPremiumState(premium_state) {
   let tmp = null;
   if (null != premium_state) {
     const obj = { premiumSubscriptionType: null, premiumSource: null, premiumSubscriptionGroupRole: null };
@@ -15,4 +15,4 @@ export const parseServerPremiumState = function parseServerPremiumState(premium_
     tmp = obj;
   }
   return tmp;
-};
+}

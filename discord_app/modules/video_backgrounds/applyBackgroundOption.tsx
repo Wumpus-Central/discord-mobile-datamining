@@ -52,7 +52,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
             if (null == asset) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else if (asset === closure_2_7) {
               applyBackgroundMediaFilterSettings(
                 closure_0,
@@ -85,7 +85,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
                 BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR,
               );
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               if (typeof asset !== "string") {
                 if (typeof asset !== "number") {
@@ -213,25 +213,91 @@ let closure_14 = async function _applyBackgroundOptionLive(arg0, arg1) {
   c4 = 0;
   c5 = 0;
   let iter = (async (arg0, value) => {
-    await closure_131_11(
-      closure_131_0(closure_131_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE,
-      { type: closure_131_0(closure_131_2[6]).FilterTargetType.INPUT_DEVICE },
-      closure_130_0,
-    );
-    if (closure_130_1) {
-      const result = closure_131_0(closure_131_2[10]).trackBackgroundOptionUpdated(closure_130_0, _location, "Enabled");
-      closure_131_0(closure_131_2[10]);
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = tmp5;
+            closure_2 = tmp2;
+            closure_130_1 = undefined;
+            let _location;
+            closure_130_0 = closure_0;
+            let flag = track.track;
+            if (flag === undefined) {
+              flag = true;
+            }
+            closure_130_1 = flag;
+            _location = track.location;
+            c4 = 1;
+            c5 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const obj5 = { type: closure_131_0(closure_131_2[6]).FilterTargetType.INPUT_DEVICE };
+            c4 = 2;
+            c5 = 1;
+            const obj6 = {
+              value: closure_131_11(
+                closure_131_0(closure_131_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE,
+                obj5,
+                closure_130_0,
+              ),
+              done: false,
+            };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          if (closure_130_1) {
+            const result = closure_131_0(closure_131_2[10]).trackBackgroundOptionUpdated(
+              closure_130_0,
+              _location,
+              "Enabled",
+            );
+            const obj = closure_131_0(closure_131_2[10]);
+          }
+          c5 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp16) {
+        c5 = tmp;
+        throw tmp16;
+      }
     }
-    await "IconComponent";
-    closure_2 = tmp2;
-    closure_130_0 = closure_0;
-    let flag = track.track;
-    if (flag === undefined) {
-      flag = true;
-    }
-    closure_130_1 = flag;
-    _location = track.location;
-    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -243,43 +309,105 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   c5 = 0;
   c6 = 0;
   let iter = (async (arg0, value, arg2) => {
-    const result = closure_132_0(closure_132_2[5]).startApplyMediaFilterSettings();
-    await closure_132_11(
-      closure_132_0(closure_132_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW,
-      { type: closure_132_0(closure_132_2[6]).FilterTargetType.STREAM, streamId: closure_131_1 },
-      closure_131_0,
-    );
-    if (closure_131_2) {
-      const result1 = closure_132_0(closure_132_2[10]).trackBackgroundOptionUpdated(
-        closure_131_0,
-        _location,
-        "Preview",
-      );
-      closure_132_0(closure_132_2[10]);
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_4 = tmp5;
+            closure_3 = tmp2;
+            closure_131_2 = undefined;
+            let _location;
+            closure_131_0 = closure_0;
+            closure_131_1 = closure_1;
+            let flag = track.track;
+            if (flag === undefined) {
+              flag = true;
+            }
+            closure_131_2 = flag;
+            _location = track.location;
+            c5 = 1;
+            c6 = 1;
+            return { value: "Reflect", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const result = closure_132_0(closure_132_2[5]).startApplyMediaFilterSettings();
+            const obj5 = { type: closure_132_0(closure_132_2[6]).FilterTargetType.STREAM, streamId: closure_131_1 };
+            c5 = 2;
+            c6 = 1;
+            const obj6 = {
+              value: closure_132_11(
+                closure_132_0(closure_132_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW,
+                obj5,
+                closure_131_0,
+              ),
+              done: false,
+            };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          if (closure_131_2) {
+            const result1 = closure_132_0(closure_132_2[10]).trackBackgroundOptionUpdated(
+              closure_131_0,
+              _location,
+              "Preview",
+            );
+            const obj = closure_132_0(closure_132_2[10]);
+          }
+          c6 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } catch (tmp17) {
+        c6 = tmp;
+        throw tmp17;
+      }
     }
-    await "IconComponent";
-    closure_3 = tmp2;
-    closure_131_0 = closure_0;
-    closure_131_1 = closure_1;
-    let flag = track.track;
-    if (flag === undefined) {
-      flag = true;
-    }
-    closure_131_2 = flag;
-    _location = track.location;
-    return "Reflect";
   })();
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(5899);
+const VideoBackgroundConstants = fn(5901);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1084).NOOP;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
 
 export { applyBackgroundOptionLive };
-export const applyBackgroundOptionPreview = function applyBackgroundOptionPreview() {
+export function applyBackgroundOptionPreview() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -288,8 +416,8 @@ export const applyBackgroundOptionPreview = function applyBackgroundOptionPrevie
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const applyInitialVideoBackgroundOption = function applyInitialVideoBackgroundOption() {
+}
+export function applyInitialVideoBackgroundOption() {
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(currentUser);
@@ -305,4 +433,4 @@ export const applyInitialVideoBackgroundOption = function applyInitialVideoBackg
       const promise = applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false });
     }
   }
-};
+}

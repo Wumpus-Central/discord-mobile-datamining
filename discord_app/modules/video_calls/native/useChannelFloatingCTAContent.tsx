@@ -65,13 +65,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items2 = [];
       if (stateFromStores1) {
-        items2.push(tmp(4840).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
+        items2.push(tmp(4841).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
       }
       if (stateFromStores) {
-        items2.push(tmp(4840).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
+        items2.push(tmp(4841).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
       }
       if (obj3.some((twoWayLink) => twoWayLink.twoWayLink)) {
-        items2.push(tmp(4840).DismissibleContent.DONUT_MOBILE_NUX);
+        items2.push(tmp(4841).DismissibleContent.DONUT_MOBILE_NUX);
       }
       cResult[5] = obj3;
       cResult[6] = stateFromStores1;

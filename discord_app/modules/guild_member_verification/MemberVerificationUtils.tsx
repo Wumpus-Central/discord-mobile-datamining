@@ -9,7 +9,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
 
-export const isValidFormResponse = function isValidFormResponse(required) {
+export function isValidFormResponse(required) {
   ({ response, field_type } = required);
   if (required.required) {
     if (null == response) {
@@ -39,31 +39,31 @@ export const isValidFormResponse = function isValidFormResponse(required) {
   } else {
     return true;
   }
-};
-export const removeInternalFields = function removeInternalFields(arr) {
+}
+export function removeInternalFields(arr) {
   return arr.filter(
     (field_type) => field_type.field_type !== MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION,
   );
-};
-export const isAutomaticApprovalFormField = function isAutomaticApprovalFormField(field_type) {
+}
+export function isAutomaticApprovalFormField(field_type) {
   field_type = undefined;
   if (field_type != null) {
     field_type = field_type.field_type;
   }
   return set.has(field_type);
-};
-export const isManualApprovalFormField = function isManualApprovalFormField(field_type) {
+}
+export function isManualApprovalFormField(field_type) {
   field_type = undefined;
   if (field_type != null) {
     field_type = field_type.field_type;
   }
   return set2.has(field_type);
-};
-export const guildHasVerificationGate = function guildHasVerificationGate(guild) {
+}
+export function guildHasVerificationGate(guild) {
   let hasItem = null != guild;
   if (hasItem) {
     const features = guild.features;
     hasItem = features.has(GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED);
   }
   return hasItem;
-};
+}

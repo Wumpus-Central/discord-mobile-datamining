@@ -14,7 +14,7 @@ const GuildSpaceMusicEvent = {
 const result = size.fileFinishedImporting("modules/guild_space/popular_music/PopularMusicSystemMessageTypes.tsx");
 
 export { GuildSpaceMusicEvent };
-export const parseGuildSpaceMusicMessageData = function parseGuildSpaceMusicMessageData(music) {
+export function parseGuildSpaceMusicMessageData(music) {
   let tmp = null;
   if (null != music) {
     tmp = null;
@@ -53,4 +53,4 @@ export const parseGuildSpaceMusicMessageData = function parseGuildSpaceMusicMess
     }
   }
   return tmp;
-};
+}

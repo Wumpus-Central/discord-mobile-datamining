@@ -27,10 +27,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_0 = AppEntryKeyContext.useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
     };
-export const getCustomKeyboardHeight = function getCustomKeyboardHeight() {
+export function getCustomKeyboardHeight() {
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
   return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
-};
+}

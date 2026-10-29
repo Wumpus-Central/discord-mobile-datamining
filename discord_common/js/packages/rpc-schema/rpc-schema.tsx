@@ -6,11 +6,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
 export const CONTEXT_MENU_ICON_NAMES = contextMenuIcons.CONTEXT_MENU_ICON_NAMES;
-export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
+export function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
   let obj = { scope: scope.scope, validateAccess: scope.validateAccess, handler: scope.handler };
-  const tmp = request(15988).RPCCommandSchemas[AUTHENTICATE];
+  const tmp = request(16216).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;
@@ -25,4 +25,24 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
     };
   }
   return obj;
-};
+}
+export function createRPCEvent(ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, scope) {
+  let subscribeArgs;
+  dependencyMap = undefined;
+  let obj = { scope: scope.scope, handler: scope.handler };
+  const tmp = subscribeArgs(16216).RPCEventSchemas[ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE];
+  subscribeArgs = undefined;
+  if (tmp != null) {
+    subscribeArgs = tmp.subscribeArgs;
+  }
+  dependencyMap = null;
+  if (null != subscribeArgs) {
+    obj.validation = function validation(object) {
+      if (null == closure_1) {
+        closure_1 = helpers.joiReqObj(object.object(subscribeArgs(object)));
+      }
+      return closure_1;
+    };
+  }
+  return obj;
+}

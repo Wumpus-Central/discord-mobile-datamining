@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const DEFAULT_CDN_HOST = Constants.DEFAULT_CDN_HOST;
 const result = size.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
 
-export const getWidgetAssetURL = function getWidgetAssetURL(arg0, fileId, arg2) {
+export function getWidgetAssetURL(arg0, fileId, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -27,4 +27,4 @@ export const getWidgetAssetURL = function getWidgetAssetURL(arg0, fileId, arg2) 
     str = str2;
   }
   return "https://" + CDN_HOST + "/widget-assets/" + arg0 + "/" + fileId + "?format=" + str + "&animated=" + flag;
-};
+}

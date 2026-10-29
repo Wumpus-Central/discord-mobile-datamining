@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/tips/native/ConjureLiveBehindTip.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
 import useConjureStartPublishDefault from "../../publish/native/useConjureStartPublish.tsx";
 import ConjureTipHintDefault from "ConjureTipHint.tsx";
@@ -24,7 +24,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_0("outdated_notice");
           },
         };
-        const formatResult = intl.format(_modDef3863.fWfeZ8, obj2);
+        const formatResult = intl.format(_modDef3864.fWfeZ8, obj2);
         cResult[0] = tmp5;
         cResult[1] = formatResult;
         let tmp6 = formatResult;
@@ -53,7 +53,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       closure_0 = useConjureStartPublishDefault(projectId, publish);
       const obj = { icon: UploadIcon.UploadIcon, onDismiss, children: null };
       const intl = util.intl;
-      obj.children = intl.format(_modDef3863.fWfeZ8, {
+      obj.children = intl.format(_modDef3864.fWfeZ8, {
         onPublish() {
           return closure_0("outdated_notice");
         },
@@ -61,7 +61,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       return jsx(ConjureTipHintDefault, { icon: UploadIcon.UploadIcon, onDismiss, children: null });
     };
 let obj2 = {};
-const merged = Object.assign(fn(12368).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(12422).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj2.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp3 = null;

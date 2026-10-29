@@ -24,7 +24,7 @@ let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationSy
 export const AgeVerificationSystemNotificationEmbedKeys = obj;
 export const AgeVerificationSystemNotificationCtaTypes = obj2;
 export const AgeVerificationSystemNotificationContentType = obj3;
-export const isAgeVerificationMessageWithRetryCta = function isAgeVerificationMessageWithRetryCta(channel_id, id) {
+export function isAgeVerificationMessageWithRetryCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
     if (null != message.embeds) {
@@ -45,11 +45,8 @@ export const isAgeVerificationMessageWithRetryCta = function isAgeVerificationMe
     }
   }
   return false;
-};
-export const isAgeVerificationMessageWithManualReviewCta = function isAgeVerificationMessageWithManualReviewCta(
-  channel_id,
-  id,
-) {
+}
+export function isAgeVerificationMessageWithManualReviewCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
     if (null != message.embeds) {
@@ -75,11 +72,8 @@ export const isAgeVerificationMessageWithManualReviewCta = function isAgeVerific
     }
   }
   return false;
-};
-export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificationMessageWithConfirmAgeCta(
-  channel_id,
-  id,
-) {
+}
+export function isAgeVerificationMessageWithConfirmAgeCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
     if (null != message.embeds) {
@@ -107,11 +101,8 @@ export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificat
     }
   }
   return false;
-};
-export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerificationMessageWithConnectToTeenCta(
-  channel_id,
-  id,
-) {
+}
+export function isAgeVerificationMessageWithConnectToTeenCta(channel_id, id) {
   if (null == FamilyCenterPendingConnectionStore.getPendingConnection()) {
     return false;
   } else {
@@ -136,4 +127,4 @@ export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerifi
     }
     return false;
   }
-};
+}

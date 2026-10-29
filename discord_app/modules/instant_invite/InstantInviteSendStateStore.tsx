@@ -7,7 +7,7 @@ const require = globalThis.__r;
 let useInstantInviteSendStates = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
 
-export const setSendState = function setSendState(arg0, arg1, arg2) {
+export function setSendState(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   useInstantInviteSendStates = arg2;
@@ -21,5 +21,5 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
     obj[closure_0] = obj2;
     obj.setState(obj);
   });
-};
+}
 export { useInstantInviteSendStates };

@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 
 export const LIMITED_GUILD_MEMBER_THRESHOLD = 10000;
-export const isLimitedChannel = function isLimitedChannel(basicChannel) {
+export function isLimitedChannel(basicChannel) {
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
@@ -27,8 +27,8 @@ export const isLimitedChannel = function isLimitedChannel(basicChannel) {
     tmp3 = num >= 10000;
   }
   return tmp3;
-};
-export const isLimitedChannelId = function isLimitedChannelId(arg0) {
+}
+export function isLimitedChannelId(arg0) {
   let str = arg0;
   if (arg0 == null) {
     str = "_";
@@ -53,4 +53,4 @@ export const isLimitedChannelId = function isLimitedChannelId(arg0) {
     tmp5 = num >= 10000;
   }
   return tmp5;
-};
+}

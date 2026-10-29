@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1987 from "../../../../_runtime/metro/01987__.js";
+import _modDef1988 from "../../../../_runtime/metro/01988__.js";
 import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import ApplicationCommandTypes from "../../application_commands/ApplicationCommandTypes.tsx";
@@ -14,10 +14,10 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const BuiltInSectionId = fn(6019).BuiltInSectionId;
+const BuiltInSectionId = fn(6023).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -71,7 +71,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
-export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
+export function handleApplicationSelected(entrypoint) {
   ({ application, navigation, sectionName, navigates } = entrypoint);
   ({ location: _location, context, installOnDemand, query, searchResultsPosition } = entrypoint);
   if (navigates === undefined) {
@@ -107,8 +107,8 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     const obj3 = { application, context, installOnDemand, sectionName, entrypoint };
     navigation.navigate(constants.APPLICATION_VIEW, obj3);
   }
-};
-export const handleViewAllSelected = function handleViewAllSelected(arg0) {
+}
+export function handleViewAllSelected(arg0) {
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
   const obj = AppAnalyticsUtils;
@@ -128,8 +128,8 @@ export const handleViewAllSelected = function handleViewAllSelected(arg0) {
     title,
     promotedApplicationIds,
   });
-};
-export const handleApplicationCommandSelected = function handleApplicationCommandSelected(arg0) {
+}
+export function handleApplicationCommandSelected(arg0) {
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
@@ -177,8 +177,8 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       navigation.navigate(constants.COMMAND_VIEW, obj6);
     }
   }
-};
-export const getInitialOptionValues = function getInitialOptionValues(option) {
+}
+export function getInitialOptionValues(option) {
   option = option.option;
   ({ prefilledValues, roles } = option);
   let found;
@@ -293,10 +293,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     const items15 = [{ type: "text", text: "" }];
     return items15;
   }
-};
-export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
+}
+export function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1987;
+    let applicationIconSource = _modDef1988;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
@@ -309,7 +309,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
     isRealApplicationResult = AppLauncherUtils.isRealApplication(application);
   }
   return applicationIconSource;
-};
+}
 export const useLogAppLauncherEmptyStateView = tmp3;
 export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHandleActivityItemSelected(onActivityItemSelected) {

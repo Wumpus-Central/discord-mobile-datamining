@@ -32,7 +32,7 @@ obj.googlePlay = {
 };
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
-export const getMobileStoreReviews = function getMobileStoreReviews(reviews) {
+export function getMobileStoreReviews(reviews) {
   const entries = Object.entries(obj);
   return entries.flatMap((item) => {
     [tmp, obj] = item;
@@ -94,8 +94,8 @@ export const getMobileStoreReviews = function getMobileStoreReviews(reviews) {
     }
     return [];
   });
-};
-export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreDescriptionColor(NO_USER_REVIEWS) {
+}
+export function getSteamReviewScoreDescriptionColor(NO_USER_REVIEWS) {
   if (GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS === NO_USER_REVIEWS) {
     return "text-subtle";
   } else {
@@ -123,8 +123,8 @@ export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreD
     }
     return "steam-review-text-positive";
   }
-};
-export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDescriptionIntl(result) {
+}
+export function getSteamReviewScoreDescriptionIntl(result) {
   if (GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS === result) {
     const intl10 = util.intl;
     return intl10.string(util.t.CLMt8J);
@@ -158,8 +158,8 @@ export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDe
   } else {
     return null;
   }
-};
-export const canShowOpenCriticReview = function canShowOpenCriticReview(game, mobileStoreReviews) {
+}
+export function canShowOpenCriticReview(game, mobileStoreReviews) {
   let tmp = game.steamReleaseStatus !== SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED;
   if (!tmp) {
     tmp = mobileStoreReviews.length > 0;
@@ -176,4 +176,4 @@ export const canShowOpenCriticReview = function canShowOpenCriticReview(game, mo
     tmp = null != game.opencriticUrl;
   }
   return tmp;
-};
+}

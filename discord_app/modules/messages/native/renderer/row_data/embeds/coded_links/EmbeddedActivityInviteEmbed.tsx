@@ -18,16 +18,16 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(8658).FetchState;
-const CodedLinkExtendedType = fn(10038).CodedLinkExtendedType;
-const InviteTargetTypes = fn(7844).InviteTargetTypes;
+const FetchState = fn(8680).FetchState;
+const CodedLinkExtendedType = fn(10070).CodedLinkExtendedType;
+const InviteTargetTypes = fn(7867).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx",
 );
 
-export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivityInviteEmbed(inviteCode) {
+export function createEmbeddedActivityInviteEmbed(inviteCode) {
   let id;
   const invite = InviteStore.getInvite(inviteCode.inviteCode);
   if (null == invite) {
@@ -164,4 +164,4 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
     }
     return null;
   }
-};
+}

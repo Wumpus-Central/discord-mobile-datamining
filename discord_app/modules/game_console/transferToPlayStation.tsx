@@ -17,7 +17,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       } else {
         closure_132_1(closure_132_2[4])(closure_131_2.id, closure_131_0);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp29) {
       c6 = tmp;
@@ -132,7 +132,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -224,7 +224,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/transferToPlayStation.tsx");
 
-export const transferToPlayStation = function transferToPlayStation() {
+export function transferToPlayStation() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -233,4 +233,4 @@ export const transferToPlayStation = function transferToPlayStation() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

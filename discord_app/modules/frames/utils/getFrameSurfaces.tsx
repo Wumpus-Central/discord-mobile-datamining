@@ -46,14 +46,14 @@ const ApplicationFlags = Constants.ApplicationFlags;
 let result = size.fileFinishedImporting("modules/frames/utils/getFrameSurfaces.tsx");
 
 export { getFrameSurfaces };
-export const isFrameApp = function isFrameApp(application) {
+export function isFrameApp(application) {
   return getFrameSurfaces(application).size > 0;
-};
-export const canOpenFrame = function canOpenFrame(app) {
+}
+export function canOpenFrame(app) {
   const obj = getFrameSurfaces(app);
   let hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
   if (!hasItem) {
     hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL);
   }
   return hasItem;
-};
+}

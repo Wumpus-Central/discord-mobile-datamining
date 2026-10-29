@@ -13,11 +13,11 @@ export default function isForwardMessage(messageReference) {
   }
   return type === MessageReferenceTypes.FORWARD;
 }
-export const isForwardServerMessage = function isForwardServerMessage(message_reference) {
+export function isForwardServerMessage(message_reference) {
   message_reference = message_reference.message_reference;
   let type;
   if (message_reference != null) {
     type = message_reference.type;
   }
   return type === MessageReferenceTypes.FORWARD;
-};
+}

@@ -113,7 +113,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4931).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4932).SecondaryIndexMap(
   (saveData) => {
     const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
@@ -139,7 +139,7 @@ let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 let nextBefore = null;
-let FAILED = fn(10112).BookmarksFetchState.LOADED_FINISHED;
+let FAILED = fn(10145).BookmarksFetchState.LOADED_FINISHED;
 let c12 = false;
 let c13 = null;
 const set2 = new Set();
@@ -411,11 +411,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesStore.tsx");
 
 export default savedMessagesStore;
-export const getComparator = function getComparator(dueAt) {
+export function getComparator(dueAt) {
   if (null != dueAt.dueAt) {
     let diff = getTimeSafe(dueAt.dueAt);
   } else {
     diff = c3 - getTimeSafe(dueAt.savedAt);
   }
   return diff;
-};
+}

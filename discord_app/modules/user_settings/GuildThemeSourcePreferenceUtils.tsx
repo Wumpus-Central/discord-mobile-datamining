@@ -4,18 +4,15 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
-export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {
+export function resolveDefaultGuildThemePreference(arg0) {
   if (arg0 === preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
     let GUILD = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
   } else {
     GUILD = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
-};
-export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourcePreference(
-  guildThemeSourcePreferenceOverride,
-  defaultGuildThemePreference,
-) {
+}
+export function resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, defaultGuildThemePreference) {
   let GuildThemeSourcePreference = dependencyMap;
   let tmp2 = guildThemeSourcePreferenceOverride;
   if (guildThemeSourcePreferenceOverride !== preloaded_user_settings.GuildThemeSourcePreference.GUILD) {
@@ -30,4 +27,4 @@ export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourc
     }
   }
   return tmp2;
-};
+}

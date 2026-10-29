@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx",
 );
 
-export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(value) {
+export function updateDmSafetyAlertsSetting(value) {
   _require = value;
   const PreloadedUserSettingsActionCreators =
     require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
@@ -20,4 +20,4 @@ export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
-};
+}

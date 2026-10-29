@@ -10,7 +10,7 @@ let result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanOverlay
 export const CONJURE_PLAN_OVERLAY_SCENE_ASPECT_RATIO = 1.8860510805500983;
 export const CONJURE_PLAN_OVERLAY_WIDGET_TOP = combined;
 export const CONJURE_PLAN_OVERLAY_WIDGET_END = combined1;
-export const conjurePlanDesignPreviews = function conjurePlanDesignPreviews(proposal) {
+export function conjurePlanDesignPreviews(proposal) {
   const result = conjurePlanExperienceSurfaces.conjurePlanDesignExperienceId(proposal);
   const design_image = proposal.design_image;
   let tmp4 = null;
@@ -97,8 +97,8 @@ export const conjurePlanDesignPreviews = function conjurePlanDesignPreviews(prop
   }
   obj3.overlay = tmp15;
   return obj3;
-};
-export const conjurePlanOverlayWidgetBox = function conjurePlanOverlayWidgetBox(size) {
+}
+export function conjurePlanOverlayWidgetBox(size) {
   const bound = Math.min(1, 1872 / size.width, 970 / size.height);
   size = { width: null, height: null };
   const result = ((size.width * bound) / 1920) * 100;
@@ -106,4 +106,4 @@ export const conjurePlanOverlayWidgetBox = function conjurePlanOverlayWidgetBox(
   const result1 = ((size.height * bound) / 1018) * 100;
   size.height = "" + Number(result1.toFixed(3)) + "%";
   return size;
-};
+}

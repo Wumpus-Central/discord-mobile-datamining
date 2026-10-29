@@ -160,11 +160,11 @@ export default function getInitialNavigationState(arr) {
   }
   return tmp;
 }
-export const wrapRouteForRootNavigator = function wrapRouteForRootNavigator(items) {
+export function wrapRouteForRootNavigator(items) {
   const obj = { name: "main", state: { routes: items, index: items.length - 1 } };
   items = [obj];
   return items;
-};
+}
 export function getInitialAuthState() {
   const obj = { routes: null, index: 0 };
   const items = [{ name: "auth" }];
@@ -172,8 +172,8 @@ export function getInitialAuthState() {
   return obj;
 }
 export { getInitialGuildState };
-export const computeInitialNavigationState = function computeInitialNavigationState() {
+export function computeInitialNavigationState() {
   const tmp = computeInitialNavigationStateWithoutLogging();
   logger.log("Initial State:", tmp);
   return tmp;
-};
+}

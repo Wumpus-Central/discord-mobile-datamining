@@ -14,7 +14,7 @@ const Permissions = Constants.Permissions;
 const ChannelFlags = ChannelConstants.ChannelFlags;
 const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
 
-export const getActiveTextChannels = function getActiveTextChannels(guildId) {
+export function getActiveTextChannels(guildId) {
   let tmp = arg1;
   if (arg1 === undefined) {
     const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
@@ -70,4 +70,4 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
       return false;
     }
   });
-};
+}

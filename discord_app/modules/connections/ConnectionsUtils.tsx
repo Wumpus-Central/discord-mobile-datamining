@@ -10,7 +10,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(7312);
+const Constants = fn(7336);
 ({ MetadataFields: hasOwnProperty, OperatorTypes: metroRequire } = Constants);
 const PlatformTypes = fn(1084).PlatformTypes;
 const size = fn(2);
@@ -25,7 +25,7 @@ export const officialApplicationIds = [
   "512333785338216465",
 ];
 export const ConnectionConfigurationRuleOperator = { AND: 0, [0]: "AND", OR: 1, [1]: "OR" };
-export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
+export function getCallbackParamsFromURL(c0) {
   let toURLSafeResult = URLUtilsDefault.toURLSafe(c0);
   if (toURLSafeResult == null) {
     const obj2 = { searchParams: null };
@@ -44,8 +44,8 @@ export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
   const tmpResult5 = _modDef38;
   _modDef38(!Array.isArray(errorDescription), "Received multiple query param values for error_description");
   return { code, state, error, errorDescription };
-};
-export const getConnectionsCheckText = function getConnectionsCheckText(value) {
+}
+export function getConnectionsCheckText(value) {
   ({ connectionType, connectionMetadataField, operator, operatorText } = value);
   const rounded = Math.round(Number(value.value));
   _require = rounded;
@@ -372,11 +372,11 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
     }
   }
   return formatResult;
-};
-export const isVerifiedRolesChannelVisible = function isVerifiedRolesChannelVisible(sortedRoles) {
+}
+export function isVerifiedRolesChannelVisible(sortedRoles) {
   return sortedRoles.some((tags) => null === tags.tags.guild_connections);
-};
-export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guildMember) {
+}
+export function getVisibleConnectionsRole(guildMember) {
   guildMember = guildMember.guildMember;
   ({ guild, sortedGuildRoles, channel, onlyChannelConnectionRoles } = guildMember);
   if (onlyChannelConnectionRoles === undefined) {
@@ -423,8 +423,8 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
     }
     tmp = null == guild && null != channel;
   }
-};
-export const getCreatedAtDate = function getCreatedAtDate(metadata, locale) {
+}
+export function getCreatedAtDate(metadata, locale) {
   if (null != metadata) {
     if ("" !== metadata) {
       const _Date = Date;
@@ -446,4 +446,4 @@ export const getCreatedAtDate = function getCreatedAtDate(metadata, locale) {
     }
   }
   return null;
-};
+}

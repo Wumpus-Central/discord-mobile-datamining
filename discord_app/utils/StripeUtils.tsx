@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import c from "../../_runtime/00576_c.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod6514 from "../../_runtime/metro/06514__.js";
+import _mod6538 from "../../_runtime/metro/06538__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -13,7 +13,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6514.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6538.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -32,7 +32,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -227,7 +227,7 @@ function getStripeElementLocale(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/StripeUtils.tsx");
 
-export const validateExpiry = function validateExpiry(arg0) {
+export function validateExpiry(arg0) {
   try {
     [tmp4, tmp5] = (function parseExpString(str) {
       closure_0 = str;
@@ -310,9 +310,9 @@ export const validateExpiry = function validateExpiry(arg0) {
   } catch (err) {
     return false;
   }
-};
+}
 export { getStripe };
-export const getStripeClientMode = function getStripeClientMode() {
+export function getStripeClientMode() {
   if (null == constants.STRIPE.KEY) {
     logger.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", constants.STRIPE.KEY);
     let str2 = "unknown";
@@ -330,8 +330,8 @@ export const getStripeClientMode = function getStripeClientMode() {
     }
   }
   return str2;
-};
-export const parseStripePaymentMethod = function parseStripePaymentMethod(billing_details) {
+}
+export function parseStripePaymentMethod(billing_details) {
   billing_details = billing_details.billing_details;
   let address = billing_details.address;
   if (address == null) {
@@ -373,10 +373,8 @@ export const parseStripePaymentMethod = function parseStripePaymentMethod(billin
   }
   obj.postalCode = str7;
   return { token: billing_details.id, billingAddressInfo: obj };
-};
-export const parseBillingAddressInfoToStripeBillingDetails = function parseBillingAddressInfoToStripeBillingDetails(
-  name,
-) {
+}
+export function parseBillingAddressInfoToStripeBillingDetails(name) {
   return {
     name: name.name,
     address: {
@@ -388,8 +386,8 @@ export const parseBillingAddressInfoToStripeBillingDetails = function parseBilli
       country: name.country,
     },
   };
-};
-export const authenticatePaymentIntentForPaymentId = function authenticatePaymentIntentForPaymentId() {
+}
+export function authenticatePaymentIntentForPaymentId() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -398,7 +396,7 @@ export const authenticatePaymentIntentForPaymentId = function authenticatePaymen
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { getStripeElementLocale };
 export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled()
   ? function useStripeLocale() {

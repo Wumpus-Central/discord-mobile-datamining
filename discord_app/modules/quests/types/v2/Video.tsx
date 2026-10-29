@@ -3,7 +3,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Video.tsx");
 
-export const videoAssetFromServer = function videoAssetFromServer(url) {
+export function videoAssetFromServer(url) {
   const size = {
     url: url.url,
     width: url.width,
@@ -13,8 +13,8 @@ export const videoAssetFromServer = function videoAssetFromServer(url) {
     transcript: url.transcript,
   };
   return size;
-};
-export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServer(assets) {
+}
+export function desktopVideoAssetsFromServer(assets) {
   const obj = { video: null };
   const video = assets.video;
   obj.video = {
@@ -50,11 +50,11 @@ export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServe
     obj.videoHls = size1;
   }
   return obj;
-};
-export const desktopVideoMessagesFromServer = function desktopVideoMessagesFromServer(messages) {
+}
+export function desktopVideoMessagesFromServer(messages) {
   return { videoTitle: messages.video_title };
-};
-export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(assets) {
+}
+export function mobileVideoAssetsFromServer(assets) {
   const obj = { video: null };
   const video = assets.video;
   obj.video = {
@@ -90,7 +90,7 @@ export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(
     obj.videoHls = size1;
   }
   return obj;
-};
-export const mobileVideoMessagesFromServer = function mobileVideoMessagesFromServer(messages) {
+}
+export function mobileVideoMessagesFromServer(messages) {
   return { videoTitle: messages.video_title };
-};
+}

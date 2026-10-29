@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugJson.tsx");
 
-export const extractLogJson = function extractLogJson(message) {
+export function extractLogJson(message) {
   if (message.length > 16000) {
     return null;
   } else {
@@ -53,4 +53,4 @@ export const extractLogJson = function extractLogJson(message) {
       const str3 = message.slice(tmp3);
     }
   }
-};
+}

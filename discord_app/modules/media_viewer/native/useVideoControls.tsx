@@ -11,8 +11,8 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 const module_570 = fn(570);
-const obj5 = module_570.create(() => ({ controls: "Reflect", paused: true }));
-const createStyles = fn(5004);
+const obj5 = module_570.create(() => ({ controls: "Reflect", paused: null }));
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -208,43 +208,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = require("useMediaItemHasSpoiler");
     };
 export const useVideoStateStore = obj5;
-export const initVideoStateStore = function initVideoStateStore() {
+export function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "Reflect", paused: true });
+    state.setState({ controls: "Reflect", paused: null });
   });
-};
-export const setMuted = function setMuted(isMuted) {
+}
+export function setMuted(isMuted) {
   _require = isMuted;
   require("ReactBatchUpdates").batchUpdates(() => {
     const useMediaPlayerMutedStore = MediaPlayerMuteManager.useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState({ isMuted });
   });
-};
-export const toggleMuted = function toggleMuted() {
+}
+export function toggleMuted() {
   ReactBatchUpdates.batchUpdates(() => {
     const useMediaPlayerMutedStore = require("MediaPlayerMuteManager").useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState((isMuted) => ({ isMuted: !isMuted.isMuted }));
   });
-};
-export const setVideoStateControls = function setVideoStateControls(videoControls) {
+}
+export function setVideoStateControls(videoControls) {
   _require = videoControls;
   require("ReactBatchUpdates").batchUpdates(() => obj5.setState({ controls }));
-};
-export const setPausedState = function setPausedState(paused) {
+}
+export function setPausedState(paused) {
   _require = paused;
   require("ReactBatchUpdates").batchUpdates(() => obj5.setState({ paused }));
-};
-export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
+}
+export function tryPauseCurrentVideo() {
   const controls = obj5.getState().controls;
   if (controls != null) {
     controls.pause(true);
   }
-};
-export const unpauseCurrentVideoIfNeeded = function unpauseCurrentVideoIfNeeded() {
+}
+export function unpauseCurrentVideoIfNeeded() {
   if (!obj5.getState().paused) {
     const controls = obj5.getState().controls;
     if (controls != null) {
       controls.pause(false);
     }
   }
-};
+}

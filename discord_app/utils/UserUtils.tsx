@@ -450,7 +450,7 @@ export { getGlobalName };
 export { getFormattedName };
 export { humanizeStatus };
 export { accountAgeInRange };
-export const ageEligibleForPremiumUpsell = function ageEligibleForPremiumUpsell(stateFromStores) {
+export function ageEligibleForPremiumUpsell(stateFromStores) {
   let flag = false;
   if (null != stateFromStores) {
     const _Date = Date;
@@ -464,8 +464,8 @@ export const ageEligibleForPremiumUpsell = function ageEligibleForPremiumUpsell(
     flag = tmp5;
   }
   return !flag;
-};
-export const isNewUser = function isNewUser(createdAt) {
+}
+export function isNewUser(createdAt) {
   let flag = false;
   if (null != createdAt) {
     const _Date = Date;
@@ -479,7 +479,7 @@ export const isNewUser = function isNewUser(createdAt) {
     flag = tmp5;
   }
   return flag;
-};
+}
 export { getUserTag };
 export const useUserTag = tmp3;
 export const useDirectMessageRecipient = tmp4;

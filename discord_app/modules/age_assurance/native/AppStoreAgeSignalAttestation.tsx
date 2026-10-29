@@ -123,7 +123,7 @@ let closure_11 = async function _registerAttestKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -183,7 +183,7 @@ let closure_11 = async function _registerAttestKey(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp20) {
       c4 = tmp;
       throw tmp20;
@@ -201,7 +201,7 @@ let closure_12 = async function _getAppStoreAgeSignalAssertion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -268,13 +268,13 @@ let closure_12 = async function _getAppStoreAgeSignalAssertion(arg0) {
             }
           }
           c9 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp7) {
         c7 = 0;
         closure_134_10(null);
         c9 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else {
         if (2 === tmp7) {
           if (arg0 === 1) {
@@ -290,7 +290,7 @@ let closure_12 = async function _getAppStoreAgeSignalAssertion(arg0) {
             if (null == closure_133_3) {
               c7 = 0;
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               closure_133_4 = closure_133_2;
               nonce = closure_133_3.nonce;
@@ -343,7 +343,7 @@ let closure_12 = async function _getAppStoreAgeSignalAssertion(arg0) {
             if (null == closure_133_4) {
               c7 = 0;
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               c8 = 5;
               c9 = 1;
@@ -383,7 +383,7 @@ let closure_12 = async function _getAppStoreAgeSignalAssertion(arg0) {
         }
         c7 = 0;
         c9 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp47) {
       if (tmp4 === c7) {
@@ -425,7 +425,7 @@ let closure_14 = async function _getAgeSignalChallenge() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -447,14 +447,14 @@ let closure_14 = async function _getAgeSignalChallenge() {
             return obj5;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
           obj3 = PlatformUtils;
         }
       } else if (1 === tmp6) {
         c2 = 0;
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
@@ -494,7 +494,7 @@ let closure_15 = async function _getAgeSignalIntegrityToken(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -526,7 +526,7 @@ let closure_15 = async function _getAgeSignalIntegrityToken(arg0) {
           return obj4;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (arg0 === 1) {
         c2 = 3;
@@ -551,7 +551,7 @@ let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAg
 
 export { buildRequestHashPayload };
 export { buildIOSClientDataPayload };
-export const getAppStoreAgeSignalAssertion = function getAppStoreAgeSignalAssertion() {
+export function getAppStoreAgeSignalAssertion() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -560,8 +560,8 @@ export const getAppStoreAgeSignalAssertion = function getAppStoreAgeSignalAssert
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const warmAgeSignalAttestation = function warmAgeSignalAttestation() {
+}
+export function warmAgeSignalAttestation() {
   if ("production" === PROJECT_ENV) {
     let tmp = 179099419678;
   } else {
@@ -578,8 +578,8 @@ export const warmAgeSignalAttestation = function warmAgeSignalAttestation() {
     const result = NativePlayIntegrityModuleDefault.prepareIntegrityToken(tmp);
     result.catch(() => {});
   }
-};
-export const getAgeSignalChallenge = function getAgeSignalChallenge() {
+}
+export function getAgeSignalChallenge() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -588,8 +588,8 @@ export const getAgeSignalChallenge = function getAgeSignalChallenge() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getAgeSignalIntegrityToken = function getAgeSignalIntegrityToken() {
+}
+export function getAgeSignalIntegrityToken() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -598,4 +598,4 @@ export const getAgeSignalIntegrityToken = function getAgeSignalIntegrityToken() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

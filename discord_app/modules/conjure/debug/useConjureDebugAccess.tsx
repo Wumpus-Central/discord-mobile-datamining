@@ -15,11 +15,11 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result2 = size.fileFinishedImporting("modules/conjure/debug/useConjureDebugAccess.tsx");
 
 export { useConjureDebugPaneEnabled };
-export const useConjureTraceTabEnabled = function useConjureTraceTabEnabled() {
+export function useConjureTraceTabEnabled() {
   if (typeof useConjureDebugPaneEnabled === "function") {
     const DeveloperMode = UserSettings.DeveloperMode;
     return DeveloperMode.useSetting() || c2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

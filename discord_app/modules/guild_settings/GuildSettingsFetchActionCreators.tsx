@@ -44,12 +44,12 @@ let closure_7 = async function _fetchGuildIntegrationsApplications() {
   });
   return closure_129_1;
 };
-const BasicApplicationRecord = fn(2021).BasicApplicationRecord;
+const BasicApplicationRecord = fn(2022).BasicApplicationRecord;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");
 
-export const fetchGuildIntegrationsApplications = function fetchGuildIntegrationsApplications() {
+export function fetchGuildIntegrationsApplications() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -58,8 +58,8 @@ export const fetchGuildIntegrationsApplications = function fetchGuildIntegration
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchGuildEmbed = function fetchGuildEmbed(guildId) {
+}
+export function fetchGuildEmbed(guildId) {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: Endpoints.GUILD_WIDGET(guildId), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
@@ -69,4 +69,4 @@ export const fetchGuildEmbed = function fetchGuildEmbed(guildId) {
       channelId: body.body.channel_id,
     });
   });
-};
+}

@@ -8,7 +8,7 @@ obj.enableNativeLogger(true);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationTTIAnalytics.tsx");
 
-export const trackNavigationTTISpan = function trackNavigationTTISpan(spanComponentName, spanTtiProperties) {
+export function trackNavigationTTISpan(spanComponentName, spanTtiProperties) {
   if (DeveloperOptionsStore.isLoggingInteractionTTIAnalytics) {
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
@@ -16,4 +16,4 @@ export const trackNavigationTTISpan = function trackNavigationTTISpan(spanCompon
   }
   obj = DispatcherDefault;
   obj.dispatch({ type: "TRACK", event: spanComponentName, properties: spanTtiProperties });
-};
+}

@@ -20,8 +20,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== spans) {
         let perfTraceTreeResult = null;
         if (null != spans) {
-          perfTraceTreeResult = tmp(10771).perfTraceTree(spans);
-          const tmpResult = tmp(10771);
+          perfTraceTreeResult = tmp(10846).perfTraceTree(spans);
+          const tmpResult = tmp(10846);
         }
         cResult[0] = spans;
         cResult[1] = perfTraceTreeResult;
@@ -55,8 +55,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Set = Set;
           let set = new Set();
         } else {
-          set = tmp(10771).perfTraceKeys(tmp4);
-          const tmpResult2 = tmp(10771);
+          set = tmp(10846).perfTraceKeys(tmp4);
+          const tmpResult2 = tmp(10846);
         }
         cResult[4] = tmp4;
         cResult[5] = set;

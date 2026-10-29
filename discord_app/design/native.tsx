@@ -157,6 +157,7 @@ import MessageRequestLottie from "components/LottieIcon/native/generated/Message
 import ToggleButton from "components/Button/native/ToggleButton.native.tsx";
 import TableSliderRow from "components/TableRow/native/TableSliderRow.native.tsx";
 import Slider from "components/Slider/native/Slider.native.tsx";
+import IndicatorDot from "components/IndicatorDot/native/IndicatorDot.native.tsx";
 import ContextMenuItem from "components/ContextMenu/native/ContextMenuItem.native.tsx";
 import ContextMenuContainer from "components/ContextMenu/native/ContextMenuContainer.native.tsx";
 import useManaTextMigrationHighlightRestartNotice from "components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx";
@@ -402,6 +403,7 @@ export const TabsVariant = Tabs_Tabs.TabsVariant;
 export const defaultCountFormatter = Tabs_Tabs.defaultCountFormatter;
 export const TabsGradient = TabsGradientDefault;
 export const Badge = Badge.Badge;
+export const IndicatorDot = IndicatorDot.IndicatorDot;
 export const TagGroup = TagGroup.TagGroup;
 export const ContextMenuItemOptions = ContextMenuItem.ContextMenuItemOptions;
 export const CONTEXT_MENU_LONG_PRESS_DURATION_MS = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;

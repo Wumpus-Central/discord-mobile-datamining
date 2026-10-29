@@ -5,24 +5,24 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 
-export const applyOrientationLock = function applyOrientationLock(PORTRAIT) {
+export function applyOrientationLock(PORTRAIT) {
   if (flag === undefined) {
     flag = true;
   }
   if (isOrientationLockSupportedDefault()) {
     DeviceOrientation.lockOrientation(PORTRAIT, flag);
   }
-};
-export const releaseOrientationLock = function releaseOrientationLock(unlockAfterRotatingToPreviousLock) {
+}
+export function releaseOrientationLock(unlockAfterRotatingToPreviousLock) {
   if (isOrientationLockSupportedDefault()) {
     const obj2 = {
       unlockAfterRotatingToPreviousLock: unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock,
     };
     DeviceOrientation.unlockOrientation(obj2);
   }
-};
-export const restoreDefaultOrientationLock = function restoreDefaultOrientationLock() {
+}
+export function restoreDefaultOrientationLock() {
   if (isOrientationLockSupportedDefault()) {
     const result = DeviceOrientation.restoreDefaultOrientation();
   }
-};
+}

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ProfileFrameRecord from "../../records/ProfileFrameRecord.tsx";
 
 require = fn;
-let closure_4 = fn(8731).useFramePreviewOverrideStore;
+let closure_4 = fn(8734).useFramePreviewOverrideStore;
 let c5 = "frame-preview-override";
 const ReactCompilerGating = fn(558);
 const size = fn(2);

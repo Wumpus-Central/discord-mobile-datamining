@@ -7,12 +7,12 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 
 require = fn;
-const UnreadSetting = fn(6740).UnreadSetting;
+const UnreadSetting = fn(6763).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   container: {
-    marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -20,7 +20,7 @@ let obj = {
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -86,7 +86,7 @@ export default noop.memo(
           } else {
             if (cResult[8] !== stateFromStores) {
               const obj2 = { channel: stateFromStores };
-              const tmp15 = id(9051)(obj2);
+              const tmp15 = id(9054)(obj2);
               cResult[8] = stateFromStores;
               cResult[9] = tmp15;
               let tmp13 = tmp15;
@@ -129,7 +129,7 @@ export default noop.memo(
               selected,
               resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
             };
-            const tmp21 = jsx(id(17831), {
+            const tmp21 = jsx(id(18069), {
               onPress: tmp11,
               onLongPress: tmp12,
               style: tmp4.container,
@@ -212,13 +212,13 @@ export default noop.memo(
             resolvedUnreadSetting: null,
           };
           const obj3 = { channel: stateFromStores };
-          obj2.accessibilityLabel = id(9051)(obj3);
+          obj2.accessibilityLabel = id(9054)(obj3);
           const obj4 = { selected };
           obj2.accessibilityState = obj4;
           obj2.channel = stateFromStores;
           obj2.selected = selected;
           obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-          tmp7 = jsx(id(17831), {
+          tmp7 = jsx(id(18069), {
             onPress: callback,
             onLongPress: tmp6,
             style: tmp.container,
@@ -230,7 +230,7 @@ export default noop.memo(
             selected: null,
             resolvedUnreadSetting: null,
           });
-          const tmp10 = id(17831);
+          const tmp10 = id(18069);
         }
         return tmp7;
       },

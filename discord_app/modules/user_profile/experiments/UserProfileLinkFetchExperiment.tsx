@@ -9,6 +9,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileLinkFetchExperiment.tsx");
 
-export const getIsUserProfileLinkFetchEnabled = function getIsUserProfileLinkFetchEnabled(showUserProfileActionSheet) {
+export function getIsUserProfileLinkFetchEnabled(showUserProfileActionSheet) {
   return config.getConfig({ location: showUserProfileActionSheet }).enabled;
-};
+}

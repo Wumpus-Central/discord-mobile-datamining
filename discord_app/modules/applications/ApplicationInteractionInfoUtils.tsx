@@ -5,10 +5,10 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
-export const canViewInteractionInfo = function canViewInteractionInfo(message) {
+export function canViewInteractionInfo(message) {
   return null != message.interactionMetadata;
-};
-export const isPrimaryEntryPointCommandMessage = function isPrimaryEntryPointCommandMessage(message) {
+}
+export function isPrimaryEntryPointCommandMessage(message) {
   const interactionMetadata = message.interactionMetadata;
   let type;
   if (interactionMetadata != null) {
@@ -24,4 +24,4 @@ export const isPrimaryEntryPointCommandMessage = function isPrimaryEntryPointCom
     tmp4 = command_type === Server.ApplicationCommandType.PRIMARY_ENTRY_POINT;
   }
   return tmp4;
-};
+}

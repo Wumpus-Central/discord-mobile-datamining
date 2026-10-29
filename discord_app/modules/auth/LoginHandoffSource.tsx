@@ -16,7 +16,7 @@ const LoginHandoffSource = {
 const result = size.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
 
 export { LoginHandoffSource };
-export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(arg0) {
+export function getLoginHandoffSourceFromRedirectTo(arg0) {
   const str = decodeURIComponent(arg0);
   const obj = LinkUtils;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
@@ -31,4 +31,4 @@ export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourc
     ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION_SETTING;
   }
   tmpResult = UserSettingsURLUtils;
-};
+}

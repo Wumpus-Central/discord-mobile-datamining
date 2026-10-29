@@ -2,7 +2,7 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import keysSorter from "../../../_runtime/06757_keysSorter.js";
+import keysSorter from "../../../_runtime/06780_keysSorter.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -14,7 +14,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/Authorize.tsx");
 
-export const filterScopes = function filterScopes(items) {
+export function filterScopes(items) {
   const found = items.filter((item) => {
     const RemovedScopes = scopes.RemovedScopes;
     return !RemovedScopes.includes(item);
@@ -27,8 +27,8 @@ export const filterScopes = function filterScopes(items) {
     found.push(OAuth2Scopes.OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
-};
-export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(query) {
+}
+export function parseOAuth2AuthorizeProps(query) {
   const parsed = keysSorter.parse(query, { arrayFormat: "bracket" });
   const NONE = PermissionUtilsAll.NONE;
   try {
@@ -107,4 +107,4 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     obj2.nonce = parsed.nonce;
     return obj2;
   } catch (err) {}
-};
+}

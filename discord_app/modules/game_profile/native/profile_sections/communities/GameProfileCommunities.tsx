@@ -20,15 +20,15 @@ const GameProfileCommunitiesLocaleFilterActionSheetDefault = GameProfileCommunit
 require = fn;
 const View = fn(17).View;
 const JoinGuildSources = fn(1084).JoinGuildSources;
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9332).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9336).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9332).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9336).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -181,7 +181,7 @@ let closure_14 = noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -279,7 +279,7 @@ let closure_14 = noop.memo(
                   P(currentlySelectedChannelId2, closure_129_0);
                 }
                 c6 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp63) {
               if (tmp4 === v0) {
@@ -359,7 +359,7 @@ let closure_14 = noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -461,7 +461,7 @@ let closure_14 = noop.memo(
                     closure_130_7(currentlySelectedChannelId2, closure_129_0);
                   }
                   c6 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp63) {
                 if (tmp4 === c4) {
@@ -718,19 +718,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = game(1125).intl;
       obj3.children = intl.string(game(1125).t.r6bvTh);
-      const items1 = [closure_11(game(5270).Heading, obj3)];
+      const items1 = [closure_11(game(5271).Heading, obj3)];
       if (showLocaleFilter) {
         const obj4 = {
           size: "sm",
           variant: "secondary",
-          icon: closure_11(tmp12(9545).LanguageIcon, { size: "sm" }),
+          icon: closure_11(tmp12(9577).LanguageIcon, { size: "sm" }),
           accessibilityLabel: null,
           onPress: null,
         };
         const intl2 = tmp12(1125).intl;
         obj4.accessibilityLabel = intl2.string(tmp12(1125).t.OlOHDH);
         obj4.onPress = callback;
-        showLocaleFilter = closure_11(tmp12(7991).IconButton, obj4);
+        showLocaleFilter = closure_11(tmp12(8014).IconButton, obj4);
       }
       items1[1] = showLocaleFilter;
       obj2.children = items1;

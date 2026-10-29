@@ -3,11 +3,9 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer.tsx";
 import CheckpointStatNumber from "CheckpointStatNumber.tsx";
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation.tsx";
 import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber.tsx";
-import _modDef13215 from "../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef13216 from "../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -100,70 +98,70 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (tmpResult.isCheckpointStatNumberShrunk(value)) {
           if (cResult[3] === iter.container) {
             if (cResult[4] === iter.croppedContainer) {
-              let tmp21 = cResult[5];
+              let tmp20 = cResult[5];
             }
             if (cResult[6] !== value) {
               const obj2 = { value };
-              const tmp25 = React4(closure_7, obj2);
+              const tmp24 = React4(closure_7, obj2);
               cResult[6] = value;
-              cResult[7] = tmp25;
-              let tmp22 = tmp25;
+              cResult[7] = tmp24;
+              let tmp21 = tmp24;
             } else {
-              tmp22 = cResult[7];
+              tmp21 = cResult[7];
             }
             if (cResult[8] === iter.value) {
-              if (cResult[9] === tmp22) {
-                let tmp26 = cResult[10];
+              if (cResult[9] === tmp21) {
+                let tmp25 = cResult[10];
               }
               if (cResult[11] === iter.clip) {
-                if (cResult[12] === tmp26) {
-                  let tmp30 = cResult[13];
+                if (cResult[12] === tmp25) {
+                  let tmp29 = cResult[13];
                 }
                 if (cResult[14] !== iter.globe) {
-                  const obj3 = { animatedUri: _modDef13215, staticUri: _modDef13216, style: iter.globe };
-                  const tmp38 = React4(CheckpointApngPlayerDefault, obj3);
+                  const obj3 = { style: iter.globe };
+                  const tmp36 = React4(CheckpointGlobeAnimationDefault, obj3);
                   cResult[14] = iter.globe;
-                  cResult[15] = tmp38;
-                  let tmp34 = tmp38;
+                  cResult[15] = tmp36;
+                  let tmp33 = tmp36;
                 } else {
-                  tmp34 = cResult[15];
+                  tmp33 = cResult[15];
                 }
                 if (cResult[16] === tmp4) {
-                  if (cResult[17] === tmp21) {
-                    if (cResult[18] === tmp30) {
+                  if (cResult[17] === tmp20) {
+                    if (cResult[18] === tmp29) {
                     }
                   }
                 }
-                const obj4 = { accessible: true, accessibilityLabel: tmp4, style: tmp21, children: null };
-                const items = [tmp30, tmp34];
+                const obj4 = { accessible: true, accessibilityLabel: tmp4, style: tmp20, children: null };
+                const items = [tmp29, tmp33];
                 obj4.children = items;
-                const tmp42 = hasOwnProperty(View, obj4);
+                const tmp40 = hasOwnProperty(View, obj4);
                 cResult[16] = tmp4;
-                cResult[17] = tmp21;
-                cResult[18] = tmp30;
-                cResult[19] = tmp34;
-                cResult[20] = tmp42;
+                cResult[17] = tmp20;
+                cResult[18] = tmp29;
+                cResult[19] = tmp33;
+                cResult[20] = tmp40;
               }
-              const obj5 = { style: iter.clip, children: tmp26 };
-              const tmp33 = React4(View, obj5);
+              const obj5 = { style: iter.clip, children: tmp25 };
+              const tmp32 = React4(View, obj5);
               cResult[11] = iter.clip;
-              cResult[12] = tmp26;
-              cResult[13] = tmp33;
-              tmp30 = tmp33;
+              cResult[12] = tmp25;
+              cResult[13] = tmp32;
+              tmp29 = tmp32;
             }
-            const obj6 = { style: iter.value, children: tmp22 };
-            const tmp29 = React4(View, obj6);
+            const obj6 = { style: iter.value, children: tmp21 };
+            const tmp28 = React4(View, obj6);
             cResult[8] = iter.value;
-            cResult[9] = tmp22;
-            cResult[10] = tmp29;
-            tmp26 = tmp29;
+            cResult[9] = tmp21;
+            cResult[10] = tmp28;
+            tmp25 = tmp28;
           }
           const items1 = [,];
           ({ container: arr3[0], croppedContainer: arr3[1] } = iter);
           cResult[3] = iter.container;
           cResult[4] = iter.croppedContainer;
           cResult[5] = items1;
-          tmp21 = items1;
+          tmp20 = items1;
         } else {
           if (cResult[21] === iter.container) {
             if (cResult[22] === iter.uncroppedContainer) {
@@ -179,11 +177,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = cResult[25];
             }
             if (cResult[26] !== iter.globe) {
-              const obj8 = { animatedUri: _modDef13215, staticUri: _modDef13216, style: iter.globe };
-              const tmp16 = React4(CheckpointApngPlayerDefault, obj8);
+              const obj8 = { style: iter.globe };
+              const tmp15 = React4(CheckpointGlobeAnimationDefault, obj8);
               cResult[26] = iter.globe;
-              cResult[27] = tmp16;
-              let tmp12 = tmp16;
+              cResult[27] = tmp15;
+              let tmp12 = tmp15;
             } else {
               tmp12 = cResult[27];
             }
@@ -191,22 +189,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[29] === tmp7) {
                 if (cResult[30] === tmp8) {
                   if (cResult[31] === tmp12) {
-                    let tmp17 = cResult[32];
+                    let tmp16 = cResult[32];
                   }
-                  return tmp17;
+                  return tmp16;
                 }
               }
             }
             const obj9 = { accessible: true, accessibilityLabel: tmp4, style: tmp7, children: null };
             const items2 = [tmp8, tmp12];
             obj9.children = items2;
-            const tmp20 = hasOwnProperty(View, obj9);
+            const tmp19 = hasOwnProperty(View, obj9);
             cResult[28] = tmp4;
             cResult[29] = tmp7;
             cResult[30] = tmp8;
             cResult[31] = tmp12;
-            cResult[32] = tmp20;
-            tmp17 = tmp20;
+            cResult[32] = tmp19;
+            tmp16 = tmp19;
           }
           const items3 = [,];
           ({ container: arr[0], uncroppedContainer: arr[1] } = iter);
@@ -251,8 +249,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.children = React4(closure_7, obj5);
         obj3.children = React4(View, obj4);
         const items1 = [React4(View, obj3)];
-        const obj6 = { animatedUri: _modDef13215, staticUri: _modDef13216, style: iter.globe };
-        items1[1] = React4(CheckpointApngPlayerDefault, obj6);
+        const obj6 = { style: iter.globe };
+        items1[1] = React4(CheckpointGlobeAnimationDefault, obj6);
         obj2.children = items1;
         let tmp3Result = hasOwnProperty(View, obj2);
       } else {
@@ -260,8 +258,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.style = items;
         const obj7 = { value };
         const items2 = [React4(closure_7, obj7)];
-        const obj8 = { animatedUri: _modDef13215, staticUri: _modDef13216, style: iter.globe };
-        items2[1] = React4(CheckpointApngPlayerDefault, obj8);
+        const obj8 = { style: iter.globe };
+        items2[1] = React4(CheckpointGlobeAnimationDefault, obj8);
         obj2.children = items2;
         tmp3Result = hasOwnProperty(View, obj2);
       }

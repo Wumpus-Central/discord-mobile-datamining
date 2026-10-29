@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-10-interest-picker",
   kind: "user",
@@ -20,14 +20,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/InterestPickerExperiment.tsx");
 
 export const InterestPickerExperiment = apexExperiment;
-export const isInterestPickerExperimentEnabled = function isInterestPickerExperimentEnabled(nuf_interest_picker_step) {
+export function isInterestPickerExperimentEnabled(nuf_interest_picker_step) {
   try {
     const obj = { location: nuf_interest_picker_step };
     return apexExperiment.getConfig(obj).enabled;
   } catch (err) {
     return false;
   }
-};
+}
 export const useInterestPickerGameList = ReactCompilerGating.isReactCompilerEnabled()
   ? function useInterestPickerGameList(location) {
       const cResult = c.c(2);

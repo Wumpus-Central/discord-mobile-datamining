@@ -4,13 +4,13 @@ import size from "../../../../_runtime/metro/00002__.js";
 const map = new Map();
 let result = size.fileFinishedImporting("modules/conjure/tips/conjureTipImpressions.tsx");
 
-export const conjureTipShownAt = function conjureTipShownAt(arg0, id) {
+export function conjureTipShownAt(arg0, id) {
   return map.get("" + arg0 + ":" + id);
-};
-export const recordConjureTipImpression = function recordConjureTipImpression(arg0, id, timestamp) {
+}
+export function recordConjureTipImpression(arg0, id, timestamp) {
   const result = map.set("" + arg0 + ":" + id, timestamp);
-};
-export const countOwnMessagesSince = function countOwnMessagesSince(arr, conjureTipShownAtResult, stateFromStores) {
+}
+export function countOwnMessagesSince(arr, conjureTipShownAtResult, stateFromStores) {
   let diff = arr.length - 1;
   let num = 0;
   if (0 <= diff) {
@@ -44,8 +44,8 @@ export const countOwnMessagesSince = function countOwnMessagesSince(arr, conjure
     }
   }
   return num;
-};
-export const isConjureTipCoolingDown = function isConjureTipCoolingDown(arg0, arg1) {
+}
+export function isConjureTipCoolingDown(arg0, arg1) {
   let tmp = null != arg0;
   if (tmp) {
     tmp = arg0 > 0;
@@ -54,4 +54,4 @@ export const isConjureTipCoolingDown = function isConjureTipCoolingDown(arg0, ar
     tmp = arg0 < arg1;
   }
   return tmp;
-};
+}

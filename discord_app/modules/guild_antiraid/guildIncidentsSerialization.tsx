@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");
 
-export const fromServerGuildIncidentsData = function fromServerGuildIncidentsData(incidents_data) {
+export function fromServerGuildIncidentsData(incidents_data) {
   if (null != incidents_data) {
     const _Object = Object;
     if (0 !== Object.keys(incidents_data).length) {
@@ -46,8 +46,8 @@ export const fromServerGuildIncidentsData = function fromServerGuildIncidentsDat
     }
   }
   return null;
-};
-export const toServerGuildIncidentsData = function toServerGuildIncidentsData(incidentsData) {
+}
+export function toServerGuildIncidentsData(incidentsData) {
   let tmp = null;
   if (null != incidentsData) {
     tmp = null;
@@ -93,4 +93,4 @@ export const toServerGuildIncidentsData = function toServerGuildIncidentsData(in
       null == incidentsData.lockdownDurationHours;
   }
   return tmp;
-};
+}

@@ -93,10 +93,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 
 export default validateEmbeddedAppFrame;
-export const validateEmbeddedAppFrameOnAnySurface = function validateEmbeddedAppFrameOnAnySurface(require) {
+export function validateEmbeddedAppFrameOnAnySurface(require) {
   return validateFrame(require, true);
-};
-export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(socket) {
+}
+export function tryValidateEmbeddedAppFrame(socket) {
   try {
     return validateEmbeddedAppFrame(socket);
   } catch (tmp3) {
@@ -106,4 +106,4 @@ export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(
       throw tmp3;
     }
   }
-};
+}

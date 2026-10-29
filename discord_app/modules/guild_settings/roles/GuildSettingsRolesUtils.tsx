@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06863_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06886_fuzzysearch.js";
 import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import GuildRoleMemberActionCreators from "../GuildRoleMemberActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19413).GuildSettingsRoleEditSections;
+const constants = fn(19646).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -347,7 +347,7 @@ export const useQueryGuildMembers = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-export const filterFullMembersByQuery = function filterFullMembersByQuery(str, id) {
+export function filterFullMembersByQuery(str, id) {
   str = str.trim();
   const formatted = str.toLowerCase();
   let tmp8Result = id.id === formatted;
@@ -358,8 +358,8 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
     tmp8Result = fuzzysearchDefault(formatted, id.userTag.toLowerCase());
   }
   return tmp8Result;
-};
-export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY) {
+}
+export function getSectionAnalyticsName(DISPLAY) {
   if (constants.MEMBERS === DISPLAY) {
     return "Members";
   } else if (constants.PERMISSIONS === DISPLAY) {
@@ -371,12 +371,12 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
   } else {
     GlobalUtils.assertNever(DISPLAY);
   }
-};
-export const filterRole = function filterRole(name, str) {
+}
+export function filterRole(name, str) {
   let hasItem = "" === str;
   if (!hasItem) {
     const formatted = str.toLowerCase();
     hasItem = formatted.includes(str.toLowerCase());
   }
   return hasItem;
-};
+}

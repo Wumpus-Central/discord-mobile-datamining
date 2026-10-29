@@ -73,7 +73,7 @@ export default function isMessageMentioned(suppressRoles) {
     suppressRoles: flag,
   });
 }
-export const isRawMessageMentioned = function isRawMessageMentioned(suppressRoles) {
+export function isRawMessageMentioned(suppressRoles) {
   ({ rawMessage, suppressEveryone } = suppressRoles);
   if (suppressEveryone === undefined) {
     suppressEveryone = false;
@@ -113,5 +113,5 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   obj.suppressEveryone = suppressEveryone;
   obj.suppressRoles = flag;
   return isMentioned(obj);
-};
+}
 export { isMentioned };

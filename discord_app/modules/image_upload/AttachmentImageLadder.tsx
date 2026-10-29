@@ -6,14 +6,14 @@ let result = size.fileFinishedImporting("modules/image_upload/AttachmentImageLad
 
 export const ATTACHMENT_LADDER = items;
 export const ATTACHMENT_LADDER_MAX_UPSCALE = 1.1;
-export const getSnapDownMaxUpscale = function getSnapDownMaxUpscale(minSnapDownDpr, arg1) {
+export function getSnapDownMaxUpscale(minSnapDownDpr, arg1) {
   let maxUpscale = null;
   if (arg1 >= minSnapDownDpr.minSnapDownDpr) {
     maxUpscale = minSnapDownDpr.maxUpscale;
   }
   return maxUpscale;
-};
-export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) {
+}
+export function snapAttachmentDimensions(arg0) {
   ({ targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale } = arg0);
   const bound = Math.max(targetWidth, targetHeight);
   if (bound <= 0) {
@@ -84,4 +84,4 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
     size2.height = bound4;
     return size2;
   }
-};
+}

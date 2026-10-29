@@ -27,6 +27,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/NameplateRecord.tsx");
 
 export default prototype;
-export const isNameplateRecord = function isNameplateRecord(first1) {
+export function isNameplateRecord(first1) {
   return first1 instanceof prototype;
-};
+}

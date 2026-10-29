@@ -161,7 +161,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5748).sortActivity;
+const sortActivity = fn(5750).sortActivity;
 const Constants = fn(1084);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityTypes: map1, AppStates: closure_14 } = Constants);
@@ -229,13 +229,13 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
   }
   return this.findActivity((application_id) => application_id.application_id === closure_0, flag);
 };
-prototype["findActivity"] = function findActivity(cResult) {
+prototype["findActivity"] = function findActivity(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
   activities = this.getActivities(flag);
-  return activities.find(cResult);
+  return activities.find(arg0);
 };
 SelfPresenceStore.displayName = "SelfPresenceStore";
 const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {

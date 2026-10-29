@@ -65,9 +65,9 @@ prototype["resetState"] = function resetState() {
 const result = size.fileFinishedImporting("lib/uploader/Upload.tsx");
 
 export default Upload;
-export const isResolvedUpload = function isResolvedUpload(file) {
+export function isResolvedUpload(file) {
   return undefined !== file.isVideo && undefined !== file.isImage;
-};
+}
 export const UploadOrigin = {
   FILE_ATTACHMENT: 0,
   [0]: "FILE_ATTACHMENT",

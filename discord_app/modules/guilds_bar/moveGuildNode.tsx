@@ -18,6 +18,6 @@ export default function moveGuildNode(id, id1) {
   GuildActionCreatorsDefault.moveById(id, id1, flag, flag2);
   UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
 }
-export const persistGuildsBarOrder = function persistGuildsBarOrder() {
+export function persistGuildsBarOrder() {
   UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
-};
+}

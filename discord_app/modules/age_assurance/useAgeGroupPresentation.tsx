@@ -39,16 +39,16 @@ let result = size.fileFinishedImporting("modules/age_assurance/useAgeGroupPresen
 
 export { AgeGroupState };
 export const useAgeGroupState = tmp2;
-export const handleOpenAgeGatedContentArticle = function handleOpenAgeGatedContentArticle() {
+export function handleOpenAgeGatedContentArticle() {
   const obj = AgeVerificationActionCreatorsDefault;
   obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
-};
-export const handleShowAgeVerification = function handleShowAgeVerification() {
+}
+export function handleShowAgeVerification() {
   const obj = AgeVerificationActionCreatorsDefault;
   const result = obj.showAgeVerificationGetStartedModal({
     entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP,
   });
-};
+}
 export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAgeGroupValueLabel() {
       const obj = c;

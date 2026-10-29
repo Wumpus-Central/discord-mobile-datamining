@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx",
 );
 
-export const createStageStartSystemMessage = function createStageStartSystemMessage(roleStyle) {
+export function createStageStartSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { content: null };
@@ -25,4 +25,4 @@ export const createStageStartSystemMessage = function createStageStartSystemMess
   });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
-};
+}

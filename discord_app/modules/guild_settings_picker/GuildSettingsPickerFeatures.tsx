@@ -47,7 +47,7 @@ let closure_6 = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
 
-export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeature(feature) {
+export function useGuildSettingsPickerFeature(feature) {
   let tmp2;
   if (null != feature) {
     tmp2 = obj[feature];
@@ -86,4 +86,4 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
       return tmp;
     },
   };
-};
+}

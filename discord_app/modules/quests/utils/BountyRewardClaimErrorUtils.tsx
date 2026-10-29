@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const set = new Set([260021]);
 const result = size.fileFinishedImporting("modules/quests/utils/BountyRewardClaimErrorUtils.tsx");
 
-export const resolveBountyRewardClaimErrorMessage = function resolveBountyRewardClaimErrorMessage(code) {
+export function resolveBountyRewardClaimErrorMessage(code) {
   code = undefined;
   if (code != null) {
     code = code.code;
@@ -24,4 +24,4 @@ export const resolveBountyRewardClaimErrorMessage = function resolveBountyReward
   }
   const intl = util.intl;
   message = intl.string(util.t.uLjCfn);
-};
+}

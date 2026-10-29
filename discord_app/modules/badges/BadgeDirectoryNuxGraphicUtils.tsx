@@ -2,15 +2,15 @@
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 let items = [
-  fn(8710).BadgeId.STREAMING,
-  fn(8710).BadgeId.GAME_VARIETY,
-  fn(8710).BadgeId.GAME_TIME,
-  fn(8710).BadgeId.ACCOUNT_AGE,
+  fn(8713).BadgeId.STREAMING,
+  fn(8713).BadgeId.GAME_VARIETY,
+  fn(8713).BadgeId.GAME_TIME,
+  fn(8713).BadgeId.ACCOUNT_AGE,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectoryNuxGraphicUtils.tsx");
 
-export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNuxGraphicIconUrls(badges) {
+export function getBadgeDirectoryNuxGraphicIconUrls(badges) {
   const map = new Map(
     badges.map((badge_id) => {
       items = [badge_id.badge_id, badge_id];
@@ -62,8 +62,8 @@ export const getBadgeDirectoryNuxGraphicIconUrls = function getBadgeDirectoryNux
   const sorted = items.sort((tierIndex, tierIndex2) => tierIndex2.tierIndex - tierIndex.tierIndex);
   const substr = sorted.slice(0, 3);
   return substr.map((iconUrl) => iconUrl.iconUrl);
-};
-export const getBadgeDirectoryNuxGraphicLayout = function getBadgeDirectoryNuxGraphicLayout(badgeIconUrls) {
+}
+export function getBadgeDirectoryNuxGraphicLayout(badgeIconUrls) {
   [tmp2, tmp3, tmp4] = badgeIconUrls;
   if (null == tmp2) {
     let obj = { type: "fallback" };
@@ -83,4 +83,4 @@ export const getBadgeDirectoryNuxGraphicLayout = function getBadgeDirectoryNuxGr
     obj.iconUrls = items2;
   }
   return obj;
-};
+}

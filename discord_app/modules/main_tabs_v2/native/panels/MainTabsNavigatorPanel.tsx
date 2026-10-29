@@ -19,7 +19,7 @@ const Constants = fn(1084);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -67,11 +67,11 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(17701);
+                obj = obj(17939);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
-                obj(5195).dismissKeyboard();
-                const objResult = obj(5195);
+                obj(5196).dismissKeyboard();
+                const objResult = obj(5196);
                 const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
               }
               closure_4.current = true;
@@ -447,11 +447,11 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(17701);
+              obj = obj(17939);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
-              obj(5195).dismissKeyboard();
-              const objResult = obj(5195);
+              obj(5196).dismissKeyboard();
+              const objResult = obj(5196);
               const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
             }
             closure_4.current = true;

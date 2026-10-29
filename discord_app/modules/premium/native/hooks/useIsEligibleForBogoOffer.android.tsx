@@ -42,13 +42,13 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
       const tmpResult = forceUpdate(504);
       const stateFromStores1 = forceUpdate(504).useStateFromStores(tmp8, tmp9);
       const tmpResult6 = forceUpdate(504);
-      const premiumTrialOffer = forceUpdate(7592).usePremiumTrialOffer();
-      const tmpResult7 = forceUpdate(7592);
-      const premiumDiscountOffer = forceUpdate(10493).usePremiumDiscountOffer();
-      const tmpResult8 = forceUpdate(10493);
-      const isPaymentsBlocked = forceUpdate(7564).useIsPaymentsBlocked();
-      const tmpResult9 = forceUpdate(7564);
-      forceUpdate = forceUpdate(10495).useForceUpdate();
+      const premiumTrialOffer = forceUpdate(7615).usePremiumTrialOffer();
+      const tmpResult7 = forceUpdate(7615);
+      const premiumDiscountOffer = forceUpdate(10526).usePremiumDiscountOffer();
+      const tmpResult8 = forceUpdate(10526);
+      const isPaymentsBlocked = forceUpdate(7587).useIsPaymentsBlocked();
+      const tmpResult9 = forceUpdate(7587);
+      forceUpdate = forceUpdate(10528).useForceUpdate();
       if (cResult[4] !== stateFromStores) {
         let valueOfResult = null;
         if (null != stateFromStores) {
@@ -105,7 +105,7 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
       cResult[9] = items2;
       tmp18 = items2;
       tmp17 = fn3;
-      const tmpResult10 = forceUpdate(10495);
+      const tmpResult10 = forceUpdate(10528);
     }
   : function useIsEligibleForBogoOffer() {
       const items = [PromotionsStore];
@@ -118,13 +118,13 @@ export const useIsEligibleForBogoOffer = ReactCompilerGating.isReactCompilerEnab
         premiumTypeSubscription.getPremiumTypeSubscription(),
       );
       const obj2 = forceUpdate(504);
-      const premiumTrialOffer = forceUpdate(7592).usePremiumTrialOffer();
-      const obj4 = forceUpdate(7592);
-      const premiumDiscountOffer = forceUpdate(10493).usePremiumDiscountOffer();
-      const obj5 = forceUpdate(10493);
-      const isPaymentsBlocked = forceUpdate(7564).useIsPaymentsBlocked();
-      const obj6 = forceUpdate(7564);
-      forceUpdate = forceUpdate(10495).useForceUpdate();
+      const premiumTrialOffer = forceUpdate(7615).usePremiumTrialOffer();
+      const obj4 = forceUpdate(7615);
+      const premiumDiscountOffer = forceUpdate(10526).usePremiumDiscountOffer();
+      const obj5 = forceUpdate(10526);
+      const isPaymentsBlocked = forceUpdate(7587).useIsPaymentsBlocked();
+      const obj6 = forceUpdate(7587);
+      forceUpdate = forceUpdate(10528).useForceUpdate();
       let valueOfResult = null;
       if (null != stateFromStores) {
         const endDate = stateFromStores.endDate;

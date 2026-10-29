@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07695_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07718_tinycolor.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -62,7 +62,7 @@ export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled
       }
       return brandColorPrimary;
     };
-export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfileFromInvite) {
+export function getProfilePrimaryColor(guildProfileFromInvite) {
   if (null == guildProfileFromInvite) {
     return null;
   } else if (null != guildProfileFromInvite.brandColorPrimary) {
@@ -99,4 +99,4 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
     }
     const obj3 = { id: null, icon: null, size: 64 };
   }
-};
+}

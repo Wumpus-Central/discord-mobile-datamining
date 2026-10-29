@@ -196,7 +196,7 @@ export const RESTART_AGENT_RESUME_GRACE_MS = 5000;
 export const RESTART_AGENT_LABEL = "Restart Agent";
 export const RESTART_AGENT_CLEAR_ALARM_LABEL = "Also Clear Alarm";
 export const RESTART_AGENT_CLEAR_ALARM_HINT = "Scheduled wakeups wait until something sets the alarm again.";
-export const gitInfoRows = function gitInfoRows(info) {
+export function gitInfoRows(info) {
   if (info.running) {
     if (null == info.localError) {
       if (info.checkout) {
@@ -458,8 +458,8 @@ export const gitInfoRows = function gitInfoRows(info) {
   }
   const items3 = [obj27];
   return items3;
-};
-export const gitInfoStatus = function gitInfoStatus(state) {
+}
+export function gitInfoStatus(state) {
   ({ error, info, observedAt } = state);
   if (state.pending) {
     return { line: "Reading the repository", critical: false };
@@ -519,8 +519,8 @@ export const gitInfoStatus = function gitInfoStatus(state) {
     });
     return obj;
   }
-};
-export const restartAgentStatusLine = function restartAgentStatusLine(state) {
+}
+export function restartAgentStatusLine(state) {
   const phase = state.phase;
   if ("idle" === phase) {
     return "Starts a new agent instance; the container keeps running.";
@@ -535,7 +535,7 @@ export const restartAgentStatusLine = function restartAgentStatusLine(state) {
     const _HermesInternal = HermesInternal;
     return "Failed: " + state.reason + " \u00B7 " + ConjureDebugFormat.formatObservedAt(state.observedAt);
   }
-};
+}
 export const useConjureDebugGitInfo = tmp2;
 export const useConjureRestartAgent = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureRestartAgent(arg0) {

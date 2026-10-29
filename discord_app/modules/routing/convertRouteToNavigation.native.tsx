@@ -14,7 +14,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const Routes = Constants.Routes;
 const result = size.fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
 
-export const convertRouteToNavigation = function convertRouteToNavigation(pathname) {
+export function convertRouteToNavigation(pathname) {
   pathname = pathname.pathname;
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
@@ -150,4 +150,4 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
     }
   }
   return true;
-};
+}

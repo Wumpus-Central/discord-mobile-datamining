@@ -5,3 +5,4 @@ const result = size.fileFinishedImporting("modules/display_name_styles/consts/Co
 
 export const CHECKMARK_SIZE = 20;
 export const DARK_SWATCH_THRESHOLD = 0.2;
+export const EYEDROPPER_ICON_SIZE = 14;

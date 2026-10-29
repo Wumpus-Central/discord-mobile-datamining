@@ -43,7 +43,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -251,7 +251,7 @@ export const MAX_CONJURE_LINK_EMBEDS = 4;
 export const CONJURE_LINK_PREFETCH_DELAY_MS = 300;
 export { conjureLinkUrls };
 export { prefetchConjureLinkEmbeds };
-export const readyConjureLinkEmbeds = function readyConjureLinkEmbeds(trimmed) {
+export function readyConjureLinkEmbeds(trimmed) {
   if (trimmed.includes("http")) {
     let match = trimmed.match(URLUtilsDefault.URL_REGEX);
     if (match == null) {
@@ -273,7 +273,7 @@ export const readyConjureLinkEmbeds = function readyConjureLinkEmbeds(trimmed) {
     }
   }
   return tmp12;
-};
+}
 export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureLinkPrefetch(arg0) {
       _require = arg0;
@@ -307,7 +307,7 @@ export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -335,7 +335,7 @@ export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled
                       return obj;
                     } else {
                       c0 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp7) {
                     c0 = tmp;
@@ -392,7 +392,7 @@ export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -420,7 +420,7 @@ export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp7) {
                   c0 = tmp;
@@ -435,7 +435,7 @@ export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled
         str = timeout;
       }, items);
     };
-export const resetConjureLinkEmbedsForTests = function resetConjureLinkEmbedsForTests() {
+export function resetConjureLinkEmbedsForTests() {
   map.clear();
   set.clear();
-};
+}

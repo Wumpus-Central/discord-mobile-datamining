@@ -18,23 +18,22 @@ const SafetyScannedUploadSurface = {
 const result = size.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
 
 export { SafetyScannedUploadSurface };
-export const getSafetyScannedUploadSurfaceForProfileCustomization =
-  function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
-    if (UploadTypes.AVATAR === arg0) {
-      if (null != arg1) {
-        let USER_DEFAULT_PROFILE_AVATAR = obj.USER_GUILD_PROFILE_AVATAR;
-      } else {
-        USER_DEFAULT_PROFILE_AVATAR = obj.USER_DEFAULT_PROFILE_AVATAR;
-      }
-      return USER_DEFAULT_PROFILE_AVATAR;
-    } else if (UploadTypes.BANNER === arg0) {
-      if (null != arg1) {
-        let USER_DEFAULT_PROFILE_BANNER = obj.USER_GUILD_PROFILE_BANNER;
-      } else {
-        USER_DEFAULT_PROFILE_BANNER = obj.USER_DEFAULT_PROFILE_BANNER;
-      }
-      return USER_DEFAULT_PROFILE_BANNER;
+export function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
+  if (UploadTypes.AVATAR === arg0) {
+    if (null != arg1) {
+      let USER_DEFAULT_PROFILE_AVATAR = obj.USER_GUILD_PROFILE_AVATAR;
     } else {
-      return null;
+      USER_DEFAULT_PROFILE_AVATAR = obj.USER_DEFAULT_PROFILE_AVATAR;
     }
-  };
+    return USER_DEFAULT_PROFILE_AVATAR;
+  } else if (UploadTypes.BANNER === arg0) {
+    if (null != arg1) {
+      let USER_DEFAULT_PROFILE_BANNER = obj.USER_GUILD_PROFILE_BANNER;
+    } else {
+      USER_DEFAULT_PROFILE_BANNER = obj.USER_DEFAULT_PROFILE_BANNER;
+    }
+    return USER_DEFAULT_PROFILE_BANNER;
+  } else {
+    return null;
+  }
+}

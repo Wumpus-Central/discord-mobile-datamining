@@ -3,7 +3,7 @@ import router_utils from "../../../routing/router_utils.tsx";
 import ThreadConstants from "../../../threads/ThreadConstants.tsx";
 import AppLauncherNativeConstants from "../../../app_launcher/native/AppLauncherNativeConstants.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import parseURLDefault from "../../../../utils/native/parseURL.tsx";
@@ -128,7 +128,7 @@ const constants3 = ThreadConstants.OpenThreadAnalyticsLocations;
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
 
 export { handleMessagesTapURLLink };
-export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData) {
+export function handleMessagesTapLink(tapLinkData) {
   ({ chatInputRef, message, messageChannel } = tapLinkData);
   const data = tapLinkData.tapLinkData.data;
   if (true === tapLinkData.allowWithinModal) {
@@ -152,11 +152,11 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 const obj19 = ActionSheetActionCreatorsDefault;
                 const obj9 = { guildId: guild_id };
                 obj19.openLazy(
-                  asyncRequireImpl(9259, dependencyMap.paths),
+                  asyncRequireImpl(9263, dependencyMap.paths),
                   "GuildProfileActionSheet:" + guild_id,
                   obj9,
                 );
-                const tmp97 = asyncRequireImpl(9259, dependencyMap.paths);
+                const tmp97 = asyncRequireImpl(9263, dependencyMap.paths);
               }
             }
             break;
@@ -398,7 +398,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                   constants.MESSAGE_EMBED,
                 );
               } else {
-                const tmp106 = asyncRequireImpl(10099, dependencyMap.paths);
+                const tmp106 = asyncRequireImpl(10131, dependencyMap.paths);
                 const obj49 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {
@@ -427,4 +427,4 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
   } else {
     isAlertOrActionSheetOpen;
   }
-};
+}

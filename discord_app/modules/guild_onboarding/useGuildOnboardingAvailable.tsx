@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores;
     };
-export const isGuildOnboardingAvailable = function isGuildOnboardingAvailable(guild) {
+export function isGuildOnboardingAvailable(guild) {
   if (null == guild) {
     return false;
   } else {
@@ -104,4 +104,4 @@ export const isGuildOnboardingAvailable = function isGuildOnboardingAvailable(gu
     }
     return hasItem;
   }
-};
+}

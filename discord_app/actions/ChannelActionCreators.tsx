@@ -18,7 +18,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4860).createChannelRecordFromServer;
+let closure_6 = fn(4861).createChannelRecordFromServer;
 const Constants = fn(1084);
 ({
   AnalyticEvents: closure_9,
@@ -60,7 +60,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -454,7 +454,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "application" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     });
     if (flag) {
@@ -470,7 +470,7 @@ export default {
     };
     const obj2 = {
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "application" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     };
     const tmpResult2 = DispatcherDefault;
@@ -619,8 +619,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7461).checkGuildTemplateDirty(closure_128_2);
-        name(7461);
+        const result = name(7484).checkGuildTemplateDirty(closure_128_2);
+        name(7484);
       }
       return closure_128_1;
     })();
@@ -640,7 +640,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -784,7 +784,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

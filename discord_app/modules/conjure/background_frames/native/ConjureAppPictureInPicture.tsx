@@ -4,14 +4,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05334_LegacyBaseButton.js";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import VoiceNormalIcon2 from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import getGuildIdForEmbeddedSurfaceDefault from "../../../embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
+import conjureFrameSound from "../conjureFrameSound.tsx";
 import conjureBackgroundFrames from "../conjureBackgroundFrames.tsx";
 import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout.tsx";
-import conjureFrameSound from "../conjureFrameSound.tsx";
 import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../../frames/FramesStore.tsx";
@@ -20,12 +20,12 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1084).ThemeTypes;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(10940).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(10975).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let DeviceUtils = fn(4961);
+let DeviceUtils = fn(4962);
 DeviceUtils = DeviceUtils.getRamSize();
 if (DeviceUtils == null) {
   DeviceUtils = Infinity;
@@ -38,9 +38,9 @@ let closure_16 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: t
 let closure_17 = { mass: 0.4, damping: 22, stiffness: 220 };
 let presentation = {
   layoutMode: FrameLayoutModes.PIP,
-  portraitSafeAreasConfig: fn(18650).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
+  portraitSafeAreasConfig: fn(18884).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { window: null, mask: null, card: null, soundBadge: null };
 const rect = {
   position: "absolute",
@@ -130,7 +130,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_6.getGuild(closure_0);
             }
           }
-          const obj2 = { guild: stateFromStores, size: tmp(6919).GuildIconSizes.NORMAL };
+          const obj2 = { guild: stateFromStores, size: tmp(6943).GuildIconSizes.NORMAL };
           const tmp14 = closure_10(GuildIconDefault, obj2);
         }
         cResult[6] = stateFromStores;
@@ -149,7 +149,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 2, children: appName };
-        const tmp18 = closure_10(tmp(5270).Text, obj3);
+        const tmp18 = closure_10(tmp(5271).Text, obj3);
         cResult[8] = appName;
         cResult[9] = tmp18;
       } else {
@@ -191,7 +191,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.card, children: null };
       let tmp9 = null;
       if (null != stateFromStores) {
-        const obj3 = { guild: stateFromStores, size: tmp5(6919).GuildIconSizes.NORMAL };
+        const obj3 = { guild: stateFromStores, size: tmp5(6943).GuildIconSizes.NORMAL };
         tmp9 = closure_10(GuildIconDefault, obj3);
         const tmp2Result = GuildIconDefault;
       }

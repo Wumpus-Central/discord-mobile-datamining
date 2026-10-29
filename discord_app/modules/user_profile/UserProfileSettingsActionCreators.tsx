@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef5840 from "../../../_runtime/metro/05840__.js";
+import _modDef5842 from "../../../_runtime/metro/05842__.js";
 import GuildTagUtils from "../guild_tag/GuildTagUtils.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -10,7 +10,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
-export const setPendingChanges = function setPendingChanges(guildId) {
+export function setPendingChanges(guildId) {
   guildId = guildId.guildId;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0 }));
   const currentUser = UserStore.getCurrentUser();
@@ -66,7 +66,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (displayNameStyles2 == null) {
         displayNameStyles2 = null;
       }
-      obj.pendingDisplayNameStyles = _modDef5840(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
+      obj.pendingDisplayNameStyles = _modDef5842(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
     }
     if ("customTypingIndicatorStyle" in merged) {
       const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
@@ -78,7 +78,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (typingIndicatorStyle == null) {
         typingIndicatorStyle = null;
       }
-      obj.pendingCustomTypingIndicatorStyle = _modDef5840(tmp17, typingIndicatorStyle)
+      obj.pendingCustomTypingIndicatorStyle = _modDef5842(tmp17, typingIndicatorStyle)
         ? undefined
         : customTypingIndicatorStyle;
     }
@@ -283,7 +283,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (_modDef5840(tmp42, themeColors)) {
+          if (_modDef5842(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -325,4 +325,4 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     const merged1 = Object.assign(obj);
     DispatcherDefault.dispatch(obj4);
   }
-};
+}

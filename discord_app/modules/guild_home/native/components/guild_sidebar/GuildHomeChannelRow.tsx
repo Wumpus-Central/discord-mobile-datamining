@@ -6,12 +6,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1084).Routes;
-const StaticChannelRoute = fn(4863).StaticChannelRoute;
+const StaticChannelRoute = fn(4864).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
-    marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -19,7 +19,7 @@ let obj2 = {
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const ChannelModes = tmp(13507).ChannelModes;
+      const ChannelModes = tmp(13740).ChannelModes;
       const tmp6 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1125).intl;
@@ -70,9 +70,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp6) {
         const obj3 = { name: tmp10, mode: tmp6 };
-        const tmp15 = jsx(tmp(13507).BaseChannelName, { name: tmp10, mode: tmp6 });
-        const obj4 = { mode: tmp6, IconComponent: tmp(15343).SignPostIcon };
-        const tmp16 = jsx(tmp(13507).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(15343).SignPostIcon });
+        const tmp15 = jsx(tmp(13740).BaseChannelName, { name: tmp10, mode: tmp6 });
+        const obj4 = { mode: tmp6, IconComponent: tmp(15578).SignPostIcon };
+        const tmp16 = jsx(tmp(13740).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(15578).SignPostIcon });
         cResult[6] = tmp6;
         cResult[7] = tmp15;
         cResult[8] = tmp16;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
       }, items);
-      const ChannelModes = id(13507).ChannelModes;
+      const ChannelModes = id(13740).ChannelModes;
       if (selected) {
         let DEFAULT = ChannelModes.SELECTED;
         let tmp5 = tmp3;
@@ -150,8 +150,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp5(1125).intl;
       obj2.name = intl2.string(tmp5(1125).t.VbpLyU);
       obj2.mode = DEFAULT;
-      obj.name = jsx(tmp5(13507).BaseChannelName, { name: null, mode: null });
-      obj.icon = jsx(tmp5(13507).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15343).SignPostIcon });
+      obj.name = jsx(tmp5(13740).BaseChannelName, { name: null, mode: null });
+      obj.icon = jsx(tmp5(13740).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15578).SignPostIcon });
       return (
         <tmp7
           onPress={callback}

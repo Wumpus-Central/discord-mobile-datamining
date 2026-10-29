@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting("modules/summaries/Summary.tsx");
 
 export const SummarySources = { SOURCE_0: 0, [0]: "SOURCE_0", SOURCE_1: 1, [1]: "SOURCE_1" };
 export const SummaryType = { UNSET: 0, [0]: "UNSET", SOURCE_1: 1, [1]: "SOURCE_1", SOURCE_2: 2, [2]: "SOURCE_2" };
-export const createSummaryFromServer = function createSummaryFromServer(summary, channelId) {
+export function createSummaryFromServer(summary, channelId) {
   const obj = {
     id: summary.id,
     topic: summary.topic,
@@ -21,4 +21,4 @@ export const createSummaryFromServer = function createSummaryFromServer(summary,
   ({ start_id: obj.startId, end_id: obj.endId, count: obj.count } = summary);
   ({ source: obj.source, type: obj.type } = summary);
   return obj;
-};
+}

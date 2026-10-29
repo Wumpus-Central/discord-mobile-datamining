@@ -6,8 +6,8 @@ import discord_common_AnalyticsUtils from "../../../../../discord_common/js/pack
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import InstantInviteDefault from "../../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef10878 from "../../../../../_runtime/metro/10878__.js";
-import _modDef10879 from "../../../../../_runtime/metro/10879__.js";
+import _modDef10783 from "../../../../../_runtime/metro/10783__.js";
+import _modDef10784 from "../../../../../_runtime/metro/10784__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,11 +16,11 @@ import InviteRecord from "../../../../records/InviteRecord.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(10128);
+const ChannelSettingsStore = fn(10161);
 const Constants = fn(1084);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { listContent: { paddingTop: nativeDefault.space.PX_8 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -54,7 +54,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -99,7 +99,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp2(closure_128_0);
                   v1(false);
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -273,7 +273,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               return jsx(View, obj);
             }
           }
-          SceneLoadingIndicator = SceneLoadingIndicator(7170).SceneLoadingIndicator;
+          SceneLoadingIndicator = SceneLoadingIndicator(7194).SceneLoadingIndicator;
           let obj = {};
           let tmp16 = <SceneLoadingIndicator />;
         } else {
@@ -310,14 +310,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 return jsx(View, obj);
               }
             }
-            let obj3 = { lightSource: _modDef10878, darkSource: _modDef10879, title: null, body: null };
+            let obj3 = { lightSource: _modDef10783, darkSource: _modDef10784, title: null, body: null };
             const intl = SceneLoadingIndicator(1125).intl;
             obj3.title = intl.string(SceneLoadingIndicator(1125).t["+nLJkZ"]);
             const intl2 = SceneLoadingIndicator(1125).intl;
             obj3.body = intl2.string(SceneLoadingIndicator(1125).t.F53CAc);
             tmp16 = jsx(SceneLoadingIndicator(1199).EmptyState, {
-              lightSource: _modDef10878,
-              darkSource: _modDef10879,
+              lightSource: _modDef10783,
+              darkSource: _modDef10784,
               title: null,
               body: null,
             });
@@ -339,7 +339,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj4 = { contentContainerStyle: tmp2.listContent, data: tmp10, keyExtractor: G, renderItem: F };
-            tmp16 = jsx(SceneLoadingIndicator(7256).FlashList, {
+            tmp16 = jsx(SceneLoadingIndicator(7280).FlashList, {
               contentContainerStyle: tmp2.listContent,
               data: tmp10,
               keyExtractor: G,
@@ -362,7 +362,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       [first, dependencyMap] = noop.useState([]);
       const tmp3 = _slicedToArray(noop.useState(true), 2);
       closure_3 = tmp3[1];
-      first(5299)(() => {
+      first(5300)(() => {
         closure_0 = async function _fetchInvites2() {
           if (v3 === 2) {
             v3 = 3;
@@ -374,7 +374,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -421,7 +421,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 v1(closure_128_0);
                 v3(false);
                 v3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp13) {
               v3 = tmp;
@@ -462,22 +462,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const callback = noop.useCallback((code) => code.code, []);
       if (tmp3[0]) {
-        let tmp12 = jsx(channelId(7170).SceneLoadingIndicator, {});
+        let tmp12 = jsx(channelId(7194).SceneLoadingIndicator, {});
       } else if (0 === first.length) {
-        let obj2 = { lightSource: tmp4(10878), darkSource: tmp4(10879), title: null, body: null };
+        let obj2 = { lightSource: tmp4(10783), darkSource: tmp4(10784), title: null, body: null };
         const intl = channelId(1125).intl;
         obj2.title = intl.string(channelId(1125).t["+nLJkZ"]);
         const intl2 = channelId(1125).intl;
         obj2.body = intl2.string(channelId(1125).t.F53CAc);
         tmp12 = jsx(channelId(1199).EmptyState, {
-          lightSource: tmp4(10878),
-          darkSource: tmp4(10879),
+          lightSource: tmp4(10783),
+          darkSource: tmp4(10784),
           title: null,
           body: null,
         });
       } else {
         let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
-        tmp12 = jsx(channelId(7256).FlashList, {
+        tmp12 = jsx(channelId(7280).FlashList, {
           contentContainerStyle: tmp.listContent,
           data: memo,
           keyExtractor: callback,
@@ -502,7 +502,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4) {
             const obj2 = { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT };
-            const tmp8 = jsx(channelId(7131).Navigator, {
+            const tmp8 = jsx(channelId(7155).Navigator, {
               screens: tmp4,
               initialRouteName: constants.INSTANT_INVITES_MANAGEMENT,
             });
@@ -519,7 +519,7 @@ export default noop.memo(
         const intl = channelId(1125).intl;
         obj4.title = intl.string(channelId(1125).t.OQ9MKu);
         const obj = channelId(576);
-        obj4.headerLeft = channelId(6960).getHeaderCloseButton(onClose);
+        obj4.headerLeft = channelId(6984).getHeaderCloseButton(onClose);
         obj4.render = function render() {
           return <closure_2_12 channelId={channelId} />;
         };
@@ -529,7 +529,7 @@ export default noop.memo(
         cResult[1] = onClose;
         cResult[2] = obj3;
         tmp4 = obj3;
-        const tmpResult = channelId(6960);
+        const tmpResult = channelId(6984);
       }
     : function GroupDMInviteManagementScreen(channelId) {
         channelId = channelId.channelId;
@@ -548,7 +548,7 @@ export default noop.memo(
           obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
           return obj;
         }, items);
-        return jsx(channelId(7131).Navigator, {
+        return jsx(channelId(7155).Navigator, {
           screens: memo,
           initialRouteName: constants.INSTANT_INVITES_MANAGEMENT,
         });

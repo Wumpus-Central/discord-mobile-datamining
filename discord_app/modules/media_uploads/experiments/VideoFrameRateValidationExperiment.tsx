@@ -10,8 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/media_uploads/experiments/VideoFrameRateValidationExperiment.tsx");
 
-export const getVideoFrameRateValidationExperimentConfig = function getVideoFrameRateValidationExperimentConfig(
-  location,
-) {
+export function getVideoFrameRateValidationExperimentConfig(location) {
   return config.getConfig({ location: location.location });
-};
+}

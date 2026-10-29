@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, id) {
+export function isGuestOrLurkerInGuild(guild_id, id) {
   guild = GuildStore.getGuild(guild_id);
   let hasItem;
   if (guild != null) {
@@ -86,4 +86,4 @@ export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, 
     isGuestOrLurkerResult = GuildMemberStore.isGuestOrLurker(guild_id, id);
   }
   return isGuestOrLurkerResult;
-};
+}

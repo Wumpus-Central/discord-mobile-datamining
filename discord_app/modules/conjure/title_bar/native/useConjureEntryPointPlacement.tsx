@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const hasConjureGuild = require("ConjureGuildExperiment").useHasConjureGuild(_location);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [tmp(1452).ApexExperimentStore];
+        const items = [tmp(1453).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {

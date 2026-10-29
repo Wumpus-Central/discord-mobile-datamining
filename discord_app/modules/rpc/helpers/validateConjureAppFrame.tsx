@@ -24,7 +24,7 @@ export default function validateConjureAppFrame(arg0) {
   }
 }
 export const isConjureApplication = isConjureApplicationDefault;
-export const isUserScopedConjureApplication = function isUserScopedConjureApplication(applicationId) {
+export function isUserScopedConjureApplication(applicationId) {
   const result = ConjureProjectStore.findProjectByApplicationId(applicationId);
   if (null != result) {
     return "user" === result.install_scope;
@@ -47,12 +47,12 @@ export const isUserScopedConjureApplication = function isUserScopedConjureApplic
     }
     return result1;
   }
-};
-export const isVoiceChannelInFrameGuild = function isVoiceChannelInFrameGuild(frame, channelId) {
+}
+export function isVoiceChannelInFrameGuild(frame, channelId) {
   let guildId;
   if (frame.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY) {
     guildId = frame.surface.guildId;
   }
   const channel = ChannelStore.getChannel(channelId);
   return null != guildId && null != channel && channel.isGuildVocal() && channel.getGuildId() === guildId;
-};
+}

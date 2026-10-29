@@ -2,6 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../../discord_common/js/shared/Constants.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import ActivityPanelConstants from "../activities/panel/ActivityPanelConstants.tsx";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import EmbeddedAppTypes from "../embedded_apps/EmbeddedAppTypes.tsx";
@@ -9,6 +10,9 @@ import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getCha
 import FramesConstants from "FramesConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+function computeMuted(poolVisibility, userMuted) {
+  return "hidden" === poolVisibility || userMuted || muted;
+}
 function findFrameByIframeId(iframeId) {
   const values = map.values();
   for (const item10009 of values) {
@@ -34,6 +38,7 @@ const NOOP_TRUE = Constants.NOOP_TRUE;
 const map = new Map();
 let closure_12 = { audible: false };
 let frameId = null;
+let muted = false;
 const Store = initializeDefault.Store;
 class FramesStoreClass extends Store {}
 const prototype = FramesStoreClass.prototype;
@@ -61,6 +66,9 @@ prototype["isFrameVisible"] = function isFrameVisible(frameId) {
 };
 prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
   return findFrameByIframeId(iframeId);
+};
+prototype["isDeviceMuted"] = function isDeviceMuted() {
+  return muted;
 };
 prototype["getMainFrame"] = function getMainFrame() {
   let tmp = null;
@@ -129,19 +137,32 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     const tmp = timestampProducer(surface);
   },
   FRAME_LAUNCH: function handleFrameLaunch(arg0) {
-    ({ frameId, hostWindowKey, launchRequestId } = arg0);
-    ({ proxyTicket, launch, invite } = arg0);
+    ({ frameId, launch, hostWindowKey, launchRequestId } = arg0);
+    ({ proxyTicket, invite } = arg0);
     value = map.get(frameId);
     if (null != value) {
       if (!tmp2) {
         const tmp5 = getURLForApplicationDefault(value.applicationId);
-        if (null == tmp5) {
+        let tmp6 = tmp5;
+        if (null != tmp5) {
+          tmp6 = tmp5;
+          if (null != launch.path) {
+            const str = URLUtilsDefault.toURLSafe(launch.path, tmp5);
+            let str1;
+            if (str != null) {
+              str1 = str.toString();
+            }
+            tmp6 = str1;
+            const tmp3Result = URLUtilsDefault;
+          }
+        }
+        if (null == tmp6) {
           map.delete(frameId);
           if (frameId === frameId) {
             frameId = null;
           }
         } else {
-          const obj3 = {
+          const obj2 = {
             id: null,
             applicationId: null,
             intent: null,
@@ -151,14 +172,14 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
             data: null,
           };
           ({
-            id: obj2.id,
-            applicationId: obj2.applicationId,
-            intent: obj2.intent,
-            surface: obj2.surface,
-            launchRequestId: obj2.launchRequestId,
+            id: obj3.id,
+            applicationId: obj3.applicationId,
+            intent: obj3.intent,
+            surface: obj3.surface,
+            launchRequestId: obj3.launchRequestId,
           } = value);
-          const obj5 = {
-            url: tmp5,
+          const obj4 = {
+            url: tmp6,
             connectedSince: null,
             layoutMode: null,
             activityPanelMode: null,
@@ -168,24 +189,25 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
             pipOrientationLock: null,
             runsInBackground: false,
             poolVisibility: "unpooled",
-            muted: false,
+            muted: null,
             userMuted: false,
           };
           const _Date = Date;
-          obj5.connectedSince = Date.now();
-          obj5.layoutMode = constants2.FOCUSED;
-          obj5.activityPanelMode = ActivityPanelModes.PANEL;
-          obj5.proxyTicket = proxyTicket;
+          obj4.connectedSince = Date.now();
+          obj4.layoutMode = constants2.FOCUSED;
+          obj4.activityPanelMode = ActivityPanelModes.PANEL;
+          obj4.proxyTicket = proxyTicket;
+          obj4.muted = muted;
           const merged = Object.assign(closure_12);
-          obj5.iframeId = null;
+          obj4.iframeId = null;
           if (hostWindowKey == null) {
             hostWindowKey = null;
           }
-          obj5.hostWindowKey = hostWindowKey;
-          obj5.launch = launch;
-          obj5.invite = invite;
-          obj3.data = obj5;
-          const result = map.set(frameId, obj3);
+          obj4.hostWindowKey = hostWindowKey;
+          obj4.launch = launch;
+          obj4.invite = invite;
+          obj2.data = obj4;
+          const result = map.set(frameId, obj2);
         }
       }
       tmp2 = null != launchRequestId && value.launchRequestId !== launchRequestId;
@@ -212,6 +234,10 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (frameId === frameId) {
       frameId = null;
     }
+    if (!arr.some(React5)) {
+      muted = false;
+    }
+    arr = Array.from(map.values());
   },
   FRAME_CLEAR_MAIN_SLOT: function handleFrameClearMainSlot(frameId) {
     if (frameId !== frameId.frameId) {
@@ -393,7 +419,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(data);
           obj3.poolVisibility = poolVisibility;
-          obj3.muted = "hidden" === poolVisibility || data.userMuted;
+          obj3.muted = "hidden" === poolVisibility || data.userMuted || muted;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -419,7 +445,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(data);
           obj3.userMuted = muted;
-          obj3.muted = "hidden" === data.poolVisibility || muted;
+          obj3.muted = "hidden" === data.poolVisibility || muted || muted;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -429,6 +455,29 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
       flag = tmp3;
     }
     return flag;
+  },
+  FRAME_SET_DEVICE_MUTED: function handleSetDeviceMuted(muted) {
+    muted = muted.muted;
+    if (muted === muted) {
+      return false;
+    } else {
+      const values = map.values();
+      const iter = values[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp4 = nextResult;
+        if (React5(nextResult)) {
+          let obj = {};
+          let merged = Object.assign(nextResult);
+          let obj2 = {};
+          let merged1 = Object.assign(tmp4.data);
+          obj2.muted = computeMuted(tmp4.data.poolVisibility, tmp4.data.userMuted);
+          obj.data = obj2;
+          let result = map.set(tmp4.id, obj);
+        }
+        continue;
+      }
+    }
   },
   EMBEDDED_APP_SHIM_STATE_UPDATE: function handleEmbeddedAppShimStateUpdate(iframeId) {
     const tmp = findFrameByIframeId(iframeId.iframeId);

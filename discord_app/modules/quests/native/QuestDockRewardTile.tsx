@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }, video: { overflow: "hidden", height: "100%", width: "100%" }, image: { height: "100%", width: "100%" } };
   return obj;
@@ -57,8 +57,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (closure_0) {
           tmp = closure_1_5;
           str = "change";
-          closure_0 = closure_1_5.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_5.addEventListener("change", /* F153996 */ function() { ... });
+          return /* F153997 */ function() { ... };
         } else {
           return;
         }
@@ -80,8 +80,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (closure_0) {
           tmp = closure_1_5;
           str = "change";
-          closure_0 = closure_1_5.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_5.addEventListener("change", /* F153996 */ function() { ... });
+          return /* F153997 */ function() { ... };
         } else {
           return;
         }
@@ -96,8 +96,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (closure_0) {
           tmp = closure_1_5;
           str = "change";
-          closure_0 = closure_1_5.addEventListener("change", () => { ... });
-          return () => { ... };
+          closure_0 = closure_1_5.addEventListener("change", /* F153996 */ function() { ... });
+          return /* F153997 */ function() { ... };
         } else {
           return;
         }
@@ -105,12 +105,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const tmp11 = _slicedToArray(noop.useState("active" === closure_5.currentState), 2);
-  const scaledImageUrl = isAnimatedAsset(9618).getScaledImageUrl({ assetUrl, width, height });
+  const scaledImageUrl = isAnimatedAsset(9650).getScaledImageUrl({ assetUrl, width, height });
   cResult[7] = assetUrl;
   cResult[8] = height;
   cResult[9] = width;
   cResult[10] = scaledImageUrl;
-  const tmpResult4 = isAnimatedAsset(9618);
+  const tmpResult4 = isAnimatedAsset(9650);
 }) : (function QuestDockRewardTile(assetUrl) {
   assetUrl = assetUrl.assetUrl;
   const isAnimatedAsset = assetUrl.isAnimatedAsset;

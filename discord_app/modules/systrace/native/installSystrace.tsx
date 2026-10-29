@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const Systrace = _mod17.Systrace;
 const result = size.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
 
-export const installSystrace = function installSystrace() {
+export function installSystrace() {
   if (obj.isAndroid()) {
     Systrace.isEnabled = () => {
       const _default = NativeSystraceModule.default;
@@ -73,4 +73,4 @@ export const installSystrace = function installSystrace() {
     };
   }
   obj = PlatformUtils;
-};
+}

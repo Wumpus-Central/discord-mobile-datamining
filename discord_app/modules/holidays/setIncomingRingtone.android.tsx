@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/holidays/setIncomingRingtone.android.tsx");
 
-export const setIncomingRingtone = function setIncomingRingtone(call_ringing) {
+export function setIncomingRingtone(call_ringing) {
   const DCDNotificationCategoryUtils = NativeModules.DCDNotificationCategoryUtils;
   if (DCDNotificationCategoryUtils != null) {
     const setIncomingRingtone = DCDNotificationCategoryUtils.setIncomingRingtone;
@@ -13,4 +13,4 @@ export const setIncomingRingtone = function setIncomingRingtone(call_ringing) {
       setIncomingRingtone(call_ringing);
     }
   }
-};
+}

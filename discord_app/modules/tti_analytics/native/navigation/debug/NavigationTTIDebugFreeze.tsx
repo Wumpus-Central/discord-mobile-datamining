@@ -12,7 +12,7 @@ const set = new Set();
 let c3 = null;
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/debug/NavigationTTIDebugFreeze.tsx");
 
-export const getNavigationTTIDebugFreezeTarget = function getNavigationTTIDebugFreezeTarget() {
+export function getNavigationTTIDebugFreezeTarget() {
   let target;
   if (_null != null) {
     target = _null.target;
@@ -21,13 +21,13 @@ export const getNavigationTTIDebugFreezeTarget = function getNavigationTTIDebugF
     target = null;
   }
   return target;
-};
-export const subscribeNavigationTTIDebugFreezeTarget = function subscribeNavigationTTIDebugFreezeTarget(arg0) {
+}
+export function subscribeNavigationTTIDebugFreezeTarget(arg0) {
   closure_0 = arg0;
   set.add(arg0);
   return () => set.delete(closure_0);
-};
-export const armNavigationTTIDebugFreeze = function armNavigationTTIDebugFreeze(freeze, arg1) {
+}
+export function armNavigationTTIDebugFreeze(freeze, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -42,14 +42,14 @@ export const armNavigationTTIDebugFreeze = function armNavigationTTIDebugFreeze(
   }
   c3 = { target: freeze, armedDuringTraceId, destinationKey };
   notify();
-};
-export const disarmNavigationTTIDebugFreeze = function disarmNavigationTTIDebugFreeze() {
+}
+export function disarmNavigationTTIDebugFreeze() {
   if (null != c3) {
     c3 = null;
     notify();
   }
-};
-export const emitNavigationTTIDebugCheckpoint = function emitNavigationTTIDebugCheckpoint(traceId, logActiveBundle) {
+}
+export function emitNavigationTTIDebugCheckpoint(traceId, logActiveBundle) {
   if (null != c3) {
     let name2 = traceId;
     if (traceId.traceId !== tmp.armedDuringTraceId) {
@@ -88,4 +88,4 @@ export const emitNavigationTTIDebugCheckpoint = function emitNavigationTTIDebugC
     }
   }
   return false;
-};
+}

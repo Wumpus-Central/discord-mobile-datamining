@@ -451,7 +451,7 @@ const AnalyticEvents = Constants.AnalyticEvents;
 let map = new Map();
 let result = size.fileFinishedImporting("modules/libdiscore/stores/DualReadUtils.tsx");
 
-export const runDualReadValidation = function runDualReadValidation(store_name, Kkv, fn) {
+export function runDualReadValidation(store_name, Kkv, fn) {
   let items = [];
   fn((derived, derived2) => {
     doDualReadValidation(items, derived, derived2);
@@ -566,6 +566,6 @@ export const runDualReadValidation = function runDualReadValidation(store_name, 
     });
   }
   logErrorsToAnalytics(store_name, items);
-};
+}
 export { doDualReadValidation };
 export { logErrorsToAnalytics };

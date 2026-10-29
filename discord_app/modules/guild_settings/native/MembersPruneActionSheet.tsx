@@ -10,7 +10,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const PrunePreviewStore = fn(18309);
+const PrunePreviewStore = fn(18543);
 ({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -36,7 +36,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         handlePruneUpdate = function handlePruneUpdate() { ... };
         obj = id(closure_2[9]);
         subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return () => { ... };
+        return /* F157326 */ function() { ... };
       }
     }
     cResult[1] = guild.id;
@@ -47,7 +47,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         handlePruneUpdate = function handlePruneUpdate() { ... };
         obj = id(closure_2[9]);
         subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return () => { ... };
+        return /* F157326 */ function() { ... };
       }
     }
   }
@@ -57,7 +57,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         handlePruneUpdate = function handlePruneUpdate() { ... };
         obj = id(closure_2[9]);
         subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return () => { ... };
+        return /* F157326 */ function() { ... };
       }
     }
     const effect = obj2.useEffect(T, items2);
@@ -67,7 +67,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
           handlePruneUpdate = function handlePruneUpdate() { ... };
           obj = id(closure_2[9]);
           subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-          return () => { ... };
+          return /* F157326 */ function() { ... };
         }
       }
     }

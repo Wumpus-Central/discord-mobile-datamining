@@ -28,22 +28,19 @@ const logger = new LoggerDefault("MarketingStringFormat.tsx");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/MarketingStringFormat.tsx");
 
-export const formatMarketingString = function formatMarketingString(acknowledgedBadgeLabel, arg1) {
+export function formatMarketingString(acknowledgedBadgeLabel, arg1) {
   closure_0 = arg1;
   return formatWith(acknowledgedBadgeLabel, "", (arg0) => {
     closure_0 = arg0;
     const intl = util.intl;
     return intl.format(() => closure_0, closure_0);
   });
-};
-export const formatMarketingPlainString = function formatMarketingPlainString(
-  acknowledgedBadgeLabel,
-  formatVariableValues,
-) {
+}
+export function formatMarketingPlainString(acknowledgedBadgeLabel, formatVariableValues) {
   closure_0 = formatVariableValues;
   return formatWith(acknowledgedBadgeLabel, "", (time) => {
     closure_0 = time;
     const intl = util.intl;
     return intl.formatToPlainString(() => closure_0, closure_0);
   });
-};
+}

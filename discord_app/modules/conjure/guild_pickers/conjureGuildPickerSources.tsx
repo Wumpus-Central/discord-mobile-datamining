@@ -123,13 +123,13 @@ const result = size.fileFinishedImporting("modules/conjure/guild_pickers/conjure
 
 export const useConjureGuildRoles = tmp2;
 export const useConjureGuildMemberUsers = tmp3;
-export const conjureMemberUsername = function conjureMemberUsername(id, stateFromStores1) {
+export function conjureMemberUsername(id, stateFromStores1) {
   let identifiable = "always";
   if (stateFromStores1) {
     identifiable = "never";
   }
   return UserUtils.getUserTag(id, { identifiable });
-};
+}
 export const useConjureMemberRequests = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureMemberRequests(arg0, arg1) {
       _require = arg0;

@@ -14,7 +14,7 @@ const FormSubmitErrorType = {
 const result = size.fileFinishedImporting("modules/threads/FormError.tsx");
 
 export { FormSubmitErrorType };
-export const makeEmptyTitleError = function makeEmptyTitleError() {
+export function makeEmptyTitleError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t.uXA573);
   obj = { type: obj.EmptyContent, message: null };
@@ -23,8 +23,8 @@ export const makeEmptyTitleError = function makeEmptyTitleError() {
   }
   obj.message = stringResult;
   return obj;
-};
-export const makeEmptyMessageError = function makeEmptyMessageError() {
+}
+export function makeEmptyMessageError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t.kesTVT);
   obj = { type: obj.EmptyContent, message: null };
@@ -33,8 +33,8 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   }
   obj.message = stringResult;
   return obj;
-};
-export const makeApiNameRequiredError = function makeApiNameRequiredError() {
+}
+export function makeApiNameRequiredError() {
   const intl = util.intl;
   let stringResult = intl.string(util.t.uXA573);
   obj = { type: obj.ApiValidation, message: null };
@@ -43,8 +43,8 @@ export const makeApiNameRequiredError = function makeApiNameRequiredError() {
   }
   obj.message = stringResult;
   return obj;
-};
-export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
+}
+export function makeAutomodViolationError(errorResponseBody, id) {
   const obj = AutomodErrorUtils;
   id = undefined;
   if (id != null) {
@@ -57,8 +57,8 @@ export const makeAutomodViolationError = function makeAutomodViolationError(erro
   }
   obj2.message = automodErrorMessageFromErrorResponse;
   return obj2;
-};
-export const renderError = function renderError(type, content) {
+}
+export function renderError(type, content) {
   let tmp = null;
   if (null != type) {
     if (type.type === obj.EmptyContent) {
@@ -73,4 +73,4 @@ export const renderError = function renderError(type, content) {
     tmp = message;
   }
   return tmp;
-};
+}

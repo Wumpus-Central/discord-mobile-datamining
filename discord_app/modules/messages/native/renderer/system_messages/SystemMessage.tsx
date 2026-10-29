@@ -43,7 +43,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 ({ MessageTypes: c2, BoostedGuildTiers: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/SystemMessage.tsx");
 
-export const createSystemMessageContent = function createSystemMessageContent(message) {
+export function createSystemMessageContent(message) {
   const type = message.message.type;
   if (constants.RECIPIENT_ADD === type) {
     return AddRecipientSystemMessage.createAddRecipientSystemMessage(message);
@@ -169,4 +169,4 @@ export const createSystemMessageContent = function createSystemMessageContent(me
     }
     return ApplicationCommandSourceSystemMessage.createApplicationCommandSourceSystemMessage(message);
   }
-};
+}

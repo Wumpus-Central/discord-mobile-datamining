@@ -143,7 +143,7 @@ export const usePresenceActivityInviteCoverImageURL = ReactCompilerGating.isReac
       }, items2);
       return imageURL;
     };
-export const getPresenceActivityInviteCoverImageURL = function getPresenceActivityInviteCoverImageURL(messageId) {
+export function getPresenceActivityInviteCoverImageURL(messageId) {
   messageId = messageId.messageId;
   const tmp = _getPresenceActivityInviteCoverImageURL({
     messageId,
@@ -156,4 +156,4 @@ export const getPresenceActivityInviteCoverImageURL = function getPresenceActivi
     MessageActivityInviteCoverImageActionCreatorsAll.setCoverImageURL(obj3);
   }
   return imageURL;
-};
+}

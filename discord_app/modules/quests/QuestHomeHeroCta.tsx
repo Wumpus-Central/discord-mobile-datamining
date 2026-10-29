@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
-export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
+export function questHomeHeroCtaFromServer(cta) {
   const obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
@@ -18,4 +18,4 @@ export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(ct
   }
   obj.ios = tmp2;
   return obj;
-};
+}

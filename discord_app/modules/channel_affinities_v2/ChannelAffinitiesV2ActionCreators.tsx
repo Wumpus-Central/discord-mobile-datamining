@@ -10,7 +10,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx");
 
-export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
+export function fetchChannelAffinitiesV2() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -54,4 +54,4 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
     return nextPromise;
   }
   nextPromise = Promise.resolve();
-};
+}

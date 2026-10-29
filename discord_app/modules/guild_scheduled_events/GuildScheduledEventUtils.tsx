@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -12,18 +12,13 @@ import size from "../../../_runtime/metro/00002__.js";
 } = GuildScheduledEventsConstants);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
-export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(
-  guildScheduledEvent,
-  arg1,
-  arg2,
-  flag,
-) {
-  const obj = _modDef2046();
+export function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
+  const obj = _modDef2047();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
   const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = _modDef2046(arg1);
+      const obj4 = _modDef2047(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {
@@ -51,4 +46,4 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
     const tmpResult = SnowflakeUtilsDefault;
   }
   const date = new Date(guildScheduledEvent.scheduled_start_time);
-};
+}

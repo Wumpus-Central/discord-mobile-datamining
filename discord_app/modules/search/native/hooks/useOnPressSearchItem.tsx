@@ -48,7 +48,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -87,13 +87,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9748);
+const SearchConstants = fn(9780);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18366).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9747).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18600).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9779).SearchFilterAddLocations;
 const Constants = fn(1084);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(4863).StaticChannelRoute;
+const StaticChannelRoute = fn(4864).StaticChannelRoute;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressSearchLink(arg0) {
@@ -305,7 +305,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
       } catch (tmp12) {
@@ -407,7 +407,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -468,7 +468,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
       } catch (tmp12) {
@@ -494,7 +494,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   const cResult = searchContext(576).c(3);
   searchContext = searchContext.searchContext;
   const obj = searchContext(576);
-  const navigation = searchContext(1502).useNavigation();
+  const navigation = searchContext(1503).useNavigation();
   if (cResult[0] === navigation) {
     if (cResult[1] === searchContext) {
       let tmp3 = cResult[2];
@@ -522,7 +522,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   tmp3 = fn;
 }) : (function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1502).useNavigation();
+  const navigation = searchContext(1503).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((channelId) => {
     closure_0 = searchContext;
@@ -545,7 +545,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   const cResult = searchContext(576).c(3);
   searchContext = searchContext.searchContext;
   const obj = searchContext(576);
-  const navigation = searchContext(1502).useNavigation();
+  const navigation = searchContext(1503).useNavigation();
   if (cResult[0] === navigation) {
     if (cResult[1] === searchContext) {
       let tmp3 = cResult[2];
@@ -574,7 +574,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   tmp3 = fn;
 }) : (function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1502).useNavigation();
+  const navigation = searchContext(1503).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((userId, arg1) => {
     closure_0 = searchContext;
@@ -800,7 +800,7 @@ let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressS
 export const useOnPressSearchLink = tmp4;
 export const useOnPressMessageItem = tmp5;
 export const useOnPressConversationCitation = tmp6;
-export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
+export function useOnPressMediaItem(searchContext) {
   searchContext = searchContext.searchContext;
   const allMediaResults = searchContext.allMediaResults;
   let onEndReached = searchContext.onEndReached;
@@ -903,7 +903,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
     }
     const obj = { type: constants2.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
   }, items);
-};
+}
 export const useOnPressGroupDMItem = tmp7;
 export const useOnPressDMItem = tmp8;
 export const useOnPressGuildTextChannel = tmp9;
@@ -917,8 +917,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(13456).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(13456);
+        const result = searchContext(13689).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(13689);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -950,8 +950,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13456).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(13456);
+      const result = searchContext(13689).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(13689);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

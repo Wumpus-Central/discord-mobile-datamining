@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandValidationUtils.tsx");
 
-export const getFirstInvalidOption = function getFirstInvalidOption(activeCommand, first2) {
+export function getFirstInvalidOption(activeCommand, first2) {
   const options = activeCommand.options;
   if (null == options) {
     return null;
@@ -26,4 +26,4 @@ export const getFirstInvalidOption = function getFirstInvalidOption(activeComman
     }
     return null;
   }
-};
+}

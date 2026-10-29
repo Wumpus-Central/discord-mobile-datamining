@@ -24,10 +24,10 @@ export const MODAL_LOCATION_CONTEXT_WEB = "InappropriateConversationModal-web";
 export const ACTION_SHEET_CONTEXT_MOBILE = "SafetyToolsActionSheet-mobile";
 export const SAFETY_TOOLS_MODAL_KEY = "PRIVATE_DM_SAFETY_TOOLS_MODAL";
 export const WEB_SAFETY_TOOLS_CONTEXT = "SafetyToolsActionSheet-web";
-export const getSafetyToolsActionSheetKey = function getSafetyToolsActionSheetKey(arg0) {
+export function getSafetyToolsActionSheetKey(arg0) {
   return "SAFETY_TOOLS_ACTION_SHEET_" + arg0;
-};
-export const getStrangerDangerSafetyTips = function getStrangerDangerSafetyTips() {
+}
+export function getStrangerDangerSafetyTips() {
   const intl = util.intl;
   const items = [intl.string(util.t["26fDv4"]), ,];
   const intl2 = util.intl;
@@ -35,8 +35,8 @@ export const getStrangerDangerSafetyTips = function getStrangerDangerSafetyTips(
   const intl3 = util.intl;
   items[2] = intl3.string(util.t.O4Ljca);
   return items;
-};
-export const getInappropriateConversationsSafetyTips = function getInappropriateConversationsSafetyTips() {
+}
+export function getInappropriateConversationsSafetyTips() {
   const intl = util.intl;
   const items = [intl.string(util.t.bCWw8l), ,];
   const intl2 = util.intl;
@@ -44,6 +44,6 @@ export const getInappropriateConversationsSafetyTips = function getInappropriate
   const intl3 = util.intl;
   items[2] = intl3.string(util.t.ZkmC7s);
   return items;
-};
+}
 export const SAFETY_TOOLS_IGNORED_USER_TOAST_KEY = "SAFETY_TOOLS_IGNORED_USER_CONFIRMED";
 export const SAFETY_TOOLS_UNIGNORED_USER_TOAST_KEY = "SAFETY_TOOLS_UNIGNORED_USER_CONFIRMED";

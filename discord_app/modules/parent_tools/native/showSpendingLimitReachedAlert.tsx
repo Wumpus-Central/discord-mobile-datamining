@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
-import _modDef2535 from "../FamilyCenter.messages.js";
+import _modDef2536 from "../FamilyCenter.messages.js";
 import BillingError from "../../../errors/BillingError.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import V6OrEarlierAPIError from "../../../errors/index.tsx";
@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
-export const isSpendingLimitError = function isSpendingLimitError(billingError) {
+export function isSpendingLimitError(billingError) {
   let tmp3 = billingError instanceof V6OrEarlierAPIError.BillingError;
   if (tmp3) {
     let tmp4 = billingError.code === BillingError.ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
@@ -19,10 +19,10 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
     tmp3 = tmp4;
   }
   return tmp3;
-};
-export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8157).getActiveLinkUserIds();
-  const obj = activeLinkUserIds(8157);
+}
+export function showSpendingLimitReachedAlert() {
+  activeLinkUserIds = activeLinkUserIds(8180).getActiveLinkUserIds();
+  const obj = activeLinkUserIds(8180);
   const obj3 = { title: null, body: null, isDismissable: true };
   let intl = activeLinkUserIds(1125).intl;
   obj3.title = intl.string(activeLinkUserIds(1125).t.QJKKrT);
@@ -35,8 +35,8 @@ export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAl
     obj4.onConfirm = function onConfirm() {
       return openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
         const intl = activeLinkUserIds(1125).intl;
-        return activeLinkUserIds(5698).presentFailedToast(
-          intl.formatToPlainString(_modDef2535.D1BwNC, { count: length.length }),
+        return activeLinkUserIds(5700).presentFailedToast(
+          intl.formatToPlainString(_modDef2536.D1BwNC, { count: length.length }),
         );
       });
     };
@@ -48,4 +48,4 @@ export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAl
   }
   const merged = Object.assign(obj5);
   actions_AlertActionCreatorsDefault.show(obj3);
-};
+}

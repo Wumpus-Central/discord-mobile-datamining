@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
-export const isCommunicationDisabled = function isCommunicationDisabled(communicationDisabledUserMap) {
+export function isCommunicationDisabled(communicationDisabledUserMap) {
   let tmp = null != communicationDisabledUserMap;
   if (tmp) {
     const _Date = Date;
@@ -13,8 +13,8 @@ export const isCommunicationDisabled = function isCommunicationDisabled(communic
     tmp = date > date1;
   }
   return tmp;
-};
-export const isMemberCommunicationDisabled = function isMemberCommunicationDisabled(member) {
+}
+export function isMemberCommunicationDisabled(member) {
   let prop;
   if (member != null) {
     prop = member.communicationDisabledUntil;
@@ -28,4 +28,4 @@ export const isMemberCommunicationDisabled = function isMemberCommunicationDisab
     tmp2 = date > date1;
   }
   return tmp2;
-};
+}

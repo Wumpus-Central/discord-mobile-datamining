@@ -6,6 +6,6 @@ const result = size.fileFinishedImporting("modules/activities/ActivityPopoutUtil
 export function shouldOpenActivityInPopoutWindow() {
   return false;
 }
-export const wrapPreemptiveActivityPopout = function wrapPreemptiveActivityPopout(arg0, fn) {
+export function wrapPreemptiveActivityPopout(arg0, fn) {
   return fn();
-};
+}

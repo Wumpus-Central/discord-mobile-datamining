@@ -40,10 +40,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
     };
-export const getChatLayout = function getChatLayout() {
+export function getChatLayout() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
   return {
     isChatBesideChannelList: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE,
     isChatLockedOpen: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE,
   };
-};
+}

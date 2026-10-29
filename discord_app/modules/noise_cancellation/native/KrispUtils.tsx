@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
 
-export const getKrispModel = function getKrispModel() {
+export function getKrispModel() {
   return new Promise((fn) => {
     closure_0 = fn;
     const voiceEngine = inject.getVoiceEngine();
@@ -14,6 +14,6 @@ export const getKrispModel = function getKrispModel() {
       fn(null);
     }
   });
-};
+}
 export function setKrispSuppressionLevel() {}
 export function setKrispModelOverride() {}

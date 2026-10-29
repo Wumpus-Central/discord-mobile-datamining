@@ -53,7 +53,6 @@ const obj = {
   BILLING_PAYMENT_SOURCES_CREATE: "/billing/payment-sources/create",
   BILLING_PREMIUM_SWITCH_PLAN: "/billing/premium/switch-plan",
   BILLING_GUILD_SUBSCRIPTIONS_PURCHASE: "/billing/guild-subscriptions/purchase",
-  BILLING_PAYMENTS: "/billing/payments",
   BILLING_PROMOTION_REDEMPTION(arg0) {
     return "/billing/promotions/" + arg0;
   },

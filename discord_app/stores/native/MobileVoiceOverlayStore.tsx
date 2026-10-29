@@ -47,11 +47,11 @@ const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(DispatcherDefault, {
 const result = size.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
 
 export default mobileVoiceOverlayStore;
-export const isMobileOverlaySupported = function isMobileOverlaySupported() {
+export function isMobileOverlaySupported() {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !MetaQuestUtils.isMetaQuest();
     const tmpResult = MetaQuestUtils;
   }
   return isAndroidResult;
-};
+}

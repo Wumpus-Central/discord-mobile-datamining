@@ -87,11 +87,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/FriendsUtils.tsx");
 
 export { validateDiscordTag };
-export const isValidDiscordTag = function isValidDiscordTag(substr) {
+export function isValidDiscordTag(substr) {
   return null == validateDiscordTag(substr);
-};
+}
 export { humanizeAbortCode };
-export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, substr) {
+export function humanizeAbortCodeForA11y(arg0, substr) {
   let formatToPlainStringResult = humanizeAbortCode(arg0, substr);
   if (arg0 === constants.RELATIONSHIP_INCOMING_DISABLED) {
     const intl = util.intl;
@@ -100,4 +100,4 @@ export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, 
   }
   _modDef38(typeof formatToPlainStringResult === "string", "abortCode should be a string for a11y");
   return formatToPlainStringResult;
-};
+}

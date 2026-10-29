@@ -90,7 +90,7 @@ export const useChannelContentGate = ReactCompilerGating.isReactCompilerEnabled(
         tmpResult = age_gate_AgeGateUtils;
       }
     };
-export const renderChannelContentGate = function renderChannelContentGate(channelContentGate) {
+export function renderChannelContentGate(channelContentGate) {
   const kind = channelContentGate.kind;
   if (constants.IOS_GUILD_NSFW === kind) {
     return jsx(NsfwGateChatDefault, {});
@@ -102,4 +102,4 @@ export const renderChannelContentGate = function renderChannelContentGate(channe
     ({ guildId: obj.guildId, spoilerGatingChannelId: obj.channelId } = channelContentGate);
     return jsx(ChannelSpoilerDefault, { guildId: null, channelId: null }, channelContentGate.channelId);
   }
-};
+}

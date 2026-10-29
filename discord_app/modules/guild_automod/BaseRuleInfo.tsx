@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const AutomodTriggerType = Constants.AutomodTriggerType;
 const result = size.fileFinishedImporting("modules/guild_automod/BaseRuleInfo.tsx");
 
-export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, rule) {
+export function getBaseRuleInfo(triggerType, rule) {
   let tmp = null;
   if (null != triggerType) {
     if (AutomodTriggerType.KEYWORD !== triggerType) {
@@ -103,4 +103,4 @@ export const getBaseRuleInfo = function getBaseRuleInfo(triggerType, rule) {
     flag = true;
   }
   return tmp;
-};
+}

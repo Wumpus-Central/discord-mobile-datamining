@@ -31,7 +31,7 @@ export default {
                     closure_0 = closure_1_0;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(() => { ... });
+                      let nextPromise = resolved.then(/* F100434 */ function() { ... });
                     } else {
                       nextPromise = closure_2_5.get(closure_1_0);
                       if (null == nextPromise) {
@@ -41,10 +41,10 @@ export default {
                         let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                         let value = HTTP.get(obj4);
                         let tmp2Result = closure_2_1(closure_2_2[1]);
-                        let cleanupPromise = value.then(() => { ... }, () => { ... }).finally(() => { ... });
+                        let cleanupPromise = value.then(/* F100435 */ function() { ... }, /* F100436 */ function() { ... }).finally(/* F100437 */ function() { ... });
                         let result = closure_2_5.set(closure_1_0, cleanupPromise);
                         nextPromise = cleanupPromise;
-                        let nextPromise1 = value.then(() => { ... }, () => { ... });
+                        let nextPromise1 = value.then(/* F100435 */ function() { ... }, /* F100436 */ function() { ... });
                       }
                     }
                     return nextPromise;

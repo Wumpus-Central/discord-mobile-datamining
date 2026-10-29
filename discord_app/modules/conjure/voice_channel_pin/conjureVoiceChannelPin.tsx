@@ -34,7 +34,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/conjureVoiceChannelPin.tsx");
 
-export const parseVoiceChannelPinOutcome = function parseVoiceChannelPinOutcome(voice_channel_pin) {
+export function parseVoiceChannelPinOutcome(voice_channel_pin) {
   if (null != voice_channel_pin) {
     if (typeof voice_channel_pin === "object") {
       ({ status, channel_id } = voice_channel_pin);
@@ -118,9 +118,9 @@ export const parseVoiceChannelPinOutcome = function parseVoiceChannelPinOutcome(
       return tmp;
     }
   }
-};
+}
 export { canPinVoiceChannel };
-export const resolveVoiceChannelPin = function resolveVoiceChannelPin(projectId, outcome) {
+export function resolveVoiceChannelPin(projectId, outcome) {
   DispatcherDefault.dispatch({ type: "CONJURE_VOICE_CHANNEL_PIN_RESOLVED", projectId, outcome });
   try {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
@@ -134,8 +134,8 @@ export const resolveVoiceChannelPin = function resolveVoiceChannelPin(projectId,
     obj4 = conjureSocket;
   } catch (err) {}
   const obj2 = { type: "CONJURE_VOICE_CHANNEL_PIN_RESOLVED", projectId, outcome };
-};
-export const pinVoiceChannel = function pinVoiceChannel() {
+}
+export function pinVoiceChannel() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -144,4 +144,4 @@ export const pinVoiceChannel = function pinVoiceChannel() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

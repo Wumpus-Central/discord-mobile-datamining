@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
 
-export const getConsoleConnectingText = function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
+export function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
@@ -39,4 +39,4 @@ export const getConsoleConnectingText = function getConsoleConnectingText(stateF
       str = intl.string(util.t.QCw1oW);
     }
   }
-};
+}

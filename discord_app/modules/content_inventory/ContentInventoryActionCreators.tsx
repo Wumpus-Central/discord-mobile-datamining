@@ -13,7 +13,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
-export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
+export function toggleMemberListContentFeedHidden() {
   DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
   const obj2 = AnalyticsUtilsDefault;
   obj2.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, {
@@ -21,11 +21,11 @@ export const toggleMemberListContentFeedHidden = function toggleMemberListConten
     guild_id: SelectedGuildStore.getGuildId(),
     hidden: ContentInventoryPersistedStore.hidden,
   });
-};
-export const onGameProfileOpen = function onGameProfileOpen() {
+}
+export function onGameProfileOpen() {
   DispatcherDefault.dispatch({ type: "GAME_PROFILE_OPEN" });
-};
-export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEntryEmbed(authorId) {
+}
+export function onTapContentInventoryEntryEmbed(authorId) {
   ({ message, tappedElement } = authorId);
   const channel = ChannelStore.getChannel(message.channel_id);
   if ("avatar" === tappedElement) {
@@ -50,7 +50,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       showUserProfileResult = ContentInventoryPlatformActionCreatorsAll.showUserProfile(showUserProfileResult);
     }
   }
-};
-export const clearDeleteHistoryError = function clearDeleteHistoryError() {
+}
+export function clearDeleteHistoryError() {
   DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
-};
+}

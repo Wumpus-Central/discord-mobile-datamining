@@ -26,10 +26,10 @@ const result = size.fileFinishedImporting("modules/slayer_storefront/storefrontC
 
 export const MAX_STOREFRONT_EMBED_SKUS = 6;
 export { normalizeStorefrontSkuIds };
-export const makeStorefrontCodedLink = function makeStorefrontCodedLink(items, applicationId) {
+export function makeStorefrontCodedLink(items, applicationId) {
   return "" + items.join(",") + "-" + applicationId;
-};
-export const parseStorefrontCodedLink = function parseStorefrontCodedLink(code) {
+}
+export function parseStorefrontCodedLink(code) {
   const parts = code.split("-");
   if (2 !== parts.length) {
     return null;
@@ -48,4 +48,4 @@ export const parseStorefrontCodedLink = function parseStorefrontCodedLink(code) 
     }
     const tmp2 = _slicedToArray(parts, 2);
   }
-};
+}

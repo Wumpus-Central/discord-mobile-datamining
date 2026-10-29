@@ -18,76 +18,46 @@ function summaryEqual(status, status2) {
   if (status2 != null) {
     kind1 = status2.kind;
   }
-  let tmp3 = kind === kind1;
-  if (tmp3) {
-    const status3 = status.status;
-    let projectId;
-    if (status3 != null) {
-      projectId = status3.projectId;
-    }
-    const status4 = status2.status;
-    let projectId1;
-    if (status4 != null) {
-      projectId1 = status4.projectId;
-    }
-    tmp3 = projectId === projectId1;
-  }
-  if (tmp3) {
-    tmp3 = status.hasUnread === status2.hasUnread;
-  }
-  if (tmp3) {
-    tmp3 = status.mentionCount === status2.mentionCount;
-  }
-  if (tmp3) {
-    tmp3 = status.unreadProjectCount === status2.unreadProjectCount;
-  }
-  return tmp3;
+  return kind === kind1 && status.hasUnread === status2.hasUnread;
 }
 function summarize(arg0) {
-  let id = null;
-  let id1 = null;
-  let id2 = null;
-  let num = 0;
-  let num2 = 0;
+  let flag = false;
+  let flag2 = false;
+  let flag3 = false;
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp5 = nextResult;
+    let tmp2 = nextResult;
     let obj = conjureHomeProjectState2;
     let conjureHomeProjectState = obj.readConjureHomeProjectState(nextResult.id);
     if ("in_progress" === conjureHomeProjectState) {
-      if (id == null) {
-        id = tmp5.id;
-      }
-    } else if ("unread" === tmp9) {
-      num2 = num2 + 1;
-      let tmp6Result = conjureUnread;
-      let conjureProjectMentionCount = tmp6Result.getConjureProjectMentionCount(tmp5.id);
-      num = num + conjureProjectMentionCount;
-      if (conjureProjectMentionCount > 0) {
-        if (id1 == null) {
-          id1 = tmp5.id;
-        }
-      } else if (id2 == null) {
-        id2 = tmp5.id;
+      flag = true;
+    } else if ("unread" === tmp6) {
+      let tmp3Result = conjureUnread;
+      if (tmp3Result.getConjureProjectMentionCount(tmp2.id) > 0) {
+        flag2 = true;
+      } else {
+        flag3 = true;
       }
     }
     continue;
   }
-  if (null != id) {
-    const obj2 = { kind: "working", projectId: id };
-    let tmp23 = obj2;
-  } else if (null != id1) {
-    const obj3 = { kind: "needs_input", projectId: id1 };
-    tmp23 = obj3;
+  if (flag) {
+    let obj2 = { kind: "working" };
+  } else if (flag2) {
+    obj2 = { kind: "needs_input" };
   } else {
-    tmp23 = null;
-    if (null != id2) {
-      const obj4 = { kind: "unread", projectId: id2 };
-      tmp23 = obj4;
+    obj2 = null;
+    if (flag3) {
+      obj2 = { kind: "unread" };
     }
   }
-  return { status: tmp23, hasUnread: null != id1 || null != id2, mentionCount: num, unreadProjectCount: num2 };
+  const obj3 = { status: obj2, hasUnread: null };
+  if (!flag2) {
+    flag2 = flag3;
+  }
+  obj3.hasUnread = flag2;
+  return obj3;
 }
 const result = size.fileFinishedImporting("modules/conjure/title_bar/useConjureTitleBarStatus.tsx");
 

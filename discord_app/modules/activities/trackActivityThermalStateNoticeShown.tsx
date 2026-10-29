@@ -10,7 +10,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
-export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
+export function trackActivityThermalStateNoticeShown() {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let _location;
   if (currentEmbeddedActivity != null) {
@@ -41,4 +41,4 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   obj3.guild_id = guild_id;
   obj3.media_session_id = RTCConnectionStore.getMediaSessionId();
   AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj3);
-};
+}

@@ -69,11 +69,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
+export function isFavoritesGuildVisible() {
   const isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(SelectedGuildStore.getGuildId());
   let favoriteGuildEnabled = isFavoritesGuildIdResult;
   if (!isFavoritesGuildIdResult) {
     favoriteGuildEnabled = FavoriteStore.favoriteGuildEnabled;
   }
   return favoriteGuildEnabled;
-};
+}

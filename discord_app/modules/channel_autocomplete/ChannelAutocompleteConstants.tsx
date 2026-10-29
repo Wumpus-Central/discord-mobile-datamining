@@ -15,15 +15,15 @@ export const REACTION_END_SENTINEL = ":";
 export const COMMAND_SENTINEL = "/";
 export const GAME_MENTION_INPUT_PREFIX = "@game:";
 export const TIMESTAMP_MENTION_INPUT_PREFIX = "@time:";
-export const formatGameMentionRaw = function formatGameMentionRaw(arg0) {
+export function formatGameMentionRaw(arg0) {
   return "<@$" + arg0 + ">";
-};
-export const formatGameMentionToken = function formatGameMentionToken(arg0) {
+}
+export function formatGameMentionToken(arg0) {
   return "$" + arg0;
-};
+}
 export const GAME_MENTION_RAW_RE = tmp2;
 export const GAME_MENTION_RAW_RE_GLOBAL = regExp;
-export const extractGameMentionIds = function extractGameMentionIds(arr) {
+export function extractGameMentionIds(arr) {
   if (arr.includes("<@$")) {
     const items = [];
     HermesBuiltin.arraySpread(arr.matchAll(regExp), 0);
@@ -35,4 +35,4 @@ export const extractGameMentionIds = function extractGameMentionIds(arr) {
   } else {
     return closure_0;
   }
-};
+}

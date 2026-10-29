@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ConjureProjectIconDefault from "ConjureProjectIcon.tsx";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   row: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   titles: { flex: 1, justifyContent: "center" },
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const intl = util.intl;
-        obj6.accessibilityLabel = intl.string(_modDef3863.FzfmQ8);
+        obj6.accessibilityLabel = intl.string(_modDef3864.FzfmQ8);
         const obj7 = { project, size: "list" };
         obj6.children = React4(ConjureProjectIconDefault, obj7);
         tmp9 = React4(Pressables.PressableOpacity, obj6);
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const intl = util.intl;
-        obj2.accessibilityLabel = intl.string(_modDef3863.FzfmQ8);
+        obj2.accessibilityLabel = intl.string(_modDef3864.FzfmQ8);
         const obj3 = { project, size: "list" };
         obj2.children = React4(ConjureProjectIconDefault, obj3);
         tmp8 = React4(Pressables.PressableOpacity, obj2);

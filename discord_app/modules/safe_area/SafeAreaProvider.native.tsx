@@ -2,7 +2,7 @@
 import c from "../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import SafeAreaConstants from "SafeAreaConstants.native.tsx";
-import _mod1633 from "../../../_runtime/metro/01633__.js";
+import _mod1634 from "../../../_runtime/metro/01634__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,9 +15,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function SafeAreaReporter() {
       const cResult = safeAreaInsets(576).c(9);
       let obj = safeAreaInsets(576);
-      safeAreaInsets = safeAreaInsets(1633).useSafeAreaInsets();
-      const obj2 = safeAreaInsets(1633);
-      const appEntryKey = safeAreaInsets(1499).useAppEntryKey();
+      safeAreaInsets = safeAreaInsets(1634).useSafeAreaInsets();
+      const obj2 = safeAreaInsets(1634);
+      const appEntryKey = safeAreaInsets(1500).useAppEntryKey();
       if (cResult[0] === appEntryKey) {
         if (cResult[1] === safeAreaInsets) {
           let tmp4 = cResult[2];
@@ -147,12 +147,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       tmp4 = fn;
-      const obj3 = safeAreaInsets(1499);
+      const obj3 = safeAreaInsets(1500);
     }
   : function SafeAreaReporter() {
-      safeAreaInsets = safeAreaInsets(1633).useSafeAreaInsets();
-      let obj = safeAreaInsets(1633);
-      const appEntryKey = safeAreaInsets(1499).useAppEntryKey();
+      safeAreaInsets = safeAreaInsets(1634).useSafeAreaInsets();
+      let obj = safeAreaInsets(1634);
+      const appEntryKey = safeAreaInsets(1500).useAppEntryKey();
       const items = [safeAreaInsets, appEntryKey];
       const layoutEffect = noop.useLayoutEffect(() => {
         closure_0 = safeAreaInsets;
@@ -202,7 +202,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       dependencyMap = noop.useRef(false);
       const items1 = [safeAreaInsets, appEntryKey];
-      let obj2 = safeAreaInsets(1499);
+      let obj2 = safeAreaInsets(1500);
       return (
         <View
           style={style}
@@ -272,7 +272,7 @@ export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp4;
       }
-      const tmp5 = jsx(_mod1633.SafeAreaProvider, {
+      const tmp5 = jsx(_mod1634.SafeAreaProvider, {
         initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS,
         children,
         style,
@@ -285,7 +285,7 @@ export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function SafeAreaProvider(arg0) {
       ({ children, style } = arg0);
-      return jsx(_mod1633.SafeAreaProvider, {
+      return jsx(_mod1634.SafeAreaProvider, {
         initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS,
         children,
         style,

@@ -3,6 +3,6 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_tag/GuildTagTypes.tsx");
 
-export const toServerGuildProfile = function toServerGuildProfile(profile) {
+export function toServerGuildProfile(profile) {
   return { tag: profile.tag };
-};
+}

@@ -10,9 +10,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx",
 );
 
-export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(
-  roleStyle,
-) {
+export function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
@@ -32,4 +30,4 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };
-};
+}

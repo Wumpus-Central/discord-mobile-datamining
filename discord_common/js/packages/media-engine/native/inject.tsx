@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/media-e
 export function inject(arg0) {
   global = arg0;
 }
-export const supported = function supported() {
+export function supported() {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
@@ -14,8 +14,8 @@ export const supported = function supported() {
   } else {
     return global.supported();
   }
-};
-export const supportsFeature = function supportsFeature(SPATIAL_AUDIO) {
+}
+export function supportsFeature(SPATIAL_AUDIO) {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
@@ -23,8 +23,8 @@ export const supportsFeature = function supportsFeature(SPATIAL_AUDIO) {
   } else {
     return global.supportsFeature(SPATIAL_AUDIO);
   }
-};
-export const setProcessPriority = function setProcessPriority(NORMAL) {
+}
+export function setProcessPriority(NORMAL) {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
@@ -32,8 +32,8 @@ export const setProcessPriority = function setProcessPriority(NORMAL) {
   } else {
     global.setProcessPriority(NORMAL);
   }
-};
-export const getVoiceEngine = function getVoiceEngine() {
+}
+export function getVoiceEngine() {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
@@ -46,8 +46,8 @@ export const getVoiceEngine = function getVoiceEngine() {
     }
     return tmp;
   }
-};
-export const getOpenH264LibraryPath = function getOpenH264LibraryPath() {
+}
+export function getOpenH264LibraryPath() {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
@@ -55,4 +55,4 @@ export const getOpenH264LibraryPath = function getOpenH264LibraryPath() {
   } else {
     return global.getOpenH264LibraryPath();
   }
-};
+}

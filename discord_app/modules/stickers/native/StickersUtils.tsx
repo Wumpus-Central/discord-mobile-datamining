@@ -2,8 +2,8 @@
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import StickersTypes from "../StickersTypes.tsx";
 import StickerCategoryUtils from "../StickerCategoryUtils.tsx";
-import _modDef10193 from "../../../../_runtime/metro/10193__.js";
-import _modDef10194 from "../../../../_runtime/metro/10194__.js";
+import _modDef10226 from "../../../../_runtime/metro/10226__.js";
+import _modDef10227 from "../../../../_runtime/metro/10227__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10191).useStickerPickerStore;
+const useStickerPickerStore = fn(10224).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1084).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
@@ -152,9 +152,9 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (type.type === StickersTypes.StickerCategoryTypes.FAVORITE) {
-          let tmp14 = _modDef10193;
+          let tmp14 = _modDef10226;
         } else {
-          tmp14 = _modDef10194;
+          tmp14 = _modDef10227;
         }
         const obj3 = {};
         const merged1 = Object.assign(type);
@@ -242,15 +242,15 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
         });
       }, items1);
     };
-export const preloadSticker = function preloadSticker(hash) {
+export function preloadSticker(hash) {
   const NativeLottieUtils = NativeModules.NativeLottieUtils;
   NativeLottieUtils.preload(hash.hash, hash.url, hash.width, hash.height, hash.frames, hash.callback);
-};
-export const dropPreloadedSticker = function dropPreloadedSticker(arg0) {
+}
+export function dropPreloadedSticker(arg0) {
   const NativeLottieUtils = NativeModules.NativeLottieUtils;
   NativeLottieUtils.dropPreload(arg0);
-};
-export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0, dependencyMap) {
+}
+export function openStickerPickerToPackId(arg0, dependencyMap) {
   const state = useStickerPickerStore.getState();
   state.setPackToScrollTo(dependencyMap);
   const timerId = setTimeout(() => {
@@ -262,4 +262,4 @@ export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0
       current.openCustomKeyboard(obj);
     }
   }, 1);
-};
+}

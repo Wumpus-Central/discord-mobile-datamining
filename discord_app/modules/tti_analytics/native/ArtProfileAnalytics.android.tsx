@@ -16,7 +16,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
           logEventProperties: true,
         });
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp6) {
       c5 = tmp;
@@ -93,7 +93,7 @@ const UNKNOWN_STATUS = "UNKNOWN_STATUS";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/ArtProfileAnalytics.android.tsx");
 
-export const trackAndroidArtProfileSnapshot = function trackAndroidArtProfileSnapshot(arg0, arg1) {
+export function trackAndroidArtProfileSnapshot(arg0, arg1) {
   (function trackAndroidArtProfileSnapshotAsync() {
     const self = this;
     const apply = closure_1_7.apply;
@@ -104,4 +104,4 @@ export const trackAndroidArtProfileSnapshot = function trackAndroidArtProfileSna
     }
     return applyArgumentsResult;
   })(arg0, arg1).catch(() => {});
-};
+}

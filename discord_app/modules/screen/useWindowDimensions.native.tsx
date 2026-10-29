@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }, items),
       );
     };
-export const getWindowDimensions = function getWindowDimensions(arg0) {
+export function getWindowDimensions(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_4;
@@ -92,4 +92,4 @@ export const getWindowDimensions = function getWindowDimensions(arg0) {
   }
   const tmp2 = DimensionsStore.getState().byAppEntry[str];
   return flag ? tmp2.windowDimensionsIgnoringKeyboard : tmp2.windowDimensions;
-};
+}

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/AutomodRemovedContentActionCreators.native.tsx
 import util from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../toast/native/ToastActionCreators.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -9,7 +9,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodRemovedContentActionCreators.native.tsx");
 
-export const showRemovedMessageToast = function showRemovedMessageToast(arg0, channel_id) {
+export function showRemovedMessageToast(arg0, channel_id) {
   const channel = ChannelStore.getChannel(channel_id);
   let name;
   if (channel != null) {
@@ -26,11 +26,11 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
     obj2.text = intl.formatToPlainString(util.t["9U3Wb3"], obj3);
     ToastActionCreatorsDefault.open(combined, obj2);
   }
-};
-export const openRemovedContentModal = function openRemovedContentModal(action) {
+}
+export function openRemovedContentModal(action) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19044, dependencyMap.paths),
+    asyncRequireImpl(19277, dependencyMap.paths),
     "AutomodRemovedContentSheet",
     { action },
   );
-};
+}

@@ -55,7 +55,7 @@ export const UserSettingsDelay = {
   DAILY: 86400,
   [86400]: "DAILY",
 };
-export const createEmptyEditInfo = function createEmptyEditInfo() {
+export function createEmptyEditInfo() {
   const obj = {
     protoToSave: "Array",
     timeout: "Reflect",
@@ -64,12 +64,12 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "applicationId",
-    triggeredMigrations: "ki",
-    offlineEditDataVersion: "isSymbol",
+    loading: "color",
+    triggeredMigrations: true,
+    offlineEditDataVersion: true,
   };
   return obj;
-};
+}
 export const UserSettingsPath = {
   ACCOUNT: "account",
   ACCOUNT_STANDING: "account-standing",

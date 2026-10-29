@@ -4,7 +4,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
-export const combineKey = function combineKey(prefix, key) {
+export function combineKey(prefix, key) {
   if (Array.isArray(key)) {
     const items = [];
     HermesBuiltin.arraySpread(key, HermesBuiltin.arraySpread(prefix, 0));
@@ -22,8 +22,8 @@ export const combineKey = function combineKey(prefix, key) {
     "combination results in an invalid key that has " + items1.length + " elements: " + JSON.stringify(items1),
   );
   throw error;
-};
-export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
+}
+export function combineKeyPrefix(prefix, items) {
   if (Array.isArray(items)) {
     items = [];
     HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(prefix, 0));
@@ -43,4 +43,4 @@ export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
     );
     throw error;
   }
-};
+}

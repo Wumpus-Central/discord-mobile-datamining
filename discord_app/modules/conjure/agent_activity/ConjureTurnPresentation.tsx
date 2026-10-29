@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTurnPresentation.tsx");
 
-export const resolveAttachmentHost = function resolveAttachmentHost(hasAttachments) {
+export function resolveAttachmentHost(hasAttachments) {
   let str = "none";
   if (hasAttachments.hasAttachments) {
     let str2 = "closing";
@@ -18,8 +18,8 @@ export const resolveAttachmentHost = function resolveAttachmentHost(hasAttachmen
     str = str2;
   }
   return str;
-};
-export const resolveTurnPresentation = function resolveTurnPresentation(hasAttachments) {
+}
+export function resolveTurnPresentation(hasAttachments) {
   ({ steps, content, hasProposal, hasLiveClarification } = hasAttachments);
   if (hasLiveClarification === undefined) {
     hasLiveClarification = false;
@@ -93,12 +93,12 @@ export const resolveTurnPresentation = function resolveTurnPresentation(hasAttac
   }
   obj2.attachmentsHost = str5;
   return obj2;
-};
-export const turnLeadsWithStretch = function turnLeadsWithStretch(arg0, turnPresentation) {
+}
+export function turnLeadsWithStretch(arg0, turnPresentation) {
   let someResult = arg0;
   if (!arg0) {
     const streamed = turnPresentation.streamed;
     someResult = streamed.some((type) => "message" === type.type);
   }
   return someResult;
-};
+}

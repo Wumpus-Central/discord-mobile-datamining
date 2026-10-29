@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/native/conjureProjectActions.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
@@ -28,7 +28,7 @@ let closure_11 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -86,13 +86,13 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1125).intl;
-          await tmp3(12305).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3863).Owerd3));
+          await tmp3(12359).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3864).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1125).intl;
-            tmp3(5698).presentError(intl.string(v2(3863)["Q+l4Hv"]));
+            tmp3(5700).presentError(intl.string(v2(3864)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(5698);
+            tmp3(5700);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -126,15 +126,15 @@ function deleteConjureProject(project, removeTarget) {
     const obj3 = { key: "ConjureProjectDelete", title: null, content: null, confirmText: null, onConfirm: null };
     let intl = require("util").intl;
     const obj4 = { name: project.name };
-    obj3.title = intl.formatToPlainString(_modDef3863.CJBhb2, obj4);
+    obj3.title = intl.formatToPlainString(_modDef3864.CJBhb2, obj4);
     const intl2 = require("util").intl;
-    obj3.content = intl2.string(_modDef3863["0OmrVn"]);
+    obj3.content = intl2.string(_modDef3864["0OmrVn"]);
     const intl3 = require("util").intl;
     obj3.confirmText = intl3.string(require("util").t.oyYWHE);
     obj3.onConfirm = function onConfirm() {
       const result = ConjureActionCreators.deleteProjectInBackground(project.id, () => {
         const intl = project(1125).intl;
-        return project(5698).presentError(intl.string(closure_1_1(3863)["0XDHob"]));
+        return project(5700).presentError(intl.string(closure_1_1(3864)["0XDHob"]));
       });
     };
     require("AlertModal").showConfirmModal(obj3);
@@ -144,23 +144,23 @@ function deleteConjureProject(project, removeTarget) {
     openConjureRemoveAppAlertDefault(obj);
   }
 }
-const ConjureConnectionStore = fn(10733);
+const ConjureConnectionStore = fn(10807);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(6808);
+const ConjureProjectStore = fn(6831);
 ({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);
-const StaticChannelRoute = fn(4863).StaticChannelRoute;
+const StaticChannelRoute = fn(4864).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/conjureProjectActions.tsx");
 
-export const exportConjureProject = function exportConjureProject(project, fn) {
+export function exportConjureProject(project, fn) {
   if (fn != null) {
     fn();
   }
   React4(project.id);
   const intl = util.intl;
-  hasOwnProperty(project.id, intl.string(_modDef3863.oU20rd));
-};
-export const importConjureProject = function importConjureProject(project, arg1) {
+  hasOwnProperty(project.id, intl.string(_modDef3864.oU20rd));
+}
+export function importConjureProject(project, arg1) {
   (function importIntoProject() {
     const self = this;
     const apply = closure_1_11.apply;
@@ -172,23 +172,23 @@ export const importConjureProject = function importConjureProject(project, arg1)
     return applyArgumentsResult;
   })(project, arg1).catch(() => {
     const intl = project(1125).intl;
-    project(5698).presentError(intl.string(closure_1_1(3863)["Q+l4Hv"]));
+    project(5700).presentError(intl.string(closure_1_1(3864)["Q+l4Hv"]));
   });
-};
-export const copyConjureProjectLink = function copyConjureProjectLink(project, guild_id) {
+}
+export function copyConjureProjectLink(project, guild_id) {
   const obj = ClipboardUtils;
   obj.copy(ChannelUtils.getChannelPermalink(guild_id, StaticChannelRoute.CONJURE, project.id));
   ToastUtils.presentLinkCopied();
-};
-export const copyConjureProjectId = function copyConjureProjectId(project) {
+}
+export function copyConjureProjectId(project) {
   ClipboardUtils.copy(project.id);
   const obj3 = { text: null, icon: null };
   const intl = util.intl;
-  obj3.text = intl.string(_modDef3863.CmfaZG);
+  obj3.text = intl.string(_modDef3864.CmfaZG);
   obj3.icon = CopyIcon.CopyIcon;
   ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
-};
-export const canUnpublishConjureUserApp = function canUnpublishConjureUserApp(project) {
+}
+export function canUnpublishConjureUserApp(project) {
   let result = React6(project);
   if (result) {
     result = conjureRemoveApp.isPublishedConjureUserApp(
@@ -197,9 +197,9 @@ export const canUnpublishConjureUserApp = function canUnpublishConjureUserApp(pr
     );
   }
   return result;
-};
+}
 export { deleteConjureProject };
-export const conjureProjectActions = function conjureProjectActions(project) {
+export function conjureProjectActions(project) {
   project = project.project;
   ({ guildId: importDefault, muted } = project);
   const removeTarget = project.removeTarget;
@@ -244,7 +244,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     }
     React4(project.id);
     const intl = util.intl;
-    hasOwnProperty(project.id, intl.string(_modDef3863.oU20rd));
+    hasOwnProperty(project.id, intl.string(_modDef3864.oU20rd));
   };
   items.push(obj3);
   if (tmp2) {
@@ -264,7 +264,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1125).intl;
-        project(5698).presentError(intl.string(closure_1_1(3863)["Q+l4Hv"]));
+        project(5700).presentError(intl.string(closure_1_1(3864)["Q+l4Hv"]));
       });
     };
     items.push(obj4);
@@ -287,7 +287,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     ClipboardUtils.copy(project.id);
     const obj3 = { text: null, icon: null };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef3863.CmfaZG);
+    obj3.text = intl.string(_modDef3864.CmfaZG);
     obj3.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
   };
@@ -345,4 +345,4 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     items.push(obj11);
   }
   return items;
-};
+}

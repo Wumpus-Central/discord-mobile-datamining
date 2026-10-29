@@ -11,7 +11,7 @@ import TableRadioGroup from "../../../../design/components/TableRow/native/Table
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import _modDef10201 from "../../../../../_runtime/metro/10201__.js";
+import _modDef10234 from "../../../../../_runtime/metro/10234__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj = { style: closure_0.nitroUpsell, children: null };
                             const items = [
                               __initData(native.Icon, {
-                                source: _modDef10201,
+                                source: _modDef10234,
                                 size: native.Icon.Sizes.SMALL,
                                 style: closure_0.nitroIcon,
                               }),
@@ -832,13 +832,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj8.children = closure_12(require("Form").Form, obj24);
       return closure_12(setting4, obj8);
     };
-export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
+export function setStickerAutocomplete(enabled) {
   const obj2 = { enabled, location: { section: constants2.SETTINGS_TEXT_AND_IMAGES } };
   AnalyticsUtilsDefault.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj2);
   const IncludeStickersInAutocomplete = UserSettings.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);
-};
-export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
+}
+export function setLowQualityImageMode(lowQualityImageMode) {
   lowQualityImageMode = lowQualityImageMode.lowQualityImageMode;
   ({ videoUploadQuality, viewImageDescriptions, dataSavingMode } = lowQualityImageMode);
   AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, {
@@ -849,7 +849,7 @@ export const setLowQualityImageMode = function setLowQualityImageMode(lowQuality
     updated_setting: "low_quality_image_mode",
   });
   const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ lowQualityImageMode });
-};
+}
 export { setDataSavingMode };
 export { setVideoUploadQuality };
 export { setImageDescriptions };

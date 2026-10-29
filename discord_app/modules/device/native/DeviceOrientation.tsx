@@ -3,7 +3,7 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import get_ActivityIndicator_mod from "../../../../_runtime/metro/08858__.js";
+import get_ActivityIndicator_mod from "../../../../_runtime/metro/08861__.js";
 
 const require = globalThis.__r;
 
@@ -256,12 +256,12 @@ export { handleOrientationChange };
 export { unlockOrientation };
 export { lockOrientation };
 export { lockOrientationForiOS };
-export const getOrientation = function getOrientation() {
+export function getOrientation() {
   return obj3.getState().orientation;
-};
-export const getOrientationLock = function getOrientationLock() {
+}
+export function getOrientationLock() {
   return obj3.getState().orientationLock;
-};
+}
 export { useOrientation };
 export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOrientationListener(arg0) {
@@ -288,7 +288,7 @@ export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled
       const items = [arg0];
       const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);
     };
-export const restoreDefaultOrientation = function restoreDefaultOrientation() {
+export function restoreDefaultOrientation() {
   if (obj.isIOS()) {
     const tmpResult = DeviceUtils;
   }
@@ -309,4 +309,4 @@ export const restoreDefaultOrientation = function restoreDefaultOrientation() {
   });
   lockOrientationForiOS();
   const tmpResult8 = ReactBatchUpdates;
-};
+}

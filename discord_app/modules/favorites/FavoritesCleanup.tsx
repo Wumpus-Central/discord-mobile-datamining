@@ -47,7 +47,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -78,7 +78,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -86,13 +86,13 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4860).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4861).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1095).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
 
 export { getFavoriteThreadIdsForCleanup };
-export const loadFavoriteThreadsForCleanup = function loadFavoriteThreadsForCleanup() {
+export function loadFavoriteThreadsForCleanup() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -101,8 +101,8 @@ export const loadFavoriteThreadsForCleanup = function loadFavoriteThreadsForClea
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getFavoritesCleanupCandidates = function getFavoritesCleanupCandidates(days) {
+}
+export function getFavoritesCleanupCandidates(days) {
   days = days.days;
   if (Number.isSafeInteger(days)) {
     if (days >= 1) {
@@ -158,4 +158,4 @@ export const getFavoritesCleanupCandidates = function getFavoritesCleanupCandida
     }
   }
   return [];
-};
+}

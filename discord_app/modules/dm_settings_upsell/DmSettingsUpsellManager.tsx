@@ -20,7 +20,7 @@ const dmSettingsUpsellManager = new DmSettingsUpsellManager();
 let result = size.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
 
 export default dmSettingsUpsellManager;
-export const acknowledgeDmSettingsUpsell = function acknowledgeDmSettingsUpsell(guildId) {
+export function acknowledgeDmSettingsUpsell(guildId) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.post({ url: Endpoints.DM_SETTINGS_UPSELL_ACK(guildId), rejectWithError: false });
-};
+}

@@ -11,7 +11,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");
 
-export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGateForVoiceChannel(id) {
+export function maybeOpenSpoilerGateForVoiceChannel(id) {
   const channel = ChannelStore.getChannel(id);
   let tmp2 = null == channel;
   if (!tmp2) {
@@ -27,4 +27,4 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
     flag = true;
   }
   return flag;
-};
+}

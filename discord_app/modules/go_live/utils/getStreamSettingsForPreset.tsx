@@ -82,7 +82,7 @@ const result = size.fileFinishedImporting("modules/go_live/utils/getStreamSettin
 
 export default getStreamSettingsForPreset;
 export { getApplicationStreamPresetValues };
-export const getMaxSettingsForPreset = function getMaxSettingsForPreset(PRESET_MOBILE_DEFAULT) {
+export function getMaxSettingsForPreset(PRESET_MOBILE_DEFAULT) {
   const tmp = getApplicationStreamPresetValues()[PRESET_MOBILE_DEFAULT];
   let first;
   if (tmp != null) {
@@ -92,7 +92,7 @@ export const getMaxSettingsForPreset = function getMaxSettingsForPreset(PRESET_M
     first = null;
   }
   return first;
-};
-export const canStreamWithPreset = function canStreamWithPreset(arg0, user, guildPremiumTier, arg3) {
+}
+export function canStreamWithPreset(arg0, user, guildPremiumTier, arg3) {
   return null != getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3);
-};
+}

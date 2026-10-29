@@ -1,11 +1,11 @@
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
-const LinkType = fn(7797).LinkType;
+const LinkType = fn(7820).LinkType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 
-export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id) {
+export function trackingConfigWithDefaults(id) {
   let str;
   if (id != null) {
     str = id.id;
@@ -92,4 +92,4 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
   }
   obj.analyticsLocations = analyticsLocations;
   return obj;
-};
+}

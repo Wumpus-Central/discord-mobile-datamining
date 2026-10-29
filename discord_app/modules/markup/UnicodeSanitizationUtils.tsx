@@ -389,21 +389,21 @@ let result = size.fileFinishedImporting("modules/markup/UnicodeSanitizationUtils
 
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX = regExp;
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX_EXCLUDING_TABS = regExp1;
-export const sanitizeWhitespace = function sanitizeWhitespace(src) {
+export function sanitizeWhitespace(src) {
   return src.replace(regExp, "");
-};
-export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExcludingTabs(str) {
+}
+export function sanitizeWhitespaceExcludingTabs(str) {
   return str.replace(regExp1, "");
-};
+}
 export const UNICODE_CONFUSABLES_FOR_URL_DETECTION = items2;
-export const sanitizeUnicodeConfusables = function sanitizeUnicodeConfusables(sanitizeWhitespaceResult) {
+export function sanitizeUnicodeConfusables(sanitizeWhitespaceResult) {
   closure_0 = sanitizeWhitespaceResult;
   const item = items2.forEach((matcher) => {
     closure_0 = closure_0.replace(matcher.matcher, matcher.character);
   });
   return closure_0;
-};
-export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uRL) {
+}
+export function safelyMakeUrlHumanReadable(uRL) {
   let startsWithResult = "null" === uRL.origin;
   if (startsWithResult) {
     const pathname = uRL.pathname;
@@ -435,4 +435,4 @@ export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uR
   const sum = protocol + safelyPartiallyDecodeURIComponent(uRL.pathname);
   const sum1 = sum + safelyPartiallyDecodeURIComponent(uRL.search);
   return sum1 + safelyPartiallyDecodeURIComponent(uRL.hash);
-};
+}

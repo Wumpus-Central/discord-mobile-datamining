@@ -61,6 +61,6 @@ let result = size.fileFinishedImporting("modules/stickers/StickerSendability.tsx
 
 export { StickerSendability };
 export { getStickerSendability };
-export const isSendableSticker = function isSendableSticker(id, currentUser, channel) {
+export function isSendableSticker(id, currentUser, channel) {
   return getStickerSendability(id, currentUser, channel) === obj.SENDABLE;
-};
+}

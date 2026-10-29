@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx",
 );
 
-export const createFriendInvite = function createFriendInvite(inviter, arg1, id, theme) {
+export function createFriendInvite(inviter, arg1, id, theme) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   const intl = util.intl;
   const string = intl.string;
@@ -117,4 +117,4 @@ export const createFriendInvite = function createFriendInvite(inviter, arg1, id,
   }
   obj.type = FRIEND;
   return obj;
-};
+}

@@ -14,7 +14,7 @@ let closure_5 = async function _fetchReactiveCheckResult() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_6 = async function _resetAgeVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -114,7 +114,7 @@ let closure_6 = async function _resetAgeVerification() {
       } else {
         closure_128_1(closure_128_2[3]).dispatch({ type: "AGE_VERIFICATION_RESET" });
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -126,7 +126,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
 
-export const fetchReactiveCheckResult = function fetchReactiveCheckResult() {
+export function fetchReactiveCheckResult() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -135,8 +135,8 @@ export const fetchReactiveCheckResult = function fetchReactiveCheckResult() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resetAgeVerification = function resetAgeVerification() {
+}
+export function resetAgeVerification() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -145,4 +145,4 @@ export const resetAgeVerification = function resetAgeVerification() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

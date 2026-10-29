@@ -5,7 +5,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const UserRowModes = fn(10651).UserRowModes;
+const UserRowModes = fn(10684).UserRowModes;
 const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpamRequ
   if (cResult[4] !== stateFromStoresArray) {
     class N {
       constructor() {
-        mapped = closure_1.map(() => { ... });
-        return mapped.filter(() => { ... });
+        mapped = closure_1.map(/* F158520 */ function() { ... });
+        return mapped.filter(/* F158521 */ function() { ... });
       }
     }
     const items2 = [stateFromStoresArray];
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpamRequ
   } else {
     class N {
       constructor() {
-        mapped = closure_1.map(() => { ... });
-        return mapped.filter(() => { ... });
+        mapped = closure_1.map(/* F158520 */ function() { ... });
+        return mapped.filter(/* F158521 */ function() { ... });
       }
     }
     tmp15 = cResult[6];

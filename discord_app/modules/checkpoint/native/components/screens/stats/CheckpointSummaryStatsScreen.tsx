@@ -4,14 +4,14 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
-import _modDef3057 from "../../../../Checkpoint.messages.js";
-import _modDef3089 from "../../../../Checkpoint2026.messages.js";
+import _modDef3058 from "../../../../Checkpoint.messages.js";
+import _modDef3090 from "../../../../Checkpoint2026.messages.js";
 import UnicodeEmojisDefault from "../../../../../emojis/UnicodeEmojis.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
+import CheckpointCardColors from "../../../../CheckpointCardColors.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import EmojiDefault from "../../../../../emojis/native/Emoji.tsx";
 import UnknownGameIcon from "../../../../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
-import CheckpointCardColors from "../../../../CheckpointCardColors.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreen from "../../CheckpointScreen.tsx";
 import CheckpointStatNumberDefault from "../../CheckpointStatNumber.tsx";
@@ -30,8 +30,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6050).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5004);
+const sum = fn(6054).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5005);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
 obj2.row = { flexDirection: "row", columnGap: nativeDefault.space.PX_16 };
@@ -313,25 +313,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const tmpResult = initialize;
   const stateFromStores = initialize.useStateFromStores(tmp12, tmp13);
   if (cResult[4] !== character) {
-    const cardColors = CheckpointCardColors.getCardColors(character);
+    const characterCardColorPalette = CheckpointCardColors.getCharacterCardColorPalette(character);
+    CheckpointCardColors;
     class M {
       constructor() {
         return closure_1_6.useReducedMotion;
       }
     }
-    cResult[5] = cardColors;
-    let tmp16 = cardColors;
-    const tmpResult5 = CheckpointCardColors;
+    cResult[4] = character;
+    cResult[5] = tmp19;
+    let tmp16 = tmp19;
+    const tmpResult6 = CheckpointCardColors;
   } else {
     tmp16 = cResult[5];
   }
   const primaryBackgroundColor = tmp16.primaryBackgroundColor;
-  const tmpResult4 = initialize;
+  const tmpResult5 = initialize;
   const checkpointScreenContentHeight = CheckpointScreen.useCheckpointScreenContentHeight();
-  const tmpResult6 = CheckpointScreen;
-  [tmp20, require] = noop.useState(null);
-  if (null != tmp20) {
-    const diff = checkpointScreenContentHeight - closure_11 - PX_16 - tmp20;
+  const tmpResult8 = CheckpointScreen;
+  [tmp22, require] = noop.useState(null);
+  if (null != tmp22) {
+    const diff = checkpointScreenContentHeight - closure_11 - PX_16 - tmp22;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     function handleStatsLayout(nativeEvent) {
@@ -382,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         }
       }
       cResult[12] = primaryBackgroundColor;
-      cResult[13] = tmp37;
+      cResult[13] = tmp39;
       const obj3 = { size: "md", color: null };
     }
     class M {
@@ -390,11 +392,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         return closure_1_6.useReducedMotion;
       }
     }
-    const obj4 = { character, maxHeight: diff };
-    const tmp41 = closure_8(CheckpointRecapCardDefault, obj4);
+    const obj4 = { isStepFocusTarget: true, character, maxHeight: diff };
+    const tmp43 = closure_8(CheckpointRecapCardDefault, obj4);
     cResult[14] = diff;
     cResult[15] = character;
-    cResult[16] = tmp41;
+    cResult[16] = tmp43;
   }
   let id;
   if (first1 != null) {
@@ -408,17 +410,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         return closure_1_6.useReducedMotion;
       }
     }
-    let tmp31 = !stateFromStores;
+    let tmp33 = !stateFromStores;
     if (!stateFromStores) {
-      tmp31 = true === first1.animated;
+      tmp33 = true === first1.animated;
     }
-    obj5.animated = tmp31;
+    obj5.animated = tmp33;
     emojiURL = AvatarUtilsDefault.getEmojiURL(obj5);
   }
   cResult[7] = stateFromStores;
   cResult[8] = first1;
   cResult[9] = emojiURL;
-  const tmp19 = _slicedToArray(noop.useState(null), 2);
+  const tmp21 = _slicedToArray(noop.useState(null), 2);
 }) : (function CheckpointSummaryStatsScreen() {
   const tmp = closure_12();
   const items = [CheckpointStore];
@@ -450,14 +452,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items1 = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const tmp2Result = initialize;
-  const primaryBackgroundColor = CheckpointCardColors.getCardColors(character).primaryBackgroundColor;
-  const tmp2Result3 = CheckpointCardColors;
+  const characterCardColorPalette = CheckpointCardColors.getCharacterCardColorPalette(character);
+  const tmp2Result4 = CheckpointCardColors;
+  const primaryBackgroundColor = CheckpointCardColors.getCardColors(characterCardColorPalette).primaryBackgroundColor;
+  const tmp2Result5 = CheckpointCardColors;
   const checkpointScreenContentHeight = CheckpointScreen.useCheckpointScreenContentHeight();
-  const tmp2Result4 = CheckpointScreen;
-  [tmp13, require] = noop.useState(null);
+  const tmp2Result6 = CheckpointScreen;
+  [tmp14, require] = noop.useState(null);
   let diff;
-  if (null != tmp13) {
-    diff = checkpointScreenContentHeight - closure_11 - PX_16 - tmp13;
+  if (null != tmp14) {
+    diff = checkpointScreenContentHeight - closure_11 - PX_16 - tmp14;
   }
   let first1;
   if (emojis != null) {
@@ -476,34 +480,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   if (null != id) {
     const obj2 = { id: first1.id, animated: null, size: 48 };
-    let tmp23 = !stateFromStores;
+    let tmp24 = !stateFromStores;
     if (!stateFromStores) {
-      tmp23 = true === first1.animated;
+      tmp24 = true === first1.animated;
     }
-    obj2.animated = tmp23;
+    obj2.animated = tmp24;
     const emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
   }
   let applicationIconURL;
   if (null != game) {
-    ({ id: obj8.id, iconHash: obj8.icon } = game);
+    ({ id: obj9.id, iconHash: obj9.icon } = game);
     applicationIconURL = AvatarUtilsDefault.getApplicationIconURL({ id: null, icon: null, fallbackAvatar: false });
     const obj3 = { id: null, icon: null, fallbackAvatar: false };
   }
-  let tmp26Result4 = closure_8(UnknownGameIcon.UnknownGameIcon, { size: "md", color: primaryBackgroundColor });
+  let tmp27Result4 = closure_8(UnknownGameIcon.UnknownGameIcon, { size: "md", color: primaryBackgroundColor });
   const obj4 = { style: tmp.container, children: null };
-  const tmp12 = _slicedToArray(noop.useState(null), 2);
-  const items2 = [closure_8(CheckpointRecapCardDefault, { character, maxHeight: diff }), ];
-  const obj6 = {
+  const tmp13 = _slicedToArray(noop.useState(null), 2);
+  const items2 = [closure_8(CheckpointRecapCardDefault, { isStepFocusTarget: true, character, maxHeight: diff }), ];
+  const obj5 = {
     style: tmp.stats,
     onLayout: function handleStatsLayout(nativeEvent) {
       require(nativeEvent.nativeEvent.layout.height);
     },
     children: null
   };
-  const obj9 = { style: tmp.row, children: null };
+  const obj7 = { style: tmp.row, children: null };
   const obj10 = { label: null, value: null, color: null };
   const intl = util.intl;
-  obj10.label = intl.string(_modDef3089.MSrV9z);
+  obj10.label = intl.string(_modDef3090.MSrV9z);
   let num;
   if (voice != null) {
     num = voice.totalVoiceMinutes;
@@ -516,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items3 = [closure_8(closure_13, obj10), ];
   const obj11 = { label: null, value: null, color: null };
   const intl2 = util.intl;
-  obj11.label = intl2.string(_modDef3057.wWKySP);
+  obj11.label = intl2.string(_modDef3058.wWKySP);
   let num2;
   if (messages != null) {
     num2 = messages.numMessagesSent;
@@ -527,12 +531,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   obj11.value = Math.round(num2);
   obj11.color = primaryBackgroundColor;
   items3[1] = closure_8(closure_13, obj11);
-  obj9.children = items3;
-  const items4 = [closure_9(View, obj9), , , ];
+  obj7.children = items3;
+  const items4 = [closure_9(View, obj7), , , ];
   const obj12 = { style: tmp.row, children: null };
   const obj13 = { label: null, value: null, color: null };
   const intl3 = util.intl;
-  obj13.label = intl3.string(_modDef3089["f5S+pt"]);
+  obj13.label = intl3.string(_modDef3090["f5S+pt"]);
   let num3;
   if (first != null) {
     num3 = first.numDaysInteracted;
@@ -545,29 +549,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items5 = [closure_8(closure_13, obj13), ];
   const obj14 = { label: null, name: null, color: null, icon: null };
   const intl4 = util.intl;
-  obj14.label = intl4.string(_modDef3057["8XPMJj"]);
+  obj14.label = intl4.string(_modDef3058["8XPMJj"]);
   if (null != first) {
     let name = first.guild.name;
   } else {
     const intl5 = util.intl;
-    name = intl5.string(_modDef3089.GultYJ);
+    name = intl5.string(_modDef3090.GultYJ);
   }
   obj14.name = name;
   obj14.color = primaryBackgroundColor;
-  let tmp26Result = tmp26Result4;
+  let tmp27Result = tmp27Result4;
   if (null != first) {
     const obj15 = { guild: first.guild, size: GuildIcon.GuildIconSizes.SMALL, style: tmp.itemIcon };
-    tmp26Result = closure_8(GuildIconDefault, obj15);
-    const tmp28Result = GuildIconDefault;
+    tmp27Result = closure_8(GuildIconDefault, obj15);
+    const tmp29Result = GuildIconDefault;
   }
-  obj14.icon = tmp26Result;
+  obj14.icon = tmp27Result;
   items5[1] = closure_8(closure_14, obj14);
   obj12.children = items5;
   items4[1] = closure_9(View, obj12);
   const obj16 = { style: tmp.row, children: null };
   const obj17 = { label: null, value: null, color: null };
   const intl6 = util.intl;
-  obj17.label = intl6.string(_modDef3089.xVSlv3);
+  obj17.label = intl6.string(_modDef3090.xVSlv3);
   let num4;
   if (emojis != null) {
     num4 = emojis.numEmojisSent;
@@ -580,38 +584,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items6 = [closure_8(closure_13, obj17), ];
   const obj18 = { label: null, name: null, color: null, icon: null };
   const intl7 = util.intl;
-  obj18.label = intl7.string(_modDef3057["3sARW7"]);
+  obj18.label = intl7.string(_modDef3058["3sARW7"]);
   if (null == first1) {
     const intl8 = util.intl;
     let stringResult = intl8.string(util.t.PoWNfe);
   } else if (null == first1.id) {
     stringResult = UnicodeEmojisDefault.convertSurrogateToName(first1.name);
-    const tmp28Result3 = UnicodeEmojisDefault;
+    const tmp29Result3 = UnicodeEmojisDefault;
   } else {
     const _HermesInternal = HermesInternal;
     stringResult = ":" + first1.name + ":";
   }
   obj18.name = stringResult;
   obj18.color = primaryBackgroundColor;
-  let tmp26Result3 = tmp26Result4;
+  let tmp27Result3 = tmp27Result4;
   if (null != first1) {
     let str2 = "";
     if (null == first1.id) {
       str2 = first1.name;
     }
     const obj19 = { name: str2, src: emojiURL, style: null, fastImageStyle: null, textEmojiStyle: null };
-    ({ emoji: obj22.style, emoji: obj22.fastImageStyle, textEmoji: obj22.textEmojiStyle } = tmp);
-    tmp26Result3 = closure_8(EmojiDefault, obj19);
-    const tmp28Result4 = EmojiDefault;
+    ({ emoji: obj23.style, emoji: obj23.fastImageStyle, textEmoji: obj23.textEmojiStyle } = tmp);
+    tmp27Result3 = closure_8(EmojiDefault, obj19);
+    const tmp29Result4 = EmojiDefault;
   }
-  obj18.icon = tmp26Result3;
+  obj18.icon = tmp27Result3;
   items6[1] = closure_8(closure_14, obj18);
   obj16.children = items6;
   items4[2] = closure_9(View, obj16);
   const obj20 = { style: tmp.row, children: null };
   const obj21 = { label: null, value: null, color: null };
   const intl9 = util.intl;
-  obj21.label = intl9.string(_modDef3089.y2Y1DD);
+  obj21.label = intl9.string(_modDef3090.y2Y1DD);
   let num5;
   if (games != null) {
     num5 = games.totalDaysPlayed;
@@ -622,31 +626,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   obj21.value = Math.round(num5);
   obj21.color = primaryBackgroundColor;
   const items7 = [closure_8(closure_13, obj21), ];
-  const obj23 = { label: null, name: null, color: null, icon: null };
+  const obj22 = { label: null, name: null, color: null, icon: null };
   const intl10 = util.intl;
-  obj23.label = intl10.string(_modDef3057.RbT4Zq);
+  obj22.label = intl10.string(_modDef3058.RbT4Zq);
   if (null != game) {
     let name2 = game.name;
   } else {
     const intl11 = util.intl;
     name2 = intl11.string(util.t.PoWNfe);
   }
-  obj23.name = name2;
-  obj23.color = primaryBackgroundColor;
+  obj22.name = name2;
+  obj22.color = primaryBackgroundColor;
   if (null != applicationIconURL) {
     const obj24 = { source: null, style: null };
     const obj25 = { uri: applicationIconURL };
     obj24.source = obj25;
     obj24.style = tmp.itemIcon;
-    tmp26Result4 = closure_8(FastImageDefault, obj24);
+    tmp27Result4 = closure_8(FastImageDefault, obj24);
   }
   const obj26 = { children: null };
-  obj23.icon = tmp26Result4;
-  items7[1] = closure_8(closure_14, obj23);
+  obj22.icon = tmp27Result4;
+  items7[1] = closure_8(closure_14, obj22);
   obj20.children = items7;
   items4[3] = closure_9(View, obj20);
-  obj6.children = items4;
-  items2[1] = closure_9(View, obj6);
+  obj5.children = items4;
+  items2[1] = closure_9(View, obj5);
   obj4.children = items2;
   obj26.children = closure_9(View, obj4);
   return closure_8(CheckpointScreenDefault, obj26);

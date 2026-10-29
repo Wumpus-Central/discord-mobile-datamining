@@ -25,7 +25,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -236,9 +236,9 @@ function cleanCode(str) {
 }
 function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_6519").match(getOrFetchSubscriptionPlan);
+  const match = require("module_6543").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_6519");
+  const str = require("module_6543");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -313,7 +313,7 @@ const result = size.fileFinishedImporting("utils/GiftCodeUtils.tsx");
 
 export { GiftExperience };
 export { getGiftExperience };
-export const shouldShowCustomGiftExperience = function shouldShowCustomGiftExperience(arg0) {
+export function shouldShowCustomGiftExperience(arg0) {
   if (!shared_PlatformUtils.isMobile) {
     if (!shared_PlatformUtils.isTablet) {
       if (null != arg0) {
@@ -328,8 +328,8 @@ export const shouldShowCustomGiftExperience = function shouldShowCustomGiftExper
   }
   DEFAULT = obj.DEFAULT;
   tmp5 = obj;
-};
-export const makeComboId = function makeComboId(skuId) {
+}
+export function makeComboId(skuId) {
   let str = subscriptionPlanId;
   if (subscriptionPlanId === undefined) {
     str = null;
@@ -342,8 +342,8 @@ export const makeComboId = function makeComboId(skuId) {
     str2 = "";
   }
   return "" + skuId + ":" + str + ":" + str2;
-};
-export const parseComboId = function parseComboId(item) {
+}
+export function parseComboId(item) {
   const tmp = _slicedToArray(item.split(":"), 3);
   const obj = { skuId: tmp[0], subscriptionPlanId: null, giftStyle: null };
   let tmp4 = null;
@@ -360,9 +360,9 @@ export const parseComboId = function parseComboId(item) {
   }
   obj.giftStyle = parsed;
   return obj;
-};
+}
 export { cleanCode };
-export const isGiftCodeEmbed = function isGiftCodeEmbed(type) {
+export function isGiftCodeEmbed(type) {
   type = undefined;
   if (type != null) {
     type = type.type;
@@ -386,8 +386,8 @@ export const isGiftCodeEmbed = function isGiftCodeEmbed(type) {
     tmp2 = type1 === constants4.GIFT;
   }
   return tmp2;
-};
-export const findGiftCodes = function findGiftCodes(content) {
+}
+export function findGiftCodes(content) {
   if (null == content) {
     return [];
   } else {
@@ -409,8 +409,8 @@ export const findGiftCodes = function findGiftCodes(content) {
     const _Array = Array;
     return Array.from(set);
   }
-};
-export const getGiftCodeURL = function getGiftCodeURL() {
+}
+export function getGiftCodeURL() {
   let str = code;
   if (code === undefined) {
     str = "";
@@ -426,8 +426,8 @@ export const getGiftCodeURL = function getGiftCodeURL() {
     combined = "/gifts/" + str;
   }
   return "" + location.protocol + "//" + host + combined;
-};
-export const resolveGiftCode = function resolveGiftCode() {
+}
+export function resolveGiftCode() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -436,13 +436,13 @@ export const resolveGiftCode = function resolveGiftCode() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const trackGiftCodeCopy = function trackGiftCodeCopy(giftCodeRecord, value) {
+}
+export function trackGiftCodeCopy(giftCodeRecord, value) {
   const merged = Object.assign(getAnalyticsDataForSKUDefault(value, false, false));
   const merged1 = Object.assign(giftCodeRecord.analyticsData);
   AnalyticsUtilsDefault.track(constants.GIFT_CODE_COPIED, {});
-};
-export const getStep = function getStep(arg0, isSubscription, error) {
+}
+export function getStep(arg0, isSubscription, error) {
   ({ accepted, accepting } = error);
   if (null == error.error) {
     if (!accepted) {
@@ -465,8 +465,8 @@ export const getStep = function getStep(arg0, isSubscription, error) {
     const SUCCESS = constants3.SUCCESS;
   }
   ERROR = constants3.ERROR;
-};
-export const getHeaderText = function getHeaderText(arg0, isSubscription, name) {
+}
+export function getHeaderText(arg0, isSubscription, name) {
   if (constants3.ERROR === arg0) {
     const intl2 = util.intl;
     return intl2.formatToMarkdownString(util.t.JUvC0s, {});
@@ -490,8 +490,8 @@ export const getHeaderText = function getHeaderText(arg0, isSubscription, name) 
     }
     return formatToPlainStringResult1;
   }
-};
-export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGift) {
+}
+export function getButtonText(arg0, giftStyle, isCustomGift) {
   isCustomGift = isCustomGift.isCustomGift;
   if (constants3.ERROR === arg0) {
     const intl6 = util.intl;
@@ -532,13 +532,9 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
       }
     }
   }
-};
+}
 export { getSubscriptionGiftSuccessText };
-export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftStartHeaderText(
-  subscriptionPlan,
-  sender,
-  name,
-) {
+export function getSubscriptionGiftStartHeaderText(subscriptionPlan, sender, name) {
   _require = sender;
   const skuName = name;
   if (null == name) {
@@ -554,9 +550,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   } else {
     intervalCount = subscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_6519").match(subscriptionPlan);
+      const match = require("module_6543").match(subscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_6519");
+      const str = require("module_6543");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -585,9 +581,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
           return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
         });
     } else {
-      const match1 = require("module_6519").match(subscriptionPlan);
+      const match1 = require("module_6543").match(subscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_6519");
+      const str2 = require("module_6543");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -618,8 +614,8 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
     }
     return otherwiseResult;
   }
-};
-export const getBodyText = function getBodyText(arg0) {
+}
+export function getBodyText(arg0) {
   ({ step, sku, error, subscriptionPlan } = arg0);
   ({ libraryApplication, accepted, accepting, onGoToLibrary } = arg0);
   if (subscriptionPlan === undefined) {
@@ -645,9 +641,9 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(6519).match(subscriptionPlan);
+      const match = subscriptionPlan(6543).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(6519);
+      const str = subscriptionPlan(6543);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;
@@ -740,13 +736,9 @@ export const getBodyText = function getBodyText(arg0) {
       return intl.formatToPlainString(subscriptionPlan(1125).t.l6Ea4Z, obj);
     }
   }
-};
+}
 export { getErrorMessage };
-export const firstLibraryApplicationForGiftCode = function firstLibraryApplicationForGiftCode(
-  arg0,
-  applicationId,
-  arg2,
-) {
+export function firstLibraryApplicationForGiftCode(arg0, applicationId, arg2) {
   let arr = arg0;
   const libraryApplication = arg2;
   applicationId = applicationId.applicationId;
@@ -761,8 +753,8 @@ export const firstLibraryApplicationForGiftCode = function firstLibraryApplicati
     first = found[0];
   }
   return first;
-};
-export const processGiftCodeInput = function processGiftCodeInput(str) {
+}
+export function processGiftCodeInput(str) {
   str = str.trim();
   const parts = str.split("/");
   const str2 = parts.pop();
@@ -782,7 +774,7 @@ export const processGiftCodeInput = function processGiftCodeInput(str) {
     }
     return replaced;
   }
-};
+}
 export const useGetGiftCode = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetGiftCode(arg0, arg1) {
       _require = arg0;
@@ -845,7 +837,7 @@ export const useGetGiftCode = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       });
     };
-export const trackStep = function trackStep(giftCode) {
+export function trackStep(giftCode) {
   giftCode = giftCode.giftCode;
   ({ step, customMessage, emojiName, soundId, productLine } = giftCode);
   const obj3 = {
@@ -869,5 +861,5 @@ export const trackStep = function trackStep(giftCode) {
   obj3.sound_id = soundId;
   obj3.product_line = productLine;
   AnalyticsUtilsDefault.track(constants.GIFT_ACCEPT_STEP, obj3);
-};
+}
 export { getGiftCodeRedeemError };

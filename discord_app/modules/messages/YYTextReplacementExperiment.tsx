@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/messages/YYTextReplacementExperiment.tsx");
 
-export const shouldEnableYYTextReplacement = function shouldEnableYYTextReplacement(location) {
+export function shouldEnableYYTextReplacement(location) {
   return config.getConfig({ location: location.location }).enabled;
-};
+}

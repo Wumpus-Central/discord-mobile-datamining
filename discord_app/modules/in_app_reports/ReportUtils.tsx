@@ -97,7 +97,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -153,7 +153,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
         return obj;
       } else {
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp10) {
       c5 = tmp;
@@ -229,7 +229,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "Array", message_id: "ix", stage_instance_id: "borderRadius", guild_id: "withSpring", guild_scheduled_event_id: "duration", user_id: "t", email_token: "toCharArray$esjava$1", application_id: "toCharArray$esjava$1", entrypoint: "toCharArray$esjava$1", widget_id: "round" };
+  let obj2 = { channel_id: "username", message_id: "create", stage_instance_id: "container", guild_id: "username", guild_scheduled_event_id: "context", user_id: "username", email_token: "count", application_id: "username", entrypoint: "createStyles", widget_id: "username" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -368,7 +368,7 @@ function genSubmitData(version, name, arr, email_token) {
 }
 const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
-const SafetyToastType = fn(7453).SafetyToastType;
+const SafetyToastType = fn(7476).SafetyToastType;
 const ReactCompilerGating = fn(558);
 function getModeratorReportEndpointSafely(name) {
   const REPORT_TO_MOD = ReportMenuType.ReportMenuTypeSets.REPORT_TO_MOD;
@@ -387,7 +387,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportUtils.tsx");
 
 export { getReportMenu };
-export const getReportMenuForModeratorReport = function getReportMenuForModeratorReport() {
+export function getReportMenuForModeratorReport() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -396,8 +396,8 @@ export const getReportMenuForModeratorReport = function getReportMenuForModerato
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getUnauthenticatedReportMenu = function getUnauthenticatedReportMenu() {
+}
+export function getUnauthenticatedReportMenu() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -406,8 +406,8 @@ export const getUnauthenticatedReportMenu = function getUnauthenticatedReportMen
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const submitHeadlessReport = function submitHeadlessReport() {
+}
+export function submitHeadlessReport() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -416,12 +416,12 @@ export const submitHeadlessReport = function submitHeadlessReport() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const submitReport = function submitReport(language, name, arr) {
+}
+export function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj4(8143).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(8166).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -454,8 +454,8 @@ export const submitReport = function submitReport(language, name, arr) {
         return {};
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8141).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "Array", message_id: "ix", guild_id: "withSpring" };
+      if (name.name === tmp4(8164).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "duration", message_id: "toCharArray$esjava$1", guild_id: "toCharArray$esjava$1" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -467,11 +467,11 @@ export const submitReport = function submitReport(language, name, arr) {
       }
       obj4 = tmp15;
       const HTTP2 = tmp4(1294).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8143).ReportMenuTypeSets.REPORT_TO_MOD;
+      const REPORT_TO_MOD2 = tmp4(8166).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8141).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(8164).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
           SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
@@ -507,7 +507,7 @@ export const submitReport = function submitReport(language, name, arr) {
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8141).ReportNames);
+      const values = Object.values(tmp4(8164).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);
@@ -517,8 +517,8 @@ export const submitReport = function submitReport(language, name, arr) {
     }
   }
   return resolved;
-};
-export const submitUnauthenticatedReport = function submitUnauthenticatedReport(version, name, arr, email_token) {
+}
+export function submitUnauthenticatedReport(version, name, arr, email_token) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     return Promise.resolve();
   } else {
@@ -532,8 +532,8 @@ export const submitUnauthenticatedReport = function submitUnauthenticatedReport(
     const request = { url: React5.SUBMIT_UNAUTHENTICATED_REPORT_MENU(name), body: genSubmitData(version, name, arr, email_token), rejectWithError: true };
     return HTTP.post(request);
   }
-};
-export const sendUnauthenticatedReportPincode = function sendUnauthenticatedReportPincode(name, email) {
+}
+export function sendUnauthenticatedReportPincode(name, email) {
   let length;
   const HTTP = HTTPUtils.HTTP;
   let num = 5381;
@@ -550,8 +550,8 @@ export const sendUnauthenticatedReportPincode = function sendUnauthenticatedRepo
   }
   const request = { url: "" + result + "?b=" + num3 >>> 0.toString(36), body: { name, email }, rejectWithError: false, failImmediatelyWhenRateLimited: true };
   return HTTP.post(request);
-};
-export const verifyUnauthenticatedReport = function verifyUnauthenticatedReport() {
+}
+export function verifyUnauthenticatedReport() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -560,8 +560,8 @@ export const verifyUnauthenticatedReport = function verifyUnauthenticatedReport(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getDsaExperiment = function getDsaExperiment() {
+}
+export function getDsaExperiment() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -570,8 +570,8 @@ export const getDsaExperiment = function getDsaExperiment() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchUrfCapabilities = function fetchUrfCapabilities() {
+}
+export function fetchUrfCapabilities() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -580,8 +580,8 @@ export const fetchUrfCapabilities = function fetchUrfCapabilities() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const submitReportSecondLook = function submitReportSecondLook() {
+}
+export function submitReportSecondLook() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -590,12 +590,12 @@ export const submitReportSecondLook = function submitReportSecondLook() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { getUnauthenticatedReportNameSafely };
 export { getReportNameSafely };
 export { getModeratorReportNameSafely };
 export { getModeratorReportEndpointSafely };
-export const trackCloseReportModalAnalytics = function trackCloseReportModalAnalytics(name, c12, onSubmit) {
+export function trackCloseReportModalAnalytics(name, c12, onSubmit) {
   const obj2 = { report_type: name.name, report_id: onSubmit, navigation_history, message_id: null, stage_instance_id: null, guild_scheduled_event_id: null, guild_id: null, channel_id: null, application_id: null };
   if (name.name === MenuTypes.ReportNames.MESSAGE) {
     const id = name.record.id;
@@ -635,11 +635,11 @@ export const trackCloseReportModalAnalytics = function trackCloseReportModalAnal
   }
   id2 = name.record.id;
   obj = AppAnalyticsUtilsDefault;
-};
-export const showInAppReportsFeedbackModal = function showInAppReportsFeedbackModal(name, onSubmit) {
+}
+export function showInAppReportsFeedbackModal(name, onSubmit) {
   DispatcherDefault.dispatch({ type: "IN_APP_REPORTS_SHOW_FEEDBACK", reportId: onSubmit, reportType: name.name });
-};
-export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(arg0, textInput) {
+}
+export function areRequiredElementsUnfilled(arg0, textInput) {
   ({ freeTextElements, dropdownElements, countrySelectElement, radioGroupElements, multiSelectElement, contentUrlInputElement } = arg0);
   textInput = textInput.textInput;
   const multiSelect = textInput.multiSelect;
@@ -801,7 +801,7 @@ export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(
     someResult = tmp18;
   }
   return someResult;
-};
+}
 export const TrackIarSettingsUpsellsActionType = { SETTINGS_UPSELLS_VIEWED: "SETTINGS_UPSELLS_VIEWED", SETTINGS_UPSELLS_APPLY_CLICKED: "SETTINGS_UPSELLS_APPLY_CLICKED", SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED: "SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED" };
 export const useTrackSettingsUpsellsAction = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackSettingsUpsellsAction(name, arg1, arg2) {
   _require = name;

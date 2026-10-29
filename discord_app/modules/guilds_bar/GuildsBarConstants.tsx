@@ -7,7 +7,7 @@ const hex2intResult = ColorUtils.hex2int(shims.unsafe_getResolvedRawColor("BRAND
 const result = size.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");
 
 export const DEFAULT_FOLDER_COLOR = hex2intResult;
-export const normalizeFolderColor = function normalizeFolderColor(arg0) {
+export function normalizeFolderColor(arg0) {
   let tmp = null;
   if (null != arg0) {
     tmp = null;
@@ -16,8 +16,8 @@ export const normalizeFolderColor = function normalizeFolderColor(arg0) {
     }
   }
   return tmp;
-};
-export const isDefaultFolderColor = function isDefaultFolderColor(arg0) {
+}
+export function isDefaultFolderColor(arg0) {
   let tmp = null;
   if (null != arg0) {
     tmp = null;
@@ -26,7 +26,7 @@ export const isDefaultFolderColor = function isDefaultFolderColor(arg0) {
     }
   }
   return null == tmp;
-};
+}
 export const GuildPeekCardTypes = { WHO: 0, [0]: "WHO", WHAT: 1, [1]: "WHAT" };
 export const CardCategory = {
   HANGOUT: "hangout",

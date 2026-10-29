@@ -105,7 +105,7 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
   }
   return value2.find((id) => id.id === closure_0);
 };
-prototype["findUpload"] = function findUpload(channelId, ChannelMessage, cResult) {
+prototype["findUpload"] = function findUpload(channelId, ChannelMessage, arg2) {
   map = map.get(channelId);
   if (map == null) {
     const _Map = Map;
@@ -118,7 +118,7 @@ prototype["findUpload"] = function findUpload(channelId, ChannelMessage, cResult
   if (value2 == null) {
     value2 = closure_7;
   }
-  return value2.find(cResult);
+  return value2.find(arg2);
 };
 UploadAttachmentStore.displayName = "UploadAttachmentStore";
 const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {

@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");
 
-export const getSource = function getSource(image_asset) {
+export function getSource(image_asset) {
   if (null == image_asset.image_asset) {
     let obj2 = { uri: "" };
   } else {
@@ -15,4 +15,4 @@ export const getSource = function getSource(image_asset) {
     obj2 = { uri: str };
   }
   return obj2;
-};
+}

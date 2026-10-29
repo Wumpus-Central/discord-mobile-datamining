@@ -1,6 +1,6 @@
 // discord_app/utils/ImageUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import PQueueDefault from "../../_runtime/01494_PQueue.js";
+import PQueueDefault from "../../_runtime/01495_PQueue.js";
 import utils_ImageUtils from "native/ImageUtils.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import apply from "../../_runtime/metro/00012__.js";
@@ -185,7 +185,7 @@ let result = size.fileFinishedImporting("utils/ImageUtils.tsx");
 
 export { fit };
 export const IMAGE_MAX_ZOOM = 2000;
-export const zoomFit = function zoomFit(width, height) {
+export function zoomFit(width, height) {
   const rounded = Math.round(0.65 * window.innerHeight);
   const bound = Math.min(rounded, Math.round(window.innerHeight));
   const rounded1 = Math.round(0.75 * window.innerWidth);
@@ -195,8 +195,8 @@ export const zoomFit = function zoomFit(width, height) {
   size.maxWidth = Math.min(bound1, c5);
   size.maxHeight = bound2;
   return fit(size);
-};
-export const zoomScale = function zoomScale(arg0, arg1, arg2, arg3) {
+}
+export function zoomScale(arg0, arg1, arg2, arg3) {
   let num = 0;
   if (null != arg0) {
     num = 0;
@@ -233,8 +233,8 @@ export const zoomScale = function zoomScale(arg0, arg1, arg2, arg3) {
   }
   const bound1 = Math.min(bound, num2, num3);
   return parseFloat(bound1.toFixed(2));
-};
-export const getRatio = function getRatio(height) {
+}
+export function getRatio(height) {
   ({ width, maxWidth, maxHeight } = height);
   let num = 1;
   if (width > maxWidth) {
@@ -247,8 +247,8 @@ export const getRatio = function getRatio(height) {
     num2 = maxHeight / rounded1;
   }
   return Math.min(num * num2, 1);
-};
-export const getCoverRatio = function getCoverRatio(arg0) {
+}
+export function getCoverRatio(arg0) {
   ({ width, height } = arg0);
   if (width === height) {
     return 1;
@@ -257,8 +257,8 @@ export const getCoverRatio = function getCoverRatio(arg0) {
     const _Math2 = Math;
     return Math.min(Math.max(tmp / width, tmp2 / height), 1);
   }
-};
-export const hasDimensions = function hasDimensions(arg0) {
+}
+export function hasDimensions(arg0) {
   ({ width, height } = arg0);
   let tmp = null != width;
   if (tmp) {
@@ -271,8 +271,8 @@ export const hasDimensions = function hasDimensions(arg0) {
     tmp = 0 !== height;
   }
   return tmp;
-};
-export const makeCssUrlString = function makeCssUrlString(arg0) {
+}
+export function makeCssUrlString(arg0) {
   let str = "none";
   if (null != arg0) {
     str = "none";
@@ -282,12 +282,12 @@ export const makeCssUrlString = function makeCssUrlString(arg0) {
     }
   }
   return str;
-};
+}
 export { getPalette };
-export const getPaletteForAvatar = function getPaletteForAvatar(src) {
+export function getPaletteForAvatar(src) {
   return utils_ImageUtils.default.getPaletteForAvatarMobile(src);
-};
-export const readFileAsBase64 = function readFileAsBase64(value) {
+}
+export function readFileAsBase64(value) {
   closure_0 = value;
   return new Promise((data, arg1) => {
     closure_1 = arg1;
@@ -299,13 +299,13 @@ export const readFileAsBase64 = function readFileAsBase64(value) {
     };
     fileReader.onerror = (arg0) => closure_1(arg0);
   });
-};
-export const dataUriFileSize = function dataUriFileSize(str) {
+}
+export function dataUriFileSize(str) {
   const parts = str.split(";base64,");
   _modDef38(2 === parts.length, "Input data is not a valid image.");
   return atob(parts[1]).length;
-};
-export const dataUrlToFile = function dataUrlToFile() {
+}
+export function dataUrlToFile() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -314,9 +314,9 @@ export const dataUrlToFile = function dataUrlToFile() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { dataUrlToBlob };
-export const isPNGAnimated = function isPNGAnimated() {
+export function isPNGAnimated() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -325,12 +325,12 @@ export const isPNGAnimated = function isPNGAnimated() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const preloadImage = function preloadImage(src) {
+}
+export function preloadImage(src) {
   return new Promise((arg0, arg1) => {
     const image = new globalThis.Image();
     const listener = image.addEventListener("load", arg0);
     const listener1 = image.addEventListener("error", arg1);
     image.src = src;
   });
-};
+}

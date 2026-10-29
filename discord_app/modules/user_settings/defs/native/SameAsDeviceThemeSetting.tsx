@@ -7,7 +7,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11248);
+const SettingBuilders = fn(11302);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSameAsDeviceThemeValue() {
       const cResult = c.c(2);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.c445ix);
   },
-  parent: fn(8365).MobileUserSettings.APPEARANCE,
+  parent: fn(8387).MobileUserSettings.APPEARANCE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSameAsDeviceThemeValue() {
         const cResult = c.c(2);

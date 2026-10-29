@@ -14,7 +14,7 @@ import usePipDimensionsDefault from "usePipDimensions.tsx";
 import useIsViewingActivity from "../../../activities/native/useIsViewingActivity.tsx";
 import VideoRenderer from "VideoRenderer.tsx";
 import UserTileDefault from "UserTile.tsx";
-import _modDef11487 from "../../../../../_runtime/metro/11487__.js";
+import _modDef11541 from "../../../../../_runtime/metro/11541__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -33,12 +33,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10921);
+const ChannelCallStore = fn(10956);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5668).ParticipantTypes;
+const ParticipantTypes = fn(5670).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -1008,7 +1008,7 @@ let closure_23 = noop.memo(
                           const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
                           const obj5 = {
                             style: tmp4.thermalAlertIcon,
-                            source: _modDef11487,
+                            source: _modDef11541,
                             color: tmp4.thermalAlertIcon.color,
                           };
                           obj4.children = value3(native2.Icon, obj5);
@@ -1138,7 +1138,7 @@ let closure_23 = noop.memo(
             let tmp16Result = null;
             if (tmp5) {
               const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11487, color: tmp.thermalAlertIcon.color };
+              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11541, color: tmp.thermalAlertIcon.color };
               obj8.children = tmp16(native2.Icon, obj9);
               tmp16Result = tmp16(hasOwnProperty, obj8);
             }

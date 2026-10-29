@@ -23,7 +23,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -79,7 +79,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         };
         closure_133_1(closure_133_2[2]).dispatch(obj7);
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp16) {
         c7 = tmp;
         throw tmp16;
@@ -90,7 +90,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelSettingsPermissionsActionCreators.tsx");
 
-export const updatePermission = function updatePermission() {
+export function updatePermission() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -99,17 +99,17 @@ export const updatePermission = function updatePermission() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const selectPermission = function selectPermission(id) {
+}
+export function selectPermission(id) {
   DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id });
-};
-export const setAdvancedMode = function setAdvancedMode(advancedMode) {
+}
+export function setAdvancedMode(advancedMode) {
   DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode });
-};
-export const init = function init() {
+}
+export function init() {
   DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
-};
-export const savePermissionUpdates = function savePermissionUpdates(id, items, silent) {
+}
+export function savePermissionUpdates(id, items, silent) {
   closure_0 = id;
   importDefault = items;
   dependencyMap = [];
@@ -144,8 +144,8 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, s
   }).then(() => {
     DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent });
   });
-};
-export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpdates(arg0, arg1, arg2, arg3) {
+}
+export function saveAndClearPermissionUpdates(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -181,4 +181,4 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
   }).then(() => {
     DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent });
   });
-};
+}

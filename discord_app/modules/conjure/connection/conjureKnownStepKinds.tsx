@@ -50,6 +50,6 @@ let closure_0 = {
 };
 const result = size.fileFinishedImporting("modules/conjure/connection/conjureKnownStepKinds.tsx");
 
-export const isKnownStepKind = function isKnownStepKind(kind) {
+export function isKnownStepKind(kind) {
   return Object.hasOwn(closure_0, kind);
-};
+}

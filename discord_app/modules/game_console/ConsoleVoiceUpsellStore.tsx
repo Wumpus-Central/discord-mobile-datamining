@@ -9,17 +9,17 @@ const useConsoleVoiceUpsellStore = module_570.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/game_console/ConsoleVoiceUpsellStore.tsx");
 
 export { useConsoleVoiceUpsellStore };
-export const setShowConsoleVoiceSparkles = function setShowConsoleVoiceSparkles(showSparkles) {
+export function setShowConsoleVoiceSparkles(showSparkles) {
   _require = showSparkles;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { showSparkles };
     obj.setState(obj);
   });
-};
-export const setVoiceUpsellDismissed = function setVoiceUpsellDismissed(voiceUpsellDismissed) {
+}
+export function setVoiceUpsellDismissed(voiceUpsellDismissed) {
   _require = voiceUpsellDismissed;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { voiceUpsellDismissed };
     obj.setState(obj);
   });
-};
+}

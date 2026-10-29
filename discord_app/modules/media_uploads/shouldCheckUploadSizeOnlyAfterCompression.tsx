@@ -6,6 +6,6 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_uploads/shouldCheckUploadSizeOnlyAfterCompression.tsx");
 
-export const shouldCheckUploadSizeOnlyAfterCompression = function shouldCheckUploadSizeOnlyAfterCompression() {
+export function shouldCheckUploadSizeOnlyAfterCompression() {
   return PremiumTypeUtils.isPremium(UserStore.getCurrentUser());
-};
+}

@@ -160,7 +160,7 @@ const obj16 = {
 const MessageType = fn(1209).MessageType;
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -376,6 +376,7 @@ class Experiment$Type extends MessageType {
       },
     };
     items[45] = { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 };
+    items[46] = { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.Experiment", items, T);
     return tmp1;
   }
@@ -418,6 +419,7 @@ prototype["create"] = function create(partialSettings) {
     isManaged: false,
     eligibilityPersistence: 0,
     isFeatureFlag: false,
+    isOfficialHoldout: false,
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -793,6 +795,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (false !== id.isFeatureFlag) {
     tag.tag(49, _mod1209.WireType.Varint).bool(id.isFeatureFlag);
     const tagResult45 = tag.tag(49, _mod1209.WireType.Varint);
+  }
+  if (false !== id.isOfficialHoldout) {
+    tag.tag(50, _mod1209.WireType.Varint).bool(id.isOfficialHoldout);
+    const tagResult46 = tag.tag(50, _mod1209.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

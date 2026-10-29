@@ -8,10 +8,10 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_apps/VoiceChannelAppActionCreators.tsx");
 
-export const toggleVoiceChannelAppSurface = function toggleVoiceChannelAppSurface(id) {
+export function toggleVoiceChannelAppSurface(id) {
   DispatcherDefault.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_TOGGLE", channelId: id });
-};
-export const closeVoiceChannelApp = function closeVoiceChannelApp(id) {
+}
+export function closeVoiceChannelApp(id) {
   const framesForSurface = FramesStore.getFramesForSurface(voiceChannelAppSession.voiceChannelAppSurface(id));
   for (const item10014 of framesForSurface) {
     let obj2 = leaveFrame;
@@ -20,4 +20,4 @@ export const closeVoiceChannelApp = function closeVoiceChannelApp(id) {
   }
   DispatcherDefault.dispatch({ type: "VOICE_CHANNEL_APP_CLOSE", channelId: id });
   const obj4 = { type: "VOICE_CHANNEL_APP_CLOSE", channelId: id };
-};
+}

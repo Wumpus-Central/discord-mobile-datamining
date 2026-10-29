@@ -81,7 +81,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
   }
 }
-const ExplicitContentFilterTypes = fn(4834).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(4835).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1208).ExplicitContentRedaction.SHOW;
@@ -129,7 +129,7 @@ const result = size.fileFinishedImporting(
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj3;
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj4;
 export { resolveExplicitContentSettingWithDefaults };
-export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefaultsForTeen(isDm) {
+export function resolveSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;
   if (flag === undefined) {
     flag = false;
@@ -150,8 +150,8 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
   } else {
     return preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
-};
-export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {
+}
+export function getExplicitContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
     const ExplicitContentSettings = UserSettings.ExplicitContentSettings;
@@ -181,8 +181,8 @@ export const getExplicitContentSettingOrDefault = function getExplicitContentSet
     isFriend: true,
   });
   return obj;
-};
-export const updateExplicitContentSetting = function updateExplicitContentSetting(arg0) {
+}
+export function updateExplicitContentSetting(arg0) {
   const ExplicitContentSettings = UserSettings.ExplicitContentSettings;
   const setting = ExplicitContentSettings.getSetting();
   let prop;
@@ -213,8 +213,8 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
   const merged1 = Object.assign(arg0);
   ExplicitContentSettings2.updateSetting({});
   obj2 = {};
-};
-export const shouldRedactMessageMediaForForum = function shouldRedactMessageMediaForForum() {
+}
+export function shouldRedactMessageMediaForForum() {
   if (null == UserStore.getCurrentUser()) {
     return false;
   } else {
@@ -240,4 +240,4 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     const tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     return SensitiveMediaRedactionSettingUtils.getShouldObscureForSetting(tmp10Result);
   }
-};
+}

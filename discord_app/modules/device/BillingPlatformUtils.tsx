@@ -5,23 +5,23 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
-export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {
+export function isPremiumGiftingSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
-export const isGooglePlayBillingSupported = function isGooglePlayBillingSupported() {
+}
+export function isGooglePlayBillingSupported() {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !MetaQuestUtils.isMetaQuest();
     const tmpResult = MetaQuestUtils;
   }
   return isAndroidResult;
-};
-export const isCollectibleGiftingSupported = function isCollectibleGiftingSupported() {
+}
+export function isCollectibleGiftingSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
-export const isSocialLayerStorefrontGiftingSupported = function isSocialLayerStorefrontGiftingSupported() {
+}
+export function isSocialLayerStorefrontGiftingSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
-export const isSocialLayerStorefrontPurchaseSupported = function isSocialLayerStorefrontPurchaseSupported() {
+}
+export function isSocialLayerStorefrontPurchaseSupported() {
   return !MetaQuestUtils.isMetaQuest();
-};
+}

@@ -65,7 +65,7 @@ export default {
 };
 export const ACTION_SHEET_HEIGHT_HALF = "start";
 export const ACTION_SHEET_HEIGHT_EXPANDED = "expanded";
-export const showActionSheet = function showActionSheet(disableHapticOnOpen) {
+export function showActionSheet(disableHapticOnOpen) {
   ({ content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey } =
     disableHapticOnOpen);
   if (!disableHapticOnOpen.disableHapticOnOpen) {
@@ -82,4 +82,4 @@ export const showActionSheet = function showActionSheet(disableHapticOnOpen) {
     stackingBehavior,
     appEntryKey,
   });
-};
+}

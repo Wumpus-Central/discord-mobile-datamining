@@ -11,10 +11,10 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(4874);
+const GuildRecord = fn(4875);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -425,7 +425,7 @@ export default noop.memo(
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "clothing",
+          children: 0.925,
         };
         let str = guildName;
         const tmp2Result2 = guildId(stateFromStores[21]);
@@ -471,7 +471,7 @@ export default noop.memo(
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "clothing",
+          children: 0.925,
         });
       },
 );

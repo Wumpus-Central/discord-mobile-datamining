@@ -39,7 +39,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/GuildPopoutActionCreators.tsx");
 
-export const fetchGuildForPopout = function fetchGuildForPopout() {
+export function fetchGuildForPopout() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -48,4 +48,4 @@ export const fetchGuildForPopout = function fetchGuildForPopout() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

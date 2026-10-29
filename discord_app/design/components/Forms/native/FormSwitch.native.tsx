@@ -16,7 +16,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;
@@ -34,7 +34,7 @@ let closure_11 = { code: "function FormSwitchNativeTsx3(){const{progress,interpo
 size = fn(2);
 let result = size.fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
 
-export const FormSwitch = function FormSwitch(onValueChange) {
+export function FormSwitch(onValueChange) {
   ({ disabled, value } = onValueChange);
   _require = value;
   importDefault = onValueChange.onValueChange;
@@ -222,4 +222,4 @@ export const FormSwitch = function FormSwitch(onValueChange) {
     }
     token(token3, tmp25);
   }
-};
+}

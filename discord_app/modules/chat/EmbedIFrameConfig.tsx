@@ -36,7 +36,7 @@ let result = size.fileFinishedImporting("modules/chat/EmbedIFrameConfig.tsx");
 export const EMBED_IFRAME_SANDBOX =
   "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
 export const SupportedEmbedIFrame = obj;
-export const formatProviderSrc = function formatProviderSrc(uri, cResult, arg2) {
+export function formatProviderSrc(uri, cResult, arg2) {
   let str = uri;
   obj2 = URLUtilsDefault;
   if (uri == null) {
@@ -89,4 +89,4 @@ export const formatProviderSrc = function formatProviderSrc(uri, cResult, arg2) 
     }
     return str2.toString();
   }
-};
+}

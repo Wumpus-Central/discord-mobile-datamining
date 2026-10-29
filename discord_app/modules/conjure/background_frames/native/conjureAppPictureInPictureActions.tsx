@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import EmbeddedAppShimExperiment from "../../../activities/experiments/EmbeddedAppShimExperiment.tsx";
 import getConjureAppSoundButtonDefault from "../../app_channel/native/getConjureAppSoundButton.tsx";
@@ -12,7 +12,7 @@ function getConjureAppPictureInPictureActions(stateFromStores, appName, arg2) {
   _require = stateFromStores;
   const obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
-  obj.label = intl.formatToPlainString(_modDef3863.dPf03z, { appName });
+  obj.label = intl.formatToPlainString(_modDef3864.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
     return conjureBackgroundFrames.returnToConjureFrameSurface(closure_0);
@@ -31,7 +31,7 @@ function getConjureAppPictureInPictureActions(stateFromStores, appName, arg2) {
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(6811).asLaunched;
+const asLaunched = fn(6834).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -40,7 +40,7 @@ let result = size.fileFinishedImporting(
 
 export const CONJURE_APP_PICTURE_IN_PICTURE_LOCATION = "ConjureAppPictureInPicture";
 export { getConjureAppPictureInPictureActions };
-export const showConjureAppPictureInPictureActions = function showConjureAppPictureInPictureActions(frameId, title) {
+export function showConjureAppPictureInPictureActions(frameId, title) {
   const tmp = asLaunched(FramesStore.getFrame(frameId));
   if (null != tmp) {
     const obj2 = { key: "ConjureAppPictureInPicture", header: null, options: null, hasIcons: true };
@@ -54,4 +54,4 @@ export const showConjureAppPictureInPictureActions = function showConjureAppPict
     );
     const result = obj.showSimpleActionSheet(obj2);
   }
-};
+}

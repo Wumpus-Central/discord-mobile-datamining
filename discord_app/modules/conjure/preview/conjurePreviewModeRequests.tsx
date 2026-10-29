@@ -9,12 +9,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewModeRequests.tsx");
 
-export const requestConjurePreviewMode = function requestConjurePreviewMode(arg0, widget) {
+export function requestConjurePreviewMode(arg0, widget) {
   for (const item10007 of set) {
     let item10007Result = item10007(arg0, arg1);
     continue;
   }
-};
+}
 export const useConjurePreviewModeRequests = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjurePreviewModeRequests(arg0, current) {
       _require = arg0;

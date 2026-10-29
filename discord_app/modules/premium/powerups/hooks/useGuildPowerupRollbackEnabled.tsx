@@ -31,11 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID && serverThemeRollbackEnabled;
     };
 export { isGuildPowerupRollbackEnabledForSku };
-export const isGuildPowerupRollbackEnabled = function isGuildPowerupRollbackEnabled(
-  guildId,
-  skuId,
-  maybeGetPerkPurchaseablePopoutDCF,
-) {
+export function isGuildPowerupRollbackEnabled(guildId, skuId, maybeGetPerkPurchaseablePopoutDCF) {
   let serverThemeRollbackEnabled = skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID;
   if (serverThemeRollbackEnabled) {
     serverThemeRollbackEnabled = ServerThemeExperiment.getServerThemeRollbackEnabled(
@@ -45,4 +41,4 @@ export const isGuildPowerupRollbackEnabled = function isGuildPowerupRollbackEnab
     const tmpResult = ServerThemeExperiment;
   }
   return serverThemeRollbackEnabled;
-};
+}

@@ -7,7 +7,7 @@ import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
 require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(fn(5684).CountryCodesSets.EU_COUNTRIES, 2);
+HermesBuiltin.arraySpread(fn(5686).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -104,6 +104,6 @@ const result1 = size.fileFinishedImporting("modules/regional_feature_config/Regi
 
 export const useUserCountryCode = tmp4;
 export const useIsTeenInCountrySet = tmp5;
-export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
+export function useIsTeenInStrictCountry() {
   return closure_6(set);
-};
+}

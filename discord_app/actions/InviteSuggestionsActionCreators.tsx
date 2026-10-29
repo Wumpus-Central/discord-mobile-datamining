@@ -6,7 +6,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
 
-export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
+export function loadInviteSuggestions(arg0) {
   ({
     omitUserIds: require,
     guild: importDefault,
@@ -30,7 +30,7 @@ export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
       inviteTargetType,
     });
   });
-};
-export const searchInviteSuggestions = function searchInviteSuggestions(current) {
+}
+export function searchInviteSuggestions(current) {
   DispatcherDefault.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query: current });
-};
+}

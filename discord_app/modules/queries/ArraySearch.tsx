@@ -17,7 +17,7 @@ function sortGroup(arr, arg1) {
 }
 const result = size.fileFinishedImporting("modules/queries/ArraySearch.tsx");
 
-export const queryData = function queryData(apps, limit) {
+export function queryData(apps, limit) {
   let num = limit.limit;
   if (num == null) {
     num = Infinity;
@@ -110,4 +110,4 @@ export const queryData = function queryData(apps, limit) {
     }
     return items;
   })(items, sortComparers, num).slice(0, num);
-};
+}

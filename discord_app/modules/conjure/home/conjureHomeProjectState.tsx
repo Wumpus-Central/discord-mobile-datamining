@@ -172,7 +172,7 @@ export function conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromS
   }
   return tmp;
 }
-export const conjureProjectLastActivityTime = function conjureProjectLastActivityTime(project) {
+export function conjureProjectLastActivityTime(project) {
   if (null == project.updated_at) {
     return null;
   } else {
@@ -185,7 +185,7 @@ export const conjureProjectLastActivityTime = function conjureProjectLastActivit
     }
     return tmp3;
   }
-};
+}
 export const CONJURE_HOME_PROJECT_STATE_STORES = items;
 export { readConjureHomeProjectState };
 export const useConjureHomeProjectState = tmp7;

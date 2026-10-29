@@ -6,9 +6,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
-export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
+export function shouldAgeVerifyForDMDefaultOff() {
   const isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
     AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS,
   );
   return AgeVerificationUtils.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
-};
+}

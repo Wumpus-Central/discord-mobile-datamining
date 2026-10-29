@@ -18,114 +18,50 @@ function saveProfileAndAccountRequest() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_3 = tmp7;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let obj6 = closure_1;
-          if (closure_1 === undefined) {
-            obj6 = {};
-          }
-          closure_130_1 = obj6;
-          closure_130_2 = undefined;
-          let body;
-          let token;
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          const HTTP = closure_131_0(closure_131_2[4]).HTTP;
-          const request = {
-            url: closure_131_4.ME,
-            oldFormErrors: true,
-            body: closure_130_0,
-            headers: closure_130_1.headers,
-            rejectWithError: closure_131_0(closure_131_2[4]).rejectWithMigratedError(),
-          };
-          c4 = 2;
-          c5 = 1;
-          const obj8 = { value: HTTP.patch(request), done: false };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        closure_130_2 = value;
-        body = closure_130_2.body;
-        if (body.token) {
-          token = body.token;
-          delete tmp4[tmp3];
-          const obj10 = { type: "UPDATE_TOKEN", token, userId: body.id };
-          closure_131_1(closure_131_2[3]).dispatch(obj10);
-          let password;
-          if (closure_130_0 != null) {
-            password = closure_130_0.password;
-          }
-          let tmp19 = null != password;
-          if (tmp19) {
-            let new_password;
-            if (closure_130_0 != null) {
-              new_password = closure_130_0.new_password;
-            }
-            tmp19 = null != new_password;
-          }
-          if (tmp19) {
-            const obj11 = { type: "PASSWORD_UPDATED", userId: body.id };
-            closure_131_1(closure_131_2[3]).dispatch(obj11);
-            const obj3 = closure_131_1(closure_131_2[3]);
-          }
-          const obj = closure_131_1(closure_131_2[3]);
-        }
-        const obj12 = { type: "CURRENT_USER_UPDATE", user: body };
-        closure_131_1(closure_131_2[3]).dispatch(obj12);
-        c5 = 3;
-        const obj13 = { value: closure_130_2, done: true };
-        return obj13;
-      }
-    } catch (tmp35) {
-      c5 = tmp;
-      throw tmp35;
-    }
+let closure_11 = async function _saveProfileAndAccountRequest() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let obj6 = closure_1;
+  if (closure_1 === undefined) {
+    obj6 = {};
   }
+  closure_130_1 = obj6;
+  await "Reflect";
+  const HTTP = closure_131_0(closure_131_2[4]).HTTP;
+  const request = {
+    url: closure_131_4.ME,
+    oldFormErrors: true,
+    body: closure_130_0,
+    headers: closure_130_1.headers,
+    rejectWithError: closure_131_0(closure_131_2[4]).rejectWithMigratedError(),
+  };
+  await HTTP.patch(request);
+  closure_130_2 = value;
+  const body = closure_130_2.body;
+  if (body.token) {
+    const token = body.token;
+    delete tmp4[tmp3];
+    closure_131_1(closure_131_2[3]).dispatch({ type: "UPDATE_TOKEN", token, userId: body.id });
+    let password;
+    if (closure_130_0 != null) {
+      password = closure_130_0.password;
+    }
+    let tmp19 = null != password;
+    if (tmp19) {
+      let new_password;
+      if (closure_130_0 != null) {
+        new_password = closure_130_0.new_password;
+      }
+      tmp19 = null != new_password;
+    }
+    if (tmp19) {
+      closure_131_1(closure_131_2[3]).dispatch({ type: "PASSWORD_UPDATED", userId: body.id });
+      closure_131_1(closure_131_2[3]);
+    }
+    closure_131_1(closure_131_2[3]);
+  }
+  closure_131_1(closure_131_2[3]).dispatch({ type: "CURRENT_USER_UPDATE", user: body });
+  return closure_130_2;
 };
 const Constants = fn(1084);
 ({
@@ -134,18 +70,18 @@ const Constants = fn(1084);
   DEVICE_TOKEN: metroRequire,
   DEVICE_VOIP_TOKEN: closure_7,
 } = Constants);
-const PushNotificationConstants = fn(6706);
+const PushNotificationConstants = fn(6730);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
 
-export const accountDetailsInit = function accountDetailsInit() {
+export function accountDetailsInit() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
-};
-export const accountDetailsClose = function accountDetailsClose() {
+}
+export function accountDetailsClose() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
-};
-export const disableAccount = function disableAccount(password, arg1) {
+}
+export function disableAccount(password, arg1) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: arg1 ? constants.DELETE_ACCOUNT : constants.DISABLE_ACCOUNT,
@@ -158,9 +94,9 @@ export const disableAccount = function disableAccount(password, arg1) {
     AuthenticationActionCreatorsDefault.logoutInternal();
     router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
-};
+}
 export { saveProfileAndAccountRequest };
-export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(avatar) {
+export function saveProfileAndAccountChanges(avatar) {
   avatar = avatar.avatar;
   const avatarId = avatar.avatarId;
   ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } = avatar);
@@ -227,8 +163,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1410).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1410);
+      result = avatar(1411).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1411);
     }
     user.typing_indicator_style = result;
   }
@@ -252,10 +188,10 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(584);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7115).buildHeadersForMd5({
-    [avatar(7119).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7139).buildHeadersForMd5({
+    [avatar(7143).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7115);
+  let tmpResult = avatarId(7139);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
@@ -274,8 +210,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
       return body;
     },
   );
-};
-export const getHarvestStatus = function getHarvestStatus() {
+}
+export function getHarvestStatus() {
   const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: constants.USER_HARVEST,
@@ -283,8 +219,8 @@ export const getHarvestStatus = function getHarvestStatus() {
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.get(obj);
-};
-export const requestHarvest = function requestHarvest(backends) {
+}
+export function requestHarvest(backends) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: constants.USER_HARVEST,
@@ -293,35 +229,35 @@ export const requestHarvest = function requestHarvest(backends) {
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.post(request);
-};
-export const clearErrors = function clearErrors() {
+}
+export function clearErrors() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
-};
-export const resetPendingAccountChanges = function resetPendingAccountChanges() {
+}
+export function resetPendingAccountChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
-};
-export const resetAllPending = function resetAllPending() {
+}
+export function resetAllPending() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
-};
-export const resetAllTryItOut = function resetAllTryItOut() {
+}
+export function resetAllTryItOut() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
-};
-export const resetAndCloseUserProfileForm = function resetAndCloseUserProfileForm() {
+}
+export function resetAndCloseUserProfileForm() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
-};
-export const resetPendingLegacyUsernameDisabled = function resetPendingLegacyUsernameDisabled() {
+}
+export function resetPendingLegacyUsernameDisabled() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
-};
-export const resetPendingPrimaryGuildChanges = function resetPendingPrimaryGuildChanges() {
+}
+export function resetPendingPrimaryGuildChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
-};
-export const updateAccount = function updateAccount(settings) {
+}
+export function updateAccount(settings) {
   DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT", settings });
-};
-export const resetAccount = function resetAccount() {
+}
+export function resetAccount() {
   DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
-};
-export const saveAccountChanges = function saveAccountChanges(user, close) {
+}
+export function saveAccountChanges(user, close) {
   avatar(newPassword[3]).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
   const password = user.password;
   avatar = user.avatar;
@@ -402,4 +338,4 @@ export const saveAccountChanges = function saveAccountChanges(user, close) {
       return body;
     },
   );
-};
+}

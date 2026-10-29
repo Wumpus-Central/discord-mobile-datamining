@@ -63,11 +63,11 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 
 require = fn;
 let closure_3 = ["ref"];
-const PollsInteractionStore = fn(11072);
+const PollsInteractionStore = fn(11126);
 ({ useChannelPollInteractions: closure_30, useMessagePollInteractions: closure_31 } = PollsInteractionStore);
 const Constants = fn(1084);
 ({ ActivityActionTypes: closure_61, ChannelTypesSets: closure_62, ME: closure_63, MessageTypes: closure_64, Permissions: closure_65 } = Constants);
-const constants3 = fn(11068).GameOrganizationInviteStates;
+const constants3 = fn(11122).GameOrganizationInviteStates;
 const PremiumConstants = fn(1391);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_67, PremiumTypes: closure_68 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -632,7 +632,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -670,7 +670,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -704,7 +704,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -731,7 +731,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
         embeddedActivitiesByChannel = closure_8.getEmbeddedActivitiesByChannel();
         item = embeddedActivitiesByChannel.forEach((arr, index) => {
           closure_0 = index;
-          let item = arr.forEach(() => { ... });
+          let item = arr.forEach(/* F163060 */ function() { ... });
         });
         return Array.from(set);
       }
@@ -752,7 +752,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -787,7 +787,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -814,7 +814,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
         embeddedActivitiesByChannel = closure_8.getEmbeddedActivitiesByChannel();
         item = embeddedActivitiesByChannel.forEach((arr, index) => {
           closure_0 = index;
-          let item = arr.forEach(() => { ... });
+          let item = arr.forEach(/* F163060 */ function() { ... });
         });
         return Array.from(set);
       }
@@ -835,7 +835,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -870,7 +870,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -911,7 +911,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -946,7 +946,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -990,7 +990,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1026,7 +1026,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1070,7 +1070,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1106,7 +1106,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {
@@ -1145,7 +1145,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConn
           value = iter.next().value;
           let findActivityResult;
           if (null != value) {
-            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            findActivityResult = PresenceStore.findActivity(value, /* F163059 */ function() { ... });
           }
           let details;
           if (findActivityResult != null) {

@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef5726 from "../../../../_runtime/metro/05726__.js";
+import _modDef5728 from "../../../../_runtime/metro/05728__.js";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   card: { gap: 16, marginBottom: 16 },
   cardDivider: {
@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-          const tmp10 = closure_10(tmp(7048).CircleErrorIcon, obj2);
+          const tmp10 = closure_10(tmp(7072).CircleErrorIcon, obj2);
           cResult[3] = tmp10;
           let tmp7 = tmp10;
         } else {
@@ -76,12 +76,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 variant: "secondary",
                 accessibilityLabel: tmp18,
                 size: "sm",
-                icon: _modDef5726,
+                icon: _modDef5728,
                 onPress() {
                   return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
                 },
               };
-              const tmp23 = closure_10(tmp(7991).IconButton, obj3);
+              const tmp23 = closure_10(tmp(8014).IconButton, obj3);
               cResult[10] = savedMessage.saveData;
               cResult[11] = tmp23;
               let tmp20 = tmp23;
@@ -103,7 +103,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp5, children: null };
               const items = [tmp7, tmp15, tmp24];
               obj4.children = items;
-              const tmp30 = closure_11(tmp(6941).Card, obj4);
+              const tmp30 = closure_11(tmp(6965).Card, obj4);
               cResult[15] = tmp5;
               cResult[16] = tmp15;
               cResult[17] = tmp24;
@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.deletedText,
             children: cResult[5],
           };
-          const tmp17 = closure_10(tmp(5270).Text, obj6);
+          const tmp17 = closure_10(tmp(5271).Text, obj6);
           cResult[6] = tmp4.deletedText;
           cResult[7] = cResult[5];
           cResult[8] = tmp17;
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ card: arr[0], deletedCard: arr[1] } = tmp);
       obj.style = items;
       const items1 = [
-        closure_10(savedMessage(7048).CircleErrorIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }),
+        closure_10(savedMessage(7072).CircleErrorIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }),
         ,
       ];
       const obj3 = {
@@ -163,19 +163,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(tmp3(1125).t.o572Fe);
       }
       obj3.children = stringResult;
-      items1[1] = closure_10(savedMessage(5270).Text, obj3);
+      items1[1] = closure_10(savedMessage(5271).Text, obj3);
       const obj4 = { style: tmp.deletedActionButton, children: null };
       const obj5 = { variant: "secondary", accessibilityLabel: null, size: "sm", icon: null, onPress: null };
       const intl3 = tmp3(1125).intl;
       obj5.accessibilityLabel = intl3.string(savedMessage(1125).t.SvXS1Z);
-      obj5.icon = _modDef5726;
+      obj5.icon = _modDef5728;
       obj5.onPress = function onPress() {
         return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
       };
-      obj4.children = closure_10(savedMessage(7991).IconButton, obj5);
+      obj4.children = closure_10(savedMessage(8014).IconButton, obj5);
       items1[2] = closure_10(View, obj4);
       obj.children = items1;
-      return closure_11(savedMessage(6941).Card, obj);
+      return closure_11(savedMessage(6965).Card, obj);
     };
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
@@ -370,7 +370,7 @@ export default noop.memo(
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -396,7 +396,7 @@ export default noop.memo(
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -412,7 +412,7 @@ export default noop.memo(
                             } else {
                               c1 = 1;
                               c2 = 1;
-                              const obj5 = { value: tmp4(14049).savedMessageJumpToMessage(tmp4, c1), done: false };
+                              const obj5 = { value: tmp4(14282).savedMessageJumpToMessage(tmp4, c1), done: false };
                               return obj5;
                             }
                           } else if (arg0 === 1) {
@@ -423,8 +423,8 @@ export default noop.memo(
                             const obj6 = { value, done: true };
                             return obj6;
                           } else {
-                            closure_2_1(6707).pop();
-                            const arr = closure_2_1(6707);
+                            closure_2_1(6731).pop();
+                            const arr = closure_2_1(6731);
                             const obj8 = {
                               channel_id: tmp4.saveData.channelId,
                               message_id: tmp4.saveData.messageId,
@@ -439,20 +439,20 @@ export default noop.memo(
                             }
                             obj8.message_author_id = id;
                             if (null != tmp4.saveData.dueAt) {
-                              let BOOKMARK = tmp4(10112).SavedMessageSortTypes.REMINDER;
+                              let BOOKMARK = tmp4(10145).SavedMessageSortTypes.REMINDER;
                             } else {
-                              BOOKMARK = tmp4(10112).SavedMessageSortTypes.BOOKMARK;
+                              BOOKMARK = tmp4(10145).SavedMessageSortTypes.BOOKMARK;
                             }
                             obj8.type = BOOKMARK;
                             let diffResult;
                             if (null != tmp4.saveData.dueAt) {
-                              diffResult = closure_2_1(2046)().diff(tmp4.saveData.dueAt);
-                              const obj = closure_2_1(2046)();
+                              diffResult = closure_2_1(2047)().diff(tmp4.saveData.dueAt);
+                              const obj = closure_2_1(2047)();
                             }
                             obj8.due_duration = diffResult;
                             closure_2_1(1264).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                             c2 = 3;
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "IconComponent" };
                           }
                         } catch (tmp26) {
                           c2 = tmp;
@@ -487,7 +487,7 @@ export default noop.memo(
                 return obj;
               }
               message = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp9) {
               message = tmp;
               throw tmp9;
@@ -529,7 +529,7 @@ export default noop.memo(
                 let obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -564,7 +564,7 @@ export default noop.memo(
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -580,7 +580,7 @@ export default noop.memo(
                             } else {
                               c1 = 1;
                               c2 = 1;
-                              const obj5 = { value: v3(14049).savedMessageJumpToMessage(tmp4, c1), done: false };
+                              const obj5 = { value: v3(14282).savedMessageJumpToMessage(tmp4, c1), done: false };
                               return obj5;
                             }
                           } else if (arg0 === 1) {
@@ -591,8 +591,8 @@ export default noop.memo(
                             const obj6 = { value, done: true };
                             return obj6;
                           } else {
-                            v1(6707).pop();
-                            const arr = v1(6707);
+                            v1(6731).pop();
+                            const arr = v1(6731);
                             const obj8 = {
                               channel_id: tmp4.saveData.channelId,
                               message_id: tmp4.saveData.messageId,
@@ -607,20 +607,20 @@ export default noop.memo(
                             }
                             obj8.message_author_id = id;
                             if (null != tmp4.saveData.dueAt) {
-                              let BOOKMARK = v3(10112).SavedMessageSortTypes.REMINDER;
+                              let BOOKMARK = v3(10145).SavedMessageSortTypes.REMINDER;
                             } else {
-                              BOOKMARK = v3(10112).SavedMessageSortTypes.BOOKMARK;
+                              BOOKMARK = v3(10145).SavedMessageSortTypes.BOOKMARK;
                             }
                             obj8.type = BOOKMARK;
                             let diffResult;
                             if (null != tmp4.saveData.dueAt) {
-                              diffResult = v1(2046)().diff(tmp4.saveData.dueAt);
-                              const obj = v1(2046)();
+                              diffResult = v1(2047)().diff(tmp4.saveData.dueAt);
+                              const obj = v1(2047)();
                             }
                             obj8.due_duration = diffResult;
                             v1(1264).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                             c2 = 3;
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "IconComponent" };
                           }
                         } catch (tmp26) {
                           c2 = tmp;
@@ -644,7 +644,7 @@ export default noop.memo(
                   return obj;
                 }
                 c0 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } catch (tmp8) {
                 c0 = tmp;
                 throw tmp8;

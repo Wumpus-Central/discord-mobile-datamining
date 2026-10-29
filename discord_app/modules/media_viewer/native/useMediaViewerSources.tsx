@@ -9,7 +9,7 @@ const zustandStore = ZustandStore.createZustandStore(() => {
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
 
 export const MediaViewerSourcesStore = zustandStore;
-export const setMediaViewerSources = function setMediaViewerSources(sources) {
+export function setMediaViewerSources(sources) {
   let initialIndex = sources.initialIndex;
   if (initialIndex === undefined) {
     initialIndex = null;
@@ -23,11 +23,11 @@ export const setMediaViewerSources = function setMediaViewerSources(sources) {
     set = new Set();
   }
   zustandStore.setState({ sources: sources.sources, userRevealedIndexes: set });
-};
-export const updateMediaViewerSources = function updateMediaViewerSources(items) {
+}
+export function updateMediaViewerSources(items) {
   zustandStore.setState({ sources: items });
-};
-export const removeSpoiler = function removeSpoiler(index) {
+}
+export function removeSpoiler(index) {
   const field = zustandStore.getField("userRevealedIndexes");
   if (!field.has(index)) {
     const _Set = Set;
@@ -36,8 +36,8 @@ export const removeSpoiler = function removeSpoiler(index) {
     const obj2 = { userRevealedIndexes: set };
     zustandStore.setState(obj2);
   }
-};
-export const toggleSpoiler = function toggleSpoiler(index) {
+}
+export function toggleSpoiler(index) {
   const set = new Set(zustandStore.getField("userRevealedIndexes"));
   if (set.has(index)) {
     set.delete(index);
@@ -45,4 +45,4 @@ export const toggleSpoiler = function toggleSpoiler(index) {
     set.add(index);
   }
   zustandStore.setState({ userRevealedIndexes: set });
-};
+}

@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
-export const getGlobalObject = function getGlobalObject() {
+export function getGlobalObject() {
   if (typeof globalThis !== "undefined") {
     let _window = globalThis;
   } else {
@@ -24,4 +24,4 @@ export const getGlobalObject = function getGlobalObject() {
     }
   }
   return _window;
-};
+}

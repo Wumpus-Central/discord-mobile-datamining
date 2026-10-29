@@ -215,7 +215,7 @@ export const useCanRing = ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores2;
     };
-export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
+export function canRingUsersInChannel(channel) {
   const CALLABLE = ChannelTypesSets.CALLABLE;
   if (CALLABLE.has(channel.type)) {
     const call = CallStore.getCall(channel.id);
@@ -223,4 +223,4 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
   } else {
     return false;
   }
-};
+}

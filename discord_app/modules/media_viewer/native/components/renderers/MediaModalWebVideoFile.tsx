@@ -493,7 +493,7 @@ export default noop.memo(
         );
       },
 );
-export const createWebFileVideoControls = function createWebFileVideoControls() {
+export function createWebFileVideoControls() {
   const ref = noop.createRef();
   noop = 0;
   closure_5 = 0;
@@ -564,4 +564,4 @@ export const createWebFileVideoControls = function createWebFileVideoControls() 
       },
     },
   };
-};
+}

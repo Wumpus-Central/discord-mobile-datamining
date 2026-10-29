@@ -22,12 +22,12 @@ const items = [, , , ,];
 } = ReportRaidTypes);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildReportRaidModalConstants.tsx");
 
-export const getReportRaidHelpArticleURL = function getReportRaidHelpArticleURL() {
+export function getReportRaidHelpArticleURL() {
   return HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.GUILD_RAID);
-};
+}
 export { ReportRaidTypes };
 export const REPORT_RAID_OPTIONS = items;
-export const getReportRaidTypeLabel = function getReportRaidTypeLabel(arg0) {
+export function getReportRaidTypeLabel(arg0) {
   if (obj.DM_SPAM === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t["9CYNmS"]);
@@ -46,4 +46,4 @@ export const getReportRaidTypeLabel = function getReportRaidTypeLabel(arg0) {
   } else {
     return null;
   }
-};
+}

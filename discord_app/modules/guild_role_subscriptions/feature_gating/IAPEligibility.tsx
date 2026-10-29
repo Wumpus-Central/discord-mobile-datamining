@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
 
-export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
+export function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
     const str = getSystemVersion.getSystemVersion();
     if (null != str) {
@@ -72,13 +72,13 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
     return false;
   }
   obj = PlatformUtils;
-};
+}
 export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCanUseRoleSubscriptionIAP(arg0) {
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const str = tmp(6799).getSystemVersion();
+        const str = tmp(6822).getSystemVersion();
         let tmp6 = null != str;
         if (tmp6) {
           const parts = str.split(".");
@@ -123,7 +123,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
         }
         cResult[0] = tmp6;
         let first = tmp6;
-        const tmpResult = tmp(6799);
+        const tmpResult = tmp(6822);
       } else {
         first = cResult[0];
       }
@@ -172,7 +172,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
   : function useCanUseRoleSubscriptionIAP(arg0) {
       _require = arg0;
       const memo = noop.useMemo(() => {
-        const str = closure_0(6799).getSystemVersion();
+        const str = closure_0(6822).getSystemVersion();
         let tmp = null != str;
         if (tmp) {
           const parts = str.split(".");

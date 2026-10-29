@@ -92,7 +92,7 @@ let closure_19 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -208,11 +208,11 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1084);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6678).StreamTypes;
+const StreamTypes = fn(6702).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
-export const startStream = function startStream(guildId, channelId, arg2) {
+export function startStream(guildId, channelId, arg2) {
   if (null != guildId) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -221,16 +221,16 @@ export const startStream = function startStream(guildId, channelId, arg2) {
   const merged = Object.assign(arg2);
   DispatcherDefault.dispatch({ type: "STREAM_START", streamType: CALL, guildId, channelId, appContext: constants.APP });
   const obj2 = { type: "STREAM_START", streamType: CALL, guildId, channelId, appContext: constants.APP };
-};
-export const setStreamPaused = function setStreamPaused(currentUserActiveStream, paused) {
+}
+export function setStreamPaused(currentUserActiveStream, paused) {
   const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(currentUserActiveStream);
   DispatcherDefault.dispatch({ type: "STREAM_SET_PAUSED", streamKey: encodeStreamKeyResult, paused });
-};
+}
 export { watchStream };
-export const toggleSelfStreamHidden = function toggleSelfStreamHidden(channelId, selfStreamHidden) {
+export function toggleSelfStreamHidden(channelId, selfStreamHidden) {
   DispatcherDefault.dispatch({ type: "STREAM_UPDATE_SELF_HIDDEN", channelId, selfStreamHidden });
-};
-export const watchStreamAndTransitionToStream = function watchStreamAndTransitionToStream(stream, forceMultiple) {
+}
+export function watchStreamAndTransitionToStream(stream, forceMultiple) {
   const channelId = stream.channelId;
   if (null == stream.guildId) {
     watchStream(stream, forceMultiple);
@@ -249,8 +249,8 @@ export const watchStreamAndTransitionToStream = function watchStreamAndTransitio
       ChannelUtils.isChannelFull(channel, VoiceStateStore, GuildStore);
     }
   }
-};
-export const stopStream = function stopStream(streamKey, arg1) {
+}
+export function stopStream(streamKey, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -268,15 +268,15 @@ export const stopStream = function stopStream(streamKey, arg1) {
   }
   DispatcherDefault.dispatch({ type: "STREAM_STOP", streamKey, appContext: constants.APP });
   const obj4 = { type: "STREAM_STOP", streamKey, appContext: constants.APP };
-};
-export const closeStream = function closeStream(encodeStreamKeyResult1, arg1) {
+}
+export function closeStream(encodeStreamKeyResult1, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
   DispatcherDefault.dispatch({ type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult1, canShowFeedback: flag });
-};
-export const fetchStreamPreview = function fetchStreamPreview() {
+}
+export function fetchStreamPreview() {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -285,11 +285,11 @@ export const fetchStreamPreview = function fetchStreamPreview() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const setLayout = function setLayout(layout) {
+}
+export function setLayout(layout) {
   DispatcherDefault.dispatch({ type: "STREAM_LAYOUT_UPDATE", layout });
-};
-export const notifyStreamStart = function notifyStreamStart() {
+}
+export function notifyStreamStart() {
   const self = this;
   const apply = closure_20.apply;
   if (typeof apply === "unknown") {
@@ -298,8 +298,8 @@ export const notifyStreamStart = function notifyStreamStart() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const updateStreamSettings = function updateStreamSettings(noTrack) {
+}
+export function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
     const obj = StreamQualityUtils;
     const result = obj.trackStreamSettingsUpdate(
@@ -312,8 +312,8 @@ export const updateStreamSettings = function updateStreamSettings(noTrack) {
   const merged = Object.assign(noTrack);
   DispatcherDefault.dispatch({ type: "STREAM_UPDATE_SETTINGS" });
   const obj3 = { type: "STREAM_UPDATE_SETTINGS" };
-};
-export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
+}
+export function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: map1.STREAM(encodeStreamKeyResult),
@@ -322,8 +322,8 @@ export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyRes
     rejectWithError: true,
   };
   HTTP.patch(request);
-};
-export const stopOwnStream = function stopOwnStream(arg0) {
+}
+export function stopOwnStream(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -342,8 +342,8 @@ export const stopOwnStream = function stopOwnStream(arg0) {
     const obj4 = { type: "STREAM_STOP", streamKey: encodeStreamKeyResult, appContext: constants.APP };
     DispatcherDefault.dispatch(obj4);
   }
-};
-export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {
+}
+export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
   _require = arg0;
   const id = AuthenticationStore.getId();
   importDefault = require("StreamKeyUtils").decodeStreamKey(streamKey);
@@ -365,15 +365,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7901)(closure_1_1);
+          closure_1(7924)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(6030).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(6030);
+          closure_0(6034).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6034);
         }
       }
     };
@@ -383,4 +383,4 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
       call(closure_0, false, false, null, fn);
     }
   });
-};
+}

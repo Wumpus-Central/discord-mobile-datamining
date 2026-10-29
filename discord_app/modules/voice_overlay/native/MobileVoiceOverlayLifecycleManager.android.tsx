@@ -19,18 +19,18 @@ import MobileVoiceOverlayStore from "../../../stores/native/MobileVoiceOverlaySt
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4934).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(16053);
-fn(16054);
-fn(16055);
-fn(16056);
-fn(8147);
-fn(14882);
-fn(16057);
-fn(16058);
-const registerAsset = fn(14857);
+fn(16289);
+fn(16290);
+fn(16291);
+fn(16292);
+fn(8170);
+fn(15117);
+fn(16293);
+fn(16294);
+const registerAsset = fn(15092);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants = {
   DISABLED: 0,

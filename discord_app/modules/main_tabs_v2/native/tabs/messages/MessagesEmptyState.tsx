@@ -5,8 +5,8 @@ import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/p
 import useNavigation from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
+import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
 import ActivitiesTogetherSpotIllustration from "../../../../../design/components/mana-assets/native/generated/ActivitiesTogetherSpotIllustration.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, justifyContent: "center" },
   scrollViewContentContainer: { flexGrow: 2 },

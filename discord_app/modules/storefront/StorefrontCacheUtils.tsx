@@ -8,7 +8,7 @@ const result2 = size.fileFinishedImporting("modules/storefront/StorefrontCacheUt
 
 export const TWELVE_HOURS_MS = result;
 export const ERROR_STALE_THRESHOLD_MS = result1;
-export const shouldRefetchEntry = function shouldRefetchEntry(hasPricingCoverage) {
+export function shouldRefetchEntry(hasPricingCoverage) {
   ({ fetchState, fetchedAt, needsPricing } = hasPricingCoverage);
   if (needsPricing === undefined) {
     needsPricing = false;
@@ -43,4 +43,4 @@ export const shouldRefetchEntry = function shouldRefetchEntry(hasPricingCoverage
     }
     return tmp;
   }
-};
+}

@@ -18,7 +18,7 @@ let closure_4 = async function _submitProjectSecrets(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ let closure_4 = async function _submitProjectSecrets(arg0) {
             throw new closure_131_3("secret request expired");
           } else if (closure_130_0.ok) {
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -80,7 +80,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/secrets/conjureSecretsRequests.tsx");
 
 export const ConjureSecretRequestExpiredError = prototype;
-export const submitProjectSecrets = function submitProjectSecrets() {
+export function submitProjectSecrets() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -89,4 +89,4 @@ export const submitProjectSecrets = function submitProjectSecrets() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

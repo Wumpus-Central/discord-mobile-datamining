@@ -15,7 +15,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("lib/spellcheck/SpellcheckExperiment.tsx");
 
 export const SpellcheckExperiment = apexExperiment;
-export const isElectronMultilangSpellcheckEnabled = function isElectronMultilangSpellcheckEnabled() {
+export function isElectronMultilangSpellcheckEnabled() {
   return apexExperiment.getConfig({ location: "isElectronMultilangSpellcheckEnabled" })
     .enableElectronMultilangSpellcheck;
-};
+}

@@ -46,10 +46,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
-export const canReactToMessage = function canReactToMessage(message, channel) {
+export function canReactToMessage(message, channel) {
   const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return canReactToMessageInternal(message, channel, items);
-};
+}
 export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCanReactToMessage(arg0, arg1) {
       _require = arg0;

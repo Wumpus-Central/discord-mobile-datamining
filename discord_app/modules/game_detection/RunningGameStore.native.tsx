@@ -128,7 +128,7 @@ export default runningGameStore;
 export function gameKey() {
   return "";
 }
-export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
+export function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
     const items = [DetectableGameStore, LibraryApplicationStore, GameStore];
   }
@@ -139,14 +139,14 @@ export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
     overlayMethod: OverlayTypes.OverlayMethod.Disabled,
     reason: "Dummy implementation",
   };
-};
+}
 export function isDetectionEnabled() {
   return false;
 }
 export function maybeTransformSubgame(arg0) {
   return arg0;
 }
-export const transformForGameSettings = function transformForGameSettings(arg0) {
+export function transformForGameSettings(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.played = "";
@@ -154,4 +154,4 @@ export const transformForGameSettings = function transformForGameSettings(arg0) 
   obj.verified = false;
   obj.detectable = false;
   return obj;
-};
+}

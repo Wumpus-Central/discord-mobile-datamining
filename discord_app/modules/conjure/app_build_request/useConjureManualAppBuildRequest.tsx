@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_build_request/useConjureManualAppBuildRequest.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAppBuildRequest from "ConjureAppBuildRequest.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { projectId, request: null, clearComposer: null };
           const obj2 = { id: "manual:" + projectId + ":" + Date.now(), summary: null, prompt: null };
           const intl = util.intl;
-          obj2.summary = intl.string(_modDef3863["o2++BO"]);
+          obj2.summary = intl.string(_modDef3864["o2++BO"]);
           const trimmed = str.trim();
           obj2.prompt = trimmed.slice(0, ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH);
           obj.request = obj2;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { projectId, request: null, clearComposer: null };
         const obj2 = { id: "manual:" + projectId + ":" + Date.now(), summary: null, prompt: null };
         const intl = util.intl;
-        obj2.summary = intl.string(_modDef3863["o2++BO"]);
+        obj2.summary = intl.string(_modDef3864["o2++BO"]);
         const trimmed = str.trim();
         obj2.prompt = trimmed.slice(0, ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH);
         obj.request = obj2;

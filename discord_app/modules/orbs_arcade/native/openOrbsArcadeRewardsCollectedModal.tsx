@@ -10,7 +10,7 @@ const OrbsArcadeRewardsCollectedModal = "OrbsArcadeRewardsCollectedModal";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/openOrbsArcadeRewardsCollectedModal.tsx");
 
-export const openOrbsArcadeRewardsCollectedModal = function openOrbsArcadeRewardsCollectedModal(rewards, entitlements) {
+export function openOrbsArcadeRewardsCollectedModal(rewards, entitlements) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
@@ -20,7 +20,7 @@ export const openOrbsArcadeRewardsCollectedModal = function openOrbsArcadeReward
     { rewards, entitlements },
     OrbsArcadeRewardsCollectedModal,
   );
-};
-export const closeOrbsArcadeRewardsCollectedModal = function closeOrbsArcadeRewardsCollectedModal() {
+}
+export function closeOrbsArcadeRewardsCollectedModal() {
   ModalActionCreatorsDefault.popWithKey(OrbsArcadeRewardsCollectedModal);
-};
+}

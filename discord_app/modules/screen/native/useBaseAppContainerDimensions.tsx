@@ -43,10 +43,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return size;
       }, items);
     };
-export const getBaseAppContainerDimensions = function getBaseAppContainerDimensions() {
+export function getBaseAppContainerDimensions() {
   const windowDimensions = useWindowDimensions.getWindowDimensions();
   ({ width, height } = windowDimensions);
   const rect = useSafeAreaInsets.getSafeAreaInsets();
   const size = { width: width - rect.left - rect.right, height };
   return size;
-};
+}

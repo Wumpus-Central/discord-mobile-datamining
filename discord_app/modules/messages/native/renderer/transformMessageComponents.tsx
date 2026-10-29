@@ -6,14 +6,14 @@ import InteractionComponentUtils from "../../../interaction_components/Interacti
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import RowGeneratorTypes from "RowGeneratorTypes.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import priv from "../../../../../_runtime/01456_priv.js";
+import priv from "../../../../../_runtime/01457_priv.js";
 
 const util = tmp4(1125);
 const FlagUtils = tmp4(1402);
-const MediaTypes = tmp4(6056);
-const AgeVerificationUtils = tmp4(6689);
-const sanitizeMediaDimension = tmp4(8625);
-const ExplicitMediaUtils = tmp4(8645);
+const MediaTypes = tmp4(6060);
+const AgeVerificationUtils = tmp4(6713);
+const sanitizeMediaDimension = tmp4(8647);
+const ExplicitMediaUtils = tmp4(8667);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -456,7 +456,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                       let obj = obj19;
                       const tmpResult45 = tmp(tmp2[30]);
                     } else if (tmp7.V2026 === version) {
-                      const cardColors = tmp(tmp2[31]).getCardColors(checkpointData.character);
+                      const cardColors = tmp(tmp2[31]).getCardColors(checkpointData.cardColorPalette);
                       const tmpResult46 = tmp(tmp2[31]);
                       const tmpResult47 = tmp(tmp2[32]);
                       const processColorOrThrowResult = tmp(tmp2[32]).processColorOrThrow(
@@ -588,8 +588,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(6050).CheckpointVersions;
-let closure_7 = fn(8631).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(6054).CheckpointVersions;
+let closure_7 = fn(8653).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -599,7 +599,7 @@ let result = size.fileFinishedImporting("modules/messages/native/renderer/transf
 export default function transformMessageComponents(message, arr) {
   const obj = {
     type: "textDisplayComponent",
-    parserState: obj3(8518).getInitialParserStateFromMessage(message.message, closure_7),
+    parserState: obj3(8540).getInitialParserStateFromMessage(message.message, closure_7),
   };
   obj3 = {};
   const merged = Object.assign(message);
@@ -607,7 +607,7 @@ export default function transformMessageComponents(message, arr) {
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));
   return mapped.filter(obj3(1385).isNotNullish);
 }
-export const getUnfurledMediaItemType = function getUnfurledMediaItemType(media) {
+export function getUnfurledMediaItemType(media) {
   ({ width, height, contentType } = media);
   if (null != width) {
     if (width > 0) {
@@ -627,4 +627,4 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(media)
     }
   }
   return RowGeneratorTypes.MediaGalleryItemType.VISUAL_PLACEHOLDER;
-};
+}

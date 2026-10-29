@@ -79,49 +79,48 @@ function getExplicitContentSettingOrDefault(teenId) {
 }
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx");
 
-export const isSetAndNotDefault = function isSetAndNotDefault(goreContentFriendDm) {
+export function isSetAndNotDefault(goreContentFriendDm) {
   let tmp = null != goreContentFriendDm;
   if (tmp) {
     tmp = goreContentFriendDm !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   return tmp;
-};
+}
 export { getGoreContentSettingOrDefault };
-export const updateGoreContentSetting = function updateGoreContentSetting(selectedTeenId, arg1) {
+export function updateGoreContentSetting(selectedTeenId, arg1) {
   const ParentalControlledGoreContent = ParentalControlledUserSettings.ParentalControlledGoreContent;
   const merged = Object.assign(getGoreContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledGoreContent.updateControlledSetting(selectedTeenId, {});
-};
-export const resolveExplicitContentSettingWithDefaultsForTeen =
-  function resolveExplicitContentSettingWithDefaultsForTeen(teenId) {
-    ({ setting, isFriend } = teenId);
-    if (isFriend === undefined) {
-      isFriend = false;
-    }
-    let tmp = null != setting;
-    if (tmp) {
-      tmp = setting !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
-    }
-    if (tmp) {
-      return setting;
+}
+export function resolveExplicitContentSettingWithDefaultsForTeen(teenId) {
+  ({ setting, isFriend } = teenId);
+  if (isFriend === undefined) {
+    isFriend = false;
+  }
+  let tmp = null != setting;
+  if (tmp) {
+    tmp = setting !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+  }
+  if (tmp) {
+    return setting;
+  } else {
+    const ParentalControlledLegacyExplicitContent =
+      ParentalControlledUserSettings.ParentalControlledLegacyExplicitContent;
+    const controlledSetting = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId.teenId);
+    const tmp7 = SensitiveMediaExplicitRedactionSettingsUtils;
+    if (isFriend) {
+      let tmp8 = tmp7.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting];
     } else {
-      const ParentalControlledLegacyExplicitContent =
-        ParentalControlledUserSettings.ParentalControlledLegacyExplicitContent;
-      const controlledSetting = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId.teenId);
-      const tmp7 = SensitiveMediaExplicitRedactionSettingsUtils;
-      if (isFriend) {
-        let tmp8 = tmp7.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting];
-      } else {
-        tmp8 = tmp7.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM[controlledSetting];
-      }
-      return tmp8;
+      tmp8 = tmp7.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM[controlledSetting];
     }
-  };
+    return tmp8;
+  }
+}
 export { getExplicitContentSettingOrDefault };
-export const updateExplicitContentSetting = function updateExplicitContentSetting(selectedTeenId, arg1) {
+export function updateExplicitContentSetting(selectedTeenId, arg1) {
   const ParentalControlledExplicitContent = ParentalControlledUserSettings.ParentalControlledExplicitContent;
   const merged = Object.assign(getExplicitContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledExplicitContent.updateControlledSetting(selectedTeenId, {});
-};
+}

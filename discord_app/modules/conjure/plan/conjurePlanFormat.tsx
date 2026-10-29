@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanFormat.tsx");
 
-export const formatConjurePlanRequirementLabel = function formatConjurePlanRequirementLabel(str) {
+export function formatConjurePlanRequirementLabel(str) {
   const parts = str.split("_");
   str = parts.join(" ");
   const formatted = str.toLowerCase();
@@ -14,8 +14,8 @@ export const formatConjurePlanRequirementLabel = function formatConjurePlanRequi
     sum = formatted1 + formatted.slice(1);
   }
   return sum;
-};
-export const conjurePlanCommandPrefix = function conjurePlanCommandPrefix(type) {
+}
+export function conjurePlanCommandPrefix(type) {
   let str = "\u21EA /";
   if (type.type !== Server.ApplicationCommandType.PRIMARY_ENTRY_POINT) {
     if (type.type === Server.ApplicationCommandType.USER) {
@@ -26,4 +26,4 @@ export const conjurePlanCommandPrefix = function conjurePlanCommandPrefix(type) 
     str = str2;
   }
   return str;
-};
+}

@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/share/native/resolveShareSendOutcome.tsx");
 
-export const getShareUploadError = function getShareUploadError(uploadError) {
+export function getShareUploadError(uploadError) {
   uploadError = undefined;
   if (uploadError != null) {
     uploadError = uploadError.uploadError;
@@ -13,8 +13,8 @@ export const getShareUploadError = function getShareUploadError(uploadError) {
     uploadError = null;
   }
   return uploadError;
-};
-export const pairDestinationsWithChannels = function pairDestinationsWithChannels(arr, arg1) {
+}
+export function pairDestinationsWithChannels(arr, arg1) {
   closure_0 = arg1;
   const items = [];
   const item = arr.forEach((destination, index) => {
@@ -24,19 +24,19 @@ export const pairDestinationsWithChannels = function pairDestinationsWithChannel
     }
   });
   return items;
-};
-export const withoutSentDestinations = function withoutSentDestinations(arr, arr2) {
+}
+export function withoutSentDestinations(arr, arr2) {
   if (0 === arr2.length) {
     const items = [];
     HermesBuiltin.arraySpread(arr, 0);
     return items;
   } else {
     const _Set = Set;
-    set = new Set(arr2.map(set(12963).destinationKey));
+    set = new Set(arr2.map(set(13184).destinationKey));
     return arr.filter((item) => !set.has(formatResults.destinationKey(item)));
   }
-};
-export const resolveShareSendOutcome = function resolveShareSendOutcome(arr) {
+}
+export function resolveShareSendOutcome(arr) {
   const found = arr.filter((status) => "sent" === status.status);
   const found1 = arr.filter((status) => "failed" === status.status);
   let tmp = null;
@@ -69,4 +69,4 @@ export const resolveShareSendOutcome = function resolveShareSendOutcome(arr) {
   obj.transitionChannelId = tmp3;
   obj.uploadErrorToAlert = tmp;
   return obj;
-};
+}

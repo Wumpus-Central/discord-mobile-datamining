@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx",
 );
 
-export const renderChannelPressableWrapper = function renderChannelPressableWrapper(children, panelVariant) {
+export function renderChannelPressableWrapper(children, panelVariant) {
   let flag = panelVariant.panelVariant;
   ({ layout, launchpad, isThread } = panelVariant);
   if (flag === undefined) {
@@ -26,4 +26,4 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
   obj2.style = items;
   return <View style={null}>{children}</View>;
-};
+}

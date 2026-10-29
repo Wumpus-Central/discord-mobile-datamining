@@ -20,7 +20,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -121,12 +121,12 @@ let closure_10 = async function _navigateToEvent(arg0) {
     }
   }
 };
-let closure_8 = fn(4862).GuildScheduledEventEntityTypes;
+let closure_8 = fn(4863).GuildScheduledEventEntityTypes;
 const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
 
-export const navigateToEvent = function navigateToEvent() {
+export function navigateToEvent() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -135,7 +135,7 @@ export const navigateToEvent = function navigateToEvent() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const postStartActions = function postStartActions() {
+}
+export function postStartActions() {
   return Promise.resolve();
-};
+}

@@ -24,9 +24,9 @@ export const ThemeContextFlags = {
   [64]: "REDUCE_SATURATION_ENABLED",
 };
 export { hasThemeFlag };
-export const setThemeFlag = function setThemeFlag(tmpResult, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
+export function setThemeFlag(tmpResult, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
   return tmpResult | MOBILE_DARK_GRADIENT_THEME_ENABLED;
-};
+}
 export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled()
   ? function useThemeFlag(arg0) {
       const cResult = c.c(3);

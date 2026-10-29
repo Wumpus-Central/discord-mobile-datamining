@@ -56,7 +56,7 @@ export const WINDOW_SIZE_THRESHOLD_SMALL = 360;
 export const WINDOW_SIZE_THRESHOLD_LARGE = 600;
 export const WINDOW_SIZE_THRESHOLD_XLARGE = 840;
 export { WindowSizeClassifier };
-export const getWindowSizeClassifier = function getWindowSizeClassifier() {
+export function getWindowSizeClassifier() {
   const obj = useBaseAppContainerDimensions;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
@@ -69,4 +69,4 @@ export const getWindowSizeClassifier = function getWindowSizeClassifier() {
     XLARGE = obj.XLARGE;
   }
   return XLARGE;
-};
+}

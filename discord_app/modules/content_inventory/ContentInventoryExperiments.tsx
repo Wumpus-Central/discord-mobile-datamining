@@ -28,18 +28,18 @@ const result = size.fileFinishedImporting("modules/content_inventory/ContentInve
 
 export const MemberlistRankerExperiment = apexExperiment;
 export const HotwheelsActivityFeedNvidiaExperiment = experiment;
-export const isEligibleForContentInventoryV1 = function isEligibleForContentInventoryV1(ContentInventoryManager) {
+export function isEligibleForContentInventoryV1(ContentInventoryManager) {
   let enabled = apexExperiment.getConfig({ location: ContentInventoryManager }).enabled;
   if (!enabled) {
     enabled = obj2.getICYMIEnabled(ContentInventoryManager);
   }
   return enabled;
-};
-export const isEligibleForImpressionCapping = function isEligibleForImpressionCapping(location) {
+}
+export function isEligibleForImpressionCapping(location) {
   const config = apexExperiment.getConfig({ location });
   let enabled = config.enabled;
   if (enabled) {
     enabled = true === tmp2;
   }
   return enabled;
-};
+}

@@ -83,7 +83,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
           if (tmpResult6.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
             id = data.id;
           }
-          tmpResult6 = tmp(6847);
+          tmpResult6 = tmp(6870);
         }
         cResult[6] = data;
         cResult[7] = id;
@@ -140,11 +140,11 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
         if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
           id = data.id;
         }
-        tmpResult = tmp(6847);
+        tmpResult = tmp(6870);
       }
       return id;
     };
-export const isDMAppChannel = function isDMAppChannel(channel) {
+export function isDMAppChannel(channel) {
   if (channel.type === constants2.DM) {
     if (!channel.isSystemDM()) {
       const user = UserStore.getUser(channel.getRecipientId());
@@ -168,4 +168,4 @@ export const isDMAppChannel = function isDMAppChannel(channel) {
     }
   }
   return false;
-};
+}

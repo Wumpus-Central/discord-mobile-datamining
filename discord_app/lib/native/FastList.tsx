@@ -3,7 +3,7 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../_runtime/05305_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/05306_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -2866,9 +2866,9 @@ let result1 = size.fileFinishedImporting("lib/native/FastList.tsx");
 export default FastList;
 export const DEFAULT_BATCHES_TO_RENDER = 12;
 export const MINIMUM_BATCHES_TO_RENDER = 5;
-export const getItemSizeOverrideKey = function getItemSizeOverrideKey(arg0, arg1, arg2) {
+export function getItemSizeOverrideKey(arg0, arg1, arg2) {
   return "" + arg0 + ":" + arg1 + ":" + arg2;
-};
+}
 export { FastListItemTypes };
 export { FastListComputer };
 export const AnimatedFastList = animatedComponent;

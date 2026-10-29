@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import _mod6511 from "../../../../_runtime/metro/06511__.js";
+import _mod6535 from "../../../../_runtime/metro/06535__.js";
 import StripeActionCreators from "StripeActionCreators.tsx";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -52,7 +52,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod6511.CardNumberElement);
+                element = element.getElement(_mod6535.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError(
                     "Unable to load card elements from Stripe",
@@ -334,86 +334,20 @@ let closure_23 = async function _submitElementsAndCreateStripePaymentMethod() {
   closure_130_2 = value;
   return { paymentMethod: closure_130_2.paymentMethod, error: closure_130_2.error };
 };
-let closure_24 = async function _createExpressCheckoutPaymentMethod(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({
-            stripePaymentMethodId: closure_129_0,
-            billingAddress: closure_129_1,
-            analyticsLocation: closure_129_2,
-          } = closure_0);
-          closure_129_3 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c3 = 2;
-          c4 = 1;
-          const obj6 = {
-            value: closure_130_0(closure_130_3[6]).validatePaymentSourceBillingAddress(closure_129_1),
-            done: false,
-          };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_3 = value;
-        const obj = closure_130_0(closure_130_3[6]);
-        const obj8 = { billingAddressToken: closure_129_3, analyticsLocation: closure_129_2 };
-        c4 = 3;
-        const obj9 = {
-          value: obj.createPaymentSource(closure_130_6.STRIPE, closure_129_0, closure_129_1, obj8),
-          done: true,
-        };
-        return obj9;
-      }
-    } catch (tmp23) {
-      c4 = tmp;
-      throw tmp23;
-    }
-  }
+let closure_24 = async function _createExpressCheckoutPaymentMethod() {
+  closure_1 = tmp2;
+  ({
+    stripePaymentMethodId: closure_129_0,
+    billingAddress: closure_129_1,
+    analyticsLocation: closure_129_2,
+  } = closure_0);
+  await "Reflect";
+  await closure_130_0(closure_130_3[6]).validatePaymentSourceBillingAddress(closure_129_1);
+  closure_129_3 = value;
+  return closure_130_0(closure_130_3[6]).createPaymentSource(closure_130_6.STRIPE, closure_129_0, closure_129_1, {
+    billingAddressToken: closure_129_3,
+    analyticsLocation: closure_129_2,
+  });
 };
 let closure_26 = async function _confirmPaymentElementSource() {
   dependencyMap = [...arguments];
@@ -431,7 +365,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -524,7 +458,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
               let billing_details;
               c12 = 3;
               c13 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
             break;
           case 1:
@@ -592,7 +526,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "Array" };
+                      const obj8 = { setupIntent, error: "a" };
                       closure_136_10 = obj8;
                       if (
                         (function shouldRecreateSetupIntentForPaymentElement(error) {
@@ -623,7 +557,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       setupIntent2 = closure_137_17(closure_136_10.setupIntent, closure_136_10.error, (type) => {
                         const intl = dependencyMap(1125).intl;
                         const stringResult = intl.string(dependencyMap(1125).t.khEaRI);
-                        return dependencyMap(6499).dispatchConfirmationError(type, {
+                        return dependencyMap(6523).dispatchConfirmationError(type, {
                           captureException: true,
                           defaultErrorMessage: stringResult,
                           captureExceptionOptions: { tags: { source: "payment_elements" } },
@@ -801,7 +735,7 @@ let closure_27 = async function _confirmCardPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -988,7 +922,7 @@ let closure_30 = async function _createAdyenVaultablePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1021,7 +955,7 @@ let closure_30 = async function _createAdyenVaultablePaymentSource(arg0) {
           let adyen_redirect_url;
           c12 = 1;
           c13 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1173,7 +1107,7 @@ let closure_32 = async function _createStripePaymentSourceToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1406,7 +1340,7 @@ const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/actions/BillingPaymentGatewayActionCreators.tsx");
 
-export const createAdyenPaymentSourceToken = function createAdyenPaymentSourceToken(type) {
+export function createAdyenPaymentSourceToken(type) {
   let json = null;
   if (!set.has(type.type)) {
     value = map.get(type.type);
@@ -1417,9 +1351,9 @@ export const createAdyenPaymentSourceToken = function createAdyenPaymentSourceTo
     json = JSON.stringify(obj);
   }
   return json;
-};
+}
 export { dispatchPaymentElementsConfirmationError };
-export const createCardToken = function createCardToken() {
+export function createCardToken() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -1428,8 +1362,8 @@ export const createCardToken = function createCardToken() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const confirmEPS = function confirmEPS() {
+}
+export function confirmEPS() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -1438,8 +1372,8 @@ export const confirmEPS = function confirmEPS() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const confirmPrzelewy24 = function confirmPrzelewy24() {
+}
+export function confirmPrzelewy24() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -1448,9 +1382,9 @@ export const confirmPrzelewy24 = function confirmPrzelewy24() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { submitElementsForPaymentElement };
-export const submitElementsAndCreateStripePaymentMethod = function submitElementsAndCreateStripePaymentMethod() {
+export function submitElementsAndCreateStripePaymentMethod() {
   const self = this;
   const apply = closure_23.apply;
   if (typeof apply === "unknown") {
@@ -1459,8 +1393,8 @@ export const submitElementsAndCreateStripePaymentMethod = function submitElement
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createExpressCheckoutPaymentMethod = function createExpressCheckoutPaymentMethod() {
+}
+export function createExpressCheckoutPaymentMethod() {
   const self = this;
   const apply = closure_24.apply;
   if (typeof apply === "unknown") {
@@ -1469,8 +1403,8 @@ export const createExpressCheckoutPaymentMethod = function createExpressCheckout
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const confirmPaymentElementSource = function confirmPaymentElementSource() {
+}
+export function confirmPaymentElementSource() {
   const self = this;
   const apply = closure_26.apply;
   if (typeof apply === "unknown") {
@@ -1479,8 +1413,8 @@ export const confirmPaymentElementSource = function confirmPaymentElementSource(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const confirmCardPaymentSource = function confirmCardPaymentSource() {
+}
+export function confirmCardPaymentSource() {
   const self = this;
   const apply = closure_27.apply;
   if (typeof apply === "unknown") {
@@ -1489,11 +1423,11 @@ export const confirmCardPaymentSource = function confirmCardPaymentSource() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createBraintreePaymentSource = function createBraintreePaymentSource(id, arg1, analyticsLocation) {
+}
+export function createBraintreePaymentSource(id, arg1, analyticsLocation) {
   return BillingSharedActionCreators.createPaymentSource(constants.BRAINTREE, id, arg1, { analyticsLocation });
-};
-export const createStripePaymentSource = function createStripePaymentSource() {
+}
+export function createStripePaymentSource() {
   const self = this;
   const apply = closure_28.apply;
   if (typeof apply === "unknown") {
@@ -1502,8 +1436,8 @@ export const createStripePaymentSource = function createStripePaymentSource() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createAdyenPrepaidPaymentSource = function createAdyenPrepaidPaymentSource() {
+}
+export function createAdyenPrepaidPaymentSource() {
   const self = this;
   const apply = closure_29.apply;
   if (typeof apply === "unknown") {
@@ -1512,8 +1446,8 @@ export const createAdyenPrepaidPaymentSource = function createAdyenPrepaidPaymen
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createAdyenVaultablePaymentSource = function createAdyenVaultablePaymentSource() {
+}
+export function createAdyenVaultablePaymentSource() {
   const self = this;
   const apply = closure_30.apply;
   if (typeof apply === "unknown") {
@@ -1522,9 +1456,9 @@ export const createAdyenVaultablePaymentSource = function createAdyenVaultablePa
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { createStripePaymentSourceToken };
-export const createPaymentSourceToken = function createPaymentSourceToken(paymentSource) {
+export function createPaymentSourceToken(paymentSource) {
   let obj = paymentSource;
   if (set.has(paymentSource.type)) {
     return null;
@@ -1541,8 +1475,8 @@ export const createPaymentSourceToken = function createPaymentSourceToken(paymen
   } else {
     const tmp2 = createStripePaymentSourceToken(obj);
   }
-};
-export const paymentIntentSucceeded = function paymentIntentSucceeded() {
+}
+export function paymentIntentSucceeded() {
   const self = this;
   const apply = closure_33.apply;
   if (typeof apply === "unknown") {
@@ -1551,4 +1485,4 @@ export const paymentIntentSucceeded = function paymentIntentSucceeded() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileCTA.tsx
 import MemberVerificationTypes from "../../../guild_member_verification/MemberVerificationTypes.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import JoinGuildRefusedError from "../../../guild/JoinGuildRefusedError.tsx";
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
 import GuildProfileTypes from "../../GuildProfileTypes.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import JoinGuildRefusedError from "../../../guild/JoinGuildRefusedError.tsx";
 import GuildDiscoveryUtils from "../../../../utils/GuildDiscoveryUtils.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../actions/InstantInviteActionCreators.tsx";

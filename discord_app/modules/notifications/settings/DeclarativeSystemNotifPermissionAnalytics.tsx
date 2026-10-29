@@ -40,7 +40,7 @@ const result = size.fileFinishedImporting(
   "modules/notifications/settings/DeclarativeSystemNotifPermissionAnalytics.tsx",
 );
 
-export const trackSystemNotifSettingsOpened = function trackSystemNotifSettingsOpened(notif_setting_id) {
+export function trackSystemNotifSettingsOpened(notif_setting_id) {
   value = map.get(notif_setting_id);
   if (null != value) {
     const items = [notif_setting_id];
@@ -49,12 +49,8 @@ export const trackSystemNotifSettingsOpened = function trackSystemNotifSettingsO
     ({ ids: obj2.notif_type_ids, names: obj2.notif_type_names } = tmp3);
     AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTING_SYSTEM_SETTINGS_OPENED, obj3);
   }
-};
-export const trackSystemNotifSettingsReenabled = function trackSystemNotifSettingsReenabled(
-  disabledSettings,
-  disabledSettings2,
-  app_launch,
-) {
+}
+export function trackSystemNotifSettingsReenabled(disabledSettings, disabledSettings2, app_launch) {
   const items = [];
   const items1 = [];
   const iter = disabledSettings[Symbol.iterator]();
@@ -84,4 +80,4 @@ export const trackSystemNotifSettingsReenabled = function trackSystemNotifSettin
     AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTING_SYSTEM_REENABLED, obj);
   }
   set = new Set(disabledSettings2);
-};
+}

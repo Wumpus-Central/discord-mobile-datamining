@@ -6,7 +6,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
 
-export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedType) {
+export function trackIfScrolledToBottom(trackedType) {
   ({ nativeEvent, hasTrackedScrolledToBottom } = trackedType);
   let current = hasTrackedScrolledToBottom.current;
   if (!current) {
@@ -22,4 +22,4 @@ export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedT
     AnalyticsUtilsDefault.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj2);
     hasTrackedScrolledToBottom.current = true;
   }
-};
+}

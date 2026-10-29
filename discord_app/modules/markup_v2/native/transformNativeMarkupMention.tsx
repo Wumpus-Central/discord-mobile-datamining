@@ -8,38 +8,30 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
 
-export const applyChannelMentionIcons = function applyChannelMentionIcons(handleUnknownChannelResult) {
+export function applyChannelMentionIcons(handleUnknownChannelResult) {
   const obj = {};
   const merged = Object.assign(handleUnknownChannelResult);
   obj.content = PlatformMarkupRules.decorateWithIcon(handleUnknownChannelResult.content);
   obj.inContent = PlatformMarkupRules.decorateWithIcon(handleUnknownChannelResult.inContent);
   return obj;
-};
-export const transformNativeMention = function transformNativeMention(value, allowGameMentions) {
+}
+export function transformNativeMention(value, allowGameMentions) {
   const type = value.type;
   if ("user" === type) {
     const str1 = value.value.toString();
-    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "r" };
+    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "Array" };
     const _HermesInternal2 = HermesInternal;
     obj5.fullMatch = "<@" + str1 + ">";
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
     return MarkupRules.hydrateUserMention(
-      {
-        fullMatch: "@everyone",
-        id: "application",
-        everyoneOrHere: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002804286485516824,
-      },
+      { fullMatch: "@everyone", id: "application", everyoneOrHere: "r" },
       allowGameMentions,
     );
   } else if ("here" === type) {
     return MarkupRules.hydrateUserMention(
-      {
-        fullMatch: "@here",
-        id: "application",
-        everyoneOrHere: 2278796593990497400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-      },
+      { fullMatch: "@here", id: "application", everyoneOrHere: "r" },
       allowGameMentions,
     );
   } else if ("role" === type) {
@@ -90,4 +82,4 @@ export const transformNativeMention = function transformNativeMention(value, all
     const obj = { type: MarkupTypes.AST_KEY.TEXT, content: "" };
     return obj;
   }
-};
+}

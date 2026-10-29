@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/chat/native/NativeChatCapabilities.tsx");
 
-export const nativeChatSupportsAudioEmbeds = function nativeChatSupportsAudioEmbeds() {
+export function nativeChatSupportsAudioEmbeds() {
   let flag = null;
   if (null != closure_3) {
     return closure_3;
@@ -35,4 +35,4 @@ export const nativeChatSupportsAudioEmbeds = function nativeChatSupportsAudioEmb
     closure_3 = tmp3;
     obj = PlatformUtils;
   }
-};
+}

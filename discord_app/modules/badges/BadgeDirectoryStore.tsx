@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01456_priv.js";
+import privDefault from "../../../_runtime/01457_priv.js";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -356,7 +356,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/BadgeDirectoryStore.tsx");
 
 export default badgeDirectoryStore;
-export const getSingleRequirementThreshold = function getSingleRequirementThreshold(arg0) {
+export function getSingleRequirementThreshold(arg0) {
   let num;
   if (arg0 != null) {
     const first = arg0.requirements[0];
@@ -368,8 +368,8 @@ export const getSingleRequirementThreshold = function getSingleRequirementThresh
     num = 0;
   }
   return num;
-};
-export const getObtainedAtFromBadge = function getObtainedAtFromBadge(current_tier) {
+}
+export function getObtainedAtFromBadge(current_tier) {
   if (null != current_tier) {
     let obtained_at;
     if (null != current_tier.current_tier) {
@@ -385,4 +385,4 @@ export const getObtainedAtFromBadge = function getObtainedAtFromBadge(current_ti
     }
     return obtained_at;
   }
-};
+}

@@ -4,12 +4,12 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const WELCOME_STICKERS = fn(8395).WELCOME_STICKERS;
+const WELCOME_STICKERS = fn(8417).WELCOME_STICKERS;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");
 
-export const pickHelloSticker = function pickHelloSticker() {
+export function pickHelloSticker() {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
@@ -20,8 +20,8 @@ export const pickHelloSticker = function pickHelloSticker() {
     num = SnowflakeUtilsDefault.extractTimestamp(id);
   }
   return WELCOME_STICKERS[num % WELCOME_STICKERS.length];
-};
-export const pickWelcomeSticker = function pickWelcomeSticker(id) {
+}
+export function pickWelcomeSticker(id) {
   const currentUser = UserStore.getCurrentUser();
   id = undefined;
   if (currentUser != null) {
@@ -33,8 +33,8 @@ export const pickWelcomeSticker = function pickWelcomeSticker(id) {
   }
   const obj2 = SnowflakeUtilsDefault;
   return WELCOME_STICKERS[(num + obj2.extractTimestamp(obj2, id)) % WELCOME_STICKERS.length];
-};
-export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageChannel, message, stickerId) {
+}
+export function handleWelcomeCtaClicked(messageChannel, message, stickerId) {
   const obj = MessageActionCreatorsDefault;
   obj.sendGreetMessage(
     messageChannel.id,
@@ -55,4 +55,4 @@ export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageC
   }
   obj5.sender = id;
   AnalyticsUtilsDefault.track(AnalyticEvents.WELCOME_CTA_CLICKED, obj5);
-};
+}

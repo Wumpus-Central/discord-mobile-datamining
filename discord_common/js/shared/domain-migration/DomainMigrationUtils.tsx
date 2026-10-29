@@ -22,7 +22,7 @@ export const DomainMigrationEventType = {
 export { DomainMigrationMessageFrom };
 export const DOMAIN_MIGRATION_SUCCESS_KEY = "domainMigrationSuccess";
 export const DOMAIN_MIGRATION_FAILED_KEY = "domainMigrationFailed";
-export const sendPostMessage = function sendPostMessage(domainMigrationEvent, postMessage, arg2) {
+export function sendPostMessage(domainMigrationEvent, postMessage, arg2) {
   if (arg2 === obj.MIGRATION_SOURCE_DOMAIN) {
     const _window2 = window;
     let MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
@@ -32,8 +32,8 @@ export const sendPostMessage = function sendPostMessage(domainMigrationEvent, po
   }
   obj = { domainMigrationEvent };
   postMessage.postMessage(obj, MIGRATION_SOURCE_ORIGIN);
-};
-export const extractMessage = function extractMessage(origin, arg1) {
+}
+export function extractMessage(origin, arg1) {
   if (arg1 === obj.MIGRATION_SOURCE_DOMAIN) {
     const _window2 = window;
     let MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
@@ -55,4 +55,4 @@ export const extractMessage = function extractMessage(origin, arg1) {
     tmp5 = domainMigrationEvent;
   }
   return tmp5;
-};
+}

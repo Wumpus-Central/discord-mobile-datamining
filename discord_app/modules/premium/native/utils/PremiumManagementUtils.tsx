@@ -35,9 +35,7 @@ let result = size.fileFinishedImporting("modules/premium/native/utils/PremiumMan
 
 export const MobileWebDestinationTypes = { PREMIUM_MANAGEMENT: "premium_management" };
 export { PremiumManagementMethod };
-export const getPremiumManagementMethod = function getPremiumManagementMethod(
-  isOnPlatformMatchingExternalPaymentGateway,
-) {
+export function getPremiumManagementMethod(isOnPlatformMatchingExternalPaymentGateway) {
   if (null == isOnPlatformMatchingExternalPaymentGateway) {
     return null;
   } else if (isOnPlatformMatchingExternalPaymentGateway.isOnPlatformMatchingExternalPaymentGateway) {
@@ -50,8 +48,8 @@ export const getPremiumManagementMethod = function getPremiumManagementMethod(
     }
     IN_WEB = obj.IN_WEB;
   }
-};
-export const getExternalManagementMessage = function getExternalManagementMessage(subscription, arg1) {
+}
+export function getExternalManagementMessage(subscription, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
@@ -67,7 +65,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
             str = "Meta Quest";
           }
           str2 = str;
-          tmp13Result = tmp13(1627);
+          tmp13Result = tmp13(1628);
         }
         if (null === tmp12.IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY) {
           if (null != subscription) {
@@ -82,7 +80,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
           if (null != tmp) {
             if (tmp.shouldAllowExternalManagement) {
               if ("iOS" !== str2) {
-                tmp13(1627);
+                tmp13(1628);
               }
               let status;
               if (subscription != null) {
@@ -117,7 +115,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 const intl3 = tmp13(1125).intl;
                 const t = tmp13(1125).t;
                 obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7553).LinkButton, {
+                jsx(tmp13(7576).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                     if (null != _null) {
@@ -193,4 +191,4 @@ export const getExternalManagementMessage = function getExternalManagementMessag
     }
     IN_WEB = obj.IN_WEB;
   }
-};
+}

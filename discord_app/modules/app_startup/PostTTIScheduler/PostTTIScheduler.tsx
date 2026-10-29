@@ -9,12 +9,12 @@ const promise = new Promise((resolve) => {
 });
 const result = size.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
 
-export const schedulePostTTIEvent = function schedulePostTTIEvent(arg0) {
+export function schedulePostTTIEvent(arg0) {
   closure_0 = arg0;
   promise.then(() => {
     closure_0();
   });
-};
-export const notifyAboutTTI = function notifyAboutTTI() {
+}
+export function notifyAboutTTI() {
   obj.resolve(null);
-};
+}

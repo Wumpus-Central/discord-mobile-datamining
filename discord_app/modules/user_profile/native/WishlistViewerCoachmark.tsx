@@ -2,14 +2,14 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef14705 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef14940 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const ContentDismissActionType = fn(4854).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({
   imageContainer: { alignItems: "center", justifyContent: "center" },
   image: { width: 160, height: 106 },
@@ -20,7 +20,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp3 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef14705 };
+        const obj2 = { uri: _modDef14940 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -52,7 +52,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_7();
       const obj = { style: tmp.imageContainer, children: null };
       const obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef14705 };
+      const obj3 = { uri: _modDef14940 };
       obj2.source = obj3;
       obj2.style = tmp.image;
       obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === tmp9) {
             let tmp13 = cResult[11];
           }
-          const coachmark = markAsDismissed(9874).useCoachmark(onViewWishlist.anchorRef, tmp13);
+          const coachmark = markAsDismissed(9906).useCoachmark(onViewWishlist.anchorRef, tmp13);
           return null;
         }
       }

@@ -17,7 +17,7 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9816).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9848).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -398,7 +398,7 @@ let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.t
 export const useMessageAuthorActivities = tmp2;
 export const useFetchMessageApplications = tmp3;
 export const useFetchVoiceChannelInviteStartTimes = tmp4;
-export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
+export function useMessagesLifecycle(screenIndex) {
   ({
     messages: require,
     isMessagesReady: importDefault,
@@ -435,9 +435,9 @@ export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
     },
     items,
   );
-};
+}
 export const useScrollState = tmp5;
-export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) {
+export function useChatUpdatesQueue(ref5, callback) {
   closure_0 = ref5;
   closure_1 = callback;
   const items = [ref5, callback];
@@ -465,7 +465,7 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
     items1,
   );
   return memo;
-};
+}
 export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled()
   ? function useMessagesState() {
       const cResult = c.c(3);

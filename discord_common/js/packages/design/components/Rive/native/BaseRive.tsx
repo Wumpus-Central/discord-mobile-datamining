@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/05080_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/05081_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";
@@ -854,7 +854,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { value, done: true };
                   return obj;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -968,7 +968,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { value, done: true };
                   return obj;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -1061,7 +1061,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
     };
-export const useArtboardBinding = function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
+export function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
   closure_0 = Icon;
   const bindableArtboard = file;
   closure_3 = Icon2;
@@ -1084,4 +1084,4 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
       }
     }
   }, items);
-};
+}

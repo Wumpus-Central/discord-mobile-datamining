@@ -38,7 +38,7 @@ let closure_5 = apply.memoize((arg0) => {
 });
 const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
-export const generateBlockedGroupRowData = function generateBlockedGroupRowData(canUncollapse, theme, self) {
+export function generateBlockedGroupRowData(canUncollapse, theme, self) {
   const _self = self;
   ({ content, context } = canUncollapse);
   canUncollapse = !("canUncollapse" in canUncollapse);
@@ -61,4 +61,4 @@ export const generateBlockedGroupRowData = function generateBlockedGroupRowData(
   obj.revealed = revealed;
   obj.canUncollapse = canUncollapse;
   return obj;
-};
+}

@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
-export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
+export function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
     if (null != avatar_decoration_data) {
       const result = mappers.parseSkuIdFromServerData(avatar_decoration_data);
@@ -27,8 +27,8 @@ export const parseAvatarDecorationData = function parseAvatarDecorationData(avat
     }
   }
   return null;
-};
-export const isAvatarDecorationExpired = function isAvatarDecorationExpired(avatarDecoration) {
+}
+export function isAvatarDecorationExpired(avatarDecoration) {
   let expiresAt;
   if (avatarDecoration != null) {
     expiresAt = avatarDecoration.expiresAt;
@@ -40,8 +40,8 @@ export const isAvatarDecorationExpired = function isAvatarDecorationExpired(avat
     tmp2 = result < Date.now();
   }
   return tmp2;
-};
-export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDecoration, asset2) {
+}
+export function isEqualAvatarDecoration(avatarDecoration, asset2) {
   if (null != avatarDecoration) {
     if (null != asset2) {
       let tmp2 = null;
@@ -101,8 +101,8 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
     return isEqualResult;
   }
   isEqualResult = avatarDecoration === asset2;
-};
-export const hasGlobalDefaultAvatarDecoration = function hasGlobalDefaultAvatarDecoration(avatarDecoration, arg1) {
+}
+export function hasGlobalDefaultAvatarDecoration(avatarDecoration, arg1) {
   let tmp = null != arg1;
   if (tmp) {
     let avatarDecoration1;
@@ -132,4 +132,4 @@ export const hasGlobalDefaultAvatarDecoration = function hasGlobalDefaultAvatarD
     tmp = null != asset;
   }
   return tmp;
-};
+}

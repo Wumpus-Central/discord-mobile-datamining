@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx",
 );
 
-export const createInGameMessageNuxSystemMessage = function createInGameMessageNuxSystemMessage(message) {
+export function createInGameMessageNuxSystemMessage(message) {
   message = message.message;
   ({ theme, roleStyle } = message);
   let str = message.applicationId;
@@ -46,4 +46,4 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     return obj5;
   }
   tmp3 = resolveMessageContentColorsDefault(theme);
-};
+}

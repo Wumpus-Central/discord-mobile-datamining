@@ -6,7 +6,7 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7731).ReferencedMessageState;
+const ReferencedMessageState = fn(7754).ReferencedMessageState;
 const Constants = fn(1084);
 ({
   MessageStates: closure_7,
@@ -142,7 +142,7 @@ export default function createMessage(tts) {
   obj5.media_mention = mediaMention;
   return obj5;
 }
-export const userRecordToServer = function userRecordToServer(currentUser) {
+export function userRecordToServer(currentUser) {
   return {
     id: currentUser.id,
     username: currentUser.username,
@@ -152,8 +152,8 @@ export const userRecordToServer = function userRecordToServer(currentUser) {
     global_name: currentUser.globalName,
     primary_guild: currentUser.primaryGuild,
   };
-};
-export const createBotMessage = function createBotMessage(arg0) {
+}
+export function createBotMessage(arg0) {
   ({ messageId, embeds } = arg0);
   ({ channelId, content, loggingName } = arg0);
   if (messageId == null) {
@@ -189,4 +189,4 @@ export const createBotMessage = function createBotMessage(arg0) {
   obj2.state = constants.SENT;
   obj2.loggingName = loggingName;
   return obj2;
-};
+}

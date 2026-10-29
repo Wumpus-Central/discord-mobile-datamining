@@ -2,7 +2,7 @@
 import _mod17 from "../../../_runtime/metro/00017__.js";
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
-import _modDef1948 from "../../../_runtime/metro/01948__.js";
+import _modDef1949 from "../../../_runtime/metro/01949__.js";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import MarkupTextRuleDefault from "MarkupTextRule.tsx";
@@ -49,7 +49,7 @@ let obj = {
   silentPrefix: null,
 };
 let obj2 = {};
-let merged = Object.assign(_modDef1948.defaultRules.escape);
+let merged = Object.assign(_modDef1949.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;
@@ -378,7 +378,7 @@ obj.silentPrefix = {
 let result = size.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
-export const decorateWithIcon = function decorateWithIcon(content) {
+export function decorateWithIcon(content) {
   let mapped = content;
   if (null != content) {
     mapped = content;
@@ -407,8 +407,8 @@ export const decorateWithIcon = function decorateWithIcon(content) {
     }
   }
   return mapped;
-};
-export const hydrateGameMention = function hydrateGameMention(gameId, channelId) {
+}
+export function hydrateGameMention(gameId, channelId) {
   const gameMentionData = useGameMentionData.getGameMentionData(gameId);
   let gameIcon;
   if (gameMentionData != null) {
@@ -431,4 +431,4 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
   }
   obj2.displayName = gameName;
   return obj2;
-};
+}

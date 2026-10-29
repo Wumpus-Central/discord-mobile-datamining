@@ -15,7 +15,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -155,14 +155,14 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx");
 
-export const getIosAppStoreReviewsUrl = function getIosAppStoreReviewsUrl(arg0) {
+export function getIosAppStoreReviewsUrl(arg0) {
   return (
     "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" +
     arg0 +
     "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software"
   );
-};
-export const openAppStoreReviews = function openAppStoreReviews(storeUrl, platform, appId) {
+}
+export function openAppStoreReviews(storeUrl, platform, appId) {
   if ("ios" === platform) {
     if (null != appId) {
       if ("" !== appId) {
@@ -176,8 +176,8 @@ export const openAppStoreReviews = function openAppStoreReviews(storeUrl, platfo
     }
   }
   openURL.default(storeUrl);
-};
-export const getAppStoreOverlayContent = function getAppStoreOverlayContent() {
+}
+export function getAppStoreOverlayContent() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -186,4 +186,4 @@ export const getAppStoreOverlayContent = function getAppStoreOverlayContent() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

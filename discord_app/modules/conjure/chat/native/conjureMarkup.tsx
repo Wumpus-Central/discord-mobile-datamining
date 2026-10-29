@@ -19,7 +19,7 @@ let closure_4 = apply.once(() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/conjureMarkup.tsx");
 
-export const parseConjureMarkup = function parseConjureMarkup() {
+export function parseConjureMarkup() {
   const items = [...arguments];
   return closure_4()(...items);
-};
+}

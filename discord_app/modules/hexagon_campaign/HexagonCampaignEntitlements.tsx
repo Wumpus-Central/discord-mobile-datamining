@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const HexagonCampaignPerk = HexagonCampaignConstants.HexagonCampaignPerk;
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignEntitlements.tsx");
 
-export const canUseAllAppIcons = function canUseAllAppIcons(currentUser) {
+export function canUseAllAppIcons(currentUser) {
   if (obj.hasPerkOnlyFromHexagonCampaign(currentUser, HexagonCampaignPerk.APP_ICON)) {
     const APP_ICONS = ProductCatalog.APP_ICONS;
     let featureValue = APP_ICONS.getFeatureValue(currentUser);
@@ -15,4 +15,4 @@ export const canUseAllAppIcons = function canUseAllAppIcons(currentUser) {
     featureValue = PremiumUtilsDefault.canUsePremiumAppIcons(currentUser);
   }
   return featureValue;
-};
+}

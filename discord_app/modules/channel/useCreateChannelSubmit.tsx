@@ -26,7 +26,7 @@ export default function useCreateChannelSubmit(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ export default function useCreateChannelSubmit(arg0) {
             let guild_id;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -82,7 +82,7 @@ export default function useCreateChannelSubmit(arg0) {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
               const obj6 = {
                 id: closure_131_4,
-                type: closure_0(1997).PermissionOverwriteType.ROLE,
+                type: closure_0(1998).PermissionOverwriteType.ROLE,
                 deny: constants2.VIEW_CHANNEL,
                 allow: closure_2(1096).getFlag(0),
               };
@@ -120,7 +120,7 @@ export default function useCreateChannelSubmit(arg0) {
           if (3 === tmp8) {
             c6 = 1;
             closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(5011).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(5012).AccessibilityAnnouncer;
             const intl = closure_0(1125).intl;
             AccessibilityAnnouncer.announce(intl.string(closure_0(1125).t["0SbUzm"]));
             const body = closure_131_13.body;
@@ -151,7 +151,7 @@ export default function useCreateChannelSubmit(arg0) {
               id = closure_131_10.id;
               guild_id = closure_131_10.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(5011).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer2 = closure_0(5012).AccessibilityAnnouncer;
                 const intl2 = closure_0(1125).intl;
                 const obj9 = { name: closure_131_5 };
                 AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1125).t.Wke70b, obj9));

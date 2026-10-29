@@ -14,7 +14,7 @@ let closure_6 = async function _openSafetyFlow() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_6 = async function _openSafetyFlow() {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -94,7 +94,7 @@ let closure_6 = async function _openSafetyFlow() {
                 if (null == closure_130_1) {
                   c5 = 0;
                   c7 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               }
             } else if (4 === tmp7) {
@@ -125,7 +125,7 @@ let closure_6 = async function _openSafetyFlow() {
               if (null == value) {
                 c5 = 0;
                 c7 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             closure_130_2 = (function getInitialScreenForTask(task_type) {
@@ -174,7 +174,7 @@ const UserRequiredActions = fn(1084).UserRequiredActions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
 
-export const openSafetyFlow = function openSafetyFlow() {
+export function openSafetyFlow() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -183,4 +183,4 @@ export const openSafetyFlow = function openSafetyFlow() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

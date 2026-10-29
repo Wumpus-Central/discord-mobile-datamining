@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");
 
-export const createFavoritesGuildChannelRecord = function createFavoritesGuildChannelRecord(arg0, order, toJS) {
+export function createFavoritesGuildChannelRecord(arg0, order, toJS) {
   const constructor = new toJS.constructor(toJS.toJS());
   constructor.position_ = order.order;
   let tmp2 = null != order.nickname;
@@ -24,4 +24,4 @@ export const createFavoritesGuildChannelRecord = function createFavoritesGuildCh
   if (undefined === constructor.parent_id) {
     constructor.parent_id = null;
   }
-};
+}

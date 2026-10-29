@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/create/ConjureCreateErrors.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
@@ -16,7 +16,7 @@ class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/conjure/create/ConjureCreateErrors.tsx");
 
 export const ConjureCreateError = prototype;
-export const classifyCreateFailure = function classifyCreateFailure(error) {
+export function classifyCreateFailure(error) {
   if (typeof error === "object") {
     if (null !== error) {
       ({ status, body } = error);
@@ -40,8 +40,8 @@ export const classifyCreateFailure = function classifyCreateFailure(error) {
     }
   }
   return "unknown";
-};
-export const createFailureStatus = function createFailureStatus(status) {
+}
+export function createFailureStatus(status) {
   status = undefined;
   if (status != null) {
     status = status.status;
@@ -51,20 +51,20 @@ export const createFailureStatus = function createFailureStatus(status) {
     num = status;
   }
   return num;
-};
-export const getConjureCreateErrorMessage = function getConjureCreateErrorMessage(reason) {
+}
+export function getConjureCreateErrorMessage(reason) {
   let str = "unknown";
   if (reason instanceof prototype) {
     str = reason.reason;
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3863["lh+h/p"]);
+    return intl3.string(_modDef3864["lh+h/p"]);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3863.zBENJU);
+    return intl2.string(_modDef3864.zBENJU);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3863["9m86fn"]);
+    return intl.string(_modDef3864["9m86fn"]);
   }
-};
+}

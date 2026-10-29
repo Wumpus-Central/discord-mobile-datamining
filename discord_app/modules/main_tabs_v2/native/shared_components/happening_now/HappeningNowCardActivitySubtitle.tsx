@@ -57,7 +57,7 @@ function getActivitySubtitle(activity, stream) {
 const View = fn(17).View;
 const ActivityTypes = fn(1084).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_7 = createStyles.createStyles({
   cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" },
 });
@@ -70,7 +70,7 @@ const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx",
 );
 
-export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
+export function HappeningNowVoiceCardSubtitle(voiceState) {
   if (closure_8) {
     const cResult = voiceState(576).c(11);
     voiceState = voiceState.voiceState;
@@ -123,7 +123,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       cResult[10] = tmp33;
     }
     const obj4 = { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 };
-    const tmp29 = jsx(voiceState(16925).HappeningNowCardSubtitle, {
+    const tmp29 = jsx(voiceState(17164).HappeningNowCardSubtitle, {
       lineClamp: 1,
       accessibilityLabel: tmp24,
       children: tmp23,
@@ -148,15 +148,15 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       tmp12 = getChannelA11yLabelDefault(obj7);
     }
     const obj8 = { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) };
-    obj6.children = jsx(voiceState(16925).HappeningNowCardSubtitle, {
+    obj6.children = jsx(voiceState(17164).HappeningNowCardSubtitle, {
       lineClamp: 1,
       accessibilityLabel: tmp12,
       children: useChannelNameDefault(stateFromStores1),
     });
     return <View style={tmp2.cardDetails}>{null}</View>;
   }
-};
-export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
+}
+export function HappeningNowActivityCardSubtitle(activity) {
   if (closure_10) {
     let HappeningNowCardSubtitle = require;
     let tmp6 = dependencyMap;
@@ -167,7 +167,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp8) {
-        HappeningNowCardSubtitle = HappeningNowCardSubtitle(16925).HappeningNowCardSubtitle;
+        HappeningNowCardSubtitle = HappeningNowCardSubtitle(17164).HappeningNowCardSubtitle;
         const obj3 = { lineClamp: 1, children: tmp8 };
         tmp6 = <HappeningNowCardSubtitle lineClamp={1}>{tmp8}</HappeningNowCardSubtitle>;
         cResult[3] = tmp8;
@@ -186,4 +186,4 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
       children: getActivitySubtitle(activity.activity, activity.stream),
     });
   }
-};
+}

@@ -3,7 +3,7 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import DatabaseDaosDefault from "../app_database/DatabaseDaos.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
 import RegexUtilsDefault from "../../utils/RegexUtils.tsx";
@@ -67,7 +67,7 @@ let closure_39 = async function _loadSavedEmojis() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -93,9 +93,9 @@ let closure_39 = async function _loadSavedEmojis() {
               c2 = 1;
               c3 = 1;
               const obj6 = {
-                value: React(4902).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
+                value: React(4903).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(6764).getAsync(closure_1_0),
+                    closure_2_1(6787).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -132,6 +132,8 @@ function handlePackEmojisChange() {
   if (flag) {
     closure_25 = indexablePackEmojis;
     EmojiDisambiguations.reset();
+    importDefaultResult21.markDirty();
+    importDefaultResult31.markDirty();
     flag = true;
   }
   return flag;
@@ -160,7 +162,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(6798).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(6821).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -180,7 +182,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(6798);
+      obj = closure_0(6821);
     }
   }
 }
@@ -339,14 +341,14 @@ function handleRoleUpdate(guildId) {
         importDefaultResult31.compute();
       }
     }
-    obj = closure_0(4926);
+    obj = closure_0(4927);
   }
   return false;
 }
 const EmojiConstants = fn(1392);
 ({ EmojiDisabledReasons: closure_18, EmojiIntention: closure_19 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1084).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(6763).EmojiCategories;
+const EmojiCategories = fn(6786).EmojiCategories;
 const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),
@@ -406,7 +408,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(4958).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(4959).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -415,7 +417,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(4958);
+        obj = emoji(4959);
       }
       tmp6 = someResult;
     }
@@ -1010,7 +1012,19 @@ let merged = Object.assign({
       }
       byName = tmp4;
     }
-    return byName;
+    if (null != byName) {
+      return byName;
+    } else {
+      const emoji = EmojiPackStore.getEmoji(id1);
+      let tmp8;
+      if (null != emoji) {
+        if (EmojiPackStore.isPackEmojiUsable(emoji)) {
+          tmp8 = emoji;
+        }
+      }
+      return tmp8;
+    }
+    obj = require("UnicodeEmojis");
   },
   afterCompute() {
     closure_0();
@@ -1044,7 +1058,19 @@ const merged1 = Object.assign({
       }
       byName = tmp4;
     }
-    return byName;
+    if (null != byName) {
+      return byName;
+    } else {
+      const emoji = EmojiPackStore.getEmoji(id1);
+      let tmp8;
+      if (null != emoji) {
+        if (EmojiPackStore.isPackEmojiUsable(emoji)) {
+          tmp8 = emoji;
+        }
+      }
+      return tmp8;
+    }
+    obj = require("UnicodeEmojis");
   },
   afterCompute() {
     closure_0();
@@ -1206,7 +1232,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(5644).escape(formatted);
+  const escapeResult = formatted(5645).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1332,7 +1358,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
       if (!tmp5) {
         let tmp6 = _slicedToArray;
         if (_slicedToArray) {
-          tmp6 = emoji.type !== channel(4953).EmojiTypes.UNICODE;
+          tmp6 = emoji.type !== channel(4954).EmojiTypes.UNICODE;
         }
         tmp5 = tmp6;
       }
@@ -1607,8 +1633,8 @@ const emojiStore = new EmojiStore(DispatcherDefault, {
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(topEmojisMetadata) {
     topEmojisMetadata = topEmojisMetadata.topEmojisMetadata;
     obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: null };
-    const tmpResult = _modDef2046(_modDef2046());
-    obj.topEmojisTTL = _modDef2046(_modDef2046()).add(1, "days").valueOf();
+    const tmpResult = _modDef2047(_modDef2047());
+    obj.topEmojisTTL = _modDef2047(_modDef2047()).add(1, "days").valueOf();
     const result = map.set(topEmojisMetadata.guildId, obj);
   },
   TOGGLE_GUILD_EXPANDED_STATE: function toggleGuildExpandedState(guildId) {

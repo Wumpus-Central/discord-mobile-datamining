@@ -187,7 +187,7 @@ export const REVEAL_CATCHUP_MS = 280;
 export const REVEAL_MAX_CHARS_PER_FRAME = 120;
 export const REVEAL_SNAP_CHARS = 900;
 export const REVEAL_FRAME_MS = 32;
-export const wholeCharacterBoundary = function wholeCharacterBoundary(target, sum) {
+export function wholeCharacterBoundary(target, sum) {
   let tmp = sum;
   if (sum < target.length) {
     tmp = sum;
@@ -213,8 +213,8 @@ export const wholeCharacterBoundary = function wholeCharacterBoundary(target, su
     }
   }
   return tmp;
-};
-export const safeRevealBoundary = function safeRevealBoundary(str, arg1, arg2) {
+}
+export function safeRevealBoundary(str, arg1, arg2) {
   if (arg2 >= str.length) {
     return arg2;
   } else {
@@ -247,8 +247,8 @@ export const safeRevealBoundary = function safeRevealBoundary(str, arg1, arg2) {
     }
     return tmp;
   }
-};
-export const reconcileRevealedLength = function reconcileRevealedLength(target, target, length) {
+}
+export function reconcileRevealedLength(target, target, length) {
   const bound = Math.min(Math.max(length, 0), target.length);
   if (0 === bound) {
     return 0;
@@ -296,8 +296,8 @@ export const reconcileRevealedLength = function reconcileRevealedLength(target, 
     }
     return tmp6;
   }
-};
-export const nextRevealLength = function nextRevealLength(target) {
+}
+export function nextRevealLength(target) {
   target = target.target;
   const bound = Math.min(Math.max(target.revealed, 0), target.length);
   const diff = target.length - bound;
@@ -374,4 +374,4 @@ export const nextRevealLength = function nextRevealLength(target) {
     }
     return tmp10;
   }
-};
+}

@@ -72,12 +72,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsUtils.tsx");
 
-export const b64ToDeclarativeSettingsProto = function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
+export function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
   return user_settings_UserSettingsUtils.b64ToProto(
     notification_settings.DeclarativeSettings,
     declarative_settings_proto,
   );
-};
+}
 export const useNotifSettingValue = tmp2;
 export const useNotifSettingToggleValue = tmp3;
 export const useNotifSettingRadioValue = ReactCompilerGating.isReactCompilerEnabled()

@@ -33,7 +33,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "useCallback", paymentGatewayOverride: "PX_16" };
+            obj8 = { offerId: "Array", paymentGatewayOverride: "Reflect" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -77,7 +77,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -299,7 +299,7 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/UserOfferActionCreators.tsx");
 
-export const fetchUserOffer = function fetchUserOffer() {
+export function fetchUserOffer() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -308,8 +308,8 @@ export const fetchUserOffer = function fetchUserOffer() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchExistingChurnDiscountOffer = function fetchExistingChurnDiscountOffer() {
+}
+export function fetchExistingChurnDiscountOffer() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -318,8 +318,8 @@ export const fetchExistingChurnDiscountOffer = function fetchExistingChurnDiscou
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchChurnDiscountOffer = function fetchChurnDiscountOffer() {
+}
+export function fetchChurnDiscountOffer() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -328,8 +328,8 @@ export const fetchChurnDiscountOffer = function fetchChurnDiscountOffer() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledged, userDiscountOffer) {
+}
+export function acknowledgeUserOffer(hasAcknowledged, userDiscountOffer) {
   let id;
   if (null != hasAcknowledged) {
     if (!hasAcknowledged.hasAcknowledged) {
@@ -396,8 +396,8 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledge
         });
       }
     });
-};
-export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_location_stack, fn) {
+}
+export function triggerUserOffer(triggerType, trigger_location_stack, fn) {
   let _JSON = triggerType;
   _require = triggerType;
   if (UserOfferStore.canTriggerUserOffer(triggerType)) {
@@ -466,4 +466,4 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
     });
     obj4 = require("PlatformUtils");
   }
-};
+}

@@ -84,7 +84,7 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(17907);
+const FavoritesGuildSuggestionsStore = fn(18145);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1084).NOOP;
 const prototype = function FavoriteManager() {

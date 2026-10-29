@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(5899).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(5901).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { imageThumbnail: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -24,7 +24,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/native/VideoBackgroundOptions.tsx");
 
 export const NONE_VALUE = "none";
-export const toVideoBackgroundRadioValue = function toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption) {
+export function toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption) {
   if (null == lastUsedVideoBackgroundOption) {
     let tmp2 = none;
   } else {
@@ -37,7 +37,7 @@ export const toVideoBackgroundRadioValue = function toVideoBackgroundRadioValue(
     }
   }
   return tmp2;
-};
+}
 export function fromVideoBackgroundRadioValue(arg0) {
   let tmp = null;
   if (arg0 !== none) {
@@ -45,7 +45,7 @@ export function fromVideoBackgroundRadioValue(arg0) {
   }
   return tmp;
 }
-export const parseVideoBackgroundRadioValue = function parseVideoBackgroundRadioValue(arg0) {
+export function parseVideoBackgroundRadioValue(arg0) {
   let NumberResult = arg0;
   if (arg0 !== none) {
     NumberResult = arg0;
@@ -55,7 +55,7 @@ export const parseVideoBackgroundRadioValue = function parseVideoBackgroundRadio
     }
   }
   return NumberResult;
-};
+}
 export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVideoBackgroundRadioOptions() {
       const cResult = require("c").c(5);
@@ -74,8 +74,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj2 = { value: none, label: null, icon: null };
         const intl = tmp(1125).intl;
         obj2.label = intl.string(tmp(1125).t.fUdMeO);
-        const obj3 = { IconComponent: tmp(9804).DenyIcon };
-        obj2.icon = jsx(tmp(6947).TableRowIcon, { IconComponent: tmp(9804).DenyIcon });
+        const obj3 = { IconComponent: tmp(9836).DenyIcon };
+        obj2.icon = jsx(tmp(6971).TableRowIcon, { IconComponent: tmp(9836).DenyIcon });
         cResult[1] = obj2;
         let tmp7 = obj2;
       } else {
@@ -85,8 +85,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
         const intl2 = tmp(1125).intl;
         obj4.label = intl2.string(tmp(1125).t.LhSyL8);
-        const obj5 = { IconComponent: tmp(11679).BlurBackgroundIcon };
-        obj4.icon = jsx(tmp(6947).TableRowIcon, { IconComponent: tmp(11679).BlurBackgroundIcon });
+        const obj5 = { IconComponent: tmp(11733).BlurBackgroundIcon };
+        obj4.icon = jsx(tmp(6971).TableRowIcon, { IconComponent: tmp(11733).BlurBackgroundIcon });
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {

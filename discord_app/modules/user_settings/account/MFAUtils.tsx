@@ -92,7 +92,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMFAAvai
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
 
-export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(stateFromStores) {
+export function getSMSBackupDisabledMessage(stateFromStores) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -133,7 +133,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
       string3Result = string3(YJGvuD["3iKih7"]);
     }
   }
-};
+}
 export const useIsMFAEnabled = tmp3;
 export const MFAAvailability = obj2;
 export const useMFAAvailability = tmp4;
@@ -173,7 +173,7 @@ export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnab
           tmp2 = closure_2;
           guildsArray = closure_2.getGuildsArray();
           tmp3 = null;
-          if (!guildsArray.some(() => { ... })) {
+          if (!guildsArray.some(/* F155242 */ function() { ... })) {
             return null;
           } else {
             tmp4 = closure_0;
@@ -222,7 +222,7 @@ export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnab
           tmp2 = closure_2;
           guildsArray = closure_2.getGuildsArray();
           tmp3 = null;
-          if (!guildsArray.some(() => { ... })) {
+          if (!guildsArray.some(/* F155242 */ function() { ... })) {
             return null;
           } else {
             tmp4 = closure_0;

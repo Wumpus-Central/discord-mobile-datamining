@@ -19,7 +19,7 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_10();
       let obj = guildId(576);
       const tmp = guildId;
-      const navigation = guildId(1502).useNavigation();
+      const navigation = guildId(1503).useNavigation();
       if (cResult[0] !== guildId) {
         const fn = function o() {
           GuildSettingsActionCreatorsDefault.init(guildId);
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = noop.useEffect(tmp6, tmp7);
-      const sum = 16 + navigation(1630)().bottom;
+      const sum = 16 + navigation(1631)().bottom;
       if (cResult[3] !== sum) {
         const obj3 = { contentContainerStyle: null };
         const obj4 = { paddingBottom: sum };
@@ -131,11 +131,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp10;
       if (cResult[5] !== navigation) {
-        const headerCloseButton = tmp(6960).getHeaderCloseButton(() => navigation.goBack());
+        const headerCloseButton = tmp(6984).getHeaderCloseButton(() => navigation.goBack());
         cResult[5] = navigation;
         cResult[6] = headerCloseButton;
         let tmp11 = headerCloseButton;
-        const tmpResult = tmp(6960);
+        const tmpResult = tmp(6984);
       } else {
         tmp11 = cResult[6];
       }
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { title: null };
           const intl = guildId(1125).intl;
           obj.title = intl.string(guildId(1125).t["9Oq93m"]);
-          return closure_1_6(guildId(6960).NavigatorHeader, obj);
+          return closure_1_6(guildId(6984).NavigatorHeader, obj);
         };
         cResult[7] = fn2;
         let tmp13 = fn2;
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp11;
       cResult[10] = obj9;
       tmp14 = obj9;
-      const obj2 = guildId(1502);
+      const obj2 = guildId(1503);
     }
   : function StandaloneMembersView(guildId) {
       guildId = guildId.guildId;

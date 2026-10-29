@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 _mod19.useCallback;
 const result = size.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
 
-export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
+export function useAndroidUnsyncedFilter() {
   isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(stateFromStores[3]).useIsInImprovedMobileShopLoading();
   const obj = isInImprovedMobileShopLoading(stateFromStores[3]);
   const items = [IAPStore];
@@ -56,4 +56,4 @@ export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
     }
     return found;
   }, items5);
-};
+}

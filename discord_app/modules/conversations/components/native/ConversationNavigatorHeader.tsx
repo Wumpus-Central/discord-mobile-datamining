@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = {
     flex: 1,
@@ -83,7 +83,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp18;
         tmp15 = tmp18;
       }
-      const tmp14 = jsx(channelId(9733).GenericHeaderTitle, {
+      const tmp14 = jsx(channelId(9765).GenericHeaderTitle, {
         title,
         subtitle: tmp12,
         variant: "heading-lg/semibold",
@@ -117,7 +117,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "heading-lg/semibold",
         subtitleColor: "text-muted",
       };
-      obj2.children = jsx(channelId(9733).GenericHeaderTitle, {
+      obj2.children = jsx(channelId(9765).GenericHeaderTitle, {
         title: channelId.title,
         subtitle: useChannelNameDefault(stateFromStores, true),
         variant: "heading-lg/semibold",
@@ -173,11 +173,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorHeader.tsx");
 
-export const conversationNavigatorListHeaderOptions = function conversationNavigatorListHeaderOptions(
-  route,
-  navigation,
-  backgroundColor,
-) {
+export function conversationNavigatorListHeaderOptions(route, navigation, backgroundColor) {
   _require = route;
   let obj = {
     headerShown: true,
@@ -206,12 +202,8 @@ export const conversationNavigatorListHeaderOptions = function conversationNavig
     return <closure_7 channelId={navigation.params.channelId} title={null} />;
   };
   return obj;
-};
-export const conversationNavigatorFocusHeaderOptions = function conversationNavigatorFocusHeaderOptions(
-  route,
-  navigation,
-  backgroundColor,
-) {
+}
+export function conversationNavigatorFocusHeaderOptions(route, navigation, backgroundColor) {
   _require = route;
   let obj = {
     headerShown: true,
@@ -254,4 +246,4 @@ export const conversationNavigatorFocusHeaderOptions = function conversationNavi
     return tmp2;
   };
   return obj;
-};
+}

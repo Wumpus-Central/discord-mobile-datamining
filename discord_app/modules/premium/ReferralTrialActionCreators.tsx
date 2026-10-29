@@ -56,7 +56,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -153,7 +153,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -342,7 +342,7 @@ export const ReferralOfferStatus = {
   [4]: "REFERRER_REWARD_GRANTED",
 };
 export { CreateReferralStatus };
-export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers() {
+export function fetchReferralEligibleUsers() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -351,8 +351,8 @@ export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const maybeFetchRecipientEligibility = function maybeFetchRecipientEligibility() {
+}
+export function maybeFetchRecipientEligibility() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -361,8 +361,8 @@ export const maybeFetchRecipientEligibility = function maybeFetchRecipientEligib
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const fetchReferralsRemaining = function fetchReferralsRemaining() {
+}
+export function fetchReferralsRemaining() {
   DispatcherDefault.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false });
@@ -450,8 +450,8 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
       }
     },
   );
-};
-export const createReferralTrials = function createReferralTrials() {
+}
+export function createReferralTrials() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -460,8 +460,8 @@ export const createReferralTrials = function createReferralTrials() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const createReferralTrial = function createReferralTrial() {
+}
+export function createReferralTrial() {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -470,8 +470,8 @@ export const createReferralTrial = function createReferralTrial() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resolveReferralTrialOffer = function resolveReferralTrialOffer() {
+}
+export function resolveReferralTrialOffer() {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -480,4 +480,4 @@ export const resolveReferralTrialOffer = function resolveReferralTrialOffer() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

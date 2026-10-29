@@ -50,9 +50,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiments.tsx");
 
 export const useIsCheckpointEnabled = tmp2;
-export const getIsCheckpointEnabled = function getIsCheckpointEnabled(getCheckpointClickable) {
+export function getIsCheckpointEnabled(getCheckpointClickable) {
   return closure_2.getConfig({ location: getCheckpointClickable }).enabled;
-};
+}
 export const useIsCheckpointCardEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsCheckpointCardEnabled(location) {
       const cResult = c.c(2);
@@ -69,6 +69,6 @@ export const useIsCheckpointCardEnabled = ReactCompilerGating.isReactCompilerEna
   : function useIsCheckpointCardEnabled(location) {
       return closure_3.useConfig({ location }).enabled;
     };
-export const getIsCheckpointCardEnabled = function getIsCheckpointCardEnabled(transformCheckpoint2026CardComponent) {
+export function getIsCheckpointCardEnabled(transformCheckpoint2026CardComponent) {
   return closure_3.getConfig({ location: transformCheckpoint2026CardComponent }).enabled;
-};
+}

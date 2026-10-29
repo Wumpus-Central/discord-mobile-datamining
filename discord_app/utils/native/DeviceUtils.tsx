@@ -9,23 +9,23 @@ const mediaPerformanceClass = "mediaPerformanceClass";
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
-export const isIpadOS = function isIpadOS() {
+export function isIpadOS() {
   let tmp = "iPad" === closure_3.deviceModel;
   if (!tmp) {
     tmp = "iPhone19,4" === closure_3.deviceProduct;
   }
   return tmp;
-};
-export const isDuo = function isDuo() {
+}
+export function isDuo() {
   return "iPhone19,4" === closure_3.deviceProduct;
-};
-export const isGestureNavigationEnabled = function isGestureNavigationEnabled() {
+}
+export function isGestureNavigationEnabled() {
   return closure_3.isGestureNavigationEnabled;
-};
-export const getSystemVersion = function getSystemVersion() {
+}
+export function getSystemVersion() {
   return closure_3.systemVersion;
-};
-export const getSystemVersionMajor = function getSystemVersionMajor() {
+}
+export function getSystemVersionMajor() {
   const match = closure_3.systemVersion.match(/\d+/);
   if (null == match) {
     return 0;
@@ -39,8 +39,8 @@ export const getSystemVersionMajor = function getSystemVersionMajor() {
     }
     return num2;
   }
-};
-export const getSystemVersionMinor = function getSystemVersionMinor() {
+}
+export function getSystemVersionMinor() {
   const match = closure_3.systemVersion.match(/\d+/g);
   if (null != match) {
     if (match.length >= 2) {
@@ -55,11 +55,11 @@ export const getSystemVersionMinor = function getSystemVersionMinor() {
     }
   }
   return 0;
-};
-export const getDevice = function getDevice() {
+}
+export function getDevice() {
   return closure_3.device;
-};
-export const getDeviceInfo = function getDeviceInfo() {
+}
+export function getDeviceInfo() {
   const device = closure_3.device;
   if (obj.isAndroid()) {
     let text = `${device + " (" + tmp.deviceModel})`;
@@ -67,8 +67,8 @@ export const getDeviceInfo = function getDeviceInfo() {
     text = device;
   }
   return text;
-};
-export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformanceClass() {
+}
+export function getDeviceMediaPerformanceClass() {
   let tmp3 = null;
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
@@ -86,33 +86,33 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
     tmp3 = mediaPerformanceClass2;
   }
   return tmp3;
-};
-export const getDeviceModel = function getDeviceModel() {
+}
+export function getDeviceModel() {
   return closure_3.deviceModel;
-};
-export const getDeviceBrand = function getDeviceBrand() {
+}
+export function getDeviceBrand() {
   return closure_3.deviceBrand;
-};
-export const getDeviceProduct = function getDeviceProduct() {
+}
+export function getDeviceProduct() {
   return closure_3.deviceProduct;
-};
-export const getDeviceManufacturer = function getDeviceManufacturer() {
+}
+export function getDeviceManufacturer() {
   return closure_3.deviceManufacturer;
-};
-export const getSmallestScreenWidthDp = function getSmallestScreenWidthDp() {
+}
+export function getSmallestScreenWidthDp() {
   return closure_3.smallestScreenWidth;
-};
-export const isOrientationLockSupported = function isOrientationLockSupported() {
+}
+export function isOrientationLockSupported() {
   let flag = closure_3.isOrientationLockSupported;
   if (flag == null) {
     flag = true;
   }
   return flag;
-};
-export const getSocName = function getSocName() {
+}
+export function getSocName() {
   return closure_3.socName;
-};
-export const getRamSize = function getRamSize() {
+}
+export function getRamSize() {
   const ramSize = closure_3.ramSize;
   let parsed;
   if ("" !== ramSize) {
@@ -120,8 +120,8 @@ export const getRamSize = function getRamSize() {
     parsed = parseFloat(ramSize);
   }
   return parsed;
-};
-export const getMaxCpuFreq = function getMaxCpuFreq() {
+}
+export function getMaxCpuFreq() {
   const maxCpuFreq = closure_3.maxCpuFreq;
   let parsed;
   if ("" !== maxCpuFreq) {
@@ -129,10 +129,10 @@ export const getMaxCpuFreq = function getMaxCpuFreq() {
     parsed = parseFloat(maxCpuFreq);
   }
   return parsed;
-};
-export const getTimeZone = function getTimeZone() {
+}
+export function getTimeZone() {
   return closure_3.timeZone;
-};
-export const getIsRunningOnSimulator = function getIsRunningOnSimulator() {
+}
+export function getIsRunningOnSimulator() {
   return closure_3.isRunningOnSimulator;
-};
+}

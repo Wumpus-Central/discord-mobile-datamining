@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
-export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
+export function coalesceInvoiceItems(arr) {
   const items = [];
   const set = new Set();
   const mapped = arr.map((subscriptionPlanId) => {
@@ -45,8 +45,8 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
     }
     return obj;
   });
-};
-export const createInvoiceItemFromServer = function createInvoiceItemFromServer(id) {
+}
+export function createInvoiceItemFromServer(id) {
   return {
     id: id.id,
     subscriptionPlanId: id.subscription_plan_id,
@@ -59,4 +59,4 @@ export const createInvoiceItemFromServer = function createInvoiceItemFromServer(
     taxCode: id.tax_code,
     nominalTaxRate: id.nominal_tax_rate,
   };
-};
+}

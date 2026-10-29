@@ -7,7 +7,7 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaActions.tsx");
 
-export const useExplicitMediaActions = function useExplicitMediaActions(onError) {
+export function useExplicitMediaActions(onError) {
   onError = onError.onError;
   const onSuccess = onError.onSuccess;
   const report = onError.report;
@@ -29,7 +29,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -102,4 +102,4 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
     items,
   );
   return obj;
-};
+}

@@ -31,7 +31,7 @@ let result = size.fileFinishedImporting("modules/soundboard/searchSounds.tsx");
 
 export { trackSearchStart };
 export { trackSearchResultViewed };
-export const searchSounds = function searchSounds(arg0, availableSounds, stateFromStores, channel, arg4) {
+export function searchSounds(arg0, availableSounds, stateFromStores, channel, arg4) {
   closure_0 = arg0;
   closure_1 = stateFromStores;
   closure_3 = arg4;
@@ -121,4 +121,4 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
   }
   closure_7(sorted, arg4, id, arg0);
   return sorted;
-};
+}

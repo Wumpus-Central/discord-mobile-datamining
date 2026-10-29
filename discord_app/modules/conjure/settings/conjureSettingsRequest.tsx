@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let set = new Set(["select", "channel", "role", "user"]);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsRequest.tsx");
 
-export const conjureSettingsRequestBlocks = function conjureSettingsRequestBlocks(arg0, settings) {
+export function conjureSettingsRequestBlocks(arg0, settings) {
   let someResult = null != settings;
   if (someResult) {
     let keys = arg0.keys;
@@ -35,8 +35,8 @@ export const conjureSettingsRequestBlocks = function conjureSettingsRequestBlock
     });
   }
   return someResult;
-};
-export const conjureSettingsRequestIsPickOnly = function conjureSettingsRequestIsPickOnly(arg0, arg1) {
+}
+export function conjureSettingsRequestIsPickOnly(arg0, arg1) {
   let schema = arg1;
   let keys = arg0.keys;
   if (keys == null) {
@@ -59,8 +59,8 @@ export const conjureSettingsRequestIsPickOnly = function conjureSettingsRequestI
     });
   }
   return everyResult;
-};
-export const conjureSettingsRequestKeys = function conjureSettingsRequestKeys(settingsRequest, settings) {
+}
+export function conjureSettingsRequestKeys(settingsRequest, settings) {
   let keys = settingsRequest.keys;
   if (keys == null) {
     keys = [];
@@ -70,4 +70,4 @@ export const conjureSettingsRequestKeys = function conjureSettingsRequestKeys(se
     keys = schema.map((key) => key.key);
   }
   return keys;
-};
+}

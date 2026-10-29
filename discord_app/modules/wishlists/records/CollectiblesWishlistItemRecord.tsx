@@ -22,7 +22,7 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
     return null;
   }
 }
-let closure_3 = fn(7689).transformSKUToCollectiblesItem;
+let closure_3 = fn(7712).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1084).SKUProductLines;
 const prototype = function CollectiblesWishlistItemRecord(bundle_items) {
   const tmp2 = new prototype(bundle_items, tmp);
@@ -102,6 +102,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/CollectiblesWishlistItemRecord.tsx");
 
 export default prototype;
-export const isCollectiblesWishlistItemRecord = function isCollectiblesWishlistItemRecord(arg0) {
+export function isCollectiblesWishlistItemRecord(arg0) {
   return arg0 instanceof prototype;
-};
+}

@@ -11,7 +11,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
 
-export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActivityPlatform(presenceActivity) {
+export function getRemoteJoinableActivityPlatform(presenceActivity) {
   if (null == presenceActivity) {
     return null;
   } else {
@@ -68,4 +68,4 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
     }
     return null;
   }
-};
+}

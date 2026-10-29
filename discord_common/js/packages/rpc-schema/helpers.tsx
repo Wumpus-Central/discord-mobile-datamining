@@ -7,6 +7,6 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-sch
 
 export const RPCCommand = RPCCommands;
 export const RPCEvent = RPCEvents;
-export const joiReqObj = function joiReqObj(required) {
+export function joiReqObj(required) {
   return required.required().unknown(true);
-};
+}

@@ -14,7 +14,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
           closure_130_4 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -131,7 +131,7 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -261,10 +261,10 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/external_connections/conjureExternalConnectionRequests.tsx");
 
-export const formatMcpConnectionExpiry = function formatMcpConnectionExpiry(connection) {
+export function formatMcpConnectionExpiry(connection) {
   return new Date(connection.expiresAtMs).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
-};
-export const fetchProjectMcpConnection = function fetchProjectMcpConnection() {
+}
+export function fetchProjectMcpConnection() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -273,8 +273,8 @@ export const fetchProjectMcpConnection = function fetchProjectMcpConnection() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl() {
+}
+export function requestExternalAuthorizeUrl() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -283,4 +283,4 @@ export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

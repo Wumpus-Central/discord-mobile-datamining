@@ -17,7 +17,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -44,7 +44,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -174,7 +174,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -201,7 +201,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -288,7 +288,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 
-export const maybeFetchProductsWithSkus = function maybeFetchProductsWithSkus() {
+export function maybeFetchProductsWithSkus() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -297,9 +297,9 @@ export const maybeFetchProductsWithSkus = function maybeFetchProductsWithSkus() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { shouldFetchProductBySku };
-export const maybeFetchProductsBySkuIds = function maybeFetchProductsBySkuIds() {
+export function maybeFetchProductsBySkuIds() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -308,4 +308,4 @@ export const maybeFetchProductsBySkuIds = function maybeFetchProductsBySkuIds() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return setting;
     };
-export const getShouldConvertBioEmoji = function getShouldConvertBioEmoji() {
+export function getShouldConvertBioEmoji() {
   const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
   let setting = UseLegacyChatInput.getSetting();
   if (!setting) {
@@ -32,4 +32,4 @@ export const getShouldConvertBioEmoji = function getShouldConvertBioEmoji() {
     setting = !UseRichChatInput.getSetting();
   }
   return setting;
-};
+}

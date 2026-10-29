@@ -8,6 +8,6 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
 
 export const VoiceChatNavigationContext = context;
-export const useVoiceChatNavigationContext = function useVoiceChatNavigationContext() {
+export function useVoiceChatNavigationContext() {
   return noop.useContext(context);
-};
+}

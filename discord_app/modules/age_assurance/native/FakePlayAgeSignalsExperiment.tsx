@@ -46,9 +46,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/FakePlay
 
 export default apexExperiment;
 export const FakePlayAgeSignalsScenario = obj;
-export const getFakePlayAgeSignalsConfig = function getFakePlayAgeSignalsConfig(location) {
+export function getFakePlayAgeSignalsConfig(location) {
   return apexExperiment.getConfig({ location });
-};
-export const isFakePlayAgeSignalsEnabled = function isFakePlayAgeSignalsEnabled(location) {
+}
+export function isFakePlayAgeSignalsEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
-};
+}

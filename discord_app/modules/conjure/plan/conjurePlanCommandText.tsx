@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanCommandText.tsx
 import c from "../../../../_runtime/00576_c.js";
-import escapeRegExpDefault from "../../../../_runtime/05055_escapeRegExp.js";
+import escapeRegExpDefault from "../../../../_runtime/05056_escapeRegExp.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -52,7 +52,7 @@ const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanComma
 export { conjurePlanSlashCommandNames };
 export const useConjurePlanSlashCommandNames = tmp2;
 export { conjurePlanCommandPattern };
-export const conjurePlanTextMentionsCommand = function conjurePlanTextMentionsCommand(item, arr) {
+export function conjurePlanTextMentionsCommand(item, arr) {
   if (0 === arr.length) {
     return false;
   } else {
@@ -62,7 +62,7 @@ export const conjurePlanTextMentionsCommand = function conjurePlanTextMentionsCo
     const regExp = new RegExp("(?<![\\p{L}\\p{N}/.:])/(?:" + mapped.join("|") + ")(?![\\p{L}\\p{N}_-])", "iu");
     return regExp.test(item);
   }
-};
+}
 export const useConjurePlanCommandPattern = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjurePlanCommandPattern(arg0) {
       const cResult = c.c(2);
@@ -101,7 +101,7 @@ export const useConjurePlanCommandPattern = ReactCompilerGating.isReactCompilerE
         return regExp;
       }, items);
     };
-export const splitConjurePlanCommandText = function splitConjurePlanCommandText(text, conjurePlanCommandPattern) {
+export function splitConjurePlanCommandText(text, conjurePlanCommandPattern) {
   if (null == conjurePlanCommandPattern) {
     return null;
   } else {
@@ -142,4 +142,4 @@ export const splitConjurePlanCommandText = function splitConjurePlanCommandText(
     }
     return tmp15;
   }
-};
+}

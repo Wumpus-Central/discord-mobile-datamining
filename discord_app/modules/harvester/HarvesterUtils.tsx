@@ -7,12 +7,12 @@ import UserStore from "../../stores/UserStore.tsx";
 import DataHarvestStore from "DataHarvestStore.tsx";
 
 require = fn;
-const REQUEST_DATA_LIMIT_MS = fn(16418).REQUEST_DATA_LIMIT_MS;
+const REQUEST_DATA_LIMIT_MS = fn(16656).REQUEST_DATA_LIMIT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
-export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
+export function harvestDisabled(created_at, stateFromStores) {
   const verified = stateFromStores.verified;
   let tmp = !verified;
   if (verified) {
@@ -31,7 +31,7 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
     tmp = isStaffResult;
   }
   return tmp;
-};
+}
 export const useRequestHarvestStatus = ReactCompilerGating.isReactCompilerEnabled()
   ? function useRequestHarvestStatus() {
       const cResult = c.c(17);

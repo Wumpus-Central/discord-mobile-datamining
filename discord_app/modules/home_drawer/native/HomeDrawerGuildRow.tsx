@@ -21,10 +21,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const isThread = fn(4860).isThread;
+const isThread = fn(4861).isThread;
 const Constants = fn(1084);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6740).UnreadSetting;
+const UnreadSetting = fn(6763).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -35,7 +35,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -175,7 +175,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: guild.name,
           };
-          const tmp22 = closure_18(tmp(5270).Text, obj3);
+          const tmp22 = closure_18(tmp(5271).Text, obj3);
           cResult[12] = guild.name;
           cResult[13] = tmp4.guildNameText;
           cResult[14] = "text-default";
@@ -334,7 +334,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp = unreadChannel.getMutableGuildStates()[guild.id];
           guild = tmp;
           if (null == tmp) {
-            return { mentionChannel: "done", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
+            return {
+              mentionChannel: "duration",
+              mentionChannelName: "toCharArray$esjava$1",
+              mentionChannelCount: null,
+            };
           } else {
             const keys = disableSubtitle(onActiveHookChange[27]).keys(tmp.mentionCounts);
             const found = keys.filter((item) => {
@@ -562,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(5192).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(5193).MobileHomeDrawerExperiment;
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -589,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ disableSubtitle, onActiveHookChange } = guildId);
       const items = [GuildStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-      const MobileHomeDrawerExperiment = guildId(5192).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = guildId(5193).MobileHomeDrawerExperiment;
       let tmp3 = null;
       if (null != stateFromStores) {
         tmp3 = null;

@@ -15,7 +15,7 @@ let closure_5 = async function _getTemplates(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_5 = async function _getTemplates(arg0) {
           const obj = closure_130_1(closure_130_2[2]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp16) {
       c4 = tmp;
@@ -76,10 +76,10 @@ const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx",
 );
 
-export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
+export function stashTemplateChannels(selectedTemplate, guildId) {
   DispatcherDefault.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId });
-};
-export const getTemplates = function getTemplates() {
+}
+export function getTemplates() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -88,4 +88,4 @@ export const getTemplates = function getTemplates() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

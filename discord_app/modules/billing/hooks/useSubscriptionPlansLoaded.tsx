@@ -50,7 +50,7 @@ new LoggerDefault("useSubscriptionPlansLoaded");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
 
-export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() {
+export function useSubscriptionPlansLoaded() {
   let tmp = arg0;
   if (arg0 === undefined) {
     let items = [];
@@ -68,5 +68,5 @@ export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() 
     },
     items2,
   );
-};
+}
 export { getSubscriptionPlansLoaded };

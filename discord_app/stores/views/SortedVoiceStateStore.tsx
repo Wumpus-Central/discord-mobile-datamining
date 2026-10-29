@@ -838,7 +838,7 @@ let result = size.fileFinishedImporting("stores/views/SortedVoiceStateStore.tsx"
 
 export default sortedVoiceStateStore;
 export const NO_VOICE_STATES = frozen;
-export const makeMemberAndComparator = function makeMemberAndComparator(selfStream, member, user) {
+export function makeMemberAndComparator(selfStream, member, user) {
   const obj = { member, comparator: null };
   let nick;
   if (member != null) {
@@ -853,12 +853,12 @@ export const makeMemberAndComparator = function makeMemberAndComparator(selfStre
   }
   obj.comparator = "" + str + nick.toLowerCase() + "\0" + selfStream.userId;
   return obj;
-};
-export const getComparator = function getComparator(selfStream, str) {
+}
+export function getComparator(selfStream, str) {
   str = "\u0001";
   if (selfStream.selfStream) {
     str = "\0";
   }
   return "" + str + str.toLowerCase() + "\0" + selfStream.userId;
-};
+}
 export { makeSortedVoiceState };

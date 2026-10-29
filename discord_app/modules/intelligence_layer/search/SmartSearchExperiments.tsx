@@ -6,14 +6,14 @@ const require = globalThis.__r;
 
 require = fn;
 const GuildFeatures = fn(1084).GuildFeatures;
-let ApexExperiment = fn(1452);
+let ApexExperiment = fn(1453);
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
   name: "2026-09-mobile-nlp-search-user-flag",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1452);
+ApexExperiment = fn(1453);
 const apexExperiment1 = ApexExperiment.createApexExperiment({
   kind: "guild",
   name: "2026-09-mobile-nlp-search-guild-experiment",
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/intelligence_layer/search/Sma
 
 export const NlpSearchUserExperiment = apexExperiment;
 export const NlpSearchGuildExperiment = apexExperiment1;
-export const isNlpSearchEnabled = function isNlpSearchEnabled(guildId, suggested_searches) {
+export function isNlpSearchEnabled(guildId, suggested_searches) {
   guild = GuildStore.getGuild(guildId);
   let flag;
   if (guild != null) {
@@ -52,7 +52,7 @@ export const isNlpSearchEnabled = function isNlpSearchEnabled(guildId, suggested
   } else {
     return false;
   }
-};
+}
 export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsNlpSearchEnabled(arg0, location) {
       _require = arg0;

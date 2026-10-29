@@ -40,6 +40,6 @@ export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerE
   : function useIsIarUserReportingEnabled(location) {
       return experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled;
     };
-export const isIarUserReportingEnabled = function isIarUserReportingEnabled(location) {
+export function isIarUserReportingEnabled(location) {
   return experiment.getCurrentConfig({ location }, { autoTrackExposure: true }).enabled;
-};
+}

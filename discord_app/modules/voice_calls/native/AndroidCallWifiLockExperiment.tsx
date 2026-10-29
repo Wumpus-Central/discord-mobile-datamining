@@ -14,6 +14,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/native/AndroidCallWifiLockExperiment.tsx");
 
-export const shouldAcquireCallWifiLock = function shouldAcquireCallWifiLock() {
+export function shouldAcquireCallWifiLock() {
   return config.getConfig({ location: "VoiceNotificationManager" }).acquireWifiLock;
-};
+}

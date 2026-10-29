@@ -4,7 +4,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
 
-export const collectGuildThemeAnalyticsMetadata = function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
+export function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
   if (null == selectedGuildId) {
     return null;
   } else {
@@ -35,4 +35,4 @@ export const collectGuildThemeAnalyticsMetadata = function collectGuildThemeAnal
       return { guild_theme_enabled: false, guild_theme_is_custom: false };
     }
   }
-};
+}

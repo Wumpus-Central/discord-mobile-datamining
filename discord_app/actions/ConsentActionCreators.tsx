@@ -38,7 +38,7 @@ function handleRequestFailure(status) {
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
-export const fetchConsents = function fetchConsents() {
+export function fetchConsents() {
   const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.SETTINGS_CONSENT,
@@ -50,8 +50,8 @@ export const fetchConsents = function fetchConsents() {
     const error = new Error(body.body.message);
     return Promise.reject(error);
   });
-};
-export const setConsents = function setConsents(items, items2) {
+}
+export function setConsents(items, items2) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
     url: Endpoints.SETTINGS_CONSENT,
@@ -61,4 +61,4 @@ export const setConsents = function setConsents(items, items2) {
   };
   const obj = { grant: items, revoke: items2 };
   return HTTP.post(request).then(handleRequestSuccess, handleRequestFailure);
-};
+}

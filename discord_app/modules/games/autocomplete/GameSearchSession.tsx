@@ -243,7 +243,7 @@ let result = size.fileFinishedImporting("modules/games/autocomplete/GameSearchSe
 
 export const GAME_SEARCH_SESSION_IDLE_MS = 60000;
 export { GameSearchSession };
-export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, DEFAULT) {
+export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
   value = map.get(CHAT_MENTION);
   if (null == value) {
     if (typeof GameSearchSession === "function") {
@@ -419,4 +419,4 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, 
     }
   }
   return value;
-};
+}

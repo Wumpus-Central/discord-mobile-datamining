@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx",
 );
 
-export const createRemoveRecipientSystemMessage = function createRemoveRecipientSystemMessage(message) {
+export function createRemoveRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
   const channel = ChannelStore.getChannel(message.channel_id);
@@ -58,4 +58,4 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     const merged2 = Object.assign(createCommonMessageDefault(message));
     return obj6;
   }
-};
+}

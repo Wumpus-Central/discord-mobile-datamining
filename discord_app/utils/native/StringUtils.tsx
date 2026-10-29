@@ -1,10 +1,10 @@
 // discord_app/utils/native/StringUtils.tsx
-import rawDefault from "../../../_runtime/10702_raw.js";
+import rawDefault from "../../../_runtime/10735_raw.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
-export const splitGraphemes = function splitGraphemes(name) {
+export function splitGraphemes(name) {
   const obj = rawDefault();
   const items = [];
   let match = obj.exec(name);
@@ -33,4 +33,4 @@ export const splitGraphemes = function splitGraphemes(name) {
     HermesBuiltin.apply(items2, items);
   }
   return items;
-};
+}

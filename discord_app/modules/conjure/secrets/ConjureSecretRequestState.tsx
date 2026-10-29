@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/secrets/ConjureSecretRequestState.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,10 +10,10 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3863.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3864.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3863.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3864.sMQt5O);
   }
   return tmp5;
 }
@@ -42,17 +42,17 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
 
-export const markMcpSecretRequestSaved = function markMcpSecretRequestSaved(request_id) {
+export function markMcpSecretRequestSaved(request_id) {
   if (null != request_id) {
     set.add(request_id);
   }
-};
-export const unmarkMcpSecretRequestSaved = function unmarkMcpSecretRequestSaved(request_id) {
+}
+export function unmarkMcpSecretRequestSaved(request_id) {
   if (null != request_id) {
     set.delete(request_id);
   }
-};
-export const secretRequestStatuses = function secretRequestStatuses(memo, secrets) {
+}
+export function secretRequestStatuses(memo, secrets) {
   let set1 = null;
   if (null != secrets) {
     const _Set = Set;
@@ -139,7 +139,7 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, secret
     }
   }
   return map;
-};
+}
 export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecretRequestStatusChanged(cardId, arg1) {
   closure_1 = arg1;
   const cResult = c.c(3);

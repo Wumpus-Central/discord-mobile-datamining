@@ -17,11 +17,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(11655).isMobileOverlaySupported;
-const guideURL = fn(11656).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(11709).isMobileOverlaySupported;
+const guideURL = fn(11710).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
 fn(558);
 const ReactCompilerGating = fn(558);

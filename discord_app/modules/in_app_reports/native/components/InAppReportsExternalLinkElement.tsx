@@ -36,8 +36,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(14854).LinkExternalMediumIcon };
-          const tmp9 = closure_4(tmp(6947).TableRowIcon, obj2);
+          const obj2 = { IconComponent: tmp(15089).LinkExternalMediumIcon };
+          const tmp9 = closure_4(tmp(6971).TableRowIcon, obj2);
           cResult[2] = tmp9;
           let tmp7 = tmp9;
         } else {
@@ -59,7 +59,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const tmp12 = closure_4(tmp(8987).RowButton, obj3);
+        const tmp12 = closure_4(tmp(8990).RowButton, obj3);
         cResult[3] = link_description;
         cResult[4] = link_text;
         cResult[5] = tmp5;
@@ -83,12 +83,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const obj2 = { IconComponent: url(14854).LinkExternalMediumIcon };
-        obj.trailing = closure_4(url(6947).TableRowIcon, obj2);
+        const obj2 = { IconComponent: url(15089).LinkExternalMediumIcon };
+        obj.trailing = closure_4(url(6971).TableRowIcon, obj2);
         obj.onPress = function onLinkPress() {
           LinkingDefault.openURL(url);
         };
-        tmp3 = closure_4(url(8987).RowButton, obj);
+        tmp3 = closure_4(url(8990).RowButton, obj);
       }
       return tmp3;
     };

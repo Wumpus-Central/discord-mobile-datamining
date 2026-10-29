@@ -31,7 +31,7 @@ import _mod1158 from "../../../_runtime/metro/01158__.js";
 import _mod1159 from "../../../_runtime/metro/01159__.js";
 import _mod1160 from "../../../_runtime/metro/01160__.js";
 import _mod1162 from "../../../_runtime/metro/01162__.js";
-import _mod15694 from "../../../_runtime/metro/15694__.js";
+import _mod15930 from "../../../_runtime/metro/15930__.js";
 import module_1164_mod from "../../../_runtime/metro/01164__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -162,7 +162,7 @@ const loader = module_1164.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15694);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15930);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx",
 );
 
-export const createGuildReportRaidSystemMessage = function createGuildReportRaidSystemMessage(roleStyle) {
+export function createGuildReportRaidSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   const channel = ChannelStore.getChannel(message.channel_id);
   let guild_id;
@@ -61,4 +61,4 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   obj4.avatarURL = tmp8Result.ensureAvatarSource(tmp8Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp11);
   return obj4;
-};
+}

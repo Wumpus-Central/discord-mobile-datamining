@@ -23,7 +23,7 @@ let closure_4 = async function _finishMFACheck(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -51,7 +51,7 @@ let closure_4 = async function _finishMFACheck(arg0) {
           closure_130_3 = num7;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -153,7 +153,7 @@ export const BACKUP_CODE_MAX_LENGTH = 11;
 export const TOTP_CODE_LENGTH = 6;
 export const SMS_CODE_LENGTH = 6;
 export { finishMFACheck };
-export const trySubmit = function trySubmit() {
+export function trySubmit() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -162,4 +162,4 @@ export const trySubmit = function trySubmit() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

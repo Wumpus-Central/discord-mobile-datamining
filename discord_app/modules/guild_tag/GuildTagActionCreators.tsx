@@ -19,7 +19,7 @@ let closure_6 = async function _adoptGuildIdentity() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
 
-export const adoptGuildIdentity = function adoptGuildIdentity() {
+export function adoptGuildIdentity() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -97,4 +97,4 @@ export const adoptGuildIdentity = function adoptGuildIdentity() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

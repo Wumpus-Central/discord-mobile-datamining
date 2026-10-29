@@ -4,7 +4,7 @@ import NativeChatUtils from "NativeChatUtils.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const RowGeneratorConstants = fn(8166);
+const RowGeneratorConstants = fn(8189);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
@@ -112,7 +112,7 @@ export default function computeScrollData(shouldInitialScroll) {
   }
   return tmp4;
 }
-export const findMessageRowIndex = function findMessageRowIndex(previousRows, startMessageId) {
+export function findMessageRowIndex(previousRows, startMessageId) {
   closure_0 = startMessageId;
   const findIndexResult = previousRows.findIndex((message) => {
     let tmp = null != message.message;
@@ -122,4 +122,4 @@ export const findMessageRowIndex = function findMessageRowIndex(previousRows, st
     return tmp;
   });
   return -1 !== findIndexResult ? findIndexResult : undefined;
-};
+}

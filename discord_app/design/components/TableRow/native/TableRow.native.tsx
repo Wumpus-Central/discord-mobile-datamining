@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const style = { padding: 0 };
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = {
     padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
@@ -408,9 +408,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     };
-tmp4.Icon = fn(6947).TableRowIcon;
-tmp4.Arrow = fn(6948).TableRowArrow;
-tmp4.TrailingText = fn(6950).TableRowTrailingText;
+tmp4.Icon = fn(6971).TableRowIcon;
+tmp4.Arrow = fn(6972).TableRowArrow;
+tmp4.TrailingText = fn(6974).TableRowTrailingText;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function TableRowInner(disabled) {

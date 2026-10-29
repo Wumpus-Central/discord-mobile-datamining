@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupEmoji.tsx");
 
-export const transformNativeEmoji = function transformNativeEmoji(value, disableAnimatedEmoji) {
+export function transformNativeEmoji(value, disableAnimatedEmoji) {
   if ("unicode" === value.type) {
     value = value.value;
     const result = UnicodeEmojisDefault.convertSurrogateToName(value, false);
@@ -34,4 +34,4 @@ export const transformNativeEmoji = function transformNativeEmoji(value, disable
     obj7.frozenSrc = emojiURL1;
     return obj7;
   }
-};
+}

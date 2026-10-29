@@ -32,6 +32,6 @@ export const useIsEligibleForUserProfileWYSIWYGEditing = ReactCompilerGating.isR
   : function useIsEligibleForUserProfileWYSIWYGEditing(location) {
       return closure_2.useConfig({ location }).enabled;
     };
-export const getIsEligibleForUserProfileWYSIWYGEditing = function getIsEligibleForUserProfileWYSIWYGEditing(location) {
+export function getIsEligibleForUserProfileWYSIWYGEditing(location) {
   return closure_2.getConfig({ location }).enabled;
-};
+}

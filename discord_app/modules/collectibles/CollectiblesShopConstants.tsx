@@ -145,10 +145,10 @@ export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
 export { CollectibleShopTab };
 export const CollectiblesIndexPageTabs = items;
-export const isIndexPageTab = function isIndexPageTab(arg0) {
+export function isIndexPageTab(arg0) {
   return items.includes(arg0);
-};
-export const shouldAddTabToUrl = function shouldAddTabToUrl(arg0) {
+}
+export function shouldAddTabToUrl(arg0) {
   let tmp = null != arg0;
   if (tmp) {
     tmp = arg0 !== obj.HOME;
@@ -160,7 +160,7 @@ export const shouldAddTabToUrl = function shouldAddTabToUrl(arg0) {
     tmp = arg0 !== obj.GAME_SHOPS;
   }
   return tmp;
-};
+}
 export const SHOP_FEED_TRANSITION_DURATION = 800;
 export const FEED_ITEMS = [
   "1212569433839636530",
@@ -517,13 +517,13 @@ export const ShopPurchaseType = {
   [5]: "GIFT",
 };
 export const EXTERNAL_PRODUCT_SKU_IDS = obj2;
-export const isFractionalPremiumSku = function isFractionalPremiumSku(arg0) {
+export function isFractionalPremiumSku(arg0) {
   const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
   return ALL.has(arg0);
-};
-export const isExternalProduct = function isExternalProduct(arg0) {
+}
+export function isExternalProduct(arg0) {
   return set.has(arg0);
-};
+}
 export const ALL_FILTERS = items1;
 export const SORT_OPTIONS = items2;
 export const CollectiblesMobileShopScreen = { FEATURED_PAGE: "featured-page", SHOP_ALL: "shop-all", ORBS: "orbs" };

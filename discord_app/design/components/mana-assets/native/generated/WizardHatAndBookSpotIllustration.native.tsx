@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef16473 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-1x.png.js";
-import _modDef16474 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-2x.png.js";
-import _modDef16475 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-3x.png.js";
+import _modDef16711 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-1x.png.js";
+import _modDef16712 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-2x.png.js";
+import _modDef16713 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16473 }, 3: null };
-let obj2 = { uri: _modDef16473 };
-obj[2] = { uri: _modDef16474 };
-const obj3 = { uri: _modDef16474 };
-obj[3] = { uri: _modDef16475 };
+let obj = { 1: null, 2: { uri: _modDef16711 }, 3: null };
+let obj2 = { uri: _modDef16711 };
+obj[2] = { uri: _modDef16712 };
+const obj3 = { uri: _modDef16712 };
+obj[3] = { uri: _modDef16713 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef16475 };
+const obj4 = { uri: _modDef16713 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/WizardHatAndBookSpotIllustration.native.tsx",

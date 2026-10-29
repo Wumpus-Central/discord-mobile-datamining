@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     const items = [];
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   } else {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     tmp9 = cResult[4];
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   if (cResult[5] !== tmp3) {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     cResult[5] = tmp3;
@@ -60,14 +60,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   } else {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
   }
   if (ActionSheetStore.isOpen()) {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     const obj2 = {};
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   } else {
     class M {
       constructor() {
-        return () => { ... };
+        return /* F153977 */ function() { ... };
       }
     }
     const obj3 = {};

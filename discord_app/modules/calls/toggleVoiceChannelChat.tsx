@@ -7,7 +7,7 @@ import ChannelRTCStore from "ChannelRTCStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
-export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
+export function toggleVoiceChannelChat(open) {
   if (RTCConnectionStore.isConnected()) {
     const channelId = RTCConnectionStore.getChannelId();
     if (null == channelId) {
@@ -30,4 +30,4 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
   } else {
     return null;
   }
-};
+}

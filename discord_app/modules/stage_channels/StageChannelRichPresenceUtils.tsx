@@ -32,13 +32,13 @@ function unpackStageChannelParty(activity) {
     }
   }
 }
-const STAGE_APPLICATION_ID = fn(6672).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6696).STAGE_APPLICATION_ID;
 const GuildFeatures = fn(1084).GuildFeatures;
 let c7 = "stage:";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
 
-export const packStageChannelPartyId = function packStageChannelPartyId(channel, stageInstanceByChannel) {
+export function packStageChannelPartyId(channel, stageInstanceByChannel) {
   let num = 0;
   if (StageChannelRoleStore.isSpeaker(AuthenticationStore.getId(), channel.id)) {
     num = 1;
@@ -59,20 +59,20 @@ export const packStageChannelPartyId = function packStageChannelPartyId(channel,
     str = tmp4;
   }
   return "" + c7 + channel.guild_id + ":" + channel.id + ":" + str.toString(16) + ":" + stageInstanceByChannel.id;
-};
+}
 export { unpackStageChannelParty };
-export const isStageActivity = function isStageActivity(activity) {
+export function isStageActivity(activity) {
   let application_id;
   if (activity != null) {
     application_id = activity.application_id;
   }
   return application_id === STAGE_APPLICATION_ID;
-};
-export const shouldShowActivity = function shouldShowActivity(activity) {
+}
+export function shouldShowActivity(activity) {
   const tmp = unpackStageChannelParty(activity);
   if (null == tmp) {
     return false;
   } else {
     return null != ChannelStore.getChannel(tmp.channelId);
   }
-};
+}

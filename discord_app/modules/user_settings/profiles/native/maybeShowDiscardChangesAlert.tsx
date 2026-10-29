@@ -38,14 +38,14 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     obj2.onCancel = function onCancel() {
       onConfirm(dependencyMap[0]).close();
     };
-    let showResult = onConfirm(5945).show(obj2);
-    const obj = onConfirm(5945);
+    let showResult = onConfirm(5947).show(obj2);
+    const obj = onConfirm(5947);
   } else {
     showResult = onConfirm();
   }
   return showResult;
 }
-export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
+export function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
   const obj2 = {
     title: null,
@@ -67,4 +67,4 @@ export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   obj2.onConfirm = onConfirm;
   obj2.onCancel = onCancel;
   return actions_AlertActionCreatorsDefault.show(obj2);
-};
+}

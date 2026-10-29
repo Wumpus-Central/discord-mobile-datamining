@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
 
-export const areSetsEqual = function areSetsEqual(set, set2) {
+export function areSetsEqual(set, set2) {
   if (set === set2) {
     return true;
   } else if (set.size !== set2.size) {
@@ -21,8 +21,8 @@ export const areSetsEqual = function areSetsEqual(set, set2) {
     }
     return true;
   }
-};
-export const toSetInplace = function toSetInplace(features) {
+}
+export function toSetInplace(features) {
   if (null == features) {
     const _Set3 = Set;
     let set = new Set();
@@ -35,4 +35,4 @@ export const toSetInplace = function toSetInplace(features) {
     }
   }
   return set;
-};
+}

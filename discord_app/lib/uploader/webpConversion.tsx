@@ -30,7 +30,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -464,7 +464,7 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -671,7 +671,7 @@ const result = size.fileFinishedImporting("lib/uploader/webpConversion.tsx");
 
 export { ConversionFailureReason };
 export { _shouldConvertToWebP };
-export const maybeConvertToWebP = function maybeConvertToWebP() {
+export function maybeConvertToWebP() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -680,4 +680,4 @@ export const maybeConvertToWebP = function maybeConvertToWebP() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

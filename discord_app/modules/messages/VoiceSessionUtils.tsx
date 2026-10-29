@@ -171,7 +171,7 @@ export const useSortedVoiceSessionParticipants = ReactCompilerGating.isReactComp
         items1,
       );
     };
-export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
+export function getVoiceSessionMessageContent(channel_id) {
   _require = ChannelStore.getChannel(channel_id.channel_id);
   let tmp2 = getHumanizedCallDurationDefault(channel_id);
   const messageAuthor = require("useMessageAuthor").getMessageAuthor(channel_id);
@@ -243,4 +243,4 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     formatToPlainStringResult = intl2.formatToPlainString(tmp3(1125).t.atbXuX, obj3);
   }
   return formatToPlainStringResult;
-};
+}

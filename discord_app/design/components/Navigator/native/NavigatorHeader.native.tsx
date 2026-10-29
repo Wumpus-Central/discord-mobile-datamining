@@ -8,7 +8,7 @@ import NavigatorConstants from "NavigatorConstants.native.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
-import _mod6969 from "../../../../../_runtime/metro/06969__.js";
+import _mod6993 from "../../../../../_runtime/metro/06993__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" },
   headerTitle: null,
@@ -33,7 +33,7 @@ let obj2 = {
   submittingIndicator: null,
 };
 let obj4 = {};
-let merged = Object.assign(fn(5270).TextStyleSheet["redesign/heading-18/bold"]);
+let merged = Object.assign(fn(5271).TextStyleSheet["redesign/heading-18/bold"]);
 obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -123,7 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        tmp(6966).useNavigatorBackPressHandler(B);
+        tmp(6990).useNavigatorBackPressHandler(B);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class B {
@@ -174,12 +174,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.displayMode = "minimal";
         obj2.backImage = tmp19;
         obj2.accessibilityLabel = tmp16;
-        const tmp25 = closure_10(tmp(6969).HeaderBackButton, obj2);
+        const tmp25 = closure_10(tmp(6993).HeaderBackButton, obj2);
         cResult[11] = tmp11;
         cResult[12] = tmp5;
         cResult[13] = tmp19;
         cResult[14] = tmp25;
-        const tmpResult2 = tmp(6966);
+        const tmpResult2 = tmp(6990);
       }
       if (tmp4 == null) {
         class B {
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return v65535(XSmallIcon.XSmallIcon, obj);
       };
       obj2.accessibilityLabel = stringResult;
-      return closure_10(require("../../../../../_runtime/metro/06969__.js").HeaderBackButton, obj2);
+      return closure_10(require("../../../../../_runtime/metro/06993__.js").HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
@@ -278,7 +278,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = tmp4;
       obj2.displayMode = "minimal";
       obj2.backImage = tmp11;
-      const tmp14 = closure_10(require("../../../../../_runtime/metro/06969__.js").HeaderBackButton, obj2);
+      const tmp14 = closure_10(require("../../../../../_runtime/metro/06993__.js").HeaderBackButton, obj2);
       cResult[6] = tmp4;
       cResult[7] = tmp5;
       cResult[8] = tmp14;
@@ -288,7 +288,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : function CustomHeaderBackButton(onPress) {
       onPress = onPress.onPress;
       const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-      onPress(6966).useNavigatorBackPressHandler(() => {
+      onPress(6990).useNavigatorBackPressHandler(() => {
         if (null != onPress) {
           tmp();
         }
@@ -301,7 +301,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.backImage = function backImage() {
         return closure_1_10(closure_1_13, {});
       };
-      return closure_10(onPress(6969).HeaderBackButton, obj2);
+      return closure_10(onPress(6993).HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -368,7 +368,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.labelStyle = tmp14;
         obj3.backImage = tmp16;
         obj3.accessibilityLabel = tmp17;
-        const tmp23 = v65535(_mod6969.HeaderBackButton, obj3);
+        const tmp23 = v65535(_mod6993.HeaderBackButton, obj3);
         cResult[10] = tmp14;
         cResult[11] = tmp4;
         cResult[12] = tmp17;
@@ -403,7 +403,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = text;
       }
       obj2.accessibilityLabel = tmp5;
-      return v65535(_mod6969.HeaderBackButton, obj2);
+      return v65535(_mod6993.HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -588,9 +588,9 @@ const result = size.fileFinishedImporting("design/components/Navigator/native/Na
 export const useStyles = styles;
 export const NavigatorHeader = tmp7;
 export const HeaderBackImage = tmp8;
-export const renderBackImage = function renderBackImage() {
+export function renderBackImage() {
   return v65535(closure_13, {});
-};
+}
 export function getHeaderCloseButton(pop) {
   const onPress = pop;
   return function renderCloseButton(arg0) {
@@ -615,7 +615,7 @@ export function getHeaderConditionalBackButton(callback1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -648,7 +648,7 @@ export function getHeaderConditionalBackButton(callback1) {
               }
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c2 = tmp;

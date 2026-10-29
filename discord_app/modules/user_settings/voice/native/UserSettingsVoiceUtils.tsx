@@ -26,19 +26,19 @@ function getSelectedNoiseSuppressionOption() {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
-export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
+export function handleAutomaticGainControlChange(arg0) {
   const result = AudioActionCreatorsDefault.setAutomaticGainControl(arg0, {
     page: constants.USER_SETTINGS,
     section: constants2.SETTINGS_VOICE_AND_VIDEO,
   });
-};
-export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
+}
+export function handleEchoCancellationChange(arg0) {
   AudioActionCreatorsDefault.setEchoCancellation(arg0, {
     page: constants.USER_SETTINGS,
     section: constants2.SETTINGS_VOICE_AND_VIDEO,
   });
-};
-export const handleNoiseSuppressionChange = function handleNoiseSuppressionChange(arg0) {
+}
+export function handleNoiseSuppressionChange(arg0) {
   ({ KRISP, STANDARD } = obj);
   obj = AudioActionCreatorsDefault;
   obj.setNoiseCancellation(arg0 === KRISP, {
@@ -49,7 +49,7 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
     page: constants.USER_SETTINGS,
     section: constants2.SETTINGS_VOICE_AND_VIDEO,
   });
-};
+}
 export { NoiseSuppressionOpt };
 export { getSelectedNoiseSuppressionOption };
 export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactCompilerEnabled()

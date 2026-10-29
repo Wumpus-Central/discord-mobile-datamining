@@ -7,13 +7,13 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
 require = fn;
-const constants = fn(6672).RequestToSpeakPermissionStates;
+const constants = fn(6696).RequestToSpeakPermissionStates;
 const Permissions = fn(1084).Permissions;
-const RowType = fn(7910).RowType;
+const RowType = fn(7933).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
-export const fillChunk = function fillChunk(arg0, arg1, arg2) {
+export function fillChunk(arg0, arg1, arg2) {
   let tmp = arg2;
   if (arg2 == null) {
     tmp = arg1;
@@ -34,8 +34,8 @@ export const fillChunk = function fillChunk(arg0, arg1, arg2) {
       return items2;
     }
   }, []);
-};
-export const summarizeUsernamesParticipating = function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
+}
+export function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
   let length = arg3;
   const first = arg1[0];
   let obj = dependencyMap;
@@ -57,29 +57,28 @@ export const summarizeUsernamesParticipating = function summarizeUsernamesPartic
     const obj3 = { name, count: length - 1 };
     intl.formatToPlainString(util.t.GhkJ21, obj3);
   }
-};
-export const summarizeUsernamesParticipatingWithSpeakerNickname =
-  function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, name, arg2) {
-    let length = arg2;
-    if (arg2 == null) {
-      length = arg0.length;
+}
+export function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, name, arg2) {
+  let length = arg2;
+  if (arg2 == null) {
+    length = arg0.length;
+  }
+  if (1 === length) {
+    if (null != name) {
+      return name;
     }
-    if (1 === length) {
-      if (null != name) {
-        return name;
-      }
-    }
-    if (null == name) {
-      const intl2 = util.intl;
-      const obj2 = { count: length };
-      intl2.formatToPlainString(util.t.chmM9N, obj2);
-    } else {
-      const intl = util.intl;
-      const obj = { name, count: length - 1 };
-      intl.formatToPlainString(util.t.GhkJ21, obj);
-    }
-  };
-export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipHint(arg0, arg1) {
+  }
+  if (null == name) {
+    const intl2 = util.intl;
+    const obj2 = { count: length };
+    intl2.formatToPlainString(util.t.chmM9N, obj2);
+  } else {
+    const intl = util.intl;
+    const obj = { name, count: length - 1 };
+    intl.formatToPlainString(util.t.GhkJ21, obj);
+  }
+}
+export function getRemoveModeratorTooltipHint(arg0, arg1) {
   if (RowType.OWNER === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.icuNBM);
@@ -106,8 +105,8 @@ export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipH
     }
     return stringResult;
   }
-};
-export const getStageChannelMetadata = function getStageChannelMetadata(channel_id) {
+}
+export function getStageChannelMetadata(channel_id) {
   const stageInstanceByChannel = StageInstanceStore.getStageInstanceByChannel(channel_id.id);
   const obj = {
     channel_id: channel_id.id,
@@ -132,8 +131,8 @@ export const getStageChannelMetadata = function getStageChannelMetadata(channel_
   }
   obj.stage_instance_id = id;
   return obj;
-};
-export const getParticipantNamesText = function getParticipantNamesText(channel, found) {
+}
+export function getParticipantNamesText(channel, found) {
   new Set();
   found = found.filter((user) => {
     const id = user.user.id;
@@ -165,4 +164,4 @@ export const getParticipantNamesText = function getParticipantNamesText(channel,
     stringResult = intl4.formatToPlainString(util.t["3AqFaG"], obj6);
   }
   return stringResult;
-};
+}

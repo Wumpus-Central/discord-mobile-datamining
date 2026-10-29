@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
@@ -14,8 +14,8 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
 require = fn;
-let closure_6 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(18206).calculateLocaleOptions;
+let closure_6 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
+const calculateLocaleOptions = fn(18440).calculateLocaleOptions;
 const Constants = fn(1084);
 ({
   ChannelTypes: closure_12,
@@ -25,7 +25,7 @@ const Constants = fn(1084);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { overview: { flex: 1 }, overviewContent: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_18 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -44,14 +44,14 @@ export default function GuildSettingsModalCommunity(guildId) {
   const tmp5 = closure_18();
   navigation = preferredLocale(navigation[13]).useNavigation();
   let obj2 = preferredLocale(navigation[13]);
-  const items = [preferredLocale];
+  let items = [preferredLocale];
   const stateFromStoresObject = preferredLocale(navigation[14]).useStateFromStoresObject(items, () =>
     preferredLocale.getProps(),
   );
   const submitting = stateFromStoresObject.submitting;
   const hasChanges = stateFromStoresObject.hasChanges;
   guild = stateFromStoresObject.guild;
-  const obj3 = preferredLocale(navigation[14]);
+  let obj3 = preferredLocale(navigation[14]);
   const items1 = [publicUpdatesChannel];
   const stateFromStoresObject1 = preferredLocale(navigation[14]).useStateFromStoresObject(items1, () => {
     let canResult = null != guild;
@@ -198,19 +198,26 @@ export default function GuildSettingsModalCommunity(guildId) {
     let obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
     obj2.title = intl.string(util.t.Yr6nGx);
-    obj2.items = callback1();
+    const obj3 = { value: null, label: null };
+    const intl2 = util.intl;
+    obj3.label = intl2.string(util.t.PoWNfe);
+    const items = [obj3, ...callback1()];
+    obj2.items = items;
     obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      onClose(9039).updateGuild({ rulesChannelId });
-      const obj = onClose(9039);
+      onClose(9042).updateGuild({ rulesChannelId });
+      const obj = onClose(9042);
       const obj2 = { rulesChannelId };
-      onClose(5246).hideActionSheet();
+      onClose(5247).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
       id = rulesChannel.id;
     }
+    if (id == null) {
+      id = null;
+    }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8959, dependencyMap.paths), "SelectRulesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8962, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items7);
   const items9 = [callback1, safetyAlertsChannel];
   const callback3 = obj6.useCallback(() => {
@@ -220,17 +227,17 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj2.title = intl.string(util.t.VqhxxN);
     obj2.items = callback1();
     obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      onClose(9039).updateGuild({ publicUpdatesChannelId });
-      const obj = onClose(9039);
+      onClose(9042).updateGuild({ publicUpdatesChannelId });
+      const obj = onClose(9042);
       const obj2 = { publicUpdatesChannelId };
-      onClose(5246).hideActionSheet();
+      onClose(5247).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
       id = publicUpdatesChannel.id;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8959, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8962, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items8);
   preferredLocale = undefined;
   const callback4 = obj6.useCallback(() => {
@@ -240,17 +247,17 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj2.title = intl.string(util.t.wSD7jV);
     obj2.items = callback1();
     obj2.onItemSelect = function onItemSelect(safetyAlertsChannelId) {
-      onClose(9039).updateGuild({ safetyAlertsChannelId });
-      const obj = onClose(9039);
+      onClose(9042).updateGuild({ safetyAlertsChannelId });
+      const obj = onClose(9042);
       const obj2 = { safetyAlertsChannelId };
-      onClose(5246).hideActionSheet();
+      onClose(5247).hideActionSheet();
     };
     let id;
     if (safetyAlertsChannel != null) {
       id = safetyAlertsChannel.id;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8959, dependencyMap.paths), "SelectSafetyAlertsChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8962, dependencyMap.paths), "SelectSafetyAlertsChannel", obj2);
   }, items9);
   if (guild != null) {
     preferredLocale = guild.preferredLocale;
@@ -264,62 +271,63 @@ export default function GuildSettingsModalCommunity(guildId) {
     const obj10 = { paddingHorizontal: token };
     obj9.style = obj10;
     obj9.spacing = tmp3(tmp2[11]).space.PX_24;
-    let str = null;
+    let channelName = null;
     if (null != rulesChannel) {
       const tmpResult = tmp(tmp2[19]);
-      str = tmpResult.computeChannelName(rulesChannel, callback1, safetyAlertsChannel, true);
+      channelName = tmpResult.computeChannelName(rulesChannel, callback1, safetyAlertsChannel, true);
     }
     const obj11 = { helperText: null, hasIcons: false, children: null };
-    const intl2 = tmp(tmp2[16]).intl;
+    let intl2 = tmp(tmp2[16]).intl;
     obj11.helperText = intl2.string(tmp(tmp2[16]).t.BtwmYB);
     const obj12 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
     const intl3 = tmp(tmp2[16]).intl;
     obj12.label = intl3.string(tmp(tmp2[16]).t.U5BW0c);
     obj12.disabled = !canManage;
-    if (str == null) {
-      str = "";
+    if (channelName == null) {
+      const intl4 = tmp(tmp2[16]).intl;
+      channelName = intl4.string(tmp(tmp2[16]).t.PoWNfe);
     }
-    const obj13 = { text: str };
+    const obj13 = { text: channelName };
     obj12.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj13);
     obj12.onPress = callback2;
     obj11.children = closure_16(tmp(tmp2[26]).TableRow, obj12);
     const items10 = [closure_16(tmp(tmp2[25]).TableRowGroup, obj11), , , ,];
-    let str2 = null;
+    let str = null;
     if (null != publicUpdatesChannel) {
       const tmpResult3 = tmp(tmp2[19]);
-      str2 = tmpResult3.computeChannelName(publicUpdatesChannel, callback1, safetyAlertsChannel, true);
+      str = tmpResult3.computeChannelName(publicUpdatesChannel, callback1, safetyAlertsChannel, true);
     }
     const obj14 = { helperText: null, hasIcons: false, children: null };
-    const intl4 = tmp(tmp2[16]).intl;
-    obj14.helperText = intl4.string(tmp(tmp2[16]).t.ZFeonu);
-    const obj15 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
     const intl5 = tmp(tmp2[16]).intl;
-    obj15.label = intl5.string(tmp(tmp2[16]).t.vAyDGU);
+    obj14.helperText = intl5.string(tmp(tmp2[16]).t.ZFeonu);
+    const obj15 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
+    const intl6 = tmp(tmp2[16]).intl;
+    obj15.label = intl6.string(tmp(tmp2[16]).t.vAyDGU);
     obj15.disabled = !isAdmin;
-    if (str2 == null) {
-      str2 = "";
+    if (str == null) {
+      str = "";
     }
-    const obj16 = { text: str2 };
+    const obj16 = { text: str };
     obj15.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj16);
     obj15.onPress = callback3;
     obj14.children = closure_16(tmp(tmp2[26]).TableRow, obj15);
     items10[1] = closure_16(tmp(tmp2[25]).TableRowGroup, obj14);
-    let str3 = null;
+    let str2 = null;
     if (null != safetyAlertsChannel) {
       const tmpResult4 = tmp(tmp2[19]);
-      str3 = tmpResult4.computeChannelName(safetyAlertsChannel, callback1, safetyAlertsChannel, true);
+      str2 = tmpResult4.computeChannelName(safetyAlertsChannel, callback1, safetyAlertsChannel, true);
     }
     const obj17 = { helperText: null, hasIcons: false, children: null };
-    const intl6 = tmp(tmp2[16]).intl;
-    obj17.helperText = intl6.string(tmp(tmp2[16]).t.htioQo);
-    const obj18 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
     const intl7 = tmp(tmp2[16]).intl;
-    obj18.label = intl7.string(tmp(tmp2[16]).t.sMkYE8);
+    obj17.helperText = intl7.string(tmp(tmp2[16]).t.htioQo);
+    const obj18 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
+    const intl8 = tmp(tmp2[16]).intl;
+    obj18.label = intl8.string(tmp(tmp2[16]).t.sMkYE8);
     obj18.disabled = !canManage;
-    if (str3 == null) {
-      str3 = "";
+    if (str2 == null) {
+      str2 = "";
     }
-    const obj19 = { text: str3 };
+    const obj19 = { text: str2 };
     obj18.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj19);
     obj18.onPress = callback4;
     obj17.children = closure_16(tmp(tmp2[26]).TableRow, obj18);
@@ -329,21 +337,21 @@ export default function GuildSettingsModalCommunity(guildId) {
     if (null != guild) {
       preferredLocale = guild.preferredLocale;
       let found = calculateLocaleOptions().find((value) => value.value === preferredLocale);
-      let str4;
+      let str3;
       if (found != null) {
-        str4 = found.label;
+        str3 = found.label;
       }
       const obj20 = { helperText: null, hasIcons: false, children: null };
-      const intl8 = tmp(tmp2[16]).intl;
-      obj20.helperText = intl8.string(tmp(tmp2[16]).t["l2g81/"]);
-      const obj21 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
       const intl9 = tmp(tmp2[16]).intl;
-      obj21.label = intl9.string(tmp(tmp2[16]).t.VeC8vc);
+      obj20.helperText = intl9.string(tmp(tmp2[16]).t["l2g81/"]);
+      const obj21 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
+      const intl10 = tmp(tmp2[16]).intl;
+      obj21.label = intl10.string(tmp(tmp2[16]).t.VeC8vc);
       obj21.disabled = !canManage;
-      if (str4 == null) {
-        str4 = "";
+      if (str3 == null) {
+        str3 = "";
       }
-      const obj22 = { text: str4 };
+      const obj22 = { text: str3 };
       obj21.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj22);
       obj21.onPress = tmp20;
       obj20.children = closure_16(tmp(tmp2[26]).TableRow, obj21);
@@ -355,8 +363,8 @@ export default function GuildSettingsModalCommunity(guildId) {
     if (isAdmin) {
       const obj23 = { helperText: stringResult, hasIcons: false, children: null };
       const obj24 = { variant: "danger", onPress: callback, label: null, disabled: null };
-      const intl10 = tmp(tmp2[16]).intl;
-      obj24.label = intl10.string(tmp(tmp2[16]).t.c1BmbC);
+      const intl11 = tmp(tmp2[16]).intl;
+      obj24.label = intl11.string(tmp(tmp2[16]).t.c1BmbC);
       obj24.disabled = !tmp12;
       obj23.children = closure_16(tmp(tmp2[26]).TableRow, obj24);
       tmp22Result3 = closure_16(tmp(tmp2[25]).TableRowGroup, obj23);

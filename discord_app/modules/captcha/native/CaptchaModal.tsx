@@ -1,6 +1,6 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
 import util from "../../../intl/index.native.tsx";
-import Link from "../../../../_runtime/01503_Link.js";
+import Link from "../../../../_runtime/01504_Link.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -14,12 +14,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(17636).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17637);
+let closure_6 = fn(17874).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17875);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         rqtoken: closure_6,
         userflow: closure_7,
       } = arg0);
-      const tmp2 = closure_11(onReject(7073)());
+      const tmp2 = closure_11(onReject(7097)());
       const navigation = Link.useNavigation();
       const items = [navigation];
       const memo = noop.useMemo(() => {
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return str;
       }, items);
-      closure_9 = onReject(19013)({ onReject, analyticsType: memo });
+      closure_9 = onReject(19246)({ onReject, analyticsType: memo });
       const effect = noop.useEffect(() => {
         closure_1_4.dismiss();
       }, []);

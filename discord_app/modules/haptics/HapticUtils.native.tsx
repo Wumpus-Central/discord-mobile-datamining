@@ -2,13 +2,13 @@
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import DeviceUtils from "../../utils/native/DeviceUtils.tsx";
 import haptics_HapticFeedbackTypesDefault from "HapticFeedbackTypes.tsx";
-import Patterns from "../../../_runtime/05250_Patterns.js";
+import Patterns from "../../../_runtime/05251_Patterns.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
 
 export const HapticFeedbackTypes = haptics_HapticFeedbackTypesDefault;
-export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT) {
+export function triggerHapticFeedback(IMPACT_LIGHT) {
   if (haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT === IMPACT_LIGHT) {
     const obj41 = Patterns;
     let str36 = "selection";
@@ -142,4 +142,4 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
   } else if (haptics_HapticFeedbackTypesDefault.EFFECT_TICK === IMPACT_LIGHT) {
     Patterns.trigger("effectTick");
   }
-};
+}

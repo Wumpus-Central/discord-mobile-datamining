@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
 
-export const staticRouteToTranslation = function staticRouteToTranslation(id) {
+export function staticRouteToTranslation(id) {
   if ("home" !== id) {
     if ("guide" !== id) {
       if ("browse" === id) {
@@ -23,8 +23,8 @@ export const staticRouteToTranslation = function staticRouteToTranslation(id) {
   }
   const intl4 = util.intl;
   return intl4.string(util.t.VbpLyU);
-};
-export const staticRouteToItemString = function staticRouteToItemString(GuildRoleStore, id, itemId, guildId) {
+}
+export function staticRouteToItemString(GuildRoleStore, id, itemId, guildId) {
   if ("linked-roles" === id) {
     if (null == guildId) {
       return null;
@@ -47,4 +47,4 @@ export const staticRouteToItemString = function staticRouteToItemString(GuildRol
   } else {
     return null;
   }
-};
+}

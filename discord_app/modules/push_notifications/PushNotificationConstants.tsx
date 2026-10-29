@@ -42,7 +42,7 @@ export const DEVICE_PUSH_PROVIDER_ANDROID = "gcm";
 export const DEVICE_PUSH_PROVIDER_META_HORIZON = "meta_horizon";
 export const DEVICE_PUSH_PROVIDER_IOS = str2;
 export const DEVICE_PUSH_VOIP_PROVIDER = str4;
-export const getDevicePushProvider = function getDevicePushProvider() {
+export function getDevicePushProvider() {
   if (MetaQuestUtils) {
     let str = meta_horizon;
   } else {
@@ -53,7 +53,7 @@ export const getDevicePushProvider = function getDevicePushProvider() {
     obj = PlatformUtils;
   }
   return str;
-};
+}
 export const NotificationTypes = {
   REMINDER: "reminder",
   TOP_MESSAGE_PUSH: "top_messages_push",

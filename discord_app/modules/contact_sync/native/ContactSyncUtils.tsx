@@ -15,106 +15,44 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-let closure_18 = async function _uploadContacts(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
-          }
-          closure_130_1 = flag;
-          closure_130_2 = undefined;
-          let body;
-          c4 = 1;
-          c5 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const _JSON = JSON;
-          closure_130_2 = JSON.parse(closure_130_0);
-          const request = {
-            url: closure_131_12.CONNECTION_SYNC_CONTACTS,
-            body: null,
-            trackedActionData: null,
-            rejectWithError: false,
-          };
-          const obj5 = {
-            friend_list_entries: closure_130_2,
-            background: closure_130_1,
-            allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO,
-            include_mutual_friends_count: false,
-          };
-          request.body = obj5;
-          const obj6 = { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC };
-          request.trackedActionData = obj6;
-          c4 = 2;
-          c5 = 1;
-          const obj7 = { value: closure_131_1(closure_131_2[7]).put(request), done: false };
-          return obj7;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        body = value.body;
-        const obj10 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
-        closure_131_1(closure_131_2[9]).dispatch(obj10);
-        c5 = 3;
-        const obj11 = { value: body, done: true };
-        return obj11;
-      }
-    } catch (tmp13) {
-      c5 = tmp;
-      throw tmp13;
-    }
+let closure_18 = async function _uploadContacts() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = false;
   }
+  closure_130_1 = flag;
+  await "Reflect";
+  const _JSON = JSON;
+  closure_130_2 = JSON.parse(closure_130_0);
+  const request = {
+    url: closure_131_12.CONNECTION_SYNC_CONTACTS,
+    body: {
+      friend_list_entries: closure_130_2,
+      background: closure_130_1,
+      allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO,
+      include_mutual_friends_count: false,
+    },
+    trackedActionData: { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC },
+    rejectWithError: false,
+  };
+  await closure_131_1(closure_131_2[7]).put(request);
+  const body = value.body;
+  closure_131_1(closure_131_2[9]).dispatch({
+    type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS",
+    suggestions: body.friend_suggestions,
+  });
+  return body;
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(13816);
+const ContactSyncPersistedStore = fn(14049);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(13815);
+const ContactSyncConstants = fn(14048);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,
@@ -211,7 +149,7 @@ export const ContactSyncPermissionDenied = error;
 export const ContactSyncFailedUserHasNoPhone = error1;
 export const ContactImageFetchFailed = error2;
 export { isContactSyncAvailable };
-export const checkContactPermissions = function checkContactPermissions() {
+export function checkContactPermissions() {
   let isIOSResult = utils_PlatformUtils.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -231,8 +169,8 @@ export const checkContactPermissions = function checkContactPermissions() {
     result = Promise.resolve(constants.UNAUTHORIZED);
   }
   return result;
-};
-export const uploadContacts = function uploadContacts() {
+}
+export function uploadContacts() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -241,8 +179,8 @@ export const uploadContacts = function uploadContacts() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
+}
+export function bulkAddFriends(user_ids, bulkAddToken) {
   const request = {
     url: __initData.USER_BULK_RELATIONSHIPS,
     body: { user_ids, token: bulkAddToken },
@@ -256,8 +194,8 @@ export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
   };
   const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
   return obj.post(request).then((body) => body.body);
-};
-export const adminDeleteContactSync = function adminDeleteContactSync() {
+}
+export function adminDeleteContactSync() {
   React5();
   closure_1_8();
   const result = ContactSyncManager.removeLastUserContactsUpload();
@@ -272,8 +210,8 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   const obj2 = TrackedHTTPUtilsDefault;
   obj3.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   return obj2.delete(obj3);
-};
-export const getImageForContactId = function getImageForContactId(arg0) {
+}
+export function getImageForContactId(arg0) {
   closure_0 = arg0;
   const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
   return new Promise((arg0, arg1) => {
@@ -287,8 +225,8 @@ export const getImageForContactId = function getImageForContactId(arg0) {
       }
     });
   });
-};
-export const getContacts = function getContacts(phone) {
+}
+export function getContacts(phone) {
   closure_0 = phone;
   if (storedContacts === undefined) {
     const str = "";
@@ -325,15 +263,15 @@ export const getContacts = function getContacts(phone) {
       }
     });
   });
-};
-export const getStoredContacts = function getStoredContacts() {
+}
+export function getStoredContacts() {
   try {
     const _JSON = JSON;
     return JSON.parse(tmp2);
   } catch (tmp4) {
     SentryUtilsDefault.captureException(tmp4);
   }
-};
+}
 export const useContactSyncAccount = tmp8;
 export const useContactSyncEnabled = tmp9;
 export const useContactSyncUserIsDiscoverable = ReactCompilerGating.isReactCompilerEnabled()
@@ -392,10 +330,10 @@ export const useContactSyncUserIsDiscoverable = ReactCompilerGating.isReactCompi
     };
 export { isContactSyncEnabled };
 export { getOpenLearnMoreUrl };
-export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
+export function handleOpenLearnMoreLink() {
   const obj = LinkingDefault;
   obj.openURL(HelpdeskUtilsDefault.getArticleURL(constants4.CONTACT_SYNC));
-};
-export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
+}
+export function transitionToAddFriendsLandingPage() {
   ModalActionCreatorsDefault.popWithKey(React6);
-};
+}

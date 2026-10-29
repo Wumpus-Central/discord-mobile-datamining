@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx",
 );
 
-export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
+export function createAddRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
   const user = UserStore.getUser(first);
@@ -45,4 +45,4 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };
-};
+}

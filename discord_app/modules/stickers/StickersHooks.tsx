@@ -236,7 +236,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_9.getCurrentUser();
               }
             }
-            obj3.type = tmp45(6524).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+            obj3.type = tmp45(6548).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
             ({ id: obj6.id, name: obj6.name } = guild);
             obj3.stickers = [];
             tmp35(obj3);
@@ -843,15 +843,15 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = current(noop.useState(true), 2);
       [tmp12, asyncGeneratorStep] = current(noop.useState(false), 2);
       if (cResult[3] !== id) {
-        let isGuildStickerResult = tmp(6523).isGuildSticker(id);
+        let isGuildStickerResult = tmp(6547).isGuildSticker(id);
         if (!isGuildStickerResult) {
-          isGuildStickerResult = tmp(6523).isStandardSticker(id);
-          const tmpResult4 = tmp(6523);
+          isGuildStickerResult = tmp(6547).isStandardSticker(id);
+          const tmpResult4 = tmp(6547);
         }
         cResult[3] = id;
         cResult[4] = isGuildStickerResult;
         let tmp13 = isGuildStickerResult;
-        const tmpResult3 = tmp(6523);
+        const tmpResult3 = tmp(6547);
       } else {
         tmp13 = cResult[4];
       }
@@ -896,7 +896,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { value, done: true };
                           return obj3;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -977,7 +977,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { value, done: true };
                           return obj3;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -1056,7 +1056,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { value, done: true };
                           return obj3;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -1136,7 +1136,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { value, done: true };
                           return obj3;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -1212,7 +1212,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj3 = { value, done: true };
                             return obj3;
                           } else {
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "IconComponent" };
                           }
                         } else {
                           try {
@@ -1289,7 +1289,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj3 = { value, done: true };
                             return obj3;
                           } else {
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "IconComponent" };
                           }
                         } else {
                           try {
@@ -1400,8 +1400,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = obj4(noop.useState(false), 2);
       let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
       if (!isGuildStickerResult) {
-        isGuildStickerResult = tmp(6523).isStandardSticker(renderableSticker);
-        const tmpResult = tmp(6523);
+        isGuildStickerResult = tmp(6547).isStandardSticker(renderableSticker);
+        const tmpResult = tmp(6547);
       }
       obj4 = {
         hasFetched: tmp6,
@@ -1427,7 +1427,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -1504,7 +1504,7 @@ let result = size.fileFinishedImporting("modules/stickers/StickersHooks.tsx");
 
 export const useFetchStickerPack = tmp2;
 export const useShouldAnimateSticker = tmp3;
-export const useStickersGrid = function useStickersGrid(collapsedStickersCategories) {
+export function useStickersGrid(collapsedStickersCategories) {
   collapsedStickersCategories = collapsedStickersCategories.collapsedStickersCategories;
   const filteredStickers = collapsedStickersCategories.filteredStickers;
   let num = collapsedStickersCategories.listPaddingRight;
@@ -1559,7 +1559,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         const tmpResult = collapsedStickersCategories(num[16]);
         let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex(
-          (type) => type.type === category(6524).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === category(6548).StickerCategoryTypes.FAVORITE,
         );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
@@ -1647,7 +1647,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         }
         gridSectionIndex = gridSectionIndex + 1;
         findIndexResult1 = visibleRowIndex.findIndex(
-          (type) => type.type === category(6524).StickerCategoryTypes.RECENT,
+          (type) => type.type === category(6548).StickerCategoryTypes.RECENT,
         );
       }
       if (null == items) {
@@ -1685,7 +1685,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
     }
     return { rowCount, rowCountBySection: items1, stickersGrid: items2, gutterWidth: rounded1, columnCounts: items };
   }, items);
-};
+}
 export function useHasSendableSticker() {
   return true;
 }

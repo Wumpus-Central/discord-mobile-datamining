@@ -36,7 +36,7 @@ function videoRenditionsFromServer(video_renditions) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
-export const bountyCtaFromServer = function bountyCtaFromServer(url) {
+export function bountyCtaFromServer(url) {
   const obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
@@ -51,8 +51,8 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   }
   obj.ios = tmp2;
   return obj;
-};
-export const bountyFromServer = function bountyFromServer(creative_content) {
+}
+export function bountyFromServer(creative_content) {
   const obj = {
     id: creative_content.id,
     advertiserName: creative_content.advertiser_name,
@@ -92,4 +92,4 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
   obj.rewardTimerSeconds = num;
   obj.videoDurationSeconds = creative_content.video_duration_seconds;
   return obj;
-};
+}

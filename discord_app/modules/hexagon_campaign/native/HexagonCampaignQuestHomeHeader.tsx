@@ -11,11 +11,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const adContentId = fn(5029).HEXAGON_CAMPAIGN_AD_CONTENT_ID;
+const adContentId = fn(5030).HEXAGON_CAMPAIGN_AD_CONTENT_ID;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { width: "100%", maxWidth: 448, alignSelf: "center", marginBottom: nativeDefault.space.PX_40 },
   banner: { width: "100%", aspectRatio: 1 },
@@ -99,13 +99,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = isHexagonCampaignQuestHomeHeaderEnabled(576).c(52);
       const tmp4 = closure_10();
       let obj = isHexagonCampaignQuestHomeHeaderEnabled(576);
-      const theme = isHexagonCampaignQuestHomeHeaderEnabled(5070).useThemeContext().theme;
-      let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5070);
+      const theme = isHexagonCampaignQuestHomeHeaderEnabled(5071).useThemeContext().theme;
+      let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5071);
       isHexagonCampaignQuestHomeHeaderEnabled = isHexagonCampaignQuestHomeHeaderEnabled(
-        5033,
+        5034,
       ).useIsHexagonCampaignQuestHomeHeaderEnabled("HexagonCampaignQuestHomeHeader");
-      let obj3 = isHexagonCampaignQuestHomeHeaderEnabled(5033);
-      token = isHexagonCampaignQuestHomeHeaderEnabled(5288).useToken(token(587).colors.BACKGROUND_BASE_LOWEST);
+      let obj3 = isHexagonCampaignQuestHomeHeaderEnabled(5034);
+      token = isHexagonCampaignQuestHomeHeaderEnabled(5289).useToken(token(587).colors.BACKGROUND_BASE_LOWEST);
       if (cResult[0] !== token) {
         const items = [0, 0.83, 1];
         const mapped = items.map((item) => {
@@ -419,11 +419,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const obj5 = { source: tmp6(16655), style: tmp4.bannerImage, resizeMode: "cover", accessible: false };
-          const tmp19 = closure_8(tmp6(5705), obj5);
+          const obj5 = { source: tmp6(16893), style: tmp4.bannerImage, resizeMode: "cover", accessible: false };
+          const tmp19 = closure_8(tmp6(5707), obj5);
           cResult[7] = tmp4.bannerImage;
           cResult[8] = tmp19;
-          const tmp6Result = tmp6(5705);
+          const tmp6Result = tmp6(5707);
         } else {
           class H {
             constructor() {
@@ -573,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj6 = { colors: tmp8, locations: tmp21, style: closure_4.absoluteFill, pointerEvents: "none" };
-          const tmp24 = closure_8(tmp6(5294), obj6);
+          const tmp24 = closure_8(tmp6(5295), obj6);
           cResult[10] = tmp8;
           cResult[11] = tmp24;
         } else {
@@ -649,11 +649,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const obj7 = { source: tmp6(16656), style: tmp4.logo, resizeMode: "contain", accessible: false };
-          const tmp27 = closure_8(tmp6(5705), obj7);
+          const obj7 = { source: tmp6(16894), style: tmp4.logo, resizeMode: "contain", accessible: false };
+          const tmp27 = closure_8(tmp6(5707), obj7);
           cResult[12] = tmp4.logo;
           cResult[13] = tmp27;
-          const tmp6Result2 = tmp6(5705);
+          const tmp6Result2 = tmp6(5707);
         } else {
           class H {
             constructor() {
@@ -730,8 +730,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj8 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
           const intl = tmp(1125).intl;
-          obj8.children = intl.string(tmp6(4280).kVJc0r);
-          const tmp29 = closure_8(tmp(5270).Text, obj8);
+          obj8.children = intl.string(tmp6(4281).kVJc0r);
+          const tmp29 = closure_8(tmp(5271).Text, obj8);
           cResult[14] = tmp29;
           const tmp28 = tmp29;
         } else {
@@ -933,16 +933,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return null;
       }
-      let obj4 = isHexagonCampaignQuestHomeHeaderEnabled(5288);
+      let obj4 = isHexagonCampaignQuestHomeHeaderEnabled(5289);
     }
   : function HexagonCampaignQuestHomeHeader() {
       const tmp = closure_10();
-      let obj = isHexagonCampaignQuestHomeHeaderEnabled(5070);
+      let obj = isHexagonCampaignQuestHomeHeaderEnabled(5071);
       isHexagonCampaignQuestHomeHeaderEnabled = isHexagonCampaignQuestHomeHeaderEnabled(
-        5033,
+        5034,
       ).useIsHexagonCampaignQuestHomeHeaderEnabled("HexagonCampaignQuestHomeHeader");
-      let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5033);
-      token = isHexagonCampaignQuestHomeHeaderEnabled(5288).useToken(token(587).colors.BACKGROUND_BASE_LOWEST);
+      let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5034);
+      token = isHexagonCampaignQuestHomeHeaderEnabled(5289).useToken(token(587).colors.BACKGROUND_BASE_LOWEST);
       let items = [token];
       const items1 = [isHexagonCampaignQuestHomeHeaderEnabled];
       const memo = noop.useMemo(() => {
@@ -976,84 +976,84 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (isHexagonCampaignQuestHomeHeaderEnabled) {
         let obj4 = { style: tmp.container, children: null };
         const obj5 = { style: tmp.banner, children: null };
-        const obj6 = { source: tmp5(16655), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
-        const items2 = [closure_8(tmp5(5705), obj6), , ,];
+        const obj6 = { source: tmp5(16893), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
+        const items2 = [closure_8(tmp5(5707), obj6), , ,];
         const obj7 = {
           colors: memo,
           locations: [0.716, 0.823, 1],
           style: closure_4.absoluteFill,
           pointerEvents: "none",
         };
-        items2[1] = closure_8(tmp5(5294), obj7);
+        items2[1] = closure_8(tmp5(5295), obj7);
         const obj8 = { source: null, style: null, resizeMode: "contain", accessible: false };
-        const tmp5Result = tmp5(5705);
-        obj8.source = tmp5(16656);
+        const tmp5Result = tmp5(5707);
+        obj8.source = tmp5(16894);
         obj8.style = tmp.logo;
-        items2[2] = closure_8(tmp5(5705), obj8);
+        items2[2] = closure_8(tmp5(5707), obj8);
         const obj9 = { style: tmp.sponsoredTag, children: null };
         const obj10 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
         const intl = tmp2(1125).intl;
-        obj10.children = intl.string(tmp5(4280).kVJc0r);
-        obj9.children = closure_8(tmp2(5270).Text, obj10);
+        obj10.children = intl.string(tmp5(4281).kVJc0r);
+        obj9.children = closure_8(tmp2(5271).Text, obj10);
         items2[3] = closure_8(closure_5, obj9);
         obj5.children = items2;
         const items3 = [closure_9(closure_5, obj5)];
         const obj11 = { style: tmp.cardShadow, children: null };
         const obj12 = { style: tmp.card, children: null };
-        const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16657).BundleAbstractUI, { accessible: false }) };
+        const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16895).BundleAbstractUI, { accessible: false }) };
         const items4 = [closure_8(closure_5, obj13)];
         const obj14 = { direction: "vertical", spacing: tmp5(587).space.PX_12, style: tmp.cardContent, children: null };
         const obj15 = { direction: "vertical", spacing: tmp5(587).space.PX_8, children: null };
         const obj16 = { direction: "vertical", spacing: tmp5(587).space.PX_4, children: null };
         const obj17 = { variant: "text-lg/semibold", color: "text-strong", children: null };
         const intl2 = tmp2(1125).intl;
-        obj17.children = intl2.string(tmp5(4280)["fShp/D"]);
-        const items5 = [closure_8(tmp2(5270).Heading, obj17)];
+        obj17.children = intl2.string(tmp5(4281)["fShp/D"]);
+        const items5 = [closure_8(tmp2(5271).Heading, obj17)];
         const obj18 = { variant: "text-sm/medium", color: "text-default", style: tmp.cardBody, children: null };
         const intl3 = tmp2(1125).intl;
-        obj18.children = intl3.string(tmp5(4280).XLqMej);
-        items5[1] = closure_8(tmp2(5270).Text, obj18);
+        obj18.children = intl3.string(tmp5(4281).XLqMej);
+        items5[1] = closure_8(tmp2(5271).Text, obj18);
         obj16.children = items5;
-        const items6 = [closure_9(tmp2(6013).Stack, obj16)];
+        const items6 = [closure_9(tmp2(6015).Stack, obj16)];
         const obj19 = { variant: "text-xs/medium", color: "text-subtle", children: null };
         const intl4 = tmp2(1125).intl;
         const obj20 = {
           learnMoreHook(children, arg1) {
             return closure_1_8(
-              isHexagonCampaignQuestHomeHeaderEnabled(5270).Text,
+              isHexagonCampaignQuestHomeHeaderEnabled(5271).Text,
               {
                 variant: "text-xs/medium",
                 color: "text-link",
                 accessibilityRole: "link",
-                onPress: isHexagonCampaignQuestHomeHeaderEnabled(16138).openHexagonCampaignLearnMore,
+                onPress: isHexagonCampaignQuestHomeHeaderEnabled(16375).openHexagonCampaignLearnMore,
                 children,
               },
               arg1,
             );
           },
         };
-        obj19.children = intl4.format(tmp5(4280).uL0TOA, obj20);
-        items6[1] = closure_8(tmp2(5270).Text, obj19);
+        obj19.children = intl4.format(tmp5(4281).uL0TOA, obj20);
+        items6[1] = closure_8(tmp2(5271).Text, obj19);
         obj15.children = items6;
-        const items7 = [closure_9(tmp2(6013).Stack, obj15)];
-        const tmp5Result2 = tmp5(5705);
+        const items7 = [closure_9(tmp2(6015).Stack, obj15)];
+        const tmp5Result2 = tmp5(5707);
         let str = "primary-overlay";
         if (tmp2Result.isThemeLight(obj.useThemeContext().theme)) {
           str = "primary";
         }
         const obj21 = { variant: str, text: null, onPress: null, grow: true };
         const intl5 = tmp2(1125).intl;
-        obj21.text = intl5.string(tmp5(4280)["KX1/jp"]);
+        obj21.text = intl5.string(tmp5(4281)["KX1/jp"]);
         obj21.onPress = tmp9;
-        items7[1] = closure_8(tmp2(5280).Button, obj21);
+        items7[1] = closure_8(tmp2(5281).Button, obj21);
         obj14.children = items7;
-        items4[1] = closure_9(tmp2(6013).Stack, obj14);
+        items4[1] = closure_9(tmp2(6015).Stack, obj14);
         obj12.children = items4;
         obj11.children = closure_9(closure_5, obj12);
         items3[1] = closure_8(closure_5, obj11);
         obj4.children = items3;
         tmp11Result = closure_9(closure_5, obj4);
-        tmp2Result = tmp2(5011);
+        tmp2Result = tmp2(5012);
       }
       return tmp11Result;
     };

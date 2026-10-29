@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           : arg0.byAppEntry[closure_1].keyboardHeight,
       );
     };
-export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {
+export function getSystemKeyboardHeight(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_3;
@@ -66,4 +66,4 @@ export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {
   }
   const tmp4 = KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
   return flag ? tmp4.keyboardHeightExcludingSafeAreaInsets : tmp4.keyboardHeight;
-};
+}

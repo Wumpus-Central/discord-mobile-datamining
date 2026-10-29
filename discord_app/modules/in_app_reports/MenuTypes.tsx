@@ -28,10 +28,10 @@ export const UnauthenticatedReportNames = {
   MEDIA_TAKEDOWN: "media_takedown",
 };
 export { MediaTakedownRegulation };
-export const isMediaTakedownRegulation = function isMediaTakedownRegulation(arg0) {
+export function isMediaTakedownRegulation(arg0) {
   const values = Object.values(obj);
   return values.includes(arg0);
-};
+}
 export const ReportSubType = {
   SUB_SPAM: "sub_spam",
   SUB_UNSOLICITED_PORN: "sub_unsolicited_porn",

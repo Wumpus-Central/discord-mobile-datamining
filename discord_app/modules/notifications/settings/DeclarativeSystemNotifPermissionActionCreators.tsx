@@ -10,9 +10,7 @@ let result = size.fileFinishedImporting(
   "modules/notifications/settings/DeclarativeSystemNotifPermissionActionCreators.tsx",
 );
 
-export const refreshSystemNotifPermissionsAsync = function refreshSystemNotifPermissionsAsync(
-  notification_settings_screen,
-) {
+export function refreshSystemNotifPermissionsAsync(notification_settings_screen) {
   const result = DeclarativeSystemNotifPermissionHelpersDefault.refreshSystemNotifPermissions();
   if (null != result) {
     const disabledSettings = DeclarativeSystemNotifPermissionStore.getDisabledSettings();
@@ -24,4 +22,4 @@ export const refreshSystemNotifPermissionsAsync = function refreshSystemNotifPer
       notification_settings_screen,
     );
   }
-};
+}

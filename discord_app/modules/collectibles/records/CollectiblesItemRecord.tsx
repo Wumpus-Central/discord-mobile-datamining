@@ -128,7 +128,7 @@ function transformSKUToCollectiblesItem(productLine) {
   }
 }
 
-export const createCollectiblesItemsFromServerResponse = function createCollectiblesItemsFromServerResponse(arr) {
+export function createCollectiblesItemsFromServerResponse(arr) {
   if (null == arr) {
     let items = [];
   } else {
@@ -149,8 +149,8 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
     }, []);
   }
   return items;
-};
-export const transformProductToCollectiblesItem = function transformProductToCollectiblesItem(type) {
+}
+export function transformProductToCollectiblesItem(type) {
   if (null != type) {
     if (0 !== type.items.length) {
       if (type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
@@ -163,5 +163,5 @@ export const transformProductToCollectiblesItem = function transformProductToCol
       return obj;
     }
   }
-};
+}
 export { transformSKUToCollectiblesItem };

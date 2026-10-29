@@ -5,8 +5,8 @@ import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
 import InteractionComponentTypes from "../InteractionComponentTypes.tsx";
 import RoleIconUtils from "../../guild_boosting/RoleIconUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8643 from "../../../../_runtime/metro/08643__.js";
-import _modDef8644 from "../../../../_runtime/metro/08644__.js";
+import _modDef8665 from "../../../../_runtime/metro/08665__.js";
+import _modDef8666 from "../../../../_runtime/metro/08666__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -22,10 +22,7 @@ const result = size.fileFinishedImporting(
   "modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx",
 );
 
-export const transformSearchableSelectOptions = function transformSearchableSelectOptions(
-  initialSnowflakeSelectOptions,
-  guildId,
-) {
+export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId) {
   _require = guildId;
   guild = GuildStore.getGuild(guildId);
   const mapped = initialSnowflakeSelectOptions.map((type) => {
@@ -58,7 +55,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8643).uri;
+            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8665).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult10 = utils_ColorUtils;
@@ -104,7 +101,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8644;
+          let channelIconWithGuild = _modDef8666;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -119,12 +116,12 @@ export const transformSearchableSelectOptions = function transformSearchableSele
     }
   });
   return mapped.filter(require("GlobalUtils").isNotNullish);
-};
-export const getChannelIconData = function getChannelIconData(channel, guild) {
+}
+export function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8644;
+    let channelIconWithGuild = _modDef8666;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }
   return channelIconWithGuild;
-};
+}

@@ -42,7 +42,7 @@ let closure_14 = async function _maybeFetchOnboardingPrompts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -147,24 +147,24 @@ function _trackOnboardingDirectJoin(guildId) {
   obj5.in_onboarding = true;
   obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
 }
-let closure_8 = fn(7232).serverApiResponseToClientState;
+let closure_8 = fn(7256).serverApiResponseToClientState;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, Endpoints: c10, GuildFeatures: closure_11 } = Constants);
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 let c16 = -2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
 
-export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
+export function loadOnboardingPrompts(guildId) {
   const obj2 = {};
   const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
   obj2.has_new_prompts = false;
   obj2.number_of_prompts = 0;
   obj.track(constants.GUILD_ONBOARDING_LOADED, obj2);
-};
+}
 export { fetchOnboardingPrompts };
-export const maybeFetchOnboardingPrompts = function maybeFetchOnboardingPrompts() {
+export function maybeFetchOnboardingPrompts() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -173,6 +173,6 @@ export const maybeFetchOnboardingPrompts = function maybeFetchOnboardingPrompts(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { startOnboarding };
 export const CONNECTIONS_STEP = -3;

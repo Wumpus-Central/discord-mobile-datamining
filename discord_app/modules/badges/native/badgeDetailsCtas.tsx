@@ -46,10 +46,10 @@ obj[BadgeId.BadgeId.GIFTING] = {
 };
 const result = size.fileFinishedImporting("modules/badges/native/badgeDetailsCtas.tsx");
 
-export const getBadgeDetailsCta = function getBadgeDetailsCta(badge_id) {
+export function getBadgeDetailsCta(badge_id) {
   let isAvailable;
   if (obj[badge_id] != null) {
     isAvailable = obj.isAvailable;
   }
   return obj[badge_id];
-};
+}

@@ -103,9 +103,9 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(DispatcherDefault,
 const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
 
 export default voiceChannelEffectsStore;
-export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(userId) {
+export function clearVoiceChannelEffectForUser(userId) {
   if (null != userId) {
     const obj2 = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId };
     DispatcherDefault.dispatch(obj2);
   }
-};
+}

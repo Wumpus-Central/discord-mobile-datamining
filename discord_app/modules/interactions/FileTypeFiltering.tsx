@@ -88,7 +88,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/FileTypeFiltering.tsx");
 
 export const useFileTypesFormattedString = tmp2;
-export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
+export function getFileTypeFiltering(fileTypes) {
   if (null != fileTypes) {
     if (0 !== fileTypes.length) {
       const found = fileTypes.filter((item) => item.startsWith("."));
@@ -157,7 +157,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
     return obj;
   }
   items3 = [];
-};
+}
 export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFileTypeFiltering(arr) {
       const cResult = allowedExtensions(576).c(14);

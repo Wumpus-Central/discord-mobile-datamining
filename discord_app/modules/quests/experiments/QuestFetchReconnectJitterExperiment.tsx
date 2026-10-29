@@ -19,6 +19,6 @@ const result = size.fileFinishedImporting("modules/quests/experiments/QuestFetch
 
 export default apexExperiment;
 export const DEFAULT_QUEST_FETCH_JITTER_CONFIG = obj;
-export const getQuestFetchReconnectJitterConfig = function getQuestFetchReconnectJitterConfig(location) {
+export function getQuestFetchReconnectJitterConfig(location) {
   return apexExperiment.getConfig({ location: location.location });
-};
+}

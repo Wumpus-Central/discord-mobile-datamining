@@ -28,7 +28,6 @@ export const APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS = {
   [obj.LEAGUE_OF_LEGENDS]: obj2[obj.LEAGUE_OF_LEGENDS],
   [obj.VALORANT]: obj2[obj.VALORANT],
 };
-export const getMigratedApplicationIdentityConnectionsScreenApplications =
-  function getMigratedApplicationIdentityConnectionsScreenApplications() {
-    return items.map((applicationId) => applicationId.applicationId);
-  };
+export function getMigratedApplicationIdentityConnectionsScreenApplications() {
+  return items.map((applicationId) => applicationId.applicationId);
+}

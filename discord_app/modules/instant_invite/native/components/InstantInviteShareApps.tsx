@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InstantInviteConstants = fn(9125);
+const InstantInviteConstants = fn(9128);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   contentContainer: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" },
 };
@@ -27,8 +27,8 @@ export default noop.memo(
         const contentContainerStyle = onItemPressed.contentContainerStyle;
         const tmp4 = closure_10();
         let obj = onItemPressed(576);
-        const fontScale = onItemPressed(5289).useFontScale();
-        const obj2 = onItemPressed(5289);
+        const fontScale = onItemPressed(5290).useFontScale();
+        const obj2 = onItemPressed(5290);
         [arr, dependencyMap] = noop.useState(closure_8);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let obj4 = { disallowInterruption: true };
@@ -38,7 +38,7 @@ export default noop.memo(
           first = cResult[0];
         }
         const tmp6 = _slicedToArray(noop.useState(closure_8), 2);
-        const nativeGesture = onItemPressed(5333).useNativeGesture(first);
+        const nativeGesture = onItemPressed(5334).useNativeGesture(first);
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function x() {
             Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
@@ -126,7 +126,7 @@ export default noop.memo(
                   }
                   tmp22[0] = nativeGesture;
                   tmp22[1] = tmp17;
-                  const tmp23 = jsx(tmp(5333).GestureDetector, tmp22);
+                  const tmp23 = jsx(tmp(5334).GestureDetector, tmp22);
                   cResult[16] = nativeGesture;
                   cResult[17] = tmp17;
                   cResult[18] = tmp23;
@@ -289,17 +289,17 @@ export default noop.memo(
         cResult[4] = tmp4.contentContainer;
         cResult[5] = items1;
         tmp12 = items1;
-        let tmpResult = onItemPressed(5333);
+        let tmpResult = onItemPressed(5334);
       }
     : function InstantInviteShareApps(onItemPressed) {
         onItemPressed = onItemPressed.onItemPressed;
         dependencyMap = undefined;
         const tmp = closure_10();
-        closure_1 = onItemPressed(5289).useFontScale();
-        let obj = onItemPressed(5289);
+        closure_1 = onItemPressed(5290).useFontScale();
+        let obj = onItemPressed(5290);
         [arr, c2] = noop.useState(closure_8);
         const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-        const gesture = onItemPressed(5333).useNativeGesture({ disallowInterruption: true });
+        const gesture = onItemPressed(5334).useNativeGesture({ disallowInterruption: true });
         const effect = noop.useEffect(() => {
           Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
             const items = [];
@@ -428,6 +428,6 @@ export default noop.memo(
             })}
           </closure_6>
         );
-        return jsx(onItemPressed(5333).GestureDetector, { gesture, children });
+        return jsx(onItemPressed(5334).GestureDetector, { gesture, children });
       },
 );

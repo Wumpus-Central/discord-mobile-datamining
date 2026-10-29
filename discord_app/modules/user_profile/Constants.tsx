@@ -7,7 +7,7 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
-export const getBadgeName = function getBadgeName(GIFTING) {
+export function getBadgeName(GIFTING) {
   const str = BadgeId.BadgeId[GIFTING];
   if (null != str) {
     let formatted = str.toLowerCase();
@@ -16,7 +16,7 @@ export const getBadgeName = function getBadgeName(GIFTING) {
     formatted = String(GIFTING);
   }
   return formatted;
-};
+}
 export const USER_PROFILE_POPOUT_KEY = "user-profile-popout";
 export const UserProfileSections = {
   FEATURED: "FEATURED",
@@ -305,7 +305,7 @@ export const TrackUserProfileWishlistActions = {
   PRESS_ADD_WISHLIST_ITEM: "PRESS_ADD_WISHLIST_ITEM",
 };
 export const TrackUserProfileUi = { USER_PROFILE: "USER_PROFILE", PROFILE_FRAME: "PROFILE_FRAME" };
-export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(icon) {
+export function getBadgeAssetFromCDN(icon) {
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
     let combined = "https://" + CDN_HOST + "/badge-icons/" + icon + ".png";
@@ -315,7 +315,7 @@ export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(icon) {
     combined = "" + location.protocol + tmp + Endpoints.BADGE_ICON(icon);
   }
   return combined;
-};
+}
 export const UserProfileInteractionSources = { ACTIVITY: "ACTIVITY", AVATAR: "AVATAR", STATUS: "STATUS" };
 export const UserProfileInteractionTypes = { REPLY: "REPLY", REACT: "REACT" };
 export const UserProfileToastTypes = {

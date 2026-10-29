@@ -7,11 +7,11 @@ const require = globalThis.__r;
 const useGuildSettingsRolesManagerState = module_570.create(() => ({ roleJustCreated: false }));
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
 
-export const setRoleJustCreated = function setRoleJustCreated(roleJustCreated) {
+export function setRoleJustCreated(roleJustCreated) {
   _require = roleJustCreated;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { roleJustCreated };
     return obj.setState(obj);
   });
-};
+}
 export { useGuildSettingsRolesManagerState };

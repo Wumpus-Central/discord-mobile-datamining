@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9816).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(4916).getUserCommunicationDisabledVersion;
-const Changeset = fn(8166).Changeset;
+let closure_6 = fn(9848).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(4917).getUserCommunicationDisabledVersion;
+const Changeset = fn(8189).Changeset;
 const Constants = fn(1084);
 ({
   ActivityActionTypes: closure_12,
@@ -171,7 +171,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -204,7 +204,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);

@@ -1,6 +1,6 @@
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef5840 from "../../../_runtime/metro/05840__.js";
+import _modDef5842 from "../../../_runtime/metro/05842__.js";
 import VideoQualityStats from "../../lib/VideoQualityStats.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -151,13 +151,13 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(8180);
+const ClipsConstants = fn(8203);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
-export const getClipType = function getClipType(decision) {
+export function getClipType(decision) {
   decision = decision.decision;
   let type;
   if (decision != null) {
@@ -180,8 +180,8 @@ export const getClipType = function getClipType(decision) {
     }
     return "auto_ml";
   }
-};
-export const getClipBaseProperties = function getClipBaseProperties(clip) {
+}
+export function getClipBaseProperties(clip) {
   const decision = clip.decision;
   let type;
   if (decision != null) {
@@ -208,8 +208,8 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
     clip_session_id: clip.gameSessionId,
     is_candidate: clip.isCandidate,
   };
-};
-export const getClipContextProperties = function getClipContextProperties() {
+}
+export function getClipContextProperties() {
   const obj = { clip_runtime, current_clip_session_id: null };
   const activeClipsSession = ClipsStore.getActiveClipsSession();
   let id;
@@ -218,9 +218,9 @@ export const getClipContextProperties = function getClipContextProperties() {
   }
   obj.current_clip_session_id = id;
   return obj;
-};
+}
 export { getClipSignalTypes };
-export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision) {
+export function getPreSaveClipAnalytics(decision) {
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   let rTCConnection = null;
   if (null != currentUserActiveStream) {
@@ -281,9 +281,9 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   } = decision);
   obj3.clip_event_timeline_size = decision.timeline.length;
   return obj3;
-};
+}
 export { getPostSaveClipAnalytics };
-export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, framesEncodedByEncoder, arg2, arg3) {
+export function getClipSavedAnalytics(arg0, framesEncodedByEncoder, arg2, arg3) {
   const tmp = getPostSaveClipAnalytics(arg0, framesEncodedByEncoder);
   ({ clipSaveTimeMs: tmp.clip_save_time_ms, clipSizeBytes: tmp.clip_size_bytes } = framesEncodedByEncoder);
   tmp.clip_signal_types = getClipSignalTypes(arg2);
@@ -292,17 +292,17 @@ export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, frames
     const merged = Object.assign(tmp, arg3);
   }
   return tmp;
-};
-export const getClipSaveFailureAnalytics = function getClipSaveFailureAnalytics(arg0, framesEncodedByEncoder) {
+}
+export function getClipSaveFailureAnalytics(arg0, framesEncodedByEncoder) {
   const tmp = getPostSaveClipAnalytics(arg0, framesEncodedByEncoder);
   ({ errorAt: tmp.error_at, errorMessage: tmp.error_message } = framesEncodedByEncoder);
   return tmp;
-};
-export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite) {
+}
+export function trackClipEdited(editMetadata, isFavorite) {
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef5840(isFavorite, tmp)) {
+    if (!_modDef5842(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -319,7 +319,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef5840(name, tmp5)) {
+    if (!_modDef5842(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -339,7 +339,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef5840(start1, start)) {
+    if (!_modDef5842(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -355,7 +355,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef5840(end1, end)) {
+    if (!_modDef5842(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -371,7 +371,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef5840(applicationAudio1, applicationAudio)) {
+    if (!_modDef5842(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -387,7 +387,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef5840(voiceAudio1, voiceAudio)) {
+    if (!_modDef5842(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -403,7 +403,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef5840(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5842(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -425,7 +425,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef5840(preset1, preset)) {
+    if (!_modDef5842(preset1, preset)) {
       tmp31 = preset1;
     }
   }
@@ -445,4 +445,4 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
     const merged1 = Object.assign(obj);
     AnalyticsUtilsDefault.track(AnalyticEvents.CLIP_EDITED, obj4);
   }
-};
+}

@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/tips/native/ConjureBotPermissionsTip.tsx
-import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureTipHintDefault from "ConjureTipHint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -41,7 +41,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -72,7 +72,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } catch (tmp10) {
             v3 = tmp;
             throw tmp10;
@@ -98,8 +98,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function BotPermissionsHint(projectId) {
       projectId = projectId.projectId;
-      dependencyMap = noop.useContext(projectId(11803).ConjurePublishActionContext);
-      let obj = { icon: projectId(10992).ShieldIcon, children: null };
+      dependencyMap = noop.useContext(projectId(11857).ConjurePublishActionContext);
+      let obj = { icon: projectId(11027).ShieldIcon, children: null };
       const intl = projectId(1125).intl;
       const obj2 = { onReview: null };
       importDefault = asyncGeneratorStep(async () => {
@@ -113,7 +113,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -144,7 +144,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } catch (tmp10) {
             v3 = tmp;
             throw tmp10;
@@ -161,11 +161,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return applyArgumentsResult;
       };
-      obj.children = intl.format(_modDef3863["0S9HY8"], obj2);
-      return jsx(ConjureTipHintDefault, { icon: projectId(10992).ShieldIcon, children: null });
+      obj.children = intl.format(_modDef3864["0S9HY8"], obj2);
+      return jsx(ConjureTipHintDefault, { icon: projectId(11027).ShieldIcon, children: null });
     };
 let obj2 = {};
-const merged = Object.assign(fn(12381).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12435).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj2.render = function render(arg0, context) {
   return <closure_6 projectId={context.context.projectId} />;
 };

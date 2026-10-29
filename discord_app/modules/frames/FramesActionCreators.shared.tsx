@@ -25,7 +25,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_13 = async function _launchFrame(arg0) {
             closure_130_12 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -269,7 +269,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10803);
+    obj2 = obj2(10879);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -297,7 +297,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -445,7 +445,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6834);
 ({
   FrameIntent: metroRequire,
   FrameLayoutModes: closure_7,
@@ -453,12 +453,12 @@ const FramesConstants = fn(6811);
   isLaunched: closure_9,
   makeFrameId: c10,
 } = FramesConstants);
-const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const ActivityPanelModes = fn(5646).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
-export const launchFrame = function launchFrame() {
+export function launchFrame() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -467,21 +467,21 @@ export const launchFrame = function launchFrame() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { clearMainFrameSlot };
 export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
-export const setFrameRunsInBackground = function setFrameRunsInBackground(id, enabled) {
+export function setFrameRunsInBackground(id, enabled) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: id, enabled });
-};
-export const setFrameUserMuted = function setFrameUserMuted(frameId, muted) {
-  DispatcherDefault.dispatch({ type: "FRAME_SET_USER_MUTED", frameId, muted });
-};
-export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
+}
+export function setFrameUserMuted(id, muted) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_USER_MUTED", frameId: id, muted });
+}
+export function updateFramePanelMode(id, PIP) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });
-};
-export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
+}
+export function resetFrameLayoutModes(frameId) {
   const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
     const obj2 = {
@@ -494,20 +494,20 @@ export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
   }
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL });
   const obj4 = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL };
-};
-export const attachFrameIframe = function attachFrameIframe(id, first1) {
+}
+export function attachFrameIframe(id, first1) {
   DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId: first1 });
-};
-export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
+}
+export function detachFrameIframe(frameId, iframeId) {
   DispatcherDefault.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId });
-};
-export const attachFrameHostWindow = function attachFrameHostWindow(frameId, windowKey) {
+}
+export function attachFrameHostWindow(frameId, windowKey) {
   DispatcherDefault.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId, windowKey });
-};
-export const detachFrameHostWindow = function detachFrameHostWindow(frameId, windowKey) {
+}
+export function detachFrameHostWindow(frameId, windowKey) {
   DispatcherDefault.dispatch({ type: "FRAME_HOST_WINDOW_UNMOUNT", frameId, windowKey });
-};
-export const refreshProxyTicket = function refreshProxyTicket() {
+}
+export function refreshProxyTicket() {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -516,4 +516,4 @@ export const refreshProxyTicket = function refreshProxyTicket() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

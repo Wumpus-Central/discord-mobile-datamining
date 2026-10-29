@@ -15,14 +15,14 @@ const apexExperiment = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/guild_space/GuildSpaceExperiment.tsx");
 
 export const GuildSpaceExperiment = apexExperiment;
-export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEnabled(id, GuildSettingsModalOverview) {
+export function getGuildSpaceExperimentEnabled(id, GuildSettingsModalOverview) {
   let enabled = null != id;
   if (enabled) {
     const obj = { guildId: id, location: GuildSettingsModalOverview };
     enabled = apexExperiment.getConfig(obj).enabled;
   }
   return enabled;
-};
+}
 export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildSpaceExperimentEnabled(arg0, location) {
       let tmp = arg0;

@@ -36,7 +36,7 @@ export const GuildSettingsRoleEditSections = {
   [3]: "VERIFICATIONS",
 };
 export { ERROR_KEY_TO_LABEL_FUNC };
-export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
+export function getSettingsErrorMessage(arg0) {
   if (0 === Object.keys(arg0).length) {
     return null;
   } else {
@@ -54,5 +54,5 @@ export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
     }
     return combined;
   }
-};
+}
 export const VANITY_URL_INVITE_ENDPOINT = "https://discord.gg";

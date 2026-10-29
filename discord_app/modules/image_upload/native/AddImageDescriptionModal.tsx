@@ -9,10 +9,11 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7666).DraftType;
+const DraftType = fn(7689).DraftType;
+const maxLength = fn(14439).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5004);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5005);
 let obj2 = {
   contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   imageContainer: null,
@@ -25,14 +26,14 @@ let size = { width: "100%", resizeMode: "contain", height: "Array", borderRadius
 obj2.image = size;
 let obj4 = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
 obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
-let closure_12 = createStyles.createStyles(obj2);
+let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AddDescription(id) {
-      const cResult = channelId(stateFromStores[9]).c(45);
+      const cResult = channelId(stateFromStores[10]).c(45);
       ({ source, channelId } = id);
       id = id.id;
-      closure_12();
+      closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UploadAttachmentStore];
         cResult[0] = items;
@@ -44,7 +45,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === id) {
           let tmp7 = cResult[3];
         }
-        stateFromStores = channelId(tmp2[10]).useStateFromStores(first, tmp7);
+        stateFromStores = channelId(tmp2[11]).useStateFromStores(first, tmp7);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { ignoreKeyboard: true };
@@ -54,7 +55,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[4];
         }
         ({ width, height } = source);
-        id(tmp2[11])(tmp9);
+        id(tmp2[12])(tmp9);
         let str;
         if (stateFromStores != null) {
           str = stateFromStores.description;
@@ -70,10 +71,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp13 = first1(noop.useState(str), 2);
         first1 = tmp13[0];
         noop = obj4.useRef(first1);
-        const tmpResult = channelId(tmp2[10]);
+        const tmpResult = channelId(tmp2[11]);
         const ref = noop.useRef(null);
         const ref1 = noop.useRef(null);
-        const navigation = channelId(tmp2[12]).useNavigation();
+        const navigation = channelId(tmp2[13]).useNavigation();
         const _Symbol2 = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { includeKeyboardHeight: true };
@@ -82,7 +83,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp19 = cResult[5];
         }
-        const insets = tmp10(tmp2[13])(tmp19).insets;
+        const insets = tmp10(tmp2[14])(tmp19).insets;
         const _Symbol3 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj5 = { ref, offset: { type: "toBottom" } };
@@ -100,7 +101,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp21 = cResult[8];
         }
-        id(tmp2[14])(tmp21);
+        id(tmp2[15])(tmp21);
         if (cResult[9] !== first1) {
           class V {
             constructor() {
@@ -134,16 +135,16 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const fn = function z() {
           navigation.setOptions({
             headerRight(arg0) {
-              const intl = channelId(stateFromStores[16]).intl;
-              const renderHeaderTextButton = channelId(stateFromStores[15]).getRenderHeaderTextButton(
-                intl.string(channelId(stateFromStores[16]).t["R3BPH+"]),
+              const intl = channelId(stateFromStores[17]).intl;
+              const renderHeaderTextButton = channelId(stateFromStores[16]).getRenderHeaderTextButton(
+                intl.string(channelId(stateFromStores[17]).t["R3BPH+"]),
                 () => {
                   const obj2 = {};
                   const merged = Object.assign(dependencyMap);
                   obj2.description = ref.current;
-                  id(9699).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                  const obj = id(9699);
-                  id(14204).close();
+                  id(9731).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                  const obj = id(9731);
+                  id(14437).close();
                 },
               );
               let merged = Object.assign(arg0);
@@ -158,7 +159,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = stateFromStores;
         cResult[16] = items3;
         cResult[17] = fn;
-        const tmpResult2 = channelId(tmp2[12]);
+        const tmpResult2 = channelId(tmp2[13]);
       }
       class R {
         constructor() {
@@ -169,7 +170,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = id;
       cResult[3] = R;
       tmp7 = R;
-      let obj = channelId(stateFromStores[9]);
+      let obj = channelId(stateFromStores[10]);
     }
   : function AddDescription(id) {
       ({ source, channelId } = id);
@@ -178,14 +179,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       value = undefined;
       noop = undefined;
       let navigation;
-      const tmp = closure_12();
+      const tmp = closure_13();
       const items = [UploadAttachmentStore];
-      stateFromStores = channelId(stateFromStores[10]).useStateFromStores(items, () =>
+      stateFromStores = channelId(stateFromStores[11]).useStateFromStores(items, () =>
         UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage),
       );
       ({ width, height } = source);
       let num = 1;
-      let obj = channelId(stateFromStores[10]);
+      let obj = channelId(stateFromStores[11]);
       if (null != width) {
         num = 1;
         if (null != height) {
@@ -210,13 +211,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       noop = obj2.useRef(value);
       const ref = noop.useRef(null);
       const ref1 = noop.useRef(null);
-      const tmp6 = id(stateFromStores[11])({ ignoreKeyboard: true });
-      navigation = channelId(stateFromStores[12]).useNavigation();
-      const insets = tmp5(tmp3[13])({ includeKeyboardHeight: true }).insets;
+      const tmp6 = id(stateFromStores[12])({ ignoreKeyboard: true });
+      navigation = channelId(stateFromStores[13]).useNavigation();
+      const insets = tmp5(tmp3[14])({ includeKeyboardHeight: true }).insets;
       const obj3 = { insets, inputs: null, scrollViewRef: ref1 };
       const items1 = [{ ref, offset: { type: "toBottom" } }];
       obj3.inputs = items1;
-      id(stateFromStores[14])(obj3);
+      id(stateFromStores[15])(obj3);
       const items2 = [value];
       const effect = obj2.useEffect(() => {
         closure_4.current = current;
@@ -225,16 +226,16 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const effect1 = obj2.useEffect(() => {
         navigation.setOptions({
           headerRight(arg0) {
-            const intl = channelId(stateFromStores[16]).intl;
-            const renderHeaderTextButton = channelId(stateFromStores[15]).getRenderHeaderTextButton(
-              intl.string(channelId(stateFromStores[16]).t["R3BPH+"]),
+            const intl = channelId(stateFromStores[17]).intl;
+            const renderHeaderTextButton = channelId(stateFromStores[16]).getRenderHeaderTextButton(
+              intl.string(channelId(stateFromStores[17]).t["R3BPH+"]),
               () => {
                 const obj2 = {};
                 const merged = Object.assign(dependencyMap);
                 obj2.description = ref.current;
-                id(9699).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                const obj = id(9699);
-                id(14204).close();
+                id(9731).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                const obj = id(9731);
+                id(14437).close();
               },
             );
             let merged = Object.assign(arg0);
@@ -243,17 +244,17 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         });
       }, items3);
       const obj4 = { ref: ref1, style: tmp.contentContainer, contentContainerStyle: null, children: null };
-      const tmp2Result = channelId(stateFromStores[12]);
+      const tmp2Result = channelId(stateFromStores[13]);
       obj4.contentContainerStyle = {
-        padding: id(stateFromStores[7]).space.PX_16,
-        paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
+        padding: id(stateFromStores[8]).space.PX_16,
+        paddingBottom: insets.bottom + id(stateFromStores[8]).space.PX_16,
       };
       const obj6 = { style: tmp.imageContainer, children: null };
       const obj7 = { style: null, source: { uri: source.uri } };
       const items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
       obj7.style = items4;
-      obj6.children = closure_10(closure_6, obj7);
-      const items5 = [closure_10(navigation, obj6)];
+      obj6.children = closure_11(closure_6, obj7);
+      const items5 = [closure_11(navigation, obj6)];
       const obj8 = {
         ref,
         containerStyle: null,
@@ -262,24 +263,25 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         value: null,
         onChange: null,
         placeholderTextColor: null,
-        maxLength: 1000,
+        maxLength: null,
         autoFocus: true,
       };
       const obj5 = {
-        padding: id(stateFromStores[7]).space.PX_16,
-        paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
+        padding: id(stateFromStores[8]).space.PX_16,
+        paddingBottom: insets.bottom + id(stateFromStores[8]).space.PX_16,
       };
-      obj8.containerStyle = { paddingTop: id(stateFromStores[7]).space.PX_16 };
-      let intl = tmp2(tmp3[16]).intl;
-      obj8.label = intl.string(channelId(stateFromStores[16]).t.eOB2eR);
-      const intl2 = tmp2(tmp3[16]).intl;
-      obj8.placeholder = intl2.string(channelId(stateFromStores[16]).t.RNH1jn);
+      obj8.containerStyle = { paddingTop: id(stateFromStores[8]).space.PX_16 };
+      let intl = tmp2(tmp3[17]).intl;
+      obj8.label = intl.string(channelId(stateFromStores[17]).t.eOB2eR);
+      const intl2 = tmp2(tmp3[17]).intl;
+      obj8.placeholder = intl2.string(channelId(stateFromStores[17]).t.RNH1jn);
       obj8.value = value;
       obj8.onChange = tmp7[1];
       obj8.placeholderTextColor = tmp.placeholderText.color;
-      items5[1] = closure_10(channelId(stateFromStores[19]).TextArea, obj8);
+      obj8.maxLength = maxLength;
+      items5[1] = closure_11(channelId(stateFromStores[20]).TextArea, obj8);
       obj4.children = items5;
-      return closure_11(closure_7, obj4);
+      return closure_12(closure_7, obj4);
     };
 ReactCompilerGating = fn(558);
 let obj5 = { color: nativeDefault.colors.TEXT_MUTED };
@@ -288,13 +290,13 @@ const result = size.fileFinishedImporting("modules/image_upload/native/AddImageD
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function AddImageDescriptionModal(source) {
-      const cResult = source(id[9]).c(5);
+      const cResult = source(id[10]).c(5);
       source = source.source;
       const channelId = source.channelId;
       id = source.id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(tmp2[16]).intl;
-        const stringResult = intl.string(tmp(tmp2[16]).t["5S2AK+"]);
+        const intl = tmp(tmp2[17]).intl;
+        const stringResult = intl.string(tmp(tmp2[17]).t["5S2AK+"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -308,11 +310,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp6;
         }
       }
-      const tmp7 = closure_10(channelId(id[20]), {
+      const tmp7 = closure_11(channelId(id[21]), {
         screenKey: "addImageDescriptionModal",
         title: first,
         render() {
-          return v65535(closure_13, { source, channelId, id });
+          return closure_2_11(closure_14, { source, channelId, id });
         },
       });
       cResult[1] = channelId;
@@ -327,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.title = intl.string(util.t["5S2AK+"]);
       obj.render = function render() {
-        return v65535(closure_13, { source, channelId, id });
+        return closure_2_11(closure_14, { source, channelId, id });
       };
-      return closure_10(ModalStackNavigatorDefault, obj);
+      return closure_11(ModalStackNavigatorDefault, obj);
     };

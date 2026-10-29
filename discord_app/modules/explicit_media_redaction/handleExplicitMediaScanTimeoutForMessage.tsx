@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx",
 );
 
-export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
+export function handleExplicitMediaScanTimeoutForMessage(message) {
   let attachments = message.attachments;
   let embeds = message.embeds;
   const attachments1 = attachments.map((item) => {
@@ -95,4 +95,4 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
     }
   }
   return message.merge({ attachments: attachments1, embeds: embeds1, components, messageSnapshots: messageSnapshots1 });
-};
+}

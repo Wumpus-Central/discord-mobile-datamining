@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/history/ConjureChatRestore.tsx");
 
-export const turnRestoreEntry = function turnRestoreEntry(message) {
+export function turnRestoreEntry(message) {
   let tmp = null;
   if ("assistant" === message.role) {
     tmp = null;
@@ -17,7 +17,7 @@ export const turnRestoreEntry = function turnRestoreEntry(message) {
     }
   }
   return tmp;
-};
-export const proposalRestoreEntry = function proposalRestoreEntry(sha) {
+}
+export function proposalRestoreEntry(sha) {
   return { sha: sha.sha, authorName: "", authorEmail: "", authoredAt: sha.authored_at, subject: sha.subject };
-};
+}

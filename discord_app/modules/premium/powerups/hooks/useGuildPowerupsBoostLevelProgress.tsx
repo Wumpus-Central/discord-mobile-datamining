@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       return num + tmp.available;
     };
-export const getGuildPowerupBoostLevelProgress = function getGuildPowerupBoostLevelProgress(id) {
+export function getGuildPowerupBoostLevelProgress(id) {
   const guildPowerupsBoostCount = useGuildPowerupsBoostCount.getGuildPowerupsBoostCount(id);
   guild = GuildStore.getGuild(id);
   let premiumTier;
@@ -147,4 +147,4 @@ export const getGuildPowerupBoostLevelProgress = function getGuildPowerupBoostLe
     premiumTier = constants.NONE;
   }
   return dependencyMap[premiumTier] + guildPowerupsBoostCount.available;
-};
+}

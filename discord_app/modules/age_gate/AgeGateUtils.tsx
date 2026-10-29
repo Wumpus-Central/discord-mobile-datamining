@@ -576,7 +576,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
       const tmpResult4 = require("initialize");
       let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-        tmp(6694).AgeGatedFeature.AGE_GATED_SPACES,
+        tmp(6718).AgeGatedFeature.AGE_GATED_SPACES,
       );
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];
@@ -1292,7 +1292,7 @@ function isCurrentUserMissingDateOfBirth() {
 let result = size.fileFinishedImporting("modules/age_gate/AgeGateUtils.tsx");
 
 export const SERVER_AGE_GATE_SOURCES = set;
-export const userNeedsAgeGate = function userNeedsAgeGate() {
+export function userNeedsAgeGate() {
   const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
@@ -1303,17 +1303,17 @@ export const userNeedsAgeGate = function userNeedsAgeGate() {
     tmp2 = null == currentUser.nsfwAllowed;
   }
   return tmp2;
-};
-export const guildNeedsAgeGate = function guildNeedsAgeGate(nsfwLevel) {
+}
+export function guildNeedsAgeGate(nsfwLevel) {
   return items.includes(nsfwLevel.nsfwLevel);
-};
+}
 export const useAgeGateVerifyContentForGuild = tmp6;
 export const useAgeGateVerifyContent = tmp7;
 export { shouldShowAgeGateForCurrentUser };
 export { shouldShowAgeGateForGuildContentLevel };
 export { shouldShowAgeGateForChannelId };
 export { shouldShowAgeGateForVoiceChannel };
-export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoiceChannel(id) {
+export function maybeOpenAgeGateForVoiceChannel(id) {
   let result = shouldAgeVerifyForAgeGate2.shouldAgeVerifyForAgeGate();
   if (result) {
     const currentUser = UserStore.getCurrentUser();
@@ -1340,8 +1340,8 @@ export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoice
     const tmpResult2 = AgeGateModalActionCreators;
   }
   return flag3;
-};
-export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JOIN_LARGE_GUILD_UNDERAGE) {
+}
+export function maybeShowAgeGate(guildId, channelId, JOIN_LARGE_GUILD_UNDERAGE) {
   const currentUser = UserStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
@@ -1394,9 +1394,9 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       AgeGateModalActionCreators.openAgeGateModal(NSFW_CHANNEL);
     }
   }
-};
+}
 export const SOURCES_WITH_DOB = set1;
-export const getAgeGateType = function getAgeGateType(arg0) {
+export function getAgeGateType(arg0) {
   if (set1.has(arg0)) {
     return AgeGateType.DATE_OF_BIRTH;
   } else {
@@ -1418,22 +1418,22 @@ export const getAgeGateType = function getAgeGateType(arg0) {
     }
     obj = shouldAgeVerifyForAgeGate2;
   }
-};
+}
 export const isChannelOrGuildNSFW = NSFWContentGate.isChannelOrGuildNSFW;
 export const userCannotSeeNSFWContent = NSFWContentGate.userCannotSeeNSFWContent;
-export const isChannelAgeVerificationGated = function isChannelAgeVerificationGated(channel) {
+export function isChannelAgeVerificationGated(channel) {
   if (null == channel) {
     return false;
   } else {
     const result = AgeVerificationUtils.shouldShowTiggerPawtect();
     return NSFWContentGate.isChannelOrGuildNSFW(channel) && result;
   }
-};
+}
 export { isChannelContentGated };
 export const useIsChannelContentGated = tmp9;
 export const useShouldHideChannelContent = tmp10;
 export { isCurrentUserMissingDateOfBirth };
-export const shouldAgeVerifyForSettingsToggles = function shouldAgeVerifyForSettingsToggles() {
+export function shouldAgeVerifyForSettingsToggles() {
   let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
     AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE,
   );
@@ -1441,7 +1441,7 @@ export const shouldAgeVerifyForSettingsToggles = function shouldAgeVerifyForSett
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
-};
+}
 export const useShouldAgeVerifyForSettingsToggles = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldAgeVerifyForSettingsToggles() {
       let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(

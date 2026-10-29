@@ -9,6 +9,6 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/WindowsMediaFoundationCpuEncodeIntel.tsx");
 
-export const getWmfCpuEncodeIntel = function getWmfCpuEncodeIntel(MediaEngineStore) {
+export function getWmfCpuEncodeIntel(MediaEngineStore) {
   return config.getConfig({ location: MediaEngineStore });
-};
+}

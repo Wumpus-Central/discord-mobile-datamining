@@ -6,13 +6,13 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(12870);
+const Constants = fn(13091);
 ({ AutomodActionType: hasOwnProperty, AutomodTriggerType: metroRequire } = Constants);
-const getFriendlyDurationString = fn(4918).getFriendlyDurationString;
+const getFriendlyDurationString = fn(4919).getFriendlyDurationString;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/BaseActionInfo.tsx");
 
-export const getBaseActionInfo = function getBaseActionInfo(actionType, metadata, triggerType) {
+export function getBaseActionInfo(actionType, metadata, triggerType) {
   if (constants.BLOCK_MESSAGE !== actionType) {
     if (constants.FLAG_TO_CHANNEL !== actionType) {
       if (constants.USER_COMMUNICATION_DISABLED !== actionType) {
@@ -122,4 +122,4 @@ export const getBaseActionInfo = function getBaseActionInfo(actionType, metadata
     }
   }
   flag = true;
-};
+}

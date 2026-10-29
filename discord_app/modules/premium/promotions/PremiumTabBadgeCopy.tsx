@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/premium/promotions/PremiumTabBadgeCopy.tsx");
 
-export const getPremiumTabBadgeCopy = function getPremiumTabBadgeCopy(promotionMarketingComponent) {
+export function getPremiumTabBadgeCopy(promotionMarketingComponent) {
   if ("premiumTab" !== promotionMarketingComponent.properties.properties.oneofKind) {
     return null;
   } else {
@@ -27,4 +27,4 @@ export const getPremiumTabBadgeCopy = function getPremiumTabBadgeCopy(promotionM
       return null;
     }
   }
-};
+}

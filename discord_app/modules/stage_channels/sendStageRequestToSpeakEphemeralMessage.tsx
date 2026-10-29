@@ -7,11 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 ({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
 
-export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequestToSpeakEphemeralMessage(
-  channelId,
-  user,
-  requestToSpeakTimestamp,
-) {
+export function sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp) {
   const obj2 = {
     type: "MESSAGE_CREATE",
     channelId,
@@ -54,4 +50,4 @@ export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequest
   obj2.message = obj3;
   obj2.sendMessageOptions = {};
   obj.dispatch(obj2);
-};
+}

@@ -185,8 +185,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: null }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: null }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: "ix" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: "ix" }),
 };
 let closure_5 = {
   drain() {
@@ -200,7 +200,7 @@ const keys = Object.keys(obj);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewNativeSurfaces.tsx");
 
 export const ANSWERED_NATIVE_COMMANDS = keys;
-export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
+export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
   if (null == iframeId) {
     return closure_5;
   } else {
@@ -217,8 +217,8 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      let result = obj2(9301).setRpcCommandInterceptor(answerFor);
-      obj = obj2(9301);
+      let result = obj2(9305).setRpcCommandInterceptor(answerFor);
+      obj = obj2(9305);
     }
     const obj3 = {
       iframeId,
@@ -238,4 +238,4 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
     };
     return obj3;
   }
-};
+}

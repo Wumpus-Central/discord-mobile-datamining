@@ -11,7 +11,7 @@ const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 
-export const getToastEmojiEntity = function getToastEmojiEntity(id) {
+export function getToastEmojiEntity(id) {
   if (null != id.id) {
     const obj2 = { id: id.id, animated: null, size: null };
     const useReducedMotion = AccessibilityStore.useReducedMotion;
@@ -35,8 +35,8 @@ export const getToastEmojiEntity = function getToastEmojiEntity(id) {
     }
     return obj;
   }
-};
-export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
+}
+export function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
@@ -75,4 +75,4 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     ToastActionCreatorsDefault.open("DEFAULT_REACTION_EMOJI_UPDATED", obj4);
   }
   obj = useIsScreenReaderEnabled;
-};
+}

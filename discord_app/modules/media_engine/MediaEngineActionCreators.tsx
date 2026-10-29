@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 const result = size.fileFinishedImporting("modules/media_engine/MediaEngineActionCreators.tsx");
 
-export const setPushToTalkState = function setPushToTalkState(mediaEngine, first1, arg2) {
+export function setPushToTalkState(mediaEngine, first1, arg2) {
   closure_0 = first1;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -17,4 +17,4 @@ export const setPushToTalkState = function setPushToTalkState(mediaEngine, first
     (setForceAudioInput) => setForceAudioInput.setForceAudioInput(closure_0, flag, false),
     MediaEngineContextTypes.DEFAULT,
   );
-};
+}

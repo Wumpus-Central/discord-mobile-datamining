@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
 
-export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSettings) {
+export function cloneGuildThemeSettings(themeSettings) {
   let tmp = null;
   if (null != themeSettings) {
     const obj = { presetId: null, customUserThemeSettings: null };
@@ -28,8 +28,8 @@ export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSet
     tmp = obj;
   }
   return tmp;
-};
-export const cloneGuildTheme = function cloneGuildTheme(guildTheme) {
+}
+export function cloneGuildTheme(guildTheme) {
   let tmp = null;
   if (null != guildTheme) {
     const obj = { enabled: null, themeSettings: null };
@@ -61,8 +61,8 @@ export const cloneGuildTheme = function cloneGuildTheme(guildTheme) {
     tmp = obj;
   }
   return tmp;
-};
-export const toServerGuildThemeSettings = function toServerGuildThemeSettings(themeSettings) {
+}
+export function toServerGuildThemeSettings(themeSettings) {
   if (null == themeSettings) {
     let obj = { preset_id: null, custom_user_theme_settings: null };
   } else {
@@ -101,8 +101,8 @@ export const toServerGuildThemeSettings = function toServerGuildThemeSettings(th
     obj.custom_user_theme_settings = tmp2;
   }
   return obj;
-};
-export const fromServerGuildThemeSettings = function fromServerGuildThemeSettings(preset_id) {
+}
+export function fromServerGuildThemeSettings(preset_id) {
   let tmp = null;
   if (null != preset_id) {
     if (null != preset_id.preset_id) {
@@ -139,8 +139,8 @@ export const fromServerGuildThemeSettings = function fromServerGuildThemeSetting
     }
   }
   return tmp;
-};
-export const fromServerGuildTheme = function fromServerGuildTheme(theme) {
+}
+export function fromServerGuildTheme(theme) {
   let tmp = null;
   if (null != theme) {
     const obj = { enabled: theme.enabled, themeSettings: null };
@@ -183,4 +183,4 @@ export const fromServerGuildTheme = function fromServerGuildTheme(theme) {
     tmp = obj;
   }
   return tmp;
-};
+}

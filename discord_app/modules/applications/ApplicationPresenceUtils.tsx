@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
 
-export const shouldDisableUserPresenceInChannel = function shouldDisableUserPresenceInChannel(bot, channelId) {
+export function shouldDisableUserPresenceInChannel(bot, channelId) {
   const channel = ChannelStore.getChannel(channelId);
   let tmp = null != channel && bot.bot && channel.isPrivate();
   if (tmp) {
@@ -12,4 +12,4 @@ export const shouldDisableUserPresenceInChannel = function shouldDisableUserPres
     tmp = null == rawRecipients.find((id) => id.id === bot.id);
   }
   return tmp;
-};
+}

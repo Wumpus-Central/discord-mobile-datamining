@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const constants = ClientInfoUtils.getConstants();
 const result = size.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
-export const getAppMajorVersion = function getAppMajorVersion() {
+export function getAppMajorVersion() {
   if (undefined === closure_0) {
     return -1;
   } else {
@@ -17,4 +17,4 @@ export const getAppMajorVersion = function getAppMajorVersion() {
     }
     return num;
   }
-};
+}

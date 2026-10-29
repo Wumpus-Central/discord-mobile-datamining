@@ -67,19 +67,19 @@ let c7 = 0;
 let c8;
 let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadPullTabCache.tsx");
 
-export const getLaunchPadPullTabPositionCached = function getLaunchPadPullTabPositionCached() {
+export function getLaunchPadPullTabPositionCached() {
   const Storage = Storage2.Storage;
   value = Storage.get(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY);
   if (value == null) {
     value = React4;
   }
   return value;
-};
-export const setLaunchPadPullTabPositionCached = function setLaunchPadPullTabPositionCached(arg0) {
+}
+export function setLaunchPadPullTabPositionCached(arg0) {
   const Storage = Storage2.Storage;
   const result = Storage.set(LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY, arg0);
-};
-export const persistLaunchPadPullTabPosition = function persistLaunchPadPullTabPosition(arg0) {
+}
+export function persistLaunchPadPullTabPosition(arg0) {
   closure_0 = arg0;
   clearTimeout(timeout);
   timeout = setTimeout(() => {
@@ -89,8 +89,8 @@ export const persistLaunchPadPullTabPosition = function persistLaunchPadPullTabP
       setLaunchPadPullTabExclusionRect(closure_0);
     }
   }, 300);
-};
-export const clearLaunchPadPullTabExclusionRect = function clearLaunchPadPullTabExclusionRect() {
+}
+export function clearLaunchPadPullTabExclusionRect() {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != c8;
@@ -99,5 +99,5 @@ export const clearLaunchPadPullTabExclusionRect = function clearLaunchPadPullTab
     c8 = undefined;
     const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects([]);
   }
-};
+}
 export { setLaunchPadPullTabExclusionRect };

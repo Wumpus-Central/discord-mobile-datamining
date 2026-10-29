@@ -5,12 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
 
-export const canViewInviteModal = function canViewInviteModal(
-  PermissionStore,
-  guild,
-  channel1,
-  stageInstanceByChannel,
-) {
+export function canViewInviteModal(PermissionStore, guild, channel1, stageInstanceByChannel) {
   let tmp = channel1;
   if (channel1 == null) {
     tmp = guild;
@@ -31,4 +26,4 @@ export const canViewInviteModal = function canViewInviteModal(
     canResult = null != invite_code;
   }
   return canResult;
-};
+}

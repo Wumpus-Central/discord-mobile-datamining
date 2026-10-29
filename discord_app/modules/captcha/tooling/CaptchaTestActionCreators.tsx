@@ -17,7 +17,7 @@ let closure_4 = async function _testCaptcha() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -49,7 +49,7 @@ let closure_4 = async function _testCaptcha() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -78,7 +78,7 @@ export const HCaptchaDifficulty = {
   VERY_DIFFICULT: 4,
   [4]: "VERY_DIFFICULT",
 };
-export const testCaptcha = function testCaptcha() {
+export function testCaptcha() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -87,4 +87,4 @@ export const testCaptcha = function testCaptcha() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

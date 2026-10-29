@@ -16,7 +16,7 @@ let closure_6 = async function _signOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -48,7 +48,7 @@ let closure_6 = async function _signOrder(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -155,7 +155,7 @@ let closure_7 = async function _getOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -241,7 +241,7 @@ let closure_9 = async function _fetchOrderEntitlements(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -310,7 +310,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -357,7 +357,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -407,7 +407,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   } else {
                     closure_129_1 = value;
                     c3 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -542,7 +542,7 @@ let result = size.fileFinishedImporting("modules/payments/OrderActionCreators.ts
 
 export { OrderSigningFailedWithConstraintsError };
 export const OrderProcessingPendingError = prototype;
-export const signOrder = function signOrder() {
+export function signOrder() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -551,8 +551,8 @@ export const signOrder = function signOrder() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getOrder = function getOrder() {
+}
+export function getOrder() {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -561,9 +561,9 @@ export const getOrder = function getOrder() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { fetchOrderEntitlements };
-export const fetchOrderEntitlementsWithRetry = function fetchOrderEntitlementsWithRetry() {
+export function fetchOrderEntitlementsWithRetry() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -572,4 +572,4 @@ export const fetchOrderEntitlementsWithRetry = function fetchOrderEntitlementsWi
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

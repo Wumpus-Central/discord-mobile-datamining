@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileEditingAccessibilityUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2929 from "../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2930 from "../display_name_styles/intl/DisplayNameStyles.messages.js";
 import ProfilePendingImageTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 import useDisplayNameStylesEffectConfigs from "../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
 import getDisplayNameStylesFontNameDefault from "../display_name_styles/getDisplayNameStylesFontName.tsx";
@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileEditingAccessibilityUtils.tsx");
 
-export const getDisplayNameStyleAccessibleValue = function getDisplayNameStyleAccessibleValue(displayNameStyles) {
+export function getDisplayNameStyleAccessibleValue(displayNameStyles) {
   if (null == displayNameStyles) {
     const intl2 = util.intl;
     return intl2.string(util.t["3Xph0/"]);
@@ -17,7 +17,7 @@ export const getDisplayNameStyleAccessibleValue = function getDisplayNameStyleAc
     const intl4 = util.intl;
     let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[displayNameStyles.effectId];
     if (OpWJ3f == null) {
-      OpWJ3f = _modDef2929.OpWJ3f;
+      OpWJ3f = _modDef2930.OpWJ3f;
     }
     const colors = displayNameStyles.colors;
     const stringResult = intl3.string(getDisplayNameStylesFontNameDefault(displayNameStyles.fontId));
@@ -27,8 +27,8 @@ export const getDisplayNameStyleAccessibleValue = function getDisplayNameStyleAc
     const obj = { fontName: stringResult, effectName: intl4.string(OpWJ3f), colors: joined };
     return intl.formatToPlainString(util.t.Igwax6, obj);
   }
-};
-export const getBannerAccessibleValue = function getBannerAccessibleValue(bannerChange, currentProfileBanner) {
+}
+export function getBannerAccessibleValue(bannerChange, currentProfileBanner) {
   if (null !== bannerChange) {
     if (undefined === bannerChange) {
       return description;
@@ -42,8 +42,8 @@ export const getBannerAccessibleValue = function getBannerAccessibleValue(banner
   }
   const intl2 = util.intl;
   description = intl2.string(util.t["3Xph0/"]);
-};
-export const getAvatarAccessibleValue = function getAvatarAccessibleValue(avatarChange, avatar) {
+}
+export function getAvatarAccessibleValue(avatarChange, avatar) {
   if (null !== avatarChange) {
     if (undefined === avatarChange) {
       return description;
@@ -65,4 +65,4 @@ export const getAvatarAccessibleValue = function getAvatarAccessibleValue(avatar
   }
   const intl3 = util.intl;
   description = intl3.string(util.t["3Xph0/"]);
-};
+}

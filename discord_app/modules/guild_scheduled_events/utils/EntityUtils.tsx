@@ -1,12 +1,12 @@
 // discord_app/modules/guild_scheduled_events/utils/EntityUtils.tsx
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-const GuildScheduledEventsConstants = fn(4862);
+const GuildScheduledEventsConstants = fn(4863);
 ({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: c2 } = GuildScheduledEventsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
 
-export const getChannelFromEvent = function getChannelFromEvent(entity_type) {
+export function getChannelFromEvent(entity_type) {
   let tmp2 = entity_type.entity_type in React2;
   if (tmp2) {
     tmp2 = null != tmp;
@@ -17,8 +17,8 @@ export const getChannelFromEvent = function getChannelFromEvent(entity_type) {
     tmp4 = channel;
   }
   return tmp4;
-};
-export const getLocationFromEvent = function getLocationFromEvent(event) {
+}
+export function getLocationFromEvent(event) {
   const entity_metadata = event.entity_metadata;
   let tmp = event.entity_type === constants.EXTERNAL;
   if (tmp) {
@@ -32,8 +32,8 @@ export const getLocationFromEvent = function getLocationFromEvent(event) {
     _location = entity_metadata.location;
   }
   return _location;
-};
-export const getLocationFromEventData = function getLocationFromEventData(guildEvent) {
+}
+export function getLocationFromEventData(guildEvent) {
   const entityMetadata = guildEvent.entityMetadata;
   let tmp = guildEvent.entityType === constants.EXTERNAL;
   if (tmp) {
@@ -47,10 +47,10 @@ export const getLocationFromEventData = function getLocationFromEventData(guildE
     _location = entityMetadata.location;
   }
   return _location;
-};
-export const getChannelTypeFromEntity = function getChannelTypeFromEntity(entityType) {
+}
+export function getChannelTypeFromEntity(entityType) {
   if (entityType === constants.VOICE) {
     const tmp2 = React2[entityType];
   }
   return tmp2;
-};
+}

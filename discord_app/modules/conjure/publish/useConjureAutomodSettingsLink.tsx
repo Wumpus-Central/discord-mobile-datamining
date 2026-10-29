@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjureAutomodSettingsLink.tsx
-import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import GuildSettingsActionCreatorsDefault from "../../guild_settings/GuildSettingsActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -154,7 +154,7 @@ export const ConjureAutomodSettingsLink = ReactCompilerGating.isReactCompilerEna
         tmp5 = cResult[4];
       }
       const intl = guildId(1125).intl;
-      let formatResult = _modDef3863;
+      let formatResult = _modDef3864;
       formatResult = intl.format(update ? formatResult.esEGL5 : formatResult["XrN+Bg"], { onOpen: tmp5 });
       cResult[0] = guildId;
       cResult[1] = update;
@@ -164,7 +164,7 @@ export const ConjureAutomodSettingsLink = ReactCompilerGating.isReactCompilerEna
   : function ConjureAutomodSettingsLink(guildId) {
       guildId = guildId.guildId;
       const intl = guildId(1125).intl;
-      const tmp3 = _modDef3863;
+      const tmp3 = _modDef3864;
       const obj = { children: null };
       const items = [
         " ",

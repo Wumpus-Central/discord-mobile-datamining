@@ -14,17 +14,14 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
 
-export const getComboId = function getComboId(applicationId, branchId) {
+export function getComboId(applicationId, branchId) {
   return "" + applicationId + ":" + branchId;
-};
-export const convertComboId = function convertComboId(str) {
+}
+export function convertComboId(str) {
   const tmp = _slicedToArray(str.split(":"), 2);
   return { applicationId: tmp[0], branchId: tmp[1] };
-};
-export const shouldShareApplicationActivity = function shouldShareApplicationActivity(
-  application_id,
-  LibraryApplicationStore,
-) {
+}
+export function shouldShareApplicationActivity(application_id, LibraryApplicationStore) {
   const ShowCurrentGame = UserSettings.ShowCurrentGame;
   if (ShowCurrentGame.getSetting()) {
     const StatusSetting = UserSettings.StatusSetting;
@@ -38,15 +35,15 @@ export const shouldShareApplicationActivity = function shouldShareApplicationAct
     }
   }
   return false;
-};
-export const calculateProgressPercentage = function calculateProgressPercentage(arg0, arg1) {
+}
+export function calculateProgressPercentage(arg0, arg1) {
   let num = 100;
   if (0 !== arg1) {
     num = (arg0 / arg1) * 100;
   }
   return num;
-};
-export const shouldShowGameInLibrary = function shouldShowGameInLibrary(arg0, hasFlag, enabled) {
+}
+export function shouldShowGameInLibrary(arg0, hasFlag, enabled) {
   let tmp = null != hasFlag;
   if (tmp) {
     enabled = enabled.enabled;
@@ -60,8 +57,8 @@ export const shouldShowGameInLibrary = function shouldShowGameInLibrary(arg0, ha
     tmp = tmp3;
   }
   return tmp;
-};
-export const convertToTransitionState = function convertToTransitionState(type) {
+}
+export function convertToTransitionState(type) {
   let tmp = null;
   if (null != type) {
     if (type.type !== constants2.INSTALLING) {
@@ -73,8 +70,8 @@ export const convertToTransitionState = function convertToTransitionState(type) 
     tmp3 = type;
   }
   return tmp;
-};
-export const getCombinedProgress = function getCombinedProgress(arr) {
+}
+export function getCombinedProgress(arr) {
   return arr.reduce(
     (total, type) => {
       let tmp = null;
@@ -103,11 +100,11 @@ export const getCombinedProgress = function getCombinedProgress(arr) {
     },
     { total: 0, progress: 0 },
   );
-};
-export const isUserEntitledToLibraryApplication = function isUserEntitledToLibraryApplication(libraryApplication) {
+}
+export function isUserEntitledToLibraryApplication(libraryApplication) {
   let isEntitledResult = libraryApplication.isDiscordApplication();
   if (isEntitledResult) {
     isEntitledResult = libraryApplication.isEntitled(UserStore.getCurrentUser(), SKUStore);
   }
   return isEntitledResult;
-};
+}

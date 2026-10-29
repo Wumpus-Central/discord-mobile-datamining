@@ -4,10 +4,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 
-export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(
-  streamingMembers,
-  arg1,
-) {
+export function areVoicePanelPreJoinContentPropsEqual(streamingMembers, arg1) {
   if (null != streamingMembers) {
     if (null != arg1) {
       if (discord_common_shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
@@ -39,4 +36,4 @@ export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJo
     }
   }
   return streamingMembers === arg1;
-};
+}

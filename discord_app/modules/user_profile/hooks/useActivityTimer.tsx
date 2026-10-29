@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = first1(576).c(9);
       start = start.start;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const interval = new tmp(4851).Interval();
+        const interval = new tmp(4852).Interval();
         cResult[0] = interval;
         let first = interval;
       } else {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function useActivityTimer(start) {
       start = start.start;
       let first;
-      const interval = new first(4851).Interval();
+      const interval = new first(4852).Interval();
       first = _slicedToArray(closure_5(interval), 1)[0];
       const tmp3 = _slicedToArray(
         closure_5(() => Date.now()),
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const bound = Math.max(Math.min(diff1 / DurationsDefault.Millis.SECOND, result), 0);
       return { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
     };
-export const formatTime = function formatTime(duration) {
+export function formatTime(duration) {
   const rounded = Math.floor(duration);
   const result = rounded % DurationsDefault.Seconds.MINUTE;
   const rounded1 = Math.floor(duration / DurationsDefault.Seconds.MINUTE);
@@ -119,12 +119,12 @@ export const formatTime = function formatTime(duration) {
     const StringResult4 = String(result);
   }
   return combined;
-};
-export const formatTimeForA11yLabel = function formatTimeForA11yLabel(arg0) {
+}
+export function formatTimeForA11yLabel(arg0) {
   const rounded = Math.floor(arg0);
   const seconds = rounded % DurationsDefault.Seconds.MINUTE;
   const rounded1 = Math.floor(arg0 / DurationsDefault.Seconds.MINUTE);
   const minutes = rounded1 % DurationsDefault.Seconds.MINUTE;
   const hours = Math.floor(arg0 / DurationsDefault.Seconds.HOUR);
   return utils.formatTimestampToA11yLabel({ hours, minutes, seconds });
-};
+}

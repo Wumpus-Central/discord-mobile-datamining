@@ -11,13 +11,13 @@ const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1627);
+const MetaQuestUtils = fn(1628);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13689).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13922).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18928).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19161).MobilePhoneShareIcon;
 }
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let closure_8 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",

@@ -12,7 +12,7 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4874).isGuildOwner;
+const isGuildOwner = fn(4875).isGuildOwner;
 const Constants = fn(1084);
 ({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
 fn(558);
@@ -215,7 +215,7 @@ function createOrUpdateModeratorOverwrite(id, type, deny) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
 
-export const createModeratorOverwrite = function createModeratorOverwrite(id, MEMBER, arg2) {
+export function createModeratorOverwrite(id, MEMBER, arg2) {
   let tmp;
   if (arg2 != null) {
     tmp = arg2.permissionOverwrites[id];
@@ -238,9 +238,9 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
   }
   obj.allow = BigFlagUtilsAll.combine(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
-};
+}
 export { createOrUpdateModeratorOverwrite };
-export const removeModeratorOverwrite = function removeModeratorOverwrite(id, MEMBER, name) {
+export function removeModeratorOverwrite(id, MEMBER, name) {
   let tmp;
   if (name != null) {
     tmp = name.permissionOverwrites[id];
@@ -263,8 +263,8 @@ export const removeModeratorOverwrite = function removeModeratorOverwrite(id, ME
   }
   obj.allow = BigFlagUtilsAll.remove(allow, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   return obj;
-};
-export const isEmptyOverwrite = function isEmptyOverwrite(id) {
+}
+export function isEmptyOverwrite(id) {
   ({ allow, deny } = id);
   let equalsResult = BigFlagUtilsAll.equals(allow, PermissionUtilsAll.NONE);
   if (equalsResult) {
@@ -272,7 +272,7 @@ export const isEmptyOverwrite = function isEmptyOverwrite(id) {
     const tmpResult = BigFlagUtilsAll;
   }
   return equalsResult;
-};
+}
 export const useCanCreateStageChannelByGuild = tmp3;
 export const useCanUpdateStageChannelModerators = tmp4;
 export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerEnabled()
@@ -323,7 +323,7 @@ export const useCanModerateRequestToSpeak = ReactCompilerGating.isReactCompilerE
         items1,
       );
     };
-export const canLurkerListen = function canLurkerListen(channel) {
+export function canLurkerListen(channel) {
   const tmp = null == channel || !channel.isGuildStageVoice();
   let tmp2 = !tmp;
   if (!tmp) {
@@ -338,4 +338,4 @@ export const canLurkerListen = function canLurkerListen(channel) {
     tmp2 = isLurkingResult;
   }
   return tmp2;
-};
+}

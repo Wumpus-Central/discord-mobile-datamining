@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting(
   "design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx",
 );
 
-export const getGradientThemeFromFlags = function getGradientThemeFromFlags(primaryColor) {
+export function getGradientThemeFromFlags(primaryColor) {
   native;
   let str = "dark";
   if (!hasThemeFlagResult) {
@@ -17,4 +17,4 @@ export const getGradientThemeFromFlags = function getGradientThemeFromFlags(prim
     str = str2;
   }
   return str;
-};
+}

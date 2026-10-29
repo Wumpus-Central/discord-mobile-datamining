@@ -3,14 +3,14 @@ import c from "../../../_runtime/00576_c.js";
 import LabFeatureStore from "../labs/LabFeatureStore.tsx";
 
 require = fn;
-let ApexExperiment = fn(1452);
+let ApexExperiment = fn(1453);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2025-04-native-markdown",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1452);
+ApexExperiment = fn(1453);
 const apexExperiment1 = ApexExperiment.createApexExperiment({
   name: "2026-10-native-markdown-setting",
   kind: "user",
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/markup_v2/NativeMarkdownExper
 export const NativeMarkdownExperiment = apexExperiment;
 export const NativeMarkdownSettingExperiment = apexExperiment1;
 export const NATIVE_MARKDOWN_LAB_FEATURE = "enable_native_markdown";
-export const isNativeMarkdownEnabled = function isNativeMarkdownEnabled(location, arg1) {
+export function isNativeMarkdownEnabled(location, arg1) {
   const _location = location.location;
   if (apexExperiment1.getConfig({ location: _location }, arg1).enabled) {
     let enabled = LabFeatureStore.get(enable_native_markdown);
@@ -34,7 +34,7 @@ export const isNativeMarkdownEnabled = function isNativeMarkdownEnabled(location
     enabled = apexExperiment.getConfig(obj, arg1).enabled;
   }
   return enabled;
-};
+}
 export const useNativeMarkdown = ReactCompilerGating.isReactCompilerEnabled()
   ? function useNativeMarkdown(location) {
       const cResult = c.c(6);

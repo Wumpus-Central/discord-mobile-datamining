@@ -5,7 +5,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(15364);
+const MidjourneyOnboardingConstants = fn(15598);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const ReactCompilerGating = fn(558);
 function isMidjourneyOnboardingFlow() {
@@ -87,7 +87,7 @@ export const useIsMidjourneyOnboardingFlow = ReactCompilerGating.isReactCompiler
         return 1 === guildStore.getGuildCount() && tmp3;
       }, []);
     };
-export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyRedirect(channel) {
+export function isEligibleForMidjourneyRedirect(channel) {
   let isDMResult = channel.isDM();
   if (isDMResult) {
     isDMResult = 1 === channel.rawRecipients.length;
@@ -117,8 +117,8 @@ export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyR
     const tmp10 = 1 === guildStore.getGuildCount() && tmp8;
   }
   return isDMResult;
-};
-export const hasRedirectedToGuild = function hasRedirectedToGuild(arg0) {
+}
+export function hasRedirectedToGuild(arg0) {
   closure_0 = arg0;
   return new Promise((fn, arg1) => {
     closure_0 = fn;
@@ -143,4 +143,4 @@ export const hasRedirectedToGuild = function hasRedirectedToGuild(arg0) {
       fn();
     }
   });
-};
+}

@@ -7,7 +7,7 @@ import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 require = fn;
-const createExecutable = fn(2021).createExecutable;
+const createExecutable = fn(2022).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -202,7 +202,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(coverImageSize) {
+prototype["getCoverURL"] = function getCoverURL(rounded) {
   const media = this.media;
   let cover;
   if (media != null) {
@@ -212,7 +212,7 @@ prototype["getCoverURL"] = function getCoverURL(coverImageSize) {
   if (AvatarUtils.SUPPORTS_WEBP) {
     str = "webp";
   }
-  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size: coverImageSize });
+  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size: rounded });
 };
 prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   const self = this;
@@ -262,8 +262,8 @@ prototype["getScreenshotURLs"] = function getScreenshotURLs(arg0) {
   const mapped = screenshotUrls.map((item, index) => self.getScreenshotURL(index, closure_0));
   return mapped.filter(GlobalUtils.isNotNullish);
 };
-prototype["getCompanyByRole"] = function getCompanyByRole(PUBLISHER) {
-  closure_0 = PUBLISHER;
+prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
+  closure_0 = DEVELOPER;
   const companies = this.companies;
   let found;
   if (companies != null) {

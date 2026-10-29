@@ -66,18 +66,18 @@ const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx",
 );
 
-export const getJoinButtonLabels = function getJoinButtonLabels() {
+export function getJoinButtonLabels() {
   const intl = util.intl;
   const items = [intl.string(util.t.b6wEe6)];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.i8o9hX);
   return items;
-};
-export const getRenewButtonLabels = function getRenewButtonLabels() {
+}
+export function getRenewButtonLabels() {
   const intl = util.intl;
   const items = [intl.string(util.t.vqnToc)];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t["9yh+dM"]);
   return items;
-};
+}
 export const STICKERS = items;

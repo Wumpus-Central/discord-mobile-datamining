@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
 
 export default { getUploadPayload };
-export const prepareMessagePayload = function prepareMessagePayload(Authorization, arr, arg2, arg3) {
+export function prepareMessagePayload(Authorization, arr, arg2, arg3) {
   const items = [];
   const item = arr.forEach((item, index) => {
     const merged = Object.assign(UploadUtils.getAttachmentPayload(item, index));
@@ -53,5 +53,5 @@ export const prepareMessagePayload = function prepareMessagePayload(Authorizatio
   result = {};
   const merged1 = Object.assign(arg2);
   result.attachments = items;
-};
+}
 export { getUploadPayload };

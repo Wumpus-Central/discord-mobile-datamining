@@ -9,12 +9,12 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj = {
   list: { flex: 1 },
   listContent: { paddingBottom: 88 },
   loadingContainer: { paddingVertical: 80, alignItems: "center" },
-  header: { paddingHorizontal: fn(14754).GUTTER_SIZE, paddingBottom: 5 },
+  header: { paddingHorizontal: fn(14989).GUTTER_SIZE, paddingBottom: 5 },
 };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -58,7 +58,7 @@ let closure_10 = noop.memo(
       },
 );
 ReactCompilerGating = fn(558);
-let obj3 = { paddingHorizontal: fn(14754).GUTTER_SIZE, paddingBottom: 5 };
+let obj3 = { paddingHorizontal: fn(14989).GUTTER_SIZE, paddingBottom: 5 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
@@ -277,7 +277,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
             const obj = { type: "header", key: "header-" + header.section, header: header.header };
             const obj2 = items(12);
             const item = items(12)
-              .chunk(header.items, items(14754).ROW_SIZE)
+              .chunk(header.items, items(14989).ROW_SIZE)
               .forEach((items, index) => {
                 items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
               });

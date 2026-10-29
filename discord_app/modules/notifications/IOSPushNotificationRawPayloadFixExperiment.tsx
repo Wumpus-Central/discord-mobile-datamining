@@ -15,10 +15,9 @@ const config = ApexExperiment.createApexExperiment(obj);
 let enabled = null;
 const result = size.fileFinishedImporting("modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx");
 
-export const isIOSPushNotificationRawPayloadFixExperimentEnabled =
-  function isIOSPushNotificationRawPayloadFixExperimentEnabled() {
-    if (null == enabled) {
-      enabled = config.getConfig({ location: "isIOSPushNotificationRawPayloadFixExperiment" }).enabled;
-    }
-    return enabled;
-  };
+export function isIOSPushNotificationRawPayloadFixExperimentEnabled() {
+  if (null == enabled) {
+    enabled = config.getConfig({ location: "isIOSPushNotificationRawPayloadFixExperiment" }).enabled;
+  }
+  return enabled;
+}

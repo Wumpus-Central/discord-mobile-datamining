@@ -11,7 +11,7 @@ const Constants = fn(1084);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 
-export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
+export function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {
     guild = GuildStore.getGuild(guildId);
     const currentUser = UserStore.getCurrentUser();
@@ -44,4 +44,4 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
     return false;
   }
   obj = PlatformUtils;
-};
+}

@@ -3,6 +3,6 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/icymi/generateHydrationId.tsx");
 
-export const generateHydrationId = function generateHydrationId(startingIndex, endingIndex) {
+export function generateHydrationId(startingIndex, endingIndex) {
   return "hydration-" + startingIndex + "-" + endingIndex;
-};
+}

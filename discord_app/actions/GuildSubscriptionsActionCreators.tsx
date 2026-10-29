@@ -5,25 +5,25 @@ import size from "../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
-export const subscribeMembers = function subscribeMembers(guildId, userIds) {
+export function subscribeMembers(guildId, userIds) {
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds });
-};
-export const unsubscribeMembers = function unsubscribeMembers(guildId, userIds) {
+}
+export function unsubscribeMembers(guildId, userIds) {
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds });
-};
-export const subscribeToMemberUpdates = function subscribeToMemberUpdates(guildId) {
+}
+export function subscribeToMemberUpdates(guildId) {
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId });
-};
-export const unsubscribeFromMemberUpdates = function unsubscribeFromMemberUpdates(guildId) {
+}
+export function unsubscribeFromMemberUpdates(guildId) {
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId });
-};
-export const subscribeGuild = function subscribeGuild(guildId) {
+}
+export function subscribeGuild(guildId) {
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS", guildId });
-};
-export const subscribeChannel = function subscribeChannel(guildId, channelId, ranges) {
+}
+export function subscribeChannel(guildId, channelId, ranges) {
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges });
-};
-export const subscribeChannelDimensions = function subscribeChannelDimensions(arg0) {
+}
+export function subscribeChannelDimensions(arg0) {
   ({ y, height, rowHeight } = arg0);
   ({ guildId, channelId } = arg0);
   const bound = Math.max(0, Math.ceil(Math.ceil((0.5 * height) / rowHeight)));
@@ -55,4 +55,4 @@ export const subscribeChannelDimensions = function subscribeChannelDimensions(ar
   }
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });
   const tmp2 = -bound;
-};
+}

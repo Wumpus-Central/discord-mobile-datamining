@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureQueuedMessage.tsx");
 
-export const queuedMessageActionHandler = function queuedMessageActionHandler(projectId, message, stateFromStores) {
+export function queuedMessageActionHandler(projectId, message, stateFromStores) {
   closure_0 = projectId;
   if ("user" === message.role) {
     if ("queued" === message.disposition) {
@@ -15,4 +15,4 @@ export const queuedMessageActionHandler = function queuedMessageActionHandler(pr
       }
     }
   }
-};
+}

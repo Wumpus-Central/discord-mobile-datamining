@@ -11,10 +11,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx",
 );
 
-export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(
-  roleStyle,
-  type,
-) {
+export function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const tmp5 = formatUsernameOnClickDefault({
@@ -58,4 +55,4 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: privateChannelIntegrationAddedSystemMessageASTContent };
-};
+}

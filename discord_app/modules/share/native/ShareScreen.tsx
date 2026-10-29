@@ -25,15 +25,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4860);
+const ChannelRecord = fn(4861);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12962).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10651).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(13183).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10684).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -118,7 +118,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -211,7 +211,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             }
                           } else {
                             try {
@@ -233,7 +233,7 @@ export default function ShareScreen(appEntryKey) {
                                   let channel2;
                                   c5 = 1;
                                   c6 = 1;
-                                  return { value: "Reflect", done: true };
+                                  return { value: "Reflect", done: null };
                                 }
                               } else if (1 === tmp7) {
                                 if (arg0 === 1) {
@@ -383,7 +383,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_6(false);
               closure_129_7.current = false;
               React = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (arg0 === 1) {
             React = 3;

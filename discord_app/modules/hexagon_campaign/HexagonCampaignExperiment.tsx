@@ -40,9 +40,9 @@ const result1 = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCamp
 
 export const HexagonCampaignClientExperiment = apexExperiment;
 export const useIsHexagonCampaignEnabled = tmp3;
-export const getIsHexagonCampaignEnabled = function getIsHexagonCampaignEnabled(location) {
+export function getIsHexagonCampaignEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
-};
+}
 export const useIsHexagonCampaignQuestHomeRedirectEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsHexagonCampaignQuestHomeRedirectEnabled(location) {
       const cResult = c.c(5);
@@ -79,12 +79,10 @@ export const useIsHexagonCampaignQuestHomeRedirectEnabled = ReactCompilerGating.
       }
       return tmp2;
     };
-export const useIsHexagonCampaignQuestHomeHeaderEnabled = function useIsHexagonCampaignQuestHomeHeaderEnabled(
-  HexagonCampaignQuestHomeHeader,
-) {
+export function useIsHexagonCampaignQuestHomeHeaderEnabled(HexagonCampaignQuestHomeHeader) {
   let tmp = closure_3(HexagonCampaignQuestHomeHeader);
   if (tmp) {
     tmp = !HexagonCampaignUtils.isHexagonCampaignTakeoverOver();
   }
   return tmp;
-};
+}

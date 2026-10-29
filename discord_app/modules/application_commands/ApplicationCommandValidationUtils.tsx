@@ -61,13 +61,7 @@ function validateOptionContent(allowEmptyValues) {
 const getValidationErrorText = ApplicationCommandConstants.getValidationErrorText;
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
 
-export const getValidationResults = function getValidationResults(
-  activeCommand,
-  optionValues,
-  guild_id,
-  id,
-  allowEmptyValues,
-) {
+export function getValidationResults(activeCommand, optionValues, guild_id, id, allowEmptyValues) {
   const obj = {};
   const options = activeCommand.options;
   if (null == options) {
@@ -86,5 +80,5 @@ export const getValidationResults = function getValidationResults(
     }
     return obj;
   }
-};
+}
 export { validateOptionContent };

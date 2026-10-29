@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return num2;
       });
     };
-export const updateSortOrder = function updateSortOrder(screenKey, down) {
+export function updateSortOrder(screenKey, down) {
   const items = [...DevToolsSettingsStore.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
@@ -151,4 +151,4 @@ export const updateSortOrder = function updateSortOrder(screenKey, down) {
   }
   tmp2 = getSortedDevToolsScreens()[Symbol.iterator]();
   const result = DevToolsActionCreators.updateDevToolsSettings({ sortedScreenKeys: items });
-};
+}

@@ -13,7 +13,7 @@ export default function isAuthorizedAppTwoWay(arg0) {
   }
   return hasItem;
 }
-export const useShouldWarnAuthorizedAppTwoWay = function useShouldWarnAuthorizedAppTwoWay(id) {
+export function useShouldWarnAuthorizedAppTwoWay(id) {
   let hasItem = ConsoleOAuthApplications.ConsoleOAuthApplications.XBOX_APPLICATION_ID === id;
   if (!hasItem) {
     const PLAYSTATION_APPLICATION_IDS =
@@ -21,4 +21,4 @@ export const useShouldWarnAuthorizedAppTwoWay = function useShouldWarnAuthorized
     hasItem = PLAYSTATION_APPLICATION_IDS.has(id);
   }
   return hasItem;
-};
+}

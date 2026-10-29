@@ -116,8 +116,8 @@ export const useMessageJumpAndroidKeyboardHeight = ReactCompilerGating.isReactCo
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let num2 = 0;
         if (tmpResult.isAndroid()) {
-          num2 = tmp(1896).getSystemKeyboardHeight();
-          const tmpResult2 = tmp(1896);
+          num2 = tmp(1897).getSystemKeyboardHeight();
+          const tmpResult2 = tmp(1897);
         }
         cResult[0] = num2;
         let first = num2;

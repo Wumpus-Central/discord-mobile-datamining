@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
-export const questHomeHeroFromServer = function questHomeHeroFromServer(creative_content) {
+export function questHomeHeroFromServer(creative_content) {
   creative_content = creative_content.creative_content;
   const obj = {
     id: creative_content.id,
@@ -62,4 +62,4 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(creative
   obj.features = features;
   ({ starts_at: obj.startsAt, ends_at: obj.endsAt } = creative_content);
   return obj;
-};
+}

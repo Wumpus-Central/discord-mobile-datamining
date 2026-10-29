@@ -310,7 +310,7 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsProtoStore.tsx");
 
 export default notifSettingsProtoStore;
-export const createPendingEdit = function createPendingEdit() {
+export function createPendingEdit() {
   const obj = { partialSettings: null, offlineEditDataVersion: null };
   const DeclarativeSettings = notification_settings.DeclarativeSettings;
   obj.partialSettings = DeclarativeSettings.create();
@@ -324,4 +324,4 @@ export const createPendingEdit = function createPendingEdit() {
   }
   obj.offlineEditDataVersion = num;
   return obj;
-};
+}

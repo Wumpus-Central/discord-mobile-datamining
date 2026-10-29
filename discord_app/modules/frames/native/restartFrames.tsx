@@ -37,12 +37,12 @@ function restartFrame(item10016) {
     invite,
   });
 }
-const isLaunched = fn(6811).isLaunched;
+const isLaunched = fn(6834).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 
 export { restartFrame };
-export const restartAppFrames = function restartAppFrames(application_id) {
+export function restartAppFrames(application_id) {
   closure_0 = application_id;
   if (null != application_id) {
     const items = [];
@@ -53,4 +53,4 @@ export const restartAppFrames = function restartAppFrames(application_id) {
       continue;
     }
   }
-};
+}

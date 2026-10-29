@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
 
-export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlaybackStarted(
+export function logMediaAttachmentPlaybackStarted(
   messageChannel,
   found,
   totalDurationSecs,
@@ -34,8 +34,8 @@ export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlay
   obj2.start_duration_secs = Math.min(tmp, startDurationSecs);
   obj2.sender_user_id = id;
   AnalyticsUtilsDefault.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, obj2);
-};
-export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlaybackEnded(
+}
+export function logMediaAttachmentPlaybackEnded(
   messageId,
   totalDurationSecs,
   endDurationSecs,
@@ -60,4 +60,4 @@ export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlayba
   obj2.duration_listening_secs = durationListeningSecs;
   obj2.type = found.content_type;
   AnalyticsUtilsDefault.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_ENDED, obj2);
-};
+}

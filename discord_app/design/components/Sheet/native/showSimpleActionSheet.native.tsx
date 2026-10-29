@@ -4,7 +4,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
-export const showSimpleActionSheet = function showSimpleActionSheet(key) {
+export function showSimpleActionSheet(key) {
   key = key.key;
   const merged = Object.assign(key, Object.assign({ key: 0, stackingBehavior: 0 }));
   const obj = ActionSheetActionCreatorsDefault;
@@ -13,5 +13,5 @@ export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   obj2.hideActionSheet = function hideActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
-  obj.openLazy(key(1999)(7328, dependencyMap.paths), key, obj2, key.stackingBehavior);
-};
+  obj.openLazy(key(2000)(7352, dependencyMap.paths), key, obj2, key.stackingBehavior);
+}

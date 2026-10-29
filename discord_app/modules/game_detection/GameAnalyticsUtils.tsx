@@ -7,7 +7,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
 
-export const removeExecutablePathPrefix = function removeExecutablePathPrefix(exePath) {
+export function removeExecutablePathPrefix(exePath) {
   const formatted = exePath.toLowerCase();
   let str = formatted;
   if (formatted.endsWith("/")) {
@@ -16,17 +16,17 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
   const parts = str.split("/");
   const substr = parts.slice(-2);
   return substr.join("/");
-};
-export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
+}
+export function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
     return {
-      gameName: "Array",
+      gameName: "guildId",
       gameId: "ix",
-      exe: "c",
-      distributor: "",
-      sku: "IconComponent",
-      gameMetadata: "__packager_asset",
-      rawExePath: "set",
+      exe: "alignItems",
+      distributor: "diversity",
+      sku: "ix",
+      gameMetadata: "defineProperty",
+      rawExePath: "guildId",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
@@ -88,12 +88,8 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     obj2.rawExePath = str;
     return obj2;
   }
-};
-export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(
-  currentGameForAnalytics,
-  arg1,
-  detected_game_id,
-) {
+}
+export function getGameAnalyticsMetadata(currentGameForAnalytics, arg1, detected_game_id) {
   if (arg1) {
     if (null != detected_game_id) {
       const _JSON = JSON;
@@ -103,8 +99,8 @@ export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(
     return json;
   }
   json = RobloxSubgameUtils.getSubgameMetadata(currentGameForAnalytics);
-};
-export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, arr) {
+}
+export function isVerifiedGameExecutable(str, arr) {
   if (null != str) {
     if (null != arr) {
       const formatted = str.toLowerCase();
@@ -127,4 +123,4 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
     }
   }
   return false;
-};
+}

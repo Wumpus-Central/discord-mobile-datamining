@@ -124,7 +124,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/experiments/
 
 export const ServerThemeExperiment = experiment;
 export { resolveServerThemeConfig };
-export const getServerThemeEnabled = function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
+export function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
   let currentConfig = experiment.getCurrentConfig(
     { guildId, location: GuildPowerupsConstants },
     { autoTrackExposure: false },
@@ -143,9 +143,9 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
     currentConfig = defaultConfig;
   }
   return currentConfig.enabled;
-};
+}
 export const useServerThemeEnabled = tmp3;
-export const getServerThemeRollbackEnabled = function getServerThemeRollbackEnabled(guildId, GuildPowerupsManager) {
+export function getServerThemeRollbackEnabled(guildId, GuildPowerupsManager) {
   let currentConfig = experiment.getCurrentConfig(
     { guildId, location: GuildPowerupsManager },
     { autoTrackExposure: false },
@@ -164,7 +164,7 @@ export const getServerThemeRollbackEnabled = function getServerThemeRollbackEnab
     currentConfig = defaultConfig;
   }
   return currentConfig.rollbackEnabled;
-};
+}
 export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? function useServerThemeRollbackEnabled(guildId, location) {
       const cResult = c.c(11);

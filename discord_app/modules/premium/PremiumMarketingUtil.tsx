@@ -8,13 +8,13 @@ import size from "../../../_runtime/metro/00002__.js";
 ({ Routes: c2, UserSettingsSections: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");
 
-export const navigateToPremiumHomePage = function navigateToPremiumHomePage() {
+export function navigateToPremiumHomePage() {
   openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
-};
-export const navigateToNitroHomePage = function navigateToNitroHomePage(fn) {
+}
+export function navigateToNitroHomePage(fn) {
   if (fn != null) {
     fn();
   }
   LayerActionCreators.popLayer();
   router_utils.transitionTo(constants.APPLICATION_STORE);
-};
+}

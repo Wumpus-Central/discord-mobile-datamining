@@ -4,11 +4,11 @@ import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4922).GuildMemberFlags;
+const GuildMemberFlags = fn(4923).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
 
-export const waitForOnboardingCompletion = function waitForOnboardingCompletion(guildId) {
+export function waitForOnboardingCompletion(guildId) {
   closure_0 = guildId;
   return new Promise((arg0) => {
     closure_0 = arg0;
@@ -31,4 +31,4 @@ export const waitForOnboardingCompletion = function waitForOnboardingCompletion(
       return flag;
     });
   });
-};
+}

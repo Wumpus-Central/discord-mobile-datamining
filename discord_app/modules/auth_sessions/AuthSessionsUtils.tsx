@@ -1,6 +1,6 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import AuthSessionsStore from "AuthSessionsStore.tsx";
@@ -83,14 +83,14 @@ export const useAuthSessions = ReactCompilerGating.isReactCompilerEnabled()
         return { currentSession, otherSessions };
       }, items1);
     };
-export const formatDate = function formatDate(arg0) {
+export function formatDate(arg0) {
   const timestamp = Date.now();
   if ((timestamp - arg0.valueOf()) / 1000 / 60 / 60 < 1) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef2046(arg0).fromNow();
-    const obj = _modDef2046(arg0);
+    stringResult = _modDef2047(arg0).fromNow();
+    const obj = _modDef2047(arg0);
   }
   return stringResult;
-};
+}

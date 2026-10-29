@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/activate_device/ActivateDeviceUtils.tsx");
 
-export const clientIdToActivateDevicePlatform = function clientIdToActivateDevicePlatform(clientId) {
+export function clientIdToActivateDevicePlatform(clientId) {
   if (clientId === ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID) {
     let PLAYSTATION = PlatformTypes.PLAYSTATION;
   } else {
@@ -16,4 +16,4 @@ export const clientIdToActivateDevicePlatform = function clientIdToActivateDevic
     }
   }
   return PLAYSTATION;
-};
+}

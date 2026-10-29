@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
-import _modDef2535 from "FamilyCenter.messages.js";
+import _modDef2536 from "FamilyCenter.messages.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import utils_PriceUtils from "../../../discord_common/js/shared/utils/PriceUtils.tsx";
 import SpendingLimitUtils from "SpendingLimitUtils.tsx";
@@ -36,7 +36,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = util.intl;
         const obj4 = { amount: PriceUtils.formatPrice(diff, currency) };
-        obj3.remainingText = intl.formatToPlainString(_modDef2535["+Q+bU1"], obj4);
+        obj3.remainingText = intl.formatToPlainString(_modDef2536["+Q+bU1"], obj4);
         let obj = obj3;
         const tmp5Result = PriceUtils;
       } else {

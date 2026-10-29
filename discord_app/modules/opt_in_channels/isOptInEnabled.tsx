@@ -125,7 +125,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/opt_in_channels/isOptInEnabled.tsx");
 
 export const useOptInEnabledForGuild = tmp3;
-export const isOptInEnabledForGuild = function isOptInEnabledForGuild(guild_id) {
+export function isOptInEnabledForGuild(guild_id) {
   guild = GuildStore.getGuild(guild_id);
   const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != guild_id && null != guild && null != currentUser;
@@ -138,7 +138,7 @@ export const isOptInEnabledForGuild = function isOptInEnabledForGuild(guild_id) 
     tmp2 = isOptInEnabledResult;
   }
   return tmp2;
-};
+}
 export const useShouldShowOnboardingAdminUpsellForGuild = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShouldShowOnboardingAdminUpsellForGuild(arg0) {
       _require = arg0;

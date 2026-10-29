@@ -6,7 +6,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import VirtualCurrencyStore from "../virtual_currency/stores/VirtualCurrencyStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const orbs_arcade_game_state = tmp(16664);
+const orbs_arcade_game_state = tmp(16902);
 require = fn;
 function handleBalanceChange(balance) {
   balance = balance.balance;
@@ -33,9 +33,8 @@ let fetchedAt = null;
 let c4 = false;
 let orbsArcadeGames = [];
 new Map();
-new Set();
 let set = new Set();
-let set1 = new Set();
+let c8 = null;
 let map = new Map();
 let balance = null;
 const Store = initializeDefault.Store;
@@ -86,8 +85,14 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
 prototype["isClaimingRewards"] = function isClaimingRewards(id) {
   return set.has(id);
 };
+Object.defineProperty(prototype, "isLaunchingAnyGame", {
+  get: function isLaunchingAnyGame() {
+    return null != c8;
+  },
+  set: undefined,
+});
 prototype["isLaunchingGame"] = function isLaunchingGame(id) {
-  return set.has(id);
+  return c8 === id;
 };
 Object.defineProperty(prototype, "heldRunChargeTotal", {
   get: function heldRunChargeTotal() {
@@ -198,14 +203,16 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     }
   },
   ORBS_ARCADE_LAUNCH_GAME_BEGIN: function handleLaunchGameBegin(gameId) {
-    set = new Set(set);
-    set = set.add(gameId.gameId);
+    gameId = gameId.gameId;
     map = new Map();
     balance = VirtualCurrencyStore.balance;
   },
   ORBS_ARCADE_LAUNCH_GAME_END: function handleLaunchGameEnd(gameId) {
-    set = new Set(set);
-    set.delete(gameId.gameId);
+    if (c8 !== gameId.gameId) {
+      return false;
+    } else {
+      c8 = null;
+    }
   },
   VIRTUAL_CURRENCY_BALANCE_UPDATE: handleBalanceChange,
   VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS: handleBalanceChange,
@@ -215,9 +222,8 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     c4 = false;
     orbsArcadeGames = [];
     new Map();
-    new Set();
     set = new Set();
-    const set1 = new Set();
+    c8 = null;
     map = new Map();
     balance = null;
   },

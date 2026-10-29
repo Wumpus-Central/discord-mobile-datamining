@@ -22,13 +22,7 @@ const processColor = _mod17.processColor;
 const MessageTypes = Constants.MessageTypes;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/ExecutedCommand.tsx");
 
-export const createExecutedCommand = function createExecutedCommand(
-  message,
-  channel,
-  roleStyle,
-  forcedTheme,
-  defaultUsernameColor,
-) {
+export function createExecutedCommand(message, channel, roleStyle, forcedTheme, defaultUsernameColor) {
   let tmp = null != message.activityInstance;
   if (tmp) {
     tmp = undefined !== message.activityInstance;
@@ -282,4 +276,4 @@ export const createExecutedCommand = function createExecutedCommand(
       avatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(obj19, user2);
     }
   }
-};
+}

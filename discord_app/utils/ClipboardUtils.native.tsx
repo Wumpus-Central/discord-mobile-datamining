@@ -1,5 +1,5 @@
 // discord_app/utils/ClipboardUtils.native.tsx
-import _modDef7322 from "../../_runtime/metro/07322__.js";
+import _modDef7346 from "../../_runtime/metro/07346__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_3 = async function _copy(arg0) {
@@ -13,7 +13,7 @@ let closure_3 = async function _copy(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -27,7 +27,7 @@ let closure_3 = async function _copy(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          _modDef7322.setString(closure_0);
+          _modDef7346.setString(closure_0);
           if (dependencyMap != null) {
             dependencyMap();
           }
@@ -45,7 +45,7 @@ let closure_3 = async function _copy(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -57,7 +57,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/ClipboardUtils.native.tsx");
 
 export const SUPPORTS_COPY = true;
-export const copy = function copy() {
+export function copy() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -66,7 +66,7 @@ export const copy = function copy() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getString = function getString() {
-  return _modDef7322.getString();
-};
+}
+export function getString() {
+  return _modDef7346.getString();
+}

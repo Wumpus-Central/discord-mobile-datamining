@@ -8,7 +8,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
 
-export const fetchUserCustomThemes = function fetchUserCustomThemes() {
+export function fetchUserCustomThemes() {
   if (!SavedCustomThemeStore.isFetching()) {
     DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
     const HTTP = HTTPUtils.HTTP;
@@ -41,4 +41,4 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     });
   }
-};
+}

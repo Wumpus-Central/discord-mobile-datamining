@@ -14,7 +14,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_5 = async function _showReportModal(arg0) {
           closure_131_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -122,7 +122,7 @@ const IN_APP_REPORT_MODAL_KEY = "IN_APP_REPORT_MODAL_KEY";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
 
-export const showReportModal = function showReportModal() {
+export function showReportModal() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -131,7 +131,7 @@ export const showReportModal = function showReportModal() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const hideReportModal = function hideReportModal() {
+}
+export function hideReportModal() {
   ModalActionCreatorsDefault.popWithKey(IN_APP_REPORT_MODAL_KEY);
-};
+}

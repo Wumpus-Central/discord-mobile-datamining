@@ -95,7 +95,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -124,7 +124,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                           c3 = 1;
                           ref = 2;
                           v3 = 1;
-                          const obj7 = { value: tmp5(9832).loadInAppSkus(differenceResult), done: false };
+                          const obj7 = { value: tmp5(9864).loadInAppSkus(differenceResult), done: false };
                           return obj7;
                         }
                       }
@@ -139,8 +139,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_128_1 = closure_2;
                   logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
                   v3("Unable to fetch");
-                  const result = tmp5(4820).captureBillingException(closure_128_1);
-                  const obj3 = tmp5(4820);
+                  const result = tmp5(4821).captureBillingException(closure_128_1);
+                  const obj3 = tmp5(4821);
                 } else if (arg0 === 1) {
                   v3 = 3;
                   throw value;
@@ -225,7 +225,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -254,7 +254,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                           c3 = 1;
                           ref = 2;
                           v3 = 1;
-                          const obj7 = { value: closure_2_0(9832).loadInAppSkus(differenceResult), done: false };
+                          const obj7 = { value: closure_2_0(9864).loadInAppSkus(differenceResult), done: false };
                           return obj7;
                         }
                       }
@@ -270,8 +270,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_128_1 = closure_2;
                   logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
                   v3("Unable to fetch");
-                  const result = closure_2_0(4820).captureBillingException(closure_128_1);
-                  const obj3 = closure_2_0(4820);
+                  const result = closure_2_0(4821).captureBillingException(closure_128_1);
+                  const obj3 = closure_2_0(4821);
                 } else if (arg0 === 1) {
                   v3 = 3;
                   throw value;
@@ -355,8 +355,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== arg0) {
         const fn2 = function b() {
           c0 = true;
-          const obj = closure_0(9832);
-          ({ settled, release: closure_1 } = closure_0(9832).retainInAppSkus(c0));
+          const obj = closure_0(9864);
+          ({ settled, release: closure_1 } = closure_0(9864).retainInAppSkus(c0));
           settled.then(() => {
             if (c0) {
               importDefault((arg0) => {
@@ -472,8 +472,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       const effect = noop.useEffect(() => {
         c0 = true;
-        const obj = closure_0(9832);
-        ({ settled, release: first } = closure_0(9832).retainInAppSkus(c0));
+        const obj = closure_0(9864);
+        ({ settled, release: first } = closure_0(9864).retainInAppSkus(c0));
         settled.then(() => {
           if (c0) {
             closure_2((arg0) => {

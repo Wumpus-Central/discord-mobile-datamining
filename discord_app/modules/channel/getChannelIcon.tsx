@@ -9,7 +9,7 @@ const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 
-export const getChannelIconURL = function getChannelIconURL(type) {
+export function getChannelIconURL(type) {
   let num = size2;
   if (size2 === undefined) {
     num = 32;
@@ -31,8 +31,8 @@ export const getChannelIconURL = function getChannelIconURL(type) {
     obj3.size = num;
     return AvatarUtilsDefault.getChannelIconURL(obj3);
   }
-};
-export const getChannelIconSource = function getChannelIconSource(type) {
+}
+export function getChannelIconSource(type) {
   type = type.type;
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
@@ -49,4 +49,4 @@ export const getChannelIconSource = function getChannelIconSource(type) {
     obj3.applicationId = type.getApplicationId();
     return AvatarUtilsDefault.getChannelIconSource(obj3);
   }
-};
+}

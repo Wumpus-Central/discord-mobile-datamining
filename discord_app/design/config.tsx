@@ -7,6 +7,6 @@ const designConfig = {
 const result = size.fileFinishedImporting("design/config.tsx");
 
 export { designConfig };
-export const setDesignConfig = function setDesignConfig(arg0) {
+export function setDesignConfig(arg0) {
   const merged = Object.assign(obj, arg0);
-};
+}

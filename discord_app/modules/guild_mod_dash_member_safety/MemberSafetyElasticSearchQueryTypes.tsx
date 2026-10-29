@@ -8,7 +8,7 @@ const result1 = size.fileFinishedImporting(
 );
 
 export const UNUSUAL_DM_COMPARISON_DELTA = result;
-export const createMemberSearchCursor = function createMemberSearchCursor(joinedAt) {
+export function createMemberSearchCursor(joinedAt) {
   joinedAt = joinedAt.joinedAt;
   let tmp2 = null;
   if (null != joinedAt) {
@@ -20,7 +20,7 @@ export const createMemberSearchCursor = function createMemberSearchCursor(joined
     tmp2 = obj;
   }
   return tmp2;
-};
+}
 export const OrderBy = {
   ORDER_BY_UNSPECIFIED: 0,
   [0]: "ORDER_BY_UNSPECIFIED",

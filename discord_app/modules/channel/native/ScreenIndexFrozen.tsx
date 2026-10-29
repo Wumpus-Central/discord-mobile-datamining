@@ -23,14 +23,14 @@ function removeFrozenScreenIndexesChangedListener(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ScreenIndexFrozen.tsx");
 
-export const freezeScreenIndex = function freezeScreenIndex(shouldFreeze, arg1) {
+export function freezeScreenIndex(shouldFreeze, arg1) {
   if (shouldFreeze) {
     set.add(arg1);
   } else {
     set.delete(arg1);
   }
   const item = set1.forEach((fn) => fn());
-};
+}
 export { isScreenIndexFrozen };
 export { addFrozenScreenIndexesChangedListener };
 export { removeFrozenScreenIndexesChangedListener };

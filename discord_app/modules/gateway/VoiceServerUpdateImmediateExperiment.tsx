@@ -14,9 +14,7 @@ obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
 
-export const isVoiceServerUpdateImmediateEnabled = function isVoiceServerUpdateImmediateEnabled(
-  GatewaySocketDispatcher,
-) {
+export function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
   let flag;
   if (config != null) {
     const obj2 = { location: GatewaySocketDispatcher };
@@ -26,4 +24,4 @@ export const isVoiceServerUpdateImmediateEnabled = function isVoiceServerUpdateI
     flag = false;
   }
   return flag;
-};
+}

@@ -22,7 +22,13 @@ function useStateFromStores(items, cResult, items1) {
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: cResult, prevDeps: "Boolean", state: "ix" };
+    const obj = {
+      stores: items,
+      areStatesEqual: tmp,
+      getStateFromStores: cResult,
+      prevDeps: "Boolean",
+      state: "toCharArray$esjava$1",
+    };
     tmp2.current = obj;
   }
   current = tmp2.current;
@@ -72,9 +78,9 @@ export function statesWillNeverBeEqual() {
   return false;
 }
 export { useStateFromStores };
-export const useStateFromStoresObject = function useStateFromStoresObject(items, cResult, items1) {
+export function useStateFromStoresObject(items, cResult, items1) {
   return useStateFromStores(items, cResult, items1, discord_common_shallowEqualDefault);
-};
-export const useStateFromStoresArray = function useStateFromStoresArray(items, cResult, items1) {
+}
+export function useStateFromStoresArray(items, cResult, items1) {
   return useStateFromStores(items, cResult, items1, discord_common_shallowEqual.areArraysShallowEqual);
-};
+}

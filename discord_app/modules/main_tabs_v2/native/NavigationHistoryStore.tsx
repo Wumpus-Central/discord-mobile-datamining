@@ -112,7 +112,7 @@ export default navigationHistoryStore;
 export const CHANNEL_PREFIX = "channel-";
 export const GUILD_PREFIX = "guild-";
 export { getIdFromHistoryItem };
-export const handleHistoryStoreNavigationChange = function handleHistoryStoreNavigationChange() {
+export function handleHistoryStoreNavigationChange() {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     const currentRoute = rootNavigationRef.getCurrentRoute();
@@ -194,7 +194,7 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
       }
     }
   }
-};
+}
 export function getNavigationHistory() {
   return closure_6;
 }

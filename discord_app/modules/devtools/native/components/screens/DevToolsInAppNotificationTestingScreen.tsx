@@ -223,12 +223,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(4860).createChannelRecord;
+const createChannelRecord = fn(4861).createChannelRecord;
 const Constants = fn(1084);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -708,15 +708,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj2.children = options.map((label) => {
               closure_0 = label;
               return closure_1_14(
-                first(6939).TableRow,
+                first(6963).TableRow,
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(17218).BeakerIcon, {}),
+                  icon: closure_1_14(first(17457).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
-                  trailing: closure_1_14(first(6948).TableRowArrow, {}),
+                  trailing: closure_1_14(first(6972).TableRowArrow, {}),
                 },
                 label.label,
               );
@@ -744,21 +744,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: items3.map((label) => {
               closure_0 = label;
               return closure_1_14(
-                first(6939).TableRow,
+                first(6963).TableRow,
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(17218).BeakerIcon, {}),
+                  icon: closure_1_14(first(17457).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
-                  trailing: closure_1_14(first(6948).TableRowArrow, {}),
+                  trailing: closure_1_14(first(6972).TableRowArrow, {}),
                 },
                 label.label,
               );
             }),
           };
-          const tmp20 = closure_14(tmp(7023).TableRowGroup, obj4);
+          const tmp20 = closure_14(tmp(7047).TableRowGroup, obj4);
           cResult[8] = tmp20;
           let tmp17 = tmp20;
         } else {
@@ -812,15 +812,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = options.map((label) => {
             closure_0 = label;
             return closure_1_14(
-              closure_1_0(6939).TableRow,
+              closure_1_0(6963).TableRow,
               {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(closure_1_0(17218).BeakerIcon, {}),
+                icon: closure_1_14(closure_1_0(17457).BeakerIcon, {}),
                 onPress() {
                   return closure_2_0(closure_0);
                 },
-                trailing: closure_1_14(closure_1_0(6948).TableRowArrow, {}),
+                trailing: closure_1_14(closure_1_0(6972).TableRowArrow, {}),
               },
               label.label,
             );
@@ -839,15 +839,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         children: items3.map((label) =>
           closure_1_14(
-            label(6939).TableRow,
+            label(6963).TableRow,
             {
               label: label.label,
               subLabel: label.subLabel,
-              icon: closure_1_14(label(17218).BeakerIcon, {}),
+              icon: closure_1_14(label(17457).BeakerIcon, {}),
               onPress() {
                 return label(label);
               },
-              trailing: closure_1_14(label(6948).TableRowArrow, {}),
+              trailing: closure_1_14(label(6972).TableRowArrow, {}),
             },
             label.label,
           ),

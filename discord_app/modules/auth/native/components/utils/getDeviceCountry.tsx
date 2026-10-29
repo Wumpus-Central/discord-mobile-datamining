@@ -4,7 +4,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
-export const getDeviceCountry = function getDeviceCountry() {
+export function getDeviceCountry() {
   const _default = NativeDeviceLocaleModule.default;
   let Language;
   if (_default != null) {
@@ -20,4 +20,4 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-};
+}

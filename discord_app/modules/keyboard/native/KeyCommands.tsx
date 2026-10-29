@@ -77,7 +77,7 @@ let result = size.fileFinishedImporting("modules/keyboard/native/KeyCommands.tsx
 
 export const KeyModifierFlags = NativeKeyCommandsModule;
 export const KeyInputs = { ESCAPE: "UIKeyInputEscape" };
-export const subscribeKeyCommand = function subscribeKeyCommand(arg0) {
+export function subscribeKeyCommand(arg0) {
   closure_0 = arg0;
   let items = [];
   items[HermesBuiltin.arraySpread(items, 0)] = arg0;
@@ -128,7 +128,7 @@ export const subscribeKeyCommand = function subscribeKeyCommand(arg0) {
       });
     }
   };
-};
+}
 export const useKeyCommands = ReactCompilerGating.isReactCompilerEnabled()
   ? function useKeyCommands(arg0) {
       _require = arg0;

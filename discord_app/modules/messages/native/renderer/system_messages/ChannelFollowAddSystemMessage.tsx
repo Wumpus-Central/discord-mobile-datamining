@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx",
 );
 
-export const createChannelFollowAddSystemMessage = function createChannelFollowAddSystemMessage(roleStyle) {
+export function createChannelFollowAddSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = { content: null };
@@ -26,4 +26,4 @@ export const createChannelFollowAddSystemMessage = function createChannelFollowA
   });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj2;
-};
+}

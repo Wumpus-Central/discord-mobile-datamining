@@ -7,6 +7,6 @@ const result = size.fileFinishedImporting(
 );
 
 export const GameOrganizationJoinScenes = { VIEW: "VIEW", ACCEPT: "ACCEPT", OUTCOME: "OUTCOME" };
-export const closeGameOrganizationJoinModal = function closeGameOrganizationJoinModal() {
+export function closeGameOrganizationJoinModal() {
   ModalActionCreatorsDefault.pop();
-};
+}

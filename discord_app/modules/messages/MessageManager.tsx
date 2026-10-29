@@ -280,19 +280,31 @@ function loadSelectedChannelIfNecessary() {
       if (isTextChannel(channel.type)) {
         const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
         if (!tmp7) {
-          obj3 = { guildId: channel.getGuildId(), channelId: channel.id };
-          fetchMessages(obj3);
+          const obj6 = { guildId: channel.getGuildId(), channelId: null, messageId: null };
+          ({ id: obj3.channelId, id: id2 } = channel);
+          const obj4 = matchPathCompat;
+          const obj8 = { path: collapsedCategories.CHANNEL(":guild", ":channel", ":message"), exact: true };
+          const matchPathResult = obj4.matchPath(router_utils.getHistory().location.pathname, obj8);
+          let message;
+          if (matchPathResult != null) {
+            const params = matchPathResult.params;
+            if (params != null) {
+              message = params.message;
+            }
+          }
+          obj6.messageId = message;
+          fetchMessages(obj6);
         }
-        const id2 = channel.id;
+        const id3 = channel.id;
         const guildId = channel.getGuildId();
-        const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(id2);
+        const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(id3);
         if (null != currentSidebarChannelId) {
-          const obj5 = {
+          const obj9 = {
             guildId,
             channelId: currentSidebarChannelId,
-            messageId: ChannelSectionStore.getCurrentSidebarMessageId(id2),
+            messageId: ChannelSectionStore.getCurrentSidebarMessageId(id3),
           };
-          fetchMessages(obj5);
+          fetchMessages(obj9);
         }
         tmp7 = orCreate.ready && orCreate.hasFetched;
       } else {
@@ -300,12 +312,12 @@ function loadSelectedChannelIfNecessary() {
         const guildId1 = channel.getGuildId();
         const currentSidebarChannelId1 = ChannelSectionStore.getCurrentSidebarChannelId(id);
         if (null != currentSidebarChannelId1) {
-          const obj6 = {
+          const obj10 = {
             guildId: guildId1,
             channelId: currentSidebarChannelId1,
             messageId: ChannelSectionStore.getCurrentSidebarMessageId(id),
           };
-          fetchMessages(obj6);
+          fetchMessages(obj10);
         }
       }
     }
@@ -473,7 +485,7 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, closure_1_14);
   }
 }
-const isTextChannel = fn(4860).isTextChannel;
+const isTextChannel = fn(4861).isTextChannel;
 const Constants = fn(1084);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_14,
@@ -483,7 +495,7 @@ const Constants = fn(1084);
   Routes: closure_18,
   ChannelTypesSets: closure_19,
 } = Constants);
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
 let closure_21 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_25 = 90 * DurationsDefault.Millis.DAY;

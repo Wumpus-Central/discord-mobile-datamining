@@ -39,10 +39,10 @@ function int2hslRaw(initialColor) {
 const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
-export const hex2int = function hex2int(PRIMARY_530) {
+export function hex2int(PRIMARY_530) {
   return _modDef683(PRIMARY_530).num();
-};
-export const int2hex = function int2hex(color) {
+}
+export function int2hex(color) {
   if (color <= 16777215) {
     const str1 = color >> 16 & 255.toString(16);
     let combined = str1;
@@ -93,9 +93,9 @@ export const int2hex = function int2hex(color) {
     const str4 = color >> 8 & 255;
   }
   return combined3;
-};
+}
 export { int2hslRaw };
-export const int2hslValues = function int2hslValues(initialColor) {
+export function int2hslValues(initialColor) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -121,8 +121,8 @@ export const int2hslValues = function int2hslValues(initialColor) {
     combined = "" + h + " " + tmp3 + "% " + tmp4 + "%";
   }
   return combined;
-};
-export const int2hsl = function int2hsl(color, arg1) {
+}
+export function int2hsl(color, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -152,8 +152,8 @@ export const int2hsl = function int2hsl(color, arg1) {
     combined = "hsla(" + h + ", " + tmp3 + "%, " + tmp4 + "%, " + num + ")";
   }
   return combined;
-};
-export const hex2rgb = function hex2rgb(gradientValue) {
+}
+export function hex2rgb(gradientValue) {
   if (alphaResult === undefined) {
     alphaResult = null;
   }
@@ -167,15 +167,15 @@ export const hex2rgb = function hex2rgb(gradientValue) {
     return null;
   }
   obj = _modDef683;
-};
-export const int2rgba = function int2rgba(primaryColor, arg1) {
+}
+export function int2rgba(primaryColor, arg1) {
   let result = arg1;
   if (null == arg1) {
     result = (primaryColor >> 24 & 255) / 255;
   }
   return "rgba(" + primaryColor >> 16 & 255 + ", " + primaryColor >> 8 & 255 + ", " + 255 & primaryColor + ", " + result + ")";
-};
-export const rgb2int = function rgb2int(dominantColorFromImage) {
+}
+export function rgb2int(dominantColorFromImage) {
   const match = dominantColorFromImage.match(re2);
   if (null != match) {
     const color1 = { red: null, green: null, blue: null };
@@ -190,8 +190,8 @@ export const rgb2int = function rgb2int(dominantColorFromImage) {
     color = { red: 0, green: 0, blue: 0 };
   }
   return (color.red << 16) + (color.green << 8) + color.blue;
-};
-export const int2hsv = function int2hsv(color) {
+}
+export function int2hsv(color) {
   let num = (color >> 16 & 255) / 255;
   const result = (color >> 8 & 255) / 255;
   const result1 = (255 & color) / 255;
@@ -223,18 +223,18 @@ export const int2hsv = function int2hsv(color) {
     }
     sum = (result1 - num) / diff + 2;
   }
-};
-export const getDarkness = function getDarkness(hex2intResult) {
+}
+export function getDarkness(hex2intResult) {
   return 1 - (0.299 * (hex2intResult >> 16 & 255) + 0.587 * (hex2intResult >> 8 & 255) + 0.114 * (255 & hex2intResult)) / 255;
-};
-export const isValidHex = function isValidHex(variantValue) {
+}
+export function isValidHex(variantValue) {
   return _modDef683.valid(variantValue);
-};
-export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
+}
+export function int2rgbArray(modalV2BackgroundColor) {
   const items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];
   return items;
-};
-export const getLuminance = function getLuminance(arg0, arg1, arg2) {
+}
+export function getLuminance(arg0, arg1, arg2) {
   const items = [arg0, arg1, arg2];
   const mapped = items.map((item) => {
     const result = item / 255;
@@ -247,8 +247,8 @@ export const getLuminance = function getLuminance(arg0, arg1, arg2) {
     return result1;
   });
   return 0.2126 * mapped[0] + 0.7152 * mapped[1] + 0.0722 * mapped[2];
-};
-export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
+}
+export function getContrast(hex2intResult, hex2intResult1) {
   const items = [hex2intResult >> 16 & 255, hex2intResult >> 8 & 255, 255 & hex2intResult];
   const items1 = [hex2intResult1 >> 16 & 255, hex2intResult1 >> 8 & 255, 255 & hex2intResult1];
   const items2 = [, , ];
@@ -279,8 +279,8 @@ export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
   const sum1 = 0.2126 * mapped1[0] + 0.7152 * mapped1[1] + 0.0722 * mapped1[2];
   const sum2 = Math.max(sum, sum1) + 0.05;
   return sum2 / (Math.min(sum, sum1) + 0.05);
-};
-export const hsv2int = function hsv2int(value, value2, sharedValue2) {
+}
+export function hsv2int(value, value2, sharedValue2) {
   const result = 6 * (value / 360);
   const rounded = Math.floor(result);
   const diff = result - rounded;
@@ -320,4 +320,4 @@ export const hsv2int = function hsv2int(value, value2, sharedValue2) {
   }
   const tmp8 = Math.round(255 * num7) << 16;
   return tmp8 + (Math.round(255 * num6) << 8) + Math.round(255 * num5);
-};
+}

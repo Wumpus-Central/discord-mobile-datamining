@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -8,12 +8,10 @@ const result = size.fileFinishedImporting(
   "modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx",
 );
 
-export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSettingsModalStickerInfoActionSheet(
-  arg0,
-) {
+export function showGuildSettingsModalStickerInfoActionSheet(arg0) {
   ({ guildId, stickerId } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19393, dependencyMap.paths),
+    asyncRequireImpl(19626, dependencyMap.paths),
     GuildSettingsModalStickerInfoActionSheet,
     {
       guildId,
@@ -23,4 +21,4 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       },
     },
   );
-};
+}

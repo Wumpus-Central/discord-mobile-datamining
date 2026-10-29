@@ -27,7 +27,7 @@ export const RequestToSpeakPermissionStates = {
   ROLES: 3,
   [3]: "ROLES",
 };
-export const getStagePublicInfoText = function getStagePublicInfoText() {
+export function getStagePublicInfoText() {
   const intl = util.intl;
   const items = [intl.string(util.t["9XlQ9W"]), , ,];
   const intl2 = util.intl;
@@ -38,4 +38,4 @@ export const getStagePublicInfoText = function getStagePublicInfoText() {
   const intl4 = util.intl;
   items[3] = intl4.string(util.t.xfb7ZU);
   return items;
-};
+}

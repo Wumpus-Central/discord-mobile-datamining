@@ -9,8 +9,8 @@ import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/Guil
 import GuildRoleSubscriptionTypeUtils from "../../GuildRoleSubscriptionTypeUtils.tsx";
 import GuildRoleSubscriptionMemberPreview from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
 import GuildRoleSubscriptionsActionCreatorExtras from "../../GuildRoleSubscriptionsActionCreatorExtras.native.tsx";
-import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview.tsx";
 import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton.tsx";
+import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ let closure_6 = ["label", "children"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: { padding: 16 },
   header: {
@@ -507,7 +507,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[1] === label) {
             let tmp6 = cResult[2];
           }
-          const tmp8 = listingId === tmp(19597).NEW_LISTING_EDIT_STATE_ID;
+          const tmp8 = listingId === tmp(19830).NEW_LISTING_EDIT_STATE_ID;
           closure_2 = tmp8;
           if (cResult[3] === benefits) {
             if (cResult[4] === guildId) {

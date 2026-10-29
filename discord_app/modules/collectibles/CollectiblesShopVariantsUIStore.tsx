@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import _mod4919 from "../../../_runtime/metro/04919__.js";
+import _mod4920 from "../../../_runtime/metro/04920__.js";
 import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
 import identity from "../../../_runtime/metro/01266__.js";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4919.shallow);
+}, _mod4920.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled()
@@ -76,7 +76,7 @@ export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnable
       }
       return defaultVariantIndex;
     };
-export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, arg1) {
+export function setSelectedVariantIndex(arg0, arg1) {
   const storeListingId = arg0;
   closure_1 = arg1;
   state.setState((selectionStates) => {
@@ -97,4 +97,4 @@ export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, ar
     }
     return tmp5;
   });
-};
+}

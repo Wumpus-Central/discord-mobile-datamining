@@ -1,7 +1,7 @@
 // discord_app/modules/custom_status/setCustomStatus.tsx
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import Constants2 from "Constants.tsx";
 import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
@@ -31,10 +31,10 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = _modDef2046();
-      const addResult = _modDef2046().add(getClearAfterDurationDefault(clearAfter), "ms");
-      str2 = String(_modDef2046().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
-      const toDateResult = _modDef2046().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
+      const obj2 = _modDef2047();
+      const addResult = _modDef2047().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(_modDef2047().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = _modDef2047().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
   obj.expiresAtMs = str2;
@@ -52,9 +52,9 @@ export default function setCustomStatus(arg0) {
   }
   obj.emojiName = str5;
   if (createdAtMs == null) {
-    const obj5 = _modDef2046();
-    createdAtMs = _modDef2046().toDate().getTime();
-    const toDateResult1 = _modDef2046().toDate();
+    const obj5 = _modDef2047();
+    createdAtMs = _modDef2047().toDate().getTime();
+    const toDateResult1 = _modDef2047().toDate();
   }
   obj.createdAtMs = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);

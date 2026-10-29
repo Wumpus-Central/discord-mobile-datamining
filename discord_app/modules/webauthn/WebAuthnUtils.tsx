@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
 
-export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(id) {
+export function encodeUserIdForWebAuthn(id) {
   const uint8Array = new Uint8Array(16);
   const dataView = new DataView(uint8Array.buffer);
   dataView.setUint32(0, 821232635);
@@ -14,4 +14,4 @@ export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(id) {
   const str = btoa(String.fromCharCode.apply(items));
   const str2 = btoa(String.fromCharCode.apply(items)).replace(/\+/g, "-");
   return btoa(String.fromCharCode.apply(items)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
-};
+}

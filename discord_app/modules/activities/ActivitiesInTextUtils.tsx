@@ -115,7 +115,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 
 export { isActivityInTextSupportedForChannel };
-export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel) {
+export function isActivitiesInTextEnabled(channel) {
   let flag = false;
   if (null != channel) {
     flag = false;
@@ -133,7 +133,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
     }
   }
   return flag;
-};
+}
 export const useIsActivitiesInTextEnabled = tmp2;
 export { getIsAppLauncherEnabled };
 export const useIsAppLauncherEnabled = ReactCompilerGating.isReactCompilerEnabled()

@@ -10,8 +10,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/age_gate/experiments/InviteAcceptAgeGroupErrorsExperiment.tsx");
 
-export const getIsInviteAcceptAgeGroupErrorsEnabled = function getIsInviteAcceptAgeGroupErrorsEnabled(
-  invite_accept_error,
-) {
+export function getIsInviteAcceptAgeGroupErrorsEnabled(invite_accept_error) {
   return config.getConfig({ location: invite_accept_error }).enabled;
-};
+}

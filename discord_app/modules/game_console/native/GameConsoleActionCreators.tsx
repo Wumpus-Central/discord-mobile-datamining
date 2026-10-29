@@ -39,7 +39,7 @@ let closure_4 = async function _transferToPlaystationWithAlert(arg0, arg1, arg2)
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleActionCreators.tsx");
 
-export const transferToPlaystationWithAlert = function transferToPlaystationWithAlert() {
+export function transferToPlaystationWithAlert() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -48,4 +48,4 @@ export const transferToPlaystationWithAlert = function transferToPlaystationWith
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

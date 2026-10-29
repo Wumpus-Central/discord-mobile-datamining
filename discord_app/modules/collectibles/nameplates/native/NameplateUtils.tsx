@@ -4,7 +4,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 
-export const getNameplateAssets = function getNameplateAssets(nameplate) {
+export function getNameplateAssets(nameplate) {
   const skuId = nameplate.skuId;
   const obj = { staticImageUrl: null, animatedImageUrl: null };
   const obj2 = CollectiblesAssetUtils;
@@ -19,4 +19,4 @@ export const getNameplateAssets = function getNameplateAssets(nameplate) {
     assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.ANIMATED,
   });
   return obj;
-};
+}

@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef9461 from "../../../../_runtime/metro/09461__.js";
+import _modDef9492 from "../../../../_runtime/metro/09492__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -59,7 +59,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             onPress,
             size: "sm",
             text: tmp5,
-            icon: _modDef9461,
+            icon: _modDef9492,
             accessible: tmp4,
             accessibilityElementsHidden: tmp7,
             importantForAccessibility: str3,
@@ -72,7 +72,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             onPress,
             size: "sm",
             text: tmp5,
-            icon: _modDef9461,
+            icon: _modDef9492,
             accessible: tmp4,
             accessibilityElementsHidden: tmp7,
             importantForAccessibility: str3,
@@ -133,7 +133,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       obj.text = str;
-      obj.icon = _modDef9461;
+      obj.icon = _modDef9492;
       obj.accessible = flag;
       obj.accessibilityElementsHidden = !flag;
       let str2 = "no";

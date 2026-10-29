@@ -11,36 +11,36 @@ const useGuildIncidentsActionSheetStore = module_570.create(() => ({ time: DEFAU
 const result = size.fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentsActionSheetStore.tsx");
 
 export { useGuildIncidentsActionSheetStore };
-export const setTime = function setTime(diff) {
+export function setTime(diff) {
   _require = diff;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { time, hasTimeChanges: true };
     return obj.setState(obj);
   });
-};
-export const setInitialTime = function setInitialTime(time) {
+}
+export function setInitialTime(time) {
   _require = time;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { time, hasTimeChanges: false };
     return obj.setState(obj);
   });
-};
-export const setPauseInvites = function setPauseInvites(pauseInvites) {
+}
+export function setPauseInvites(pauseInvites) {
   _require = pauseInvites;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { pauseInvites };
     return obj.setState(obj);
   });
-};
-export const setPauseDms = function setPauseDms(pauseDms) {
+}
+export function setPauseDms(pauseDms) {
   _require = pauseDms;
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { pauseDms };
     return obj.setState(obj);
   });
-};
-export const resetGuildIncidentsActionSheetStore = function resetGuildIncidentsActionSheetStore() {
+}
+export function resetGuildIncidentsActionSheetStore() {
   ReactBatchUpdates.batchUpdates(() => {
     state.setState({ time, pauseInvites: true, pauseDms: true, hasTimeChanges: false });
   });
-};
+}

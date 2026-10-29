@@ -15,7 +15,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 
-export const startAuthorizationNoHook = function startAuthorizationNoHook() {
+export function startAuthorizationNoHook() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -91,4 +91,4 @@ export const startAuthorizationNoHook = function startAuthorizationNoHook() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

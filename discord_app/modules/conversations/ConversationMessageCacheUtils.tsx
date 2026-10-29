@@ -8,7 +8,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationMessageCacheUtils.tsx");
 
-export const applyHydratedMessages = function applyHydratedMessages(arg0) {
+export function applyHydratedMessages(arg0) {
   ({ meta, messages, fullyHydrated, messageReferences } = arg0);
   if (messageReferences === undefined) {
     messageReferences = [];
@@ -35,8 +35,8 @@ export const applyHydratedMessages = function applyHydratedMessages(arg0) {
     continue;
   }
   return true;
-};
-export const replaceHydratedMessage = function replaceHydratedMessage(peekResult, messageId, addReactionBatchResult) {
+}
+export function replaceHydratedMessage(peekResult, messageId, addReactionBatchResult) {
   closure_0 = messageId;
   let hydratedMessages1;
   if (peekResult != null) {
@@ -52,8 +52,8 @@ export const replaceHydratedMessage = function replaceHydratedMessage(peekResult
       peekResult.hydratedMessages = substr;
     }
   }
-};
-export const removeHydratedMessage = function removeHydratedMessage(peekResult, id) {
+}
+export function removeHydratedMessage(peekResult, id) {
   closure_0 = id;
   let hydratedMessages;
   if (peekResult != null) {
@@ -63,8 +63,8 @@ export const removeHydratedMessage = function removeHydratedMessage(peekResult, 
     const hydratedMessages1 = peekResult.hydratedMessages;
     peekResult.hydratedMessages = hydratedMessages1.filter((id) => id.id !== closure_0);
   }
-};
-export const applyRelationshipFlags = function applyRelationshipFlags(message) {
+}
+export function applyRelationshipFlags(message) {
   const isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
   const isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message);
   if (message.blocked !== isBlockedForMessageResult) {
@@ -74,8 +74,8 @@ export const applyRelationshipFlags = function applyRelationshipFlags(message) {
     result1 = null;
   }
   return result1;
-};
-export const applyReaction = function applyReaction(userId, message) {
+}
+export function applyReaction(userId, message) {
   if (obj.shouldApplyReaction(userId)) {
     const tmp4 = AuthenticationStore.getId() === userId.userId;
     if ("MESSAGE_REACTION_ADD" === userId.type) {
@@ -90,4 +90,4 @@ export const applyReaction = function applyReaction(userId, message) {
     return null;
   }
   obj = ReactionUtils;
-};
+}

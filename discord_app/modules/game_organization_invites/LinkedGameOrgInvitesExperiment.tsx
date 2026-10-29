@@ -33,6 +33,6 @@ export const useLinkedGameOrgInvitesEnabled = ReactCompilerGating.isReactCompile
   : function useLinkedGameOrgInvitesEnabled(location) {
       return apexExperiment.useConfig({ location }).enabled;
     };
-export const getLinkedGameOrgInvitesEnabled = function getLinkedGameOrgInvitesEnabled(MessageCodedLinkManager) {
+export function getLinkedGameOrgInvitesEnabled(MessageCodedLinkManager) {
   return apexExperiment.getConfig({ location: MessageCodedLinkManager }).enabled;
-};
+}

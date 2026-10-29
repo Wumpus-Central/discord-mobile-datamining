@@ -75,21 +75,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { icon: null, text: null };
         let intl = closure_6;
         if (setting) {
-          obj2.icon = intl(tmp(9680).ServerIcon, { size: "xs" });
+          obj2.icon = intl(tmp(9712).ServerIcon, { size: "xs" });
           intl = tmp(1125).intl;
           obj2.text = intl.string(tmp(1125).t["2bL0wT"]);
           let items = [obj2];
           let items1 = items;
         } else {
-          obj2.icon = intl(tmp(9523).GlobeEarthIcon, { size: "xs" });
+          obj2.icon = intl(tmp(9555).GlobeEarthIcon, { size: "xs" });
           const intl2 = tmp(1125).intl;
           obj2.text = intl2.string(tmp(1125).t.xQSdPv);
           items1 = [obj2, ,];
-          const obj3 = { icon: intl(tmp(12214).UserIcon, { size: "xs" }), text: null };
+          const obj3 = { icon: intl(tmp(12268).UserIcon, { size: "xs" }), text: null };
           const intl3 = tmp(1125).intl;
           obj3.text = intl3.string(tmp(1125).t.mYt7hQ);
           items1[1] = obj3;
-          const obj4 = { icon: intl(tmp(9650).GameControllerIcon, { size: "xs" }), text: null };
+          const obj4 = { icon: intl(tmp(9682).GameControllerIcon, { size: "xs" }), text: null };
           const intl4 = tmp(1125).intl;
           obj4.text = intl4.string(tmp(1125).t.XAsWxQ);
           items1[2] = obj4;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         ({ container, contentContainer } = tmp4);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = closure_6(tmp(16728).WumpusCouchSpotIllustration, {});
+          const tmp10 = closure_6(tmp(16966).WumpusCouchSpotIllustration, {});
           cResult[2] = tmp10;
           let tmp8 = tmp10;
         } else {
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[13] !== tmp15) {
                       const obj6 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: tmp15 };
-                      const tmp19 = closure_6(tmp(5270).Text, obj6);
+                      const tmp19 = closure_6(tmp(5271).Text, obj6);
                       cResult[13] = tmp15;
                       cResult[14] = tmp19;
                       let tmp17 = tmp19;
@@ -150,13 +150,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 };
                                 const intl5 = tmp(1125).intl;
                                 const obj8 = {
-                                  privacySettingsUrl: arr(2064).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS),
+                                  privacySettingsUrl: arr(2065).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS),
                                 };
                                 obj7.children = intl5.format(tmp(1125).t.tzq9Wa, obj8);
-                                const tmp27 = closure_6(tmp(5270).Text, obj7);
+                                const tmp27 = closure_6(tmp(5271).Text, obj7);
                                 cResult[22] = tmp27;
                                 let tmp23 = tmp27;
-                                const obj12 = arr(2064);
+                                const obj12 = arr(2065);
                               } else {
                                 tmp23 = cResult[22];
                               }
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   text: tmp28,
                                   onPress: onClose,
                                 };
-                                const tmp32 = closure_6(tmp(5280).Button, obj9);
+                                const tmp32 = closure_6(tmp(5281).Button, obj9);
                                 cResult[24] = onClose;
                                 cResult[25] = tmp32;
                                 let tmp30 = tmp32;
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return React5(React4, obj, index);
                         }),
                       };
-                      tmp21 = closure_6(tmp(6941).Card, obj13);
+                      tmp21 = closure_6(tmp(6965).Card, obj13);
                     }
                     cResult[15] = isTargetedDisclosure;
                     cResult[16] = tmp4.disclosureText;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cosponsorName,
           isVideoQuest,
         };
-        const disclosureText = tmp(9628).getDisclosureText(obj14);
+        const disclosureText = tmp(9660).getDisclosureText(obj14);
         cResult[5] = adCreativeType;
         cResult[6] = cosponsorName;
         cResult[7] = gamePublisher;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = isVideoQuest;
         cResult[12] = disclosureText;
         tmp15 = disclosureText;
-        const tmpResult = tmp(9628);
+        const tmpResult = tmp(9660);
       }
       let obj = require("c");
     }
@@ -304,22 +304,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const setting = DropsOptedOut.useSetting();
       let obj = { icon: null, text: null };
       if (setting) {
-        obj.icon = closure_6(tmp2(9680).ServerIcon, { size: "xs" });
+        obj.icon = closure_6(tmp2(9712).ServerIcon, { size: "xs" });
         const intl4 = tmp2(1125).intl;
         obj.text = intl4.string(tmp2(1125).t["2bL0wT"]);
         let items = [obj];
         let tmp6 = closure_6;
         items1 = items;
       } else {
-        obj.icon = closure_6(tmp2(9523).GlobeEarthIcon, { size: "xs" });
+        obj.icon = closure_6(tmp2(9555).GlobeEarthIcon, { size: "xs" });
         const intl = tmp2(1125).intl;
         obj.text = intl.string(tmp2(1125).t.xQSdPv);
         items1 = [obj, ,];
-        const obj2 = { icon: closure_6(tmp2(12214).UserIcon, { size: "xs" }), text: null };
+        const obj2 = { icon: closure_6(tmp2(12268).UserIcon, { size: "xs" }), text: null };
         const intl2 = tmp2(1125).intl;
         obj2.text = intl2.string(tmp2(1125).t.mYt7hQ);
         items1[1] = obj2;
-        const obj3 = { icon: closure_6(tmp2(9650).GameControllerIcon, { size: "xs" }), text: null };
+        const obj3 = { icon: closure_6(tmp2(9682).GameControllerIcon, { size: "xs" }), text: null };
         const intl3 = tmp2(1125).intl;
         obj3.text = intl3.string(tmp2(1125).t.XAsWxQ);
         items1[2] = obj3;
@@ -371,14 +371,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return React5(React4, obj, index);
           }),
         };
-        isTargetedDisclosure = tmp6(tmp2(6941).Card, obj7);
+        isTargetedDisclosure = tmp6(tmp2(6965).Card, obj7);
       }
       items2[2] = isTargetedDisclosure;
       const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
       const intl5 = tmp2(1125).intl;
       const obj9 = { privacySettingsUrl: null };
       const tmp2Result = require("QuestCopyUtils");
-      obj9.privacySettingsUrl = items1(2064).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
+      obj9.privacySettingsUrl = items1(2065).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
       obj8.children = intl5.format(require("util").t.tzq9Wa, obj9);
       items2[3] = tmp6(require("Text/Text").Text, obj8);
       const obj10 = { style: tmp.closeButton, children: null };

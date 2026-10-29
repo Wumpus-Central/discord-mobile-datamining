@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ActivityActionTypes = Constants.ActivityActionTypes;
 const result = size.fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");
 
-export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, messages, id2, findActivityResult) {
+export function isMostRecentDeadEndInvite(id, messages, id2, findActivityResult) {
   closure_0 = id2;
   closure_1 = findActivityResult;
   return !messages.hasAnyAfter(
@@ -31,4 +31,4 @@ export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, 
     },
     25,
   );
-};
+}

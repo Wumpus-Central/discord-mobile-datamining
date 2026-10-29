@@ -5,7 +5,7 @@ import shared from "../../../shared.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05334_LegacyBaseButton.js";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
@@ -47,7 +47,7 @@ let closure_15 = {
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenu.native.tsx");
 
-export const ContextMenu = function ContextMenu(triggerOnLongPress) {
+export function ContextMenu(triggerOnLongPress) {
   ({ children, items } = triggerOnLongPress);
   let flag = triggerOnLongPress.triggerOnLongPress;
   if (flag === undefined) {
@@ -638,4 +638,4 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
     tmp25Result = tmp25(tmp(tmp2[13]).GestureDetector, obj7);
   }
   return tmp25Result;
-};
+}

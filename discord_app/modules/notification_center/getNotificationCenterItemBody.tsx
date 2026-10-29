@@ -10,7 +10,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const isGuildEventEnded = fn(6819).isGuildEventEnded;
+const isGuildEventEnded = fn(6842).isGuildEventEnded;
 const Constants = fn(1084);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);
@@ -221,7 +221,7 @@ export default function getNotificationCenterItemBody(arg0) {
     return str;
   }
 }
-export const getFriendRequestSentBody = function getFriendRequestSentBody(user) {
+export function getFriendRequestSentBody(user) {
   const intl = util.intl;
   return intl.format(util.t.gZVTy2, { user });
-};
+}

@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AgeVerificationStore from "../AgeVerificationStore.tsx";
 
 require = fn;
-const AgeVerificationConstants = fn(6691);
+const AgeVerificationConstants = fn(6715);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -251,11 +251,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        const obj5 = id(6692);
+                        const obj5 = id(6716);
                         const result = obj5.trackAgeVerificationModalClicked(
                           id,
-                          id(6692).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                          id(6692).AgeVerificationModalCta.METHOD_SELECT,
+                          id(6716).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                          id(6716).AgeVerificationModalCta.METHOD_SELECT,
                           id,
                         );
                         v1 = 1;
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } catch (tmp5) {
                     c1 = tmp;
@@ -635,7 +635,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else {
                     try {
@@ -649,11 +649,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { value, done: true };
                           return obj3;
                         } else {
-                          const obj5 = id(6692);
+                          const obj5 = id(6716);
                           const result = obj5.trackAgeVerificationModalClicked(
                             id,
-                            id(6692).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                            id(6692).AgeVerificationModalCta.METHOD_SELECT,
+                            id(6716).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                            id(6716).AgeVerificationModalCta.METHOD_SELECT,
                             id,
                           );
                           v1 = 1;
@@ -670,7 +670,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return obj;
                       } else {
                         c1 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     } catch (tmp5) {
                       c1 = tmp;

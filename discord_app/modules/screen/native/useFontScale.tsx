@@ -9,13 +9,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/native/useFontScale.tsx");
 
-export const getFontScale = function getFontScale() {
+export function getFontScale() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "main";
   }
   return DimensionsStore.getState().byAppEntry[str].fontScale;
-};
+}
 export const useFontScale = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFontScale() {
       const cResult = c.c(2);

@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");
 
-export const iOSTrackAutocompleteOpen = function iOSTrackAutocompleteOpen(autocompleteType, channel, arg2) {
+export function iOSTrackAutocompleteOpen(autocompleteType, channel, arg2) {
   const obj5 = {};
   const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
@@ -19,8 +19,8 @@ export const iOSTrackAutocompleteOpen = function iOSTrackAutocompleteOpen(autoco
     gameMentionsAvailable: obj2.game_mentions_available,
   } = arg2);
   obj.track(AnalyticEvents.CHANNEL_AUTOCOMPLETE_OPEN, obj5);
-};
-export const iOSTrackAutocompleteSelect = function iOSTrackAutocompleteSelect(autocompleteType, channel, arg2) {
+}
+export function iOSTrackAutocompleteSelect(autocompleteType, channel, arg2) {
   const obj5 = {};
   const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
@@ -37,4 +37,4 @@ export const iOSTrackAutocompleteSelect = function iOSTrackAutocompleteSelect(au
     isAnimated: obj2.is_animated,
   } = arg2);
   obj.track(AnalyticEvents.CHANNEL_AUTOCOMPLETE_SELECTED, obj5);
-};
+}

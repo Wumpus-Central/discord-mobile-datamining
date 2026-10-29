@@ -21,7 +21,7 @@ const Constants = fn(1084);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   name: {
     color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -156,7 +156,7 @@ const result = size.fileFinishedImporting(
   "modules/interaction_components/native/components/MentionableSelectOptionParts.tsx",
 );
 
-export const renderMentionableOptionIcon = function renderMentionableOptionIcon(type, guild, guildId) {
+export function renderMentionableOptionIcon(type, guild, guildId) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const user = UserStore.getUser(type.value);
     if (null == user) {
@@ -204,14 +204,14 @@ export const renderMentionableOptionIcon = function renderMentionableOptionIcon(
     }
     return null;
   }
-};
-export const renderMentionableOptionDescription = function renderMentionableOptionDescription(type) {
+}
+export function renderMentionableOptionDescription(type) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const obj = { user: UserStore.getUser(type.value) };
     return closure_1_8(closure_11, obj);
   }
-};
-export const renderMentionableOptionSuffix = function renderMentionableOptionSuffix(type, guild, arg2) {
+}
+export function renderMentionableOptionSuffix(type, guild, arg2) {
   if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
     let role;
     if (null != guild) {
@@ -230,8 +230,8 @@ export const renderMentionableOptionSuffix = function renderMentionableOptionSuf
       return closure_1_8(closure_12, obj);
     }
   }
-};
-export const mentionableOptionAccessibilityLabel = function mentionableOptionAccessibilityLabel(type) {
+}
+export function mentionableOptionAccessibilityLabel(type) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const user = UserStore.getUser(type.value);
     let bot;
@@ -264,4 +264,4 @@ export const mentionableOptionAccessibilityLabel = function mentionableOptionAcc
     const obj = { roleName: type.label };
     return intl.formatToPlainString(util.t.F6ejkk, obj);
   }
-};
+}

@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7689);
+const CollectiblesItemRecord = fn(7712);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -76,12 +76,13 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   if (null != preview_assets) {
     ({
       fg_static: obj2.fgStatic,
+      fg_video: obj2.fgVideo,
       fg_animated: obj2.fgAnimated,
       bg_static: obj2.bgStatic,
       bg_animated: obj2.bgAnimated,
     } = preview_assets);
-    tmp11 = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
-    const obj3 = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
+    tmp11 = { fgStatic: null, fgVideo: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
+    const obj3 = { fgStatic: null, fgVideo: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
   }
   obj.previewAssets = tmp11;
   let mapped1;
@@ -259,18 +260,18 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "t",
                 type: "Array",
-                premiumType: "IconComponent",
-                items: "/assets/images/platforms",
-                categorySkuId: 255,
-                categoryWillUnpublishAt: 255,
+                premiumType: "unicodeVersion",
+                items: null,
+                categorySkuId: null,
+                categoryWillUnpublishAt: null,
                 isCategoryReward: null,
-                prices: "72952773756d8776abb1f02e0c8ab235",
-                previewAssets: "img_account_sync_battlenet_light_and_dark",
-                googleSkuIds: "png",
-                eligibleOffers: true,
-                variants: "/assets/images/platforms",
-                bundledProducts: 255,
-                isFirstParty: 255,
+                prices: null,
+                previewAssets: null,
+                googleSkuIds: null,
+                eligibleOffers: null,
+                variants: null,
+                bundledProducts: null,
+                isFirstParty: null,
               };
               let str;
               if (first != null) {

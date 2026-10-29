@@ -15,7 +15,7 @@ const dependencyMap = {
 };
 const result = size.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
-export const getExtensionFromContentType = function getExtensionFromContentType(str) {
+export function getExtensionFromContentType(str) {
   if (null != str) {
     str = str.toLowerCase();
     if (obj.test(str)) {
@@ -36,8 +36,8 @@ export const getExtensionFromContentType = function getExtensionFromContentType(
     }
     obj = /^(image|video)\//;
   }
-};
-export const decideFileExtension = function decideFileExtension(uri, contentType, arg2) {
+}
+export function decideFileExtension(uri, contentType, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -113,4 +113,4 @@ export const decideFileExtension = function decideFileExtension(uri, contentType
     tmp = tmp15;
   }
   return tmp;
-};
+}

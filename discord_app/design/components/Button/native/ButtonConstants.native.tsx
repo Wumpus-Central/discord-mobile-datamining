@@ -39,14 +39,14 @@ export function getButtonDefaultTextVariant(size) {
   }
   return str;
 }
-export const getButtonPadding = function getButtonPadding(FAB_BUTTON_SIZE, FAB_BUTTON_ICON_SIZE) {
+export function getButtonPadding(FAB_BUTTON_SIZE, FAB_BUTTON_ICON_SIZE) {
   return (FAB_BUTTON_SIZE - Icon.getIconSize(FAB_BUTTON_ICON_SIZE) - 2) / 2;
-};
-export const getButtonBorderRadius = function getButtonBorderRadius(arg0) {
+}
+export function getButtonBorderRadius(arg0) {
   if ("lg" === arg0) {
     let BORDER_RADIUS = nativeDefault.modules.button.BORDER_RADIUS_LG;
   } else {
     BORDER_RADIUS = nativeDefault.modules.button.BORDER_RADIUS;
   }
   return BORDER_RADIUS;
-};
+}

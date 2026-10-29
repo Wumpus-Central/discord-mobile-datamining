@@ -7,6 +7,7 @@ import LikelyAtoWarningBannerDefault from "../../ato_alerts/native/components/Li
 import StrangerDangerWarningBannerDefault from "../../self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx";
 import InappropriateConversationWarningBannerDefault from "../../self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx";
 import useUnreadSettingNoticeDefault from "../../notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx";
+import PinotLazy from "../../pinot/native/PinotLazy.tsx";
 import ForumPostActionBarDefault from "../../forums/native/ForumPostActionBar.tsx";
 import UnreadSettingNoticeDefault from "../../notifications/settings_unread_notice/native/UnreadSettingNotice.tsx";
 import ChatBannerDefault from "../../messages/native/ChatBanner.tsx";
@@ -14,7 +15,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LOCATION_CONTEXT_MOBILE = fn(10965).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11000).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -100,12 +101,14 @@ const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHea
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function StickyHeader(channel) {
-        const cResult = c.c(19);
+        const cResult = c.c(23);
         channel = channel.channel;
         const scrollToNewMessages = channel.scrollToNewMessages;
-        [tmp4, importDefault] = noop.useState(false);
-        const tmp3 = _slicedToArray(noop.useState(false), 2);
+        [tmp5, importDefault] = noop.useState(false);
+        const tmp4 = _slicedToArray(noop.useState(false), 2);
         ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
+        const tmp7 = useUnreadSettingNoticeDefault(channel);
+        const pinotMemberNotice = PinotLazy.usePinotMemberNotice(channel, "mobile_chat_sticky_header");
         if (cResult[0] !== channel) {
           const fn = function t() {
             return {
@@ -118,89 +121,105 @@ export default noop.memo(
           };
           cResult[0] = channel;
           cResult[1] = fn;
-          let tmp7 = fn;
+          let tmp9 = fn;
         } else {
-          tmp7 = cResult[1];
+          tmp9 = cResult[1];
         }
-        const imperativeHandle = noop.useImperativeHandle(channel.ref, tmp7);
-        if (cResult[2] === channel) {
-          if (cResult[3] === tmp4) {
-            let tmp9 = cResult[4];
+        const imperativeHandle = noop.useImperativeHandle(channel.ref, tmp9);
+        if (cResult[2] === pinotMemberNotice.dismiss) {
+          if (cResult[3] === pinotMemberNotice.visible) {
+            let tmp11 = cResult[4];
           }
-          if (cResult[5] !== channel) {
-            let tmp13 = null;
-            if (channel.isDM()) {
-              const obj3 = { channelId: channel.id, senderId: channel.getRecipientId() };
-              tmp13 = timestampProducer(closure_9, obj3);
+          if (cResult[5] === channel) {
+            if (cResult[6] === tmp5) {
+              let tmp14 = cResult[7];
             }
-            cResult[5] = channel;
-            cResult[6] = tmp13;
-            let tmp12 = tmp13;
-          } else {
-            tmp12 = cResult[6];
-          }
-          if (cResult[7] === channel) {
-            if (cResult[8] === clearUnreadsNotice) {
-              if (cResult[9] === showUnreadsNotice) {
-                let tmp16 = cResult[10];
+            if (cResult[8] !== channel) {
+              let tmp18 = null;
+              if (channel.isDM()) {
+                const obj4 = { channelId: channel.id, senderId: channel.getRecipientId() };
+                tmp18 = timestampProducer(closure_9, obj4);
               }
-              if (cResult[11] === channel) {
-                if (cResult[12] === scrollToNewMessages) {
-                  let tmp19 = cResult[13];
+              cResult[8] = channel;
+              cResult[9] = tmp18;
+              let tmp17 = tmp18;
+            } else {
+              tmp17 = cResult[9];
+            }
+            if (cResult[10] === channel) {
+              if (cResult[11] === clearUnreadsNotice) {
+                if (cResult[12] === showUnreadsNotice) {
+                  let tmp21 = cResult[13];
                 }
-                if (cResult[14] === tmp9) {
-                  if (cResult[15] === tmp12) {
-                    if (cResult[16] === tmp16) {
-                      if (cResult[17] === tmp19) {
-                        let tmp22 = cResult[18];
+                if (cResult[14] === channel) {
+                  if (cResult[15] === scrollToNewMessages) {
+                    let tmp24 = cResult[16];
+                  }
+                  if (cResult[17] === tmp11) {
+                    if (cResult[18] === tmp14) {
+                      if (cResult[19] === tmp17) {
+                        if (cResult[20] === tmp21) {
+                          if (cResult[21] === tmp24) {
+                            let tmp27 = cResult[22];
+                          }
+                          return tmp27;
+                        }
                       }
-                      return tmp22;
                     }
                   }
+                  const obj5 = { children: null };
+                  const items = [tmp11, tmp14, tmp17, tmp21, tmp24];
+                  obj5.children = items;
+                  const tmp30 = closure_1_8(React5, obj5);
+                  cResult[17] = tmp11;
+                  cResult[18] = tmp14;
+                  cResult[19] = tmp17;
+                  cResult[20] = tmp21;
+                  cResult[21] = tmp24;
+                  cResult[22] = tmp30;
+                  tmp27 = tmp30;
                 }
-                const obj4 = { children: null };
-                const items = [tmp9, tmp12, tmp16, tmp19];
-                obj4.children = items;
-                const tmp25 = closure_1_8(React5, obj4);
-                cResult[14] = tmp9;
-                cResult[15] = tmp12;
-                cResult[16] = tmp16;
-                cResult[17] = tmp19;
-                cResult[18] = tmp25;
-                tmp22 = tmp25;
+                const obj6 = { channel, handleScrollToNewMessages: scrollToNewMessages };
+                const tmp26 = timestampProducer(ChatBannerDefault, obj6);
+                cResult[14] = channel;
+                cResult[15] = scrollToNewMessages;
+                cResult[16] = tmp26;
+                tmp24 = tmp26;
               }
-              const obj5 = { channel, handleScrollToNewMessages: scrollToNewMessages };
-              const tmp21 = timestampProducer(ChatBannerDefault, obj5);
-              cResult[11] = channel;
-              cResult[12] = scrollToNewMessages;
-              cResult[13] = tmp21;
-              tmp19 = tmp21;
+            }
+            let tmp22 = null;
+            if (showUnreadsNotice) {
+              const obj7 = { channel, clearUnreadsNotice };
+              tmp22 = timestampProducer(UnreadSettingNoticeDefault, obj7);
+            }
+            cResult[10] = channel;
+            cResult[11] = clearUnreadsNotice;
+            cResult[12] = showUnreadsNotice;
+            cResult[13] = tmp22;
+            tmp21 = tmp22;
+          }
+          let tmp15 = null;
+          if (channel.isForumPost()) {
+            tmp15 = null;
+            if (tmp5) {
+              const obj8 = { channel };
+              tmp15 = timestampProducer(ForumPostActionBarDefault, obj8);
             }
           }
-          let tmp17 = null;
-          if (showUnreadsNotice) {
-            const obj6 = { channel, clearUnreadsNotice };
-            tmp17 = timestampProducer(UnreadSettingNoticeDefault, obj6);
-          }
-          cResult[7] = channel;
-          cResult[8] = clearUnreadsNotice;
-          cResult[9] = showUnreadsNotice;
-          cResult[10] = tmp17;
-          tmp16 = tmp17;
+          cResult[5] = channel;
+          cResult[6] = tmp5;
+          cResult[7] = tmp15;
+          tmp14 = tmp15;
         }
-        let tmp10 = null;
-        if (channel.isForumPost()) {
-          tmp10 = null;
-          if (tmp4) {
-            const obj7 = { channel };
-            tmp10 = timestampProducer(ForumPostActionBarDefault, obj7);
-          }
+        let tmp12 = null;
+        if (pinotMemberNotice.visible) {
+          const obj9 = { onDismiss: pinotMemberNotice.dismiss };
+          tmp12 = timestampProducer(PinotLazy.PinotMemberNoticeBar, obj9);
         }
-        cResult[2] = channel;
-        cResult[3] = tmp4;
-        cResult[4] = tmp10;
-        tmp9 = tmp10;
-        const tmp6 = useUnreadSettingNoticeDefault(channel);
+        cResult[2] = pinotMemberNotice.dismiss;
+        cResult[3] = pinotMemberNotice.visible;
+        cResult[4] = tmp12;
+        tmp11 = tmp12;
       }
     : function StickyHeader(channel) {
         channel = channel.channel;
@@ -208,6 +227,8 @@ export default noop.memo(
         const tmp = _slicedToArray(noop.useState(false), 2);
         closure_1 = tmp[1];
         ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
+        const tmp4 = useUnreadSettingNoticeDefault(channel);
+        const pinotMemberNotice = PinotLazy.usePinotMemberNotice(channel, "mobile_chat_sticky_header");
         const imperativeHandle = noop.useImperativeHandle(ref, () => ({
           onChatViewScrolled(isFirstMessageVisible) {
             if (forumPost.isForumPost()) {
@@ -215,30 +236,36 @@ export default noop.memo(
             }
           },
         }));
-        let tmp8 = null;
+        let tmp10 = null;
+        if (pinotMemberNotice.visible) {
+          const obj2 = { onDismiss: pinotMemberNotice.dismiss };
+          tmp10 = timestampProducer(PinotLazy.PinotMemberNoticeBar, obj2);
+        }
+        const items = [tmp10, , , ,];
+        let tmp12 = null;
         if (channel.isForumPost()) {
-          tmp8 = null;
+          tmp12 = null;
           if (tmp[0]) {
-            const obj = { channel };
-            tmp8 = timestampProducer(ForumPostActionBarDefault, obj);
+            const obj3 = { channel };
+            tmp12 = timestampProducer(ForumPostActionBarDefault, obj3);
           }
         }
-        const items = [tmp8, , ,];
-        let tmp10 = null;
+        items[1] = tmp12;
+        let tmp14 = null;
         if (channel.isDM()) {
-          const obj2 = { channelId: channel.id, senderId: channel.getRecipientId() };
-          tmp10 = timestampProducer(closure_9, obj2);
+          const obj4 = { channelId: channel.id, senderId: channel.getRecipientId() };
+          tmp14 = timestampProducer(closure_9, obj4);
         }
-        items[1] = tmp10;
-        let tmp13 = null;
+        items[2] = tmp14;
+        let tmp17 = null;
         if (showUnreadsNotice) {
-          const obj3 = { channel, clearUnreadsNotice };
-          tmp13 = timestampProducer(UnreadSettingNoticeDefault, obj3);
+          const obj5 = { channel, clearUnreadsNotice };
+          tmp17 = timestampProducer(UnreadSettingNoticeDefault, obj5);
         }
-        const obj4 = { children: null };
-        items[2] = tmp13;
-        items[3] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: scrollToNewMessages });
-        obj4.children = items;
-        return closure_1_8(React5, obj4);
+        const obj6 = { children: null };
+        items[3] = tmp17;
+        items[4] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: scrollToNewMessages });
+        obj6.children = items;
+        return closure_1_8(React5, obj6);
       },
 );

@@ -7,7 +7,7 @@ let size = size_mod;
 const result = size.fileFinishedImporting("modules/conjure/preview/conjureOverlayPreview.tsx");
 
 export const CONJURE_OVERLAY_WIDGET_FALLBACK_SIZE = size;
-export const previewSupportsOverlay = function previewSupportsOverlay(preview_supported_surfaces) {
+export function previewSupportsOverlay(preview_supported_surfaces) {
   let hasItem;
   if (preview_supported_surfaces != null) {
     preview_supported_surfaces = preview_supported_surfaces.preview_supported_surfaces;
@@ -16,8 +16,8 @@ export const previewSupportsOverlay = function previewSupportsOverlay(preview_su
     }
   }
   return true === hasItem;
-};
-export const overlayWidgetPreviewSize = function overlayWidgetPreviewSize(overlay_widget) {
+}
+export function overlayWidgetPreviewSize(overlay_widget) {
   let default_size;
   if (overlay_widget != null) {
     default_size = overlay_widget.default_size;
@@ -41,8 +41,8 @@ export const overlayWidgetPreviewSize = function overlayWidgetPreviewSize(overla
     default_size = size;
   }
   return default_size;
-};
-export const overlayWidgetPreviewScale = function overlayWidgetPreviewScale(arg0, width) {
+}
+export function overlayWidgetPreviewScale(arg0, width) {
   ({ width, height } = arg0);
   let num = 1;
   if (null != width) {
@@ -59,8 +59,8 @@ export const overlayWidgetPreviewScale = function overlayWidgetPreviewScale(arg0
     }
   }
   return num;
-};
-export const previewOverlayWidgetSize = function previewOverlayWidgetSize(preview_overlay_widget) {
+}
+export function previewOverlayWidgetSize(preview_overlay_widget) {
   let prop;
   if (preview_overlay_widget != null) {
     prop = preview_overlay_widget.preview_overlay_widget;
@@ -91,4 +91,4 @@ export const previewOverlayWidgetSize = function previewOverlayWidgetSize(previe
     default_size = size;
   }
   return default_size;
-};
+}

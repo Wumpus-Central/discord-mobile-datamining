@@ -3,7 +3,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureRepliedMessage.tsx");
 
-export const repliedMessagesById = function repliedMessagesById(memo) {
+export function repliedMessagesById(memo) {
   const map = new Map();
   const iter = memo[Symbol.iterator]();
   const nextResult = iter.next();
@@ -31,4 +31,4 @@ export const repliedMessagesById = function repliedMessagesById(memo) {
     }
   }
   return map;
-};
+}

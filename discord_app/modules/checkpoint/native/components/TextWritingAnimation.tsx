@@ -4,34 +4,39 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 let require = fn;
 const noop = fn(19);
-({ useEffect: closure_4, useState: hasOwnProperty } = noop);
+({ useContext: closure_4, useEffect: hasOwnProperty, useState: metroRequire } = noop);
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5004);
-let closure_10 = createStyles.createStyles({
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5005);
+let closure_11 = createStyles.createStyles({
   hiddenText: { opacity: 0 },
   animatedText: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/TextWritingAnimation.tsx");
 
-export default function TextWritingAnimation(arg0) {
-  ({ style, textStyle, text } = arg0);
+export default function TextWritingAnimation(isStepHeading) {
+  ({ style, textStyle, text } = isStepHeading);
   require = text;
-  ({ variant, adjustsFontSizeToFit, lineClamp, delay } = arg0);
+  ({ variant, adjustsFontSizeToFit, lineClamp, delay } = isStepHeading);
   if (delay === undefined) {
     delay = 0;
   }
+  let flag = isStepHeading.isStepHeading;
+  if (flag === undefined) {
+    flag = false;
+  }
   let stateFromStores;
   _slicedToArray = undefined;
-  const tmp = closure_10();
+  const tmp = closure_11();
+  const tmp4 = closure_4(delay(stateFromStores[6]));
   const items = [AccessibilityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp4 = _slicedToArray(closure_5(0), 2);
-  _slicedToArray = tmp4[1];
+  const tmp6 = _slicedToArray(closure_6(0), 2);
+  _slicedToArray = tmp6[1];
   const items1 = [delay, stateFromStores, text];
-  closure_4(() => {
+  closure_5(() => {
     if (!handleAnimationFrame) {
       const _Date = Date;
       closure_0 = Date.now() + closure_1;
@@ -50,19 +55,55 @@ export default function TextWritingAnimation(arg0) {
   }, items1);
   if (stateFromStores) {
     const obj2 = { style, children: null };
-    const obj3 = { style: textStyle, variant, adjustsFontSizeToFit, lineClamp, children: text };
-    obj2.children = closure_8(delay(tmp2[7]), obj3);
-    let tmp11 = closure_8(View, obj2);
+    const obj3 = { isStepHeading: flag, style: textStyle, variant, adjustsFontSizeToFit, lineClamp, children: text };
+    obj2.children = closure_9(tmp2(tmp3[8]), obj3);
+    let tmp8Result = closure_9(View, obj2);
   } else {
-    const obj4 = { style, children: null };
-    const obj5 = { style: null, variant: null, adjustsFontSizeToFit: null, lineClamp: null, children: null };
+    let tmp10;
+    if (flag) {
+      tmp10 = tmp4;
+    }
+    const obj4 = {
+      ref: tmp10,
+      accessible: flag,
+      accessibilityRole: null,
+      accessibilityLabel: null,
+      style: null,
+      children: null,
+    };
+    let str;
+    if (flag) {
+      str = "header";
+    }
+    obj4.accessibilityRole = str;
+    let tmp11;
+    if (flag) {
+      tmp11 = text;
+    }
+    obj4.accessibilityLabel = tmp11;
+    obj4.style = style;
+    const obj5 = {
+      accessible: !flag,
+      accessibilityElementsHidden: flag,
+      importantForAccessibility: null,
+      style: null,
+      variant: null,
+      adjustsFontSizeToFit: null,
+      lineClamp: null,
+      children: null,
+    };
+    let str2;
+    if (flag) {
+      str2 = "no-hide-descendants";
+    }
+    obj5.importantForAccessibility = str2;
     const items2 = [tmp.hiddenText, textStyle];
     obj5.style = items2;
     obj5.variant = variant;
     obj5.adjustsFontSizeToFit = adjustsFontSizeToFit;
     obj5.lineClamp = lineClamp;
     obj5.children = text;
-    const items3 = [closure_8(delay(tmp2[7]), obj5)];
+    const items3 = [closure_9(tmp2(tmp3[8]), obj5)];
     const obj6 = {
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
@@ -77,12 +118,14 @@ export default function TextWritingAnimation(arg0) {
     obj6.variant = variant;
     obj6.adjustsFontSizeToFit = adjustsFontSizeToFit;
     obj6.lineClamp = lineClamp;
-    obj6.children = text.substring(0, tmp4[0]);
-    items3[1] = closure_8(delay(tmp2[7]), obj6);
+    const tmp14 = !flag;
+    const tmp2Result = tmp2(tmp3[8]);
+    obj6.children = text.substring(0, tmp6[0]);
+    items3[1] = closure_9(tmp2(tmp3[8]), obj6);
     obj4.children = items3;
-    tmp11 = closure_9(View, obj4);
-    const tmp10 = delay(tmp2[7]);
+    tmp8Result = closure_10(View, obj4);
+    const tmp2Result2 = tmp2(tmp3[8]);
   }
-  return tmp11;
+  return tmp8Result;
 }
 export const DURATION = 400;

@@ -18,7 +18,7 @@ import ACOMExperiments from "../../modules/billing/native/ACOMExperiments.tsx";
 import showSpendingLimitReachedAlert from "../../modules/parent_tools/native/showSpendingLimitReachedAlert.tsx";
 import openBlockedPaymentsCountryActionSheetDefault from "../../modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx";
 import IAPUtils from "../../utils/native/IAPUtils.tsx";
-import _mod14149 from "../../../_runtime/metro/14149__.js";
+import _mod14382 from "../../../_runtime/metro/14382__.js";
 import ErrorUtilsAll from "../../utils/ErrorUtils.tsx";
 import purchaseExceptionAlerts from "../../modules/billing/native/apple/purchaseExceptionAlerts.tsx";
 import APBRequestOperations from "../../../discord_common/js/shared/shared-constants/APBRequestOperations.tsx";
@@ -107,7 +107,7 @@ let closure_24 = async function _applyTransactionFromListener(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -144,9 +144,9 @@ let closure_24 = async function _applyTransactionFromListener(arg0) {
                       const transactionReason = parsed.transactionReason;
                       let tmp61 = "autoRenewable" === _require.productType;
                       if (tmp61) {
-                        let tmp58 = transactionReason === _mod14149.TransactionReason.PURCHASE;
+                        let tmp58 = transactionReason === _mod14382.TransactionReason.PURCHASE;
                         if (!tmp58) {
-                          tmp58 = transactionReason === _mod14149.TransactionReason.RENEWAL;
+                          tmp58 = transactionReason === _mod14382.TransactionReason.RENEWAL;
                         }
                         tmp61 = tmp58;
                       }
@@ -158,10 +158,10 @@ let closure_24 = async function _applyTransactionFromListener(arg0) {
                         }
                         const GiftACOMOrderExperiment = ACOMExperiments.GiftACOMOrderExperiment;
                         c6 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       } else if (!tmp61) {
                         c6 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                       const IAPTransactionApplyExperiment = ACOMExperiments.IAPTransactionApplyExperiment;
                       if (IAPTransactionApplyExperiment.getConfig({ location: "IAPTransactionListener" }).enabled) {
@@ -205,7 +205,7 @@ let closure_24 = async function _applyTransactionFromListener(arg0) {
       } else if (1 === tmp9) {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (2 !== tmp9) {
         if (3 === tmp9) {
           c4 = 2;
@@ -317,7 +317,7 @@ function handlePurchaseException(code, purchase_type, arg2) {
     if (obj.isSpendingLimitError(billingError)) {
       const result = showSpendingLimitReachedAlert.showSpendingLimitReachedAlert();
       const tmpResult = showSpendingLimitReachedAlert;
-    } else if (code.code !== _mod14149.ErrorCode.E_DEFERRED_PAYMENT) {
+    } else if (code.code !== _mod14382.ErrorCode.E_DEFERRED_PAYMENT) {
       const message = code.message;
       const obj3 = {};
       const merged = Object.assign(code);
@@ -477,7 +477,7 @@ let closure_32 = async function _clearAndMakeIAPRequest() {
   closure_133_2 = closure_2;
   closure_133_3 = closure_3;
   closure_133_4 = closure_4;
-  await _mod14149.clearTransactionIOS();
+  await _mod14382.clearTransactionIOS();
   return closure_134_33(closure_133_0, closure_133_1, closure_133_2, closure_133_3, closure_133_4);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3, arg4) {
@@ -501,7 +501,7 @@ let closure_34 = async function _makeTrackedIAPRequest(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -752,7 +752,7 @@ let closure_38 = async function _updateAppleSubscription() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -800,7 +800,7 @@ let closure_38 = async function _updateAppleSubscription() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -851,7 +851,7 @@ let closure_40 = async function _cancelGenericSubscription(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -962,7 +962,7 @@ let closure_43 = async function _createGenericSubscription(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -993,7 +993,7 @@ let closure_43 = async function _createGenericSubscription(arg0) {
           let originalPurchase;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -1169,7 +1169,7 @@ let closure_44 = async function _modifyGenericSubscription(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1201,7 +1201,7 @@ let closure_44 = async function _modifyGenericSubscription(arg0) {
             let originalPurchase;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         break;
         case 1:
@@ -1446,7 +1446,7 @@ let closure_45 = async function _resubscribeGenericSubscription(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1475,7 +1475,7 @@ let closure_45 = async function _resubscribeGenericSubscription(arg0) {
           let originalPurchase;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -1646,7 +1646,7 @@ let closure_46 = async function _retryPendingPurchases(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -1829,7 +1829,7 @@ let closure_47 = async function _mobilePurchaseSKU(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1878,7 +1878,7 @@ let closure_47 = async function _mobilePurchaseSKU(arg0, arg1) {
               closure_132_22 = undefined;
               c8 = 1;
               c9 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Reflect", done: null };
             }
           break;
           case 1:
@@ -2153,7 +2153,7 @@ let closure_48 = async function _migrateToACOM() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -2243,7 +2243,7 @@ let closure_48 = async function _migrateToACOM() {
 let closure_4 = ["items", "country_code"];
 let closure_5 = ["subscription_items"];
 let closure_6 = ["sku_id", "country_code", "is_gift", "gift_info_options"];
-const PremiumPlanPurchasedStore = fn(7568);
+const PremiumPlanPurchasedStore = fn(7591);
 ({ setPaymentSuccess: c10, showOldPaymentFlowSuccess: closure_11 } = PremiumPlanPurchasedStore);
 const Constants = fn(1084);
 ({ SubscriptionTypes: closure_15, AnalyticEvents: closure_16, CurrencyCodes: closure_17, Endpoints: closure_18, StoreKitErrors } = Constants);
@@ -2252,9 +2252,9 @@ const jsx = fn(21).jsx;
 const localAppleReceiptHash = "localAppleReceiptHash";
 const BILLING = "BILLING";
 new LoggerDefault("BillingActionCreators.tsx");
-let items = [fn(14149).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(14382).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
-const items1 = [fn(14149).ErrorCode.E_UNKNOWN, fn(14149).ErrorCode.E_DEFERRED_PAYMENT];
+const items1 = [fn(14382).ErrorCode.E_UNKNOWN, fn(14382).ErrorCode.E_DEFERRED_PAYMENT];
 const set1 = new Set(items1);
 let obj2 = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);
@@ -2262,8 +2262,8 @@ let result = size.fileFinishedImporting("actions/native/BillingActionCreators.ts
 
 export default {
   applyAppleReceipt,
-  fetchMostRecentSubscription: fn(6498).fetchMostRecentSubscription,
-  fetchIpCountryCode: fn(6498).fetchIpCountryCode,
+  fetchMostRecentSubscription: fn(6522).fetchMostRecentSubscription,
+  fetchIpCountryCode: fn(6522).fetchIpCountryCode,
   init() {
     const self = this;
     return (async () => {
@@ -2277,7 +2277,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -2393,7 +2393,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -2413,7 +2413,7 @@ export default {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: _mod14149.initConnection(), done: false };
+              const obj4 = { value: _mod14382.initConnection(), done: false };
               return obj4;
             }
           } else if (1 === tmp7) {
@@ -2466,7 +2466,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -2583,7 +2583,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -2845,7 +2845,7 @@ export default {
                     importer() {
                       return transactionReceipt(paths[32])(paths[31], paths.paths).then((result) => {
                         closure_0 = result.default;
-                        return () => { ... };
+                        return /* F166719 */ function() { ... };
                       });
                     },
                     isDismissable: false
@@ -2935,7 +2935,7 @@ export default {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -3076,7 +3076,7 @@ export default {
                         str1 = str1.transactionIdentifier.toString();
                         let obj = skipDupCheck(dependencyMap[19]);
                         obj2 = { purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } };
-                        skipDupCheck(dependencyMap[19]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(() => { ... });
+                        skipDupCheck(dependencyMap[19]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(/* F166720 */ function() { ... });
                         if (null != result) {
                           const obj4 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key };
                           transactionReceipt(dependencyMap[21]).dispatch(obj4);
@@ -3117,8 +3117,8 @@ export default {
                     } else if (closure_134_3.length > 0) {
                       const item = closure_134_3.forEach((code) => {
                         if (!set.has(code.code)) {
-                          const result = closure_1_0(4820).captureBillingException(code);
-                          const obj = closure_1_0(4820);
+                          const result = closure_1_0(4821).captureBillingException(code);
+                          const obj = closure_1_0(4821);
                         }
                       });
                       const _Error = Error;
@@ -3254,7 +3254,7 @@ export default {
     })();
   }
 };
-export const applyTransactionFromListener = function applyTransactionFromListener() {
+export function applyTransactionFromListener() {
   const self = this;
   const apply = closure_24.apply;
   if (typeof apply === "unknown") {
@@ -3263,10 +3263,10 @@ export const applyTransactionFromListener = function applyTransactionFromListene
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { getIAPJWTRequestData };
 export { updateAppleSubscription };
-export const cancelGenericSubscription = function cancelGenericSubscription(arg0, arg1, arg2) {
+export function cancelGenericSubscription(arg0, arg1, arg2) {
   const self = this;
   const apply = closure_40.apply;
   if (typeof apply === "unknown") {
@@ -3275,10 +3275,10 @@ export const cancelGenericSubscription = function cancelGenericSubscription(arg0
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { isValidCurrency };
 export const SubscriptionPurchaseFailureReason = obj2;
-export const createGenericSubscription = function createGenericSubscription(arg0) {
+export function createGenericSubscription(arg0) {
   const self = this;
   const apply = closure_43.apply;
   if (typeof apply === "unknown") {
@@ -3287,8 +3287,8 @@ export const createGenericSubscription = function createGenericSubscription(arg0
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const modifyGenericSubscription = function modifyGenericSubscription(arg0) {
+}
+export function modifyGenericSubscription(arg0) {
   const self = this;
   const apply = closure_44.apply;
   if (typeof apply === "unknown") {
@@ -3297,8 +3297,8 @@ export const modifyGenericSubscription = function modifyGenericSubscription(arg0
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const resubscribeGenericSubscription = function resubscribeGenericSubscription(arg0, arg1) {
+}
+export function resubscribeGenericSubscription(arg0, arg1) {
   const self = this;
   const apply = closure_45.apply;
   if (typeof apply === "unknown") {
@@ -3307,8 +3307,8 @@ export const resubscribeGenericSubscription = function resubscribeGenericSubscri
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const mobilePurchaseSKU = function mobilePurchaseSKU(arg0, arg1) {
+}
+export function mobilePurchaseSKU(arg0, arg1) {
   const self = this;
   const apply = closure_47.apply;
   if (typeof apply === "unknown") {
@@ -3317,8 +3317,8 @@ export const mobilePurchaseSKU = function mobilePurchaseSKU(arg0, arg1) {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const migrateToACOM = function migrateToACOM() {
+}
+export function migrateToACOM() {
   const self = this;
   const apply = closure_48.apply;
   if (typeof apply === "unknown") {
@@ -3327,4 +3327,4 @@ export const migrateToACOM = function migrateToACOM() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

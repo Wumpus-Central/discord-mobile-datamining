@@ -46,6 +46,6 @@ const result = size.fileFinishedImporting("modules/collectibles/records/ProfileE
 
 export default prototype;
 export const RestartMethod = { FromLoop: "fromLoop", FromStart: "fromStart" };
-export const isProfileEffectRecord = function isProfileEffectRecord(first1) {
+export function isProfileEffectRecord(first1) {
   return first1 instanceof prototype;
-};
+}

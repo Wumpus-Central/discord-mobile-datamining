@@ -4,11 +4,11 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
-const DraftType = fn(7666).DraftType;
+const DraftType = fn(7689).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
 
-export const useFileUploadComponentState = function useFileUploadComponentState(maxValues) {
+export function useFileUploadComponentState(maxValues) {
   const componentStateContext = state(uploadIds[3]).useComponentStateContext();
   executeStateUpdate(uploadIds[4])(
     null != componentStateContext,
@@ -53,4 +53,4 @@ export const useFileUploadComponentState = function useFileUploadComponentState(
     }
   }, items3);
   return { uploadIds, setUploadIds, currentUploads, error: error.error };
-};
+}

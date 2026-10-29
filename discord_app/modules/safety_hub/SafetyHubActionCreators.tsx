@@ -27,7 +27,7 @@ let closure_11 = async function _getSafetyHubData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -244,7 +244,7 @@ let closure_11 = async function _getSafetyHubData() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp11) {
       c0 = tmp;
@@ -266,7 +266,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -331,7 +331,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = classificationId(7932);
+                      obj3 = classificationId(7955);
                     }
                   }
                   const obj2 = {
@@ -392,7 +392,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(7932);
+                    obj3 = classificationId(7955);
                   }
                 }
                 const obj2 = {
@@ -425,7 +425,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp11) {
         c1 = tmp;
@@ -450,7 +450,7 @@ let closure_13 = async function _requestReview(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -520,7 +520,7 @@ let closure_13 = async function _requestReview(arg0) {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -543,7 +543,7 @@ let closure_14 = async function _requestSuspendedUserAgeVerification() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -610,7 +610,7 @@ let closure_14 = async function _requestSuspendedUserAgeVerification() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -640,7 +640,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -713,7 +713,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -745,7 +745,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -820,7 +820,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -829,7 +829,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(7933);
+const SafetyHubConstants = fn(7956);
 ({
   AGE_CHECK_POLL_INTERVAL_MS: metroRequire,
   AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7,
@@ -840,7 +840,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_hub/SafetyHubActionCreators.tsx");
 
 export { getSafetyHubData };
-export const getSafetyHubDataForClassification = function getSafetyHubDataForClassification() {
+export function getSafetyHubDataForClassification() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -849,8 +849,8 @@ export const getSafetyHubDataForClassification = function getSafetyHubDataForCla
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestReview = function requestReview() {
+}
+export function requestReview() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -859,8 +859,8 @@ export const requestReview = function requestReview() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const requestSuspendedUserAgeVerification = function requestSuspendedUserAgeVerification() {
+}
+export function requestSuspendedUserAgeVerification() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -869,9 +869,9 @@ export const requestSuspendedUserAgeVerification = function requestSuspendedUser
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { checkSuspendedUserAgeVerification };
 export { checkSuspendedUserAgeVerificationV2 };
-export const resetAgeCheckStatus = function resetAgeCheckStatus() {
+export function resetAgeCheckStatus() {
   DispatcherDefault.dispatch({ type: "SAFETY_HUB_RESET_AGE_CHECK_STATUS" });
-};
+}

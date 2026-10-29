@@ -1,6 +1,6 @@
 // discord_app/utils/MFAUtils.tsx
 import SentryUtilsDefault from "SentryUtils.native.tsx";
-import encodeDefault from "../../_runtime/07081_encode.js";
+import encodeDefault from "../../_runtime/07105_encode.js";
 import MetaQuestUtils from "../modules/device/MetaQuestUtils.android.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("utils/MFAUtils.tsx");
 
 export const hasCrypto = tmp5;
 export const hasWebAuthn = !MetaQuestUtils.isMetaQuest();
-export const generateTotpSecret = function generateTotpSecret() {
+export function generateTotpSecret() {
   const uint8Array = new Uint8Array(20);
   const randomValues = _crypto.getRandomValues(uint8Array);
   const encoder = encodeDefault;
@@ -44,9 +44,9 @@ export const generateTotpSecret = function generateTotpSecret() {
     .toLowerCase()
     .replace(/(\w{4})/g, "$1 ")
     .trim();
-};
+}
 export { encodeTotpSecret };
-export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
+export function encodeTotpSecretAsUrl(arg0, str) {
   str = arg2;
   if (arg2 === undefined) {
     str = "Discord";
@@ -64,8 +64,8 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
     "&issuer=" +
     encodeURIComponent(str)
   );
-};
-export const captureWebAuthnException = function captureWebAuthnException(error, tags) {
+}
+export function captureWebAuthnException(error, tags) {
   const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
@@ -77,4 +77,4 @@ export const captureWebAuthnException = function captureWebAuthnException(error,
   obj3.app_context = "webauthn";
   obj2.tags = obj3;
   SentryUtilsDefault.captureException(error, obj2);
-};
+}

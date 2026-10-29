@@ -6,7 +6,7 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7256 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7280 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
@@ -24,8 +24,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(9164).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7109).CreateGuildModalStates;
+let closure_6 = fn(9167).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7133).CreateGuildModalStates;
 const Constants = fn(1084);
 ({
   AnalyticEvents: closure_12,
@@ -36,10 +36,10 @@ const Constants = fn(1084);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = {
   container: {
-    marginTop: fn(5304).NAV_BAR_HEIGHT,
+    marginTop: fn(5305).NAV_BAR_HEIGHT,
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     alignItems: "center",
@@ -58,7 +58,7 @@ let obj2 = {
   separator: null,
 };
 let obj3 = {
-  marginTop: fn(5304).NAV_BAR_HEIGHT,
+  marginTop: fn(5305).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",
@@ -250,7 +250,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             keyExtractor: tmp14,
             getItemType: tmp15,
           };
-          const tmp18 = closure_17(tmp(7256).FlashList, obj3);
+          const tmp18 = closure_17(tmp(7280).FlashList, obj3);
           cResult[11] = tmp5;
           cResult[12] = tmp7;
           cResult[13] = tmp4.suggestionRowsContainer;
@@ -307,7 +307,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.getItemType = function getItemType(type) {
           return type.type;
         };
-        obj2.children = closure_17(_mod7256.FlashList, obj3);
+        obj2.children = closure_17(_mod7280.FlashList, obj3);
         tmp6Result2 = closure_17(closure_5, obj2);
       }
       return tmp6Result2;

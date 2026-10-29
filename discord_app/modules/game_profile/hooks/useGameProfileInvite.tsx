@@ -83,7 +83,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.isResolving = tmp8;
       return obj3;
     };
-export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsite(game) {
+export function hasGameProfileDiscordWebsite(game) {
   let flag;
   if (game != null) {
     const websites = game.websites;
@@ -385,8 +385,8 @@ export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsit
     flag = false;
   }
   return flag;
-};
-export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) {
+}
+export function preloadGameProfileInvite(arg0) {
   _require = arg0;
   const useGame = require("useGame").useGame;
   let items = [arg0];
@@ -420,4 +420,4 @@ export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) 
       const many = closure_10.fetchMany(items);
     }
   });
-};
+}

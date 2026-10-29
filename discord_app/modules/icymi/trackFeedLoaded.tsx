@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 ({ AnalyticEvents: c3, ChannelTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/icymi/trackFeedLoaded.tsx");
 
-export const trackFeedLoaded = function trackFeedLoaded(unreadFeedItems) {
+export function trackFeedLoaded(unreadFeedItems) {
   const items = [];
   const items1 = [];
   const items2 = [];
@@ -71,4 +71,4 @@ export const trackFeedLoaded = function trackFeedLoaded(unreadFeedItems) {
   obj3.unread_feed_item_types = items2;
   obj3.read_feed_item_types = items3;
   items1(items2[1]).track(items3.FEED_LOADED, obj3);
-};
+}

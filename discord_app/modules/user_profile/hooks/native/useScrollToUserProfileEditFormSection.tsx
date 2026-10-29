@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrol
           const tmp = findNodeHandle(ref.current);
           if (null != tmp) {
             if (obj != null) {
-              obj.measureLayout(tmp, () => { ... });
+              obj.measureLayout(tmp, /* F164060 */ function() { ... });
             }
             ProfileCustomizationNavigationStore.setState({ scrollPosition: null });
           }

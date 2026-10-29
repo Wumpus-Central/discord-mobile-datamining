@@ -7,7 +7,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
 
-export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(selectedChannelId) {
+export function isAlertOrActionSheetOpen(selectedChannelId) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = ActionSheetStore;
@@ -26,4 +26,4 @@ export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(select
     tmp = tmp3;
   }
   return tmp;
-};
+}

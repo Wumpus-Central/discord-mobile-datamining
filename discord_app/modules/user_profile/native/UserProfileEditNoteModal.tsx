@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
         const intl = userId(1125).intl;
         obj.children = intl.string(userId(1125).t.sHHsOM);
-        return jsx(userId(5270).Text, {
+        return jsx(userId(5271).Text, {
           variant: "redesign/heading-18/bold",
           accessibilityRole: "header",
           children: null,

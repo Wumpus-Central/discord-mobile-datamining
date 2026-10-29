@@ -13,7 +13,7 @@ import VoicePanelStore from "../voice_panel/VoicePanelStore.tsx";
 const require = globalThis.__r;
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(5186);
+const NavigationRouteUtils = params(5187);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -141,7 +141,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6838).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6861).CHANNEL_PREFIX;
 let c9 = null;
 const ReactCompilerGating = fn(558);
 function isChannelFocused() {
@@ -236,7 +236,7 @@ export const useIsChannelFocused = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       return tmp[0];
     };
-export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadStateAck(channelId, arg1) {
+export function isChannelFocusedForReadStateAck(channelId, arg1) {
   if (ChannelRTCStore.getChatOpen(channelId)) {
     return true;
   } else {
@@ -273,4 +273,4 @@ export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadS
       return false;
     }
   }
-};
+}

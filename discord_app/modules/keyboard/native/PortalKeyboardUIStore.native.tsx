@@ -12,7 +12,7 @@ const zustandStore = ZustandStore.createZustandStore(() => ({
 const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardUIStore.native.tsx");
 
 export const PortalKeyboardUIStore = { getField: zustandStore.getField, useField: zustandStore.useField };
-export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForChannel(arg0) {
+export function isPortalKeyboardOpenForChannel(arg0) {
   const state1 = zustandStore.getState();
   ({ state, keyboard } = state1);
   let channelId;
@@ -31,8 +31,8 @@ export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForCh
       state === PortalKeyboard.PortalKeyboardState.OPEN;
   }
   return tmp3;
-};
-export const openPortalKeyboard = function openPortalKeyboard(type, channelId, chatInputRef) {
+}
+export function openPortalKeyboard(type, channelId, chatInputRef) {
   const state1 = zustandStore.getState();
   ({ state, keyboard } = state1);
   type = undefined;
@@ -62,8 +62,8 @@ export const openPortalKeyboard = function openPortalKeyboard(type, channelId, c
     state === PortalKeyboard.PortalKeyboardState.REQUEST_OPEN ||
     state === PortalKeyboard.PortalKeyboardState.OPENING ||
     state === PortalKeyboard.PortalKeyboardState.OPEN;
-};
-export const registerPortalKeyboardRenderer = function registerPortalKeyboardRenderer(id) {
+}
+export function registerPortalKeyboardRenderer(id) {
   closure_0 = id;
   zustandStore.setState((renderers) => {
     renderers = renderers.renderers;
@@ -85,8 +85,8 @@ export const registerPortalKeyboardRenderer = function registerPortalKeyboardRen
       return obj;
     });
   };
-};
-export const handlePortalKeyboardOpen = function handlePortalKeyboardOpen(id) {
+}
+export function handlePortalKeyboardOpen(id) {
   closure_0 = id;
   zustandStore.setState((keyboard) => {
     let tmp = keyboard;
@@ -104,11 +104,11 @@ export const handlePortalKeyboardOpen = function handlePortalKeyboardOpen(id) {
     }
     return tmp;
   });
-};
-export const closePortalKeyboard = function closePortalKeyboard() {
+}
+export function closePortalKeyboard() {
   zustandStore.setState({ state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null });
-};
-export const closePortalKeyboardIfUnhandled = function closePortalKeyboardIfUnhandled() {
+}
+export function closePortalKeyboardIfUnhandled() {
   const state = zustandStore.getState();
   const keyboard = state.keyboard;
   let tmp3 = null == keyboard;
@@ -125,8 +125,8 @@ export const closePortalKeyboardIfUnhandled = function closePortalKeyboardIfUnha
       zustandStore.setState(obj2);
     }
   }
-};
-export const closePortalKeyboardRequest = function closePortalKeyboardRequest() {
+}
+export function closePortalKeyboardRequest() {
   const field = zustandStore.getField("state");
   if (tmp4) {
     const obj2 = { state: PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE };
@@ -134,4 +134,4 @@ export const closePortalKeyboardRequest = function closePortalKeyboardRequest() 
   }
   tmp4 =
     field !== PortalKeyboard.PortalKeyboardState.CLOSED && field !== PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE;
-};
+}

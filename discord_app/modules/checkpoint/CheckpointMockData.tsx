@@ -29,7 +29,7 @@ const obj2 = {
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointMockData.tsx");
 
 export { CheckpointMockStats };
-export const getMockCheckpointStats = function getMockCheckpointStats(arg0) {
+export function getMockCheckpointStats(arg0) {
   if (obj.DEFAULT === arg0) {
     return closure_1;
   } else if (obj.NO_PERSONAL_DATA === arg0) {
@@ -37,4 +37,4 @@ export const getMockCheckpointStats = function getMockCheckpointStats(arg0) {
   } else if (obj.ZERO_DATA === arg0) {
     return obj2;
   }
-};
+}

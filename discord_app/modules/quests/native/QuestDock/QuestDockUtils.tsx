@@ -98,12 +98,12 @@ export { getQuestDockExpandedHeightLimits };
 export { getQuestDockCollapsedWidth };
 export { getQuestDockExpandedWidth };
 export { getQuestDockClosedWidth };
-export const isSoftDismissed = function isSoftDismissed(questDockSoftDismissedAt) {
+export function isSoftDismissed(questDockSoftDismissedAt) {
   let tmp = null != questDockSoftDismissedAt;
   if (tmp) {
     const _Date = Date;
     tmp = Date.now() - questDockSoftDismissedAt < closure_7;
   }
   return tmp;
-};
+}
 export { dimensionsLayoutTransition };

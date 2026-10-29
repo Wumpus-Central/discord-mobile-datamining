@@ -16,8 +16,6 @@ const config = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/collectibles/experiments/CollectiblesMarketingCacheExperiment.tsx");
 
-export const getCollectiblesMarketingCacheTTL = function getCollectiblesMarketingCacheTTL(
-  CollectiblesMarketingManager,
-) {
+export function getCollectiblesMarketingCacheTTL(CollectiblesMarketingManager) {
   return config.getConfig({ location: CollectiblesMarketingManager }).ttlMs;
-};
+}

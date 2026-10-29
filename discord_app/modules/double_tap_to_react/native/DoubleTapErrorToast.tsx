@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const EmojiDisabledReasons = EmojiConstants.EmojiDisabledReasons;
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapErrorToast.tsx");
 
-export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiName) {
+export function showDoubleTapErrorToast(emojiName) {
   emojiName = emojiName.emojiName;
   if (null == emojiName) {
     const intl3 = util.intl;
@@ -22,4 +22,4 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
     stringResult = intl.formatToPlainString(util.t.WZGLFq, obj3);
   }
   ToastActionCreatorsDefault.open("EMOJI_DOUBLE_TAP_ERROR", { text: stringResult, variant: "critical" });
-};
+}

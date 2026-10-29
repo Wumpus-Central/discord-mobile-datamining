@@ -9,7 +9,7 @@ let ApexExperiment = ApexExperiment_mod;
 const obj = {
   name: "2026-03-overlay-default-keybind",
   kind: "user",
-  defaultConfig: { keybindOverride: "paths" },
+  defaultConfig: { keybindOverride: "r" },
   variations: null,
 };
 let obj2 = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
@@ -78,9 +78,9 @@ const apexExperiment3 = ApexExperiment.createApexExperiment(obj7);
 const result = size.fileFinishedImporting("modules/overlay/OverlayV3Experiment.tsx");
 
 export const OverlayDefaultKeybindOverrideExperiment = apexExperiment;
-export const getOverlayDefaultKeybind = function getOverlayDefaultKeybind(location) {
+export function getOverlayDefaultKeybind(location) {
   return apexExperiment.getConfig({ location });
-};
+}
 export const OverlayChatExperiment = apexExperiment1;
 export { getOverlayChatConfig };
 export const useOverlayChat = tmp4;
@@ -102,11 +102,11 @@ export const useOverlayStreamerMode = ReactCompilerGating.isReactCompilerEnabled
   : function useOverlayStreamerMode(location) {
       return apexExperiment2.useConfig({ location }).enabled;
     };
-export const trackOverlayInitializedExperiments = function trackOverlayInitializedExperiments() {
+export function trackOverlayInitializedExperiments() {
   const config = apexExperiment1.getConfig({ location: "OVERLAY_INITIALIZED" });
   const config1 = apexExperiment2.getConfig({ location: "OVERLAY_INITIALIZED" });
-};
+}
 export const OverlayNativeWindowRenderingExperiment = apexExperiment3;
-export const getOverlayNativeWindowRenderingConfig = function getOverlayNativeWindowRenderingConfig(location) {
+export function getOverlayNativeWindowRenderingConfig(location) {
   return apexExperiment3.getConfig({ location });
-};
+}

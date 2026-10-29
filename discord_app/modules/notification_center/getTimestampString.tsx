@@ -1,6 +1,6 @@
 // discord_app/modules/notification_center/getTimestampString.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2046 from "../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../_runtime/metro/02047__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getDurationString(seconds) {
@@ -47,11 +47,11 @@ let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: _modDef2046().diff(_modDef2046(since), "s"), getFormatter };
+  const obj = { seconds: _modDef2047().diff(_modDef2047(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 }
-export const getAbbreviatedFormatter = function getAbbreviatedFormatter() {
+export function getAbbreviatedFormatter() {
   const time = {
     minutes: util.t["XIGt+W"],
     hours: util.t.rhY1Rs,
@@ -60,8 +60,8 @@ export const getAbbreviatedFormatter = function getAbbreviatedFormatter() {
     years: util.t.I1E8p6,
   };
   return time;
-};
-export const getFullFormatter = function getFullFormatter() {
+}
+export function getFullFormatter() {
   const time = {
     minutes: util.t["GqQ/Y9"],
     hours: util.t.c5zfWZ,
@@ -70,5 +70,5 @@ export const getFullFormatter = function getFullFormatter() {
     years: util.t["12B3Re"],
   };
   return time;
-};
+}
 export { getDurationString };

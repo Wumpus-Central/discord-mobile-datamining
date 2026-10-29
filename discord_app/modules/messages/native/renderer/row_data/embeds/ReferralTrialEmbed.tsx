@@ -9,10 +9,10 @@ import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8455 from "../../../../../../../_runtime/metro/08455__.js";
+import _modDef8477 from "../../../../../../../_runtime/metro/08477__.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
-import _modDef8471 from "../../../../../../../_runtime/metro/08471__.js";
-import _modDef8472 from "../../../../../../../_runtime/metro/08472__.js";
+import _modDef8493 from "../../../../../../../_runtime/metro/08493__.js";
+import _modDef8494 from "../../../../../../../_runtime/metro/08494__.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../../../stores/billing/SubscriptionStore.tsx";
@@ -27,12 +27,7 @@ let closure_9 = fn(1391).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");
 
-export const createReferralTrialEmbedRedeemable = function createReferralTrialEmbedRedeemable(
-  message,
-  theme,
-  id,
-  relevantUserTrialOffer,
-) {
+export function createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer) {
   if (null != message.author) {
     const obj2 = {
       headerTextColor: nativeDefault.colors.WHITE,
@@ -53,7 +48,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
           backgroundColor,
           borderColor: backgroundColor,
           thumbnailCornerRadius: 3,
-          headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8471),
+          headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8493),
           headerText: null,
           headerColor: null,
           thumbnailUrl: null,
@@ -63,7 +58,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(util.t.gtNqJQ);
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8472);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8494);
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -182,7 +177,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                     const intl8 = util.intl;
                     obj11.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8455);
+                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8477);
                     tmp33 = obj11;
                     const tmp44Result11 = renderer_EmbedUtils;
                   }
@@ -249,4 +244,4 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
       }
     }
   }
-};
+}

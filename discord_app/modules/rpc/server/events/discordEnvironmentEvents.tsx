@@ -4,7 +4,7 @@ import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objec
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 let closure_3 = ["uiDensity"];
-const Constants = fn(6413);
+const Constants = fn(6437);
 const RPC_AUTHENTICATED_SCOPE = Constants.RPC_AUTHENTICATED_SCOPE;
 const RPC_EMBEDDED_APP_SCOPE = Constants.RPC_EMBEDDED_APP_SCOPE;
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;
@@ -66,7 +66,7 @@ obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/discordEnvironmentEvents.tsx");
 
-export const createDiscordEnvironmentEvents = function createDiscordEnvironmentEvents(arg0) {
+export function createDiscordEnvironmentEvents(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
@@ -125,5 +125,5 @@ export const createDiscordEnvironmentEvents = function createDiscordEnvironmentE
   const items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
   obj.scope = { [closure_8.ANY]: items };
   return { [closure_9.DISCORD_ENV_UPDATE]: obj };
-};
+}
 export const discordEnvironmentEvents = { [RPCEvents.DISCORD_ENV_UPDATE]: obj };

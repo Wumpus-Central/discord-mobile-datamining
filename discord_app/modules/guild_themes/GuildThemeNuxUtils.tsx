@@ -16,7 +16,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
         return obj;
       } else {
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp14) {
       c5 = tmp;
@@ -81,7 +81,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_themes/GuildThemeNuxUtils.tsx");
 
-export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
+export function getInitialGuildThemeNuxSelection() {
   const defaultGuildThemePreference = UserSettingsProtoStore.getDefaultGuildThemePreference();
   if (defaultGuildThemePreference === Client.GuildThemeSourcePreference.PERSONAL) {
     let GUILD = Client.GuildThemeSourcePreference.PERSONAL;
@@ -89,8 +89,8 @@ export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNux
     GUILD = Client.GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
-};
-export const saveGuildThemeNuxPreference = function saveGuildThemeNuxPreference() {
+}
+export function saveGuildThemeNuxPreference() {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -99,4 +99,4 @@ export const saveGuildThemeNuxPreference = function saveGuildThemeNuxPreference(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

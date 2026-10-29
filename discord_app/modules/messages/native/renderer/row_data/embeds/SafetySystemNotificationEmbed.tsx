@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../../Constants.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef2046 from "../../../../../../../_runtime/metro/02046__.js";
+import _modDef2047 from "../../../../../../../_runtime/metro/02047__.js";
 import SafetyHubUtils from "../../../../../safety_hub/SafetyHubUtils.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx",
 );
 
-export const createSafetySystemNotificationEmbed = function createSafetySystemNotificationEmbed(message) {
+export function createSafetySystemNotificationEmbed(message) {
   if (null != message) {
     if (null != message.embeds) {
       const first = message.embeds[0];
@@ -61,7 +61,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             const obj2 = {
               titleText: str,
               titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(
-                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7990 : 8547)),
+                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8013 : 8569)),
               ),
               subtitleText: null,
               descriptionText: null,
@@ -80,8 +80,8 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             const obj3 = { daysAgo: null };
             const tmp6Result4 = renderer_EmbedUtils;
-            const obj7 = _modDef2046();
-            obj3.daysAgo = obj7.diff(_modDef2046.unix(num), "days");
+            const obj7 = _modDef2047();
+            obj3.daysAgo = obj7.diff(_modDef2047.unix(num), "days");
             obj2.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj3);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
@@ -125,4 +125,4 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
       }
     }
   }
-};
+}

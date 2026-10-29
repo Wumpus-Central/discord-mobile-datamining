@@ -4,9 +4,9 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("actions/MaskedLinkActionCreators.tsx");
 
-export const trustDomain = function trustDomain(url) {
+export function trustDomain(url) {
   DispatcherDefault.dispatch({ type: "MASKED_LINK_ADD_TRUSTED_DOMAIN", url });
-};
-export const trustProtocol = function trustProtocol(url) {
+}
+export function trustProtocol(url) {
   DispatcherDefault.dispatch({ type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url });
-};
+}

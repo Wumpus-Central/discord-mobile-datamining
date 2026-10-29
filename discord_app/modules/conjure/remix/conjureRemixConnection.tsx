@@ -138,7 +138,7 @@ export const remixFrameHandlers = {
     });
   },
 };
-export const acceptRemix = function acceptRemix() {
+export function acceptRemix() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -147,9 +147,9 @@ export const acceptRemix = function acceptRemix() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const sendRetryRemix = function sendRetryRemix(projectId) {
+}
+export function sendRetryRemix(projectId) {
   return conjureProjectSockets.sendOnConjureSocket(projectId, "retry remix", (sendRetryRemix) =>
     sendRetryRemix.sendRetryRemix(),
   );
-};
+}

@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
-export const getApplicationAssetUrl = function getApplicationAssetUrl(arg0, asset_id, size) {
+export function getApplicationAssetUrl(arg0, asset_id, size) {
   if (null != window.GLOBAL_ENV.CDN_HOST) {
     const _URL2 = URL;
     const _location = location;
@@ -39,4 +39,4 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(arg0, asse
     const result1 = searchParams2.set("animated", "true");
   }
   return str5.toString();
-};
+}

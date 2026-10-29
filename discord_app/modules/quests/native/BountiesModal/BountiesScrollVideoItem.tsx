@@ -11,7 +11,7 @@ import BountyStore from "../../BountyStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6745).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6768).BOUNTY_ORB_AMOUNT;
 let jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -293,7 +293,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -349,7 +349,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   });
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp27) {
               closure_2 = tmp27;
@@ -482,7 +482,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -540,7 +540,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   });
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp27) {
               if (tmp4 === c3) {
@@ -898,10 +898,10 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
       if (flag4 === undefined) {
         flag4 = false;
       }
-      return flag3(bounty(14380).BillableAdPlacementImpressionTrackerNative, {
+      return flag3(bounty(14614).BillableAdPlacementImpressionTrackerNative, {
         adContentId: bounty.id,
-        adCreativeType: bounty(6752).AdCreativeType.BOUNTY,
-        questContent: bounty(6750).QuestContent.VIDEO_MODAL_MOBILE,
+        adCreativeType: bounty(6775).AdCreativeType.BOUNTY,
+        questContent: bounty(6773).QuestContent.VIDEO_MODAL_MOBILE,
         sourceQuestContent,
         overrideVisibility: isActive,
         children() {

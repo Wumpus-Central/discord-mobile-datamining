@@ -22,7 +22,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -84,14 +84,14 @@ let closure_22 = async function _startAudioRecording(arg0) {
         if (closure_130_11.getState().recordingId !== closure_129_0) {
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           closure_130_9(closure_130_12.STARTED);
           const _Date = Date;
           closure_130_10(Date.now());
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       }
     } catch (tmp22) {
@@ -149,7 +149,7 @@ let closure_26 = async function _endAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -225,7 +225,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
         closure_129_23();
         closure_129_7(closure_128_0);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13293);
+const VoiceMessagesUIStore = fn(13526);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: metroRequire,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(13293);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13294);
+const VoiceMessageConstants = fn(13527);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,
@@ -306,7 +306,7 @@ let closure_21 = apply.throttle((arg0) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
 
-export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
+export function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
   if (arg0.length > value3) {
     arr = downsampleWaveformDefault(arg0, tmp);
@@ -314,8 +314,8 @@ export const generateBase64EncodedWaveform = function generateBase64EncodedWavef
   const mapped = arr.map((item) => Math.min(item, closure_1_13));
   const uint8Array = new Uint8Array(mapped);
   return byteLengthDefault.fromByteArray(uint8Array);
-};
-export const startAudioRecording = function startAudioRecording() {
+}
+export function startAudioRecording() {
   const self = this;
   const apply = closure_22.apply;
   if (typeof apply === "unknown") {
@@ -324,8 +324,8 @@ export const startAudioRecording = function startAudioRecording() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const endAudioRecording = function endAudioRecording() {
+}
+export function endAudioRecording() {
   const self = this;
   const apply = closure_26.apply;
   if (typeof apply === "unknown") {
@@ -334,13 +334,9 @@ export const endAudioRecording = function endAudioRecording() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { stopAndCacheAudioRecording };
-export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(
-  CANCELLED_DURATION,
-  durationSecs,
-  startTimeMillis,
-) {
+export function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, startTimeMillis) {
   if (null != startTimeMillis) {
     const obj2 = {
       recording_start_timestamp: startTimeMillis,
@@ -357,11 +353,11 @@ export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(
     AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_RECORDED, obj2);
     initialize_secs = null;
   }
-};
-export const triggerHaptic = function triggerHaptic() {
+}
+export function triggerHaptic() {
   const obj = HapticUtils;
   const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
   const result = obj.triggerHapticFeedback(
     PlatformUtils.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM,
   );
-};
+}

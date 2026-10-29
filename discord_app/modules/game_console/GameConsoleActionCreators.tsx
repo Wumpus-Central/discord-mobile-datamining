@@ -95,7 +95,7 @@ let closure_12 = async function _getConnectNonce() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -179,7 +179,7 @@ let closure_14 = async function _fetchDevices() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -269,7 +269,7 @@ let closure_16 = async function _cancelCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -331,7 +331,7 @@ let closure_16 = async function _cancelCommand() {
           };
           closure_132_1(closure_132_2[6]).dispatch(obj11);
           c8 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp28) {
         closure_5 = tmp28;
@@ -350,14 +350,14 @@ const Constants = fn(1084);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
 
-export const waitForSession = function waitForSession(XBOX, id, nonce) {
+export function waitForSession(XBOX, id, nonce) {
   DispatcherDefault.dispatch({ type: "WAIT_FOR_REMOTE_SESSION", sessionType: XBOX, nonce, channelId: id });
-};
+}
 export { disconnectRemote };
-export const connectToRemote = function connectToRemote(sessionId) {
+export function connectToRemote(sessionId) {
   DispatcherDefault.dispatch({ type: "REMOTE_SESSION_CONNECT", sessionId });
-};
-export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSessionId, arg1) {
+}
+export function remoteVoiceStateUpdate(remoteSessionId, arg1) {
   ({ selfMute, selfDeaf } = arg1);
   const action = {
     type: "REMOTE_COMMAND",
@@ -377,8 +377,8 @@ export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSess
     command_type: "VOICE_STATE_UPDATE",
     remote_platform: os,
   });
-};
-export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
+}
+export function remoteDisconnect(remoteSessionId) {
   const action = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "DISCONNECT" } };
   DispatcherDefault.dispatch(action);
   const sessionById = SessionsStore.getSessionById(remoteSessionId);
@@ -391,8 +391,8 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
   }
   AnalyticsUtilsDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
   disconnectRemote();
-};
-export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, id, arg2, arg3) {
+}
+export function remoteAudioSettingsUpdate(sessionId, id, arg2, arg3) {
   const result = AudioSettingsUtils.coerceAudioContextForProto(arg2);
   if (null != result) {
     const action = { type: "REMOTE_COMMAND", sessionId, payload: null };
@@ -411,8 +411,8 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
     const obj4 = { command_type: "AUDIO_SETTINGS_UPDATE", remote_platform: os };
     AnalyticsUtilsDefault.track(constants.REMOTE_COMMAND_SENT, obj4);
   }
-};
-export const getConnectNonce = function getConnectNonce() {
+}
+export function getConnectNonce() {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -421,9 +421,9 @@ export const getConnectNonce = function getConnectNonce() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { cancelConnectRequest };
-export const fetchDevices = function fetchDevices() {
+export function fetchDevices() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -432,8 +432,8 @@ export const fetchDevices = function fetchDevices() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const persistSelectedDeviceId = function persistSelectedDeviceId(platform, value) {
+}
+export function persistSelectedDeviceId(platform, value) {
   DispatcherDefault.dispatch({ type: "GAME_CONSOLE_SELECT_DEVICE", platform, deviceId: value });
-};
+}
 export { cancelCommand };

@@ -13,17 +13,17 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/activities/experiments/EmbeddedAppShimExperiment.tsx");
 
 export const EMBEDDED_APP_SHIM_EXPERIMENT = "2026-10-embedded-app-shim-v2";
-export const useEmbeddedAppShimVersion = function useEmbeddedAppShimVersion(BaseEmbeddedAppWebView) {
+export function useEmbeddedAppShimVersion(BaseEmbeddedAppWebView) {
   let num = 1;
   if (closure_0.useConfig(obj).enabled) {
     num = 2;
   }
   return num;
-};
-export const getEmbeddedAppShimVersion = function getEmbeddedAppShimVersion(ChannelLongPressActionSheet) {
+}
+export function getEmbeddedAppShimVersion(ChannelLongPressActionSheet) {
   let num = 1;
   if (closure_0.getConfig(obj).enabled) {
     num = 2;
   }
   return num;
-};
+}

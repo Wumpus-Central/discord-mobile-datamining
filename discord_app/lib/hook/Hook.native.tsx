@@ -3,12 +3,12 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/hook/Hook.native.tsx");
 
-export const attachToProcess = function attachToProcess() {
+export function attachToProcess() {
   return Promise.resolve();
-};
-export const cancelAttachToProcess = function cancelAttachToProcess() {
+}
+export function cancelAttachToProcess() {
   return Promise.resolve();
-};
-export const findSteamProcess = function findSteamProcess() {
+}
+export function findSteamProcess() {
   return Promise.resolve(null);
-};
+}

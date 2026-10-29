@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import MFAUtils from "../../../utils/MFAUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8147 from "../../../../_runtime/metro/08147__.js";
+import _modDef8170 from "../../../../_runtime/metro/08170__.js";
 import MfaStepsTypes from "MfaStepsTypes.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            let obj2 = { name: tmp(17305).MfaScreens.SELECT, params: null };
+            let obj2 = { name: tmp(17544).MfaScreens.SELECT, params: null };
             const obj3 = { mfaChallenge: tmp8, finish: tmp24 };
             obj2.params = obj3;
             cResult[19] = tmp24;
@@ -129,7 +129,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -159,9 +159,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj11 = { value, done: true };
                 return obj11;
               } else {
-                tmp4(6707).popWithKey(MFA_MODAL_KEY);
+                tmp4(6731).popWithKey(MFA_MODAL_KEY);
                 ticket = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp13) {
               ticket = tmp;
@@ -326,11 +326,70 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }, items);
       _require = flag(function* (arg0) {
-        yield tmp2({ mfaType: closure_129_0, data: closure_129_1, ticket: ticket.ticket });
-        finish(cancel[8]).popWithKey(MFA_MODAL_KEY);
-        yield "IconComponent";
-        ({ mfaType: closure_129_0, data: closure_129_1 } = closure_0);
-        return "Reflect";
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: "IconComponent" };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_2 = tmp5;
+                closure_129_0 = undefined;
+                closure_129_1 = undefined;
+                ({ mfaType: closure_129_0, data: closure_129_1 } = closure_0);
+                c3 = 1;
+                c4 = 1;
+                return { value: "Reflect", done: null };
+              }
+            } else if (1 === tmp5) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                const obj5 = { mfaType: closure_129_0, data: closure_129_1, ticket: ticket.ticket };
+                c3 = 2;
+                c4 = 1;
+                const obj6 = { value: tmp2(obj5), done: false };
+                return obj6;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else {
+              finish(cancel[8]).popWithKey(MFA_MODAL_KEY);
+              c4 = 3;
+              return { value: "IconComponent", done: "IconComponent" };
+            }
+          } catch (tmp18) {
+            c4 = tmp;
+            throw tmp18;
+          }
+        }
       });
       let items1 = [finish, memo.ticket];
       finish = finish.useCallback(function () {
@@ -397,7 +456,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.headerRight = headerRight;
         obj3.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(finish(17306), {});
+          return closure_1_8(finish(17545), {});
         };
         obj2[MfaStepsTypes.MfaScreens.SELECT] = obj3;
         const obj5 = {};
@@ -427,7 +486,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.headerRight = tmp12;
         obj5.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(finish(17307), {});
+          return closure_1_8(finish(17546), {});
         };
         obj2[MfaStepsTypes.MfaScreens.WEBAUTHN] = obj5;
         const obj6 = {};
@@ -457,7 +516,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj6.headerRight = tmp20;
         obj6.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(finish(17312), {});
+          return closure_1_8(finish(17551), {});
         };
         obj2[MfaStepsTypes.MfaScreens.TOTP] = obj6;
         const obj7 = {};
@@ -487,7 +546,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj7.headerRight = tmp28;
         obj7.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(finish(17315), {});
+          return closure_1_8(finish(17554), {});
         };
         obj2[MfaStepsTypes.MfaScreens.BACKUP] = obj7;
         const obj8 = {};
@@ -517,7 +576,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj8.headerRight = tmp36;
         obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(finish(17316), {});
+          return closure_1_8(finish(17555), {});
         };
         obj2[MfaStepsTypes.MfaScreens.SMS] = obj8;
         const obj9 = {};
@@ -547,7 +606,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj9.headerRight = tmp44;
         obj9.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(finish(17317), {});
+          return closure_1_8(finish(17556), {});
         };
         obj2[MfaStepsTypes.MfaScreens.PASSWORD] = obj9;
         return obj2;
@@ -564,8 +623,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/MFAModal.tsx");
 
 export const MFAModal = tmp4;
-export const openMFAModal = function openMFAModal(mfaChallenge, finish, cancel) {
+export function openMFAModal(mfaChallenge, finish, cancel) {
   ModalActionCreatorsDefault.push(closure_10, { mfaChallenge, finish, cancel }, MFA_MODAL_KEY);
   const obj = { mfaChallenge, finish, cancel };
   actions_AlertActionCreatorsDefault.close();
-};
+}

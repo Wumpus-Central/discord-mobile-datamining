@@ -7,10 +7,10 @@ NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
-export const isMetaQuest = function isMetaQuest() {
+export function isMetaQuest() {
   return NativeMetaQuestModule.isMetaQuest();
-};
-export const isQuestRelease = function isQuestRelease() {
+}
+export function isQuestRelease() {
   constants = ClientInfoUtilsAll.getConstants();
   let flag;
   if (constants != null) {
@@ -23,5 +23,5 @@ export const isQuestRelease = function isQuestRelease() {
     flag = false;
   }
   return flag;
-};
+}
 export const isThumbstickScrollDevice = NativeMetaQuestModule;

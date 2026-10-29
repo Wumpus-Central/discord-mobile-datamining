@@ -33,13 +33,13 @@ function registerConjurePausedPreview(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePausedPreviewViews.tsx");
 
-export const isConjurePausedPreviewMounted = function isConjurePausedPreviewMounted(projectId) {
+export function isConjurePausedPreviewMounted(projectId) {
   let num = map.get(projectId);
   if (num == null) {
     num = 0;
   }
   return num > 0;
-};
+}
 export { registerConjurePausedPreview };
 export const useConjurePausedPreviewView = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjurePausedPreviewView(arg0) {

@@ -8,6 +8,6 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result1 = size.fileFinishedImporting("hooks/analytics.tsx");
 
-export const useAnalyticsContext = function useAnalyticsContext() {
+export function useAnalyticsContext() {
   return noop.useContext(AnalyticsUtils.AnalyticsContext);
-};
+}

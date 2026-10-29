@@ -467,7 +467,7 @@ const MessageEmbedTypes = fn(1084).MessageEmbedTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformMessage.tsx");
 
-export const transformMessageRecord = function transformMessageRecord(id) {
+export function transformMessageRecord(id) {
   let obj = {
     id: id.id,
     channel_id: id.channel_id,
@@ -728,8 +728,8 @@ export const transformMessageRecord = function transformMessageRecord(id) {
   obj9.author_color = colorString;
   const merged2 = Object.assign(obj9);
   return obj;
-};
-export const transformServerMessage = function transformServerMessage(message) {
+}
+export function transformServerMessage(message) {
   let tmp;
   if (null != message.author) {
     tmp = new UserRecord(message.author);
@@ -917,4 +917,4 @@ export const transformServerMessage = function transformServerMessage(message) {
   obj7.author_color = colorString;
   const merged2 = Object.assign(obj7);
   return obj;
-};
+}

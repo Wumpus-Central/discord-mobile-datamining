@@ -3,10 +3,10 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef2631 from "../../GiftingBadge.messages.js";
+import _modDef2632 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
+import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-const createStyles = fn(5004);
+const createStyles = fn(5005);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const intl = util.intl;
               const obj6 = { giftsRemaining: giftsToNextTier, nextTier: nextTierName };
-              const formatToPlainStringResult = intl.formatToPlainString(_modDef2631["0+xfd9"], obj6);
+              const formatToPlainStringResult = intl.formatToPlainString(_modDef2632["0+xfd9"], obj6);
               cResult[12] = giftsToNextTier;
               cResult[13] = nextTierName;
               cResult[14] = formatToPlainStringResult;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [React4(View, obj3)];
       const obj5 = { variant: "text-md/semibold", children: null };
       const intl = util.intl;
-      obj5.children = intl.formatToPlainString(_modDef2631["0+xfd9"], {
+      obj5.children = intl.formatToPlainString(_modDef2632["0+xfd9"], {
         giftsRemaining: giftsToNextTier,
         nextTier: nextTierName,
       });

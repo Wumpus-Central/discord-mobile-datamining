@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");
 
-export const waitSafelyForPostTTI = function waitSafelyForPostTTI(arg0) {
+export function waitSafelyForPostTTI(arg0) {
   return new Promise((arg0) => {
     closure_0 = arg0;
     const timeout = setTimeout(() => {
@@ -15,4 +15,4 @@ export const waitSafelyForPostTTI = function waitSafelyForPostTTI(arg0) {
       closure_0();
     });
   });
-};
+}

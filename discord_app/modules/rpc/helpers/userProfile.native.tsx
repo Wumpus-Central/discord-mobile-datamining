@@ -8,11 +8,11 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/userProfile.native.tsx");
 
-export const isAnyUserProfileOpen = function isAnyUserProfileOpen() {
+export function isAnyUserProfileOpen() {
   const stack = ActionSheetStore.getStack();
   return stack.some((key) => key.key.startsWith(showUserProfileActionSheet.USER_PROFILE_ACTION_SHEET_KEY_PREFIX));
-};
-export const openUserProfile = function openUserProfile(arg0) {
+}
+export function openUserProfile(arg0) {
   ({ userId: require, onOpen: importDefault, onClose: dependencyMap } = arg0);
   closure_3 = async function _open() {
     if (c3 === 2) {
@@ -25,7 +25,7 @@ export const openUserProfile = function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -43,7 +43,7 @@ export const openUserProfile = function openUserProfile(arg0) {
             if (null == authStore.getUser(require)) {
               v2 = 3;
               c3 = 1;
-              const obj4 = { value: tmp3(8707).getUser(require), done: false };
+              const obj4 = { value: tmp3(8710).getUser(require), done: false };
               return obj4;
             }
           }
@@ -84,7 +84,7 @@ export const openUserProfile = function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, onClose: closure_128_2 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(8705)(obj8), done: false };
+          const obj9 = { value: v2(8708)(obj8), done: false };
           return obj9;
         }
       } catch (tmp28) {
@@ -108,4 +108,4 @@ export const openUserProfile = function openUserProfile(arg0) {
     return applyArgumentsResult;
   })();
   return true;
-};
+}

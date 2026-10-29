@@ -10,7 +10,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
 
-export const getAttachmentObscurityProps = function getAttachmentObscurityProps(shouldAgeVerify) {
+export function getAttachmentObscurityProps(shouldAgeVerify) {
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
   let num = attachment.flags;
   if (num == null) {
@@ -87,8 +87,8 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   obj5.obscureHideControls = isVerifiedTeenResult;
   obj5.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
   return obj5;
-};
-export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemObscurityProps(arg0) {
+}
+export function getUnfurledMediaItemObscurityProps(arg0) {
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
   const obj = ObscuredMediaUtils;
@@ -155,7 +155,7 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     stringResult1 = intl.string(util.t["3Gc2XP"]);
   }
   const obj2 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: mediaItem };
-};
+}
 export function getAttachmentObscurityDefaults() {
   return { isSpoiler: false, spoiler: "" };
 }

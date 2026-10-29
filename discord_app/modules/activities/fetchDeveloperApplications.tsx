@@ -44,7 +44,7 @@ const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/fetchDeveloperApplications.tsx");
 
-export const fetchDeveloperApplications = function fetchDeveloperApplications() {
+export function fetchDeveloperApplications() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -53,4 +53,4 @@ export const fetchDeveloperApplications = function fetchDeveloperApplications() 
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

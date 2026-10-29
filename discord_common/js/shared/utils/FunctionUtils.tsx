@@ -179,7 +179,7 @@ prototype["many"] = function many(items, fn) {
   const set = new Set(items);
 };
 
-export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, arg1) {
+export function areArraysShallowlyEqual(arg0, arg1) {
   if (arg0 === arg1) {
     return true;
   } else {
@@ -199,7 +199,7 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, ar
     }
     return false;
   }
-};
+}
 export function cachedFunction(arg0) {
   closure_0 = arg0;
   let items = null;
@@ -257,7 +257,7 @@ export function promiseThrottle(arg0) {
     return closure_3;
   };
 }
-export const ignoreErrors = function ignoreErrors() {
+export function ignoreErrors() {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -266,9 +266,9 @@ export const ignoreErrors = function ignoreErrors() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { PromiseDeduper };
-export const clearObject = function clearObject(obj) {
+export function clearObject(obj) {
   for (const key10003 in arg0) {
     if (!arg0.hasOwnProperty(key10003)) {
       continue;
@@ -278,8 +278,8 @@ export const clearObject = function clearObject(obj) {
     }
     continue;
   }
-};
-export const isPlainObjectEmpty = function isPlainObjectEmpty(arg0) {
+}
+export function isPlainObjectEmpty(arg0) {
   const keys = Object.keys();
   if (keys !== undefined) {
     if (keys[tmp] !== undefined) {
@@ -287,4 +287,4 @@ export const isPlainObjectEmpty = function isPlainObjectEmpty(arg0) {
     }
   }
   return true;
-};
+}

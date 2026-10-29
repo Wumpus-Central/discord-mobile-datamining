@@ -14,8 +14,8 @@ const prototype = ContentInventoryStore.prototype;
 prototype["getFeeds"] = function getFeeds() {
   return map;
 };
-prototype["getFeed"] = function getFeed(GLOBAL_FEED) {
-  return map.get(GLOBAL_FEED);
+prototype["getFeed"] = function getFeed(arg0) {
+  return map.get(arg0);
 };
 prototype["getFeedState"] = function getFeedState(arg0) {
   return map1.get(arg0);

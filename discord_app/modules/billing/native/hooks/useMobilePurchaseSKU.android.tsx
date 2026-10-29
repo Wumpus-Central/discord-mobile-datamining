@@ -8,9 +8,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(7571).useNativeCheckoutStoreOrNull;
+let closure_5 = fn(7594).useNativeCheckoutStoreOrNull;
 const CurrencyCodes = fn(1084).CurrencyCodes;
-fn(7560).GPlayBillingResult;
+fn(7583).GPlayBillingResult;
 let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
@@ -106,7 +106,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -382,7 +382,7 @@ export default function useMobilePurchaseSKU(skuId) {
             }
             c4 = 0;
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
           const obj15 = {
             productId: closure_130_1,

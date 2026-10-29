@@ -2,7 +2,7 @@
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 const require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let obj2 = {
   kind: "user",
   name: "2026-07-manual-age-assurance-fallback",
@@ -16,9 +16,7 @@ const config = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx");
 
-export const isManualAgeAssuranceFallbackEnabled = function isManualAgeAssuranceFallbackEnabled(
-  isAgeVerificationMessageWithManualReviewCta,
-) {
+export function isManualAgeAssuranceFallbackEnabled(isAgeVerificationMessageWithManualReviewCta) {
   if (obj.isCurrentUserSuspended()) {
     let enabled = SafetyHubStore.getIsManualReviewFallbackEnabled();
   } else {
@@ -26,4 +24,4 @@ export const isManualAgeAssuranceFallbackEnabled = function isManualAgeAssurance
     enabled = config.getConfig(obj2).enabled;
   }
   return enabled;
-};
+}

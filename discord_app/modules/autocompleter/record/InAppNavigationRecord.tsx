@@ -4,7 +4,7 @@ import Record from "../../../lib/Record.tsx";
 
 require = fn;
 const Routes = fn(1084).Routes;
-const RewardFilterTypes = fn(6745).RewardFilterTypes;
+const RewardFilterTypes = fn(6768).RewardFilterTypes;
 const UserSettingsPath = fn(1094).UserSettingsPath;
 const InAppNavigationType = {
   SHOP: "SHOP",

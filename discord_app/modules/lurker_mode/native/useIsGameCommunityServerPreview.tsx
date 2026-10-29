@@ -59,11 +59,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-export const isGameCommunityServerPreview = function isGameCommunityServerPreview(id) {
+export function isGameCommunityServerPreview(id) {
   const lurkingSourceForGuild = LurkingStore.getLurkingSourceForGuild(id);
   let type;
   if (lurkingSourceForGuild != null) {
     type = lurkingSourceForGuild.type;
   }
   return type === JoinGuildSources.GAME_COMMUNITY_UPSELL;
-};
+}

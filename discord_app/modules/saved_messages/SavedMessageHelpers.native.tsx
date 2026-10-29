@@ -18,7 +18,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -43,7 +43,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
             closure_129_4 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Reflect", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -90,12 +90,12 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                     const intl5 = tmp9(1125).intl;
                     obj3.cancelText = intl5.string(closure_0(1125).t.ZGbTcy);
                     obj3.onCancel = function onCancel() {
-                      const SavedMessageSortTypes = displayToast(10112).SavedMessageSortTypes;
-                      return displayToast(14036).showForLaterModal(
+                      const SavedMessageSortTypes = displayToast(10145).SavedMessageSortTypes;
+                      return displayToast(14269).showForLaterModal(
                         closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
                       );
                     };
-                    closure_1(5944).show(obj3);
+                    closure_1(5946).show(obj3);
                     return null;
                   } else {
                     let message;
@@ -110,7 +110,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                       message = intl.string(closure_0(1125).t.R0RpRX);
                     }
                     const obj = { text: message, variant: "critical" };
-                    closure_1(5699).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+                    closure_1(5701).open("SAVED_MESSAGE_CREATE_ERROR", obj);
                     return null;
                   }
                 }),
@@ -175,7 +175,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -200,7 +200,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
           closure_129_4 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Reflect", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -282,12 +282,12 @@ let closure_9 = async function _removeSavedMessage(arg0) {
   }
 };
 const AbortCodes = fn(1084).AbortCodes;
-const SavedMessagesConstants = fn(14046);
+const SavedMessagesConstants = fn(14279);
 ({ SAVED_BOOKMARKS_MAX: metroRequire, SAVED_REMINDERS_MAX: closure_7 } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");
 
-export const addOrUpdateSavedMessage = function addOrUpdateSavedMessage() {
+export function addOrUpdateSavedMessage() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -296,8 +296,8 @@ export const addOrUpdateSavedMessage = function addOrUpdateSavedMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const removeSavedMessage = function removeSavedMessage() {
+}
+export function removeSavedMessage() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -306,4 +306,4 @@ export const removeSavedMessage = function removeSavedMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
