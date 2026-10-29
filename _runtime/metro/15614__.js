@@ -1,34 +1,7 @@
 // === Module 15614: ? ===
 
 // Module 15614
-import _mod15581 from "module_15581" /* 15581 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default (arr, arg1, arg2) => {
-  _require = arg2;
-  dependencyMap = null;
-  closure_2 = null;
-  let regex = null;
-  try {
-    let tmp9 = new require("module_15610")(arg1, arg2);
-    regex = tmp9;
-    const item = arr.forEach((item) => {
-      if (regex.test(item)) {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = -1 !== closure_2.compare(item);
-        }
-        if (!tmp) {
-          closure_1 = item;
-          const tmp9 = new _mod15581(closure_1, closure_0);
-          closure_2 = tmp9;
-        }
-      }
-    });
-    return dependencyMap;
-  } catch (err) {
-    return tmp;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/build_overrides/native/images", width: 60, height: 46, scales: [2, 3], hash: "43446a28e1d529de720e6c778c814b1c", name: "code-illustration-dark", type: "png" });

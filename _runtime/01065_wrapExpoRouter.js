@@ -7,7 +7,7 @@ import SPAN_ORIGIN_AUTO_INTERACTION from "SPAN_ORIGIN_AUTO_INTERACTION" /* 1032 
 require = arg1;
 const dependencyMap = arg6;
 
-export const wrapExpoRouter = function wrapExpoRouter(prefetch) {
+export function wrapExpoRouter(prefetch) {
   let prefetch1;
   if (null != prefetch) {
     prefetch1 = prefetch.prefetch;
@@ -113,4 +113,4 @@ export const wrapExpoRouter = function wrapExpoRouter(prefetch) {
   } else {
     return prefetch;
   }
-};
+}

@@ -9,7 +9,7 @@ require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createConsoleTemplateAttributes = function createConsoleTemplateAttributes(args, substr) {
+export function createConsoleTemplateAttributes(args, substr) {
   const obj = {};
   const array = new Array(substr.length);
   obj["sentry.message.template"] = "" + args + " " + array.fill("{}").join(" ");
@@ -17,8 +17,8 @@ export const createConsoleTemplateAttributes = function createConsoleTemplateAtt
     obj["sentry.message.parameter." + index] = item;
   });
   return obj;
-};
-export const formatConsoleArgs = function formatConsoleArgs(args, normalizeDepth, normalizeMaxBreadth) {
+}
+export function formatConsoleArgs(args, normalizeDepth, normalizeMaxBreadth) {
   if ("util" in require("module_697").GLOBAL_OBJ) {
     if (typeof tmp(697).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(697).GLOBAL_OBJ.util;
@@ -43,11 +43,11 @@ export const formatConsoleArgs = function formatConsoleArgs(args, normalizeDepth
     return StringResult;
   });
   applyResult = mapped.join(" ");
-};
-export const hasConsoleSubstitutions = function hasConsoleSubstitutions(args) {
+}
+export function hasConsoleSubstitutions(args) {
   return /%[sdifocO]/.test(args);
-};
-export const safeJoinConsoleArgs = function safeJoinConsoleArgs(arr, arg1, arg2) {
+}
+export function safeJoinConsoleArgs(arr, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = arg2;
   const mapped = arr.map((item) => {
@@ -62,4 +62,4 @@ export const safeJoinConsoleArgs = function safeJoinConsoleArgs(arr, arg1, arg2)
     return StringResult;
   });
   return mapped.join(" ");
-};
+}

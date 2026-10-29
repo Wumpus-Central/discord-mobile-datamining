@@ -1,96 +1,147 @@
 // === Module 8973: ? ===
 
 // Module 8973
-import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import module_8971 from "module_8971" /* 8971 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop_mod from "module_19" /* 19 */;
+import module_8974_mod from "module_8974" /* 8974 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useRef: c2 } = noop);
-({ NativeEventEmitter: c3, Platform } = get_ActivityIndicator);
-const nativeModule = module_8971.getNativeModule();
+const require = globalThis.__r;
 
-export const useModal = (props) => {
-  props = props.props;
-  let id = props.id;
-  props = undefined;
-  closure_4 = props(false);
-  const tmp = props();
-  closure_3 = tmp;
-  id(() => {
-    closure_3.current = props;
-  });
-  const current = tmp.current;
-  const items = [id, props];
-  const tmp3 = props((id) => {
-    if (id.id === id) {
-      closure_4.current = true;
-      if (props.onConfirm) {
+let noop = noop_mod;
+({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
+let noop = noop_mod;
+const NativeEventEmitter = _mod17.NativeEventEmitter;
+const jsx = jsxProd.jsx;
+let module_8974 = module_8974_mod;
+const nativeComponent = module_8974.getNativeComponent();
+let module_8974 = module_8974_mod;
+const nativeModule = module_8974.getNativeModule();
+const memoResult = noop.memo((date) => {
+  _require = date;
+  const current = closure_4(Math.random().toString()).current;
+  const items = [date, current];
+  let tmp = closure_2((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    ({ date, id } = nativeEvent);
+    if (null === id) {
+      if (typeof fromIsoWithTimeZoneOffset === "function") {
         const _Date = Date;
         const date1 = new Date(date);
-        props.onConfirm(date1);
+        if (date.onDateChange) {
+          date.onDateChange(date1);
+        }
+        if (date.onDateStringChange) {
+          date.onDateStringChange(tmp);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
     }
   }, items);
-  closure_6 = tmp3;
-  const items1 = [id, props];
-  const tmp4 = props((id) => {
-    id = undefined;
-    if (id != null) {
-      id = id.id;
+  closure_2 = tmp;
+  const items1 = [date, current];
+  const tmp2 = closure_2((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    const id = nativeEvent.id;
+    let tmp = null !== id;
+    if (tmp) {
+      tmp = id !== current;
     }
-    if (id === id) {
-      closure_4.current = true;
-      if (props.onCancel) {
-        props.onCancel();
+    if (!tmp) {
+      if (date.onStateChange) {
+        date.onStateChange(nativeEvent.spinnerState);
       }
     }
   }, items1);
-  closure_7 = tmp4;
-  const items2 = [tmp4, tmp3, current, props];
-  id(() => {
-    let flag = false;
-    if (props.modal) {
-      flag = false;
-      if (props.open) {
-        let open;
-        if (current != null) {
-          open = current.open;
-        }
-        flag = !open;
-      }
-    }
-    if (flag) {
-      closure_4.current = false;
-      closure_4.openPicker(props, closure_6, closure_7);
-    }
-  }, items2);
-  const items3 = [current, props];
-  id(() => {
-    let flag = false;
-    if (props.modal) {
-      flag = false;
-      if (!props.open) {
-        let open;
-        if (current != null) {
-          open = current.open;
-        }
-        flag = open && !tmp3;
-        const tmp6 = open && !tmp3;
-      }
-    }
-    if (flag) {
-      closure_4.current = true;
-      closure_4.closePicker();
-    }
-  }, items3);
-  const items4 = [tmp4, tmp3];
-  id(() => {
-    const obj = new React3(closure_4);
-    obj.addListener("onConfirm", closure_6);
-    obj.addListener("onCancel", closure_7);
+  closure_3 = tmp2;
+  const items2 = [tmp, tmp2];
+  closure_3(() => {
+    const obj = new NativeEventEmitter(closure_8);
+    obj.addListener("dateChange", closure_2);
+    obj.addListener("spinnerStateChange", closure_3);
     return () => {
-      obj.removeAllListeners("onConfirm");
-      obj.removeAllListeners("onCancel");
+      obj.removeAllListeners("dateChange");
+      obj.removeAllListeners("spinnerStateChange");
     };
-  }, items4);
-};
+  }, items2);
+  let obj = {};
+  const merged = Object.assign(date);
+  if (typeof toIsoWithTimeZoneOffset === "function") {
+    let toISOStringResult;
+    if (date) {
+      toISOStringResult = date.toISOString();
+    }
+    obj.date = toISOStringResult;
+    obj.id = current;
+    const minimumDate = date.minimumDate;
+    if (typeof toIsoWithTimeZoneOffset === "function") {
+      let toISOStringResult1;
+      if (minimumDate) {
+        toISOStringResult1 = minimumDate.toISOString();
+      }
+      obj.minimumDate = toISOStringResult1;
+      const maximumDate = date.maximumDate;
+      if (typeof toIsoWithTimeZoneOffset === "function") {
+        let toISOStringResult2;
+        if (maximumDate) {
+          toISOStringResult2 = maximumDate.toISOString();
+        }
+        obj.maximumDate = toISOStringResult2;
+        if (typeof getTimezoneOffsetInMinutes === "function") {
+          let prop;
+          if (null != date.timeZoneOffsetInMinutes) {
+            prop = date.timeZoneOffsetInMinutes;
+          }
+          obj.timezoneOffsetInMinutes = prop;
+          if (typeof getStyle === "function") {
+            let num = 310;
+            if ("time" === date.mode) {
+              num = 240;
+            }
+            const size = { width: num, height: 180 };
+            const items3 = [size, date.style];
+            obj.style = items3;
+            obj.onChange = tmp;
+            obj.onStateChange = tmp2;
+            const obj2 = { props: obj, id: current };
+            const modal = require("module_8976").useModal(obj2);
+            let tmp16 = null;
+            if (!date.modal) {
+              const obj4 = {};
+              const merged1 = Object.assign(obj);
+              tmp16 = <closure_7 />;
+            }
+            return tmp16;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  const str = Math.random();
+});
+function getStyle(arg0) {
+
+}
+function getTimezoneOffsetInMinutes(arg0) {
+
+}
+function toIsoWithTimeZoneOffset(arg0) {
+
+}
+function fromIsoWithTimeZoneOffset(arg0) {
+
+}
+
+export default memoResult;
+export const DatePickerAndroid = memoResult;

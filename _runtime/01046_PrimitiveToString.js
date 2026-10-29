@@ -2,7 +2,7 @@
 
 // Module 1046 (PrimitiveToString)
 
-export const PrimitiveToString = function PrimitiveToString(arg0) {
+export function PrimitiveToString(arg0) {
   if (null === arg0) {
     return "";
   } else {
@@ -29,4 +29,4 @@ export const PrimitiveToString = function PrimitiveToString(arg0) {
     }
     return arg0;
   }
-};
+}

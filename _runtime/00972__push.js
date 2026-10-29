@@ -113,10 +113,10 @@ function _shift(fn) {
           return new Promise((arg0, arg1) => {
             closure_0 = arg0;
             closure_1 = arg1;
-            const fn = () => { ... };
+            const fn = /* F144528 */ function() { ... };
             closure_0.onsuccess = fn;
             closure_0.oncomplete = fn;
-            const fn2 = () => { ... };
+            const fn2 = /* F144529 */ function() { ... };
             closure_0.onerror = fn2;
             closure_0.onabort = fn2;
           }).then(() => transaction);
@@ -128,7 +128,7 @@ function _shift(fn) {
 function createIndexedDbStore(arg0) {
   let dbName = arg0;
   function getStore() {
-    if (null == f88035) {
+    if (null == f89042) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
@@ -150,12 +150,12 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f88035 = (arg0) => {
+      f89042 = (arg0) => {
         closure_0 = arg0;
         return promise.then((transaction) => closure_0(transaction.transaction(openResult, "readwrite").objectStore(openResult)));
       };
     }
-    return f88035;
+    return f89042;
   }
   const obj = { push: null, unshift: null, shift: null };
   closure_4 = asyncGeneratorStep(async (arg0) => {
@@ -278,7 +278,7 @@ function createIndexedDbStore(arg0) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const createStore = function createStore(arg0, arg1) {
+export function createStore(arg0, arg1) {
   closure_0 = arg1;
   const openResult = globalThis.indexedDB.open(arg0);
   dependencyMap = openResult;
@@ -301,8 +301,8 @@ export const createStore = function createStore(arg0, arg1) {
     closure_0 = arg0;
     return promise.then((transaction) => closure_0(transaction.transaction(openResult, "readwrite").objectStore(openResult)));
   };
-};
-export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport() {
+}
+export function makeBrowserOfflineTransport() {
   let makeFetchTransport = arg0;
   if (arg0 === undefined) {
     makeFetchTransport = require("module_906").makeFetchTransport;
@@ -325,7 +325,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -353,7 +353,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp6) {
           c0 = tmp;
@@ -373,7 +373,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
     });
     return tmp2;
   };
-};
+}
 export const push = _push;
 export const shift = _shift;
 export const unshift = _unshift;

@@ -64,7 +64,7 @@ const items = [entry];
 let closure_11 = _createClass(RNSentryOnDrawReporterNoop, items);
 
 export const nativeComponentExists = tmp6;
-export const getRNSentryOnDrawReporter = () => {
+export () => {
   if (result) {
     return result;
   } else {
@@ -86,4 +86,4 @@ export const getRNSentryOnDrawReporter = () => {
     result = closure_11;
     obj = RNSentryOnDrawReporterNoop(879);
   }
-};
+}

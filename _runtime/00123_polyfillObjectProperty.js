@@ -7,7 +7,7 @@ const global = arg0;
 require = arg1;
 const dependencyMap = arg6;
 
-export const polyfillObjectProperty = function polyfillObjectProperty(_navigator, product, get) {
+export function polyfillObjectProperty(_navigator, product, get) {
   const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(_navigator, product);
   let obj = ownPropertyDescriptor;
   if (!ownPropertyDescriptor) {
@@ -21,8 +21,8 @@ export const polyfillObjectProperty = function polyfillObjectProperty(_navigator
     const _console = console;
     console.error(`Failed to set polyfill. ${product} is not configurable.`);
   }
-};
-export const polyfillGlobal = function polyfillGlobal(cancelIdleCallback, get) {
+}
+export function polyfillGlobal(cancelIdleCallback, get) {
   const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(global, cancelIdleCallback);
   let obj = ownPropertyDescriptor;
   if (!ownPropertyDescriptor) {
@@ -36,4 +36,4 @@ export const polyfillGlobal = function polyfillGlobal(cancelIdleCallback, get) {
     const _console = console;
     console.error(`Failed to set polyfill. ${cancelIdleCallback} is not configurable.`);
   }
-};
+}

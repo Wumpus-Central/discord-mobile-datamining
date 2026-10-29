@@ -10,7 +10,7 @@ let c2 = "app:///index.android.bundle";
 
 export const ANDROID_DEFAULT_BUNDLE_NAME = "app:///index.android.bundle";
 export const IOS_DEFAULT_BUNDLE_NAME = "app:///main.jsbundle";
-export const createReactNativeRewriteFrames = function createReactNativeRewriteFrames() {
+export function createReactNativeRewriteFrames() {
   return _mod693.rewriteFramesIntegration({
     iteratee(platform) {
       if ("java" !== platform.platform) {
@@ -62,4 +62,4 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
       return platform;
     }
   });
-};
+}

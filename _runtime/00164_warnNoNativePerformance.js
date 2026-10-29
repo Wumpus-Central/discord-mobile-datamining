@@ -15,7 +15,7 @@ if (fn == null) {
   fn = () => Date.now();
 }
 
-export const warnNoNativePerformance = function warnNoNativePerformance() {
+export function warnNoNativePerformance() {
   warnOnceDefault("missing-native-performance", "Missing native implementation of Performance");
-};
+}
 export const getCurrentTimeStamp = fn;

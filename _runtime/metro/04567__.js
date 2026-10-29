@@ -1,17 +1,17 @@
 // === Module 4567: ? ===
 
 // Module 4567
-import module_4566_mod from "module_4566" /* 4566 */;
-import requiredArgs_mod from "requiredArgs" /* 4288 */;
+import _typeof_mod from "module_4288" /* 4288 */;
+import requiredArgs_mod from "requiredArgs" /* 4289 */;
 
-let module_4566 = module_4566_mod;
-if (!module_4566) {
-  const obj = { default: module_4566 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4566;
+  tmp3 = _typeof;
 }
-module_4566 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
+export default function getTime(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(module_4566.default(arg0) / 1000);
+  return _typeof.default(arg0).getTime();
 };
 export default exports.default;

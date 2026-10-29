@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d596d6fe17dcf89145bacf83df3826b6", name: "PuzzlePieceIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/tiny_bronco/native/images", width: 198, height: 132, scales: [2, 3], hash: "f08317e805d614c5dd09a300df6ccaab", name: "tiny-bronco-spot", type: "png" });

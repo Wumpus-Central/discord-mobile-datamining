@@ -1,7 +1,14 @@
 // === Module 16053: ? ===
 
 // Module 16053
-import registerAsset from "module_1131" /* 1131 */;
+import _mod16054 from "module_16054" /* 16054 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "f6cc137da3a192935ccaaac37e4eb9a2", name: "ic_call_status_green_24px", type: "png" });
+export default (arg0) => {
+  if (_mod16054(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

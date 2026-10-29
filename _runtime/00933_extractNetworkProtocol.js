@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const extractNetworkProtocol = function extractNetworkProtocol(nextHopProtocol) {
+export function extractNetworkProtocol(nextHopProtocol) {
   str = "unknown";
   str2 = "unknown";
   let str3 = "";
@@ -48,19 +48,19 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
     let obj = { name: str, version: str2 };
     return obj;
   }
-};
-export const getBrowserPerformanceAPI = function getBrowserPerformanceAPI() {
+}
+export function getBrowserPerformanceAPI() {
   return _mod913.WINDOW.addEventListener && _mod913.WINDOW.performance;
-};
-export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
+}
+export function isMeasurementValue(deviceMemory) {
   let isFiniteResult = typeof deviceMemory === "number";
   if (typeof deviceMemory === "number") {
     const _isFinite = isFinite;
     isFiniteResult = isFinite(deviceMemory);
   }
   return isFiniteResult;
-};
-export const listenForWebVitalReportEvents = function listenForWebVitalReportEvents(on, arg1) {
+}
+export function listenForWebVitalReportEvents(on, arg1) {
   closure_0 = arg1;
   c2 = false;
   _mod934.onHidden(() => {
@@ -95,11 +95,11 @@ export const listenForWebVitalReportEvents = function listenForWebVitalReportEve
     spanId = spanContext.spanContext().spanId;
     closure_4();
   });
-};
-export const msToSec = function msToSec(duration) {
+}
+export function msToSec(duration) {
   return duration / 1000;
-};
-export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, arg3) {
+}
+export function startAndEndSpan(activeSpan, sum, sum1, arg3) {
   _require = sum;
   dependencyMap = sum1;
   if (arg3 == null) {
@@ -127,8 +127,8 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
       return startInactiveSpanResult;
     });
   }
-};
-export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(arg0) {
+}
+export function startStandaloneWebVitalSpan(arg0) {
   const client = _mod693.getClient();
   if (client) {
     ({ attributes, name, transaction, startTime } = arg0);
@@ -165,12 +165,12 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     }
     const tmpResult = _mod693;
   }
-};
-export const supportsWebVital = function supportsWebVital(arg0) {
+}
+export function supportsWebVital(arg0) {
   try {
     const supportedEntryTypes = globalThis.PerformanceObserver.supportedEntryTypes;
     return supportedEntryTypes.includes(arg0);
   } catch (err) {
     return false;
   }
-};
+}

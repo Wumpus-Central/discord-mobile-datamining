@@ -9,7 +9,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const whenIdleOrHidden = (fn) => {
+export (fn) => {
   _require = fn;
   const _document = tmp(913).WINDOW.document;
   let visibilityState;
@@ -33,4 +33,4 @@ export const whenIdleOrHidden = (fn) => {
     const tmpResult4 = tmp(915);
   }
   tmp3 = require("module_913").WINDOW.requestIdleCallback || require("module_913").WINDOW.setTimeout;
-};
+}

@@ -8,8 +8,8 @@ import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-function instrumentReactRouter(f143048, arg1, arg2, location, reactrouter_v4) {
-  _require = f143048;
+function instrumentReactRouter(f144596, arg1, arg2, location, reactrouter_v4) {
+  _require = f144596;
   dependencyMap = reactrouter_v4;
   let items = _slicedToArray;
   if (_slicedToArray === undefined) {
@@ -55,7 +55,7 @@ function instrumentReactRouter(f143048, arg1, arg2, location, reactrouter_v4) {
       obj3[require("module_693").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + reactrouter_v4;
       obj3[require("module_693").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj2.attributes = obj3;
-      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f143048, obj2);
+      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f144596, obj2);
       let obj = require("feedbackAsyncIntegration");
     }
   }
@@ -169,7 +169,7 @@ function matchRoutes(pathname, search, arg2) {
                           if (items === undefined) {
                             items = [];
                           }
-                          routes.some(() => { ... });
+                          routes.some(/* F89187 */ function() { ... });
                         }
                       }
                       return match;
@@ -190,7 +190,7 @@ function matchRoutes(pathname, search, arg2) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const reactRouterV4BrowserTracingIntegration = function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
+export function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
   const obj2 = {};
   const merged = Object.assign(instrumentNavigation);
   obj2.instrumentPageLoad = false;
@@ -203,13 +203,13 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f143048) {
-    result.afterAllSetup(f143048);
-    instrumentReactRouter(f143048, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f144596) {
+    result.afterAllSetup(f144596);
+    instrumentReactRouter(f144596, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
   };
   return obj3;
-};
-export const reactRouterV5BrowserTracingIntegration = function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
+}
+export function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
   const obj2 = {};
   const merged = Object.assign(instrumentNavigation);
   obj2.instrumentPageLoad = false;
@@ -222,13 +222,13 @@ export const reactRouterV5BrowserTracingIntegration = function reactRouterV5Brow
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f143048) {
-    result.afterAllSetup(f143048);
-    instrumentReactRouter(f143048, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f144596) {
+    result.afterAllSetup(f144596);
+    instrumentReactRouter(f144596, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
   };
   return obj3;
-};
-export const withSentryRouting = function withSentryRouting(displayName) {
+}
+export function withSentryRouting(displayName) {
   _require = displayName;
   class WrappedRoute {
     constructor(arg0) {
@@ -279,4 +279,4 @@ export const withSentryRouting = function withSentryRouting(displayName) {
   WrappedRoute.displayName = "sentryRoute(" + displayName.displayName || displayName.name + ")";
   require("module_1014").hoistNonReactStatics(WrappedRoute, displayName);
   return WrappedRoute;
-};
+}

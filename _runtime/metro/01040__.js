@@ -12,7 +12,7 @@ defaultReactNativeTracingOptions.traceFetch = module_879.isWeb();
 
 export const INTEGRATION_NAME = "ReactNativeTracing";
 export { defaultReactNativeTracingOptions };
-export const reactNativeTracingIntegration = (arg0) => {
+export (arg0) => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -20,7 +20,7 @@ export const reactNativeTracingIntegration = (arg0) => {
   let merged1;
   let fn2;
   let url;
-  let obj2 = { currentRoute: "paths" };
+  let obj2 = { currentRoute: "r" };
   let fn = obj.beforeStartSpan;
   const merged = Object.assign(Object.assign({}, url), obj);
   if (null === fn) {
@@ -100,13 +100,13 @@ export const reactNativeTracingIntegration = (arg0) => {
       obj2.currentRoute = componentName;
     }
   };
-};
-export const getCurrentReactNativeTracingIntegration = function getCurrentReactNativeTracingIntegration() {
+}
+export function getCurrentReactNativeTracingIntegration() {
   const client = _mod693.getClient();
   if (client) {
     return client.getIntegrationByName(ReactNativeTracing);
   }
-};
-export const getReactNativeTracingIntegration = function getReactNativeTracingIntegration(getIntegrationByName) {
+}
+export function getReactNativeTracingIntegration(getIntegrationByName) {
   return getIntegrationByName.getIntegrationByName(ReactNativeTracing);
-};
+}

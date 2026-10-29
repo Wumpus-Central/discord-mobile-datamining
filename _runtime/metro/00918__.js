@@ -10,7 +10,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const initMetric = (CLS, arg1) => {
+export (CLS, arg1) => {
   let num = arg1;
   if (arg1 === undefined) {
     num = -1;
@@ -50,4 +50,4 @@ export const initMetric = (CLS, arg1) => {
   obj2.id = generateUniqueID.generateUniqueID();
   obj2.navigationType = str2;
   return obj2;
-};
+}

@@ -1,148 +1,722 @@
 // === Module 12659: ? ===
 
 // Module 12659
-import _mod12642 from "module_12642" /* 12642 */;
-import _mod12647 from "module_12647" /* 12647 */;
-import _mod12650 from "module_12650" /* 12650 */;
-import _mod12660 from "module_12660" /* 12660 */;
-import __SENTRY_DEBUG__ from "module_12635" /* 12635 */;
-import consoleSandbox from "module_12636" /* 12636 */;
+const require = globalThis.__r;
 
-function updateSession(ipAddress) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
+function createItem(data) {
+  return { prev: null, next: null, data };
+}
+let cursor = null;
+class List {
+  constructor() {
+    return;
   }
-  if (obj.user) {
-    ipAddress = ipAddress.ipAddress;
-    let ip_address = !ipAddress;
-    if (!ipAddress) {
-      ip_address = obj.user.ip_address;
+  updateCursors(arg0, arg1, arg2, arg3) {
+    iter = this.cursor;
+    if (null !== iter) {
+      do {
+        tmp = iter;
+        if (iter.prev === global) {
+          iter.prev = require;
+        }
+        if (iter.next === importDefault) {
+          iter.next = importAll;
+        }
+        iter = iter.cursor;
+      } while (null !== iter);
     }
-    if (ip_address) {
-      ipAddress.ipAddress = obj.user.ip_address;
-    }
-    if (!tmp) {
-      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
-    }
-    tmp = ipAddress.did || obj.did;
+    return;
   }
-  let timestamp = obj.timestamp;
-  if (!timestamp) {
-    timestamp = _mod12650.timestampInSeconds();
+  getSize() {
+    head = this.head;
+    num = 0;
+    num2 = 0;
+    while (head) {
+      num = num + 1;
+      num2 = num;
+    }
+    return num2;
   }
-  ipAddress.timestamp = timestamp;
-  if (obj.abnormal_mechanism) {
-    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  fromArray(arg0) {
+    self = this;
+    this.head = null;
+    num = 0;
+    tmp = null;
+    tmp2 = null;
+    if (0 < global.length) {
+      do {
+        obj = { prev: null, next: null, data: null };
+        obj.data = global[num];
+        tmp3 = num;
+        tmp4 = tmp;
+        if (null !== tmp) {
+          tmp.next = obj;
+        } else {
+          self.head = obj;
+        }
+        obj.prev = tmp;
+        num = num + 1;
+        tmp = obj;
+        tmp2 = obj;
+      } while (num < global.length);
+    }
+    self.tail = tmp2;
+    return self;
   }
-  if (obj.ignoreDuration) {
-    ipAddress.ignoreDuration = obj.ignoreDuration;
+  toArray() {
+    iter = this.head;
+    items = [];
+    while (iter) {
+      arr1 = items.push(iter.data);
+      iter = iter.next;
+    }
+    return items;
   }
-  if (!obj.sid) {
-    if (undefined !== obj.init) {
-      ipAddress.init = obj.init;
+  isEmpty() {
+    return null === this.head;
+  }
+  first() {
+    tmp = this.head && this.head.data;
+    return tmp;
+  }
+  last() {
+    tmp = this.tail && this.tail.data;
+    return tmp;
+  }
+  each(arg0, arg1) {
+    self = this;
+    tmp = require;
+    if (undefined === require) {
+      tmp = self;
     }
-    const did = ipAddress.did;
-    let did2 = !did;
-    if (!did) {
-      did2 = obj.did;
-    }
-    if (did2) {
-      const _HermesInternal = HermesInternal;
-      ipAddress.did = "" + obj.did;
-    }
-    if (typeof obj.started === "number") {
-      ipAddress.started = obj.started;
-    }
-    if (ipAddress.ignoreDuration) {
-      ipAddress.duration = undefined;
-    } else if (typeof obj.duration === "number") {
-      ipAddress.duration = obj.duration;
+    head = self.head;
+    tmp2 = cursor;
+    if (null !== cursor) {
+      cursor = tmp2.cursor;
+      tmp2.prev = null;
+      tmp2.next = head;
+      tmp2.cursor = self.cursor;
+      obj = tmp2;
     } else {
-      const diff = ipAddress.timestamp - ipAddress.started;
-      let num2 = 0;
-      if (diff >= 0) {
-        num2 = diff;
+      obj = { prev: null, next: null, cursor: null };
+      obj.next = head;
+      obj.cursor = self.cursor;
+    }
+    self.cursor = obj;
+    if (null !== obj.next) {
+      do {
+        iter = obj.next;
+        obj.next = iter.next;
+        call = global.call;
+        data = iter.data;
+        if (typeof call === "unknown") {
+          tmp3 = global(data, iter, self);
+        } else {
+          tmp4 = global;
+          tmp5 = tmp;
+          tmp6 = data;
+          tmp7 = iter;
+          tmp8 = self;
+          callResult = call(tmp, data, iter, self);
+        }
+      } while (null !== obj.next);
+    }
+    cursor = self.cursor;
+    self.cursor = cursor.cursor;
+    cursor.prev = null;
+    cursor.next = null;
+    cursor.cursor = cursor;
+    return;
+  }
+  eachRight(arg0, arg1) {
+    self = this;
+    tmp = require;
+    if (undefined === require) {
+      tmp = self;
+    }
+    tail = self.tail;
+    tmp2 = cursor;
+    if (null !== cursor) {
+      cursor = tmp2.cursor;
+      tmp2.prev = tail;
+      tmp2.next = null;
+      tmp2.cursor = self.cursor;
+      obj = tmp2;
+    } else {
+      obj = { prev: null, next: null, cursor: null };
+      obj.prev = tail;
+      obj.cursor = self.cursor;
+    }
+    self.cursor = obj;
+    if (null !== obj.prev) {
+      do {
+        prev = obj.prev;
+        obj.prev = prev.prev;
+        call = global.call;
+        data = prev.data;
+        if (typeof call === "unknown") {
+          tmp3 = global(data, prev, self);
+        } else {
+          tmp4 = global;
+          tmp5 = tmp;
+          tmp6 = data;
+          tmp7 = prev;
+          tmp8 = self;
+          callResult = call(tmp, data, prev, self);
+        }
+      } while (null !== obj.prev);
+    }
+    cursor = self.cursor;
+    self.cursor = cursor.cursor;
+    cursor.prev = null;
+    cursor.next = null;
+    cursor.cursor = cursor;
+    return;
+  }
+  reduce(arg0, arg1, arg2) {
+    self = this;
+    tmp = importDefault;
+    if (undefined === importDefault) {
+      tmp = self;
+    }
+    head = self.head;
+    tmp2 = cursor;
+    if (null !== cursor) {
+      cursor = tmp2.cursor;
+      tmp2.prev = null;
+      tmp2.next = head;
+      tmp2.cursor = self.cursor;
+      obj = tmp2;
+    } else {
+      obj = { prev: null, next: null, cursor: null };
+      obj.next = head;
+      obj.cursor = self.cursor;
+    }
+    tmp3 = require;
+    self.cursor = obj;
+    tmp4 = require;
+    if (null !== obj.next) {
+      do {
+        iter = obj.next;
+        obj.next = iter.next;
+        call = global.call;
+        data = iter.data;
+        tmp5 = tmp3;
+        if (typeof call === "unknown") {
+          tmp6 = tmp;
+          tmp7 = tmp3;
+          tmp8 = data;
+          tmp9 = iter;
+          tmp10 = self;
+          callResult = global(tmp5, data, iter, self);
+        } else {
+          tmp12 = global;
+          tmp13 = tmp;
+          tmp14 = tmp3;
+          tmp15 = data;
+          tmp16 = iter;
+          tmp17 = self;
+          callResult = call(tmp, tmp5, data, iter, self);
+        }
+        tmp3 = callResult;
+        tmp4 = callResult;
+      } while (null !== obj.next);
+    }
+    cursor = self.cursor;
+    self.cursor = cursor.cursor;
+    cursor.prev = null;
+    cursor.next = null;
+    cursor.cursor = cursor;
+    return tmp4;
+  }
+  reduceRight(arg0, arg1, arg2) {
+    self = this;
+    tmp = importDefault;
+    if (undefined === importDefault) {
+      tmp = self;
+    }
+    tail = self.tail;
+    tmp2 = cursor;
+    if (null !== cursor) {
+      cursor = tmp2.cursor;
+      tmp2.prev = tail;
+      tmp2.next = null;
+      tmp2.cursor = self.cursor;
+      obj = tmp2;
+    } else {
+      obj = { prev: null, next: null, cursor: null };
+      obj.prev = tail;
+      obj.cursor = self.cursor;
+    }
+    tmp3 = require;
+    self.cursor = obj;
+    tmp4 = require;
+    if (null !== obj.prev) {
+      do {
+        prev = obj.prev;
+        obj.prev = prev.prev;
+        call = global.call;
+        data = prev.data;
+        tmp5 = tmp3;
+        if (typeof call === "unknown") {
+          tmp6 = tmp;
+          tmp7 = tmp3;
+          tmp8 = data;
+          tmp9 = prev;
+          tmp10 = self;
+          callResult = global(tmp5, data, prev, self);
+        } else {
+          tmp12 = global;
+          tmp13 = tmp;
+          tmp14 = tmp3;
+          tmp15 = data;
+          tmp16 = prev;
+          tmp17 = self;
+          callResult = call(tmp, tmp5, data, prev, self);
+        }
+        tmp3 = callResult;
+        tmp4 = callResult;
+      } while (null !== obj.prev);
+    }
+    cursor = self.cursor;
+    self.cursor = cursor.cursor;
+    cursor.prev = null;
+    cursor.next = null;
+    cursor.cursor = cursor;
+    return tmp4;
+  }
+  nextUntil(arg0, arg1, arg2) {
+    if (null !== global) {
+      self = this;
+      tmp = importDefault;
+      if (undefined === importDefault) {
+        tmp = self;
       }
-      ipAddress.duration = num2;
+      tmp2 = cursor;
+      if (null !== cursor) {
+        cursor = tmp2.cursor;
+        tmp2.prev = null;
+        tmp2.next = global;
+        tmp2.cursor = self.cursor;
+        obj = tmp2;
+      } else {
+        obj = { prev: null, next: null, cursor: null };
+        obj.next = global;
+        obj.cursor = self.cursor;
+      }
+      self.cursor = obj;
+      if (null !== obj.next) {
+        tmp6 = require;
+        iter2 = obj.next;
+        obj.next = iter2.next;
+        call2 = require.call;
+        data2 = iter2.data;
+        if (typeof call2 === "unknown") {
+          call2Result = require(data2, iter2, self);
+        } else {
+          tmp7 = require;
+          tmp8 = tmp;
+          tmp9 = data2;
+          tmp10 = iter2;
+          tmp11 = self;
+          call2Result = call2(tmp, data2, iter2, self);
+        }
+        if (!call2Result) {
+          while (null !== obj.next) {
+            iter = obj.next;
+            obj.next = iter.next;
+            call = require.call;
+            data = iter.data;
+            if (typeof call === "unknown") {
+              callResult = require(data, iter, self);
+            } else {
+              tmp12 = require;
+              tmp13 = tmp;
+              tmp14 = data;
+              tmp15 = iter;
+              tmp16 = self;
+              callResult = call(tmp, data, iter, self);
+            }
+            if (callResult) {
+              break;
+            }
+          }
+        }
+      }
+      cursor = self.cursor;
+      self.cursor = cursor.cursor;
+      cursor.prev = null;
+      cursor.next = null;
+      tmp5 = cursor;
+      cursor.cursor = cursor;
     }
-    if (obj.release) {
-      ipAddress.release = obj.release;
+    return;
+  }
+  prevUntil(arg0, arg1, arg2) {
+    if (null !== global) {
+      self = this;
+      tmp = importDefault;
+      if (undefined === importDefault) {
+        tmp = self;
+      }
+      tmp2 = cursor;
+      if (null !== cursor) {
+        cursor = tmp2.cursor;
+        tmp2.prev = global;
+        tmp2.next = null;
+        tmp2.cursor = self.cursor;
+        obj = tmp2;
+      } else {
+        obj = { prev: null, next: null, cursor: null };
+        obj.prev = global;
+        obj.cursor = self.cursor;
+      }
+      self.cursor = obj;
+      if (null !== obj.prev) {
+        tmp6 = require;
+        prev2 = obj.prev;
+        obj.prev = prev2.prev;
+        call2 = require.call;
+        data2 = prev2.data;
+        if (typeof call2 === "unknown") {
+          call2Result = require(data2, prev2, self);
+        } else {
+          tmp7 = require;
+          tmp8 = tmp;
+          tmp9 = data2;
+          tmp10 = prev2;
+          tmp11 = self;
+          call2Result = call2(tmp, data2, prev2, self);
+        }
+        if (!call2Result) {
+          while (null !== obj.prev) {
+            prev = obj.prev;
+            obj.prev = prev.prev;
+            call = require.call;
+            data = prev.data;
+            if (typeof call === "unknown") {
+              callResult = require(data, prev, self);
+            } else {
+              tmp12 = require;
+              tmp13 = tmp;
+              tmp14 = data;
+              tmp15 = prev;
+              tmp16 = self;
+              callResult = call(tmp, data, prev, self);
+            }
+            if (callResult) {
+              break;
+            }
+          }
+        }
+      }
+      cursor = self.cursor;
+      self.cursor = cursor.cursor;
+      cursor.prev = null;
+      cursor.next = null;
+      tmp5 = cursor;
+      cursor.cursor = cursor;
     }
-    if (obj.environment) {
-      ipAddress.environment = obj.environment;
+    return;
+  }
+  some(arg0, arg1) {
+    self = this;
+    tmp = require;
+    iter = this.head;
+    if (undefined === require) {
+      tmp = self;
     }
-    const ipAddress2 = ipAddress.ipAddress;
-    let ipAddress3 = !ipAddress2;
-    if (!ipAddress2) {
-      ipAddress3 = obj.ipAddress;
+    if (null !== iter) {
+      while (true) {
+        call = global.call;
+        data = iter.data;
+        if (typeof call === "unknown") {
+          callResult = global(data, iter, self);
+        } else {
+          tmp4 = global;
+          tmp5 = tmp;
+          tmp6 = data;
+          tmp7 = iter;
+          tmp8 = self;
+          callResult = call(tmp, data, tmp2, self);
+        }
+        if (callResult) {
+          break;
+        } else {
+          iter = iter.next;
+        }
+      }
+      flag = true;
+      return true;
     }
-    if (ipAddress3) {
-      ipAddress.ipAddress = obj.ipAddress;
+    return false;
+  }
+  map(arg0, arg1) {
+    self = this;
+    tmp = require;
+    obj1 = Object.create(List.prototype);
+    obj = { cursor: null, head: null, tail: null };
+    iter = this.head;
+    if (undefined === require) {
+      tmp = self;
     }
-    const userAgent = ipAddress.userAgent;
-    let userAgent2 = !userAgent;
-    if (!userAgent) {
-      userAgent2 = obj.userAgent;
+    if (null !== iter) {
+      do {
+        call = global.call;
+        data = iter.data;
+        if (typeof call === "unknown") {
+          callResult = global(data, iter, self);
+        } else {
+          tmp6 = global;
+          tmp7 = tmp;
+          tmp8 = data;
+          tmp9 = iter;
+          tmp10 = self;
+          callResult = call(tmp, data, tmp3, self);
+        }
+        appendDataResult = obj.appendData(callResult);
+        iter = iter.next;
+      } while (null !== iter);
     }
-    if (userAgent2) {
-      ipAddress.userAgent = obj.userAgent;
+    return obj;
+  }
+  filter(arg0, arg1) {
+    self = this;
+    tmp = require;
+    obj1 = Object.create(List.prototype);
+    obj = { cursor: null, head: null, tail: null };
+    iter = this.head;
+    if (undefined === require) {
+      tmp = self;
     }
-    if (typeof obj.errors === "number") {
-      ipAddress.errors = obj.errors;
+    if (null !== iter) {
+      do {
+        call = global.call;
+        data = iter.data;
+        if (typeof call === "unknown") {
+          callResult = global(data, iter, self);
+        } else {
+          tmp6 = global;
+          tmp7 = tmp;
+          tmp8 = data;
+          tmp9 = iter;
+          tmp10 = self;
+          callResult = call(tmp, data, tmp3, self);
+        }
+        if (callResult) {
+          appendDataResult = obj.appendData(iter.data);
+        }
+        iter = iter.next;
+      } while (null !== iter);
     }
-    if (obj.status) {
-      ipAddress.status = obj.status;
+    return obj;
+  }
+  clear() {
+    return;
+  }
+  copy() {
+    obj1 = Object.create(List.prototype);
+    obj = { cursor: null, head: null, tail: null };
+    iter = this.head;
+    if (null !== iter) {
+      do {
+        obj3 = { prev: null, next: null, data: null };
+        obj3.data = iter.data;
+        insertResult = obj.insert(obj3);
+        iter = iter.next;
+      } while (null !== iter);
     }
-  } else {
-    if (32 === obj.sid.length) {
-      let sid = obj.sid;
+    return obj;
+  }
+  prepend(arg0) {
+    self = this;
+    updateCursorsResult = this.updateCursors(null, global, this.head, global);
+    if (null !== this.head) {
+      self.head.prev = global;
+      global.next = self.head;
     } else {
-      sid = _mod12647.uuid4();
+      self.tail = global;
     }
-    ipAddress.sid = sid;
+    self.head = global;
+    return self;
+  }
+  prependData(arg0) {
+    obj = { prev: null, next: null, data: global };
+    return this.prepend(obj);
+  }
+  append(arg0) {
+    return this.insert(global);
+  }
+  appendData(arg0) {
+    obj = { prev: null, next: null, data: global };
+    return this.insert(obj);
+  }
+  insert(arg0, arg1) {
+    self = this;
+    if (null != require) {
+      tmp6 = self;
+      tmp7 = global;
+      tmp8 = require;
+      tmp9 = global;
+      updateCursorsResult = self.updateCursors(require.prev, global, require, global);
+      if (null === require.prev) {
+        if (self.head !== require) {
+          tmp12 = globalThis;
+          _Error = Error;
+          tmp13 = new.target;
+          str = "before doesn't belong to list";
+          tmp14 = new.target;
+          error = new Error("before doesn't belong to list");
+          tmp16 = error;
+          throw error;
+        } else {
+          self.head = global;
+          require.prev = global;
+          global.next = require;
+          updateCursorsResult1 = self.updateCursors(null, global);
+        }
+      } else {
+        require.prev.next = global;
+        global.prev = require.prev;
+        require.prev = global;
+        global.next = require;
+      }
+    } else {
+      tmp = self;
+      tmp2 = global;
+      tmp3 = null;
+      tmp4 = global;
+      updateCursorsResult2 = self.updateCursors(self.tail, global, null, global);
+      if (null !== self.tail) {
+        self.tail.next = global;
+        global.prev = self.tail;
+      } else {
+        self.head = global;
+      }
+      self.tail = global;
+    }
+    return self;
+  }
+  insertData(arg0, arg1) {
+    obj = { prev: null, next: null, data: global };
+    return this.insert(obj, require);
+  }
+  remove(arg0) {
+    self = this;
+    updateCursorsResult = this.updateCursors(global, global.prev, global, global.next);
+    if (null !== global.prev) {
+      global.prev.next = global.next;
+    } else if (self.head !== global) {
+      tmp2 = globalThis;
+      _Error = Error;
+      tmp3 = new.target;
+      str = "item doesn't belong to list";
+      tmp4 = new.target;
+      error = new Error("item doesn't belong to list");
+      tmp6 = error;
+      throw error;
+    } else {
+      self.head = global.next;
+    }
+    if (null !== global.next) {
+      global.next.prev = global.prev;
+    } else if (self.tail !== global) {
+      tmp7 = globalThis;
+      _Error2 = Error;
+      tmp8 = new.target;
+      str2 = "item doesn't belong to list";
+      tmp9 = new.target;
+      error1 = new Error("item doesn't belong to list");
+      tmp11 = error1;
+      throw error1;
+    } else {
+      self.tail = global.prev;
+    }
+    global.prev = null;
+    global.next = null;
+    return global;
+  }
+  push(arg0) {
+    obj = { prev: null, next: null, data: global };
+    insertResult = this.insert(obj);
+    return;
+  }
+  pop() {
+    self = this;
+    if (null !== this.tail) {
+      return self.remove(self.tail);
+    } else {
+      return;
+    }
+  }
+  unshift(arg0) {
+    obj = { prev: null, next: null, data: global };
+    prependResult = this.prepend(obj);
+    return;
+  }
+  shift() {
+    self = this;
+    if (null !== this.head) {
+      return self.remove(self.head);
+    } else {
+      return;
+    }
+  }
+  prependList(arg0) {
+    return this.insertList(global, this.head);
+  }
+  appendList(arg0) {
+    return this.insertList(global);
+  }
+  insertList(arg0, arg1) {
+    self = this;
+    if (null === global.head) {
+      return self;
+    } else {
+      tmp7 = require;
+      if (null == require) {
+        tmp = self;
+        tmp2 = null;
+        updateCursorsResult = self.updateCursors(self.tail, global.tail, null, global.head);
+        if (null !== self.tail) {
+          self.tail.next = global.head;
+          global.head.prev = self.tail;
+        } else {
+          self.head = global.head;
+        }
+        self.tail = global.tail;
+        global.head = null;
+        global.tail = null;
+      }
+      tmp4 = self;
+      tmp5 = require;
+      updateCursorsResult1 = self.updateCursors(require.prev, global.tail, require, global.head);
+      if (null !== require.prev) {
+        require.prev.next = global.head;
+        global.head.prev = require.prev;
+      } else {
+        self.head = global.head;
+      }
+      require.prev = global.tail;
+      global.tail.next = require;
+    }
+    return;
+  }
+  replace(arg0, arg1) {
+    self = this;
+    if ("head" in require) {
+      insertListResult = self.insertList(require, global);
+    } else {
+      insertResult = self.insert(require, global);
+    }
+    removeResult = self.remove(global);
+    return;
   }
 }
-_mod12660;
+List.createItem = createItem;
+List.prototype.createItem = createItem;
+List.prototype.toJSON = List.prototype.toArray;
+List.prototype.forEach = List.prototype.each;
+List.prototype.forEachRight = List.prototype.eachRight;
 
-export const closeSession = function closeSession(status, status2) {
-  if (status2) {
-    const obj2 = { status: status2 };
-    let obj = obj2;
-  } else {
-    obj = {};
-    if ("ok" === status.status) {
-      obj = { status: "exited" };
-    }
-  }
-  updateSession(status, obj);
-};
-export const makeSession = function makeSession(arg0) {
-  const timestampInSecondsResult = obj2(12650).timestampInSeconds();
-  obj2 = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
-  let obj = obj2(12650);
-  obj2.sid = obj2(12647).uuid4();
-  obj2.timestamp = timestampInSecondsResult;
-  obj2.started = timestampInSecondsResult;
-  obj2.toJSON = function toJSON() {
-    const obj3 = { sid: "" + obj2.sid, init: obj2.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
-    const obj = _mod12642;
-    obj3.started = new Date(1000 * obj2.started).toISOString();
-    const date = new Date(1000 * obj2.started);
-    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
-    ({ status: obj2.status, errors: obj2.errors } = obj2);
-    if (typeof obj2.did === "number") {
-      const _HermesInternal = HermesInternal;
-      const combined = "" + obj2.did;
-    }
-    obj3.did = combined;
-    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
-    obj3.attrs = { release: obj2.release, environment: obj2.environment, ip_address: obj2.ipAddress, user_agent: obj2.userAgent };
-    return obj.dropUndefinedKeys(obj3);
-  };
-  if (arg0) {
-    updateSession(obj2, arg0);
-  }
-  return obj2;
-};
-export { updateSession };
+export default List;

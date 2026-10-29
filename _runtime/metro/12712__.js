@@ -1,23 +1,53 @@
 // === Module 12712: ? ===
 
 // Module 12712
-import eventFromMessage from "eventFromMessage" /* 12696 */;
-import _mod12713 from "module_12713" /* 12713 */;
-import setupIntegration from "module_12692" /* 12692 */;
+import _mod12657 from "module_12657" /* 12657 */;
+import _mod12701 from "module_12701" /* 12701 */;
 
-
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12713.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod12701.mode.semicolonIncluded, true);
+}
+const WhiteSpace = _mod12657.TYPE.WhiteSpace;
+const Comment = _mod12657.TYPE.Comment;
+const Semicolon = _mod12657.TYPE.Semicolon;
+const obj = {
+  name: "DeclarationList",
+  structure: null,
+  parse() {
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (Semicolon !== tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Declaration, consumeRaw));
+            }
+            if (self.scanner.eof) {
+              break;
+            }
+          }
+        }
+        let iter = self.scanner;
+        let nextResult = iter.next();
+      }
     }
-  };
-});
+    const element = { type: "DeclarationList", loc: self.getLocationFromList(list), children: list };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0, function(type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
+  }
+};
+const obj2 = { children: null };
+const items = [["Declaration"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

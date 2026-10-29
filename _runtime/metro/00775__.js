@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
+export function isSentryRequestUrl(arr, getDsn) {
   if (getDsn != null) {
     const dsn = getDsn.getDsn();
   }
@@ -49,4 +49,4 @@ export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
     flag = flag2;
   }
   return flag;
-};
+}

@@ -15,7 +15,7 @@ obj["resources/unsubscribe"] = { targetField: "uri", targetAttribute: CLIENT_ADD
 const obj5 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
 obj["prompts/get"] = { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_PROMPT_NAME_ATTRIBUTE, captureName: true, captureArguments: true, argumentsField: "arguments" };
 
-export const extractTargetInfo = function extractTargetInfo(method, arg1) {
+export function extractTargetInfo(method, arg1) {
   if (obj[method]) {
     let tmp2;
     if (tmp.targetField) {
@@ -42,8 +42,8 @@ export const extractTargetInfo = function extractTargetInfo(method, arg1) {
     obj = { attributes: {} };
     return obj;
   }
-};
-export const getRequestArguments = function getRequestArguments(method, uri) {
+}
+export function getRequestArguments(method, uri) {
   obj = {};
   if (obj[method]) {
     if (tmp.captureArguments) {
@@ -104,4 +104,4 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
   } else {
     return obj;
   }
-};
+}

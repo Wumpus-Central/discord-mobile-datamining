@@ -1,10 +1,7 @@
 // === Module 15600: ? ===
 
 // Module 15600
-import _mod15598 from "module_15598" /* 15598 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.sort((arg0, arg1) => _mod15598(arg1, arg0, closure_0));
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 120, scales: [2, 3], hash: "0242e2e3975e7ca5a2256573e276d96f", name: "logo", type: "png" });

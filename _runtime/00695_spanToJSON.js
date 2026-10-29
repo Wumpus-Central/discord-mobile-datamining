@@ -130,7 +130,7 @@ const _sentryRootSpan = "_sentryRootSpan";
 
 export const TRACE_FLAG_NONE = 0;
 export const TRACE_FLAG_SAMPLED = 1;
-export const addChildSpanToSpan = function addChildSpanToSpan(parentSpan, sentrySpan) {
+export function addChildSpanToSpan(parentSpan, sentrySpan) {
   let tmp2 = parentSpan[_sentryRootSpan];
   if (!tmp2) {
     tmp2 = parentSpan;
@@ -145,8 +145,8 @@ export const addChildSpanToSpan = function addChildSpanToSpan(parentSpan, sentry
     const result1 = _mod698.addNonEnumerableProperty(parentSpan, _sentryChildSpans, set);
     const tmp3Result = _mod698;
   }
-};
-export const convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(_links) {
+}
+export function convertSpanLinksForEnvelope(_links) {
   let mapped;
   if (_links) {
     if (_links.length > 0) {
@@ -159,8 +159,8 @@ export const convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(
     }
   }
   return mapped;
-};
-export const getActiveSpan = function getActiveSpan() {
+}
+export function getActiveSpan() {
   const mainCarrier = _mod701.getMainCarrier();
   const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
@@ -171,11 +171,11 @@ export const getActiveSpan = function getActiveSpan() {
     const tmpResult2 = _mod724;
   }
   return activeSpan;
-};
-export const getRootSpan = function getRootSpan(_getSpanForScopeResult) {
+}
+export function getRootSpan(_getSpanForScopeResult) {
   return _getSpanForScopeResult[_sentryRootSpan] || _getSpanForScopeResult;
-};
-export const getSpanDescendants = function getSpanDescendants(arg0) {
+}
+export function getSpanDescendants(arg0) {
   const set = new Set();
   function addSpanChildren(arg0) {
     if (!set.has(arg0)) {
@@ -195,8 +195,8 @@ export const getSpanDescendants = function getSpanDescendants(arg0) {
   }
   addSpanChildren(arg0);
   return Array.from(set);
-};
-export const getStatusMessage = function getStatusMessage(code) {
+}
+export function getStatusMessage(code) {
   if (code) {
     if (code.code !== SPAN_STATUS_ERROR.SPAN_STATUS_UNSET) {
       let str = "ok";
@@ -207,22 +207,22 @@ export const getStatusMessage = function getStatusMessage(code) {
       return str;
     }
   }
-};
-export const removeChildSpanFromSpan = function removeChildSpanFromSpan(c14, isRecording) {
+}
+export function removeChildSpanFromSpan(c14, isRecording) {
   if (dependencyMap[_sentryChildSpans]) {
     dependencyMap[tmp].delete(isRecording);
   }
-};
-export const showSpanDropWarning = function showSpanDropWarning() {
+}
+export function showSpanDropWarning() {
   if (!c2) {
     consoleSandbox.consoleSandbox(() => {
       console.warn("[Sentry] Returning null from `beforeSendSpan` is disallowed. To drop certain spans, configure the respective integrations directly or use `ignoreSpans`.");
     });
     c2 = true;
   }
-};
+}
 export { spanIsSampled };
-export const spanTimeInputToSeconds = function spanTimeInputToSeconds(getTime) {
+export function spanTimeInputToSeconds(getTime) {
   if (typeof getTime === "number") {
     let result = getTime;
     if (getTime > 9999999999) {
@@ -248,9 +248,9 @@ export const spanTimeInputToSeconds = function spanTimeInputToSeconds(getTime) {
     }
   }
   return sum;
-};
+}
 export { spanToJSON };
-export const spanToTraceContext = function spanToTraceContext(spanContext) {
+export function spanToTraceContext(spanContext) {
   const spanContextResult = spanContext.spanContext();
   ({ spanId, isRemote } = spanContextResult);
   let parent_span_id = spanId;
@@ -273,23 +273,23 @@ export const spanToTraceContext = function spanToTraceContext(spanContext) {
   obj2.span_id = spanId;
   obj2.trace_id = spanContextResult.traceId;
   return obj2;
-};
-export const spanToTraceHeader = function spanToTraceHeader(spanContext) {
+}
+export function spanToTraceHeader(spanContext) {
   ({ traceId, spanId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
   return _mod710.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
-};
-export const spanToTraceparentHeader = function spanToTraceparentHeader(span) {
+}
+export function spanToTraceparentHeader(span) {
   ({ traceId, spanId } = span.spanContext());
   const spanContextResult = span.spanContext();
   return _mod710.generateTraceparentHeader(traceId, spanId, 1 === span.spanContext().traceFlags);
-};
-export const spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
+}
+export function spanToTransactionTraceContext(spanContext) {
   ({ spanId, traceId } = spanContext.spanContext());
   const tmp2 = spanToJSON(spanContext);
   return { parent_span_id: tmp2.parent_span_id, span_id: spanId, trace_id: traceId, data: tmp2.data, op: tmp2.op, status: tmp2.status, origin: tmp2.origin, links: tmp2.links };
-};
-export const updateSpanName = function updateSpanName(updateName, arg1) {
+}
+export function updateSpanName(updateName, arg1) {
   updateName.updateName(arg1);
   updateName.setAttributes({ [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom", [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME]: arg1 });
-};
+}

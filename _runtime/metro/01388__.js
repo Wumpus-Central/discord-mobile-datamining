@@ -4,7 +4,7 @@
 const re2 = /; */;
 const re3 = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
 
-export const parse = function parse(str, arg1) {
+export function parse(str, arg1) {
   if (typeof str !== "string") {
     const _TypeError = TypeError;
     const typeError = new TypeError("argument str must be a string");
@@ -40,8 +40,8 @@ export const parse = function parse(str, arg1) {
     });
     return {};
   }
-};
-export const serialize = function serialize(arg0, arg1, arg2) {
+}
+export function serialize(arg0, arg1, arg2) {
   let obj = arg2;
   if (!arg2) {
     obj = {};
@@ -106,4 +106,4 @@ export const serialize = function serialize(arg0, arg1, arg2) {
     throw typeError3;
   }
   tmp = obj.encode || encodeURIComponent;
-};
+}

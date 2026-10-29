@@ -237,7 +237,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -260,7 +260,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               value4 = undefined;
-              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "__packager_asset", cacheCreationInputTokens: "np", cacheReadInputTokens: "key", toolCalls: [], activeToolBlocks: {} };
+              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "__packager_asset", cacheCreationInputTokens: "onPress", cacheReadInputTokens: "keys", toolCalls: [], activeToolBlocks: {} };
               closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
@@ -452,7 +452,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
           break;
@@ -1043,7 +1043,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
 };
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentAsyncIterableStream = function instrumentAsyncIterableStream(arg0, arg1, c1) {
+export function instrumentAsyncIterableStream(arg0, arg1, c1) {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -1052,11 +1052,11 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
+}
+export function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "__packager_asset", cacheCreationInputTokens: "np", cacheReadInputTokens: "key", toolCalls: [], activeToolBlocks: {} };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "__packager_asset", cacheCreationInputTokens: "onPress", cacheReadInputTokens: "keys", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
     processEvent(arg0, obj, closure_1, closure_0);
   });
@@ -1115,4 +1115,4 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     }
   });
   return applyResult;
-};
+}

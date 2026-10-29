@@ -5,7 +5,7 @@ function fromCharCodes(arg0) {
 
 }
 
-export const utf8read = function utf8read(arg0) {
+export function utf8read(arg0) {
   if (arg0.length < 1) {
     return "";
   } else {
@@ -83,4 +83,4 @@ export const utf8read = function utf8read(arg0) {
     }
     return joined;
   }
-};
+}

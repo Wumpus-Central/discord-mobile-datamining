@@ -10,7 +10,7 @@ const re5 = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i;
 const re6 = /^\s*(?:([^@]*)(?:\((.*?)\))?@)?(\S.*?):(\d+)(?::(\d+))?\s*$/i;
 const re7 = /^\s*at (?:((?:\[object object\])?[^\\/]+(?: \[as \S+\])?) )?\(?(.*?):(\d+)(?::(\d+))?\)?\s*$/i;
 
-export const parse = function parse(str) {
+export function parse(str) {
   let parts = str.split("\n");
   return parts.reduce((arr, item) => {
     const match = regex.exec(item);
@@ -142,4 +142,4 @@ export const parse = function parse(str) {
     }
     return arr;
   }, []);
-};
+}

@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addChatCompletionAttributes = function addChatCompletionAttributes(setAttributes, created, recordOutputs) {
+export function addChatCompletionAttributes(setAttributes, created, recordOutputs) {
   ({ id, model } = created);
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
@@ -74,8 +74,8 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
     }
   }
   const date = new Date(1000 * created.created);
-};
-export const addConversationAttributes = function addConversationAttributes(setAttributes, choices) {
+}
+export function addConversationAttributes(setAttributes, choices) {
   ({ id, created_at } = choices);
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_CONVERSATION_ID_ATTRIBUTE]: id });
   if (created_at) {
@@ -85,8 +85,8 @@ export const addConversationAttributes = function addConversationAttributes(setA
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
     setAttributes.setAttributes(obj);
   }
-};
-export const addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttributes, model) {
+}
+export function addEmbeddingsAttributes(setAttributes, model) {
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model });
   if (model.usage) {
     const prompt_tokens = model.usage.prompt_tokens;
@@ -104,8 +104,8 @@ export const addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttri
     }
   }
   const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model };
-};
-export const addResponsesApiAttributes = function addResponsesApiAttributes(setAttributes, created_at, recordOutputs) {
+}
+export function addResponsesApiAttributes(setAttributes, created_at, recordOutputs) {
   ({ id, model } = created_at);
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
@@ -166,16 +166,16 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
     }
   }
   const date = new Date(1000 * created_at.created_at);
-};
-export const buildMethodPath = function buildMethodPath(arg0, arg1) {
+}
+export function buildMethodPath(arg0, arg1) {
   let combined = arg1;
   if (arg0) {
     const _HermesInternal = HermesInternal;
     combined = "" + arg0 + "." + arg1;
   }
   return combined;
-};
-export const extractRequestParameters = function extractRequestParameters(model) {
+}
+export function extractRequestParameters(model) {
   let str = model.model;
   if (str == null) {
     str = "unknown";
@@ -217,8 +217,8 @@ export const extractRequestParameters = function extractRequestParameters(model)
       previous_response_id = model.previous_response_id;
     }
   }
-};
-export const getOperationName = function getOperationName(arr) {
+}
+export function getOperationName(arr) {
   if (!arr.includes("chat.completions")) {
     if (!arr.includes("responses")) {
       if (arr.includes("embeddings")) {
@@ -233,8 +233,8 @@ export const getOperationName = function getOperationName(arr) {
     return CHAT;
   }
   CHAT = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_OPERATIONS.CHAT;
-};
-export const getSpanOperation = function getSpanOperation(arr) {
+}
+export function getSpanOperation(arr) {
   if (!arr.includes("chat.completions")) {
     if (!arr.includes("responses")) {
       if (arr.includes("embeddings")) {
@@ -250,8 +250,8 @@ export const getSpanOperation = function getSpanOperation(arr) {
     return "gen_ai." + CHAT;
   }
   CHAT = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_OPERATIONS.CHAT;
-};
-export const isChatCompletionChunk = function isChatCompletionChunk(object) {
+}
+export function isChatCompletionChunk(object) {
   let tmp = null !== object && typeof object === "object";
   if (tmp) {
     tmp = "object" in object;
@@ -260,8 +260,8 @@ export const isChatCompletionChunk = function isChatCompletionChunk(object) {
     tmp = "chat.completion.chunk" === object.object;
   }
   return tmp;
-};
-export const isChatCompletionResponse = function isChatCompletionResponse(object) {
+}
+export function isChatCompletionResponse(object) {
   let tmp = null !== object && typeof object === "object";
   if (tmp) {
     tmp = "object" in object;
@@ -270,8 +270,8 @@ export const isChatCompletionResponse = function isChatCompletionResponse(object
     tmp = "chat.completion" === object.object;
   }
   return tmp;
-};
-export const isConversationResponse = function isConversationResponse(object) {
+}
+export function isConversationResponse(object) {
   let tmp = null !== object && typeof object === "object";
   if (tmp) {
     tmp = "object" in object;
@@ -280,8 +280,8 @@ export const isConversationResponse = function isConversationResponse(object) {
     tmp = "conversation" === object.object;
   }
   return tmp;
-};
-export const isEmbeddingsResponse = function isEmbeddingsResponse(object) {
+}
+export function isEmbeddingsResponse(object) {
   if (null !== object) {
     if (typeof object === "object") {
       if ("object" in object) {
@@ -295,8 +295,8 @@ export const isEmbeddingsResponse = function isEmbeddingsResponse(object) {
     }
   }
   return false;
-};
-export const isResponsesApiResponse = function isResponsesApiResponse(object) {
+}
+export function isResponsesApiResponse(object) {
   let tmp = null !== object && typeof object === "object";
   if (tmp) {
     tmp = "object" in object;
@@ -305,8 +305,8 @@ export const isResponsesApiResponse = function isResponsesApiResponse(object) {
     tmp = "response" === object.object;
   }
   return tmp;
-};
-export const isResponsesApiStreamEvent = function isResponsesApiStreamEvent(type) {
+}
+export function isResponsesApiStreamEvent(type) {
   let startsWithResult = null !== type && typeof type === "object";
   if (startsWithResult) {
     startsWithResult = "type" in type;
@@ -319,8 +319,8 @@ export const isResponsesApiStreamEvent = function isResponsesApiStreamEvent(type
     startsWithResult = type.startsWith("response.");
   }
   return startsWithResult;
-};
-export const setCommonResponseAttributes = function setCommonResponseAttributes(setAttributes, responseId, responseModel, responseTimestamp) {
+}
+export function setCommonResponseAttributes(setAttributes, responseId, responseModel, responseTimestamp) {
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId });
   const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId };
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel });
@@ -328,8 +328,8 @@ export const setCommonResponseAttributes = function setCommonResponseAttributes(
   const obj2 = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
   obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
   setAttributes.setAttributes(obj3);
-};
-export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes, arg1, arg2, arg3) {
+}
+export function setTokenUsageAttributes(setAttributes, arg1, arg2, arg3) {
   if (undefined !== arg1) {
     const obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = arg1;
@@ -347,8 +347,8 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttri
     obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = arg3;
     setAttributes.setAttributes(obj3);
   }
-};
-export const shouldInstrument = function shouldInstrument(arg0) {
+}
+export function shouldInstrument(arg0) {
   const INSTRUMENTED_METHODS = INSTRUMENTED_METHODS2.INSTRUMENTED_METHODS;
   return INSTRUMENTED_METHODS.includes(arg0);
-};
+}

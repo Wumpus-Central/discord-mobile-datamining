@@ -190,7 +190,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { _addTracingHeadersToFetchRequest };
-export const _callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, onRequestSpanEnd) {
+export function _callOnRequestSpanEnd(arg0, response, onRequestSpanEnd) {
   onRequestSpanEnd = undefined;
   if (typeof onRequestSpanEnd === "object") {
     if (null !== onRequestSpanEnd) {
@@ -206,8 +206,8 @@ export const _callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, respon
     const obj = { headers, error: response.error };
     onRequestSpanEnd(arg0, obj);
   }
-};
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, setAttribute, onRequestSpanEnd) {
+}
+export function instrumentFetchRequest(fetchData, fn, fn2, setAttribute, onRequestSpanEnd) {
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
     let hasSpansEnabledResult = _mod731.hasSpansEnabled();
@@ -357,4 +357,4 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
     }
     return sentryNonRecordingSpan;
   }
-};
+}

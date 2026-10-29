@@ -2,19 +2,19 @@
 
 // Module 672 (arrayFilter)
 
-export default function arrayFilter(arr, fn) {
+export default function arrayFilter(arg0, fn) {
   let num = 0;
-  if (null != arr) {
-    num = arr.length;
+  if (null != arg0) {
+    num = arg0.length;
   }
   const items = [];
   let num2 = 0;
   let num3 = 0;
   if (0 < num) {
     do {
-      let tmp = arr[num3];
+      let tmp = arg0[num3];
       let sum = num2;
-      if (fn(tmp, num3, arr)) {
+      if (fn(tmp, num3, arg0)) {
         sum = num2 + 1;
         items[num2] = tmp;
       }

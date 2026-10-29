@@ -62,11 +62,11 @@ export () => {
   };
 }
 export { patchAppRegistryRunApplication };
-export const getAppRegistryIntegration = () => {
+export () => {
   if (client === undefined) {
     client = _mod693.getClient();
   }
   if (client) {
     return client.getIntegrationByName(AppRegistry);
   }
-};
+}

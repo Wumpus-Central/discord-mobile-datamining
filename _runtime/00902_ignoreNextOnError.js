@@ -99,7 +99,7 @@ function wrap(__sentry_wrapped__) {
 }
 
 export const WINDOW = _mod693.GLOBAL_OBJ;
-export const getHttpRequestData = function getHttpRequestData() {
+export function getHttpRequestData() {
   const locationHref = _mod693.getLocationHref();
   const referrer = _mod693.GLOBAL_OBJ.document || {}.referrer;
   const tmp4 = _mod693.GLOBAL_OBJ.document || {};
@@ -119,7 +119,7 @@ export const getHttpRequestData = function getHttpRequestData() {
   const merged1 = Object.assign(tmp8);
   obj2.headers = {};
   return obj2;
-};
+}
 export { ignoreNextOnError };
 export function shouldIgnoreOnError() {
   return closure_2 > 0;

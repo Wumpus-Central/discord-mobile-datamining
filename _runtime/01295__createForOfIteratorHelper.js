@@ -899,7 +899,7 @@ export default (arg0, fn) => {
   return endResult;
 };
 export { Request };
-export const getXHR = () => {
+export () => {
   if (self.XMLHttpRequest) {
     const xMLHttpRequest = new self.XMLHttpRequest();
     return xMLHttpRequest;
@@ -908,7 +908,7 @@ export const getXHR = () => {
     const error = new Error("Browser-only version of superagent could not find XHR");
     throw error;
   }
-};
+}
 export const serializeObject = function serialize(obj) {
   obj = str2(1296);
   if (obj.isObject(obj)) {
@@ -933,8 +933,8 @@ export const types = { html: "text/html", json: "application/json", xml: "text/x
 export const serialize = { "application/x-www-form-urlencoded": _mod1297.stringify, "application/json": defaultOptions };
 export const parse = { "application/x-www-form-urlencoded": parseString, "application/json": JSON.parse };
 export { Response };
-export const agent = () => new str2(1347)();
-export const get = (arg0, fn, arg2) => {
+export () => new str2(1347)()
+export (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("GET", arg0);
   let tmp2 = fn;
@@ -949,8 +949,8 @@ export const get = (arg0, fn, arg2) => {
     obj.end(tmp);
   }
   return obj;
-};
-export const head = (arg0, fn, arg2) => {
+}
+export (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("HEAD", arg0);
   let tmp2 = fn;
@@ -965,8 +965,8 @@ export const head = (arg0, fn, arg2) => {
     obj.end(tmp);
   }
   return obj;
-};
-export const options = (arg0, fn, arg2) => {
+}
+export (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("OPTIONS", arg0);
   let tmp2 = fn;
@@ -981,10 +981,10 @@ export const options = (arg0, fn, arg2) => {
     obj.end(tmp);
   }
   return obj;
-};
+}
 export { del };
 export const delete = del;
-export const patch = (arg0, fn, arg2) => {
+export (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("PATCH", arg0);
   let tmp2 = fn;
@@ -999,8 +999,8 @@ export const patch = (arg0, fn, arg2) => {
     obj.end(tmp);
   }
   return obj;
-};
-export const post = (arg0, fn, arg2) => {
+}
+export (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("POST", arg0);
   let tmp2 = fn;
@@ -1015,8 +1015,8 @@ export const post = (arg0, fn, arg2) => {
     obj.end(tmp);
   }
   return obj;
-};
-export const put = (arg0, fn, arg2) => {
+}
+export (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("PUT", arg0);
   let tmp2 = fn;
@@ -1031,4 +1031,4 @@ export const put = (arg0, fn, arg2) => {
     obj.end(tmp);
   }
   return obj;
-};
+}

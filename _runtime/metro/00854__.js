@@ -11,7 +11,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createLangChainCallbackHandler = function createLangChainCallbackHandler() {
+export function createLangChainCallbackHandler() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -37,8 +37,8 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
     lc_attributes: "application",
-    lc_aliases: "hash",
-    lc_serializable_keys: "application",
+    lc_aliases: "title",
+    lc_serializable_keys: "backgroundColor",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},
     name: false,
@@ -298,4 +298,4 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
     }
   };
   return obj2;
-};
+}

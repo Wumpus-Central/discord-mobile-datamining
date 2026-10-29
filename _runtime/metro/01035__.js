@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const AppState = _mod17.AppState;
 
-export const onThisSpanEnd = function onThisSpanEnd(on, arg1, arg2) {
+export function onThisSpanEnd(on, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = arg2;
   on.on("spanEnd", (arg0) => {
@@ -16,8 +16,8 @@ export const onThisSpanEnd = function onThisSpanEnd(on, arg1, arg2) {
       closure_1(arg0);
     }
   });
-};
-export const adjustTransactionDuration = (client, activeSpan, finalTimeout) => {
+}
+export (client, activeSpan, finalTimeout) => {
   _require = activeSpan;
   dependencyMap = finalTimeout;
   if (obj.isRootSpan(activeSpan)) {
@@ -48,10 +48,10 @@ export const adjustTransactionDuration = (client, activeSpan, finalTimeout) => {
     const debug = require("module_693").debug;
     debug.warn("Not sampling empty back spans only works for Sentry Transactions (Root Spans).");
   }
-};
-export const ignoreEmptyBackNavigation = (client, c4) => {
-  const f88227 = (arg0) => {
-    const data = c4(f88227[2]).spanToJSON(arg0).data;
+}
+export (client, c4) => {
+  const f89234 = (arg0) => {
+    const data = c4(f89234[2]).spanToJSON(arg0).data;
     let prop;
     if (null !== data) {
       if (undefined !== data) {
@@ -60,8 +60,8 @@ export const ignoreEmptyBackNavigation = (client, c4) => {
     }
     return true === prop;
   };
-  const f88228 = () => {
-    const debug = c4(f88227[2]).debug;
+  const f89235 = () => {
+    const debug = c4(f89234[2]).debug;
     debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
   };
   if (client) {
@@ -105,8 +105,8 @@ export const ignoreEmptyBackNavigation = (client, c4) => {
     let debug = tmp(tmp2[2]).debug;
     debug.warn("Could not hook on spanEnd event because client is not defined.");
   }
-};
-export const ignoreEmptyRouteChangeTransactions = (client, c4, DEFAULT_NAVIGATION_SPAN_NAME, arg3) => {
+}
+export (client, c4, DEFAULT_NAVIGATION_SPAN_NAME, arg3) => {
   closure_2 = arg3;
   closure_129_0 = c4;
   closure_129_1 = (arg0) => {
@@ -175,8 +175,8 @@ export const ignoreEmptyRouteChangeTransactions = (client, c4, DEFAULT_NAVIGATIO
     let debug = tmp(tmp2[2]).debug;
     debug.warn("Could not hook on spanEnd event because client is not defined.");
   }
-};
-export const onlySampleIfChildSpans = (client, startIdleSpanResult) => {
+}
+export (client, startIdleSpanResult) => {
   _require = startIdleSpanResult;
   if (obj.isRootSpan(startIdleSpanResult)) {
     if (tmpResult.isSentrySpan(startIdleSpanResult)) {
@@ -198,8 +198,8 @@ export const onlySampleIfChildSpans = (client, startIdleSpanResult) => {
   let debug = tmp(693).debug;
   debug.warn("Not sampling childless spans only works for Sentry Transactions (Root Spans).");
   obj = require("module_996");
-};
-export const cancelInBackground = (client, startIdleSpanResult) => {
+}
+export (client, startIdleSpanResult) => {
   const listener = AppState.addEventListener("change", (event) => {
     if ("background" === event) {
       const debug = _mod693.debug;
@@ -232,4 +232,4 @@ export const cancelInBackground = (client, startIdleSpanResult) => {
       }
     });
   }
-};
+}

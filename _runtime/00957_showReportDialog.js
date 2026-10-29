@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const showReportDialog = function showReportDialog(arg0) {
+export function showReportDialog(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -84,4 +84,4 @@ export const showReportDialog = function showReportDialog(arg0) {
     const debug = tmp(tmp2[2]).debug;
     debug.error("[showReportDialog] Global document not defined");
   }
-};
+}

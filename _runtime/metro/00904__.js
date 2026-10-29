@@ -172,7 +172,7 @@ let items = [
 ];
 
 export const BrowserClient = _createClass(BrowserClient, items);
-export const applyDefaultOptions = function applyDefaultOptions(arg0) {
+export function applyDefaultOptions(arg0) {
   if (typeof globalThis.__SENTRY_RELEASE__ === "string") {
     let id = globalThis.__SENTRY_RELEASE__;
   } else {
@@ -183,4 +183,4 @@ export const applyDefaultOptions = function applyDefaultOptions(arg0) {
   }
   const merged = Object.assign(arg0);
   return { release: id, sendClientReports: true, parentSpanIsAlwaysRootSpan: true };
-};
+}

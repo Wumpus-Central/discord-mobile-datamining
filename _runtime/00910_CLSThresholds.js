@@ -17,7 +17,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = [0.1, 0.25];
 
 export const CLSThresholds = items;
-export const onCLS = (arg0, arg1) => {
+export (arg0, arg1) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -59,4 +59,4 @@ export const onCLS = (arg0, arg1) => {
     }
     observeResult = observe.observe("layout-shift", handleEntries);
   }));
-};
+}

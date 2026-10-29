@@ -73,7 +73,7 @@ const re3 = /^o(\d+)\./;
 const re4 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)((?:\[[:.%\w]+\]|[\w.-]+))(?::(\d+))?\/(.+)/;
 
 export { dsnFromString };
-export const dsnToString = function dsnToString(url) {
+export function dsnToString(url) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -98,8 +98,8 @@ export const dsnToString = function dsnToString(url) {
     combined = "" + path + "/";
   }
   return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
-};
-export const extractOrgIdFromClient = function extractOrgIdFromClient(client) {
+}
+export function extractOrgIdFromClient(client) {
   const options = client.getOptions();
   const str = client.getDsn() || {}.host;
   if (options.orgId) {
@@ -114,16 +114,16 @@ export const extractOrgIdFromClient = function extractOrgIdFromClient(client) {
     StringResult = tmp7;
   }
   return StringResult;
-};
-export const extractOrgIdFromDsnHost = function extractOrgIdFromDsnHost(str) {
+}
+export function extractOrgIdFromDsnHost(str) {
   const match = str.match(re3);
   let tmp2;
   if (match != null) {
     tmp2 = match[1];
   }
   return tmp2;
-};
-export const makeDsn = function makeDsn(protocol) {
+}
+export function makeDsn(protocol) {
   if (typeof protocol === "string") {
     let url = dsnFromString(protocol);
   } else {
@@ -182,4 +182,4 @@ export const makeDsn = function makeDsn(protocol) {
       return url;
     }
   }
-};
+}

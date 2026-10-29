@@ -11,7 +11,7 @@ require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const _getTraceInfoFromScope = function _getTraceInfoFromScope(client, currentScope) {
+export function _getTraceInfoFromScope(client, currentScope) {
   _require = client;
   dependencyMap = currentScope;
   if (currentScope) {
@@ -38,4 +38,4 @@ export const _getTraceInfoFromScope = function _getTraceInfoFromScope(client, cu
     withScopeResult = [undefined, undefined];
   }
   return withScopeResult;
-};
+}

@@ -1,51 +1,16 @@
 // === Module 12753: ? ===
 
 // Module 12753
+import _mod12754 from "module_12754" /* 12754 */;
+import _mod12755 from "module_12755" /* 12755 */;
+import _mod12756 from "module_12756" /* 12756 */;
+import _mod12757 from "module_12757" /* 12757 */;
+import _mod12759 from "module_12759" /* 12759 */;
+import _mod12760 from "module_12760" /* 12760 */;
+import _mod12762 from "module_12762" /* 12762 */;
+import _mod12763 from "module_12763" /* 12763 */;
+import _mod12765 from "module_12765" /* 12765 */;
+import _mod12766 from "module_12766" /* 12766 */;
 
-export function makeFifoCache(arg0) {
-  closure_0 = arg0;
-  closure_1 = [];
-  dependencyMap = {};
-  return {
-    add(arg0, arg1) {
-      if (closure_1.length >= closure_0) {
-        do {
-          if (undefined !== closure_1.shift()) {
-            delete tmp[tmp2];
-          }
-        } while (closure_1.length >= closure_0);
-      }
-      if (dependencyMap[arg0]) {
-        const self = this;
-        this.delete(arg0);
-      }
-      closure_1.push(arg0);
-      dependencyMap[arg0] = arg1;
-    },
-    clear() {
-      closure_2 = {};
-      closure_1 = [];
-    },
-    get(arg0) {
-      return dependencyMap[arg0];
-    },
-    size() {
-      return closure_1.length;
-    },
-    delete(arg0) {
-      if (dependencyMap[arg0]) {
-        delete tmp[tmp2];
-        let num = 0;
-        if (0 < closure_1.length) {
-          while (closure_1[num] !== arg0) {
-            num = num + 1;
-          }
-          closure_1.splice(num, 1);
-        }
-        return true;
-      } else {
-        return false;
-      }
-    }
-  };
-}
+
+export default { dir: _mod12754, has: _mod12755, lang: _mod12756, matches: _mod12757, not: _mod12759, "nth-child": _mod12760, "nth-last-child": _mod12762, "nth-last-of-type": _mod12763, "nth-of-type": _mod12765, slotted: _mod12766 };

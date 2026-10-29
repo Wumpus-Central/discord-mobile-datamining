@@ -1,17 +1,20 @@
 // === Module 12723: ? ===
 
 // Module 12723
-
-export const severityLevelFromString = function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
-    }
-    str = str2;
+let obj = {
+  name: "Operator",
+  structure: { value: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    this.scanner.next();
+    const obj = { type: "Operator", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart);
+    return obj;
+  },
+  generate(value) {
+    this.chunk(value.value);
   }
-  return str;
 };
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];
+
+export default obj;

@@ -9,7 +9,7 @@ require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
 
-export const getColorScheme = function getColorScheme() {
+export function getColorScheme() {
   if (null == obj) {
     const tmp11 = new EventEmitterDefault();
     closure_0 = tmp11;
@@ -37,8 +37,8 @@ export const getColorScheme = function getColorScheme() {
     colorScheme = obj.appearance.colorScheme;
   }
   return colorScheme;
-};
-export const setColorScheme = function setColorScheme(arg0) {
+}
+export function setColorScheme(arg0) {
   if (null == obj) {
     const tmp14 = new EventEmitterDefault();
     closure_0 = tmp14;
@@ -70,8 +70,8 @@ export const setColorScheme = function setColorScheme(arg0) {
     const obj4 = { colorScheme: tmp8 };
     obj.appearance = obj4;
   }
-};
-export const addChangeListener = function addChangeListener(onChange) {
+}
+export function addChangeListener(onChange) {
   if (null == appearance) {
     const tmp10 = new EventEmitterDefault();
     closure_0 = tmp10;
@@ -91,4 +91,4 @@ export const addChangeListener = function addChangeListener(onChange) {
   }
   const eventEmitter = appearance.eventEmitter;
   return eventEmitter.addListener("change", onChange);
-};
+}

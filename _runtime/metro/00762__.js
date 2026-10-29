@@ -8,13 +8,13 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createMetricContainerEnvelopeItem = function createMetricContainerEnvelopeItem(items) {
+export function createMetricContainerEnvelopeItem(items) {
   items = [, ];
   items[0] = { type: "trace_metric", item_count: items.length, content_type: "application/vnd.sentry.items.trace-metric+json" };
   items[1] = { items };
   return items;
-};
-export const createMetricEnvelope = function createMetricEnvelope(items, sdk, tunnel, dsn) {
+}
+export function createMetricEnvelope(items, sdk, tunnel, dsn) {
   sdk = undefined;
   if (sdk != null) {
     sdk = sdk.sdk;
@@ -36,4 +36,4 @@ export const createMetricEnvelope = function createMetricEnvelope(items, sdk, tu
   items[1] = { items };
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
-};
+}

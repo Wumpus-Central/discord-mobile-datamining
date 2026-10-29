@@ -1,43 +1,25 @@
 // === Module 6470: ? ===
 
 // Module 6470
-import _mod1305 from "module_1305" /* 1305 */;
-import _mod1306 from "module_1306" /* 1306 */;
-import callBindBasic from "callBindBasic" /* 1315 */;
+import _mod6471 from "module_6471" /* 6471 */;
 
-const obj = {};
-try {
-  obj.__proto__ = null;
-  let _module = _mod1306;
-  if (_module) {
-    const _Object = Object;
-    _module = _mod1306(Object.prototype, "__proto__");
-  }
-  let tmp6 = !("toString" in obj);
-  if (tmp6) {
-    let setDunder = _module;
-    if (setDunder) {
-      setDunder = typeof _module.set === "function";
-    }
-    if (setDunder) {
-      const items = [_module.set];
-      setDunder = callBindBasic(items);
-    }
-    if (!setDunder) {
-      setDunder = function setDunder(arg0, arg1) {
-        if (null == arg0) {
-          const tmp6 = new _mod1305("set Object.prototype.__proto__ called on null or undefined");
-          throw tmp6;
-        } else {
-          arg0.__proto__ = arg1;
-          return arg1;
+
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
         }
-      };
+      }
     }
-    tmp6 = setDunder;
   }
-  module.exports = tmp6;
-  const tmp3 = "toString" in obj;
-} catch (tmp2) {
-  throw tmp2;
-}
+  trim5 = _mod6471;
+};

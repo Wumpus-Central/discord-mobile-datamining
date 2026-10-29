@@ -10,7 +10,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const captureError = function captureError(error, prompt_execution, arg2) {
+export function captureError(error, prompt_execution, arg2) {
   try {
     if (obj.getClient()) {
       const activeSpan = spanToJSON.getActiveSpan();
@@ -40,4 +40,4 @@ export const captureError = function captureError(error, prompt_execution, arg2)
     obj = _mod724;
   } catch (err) {
   }
-};
+}

@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const filenameIsInApp = function filenameIsInApp(str) {
+export function filenameIsInApp(str) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -36,7 +36,7 @@ export const filenameIsInApp = function filenameIsInApp(str) {
     tmp2 = !str.includes("node_modules/");
   }
   return tmp2;
-};
+}
 export function node(arg0) {
   closure_0 = arg0;
   const re1 = /^\s*[-]{4,}$/;

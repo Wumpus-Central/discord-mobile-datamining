@@ -87,7 +87,7 @@ if (!fn) {
   };
 }
 
-export const fetchSourceContext = function fetchSourceContext(arg0) {
+export function fetchSourceContext(arg0) {
   closure_0 = arg0;
   return fn(this, undefined, undefined, function*() {
     if (c0 === 2) {
@@ -100,7 +100,7 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -178,8 +178,8 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
       }
     }
   });
-};
-export const parseErrorStack = function parseErrorStack(arg0) {
+}
+export function parseErrorStack(arg0) {
   if (TurboModuleRegistry.ReactNativeLibraries.Devtools) {
     const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
     return Devtools.parseErrorStack(arg0);
@@ -188,8 +188,8 @@ export const parseErrorStack = function parseErrorStack(arg0) {
     const error = new Error("React Native Devtools not available.");
     throw error;
   }
-};
-export const symbolicateStackTrace = function symbolicateStackTrace(arg0, arg1) {
+}
+export function symbolicateStackTrace(arg0, arg1) {
   if (TurboModuleRegistry.ReactNativeLibraries.Devtools) {
     const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
     return Devtools.symbolicateStackTrace(arg0, arg1);
@@ -198,5 +198,5 @@ export const symbolicateStackTrace = function symbolicateStackTrace(arg0, arg1) 
     const error = new Error("React Native Devtools not available.");
     throw error;
   }
-};
+}
 export { getDevServer };

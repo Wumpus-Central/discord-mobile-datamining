@@ -1,119 +1,178 @@
 // === Module 9228: ? ===
 
 // Module 9228
-const dependencyMap = [];
-const dependencyMap2 = [];
-let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
+import _asyncLoop from "_asyncLoop" /* 9224 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-export const byteLength = function byteLength(arr) {
-  if (0 < arr.length % 4) {
-    const _Error = Error;
-    const error = new Error("Invalid string. Length must be a multiple of 4");
-    throw error;
-  } else {
-    let index = arr.indexOf("=");
-    if (-1 === index) {
-      index = length;
+const HMAC = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    const items = [index, ];
-    let num2 = 0;
-    if (index !== length) {
-      num2 = 4 - index % 4;
-    }
-    items[1] = num2;
-    return 3 * (items[0] + items[1]) / 4 - items[1];
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-};
-export const toByteArray = function toByteArray(arr) {
-  if (0 < arr.length % 4) {
-    const _Error = Error;
-    const error = new Error("Invalid string. Length must be a multiple of 4");
-    throw error;
-  } else {
-    let index = arr.indexOf("=");
-    if (-1 === index) {
-      index = length;
+}
+class HMAC {
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = c2(this, HMAC);
+    tmp2 = closure_4;
+    obj = closure_4(HMAC);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
-    const items = [index, ];
-    let num = 0;
-    if (index !== length) {
-      num = 4 - index % 4;
-    }
-    items[1] = num;
-    [tmp2, tmp3] = items;
-    const tmp7 = new closure_2(3 * (tmp2 + tmp3) / 4 - tmp3);
-    let diff = tmp2;
-    if (tmp3 > 0) {
-      diff = tmp2 - 4;
-    }
-    let num11 = 0;
-    let num12 = 0;
-    let num13 = 0;
-    let num14 = 0;
-    if (0 < diff) {
-      do {
-        let tmp11 = dependencyMap2[arr.charCodeAt(arr, num12)] << 18;
-        let tmp12 = dependencyMap2[arr.charCodeAt(arr, num12 + 1)] << 12;
-        let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
-        let tmp14 = tmp11 | tmp12 | tmp13 | dependencyMap2[arr.charCodeAt(arr, num12 + 3)];
-        let sum = num11 + 1;
-        tmp7[num11] = tmp14 >> 16 & 255;
-        let sum1 = sum + 1;
-        tmp7[sum] = tmp14 >> 8 & 255;
-        num11 = sum1 + 1;
-        tmp7[sum1] = 255 & tmp14;
-        num12 = num12 + 4;
-        num13 = num11;
-        num14 = num12;
-      } while (num12 < diff);
-    }
-    let sum2 = num13;
-    if (2 === tmp3) {
-      sum2 = num13 + 1;
-      tmp7[num13] = 255 & (dependencyMap2[arr.charCodeAt(arr, num14)] << 2 | dependencyMap2[arr.charCodeAt(arr, num14 + 1)] >> 4);
-      const tmp19 = dependencyMap2[arr.charCodeAt(arr, num14)] << 2;
-    }
-    if (1 === tmp3) {
-      const tmp21 = dependencyMap2[arr.charCodeAt(arr, num14)] << 10;
-      const tmp23 = tmp21 | dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4 | dependencyMap2[arr.charCodeAt(arr, num14 + 2)] >> 2;
-      tmp7[sum2] = tmp23 >> 8 & 255;
-      tmp7[sum2 + 1] = 255 & tmp23;
-      const tmp22 = dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4;
-    }
-    return tmp7;
-  }
-};
-export const fromByteArray = function fromByteArray(uint8Array) {
-  let sum;
-  const result = length % 3;
-  const items = [];
-  const diff = length - result;
-  let num = 0;
-  if (0 < diff) {
-    do {
-      sum = num + 16383;
-      let sum2 = num;
-      let tmp5 = sum;
-      if (diff < sum) {
-        tmp5 = diff;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.finished = false;
+    tmp3Result.destroyed = false;
+    hashResult = closure_0(closure_1[5]).hash(global);
+    toBytesResult = closure_0(closure_1[6]).toBytes(require);
+    tmp3Result.iHash = global.create();
+    if (typeof tmp3Result.iHash.update !== "function") {
+      tmp13 = globalThis;
+      _Error = Error;
+      tmp14 = new.target;
+      str = "Expected instance of class which extends utils.Hash";
+      tmp15 = new.target;
+      error = new Error("Expected instance of class which extends utils.Hash");
+      tmp17 = error;
+      throw error;
+    } else {
+      tmp3Result.blockLen = tmp3Result.iHash.blockLen;
+      tmp3Result.outputLen = tmp3Result.iHash.outputLen;
+      blockLen = tmp3Result.blockLen;
+      tmp18 = globalThis;
+      _Uint8Array = Uint8Array;
+      tmp19 = new.target;
+      tmp20 = new.target;
+      tmp21 = blockLen;
+      uint8Array = new Uint8Array(blockLen);
+      tmp22 = uint8Array;
+      digestResult = toBytesResult;
+      if (toBytesResult.length > blockLen) {
+        obj1 = global.create();
+        updateResult = obj1.update(toBytesResult);
+        digestResult = updateResult.digest();
       }
-      let items1 = [];
-      if (sum2 < tmp5) {
+      result = uint8Array.set(digestResult);
+      num = 0;
+      num2 = 54;
+      num3 = 1;
+      num4 = 0;
+      if (0 < uint8Array.length) {
         do {
-          let sum1 = (uint8Array[sum2] << 16 & 16711680) + (uint8Array[sum2 + 1] << 8 & 65280) + (255 & uint8Array[sum2 + 2]);
-          let arr = items1.push(dependencyMap[sum1 >> 18 & 63] + dependencyMap[sum1 >> 12 & 63] + dependencyMap[sum1 >> 6 & 63] + dependencyMap[63 & sum1]);
-          sum2 = sum2 + 3;
-        } while (sum2 < tmp5);
+          uint8Array[num4] = uint8Array[num4] ^ 54;
+          num4 = num4 + 1;
+          length = uint8Array.length;
+        } while (num4 < length);
       }
-      let arr2 = items.push(items1.join(""));
-      num = sum;
-    } while (sum < diff);
+      iHash = tmp3Result.iHash;
+      updateResult1 = iHash.update(uint8Array);
+      tmp3Result.oHash = global.create();
+      num5 = 106;
+      num6 = 0;
+      if (0 < uint8Array.length) {
+        do {
+          uint8Array[num6] = uint8Array[num6] ^ 106;
+          num6 = num6 + 1;
+          length2 = uint8Array.length;
+        } while (num6 < length2);
+      }
+      oHash = tmp3Result.oHash;
+      updateResult2 = oHash.update(uint8Array);
+      fillResult = uint8Array.fill(0);
+      return tmp3Result;
+    }
   }
-  if (1 === result) {
-    items.push(`${closure_0[uint8Array[length - 1] >> 2]}${closure_0[uint8Array[length - 1] << 4 & 63]}==`);
-  } else if (2 === result) {
-    const sum3 = (uint8Array[length - 2] << 8) + uint8Array[length - 1];
-    items.push(`${closure_0[tmp13 >> 10]}${closure_0[tmp13 >> 4 & 63]}${closure_0[tmp13 << 2 & 63]}=`);
+}
+_inherits(HMAC, _asyncLoop.Hash);
+const entry = {
+  key: "update",
+  value: function update(arg0) {
+    HMAC(9225).exists(this);
+    const iHash = this.iHash;
+    iHash.update(arg0);
+    return this;
   }
-  return items.join("");
 };
+const items = [
+  entry,
+  {
+    key: "digestInto",
+    value: function digestInto(arg0) {
+      HMAC(9225).exists(this);
+      HMAC(9225).bytes(arg0, this.outputLen);
+      this.finished = true;
+      const iHash = this.iHash;
+      iHash.digestInto(arg0);
+      const oHash = this.oHash;
+      oHash.update(arg0);
+      const oHash2 = this.oHash;
+      oHash2.digestInto(arg0);
+      this.destroy();
+    }
+  },
+  {
+    key: "digest",
+    value: function digest() {
+      const uint8Array = new Uint8Array(this.oHash.outputLen);
+      this.digestInto(uint8Array);
+      return uint8Array;
+    }
+  },
+  {
+    key: "_cloneInto",
+    value: function _cloneInto(arg0) {
+      const self = this;
+      let obj = arg0;
+      if (!arg0) {
+        const _Object = Object;
+        const _Object2 = Object;
+        obj = Object.create(Object.getPrototypeOf(self), {});
+      }
+      ({ oHash, iHash, finished: tmp.finished, destroyed: tmp.destroyed, blockLen: tmp.blockLen, outputLen: tmp.outputLen } = self);
+      obj.oHash = oHash._cloneInto(obj.oHash);
+      obj.iHash = iHash._cloneInto(obj.iHash);
+      return obj;
+    }
+  },
+  {
+    key: "destroy",
+    value: function destroy() {
+      this.destroyed = true;
+      const oHash = this.oHash;
+      oHash.destroy();
+      const iHash = this.iHash;
+      iHash.destroy();
+    }
+  }
+];
+const _moduleResult = _createClass(HMAC, items);
+const metroRequire = _moduleResult;
+exports.hmac.create = (arg0, arg1) => new _moduleResult(arg0, arg1);
+
+export const HMAC = _moduleResult;
+export (arg0, arg1, arg2) => {
+  const obj = new _moduleResult(arg0, arg1);
+  return new _moduleResult(arg0, arg1).update(arg2).digest();
+}

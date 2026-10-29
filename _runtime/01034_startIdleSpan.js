@@ -49,7 +49,7 @@ const javascript = "javascript";
 
 export const DEFAULT_NAVIGATION_SPAN_NAME = "Route Change";
 export { defaultIdleOptions };
-export const startIdleNavigationSpan = (arg0) => {
+export (arg0) => {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -122,32 +122,32 @@ export const startIdleNavigationSpan = (arg0) => {
     const debug = obj3.debug;
     debug.warn("[startIdleNavigationSpan] Can't create route change span, missing client.");
   }
-};
+}
 export { startIdleSpan };
-export const getDefaultIdleNavigationSpanOptions = function getDefaultIdleNavigationSpanOptions() {
+export function getDefaultIdleNavigationSpanOptions() {
   const obj = { name, op: "navigation", forceTransaction: true, scope: _mod693.getCurrentScope() };
   return obj;
-};
-export const isSentryInteractionSpan = function isSentryInteractionSpan(activeSpan) {
+}
+export function isSentryInteractionSpan(activeSpan) {
   const items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
   return items.includes(_mod693.spanToJSON(activeSpan).origin || "");
-};
+}
 export const SCOPE_SPAN_FIELD = "_sentrySpan";
-export const clearActiveSpanFromScope = function clearActiveSpanFromScope(currentScope) {
+export function clearActiveSpanFromScope(currentScope) {
   delete tmp[tmp2];
-};
-export const addDefaultOpForSpanFrom = function addDefaultOpForSpanFrom(on) {
+}
+export function addDefaultOpForSpanFrom(on) {
   on.on("spanStart", (setAttribute) => {
     if (!obj.spanToJSON(setAttribute).op) {
       const attr = setAttribute.setAttribute(_mod693.SEMANTIC_ATTRIBUTE_SENTRY_OP, "default");
     }
     obj = _mod693;
   });
-};
+}
 export const SPAN_THREAD_NAME = "thread.name";
 export const SPAN_THREAD_NAME_MAIN = "main";
 export const SPAN_THREAD_NAME_JAVASCRIPT = "javascript";
-export const addThreadInfoToSpan = function addThreadInfoToSpan(on) {
+export function addThreadInfoToSpan(on) {
   on.on("spanStart", (setAttribute) => {
     const data = _mod693.spanToJSON(setAttribute).data;
     let tmp;
@@ -160,9 +160,9 @@ export const addThreadInfoToSpan = function addThreadInfoToSpan(on) {
       const attr = setAttribute.setAttribute(closure_1_7, javascript);
     }
   });
-};
-export const setMainThreadInfo = function setMainThreadInfo(childSpanJSON) {
+}
+export function setMainThreadInfo(childSpanJSON) {
   childSpanJSON.data = childSpanJSON.data || {};
   childSpanJSON.data[c7] = main;
   return childSpanJSON;
-};
+}

@@ -1,18 +1,7 @@
 // === Module 15582: ? ===
 
 // Module 15582
-let closure_0 = Object.freeze({ loose: true });
-let closure_1 = Object.freeze({});
+import registerAsset from "module_1131" /* 1131 */;
 
-export default (arg0) => {
-  let tmp = arg0;
-  if (arg0) {
-    if (typeof tmp !== "object") {
-      tmp = closure_0;
-    }
-    let tmp2 = tmp;
-  } else {
-    tmp2 = closure_1;
-  }
-  return tmp2;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "5ad61954329ae43fee881a48ae602d3b", name: "ic_paperclip_24px", type: "png" });

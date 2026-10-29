@@ -16,7 +16,7 @@ const dependencyMap = arg6;
 const ReactNavigation = "ReactNavigation";
 
 export const INTEGRATION_NAME = "ReactNavigation";
-export const reactNavigationIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -479,7 +479,7 @@ export const reactNavigationIntegration = () => {
     options: { routeChangeTimeoutMs: num, enableTimeToInitialDisplay: flag, ignoreEmptyBackNavigationTransactions: flag2, enableTimeToInitialDisplayForPreloadedRoutes: flag3, useDispatchedActionData: flag4, useFullPathsForNavigationRoutes: flag5, enablePrefetchTracking: flag6 }
   };
   return obj2;
-};
-export const getReactNavigationIntegration = function getReactNavigationIntegration(getIntegrationByName) {
+}
+export function getReactNavigationIntegration(getIntegrationByName) {
   return getIntegrationByName.getIntegrationByName(ReactNavigation);
-};
+}

@@ -185,7 +185,7 @@ function _startRootSpan(name, getPropagationContext, parentSampled) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const __SENTRY_SUPPRESS_TRACING__ = "__SENTRY_SUPPRESS_TRACING__";
 
-export const continueTrace = (arg0, arg1) => {
+export (arg0, arg1) => {
   _require = arg1;
   let mainCarrier = require("module_701").getMainCarrier();
   let obj = require("module_701");
@@ -242,8 +242,8 @@ export const continueTrace = (arg0, arg1) => {
     const tmpResult8 = tmp(724);
   }
   let obj2 = require("module_717");
-};
-export const startInactiveSpan = function startInactiveSpan(experimental) {
+}
+export function startInactiveSpan(experimental) {
   _require = experimental;
   let mainCarrier = require("module_701").getMainCarrier();
   let obj = require("module_701");
@@ -321,8 +321,8 @@ export const startInactiveSpan = function startInactiveSpan(experimental) {
     });
   }
   let obj2 = require("module_717");
-};
-export const startNewTrace = function startNewTrace(runCallback) {
+}
+export function startNewTrace(runCallback) {
   _require = runCallback;
   return require("module_724").withScope((setPropagationContext) => {
     const obj = { traceId: generateSpanId.generateTraceId(), sampleRand: null };
@@ -349,8 +349,8 @@ export const startNewTrace = function startNewTrace(runCallback) {
     }
     return withActiveSpanResult;
   });
-};
-export const startSpan = function startSpan(experimental, callback) {
+}
+export function startSpan(experimental, callback) {
   _require = experimental;
   dependencyMap = callback;
   const mainCarrier = require("module_701").getMainCarrier();
@@ -452,8 +452,8 @@ export const startSpan = function startSpan(experimental, callback) {
     });
   }
   let obj2 = require("module_717");
-};
-export const startSpanManual = function startSpanManual(experimental, arg1) {
+}
+export function startSpanManual(experimental, arg1) {
   _require = experimental;
   dependencyMap = arg1;
   let mainCarrier = require("module_701").getMainCarrier();
@@ -553,8 +553,8 @@ export const startSpanManual = function startSpanManual(experimental, arg1) {
     });
   }
   let obj2 = require("module_717");
-};
-export const suppressTracing = function suppressTracing(arg0) {
+}
+export function suppressTracing(arg0) {
   _require = arg0;
   const mainCarrier = require("module_701").getMainCarrier();
   const obj = require("module_701");
@@ -571,8 +571,8 @@ export const suppressTracing = function suppressTracing(arg0) {
     const tmpResult = tmp(724);
   }
   return suppressTracingResult;
-};
-export const withActiveSpan = function withActiveSpan(startInactiveSpanResult, arg1) {
+}
+export function withActiveSpan(startInactiveSpanResult, arg1) {
   _require = startInactiveSpanResult;
   dependencyMap = arg1;
   const mainCarrier = require("module_701").getMainCarrier();
@@ -589,4 +589,4 @@ export const withActiveSpan = function withActiveSpan(startInactiveSpanResult, a
     const tmpResult = tmp(724);
   }
   return withActiveSpanResult;
-};
+}

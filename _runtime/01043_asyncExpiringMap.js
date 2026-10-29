@@ -72,10 +72,10 @@ if (!fn) {
 }
 const asyncExpiringMap = new AsyncExpiringMap.AsyncExpiringMap({ ttl: 60000 });
 
-export const addTimeToInitialDisplayFallback = (spanId, newScreenTimeToDisplay) => {
+export (spanId, newScreenTimeToDisplay) => {
   const result = asyncExpiringMap.set(spanId, newScreenTimeToDisplay);
-};
-export const getTimeToInitialDisplayFallback = (arg0) => {
+}
+export (arg0) => {
   closure_0 = arg0;
   return closure_0(undefined, undefined, undefined, function*() {
     if (c0 === 2) {
@@ -88,7 +88,7 @@ export const getTimeToInitialDisplayFallback = (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -111,4 +111,4 @@ export const getTimeToInitialDisplayFallback = (arg0) => {
       }
     }
   });
-};
+}

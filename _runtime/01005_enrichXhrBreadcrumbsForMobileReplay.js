@@ -6,7 +6,7 @@ import _mod1006 from "module_1006" /* 1006 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {
+export function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {
   if ("xhr" === category.category) {
     if (xhr) {
       if (xhr.xhr) {
@@ -55,4 +55,4 @@ export const enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbs
       }
     }
   }
-};
+}

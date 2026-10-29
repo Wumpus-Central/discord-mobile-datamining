@@ -1036,8 +1036,8 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
     }
   }
 }
-function batchedUpdatesImpl(fn, value) {
-  return fn(value);
+function batchedUpdatesImpl(fn, arg1) {
+  return fn(arg1);
 }
 function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   if (isPropagationStopped) {
@@ -3593,7 +3593,7 @@ function updateActionStateImpl(queue, c166, memoizedState) {
       queue = tmp6.queue;
       if (memoizedState !== tmp6.memoizedState) {
         _null.flags = _null.flags | 2048;
-        pushSimpleEffect(9, { destroy: "paths" }, actionStateActionEffect.bind(null, queue, memoizedState), null);
+        pushSimpleEffect(9, { destroy: "r" }, actionStateActionEffect.bind(null, queue, memoizedState), null);
       }
       items = [tmp2, queue.dispatch, tmp];
       return items;
@@ -5903,7 +5903,7 @@ function updateSuspenseListComponent(child, pendingProps, current) {
           if ("together" === revealOrder) {
             memoizedState = pendingProps.memoizedState;
             if (null === memoizedState) {
-              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "done", treeForkCount: false };
+              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "duration", treeForkCount: false };
             } else {
               memoizedState.isBackwards = false;
               memoizedState.rendering = null;
@@ -16262,7 +16262,7 @@ function updateSyncExternalStore(serializer, getSnapshot) {
     return tmp3;
   }
   _null.flags = _null.flags | 2048;
-  const lastEffect = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "paths" }, next: null };
+  const lastEffect = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     obj2 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16599,7 +16599,7 @@ function mountEffect(create, arg1) {
   if (undefined !== arg1) {
     tmp4 = arg1;
   }
-  obj2 = { tag: 9, create, deps: tmp4, inst: { destroy: "paths" }, next: null };
+  obj2 = { tag: 9, create, deps: tmp4, inst: { destroy: "r" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16689,7 +16689,7 @@ let closure_210 = {
     if (undefined !== combined) {
       tmp6 = combined;
     }
-    obj2 = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "paths" }, next: null };
+    obj2 = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "r" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16719,7 +16719,7 @@ let closure_210 = {
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj2 = { tag: 5, create, deps: tmp4, inst: { destroy: "paths" }, next: null };
+    obj2 = { tag: 5, create, deps: tmp4, inst: { destroy: "r" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16748,7 +16748,7 @@ let closure_210 = {
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj2 = { tag: 3, create, deps: tmp4, inst: { destroy: "paths" }, next: null };
+    obj2 = { tag: 3, create, deps: tmp4, inst: { destroy: "r" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16785,16 +16785,16 @@ let closure_210 = {
     mountWorkInProgressHook().memoizedState = items;
     return tmp5;
   },
-  useReducer(lastRenderedReducer, value, fn) {
+  useReducer(lastRenderedReducer, arg1, fn) {
     const tmp3 = mountWorkInProgressHook();
-    let tmp4 = value;
+    let tmp4 = arg1;
     if (undefined !== fn) {
-      const tmp5 = fn(value);
+      const tmp5 = fn(arg1);
       tmp4 = tmp5;
       if (c170) {
         setIsStrictModeForDevtools(true);
         try {
-          fn(value);
+          fn(arg1);
           setIsStrictModeForDevtools(false);
           tmp4 = tmp5;
         } catch (tmp12) {
@@ -16924,7 +16924,7 @@ let closure_210 = {
         next = obj5;
       }
       _null.flags = _null.flags | 8390656;
-      obj6 = { tag: 9, create: subscribeToStore.bind(null, _null, obj4, serializer), deps: items2, inst: { destroy: "paths" }, next: null };
+      obj6 = { tag: 9, create: subscribeToStore.bind(null, _null, obj4, serializer), deps: items2, inst: { destroy: "r" }, next: null };
       let updateQueue2 = _null.updateQueue;
       if (null === updateQueue2) {
         obj7 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16941,7 +16941,7 @@ let closure_210 = {
       }
       next.memoizedState = obj6;
       _null.flags = _null.flags | 2048;
-      const obj8 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj4, tmp4, getSnapshot), deps: null, inst: { destroy: "paths" }, next: null };
+      const obj8 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj4, tmp4, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
       let updateQueue3 = _null.updateQueue;
       if (null === updateQueue3) {
         obj9 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -17714,7 +17714,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
   let _Error2 = Error;
   throw Error("Expected ReactFiberErrorDialog.showErrorDialog to be a function.");
 } else {
-  batchedUpdatesImpl = function batchedUpdatesImpl(fn, value) {
+  batchedUpdatesImpl = function batchedUpdatesImpl(fn, arg1) {
     closure_277 = closure_277 | 1;
     try {
       closure_277 = tmp2;
@@ -17722,7 +17722,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
         closure_297 = peek.unstable_now() + 500;
         flushSyncWorkAcrossRoots_impl(0, true);
       }
-      return fn(value);
+      return fn(arg1);
     } catch (tmp10) {
       closure_277 = tmp;
       if (0 === tmp) {

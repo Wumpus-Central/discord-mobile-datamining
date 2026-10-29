@@ -1,39 +1,22 @@
 // === Module 12676: ? ===
 
 // Module 12676
-import _mod12636 from "module_12636" /* 12636 */;
-import _mod12664 from "module_12664" /* 12664 */;
+import _mod12661 from "module_12661" /* 12661 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod12664.DEBUG_BUILD) {
-      const logger = _mod12636.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
-    }
+export default function SyntaxError(rawMessage, input, offset) {
+  const tmp = _mod12661("SyntaxError", rawMessage);
+  tmp.input = input;
+  tmp.offset = offset;
+  tmp.rawMessage = rawMessage;
+  let length = tmp.offset;
+  const text = `${tmp.rawMessage}
+    ${tmp.input}`;
+  if (!length) {
+    length = tmp.input.length;
   }
+  const array = new Array(length + 1);
+  tmp.message = `${`${tmp2}
+  --`}${obj.join("-")}^`;
+  return tmp;
 };

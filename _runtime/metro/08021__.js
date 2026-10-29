@@ -1,137 +1,216 @@
 // === Module 8021: ? ===
 
 // Module 8021
-import _mod17 from "module_17" /* 17 */;
+import extractOpacityDefault from "extractOpacity" /* 8023 */;
+import extractResponderDefault from "extractResponder" /* 8024 */;
+import _modDef8029 from "module_8029" /* 8029 */;
+import reducedDefault from "reduced" /* 8030 */;
+import _modDef8031 from "module_8031" /* 8031 */;
+import _modDef8041 from "module_8041" /* 8041 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-let closure_0 = { top: 20, left: 20, right: 20, bottom: 30 };
-const Mixin = _mod17.Touchable.Mixin;
-({ touchableHandleStartShouldSetResponder: closure_1, touchableHandleResponderTerminationRequest: c2, touchableHandleResponderGrant: c3, touchableHandleResponderMove: closure_4, touchableHandleResponderRelease: hasOwnProperty, touchableHandleResponderTerminate: metroRequire, touchableGetInitialState: closure_7 } = Mixin);
-let obj = {};
-const merged = Object.assign(Mixin);
-obj.touchableHandleStartShouldSetResponder = function touchableHandleStartShouldSetResponder(arg0) {
-  const self = this;
-  const onStartShouldSetResponder = this.props.onStartShouldSetResponder;
-  if (onStartShouldSetResponder) {
-    let result = onStartShouldSetResponder(arg0);
-  } else {
-    const call = framebus.call;
-    result = typeof call === "unknown" ? framebus(arg0) : call(self, arg0);
-  }
-  return result;
-};
-obj.touchableHandleResponderTerminationRequest = function touchableHandleResponderTerminationRequest(arg0) {
-  const self = this;
-  const onResponderTerminationRequest = this.props.onResponderTerminationRequest;
-  if (onResponderTerminationRequest) {
-    let result = onResponderTerminationRequest(arg0);
-  } else {
-    const call = React2.call;
-    result = typeof call === "unknown" ? React2(arg0) : call(self, arg0);
-  }
-  return result;
-};
-obj.touchableHandleResponderGrant = function touchableHandleResponderGrant(arg0) {
-  const self = this;
-  const onResponderGrant = this.props.onResponderGrant;
-  if (onResponderGrant) {
-    let onResponderGrantResult = onResponderGrant(arg0);
-  } else {
-    const call = React3.call;
-    onResponderGrantResult = typeof call === "unknown" ? React3(arg0) : call(self, arg0);
-  }
-  return onResponderGrantResult;
-};
-obj.touchableHandleResponderMove = function touchableHandleResponderMove(arg0) {
-  const self = this;
-  const onResponderMove = this.props.onResponderMove;
-  if (onResponderMove) {
-    let onResponderMoveResult = onResponderMove(arg0);
-  } else {
-    const call = React4.call;
-    onResponderMoveResult = typeof call === "unknown" ? React4(arg0) : call(self, arg0);
-  }
-  return onResponderMoveResult;
-};
-obj.touchableHandleResponderRelease = function touchableHandleResponderRelease(View) {
-  const self = this;
-  const onResponderRelease = this.props.onResponderRelease;
-  if (onResponderRelease) {
-    let onResponderReleaseResult = onResponderRelease(View);
-  } else {
-    const call = hasOwnProperty.call;
-    onResponderReleaseResult = typeof call === "unknown" ? hasOwnProperty(View) : call(self, View);
-  }
-  return onResponderReleaseResult;
-};
-obj.touchableHandleResponderTerminate = function touchableHandleResponderTerminate(arg0) {
-  const self = this;
-  const onResponderTerminate = this.props.onResponderTerminate;
-  if (onResponderTerminate) {
-    let onResponderTerminateResult = onResponderTerminate(arg0);
-  } else {
-    const call = timestampProducer.call;
-    onResponderTerminateResult = typeof call === "unknown" ? timestampProducer(arg0) : call(self, arg0);
-  }
-  return onResponderTerminateResult;
-};
-obj.touchableHandlePress = function touchableHandlePress(nativeEvent) {
-  const onPress = this.props.onPress;
-  if (onPress) {
-    onPress(nativeEvent);
-  }
-};
-obj.touchableHandleActivePressIn = function touchableHandleActivePressIn(nativeEvent) {
-  const onPressIn = this.props.onPressIn;
-  if (onPressIn) {
-    onPressIn(nativeEvent);
-  }
-};
-obj.touchableHandleActivePressOut = function touchableHandleActivePressOut(nativeEvent) {
-  const onPressOut = this.props.onPressOut;
-  if (onPressOut) {
-    onPressOut(nativeEvent);
-  }
-};
-obj.touchableHandleLongPress = function touchableHandleLongPress(nativeEvent) {
-  const onLongPress = this.props.onLongPress;
-  if (onLongPress) {
-    onLongPress(nativeEvent);
-  }
-};
-obj.touchableGetPressRectOffset = function touchableGetPressRectOffset() {
-  return this.props.pressRetentionOffset || closure_0;
-};
-obj.touchableGetHitSlop = function touchableGetHitSlop() {
-  return this.props.hitSlop;
-};
-obj.touchableGetHighlightDelayMS = function touchableGetHighlightDelayMS() {
-  return this.props.delayPressIn || 0;
-};
-obj.touchableGetLongPressDelayMS = function touchableGetLongPressDelayMS() {
-  let num = this.props.delayLongPress;
-  let num2 = 0;
-  if (0 !== num) {
-    if (!num) {
-      num = 500;
+const Svg = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    num2 = num;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return num2;
+}
+let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
+get_ActivityIndicator = fn(17);
+({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
+class Svg {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, Svg);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(Svg);
+    tmp3 = metroRequire;
+    if (closure_11()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.measureInWindow = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureInWindow(arg0);
+      }
+    };
+    tmp3Result.measure = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measure(arg0);
+      }
+    };
+    tmp3Result.measureLayout = (arg0, arg1, arg2) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureLayout(arg0, arg1, arg2);
+      }
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.setNativeProps(arg0);
+      }
+    };
+    tmp3Result.toDataURL = (arg0, arg1) => {
+      if (arg0) {
+        const tmp4 = closure_2_8(closure_0.root);
+        Svg(8022).default.toDataURL(tmp4, arg1, arg0);
+        const _default = Svg(8022).default;
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(Svg, _modDef8041);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ style, opacity } = props);
+    ({ viewBox, children, onLayout, preserveAspectRatio } = props);
+    const tmp = _objectWithoutProperties(props, closure_3);
+    let applyResult = style;
+    if (Array.isArray(style)) {
+      const _Object = Object;
+      const items = [{}];
+      HermesBuiltin.arraySpread(style, 1);
+      const _Object2 = Object;
+      applyResult = HermesBuiltin.apply(items, Object);
+    }
+    const obj = {};
+    const merged = Object.assign(applyResult);
+    const merged1 = Object.assign(tmp);
+    ({ width, height, focusable } = obj);
+    let tmp10 = undefined === width;
+    ({ transform, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, position } = obj);
+    if (tmp10) {
+      tmp10 = undefined === height;
+    }
+    if (tmp10) {
+      tmp10 = "absolute" !== position;
+    }
+    if (tmp10) {
+      height = "100%";
+      width = "100%";
+    }
+    let BooleanResult = Boolean(focusable);
+    if (BooleanResult) {
+      BooleanResult = "false" !== focusable;
+    }
+    tmp.focusable = BooleanResult;
+    let items1 = [svg];
+    if (style) {
+      items1.push(style);
+    }
+    let num2 = NaN;
+    if (null != opacity) {
+      num2 = extractOpacityDefault(opacity);
+    }
+    const obj2 = {};
+    let flag = false;
+    if (!isNaN(num2)) {
+      obj2.opacity = num2;
+      flag = true;
+    }
+    let flag2 = flag;
+    if (width) {
+      flag2 = flag;
+      if (height) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(width, 10);
+        const _parseInt2 = parseInt;
+        let parsed1 = parseInt(height, 10);
+        const _isNaN = isNaN;
+        let isNaNResult = isNaN(parsed);
+        if (!isNaNResult) {
+          isNaNResult = "%" === width[width.length - 1];
+        }
+        const _isNaN2 = isNaN;
+        let isNaNResult1 = isNaN(parsed1);
+        if (!isNaNResult1) {
+          isNaNResult1 = "%" === height[height.length - 1];
+        }
+        if (isNaNResult) {
+          parsed = width;
+        }
+        obj2.width = parsed;
+        if (isNaNResult1) {
+          parsed1 = height;
+        }
+        obj2.height = parsed1;
+        obj2.flex = 0;
+        flag2 = true;
+      }
+    }
+    if (flag2) {
+      items1.push(obj2);
+    }
+    if (items1.length <= 1) {
+      items1 = svg;
+    }
+    tmp.style = items1;
+    if (null != width) {
+      tmp.bbWidth = width;
+    }
+    if (null != height) {
+      tmp.bbHeight = height;
+    }
+    extractResponderDefault(tmp, tmp, this);
+    const merged2 = Object.assign({}, StyleSheet.flatten(style));
+    if (transform) {
+      if (merged2.transform) {
+        tmp.transform = merged2.transform;
+        merged2.transform = undefined;
+      }
+      tmp.transform = Svg(8025).extractTransformSvgView(tmp);
+      const obj3 = Svg(8025);
+    }
+    const obj4 = {};
+    const merged3 = Object.assign(tmp);
+    obj4.ref = function ref(arg0) {
+      return self.refMethod(arg0);
+    };
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
+    obj4.children = jsx(_modDef8031, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+    return jsx(_modDef8029, {});
+  }
 };
-obj.touchableGetPressOutDelayMS = function touchableGetPressOutDelayMS() {
-  return this.props.delayPressOut || 0;
-};
-const keys = Object.keys(obj);
-let closure_10 = keys.map((item) => obj[item]);
+let items = [entry];
+const importDefaultResultResult = _createClass(Svg, items);
+importDefaultResultResult.displayName = "Svg";
+importDefaultResultResult.defaultProps = { preserveAspectRatio: "xMidYMid meet" };
 
-export default (self) => {
-  for (let num = 0; num < length; num = num + 1) {
-    obj = closure_10[num];
-    let bindResult = obj;
-    if (typeof obj === "function") {
-      bindResult = obj.bind(self);
-    }
-    self[keys[num]] = bindResult;
-  }
-  self.state = React5();
-};
+export default importDefaultResultResult;

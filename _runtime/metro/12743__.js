@@ -1,36 +1,73 @@
 // === Module 12743: ? ===
 
 // Module 12743
-import _mod12642 from "module_12642" /* 12642 */;
-import _mod12663 from "module_12663" /* 12663 */;
+import _mod12657 from "module_12657" /* 12657 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const Delim = _mod12657.TYPE.Delim;
+const Ident = _mod12657.TYPE.Ident;
+const Dimension = _mod12657.TYPE.Dimension;
+const Percentage = _mod12657.TYPE.Percentage;
+const Number = _mod12657.TYPE.Number;
+const Hash = _mod12657.TYPE.Hash;
+const Colon = _mod12657.TYPE.Colon;
+const LeftSquareBracket = _mod12657.TYPE.LeftSquareBracket;
 
-export const captureFeedback = function captureFeedback(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
+export default {
+  getNode(arg0) {
+    const self = this;
+    const tokenType = this.scanner.tokenType;
+    if (LeftSquareBracket === tokenType) {
+      return self.AttributeSelector();
+    } else if (Hash === tokenType) {
+      return self.IdSelector();
+    } else if (Colon === tokenType) {
+      const scanner = self.scanner;
+      if (scanner.lookupType(1) === tmp6) {
+        let result = self.PseudoElementSelector();
+      } else {
+        result = self.PseudoClassSelector();
+      }
+      return result;
+    } else if (Ident === tokenType) {
+      return self.TypeSelector();
+    } else {
+      if (Number !== tokenType) {
+        if (Percentage !== tokenType) {
+          if (Dimension === tokenType) {
+            const source = self.scanner.source;
+            if (46 === source.charCodeAt(self.scanner.tokenStart)) {
+              self.error("Identifier is expected", self.scanner.tokenStart + 1);
+            }
+          } else if (Delim === tokenType) {
+            const source2 = self.scanner.source;
+            const charCodeAtResult = source2.charCodeAt(self.scanner.tokenStart);
+            if (43 !== charCodeAtResult) {
+              if (62 !== charCodeAtResult) {
+                if (126 !== charCodeAtResult) {
+                  if (47 === charCodeAtResult) {
+                    return self.Combinator();
+                  } else if (46 === charCodeAtResult) {
+                    return self.ClassSelector();
+                  } else {
+                    if (42 !== charCodeAtResult) {
+                      if (124 !== charCodeAtResult) {
+                        if (35 === charCodeAtResult) {
+                          return self.IdSelector();
+                        }
+                      }
+                    }
+                    return self.TypeSelector();
+                  }
+                }
+              }
+            }
+            arg0.space = null;
+            arg0.ignoreWSAfter = true;
+            return self.Combinator();
+          }
+        }
+      }
+      return self.Percentage();
+    }
   }
-  let currentScope = arg2;
-  if (arg2 === undefined) {
-    currentScope = _mod12663.getCurrentScope();
-  }
-  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
-  const obj4 = { feedback: _mod12642.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
-  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj2.contexts = obj4;
-  obj2.tags = tags;
-  let client = currentScope;
-  if (currentScope) {
-    client = currentScope.getClient();
-  }
-  if (!client) {
-    client = _mod12663.getClient();
-    const tmp3Result = _mod12663;
-  }
-  if (client) {
-    client.emit("beforeSendFeedback", obj2, obj);
-  }
-  return currentScope.captureEvent(obj2, obj);
 };

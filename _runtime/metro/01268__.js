@@ -26,7 +26,7 @@ if (typeof Object.is === "function") {
 }
 ({ useRef: c3, useEffect: closure_4, useMemo: hasOwnProperty, useDebugValue: metroRequire } = noop);
 
-export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) => {
+export (arg0, arg1, arg2, arg3, arg4) => {
   _require = arg1;
   dependencyMap = arg2;
   closure_2 = arg3;
@@ -124,4 +124,4 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
   }, items1);
   closure_6(syncExternalStore);
   return syncExternalStore;
-};
+}

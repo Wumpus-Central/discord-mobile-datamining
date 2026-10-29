@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const wrapTransportError = function wrapTransportError(onerror) {
+export function wrapTransportError(onerror) {
   if (onerror.onerror) {
     _mod698.fill(onerror, "onerror", (arg0) => {
       closure_0 = arg0;
@@ -31,8 +31,8 @@ export const wrapTransportError = function wrapTransportError(onerror) {
       };
     });
   }
-};
-export const wrapTransportOnClose = function wrapTransportOnClose(onclose) {
+}
+export function wrapTransportOnClose(onclose) {
   if (onclose.onclose) {
     _mod698.fill(onclose, "onclose", (arg0) => {
       closure_0 = arg0;
@@ -46,8 +46,8 @@ export const wrapTransportOnClose = function wrapTransportOnClose(onclose) {
       };
     });
   }
-};
-export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage, arg1) {
+}
+export function wrapTransportOnMessage(onmessage, arg1) {
   _require = arg1;
   if (onmessage.onmessage) {
     require("module_698").fill(onmessage, "onmessage", (arg0) => {
@@ -115,8 +115,8 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage,
     });
     let obj = require("module_698");
   }
-};
-export const wrapTransportSend = function wrapTransportSend(send, arg1) {
+}
+export function wrapTransportSend(send, arg1) {
   _require = arg1;
   if (send.send) {
     require("module_698").fill(send, "send", (arg0) => {
@@ -138,7 +138,7 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -161,7 +161,7 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
                   closure_130_0 = undefined;
                   c6 = 1;
                   c7 = 1;
-                  return { value: "Reflect", done: true };
+                  return { value: "Reflect", done: null };
                 }
               } else {
                 if (1 === tmp7) {
@@ -257,4 +257,4 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
     });
     let obj = require("module_698");
   }
-};
+}

@@ -401,7 +401,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -449,11 +449,11 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                                 set.add(children);
                                 if (tmp5) {
                                   children = children.children;
-                                  let item = children.forEach(() => { ... });
+                                  let item = children.forEach(/* F89200 */ function() { ... });
                                 }
                                 tmp5 = children.children && !children.index;
                               }
-                              let item1 = set.forEach(() => { ... });
+                              let item1 = set.forEach(/* F144603 */ function() { ... });
                             });
                           }
                           tmp2 = children.children && !children.index;
@@ -545,7 +545,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else {
                     try {
@@ -844,11 +844,11 @@ function addRoutesToAllRoutes(arr) {
                         set.add(children);
                         if (tmp5) {
                           children = children.children;
-                          let item = children.forEach(() => { ... });
+                          let item = children.forEach(/* F89200 */ function() { ... });
                         }
                         tmp5 = children.children && !children.index;
                       }
-                      let item1 = set.forEach(() => { ... });
+                      let item1 = set.forEach(/* F144603 */ function() { ... });
                     });
                   }
                   tmp5 = children.children && !children.index;
@@ -1490,7 +1490,7 @@ let set = new Set();
 const weakMap1 = new WeakMap();
 const weakMap2 = new WeakMap();
 
-export const addResolvedRoutesToParent = function addResolvedRoutesToParent(arr, children) {
+export function addResolvedRoutesToParent(arr, children) {
   const tmp = children.children || [];
   closure_0 = tmp;
   const found = arr.filter((item) => !item.some((path) => {
@@ -1510,11 +1510,11 @@ export const addResolvedRoutesToParent = function addResolvedRoutesToParent(arr,
     HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp, 0));
     children.children = items;
   }
-};
+}
 export { addRoutesToAllRoutes };
 export const allRoutes = set;
 export { computeLocationKey };
-export const createReactRouterV6CompatibleTracingIntegration = function createReactRouterV6CompatibleTracingIntegration(instrumentPageLoad, _6) {
+export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLoad, _6) {
   _require = instrumentPageLoad;
   dependencyMap = _6;
   let obj2 = {};
@@ -1582,8 +1582,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f143048) {
-    result.afterAllSetup(f143048);
+  obj3.afterAllSetup = function afterAllSetup(f144596) {
+    result.afterAllSetup(f144596);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1600,16 +1600,16 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj2[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f143048, obj);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f144596, obj);
       const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
-      weakSet.add(f143048);
+      weakSet.add(f144596);
     }
   };
   return obj3;
-};
-export const createV6CompatibleWithSentryReactRouterRouting = function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
+}
+export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
   _require = arg0;
   dependencyMap = _6;
   if (closure_4) {
@@ -1628,7 +1628,7 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
                 items = [, ];
                 items[0] = tmp;
                 items[1] = tmp2;
-                tmp3 = closure_1_4(() => { ... }, items);
+                tmp3 = closure_1_4(/* F144609 */ function() { ... }, items);
                 obj = {};
                 merged = Object.assign(arg0);
                 return closure_1_9.createElement(closure_0, obj);
@@ -1653,7 +1653,7 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
         items = [, ];
         items[0] = tmp;
         items[1] = tmp2;
-        tmp3 = closure_1_4(() => { ... }, items);
+        tmp3 = closure_1_4(/* F144609 */ function() { ... }, items);
         obj = {};
         merged = Object.assign(arg0);
         return closure_1_9.createElement(closure_0, obj);
@@ -1663,8 +1663,8 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
     obj.warn("reactRouterV6Instrumentation was unable to wrap Routes because of one or more missing parameters.\n      useEffect: " + closure_4 + ". useLocation: " + closure_5 + ". useNavigationType: " + closure_6 + ".\n      createRoutesFromChildren: " + closure_7 + ". matchRoutes: " + closure_8 + ".");
   }
   return arg0;
-};
-export const createV6CompatibleWrapCreateBrowserRouter = function createV6CompatibleWrapCreateBrowserRouter(arg0, _6) {
+}
+export function createV6CompatibleWrapCreateBrowserRouter(arg0, _6) {
   _require = arg0;
   dependencyMap = _6;
   if (closure_4) {
@@ -1724,8 +1724,8 @@ export const createV6CompatibleWrapCreateBrowserRouter = function createV6Compat
     fn = arg0;
   }
   tmp4 = _require;
-};
-export const createV6CompatibleWrapCreateMemoryRouter = function createV6CompatibleWrapCreateMemoryRouter(arg0, _6) {
+}
+export function createV6CompatibleWrapCreateMemoryRouter(arg0, _6) {
   _require = arg0;
   dependencyMap = _6;
   if (closure_4) {
@@ -1814,8 +1814,8 @@ export const createV6CompatibleWrapCreateMemoryRouter = function createV6Compati
     fn = arg0;
   }
   tmp4 = _require;
-};
-export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUseRoutes(arg0, _6) {
+}
+export function createV6CompatibleWrapUseRoutes(arg0, _6) {
   _require = arg0;
   dependencyMap = _6;
   if (closure_4) {
@@ -1862,11 +1862,11 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
                           set.add(children);
                           if (tmp5) {
                             children = children.children;
-                            let item = children.forEach(() => { ... });
+                            let item = children.forEach(/* F89200 */ function() { ... });
                           }
                           tmp5 = children.children && !children.index;
                         }
-                        let item1 = set.forEach(() => { ... });
+                        let item1 = set.forEach(/* F144603 */ function() { ... });
                       });
                     }
                     tmp2 = children.children && !children.index;
@@ -1899,7 +1899,7 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
     debug.warn("reactRouterV6Instrumentation was unable to wrap `useRoutes` because of one or more missing parameters.");
   }
   return arg0;
-};
+}
 export { handleNavigation };
 export { processResolvedRoutes };
 export { shouldSkipNavigation };

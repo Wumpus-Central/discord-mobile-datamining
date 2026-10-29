@@ -8,12 +8,12 @@ let dependencyMap = arg6;
 const items = [ReferenceError, TypeError, RangeError];
 let c3 = false;
 
-export const disable = function disable() {
+export function disable() {
   c3 = false;
   _mod177._B = null;
   _mod177._C = null;
-};
-export const enable = function enable(arg0) {
+}
+export function enable(arg0) {
   let obj = arg0;
   function onUnhandled(arg0) {
     let allRejections = obj.allRejections;
@@ -100,4 +100,4 @@ export const enable = function enable(arg0) {
       const bindResult = onUnhandled.bind(null, _x._E);
     }
   };
-};
+}

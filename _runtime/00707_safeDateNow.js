@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const safeDateNow = function safeDateNow() {
+export function safeDateNow() {
   const fn = () => Date.now();
   if (undefined !== c2) {
     if (tmp) {
@@ -31,8 +31,8 @@ export const safeDateNow = function safeDateNow() {
     const _Date = Date;
     timestamp1 = Date.now();
   }
-};
-export const safeMathRandom = function safeMathRandom() {
+}
+export function safeMathRandom() {
   const fn = () => Math.random();
   if (undefined !== c2) {
     if (tmp) {
@@ -56,8 +56,8 @@ export const safeMathRandom = function safeMathRandom() {
     const _Math = Math;
     random1 = Math.random();
   }
-};
-export const withRandomSafeContext = function withRandomSafeContext(fn) {
+}
+export function withRandomSafeContext(fn) {
   if (undefined !== c2) {
     return tmp ? tmp(fn) : fn();
   } else {
@@ -74,4 +74,4 @@ export const withRandomSafeContext = function withRandomSafeContext(fn) {
     c2 = null;
     tmp8Result = fn();
   }
-};
+}

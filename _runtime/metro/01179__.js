@@ -96,7 +96,7 @@ let items = [
 obj.builder = _createClass(_class, items);
 
 export { formatReact };
-export const makeReactFormatter = function makeReactFormatter(arg0) {
+export function makeReactFormatter(arg0) {
   let obj = { format: formatReact, builder: null };
   _class = function _class() {
     const self = this;
@@ -154,7 +154,7 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
   ];
   obj.builder = _createClass(_class, items);
   return obj;
-};
+}
 export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
   $b(element, key) {
     return <strong key={key}>{element}</strong>;

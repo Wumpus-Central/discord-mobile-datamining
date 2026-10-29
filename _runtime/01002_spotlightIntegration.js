@@ -45,7 +45,7 @@ function getDefaultSidecarUrl() {
 }
 let c2 = "http://localhost:8969/stream";
 
-export const spotlightIntegration = function spotlightIntegration(arg0) {
+export function spotlightIntegration(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -110,5 +110,5 @@ export const spotlightIntegration = function spotlightIntegration(arg0) {
       }
     }
   };
-};
+}
 export { getDefaultSidecarUrl };

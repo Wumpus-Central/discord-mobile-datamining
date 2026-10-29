@@ -1,10 +1,7 @@
 // === Module 7322: ? ===
 
 // Module 7322
-import _mod7324 from "module_7324" /* 7324 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export const useClipboard = require("module_7323").useClipboard;
-export default _mod7324.Clipboard;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "f949eef54936cb2056a4a93d768a87c3", name: "img_nitro_tier_0_icon_80px", type: "png" });

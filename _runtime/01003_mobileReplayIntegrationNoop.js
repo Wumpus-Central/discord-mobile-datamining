@@ -83,7 +83,7 @@ function mobileReplayIntegrationNoop() {
 }
 
 export const MOBILE_REPLAY_INTEGRATION_NAME = "MobileReplay";
-export const mobileReplayIntegration = () => {
+export () => {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = options;
@@ -169,7 +169,7 @@ export const mobileReplayIntegration = () => {
                     const obj = { value, done: true };
                     return obj;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -318,4 +318,4 @@ export const mobileReplayIntegration = () => {
     throw new TypeError("Trying to call a non-function");
   }
   tmp2Result3 = require("module_879");
-};
+}

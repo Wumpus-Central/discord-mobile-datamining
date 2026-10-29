@@ -9,7 +9,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const onHidden = (arg0) => {
+export (arg0) => {
   _require = arg0;
   function onHiddenOrPageHide(type) {
     let tmp = "pagehide" !== type.type;
@@ -28,4 +28,4 @@ export const onHidden = (arg0) => {
   require("module_915").addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
   const obj = require("module_915");
   require("module_915").addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
-};
+}

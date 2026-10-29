@@ -309,7 +309,7 @@ function setAttributeIfDefined(data, GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addVercelAiProcessors = function addVercelAiProcessors(on) {
+export function addVercelAiProcessors(on) {
   on.on("spanStart", onVercelAiSpanStart);
   on.addEventProcessor(Object.assign(vercelAiEventProcessor, { id: "VercelAiEventProcessor" }));
-};
+}

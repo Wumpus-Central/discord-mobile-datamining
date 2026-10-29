@@ -93,7 +93,7 @@ function _onElementTiming(arg0) {
 }
 
 export { _onElementTiming };
-export const startTrackingElementTiming = function startTrackingElementTiming() {
+export function startTrackingElementTiming() {
   if (obj.getBrowserPerformanceAPI()) {
     if (tmpResult.browserPerformanceTimeOrigin()) {
       let fn = _mod908.addPerformanceInstrumentationHandler("element", _onElementTiming);
@@ -105,4 +105,4 @@ export const startTrackingElementTiming = function startTrackingElementTiming() 
 
   };
   obj = extractNetworkProtocol;
-};
+}

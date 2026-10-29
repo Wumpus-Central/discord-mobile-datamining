@@ -1,50 +1,28 @@
 // === Module 4568: ? ===
 
 // Module 4568
-import startOfWeek_mod from "startOfWeek" /* 4446 */;
-import startOfWeekYear_mod from "startOfWeekYear" /* 4569 */;
-import _typeof_mod from "module_4287" /* 4287 */;
-import requiredArgs_mod from "requiredArgs" /* 4288 */;
+import module_4567_mod from "module_4567" /* 4567 */;
+import requiredArgs_mod from "requiredArgs" /* 4289 */;
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let module_4567 = module_4567_mod;
+if (!module_4567) {
+  const obj = { default: module_4567 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = module_4567;
 }
-startOfWeek = tmp3;
-let startOfWeekYear = startOfWeekYear_mod;
-if (!startOfWeekYear) {
-  const obj2 = { default: startOfWeekYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfWeekYear;
-}
-startOfWeekYear = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
+module_4567 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp5;
 
-export default function getWeek(arg0, arg1) {
+export default function getUnixTime(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+  return Math.floor(module_4567.default(arg0) / 1000);
 };
 export default exports.default;

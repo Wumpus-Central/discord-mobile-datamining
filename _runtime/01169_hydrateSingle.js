@@ -167,7 +167,7 @@ FormatJsNodeType[7] = "Pound";
 FormatJsNodeType.Tag = 8;
 FormatJsNodeType[8] = "Tag";
 
-export const hydrateFormatJsAst = function hydrateFormatJsAst(arr) {
+export function hydrateFormatJsAst(arr) {
   let length;
   let length2;
   if (typeof arr === "string") {
@@ -200,9 +200,9 @@ export const hydrateFormatJsAst = function hydrateFormatJsAst(arr) {
       return hydrateSingle(arr);
     }
   }
-};
+}
 export { compressFormatJsToAst };
-export const isCompressedAst = function isCompressedAst(dependencyMap) {
+export function isCompressedAst(dependencyMap) {
   let tmp = typeof dependencyMap === "string";
   if (typeof dependencyMap !== "string") {
     const _Array2 = Array;
@@ -215,6 +215,6 @@ export const isCompressedAst = function isCompressedAst(dependencyMap) {
     tmp = isArray;
   }
   return tmp;
-};
+}
 export { FormatJsNodeType };
 export const FORMAT_JS_POUND = Object.freeze({ type: 7 });

@@ -1,15 +1,7 @@
 // === Module 15930: ? ===
 
 // Module 15930
+import registerAsset from "module_1131" /* 1131 */;
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      image(dependencyMap) {
-        const size = { uri: dependencyMap.uri, preview: dependencyMap.preview, filename: dependencyMap.filename, width: dependencyMap.width, height: dependencyMap.height, caption: dependencyMap.caption };
-        return closure_0.send("image", size);
-      }
-    }
-  };
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "4e5566504fd0dc98acefa83fec15da95", name: "llm-pilot.compiled.messages", type: "jsona" });

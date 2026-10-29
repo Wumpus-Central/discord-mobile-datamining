@@ -33,7 +33,7 @@ function instrumentConsole() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
+export function addConsoleInstrumentationHandler(errorCallback) {
   _mod726.addHandler("console", errorCallback);
   _mod726.maybeInstrument("console", instrumentConsole);
-};
+}

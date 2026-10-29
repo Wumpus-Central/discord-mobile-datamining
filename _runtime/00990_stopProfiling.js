@@ -83,7 +83,7 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
     const frames = profile2.frames;
     for (const item10032 of frames) {
       let frames1 = arg0.frames;
-      let obj = { function: null, instruction_addr: null, platform: "r" };
+      let obj = { function: null, instruction_addr: null, platform: "Array" };
       ({ function: obj.function, instruction_addr: obj.instruction_addr } = item10032);
       let arr = frames1.push(obj);
       continue;
@@ -101,7 +101,7 @@ const Platform = _mod17.Platform;
 let c2 = 1000000;
 let closure_3 = { platformProfilers: true };
 
-export const hermesProfilingIntegration = () => {
+export () => {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = c3;
@@ -348,8 +348,8 @@ export const hermesProfilingIntegration = () => {
       }
     }
   };
-};
-export const startProfiling = function startProfiling(arg0) {
+}
+export function startProfiling(arg0) {
   const NATIVE = NativeModules.NATIVE;
   let result = null;
   if (NATIVE.startProfiling(arg0)) {
@@ -357,16 +357,16 @@ export const startProfiling = function startProfiling(arg0) {
     result = Date.now() * c2;
   }
   return result;
-};
+}
 export { stopProfiling };
-export const createAndroidWithHermesProfile = function createAndroidWithHermesProfile(js_profile, arg1, arg2) {
+export function createAndroidWithHermesProfile(js_profile, arg1, arg2) {
   const obj = { platform: "android", js_profile: js_profile.profile, duration_ns: null, active_thread_id: null };
   const merged = Object.assign({}, arg1);
   obj.duration_ns = require("AppStartPerformance");
   obj.active_thread_id = js_profile.transaction.active_thread_id;
   return Object.assign(merged, obj);
-};
-export const addNativeProfileToHermesProfile = function addNativeProfileToHermesProfile(profile, measurements) {
+}
+export function addNativeProfileToHermesProfile(profile, measurements) {
   const obj = { profile: null };
   profile = profile.profile;
   const merged = Object.assign({}, profile);
@@ -389,5 +389,5 @@ export const addNativeProfileToHermesProfile = function addNativeProfileToHermes
     obj4 = {};
   }
   return Object.assign(Object.assign(merged1, obj4), { measurements: measurements.measurements });
-};
+}
 export { addNativeThreadCpuProfileToHermes };

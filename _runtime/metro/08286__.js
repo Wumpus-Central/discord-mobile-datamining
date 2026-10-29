@@ -1,178 +1,109 @@
 // === Module 8286: ? ===
 
 // Module 8286
-import _mod8246 from "module_8246" /* 8246 */;
-import _modDef8263 from "module_8263" /* 8263 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _modDef8285 from "module_8285" /* 8285 */;
 
-require = arg1;
-function parseBezierKnot(dataView, arg1) {
-  const items = [];
-  let num = 0;
-  do {
-    let sum = arg1 + num;
-    let obj = _modDef8263;
-    let longAt = obj.getLongAt(dataView, sum);
-    let num2 = -1;
-    if (longAt >>> 31 === 0) {
-      num2 = 1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export default {
+  read(buffer, sum) {
+    const shortAt = _modDef8285.getShortAt(buffer, sum);
+    let tmp6;
+    if (15 <= shortAt) {
+      const byteAt = _modDef8285.getByteAt(buffer, sum + 14);
+      const obj2 = { value: byteAt, description: null };
+      const _HermesInternal = HermesInternal;
+      obj2.description = "" + byteAt + "px";
+      tmp6 = obj2;
+      const tmp3Result = _modDef8285;
     }
-    let str = (2130706432 & longAt) >>> 24;
-    let _parseInt = parseInt;
-    let obj2 = _mod8246;
-    let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
-    let obj3 = _mod8246;
-    let text = `${str.toString(2)}.`;
-    let obj4 = _mod8246;
-    let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
-    let tmp2Result = _modDef8263;
-    let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
-    let num3 = -1;
-    if (longAt1 >>> 31 === 0) {
-      num3 = 1;
+    let tmp9;
+    if (16 <= shortAt) {
+      const byteAt1 = _modDef8285.getByteAt(buffer, sum + 15);
+      const obj3 = { value: byteAt1, description: null };
+      const _HermesInternal2 = HermesInternal;
+      obj3.description = "" + byteAt1 + "px";
+      tmp9 = obj3;
+      const tmp3Result7 = _modDef8285;
     }
-    let str3 = (2130706432 & longAt1) >>> 24;
-    let _parseInt2 = parseInt;
-    let tmp6Result = _mod8246;
-    let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
-    let tmp6Result3 = _mod8246;
-    let text1 = `${str3.toString(2)}.`;
-    let tmp6Result4 = _mod8246;
-    let items1 = [num3 * tmp6Result3.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result4.padStart(str4.toString(2), 24, "0"), 2), result];
-    let arr = items.push(items1);
-    num = num + 8;
-  } while (num < 24);
-  return items;
-}
-let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
-let obj2 = { 2000: null, 2999: null };
-obj2[2000] = {
-  name: "PathInformation",
-  description: function pathResource(byteLength) {
-    const types = {};
-    const paths = [];
-    for (let num = 0; num < byteLength.byteLength; num = num + 26) {
-      let obj2 = _modDef8263;
-      let shortAt = obj2.getShortAt(byteLength, num);
-      if (dependencyMap[shortAt]) {
-        if (!types[shortAt]) {
-          types[shortAt] = dependencyMap[shortAt].description;
+    let tmp12;
+    if (9 <= shortAt) {
+      const byteAt2 = _modDef8285.getByteAt(buffer, sum + 7);
+      const tmp3Result8 = _modDef8285;
+      const byteAt3 = _modDef8285.getByteAt(buffer, sum + 7 + 1);
+      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
+      tmp12 = obj4;
+      const tmp3Result9 = _modDef8285;
+    }
+    const obj5 = { "JFIF Version": tmp12, "Resolution Unit": null, XResolution: null, YResolution: null, "JFIF Thumbnail Width": null, "JFIF Thumbnail Height": null };
+    let tmp15;
+    if (10 <= shortAt) {
+      const byteAt4 = _modDef8285.getByteAt(buffer, sum + 9);
+      const obj6 = { value: byteAt4, description: null };
+      let str6 = "None";
+      if (0 !== byteAt4) {
+        let str7 = "inches";
+        if (1 !== byteAt4) {
+          let str8 = "Unknown";
+          if (2 === byteAt4) {
+            str8 = "cm";
+          }
+          str7 = str8;
         }
-        let obj = { type: shortAt, path: null };
-        let obj4 = dependencyMap[shortAt];
-        obj.path = obj4.path(byteLength, num + 2);
-        let arr = paths.push(obj);
+        str6 = str7;
+      }
+      obj6.description = str6;
+      tmp15 = obj6;
+      const tmp3Result10 = _modDef8285;
+    }
+    obj5["Resolution Unit"] = tmp15;
+    let tmp17;
+    if (12 <= shortAt) {
+      const shortAt1 = _modDef8285.getShortAt(buffer, sum + 10);
+      const obj7 = { value: shortAt1, description: "" + shortAt1 };
+      tmp17 = obj7;
+      const tmp3Result11 = _modDef8285;
+    }
+    obj5.XResolution = tmp17;
+    let tmp19;
+    if (14 <= shortAt) {
+      const shortAt2 = _modDef8285.getShortAt(buffer, sum + 12);
+      const obj8 = { value: shortAt2, description: "" + shortAt2 };
+      tmp19 = obj8;
+      const tmp3Result12 = _modDef8285;
+    }
+    obj5.YResolution = tmp19;
+    obj5["JFIF Thumbnail Width"] = tmp6;
+    obj5["JFIF Thumbnail Height"] = tmp9;
+    if (undefined !== tmp6) {
+      if (undefined !== tmp9) {
+        const result = 3 * tmp6.value * tmp9.value;
+        let tmp22;
+        if (0 !== result) {
+          if (16 + result <= shortAt) {
+            buffer = buffer.buffer;
+            const obj9 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
+            tmp22 = obj9;
+          }
+        }
+        if (tmp22) {
+          obj5["JFIF Thumbnail"] = tmp22;
+        }
       }
     }
-    return JSON.stringify({ types, paths });
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      while (keys[16] !== undefined) {
+        if (undefined !== obj5[tmp24]) {
+          continue;
+        } else {
+          delete tmp[tmp2];
+          continue;
+        }
+        continue;
+      }
+    }
+    return obj5;
   }
 };
-obj2[2999] = {
-  name: "ClippingPathName",
-  description(getUint8) {
-    return _slicedToArray(_mod8246.getPascalStringFromDataView(getUint8, 0), 2)[1];
-  }
-};
-const dependencyMap = {
-  [obj.CLOSED_SUBPATH_LENGTH]: {
-    description: "Closed subpath length",
-    path(dataView, sum) {
-      const items = [_modDef8263.getShortAt(dataView, sum)];
-      return items;
-    }
-  },
-  [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
-  [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
-  [obj.OPEN_SUBPATH_LENGTH]: {
-    description: "Open subpath length",
-    path(dataView, sum) {
-      const items = [_modDef8263.getShortAt(dataView, sum)];
-      return items;
-    }
-  },
-  [obj.OPEN_SUBPATH_BEZIER_LINKED]: { description: "Open subpath Bezier knot, linked", path: parseBezierKnot },
-  [obj.OPEN_SUBPATH_BEZIER_UNLINKED]: { description: "Open subpath Bezier knot, unlinked", path: parseBezierKnot },
-  [obj.FILL_RULE]: {
-    description: "Path fill rule",
-    path() {
-      return [];
-    }
-  },
-  [obj.INITIAL_FILL_RULE]: {
-    description: "Initial fill rule",
-    path(dataView, sum) {
-      const items = [_modDef8263.getShortAt(dataView, sum)];
-      return items;
-    }
-  },
-  [obj.CLIPBOARD]: {
-    description: "Clipboard",
-    path: function parseClipboard(dataView, sum) {
-      const longAt = _modDef8263.getLongAt(dataView, sum);
-      let num = -1;
-      let num2 = -1;
-      if (longAt >>> 31 === 0) {
-        num2 = 1;
-      }
-      const str2 = longAt & parseInt(_mod8246.strRepeat("1", 24), 2);
-      const text = `${str.toString(2)}.`;
-      const obj3 = _mod8246;
-      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod8246.padStart(str2.toString(2), 24, "0"), 2), , , ];
-      sum = sum + 4;
-      const longAt1 = _modDef8263.getLongAt(dataView, sum);
-      let num3 = num;
-      if (longAt1 >>> 31 === 0) {
-        num3 = 1;
-      }
-      const tmpResult = _modDef8263;
-      const tmp4Result = _mod8246;
-      const str4 = longAt1 & parseInt(_mod8246.strRepeat("1", 24), 2);
-      const text1 = `${str3.toString(2)}.`;
-      const tmp4Result12 = _mod8246;
-      items[1] = num3 * tmp4Result12.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod8246.padStart(str4.toString(2), 24, "0"), 2);
-      const sum1 = sum + 8;
-      const tmp4Result13 = _mod8246;
-      const longAt2 = _modDef8263.getLongAt(dataView, sum1);
-      let num4 = num;
-      if (longAt2 >>> 31 === 0) {
-        num4 = 1;
-      }
-      const tmpResult4 = _modDef8263;
-      const tmp4Result14 = _mod8246;
-      const str6 = longAt2 & parseInt(_mod8246.strRepeat("1", 24), 2);
-      const text2 = `${str5.toString(2)}.`;
-      const tmp4Result15 = _mod8246;
-      items[2] = num4 * tmp4Result15.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + _mod8246.padStart(str6.toString(2), 24, "0"), 2);
-      const sum2 = sum + 12;
-      const tmp4Result16 = _mod8246;
-      const longAt3 = _modDef8263.getLongAt(dataView, sum2);
-      let num5 = num;
-      if (longAt3 >>> 31 === 0) {
-        num5 = 1;
-      }
-      const tmpResult5 = _modDef8263;
-      const tmp4Result17 = _mod8246;
-      const str8 = longAt3 & parseInt(_mod8246.strRepeat("1", 24), 2);
-      const text3 = `${str7.toString(2)}.`;
-      const tmp4Result18 = _mod8246;
-      items[3] = num5 * tmp4Result18.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + _mod8246.padStart(str8.toString(2), 24, "0"), 2);
-      const items1 = [items, ];
-      const sum3 = sum + 16;
-      const tmp4Result19 = _mod8246;
-      const longAt4 = _modDef8263.getLongAt(dataView, sum3);
-      if (longAt4 >>> 31 === 0) {
-        num = 1;
-      }
-      const tmpResult6 = _modDef8263;
-      const tmp4Result20 = _mod8246;
-      const str10 = longAt4 & parseInt(_mod8246.strRepeat("1", 24), 2);
-      const text4 = `${str9.toString(2)}.`;
-      const tmp4Result21 = _mod8246;
-      items1[1] = num * tmp4Result21.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + _mod8246.padStart(str10.toString(2), 24, "0"), 2);
-      return items1;
-    }
-  }
-};
-
-export default obj2;
-export const PathRecordTypes = obj;

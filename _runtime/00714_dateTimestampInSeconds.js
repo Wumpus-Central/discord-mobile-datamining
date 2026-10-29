@@ -12,7 +12,7 @@ function dateTimestampInSeconds() {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let timeOrigin = null;
 
-export const browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
+export function browserPerformanceTimeOrigin() {
   let tmp = timeOrigin;
   if (null === timeOrigin) {
     const _performance = _mod697.GLOBAL_OBJ.performance;
@@ -48,9 +48,9 @@ export const browserPerformanceTimeOrigin = function browserPerformanceTimeOrigi
     tmp = tmp3;
   }
   return tmp;
-};
+}
 export { dateTimestampInSeconds };
-export const timestampInSeconds = function timestampInSeconds() {
+export function timestampInSeconds() {
   if (fn != null) {
     return tmp();
   } else {
@@ -65,4 +65,4 @@ export const timestampInSeconds = function timestampInSeconds() {
     timeOrigin = timeOrigin.timeOrigin;
     fn = () => (timeOrigin + safeDateNow.withRandomSafeContext(() => timeOrigin.now())) / 1000;
   }
-};
+}

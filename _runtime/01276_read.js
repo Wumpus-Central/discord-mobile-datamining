@@ -2,7 +2,7 @@
 
 // Module 1276 (read)
 
-export const read = (self, arg1, arg2, arg3, arg4) => {
+export (self, arg1, arg2, arg3, arg4) => {
   let num = 0;
   const diff = 8 * arg4 - arg3;
   if (arg2) {
@@ -64,8 +64,8 @@ export const read = (self, arg1, arg2, arg3, arg4) => {
     num3 = -1;
   }
   return num3 * sum6 * Math.pow(2, diff3 - arg3);
-};
-export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
+}
+export (self, arg1, arg2, arg3, arg4, arg5) => {
   let num = 0;
   const diff = 8 * arg5 - arg4;
   if (23 === arg4) {
@@ -176,4 +176,4 @@ export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
   }
   num11 = num13;
   num12 = diff2;
-};
+}

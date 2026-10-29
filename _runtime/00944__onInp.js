@@ -83,10 +83,10 @@ function _onInp(metric) {
 }
 
 export { _onInp };
-export const _trackINP = function _trackINP() {
+export function _trackINP() {
   return _mod908.addInpInstrumentationHandler(_onInp);
-};
-export const registerInpInteractionListener = function registerInpInteractionListener() {
+}
+export function registerInpInteractionListener() {
   function captureElementFromEvent(dependencyMap) {
     const target = dependencyMap.target;
     if (target) {
@@ -166,8 +166,8 @@ export const registerInpInteractionListener = function registerInpInteractionLis
   let tmpResult = captureElementFromEvent(908);
   const result1 = captureElementFromEvent(908).addPerformanceInstrumentationHandler("first-input", handleEntries);
   const tmpResult2 = captureElementFromEvent(908);
-};
-export const startTrackingINP = function startTrackingINP() {
+}
+export function startTrackingINP() {
   if (obj.getBrowserPerformanceAPI()) {
     if (tmpResult.browserPerformanceTimeOrigin()) {
       closure_0 = _mod908.addInpInstrumentationHandler(_onInp);
@@ -180,4 +180,4 @@ export const startTrackingINP = function startTrackingINP() {
   return () => {
 
   };
-};
+}

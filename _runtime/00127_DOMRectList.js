@@ -12,7 +12,7 @@ class DOMRectList {
   constructor(arg0) {
     self = this;
     tmp = c2(this, DOMRectList);
-    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "Array" });
     num = 0;
     if (0 < global.length) {
       do {
@@ -62,6 +62,6 @@ const module_126 = fn(126);
 module_126.setPlatformObject(importDefaultResultResult);
 
 export default importDefaultResultResult;
-export const createDOMRectList = function createDOMRectList(arg0) {
+export function createDOMRectList(arg0) {
   return new importDefaultResultResult(arg0);
-};
+}

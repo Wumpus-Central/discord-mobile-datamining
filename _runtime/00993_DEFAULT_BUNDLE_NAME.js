@@ -7,7 +7,7 @@ import _mod994 from "module_994" /* 994 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const getDebugMetadata = function getDebugMetadata() {
+export function getDebugMetadata() {
   if (_mod994.DEFAULT_BUNDLE_NAME) {
     const _sentryDebugIds = _mod693.GLOBAL_OBJ._sentryDebugIds;
     if (_sentryDebugIds) {
@@ -39,4 +39,4 @@ export const getDebugMetadata = function getDebugMetadata() {
   } else {
     return [];
   }
-};
+}

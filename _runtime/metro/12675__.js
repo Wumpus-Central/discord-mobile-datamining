@@ -1,69 +1,84 @@
 // === Module 12675: ? ===
 
 // Module 12675
-import _mod12636 from "module_12636" /* 12636 */;
-import _mod12663 from "module_12663" /* 12663 */;
-import _mod12664 from "module_12664" /* 12664 */;
-import _mod12668 from "module_12668" /* 12668 */;
 import _mod12676 from "module_12676" /* 12676 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    const isolationScope = _mod12663.getIsolationScope();
-    const obj2 = {};
-    const merged = Object.assign(normalizedRequest);
-    obj2.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj2);
-    } else if (undefined !== obj2.parentSampled) {
-      num = obj2.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
-      }
-    }
-    const tmpResult = _mod12663;
-    const parseSampleRateResult = _mod12676.parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (_mod12664.DEBUG_BUILD) {
-        const logger3 = _mod12636.logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      const items = [false];
-      let items3 = items;
-    } else if (parseSampleRateResult) {
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
-      } else {
-        if (_mod12664.DEBUG_BUILD) {
-          const logger2 = _mod12636.logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
-        }
-        items2 = [false, parseSampleRateResult];
-      }
-    } else {
-      if (_mod12664.DEBUG_BUILD) {
-        const logger = _mod12636.logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
-    }
-    return items3;
-  } else {
-    const items4 = [false];
-    return items4;
+class Tokenizer {
+  constructor(arg0) {
+    return;
   }
-  obj = _mod12668;
+}
+Tokenizer.prototype = {
+  charCodeAt(sum) {
+    let num = 0;
+    if (sum < this.str.length) {
+      num = this.str.charCodeAt(sum);
+    }
+    return num;
+  },
+  charCode() {
+    return this.charCodeAt(this.pos);
+  },
+  nextCharCode() {
+    return this.charCodeAt(this.pos + 1);
+  },
+  nextNonWsCode(pos) {
+    return this.charCodeAt(this.findWsEnd(pos));
+  },
+  findWsEnd(pos) {
+    const self = this;
+    let sum = pos;
+    let tmp2 = pos;
+    if (pos < this.str.length) {
+      while (true) {
+        let str = self.str;
+        let charCodeAtResult = str.charCodeAt(sum);
+        if (13 !== charCodeAtResult) {
+          if (10 !== charCodeAtResult) {
+            if (12 !== charCodeAtResult) {
+              if (32 !== charCodeAtResult) {
+                tmp2 = sum;
+                if (9 !== charCodeAtResult) {
+                  break;
+                }
+              }
+              break;
+            }
+          }
+        }
+        sum = sum + 1;
+        tmp2 = sum;
+        if (sum >= self.str.length) {
+          break;
+        }
+      }
+    }
+    return tmp2;
+  },
+  substringToPos(wsEnd) {
+    this.pos = wsEnd;
+    return this.str.substring(this.pos, wsEnd);
+  },
+  eat(arg0) {
+    const self = this;
+    if (this.charCode() !== arg0) {
+      const _String = String;
+      self.error(`Expect \`${String.fromCharCode(arg0)}\``);
+    }
+    self.pos = self.pos + 1;
+  },
+  peek() {
+    const self = this;
+    let str = "";
+    if (this.pos < this.str.length) {
+      self.pos = +self.pos + 1;
+      str = self.str.charAt(tmp);
+    }
+    return str;
+  },
+  error(arg0) {
+    throw new _mod12676(arg0, this.str, this.pos);
+  }
 };
+
+export default Tokenizer;

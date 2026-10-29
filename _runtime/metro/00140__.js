@@ -124,8 +124,8 @@ let items = [
   },
   {
     key: "getElementById",
-    value: function getElementById(ReanimatedCustomWebAnimationsStyle) {
-      const element = NativeDOMCxxDefault.getElementById(this._rootTag, ReanimatedCustomWebAnimationsStyle);
+    value: function getElementById(arg0) {
+      const element = NativeDOMCxxDefault.getElementById(this._rootTag, arg0);
       if (null == element) {
         return null;
       } else {
@@ -142,7 +142,7 @@ let items = [
 const importDefaultResultResult = _createClass(ReactNativeDocument, items);
 
 export default importDefaultResultResult;
-export const createReactNativeDocument = function createReactNativeDocument(containerTag) {
+export function createReactNativeDocument(containerTag) {
   const obj = ReactNativeDocument(137);
   return new importDefaultResultResult(containerTag, ReactNativeDocument(137).createReactNativeDocumentInstanceHandle(containerTag));
-};
+}

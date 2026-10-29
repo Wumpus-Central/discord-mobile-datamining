@@ -34,7 +34,7 @@ export function forceLoad() {
 
 }
 export { getDefaultIntegrations };
-export const init = function init() {
+export function init() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -67,7 +67,7 @@ export const init = function init() {
   obj3.transport = obj.transport || _mod906.makeFetchTransport;
   const tmp8 = obj.transport || _mod906.makeFetchTransport;
   return _mod693.initAndBind(_mod904.BrowserClient, obj3);
-};
-export const onLoad = function onLoad(fn) {
+}
+export function onLoad(fn) {
   fn();
-};
+}

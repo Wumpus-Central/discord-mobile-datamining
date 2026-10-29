@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
+export function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
   let combined1 = tunnel;
   if (!tunnel) {
     let str2 = "";
@@ -43,8 +43,8 @@ export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpoin
     combined1 = "" + combined + "?" + str13.toString();
   }
   return combined1;
-};
-export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
+}
+export function getReportDialogEndpoint(protocol, user) {
   const url = _mod713.makeDsn(protocol);
   if (url) {
     let str = "";
@@ -124,4 +124,4 @@ export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol
   } else {
     return "";
   }
-};
+}

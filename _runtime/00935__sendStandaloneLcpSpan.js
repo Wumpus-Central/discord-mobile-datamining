@@ -68,7 +68,7 @@ function _sendStandaloneLcpSpan(c1, startTime, sentry_pageload_span_id, sentry_r
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { _sendStandaloneLcpSpan };
-export const trackLcpAsStandaloneSpan = function trackLcpAsStandaloneSpan(client) {
+export function trackLcpAsStandaloneSpan(client) {
   dependencyMap = 0;
   if (obj.supportsWebVital("largest-contentful-paint")) {
     closure_2 = require("module_908").addLcpInstrumentationHandler((metric) => {
@@ -86,4 +86,4 @@ export const trackLcpAsStandaloneSpan = function trackLcpAsStandaloneSpan(client
     const tmpResult2 = require("extractNetworkProtocol");
   }
   obj = require("extractNetworkProtocol");
-};
+}

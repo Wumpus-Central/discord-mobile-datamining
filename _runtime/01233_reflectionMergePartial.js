@@ -2,7 +2,7 @@
 
 // Module 1233 (reflectionMergePartial)
 
-export const reflectionMergePartial = function reflectionMergePartial(arg0, reflectionCreateResult, partialSettings) {
+export function reflectionMergePartial(arg0, reflectionCreateResult, partialSettings) {
   const iter = arg0.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -93,4 +93,4 @@ export const reflectionMergePartial = function reflectionMergePartial(arg0, refl
       tmp4[localName] = arr;
     }
   }
-};
+}

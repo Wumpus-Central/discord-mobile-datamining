@@ -78,7 +78,7 @@ function extractClientInfo(requestInfo) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const buildClientAttributesFromInfo = function buildClientAttributesFromInfo(clientInfo) {
+export function buildClientAttributesFromInfo(clientInfo) {
   let name;
   if (clientInfo != null) {
     name = clientInfo.name;
@@ -102,8 +102,8 @@ export const buildClientAttributesFromInfo = function buildClientAttributesFromI
     obj["mcp.client.version"] = clientInfo.version;
   }
   return obj;
-};
-export const buildServerAttributesFromInfo = function buildServerAttributesFromInfo(serverInfo) {
+}
+export function buildServerAttributesFromInfo(serverInfo) {
   let name;
   if (serverInfo != null) {
     name = serverInfo.name;
@@ -127,8 +127,8 @@ export const buildServerAttributesFromInfo = function buildServerAttributesFromI
     obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
   return obj;
-};
-export const buildTransportAttributes = function buildTransportAttributes(transport, extra) {
+}
+export function buildTransportAttributes(transport, extra) {
   let sessionId;
   if (transport) {
     if ("sessionId" in transport) {
@@ -259,9 +259,9 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   const merged4 = Object.assign(obj4);
   const merged5 = Object.assign(obj6);
   return obj8;
-};
+}
 export { extractClientInfo };
-export const extractSessionDataFromInitializeRequest = function extractSessionDataFromInitializeRequest(params) {
+export function extractSessionDataFromInitializeRequest(params) {
   const obj = {};
   if (obj2.isValidContentItem(params.params)) {
     if (typeof params.params.protocolVersion === "string") {
@@ -286,8 +286,8 @@ export const extractSessionDataFromInitializeRequest = function extractSessionDa
     }
   }
   return obj;
-};
-export const extractSessionDataFromInitializeResponse = function extractSessionDataFromInitializeResponse(protocolVersion) {
+}
+export function extractSessionDataFromInitializeResponse(protocolVersion) {
   const obj = {};
   if (obj2.isValidContentItem(protocolVersion)) {
     if (typeof protocolVersion.protocolVersion === "string") {
@@ -312,8 +312,8 @@ export const extractSessionDataFromInitializeResponse = function extractSessionD
     }
   }
   return obj;
-};
-export const getClientAttributes = function getClientAttributes(transport) {
+}
+export function getClientAttributes(transport) {
   const clientInfoForTransport = _mod816.getClientInfoForTransport(transport);
   let name;
   if (clientInfoForTransport != null) {
@@ -338,8 +338,8 @@ export const getClientAttributes = function getClientAttributes(transport) {
     obj2["mcp.client.version"] = clientInfoForTransport.version;
   }
   return obj2;
-};
-export const getServerAttributes = function getServerAttributes(transport) {
+}
+export function getServerAttributes(transport) {
   const sessionDataForTransport = _mod816.getSessionDataForTransport(transport);
   let serverInfo;
   if (sessionDataForTransport != null) {
@@ -368,8 +368,8 @@ export const getServerAttributes = function getServerAttributes(transport) {
     obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
   return obj2;
-};
-export const getTransportTypes = function getTransportTypes(arg0) {
+}
+export function getTransportTypes(arg0) {
   let constructor1;
   if (arg0 != null) {
     constructor1 = arg0.constructor;
@@ -401,4 +401,4 @@ export const getTransportTypes = function getTransportTypes(arg0) {
   } else {
     return { mcpTransport: "unknown", networkTransport: "unknown" };
   }
-};
+}

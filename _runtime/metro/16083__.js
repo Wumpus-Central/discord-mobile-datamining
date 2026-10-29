@@ -1,86 +1,24 @@
 // === Module 16083: ? ===
 
 // Module 16083
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import SentryInitUtils from "SentryInitUtils" /* 1255 */;
-import RootNavigationRef from "RootNavigationRef" /* 5187 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6710 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8728 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 16084 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4856 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import _mod16066 from "module_16066" /* 16066 */;
+import _mod16084 from "module_16084" /* 16084 */;
 
-require = fn;
-function handleNavigationOnReady() {
-  ModalDispatchQueueDefault.flush();
-  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-  ComponentDispatch.dispatch(constants.NAVIGATOR_READY);
-  const routingInstrumentation = SentryInitUtils.routingInstrumentation;
-  const result = routingInstrumentation.registerNavigationContainer(RootNavigationRef.getRootNavigationRef());
-  closure_7();
-}
-const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6838).handleHistoryStoreNavigationChange;
-const Constants = fn(1084);
-({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
-const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
-const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5004);
-let obj2 = { flex: { flex: 1 }, rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND } };
-let closure_16 = createStyles.createStyles(obj2);
-const ReanimatedRexport = fn(5085);
-let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
-let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(5085).ReanimatedLogLevel.error, strict: false });
-const ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GestureWrapper(children) {
-  const cResult = c.c(6);
-  children = children.children;
-  const tmp3 = closure_16();
-  let rootBackgroundColor;
-  if (obj2.useIsScreenLandscape()) {
-    rootBackgroundColor = tmp3.rootBackgroundColor;
-  }
-  if (cResult[0] === tmp3.flex) {
-    if (cResult[1] === rootBackgroundColor) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] === children) {
-      if (cResult[4] === tmp5) {
-        let tmp6 = cResult[5];
+
+export default (arg0, arg1, arg2) => {
+  const arr = _mod16084(arg1);
+  for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp3 = arr[num];
+    let tmp6 = _mod16066(arg0, tmp3);
+    if (!tmp6) {
+      let tmp8 = arg2;
+      if (arg2) {
+        tmp8 = _mod16066(arg2, tmp3);
       }
-      return tmp6;
+      tmp6 = tmp8;
     }
-    const obj3 = { style: tmp5, children };
-    const tmp9 = closure_1_14(DiscordGestureHandlerRootViewDefault, obj3);
-    cResult[3] = children;
-    cResult[4] = tmp5;
-    cResult[5] = tmp9;
-    tmp6 = tmp9;
+    if (!tmp6) {
+      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
+    }
   }
-  const items = [tmp3.flex, rootBackgroundColor];
-  cResult[0] = tmp3.flex;
-  cResult[1] = rootBackgroundColor;
-  cResult[2] = items;
-  tmp5 = items;
-  obj2 = useIsScreenLandscape;
-}) : (function GestureWrapper(children) {
-  const tmp = closure_16();
-  const styles = tmp;
-  const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
-  let items = [isScreenLandscape, tmp];
-  const style = noop.useMemo(() => {
-    const items = [styles.flex, ];
-    let rootBackgroundColor;
-    if (isScreenLandscape) {
-      rootBackgroundColor = styles.rootBackgroundColor;
-    }
-    items[1] = rootBackgroundColor;
-    return items;
-  }, items);
-  return closure_1_14(DiscordGestureHandlerRootViewDefault, { style, children: children.children });
-});
+};

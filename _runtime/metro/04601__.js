@@ -1,7 +1,7 @@
 // === Module 4601: ? ===
 
 // Module 4601
-import _mod4593 from "module_4593" /* 4593 */;
+import _mod4594 from "module_4594" /* 4594 */;
 
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
@@ -29,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(StandAloneQuarterParser, Parser) {
+function _setPrototypeOf(QuarterParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneQuarterParser, Parser) {
-      StandAloneQuarterParser.__proto__ = Parser;
-      return StandAloneQuarterParser;
+    _setPrototypeOf = function _setPrototypeOf(QuarterParser, Parser) {
+      QuarterParser.__proto__ = Parser;
+      return QuarterParser;
     };
   }
-  return _setPrototypeOf(StandAloneQuarterParser, Parser);
+  return _setPrototypeOf(QuarterParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,9 +55,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4593.Parser;
+const Parser = _mod4594.Parser;
 let _createSuperInternal;
-class StandAloneQuarterParser {
+class QuarterParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -107,7 +107,7 @@ class StandAloneQuarterParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["Y", "R", "Q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
+          items1 = ["Y", "R", "q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -131,7 +131,7 @@ class StandAloneQuarterParser {
     }
   }
 }
-closure_1 = StandAloneQuarterParser;
+closure_1 = QuarterParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -143,9 +143,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-StandAloneQuarterParser.prototype = Object.create(prototype, { constructor: { value: StandAloneQuarterParser, writable: true, configurable: true } });
+QuarterParser.prototype = Object.create(prototype, { constructor: { value: QuarterParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(StandAloneQuarterParser, Parser);
+  _setPrototypeOf(QuarterParser, Parser);
 }
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
@@ -207,16 +207,16 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("q" !== arg1) {
-      if ("qq" !== arg1) {
-        if ("qo" === arg1) {
+    if ("Q" !== arg1) {
+      if ("QQ" !== arg1) {
+        if ("Qo" === arg1) {
           return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
-        } else if ("qqq" === arg1) {
-          return ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
-        } else if ("qqqqq" === arg1) {
-          return ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
+        } else if ("QQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else if ("QQQQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
         } else {
-          return ordinalNumber.quarter(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
+          return ordinalNumber.quarter(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
         }
       }
     }
@@ -262,4 +262,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { StandAloneQuarterParser };
+export { QuarterParser };

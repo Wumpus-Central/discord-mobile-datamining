@@ -6,7 +6,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = { mechanism: { handled: false, type: "auto.rpc.trpc.middleware" } };
 
-export const trpcMiddleware = function trpcMiddleware() {
+export function trpcMiddleware() {
   closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
@@ -18,7 +18,7 @@ export const trpcMiddleware = function trpcMiddleware() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ export const trpcMiddleware = function trpcMiddleware() {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -221,4 +221,4 @@ export const trpcMiddleware = function trpcMiddleware() {
     }
     return applyArgumentsResult;
   };
-};
+}

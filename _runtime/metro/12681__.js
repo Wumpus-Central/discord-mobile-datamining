@@ -1,220 +1,190 @@
 // === Module 12681: ? ===
 
 // Module 12681
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12639 */;
-import _mod12642 from "module_12642" /* 12642 */;
-import _mod12643 from "module_12643" /* 12643 */;
-import memoBuilder from "memoBuilder" /* 12682 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12661 from "module_12661" /* 12661 */;
+import _mod12677 from "module_12677" /* 12677 */;
 
-function normalize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 100;
+function fromLoc(loc, start) {
+  if (loc) {
+    loc = loc.loc;
   }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = Infinity;
+  if (loc) {
+    loc = loc.loc[start];
   }
-  try {
-    return visit("", arg0, num, num2);
-  } catch (tmp5) {
-    const obj = { ERROR: null };
-    const _HermesInternal = HermesInternal;
-    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
-    return obj;
+  let tmp2 = null;
+  if (loc) {
+    let tmp3 = loc;
+    if ("line" in loc) {
+      const obj = { offset: null, line: null, column: null };
+      ({ offset: obj.offset, line: obj.line, column: obj.column } = loc);
+      tmp3 = obj;
+    }
+    tmp2 = tmp3;
   }
+  return tmp2;
 }
-function visit(arg0, __sentry_skip_normalization__) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = Infinity;
-  }
-  let num2 = arg3;
-  if (arg3 === undefined) {
-    num2 = Infinity;
-  }
-  let memoBuilderResult = arg4;
-  if (arg4 === undefined) {
-    memoBuilderResult = memoBuilder.memoBuilder();
-  }
-  _slicedToArray(memoBuilderResult, 2);
-  if (null != __sentry_skip_normalization__) {
-    const items = ["boolean", "string"];
-    if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ === "number") {
-        let _Number = Number;
-      }
-      let str = (function stringifyValue(arg0, _events) {
-        try {
-          if ("domain" === arg0) {
-            if (_events) {
-              if (typeof _events === "object") {
-                if (_events._events) {
-                  return "[Domain]";
-                }
-              }
-            }
+let closure_2 = { offset: 0, line: 1, column: 1 };
+
+export default {
+  SyntaxReferenceError(arg0, reference) {
+    let str = "";
+    if (reference) {
+      str = `${" `" + reference}\``;
+    }
+    const tmpResult = _mod12661("SyntaxReferenceError", arg0 + str);
+    tmpResult.reference = reference;
+    return tmpResult;
+  },
+  SyntaxMatchError(reason, syntax, loc, arg3) {
+    const tmp3 = _mod12661("SyntaxMatchError", reason);
+    ({ tokens, longestMatch } = arg3);
+    let tmp5 = null;
+    if ((longestMatch < tokens.length && tokens[longestMatch].node || null) !== loc) {
+      tmp5 = tmp4;
+    }
+    let str = "";
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    let num4 = 0;
+    let str2 = "";
+    let num5 = 0;
+    let num6 = 0;
+    let num7 = 0;
+    if (0 < tokens.length) {
+      do {
+        value = tokens[num].value;
+        let length = num3;
+        let length2 = num4;
+        if (num === longestMatch) {
+          length = value.length;
+          length2 = ``.length;
+        }
+        let tmp10 = tmp6;
+        if (tmp6) {
+          tmp10 = tokens[num].node === tmp5;
+        }
+        let tmp11 = num2;
+        if (tmp10) {
+          let num8 = 0;
+          if (num <= longestMatch) {
+            num8 = num2 + 1;
           }
-          if ("domainEmitter" === arg0) {
-            return "[DomainEmitter]";
-          } else {
-            if (undefined !== global) {
-              if (_events === global) {
-                return "[Global]";
-              }
-            }
-            const _window = window;
-            if (typeof window !== "undefined") {
-              const _window2 = window;
-              if (_events === window) {
-                return "[Window]";
-              }
-            }
-            const _document = document;
-            if (typeof document !== "undefined") {
-              const _document2 = document;
-              if (_events === document) {
-                return "[Document]";
-              }
-            }
-            if (obj.isVueViewModel(_events)) {
-              return "[VueViewModel]";
+          tmp11 = num8;
+        }
+        str = str + value;
+        num = num + 1;
+        num2 = tmp11;
+        num3 = length;
+        num4 = length2;
+        str2 = str;
+        num5 = tmp11;
+        num6 = length;
+        num7 = length2;
+      } while (num < tokens.length);
+    }
+    if (longestMatch !== tokens.length) {
+      if (1 >= num5) {
+        let tmp13 = fromLoc(tmp5, "start");
+        if (!tmp13) {
+          let str3 = str2.slice(0, num7);
+          const obj = { offset: null, line: null, column: null };
+          ({ offset: obj.offset, line: obj.line, column: obj.column } = fromLoc(loc, "start") || closure_2);
+          tmp13 = obj;
+          if (str3) {
+            const parts = str3.split(/\n|\r\n?|\f/);
+            obj.offset = obj.offset + str3.length;
+            obj.line = obj.line + (parts.length - 1);
+            if (1 === parts.length) {
+              str3 = str3.length;
+              let sum = obj.column + str3;
             } else {
-              if (tmp4Result.isSyntheticEvent(_events)) {
-                return "[SyntheticEvent]";
-              } else {
-                if (typeof _events === "number") {
-                  const _Number = Number;
-                  if (!Number.isFinite(_events)) {
-                    const _HermesInternal = HermesInternal;
-                    return "[" + _events + "]";
-                  }
-                }
-                if (typeof _events === "function") {
-                  const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + stackParserFromStackParserOptions.getFunctionName(_events) + "]";
-                } else if (typeof _events === "symbol") {
-                  const _String2 = String;
-                  const _HermesInternal3 = HermesInternal;
-                  return "[" + String(_events) + "]";
-                } else if (typeof _events === "bigint") {
-                  const _String = String;
-                  const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(_events) + "]";
-                } else {
-                  const tmp9 = (function getConstructorName(_events) {
-                    const prototypeOf = Object.getPrototypeOf(_events);
-                    let str = "null prototype";
-                    if (prototypeOf) {
-                      str = prototypeOf.constructor.name;
-                    }
-                    return str;
-                  })(_events);
-                  const _HermesInternal6 = HermesInternal;
-                  if (obj4.test(tmp9)) {
-                    let combined = concat(tmp10, "]");
-                  } else {
-                    combined = concat(tmp10, "]");
-                  }
-                  return combined;
-                }
-              }
-              tmp4Result = _mod12643;
+              sum = parts.pop().length + 1;
             }
-            obj = _mod12643;
+            obj.column = sum;
           }
-        } catch (tmp7) {
-          const _HermesInternal5 = HermesInternal;
-          return "**non-serializable** (" + tmp7 + ")";
+          const tmp12 = fromLoc(loc, "start") || closure_2;
         }
-      })(arg0, __sentry_skip_normalization__);
-      if (str.startsWith("[object ")) {
-        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
-          return __sentry_skip_normalization__;
+        let tmp33Result = fromLoc(tmp5, "end");
+        if (!tmp33Result) {
+          let str5 = str2.substr(num7, num6);
+          const obj4 = { offset: null, line: null, column: null };
+          ({ offset: obj2.offset, line: obj2.line, column: obj2.column } = tmp13);
+          tmp33Result = obj4;
+          if (str5) {
+            const parts1 = str5.split(/\n|\r\n?|\f/);
+            obj4.offset = obj4.offset + str5.length;
+            obj4.line = obj4.line + (parts1.length - 1);
+            if (1 === parts1.length) {
+              str5 = str5.length;
+              let sum1 = obj4.column + str5;
+            } else {
+              sum1 = parts1.pop().length + 1;
+            }
+            obj4.column = sum1;
+          }
+        }
+      }
+      tmp3.rawMessage = reason;
+      let str6 = "<generic>";
+      if (syntax) {
+        str6 = _mod12677(syntax);
+      }
+      tmp3.syntax = str6;
+      tmp3.css = str2;
+      tmp3.mismatchOffset = num7;
+      tmp3.mismatchLength = num6;
+      let str8 = str2;
+      const text = `${reason}
+      syntax: ${tmp3.syntax}`;
+      if (!str2) {
+        str8 = "<empty string>";
+      }
+      const _HermesInternal = HermesInternal;
+      const _Array = Array;
+      const combined = `${tmp26}
+       value: ` + str8 + "\n  --------";
+      const array = new Array(tmp3.mismatchOffset + 1);
+      tmp3.message = `${tmp28}${obj5.join("-")}^`;
+      const _Object = Object;
+      const merged = Object.assign(tmp3, tmp13);
+      let str13 = loc;
+      if (loc) {
+        str13 = loc.loc;
+      }
+      if (str13) {
+        str13 = loc.loc.source;
+      }
+      if (!str13) {
+        str13 = "<unknown>";
+      }
+      const obj6 = { source: str13, start: tmp13, end: tmp33Result };
+      tmp3.loc = obj6;
+      return tmp3;
+    }
+    let tmp20 = tmp5;
+    if (!tmp5) {
+      tmp20 = loc;
+    }
+    let tmp19Result = fromLoc(tmp20, "end");
+    if (!tmp19Result) {
+      const obj10 = { offset: null, line: null, column: null };
+      ({ offset: obj3.offset, line: obj3.line, column: obj3.column } = closure_2);
+      tmp19Result = obj10;
+      if (str2) {
+        const parts2 = str2.split(/\n|\r\n?|\f/);
+        obj10.offset = obj10.offset + str2.length;
+        obj10.line = obj10.line + (parts2.length - 1);
+        if (1 === parts2.length) {
+          let sum2 = obj10.column + str2.length;
         } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
-            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
-          }
-          if (0 === num) {
-            return str.replace("object ", "");
-          } else if (tmp6(__sentry_skip_normalization__)) {
-            return "[Circular ~]";
-          } else {
-            if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON === "function") {
-                try {
-                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
-                } catch (err) {
-                }
-              }
-            }
-            const _Array = Array;
-            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
-            const convertToPlainObjectResult = _mod12642.convertToPlainObject(__sentry_skip_normalization__);
-            const keys = Object.keys();
-            if (keys !== undefined) {
-              while (keys[tmp] !== undefined) {
-                let _Object = Object;
-                hasOwnProperty = Object.prototype.hasOwnProperty;
-                let call = hasOwnProperty.call;
-                let tmp28 = tmp21;
-                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
-                  continue;
-                } else {
-                  if (tmp20 >= num2) {
-                    let str4 = "[MaxProperties ~]";
-                    tmp14[tmp21] = "[MaxProperties ~]";
-                    break;
-                  } else {
-                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
-                    let num6 = tmp20 + 1;
-                    continue;
-                  }
-                  break;
-                }
-                break;
-              }
-            }
-            tmp7(__sentry_skip_normalization__);
-            return tmp14;
-          }
+          sum2 = parts2.pop().length + 1;
         }
-      } else {
-        return str;
+        obj10.column = sum2;
       }
     }
-  }
-  return __sentry_skip_normalization__;
-}
-function normalizeToSize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 3;
-  }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = 102400;
-  }
-  let tmp = normalize(arg0, num);
-  if (~-str.split(/%..|./).length > num2) {
-    tmp = normalizeToSize(arg0, num - 1, num2);
-  }
-  return tmp;
-}
-
-export { normalize };
-export { normalizeToSize };
-export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
-  const replaced = str.replace(/\\/g, "/");
-  try {
-    const _decodeURI = decodeURI;
-    str = decodeURI(arg0);
-    const str2 = str.replace(/\\/g, "/");
-    const _RegExp = RegExp;
-    const _HermesInternal = HermesInternal;
-    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str.replace(/\\/g, "/").replace(/webpack:\/?/g, "").replace(regExp, "app:///");
-  } catch (err) {
+    tmp13 = tmp19Result;
+    tmp33Result = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
+    const obj11 = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
   }
 };

@@ -5,9 +5,9 @@ import _mod703 from "module_703" /* 703 */;
 
 require = arg1;
 let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
+function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
   _require = fn;
-  dependencyMap = value;
+  dependencyMap = arg1;
   aggregateExceptionsFromError = arg2;
   closure_4 = source;
   if (arg5.length >= arg2 + 1) {
@@ -25,7 +25,7 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
       let merged1 = Object.assign(mechanism.mechanism);
       obj.exception_id = exception_id;
       mechanism.mechanism = obj;
-      const tmp7 = fn(value, errors[source]);
+      const tmp7 = fn(arg1, errors[source]);
       length = length.length;
       let obj2 = { handled: true };
       let merged2 = Object.assign(tmp7.mechanism);
@@ -36,7 +36,7 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
       tmp7.mechanism = obj2;
       const items1 = [tmp7];
       HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
+      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
     }
     const _Array2 = Array;
     if (Array.isArray(errors.errors)) {
@@ -73,7 +73,7 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser, arg2, arg3, exception, originalException) {
+export function applyAggregateErrorsToEvent(exceptionFromError, stackParser, arg2, arg3, exception, originalException) {
   exception = exception.exception;
   let values;
   if (exception != null) {
@@ -94,4 +94,4 @@ export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(
       obj = _mod703;
     }
   }
-};
+}

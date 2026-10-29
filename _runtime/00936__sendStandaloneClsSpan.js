@@ -60,7 +60,7 @@ function _sendStandaloneClsSpan(c1, startTime, sentry_pageload_span_id, sentry_r
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { _sendStandaloneClsSpan };
-export const trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client) {
+export function trackClsAsStandaloneSpan(client) {
   dependencyMap = 0;
   if (obj.supportsWebVital("layout-shift")) {
     closure_2 = require("module_908").addClsInstrumentationHandler((metric) => {
@@ -78,4 +78,4 @@ export const trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client
     const tmpResult2 = require("extractNetworkProtocol");
   }
   obj = require("extractNetworkProtocol");
-};
+}

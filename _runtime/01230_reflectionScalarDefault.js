@@ -8,7 +8,7 @@ import reflectionLongConvert from "reflectionLongConvert" /* 1227 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const reflectionScalarDefault = function reflectionScalarDefault(T) {
+export function reflectionScalarDefault(T) {
   let STRING = L;
   if (L === undefined) {
     STRING = ScalarType.LongType.STRING;
@@ -43,4 +43,4 @@ export const reflectionScalarDefault = function reflectionScalarDefault(T) {
     }
     return reflectionLongConvert.reflectionLongConvert(_mod1216.PbULong.ZERO, STRING);
   }
-};
+}

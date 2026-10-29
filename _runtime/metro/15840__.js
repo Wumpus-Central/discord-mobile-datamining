@@ -1,20 +1,7 @@
 // === Module 15840: ? ===
 
 // Module 15840
-import _mod15815 from "module_15815" /* 15815 */;
+import _mod15830 from "module_15830" /* 15830 */;
 
-if (_mod15815) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
 
-export default fn;
+export default (arg0, arg1, arg2) => _mod15830(arg0, arg1, arg2) >= 0;

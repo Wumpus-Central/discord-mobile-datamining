@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getTraceMetaTags = function getTraceMetaTags(arg0) {
+export function getTraceMetaTags(arg0) {
   let traceData = arg0;
   if (!arg0) {
     traceData = _mod780.getTraceData();
@@ -18,4 +18,4 @@ export const getTraceMetaTags = function getTraceMetaTags(arg0) {
     return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
   });
   return mapped.join("\n");
-};
+}

@@ -1,46 +1,18 @@
 // === Module 12661: ? ===
 
 // Module 12661
-function merge(arg0, obj) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 2;
-  }
-  if (obj) {
-    if (typeof obj === "object") {
-      if (num > 0) {
-        if (arg0) {
-          if (obj) {
-            const _Object = Object;
-            if (0 === Object.keys(obj).length) {
-              return arg0;
-            }
-          }
-        }
-        obj = {};
-        const merged = Object.assign(arg0);
-        for (const key10016 in arg1) {
-          let _Object2 = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10016);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10016);
-          }
-          if (!hasOwnPropertyResult) {
-            continue;
-          } else {
-            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
-            continue;
-          }
-          continue;
-        }
-        return obj;
-      }
-    }
-  }
-  return obj;
-}
 
-export { merge };
+export default function createCustomError(name, message) {
+  closure_0 = name;
+  closure_1 = message;
+  const obj2 = Object.create(SyntaxError.prototype);
+  const error = new Error();
+  obj2.name = name;
+  obj2.message = message;
+  Object.defineProperty(obj2, "stack", {
+    get() {
+      return error.stack || "".replace(/^(.+\n){1,3}/, closure_0 + ": " + closure_1 + "\n");
+    }
+  });
+  return obj2;
+};

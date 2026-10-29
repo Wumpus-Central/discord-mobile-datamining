@@ -15,7 +15,7 @@ let closure_4 = async function _lazyLoadIntegration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_4 = async function _lazyLoadIntegration(arg0) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = { replayIntegration: "replay", replayCanvasIntegration: "replay-canvas", feedbackIntegration: "feedback", feedbackModalIntegration: "feedback-modal", feedbackScreenshotIntegration: "feedback-screenshot", captureConsoleIntegration: "captureconsole", contextLinesIntegration: "contextlines", linkedErrorsIntegration: "linkederrors", dedupeIntegration: "dedupe", extraErrorDataIntegration: "extraerrordata", graphqlClientIntegration: "graphqlclient", httpClientIntegration: "httpclient", reportingObserverIntegration: "reportingobserver", rewriteFramesIntegration: "rewriteframes", browserProfilingIntegration: "browserprofiling", moduleMetadataIntegration: "modulemetadata", instrumentAnthropicAiClient: "instrumentanthropicaiclient", instrumentOpenAiClient: "instrumentopenaiclient", instrumentGoogleGenAIClient: "instrumentgooglegenaiclient", instrumentLangGraph: "instrumentlanggraph", createLangChainCallbackHandler: "createlangchaincallbackhandler" };
 
-export const lazyLoadIntegration = function lazyLoadIntegration(arg0, arg1) {
+export function lazyLoadIntegration(arg0, arg1) {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -173,4 +173,4 @@ export const lazyLoadIntegration = function lazyLoadIntegration(arg0, arg1) {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

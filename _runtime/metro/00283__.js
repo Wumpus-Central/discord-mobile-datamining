@@ -49,14 +49,14 @@ let obj = { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSt
 let c8 = null;
 let c9 = false;
 
-export const rethrowCaughtError = function rethrowCaughtError() {
+export function rethrowCaughtError() {
   if (c9) {
     c9 = false;
     c8 = null;
     throw c8;
   }
-};
-export const processResponderEvent = function processResponderEvent(arg0, self, responderIgnoreScroll) {
+}
+export function processResponderEvent(arg0, self, responderIgnoreScroll) {
   let tmp41;
   let tmp49;
   if ("topTouchStart" === arg0) {
@@ -336,4 +336,4 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
     }
   }
   recordTouchStart.recordTouchTrack(arg0, responderIgnoreScroll);
-};
+}

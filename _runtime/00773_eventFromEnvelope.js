@@ -69,7 +69,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -133,7 +133,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             if (!length) {
               items = ["event"];
             }
-            dependencyMap(740).forEachEnvelopeItem(dependencyMap, () => { ... });
+            dependencyMap(740).forEachEnvelopeItem(dependencyMap, /* F88288 */ function() { ... });
             return dependencyMap2;
           }
         }).map((dsn) => {

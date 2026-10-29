@@ -12,13 +12,13 @@ export function createReactNativeDocumentInstanceHandle(containerTag) {
 export function getNativeNodeReferenceFromReactNativeDocumentInstanceHandle(target) {
   return target;
 }
-export const getPublicInstanceFromReactNativeDocumentInstanceHandle = function getPublicInstanceFromReactNativeDocumentInstanceHandle(element) {
+export function getPublicInstanceFromReactNativeDocumentInstanceHandle(element) {
   return renderElementAll.getPublicInstanceFromRootTag(Number(element));
-};
-export const isReactNativeDocumentInstanceHandle = function isReactNativeDocumentInstanceHandle(target) {
-  let tmp = typeof target === "number";
-  if (typeof target === "number") {
-    tmp = target % 10 === 1;
+}
+export function isReactNativeDocumentInstanceHandle(element) {
+  let tmp = typeof element === "number";
+  if (typeof element === "number") {
+    tmp = element % 10 === 1;
   }
   return tmp;
-};
+}

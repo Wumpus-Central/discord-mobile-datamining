@@ -15,7 +15,7 @@ const re3 = tmp2;
 export const MAX_BAGGAGE_STRING_LENGTH = 8192;
 export const SENTRY_BAGGAGE_KEY_PREFIX = "sentry-";
 export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = tmp2;
-export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamplingContext(arr) {
+export function baggageHeaderToDynamicSamplingContext(arr) {
   if (arr) {
     if (!obj.isString(arr)) {
       const _Array = Array;
@@ -107,8 +107,8 @@ export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDyn
     }
     return tmp10;
   }
-};
-export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan) {
+}
+export function dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan) {
   if (dynamicSamplingContextFromSpan) {
     const _Object = Object;
     const entries = Object.entries(dynamicSamplingContextFromSpan);
@@ -147,8 +147,8 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
     }
     return reduced1;
   }
-};
-export const objectToBaggageHeader = function objectToBaggageHeader(arg0) {
+}
+export function objectToBaggageHeader(arg0) {
   if (0 !== Object.keys(arg0).length) {
     const _Object = Object;
     const entries = Object.entries(arg0);
@@ -172,8 +172,8 @@ export const objectToBaggageHeader = function objectToBaggageHeader(arg0) {
       return combined1;
     }, "");
   }
-};
-export const parseBaggageHeader = function parseBaggageHeader(arr) {
+}
+export function parseBaggageHeader(arr) {
   if (arr) {
     if (!obj.isString(arr)) {
       const _Array = Array;
@@ -248,4 +248,4 @@ export const parseBaggageHeader = function parseBaggageHeader(arr) {
     }
     return reduced;
   }
-};
+}

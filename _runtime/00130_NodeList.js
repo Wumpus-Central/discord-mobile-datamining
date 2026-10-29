@@ -99,6 +99,6 @@ const module_126 = fn(126);
 module_126.setPlatformObject(tmp2);
 
 export default tmp2;
-export const createNodeList = function createNodeList(addedNodes) {
+export function createNodeList(addedNodes) {
   return new closure_4(addedNodes);
-};
+}

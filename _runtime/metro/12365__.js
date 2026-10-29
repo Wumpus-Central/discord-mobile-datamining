@@ -1,42 +1,11 @@
 // === Module 12365: ? ===
 
 // Module 12365
-const items = [0.05, 0.2, 0.4, 0.6];
-let c0 = 0.55;
-Math.sqrt(1.8);
-let num = 0;
-let num2 = 0;
-do {
-  do {
-    let tmp6 = 374761393 * num2 ^ tmp5 ^ 2147483647;
-    let _Math = Math;
-    let imulResult = Math.imul(tmp6 ^ tmp6 >>> 13, 1274126177);
-    let diff = items.length - 1;
-    let num3 = 0;
-    let tmp11 = diff;
-    if (0 < items.length) {
-      while (true) {
-        let sum = num3 + 1;
-        let num4 = 1;
-        if (sum < items.length) {
-          num4 = items[sum];
-        }
-        tmp11 = num3;
-        if (tmp8 < num4) {
-          break;
-        } else {
-          tmp11 = diff;
-          num3 = sum;
-          if (sum >= items.length) {
-            break;
-          }
-        }
-      }
-    }
-    let arr2 = tmp3[tmp11];
-    let point = { x: 6 * num2, y: tmp4 };
-    let arr = arr2.push(point);
-    num2 = num2 + 1;
-  } while (num2 < 24);
-  num = num + 1;
-} while (num < 24);
+import _mod17 from "module_17" /* 17 */;
+
+const Platform = _mod17.Platform;
+const frozen = Object.freeze({ allFiles: "*/*", audio: "audio/*", csv: ["text/csv", "text/comma-separated-values"], doc: "application/msword", docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", images: "image/*", pdf: "application/pdf", plainText: "text/plain", json: "application/json", ppt: "application/vnd.ms-powerpoint", pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation", video: "video/*", xls: "application/vnd.ms-excel", xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", zip: "application/zip" });
+const frozen1 = Object.freeze({ allFiles: "public.item", audio: "public.audio", csv: "public.comma-separated-values-text", doc: "com.microsoft.word.doc", docx: "org.openxmlformats.wordprocessingml.document", images: "public.image", pdf: "com.adobe.pdf", plainText: "public.plain-text", json: "public.json", ppt: "com.microsoft.powerpoint.ppt", pptx: "org.openxmlformats.presentationml.presentation", video: "public.movie", xls: "com.microsoft.excel.xls", xlsx: "org.openxmlformats.spreadsheetml.sheet", zip: "public.zip-archive" });
+
+export const types = frozen;
+export const typesAreEqual = true;

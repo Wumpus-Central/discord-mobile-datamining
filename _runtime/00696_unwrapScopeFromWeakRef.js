@@ -25,10 +25,10 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const _sentryScope = "_sentryScope";
 const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
+export function getCapturedScopesOnSpan(scope) {
   return { scope: scope[_sentryScope], isolationScope: unwrapScopeFromWeakRef(scope[_sentryIsolationScope]) };
-};
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+}
+export function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
   if (sentrySpan) {
     const result = _mod698.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, (function wrapScopeWithWeakRef(isolationScope) {
       try {
@@ -44,4 +44,4 @@ export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySp
     })(isolationScope));
     const result1 = _mod698.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
   }
-};
+}

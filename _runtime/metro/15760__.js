@@ -1,7 +1,7 @@
 // === Module 15760: ? ===
 
 // Module 15760
+import registerAsset from "module_1131" /* 1131 */;
 
-export const CanonicalizeLocaleList = function CanonicalizeLocaleList(items) {
-  return Intl.getCanonicalLocales(items);
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "3b38f8bf8ac6605b344df2f05c37673a", name: "NitroGem9", type: "lottie" });

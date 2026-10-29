@@ -167,7 +167,7 @@ function setNumberIfDefined(arg0, arg1, arg2) {
 
 }
 
-export const extractChatModelRequestAttributes = function extractChatModelRequestAttributes(id, arr, arg2, invocationParams, ls_provider) {
+export function extractChatModelRequestAttributes(id, arr, arg2, invocationParams, ls_provider) {
   ls_provider = undefined;
   if (ls_provider != null) {
     ls_provider = ls_provider.ls_provider;
@@ -366,8 +366,8 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
     }
   }
   return tmpResult;
-};
-export const extractLLMRequestAttributes = function extractLLMRequestAttributes(kwargs, arr, arg2, invocationParams, ls_provider) {
+}
+export function extractLLMRequestAttributes(kwargs, arr, arg2, invocationParams, ls_provider) {
   ls_provider = undefined;
   if (ls_provider != null) {
     ls_provider = ls_provider.ls_provider;
@@ -411,8 +411,8 @@ export const extractLLMRequestAttributes = function extractLLMRequestAttributes(
     }
   }
   return tmp2Result;
-};
-export const extractLlmResponseAttributes = function extractLlmResponseAttributes(generations, flag2) {
+}
+export function extractLlmResponseAttributes(generations, flag2) {
   if (generations) {
     const obj = {};
     let _Array = Array;
@@ -699,16 +699,16 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
     }
     return obj;
   }
-};
-export const getInvocationParams = function getInvocationParams(invocation_params) {
+}
+export function getInvocationParams(invocation_params) {
   if (invocation_params) {
     const _Array = Array;
     if (!Array.isArray(invocation_params)) {
       return invocation_params.invocation_params;
     }
   }
-};
-export const normalizeLangChainMessages = function normalizeLangChainMessages(items) {
+}
+export function normalizeLangChainMessages(items) {
   return items.map((_getType) => {
     _getType = _getType._getType;
     if (typeof _getType === "function") {
@@ -838,4 +838,4 @@ export const normalizeLangChainMessages = function normalizeLangChainMessages(it
       }
     }
   });
-};
+}

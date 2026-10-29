@@ -53,7 +53,7 @@ function mergeScopeData(extra, arg1) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1) {
+export function applyScopeDataToEvent(extra, arg1) {
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } = arg1);
   if (Object.keys(extra).length) {
     const obj = {};
@@ -140,8 +140,8 @@ export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1)
     const merged11 = Object.assign(sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj11;
   }
-};
-export const getCombinedScopeData = function getCombinedScopeData(isolationScope, currentScope) {
+}
+export function getCombinedScopeData(isolationScope, currentScope) {
   const globalScope = _mod724.getGlobalScope();
   const scopeData = globalScope.getScopeData();
   if (isolationScope) {
@@ -151,8 +151,8 @@ export const getCombinedScopeData = function getCombinedScopeData(isolationScope
     mergeScopeData(scopeData, currentScope.getScopeData());
   }
   return scopeData;
-};
-export const mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
+}
+export function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
   arg0[arg1] = _mod722.merge(arg0[arg1], arg2, 1);
-};
+}
 export { mergeScopeData };

@@ -8,7 +8,7 @@ import _mod879 from "module_879" /* 879 */;
 
 const Alert = _mod17.Alert;
 
-export const isModalSupported = function isModalSupported() {
+export function isModalSupported() {
   const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
@@ -31,8 +31,8 @@ export const isModalSupported = function isModalSupported() {
     isFabricEnabledResult = minor < 71;
   }
   return !isFabricEnabledResult;
-};
-export const isNativeDriverSupportedForColorAnimations = function isNativeDriverSupportedForColorAnimations() {
+}
+export function isNativeDriverSupportedForColorAnimations() {
   const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
@@ -59,9 +59,9 @@ export const isNativeDriverSupportedForColorAnimations = function isNativeDriver
     flag = false;
   }
   return flag;
-};
-export const isValidEmail = (trimmed1) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed1);
-export const base64ToUint8Array = (placeholder) => {
+}
+export (trimmed1) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed1)
+export (placeholder) => {
   if (typeof atob === "function") {
     if (obj.isWeb()) {
       const _atob = atob;
@@ -75,8 +75,8 @@ export const base64ToUint8Array = (placeholder) => {
   }
   const error = new Error("atob is not available in this environment.");
   throw error;
-};
-export const feedbackAlertDialog = (errorTitle, captureScreenshotError) => {
+}
+export (errorTitle, captureScreenshotError) => {
   if (obj.isWeb()) {
     if (undefined !== RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.alert) {
       const RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
@@ -86,4 +86,4 @@ export const feedbackAlertDialog = (errorTitle, captureScreenshotError) => {
   }
   Alert.alert(errorTitle, captureScreenshotError);
   obj = _mod879;
-};
+}

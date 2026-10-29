@@ -12,7 +12,7 @@ let closure_4 = ["trace", "debug", "info", "warn", "error", "fatal"];
 let closure_5 = { silent: "trace", fatal: "fatal", error: "error", warn: "warn", log: "info", info: "info", success: "info", fail: "error", ready: "info", start: "info", box: "info", debug: "debug", trace: "trace", verbose: "debug", critical: "fatal", notice: "info" };
 let closure_6 = { 0: "fatal", 1: "warn", 2: "info", 3: "info", 4: "debug", 5: "trace" };
 
-export const createConsolaReporter = function createConsolaReporter() {
+export function createConsolaReporter() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -89,4 +89,4 @@ export const createConsolaReporter = function createConsolaReporter() {
       }
     }
   };
-};
+}

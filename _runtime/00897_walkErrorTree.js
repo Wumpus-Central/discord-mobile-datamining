@@ -116,7 +116,7 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
 }
 let nativePackageName = null;
 
-export const nativeLinkedErrorsIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -165,4 +165,4 @@ export const nativeLinkedErrorsIntegration = () => {
       }
     }
   };
-};
+}

@@ -1,13 +1,32 @@
 // === Module 12705: ? ===
 
 // Module 12705
+import _mod12657 from "module_12657" /* 12657 */;
 
-export const parameterize = function parameterize(join) {
-  const substr = [...arguments].slice();
-  const items = [join, ...substr];
-  const string = new String(String.raw.apply(items));
-  const str = join.join("\0");
-  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
-  string.__sentry_template_values__ = substr;
-  return string;
+const LeftSquareBracket = _mod12657.TYPE.LeftSquareBracket;
+const RightSquareBracket = _mod12657.TYPE.RightSquareBracket;
+const obj = {
+  name: "Brackets",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    this.eat(LeftSquareBracket);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightSquareBracket);
+    }
+    const element = { type: "Brackets", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+    return element;
+  },
+  generate(arg0) {
+    this.chunk("[");
+    this.children(arg0);
+    this.chunk("]");
+  }
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

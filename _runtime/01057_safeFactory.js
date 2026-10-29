@@ -6,7 +6,7 @@ import _mod693 from "module_693" /* 693 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
+export function safeFactory(beforeBreadcrumb, arg1) {
   let fn = beforeBreadcrumb;
   if (arg1 === undefined) {
     const obj = {};
@@ -32,7 +32,7 @@ export const safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
     };
   }
   return fn;
-};
+}
 export function safeTracesSampler(tracesSampler) {
   let fn = tracesSampler;
   closure_0 = tracesSampler;

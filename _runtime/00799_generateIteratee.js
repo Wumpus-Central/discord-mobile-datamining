@@ -6,7 +6,7 @@ import setupIntegration from "setupIntegration" /* 763 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const generateIteratee = function generateIteratee(arg0) {
+export function generateIteratee(arg0) {
   ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
   return (root) => {
     if (root.filename) {
@@ -48,7 +48,7 @@ export const generateIteratee = function generateIteratee(arg0) {
       return root;
     }
   };
-};
+}
 export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {

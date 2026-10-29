@@ -10,7 +10,7 @@ import _slicedToArray from "module_32" /* 32 */;
 require = fn;
 const AppState = fn(17).AppState;
 
-export const stallTrackingIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -351,4 +351,4 @@ export const stallTrackingIntegration = () => {
     },
     _internalState: obj2
   };
-};
+}

@@ -7,7 +7,7 @@ import _mod141 from "module_141" /* 141 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const getElementSibling = function getElementSibling(parentNode, next) {
+export function getElementSibling(parentNode, next) {
   parentNode = parentNode.parentNode;
   if (null == parentNode) {
     return null;
@@ -48,4 +48,4 @@ export const getElementSibling = function getElementSibling(parentNode, next) {
       return tmp8;
     }
   }
-};
+}

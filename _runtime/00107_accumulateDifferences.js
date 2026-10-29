@@ -65,7 +65,7 @@ function accumulateDifferences(items, arr2, obj, arg3) {
   }
 }
 
-export const validate = function validate(arg0, bubblingEventTypes, bubblingEventTypes2) {
+export function validate(arg0, bubblingEventTypes, bubblingEventTypes2) {
   const items = [];
   accumulateDifferences(items, [], { bubblingEventTypes: bubblingEventTypes.bubblingEventTypes, directEventTypes: bubblingEventTypes.directEventTypes, uiViewClassName: bubblingEventTypes.uiViewClassName, validAttributes: bubblingEventTypes.validAttributes }, { bubblingEventTypes: bubblingEventTypes2.bubblingEventTypes, directEventTypes: bubblingEventTypes2.directEventTypes, uiViewClassName: bubblingEventTypes2.uiViewClassName, validAttributes: bubblingEventTypes2.validAttributes });
   if (0 === items.length) {
@@ -74,8 +74,8 @@ export const validate = function validate(arg0, bubblingEventTypes, bubblingEven
     obj3 = { type: "invalid", differences: items };
   }
   return obj3;
-};
-export const stringifyValidationResult = function stringifyValidationResult(arg0, validateResult) {
+}
+export function stringifyValidationResult(arg0, validateResult) {
   const items = ["StaticViewConfigValidator: Invalid static view config for '" + arg0 + "'.", "", ];
   const differences = validateResult.differences;
   items[HermesBuiltin.arraySpread(differences.map((item) => {
@@ -89,4 +89,4 @@ export const stringifyValidationResult = function stringifyValidationResult(arg0
     }
   }), 2)] = "";
   return items.join("\n");
-};
+}

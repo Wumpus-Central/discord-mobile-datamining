@@ -1,17 +1,17 @@
 // === Module 4640: ? ===
 
 // Module 4640
-import startOfSecond_mod from "startOfSecond" /* 4641 */;
-import requiredArgs_mod from "requiredArgs" /* 4288 */;
+import startOfQuarter_mod from "startOfQuarter" /* 4500 */;
+import requiredArgs_mod from "requiredArgs" /* 4289 */;
 
-let startOfSecond = startOfSecond_mod;
-if (!startOfSecond) {
-  const obj = { default: startOfSecond };
+let startOfQuarter = startOfQuarter_mod;
+if (!startOfQuarter) {
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = startOfQuarter;
 }
-startOfSecond = tmp3;
+startOfQuarter = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
+export default function isSameQuarter(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
+  const defaultResult1 = startOfQuarter.default(arg0);
   const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

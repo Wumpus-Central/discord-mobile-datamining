@@ -55,7 +55,7 @@ let closure_3 = tmp2;
 export const DEFAULT_BUFFER_SIZE = 30;
 export const NativeTransport = tmp2;
 export { makeNativeTransport };
-export const makeNativeTransportFactory = function makeNativeTransportFactory(enableNative) {
+export function makeNativeTransportFactory(enableNative) {
   let tmp = null;
   if (enableNative.enableNative) {
     const NATIVE = NativeTransport(878).NATIVE;
@@ -65,4 +65,4 @@ export const makeNativeTransportFactory = function makeNativeTransportFactory(en
     }
   }
   return tmp;
-};
+}

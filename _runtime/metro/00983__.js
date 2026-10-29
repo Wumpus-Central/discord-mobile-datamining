@@ -9,7 +9,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const WebWorker = "WebWorker";
 
 export const INTEGRATION_NAME = "WebWorker";
-export const registerWebWorker = function registerWebWorker(self) {
+export function registerWebWorker(self) {
   const _self = self.self;
   const _sentryDebugIds = _self._sentryDebugIds;
   let obj = { _sentryMessage: true, _sentryDebugIds, _sentryModuleMetadata: null };
@@ -35,7 +35,7 @@ export const registerWebWorker = function registerWebWorker(self) {
     debug.log("[Sentry Worker] Registered worker with unhandled rejection handling");
   }
   tmp3 = _self;
-};
+}
 export const webWorkerIntegration = registerSpanErrorInstrumentation.defineIntegration((worker) => {
   worker = worker.worker;
   return {
@@ -123,7 +123,7 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               const found = _sentryWasmImages1.filter((code_file) => {
                 let tmp = closure_2_0(693).isPlainObject(code_file) && typeof code_file.code_file === "string";
                 if (tmp) {
-                  tmp = !code_file.some(() => { ... });
+                  tmp = !code_file.some(/* F160816 */ function() { ... });
                 }
                 return tmp;
               });

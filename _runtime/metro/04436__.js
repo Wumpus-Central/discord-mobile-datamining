@@ -1,18 +1,18 @@
 // === Module 4436: ? ===
 
 // Module 4436
-import module_4291_mod from "module_4291" /* 4291 */;
-import _typeof_mod from "module_4287" /* 4287 */;
-import requiredArgs_mod from "requiredArgs" /* 4288 */;
+import module_4292_mod from "module_4292" /* 4292 */;
+import _typeof_mod from "module_4288" /* 4288 */;
+import requiredArgs_mod from "requiredArgs" /* 4289 */;
 
-let module_4291 = module_4291_mod;
-if (!module_4291) {
-  const obj = { default: module_4291 };
+let module_4292 = module_4292_mod;
+if (!module_4292) {
+  const obj = { default: module_4292 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4291;
+  tmp3 = module_4292;
 }
-module_4291 = tmp3;
+module_4292 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -30,26 +30,17 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addMonths(interval, arg1) {
+export default function addDays(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(interval);
-  const defaultResult2 = module_4291.default(arg1);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_4292.default(arg1);
   if (isNaN(defaultResult2)) {
-    const _Date2 = Date;
+    const _Date = Date;
     const date = new Date(NaN);
     return date;
   } else if (defaultResult2) {
-    const date1 = defaultResult1.getDate();
-    const _Date = Date;
-    const date2 = new Date(defaultResult1.getTime());
-    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
-    let tmp8 = date2;
-    if (date1 < date2.getDate()) {
-      const fullYear = date2.getFullYear();
-      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
-      tmp8 = defaultResult1;
-    }
-    return tmp8;
+    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
+    return defaultResult1;
   } else {
     return defaultResult1;
   }

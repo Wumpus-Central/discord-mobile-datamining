@@ -2,7 +2,7 @@
 
 // Module 390
 
-export const isPublicInstance = function isPublicInstance(nativeScrollRef) {
+export function isPublicInstance(nativeScrollRef) {
   let tmp = null != nativeScrollRef;
   if (tmp) {
     let tmp2 = null != nativeScrollRef.__nativeTag;
@@ -13,4 +13,4 @@ export const isPublicInstance = function isPublicInstance(nativeScrollRef) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

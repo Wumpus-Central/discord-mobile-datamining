@@ -45,10 +45,10 @@ function contentUnionToMessages(contents) {
 }
 
 export { contentUnionToMessages };
-export const isStreamingMethod = function isStreamingMethod(arr) {
+export function isStreamingMethod(arr) {
   return arr.includes("Stream");
-};
-export const shouldInstrument = function shouldInstrument(str) {
+}
+export function shouldInstrument(str) {
   const GOOGLE_GENAI_INSTRUMENTED_METHODS = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
   if (GOOGLE_GENAI_INSTRUMENTED_METHODS.includes(str)) {
     return true;
@@ -57,4 +57,4 @@ export const shouldInstrument = function shouldInstrument(str) {
     const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
     return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(parts.pop());
   }
-};
+}

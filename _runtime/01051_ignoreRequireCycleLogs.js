@@ -5,7 +5,7 @@ import _mod17 from "module_17" /* 17 */;
 
 const LogBox = _mod17.LogBox;
 
-export const ignoreRequireCycleLogs = function ignoreRequireCycleLogs(version) {
+export function ignoreRequireCycleLogs(version) {
   let tmp = version;
   if (version) {
     tmp = 0 === version.major;
@@ -16,4 +16,4 @@ export const ignoreRequireCycleLogs = function ignoreRequireCycleLogs(version) {
   if (tmp) {
     LogBox.ignoreLogs(["Require cycle:"]);
   }
-};
+}

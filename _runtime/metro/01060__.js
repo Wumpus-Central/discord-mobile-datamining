@@ -9,7 +9,7 @@ import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 106
 require = arg1;
 const dependencyMap = arg6;
 
-export const getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {
+export function getDefaultIntegrations(patchGlobalPromise) {
   const items = [];
   const push = items.push;
   const obj2 = debugSymbolicatorIntegration;
@@ -196,4 +196,4 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
   const tmpResult62 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.primitiveTagIntegration());
   return items;
-};
+}

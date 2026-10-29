@@ -1,200 +1,208 @@
 // === Module 12703: ? ===
 
 // Module 12703
-import _mod12680 from "module_12680" /* 12680 */;
-import _mod12683 from "module_12683" /* 12683 */;
-import _mod12690 from "module_12690" /* 12690 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _mod12657 from "module_12657" /* 12657 */;
 
-function eventFromEnvelope(arg0, arg1) {
-  closure_0 = arg1;
-  _mod12680.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
+function getAttributeName() {
+  const self = this;
+  if (this.scanner.eof) {
+    self.error("Unexpected end of input");
+  }
+  const tokenStart = self.scanner.tokenStart;
+  const scanner = self.scanner;
+  if (scanner.isDelim(42)) {
+    iter.next();
+    let flag = false;
+    let flag2 = true;
+  } else {
+    flag = true;
+    flag2 = false;
+    if (!iter.isDelim(124)) {
+      self.eat(Ident);
+      flag = true;
+      flag2 = false;
     }
-    return closure_1;
-  });
-  return dependencyMap;
+  }
+  const scanner2 = self.scanner;
+  if (scanner2.isDelim(124)) {
+    const source = self.scanner.source;
+    if (61 !== source.charCodeAt(self.scanner.tokenStart + 1)) {
+      self.scanner.next();
+      self.eat(Ident);
+      const iter2 = self.scanner;
+    } else if (flag2) {
+      self.error("Identifier is expected", self.scanner.tokenEnd);
+    }
+  } else if (flag2) {
+    self.error("Vertical line is expected");
+  }
+  if (flag) {
+    flag = self.scanner.tokenType === Colon;
+  }
+  if (flag) {
+    self.scanner.next();
+    self.eat(Ident);
+    const iter3 = self.scanner;
+  }
+  const obj = { type: "Identifier", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: null };
+  const scanner3 = self.scanner;
+  obj.name = scanner3.substrToCursor(tokenStart);
+  return obj;
 }
-
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
-      }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
-        return items;
+function getOperator() {
+  const self = this;
+  const tokenStart = this.scanner.tokenStart;
+  const source = this.scanner.source;
+  const charCodeAtResult = source.charCodeAt(tokenStart);
+  let tmp3 = tmp2;
+  if (61 !== charCodeAtResult) {
+    tmp3 = 126 !== charCodeAtResult;
+  }
+  if (tmp3) {
+    tmp3 = 94 !== charCodeAtResult;
+  }
+  if (tmp3) {
+    tmp3 = 36 !== charCodeAtResult;
+  }
+  if (tmp3) {
+    tmp3 = 42 !== charCodeAtResult;
+  }
+  if (tmp3) {
+    tmp3 = 124 !== charCodeAtResult;
+  }
+  if (tmp3) {
+    self.error("Attribute selector (=, ~=, ^=, $=, *=, |=) is expected");
+  }
+  self.scanner.next();
+  if (61 !== charCodeAtResult) {
+    const scanner = self.scanner;
+    if (!scanner.isDelim(61)) {
+      self.error("Equal sign is expected");
+    }
+    self.scanner.next();
+    const iter2 = self.scanner;
+  }
+  const scanner2 = self.scanner;
+  return scanner2.substrToCursor(tokenStart);
+}
+const Ident = _mod12657.TYPE.Ident;
+const String = _mod12657.TYPE.String;
+const Colon = _mod12657.TYPE.Colon;
+const LeftSquareBracket = _mod12657.TYPE.LeftSquareBracket;
+const RightSquareBracket = _mod12657.TYPE.RightSquareBracket;
+let obj = {
+  name: "AttributeSelector",
+  structure: null,
+  parse() {
+    const self = this;
+    this.eat(LeftSquareBracket);
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const call = getAttributeName.call;
+    const scanner2 = self.scanner;
+    scanner2.skipSC();
+    let tmp7 = null;
+    let tmp8 = null;
+    let tmp9 = null;
+    if (self.scanner.tokenType !== RightSquareBracket) {
+      if (self.scanner.tokenType === Ident) {
+        let tokenValue = null;
+        if (self.scanner.tokenType === tmp28) {
+          const scanner7 = self.scanner;
+          tokenValue = scanner7.getTokenValue();
+          self.scanner.next();
+          const scanner8 = self.scanner;
+          scanner8.skipSC();
+          const iter3 = self.scanner;
+        }
+        tmp7 = tokenValue;
+        tmp8 = null;
+        tmp9 = null;
       } else {
-        const dsnFromStringResult = _mod12683.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod12690.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
+        const call2 = getOperator.call;
+        if (typeof call2 === "unknown") {
+          const tokenStart = self.scanner.tokenStart;
+          const source = self.scanner.source;
+          const charCodeAtResult = source.charCodeAt(tokenStart);
+          let tmp12 = tmp11;
+          if (61 !== charCodeAtResult) {
+            tmp12 = 126 !== charCodeAtResult;
           }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod12690;
+          if (tmp12) {
+            tmp12 = 94 !== charCodeAtResult;
+          }
+          if (tmp12) {
+            tmp12 = 36 !== charCodeAtResult;
+          }
+          if (tmp12) {
+            tmp12 = 42 !== charCodeAtResult;
+          }
+          if (tmp12) {
+            tmp12 = 124 !== charCodeAtResult;
+          }
+          if (tmp12) {
+            self.error("Attribute selector (=, ~=, ^=, $=, *=, |=) is expected");
+          }
+          self.scanner.next();
+          if (61 !== charCodeAtResult) {
+            const scanner3 = self.scanner;
+            if (!scanner3.isDelim(61)) {
+              self.error("Equal sign is expected");
+            }
+            self.scanner.next();
+            const iter2 = self.scanner;
+          }
+          const scanner4 = self.scanner;
+          let substrToCursorResult = scanner4.substrToCursor(tokenStart);
+          const iter = self.scanner;
+        } else {
+          substrToCursorResult = call2(self);
         }
+        const scanner5 = self.scanner;
+        scanner5.skipSC();
+        if (self.scanner.tokenType === String) {
+          let StringResult = self.String();
+        } else {
+          StringResult = self.Identifier();
+        }
+        const scanner6 = self.scanner;
+        scanner6.skipSC();
       }
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(12680).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
-        });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
+    self.eat(RightSquareBracket);
+    const tmp4 = typeof call === "unknown" ? getAttributeName() : call(self);
+    return { type: "AttributeSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: typeof call === "unknown" ? getAttributeName() : call(self), matcher: tmp9, value: tmp8, flags: tmp7 };
+  },
+  generate(name) {
+    const self = this;
+    this.chunk("[");
+    this.node(name.name);
+    let str = " ";
+    let str2 = " ";
+    if (null !== name.matcher) {
+      self.chunk(name.matcher);
+      let tmp4 = str;
+      if (null !== name.value) {
+        self.node(name.value);
+        if ("String" === name.value.type) {
+          str = "";
         }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(12680).createEnvelope(tmp4, 12680));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        tmp4 = str;
       }
-    };
-  };
-}
+      str2 = tmp4;
+    }
+    if (null !== name.flags) {
+      self.chunk(str2);
+      self.chunk(name.flags);
+    }
+    self.chunk("]");
+  }
+};
+const obj2 = { name: "Identifier", matcher: null, value: ["String", "Identifier", null], flags: null };
+const items = [String, null];
+obj2.matcher = items;
+const items1 = [String, null];
+obj2.flags = items1;
+obj.structure = obj2;
+
+export default obj;

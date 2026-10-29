@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5caaadc4fb41849c36d80e2425141f40", name: "NewUserIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/consoles", width: 254, height: 127, scales: [2, 3], hash: "4d6a15fbe9eb4d6c66e3d9151f9a0183", name: "link_failure", type: "png" });

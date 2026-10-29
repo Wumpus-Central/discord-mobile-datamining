@@ -80,7 +80,7 @@ function repeatedMsgEq(TResult, arg1, arg2) {
   }
 }
 
-export const reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
+export function reflectionEquals(fields, arg1, arg2) {
   if (arg1 === arg2) {
     return true;
   } else {
@@ -165,4 +165,4 @@ export const reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
     }
     return false;
   }
-};
+}

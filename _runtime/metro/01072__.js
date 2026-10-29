@@ -193,18 +193,18 @@ export const BACKGROUND_ANIMATION_DURATION = 200;
 export const FeedbackWidgetManager = importDefaultResult1Result1;
 export const FeedbackButtonManager = importDefaultResult1Result2;
 export const ScreenshotButtonManager = importDefaultResult1Result3;
-export const showFeedbackButton = () => {
+export () => {
   const result = ScreenshotButtonManager(1073).lazyLoadAutoInjectFeedbackButtonIntegration();
   importDefaultResult1Result2.show();
-};
-export const hideFeedbackButton = () => {
+}
+export () => {
   importDefaultResult1Result2.hide();
-};
-export const showFeedbackWidget = () => {
+}
+export () => {
   const result = ScreenshotButtonManager(1073).lazyLoadAutoInjectFeedbackIntegration();
   importDefaultResult1Result1.show();
-};
-export const showScreenshotButton = () => {
+}
+export () => {
   if (obj.isWeb()) {
     const debug = ScreenshotButtonManager(693).debug;
     debug.warn("ScreenshotButton is not supported on Web.");
@@ -214,16 +214,16 @@ export const showScreenshotButton = () => {
     const tmpResult = ScreenshotButtonManager(1073);
   }
   obj = ScreenshotButtonManager(879);
-};
-export const hideScreenshotButton = () => {
+}
+export () => {
   importDefaultResult1Result3.hide();
-};
-export const resetFeedbackButtonManager = () => {
+}
+export () => {
   importDefaultResult1Result2.reset();
-};
-export const resetFeedbackWidgetManager = () => {
+}
+export () => {
   importDefaultResult1Result1.reset();
-};
-export const resetScreenshotButtonManager = () => {
+}
+export () => {
   importDefaultResult1Result3.reset();
-};
+}

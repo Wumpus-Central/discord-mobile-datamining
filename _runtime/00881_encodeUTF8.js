@@ -7,11 +7,11 @@ import globalEncodeFactory from "globalEncodeFactory" /* 883 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const encodeUTF8 = function encodeUTF8(json) {
+export function encodeUTF8(json) {
   const sentryCarrier = _mod882.getSentryCarrier();
   if (!sentryCarrier.encodePolyfill) {
     const encodePolyfill = globalEncodeFactory.useEncodePolyfill();
     const tmpResult = globalEncodeFactory;
   }
   return sentryCarrier.encodePolyfill(json);
-};
+}

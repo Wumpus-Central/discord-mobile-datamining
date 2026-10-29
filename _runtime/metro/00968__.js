@@ -9,7 +9,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const SpotlightBrowser = "SpotlightBrowser";
 
 export const INTEGRATION_NAME = "SpotlightBrowser";
-export const isSpotlightInteraction = function isSpotlightInteraction(type) {
+export function isSpotlightInteraction(type) {
   let spans = "transaction" === type.type;
   if (spans) {
     spans = type.spans;
@@ -37,7 +37,7 @@ export const isSpotlightInteraction = function isSpotlightInteraction(type) {
     });
   }
   return Boolean(spans);
-};
+}
 export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {

@@ -15,7 +15,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       } else {
         c2 = 0;
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp7) {
       if (tmp3 === c2) {
@@ -79,7 +79,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
 };
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const diagnoseSdkConnectivity = function diagnoseSdkConnectivity() {
+export function diagnoseSdkConnectivity() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -88,4 +88,4 @@ export const diagnoseSdkConnectivity = function diagnoseSdkConnectivity() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -46,7 +46,7 @@ function createStoreImpl(fn) {
   return store;
 }
 
-export const createStore = (fn) => {
+export (fn) => {
   if (fn) {
     const _Set = Set;
     const set = new Set();
@@ -95,4 +95,4 @@ export const createStore = (fn) => {
     tmp = createStoreImpl;
   }
   return tmp;
-};
+}

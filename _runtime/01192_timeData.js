@@ -6,7 +6,7 @@ import _mod1193 from "module_1193" /* 1193 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const getBestPattern = function getBestPattern(arr3, locale) {
+export function getBestPattern(arr3, locale) {
   let num = 0;
   let str = "";
   let str2 = "";
@@ -133,4 +133,4 @@ export const getBestPattern = function getBestPattern(arr3, locale) {
     throw error;
   }
   return str2;
-};
+}

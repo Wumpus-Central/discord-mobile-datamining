@@ -99,7 +99,7 @@ function _setAppStartEndData(arg0) {
   global = arg0;
 }
 
-export const captureAppStart = function captureAppStart() {
+export function captureAppStart() {
   c0 = true;
   return fn(undefined, undefined, undefined, function*() {
     if (c5 === 2) {
@@ -112,7 +112,7 @@ export const captureAppStart = function captureAppStart() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ export const captureAppStart = function captureAppStart() {
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             const obj9 = _true(tmp3[0]);
           }
@@ -206,8 +206,8 @@ export const captureAppStart = function captureAppStart() {
       }
     }
   });
-};
-export const _captureAppStart = function _captureAppStart(_captureAppStartResult3) {
+}
+export function _captureAppStart(_captureAppStartResult3) {
   const isManual = _captureAppStartResult3.isManual;
   c1 = undefined;
   return fn(this, undefined, undefined, function*() {
@@ -221,7 +221,7 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -258,7 +258,7 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             const obj9 = _true(tmp3[0]);
           }
@@ -315,8 +315,8 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
       }
     }
   });
-};
-export const setRootComponentCreationTimestampMs = function setRootComponentCreationTimestampMs(arg0) {
+}
+export function setRootComponentCreationTimestampMs(arg0) {
   let timestampMs;
   if (null != global) {
     timestampMs = global.timestampMs;
@@ -331,8 +331,8 @@ export const setRootComponentCreationTimestampMs = function setRootComponentCrea
   }
   c6 = arg0;
   c7 = true;
-};
-export const _setRootComponentCreationTimestampMs = function _setRootComponentCreationTimestampMs(arg0) {
+}
+export function _setRootComponentCreationTimestampMs(arg0) {
   let timestampMs;
   if (null != global) {
     timestampMs = global.timestampMs;
@@ -347,12 +347,12 @@ export const _setRootComponentCreationTimestampMs = function _setRootComponentCr
   }
   c6 = arg0;
   c7 = false;
-};
+}
 export { _setAppStartEndData };
 export function _clearRootComponentCreationTimestampMs() {
   c6 = undefined;
 }
-export const appStartIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -374,7 +374,7 @@ export const appStartIntegration = () => {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -741,7 +741,7 @@ export const appStartIntegration = () => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -799,7 +799,7 @@ export const appStartIntegration = () => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -934,4 +934,4 @@ export const appStartIntegration = () => {
       debug.log("[AppStart] First started active root span id recorded.", closure_5);
     }
   };
-};
+}

@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5d5d74ab73f83ee9470274845a372119", name: "ExperimentalMythicIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 58.333333333333336, height: 58.333333333333336, scales: [3], hash: "99ffc81e67285d18182e87dbce7ba5f1", name: "asset_silver_badge_small", type: "png" });

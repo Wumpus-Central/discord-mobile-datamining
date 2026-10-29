@@ -118,7 +118,7 @@ export const PREVIOUS_TRACE_MAX_DURATION = 3600;
 export const PREVIOUS_TRACE_TMP_SPAN_ATTRIBUTE = "sentry.previous_trace";
 export { addPreviousTraceSpanLink };
 export { getPreviousTraceFromSessionStorage };
-export const linkTraces = function linkTraces(on, linkPreviousTrace) {
+export function linkTraces(on, linkPreviousTrace) {
   closure_1 = undefined;
   c2 = undefined;
   closure_0 = tmp;
@@ -170,8 +170,8 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
       }
     });
   }
-};
-export const spanContextSampled = function spanContextSampled(traceFlags) {
+}
+export function spanContextSampled(traceFlags) {
   return 1 === traceFlags.traceFlags;
-};
+}
 export { storePreviousTraceInSessionStorage };

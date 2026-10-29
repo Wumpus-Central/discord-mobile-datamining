@@ -4,7 +4,7 @@
 const global = arg0;
 const map = new Map();
 
-export const unstable_hasComponent = function unstable_hasComponent(arg0) {
+export function unstable_hasComponent(arg0) {
   value = map.get(arg0);
   if (null == value) {
     if (global.__nativeComponentRegistry__hasComponent) {
@@ -19,4 +19,4 @@ export const unstable_hasComponent = function unstable_hasComponent(arg0) {
     }
   }
   return value;
-};
+}

@@ -1,46 +1,52 @@
 // === Module 6473: ? ===
 
 // Module 6473
-import _mod6474 from "module_6474" /* 6474 */;
-import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 6475 */;
+import _mod1476 from "module_1476" /* 1476 */;
+import defineDataProperty from "defineDataProperty" /* 1477 */;
+import keys2 from "keys2" /* 6474 */;
 
-const tmp = _mod6474("%Reflect.construct%", true);
-let closure_0 = tmp;
-try {
-  const obj = {
-    () => {
-
-      }
-  };
-  DefinePropertyOrThrow({}, "", obj);
-  let tmp4 = DefinePropertyOrThrow;
-  if (tmp4) {
-    if (tmp) {
-      let closure_1 = {};
-      const obj3 = {
-        () => {
-                throw closure_1;
-              },
-        "[[Enumerable]]": true
-      };
-      tmp4({}, "length", obj3);
-      module.exports = function IsConstructor(arg0) {
-        try {
-          closure_0(arg0, obj2);
-        } catch (tmp5) {
-          return tmp5 === closure_1;
-        }
-      };
-      const obj2 = {};
-    }
-  }
-  module.exports = function IsConstructor(fn) {
-    let prototype = typeof fn === "function";
-    if (typeof fn === "function") {
-      prototype = fn.prototype;
-    }
-    return prototype;
-  };
-} catch (err) {
-  tmp4 = null;
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
+  const _Symbol = Symbol;
+  tmp = typeof Symbol("foo") === "symbol";
 }
+let closure_2 = tmp;
+const tmp2 = _mod1476();
+let closure_5 = tmp2;
+function defineProperty(arg0, arg1, arg2, arg3) {
+
+}
+function defineProperties(prototype, ownPropertyDescriptors) {
+  const arr = keys2(ownPropertyDescriptors);
+  if (!closure_2) {
+    let num = 0;
+    if (0 < arr.length) {
+      while (typeof defineProperty === "function") {
+        if (!(tmp7 in prototype)) {
+          let tmp14 = defineDataProperty;
+          if (closure_5) {
+            let flag2 = true;
+            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
+          } else {
+            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
+          }
+        } else if (true !== tmp9) {
+          if (typeof tmp9 === "function") {
+            let call2 = toString.call;
+          }
+        }
+        num = num + 1;
+      }
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    const call = concat.call;
+    const _Object = Object;
+    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
+    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
+  }
+  const tmp = arguments.length > 2 ? arguments[2] : {};
+}
+defineProperties.supportsDescriptors = tmp2;
+
+export default defineProperties;

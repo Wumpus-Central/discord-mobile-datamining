@@ -6,7 +6,7 @@ const importDefault = arg2;
 const dependencyMap = arg6;
 let closure_4 = ["createNode", "cloneNode", "cloneNodeWithNewChildren", "cloneNodeWithNewProps", "cloneNodeWithNewChildrenAndProps", "createChildSet", "appendChild", "appendChildToSet", "completeRoot", "measure", "measureInWindow", "measureLayout", "configureNextLayoutAnimation", "sendAccessibilityEvent", "findShadowNodeByTag_DEPRECATED", "setNativeProps", "dispatchCommand", "compareDocumentPosition", "getBoundingClientRect", "setIsJSResponder", "unstable_DefaultEventPriority", "unstable_DiscreteEventPriority", "unstable_ContinuousEventPriority", "unstable_IdleEventPriority", "unstable_getCurrentEventPriority"];
 
-export const getFabricUIManager = function getFabricUIManager() {
+export function getFabricUIManager() {
   let tmp = null == closure_3;
   if (tmp) {
     tmp = null != global.nativeFabricUIManager;
@@ -32,4 +32,4 @@ export const getFabricUIManager = function getFabricUIManager() {
     })(global.nativeFabricUIManager, closure_4);
   }
   return closure_3;
-};
+}

@@ -64,7 +64,7 @@ function _INTERNAL_flushMetricsBuffer(getOptions, value) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attributes, scope) {
+export function _INTERNAL_captureMetric(attributes, scope) {
   scope = undefined;
   if (scope != null) {
     scope = scope.scope;
@@ -253,13 +253,13 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     const debug = consoleSandbox.debug;
     debug.warn("No client available to capture metric.");
   }
-};
+}
 export { _INTERNAL_captureSerializedMetric };
 export { _INTERNAL_flushMetricsBuffer };
-export const _INTERNAL_getMetricBuffer = function _INTERNAL_getMetricBuffer(arg0) {
+export function _INTERNAL_getMetricBuffer(arg0) {
   const globalSingleton = _mod701.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
   return globalSingleton.get(arg0);
-};
+}

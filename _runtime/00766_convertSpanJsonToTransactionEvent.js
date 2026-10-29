@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
+export function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
   const obj = { type: "transaction", timestamp: beforeSendSpanResult.timestamp, start_timestamp: beforeSendSpanResult.start_timestamp, transaction: beforeSendSpanResult.description, contexts: null, measurements: null };
   const obj2 = { trace_id: beforeSendSpanResult.trace_id, span_id: beforeSendSpanResult.span_id, parent_span_id: beforeSendSpanResult.parent_span_id, op: beforeSendSpanResult.op, status: beforeSendSpanResult.status, origin: beforeSendSpanResult.origin, data: null };
   const merged = Object.assign(beforeSendSpanResult.data);
@@ -31,8 +31,8 @@ export const convertSpanJsonToTransactionEvent = function convertSpanJsonToTrans
   obj.contexts = obj6;
   obj.measurements = beforeSendSpanResult.measurements;
   return obj;
-};
-export const convertTransactionEventToSpanJson = function convertTransactionEventToSpanJson(contexts) {
+}
+export function convertTransactionEventToSpanJson(contexts) {
   contexts = contexts.contexts;
   let trace;
   if (contexts != null) {
@@ -76,4 +76,4 @@ export const convertTransactionEventToSpanJson = function convertTransactionEven
   obj2.exclusive_time = tmp4;
   obj2.measurements = contexts.measurements;
   return obj2;
-};
+}

@@ -12,7 +12,7 @@ const map1 = new Map();
 
 export { customBubblingEventTypes };
 export const customDirectEventTypes = obj2;
-export const register = function register(APNGDecorationView, fn) {
+export function register(APNGDecorationView, fn) {
   _modDef38(!map.has(APNGDecorationView), "Tried to register two views with the same name %s", APNGDecorationView);
   let str = "null";
   if (null !== fn) {
@@ -21,8 +21,8 @@ export const register = function register(APNGDecorationView, fn) {
   _modDef38(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", APNGDecorationView, str);
   const result = map.set(APNGDecorationView, fn);
   return APNGDecorationView;
-};
-export const get = function get(arg0) {
+}
+export function get(arg0) {
   value = map1.get(arg0);
   if (null == value) {
     value2 = map.get(arg0);
@@ -71,4 +71,4 @@ export const get = function get(arg0) {
     value = value1Result;
   }
   return value;
-};
+}

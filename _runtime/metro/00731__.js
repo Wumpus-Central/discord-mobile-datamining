@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const hasSpansEnabled = function hasSpansEnabled(options) {
+export function hasSpansEnabled(options) {
   if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
     if (!globalThis.__SENTRY_TRACING__) {
       return false;
@@ -28,4 +28,4 @@ export const hasSpansEnabled = function hasSpansEnabled(options) {
     const tmp8 = null == tmp.tracesSampleRate && !tmp.tracesSampler;
   }
   return !tmp6;
-};
+}

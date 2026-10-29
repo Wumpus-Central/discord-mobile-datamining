@@ -1,5 +1,7 @@
 // === Module 12638: ? ===
 
 // Module 12638
+import registerAsset from "module_1131" /* 1131 */;
 
-export const SDK_VERSION = "8.55.0";
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conjure/home/images", width: 640, height: 360, scales: [1], hash: "c0003a72b8ff1b39e6b2cebe0eda12b2", name: "conjure-home-flappy", type: "svg" });

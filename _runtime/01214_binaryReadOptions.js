@@ -216,7 +216,7 @@ let items = [
 const _moduleResult = _createClass(BinaryReader, items);
 const hasOwnProperty = _moduleResult;
 
-export const binaryReadOptions = function binaryReadOptions(BINARY_READ_OPTIONS) {
+export function binaryReadOptions(BINARY_READ_OPTIONS) {
   if (BINARY_READ_OPTIONS) {
     const _Object = Object;
     const _Object2 = Object;
@@ -225,5 +225,5 @@ export const binaryReadOptions = function binaryReadOptions(BINARY_READ_OPTIONS)
     merged = closure_4;
   }
   return merged;
-};
+}
 export const BinaryReader = _moduleResult;

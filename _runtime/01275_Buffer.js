@@ -3429,12 +3429,12 @@ do {
 } while (num < 16);
 
 export { Buffer };
-export const SlowBuffer = function SlowBuffer(arg0) {
+export function SlowBuffer(arg0) {
   let num = arg0;
   if (+arg0 != arg0) {
     num = 0;
   }
   return Buffer.alloc(+num);
-};
+}
 export const INSPECT_MAX_BYTES = 50;
 export const kMaxLength = 2147483647;

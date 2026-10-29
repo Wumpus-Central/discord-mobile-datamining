@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const makeFetchTransport = function makeFetchTransport(bufferSize) {
+export function makeFetchTransport(bufferSize) {
   _require = bufferSize;
   let nativeImplementation = arg1;
   if (arg1 === undefined) {
@@ -25,7 +25,7 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -125,4 +125,4 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
     return applyArgumentsResult;
   }
   return obj2.createTransport(bufferSize, makeRequest, require("module_693").makePromiseBuffer(num));
-};
+}

@@ -3,7 +3,7 @@
 // Module 782
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const debounce = function debounce(arg0, arg1, maxWait) {
+export function debounce(arg0, arg1, maxWait) {
   closure_0 = arg0;
   closure_1 = arg1;
   function invokeFunc() {
@@ -85,4 +85,4 @@ export const debounce = function debounce(arg0, arg1, maxWait) {
     tmp3 = tmp10;
   };
   return debounced;
-};
+}

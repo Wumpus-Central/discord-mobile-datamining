@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 
 export const XHR_READYSTATE_DONE = 4;
-export const createStealthXhr = function createStealthXhr() {
+export function createStealthXhr() {
   let RN_GLOBAL_OBJ = arg0;
   if (arg0 === undefined) {
     RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
@@ -24,4 +24,4 @@ export const createStealthXhr = function createStealthXhr() {
   } else {
     return null;
   }
-};
+}

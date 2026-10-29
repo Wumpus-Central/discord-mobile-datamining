@@ -13,7 +13,7 @@ let c2 = "flag.evaluation.";
 
 export const _INTERNAL_FLAG_BUFFER_SIZE = 100;
 export const _INTERNAL_MAX_FLAGS_PER_SPAN = 10;
-export const _INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToActiveSpan(flagKey, value) {
+export function _INTERNAL_addFeatureFlagToActiveSpan(flagKey, value) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 10;
@@ -37,8 +37,8 @@ export const _INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatur
       const tmp6Result = spanToJSON;
     }
   }
-};
-export const _INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
+}
+export function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
   const currentScope = _mod724.getCurrentScope();
   const flags = currentScope.getScopeData().contexts.flags;
   const arr = flags ? flags.values : [];
@@ -53,8 +53,8 @@ export const _INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsF
     contexts.contexts.flags = obj2;
   }
   return contexts;
-};
-export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(flagKey, value) {
+}
+export function _INTERNAL_insertFlagToScope(flagKey, value) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 100;
@@ -86,8 +86,8 @@ export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(
       values.push(obj3);
     }
   }
-};
-export const _INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, flag, result, arg3) {
+}
+export function _INTERNAL_insertToFlagBuffer(arr, flag, result, arg3) {
   closure_0 = flag;
   if (typeof result === "boolean") {
     if (arr.length > arg3) {
@@ -108,4 +108,4 @@ export const _INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffe
       arr.push(obj);
     }
   }
-};
+}

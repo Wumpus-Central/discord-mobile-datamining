@@ -6,7 +6,7 @@ import PixelRatioDefault from "PixelRatio" /* 87 */;
 importDefault = arg2;
 const dependencyMap = arg6;
 
-export const pickScale = function pickScale(scales, _default) {
+export function pickScale(scales, _default) {
   value = _default;
   if (_default == null) {
     value = PixelRatioDefault.get();
@@ -19,14 +19,14 @@ export const pickScale = function pickScale(scales, _default) {
     return scales[num];
   }
   return scales[scales.length - 1] || 1;
-};
+}
 export function setUrlCacheBreaker(arg0) {
   global = arg0;
 }
-export const getUrlCacheBreaker = function getUrlCacheBreaker() {
+export function getUrlCacheBreaker() {
   let str = "";
   if (null != global) {
     str = global;
   }
   return str;
-};
+}

@@ -13,7 +13,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = false;
 
-export const registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
+export function registerSpanErrorInstrumentation() {
   if (!c2) {
     function errorCallback() {
       const activeSpan = spanToJSON.getActiveSpan();
@@ -37,4 +37,4 @@ export const registerSpanErrorInstrumentation = function registerSpanErrorInstru
     const result = instrumentError.addGlobalErrorInstrumentationHandler(errorCallback);
     const result1 = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
   }
-};
+}

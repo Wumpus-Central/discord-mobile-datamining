@@ -2,7 +2,7 @@
 
 // Module 890
 
-export const isHardCrash = function isHardCrash(str) {
+export function isHardCrash(str) {
   if (typeof str !== "string") {
     if ("exception" in str) {
       const exception = str.exception;
@@ -18,4 +18,4 @@ export const isHardCrash = function isHardCrash(str) {
     values2 = str.exception.values;
   }
   values2 = [];
-};
+}

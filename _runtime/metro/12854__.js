@@ -1,7 +1,26 @@
 // === Module 12854: ? ===
 
 // Module 12854
-import registerAsset from "module_1131" /* 1131 */;
+import _mod12855 from "module_12855" /* 12855 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 78, height: 15, scales: [2, 3], hash: "6686c0dca54e6176e93ab454fcbd7545", name: "img_transfer_arrow", type: "png" });
+export const GLOBAL_OBJ = globalThis;
+export function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
+  let tmp = arg2;
+  if (!arg2) {
+    tmp = globalThis;
+  }
+  const tmp2 = tmp.__SENTRY__ || {};
+  tmp.__SENTRY__ = tmp2;
+  const tmp3 = tmp2[_mod12855.SDK_VERSION] || {};
+  tmp2[_mod12855.SDK_VERSION] = tmp3;
+  let tmp4 = tmp3[globalMetricsAggregators];
+  if (!tmp4) {
+    const tmp6 = fn();
+    tmp3[globalMetricsAggregators] = tmp6;
+    tmp4 = tmp6;
+  }
+  return tmp4;
+}

@@ -1,15 +1,29 @@
 // === Module 8276: ? ===
 
 // Module 8276
-const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
+import findOffsets from "findOffsets" /* 8277 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  isHeicFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
+          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
     }
   },
-  5: "PentaxModelID",
-  555: "LevelInfo"
+  findHeicOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  }
 };
-
-export default obj;

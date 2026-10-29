@@ -14,7 +14,7 @@ let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
+export function createTransport(bufferSize, arg1) {
   _require = bufferSize;
   dependencyMap = arg1;
   let promiseBuffer = arg2;
@@ -128,4 +128,4 @@ export const createTransport = function createTransport(bufferSize, arg1) {
       return promiseBuffer.drain(arg0);
     }
   };
-};
+}

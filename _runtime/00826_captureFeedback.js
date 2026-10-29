@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const captureFeedback = function captureFeedback(contact_email) {
+export function captureFeedback(contact_email) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -28,4 +28,4 @@ export const captureFeedback = function captureFeedback(contact_email) {
     client.emit("beforeSendFeedback", obj2, obj);
   }
   return currentScope.captureEvent(obj2, obj);
-};
+}

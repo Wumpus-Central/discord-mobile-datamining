@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, tunnel) {
+export function createUserFeedbackEnvelope(event_id, tunnel) {
   ({ metadata, dsn } = tunnel);
   const obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
   let sdk;
@@ -31,4 +31,4 @@ export const createUserFeedbackEnvelope = function createUserFeedbackEnvelope(ev
   const date = new Date();
   const items1 = [items];
   return _mod693.createEnvelope(obj, items1);
-};
+}

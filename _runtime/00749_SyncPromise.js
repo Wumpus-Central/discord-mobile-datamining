@@ -165,15 +165,15 @@ const _moduleResult = _createClass(SyncPromise, items);
 let c3 = _moduleResult;
 
 export const SyncPromise = _moduleResult;
-export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
+export function rejectedSyncPromise(arg0) {
   closure_0 = arg0;
   return new _moduleResult((arg0, fn) => {
     fn(closure_0);
   });
-};
-export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
+}
+export function resolvedSyncPromise(arg0) {
   closure_0 = arg0;
   return new _moduleResult((fn) => {
     fn(closure_0);
   });
-};
+}

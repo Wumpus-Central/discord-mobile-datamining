@@ -1,19 +1,57 @@
 // === Module 12658: ? ===
 
 // Module 12658
-import _mod12642 from "module_12642" /* 12642 */;
+import _mod12657 from "module_12657" /* 12657 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentrySpan = "_sentrySpan";
+const WhiteSpace = _mod12657.TYPE.WhiteSpace;
+const Comment = _mod12657.TYPE.Comment;
 
-export const _getSpanForScope = function _getSpanForScope(currentScope) {
-  return currentScope[_sentrySpan];
-};
-export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
-  if (arg1) {
-    const result = _mod12642.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-  } else {
-    delete tmp2[tmp];
+export default function readSequence(recognizer) {
+  const self = this;
+  const list = this.createList();
+  const obj = { recognizer, space: null, ignoreWS: false, ignoreWSAfter: false };
+  const scanner = this.scanner;
+  scanner.skipSC();
+  if (!this.scanner.eof) {
+    while (true) {
+      let tokenType = self.scanner.tokenType;
+      if (Comment === tokenType) {
+        let iter2 = self.scanner;
+        let nextResult = iter2.next();
+      } else {
+        if (WhiteSpace === tokenType) {
+          if (obj.ignoreWS) {
+            let iter = self.scanner;
+            let nextResult1 = iter.next();
+          } else {
+            obj.space = self.WhiteSpace();
+          }
+        } else {
+          let getNode = recognizer.getNode;
+          let call = getNode.call;
+          let tmp3 = typeof call === "unknown" ? getNode(obj) : call(self, obj);
+          if (undefined === tmp3) {
+            break;
+          } else {
+            if (null !== obj.space) {
+              let arr = list.push(obj.space);
+              obj.space = null;
+            }
+            let arr3 = list.push(tmp3);
+            if (obj.ignoreWSAfter) {
+              obj.ignoreWSAfter = false;
+              obj.ignoreWS = true;
+            } else {
+              obj.ignoreWS = false;
+            }
+          }
+        }
+        break;
+      }
+      if (self.scanner.eof) {
+        break;
+      }
+    }
   }
+  return list;
 };

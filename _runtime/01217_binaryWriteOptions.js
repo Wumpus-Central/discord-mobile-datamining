@@ -278,7 +278,7 @@ const items = [
 ];
 const _moduleResult = _createClass(BinaryWriter, items);
 
-export const binaryWriteOptions = function binaryWriteOptions(arg0) {
+export function binaryWriteOptions(arg0) {
   if (arg0) {
     const _Object = Object;
     const _Object2 = Object;
@@ -287,5 +287,5 @@ export const binaryWriteOptions = function binaryWriteOptions(arg0) {
     merged = closure_3;
   }
   return merged;
-};
+}
 export const BinaryWriter = _moduleResult;

@@ -48,7 +48,7 @@ const map = new Map();
 const defaultRequestInstrumentationOptions = { traceFetch: true, traceXHR: true, enableHTTPTimings: true, trackFetchStreamPerformance: false };
 
 export { defaultRequestInstrumentationOptions };
-export const instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions, arg1) {
+export function instrumentOutgoingRequests(getOptions, arg1) {
   let merged = Object.assign(shouldCreateSpanForRequest);
   let merged1 = Object.assign(arg1);
   ({ shouldCreateSpanForRequest, enableHTTPTimings: require, tracePropagationTargets: dependencyMap, onRequestSpanStart: weakMap, onRequestSpanEnd: map, traceFetch, traceXHR, trackFetchStreamPerformance } = {});
@@ -351,5 +351,5 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
     });
   }
   let obj = {};
-};
+}
 export { shouldAttachHeaders };

@@ -9,7 +9,7 @@ function browserReplayIntegrationNoop() {
 
 }
 
-export const browserReplayIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -60,4 +60,4 @@ export const browserReplayIntegration = () => {
     const tmpResult = init;
   }
   return replayIntegrationResult;
-};
+}

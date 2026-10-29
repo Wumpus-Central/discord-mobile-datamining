@@ -283,7 +283,7 @@ function nativeFramesIntegration() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -319,19 +319,19 @@ function nativeFramesIntegration() {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       c2 = false;
-                      const timeout = setTimeout(() => { ... }, 2000);
+                      const timeout = setTimeout(/* F144622 */ function() { ... }, 2000);
                       const NATIVE = closure_0(878).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
-                      nativeFrames.then(() => { ... }).then(undefined, () => { ... });
+                      nativeFrames.then(/* F144623 */ function() { ... }).then(undefined, /* F144624 */ function() { ... });
                     });
                     new Promise((arg0, arg1) => {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       c2 = false;
-                      const timeout = setTimeout(() => { ... }, 2000);
+                      const timeout = setTimeout(/* F144622 */ function() { ... }, 2000);
                       const NATIVE = closure_0(878).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
-                      nativeFrames.then(() => { ... }).then(undefined, () => { ... });
+                      nativeFrames.then(/* F144623 */ function() { ... }).then(undefined, /* F144624 */ function() { ... });
                     }).then((nativeFrames) => {
                       closure_0({ timestamp, nativeFrames });
                     }).then(undefined, (arg0) => {
@@ -456,7 +456,7 @@ function nativeFramesIntegration() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -597,7 +597,7 @@ function nativeFramesIntegration() {
   };
 }
 
-export const createNativeFramesIntegrations = (enableNative2) => {
+export (enableNative2) => {
   if (!enableNative2) {
     if (require("NativeModules").NATIVE.enableNative) {
       let NATIVE = tmp(tmp2[0]).NATIVE;
@@ -775,7 +775,7 @@ export const createNativeFramesIntegrations = (enableNative2) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -811,19 +811,19 @@ export const createNativeFramesIntegrations = (enableNative2) => {
                         closure_0 = arg0;
                         closure_1 = arg1;
                         c2 = false;
-                        const timeout = setTimeout(() => { ... }, 2000);
+                        const timeout = setTimeout(/* F144622 */ function() { ... }, 2000);
                         const NATIVE = closure_0(878).NATIVE;
                         const nativeFrames = NATIVE.fetchNativeFrames();
-                        nativeFrames.then(() => { ... }).then(undefined, () => { ... });
+                        nativeFrames.then(/* F144623 */ function() { ... }).then(undefined, /* F144624 */ function() { ... });
                       });
                       new Promise((arg0, arg1) => {
                         closure_0 = arg0;
                         closure_1 = arg1;
                         c2 = false;
-                        const timeout = setTimeout(() => { ... }, 2000);
+                        const timeout = setTimeout(/* F144622 */ function() { ... }, 2000);
                         const NATIVE = closure_0(878).NATIVE;
                         const nativeFrames = NATIVE.fetchNativeFrames();
-                        nativeFrames.then(() => { ... }).then(undefined, () => { ... });
+                        nativeFrames.then(/* F144623 */ function() { ... }).then(undefined, /* F144624 */ function() { ... });
                       }).then((nativeFrames) => {
                         closure_0({ timestamp, nativeFrames });
                       }).then(undefined, (arg0) => {
@@ -948,7 +948,7 @@ export const createNativeFramesIntegrations = (enableNative2) => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1091,5 +1091,5 @@ export const createNativeFramesIntegrations = (enableNative2) => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 export { nativeFramesIntegration };

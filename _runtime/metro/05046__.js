@@ -1,7 +1,5 @@
 // === Module 5046: ? ===
 
 // Module 5046
-import _mod5047 from "module_5047" /* 5047 */;
 
-
-export default _mod5047;
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

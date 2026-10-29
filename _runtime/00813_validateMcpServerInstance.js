@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const isJsonRpcNotification = function isJsonRpcNotification(jsonrpc) {
+export function isJsonRpcNotification(jsonrpc) {
   let tmp = typeof jsonrpc === "object";
   if (typeof jsonrpc === "object") {
     tmp = null !== jsonrpc;
@@ -26,8 +26,8 @@ export const isJsonRpcNotification = function isJsonRpcNotification(jsonrpc) {
     tmp = !("id" in jsonrpc);
   }
   return tmp;
-};
-export const isJsonRpcRequest = function isJsonRpcRequest(jsonrpc) {
+}
+export function isJsonRpcRequest(jsonrpc) {
   let tmp = typeof jsonrpc === "object";
   if (typeof jsonrpc === "object") {
     tmp = null !== jsonrpc;
@@ -45,8 +45,8 @@ export const isJsonRpcRequest = function isJsonRpcRequest(jsonrpc) {
     tmp = "id" in jsonrpc;
   }
   return tmp;
-};
-export const isJsonRpcResponse = function isJsonRpcResponse(jsonrpc) {
+}
+export function isJsonRpcResponse(jsonrpc) {
   let tmp = typeof jsonrpc === "object";
   if (typeof jsonrpc === "object") {
     tmp = null !== jsonrpc;
@@ -68,11 +68,11 @@ export const isJsonRpcResponse = function isJsonRpcResponse(jsonrpc) {
     tmp = tmp2;
   }
   return tmp;
-};
-export const isValidContentItem = function isValidContentItem(clientInfo) {
+}
+export function isValidContentItem(clientInfo) {
   return null != clientInfo && typeof clientInfo === "object";
-};
-export const validateMcpServerInstance = function validateMcpServerInstance(obj) {
+}
+export function validateMcpServerInstance(obj) {
   let flag = typeof obj === "object";
   if (typeof obj === "object") {
     flag = null !== obj;
@@ -98,4 +98,4 @@ export const validateMcpServerInstance = function validateMcpServerInstance(obj)
     }
   }
   return flag;
-};
+}

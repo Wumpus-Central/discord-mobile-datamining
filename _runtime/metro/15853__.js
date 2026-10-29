@@ -1,101 +1,95 @@
 // === Module 15853: ? ===
 
 // Module 15853
-let c0 = false;
+const require = globalThis.__r;
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15812)(arg0);
-    const tmp4 = closure_0(15854)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
+
+export default (arg0, arg1, arg2, arg3) => {
+  let obj;
+  _require = arg3;
+  let tmp3 = new require("module_15816")(arg0, arg3);
+  const tmp4 = new require("module_15845")(arg1, arg3);
+  if (">" === arg2) {
+    dependencyMap = tmp(15836);
+    let tmpResult = tmp(15841);
+    const tmpResult3 = tmp(15837);
+    closure_2 = tmpResult3;
+    let str3 = ">=";
+    let str = ">";
+    let tmpResult4 = tmpResult3;
+  } else {
+    str = "<";
+    if ("<" === arg2) {
+      dependencyMap = tmp(15837);
+      tmpResult = tmp(15840);
+      tmpResult4 = tmp(15836);
+      closure_2 = tmpResult4;
+      str3 = "<=";
     } else {
-      let sum = closure_0(15858)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
+      throw typeError;
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15812)(arg0);
-    const tmp4 = closure_0(15854)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(15858)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
+  }
+  if (require("module_15847")(tmp3, tmp4, arg3)) {
+    return false;
+  } else {
+    let num = 0;
+    let num3 = 0;
+    if (0 < tmp4.set.length) {
+      while (true) {
+        let arr = tmp4.set[num3];
+        _require = null;
+        dependencyMap = null;
+        let item = arr.forEach((semver) => {
+          let tmp = semver;
+          if (semver.semver === closure_0(semver[7]).ANY) {
+            tmp = new tmp2(tmp3[7])(">=0.0.0");
+          }
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = tmp;
+          }
+          closure_0 = tmp6;
+          let tmp7 = semver;
+          if (!semver) {
+            tmp7 = tmp;
+          }
+          semver = tmp7;
+          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
+            closure_0 = tmp;
+          } else if (React2(tmp.semver, semver.semver, require)) {
+            semver = tmp;
+          }
+          tmp2 = closure_0;
+          tmp3 = semver;
+        });
+        if (_require.operator !== str) {
+          if (_require.operator !== str3) {
+            if (!dependencyMap.operator) {
+              if (tmpResult(tmp3, dependencyMap.semver)) {
+                obj = { v: false };
+              }
             }
-            return true;
+            let obj2;
+            if (dependencyMap.operator === str3) {
+              if (tmpResult4(tmp3, dependencyMap.semver)) {
+                obj2 = { v: false };
+              }
+            }
+            obj = obj2;
+          }
+          if (obj) {
+            break;
+          } else {
+            num3 = num + 1;
+            num = num3;
           }
         }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
+        obj = { v: false };
       }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+      return obj.v;
     }
+    return true;
   }
 };

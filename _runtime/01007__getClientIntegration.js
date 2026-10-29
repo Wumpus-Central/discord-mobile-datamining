@@ -61,9 +61,9 @@ function _getClientIntegration() {
 }
 
 export const MOBILE_FEEDBACK_INTEGRATION_NAME = "MobileFeedback";
-export const feedbackIntegration = () => {
-  let obj = D;
-  if (D === undefined) {
+export () => {
+  let obj = arg0;
+  if (arg0 === undefined) {
     obj = {};
   }
   ({ buttonOptions, screenshotButtonOptions, colorScheme, themeLight, themeDark } = obj);
@@ -89,8 +89,8 @@ export const feedbackIntegration = () => {
   }
   obj2.themeDark = themeDark;
   return obj2;
-};
-export const getFeedbackOptions = () => {
+}
+export () => {
   if (typeof _getClientIntegration === "function") {
     const client = _mod693.getClient();
     let integrationByName;
@@ -103,8 +103,8 @@ export const getFeedbackOptions = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
-export const getFeedbackButtonOptions = () => {
+}
+export () => {
   if (typeof _getClientIntegration === "function") {
     const client = _mod693.getClient();
     let integrationByName;
@@ -117,8 +117,8 @@ export const getFeedbackButtonOptions = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
-export const getScreenshotButtonOptions = () => {
+}
+export () => {
   if (typeof _getClientIntegration === "function") {
     const client = _mod693.getClient();
     let integrationByName;
@@ -131,8 +131,8 @@ export const getScreenshotButtonOptions = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
-export const getColorScheme = () => {
+}
+export () => {
   if (typeof _getClientIntegration === "function") {
     const client = _mod693.getClient();
     let integrationByName;
@@ -153,8 +153,8 @@ export const getColorScheme = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
-export const getFeedbackLightTheme = () => {
+}
+export () => {
   if (typeof _getClientIntegration === "function") {
     const client = _mod693.getClient();
     let integrationByName;
@@ -167,8 +167,8 @@ export const getFeedbackLightTheme = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
-export const getFeedbackDarkTheme = () => {
+}
+export () => {
   if (typeof _getClientIntegration === "function") {
     const client = _mod693.getClient();
     let integrationByName;
@@ -181,4 +181,4 @@ export const getFeedbackDarkTheme = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}

@@ -103,7 +103,7 @@ let c4 = "<anonymous>";
 
 export const UNKNOWN_FUNCTION = "?";
 export { createStackParser };
-export const getFramesFromEvent = function getFramesFromEvent(exception) {
+export function getFramesFromEvent(exception) {
   exception = exception.exception;
   if (exception) {
     let items = [];
@@ -121,8 +121,8 @@ export const getFramesFromEvent = function getFramesFromEvent(exception) {
     } catch (err) {
     }
   }
-};
-export const getFunctionName = function getFunctionName(name) {
+}
+export function getFunctionName(name) {
   try {
     if (name) {
       name = typeof name === "function";
@@ -137,8 +137,8 @@ export const getFunctionName = function getFunctionName(name) {
   } catch (err) {
     return c4;
   }
-};
-export const getVueInternalName = function getVueInternalName(__v_isVNode) {
+}
+export function getVueInternalName(__v_isVNode) {
   let str = "[VueViewModel]";
   if ("__v_isVNode" in __v_isVNode) {
     str = "[VueViewModel]";
@@ -147,8 +147,8 @@ export const getVueInternalName = function getVueInternalName(__v_isVNode) {
     }
   }
   return str;
-};
-export const normalizeStackTracePath = function normalizeStackTracePath(match1) {
+}
+export function normalizeStackTracePath(match1) {
   let startsWithResult;
   if (match1 != null) {
     startsWithResult = match1.startsWith("file://");
@@ -166,8 +166,8 @@ export const normalizeStackTracePath = function normalizeStackTracePath(match1) 
     substr = str2.slice(1);
   }
   return substr;
-};
-export const stackParserFromStackParserOptions = function stackParserFromStackParserOptions(arg0) {
+}
+export function stackParserFromStackParserOptions(arg0) {
   let applyResult = arg0;
   if (Array.isArray(arg0)) {
     const items = [];
@@ -175,5 +175,5 @@ export const stackParserFromStackParserOptions = function stackParserFromStackPa
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
-};
+}
 export { stripSentryFramesAndReverse };

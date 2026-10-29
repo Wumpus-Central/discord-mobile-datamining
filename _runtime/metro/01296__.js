@@ -158,11 +158,11 @@ function _createForOfIteratorHelper(iterable, arg1) {
   }
 }
 
-export const type = (str) => {
+export (str) => {
   const parts = str.split(/ *; */);
   return parts.shift();
-};
-export const params = (str) => {
+}
+export (str) => {
   let iter3;
   const obj2 = _createForOfIteratorHelper(str.split(/ *; */));
   try {
@@ -197,8 +197,8 @@ export const params = (str) => {
     obj.f();
     throw tmp11;
   }
-};
-export const parseLinks = (link) => {
+}
+export (link) => {
   let done;
   const obj2 = _createForOfIteratorHelper(link.split(/ *, */));
   try {
@@ -230,8 +230,8 @@ export const parseLinks = (link) => {
     obj.f();
     throw tmp8;
   }
-};
-export const cleanHeader = (arg0, arg1) => {
+}
+export (arg0, arg1) => {
   delete tmp[tmp2];
   delete tmp[tmp2];
   delete tmp[tmp2];
@@ -241,7 +241,7 @@ export const cleanHeader = (arg0, arg1) => {
     delete tmp[tmp2];
   }
   return arg0;
-};
+}
 export (obj) => null !== obj && typeof obj === "object"
 export const hasOwn = Object.hasOwn || ((arg0, key10009) => {
   if (null == arg0) {
@@ -257,7 +257,7 @@ export const hasOwn = Object.hasOwn || ((arg0, key10009) => {
     return typeof call === "unknown" ? hasOwnProperty(key10009) : call(object, key10009);
   }
 });
-export const mixin = (prototype, obj) => {
+export (prototype, obj) => {
   for (const key10004 in arg1) {
     if (!exports.hasOwn(arg1, key10004)) {
       continue;
@@ -267,4 +267,4 @@ export const mixin = (prototype, obj) => {
     }
     continue;
   }
-};
+}

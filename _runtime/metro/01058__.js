@@ -7,7 +7,7 @@ import _mod879 from "module_879" /* 879 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
+export function createReleaseFromGlobalReleaseConstants() {
   const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
   if (SENTRY_RELEASE) {
     ({ name, version } = SENTRY_RELEASE);
@@ -18,8 +18,8 @@ export const createReleaseFromGlobalReleaseConstants = function createReleaseFro
       }
     }
   }
-};
-export const getDefaultRelease = function getDefaultRelease() {
+}
+export function getDefaultRelease() {
   if (!obj.notWeb()) {
     const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
     let combined;
@@ -35,4 +35,4 @@ export const getDefaultRelease = function getDefaultRelease() {
     return combined;
   }
   obj = _mod879;
-};
+}

@@ -3,7 +3,7 @@
 // Module 1195
 const re0 = /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g;
 
-export const parseDateTimeSkeleton = function parseDateTimeSkeleton(str) {
+export function parseDateTimeSkeleton(str) {
   const obj = {};
   const replaced = str.replace(re0, (arg0) => {
     switch (arg0[0]) {
@@ -198,4 +198,4 @@ export const parseDateTimeSkeleton = function parseDateTimeSkeleton(str) {
     }
   });
   return obj;
-};
+}

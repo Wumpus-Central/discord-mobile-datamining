@@ -422,7 +422,7 @@ importDefaultResultResult.displayName = "__Sentry.TouchEventBoundary";
 importDefaultResultResult.defaultProps = { breadcrumbCategory: "touch", breadcrumbType: "user", ignoreNames: [], maxComponentTreeSize: 20 };
 
 export const TouchEventBoundary = importDefaultResultResult;
-export const withTouchEventBoundary = (arg0, arg1) => {
+export (arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   class WrappedComponent {
@@ -439,4 +439,4 @@ export const withTouchEventBoundary = (arg0, arg1) => {
   }
   WrappedComponent.displayName = "WithTouchEventBoundary";
   return WrappedComponent;
-};
+}

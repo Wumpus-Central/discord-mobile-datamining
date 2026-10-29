@@ -3,7 +3,7 @@
 // Module 920 (observe)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const observe = (type, handleEntries, arg2) => {
+export (type, handleEntries, arg2) => {
   closure_0 = handleEntries;
   let obj = arg2;
   if (arg2 === undefined) {
@@ -26,4 +26,4 @@ export const observe = (type, handleEntries, arg2) => {
     }
   } catch (err) {
   }
-};
+}

@@ -59,15 +59,15 @@ function getNativeImplementation(fetch) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_2 = {};
 
-export const clearCachedImplementation = function clearCachedImplementation(fetch) {
+export function clearCachedImplementation(fetch) {
   closure_2[fetch] = undefined;
-};
-export const fetch = function fetch() {
+}
+export function fetch() {
   const items = [...arguments];
   return getNativeImplementation("fetch")(...items);
-};
+}
 export { getNativeImplementation };
-export const setTimeout = function setTimeout() {
+export function setTimeout() {
   const items = [...arguments];
   return getNativeImplementation("setTimeout")(...items);
-};
+}

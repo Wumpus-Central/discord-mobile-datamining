@@ -14,7 +14,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 
 export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
+export function extractTraceparentData(str) {
   if (str) {
     const match = str.match(regExp);
     if (match) {
@@ -28,8 +28,8 @@ export const extractTraceparentData = function extractTraceparentData(str) {
       return obj;
     }
   }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
+}
+export function generateSentryTraceHeader() {
   if (traceId === undefined) {
     traceId = generateSpanId.generateTraceId();
   }
@@ -46,8 +46,8 @@ export const generateSentryTraceHeader = function generateSentryTraceHeader() {
     str = str2;
   }
   return "" + traceId + "-" + spanId + str;
-};
-export const generateTraceparentHeader = function generateTraceparentHeader() {
+}
+export function generateTraceparentHeader() {
   if (traceId === undefined) {
     traceId = generateSpanId.generateTraceId();
   }
@@ -60,8 +60,8 @@ export const generateTraceparentHeader = function generateTraceparentHeader() {
     str = "01";
   }
   return "00-" + traceId + "-" + spanId + "-" + str;
-};
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, baggage) {
+}
+export function propagationContextFromHeaders(str, baggage) {
   let tmp;
   if (str) {
     const match = str.match(regExp);
@@ -130,8 +130,8 @@ export const propagationContextFromHeaders = function propagationContextFromHead
     obj4.sampleRand = safeDateNow.safeMathRandom();
     return obj4;
   }
-};
-export const shouldContinueTrace = function shouldContinueTrace(client, org_id) {
+}
+export function shouldContinueTrace(client, org_id) {
   const result = _mod713.extractOrgIdFromClient(client);
   if (org_id) {
     if (result) {
@@ -166,4 +166,4 @@ export const shouldContinueTrace = function shouldContinueTrace(client, org_id) 
     debug.log("Starting a new trace because strict trace continuation is enabled but one org ID is missing (incoming baggage: " + org_id + ", Sentry client: " + result + ")");
     flag = false;
   }
-};
+}

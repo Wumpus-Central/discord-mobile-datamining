@@ -1,0 +1,34 @@
+// === Module 12914: ? ===
+
+// Module 12914
+import _mod12859 from "module_12859" /* 12859 */;
+import _mod12897 from "module_12897" /* 12897 */;
+import _mod12900 from "module_12900" /* 12900 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12900.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12859.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12897.createEnvelope(obj, items1);
+}

@@ -264,7 +264,7 @@ const entry1 = {
 const items1 = [entry1];
 
 export default _createClass(AnimatedObject, items, items1);
-export const isPlainObject = function isPlainObject(label) {
+export function isPlainObject(label) {
   let prototypeOf;
   if (null !== label) {
     if (typeof label === "object") {
@@ -285,4 +285,4 @@ export const isPlainObject = function isPlainObject(label) {
     tmp2 = isPrototypeOfResult;
   }
   return tmp2;
-};
+}

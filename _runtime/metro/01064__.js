@@ -12,7 +12,7 @@ const dependencyMap = arg6;
 const ReactNativeNavigation = "ReactNativeNavigation";
 
 export const INTEGRATION_NAME = "ReactNativeNavigation";
-export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
+export (enableTabsInstrumentation) => {
   ({ navigation, routeChangeTimeoutMs } = enableTabsInstrumentation);
   if (routeChangeTimeoutMs === undefined) {
     routeChangeTimeoutMs = 1000;
@@ -215,4 +215,4 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       }
     }
   };
-};
+}

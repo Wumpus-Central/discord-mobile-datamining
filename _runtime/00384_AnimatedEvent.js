@@ -239,7 +239,7 @@ let items = [
   }
 ];
 
-export const attachNativeEventImpl = function attachNativeEventImpl(current, arg1, arg2, arg3) {
+export function attachNativeEventImpl(current, arg1, arg2, arg3) {
   AnimatedEvent = arg1;
   importDefault = arg3;
   const items = [];
@@ -282,5 +282,5 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current, arg
       }
     }
   };
-};
+}
 export const AnimatedEvent = _createClassDefault(AnimatedEvent, items);

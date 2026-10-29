@@ -1,52 +1,40 @@
 // === Module 5530: ? ===
 
 // Module 5530
-import ErrorMessages from "ErrorMessages" /* 5532 */;
-import FlashList from "FlashList" /* 5533 */;
-import _mod5553 from "module_5553" /* 5553 */;
-import _mod5554 from "module_5554" /* 5554 */;
-import _mod5592 from "module_5592" /* 5592 */;
-import RenderTargetOptions from "RenderTargetOptions" /* 5593 */;
-import _modDef5594 from "module_5594" /* 5594 */;
-import _mod5595 from "module_5595" /* 5595 */;
-import Cancellable from "Cancellable" /* 5596 */;
-import JSFPSMonitor from "JSFPSMonitor" /* 5597 */;
-import _mod5599 from "module_5599" /* 5599 */;
-import runScrollBenchmark from "runScrollBenchmark" /* 5600 */;
-import _mod5601 from "module_5601" /* 5601 */;
-import _mod5602 from "module_5602" /* 5602 */;
-import _modDef5603 from "module_5603" /* 5603 */;
-import LayoutCommitObserver from "LayoutCommitObserver" /* 5604 */;
-import get_ActivityIndicator from "module_5531" /* 5531 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-if (get_ActivityIndicator.isNewArch()) {
-  exports.FlashList = FlashList.FlashList;
-  exports.FlashListRef = _mod5592.FlashListRef;
-  exports.FlashListProps = RenderTargetOptions.FlashListProps;
-  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
-  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
-  exports.RenderTarget = RenderTargetOptions.RenderTarget;
-  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
-  exports.AnimatedFlashList = _modDef5594;
-  exports.useBenchmark = _mod5595.useBenchmark;
-  exports.BenchmarkParams = _mod5595.BenchmarkParams;
-  exports.BenchmarkResult = _mod5595.BenchmarkResult;
-  exports.useDataMultiplier = _mod5599.useDataMultiplier;
-  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
-  exports.useLayoutState = _mod5553.useLayoutState;
-  exports.useRecyclingState = _mod5601.useRecyclingState;
-  exports.useMappingHelper = _mod5602.useMappingHelper;
-  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
-  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
-  exports.autoScroll = Cancellable.autoScroll;
-  exports.Cancellable = Cancellable.Cancellable;
-  exports.ViewToken = _modDef5603;
-  exports.useFlashListContext = _mod5554.useFlashListContext;
-  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
+let noop = fn(19);
+const forwardRef = noop.forwardRef;
+({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+try {
+  const FlashList = fn(5531);
+  const memoResult = memo(forwardRef((focusHook, ref) => {
+    focusHook = focusHook.focusHook;
+    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
+    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
+    closure_6(() => {
+      if (!FlashList) {
+        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
+      }
+    }, []);
+    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
+    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
+    let merged = Object.assign(tmp);
+    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
+      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
+      const obj = { ref };
+      const merged1 = Object.assign(merged);
+      obj.focusHook = focusHook;
+      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
+      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
+      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
+    }), items)} />;
+  }));
+  exports.default = memoResult;
+  exports.BottomSheetFlashList = memoResult;
+} catch (err) {
 }

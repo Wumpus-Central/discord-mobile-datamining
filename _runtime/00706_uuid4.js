@@ -11,7 +11,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const re3 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
-export const addContextToFrame = function addContextToFrame(arr, lineno) {
+export function addContextToFrame(arr, lineno) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 5;
@@ -34,8 +34,8 @@ export const addContextToFrame = function addContextToFrame(arr, lineno) {
     const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
     lineno.post_context = substr1.map((item) => require("module_708").snipLine(item, 0));
   }
-};
-export const addExceptionMechanism = function addExceptionMechanism(exception, data) {
+}
+export function addExceptionMechanism(exception, data) {
   exception = exception.exception;
   let first;
   if (exception != null) {
@@ -63,8 +63,8 @@ export const addExceptionMechanism = function addExceptionMechanism(exception, d
       }
     }
   }
-};
-export const addExceptionTypeValue = function addExceptionTypeValue(exception, arg1, arg2) {
+}
+export function addExceptionTypeValue(exception, arg1, arg2) {
   const tmp = exception.exception || {};
   exception.exception = tmp;
   const tmp2 = tmp.values || [];
@@ -85,8 +85,8 @@ export const addExceptionTypeValue = function addExceptionTypeValue(exception, a
     }
     iter.type = str2;
   }
-};
-export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_captured__) {
+}
+export function checkOrSetAlreadyCaught(__sentry_captured__) {
   if ((function isAlreadyCaptured(__sentry_captured__) {
     try {
       return __sentry_captured__.__sentry_captured__;
@@ -101,8 +101,8 @@ export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry
     } catch (err) {
     }
   }
-};
-export const getEventDescription = function getEventDescription(exception) {
+}
+export function getEventDescription(exception) {
   ({ message, event_id } = exception);
   if (message) {
     return message;
@@ -131,8 +131,8 @@ export const getEventDescription = function getEventDescription(exception) {
       return str2;
     }
   }
-};
-export const parseSemver = function parseSemver(str) {
+}
+export function parseSemver(str) {
   const tmp = str.match(re3) || [];
   str = tmp[1];
   if (!str) {
@@ -167,8 +167,8 @@ export const parseSemver = function parseSemver(str) {
   obj.patch = tmp7;
   obj.prerelease = tmp[4];
   return obj;
-};
-export const uuid4 = function uuid4() {
+}
+export function uuid4() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = (function getCrypto() {
@@ -198,4 +198,4 @@ export const uuid4 = function uuid4() {
     }
   } catch (err) {
   }
-};
+}

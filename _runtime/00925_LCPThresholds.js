@@ -13,7 +13,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let items = [2500, 4000];
 
 export const LCPThresholds = items;
-export const onLCP = (arg0, arg1) => {
+export (arg0, arg1) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -74,4 +74,4 @@ export const onLCP = (arg0, arg1) => {
     }
     const obj4 = closure_0(obj[6]);
   });
-};
+}

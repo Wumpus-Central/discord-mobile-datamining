@@ -1,17 +1,13 @@
 // === Module 6492: ? ===
 
 // Module 6492
-import _mod6424 from "module_6424" /* 6424 */;
+let setPrototypeOf = typeof Reflect !== "undefined";
+if (typeof Reflect !== "undefined") {
+  const _Reflect = Reflect;
+  setPrototypeOf = Reflect.setPrototypeOf;
+}
+if (!setPrototypeOf) {
+  setPrototypeOf = null;
+}
 
-
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod6424(arg0);
-    }
-    str = str2;
-  }
-  return str;
-};
+export default setPrototypeOf;

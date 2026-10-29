@@ -398,7 +398,7 @@ let items = [
 ];
 
 export default _createClass(AnimatedValue, items);
-export const flushValue = function flushValue(self) {
+export function flushValue(self) {
   const set = new Set();
   function findAnimatedStyles(update) {
     if (typeof update.update === "function") {
@@ -415,4 +415,4 @@ export const flushValue = function flushValue(self) {
     const __getChildrenResult = self.__getChildren();
   }
   const item1 = set.forEach((update) => update.update());
-};
+}

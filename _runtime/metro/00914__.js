@@ -41,7 +41,7 @@ function onVisibilityUpdate(type) {
   }
 }
 
-export const getVisibilityWatcher = () => {
+export () => {
   if (require("module_913").WINDOW.document) {
     if (num2 < 0) {
       _require = tmp(916).getActivationStart();
@@ -97,4 +97,4 @@ export const getVisibilityWatcher = () => {
     set.add(arg0);
   };
   return obj;
-};
+}

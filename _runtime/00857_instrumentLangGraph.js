@@ -8,7 +8,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentLangGraph = function instrumentLangGraph(compile, arg1) {
+export function instrumentLangGraph(compile, arg1) {
   if (!arg1) {
     let obj = {};
   }
@@ -64,8 +64,8 @@ export const instrumentLangGraph = function instrumentLangGraph(compile, arg1) {
                   obj3[applyResult(715).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(836).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
                   obj3[applyResult(836).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj2.attributes = obj3;
-                  applyResult = closure_2(/* F164999 */ function() { ... });
-                  return applyResult(742).startSpan(obj2, () => { ... });
+                  applyResult = closure_2(/* F166686 */ function() { ... });
+                  return applyResult(742).startSpan(obj2, /* F166687 */ function() { ... });
                 }
               });
               return proxy;
@@ -84,8 +84,8 @@ export const instrumentLangGraph = function instrumentLangGraph(compile, arg1) {
   });
   compile.compile = proxy;
   return compile;
-};
-export const instrumentStateGraphCompile = function instrumentStateGraphCompile(arg0, arg1) {
+}
+export function instrumentStateGraphCompile(arg0, arg1) {
   closure_0 = arg1;
   const proxy = new Proxy(arg0, {
     apply(arg0, arg1, arg2) {
@@ -138,8 +138,8 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
                   obj3[applyResult(715).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(836).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
                   obj3[applyResult(836).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj2.attributes = obj3;
-                  applyResult = closure_2(/* F164999 */ function() { ... });
-                  return applyResult(742).startSpan(obj2, () => { ... });
+                  applyResult = closure_2(/* F166686 */ function() { ... });
+                  return applyResult(742).startSpan(obj2, /* F166687 */ function() { ... });
                 }
               });
               return proxy;
@@ -157,4 +157,4 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
     }
   });
   return proxy;
-};
+}

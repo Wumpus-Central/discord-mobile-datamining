@@ -13,7 +13,7 @@ require = arg1;
 let dependencyMap = arg6;
 const weakMap = new WeakMap();
 
-export const enableSyncToNative = function enableSyncToNative(globalScope) {
+export function enableSyncToNative(globalScope) {
   _require = globalScope;
   if (!weakMap.has(globalScope)) {
     let result = weakMap.set(globalScope, true);
@@ -151,4 +151,4 @@ export const enableSyncToNative = function enableSyncToNative(globalScope) {
     });
     const obj11 = require("fillTyped");
   }
-};
+}

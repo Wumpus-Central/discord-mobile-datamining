@@ -23,7 +23,7 @@ let closure_4 = async function _resolveResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -51,7 +51,7 @@ let closure_4 = async function _resolveResponse(arg0) {
           }
           if (!body1) {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const body = _require.body;
             closure_130_1 = body;
@@ -246,7 +246,7 @@ function getHeadersFromFetchArgs(items) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
+export function addFetchEndInstrumentationHandler(errorCallback) {
   _mod726.addHandler("fetch-body-resolved", errorCallback);
   _mod726.maybeInstrument("fetch-body-resolved", () => {
     closure_0 = closure_5;
@@ -268,7 +268,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F164617 */ function*() { ... })();
+            return (/* F166301 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -328,8 +328,8 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
       const obj = closure_0(698);
     }
   });
-};
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
+}
+export function addFetchInstrumentationHandler(errorCallback, arg1) {
   _require = arg1;
   require("module_726").addHandler("fetch", errorCallback);
   let obj = require("module_726");
@@ -359,7 +359,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F164617 */ function*() { ... })();
+            return (/* F166301 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -418,5 +418,5 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
       });
     }
   });
-};
+}
 export { parseFetchArgs };

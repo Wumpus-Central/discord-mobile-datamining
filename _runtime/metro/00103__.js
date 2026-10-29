@@ -6,7 +6,7 @@ import _modDef104 from "module_104" /* 104 */;
 importDefault = arg2;
 const dependencyMap = arg6;
 
-export const createViewConfig = function createViewConfig(uiViewClassName) {
+export function createViewConfig(uiViewClassName) {
   const obj = { uiViewClassName: uiViewClassName.uiViewClassName, Commands: {}, bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
   let bubblingEventTypes1 = _modDef104.bubblingEventTypes;
   const bubblingEventTypes = uiViewClassName.bubblingEventTypes;
@@ -60,4 +60,4 @@ export const createViewConfig = function createViewConfig(uiViewClassName) {
     bubblingEventTypes1 = {};
   }
   obj2 = bubblingEventTypes1;
-};
+}

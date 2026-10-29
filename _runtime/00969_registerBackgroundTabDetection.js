@@ -9,7 +9,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const registerBackgroundTabDetection = function registerBackgroundTabDetection() {
+export function registerBackgroundTabDetection() {
   if (ignoreNextOnError.WINDOW.document) {
     const _document = ignoreNextOnError.WINDOW.document;
     const listener = _document.addEventListener("visibilitychange", () => {
@@ -41,4 +41,4 @@ export const registerBackgroundTabDetection = function registerBackgroundTabDete
     let debug = _mod693.debug;
     debug.warn("[Tracing] Could not set up background tab detection due to lack of global document");
   }
-};
+}

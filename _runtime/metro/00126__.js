@@ -4,7 +4,7 @@
 let closure_0 = Symbol("isPlatformObject");
 let closure_1 = Symbol("clonePlatformObject");
 
-export const setPlatformObject = function setPlatformObject(importDefaultResultResult, clone) {
+export function setPlatformObject(importDefaultResultResult, clone) {
   if (typeof importDefaultResultResult === "function") {
     importDefaultResultResult.prototype[closure_0] = true;
     if (clone) {
@@ -16,10 +16,10 @@ export const setPlatformObject = function setPlatformObject(importDefaultResultR
       importDefaultResultResult[closure_1] = clone.clone;
     }
   }
-};
-export const isPlatformObject = function isPlatformObject(source) {
+}
+export function isPlatformObject(source) {
   return closure_0 in source;
-};
-export const getPlatformObjectClone = function getPlatformObjectClone(source) {
+}
+export function getPlatformObjectClone(source) {
   return source[closure_1];
-};
+}

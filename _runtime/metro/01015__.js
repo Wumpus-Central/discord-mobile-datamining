@@ -205,7 +205,7 @@ const _moduleResult = _createClass(ErrorBoundary, items);
 
 export const ErrorBoundary = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
-export const withErrorBoundary = function withErrorBoundary(displayName, arg1) {
+export function withErrorBoundary(displayName, arg1) {
   ErrorBoundary = displayName;
   dependencyMap = arg1;
   const memoResult = noop.memo((arg0) => {
@@ -216,4 +216,4 @@ export const withErrorBoundary = function withErrorBoundary(displayName, arg1) {
   memoResult.displayName = "errorBoundary(" + displayName.displayName || displayName.name || unknown + ")";
   ErrorBoundary(1014).hoistNonReactStatics(memoResult, displayName);
   return memoResult;
-};
+}

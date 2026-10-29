@@ -88,7 +88,7 @@ export () => ({
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -246,7 +246,7 @@ export () => ({
                 obj2 = obj3;
                 const _Object = Object;
                 const keys = Object.keys(obj3);
-                const item = keys.forEach(() => { ... });
+                const item = keys.forEach(/* F89289 */ function() { ... });
               }
             }
             const obj4 = on(693);
@@ -271,7 +271,7 @@ export () => ({
                 obj2 = obj5;
                 const _Object2 = Object;
                 const keys1 = Object.keys(obj5);
-                const item1 = keys1.forEach(() => { ... });
+                const item1 = keys1.forEach(/* F89289 */ function() { ... });
               }
             }
             const tmpResult = on(693);
@@ -296,12 +296,12 @@ export () => ({
                 obj2 = obj6;
                 const _Object3 = Object;
                 const keys2 = Object.keys(obj6);
-                const item2 = keys2.forEach(() => { ... });
+                const item2 = keys2.forEach(/* F89289 */ function() { ... });
               }
             }
             const _Object4 = Object;
             const keys3 = Object.keys(obj2);
-            const item3 = keys3.forEach(() => { ... });
+            const item3 = keys3.forEach(/* F166697 */ function() { ... });
             const brand = closure_2_3.brand;
             let tmp18 = null == brand;
             if (!tmp18) {

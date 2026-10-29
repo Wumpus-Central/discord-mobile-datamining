@@ -1,32 +1,30 @@
 // === Module 6467: ? ===
 
 // Module 6467
-import _mod1305 from "module_1305" /* 1305 */;
-import _mod6468 from "module_6468" /* 6468 */;
-import _mod6469 from "module_6469" /* 6469 */;
-import _mod6470 from "module_6470" /* 6470 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1338 */;
+import _mod1464 from "module_1464" /* 1464 */;
 
-if (_mod6468) {
-  function setProto(arg0, arg1) {
-    if (_mod6468(arg0, arg1)) {
-      return arg0;
-    } else {
-      const tmp5 = new _mod1305("Reflect.setPrototypeOf: failed to set [[Prototype]]");
-      throw tmp5;
-    }
-  }
-} else {
-  setProto = _mod6469;
-  if (!setProto) {
-    let setProto2 = null;
-    if (_mod6470) {
-      setProto2 = function setProto(arg0, arg1) {
-        _mod6470(arg0, arg1);
-        return arg0;
-      };
-    }
-    setProto = setProto2;
-  }
-}
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1464();
 
-export default setProto;
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
+  }
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
+};

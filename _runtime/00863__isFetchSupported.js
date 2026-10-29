@@ -33,35 +33,35 @@ function isNativeFunction(arg0) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { isNativeFunction };
-export const supportsDOMError = function supportsDOMError() {
+export function supportsDOMError() {
   try {
     const dOMError = new globalThis.DOMError("");
     return true;
   } catch (err) {
     return false;
   }
-};
-export const supportsDOMException = function supportsDOMException() {
+}
+export function supportsDOMException() {
   try {
     const dOMException = new globalThis.DOMException("");
     return true;
   } catch (err) {
     return false;
   }
-};
-export const supportsErrorEvent = function supportsErrorEvent() {
+}
+export function supportsErrorEvent() {
   try {
     const errorEvent = new globalThis.ErrorEvent("");
     return true;
   } catch (err) {
     return false;
   }
-};
+}
 export const supportsFetch = _isFetchSupported;
-export const supportsHistory = function supportsHistory() {
+export function supportsHistory() {
   return "history" in _mod697.GLOBAL_OBJ && _mod697.GLOBAL_OBJ.history;
-};
-export const supportsNativeFetch = function supportsNativeFetch() {
+}
+export function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (_isFetchSupported()) {
@@ -101,8 +101,8 @@ export const supportsNativeFetch = function supportsNativeFetch() {
   } else {
     return false;
   }
-};
-export const supportsReferrerPolicy = function supportsReferrerPolicy() {
+}
+export function supportsReferrerPolicy() {
   if (_isFetchSupported()) {
     try {
       const _Request = Request;
@@ -114,7 +114,7 @@ export const supportsReferrerPolicy = function supportsReferrerPolicy() {
   } else {
     return false;
   }
-};
-export const supportsReportingObserver = function supportsReportingObserver() {
+}
+export function supportsReportingObserver() {
   return "ReportingObserver" in _mod697.GLOBAL_OBJ;
-};
+}

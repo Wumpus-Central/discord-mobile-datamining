@@ -76,7 +76,7 @@ defaultSdkInfo.packages = items;
 defaultSdkInfo.version = SDK_PACKAGE_NAME.SDK_VERSION;
 
 export { defaultSdkInfo };
-export const sdkInfoIntegration = () => {
+export () => {
   if (obj.notWeb()) {
     if (!tmpResult.isExpoGo()) {
       _require = false;
@@ -161,4 +161,4 @@ export const sdkInfoIntegration = () => {
     return obj2;
   }
   fn = () => Promise.resolve(null);
-};
+}

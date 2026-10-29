@@ -5,7 +5,7 @@ const dependencyMap = [];
 const dependencyMap2 = [];
 let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
 
-export const byteLength = function byteLength(arr) {
+export function byteLength(arr) {
   if (0 < arr.length % 4) {
     const _Error = Error;
     const error = new Error("Invalid string. Length must be a multiple of 4");
@@ -23,8 +23,8 @@ export const byteLength = function byteLength(arr) {
     items[1] = num2;
     return 3 * (items[0] + items[1]) / 4 - items[1];
   }
-};
-export const toByteArray = function toByteArray(arr) {
+}
+export function toByteArray(arr) {
   if (0 < arr.length % 4) {
     const _Error = Error;
     const error = new Error("Invalid string. Length must be a multiple of 4");
@@ -82,8 +82,8 @@ export const toByteArray = function toByteArray(arr) {
     }
     return tmp7;
   }
-};
-export const fromByteArray = function fromByteArray(uint8Array) {
+}
+export function fromByteArray(uint8Array) {
   let sum;
   const result = length % 3;
   const items = [];
@@ -116,4 +116,4 @@ export const fromByteArray = function fromByteArray(uint8Array) {
     items.push(`${closure_0[tmp13 >> 10]}${closure_0[tmp13 >> 4 & 63]}${closure_0[tmp13 << 2 & 63]}=`);
   }
   return items.join("");
-};
+}

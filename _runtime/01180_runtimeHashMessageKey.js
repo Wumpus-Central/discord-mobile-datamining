@@ -10,7 +10,7 @@ const uint32Array = new Uint32Array(uint8Array.buffer);
 uint32Array[0] = 1;
 let closure_3 = !(1 & uint8Array[0]);
 
-export const runtimeHashMessageKey = function runtimeHashMessageKey(code) {
+export function runtimeHashMessageKey(code) {
   let num = 0;
   const BigIntResult = BigInt(textEncoder.hash(code, 0));
   const items = [];
@@ -32,4 +32,4 @@ export const runtimeHashMessageKey = function runtimeHashMessageKey(code) {
   }
   const items1 = [dependencyMap[reversed[0] >> 2], dependencyMap[(3 & reversed[0]) << 4 | reversed[1] >> 4], dependencyMap[(15 & reversed[1]) << 2 | reversed[2] >> 6], dependencyMap[63 & reversed[2]], dependencyMap[reversed[3] >> 2], dependencyMap[(3 & reversed[3]) << 4 | reversed[4] >> 4]];
   return items1.join("");
-};
+}

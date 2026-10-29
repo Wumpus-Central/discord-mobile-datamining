@@ -6,7 +6,7 @@ import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 692 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const getExpoConstants = function getExpoConstants() {
+export function getExpoConstants() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
@@ -27,8 +27,8 @@ export const getExpoConstants = function getExpoConstants() {
     }
   }
   return tmp3;
-};
-export const getExpoDevice = function getExpoDevice() {
+}
+export function getExpoDevice() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
@@ -49,8 +49,8 @@ export const getExpoDevice = function getExpoDevice() {
     }
   }
   return tmp3;
-};
-export const getExpoUpdates = function getExpoUpdates() {
+}
+export function getExpoUpdates() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
@@ -71,8 +71,8 @@ export const getExpoUpdates = function getExpoUpdates() {
     }
   }
   return tmp3;
-};
-export const getExpoGo = function getExpoGo() {
+}
+export function getExpoGo() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
   let modules;
   if (null !== expo) {
@@ -93,4 +93,4 @@ export const getExpoGo = function getExpoGo() {
     }
   }
   return tmp3;
-};
+}
