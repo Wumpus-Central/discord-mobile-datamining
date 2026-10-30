@@ -1,7 +1,0 @@
-// === Module 9854: ? ===
-
-// Module 9854
-import registerAsset from "module_1131" /* 1131 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "540091c70b333c8b8937ba1627138192", name: "wumpus-pikachu", type: "png" });

@@ -1,8 +1,10 @@
 // === Module 4553: ? ===
 
 // Module 4553
-import _typeof_mod from "module_4288" /* 4288 */;
-import requiredArgs_mod from "requiredArgs" /* 4289 */;
+import _typeof_mod from "module_4289" /* 4289 */;
+import startOfYear_mod from "startOfYear" /* 4508 */;
+import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4451 */;
+import requiredArgs_mod from "requiredArgs" /* 4290 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -12,23 +14,34 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let startOfYear = startOfYear_mod;
+if (!startOfYear) {
+  const obj2 = { default: startOfYear };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfYear;
 }
-requiredArgs = tmp5;
+startOfYear = tmp5;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj3 = { default: differenceInCalendarDays };
+  let tmp7 = obj3;
+} else {
+  tmp7 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getDaysInMonth(arg0) {
+export default function getDayOfYear(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const month = defaultResult1.getMonth();
-  const date = new Date(0);
-  date.setFullYear(fullYear, month + 1, 0);
-  date.setHours(0, 0, 0, 0);
-  return date.getDate();
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

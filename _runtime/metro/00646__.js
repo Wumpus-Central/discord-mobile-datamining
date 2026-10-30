@@ -1,8 +1,9 @@
 // === Module 646: ? ===
 
 // Module 646
-import _mod524 from "module_524" /* 524 */;
-import module_612 from "module_612" /* 612 */;
 
-
-export default module_612(_mod524, "DataView");
+export default function setCacheAdd(arg0) {
+  const __data__ = this.__data__;
+  const result = __data__.set(arg0, "__lodash_hash_undefined__");
+  return this;
+};

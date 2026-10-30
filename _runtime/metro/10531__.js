@@ -1,24 +1,7 @@
 // === Module 10531: ? ===
 
 // Module 10531
+import registerAsset from "module_1120" /* 1120 */;
 
-export default function areHookInputsEqual(arg0, arg1) {
-  if (arg0.length !== arg1.length) {
-    return false;
-  } else {
-    if (0 < arg1.length) {
-      let num3 = 0;
-      if (0 < arg0.length) {
-        const _Object = Object;
-        while (Object.is(arg0[num3], arg1[num3])) {
-          let sum = num3 + 1;
-          if (sum < arg1.length) {
-            num3 = sum;
-          }
-        }
-        return false;
-      }
-    }
-    return true;
-  }
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f8d879d772069d05fdb56edf802c6c07", name: "CameraIcon", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 9194: ? ===
 
 // Module 9194
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "6ac82e47fbd4ea8331f749e0f8f68b4b", name: "voice_bar_bluetooth", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 20, height: 20, scales: [1, 2, 3], hash: "e955954d3b070442dffa061da0dc1d1a", name: "ic_clock", type: "png" });

@@ -1,16 +1,12 @@
 // === Module 5312: ? ===
 
 // Module 5312
-import _mod19 from "module_19" /* 19 */;
-import _mod5313 from "module_5313" /* 5313 */;
+import animatedComponentDefault from "animatedComponent" /* 5313 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const useContext = _mod19.useContext;
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
 
-export () => {
-  const tmp = useContext(_mod5313.BottomSheetContext);
-  if (null === tmp) {
-    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
-  }
-}
+export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

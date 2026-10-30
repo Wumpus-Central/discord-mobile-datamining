@@ -1,26 +1,26 @@
 // === Module 4443: ? ===
 
 // Module 4443
-import module_4292_mod from "module_4292" /* 4292 */;
-import _typeof_mod from "module_4288" /* 4288 */;
-import requiredArgs_mod from "requiredArgs" /* 4289 */;
+import module_4293_mod from "module_4293" /* 4293 */;
+import module_4444_mod from "module_4444" /* 4444 */;
+import requiredArgs_mod from "requiredArgs" /* 4290 */;
 
-let module_4292 = module_4292_mod;
-if (!module_4292) {
-  const obj = { default: module_4292 };
+let module_4293 = module_4293_mod;
+if (!module_4293) {
+  const obj = { default: module_4293 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4292;
+  tmp3 = module_4293;
 }
-module_4292 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4293 = tmp3;
+let module_4444 = module_4444_mod;
+if (!module_4444) {
+  const obj2 = { default: module_4444 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4444;
 }
-_typeof = tmp5;
+module_4444 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -29,11 +29,10 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function addMilliseconds(arg0, arg1) {
+export default function addHours(interval, arg1) {
   requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_4292.default(arg1));
+  return module_4444.default(interval, module_4293.default(arg1) * c3);
 };
 export default exports.default;

@@ -1,0 +1,18 @@
+// === Module 911: ? ===
+
+// Module 911
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+const weakMap = new WeakMap();
+
+export function initUnique(visibilityWatcher, InteractionManager) {
+  try {
+    if (!weakMap.get(visibilityWatcher)) {
+      const tmp5 = new InteractionManager();
+      const result = weakMap.set(visibilityWatcher, tmp5);
+    }
+    return weakMap.get(visibilityWatcher);
+  } catch (err) {
+    const tmp7 = new tmp();
+    return tmp7;
+  }
+}

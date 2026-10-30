@@ -1,7 +1,7 @@
 // === Module 9966: ? ===
 
 // Module 9966
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 240, height: 152, scales: [2, 3], hash: "1c56c6a8d7541177ea8c3d88699db89c", name: "img_guild_cap_upsell_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BrandDarkIcon", width: 60, height: 60, scales: [2, 3], hash: "9104de6131b604f4e10e9192c73c75ed", name: "BrandDarkIcon", type: "png" });

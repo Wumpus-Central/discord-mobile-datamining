@@ -1,7 +1,9 @@
 // === Module 5802: ? ===
 
 // Module 5802
-import _mod547 from "module_547" /* 547 */;
+import baseClone from "baseClone" /* 5803 */;
 
 
-export default _mod547(Object.getPrototypeOf, Object);
+export default function cloneDeep(arg0) {
+  return baseClone(arg0, 5);
+};

@@ -1,7 +1,7 @@
 // === Module 11631: ? ===
 
 // Module 11631
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "adb011bbeb7f189fa87848559cc4fbc7", name: "ic_leave_stage", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d884288c334e9055542f154b2caf3b3e", name: "TopicsIcon", type: "png" });

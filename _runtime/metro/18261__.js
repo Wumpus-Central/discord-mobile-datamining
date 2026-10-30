@@ -1,7 +1,7 @@
 // === Module 18261: ? ===
 
 // Module 18261
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 16, height: 16, scales: [1, 2, 3], hash: "d5f86d80f0a1d11d99b6b752d01d2cf8", name: "ic-application-rejected", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images", width: 32, height: 32, scales: [2, 3, 4], hash: "c33937cb1ecf8da1cf6ed34f37467be9", name: "ic-customize", type: "png" });

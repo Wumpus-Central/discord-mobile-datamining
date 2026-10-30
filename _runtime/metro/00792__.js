@@ -1,61 +1,80 @@
 // === Module 792: ? ===
 
 // Module 792
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
+import _mod685 from "module_685" /* 685 */;
+import _mod696 from "module_696" /* 696 */;
+import _mod712 from "module_712" /* 712 */;
+import _mod772 from "module_772" /* 772 */;
+import severityLevelFromString from "severityLevelFromString" /* 784 */;
+import setupIntegration from "setupIntegration" /* 751 */;
 
-export function getClientIPAddress(headers) {
-  let obj = {};
-  const keys = Object.keys(headers);
-  for (const item10010 of keys) {
-    obj[item10010.toLowerCase()] = arg0[item10010];
-    continue;
-  }
-  let mapped = items.map((item) => {
-    obj = obj[item.toLowerCase(item)];
-    let str = obj;
-    if (Array.isArray(obj)) {
-      str = obj.join(";");
+function addConsoleBreadcrumb(level, args) {
+  const obj = { category: "console", data: { arguments: args, logger: "console" }, level: severityLevelFromString.severityLevelFromString(level), message: null };
+  if ("util" in _mod685.GLOBAL_OBJ) {
+    if (typeof _mod685.GLOBAL_OBJ.util.format === "function") {
+      const util = _mod685.GLOBAL_OBJ.util;
+      const format = util.format;
+      const items = [];
+      HermesBuiltin.arraySpread(args, 0);
+      let applyResult = HermesBuiltin.apply(items, util);
     }
-    if ("Forwarded" === item) {
-      let mapped = (function parseForwardedHeader(str) {
-        if (str) {
-          const parts = str.split(";");
-          const iter = parts[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let arr = nextResult;
-            if (nextResult.startsWith("for=")) {
-              let substr = arr.slice(4);
-              iter.return();
-              return substr;
-            }
-          }
-          return null;
+    obj.message = applyResult;
+    if ("assert" === level) {
+      if (false === args[0]) {
+        const substr = args.slice(1);
+        if (substr.length <= 0) {
+          obj.message = "Assertion failed";
+          obj.data.arguments = substr;
         } else {
-          return null;
+          if (!("util" in _mod685.GLOBAL_OBJ)) {
+            let safeJoinResult = _mod696.safeJoin(substr, " ");
+            const _HermesInternal = HermesInternal;
+            const combined = "Assertion failed: " + safeJoinResult;
+            const tmpResult = _mod696;
+          }
+          const util2 = _mod685.GLOBAL_OBJ.util;
+          const format2 = util2.format;
+          const items1 = [];
+          HermesBuiltin.arraySpread(substr, 0);
+          safeJoinResult = HermesBuiltin.apply(items1, util2);
         }
-      })(str);
-    } else if (str != null) {
-      let parts = str.split(",");
-      mapped = parts.map((item) => item.trim());
+      }
     }
-    return mapped;
-  });
-  const reduced = mapped.reduce((arr, item) => {
-    let combined = arr;
-    if (item) {
-      combined = arr.concat(item);
-    }
-    return combined;
-  }, []);
-  return reduced.find((item) => {
-    let isMatch = null !== item;
-    if (isMatch) {
-      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
-      obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
-    }
-    return isMatch;
-  }) || null;
+    const obj3 = { input: args, level };
+    _mod772.addBreadcrumb(obj, obj3);
+    const tmpResult3 = _mod772;
+  }
+  applyResult = _mod696.safeJoin(args, " ");
+  const tmpResult4 = _mod696;
 }
-export const ipHeaderNames = items;
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export { addConsoleBreadcrumb };
+export const consoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let set;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = set(688).CONSOLE_LEVELS;
+  }
+  set = new Set(CONSOLE_LEVELS);
+  return {
+    name: "Console",
+    setup(arg0) {
+      closure_0 = arg0;
+      const result = set(dependencyMap[2]).addConsoleInstrumentationHandler((level) => {
+        level = level.level;
+        let hasItem = _mod712.getClient() === closure_0;
+        if (hasItem) {
+          hasItem = set.has(level);
+        }
+        if (hasItem) {
+          addConsoleBreadcrumb(level, level.args);
+        }
+      });
+    }
+  };
+});

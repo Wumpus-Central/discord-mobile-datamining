@@ -1,36 +1,9 @@
 // === Module 12885: ? ===
 
 // Module 12885
-import _mod12880 from "module_12880" /* 12880 */;
+import _mod12883 from "module_12883" /* 12883 */;
+import _mod12886 from "module_12886" /* 12886 */;
+import _mod12887 from "module_12887" /* 12887 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
-    }
-  }
-  let tmp = tracesSampler;
-  const client = _mod12880.getClient();
-  if (!tracesSampler) {
-    let options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
-  }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
-  }
-  return tmp3;
-}
+export default { getNode: _mod12883, expression: _mod12886, var: _mod12887 };

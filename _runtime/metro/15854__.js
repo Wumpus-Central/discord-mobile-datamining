@@ -1,7 +1,22 @@
 // === Module 15854: ? ===
 
 // Module 15854
-import _mod15853 from "module_15853" /* 15853 */;
+import _mod15855 from "module_15855" /* 15855 */;
 
 
-export default (arg0, arg1, arg2) => _mod15853(arg0, arg1, ">", arg2);
+export default (arg0, arg1) => {
+  if (arg0 instanceof _mod15855) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod15855(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
+      }
+    }
+  }
+};

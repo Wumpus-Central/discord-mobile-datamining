@@ -1,7 +1,7 @@
 // === Module 14135: ? ===
 
 // Module 14135
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 48, height: 48, scales: [1, 2, 3], hash: "079f1f5099b5396d01af5ed23e7bac76", name: "ic_invites_disabled", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 240, height: 130, scales: [2, 3], hash: "ddcb188db6ac661c6c9a0057112012b2", name: "no_mutual_servers_light", type: "png" });

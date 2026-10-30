@@ -2,4 +2,4 @@
 
 // Module 1320
 
-export default Function.prototype.call;
+export default Math.max;

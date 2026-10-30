@@ -1,763 +1,531 @@
 // === Module 8303: ? ===
 
 // Module 8303
-import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
-import _modDef8304 from "module_8304" /* 8304 */;
-import calculateGPSValueDefault from "calculateGPSValue" /* 8306 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod8296 from "module_8296" /* 8296 */;
 
-const ParseError = arg1;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+require = arg1;
+const dependencyMap = arg6;
+function getCreationDate(value) {
+  const stringValue = _mod8296.getStringValue(value);
+  let text2 = stringValue;
+  if (stringValue.length >= 8) {
+    const text = `${arr.substr(0, 4)}-`;
+    const text1 = `${arr.substr(0, 4)}-${arr.substr(4, 2)}`;
+    text2 = `${`${arr.substr(0, 4)}-${arr.substr(4, 2)}`}-${arr.substr(6, 2)}`;
   }
+  return text2;
 }
-function readTags(_raw, buffer, arg2) {
-  try {
-    let str = _raw._raw;
-    ({ doc, raw } = (function getDocument(byteLength, arg1) {
-      value = _modDef8304.get(arg1);
-      if (value) {
-        let str2 = byteLength;
-        if (typeof byteLength !== "string") {
-          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
-          const obj3 = ParseError(dependencyMap[7]);
-        }
-        const obj2 = { doc: parseFromString(value, str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1")), raw: str2 };
-        return obj2;
-      } else {
-        const _console = console;
-        console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
-        const _Error = Error;
-        const error = new Error();
-        throw error;
-      }
-    })(buffer, arg2));
-    if (!str) {
-      str = "";
+function getCreationTime(value) {
+  const stringValue = _mod8296.getStringValue(value);
+  let tmp = stringValue;
+  if (stringValue.length >= 6) {
+    const text = `${arr.substr(0, 2)}:`;
+    const text1 = `${arr.substr(0, 2)}:${arr.substr(2, 2)}`;
+    const text2 = `${`${arr.substr(0, 2)}:${arr.substr(2, 2)}`}:${arr.substr(4, 2)}`;
+    let text3 = text2;
+    if (11 === stringValue.length) {
+      const substr = stringValue.substr(6, 1);
+      const sum = substr + stringValue.substr(7, 2);
+      text3 = `${tmp7}${tmp3}:${arr.substr(9, 2)}`;
     }
-    _raw._raw = str + raw;
-    const tmp4 = (function getDocument(byteLength, arg1) {
-      value = _modDef8304.get(arg1);
-      if (value) {
-        let str2 = byteLength;
-        if (typeof byteLength !== "string") {
-          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
-          const obj3 = ParseError(dependencyMap[7]);
-        }
-        const obj2 = { doc: parseFromString(value, str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1")), raw: str2 };
-        return obj2;
-      } else {
-        const _console = console;
-        console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
-        const _Error = Error;
-        const error = new Error();
-        throw error;
-      }
-    })(buffer, arg2);
-    const tmp6 = getRDF(doc);
-    ParseError(8268).objectAssign(_raw, parseXMPObject(convertToObject(tmp6, true)));
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-function parseFromString(parseFromString, tmp13Result) {
-  try {
-    const parseFromStringResult = parseFromString.parseFromString(tmp13Result, "application/xml");
-    const elements = parseFromStringResult.getElementsByTagName("parsererror");
-    if (elements.length > 0) {
-      const tmp10 = new closure_8(elements[0].textContent);
-      throw tmp10;
-    } else {
-      return parseFromStringResult;
-    }
-  } catch (tmp12) {
-    if ("ParseError" === tmp12.name) {
-      if (obj2.isMissingNamespaceError(tmp12)) {
-        if (!tmp4) {
-          tmp13Result = ParseError(8305);
-          return parseFromString(tmp2, tmp13Result.addMissingNamespaces(tmp), true);
-        }
-      }
-      obj2 = ParseError(8305);
-    }
-    throw tmp12;
-  }
-}
-function getRDF(doc) {
-  let num = 0;
-  if (0 < doc.childNodes.length) {
-    while ("x:xmpmeta" !== doc.childNodes[num].tagName) {
-      if ("rdf:RDF" === doc.childNodes[num].tagName) {
-        return doc.childNodes[num];
-      } else {
-        num = num + 1;
-      }
-    }
-    return getRDF(doc.childNodes[num]);
-  }
-  const error = new Error();
-  throw error;
-}
-function convertToObject(childNodes, arg1) {
-  let length;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  let items = [];
-  let num = 0;
-  if (0 < childNodes.childNodes.length) {
-    do {
-      let arr = items.push(childNodes.childNodes[num]);
-      num = num + 1;
-      length = childNodes.childNodes.length;
-    } while (num < length);
-  }
-  let tmp2 = 1 === items.length;
-  if (tmp2) {
-    tmp2 = "#text" === items[0].nodeName;
-  }
-  if (tmp2) {
-    if (flag) {
-      let obj2 = {};
-    }
-  } else {
-    let attributes = {};
-    const item = items.forEach((nodeName) => {
-      let length;
-      nodeName = nodeName.nodeName;
-      if (nodeName) {
-        nodeName = "#text" !== nodeName.nodeName;
-      }
-      if (nodeName) {
-        attributes = {};
-        let num3 = 0;
-        if (0 < nodeName.attributes.length) {
-          do {
-            let _decodeURIComponent = decodeURIComponent;
-            let _escape = escape;
-            attributes[nodeName.attributes[num3].nodeName] = decodeURIComponent(escape(nodeName.attributes[num3].value));
-            num3 = num3 + 1;
-            length = nodeName.attributes.length;
-          } while (num3 < length);
-        }
-        const obj2 = { attributes, value: convertToObject(nodeName) };
-        if (undefined !== attributes[nodeName.nodeName]) {
-          const _Array = Array;
-          if (!Array.isArray(tmp3[nodeName.nodeName])) {
-            const items = [tmp3[nodeName.nodeName]];
-            tmp3[nodeName.nodeName] = items;
-          }
-          tmp3[nodeName.nodeName].push(obj2);
-        } else {
-          tmp3[nodeName.nodeName] = obj2;
-        }
-      }
-    });
-    return attributes;
-  }
-}
-function parseXMPObject(str) {
-  if (typeof str === "string") {
-    return str;
-  } else {
-    for (const key10002 in arg0) {
-      let tmp5 = arg0[key10002];
-      let _Array = Array;
-      let arr2 = tmp5;
-      if (!Array.isArray(tmp5)) {
-        let items = [tmp5];
-        arr2 = items;
-      }
-      let item = arr2.forEach((attributes) => {
-        obj = ParseError(8268);
-        obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
-        if (typeof attributes.value === "object") {
-          ParseError(8268).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
-          const tmpResult = ParseError(8268);
-        }
-        tmp3 = obj;
-      });
-      continue;
-    }
-    return obj;
-  }
-  obj = {};
-}
-function parseNodeAttributesAsTags(attributes) {
-  const obj = {};
-  for (const key10005 in arg0) {
-    try {
-      if (isTagAttribute(key10005)) {
-        let obj2 = { value: arg0[key10005], attributes: {}, description: null };
-        let tmp3 = getLocalName(key10005);
-        obj2.description = getDescription(arg0[key10005], key10005);
-        obj[tmp3] = obj2;
-      }
-      continue;
-    } catch (err) {
-      continue;
-    }
-  }
-  return obj;
-}
-function isTagAttribute(key10005) {
-  let tmp = "rdf:parseType" !== key10005;
-  if (tmp) {
-    tmp = "xmlns" !== key10005.split(":")[0];
+    tmp = text3;
   }
   return tmp;
 }
-function isNamespaceDefinition(key10005) {
-  return "xmlns" === key10005.split(":")[0];
-}
-function getLocalName(key10005) {
-  let str = "RatingPercent";
-  if (!obj.test(key10005)) {
-    str = key10005.split(":")[1];
+function getEncodingName(value) {
+  const stringValue = _mod8296.getStringValue(value);
+  let str = "UTF-8";
+  if ("\u001B%G" !== stringValue) {
+    let str19 = "Windows-1252";
+    if ("\u001B%5" !== stringValue) {
+      let str18 = "UTF-8 Level 1";
+      if ("\u001B%/G" !== stringValue) {
+        let str17 = "UTF-8 Level 2";
+        if ("\u001B%/H" !== stringValue) {
+          let str16 = "UTF-8 Level 3";
+          if ("\u001B%/I" !== stringValue) {
+            let str15 = "ISO-8859-1";
+            if ("\u001B/A" !== stringValue) {
+              let str14 = "ISO-8859-2";
+              if ("\u001B/B" !== stringValue) {
+                let str2 = "ISO-8859-3";
+                if ("\u001B/C" !== stringValue) {
+                  let str4 = "ISO-8859-4";
+                  if ("\u001B/D" !== stringValue) {
+                    let str6 = "ISO-8859-5";
+                    if ("\u001B/@" !== stringValue) {
+                      let str8 = "ISO-8859-6";
+                      if ("\u001B/G" !== stringValue) {
+                        let str10 = "ISO-8859-7";
+                        if ("\u001B/F" !== stringValue) {
+                          let str12 = "Unknown";
+                          if ("\u001B/H" === stringValue) {
+                            str12 = "ISO-8859-8";
+                          }
+                          str10 = str12;
+                        }
+                        str8 = str10;
+                      }
+                      str6 = str8;
+                    }
+                    str4 = str6;
+                  }
+                  str2 = str4;
+                }
+                str14 = str2;
+              }
+              str15 = str14;
+            }
+            str16 = str15;
+          }
+          str17 = str16;
+        }
+        str18 = str17;
+      }
+      str19 = str18;
+    }
+    str = str19;
   }
   return str;
 }
-function getDescription(arr) {
-  if (Array.isArray(arr)) {
-    const tmp11 = (function getDescriptionOfArray(arr) {
-      const mapped = arr.map((value) => {
-        if (undefined !== value.value) {
-          let tmp2 = closure_1_18(value.value);
-        } else {
-          tmp2 = closure_1_18(value);
+let obj = { iptc: null };
+const obj2 = { 256: null, 261: null, 276: null, 278: null, 286: "Service Identifier", 296: "Envelope Number", 306: "Product ID", 316: "Envelope Priority", 326: null, 336: null, 346: null, 356: "UNO", 376: null, 378: null, 512: null, 515: "Object Type Reference", 516: "Object Attribute Reference", 517: "Object Name", 519: "Edit Status", 520: null, 522: "Urgency", 524: null, 527: "Category", 532: null, 534: "Fixture Identifier", 537: null, 538: null, 539: null, 542: "Release Date", 547: "Release Time", 549: "Expiration Date", 550: "Expiration Time", 552: "Special Instructions", 554: null, 557: null, 559: null, 562: null, 567: null, 572: null, 574: null, 575: null, 577: "Originating Program", 582: "Program Version", 587: null, 592: null, 597: null, 602: "City", 604: "Sub-location", 607: "Province/State", 612: "Country/Primary Location Code", 613: "Country/Primary Location Name", 615: "Original Transmission Reference", 617: "Headline", 622: "Credit", 627: "Source", 628: "Copyright Notice", 630: null, 632: "Caption/Abstract", 634: null, 637: null, 642: "Image Type", 643: null, 647: "Language Identifier", 662: null, 663: null, 664: null, 665: null, 666: "Audio Outcue", 698: "Short Document ID", 699: "Unique Document ID", 700: "Owner ID", 712: null, 713: null, 714: "ObjectData Preview Data", 1802: null, 1812: null, 1882: null, 1887: null };
+obj2[256] = {
+  name: "Model Version",
+  description(arg0) {
+    return (arg0[0] << 8) + arg0[1].toString();
+  }
+};
+obj2[261] = { name: "Destination", repeatable: true };
+obj2[276] = {
+  name: "File Format",
+  description(arg0) {
+    return (arg0[0] << 8) + arg0[1].toString();
+  }
+};
+obj2[278] = {
+  name: "File Format Version",
+  description(arg0) {
+    return (arg0[0] << 8) + arg0[1].toString();
+  }
+};
+obj2[326] = { name: "Date Sent", description: getCreationDate };
+obj2[336] = { name: "Time Sent", description: getCreationTime };
+obj2[346] = { name: "Coded Character Set", description: getEncodingName, encoding_name: getEncodingName };
+obj2[376] = {
+  name: "ARM Identifier",
+  description(arg0) {
+    return (arg0[0] << 8) + arg0[1].toString();
+  }
+};
+obj2[378] = {
+  name: "ARM Version",
+  description(arg0) {
+    return (arg0[0] << 8) + arg0[1].toString();
+  }
+};
+obj2[512] = {
+  name: "Record Version",
+  description(arg0) {
+    return (arg0[0] << 8) + arg0[1].toString();
+  }
+};
+obj2[520] = {
+  name: "Editorial Update",
+  description(value) {
+    let str = "Unknown";
+    if ("01" === obj.getStringValue(value)) {
+      str = "Additional Language";
+    }
+    return str;
+  }
+};
+obj2[524] = {
+  name: "Subject Reference",
+  repeatable: true,
+  description(value) {
+    const parts = _mod8296.getStringValue(value).split(":");
+    let str2 = "";
+    let str3 = "";
+    if (parts[3]) {
+      str3 = `/${tmp[3]}`;
+    }
+    const sum = parts[2] + str3;
+    if (parts[4]) {
+      str2 = `/${tmp[4]}`;
+    }
+    return sum + str2;
+  }
+};
+obj2[532] = { name: "Supplemental Category", repeatable: true };
+obj2[537] = { name: "Keywords", repeatable: true };
+obj2[538] = { name: "Content Location Code", repeatable: true };
+obj2[539] = { name: "Content Location Name", repeatable: true };
+obj2[554] = {
+  name: "Action Advised",
+  description(value) {
+    const stringValue = _mod8296.getStringValue(value);
+    let str = "Object Kill";
+    if ("01" !== stringValue) {
+      let str2 = "Object Replace";
+      if ("02" !== stringValue) {
+        let str4 = "Object Append";
+        if ("03" !== stringValue) {
+          let str6 = "Unknown";
+          if ("04" === stringValue) {
+            str6 = "Object Reference";
+          }
+          str4 = str6;
         }
-        return tmp2;
-      });
-      return mapped.join(", ");
-    })(arr);
-    let tmp12 = tmp11;
-    if (tmp2) {
-      tmp12 = tmp11;
-      if (typeof calculateGPSValueDefault[tmp2] === "function") {
-        tmp12 = calculateGPSValueDefault[tmp2](arr, tmp11);
-        const tmp13Result = calculateGPSValueDefault;
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj2[557] = { name: "Reference Service", repeatable: true };
+obj2[559] = { name: "Reference Date", repeatable: true };
+obj2[562] = { name: "Reference Number", repeatable: true };
+obj2[567] = { name: "Date Created", description: getCreationDate };
+obj2[572] = { name: "Time Created", description: getCreationTime };
+obj2[574] = { name: "Digital Creation Date", description: getCreationDate };
+obj2[575] = { name: "Digital Creation Time", description: getCreationTime };
+obj2[587] = {
+  name: "Object Cycle",
+  description(value) {
+    const stringValue = _mod8296.getStringValue(value);
+    let str = "morning";
+    if ("a" !== stringValue) {
+      let str2 = "evening";
+      if ("p" !== stringValue) {
+        let str4 = "Unknown";
+        if ("b" === stringValue) {
+          str4 = "both";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj2[592] = { name: "By-line", repeatable: true };
+obj2[597] = { name: "By-line Title", repeatable: true };
+obj2[630] = { name: "Contact", repeatable: true };
+obj2[634] = { name: "Writer/Editor", repeatable: true };
+obj2[637] = {
+  name: "Rasterized Caption",
+  description(arg0) {
+    return arg0;
+  }
+};
+obj2[643] = {
+  name: "Image Orientation",
+  description(value) {
+    const stringValue = _mod8296.getStringValue(value);
+    let str = "Portrait";
+    if ("P" !== stringValue) {
+      let str2 = "Landscape";
+      if ("L" !== stringValue) {
+        let str4 = "Unknown";
+        if ("S" === stringValue) {
+          str4 = "Square";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj2[662] = {
+  name: "Audio Type",
+  description(value) {
+    let str = _mod8296.getStringValue(value);
+    const charAtResult = str.charAt(0);
+    const charAtResult1 = str.charAt(1);
+    let str2 = "Mono";
+    if ("1" !== charAtResult) {
+      str2 = "";
+      if ("2" === charAtResult) {
+        str2 = "Stereo";
       }
     }
-    return tmp12;
-  } else if (typeof arr === "object") {
-    return (function getDescriptionOfObject(arr) {
-      const items = [];
-      for (const key10024 in arg0) {
-        let str8 = "CreatorCity";
-        if ("CiAdrCity" !== key10024) {
-          let str = "CreatorCountry";
-          if ("CiAdrCtry" !== key10024) {
-            let str2 = "CreatorAddress";
-            if ("CiAdrExtadr" !== key10024) {
-              let str3 = "CreatorPostalCode";
-              if ("CiAdrPcode" !== key10024) {
-                let str4 = "CreatorRegion";
-                if ("CiAdrRegion" !== key10024) {
-                  let str5 = "CreatorWorkEmail";
-                  if ("CiEmailWork" !== key10024) {
-                    let str6 = "CreatorWorkPhone";
-                    if ("CiTelWork" !== key10024) {
-                      let str7 = "CreatorWorkUrl";
-                      if ("CiUrlWork" !== key10024) {
-                        str7 = key10024;
+    if ("A" === charAtResult1) {
+      let text = `${str2}, actuality`;
+    } else if ("C" === charAtResult1) {
+      text = `${str2}, question and answer session`;
+    } else if ("M" === charAtResult1) {
+      text = `${str2}, music, transmitted by itself`;
+    } else if ("Q" === charAtResult1) {
+      text = `${str2}, response to a question`;
+    } else if ("R" === charAtResult1) {
+      text = `${str2}, raw sound`;
+    } else if ("S" === charAtResult1) {
+      text = `${str2}, scener`;
+    } else if ("V" === charAtResult1) {
+      text = `${str2}, voicer`;
+    } else {
+      text = str2;
+      if ("W" === charAtResult1) {
+        text = `${str2}, wrap`;
+      }
+    }
+    if ("" !== text) {
+      str = text;
+    }
+    return str;
+  }
+};
+obj2[663] = {
+  name: "Audio Sampling Rate",
+  description(value) {
+    return parseInt(_mod8296.getStringValue(value), 10) + " Hz";
+  }
+};
+obj2[664] = {
+  name: "Audio Sampling Resolution",
+  description(value) {
+    const parsed = parseInt(_mod8296.getStringValue(value), 10);
+    let str = " bits";
+    if (1 === parsed) {
+      str = " bit";
+    }
+    return parsed + str;
+  }
+};
+obj2[665] = {
+  name: "Audio Duration",
+  description(value) {
+    const stringValue = _mod8296.getStringValue(value);
+    let text2 = stringValue;
+    if (stringValue.length >= 6) {
+      const text = `${arr.substr(0, 2)}:`;
+      const text1 = `${arr.substr(0, 2)}:${arr.substr(2, 2)}`;
+      text2 = `${`${arr.substr(0, 2)}:${arr.substr(2, 2)}`}:${arr.substr(4, 2)}`;
+    }
+    return text2;
+  }
+};
+obj2[712] = {
+  name(arg0) {
+    let str = "Record 2 destination";
+    if (2 === arg0.length) {
+      str = "ObjectData Preview File Format";
+    }
+    return str;
+  },
+  description(value) {
+    if (2 === value.length) {
+      const sum = (value[0] << 8) + value[1];
+      let str = "No ObjectData";
+      if (0 !== sum) {
+        let str31 = "IPTC-NAA Digital Newsphoto Parameter Record";
+        if (1 !== sum) {
+          let str30 = "IPTC7901 Recommended Message Format";
+          if (2 !== sum) {
+            let str29 = "Tagged Image File Format (Adobe/Aldus Image data)";
+            if (3 !== sum) {
+              let str28 = "Illustrator (Adobe Graphics data)";
+              if (4 !== sum) {
+                let str27 = "AppleSingle (Apple Computer Inc)";
+                if (5 !== sum) {
+                  let str26 = "NAA 89-3 (ANPA 1312)";
+                  if (6 !== sum) {
+                    let str25 = "MacBinary II";
+                    if (7 !== sum) {
+                      let str24 = "IPTC Unstructured Character Oriented File Format (UCOFF)";
+                      if (8 !== sum) {
+                        let str23 = "United Press International ANPA 1312 variant";
+                        if (9 !== sum) {
+                          let str22 = "United Press International Down-Load Message";
+                          if (10 !== sum) {
+                            let str21 = "JPEG File Interchange (JFIF)";
+                            if (11 !== sum) {
+                              let str20 = "Photo-CD Image-Pac (Eastman Kodak)";
+                              if (12 !== sum) {
+                                let str19 = "Microsoft Bit Mapped Graphics File [*.BMP]";
+                                if (13 !== sum) {
+                                  let str18 = "Digital Audio File [*.WAV] (Microsoft & Creative Labs)";
+                                  if (14 !== sum) {
+                                    let str17 = "Audio plus Moving Video [*.AVI] (Microsoft)";
+                                    if (15 !== sum) {
+                                      let str16 = "PC DOS/Windows Executable Files [*.COM][*.EXE]";
+                                      if (16 !== sum) {
+                                        let str15 = "Compressed Binary File [*.ZIP] (PKWare Inc)";
+                                        if (17 !== sum) {
+                                          let str14 = "Audio Interchange File Format AIFF (Apple Computer Inc)";
+                                          if (18 !== sum) {
+                                            let str13 = "RIFF Wave (Microsoft Corporation)";
+                                            if (19 !== sum) {
+                                              let str12 = "Freehand (Macromedia/Aldus)";
+                                              if (20 !== sum) {
+                                                let str11 = "Hypertext Markup Language \"HTML\" (The Internet Society)";
+                                                if (21 !== sum) {
+                                                  let str10 = "MPEG 2 Audio Layer 2 (Musicom), ISO/IEC";
+                                                  if (22 !== sum) {
+                                                    let str9 = "MPEG 2 Audio Layer 3, ISO/IEC";
+                                                    if (23 !== sum) {
+                                                      let str2 = "Portable Document File (*.PDF) Adobe";
+                                                      if (24 !== sum) {
+                                                        let str3 = "News Industry Text Format (NITF)";
+                                                        if (25 !== sum) {
+                                                          let str4 = "Tape Archive (*.TAR)";
+                                                          if (26 !== sum) {
+                                                            let str5 = "Tidningarnas Telegrambyr\u00E5 NITF version (TTNITF DTD)";
+                                                            if (27 !== sum) {
+                                                              let str6 = "Ritzaus Bureau NITF version (RBNITF DTD)";
+                                                              if (28 !== sum) {
+                                                                let str7 = "Corel Draw [*.CDR]";
+                                                                if (29 !== sum) {
+                                                                  const _HermesInternal = HermesInternal;
+                                                                  str7 = "Unknown format " + sum;
+                                                                }
+                                                                str6 = str7;
+                                                              }
+                                                              str5 = str6;
+                                                            }
+                                                            str4 = str5;
+                                                          }
+                                                          str3 = str4;
+                                                        }
+                                                        str2 = str3;
+                                                      }
+                                                      str9 = str2;
+                                                    }
+                                                    str10 = str9;
+                                                  }
+                                                  str11 = str10;
+                                                }
+                                                str12 = str11;
+                                              }
+                                              str13 = str12;
+                                            }
+                                            str14 = str13;
+                                          }
+                                          str15 = str14;
+                                        }
+                                        str16 = str15;
+                                      }
+                                      str17 = str16;
+                                    }
+                                    str18 = str17;
+                                  }
+                                  str19 = str18;
+                                }
+                                str20 = str19;
+                              }
+                              str21 = str20;
+                            }
+                            str22 = str21;
+                          }
+                          str23 = str22;
+                        }
+                        str24 = str23;
                       }
-                      str6 = str7;
+                      str25 = str24;
                     }
-                    str5 = str6;
+                    str26 = str25;
                   }
-                  str4 = str5;
+                  str27 = str26;
                 }
-                str3 = str4;
+                str28 = str27;
               }
-              str2 = str3;
+              str29 = str28;
             }
-            str = str2;
+            str30 = str29;
           }
-          str8 = str;
+          str31 = str30;
         }
-        let _HermesInternal = HermesInternal;
-        arr = items.push("" + str8 + ": " + getDescription(arg0[key10024].value));
-        continue;
+        str = str31;
       }
-      return items.join("; ");
-    })(arr);
-  } else {
-    try {
-      if (tmp2) {
-        if (typeof calculateGPSValueDefault[tmp2] === "function") {
-          let decodeURIComponentResult = calculateGPSValueDefault[tmp2](arr);
-          const tmp4Result = calculateGPSValueDefault;
-        }
-        return decodeURIComponentResult;
-      }
-      const _decodeURIComponent = decodeURIComponent;
-      const _escape = escape;
-      decodeURIComponentResult = decodeURIComponent(escape(arr));
-    } catch (err) {
-      return tmp;
-    }
-  }
-}
-function parseNodeChildrenAsTags(value) {
-  const obj = {};
-  for (const key10005 in arg0) {
-    try {
-      if (!isNamespaceDefinition(key10005)) {
-        let tmp3 = getLocalName(key10005);
-        obj[tmp3] = parseNodeAsTag(arg0[key10005], key10005);
-      }
-      continue;
-    } catch (err) {
-      continue;
-    }
-  }
-  return obj;
-}
-function parseNodeAsTag(attributes, key10005) {
-  if (Array.isArray(attributes)) {
-    let tmp9 = parseNodeAsSimpleValue(attributes[attributes.length - 1], key10005);
-  } else {
-    let tmp = "Resource" === attributes.attributes["rdf:parseType"] && typeof attributes.value === "string";
-    if (tmp) {
-      tmp = "" === attributes.value.trim();
-    }
-    if (tmp) {
-      const obj3 = { value: "", attributes: {}, description: "" };
-      tmp9 = obj3;
+      return str;
     } else {
-      let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
-      if (tmp2) {
-        tmp2 = undefined !== attributes.value["rdf:value"];
-      }
-      if (!tmp2) {
-        tmp2 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-        let tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-      }
-      if (tmp2) {
-        tmp9 = parseNodeAsSimpleRdfDescription(attributes, key10005);
-      } else {
-        let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
-        if (!tmp4) {
-          tmp4 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-          let tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-        }
-        if (tmp4) {
-          tmp9 = parseNodeAsStructureRdfDescription(attributes, key10005);
-        } else {
-          let _Object = Object;
-          let tmp6 = 0 === Object.keys(attributes.value).length;
-          if (tmp6) {
-            tmp6 = undefined === attributes.attributes["xml:lang"];
-          }
-          if (tmp6) {
-            tmp6 = undefined === attributes.attributes["rdf:resource"];
-          }
-          if (tmp6) {
-            const tmp16 = parseNodeAttributesAsTags(attributes.attributes);
-            const obj4 = { value: tmp16, attributes: {}, description: getDescription(tmp16, key10005) };
-            tmp9 = obj4;
-          } else {
-            value = attributes.value;
-            if (undefined !== tmp7) {
-              value2 = attributes.value;
-              const prop = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"].value["rdf:li"];
-              let obj = {};
-              for (const key10070 in arg0.attributes) {
-                let tmp11 = "rdf:parseType" === key10070;
-                if (!tmp11) {
-                  tmp11 = "rdf:resource" === key10070;
-                }
-                if (!tmp11) {
-                  tmp11 = "xmlns" === key10070.split(":")[0];
-                }
-                if (tmp11) {
-                  continue;
-                } else {
-                  let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-                  let str9 = "RatingPercent";
-                  if (!obj2.test(key10070)) {
-                    str9 = key10070.split(":")[1];
-                  }
-                  obj[str9] = arg0.attributes[key10070];
-                  continue;
-                }
-                continue;
-              }
-              const items = [];
-              if (undefined === prop) {
-                let items1 = [];
-              } else {
-                const _Array = Array;
-                items1 = prop;
-                if (!Array.isArray(prop)) {
-                  const items2 = [prop];
-                  items1 = items2;
-                }
-              }
-              const item = items1.forEach((attributes) => {
-                let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
-                if (tmp2) {
-                  tmp2 = undefined !== attributes.value["rdf:value"];
-                }
-                if (!tmp2) {
-                  tmp2 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-                  const tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-                }
-                if (tmp2) {
-                  value = parseNodeAsSimpleRdfDescription(attributes);
-                } else {
-                  let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
-                  if (!tmp4) {
-                    tmp4 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-                    const tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-                  }
-                  if (tmp4) {
-                    value = parseNodeAsStructureRdfDescription(attributes).value;
-                  } else {
-                    const _Object = Object;
-                    let tmp7 = 0 === Object.keys(attributes.value).length;
-                    if (tmp7) {
-                      tmp7 = undefined === attributes.attributes["xml:lang"];
-                    }
-                    if (tmp7) {
-                      tmp7 = undefined === attributes.attributes["rdf:resource"];
-                    }
-                    if (tmp7) {
-                      const tmp10 = parseNodeAttributesAsTags(attributes.attributes);
-                      getDescription(tmp10, undefined);
-                      value = tmp10;
-                    } else {
-                      value = parseNodeAsSimpleValue(attributes);
-                    }
-                  }
-                }
-                items.push(value);
-              });
-              const obj5 = { value: items, attributes: obj, description: null };
-              obj = getDescription(items, key10005);
-              obj5.description = obj;
-              const iter = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"];
-            } else {
-              tmp9 = parseNodeAsSimpleValue(attributes, key10005);
-            }
-            tmp7 = value["rdf:Bag"] || value["rdf:Seq"] || value["rdf:Alt"];
-          }
-        }
-      }
-    }
-  }
-  return tmp9;
-}
-function parseNodeAsSimpleRdfDescription(attributes, key10005) {
-  const obj = {};
-  for (const key10009 in arg0.attributes) {
-    let tmp = "rdf:parseType" === key10009;
-    if (!tmp) {
-      tmp = "rdf:resource" === key10009;
-    }
-    if (!tmp) {
-      tmp = "xmlns" === key10009.split(":")[0];
-    }
-    if (tmp) {
-      continue;
-    } else {
-      let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str = "RatingPercent";
-      if (!obj2.test(key10009)) {
-        str = key10009.split(":")[1];
-      }
-      obj[str] = arg0.attributes[key10009];
-      continue;
-    }
-    continue;
-  }
-  let iter = attributes;
-  if (undefined !== attributes.value["rdf:Description"]) {
-    iter = attributes.value["rdf:Description"];
-  }
-  const obj4 = {};
-  for (const key10035 in iter.attributes) {
-    let tmp2 = "rdf:parseType" === key10035;
-    if (!tmp2) {
-      tmp2 = "rdf:resource" === key10035;
-    }
-    if (!tmp2) {
-      tmp2 = "xmlns" === key10035.split(":")[0];
-    }
-    if (tmp2) {
-      continue;
-    } else {
-      let obj5 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str2 = "RatingPercent";
-      if (!obj5.test(key10035)) {
-        str2 = key10035.split(":")[1];
-      }
-      obj4[str2] = iter.attributes[key10035];
-      continue;
-    }
-    continue;
-  }
-  const obj6 = {};
-  for (const key10052 in iter.value) {
-    let tmp3 = "rdf:value" === key10052;
-    if (!tmp3) {
-      tmp3 = "xmlns" === key10052.split(":")[0];
-    }
-    if (tmp3) {
-      continue;
-    } else {
-      let obj7 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str3 = "RatingPercent";
-      if (!obj7.test(key10052)) {
-        str3 = key10052.split(":")[1];
-      }
-      obj6[str3] = iter.value[key10052].value;
-      continue;
-    }
-    continue;
-  }
-  ParseError(8268).objectAssign(obj, obj4, obj6);
-  const prop = iter.value["rdf:value"];
-  const obj3 = ParseError(8268);
-  return { value: prop.attributes && prop.attributes["rdf:resource"] || iter.value["rdf:value"].value, attributes: obj, description: getDescription(prop.attributes && prop.attributes["rdf:resource"] || iter.value["rdf:value"].value, key10005) };
-}
-function parseNodeAsStructureRdfDescription(value, key10005) {
-  const obj = { value: {}, attributes: {} };
-  let iter = value;
-  if (undefined !== value.value["rdf:Description"]) {
-    ParseError(8268).objectAssign(obj.value, parseNodeAttributesAsTags(value.value["rdf:Description"].attributes));
-    const obj4 = ParseError(8268);
-    const obj6 = {};
-    for (const key10008 in arg0.attributes) {
-      let tmp = "rdf:parseType" === key10008;
-      if (!tmp) {
-        tmp = "rdf:resource" === key10008;
-      }
-      if (!tmp) {
-        tmp = "xmlns" === key10008.split(":")[0];
-      }
-      if (tmp) {
-        continue;
-      } else {
-        let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-        let str = "RatingPercent";
-        if (!obj2.test(key10008)) {
-          str = key10008.split(":")[1];
-        }
-        obj6[str] = arg0.attributes[key10008];
-        continue;
-      }
-      continue;
-    }
-    ParseError(8268).objectAssign(obj.attributes, obj6);
-    iter = value.value["rdf:Description"];
-    const obj5 = ParseError(8268);
-  }
-  ParseError(8268).objectAssign(obj.value, parseNodeChildrenAsTags(iter.value));
-  obj.description = getDescription(obj.value, key10005);
-  return obj;
-}
-function parseNodeAsSimpleValue(attributes, key10005) {
-  let tmp2 = attributes.attributes && attributes.attributes["rdf:resource"];
-  if (!tmp2) {
-    value = attributes.value;
-    let obj = {};
-    let tmp3 = value;
-    if (typeof value !== "string") {
-      tmp3 = obj;
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        tmp3 = obj;
-        while (keys[tmp] !== undefined) {
-          let tmp11 = value[tmp4];
-          let _Array = Array;
-          let arr2 = tmp11;
-          if (!Array.isArray(tmp11)) {
-            let items = [tmp11];
-            arr2 = items;
-          }
-          let item = arr2.forEach((attributes) => {
-            obj = ParseError(8268);
-            obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
-            if (typeof attributes.value === "object") {
-              ParseError(8268).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
-              const tmpResult = ParseError(8268);
-            }
-            tmp3 = obj;
-          });
-          continue;
-        }
-      }
-    }
-    tmp2 = tmp3;
-  }
-  const obj2 = { value: tmp2, attributes: null, description: null };
-  const obj3 = {};
-  for (const key10021 in arg0.attributes) {
-    let tmp6 = "rdf:parseType" === key10021;
-    if (!tmp6) {
-      tmp6 = "rdf:resource" === key10021;
-    }
-    if (!tmp6) {
-      tmp6 = "xmlns" === key10021.split(":")[0];
-    }
-    if (tmp6) {
-      continue;
-    } else {
-      let obj4 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str = "RatingPercent";
-      if (!obj4.test(key10021)) {
-        str = key10021.split(":")[1];
-      }
-      obj3[str] = arg0.attributes[key10021];
-      continue;
-    }
-    continue;
-  }
-  obj2.attributes = obj3;
-  obj2.description = getDescription(tmp2, key10005);
-  return obj2;
-}
-class ParseError {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_4(this, ParseError);
-    items = [];
-    items[0] = global;
-    tmp2 = metroRequire;
-    obj = metroRequire(ParseError);
-    tmp3 = hasOwnProperty;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.name = "ParseError";
-    return tmp3Result;
-  }
-}
-_inherits(ParseError, _wrapNativeSuperDefault(Error));
-let closure_8 = _createClass(ParseError);
-
-export default {
-  read(buffer, arr, arg2) {
-    let length;
-    let length2;
-    let length3;
-    const obj = {};
-    if (typeof buffer === "string") {
-      readTags(obj, buffer, arg2);
-      return obj;
-    } else {
-      if (0 === arr.length) {
-        let items = [];
-      } else {
-        const substr = arr.slice(0, 1);
-        const _Uint8Array5 = Uint8Array;
-        const uint8Array = new Uint8Array(substr.reduce((acc, item) => acc + item.length, 0));
-        let num2 = 0;
-        let num = 0;
-        if (0 < substr.length) {
-          do {
-            arr = substr[num2];
-            buffer = buffer.buffer;
-            let _Uint8Array = Uint8Array;
-            let tmp3 = new.target;
-            let tmp4 = new.target;
-            let uint8Array1 = new Uint8Array(buffer.slice(arr.dataOffset, arr.dataOffset + arr.length));
-            let result = uint8Array.set(uint8Array1, num);
-            num = num + arr.length;
-            num2 = num2 + 1;
-            length = substr.length;
-          } while (num2 < length);
-        }
-        const _DataView = DataView;
-        const dataView = new DataView(uint8Array.buffer);
-        const items1 = [dataView];
-        items = items1;
-        if (arr.length > 1) {
-          const substr1 = arr.slice(1);
-          const _Uint8Array6 = Uint8Array;
-          const uint8Array2 = new Uint8Array(substr1.reduce((acc, item) => acc + item.length, 0));
-          let num4 = 0;
-          let num3 = 0;
-          if (0 < substr1.length) {
-            do {
-              let arr5 = substr1[num4];
-              let buffer1 = buffer.buffer;
-              let _Uint8Array2 = Uint8Array;
-              let tmp12 = new.target;
-              let tmp13 = new.target;
-              let uint8Array3 = new Uint8Array(buffer1.slice(arr5.dataOffset, arr5.dataOffset + arr5.length));
-              let result1 = uint8Array2.set(uint8Array3, num3);
-              num3 = num3 + arr5.length;
-              num4 = num4 + 1;
-              length2 = substr1.length;
-            } while (num4 < length2);
-          }
-          const _DataView2 = DataView;
-          const dataView1 = new DataView(uint8Array2.buffer);
-          items1.push(dataView1);
-          items = items1;
-        }
-      }
-      const tmp23 = _slicedToArray(items, 2);
-      let tmp25Result = readTags(obj, tmp23[0], arg2);
-      if (tmp23[1]) {
-        if (!tmp25Result) {
-          tmp25Result = readTags(obj, tmp24, arg2);
-        }
-        if (!tmp25Result) {
-          delete tmp[tmp2];
-          const _Uint8Array3 = Uint8Array;
-          const uint8Array4 = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-          let num7 = 0;
-          let num8 = 0;
-          if (0 < arr.length) {
-            do {
-              let arr7 = arr[num7];
-              let buffer2 = buffer.buffer;
-              let _Uint8Array4 = Uint8Array;
-              let tmp31 = new.target;
-              let tmp32 = new.target;
-              let uint8Array5 = new Uint8Array(buffer2.slice(arr7.dataOffset, arr7.dataOffset + arr7.length));
-              let result2 = uint8Array4.set(uint8Array5, num8);
-              num8 = num8 + arr7.length;
-              num7 = num7 + 1;
-              length3 = arr.length;
-            } while (num7 < length3);
-          }
-          const _DataView3 = DataView;
-          const dataView2 = new DataView(uint8Array4.buffer);
-          readTags(obj, dataView2, arg2);
-        }
-      }
-      return obj;
+      return _mod8296.getStringValue(value);
     }
   }
 };
+obj2[713] = {
+  name: "ObjectData Preview File Format Version",
+  description(value, ObjectData_Preview_File_Format) {
+    const obj = { "00": { "00": "1" }, "01": { "01": "1", "02": "2", "03": "3", "04": "4" }, "02": { "04": "4" }, "03": { "01": "5.0", "02": "6.0" }, "04": { "01": "1.40" }, "05": { "01": "2" }, "06": { "01": "1" }, 11: null, 20: null, 21: null };
+    obj[11] = { "01": "1.02" };
+    obj[20] = { "01": "3.1", "02": "4.0", "03": "5.0", "04": "5.5" };
+    obj[21] = { "02": "2.0" };
+    const stringValue = _mod8296.getStringValue(value);
+    if (ObjectData_Preview_File_Format["ObjectData Preview File Format"]) {
+      const stringValue1 = _mod8296.getStringValue(ObjectData_Preview_File_Format["ObjectData Preview File Format"].value);
+      if (obj[stringValue1]) {
+        if (obj[stringValue1][stringValue]) {
+          return obj[stringValue1][stringValue];
+        }
+      }
+      const tmpResult = _mod8296;
+    }
+    return stringValue;
+  }
+};
+obj2[1802] = {
+  name: "Size Mode",
+  description(arg0) {
+    return arg0[0].toString();
+  }
+};
+obj2[1812] = {
+  name: "Max Subfile Size",
+  description(arg0) {
+    let length;
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    if (0 < arg0.length) {
+      do {
+        num2 = (num2 << 8) + arg0[num];
+        num = num + 1;
+        num3 = num2;
+        length = arg0.length;
+      } while (num < length);
+    }
+    return num3.toString();
+  }
+};
+obj2[1882] = {
+  name: "ObjectData Size Announced",
+  description(arg0) {
+    let length;
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    if (0 < arg0.length) {
+      do {
+        num2 = (num2 << 8) + arg0[num];
+        num = num + 1;
+        num3 = num2;
+        length = arg0.length;
+      } while (num < length);
+    }
+    return num3.toString();
+  }
+};
+obj2[1887] = {
+  name: "Maximum ObjectData Size",
+  description(arg0) {
+    let length;
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    if (0 < arg0.length) {
+      do {
+        num2 = (num2 << 8) + arg0[num];
+        num = num + 1;
+        num3 = num2;
+        length = arg0.length;
+      } while (num < length);
+    }
+    return num3.toString();
+  }
+};
+obj.iptc = obj2;
+
+export default obj;

@@ -1,23 +1,41 @@
 // === Module 5566: ? ===
 
 // Module 5566
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod5518 from "module_5518" /* 5518 */;
+import _slicedToArray from "module_5500" /* 5500 */;
 
-export default _getPrototypeOf;
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+
+export function useRecyclingState(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg2;
+  let tmp = hasOwnProperty(undefined);
+  [r10015, tmp3] = _mod5518.useLayoutState(0);
+  React4(() => {
+    let tmpResult = closure_0;
+    if (typeof closure_0 === "function") {
+      tmpResult = tmp();
+    }
+    closure_2.current = tmpResult;
+    if (closure_1 != null) {
+      tmp3();
+    }
+  }, arg1);
+  const items = [tmp3];
+  const items1 = [
+    tmp.current,
+    React3((fn, arg1) => {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(ref.current);
+      }
+      if (tmp !== ref.current) {
+        tmp2.current = tmp;
+        arg1((arg0) => arg0 + 1, arg1);
+      }
+    }, items)
+  ];
+  return items1;
+}

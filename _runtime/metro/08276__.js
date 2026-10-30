@@ -1,29 +1,21 @@
 // === Module 8276: ? ===
 
 // Module 8276
-import findOffsets from "findOffsets" /* 8277 */;
-
-require = arg1;
-const dependencyMap = arg6;
+let c0 = 18761;
+let c1 = 19789;
 
 export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
     } else {
-      return false;
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
     }
-  },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
   }
 };

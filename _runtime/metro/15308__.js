@@ -1,7 +1,7 @@
 // === Module 15308: ? ===
 
 // Module 15308
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 420, height: 112, scales: [1, 2, 3], hash: "ac80f7b470e8847053e22e988a30fa87", name: "subscription_placeholder_pattern_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images", width: 375, height: 199.5, scales: [2, 3], hash: "84a21c838928df371966fa4ffd9053d1", name: "nitro_home_banner", type: "png" });

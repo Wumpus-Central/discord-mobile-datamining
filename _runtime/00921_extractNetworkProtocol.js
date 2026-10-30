@@ -1,0 +1,176 @@
+// === Module 921: extractNetworkProtocol ===
+
+// Module 921 (extractNetworkProtocol)
+import _mod681 from "module_681" /* 681 */;
+import _mod901 from "module_901" /* 901 */;
+import _mod922 from "module_922" /* 922 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+const require = globalThis.__r;
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export function extractNetworkProtocol(nextHopProtocol) {
+  str = "unknown";
+  str2 = "unknown";
+  let str3 = "";
+  const iter = nextHopProtocol[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if ("/" === nextResult) {
+      let tmp9 = _slicedToArray(nextHopProtocol.split("/"), 2);
+      [str, str2] = tmp9;
+      iter.return();
+      break;
+    } else {
+      let _isNaN = isNaN;
+      let _Number = Number;
+      if (isNaN(Number(tmp2))) {
+        str3 = `${tmp2}`;
+        continue;
+      } else {
+        let str4 = "http";
+        let str5 = "h";
+        if ("h" !== `${tmp2}`) {
+          str4 = str3;
+        }
+        str = str4;
+        str2 = nextHopProtocol.split(str3)[1];
+        iter.return();
+        break;
+      }
+      break;
+    }
+    if (str3 === nextHopProtocol) {
+      str = str3;
+    }
+    let obj = { name: str, version: str2 };
+    return obj;
+  }
+}
+export function getBrowserPerformanceAPI() {
+  return _mod901.WINDOW.addEventListener && _mod901.WINDOW.performance;
+}
+export function isMeasurementValue(deviceMemory) {
+  let isFiniteResult = typeof deviceMemory === "number";
+  if (typeof deviceMemory === "number") {
+    const _isFinite = isFinite;
+    isFiniteResult = isFinite(deviceMemory);
+  }
+  return isFiniteResult;
+}
+export function listenForWebVitalReportEvents(on, arg1) {
+  closure_0 = arg1;
+  c2 = false;
+  _mod922.onHidden(() => {
+    let tmp = !c2;
+    if (!c2) {
+      tmp = spanId;
+    }
+    if (tmp) {
+      closure_0("pagehide", spanId);
+    }
+    c2 = true;
+  });
+  closure_3 = on.on("beforeStartNavigationSpan", (arg0, isRedirect) => {
+    isRedirect = undefined;
+    if (isRedirect != null) {
+      isRedirect = isRedirect.isRedirect;
+    }
+    if (!isRedirect) {
+      let tmp3 = !c2;
+      if (!c2) {
+        tmp3 = spanId;
+      }
+      if (tmp3) {
+        closure_0("navigation", spanId);
+      }
+      c2 = true;
+      closure_3();
+      closure_4();
+    }
+  });
+  closure_4 = on.on("afterStartPageLoadSpan", (spanContext) => {
+    spanId = spanContext.spanContext().spanId;
+    closure_4();
+  });
+}
+export function msToSec(duration) {
+  return duration / 1000;
+}
+export function startAndEndSpan(activeSpan, sum, sum1, arg3) {
+  _require = sum;
+  dependencyMap = sum1;
+  if (arg3 == null) {
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
+  } else {
+    closure_2 = Object.assign(arg3, undefined);
+    const start_timestamp = require("module_681").spanToJSON(activeSpan).start_timestamp;
+    let tmp = start_timestamp;
+    if (start_timestamp) {
+      tmp = start_timestamp > sum;
+    }
+    if (tmp) {
+      tmp = typeof activeSpan.updateStartTime === "function";
+    }
+    if (tmp) {
+      activeSpan.updateStartTime(sum);
+    }
+    const obj2 = require("module_681");
+    return require("module_681").withActiveSpan(activeSpan, () => {
+      const merged = Object.assign(closure_2);
+      const startInactiveSpanResult = _mod681.startInactiveSpan({ startTime });
+      if (startInactiveSpanResult) {
+        startInactiveSpanResult.end(closure_1);
+      }
+      return startInactiveSpanResult;
+    });
+  }
+}
+export function startStandaloneWebVitalSpan(arg0) {
+  const client = _mod681.getClient();
+  if (client) {
+    ({ attributes, name, transaction, startTime } = arg0);
+    const options = client.getOptions();
+    ({ release, environment, sendDefaultPii } = options);
+    const integrationByName = client.getIntegrationByName("Replay");
+    if (integrationByName != null) {
+      const replayId = integrationByName.getReplayId();
+    }
+    const currentScope = _mod681.getCurrentScope();
+    const user = currentScope.getUser();
+    if (undefined !== user) {
+      const tmp8 = user.email || user.id || user.ip_address;
+      const tmp9 = user.email || user.id || user.ip_address;
+    }
+    try {
+      const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
+      const obj2 = { release, environment, user: tmp8, profile_id, replay_id: replayId, transaction, "user_agent.original": null, "client.address": null };
+      const _navigator = _mod901.WINDOW.navigator;
+      let userAgent;
+      if (_navigator != null) {
+        userAgent = _navigator.userAgent;
+      }
+      obj2["user_agent.original"] = userAgent;
+      let str2;
+      if (sendDefaultPii) {
+        str2 = "{{auto}}";
+      }
+      obj2["client.address"] = str2;
+      const merged = Object.assign(attributes);
+      const obj3 = { name, attributes: obj2, startTime, experimental: { standalone: true } };
+      return _mod681.startInactiveSpan(obj3);
+    } catch (err) {
+    }
+    const tmpResult = _mod681;
+  }
+}
+export function supportsWebVital(arg0) {
+  try {
+    const supportedEntryTypes = globalThis.PerformanceObserver.supportedEntryTypes;
+    return supportedEntryTypes.includes(arg0);
+  } catch (err) {
+    return false;
+  }
+}

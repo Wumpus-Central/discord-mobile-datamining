@@ -1,7 +1,7 @@
 // === Module 13989: ? ===
 
 // Module 13989
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/chat_sidebar", width: 24, height: 24, scales: [2, 3], hash: "c0d7195f1a47742034be311c1f70ceed", name: "ic_settings", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cde816791540f65e5c599ecf6c251745", name: "ChatXIcon", type: "png" });

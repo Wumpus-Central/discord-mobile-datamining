@@ -1,7 +1,21 @@
 // === Module 10555: ? ===
 
 // Module 10555
-import registerAsset from "module_1131" /* 1131 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef10556 from "module_10556" /* 10556 */;
 
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 101, height: 19, scales: [2, 3], hash: "dc1cee3a8f17b01e1093a161d78cdfbe", name: "img_logo_plus_boost", type: "png" });
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef10556(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
+};

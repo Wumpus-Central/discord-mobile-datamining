@@ -1,61 +1,13 @@
 // === Module 5442: ? ===
 
 // Module 5442
-const require = arg1;
-const dependencyMap = arg6;
+const fn = function t(arg0, velocityY, substr) {
+  closure_0 = arg0 + 0.2 * velocityY;
+  closure_1 = min.apply(null, substr.map((item) => Math.abs(closure_0 - item)));
+  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
+};
+fn.__closure = {};
+fn.__workletHash = 8913698095371;
+fn.__initData = { code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}" };
 
-export function useComposedGesture(type) {
-  const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((handlerTags) => {
-    if (obj.isComposedGesture(handlerTags)) {
-      handlerTags = handlerTags.handlerTags;
-    } else {
-      handlerTags = [];
-      handlerTags[0] = handlerTags.handlerTag;
-    }
-    return handlerTags;
-  });
-  if (obj.containsDuplicates(flatMapResult)) {
-    const _Error2 = Error;
-    const error = new Error(tmp2(5339).tagMessage("Each gesture can be used only once in the gesture composition."));
-    throw error;
-  } else {
-    const obj2 = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
-    if (obj2.shouldUseReanimatedDetector) {
-      if (obj2.dispatchesAnimatedEvents) {
-        const _Error = Error;
-        const error1 = new Error(tmp2(5339).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
-        throw error1;
-      }
-    }
-    const Reanimated = tmp2(5377).Reanimated;
-    let composedEventHandler;
-    if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
-    }
-    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
-    let animatedEventHandler;
-    if (found.length > 0) {
-      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
-    }
-    const obj3 = { handlerTags: flatMapResult, type, config: obj2, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
-    const obj4 = {
-      jsEventHandler(arg0) {
-          for (const item10007 of substr) {
-            if (item10007.detectorCallbacks.jsEventHandler) {
-              let detectorCallbacks = tmp.detectorCallbacks;
-              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-            }
-            continue;
-          }
-        },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler
-    };
-    obj3.detectorCallbacks = obj4;
-    obj3.externalSimultaneousHandlers = [];
-    obj3.gestures = substr;
-    return obj3;
-  }
-  obj = substr(5402);
-}
+export const snapPoint = fn;

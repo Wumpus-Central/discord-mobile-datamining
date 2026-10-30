@@ -2,15 +2,15 @@
 
 // Module 8053
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8047 from "module_8047" /* 8047 */;
 import _modDef8054 from "module_8054" /* 8054 */;
-import _modDef8056 from "module_8056" /* 8056 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeBlend = fn;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeBlend {
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeBlend);
+    tmp = closure_3(this, ClipPath);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeBlend);
+    obj = hasOwnProperty(ClipPath);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,32 +52,19 @@ class FeBlend {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeBlend, _modDef8056);
+_inherits(ClipPath, _modDef8047);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(FeBlend(8055).extractFilter(this.props));
-    const obj2 = FeBlend(8055);
-    const merged1 = Object.assign(FeBlend(8055).extractIn(this.props));
-    const obj3 = FeBlend(8055);
-    const merged2 = Object.assign(FeBlend(8055).extractFeBlend(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(8038).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeBlend, items);
-importDefaultResultResult.displayName = "FeBlend";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.mode = "normal";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

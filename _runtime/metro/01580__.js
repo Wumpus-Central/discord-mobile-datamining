@@ -1,18 +1,30 @@
 // === Module 1580: ? ===
 
 // Module 1580
-import NavigationBuilderContext from "NavigationBuilderContext" /* 1533 */;
-import _mod1581 from "module_1581" /* 1581 */;
+import NavigationBuilderContext from "NavigationBuilderContext" /* 1528 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export function useScheduleUpdate(arg0) {
-  closure_0 = arg0;
-  const context = noop.useContext(NavigationBuilderContext.NavigationBuilderContext);
-  ({ scheduleUpdate: dependencyMap, flushUpdates } = context);
-  const insertionEffect = noop.useInsertionEffect(() => {
-    dependencyMap(closure_0);
-  });
-  const clientLayoutEffect = _mod1581.useClientLayoutEffect(flushUpdates);
+export function useOnRouteFocus(router) {
+  router = router.router;
+  const getState = router.getState;
+  const key = router.key;
+  const setState = router.setState;
+  const onRouteFocus = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onRouteFocus;
+  const items = [getState, onRouteFocus, router, setState, key];
+  return noop.useCallback((arg0) => {
+    const tmp = getState();
+    const stateForRouteFocus = router.getStateForRouteFocus(tmp, arg0);
+    if (stateForRouteFocus !== tmp) {
+      setState(stateForRouteFocus);
+    }
+    let tmp6 = undefined !== onRouteFocus;
+    if (tmp6) {
+      tmp6 = undefined !== key;
+    }
+    if (tmp6) {
+      onRouteFocus(key);
+    }
+  }, items);
 }

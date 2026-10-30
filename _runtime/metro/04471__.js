@@ -1,57 +1,38 @@
 // === Module 4471: ? ===
 
 // Module 4471
-import requiredArgs_mod from "requiredArgs" /* 4289 */;
+import _typeof_mod from "module_4472" /* 4472 */;
+import _typeof_mod from "module_4289" /* 4289 */;
+import requiredArgs_mod from "requiredArgs" /* 4290 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
 }
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj = { default: requiredArgs };
-  let tmp3 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp3 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp3;
+requiredArgs = tmp7;
 
-export default function isDate(arg0) {
+export default function isValid(num) {
   requiredArgs.default(1, arguments);
-  let tmp2 = arg0 instanceof Date;
-  if (!tmp2) {
-    const tmp4 = "object" === _typeof(arg0);
-    if (!tmp4) {
-      tmp2 = tmp4;
-    } else {
-      const _Object = Object;
-      let str2 = Object.prototype.toString;
-      const call = str2.call;
-      str2 = "[object Date]";
-      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
+  if (!_typeof.default(num)) {
+    if (typeof num !== "number") {
+      return false;
     }
   }
-  return tmp2;
+  return !isNaN(Number(_typeof.default(num)));
 };
 export default exports.default;

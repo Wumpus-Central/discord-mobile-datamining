@@ -1,118 +1,111 @@
 // === Module 5483: ? ===
 
 // Module 5483
-import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 5310 */;
+import cancelAnimation from "cancelAnimation" /* 1651 */;
+import value2 from "value2" /* 5271 */;
+import _mod5275 from "module_5275" /* 5275 */;
+import _mod5282 from "module_5282" /* 5282 */;
+import _mod5484 from "module_5484" /* 5484 */;
+import ScrollableContainer from "ScrollableContainer" /* 5485 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+require = fn;
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment", "overScrollMode", "keyboardDismissMode", "showsVerticalScrollIndicator", "contentContainerStyle", "refreshing", "onRefresh", "progressViewOffset", "refreshControl", "preserveScrollMomentum", "onScroll", "onScrollBeginDrag", "onScrollEndDrag", "lockableScrollableContentOffsetY", "onContentSizeChange"];
+let noop = fn(19);
+({ forwardRef: closure_4, useContext: hasOwnProperty, useImperativeHandle: metroRequire, useMemo: closure_7 } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+let closure_9 = { code: "function pnpm_createBottomSheetScrollableComponentTsx1(){const{preserveScrollMomentum,SCROLLABLE_DECELERATION_RATE_MAPPER,animatedScrollableState,showsVerticalScrollIndicator,SCROLLABLE_STATE}=this.__closure;return{...(preserveScrollMomentum?{}:{decelerationRate:SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value]}),showsVerticalScrollIndicator:showsVerticalScrollIndicator?animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED:showsVerticalScrollIndicator};}" };
 
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
-let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
-
-export (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
-  _require = snapPoints;
-  dependencyMap = derivedValue;
-  __initData = sharedValue1;
-  __initData2 = reactiveSharedValue2;
-  closure_4 = DEFAULT_DYNAMIC_SIZING;
-  closure_5 = maxDynamicContentSize;
-  sharedValue = require("cancelAnimation").useSharedValue(-1);
-  const obj = require("cancelAnimation");
-  class P {
-    constructor() {
-      iter = closure_1;
-      tmp = closure_0;
-      tmp2 = closure_1;
-      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
-        items = [];
-        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-        return items;
-      } else {
-        iter3 = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter3;
-          if ("value" in iter3) {
-            value = iter3.value;
-          }
-          items1 = value;
-        } else {
-          items1 = [];
-        }
-        mapped = items1.map(/* F146579 */ function() { ... });
-        tmp3 = closure_4;
-        if (closure_4) {
-          iter2 = closure_3;
-          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
-            items2 = [];
-            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-            return items2;
-          } else {
-            iter4 = closure_2;
-            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
-              items3 = [];
-              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-              return items3;
-            } else {
-              tmp4 = globalThis;
-              value1 = closure_5;
-              sum = iter4.value + iter2.value;
-              if (undefined === closure_5) {
-                value1 = iter.value;
-              }
-              diff = iter.value - Math.min(sum, value1);
-              if (!mapped.includes(diff)) {
-                arr1 = mapped.push(diff);
-              }
-              sorted = mapped.sort(/* F146580 */ function() { ... });
-              tmp8 = closure_6;
-              closure_6.value = sorted.indexOf(diff);
-              return sorted;
-            }
-          }
-        } else {
-          return mapped;
-        }
+export function createBottomSheetScrollableComponent(SCROLLVIEW, animatedComponent) {
+  const ScrollableComponent = animatedComponent;
+  return closure_4((overScrollMode, arg1) => {
+    ({ focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment } = overScrollMode);
+    overScrollMode = overScrollMode.overScrollMode;
+    let str = "never";
+    if (undefined !== overScrollMode) {
+      str = overScrollMode;
+    }
+    const keyboardDismissMode = overScrollMode.keyboardDismissMode;
+    let str2 = "interactive";
+    if (undefined !== keyboardDismissMode) {
+      str2 = keyboardDismissMode;
+    }
+    const showsVerticalScrollIndicator = overScrollMode.showsVerticalScrollIndicator;
+    SCROLLVIEW = tmp2;
+    ({ onRefresh, preserveScrollMomentum } = overScrollMode);
+    ({ onScroll, onContentSizeChange: closure_2 } = overScrollMode);
+    ({ contentContainerStyle, refreshing, progressViewOffset, refreshControl, onScrollBeginDrag, onScrollEndDrag, lockableScrollableContentOffsetY } = overScrollMode);
+    const tmp6 = hasOwnProperty(_mod5282.BottomSheetDraggableContext);
+    closure_3 = tmp6;
+    const tmp = undefined !== enableFooterMarginAdjustment && enableFooterMarginAdjustment;
+    const tmp3 = _objectWithoutProperties(overScrollMode, closure_2);
+    const scrollHandler1 = _mod5275.useScrollHandler(scrollEventsHandlersHook, onScroll, onScrollBeginDrag, onScrollEndDrag, lockableScrollableContentOffsetY);
+    const scrollableRef = scrollHandler1.scrollableRef;
+    ({ scrollableContentOffsetY, scrollHandler } = scrollHandler1);
+    const bottomSheetInternal = _mod5275.useBottomSheetInternal();
+    const animatedScrollableState = bottomSheetInternal.animatedScrollableState;
+    const setContentSize = _mod5484.useBottomSheetContentSizeSetter().setContentSize;
+    if (!tmp6) {
+      if (bottomSheetInternal.enableContentPanningGesture) {
+        throw "'Scrollable' cannot be used out of the BottomSheet!";
       }
     }
-  }
-  const obj2 = require("cancelAnimation");
-  P.__closure = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  P.__workletHash = 15015207820492;
-  P.__initData = __initData;
-  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
-  derivedValue = obj2.useDerivedValue(P, items);
-  const obj3 = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  class N {
-    constructor() {
-      if (closure_4) {
-        flag = true;
-        return true;
-      } else {
-        iter = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter;
-          if ("value" in iter) {
-            value = iter.value;
-          }
-          items = value;
+    class J {
+      constructor() {
+        if (preserveScrollMomentum) {
+          obj = {};
         } else {
-          items = [];
+          obj = { decelerationRate: null };
+          tmp = closure_0;
+          tmp2 = closure_1;
+          tmp3 = animatedScrollableState;
+          obj.decelerationRate = closure_0(closure_1[7]).SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value];
         }
-        length = items.length;
-        tmp = !length;
-        if (length) {
-          tmp = !items.find(/* F146581 */ function() { ... });
+        obj1 = {};
+        merged = Object.assign(obj);
+        tmp5 = closure_0;
+        if (closure_0) {
+          tmp6 = animatedScrollableState;
+          tmp7 = closure_0;
+          tmp8 = closure_1;
+          tmp5 = animatedScrollableState.value === closure_0(closure_1[7]).SCROLLABLE_STATE.UNLOCKED;
         }
-        return !tmp;
+        obj1.showsVerticalScrollIndicator = tmp5;
+        return obj1;
       }
     }
-  }
-  N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
-  N.__workletHash = 4816362093278;
-  N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
-  return items1;
+    const tmp4Result = cancelAnimation;
+    J.__closure = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: value2.SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, SCROLLABLE_STATE: value2.SCROLLABLE_STATE };
+    J.__workletHash = 1780437272380;
+    J.__initData = __initData;
+    const items = [animatedScrollableState, undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, preserveScrollMomentum];
+    const items1 = [tmp6];
+    const animatedProps = tmp4Result.useAnimatedProps(J, items);
+    const obj4 = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: value2.SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, SCROLLABLE_STATE: value2.SCROLLABLE_STATE };
+    const tmp10 = React5(() => {
+      let result1;
+      if (closure_3) {
+        const Gesture = closure_0(preserveScrollMomentum[8]).Gesture;
+        const result = Gesture.Native().simultaneousWithExternalGesture(tmp);
+        result1 = result.shouldCancelWhenOutside(false);
+        const NativeResult = Gesture.Native();
+      }
+      return result1;
+    }, items1);
+    const tmp4Result4 = _mod5275;
+    const stableCallback = _mod5275.useStableCallback((arg0, arg1) => {
+      setContentSize(arg1);
+      if (closure_1_2) {
+        tmp2(arg0, arg1);
+      }
+    });
+    const bottomSheetContentContainerStyle = _mod5275.useBottomSheetContentContainerStyle(tmp, contentContainerStyle);
+    timestampProducer(arg1, () => scrollableRef.current);
+    const tmp4Result5 = _mod5275;
+    const scrollableSetter = _mod5275.useScrollableSetter(scrollableRef, SCROLLVIEW, scrollableContentOffsetY, undefined !== onRefresh, focusHook);
+    let merged = Object.assign(tmp3);
+    return jsx(ScrollableContainer.ScrollableContainer, { ref: scrollableRef, nativeGesture: tmp10, animatedProps, overScrollMode: str, keyboardDismissMode: str2, refreshing, scrollEventThrottle: 16, progressViewOffset, contentContainerStyle: bottomSheetContentContainerStyle, onRefresh, onScroll: scrollHandler, onContentSizeChange: stableCallback, setContentSize, ScrollableComponent, refreshControl });
+  });
 }

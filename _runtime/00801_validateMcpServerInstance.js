@@ -1,0 +1,101 @@
+// === Module 801: validateMcpServerInstance ===
+
+// Module 801 (validateMcpServerInstance)
+import _mod687 from "module_687" /* 687 */;
+import consoleSandbox from "consoleSandbox" /* 688 */;
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export function isJsonRpcNotification(jsonrpc) {
+  let tmp = typeof jsonrpc === "object";
+  if (typeof jsonrpc === "object") {
+    tmp = null !== jsonrpc;
+  }
+  if (tmp) {
+    tmp = "jsonrpc" in jsonrpc;
+  }
+  if (tmp) {
+    tmp = "2.0" === jsonrpc.jsonrpc;
+  }
+  if (tmp) {
+    tmp = "method" in jsonrpc;
+  }
+  if (tmp) {
+    tmp = !("id" in jsonrpc);
+  }
+  return tmp;
+}
+export function isJsonRpcRequest(jsonrpc) {
+  let tmp = typeof jsonrpc === "object";
+  if (typeof jsonrpc === "object") {
+    tmp = null !== jsonrpc;
+  }
+  if (tmp) {
+    tmp = "jsonrpc" in jsonrpc;
+  }
+  if (tmp) {
+    tmp = "2.0" === jsonrpc.jsonrpc;
+  }
+  if (tmp) {
+    tmp = "method" in jsonrpc;
+  }
+  if (tmp) {
+    tmp = "id" in jsonrpc;
+  }
+  return tmp;
+}
+export function isJsonRpcResponse(jsonrpc) {
+  let tmp = typeof jsonrpc === "object";
+  if (typeof jsonrpc === "object") {
+    tmp = null !== jsonrpc;
+  }
+  if (tmp) {
+    tmp = "jsonrpc" in jsonrpc;
+  }
+  if (tmp) {
+    tmp = "2.0" === jsonrpc.jsonrpc;
+  }
+  if (tmp) {
+    tmp = "id" in jsonrpc;
+  }
+  if (tmp) {
+    let tmp2 = "result" in jsonrpc;
+    if (!tmp2) {
+      tmp2 = "error" in jsonrpc;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}
+export function isValidContentItem(clientInfo) {
+  return null != clientInfo && typeof clientInfo === "object";
+}
+export function validateMcpServerInstance(obj) {
+  let flag = typeof obj === "object";
+  if (typeof obj === "object") {
+    flag = null !== obj;
+  }
+  if (flag) {
+    flag = "resource" in obj;
+  }
+  if (flag) {
+    flag = "tool" in obj;
+  }
+  if (flag) {
+    flag = "prompt" in obj;
+  }
+  if (flag) {
+    flag = "connect" in obj;
+  }
+  if (!flag) {
+    flag = false;
+    if (_mod687.DEBUG_BUILD) {
+      const debug = consoleSandbox.debug;
+      debug.warn("Did not patch MCP server. Interface is incompatible.");
+      flag = false;
+    }
+  }
+  return flag;
+}

@@ -2,7 +2,7 @@
 
 // Module 10442
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10300 from "module_10300" /* 10300 */;
+import _mod10325 from "module_10325" /* 10325 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -44,12 +44,12 @@ if (!fn) {
     return tmp;
   };
 }
-class UKMergeDateRangeRefiner {
+class RUMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, UKMergeDateRangeRefiner);
+    tmp = closure_0(this, RUMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(UKMergeDateRangeRefiner);
+    obj = c2(RUMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -64,14 +64,14 @@ class UKMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = UKMergeDateRangeRefiner;
-_inherits(UKMergeDateRangeRefiner, fn(_mod10300).default);
+_classCallCheck = RUMergeDateRangeRefiner;
+_inherits(RUMergeDateRangeRefiner, fn(_mod10325).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(і до|і по|до|по|-)\s*$/i;
+    return /^\s*(и до|и по|до|по|-)\s*$/i;
   }
 };
 const items = [entry];
 
-export default _createClass(UKMergeDateRangeRefiner, items);
+export default _createClass(RUMergeDateRangeRefiner, items);

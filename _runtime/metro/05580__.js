@@ -1,18 +1,9 @@
 // === Module 5580: ? ===
 
 // Module 5580
-import noop from "module_19" /* 19 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
 
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
 
-export () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  framebus(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
-    };
-  }, []);
-  return tmp;
-}
+export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
+export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
+export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;

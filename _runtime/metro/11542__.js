@@ -1,7 +1,7 @@
 // === Module 11542: ? ===
 
 // Module 11542
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls/dark_theme", width: 24, height: 24, scales: [2, 3], hash: "530ba220f07acfc32feb554b142fc895", name: "voice_bar_mute_on", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 120, height: 80, scales: [2, 3], hash: "038b9efde4d99e1d058963891646a79a", name: "customize_empty", type: "png" });

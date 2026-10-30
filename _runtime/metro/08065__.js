@@ -1,13 +1,14 @@
 // === Module 8065: ? ===
 
 // Module 8065
+import _modDef8062 from "module_8062" /* 8062 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeDistantLight = fn;
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDistantLight {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    tmp = c2(this, FeDistantLight);
+    tmp = c2(this, FeComponentTransfer);
     tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
+    obj = closure_4(FeComponentTransfer);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -47,17 +48,18 @@ class FeDistantLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDistantLight, fn(19).Component);
+_inherits(FeComponentTransfer, _modDef8062);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDistantLight(8033).warnUnimplementedFilter();
+    const result = FeComponentTransfer(8039).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
+const importDefaultResultResult = _createClass(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

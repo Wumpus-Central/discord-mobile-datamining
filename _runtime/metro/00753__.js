@@ -1,0 +1,26 @@
+// === Module 753: ? ===
+
+// Module 753
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 702 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 728 */;
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  const items = [{ type: "client_report" }, ];
+  if (!arg2) {
+    result = dateTimestampInSeconds.dateTimestampInSeconds();
+  }
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const items1 = [items];
+  return forEachEnvelopeItem.createEnvelope(obj4, items1);
+}

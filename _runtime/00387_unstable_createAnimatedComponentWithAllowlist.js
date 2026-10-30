@@ -29,7 +29,7 @@ export default function createAnimatedComponent(displayName) {
       items[0] = style1;
       items[1] = style;
       obj = {};
-      tmp5 = useMemo(/* F143927 */ function() { ... }, items);
+      tmp5 = useMemo(/* F119891 */ function() { ... }, items);
       merged = Object.assign(first);
       merged1 = Object.assign(passthroughAnimatedPropExplicitValues);
       obj.style = tmp5;
@@ -60,7 +60,7 @@ export function unstable_createAnimatedComponentWithAllowlist(displayName, arg1)
       items[0] = style1;
       items[1] = style;
       obj = {};
-      tmp5 = useMemo(/* F143927 */ function() { ... }, items);
+      tmp5 = useMemo(/* F119891 */ function() { ... }, items);
       merged = Object.assign(first);
       merged1 = Object.assign(passthroughAnimatedPropExplicitValues);
       obj.style = tmp5;

@@ -1,7 +1,23 @@
 // === Module 13023: ? ===
 
 // Module 13023
-import registerAsset from "module_1131" /* 1131 */;
+import _mod13022 from "module_13022" /* 13022 */;
+import _mod13024 from "module_13024" /* 13024 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 200, height: 104, scales: [2, 3], hash: "1659789d77f59f81faaeb051e5b4088e", name: "img_invalid_link_darker", type: "png" });
+export function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13022.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13024.getStackAsyncContextStrategy();
+    const tmpResult = _mod13024;
+  }
+  return acs;
+}
+export function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13022.getMainCarrier();
+  _mod13022.getSentryCarrier(mainCarrier).acs = acs;
+}

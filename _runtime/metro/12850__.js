@@ -1,33 +1,55 @@
 // === Module 12850: ? ===
 
 // Module 12850
-import _mod12851 from "module_12851" /* 12851 */;
-import _mod12854 from "module_12854" /* 12854 */;
+import _mod12798 from "module_12798" /* 12798 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentError() {
-  onerror = _mod12854.GLOBAL_OBJ.onerror;
-  _mod12854.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
-    _mod12851.triggerHandlers("error", { column, error, line, msg, url });
-    if (!onerror) {
-      return onerror;
-    } else {
-      const self = this;
-      const apply = onerror.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+const Ident = _mod12798.TYPE.Ident;
+let obj = {
+  name: "Combinator",
+  structure: { name: String },
+  parse() {
+    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    const source = this.scanner.source;
+    const charCodeAtResult = source.charCodeAt(this.scanner.tokenStart);
+    if (62 !== charCodeAtResult) {
+      if (43 !== charCodeAtResult) {
+        if (126 !== charCodeAtResult) {
+          if (47 === charCodeAtResult) {
+            self.scanner.next();
+            let tmp5 = self.scanner.tokenType === Ident;
+            if (tmp5) {
+              const scanner = self.scanner;
+              tmp5 = false !== scanner.lookupValue(0, "deep");
+            }
+            if (!tmp5) {
+              self.error("Identifier `deep` is expected");
+            }
+            self.scanner.next();
+            const scanner2 = self.scanner;
+            if (!scanner2.isDelim(47)) {
+              self.error("Solidus is expected");
+            }
+            self.scanner.next();
+            const iter = self.scanner;
+            const iter2 = self.scanner;
+            const iter3 = self.scanner;
+          } else {
+            self.error("Combinator is expected");
+          }
+        }
+        const obj = { type: "Combinator", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: null };
+        const scanner3 = self.scanner;
+        obj.name = scanner3.substrToCursor(tokenStart);
+        return obj;
       }
     }
-    const obj = { column, error, line, msg, url };
-  };
-  _mod12854.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
-}
-let onerror = null;
+    self.scanner.next();
+    const iter4 = self.scanner;
+  },
+  generate(name) {
+    this.chunk(name.name);
+  }
+};
 
-export function addGlobalErrorInstrumentationHandler(errorCallback) {
-  _mod12851.addHandler("error", errorCallback);
-  _mod12851.maybeInstrument("error", instrumentError);
-}
+export default obj;

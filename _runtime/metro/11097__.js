@@ -1,7 +1,7 @@
 // === Module 11097: ? ===
 
 // Module 11097
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15", name: "TagsIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "56256b2d0c1f686d3df4fce9de28505a", name: "ic_file_small_audio", type: "png" });

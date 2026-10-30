@@ -1,18 +1,30 @@
 // === Module 16065: ? ===
 
 // Module 16065
-import _mod16050 from "module_16050" /* 16050 */;
+const require = globalThis.__r;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod16050(1.toString);
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("module_16066").calendars;
+  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-ca-");
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+      if ("gregory" === item) {
+        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
+}

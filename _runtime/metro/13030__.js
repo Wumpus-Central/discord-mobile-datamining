@@ -1,7 +1,21 @@
 // === Module 13030: ? ===
 
 // Module 13030
-import registerAsset from "module_1131" /* 1131 */;
+import _mod13005 from "module_13005" /* 13005 */;
+import ScopeClass from "ScopeClass" /* 13025 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "be17daf6700f31399d629fee23cb9327", name: "ic_text_channel_16px", type: "png" });
+export function getDefaultCurrentScope() {
+  return _mod13005.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+}
+export function getDefaultIsolationScope() {
+  return _mod13005.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+}

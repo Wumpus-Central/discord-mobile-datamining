@@ -1,7 +1,7 @@
 // === Module 6661: ? ===
 
 // Module 6661
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "659ba58a5945e0a8efee29d8d7d906ca", name: "img_account_sync_tiktok_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "c8b1b3c79df9edf9120c2a71e2b3bfd3", name: "img_account_sync_ebay_light_and_dark", type: "png" });

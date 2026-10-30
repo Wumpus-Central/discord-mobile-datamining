@@ -1,12 +1,7 @@
 // === Module 10529: ? ===
 
 // Module 10529
-import _slicedToArray from "module_32" /* 32 */;
+import registerAsset from "module_1120" /* 1120 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 40, scales: [2, 3], hash: "d4d023fcd230d5f7401c0e512db37851", name: "ic_checkmark", type: "png" });

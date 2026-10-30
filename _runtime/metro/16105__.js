@@ -1,14 +1,18 @@
 // === Module 16105: ? ===
 
 // Module 16105
-import _mod16043 from "module_16043" /* 16043 */;
-import all from "module_16069" /* 16069 */;
+import _mod16090 from "module_16090" /* 16090 */;
 
-let _moduleResult = all(_mod16043.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod16043.WeakMap));
-  const obj = /native code/;
-}
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod16090(1.toString);
 
-export default _moduleResult;
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
+  }
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+};

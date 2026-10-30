@@ -1,7 +1,7 @@
 // === Module 15211: ? ===
 
 // Module 15211
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "337f717407aa04f32bdedf504de7310b", name: "emoji", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "048133a782a00bf1ceee354227e49996", name: "img_boost_resubscribe_mobile", type: "png" });

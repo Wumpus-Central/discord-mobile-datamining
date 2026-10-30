@@ -1,16 +1,13 @@
 // === Module 5316: ? ===
 
 // Module 5316
+import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
-import BottomSheetContext from "BottomSheetContext" /* 5317 */;
+import _modDef5317 from "module_5317" /* 5317 */;
 
-const useContext = _mod19.useContext;
+const use = _mod19.use;
+const Platform = _mod17.Platform;
 
-export () => {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
-  if (null === tmp) {
-    throw "'BottomSheetModalContext' cannot be null!";
-  } else {
-    return tmp;
-  }
+export function useEnsureGestureHandlerRootView() {
+  use(_modDef5317);
 }

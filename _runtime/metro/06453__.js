@@ -1,24 +1,31 @@
 // === Module 6453: ? ===
 
 // Module 6453
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1338 */;
-import properlyBoxed from "properlyBoxed" /* 6454 */;
-import _mod6456 from "module_6456" /* 6456 */;
-import RequireObjectCoercible from "RequireObjectCoercible" /* 6458 */;
-import shimArrayPrototypeMap from "shimArrayPrototypeMap" /* 6519 */;
-import callBind from "callBind" /* 1474 */;
-import defineProperty from "module_6473" /* 6473 */;
+import _mod1293 from "module_1293" /* 1293 */;
+import requirePromise from "requirePromise" /* 6451 */;
+import PromiseResolve from "PromiseResolve" /* 6527 */;
+import callBind_mod from "callBind" /* 1469 */;
 
-let closure_2 = callBind.apply(properlyBoxed());
-let closure_3 = callBoundIntrinsic("Array.prototype.slice");
-function map(arg0, arg1) {
-  RequireObjectCoercible(arg0);
-  return closure_2(arg0, closure_3(arguments, 1));
-}
-const obj = { getPolyfill: null, implementation: null, shim: null };
-obj.getPolyfill = properlyBoxed;
-obj.implementation = _mod6456;
-obj.shim = shimArrayPrototypeMap;
-defineProperty(map, obj);
+requirePromise();
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1293("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1293("%Promise.reject%"));
 
-export default map;
+export default function allSettled(arg0) {
+  const self = this;
+  if ("Object" !== self(6454)(this)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("`this` value must be an object");
+    throw typeError;
+  } else {
+    return closure_2(this, tmp(6460)(tmp(6457)(arg0), (arg0) => {
+      try {
+        return promise.then((value) => ({ status: "fulfilled", value }), (reason) => ({ status: "rejected", reason }));
+      } catch (tmp3) {
+        return closure_3(tmp, tmp3);
+      }
+      promise = PromiseResolve(self, arg0);
+    }));
+  }
+};

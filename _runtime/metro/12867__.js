@@ -1,61 +1,54 @@
 // === Module 12867: ? ===
 
 // Module 12867
-import _mod12854 from "module_12854" /* 12854 */;
+import _mod12798 from "module_12798" /* 12798 */;
 
-function dateTimestampInSeconds() {
-  return Date.now() / 1000;
-}
-let timeOrigin;
-const _performance = _mod12854.GLOBAL_OBJ.performance;
-let fn = dateTimestampInSeconds;
-if (_performance) {
-  fn = dateTimestampInSeconds;
-  if (_performance.now) {
-    const _Date = Date;
-    const timestamp = Date.now();
-    timeOrigin = timestamp - _performance.now();
-    if (null != _performance.timeOrigin) {
-      timeOrigin = _performance.timeOrigin;
-    }
-    fn = () => (timeOrigin + _performance.now()) / 1000;
-  }
-}
-const _performance2 = _mod12854.GLOBAL_OBJ.performance;
-if (_performance2) {
-  if (_performance2.now) {
-    const nowResult = _performance2.now();
-    const _Date2 = Date;
-    const timestamp1 = Date.now();
-    let num2 = 3600000;
-    if (_performance2.timeOrigin) {
-      const _Math = Math;
-      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
-    }
-    let timeOrigin2 = _performance2.timing;
-    if (timeOrigin2) {
-      timeOrigin2 = _performance2.timing.navigationStart;
-    }
-    let num3 = 3600000;
-    if (typeof timeOrigin2 === "number") {
-      const _Math2 = Math;
-      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
-    }
-    if (!tmp6) {
-      if (num3 >= 3600000) {
-        exports._browserPerformanceTimeOriginMode = "dateNow";
+const Ident = _mod12798.TYPE.Ident;
+const Function = _mod12798.TYPE.Function;
+const Colon = _mod12798.TYPE.Colon;
+const RightParenthesis = _mod12798.TYPE.RightParenthesis;
+const obj = {
+  name: "PseudoClassSelector",
+  structure: null,
+  parse() {
+    const self = this;
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
       }
-    }
-    if (num2 <= num3) {
-      exports._browserPerformanceTimeOriginMode = "timeOrigin";
-      timeOrigin2 = _performance2.timeOrigin;
+      const scanner = self.scanner;
+      scanner.skipSC();
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
     } else {
-      exports._browserPerformanceTimeOriginMode = "navigationStart";
+      const element = { type: "PseudoClassSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
+      return element;
     }
-    tmp6 = num2 < 3600000;
-  }
-}
+  },
+  generate(name) {
+    const self = this;
+    this.chunk(":");
+    this.chunk(name.name);
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
+    }
+  },
+  walkContext: "function"
+};
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
+obj2.children = items;
+obj.structure = obj2;
 
-export const _browserPerformanceTimeOriginMode = "none";
-export { dateTimestampInSeconds };
-export const timestampInSeconds = fn;
+export default obj;

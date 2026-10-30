@@ -1,12 +1,24 @@
 // === Module 16099: ? ===
 
 // Module 16099
-import _mod16046 from "module_16046" /* 16046 */;
-import _mod16080 from "module_16080" /* 16080 */;
-import _mod16097 from "module_16097" /* 16097 */;
+import _mod16083 from "module_16083" /* 16083 */;
+import _mod16084 from "module_16084" /* 16084 */;
+import _mod16100 from "module_16100" /* 16100 */;
 
+let prop = _mod16083["__core-js_shared__"];
+if (!prop) {
+  prop = _mod16084("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod16100) {
+  str2 = "pure";
+}
+versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
-export default _mod16046 ? ((arg0, arg1, arg2) => _mod16097.f(arg0, arg1, _mod16080(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default prop;

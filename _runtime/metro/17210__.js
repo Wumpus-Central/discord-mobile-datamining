@@ -1,7 +1,7 @@
 // === Module 17210: ? ===
 
 // Module 17210
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hexagon_campaign/images", width: 32, height: 24, scales: [2, 3, 4], hash: "c20f5cd14c5f693d97dedff22cf6001d", name: "hexagon_campaign_font_logo", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "ef28aab39cdce9136a8e704ac5e2fd6b", name: "mac_2", type: "png" });

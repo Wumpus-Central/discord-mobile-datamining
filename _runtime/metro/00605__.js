@@ -1,16 +1,24 @@
 // === Module 605: ? ===
 
 // Module 605
-import memoize from "memoize" /* 606 */;
 
-
-export default function memoizeCapped(arg0) {
-  const tmp = memoize(arg0, (arg0) => {
-    if (500 === cache.size) {
-      cache.clear();
+export default function toSource(arg0) {
+  if (null == arg0) {
+    return "";
+  } else {
+    try {
+      const call = toString.call;
+      if (typeof call === "unknown") {
+        let callResult = toString();
+      } else {
+        callResult = call(arg0);
+      }
+      return callResult;
+    } catch (err) {
+      try {
+        return "" + tmp;
+      } catch (err) {
+      }
     }
-    return arg0;
-  });
-  const cache = tmp.cache;
-  return tmp;
+  }
 };

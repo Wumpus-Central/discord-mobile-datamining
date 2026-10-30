@@ -1,21 +1,20 @@
 // === Module 12879: ? ===
 
 // Module 12879
-import _mod12854 from "module_12854" /* 12854 */;
-import ScopeClass from "ScopeClass" /* 12874 */;
+import _mod12798 from "module_12798" /* 12798 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const WhiteSpace = _mod12798.TYPE.WhiteSpace;
+let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
+const obj = {
+  name: "WhiteSpace",
+  structure: { value: String },
+  parse() {
+    this.eat(WhiteSpace);
+    return closure_1;
+  },
+  generate(value) {
+    this.chunk(value.value);
+  }
+};
 
-export function getDefaultCurrentScope() {
-  return _mod12854.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getDefaultIsolationScope() {
-  return _mod12854.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
+export default obj;

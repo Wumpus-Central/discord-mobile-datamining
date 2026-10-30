@@ -1,29 +1,86 @@
 // === Module 1784: ? ===
 
 // Module 1784
-const require = globalThis.__r;
+import _slicedToArray_mod from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c2 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-for (const key10013 in require("module_1785")) {
-  arg5[key10013] = require("module_1785")[key10013];
-  continue;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
 }
-for (const key10017 in require("module_1786")) {
-  arg5[key10017] = require("module_1786")[key10017];
-  continue;
+let _slicedToArray = _slicedToArray_mod;
+let closure_5 = { code: "function pnpm_LinearTransitionTs1(values){const{delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,animation(values.targetOriginX,config)),originY:delayFunction(delay,animation(values.targetOriginY,config)),width:delayFunction(delay,animation(values.targetWidth,config)),height:delayFunction(delay,animation(values.targetHeight,config))},callback:callback};}" };
+class LinearTransition {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, LinearTransition);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(LinearTransition);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const delay = closure_0.getDelay();
+      const fn = function t(originX) {
+        const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
+        const size = { originX: delayFunction(delay, first(originX.targetOriginX, closure_2)), originY: delayFunction(delay, first(originX.targetOriginY, closure_2)), width: delayFunction(delay, first(originX.targetWidth, closure_2)), height: delayFunction(delay, first(originX.targetHeight, closure_2)) };
+        obj.animations = size;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 16224579837767;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
 }
-for (const key10021 in require("module_1787")) {
-  arg5[key10021] = require("module_1787")[key10021];
-  continue;
-}
-for (const key10025 in require("module_1788")) {
-  arg5[key10025] = require("module_1788")[key10025];
-  continue;
-}
-for (const key10029 in require("module_1789")) {
-  arg5[key10029] = require("module_1789")[key10029];
-  continue;
-}
-for (const key10033 in require("module_1790")) {
-  arg5[key10033] = require("module_1790")[key10033];
-  continue;
-}
+_slicedToArray = LinearTransition;
+_inherits(LinearTransition, fn(1721).ComplexAnimationBuilder);
+const entry = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(LinearTransition, null, items);
+importDefaultResultResult.presetName = "LinearTransition";
+
+export const LinearTransition = importDefaultResultResult;
+export const Layout = importDefaultResultResult;

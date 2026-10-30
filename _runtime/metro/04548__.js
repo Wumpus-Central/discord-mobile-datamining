@@ -1,196 +1,63 @@
 // === Module 4548: ? ===
 
 // Module 4548
-import _mod4293 from "module_4293" /* 4293 */;
-import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4450 */;
-import format_mod from "module_4520" /* 4520 */;
-import code_mod from "module_4534" /* 4534 */;
-import subMilliseconds_mod from "subMilliseconds" /* 4521 */;
-import _typeof_mod from "module_4288" /* 4288 */;
-import module_4451_mod from "module_4451" /* 4451 */;
-import requiredArgs_mod from "requiredArgs" /* 4289 */;
-import module_4292_mod from "module_4292" /* 4292 */;
+import _typeof_mod from "module_4289" /* 4289 */;
+import module_4471_mod from "module_4471" /* 4471 */;
+import module_4532_mod from "module_4532" /* 4532 */;
 
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  let obj = { default: differenceInCalendarDays };
-  let tmp3 = obj;
-} else {
-  tmp3 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp3;
-let format = format_mod;
-if (!format) {
-  let obj2 = { default: format };
-  let tmp5 = obj2;
-} else {
-  tmp5 = format;
-}
-format = tmp5;
-let code = code_mod;
-if (!code) {
-  const obj3 = { default: code };
-  let tmp7 = obj3;
-} else {
-  tmp7 = code;
-}
-code = tmp7;
-let subMilliseconds = subMilliseconds_mod;
-if (!subMilliseconds) {
-  const obj4 = { default: subMilliseconds };
-  let tmp9 = obj4;
-} else {
-  tmp9 = subMilliseconds;
-}
-subMilliseconds = tmp9;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj5 = { default: _typeof };
-  let tmp11 = obj5;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp11 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp11;
-let module_4451 = module_4451_mod;
-if (!module_4451) {
-  const obj6 = { default: module_4451 };
-  let tmp13 = obj6;
+_typeof = tmp3;
+let module_4471 = module_4471_mod;
+if (!module_4471) {
+  const obj2 = { default: module_4471 };
+  let tmp5 = obj2;
 } else {
-  tmp13 = module_4451;
+  tmp5 = module_4471;
 }
-module_4451 = tmp13;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj7 = { default: requiredArgs };
-  let tmp15 = obj7;
+module_4471 = tmp5;
+let module_4532 = module_4532_mod;
+if (!module_4532) {
+  const obj3 = { default: module_4532 };
+  let tmp7 = obj3;
 } else {
-  tmp15 = requiredArgs;
+  tmp7 = module_4532;
 }
-requiredArgs = tmp15;
-let module_4292 = module_4292_mod;
-if (!module_4292) {
-  const obj8 = { default: module_4292 };
-  let tmp17 = obj8;
-} else {
-  tmp17 = module_4292;
-}
-module_4292 = tmp17;
+module_4532 = tmp7;
+let closure_3 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let closure_4 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export default function formatRelative(arg0, arg1, locale) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
-  const defaultOptions = _mod4293.getDefaultOptions();
-  let locale1;
-  if (null != locale) {
-    locale1 = locale.locale;
-  }
-  if (null === locale1) {
-    locale1 = defaultOptions.locale;
-  }
-  if (null === locale1) {
-    locale1 = code.default;
-  }
-  let weekStartsOn;
-  if (null != locale) {
-    weekStartsOn = locale.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != locale) {
-      locale = locale.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult3 = module_4292.default(num);
-  if (locale1.localize) {
-    if (locale1.formatLong) {
-      if (locale1.formatRelative) {
-        const defaultResult4 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
-        const _isNaN = isNaN;
-        if (isNaN(defaultResult4)) {
-          const _RangeError4 = RangeError;
-          const rangeError = new RangeError("Invalid time value");
-          throw rangeError;
-        } else {
-          let str4 = "other";
-          let str5 = "other";
-          if (defaultResult4 >= -6) {
-            let str6 = "lastWeek";
-            if (defaultResult4 >= -1) {
-              let str7 = "yesterday";
-              if (defaultResult4 >= 0) {
-                let str8 = "today";
-                if (defaultResult4 >= 1) {
-                  let str9 = "tomorrow";
-                  if (defaultResult4 >= 2) {
-                    if (defaultResult4 < 7) {
-                      str4 = "nextWeek";
-                    }
-                    str9 = str4;
-                  }
-                  str8 = str9;
-                }
-                str7 = str8;
-              }
-              str6 = str7;
-            }
-            str5 = str6;
-          }
-          const defaultResult5 = subMilliseconds.default(defaultResult1, module_4451.default(defaultResult1));
-          const obj = { locale: locale1, weekStartsOn: defaultResult3 };
-          const obj2 = { locale: locale1, weekStartsOn: defaultResult3 };
-          return format.default(defaultResult1, locale1.formatRelative(str5, defaultResult5, subMilliseconds.default(defaultResult2, module_4451.default(defaultResult2)), obj), obj2);
-        }
-      } else {
-        const _RangeError3 = RangeError;
-        const rangeError1 = new RangeError("locale must contain formatRelative property");
-        throw rangeError1;
-      }
-    } else {
-      const _RangeError2 = RangeError;
-      const rangeError2 = new RangeError("locale must contain formatLong property");
-      throw rangeError2;
-    }
+export default function formatRFC7231(arg0) {
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat2 = "1 arguments required, but only ".concat;
+    const typeError = new TypeError("1 arguments required, but only ".concat(arguments.length, " present"));
+    throw typeError;
   } else {
-    const _RangeError = RangeError;
-    const rangeError3 = new RangeError("locale must contain localize property");
-    throw rangeError3;
+    const defaultResult = _typeof.default(arg0);
+    if (module_4471.default(defaultResult)) {
+      const uTCFullYear = defaultResult.getUTCFullYear();
+      const defaultResult1 = module_4532.default(defaultResult.getUTCDate(), 2);
+      const defaultResult2 = module_4532.default(defaultResult.getUTCHours(), 2);
+      const concat = "".concat;
+      const defaultResult3 = module_4532.default(defaultResult.getUTCMinutes(), 2);
+      const combined = "".concat(closure_3[defaultResult.getUTCDay(defaultResult)], ", ");
+      const combined1 = combined.concat(defaultResult1, " ");
+      const combined2 = combined1.concat(closure_4[defaultResult.getUTCMonth(defaultResult)], " ");
+      const combined3 = combined2.concat(uTCFullYear, " ");
+      const combined4 = combined3.concat(defaultResult2, ":");
+      const combined5 = combined4.concat(defaultResult3, ":");
+      return combined5.concat(module_4532.default(defaultResult.getUTCSeconds(), 2), " GMT");
+    } else {
+      const _RangeError = RangeError;
+      const rangeError = new RangeError("Invalid time value");
+      throw rangeError;
+    }
   }
 };
 export default exports.default;

@@ -1,128 +1,53 @@
 // === Module 906: ? ===
 
 // Module 906
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _mod901 from "module_901" /* 901 */;
+import _mod904 from "module_904" /* 904 */;
+import _mod905 from "module_905" /* 905 */;
+import generateUniqueID from "generateUniqueID" /* 907 */;
 
-const require = globalThis.__r;
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-
-export function makeFetchTransport(bufferSize) {
-  _require = bufferSize;
-  let nativeImplementation = arg1;
+export (CLS, arg1) => {
+  let num = arg1;
   if (arg1 === undefined) {
-    nativeImplementation = require("triggerHandlers").getNativeImplementation("fetch");
-    let obj = require("triggerHandlers");
+    num = -1;
   }
-  closure_4 = async function _makeRequest(arg0) {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: "IconComponent" };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp4;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_0 = length;
-            closure_2 = closure_2 + length;
-            closure_3 = closure_3 + 1;
-            const request = { body: bufferSize.body, method: "POST", referrerPolicy: "strict-origin", headers: headers.headers, keepalive: null };
-            let tmp31 = closure_2 <= 60000;
-            if (tmp31) {
-              tmp31 = closure_3 < 15;
-            }
-            request.keepalive = tmp31;
-            const merged = Object.assign(tmp54.fetchOptions);
-            c4 = 2;
-            c5 = 3;
-            c6 = 1;
-            const obj5 = { value: nativeImplementation(headers.url, request), done: false };
-            return obj5;
+  const navigationEntry = _mod905.getNavigationEntry();
+  let str = "navigate";
+  let str2 = "navigate";
+  if (navigationEntry) {
+    const _document = _mod901.WINDOW.document;
+    let prerendering;
+    if (_document != null) {
+      prerendering = _document.prerendering;
+    }
+    let str4 = "prerender";
+    if (!prerendering) {
+      str4 = "prerender";
+      if (tmpResult.getActivationStart() <= 0) {
+        const _document2 = _mod901.WINDOW.document;
+        let wasDiscarded;
+        if (_document2 != null) {
+          wasDiscarded = _document2.wasDiscarded;
+        }
+        let str5 = "restore";
+        if (!wasDiscarded) {
+          if (navigationEntry.type) {
+            str = navigationEntry.type.replace(/_/g, "-");
           }
-        } else if (1 === tmp9) {
-          c4 = 0;
-          closure_130_2 = closure_130_2 - closure_129_0;
-          closure_130_3 = closure_130_3 - 1;
-          throw closure_3;
-        } else if (2 === tmp9) {
-          c4 = 1;
-          closure_129_2 = closure_3;
-          const result = bufferSize(tmp6[1]).clearCachedImplementation("fetch");
-          throw closure_129_2;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          closure_130_2 = closure_130_2 - closure_129_0;
-          closure_130_3 = closure_130_3 - 1;
-          c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_129_1 = value;
-          const response = { statusCode: closure_129_1.status, headers: null };
-          const obj7 = { "x-sentry-rate-limits": null, "retry-after": null };
-          headers = closure_129_1.headers;
-          obj7["x-sentry-rate-limits"] = headers.get("X-Sentry-Rate-Limits");
-          const headers2 = closure_129_1.headers;
-          obj7["retry-after"] = headers2.get("Retry-After");
-          response.headers = obj7;
-          c4 = 0;
-          closure_130_2 = closure_130_2 - closure_129_0;
-          closure_130_3 = closure_130_3 - 1;
-          c6 = 3;
-          const obj = { value: response, done: true };
-          return obj;
+          str5 = str;
         }
-      } catch (tmp35) {
-        closure_3 = tmp35;
-        if (tmp5 === c4) {
-          c6 = tmp3;
-          throw tmp35;
-        } else if (tmp2 === tmp37) {
-          c5 = tmp2;
-        } else {
-          c5 = tmp;
-        }
+        str4 = str5;
       }
+      tmpResult = _mod904;
     }
-  };
-  c2 = 0;
-  c3 = 0;
-  let obj2 = require("module_693");
-  let num = bufferSize.bufferSize;
-  if (!num) {
-    num = 40;
+    str2 = str4;
   }
-  function makeRequest(arg0) {
-    const self = this;
-    const apply = closure_4.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  return obj2.createTransport(bufferSize, makeRequest, require("module_693").makePromiseBuffer(num));
+  const obj2 = { name: CLS, value: num, rating: "good", delta: 0, entries: [], id: null, navigationType: null };
+  obj2.id = generateUniqueID.generateUniqueID();
+  obj2.navigationType = str2;
+  return obj2;
 }

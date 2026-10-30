@@ -1,7 +1,7 @@
 // === Module 6674: ? ===
 
 // Module 6674
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "39595ed126e57294bab83f7792a4b2ff", name: "img_account_sync_mastodon_light_and_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 500, height: 500, scales: [1], hash: "59966e5b844184ad532c25b89628277b", name: "img_account_sync_letterboxd_dark", type: "png" });

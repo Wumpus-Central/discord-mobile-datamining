@@ -1,9 +1,9 @@
 // === Module 12881: ? ===
 
 // Module 12881
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import defaultRecognizer from "defaultRecognizer" /* 12882 */;
+import _mod12884 from "module_12884" /* 12884 */;
+import _mod12885 from "module_12885" /* 12885 */;
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+
+export default { AtrulePrelude: defaultRecognizer, Selector: _mod12884, Value: _mod12885 };

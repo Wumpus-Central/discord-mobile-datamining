@@ -1,7 +1,7 @@
 // === Module 9161: ? ===
 
 // Module 9161
-import registerAsset from "module_1131" /* 1131 */;
+import _mod9162 from "module_9162" /* 9162 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "bc9640d059e4504fae6e197e103e15f0", name: "whatsapp", type: "png" });
+export default _mod9162();

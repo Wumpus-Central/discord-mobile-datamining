@@ -2,4 +2,4 @@
 
 // Module 1313
 
-export default Object;
+export default RangeError;

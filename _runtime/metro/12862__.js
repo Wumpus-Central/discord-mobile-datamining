@@ -1,140 +1,54 @@
 // === Module 12862: ? ===
 
 // Module 12862
-import _mod12860 from "module_12860" /* 12860 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function isMatchingPattern(arr, test) {
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  const isStringResult = _mod12860.isString(arr);
-  if (!isStringResult) {
-    return isStringResult;
-  } else {
-    if (tmpResult.isRegExp(test)) {
-      let isMatch = test.test(arr);
-    } else {
-      isMatch = _mod12860.isString(test);
-      if (isMatch) {
-        if (flag) {
-          let hasItem = arr === test;
-        } else {
-          hasItem = arr.includes(test);
-        }
+export default {
+  name: "Nth",
+  structure: { nth: ["AnPlusB", "Identifier"], selector: ["SelectorList", null] },
+  parse(arg0) {
+    const self = this;
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const tokenStart = this.scanner.tokenStart;
+    const scanner2 = this.scanner;
+    if (!scanner2.lookupValue(0, "odd")) {
+      const scanner3 = self.scanner;
+      if (!scanner3.lookupValue(0, "even")) {
+        let AnPlusBResult = self.AnPlusB();
       }
-      const tmpResult2 = _mod12860;
-    }
-    tmpResult = _mod12860;
-  }
-}
-export function safeJoin(arg0, arg1) {
-  if (Array.isArray(arg0)) {
-    const items = [];
-    let num = 0;
-    if (0 < arg0.length) {
-      try {
-        const push = items.push;
-        if (obj.isVueViewModel(tmp2)) {
-          push("[VueViewModel]");
-        } else {
-          const _String = String;
-          push(String(tmp2));
-        }
-        num = num + 1;
-        obj = _mod12860;
-      } catch (err) {
-        arr.push(tmp);
-      }
-    }
-    return items.join(arg1);
-  } else {
-    return "";
-  }
-}
-export function snipLine(arr, lineno) {
-  if (arr.length <= 150) {
-    return arr;
-  } else {
-    let tmp = lineno;
-    if (lineno > length) {
-      tmp = length;
-    }
-    const _Math = Math;
-    let num3 = Math.max(tmp - 60, 0);
-    if (num3 < 5) {
-      num3 = 0;
-    }
-    const _Math2 = Math;
-    let bound = Math.min(num3 + 140, length);
-    if (bound > length - 5) {
-      bound = length;
-    }
-    if (bound === length) {
-      const _Math3 = Math;
-      num3 = Math.max(bound - 140, 0);
-    }
-    const substr = arr.slice(num3, bound);
-    let combined = substr;
-    if (num3 > 0) {
-      const _HermesInternal = HermesInternal;
-      combined = "'{snip} " + substr;
-    }
-    let text = combined;
-    if (bound < length) {
-      text = `${tmp6} {snip}`;
-    }
-    return text;
-  }
-}
-export function stringMatchesSomePattern(transaction) {
-  if (items === undefined) {
-    items = [];
-  }
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  return items.some((test) => {
-    const isStringResult = _mod12860.isString(transaction);
-    if (!isStringResult) {
-      return isStringResult;
-    } else {
-      if (tmpResult.isRegExp(test)) {
-        let isMatch = test.test(transaction);
-      } else {
-        isMatch = _mod12860.isString(test);
-        if (isMatch) {
-          if (flag) {
-            let hasItem = transaction === test;
-          } else {
-            hasItem = transaction.includes(test);
+      const scanner4 = self.scanner;
+      scanner4.skipSC();
+      if (arg0) {
+        const scanner5 = self.scanner;
+        if (scanner5.lookupValue(0, "of")) {
+          self.scanner.next();
+          const SelectorListResult = self.SelectorList();
+          let tmp5 = SelectorListResult;
+          let offset = tokenStart;
+          if (self.needPositions) {
+            offset = self.getLastListNode(SelectorListResult.children).loc.end.offset;
+            tmp5 = SelectorListResult;
           }
+          const iter = self.scanner;
         }
-        const tmpResult2 = _mod12860;
+        const obj = { type: "Nth", loc: self.getLocation(tokenStart, offset), nth: AnPlusBResult, selector: tmp5 };
+        return obj;
       }
-      tmpResult = _mod12860;
-    }
-  });
-}
-export function truncate(str) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 0;
-  }
-  let combined = str;
-  if (typeof str === "string") {
-    combined = str;
-    if (0 !== num) {
-      combined = str;
-      if (str.length > num) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + str.slice(0, num) + "...";
+      tmp5 = null;
+      offset = tokenStart;
+      if (self.needPositions) {
+        offset = AnPlusBResult.loc.end.offset;
+        tmp5 = null;
       }
     }
+    AnPlusBResult = self.Identifier();
+  },
+  generate(nth) {
+    const self = this;
+    this.node(nth.nth);
+    if (null !== nth.selector) {
+      self.chunk(" of ");
+      self.node(nth.selector);
+    }
   }
-  return combined;
-}
+};

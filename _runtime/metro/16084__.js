@@ -1,20 +1,15 @@
 // === Module 16084: ? ===
 
 // Module 16084
-import _mod16050 from "module_16050" /* 16050 */;
-import _mod16071 from "module_16071" /* 16071 */;
-import f2 from "f" /* 16085 */;
-import _mod16095 from "module_16095" /* 16095 */;
-import _mod16096 from "module_16096" /* 16096 */;
+import _mod16083 from "module_16083" /* 16083 */;
 
-let closure_2 = _mod16050([].concat);
 
-export default _mod16071("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(_mod16095(arg0));
-  const f = _mod16096.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = closure_2(fResult, f(arg0));
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod16083, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod16083[tmp2] = tmp;
   }
-  return tmp2;
-});
+};

@@ -1,17 +1,18 @@
 // === Module 7174: ? ===
 
 // Module 7174
-import _mod7175 from "module_7175" /* 7175 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getDistanceForDirection(layout, gestureDirection, arg2) {
-  const invertedMultiplier = _mod7175.getInvertedMultiplier(gestureDirection, arg2);
-  if ("vertical" !== gestureDirection) {
-    if ("vertical-inverted" !== gestureDirection) {
-      return layout.width * invertedMultiplier;
+export function throttle(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return function() {
+    if (null == timeout) {
+      const self = this;
+      closure_0.apply(this, tmp);
+      const _setTimeout = setTimeout;
+      timeout = setTimeout(() => {
+        c2 = undefined;
+      }, closure_1);
     }
-  }
-  return layout.height * invertedMultiplier;
+  };
 }

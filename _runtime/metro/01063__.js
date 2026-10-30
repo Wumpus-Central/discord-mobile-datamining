@@ -8,7 +8,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const RNSentryOnDrawReporterNoop = fn;
+const FeedbackButton = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,61 +29,97 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ UIManager, View: metroRequire } = get_ActivityIndicator);
-const RNSentryOnDrawReporter = "RNSentryOnDrawReporter";
-const tmp6 = UIManager.hasViewManagerConfig && UIManager.hasViewManagerConfig("RNSentryOnDrawReporter");
-let closure_10 = tmp6;
-class RNSentryOnDrawReporterNoop {
-  constructor() {
+({ Appearance: metroRequire, Image: closure_7, Text: closure_8, TouchableOpacity: closure_9 } = get_ActivityIndicator);
+class FeedbackButton {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, RNSentryOnDrawReporterNoop);
+    tmp = c2(this, FeedbackButton);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(RNSentryOnDrawReporterNoop);
+    obj = closure_4(FeedbackButton);
     tmp3 = closure_3;
-    if (closure_7()) {
-      tmp7 = globalThis;
+    if (c10()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    obj2 = closure_0(closure_1[7]);
+    result = obj2.lazyLoadFeedbackIntegration();
+    return tmp3Result;
   }
 }
-_inherits(RNSentryOnDrawReporterNoop, noop.Component);
+_inherits(FeedbackButton, noop.Component);
 const entry = {
-  key: "render",
-  value: function render() {
-    return <timestampProducer {......Object.assign({}, this.props)} />;
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const self = this;
+    this._themeListener = timestampProducer.addChangeListener(() => {
+      self.forceUpdate();
+    });
   }
 };
-const items = [entry];
-let closure_11 = _createClass(RNSentryOnDrawReporterNoop, items);
-
-export const nativeComponentExists = tmp6;
-export () => {
-  if (result) {
-    return result;
-  } else {
-    if (!obj.isExpoGo()) {
-      if (closure_10) {
-        const ReactNative = RNSentryOnDrawReporterNoop(874).ReactNativeLibraries.ReactNative;
-        let prop;
-        if (null !== ReactNative) {
-          if (undefined !== ReactNative) {
-            prop = ReactNative.requireNativeComponent;
-          }
-        }
-        if (prop) {
-          const ReactNative2 = RNSentryOnDrawReporterNoop(874).ReactNativeLibraries.ReactNative;
-          result = ReactNative2.requireNativeComponent(RNSentryOnDrawReporter);
-        }
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this._themeListener) {
+        const _themeListener = this._themeListener;
+        _themeListener.remove();
       }
     }
-    result = closure_11;
-    obj = RNSentryOnDrawReporterNoop(879);
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const theme = FeedbackButton(1062).getTheme();
+      const merged = Object.assign(Object.assign({}, FeedbackButton(1064).defaultButtonConfiguration), this.props);
+      const obj = FeedbackButton(1062);
+      const styles = this.props.styles;
+      let triggerButton;
+      const merged1 = Object.assign({}, FeedbackButton(1065).defaultButtonStyles(theme).triggerButton);
+      if (null !== styles) {
+        if (undefined !== styles) {
+          triggerButton = styles.triggerButton;
+        }
+      }
+      const merged2 = Object.assign(merged1, triggerButton);
+      const obj2 = FeedbackButton(1065);
+      const styles2 = self.props.styles;
+      let triggerText;
+      const merged3 = Object.assign({}, FeedbackButton(1065).defaultButtonStyles(theme).triggerText);
+      if (null !== styles2) {
+        if (undefined !== styles2) {
+          triggerText = styles2.triggerText;
+        }
+      }
+      const style = Object.assign(merged3, triggerText);
+      const tmpResult = FeedbackButton(1065);
+      const styles3 = self.props.styles;
+      let triggerIcon;
+      const merged5 = Object.assign({}, FeedbackButton(1065).defaultButtonStyles(theme).triggerIcon);
+      if (null !== styles3) {
+        if (undefined !== styles3) {
+          triggerIcon = styles3.triggerIcon;
+        }
+      }
+      const obj3 = { style: merged2, onPress: null, accessibilityLabel: null };
+      const merged6 = Object.assign(merged5, triggerIcon);
+      obj3.onPress = FeedbackButton(1060).showFeedbackWidget;
+      obj3.accessibilityLabel = merged.triggerAriaLabel;
+      const obj4 = { source: null, style: null };
+      const tmpResult2 = FeedbackButton(1065);
+      obj4.source = { uri: FeedbackButton(1066).feedbackIcon };
+      obj4.style = merged6;
+      const element = <React5 source={null} style={null} />;
+      return <React7 style={merged2} onPress={null} accessibilityLabel={null}>{element}<React6 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</React6></React7>;
+    }
   }
-}
+];
+
+export const FeedbackButton = _createClass(FeedbackButton, items);

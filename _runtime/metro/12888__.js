@@ -1,40 +1,11 @@
 // === Module 12888: ? ===
 
 // Module 12888
-import _mod12860 from "module_12860" /* 12860 */;
+import _mod12889 from "module_12889" /* 12889 */;
+import _mod12890 from "module_12890" /* 12890 */;
+import _mod12891 from "module_12891" /* 12891 */;
+import _mod12892 from "module_12892" /* 12892 */;
+import _mod12893 from "module_12893" /* 12893 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {
-
-    };
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then((result) => {
-          closure_1();
-          return result;
-        }, (arg0) => {
-          closure_0(arg0);
-          closure_1();
-          throw arg0;
-        });
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod12860;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
-}
+export default { "font-face": _mod12889, import: _mod12890, media: _mod12891, page: _mod12892, supports: _mod12893 };

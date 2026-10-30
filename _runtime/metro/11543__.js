@@ -1,7 +1,7 @@
 // === Module 11543: ? ===
 
 // Module 11543
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fbf405dd501ff5f4ce99f5ceed43f6b1", name: "ic_headset_deafened_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 120, height: 80, scales: [2, 3], hash: "4ca23515516a1452487c5deb66a2aa5c", name: "customize_empty_light", type: "png" });

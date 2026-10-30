@@ -1,5 +1,0 @@
-// === Module 997: MAX_PROFILE_DURATION_MS ===
-
-// Module 997 (MAX_PROFILE_DURATION_MS)
-
-export const MAX_PROFILE_DURATION_MS = 30000;

@@ -1,26 +1,24 @@
 // === Module 12854: ? ===
 
 // Module 12854
-import _mod12855 from "module_12855" /* 12855 */;
+import _mod12794 from "module_12794" /* 12794 */;
+import _mod12798 from "module_12798" /* 12798 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const Dimension = _mod12798.TYPE.Dimension;
+const obj = {
+  name: "Dimension",
+  structure: { value: String, unit: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    const consumeNumberResult = _mod12794.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = { type: "Dimension", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, consumeNumberResult), unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart) };
+    return obj2;
+  },
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
+  }
+};
 
-export const GLOBAL_OBJ = globalThis;
-export function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
-  }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
-  const tmp3 = tmp2[_mod12855.SDK_VERSION] || {};
-  tmp2[_mod12855.SDK_VERSION] = tmp3;
-  let tmp4 = tmp3[globalMetricsAggregators];
-  if (!tmp4) {
-    const tmp6 = fn();
-    tmp3[globalMetricsAggregators] = tmp6;
-    tmp4 = tmp6;
-  }
-  return tmp4;
-}
+export default obj;

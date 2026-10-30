@@ -1,5 +1,39 @@
 // === Module 12855: ? ===
 
 // Module 12855
+import _mod12798 from "module_12798" /* 12798 */;
 
-export const SDK_VERSION = "8.55.0";
+const RightParenthesis = _mod12798.TYPE.RightParenthesis;
+const obj = {
+  name: "Function",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
+      }
+      const element = { type: "Function", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: str, children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+      return element;
+    }
+  },
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
+  },
+  walkContext: "function"
+};
+const obj2 = { name: String, children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

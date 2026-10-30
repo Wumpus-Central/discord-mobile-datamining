@@ -1,0 +1,47 @@
+// === Module 684: unwrapScopeFromWeakRef ===
+
+// Module 684 (unwrapScopeFromWeakRef)
+import _mod685 from "module_685" /* 685 */;
+import _mod686 from "module_686" /* 686 */;
+
+require = arg1;
+const dependencyMap = arg6;
+function unwrapScopeFromWeakRef(deref) {
+  if (deref) {
+    if (typeof deref === "object") {
+      if ("deref" in deref) {
+        if (typeof deref.deref === "function") {
+          try {
+            return deref.deref();
+          } catch (err) {
+          }
+        }
+      }
+    }
+    return deref;
+  }
+}
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+const _sentryScope = "_sentryScope";
+const _sentryIsolationScope = "_sentryIsolationScope";
+
+export function getCapturedScopesOnSpan(scope) {
+  return { scope: scope[_sentryScope], isolationScope: unwrapScopeFromWeakRef(scope[_sentryIsolationScope]) };
+}
+export function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+  if (sentrySpan) {
+    const result = _mod686.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, (function wrapScopeWithWeakRef(isolationScope) {
+      try {
+        const _WeakRef = _mod685.GLOBAL_OBJ.WeakRef;
+        if (typeof _WeakRef === "function") {
+          const _WeakRef1 = new _WeakRef(isolationScope);
+          return _WeakRef1;
+        } else {
+          return isolationScope;
+        }
+      } catch (err) {
+      }
+    })(isolationScope));
+    const result1 = _mod686.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
+  }
+}

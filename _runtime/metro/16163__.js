@@ -1,435 +1,192 @@
 // === Module 16163: ? ===
 
 // Module 16163
-import assertHasLoggerPlugin2 from "assertHasLoggerPlugin" /* 16165 */;
-import assertHasStateResponsePlugin2 from "assertHasStateResponsePlugin" /* 16168 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import module_16164_mod from "module_16164" /* 16164 */;
-import module_16166 from "module_16166" /* 16166 */;
-import module_16167 from "module_16167" /* 16167 */;
-import module_16169 from "module_16169" /* 16169 */;
-import module_16170 from "module_16170" /* 16170 */;
-import repl from "repl" /* 16171 */;
-import serialize_mod from "serialize" /* 16172 */;
+import Buffer from "Buffer" /* 1264 */;
+import _mod16162 from "module_16162" /* 16162 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const ReactotronImpl = require;
-function emptyPromise() {
-  return Promise.resolve("");
-}
-let module_16164 = module_16164_mod;
-if (!module_16164) {
-  const obj4 = { default: module_16164 };
-  let tmp7 = obj4;
-} else {
-  tmp7 = module_16164;
-}
-module_16164 = tmp7;
-const assertHasLoggerPlugin = _interopRequireWildcard(assertHasLoggerPlugin2);
-if (!module_16166) {
-  const obj7 = { default: module_16166 };
-  let obj6 = obj7;
-} else {
-  obj6 = module_16166;
-}
-if (!module_16167) {
-  const obj9 = { default: module_16167 };
-  let obj8 = obj9;
-} else {
-  obj8 = module_16167;
-}
-const assertHasStateResponsePlugin = _interopRequireWildcard(assertHasStateResponsePlugin2);
-if (!module_16169) {
-  const obj12 = { default: module_16169 };
-  let obj11 = obj12;
-} else {
-  obj11 = module_16169;
-}
-if (!module_16170) {
-  const obj14 = { default: module_16170 };
-  let obj13 = obj14;
-} else {
-  obj13 = module_16170;
-}
-if (!repl) {
-  const obj16 = { default: repl };
-  let obj15 = obj16;
-} else {
-  obj15 = repl;
-}
-let serialize = serialize_mod;
-if (!serialize) {
-  const obj17 = { default: serialize };
-  let tmp14 = obj17;
-} else {
-  tmp14 = serialize;
-}
-serialize = tmp14;
-const items = [obj6.default(), assertHasLoggerPlugin.default(), obj8.default(), assertHasStateResponsePlugin.default(), obj11.default(), obj13.default(), obj15.default()];
-let closure_9 = ["configure", "connect", "connected", "options", "plugins", "send", "socket", "startTimer", "use"];
-class ReactotronImpl {
-  constructor() {
-    self = this;
-    tmp = c2(this, ReactotronImpl);
-    this.connected = false;
-    this.socket = null;
-    this.plugins = [];
-    this.sendQueue = [];
-    this.isReady = false;
-    date = new Date();
-    this.lastMessageDate = date;
-    this.customCommands = [];
-    this.customCommandLatestId = 1;
-    this.startTimer = () => self(dependencyMap[11]).start();
-    this.send = (type, payload, important) => {
-      const date = new Date();
-      const lastMessageDate = self.lastMessageDate;
-      const time = date.getTime();
-      let num = time - lastMessageDate.getTime();
-      if (num < 0) {
-        num = 0;
-      }
-      self.lastMessageDate = date;
-      const action = { type, payload, important, date: date.toISOString(), deltaTime: num };
-      const defaultResult = serialize.default(action, self.options.proxyHack);
-      if (self.isReady) {
-        try {
-          const socket = self.socket;
-          socket.send(defaultResult);
-        } catch (err) {
-          tmp2.isReady = false;
-          const _console = tmp.console;
-          _console.log("An error occurred communicating with reactotron. Please reload your app");
-        }
-      } else {
-        const sendQueue = self.sendQueue;
-        sendQueue.push(defaultResult);
-      }
-    };
-    return;
+function replaceByteInByteSequence(arr, arg1, arg2) {
+  let index = arr.indexOf(43);
+  if (index >= 0) {
+    do {
+      arr[index] = 32;
+      index = arr.indexOf(43, index + 1);
+    } while (index >= 0);
   }
+  return arr;
 }
-const entry = {
-  key: "configure",
-  value: function configure(arg0) {
-    const self = this;
-    const url = {
-      createSocket: null,
-      host: "localhost",
-      port: 9090,
-      name: "reactotron-core-client",
-      secure: false,
-      plugins: items,
-      safeRecursion: true,
-      onCommand() {
-        return null;
-      },
-      onConnect() {
-        return null;
-      },
-      onDisconnect() {
-        return null;
+function percentEncode(arr) {
+  const formatted = arr.toString(16).toUpperCase();
+  let text = formatted;
+  if (1 === formatted.length) {
+    text = `0${arr}`;
+  }
+  return "%" + text;
+}
+function percentDecode(_Buffer) {
+  _Buffer = Buffer.Buffer;
+  const allocResult = _Buffer.alloc(_Buffer.byteLength);
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < _Buffer.length) {
+    while (true) {
+      if (37 === _Buffer[num]) {
+        let obj = _mod16162;
+        let sum = num + 1;
+        if (obj.isASCIIHex(_Buffer[sum])) {
+          let tmp3Result = _mod16162;
+          let sum1 = num + 2;
+          if (tmp3Result.isASCIIHex(_Buffer[sum1])) {
+            let sum2 = num2 + 1;
+            let _parseInt = parseInt;
+            let str = _Buffer.slice(sum, num + 3);
+            allocResult[num2] = parseInt(str.toString(), 16);
+            let tmp8 = sum1;
+            num = tmp8 + 1;
+            num2 = sum2;
+            num3 = sum2;
+            if (num >= _Buffer.length) {
+              break;
+            }
+          }
+        }
       }
-    };
-    const merged = Object.assign(url, this.options, arg0);
-    module_16164.default(merged);
-    this.options = merged;
-    if (Array.isArray(this.options.plugins)) {
-      const plugins = self.options.plugins;
-      const item = plugins.forEach((item) => self.use(item));
+      sum2 = num2 + 1;
+      allocResult[num2] = _Buffer[num];
+      tmp8 = num;
     }
-    return self;
+  }
+  return allocResult.slice(0, num3);
+}
+function serializeUrlencodedByte(_Buffer) {
+  let str = "";
+  const iter = _Buffer[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let str2 = "+";
+    if (32 === nextResult) {
+      str = `+`;
+      continue;
+    } else {
+      if (42 !== tmp2) {
+        if (45 !== tmp2) {
+          if (46 !== tmp2) {
+            if (tmp2 < 48) {
+              if (tmp2 < 65) {
+                if (95 !== tmp2) {
+                  if (tmp2 < 97) {
+                    let fromCodePointResult = percentEncode(tmp2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      let _String = String;
+      fromCodePointResult = String.fromCodePoint(tmp2);
+    }
+  }
+  return str;
+}
+
+export default {
+  percentEncode,
+  percentDecode,
+  parseUrlencoded(arg0) {
+    let _Buffer = Buffer.Buffer;
+    return (function parseUrlencoded(_Buffer) {
+      let items = [];
+      const iter = (function strictlySplitByteSequence(arr, arg1) {
+        const items = [];
+        const index = arr.indexOf(38);
+        let index1 = index;
+        let num = 0;
+        let num2 = 0;
+        if (index >= 0) {
+          do {
+            arr = items.push(arr.slice(num, index1));
+            let sum = index1 + 1;
+            index1 = arr.indexOf(38, sum);
+            num = sum;
+            num2 = sum;
+          } while (index1 >= 0);
+        }
+        if (num2 !== arr.length) {
+          items.push(arr.slice(num2));
+        }
+        return items;
+      })(_Buffer, 38)[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let arr3 = nextResult;
+        if (0 === nextResult.length) {
+          continue;
+        } else {
+          let index = arr3.indexOf(61);
+          let tmp23 = index;
+          if (index >= 0) {
+            let substr = arr3.slice(0, tmp23);
+            let substr1 = arr3.slice(tmp23 + 1);
+          } else {
+            substr = nextResult;
+            _Buffer = Buffer.Buffer;
+            substr1 = _Buffer.alloc(0);
+          }
+          let _Buffer2 = Buffer.Buffer;
+          let fromResult = _Buffer2.from(substr);
+          let tmp13 = replaceByteInByteSequence(fromResult, 43, 32);
+          let _Buffer3 = Buffer.Buffer;
+          let fromResult1 = _Buffer3.from(substr1);
+          let tmp17 = replaceByteInByteSequence(fromResult1, 43, 32);
+          let str = percentDecode(fromResult);
+          let items1 = [str.toString(), ];
+          let str2 = percentDecode(fromResult1);
+          items1[1] = str2.toString();
+          let arr = items.push(items1);
+        }
+      }
+      return items;
+    })(_Buffer.from(arg0));
+  },
+  serializeUrlencoded(_list) {
+    let str = "utf-8";
+    if (undefined !== arg1) {
+      str = tmp;
+    }
+    let str2 = "";
+    const entries = _list.entries();
+    while (tmp3 !== undefined) {
+      let tmp6 = _slicedToArray(tmp4, 2);
+      [tmp7, arr] = tmp6;
+      let _Buffer = Buffer.Buffer;
+      let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
+      let name = arr[1];
+      let tmp13 = arr.length > 2;
+      if (tmp13) {
+        tmp13 = undefined !== arr[2];
+      }
+      if (tmp13) {
+        if ("hidden" === arr[2]) {
+          if ("_charset_" === tmp12) {
+            name = str;
+          }
+        }
+        if ("file" === arr[2]) {
+          name = name.name;
+        }
+      }
+      if (0 !== tmp7) {
+        str2 = `${str2}&`;
+      }
+      let _Buffer2 = Buffer.Buffer;
+      let tmp9Result = serializeUrlencodedByte(_Buffer2.from(name));
+      let _HermesInternal = HermesInternal;
+      str2 = str2 + "" + tmp12 + "=" + tmp9Result;
+      continue;
+    }
+    return str2;
   }
 };
-const items1 = [
-  entry,
-  {
-    key: "close",
-    value: function close() {
-      const self = this;
-      this.connected = false;
-      if (tmp) {
-        const socket = self.socket;
-        socket.close();
-      }
-    }
-  },
-  {
-    key: "connect",
-    value: function connect() {
-      const self = this;
-      this.connected = true;
-      let options = this.options;
-      ({ host, environment: dependencyMap, port, name: _classCallCheck, client } = options);
-      ({ createSocket, secure } = options);
-      if (undefined === client) {
-        client = {};
-      }
-      const getClientId = options.getClientId;
-      ({ onCommand: assertHasStateResponsePlugin, onConnect: serialize, onDisconnect: _interopRequireWildcard } = self.options);
-      let str = "ws";
-      if (secure) {
-        str = "wss";
-      }
-      let socket = createSocket("" + str + "://" + host + ":" + port);
-      function onOpen() {
-        if (serialize) {
-          tmp();
-        }
-        const plugins = self.plugins;
-        const item = plugins.forEach((onConnect) => onConnect.onConnect && onConnect.onConnect());
-        let tmp4 = getClientId;
-        if (!getClientId) {
-          tmp4 = emptyPromise;
-        }
-        tmp4(_classCallCheck).then((clientId) => {
-          let length;
-          self.isReady = true;
-          const obj = { environment };
-          const merged = Object.assign(client);
-          obj.name = name;
-          obj.clientId = clientId;
-          obj.reactotronCoreClientVersion = "REACTOTRON_CORE_CLIENT_VERSION";
-          self.send("client.intro", obj);
-          if (self.sendQueue.length > 0) {
-            do {
-              let sendQueue = self.sendQueue;
-              self.sendQueue = sendQueue.slice(1);
-              let socket = self.socket;
-              let sendResult1 = socket.send(self.sendQueue[0]);
-              length = self.sendQueue.length;
-            } while (length > 0);
-          }
-        });
-      }
-      function onClose() {
-        self.isReady = false;
-        if (_interopRequireWildcard) {
-          tmp2();
-        }
-        const plugins = self.plugins;
-        const item = plugins.forEach((onDisconnect) => onDisconnect.onDisconnect && onDisconnect.onDisconnect());
-      }
-      function onMessage(str) {
-        if (typeof str === "string") {
-          const _JSON2 = JSON;
-          let action = JSON.parse(str);
-        } else {
-          const _Buffer = Buffer;
-          action = str;
-          if (Buffer.isBuffer(str)) {
-            const _JSON = JSON;
-            action = JSON.parse(str.toString());
-          }
-        }
-        if (assertHasStateResponsePlugin) {
-          tmp2(action);
-        }
-        const plugins = self.plugins;
-        const item = plugins.forEach((onCommand) => {
-          onCommand = onCommand.onCommand;
-          if (onCommand) {
-            onCommand = onCommand.onCommand(action);
-          }
-          return onCommand;
-        });
-        if ("custom" === action.type) {
-          const customCommands = self.customCommands;
-          const found = customCommands.filter((command) => {
-            if (typeof action.payload === "string") {
-              let tmp2 = command.command === action.payload;
-            } else {
-              tmp2 = command.command === action.payload.command;
-            }
-            return tmp2;
-          });
-          const item1 = found.forEach((handler) => {
-            let args;
-            if (typeof action.payload === "object") {
-              args = action.payload.args;
-            }
-            return handler.handler(args);
-          });
-        } else {
-          if (tmp6) {
-            const options = self.options;
-            options.setClientId(action.payload);
-          }
-          tmp6 = "setClientId" === action.type && self.options.setClientId;
-        }
-      }
-      if ("on" in socket) {
-        if (socket.on) {
-          socket.on("open", onOpen);
-          socket.on("close", onClose);
-          socket.on("message", onMessage);
-          self.socket = socket;
-        }
-        return self;
-      }
-      socket.onopen = onOpen;
-      socket.onclose = onClose;
-      socket.onmessage = (data) => {
-        onMessage(data.data);
-      };
-      self.socket = socket;
-    }
-  },
-  {
-    key: "display",
-    value: function display(activity) {
-      ({ value, preview, image, important } = activity);
-      let tmp = undefined !== important;
-      if (tmp) {
-        tmp = important;
-      }
-      const obj = { name: activity.name, value, preview, image };
-      this.send("display", obj, tmp);
-    }
-  },
-  {
-    key: "reportError",
-    value: function reportError(arg0) {
-      this.error(arg0);
-    }
-  },
-  {
-    key: "use",
-    value: function use(bind) {
-      const self = this;
-      if (typeof bind !== "function") {
-        const _Error3 = Error;
-        let error = new Error("plugins must be a function");
-        throw error;
-      } else {
-        const tmp19 = bind.bind(self)(self);
-        const features = tmp19;
-        if (typeof tmp19 !== "object") {
-          let _Error2 = Error;
-          let error1 = new Error("plugins must return an object");
-          throw error1;
-        } else {
-          if (tmp19.features) {
-            if (typeof tmp19.features !== "object") {
-              let _Error = Error;
-              const error2 = new Error("features must be an object");
-              throw error2;
-            } else {
-              function inject(arg0) {
-
-              }
-              const _Object = Object;
-              const keys = Object.keys(tmp19.features);
-              const item = keys.forEach((item) => {
-                if (typeof inject === "function") {
-                  if (typeof features.features[item] !== "function") {
-                    const _Error2 = Error;
-                    const _HermesInternal2 = HermesInternal;
-                    const error = new Error("feature " + item + " is not a function");
-                    throw error;
-                  } else {
-                    closure_0 = item;
-                    if (closure_9.some((item) => item === closure_0)) {
-                      const _Error = Error;
-                      const _HermesInternal = HermesInternal;
-                      const error1 = new Error("feature " + item + " is a reserved name");
-                      throw error1;
-                    } else {
-                      self[item] = tmp3;
-                    }
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              });
-            }
-          }
-          const plugins = self.plugins;
-          plugins.push(tmp19);
-          if (tmp2) {
-            const onPlugin = tmp19.onPlugin;
-            onPlugin.bind(self)(self);
-          }
-          return self;
-        }
-      }
-    }
-  },
-  {
-    key: "onCustomCommand",
-    value: function onCustomCommand(command, arg1) {
-      const self = this;
-      if (typeof command === "string") {
-        handler = arg1;
-      } else {
-        command = command.command;
-        ({ handler, title, description, args } = command);
-      }
-      if (tmp) {
-        if (handler) {
-          let customCommands = self.customCommands;
-          const found = customCommands.filter((command) => command.command === command);
-          if (found.length > 0) {
-            const item = found.forEach((id) => {
-              const customCommands = self.customCommands;
-              self.customCommands = customCommands.filter((id) => id.id !== id.id);
-              self.send("customCommand.unregister", { id: id.id, command: id.command });
-            });
-          }
-          if (args) {
-            closure_2 = [];
-            const item1 = args.forEach((name) => {
-              if (name.name) {
-                if (closure_2.indexOf(name.name) > -1) {
-                  const _Error2 = Error;
-                  const _HermesInternal2 = HermesInternal;
-                  const error = new Error("A arg with the name \"" + name.name + "\" already exists in the command \"" + command + "\"");
-                  throw error;
-                } else {
-                  closure_2.push(name.name);
-                }
-              } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                const error1 = new Error("A arg on the command \"" + command + "\" is missing a name");
-                throw error1;
-              }
-            });
-          }
-          let obj = { id: self.customCommandLatestId, command: tmp, handler, title, description, args };
-          self.customCommandLatestId = self.customCommandLatestId + 1;
-          const customCommands1 = self.customCommands;
-          customCommands1.push(obj);
-          ({ id: obj2.id, command: obj2.command, title: obj2.title, description: obj2.description, args: obj2.args } = obj);
-          self.send("customCommand.register", { id: null, command: null, title: null, description: null, args: null });
-          return () => {
-            const customCommands = self.customCommands;
-            self.customCommands = customCommands.filter((id) => id.id !== id.id);
-            obj = { id: obj.id, command: obj.command };
-            self.send("customCommand.unregister", obj);
-          };
-        } else {
-          let _Error2 = Error;
-          let _HermesInternal = HermesInternal;
-          let error = new Error("A handler is required for command \"" + tmp + "\"");
-          throw error;
-        }
-      } else {
-        let _Error = Error;
-        let error1 = new Error("A command is required");
-        throw error1;
-      }
-    }
-  }
-];
-const _moduleResult = _createClass(ReactotronImpl, items1);
-
-export const assertHasLoggerPlugin = assertHasLoggerPlugin.assertHasLoggerPlugin;
-export const assertHasStateResponsePlugin = assertHasStateResponsePlugin.assertHasStateResponsePlugin;
-export function createClient(url) {
-  return new _moduleResult().configure(url);
-}
-export const hasStateResponsePlugin = assertHasStateResponsePlugin.hasStateResponsePlugin;
-export const ArgType = { String: "string" };
-export const corePlugins = items;
-export const ReactotronImpl = _moduleResult;

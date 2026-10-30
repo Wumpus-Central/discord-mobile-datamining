@@ -1,47 +1,27 @@
 // === Module 5387: ? ===
 
 // Module 5387
-import _mod19 from "module_19" /* 19 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 5365 */;
-import MountRegistry2 from "MountRegistry" /* 5368 */;
+import ComposedGestureName from "ComposedGestureName" /* 5357 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 5366 */;
+import _mod5381 from "module_5381" /* 5381 */;
 
-function shouldUpdateDetector(blocksHandlers, handlerTag) {
-  if (undefined === blocksHandlers) {
-    return false;
-  } else {
-    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
-    for (const item10012 of result) {
-      if (item10012 === arg1.handlerTag) {
-        obj2.return();
-        let flag = true;
-        return true;
-      }
-    }
-    return false;
+require = arg1;
+const dependencyMap = arg6;
+function transformLongPressProps(shouldCancelWhenOutside) {
+  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
+    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
   }
+  return shouldCancelWhenOutside;
 }
-const useEffect = _mod19.useEffect;
+const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
+const map = new Map(items);
+let closure_4 = {};
 
-export function useMountReactions(detectorUpdater, current2) {
-  closure_0 = detectorUpdater;
-  closure_1 = current2;
-  const items = [detectorUpdater, current2];
-  useEffect(() => {
-    const MountRegistry = MountRegistry2.MountRegistry;
-    return MountRegistry.addMountListener((handlerTag) => {
-      if (current2.isMounted) {
-        const attachedGestures = current2.attachedGestures;
-        const iter = attachedGestures[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let requireToFail = nextResult.config.requireToFail;
-          let simultaneousWith = nextResult.config.simultaneousWith;
-          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
-          }
-          let tmp9 = detectorUpdater();
-          iter.return();
-        }
-      }
-    });
-  }, items);
+export function useLongPressGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_4;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
+  return _mod5381.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
 }

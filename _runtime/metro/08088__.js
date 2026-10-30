@@ -1,16 +1,14 @@
 // === Module 8088: ? ===
 
 // Module 8088
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8041 from "module_8041" /* 8041 */;
-import _modDef8089 from "module_8089" /* 8089 */;
+import _modDef8062 from "module_8062" /* 8062 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const SvgImage = fn;
+const FeTile = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,18 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const Image = fn(17).Image;
-const jsx = fn(21).jsx;
-const re9 = /\s+/;
-class SvgImage {
+class FeTile {
   constructor() {
     self = this;
-    tmp = closure_3(this, SvgImage);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(SvgImage);
-    tmp3 = closure_4;
-    if (closure_8()) {
+    tmp = c2(this, FeTile);
+    tmp2 = closure_4;
+    obj = closure_4(FeTile);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -54,53 +48,18 @@ class SvgImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SvgImage, _modDef8041);
+_inherits(FeTile, _modDef8062);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ preserveAspectRatio, href } = props);
-    ({ x, y, width, height } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
-    }
-    if (preserveAspectRatio) {
-      let parts = preserveAspectRatio.trim().split(re9);
-      const str = preserveAspectRatio.trim();
-    } else {
-      parts = [];
-    }
-    const size = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: SvgImage(8030).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
-    [tmp2, tmp3] = parts;
-    const tmp6 = SvgImage(8030).meetOrSliceTypes[tmp3] || 0;
-    size.align = SvgImage(8030).alignEnum[tmp2] || "xMidYMid";
-    let assetSource = null;
-    if (href) {
-      let tmp10 = href;
-      if (typeof href === "string") {
-        const obj = { uri: href };
-        tmp10 = obj;
-      }
-      assetSource = Image.resolveAssetSource(tmp10);
-    }
-    size.src = assetSource;
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp7 = SvgImage(8030).alignEnum[tmp2] || "xMidYMid";
-    const merged = Object.assign(SvgImage(8032).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return <tmp11 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeTile(8039).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(SvgImage, items);
-importDefaultResultResult.displayName = "Image";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
+const importDefaultResultResult = _createClass(FeTile, items);
+importDefaultResultResult.displayName = "FeTile";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

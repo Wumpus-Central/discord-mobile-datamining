@@ -1,23 +1,30 @@
 // === Module 16071: ? ===
 
 // Module 16071
-import _mod16043 from "module_16043" /* 16043 */;
-import _mod16069 from "module_16069" /* 16069 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod16043[arg0];
-    let tmp8;
-    if (_mod16069(tmp7)) {
-      tmp8 = tmp7;
+export function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod16043[arg0];
-    if (tmp3) {
-      tmp3 = _mod16043[arg0][arg1];
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-nu-");
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+        if ("123" === memoizedNumberFormat.format(123)) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
     }
-  }
-  return tmp3;
-};
+  })(item, closure_0));
+}

@@ -1,14 +1,8 @@
 // === Module 5328: ? ===
 
 // Module 5328
-const fn = function o() {
+import _mod17 from "module_17" /* 17 */;
 
-};
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export () => {
-
-}
-export const workletNoop = fn;
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

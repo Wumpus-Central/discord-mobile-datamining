@@ -1,7 +1,21 @@
 // === Module 14432: ? ===
 
 // Module 14432
-import registerAsset from "module_1131" /* 1131 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleQuestionIcon-secondary", type: "png" });
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("module_14425")) {
+  arg5[key10017] = require("module_14425")[key10017];
+  continue;
+}
+for (const key10021 in require("module_14426")) {
+  arg5[key10021] = require("module_14426")[key10021];
+  continue;
+}
+for (const key10025 in require("module_14433")) {
+  arg5[key10025] = require("module_14433")[key10025];
+  continue;
+}

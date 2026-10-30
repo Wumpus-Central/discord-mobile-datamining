@@ -1,12 +1,23 @@
 // === Module 5348: ? ===
 
 // Module 5348
-import animatedComponentDefault from "animatedComponent" /* 5349 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef5333 from "module_5333" /* 5333 */;
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
+_mod19.useCallback;
 
-export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        previousViewTag.previousViewTag = _modDef5333(previousViewTag.viewRef);
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
+  }, items);
+}

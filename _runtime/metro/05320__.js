@@ -1,9 +1,9 @@
 // === Module 5320: ? ===
 
 // Module 5320
-import _mod19 from "module_19" /* 19 */;
+let closure_0 = 1;
 
-const context = _mod19.createContext(null);
-
-export const BottomSheetModalInternalContext = context;
-export const BottomSheetModalInternalProvider = context.Provider;
+export function getNextHandlerTag() {
+  closure_0 = tmp + 1;
+  return +closure_0;
+}

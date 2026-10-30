@@ -1,7 +1,7 @@
 // === Module 9964: ? ===
 
 // Module 9964
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 261.5, height: 152, scales: [2, 3], hash: "5691c33dd2c3544121435e1c3a569b50", name: "img_nitro_longer_message_upsell_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon", width: 60, height: 60, scales: [2, 3], hash: "f385b38a044809a0b451d707fc7cd058", name: "BlurpleTwilightIcon", type: "png" });

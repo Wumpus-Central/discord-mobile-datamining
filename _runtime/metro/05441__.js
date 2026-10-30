@@ -1,14 +1,11 @@
 // === Module 5441: ? ===
 
 // Module 5441
-import ComposedGestureName from "ComposedGestureName" /* 5393 */;
-import _mod5442 from "module_5442" /* 5442 */;
+const fn = function n(sum1, initialPosition, value3) {
+  return Math.min(Math.max(initialPosition, sum1), value3);
+};
+fn.__closure = {};
+fn.__workletHash = 4405247003092;
+fn.__initData = { code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}" };
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod5442.useComposedGesture.apply(items1);
-}
+export const clamp = fn;

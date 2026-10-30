@@ -1,41 +1,79 @@
 // === Module 5210: ? ===
 
 // Module 5210
-import _mod5206 from "module_5206" /* 5206 */;
-import ACTIONS from "ACTIONS" /* 5207 */;
-import PortalHost from "PortalHost" /* 5208 */;
-import registerHost from "registerHost" /* 5211 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop_mod from "module_19" /* 19 */;
+import nanoid from "nanoid" /* 1507 */;
+import noop from "module_19" /* 19 */;
 
-require = fn;
-let noop = fn(19);
-({ useReducer: c3, memo } = noop);
-let noop = noop_mod;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const memoResult = memo((rootHostName) => {
-  let str = rootHostName.rootHostName;
-  if (str === undefined) {
-    str = "root";
-  }
-  let flag = rootHostName.shouldAddRootHost;
-  if (flag === undefined) {
-    flag = true;
-  }
-  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
-  const obj = { value: tmp5, children: null };
-  const obj2 = { value: tmp4, children: null };
-  const items = [rootHostName.children, ];
-  if (flag) {
-    const obj3 = { name: str };
-    flag = React4(PortalHost.PortalHost, obj3);
-  }
-  items[1] = flag;
-  obj2.children = items;
-  obj.children = hasOwnProperty(_mod5206.PortalStateContext.Provider, obj2);
-  return React4(_mod5206.PortalDispatchContext.Provider, obj);
+({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const memoResult = noop.memo((name) => {
+  name = name.name;
+  const handleOnMount = name.handleOnMount;
+  const handleOnUnmount = name.handleOnUnmount;
+  const handleOnUpdate = name.handleOnUpdate;
+  const children = name.children;
+  const portal = name(handleOnMount[1]).usePortal(name.hostName);
+  const addPortal = portal.addPortal;
+  const removePortal = portal.removePortal;
+  const items = [name];
+  closure_7 = children(() => {
+    let nanoidResult = name;
+    if (!name) {
+      nanoidResult = nanoid.nanoid();
+    }
+    return nanoidResult;
+  }, items);
+  const tmp2 = addPortal();
+  const tmp3 = addPortal();
+  closure_9 = tmp3;
+  const tmp4 = addPortal();
+  const items1 = [handleOnMount, addPortal];
+  tmp2.current = handleOnUnmount(() => {
+    if (handleOnMount) {
+      tmp(() => addPortal(closure_1_7, children));
+    } else {
+      addPortal(closure_7, children);
+    }
+  }, items1);
+  const items2 = [handleOnUnmount, removePortal];
+  tmp3.current = handleOnUnmount(() => {
+    if (handleOnUnmount) {
+      tmp(() => removePortal(closure_1_7));
+    } else {
+      removePortal(closure_7);
+    }
+  }, items2);
+  const items3 = [handleOnUpdate, addPortal, children];
+  tmp4.current = handleOnUnmount(() => {
+    if (handleOnUpdate) {
+      tmp(() => addPortal(closure_1_7, children));
+    } else {
+      addPortal(closure_7, children);
+    }
+  }, items3);
+  handleOnUpdate(() => {
+    let current = ref.current;
+    if (current != null) {
+      current();
+    }
+    return () => {
+      const current = ref.current;
+      if (current != null) {
+        current();
+      }
+      closure_1_8.current = undefined;
+      ref.current = undefined;
+      ref2.current = undefined;
+    };
+  }, []);
+  const items4 = [children];
+  handleOnUpdate(() => {
+    const current = ref2.current;
+    if (current != null) {
+      current();
+    }
+  }, items4);
+  return null;
 });
-memoResult.displayName = "PortalProvider";
+memoResult.displayName = "Portal";
 
-export const PortalProvider = memoResult;
+export const Portal = memoResult;

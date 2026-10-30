@@ -1,56 +1,7 @@
 // === Module 12702: ? ===
 
 // Module 12702
-import _mod12657 from "module_12657" /* 12657 */;
+import registerAsset from "module_1120" /* 1120 */;
 
-const Semicolon = _mod12657.TYPE.Semicolon;
-const LeftCurlyBracket = _mod12657.TYPE.LeftCurlyBracket;
-const obj = {
-  name: "AtrulePrelude",
-  structure: null,
-  parse(key10009) {
-    let formatted = key10009;
-    if (null !== key10009) {
-      formatted = key10009.toLowerCase();
-    }
-    const self = this;
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const atrule = this.atrule;
-    if (atrule.hasOwnProperty(formatted)) {
-      if (typeof self.atrule[formatted].prelude === "function") {
-        const prelude = self.atrule[formatted].prelude;
-        const call = prelude.call;
-        typeof call === "unknown" ? prelude() : call(self);
-      }
-    }
-    let sequence = self.readSequence(self.scope.AtrulePrelude);
-    const scanner2 = self.scanner;
-    scanner2.skipSC();
-    let tmp6 = true !== self.scanner.eof;
-    if (tmp6) {
-      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
-    }
-    if (tmp6) {
-      tmp6 = self.scanner.tokenType !== Semicolon;
-    }
-    if (tmp6) {
-      self.error("Semicolon or block is expected");
-    }
-    if (null === sequence) {
-      sequence = self.createList();
-    }
-    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0);
-  },
-  walkContext: "atrulePrelude"
-};
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0cbf6a63eb42fee45267174e07a266f8", name: "WindowTopIcon", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 6609: ? ===
 
 // Module 6609
-import registerAsset from "module_1131" /* 1131 */;
+import registerAsset from "module_1120" /* 1120 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "e94b8b952ebeea94014c9e671ef91d08", name: "img_account_sync_x_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "1c6c58beca1fec7f3c53119b27e0466a", name: "img_account_sync_facebook_light_and_dark", type: "svg" });

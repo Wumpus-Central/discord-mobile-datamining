@@ -1,99 +1,85 @@
 // === Module 5446: ? ===
 
 // Module 5446
-import tagMessage from "tagMessage" /* 5339 */;
-import _mod5340 from "module_5340" /* 5340 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef38 from "module_38" /* 38 */;
 
-require = fn;
-const dependencyMap = arg6;
-const setGestureState = function t(arg0, arg1) {
-  const _globalThis = globalThis;
-  if (globalThis._setGestureStateSync) {
-    _globalThis._setGestureStateSync(arg0, arg1);
-  } else if (_globalThis._setGestureStateAsync) {
-    const _globalThis2 = globalThis;
-    const result = globalThis._setGestureStateAsync(arg0, arg1);
-  } else {
-    const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-    throw error;
-  }
-};
-setGestureState.__closure = { tagMessage: fn(5339).tagMessage };
-setGestureState.__workletHash = 727405139747;
-setGestureState.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
-const obj2 = { activate: null, fail: null, deactivate: null };
-const fn2 = function _(arg0) {
-  const ACTIVE = _mod5340.State.ACTIVE;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, ACTIVE);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj = { tagMessage: fn(5339).tagMessage };
-fn2.__closure = { setGestureState, State: fn(5340).State };
-fn2.__workletHash = 14928129771754;
-fn2.__initData = { code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}" };
-obj2.activate = fn2;
-const fn3 = function n(arg0) {
-  const FAILED = _mod5340.State.FAILED;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, FAILED);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, FAILED);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj3 = { setGestureState, State: fn(5340).State };
-fn3.__closure = { setGestureState, State: fn(5340).State };
-fn3.__workletHash = 1703030189599;
-fn3.__initData = { code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}" };
-obj2.fail = fn3;
-const fn4 = function s(arg0) {
-  const END = _mod5340.State.END;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, END);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, END);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj4 = { setGestureState, State: fn(5340).State };
-fn4.__closure = { setGestureState, State: fn(5340).State };
-fn4.__workletHash = 5511283927342;
-fn4.__initData = { code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}" };
-obj2.deactivate = fn4;
+const useMemo = _mod19.useMemo;
 
-export const GestureStateManager = obj2;
+export (index) => {
+  index = index.index;
+  const snapPoints = index.snapPoints;
+  const enableDynamicSizing = index.enableDynamicSizing;
+  const topInset = index.topInset;
+  const bottomInset = index.bottomInset;
+  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
+  topInset(() => {
+    if (snapPoints) {
+      value = snapPoints;
+      if ("get" in snapPoints) {
+        value = snapPoints.get();
+      }
+      let items = value;
+    } else {
+      items = [];
+    }
+    let tmp5 = items;
+    if (!items) {
+      tmp5 = enableDynamicSizing;
+    }
+    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
+    const mapped = items.map((item) => {
+      let parsed = item;
+      if (typeof item !== "number") {
+        const _Number = Number;
+        parsed = Number.parseInt(item.replace("%", ""), 10);
+      }
+      let tmp4 = parsed > 0;
+      if (!tmp4) {
+        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
+      }
+      snapPoints(enableDynamicSizing[1])(tmp4, "Snap point '" + item + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
+      const tmp3 = snapPoints(enableDynamicSizing[1]);
+    });
+    let tmp9 = "value" in items;
+    if (!tmp9) {
+      tmp9 = items.length > 0;
+    }
+    if (!tmp9) {
+      tmp9 = enableDynamicSizing;
+    }
+    _modDef38(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
+    let tmp13 = typeof index === "number";
+    const tmp2Result = _modDef38;
+    if (typeof index !== "number") {
+      tmp13 = undefined === index;
+    }
+    _modDef38(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
+    let tmp16 = enableDynamicSizing;
+    const tmp2Result5 = _modDef38;
+    if (!enableDynamicSizing) {
+      tmp16 = typeof index !== "number";
+    }
+    if (!tmp16) {
+      let tmp17 = index >= -1;
+      if (tmp17) {
+        tmp17 = index <= items.length - 1;
+      }
+      tmp16 = tmp17;
+    }
+    _modDef38(tmp16, `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`);
+    let tmp20 = typeof topInset === "number";
+    const tmp2Result6 = _modDef38;
+    if (typeof topInset !== "number") {
+      tmp20 = undefined === topInset;
+    }
+    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
+    let tmp23 = typeof bottomInset === "number";
+    const tmp2Result7 = _modDef38;
+    if (typeof bottomInset !== "number") {
+      tmp23 = undefined === bottomInset;
+    }
+    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
+    const tmp2Result8 = _modDef38;
+  }, items);
+}
